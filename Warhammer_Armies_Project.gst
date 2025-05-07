@@ -20733,7 +20733,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <infoLink name="Mark of Tzeentch" id="448a-fe5e-64c2-6989" hidden="false" type="rule" targetId="Mark of Tzeentch"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Warhorse" hidden="false" id="a7d2-4d12-77bb-99a0" subType="mount">
+    <selectionEntry type="model" import="true" name="Warhorse" hidden="false" id="a7d2-4d12-77bb-99a0" subType="mount" collective="true">
       <infoLinks>
         <infoLink name="Warhorse" id="1028-04d2-2293-bf84" hidden="false" type="profile" targetId="1c38-2830-10db-579c"/>
       </infoLinks>
