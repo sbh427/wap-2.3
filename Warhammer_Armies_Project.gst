@@ -15025,39 +15025,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="d622-c310-d94d-c6d3-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="d622-c310-d94d-c6d3-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="de24-cca2-c426-5072-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="de24-cca2-c426-5072-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="d622-c310-d94d-c6d3-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="de24-cca2-c426-5072-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="d622-c310-d94d-c6d3-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="de24-cca2-c426-5072-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="d622-c310-d94d-c6d3-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="de24-cca2-c426-5072-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="d622-c310-d94d-c6d3-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="de24-cca2-c426-5072-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="d622-c310-d94d-c6d3-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="de24-cca2-c426-5072-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="d622-c310-d94d-c6d3-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="de24-cca2-c426-5072-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="de24-cca2-c426-5072-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="de24-cca2-c426-5072-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="de24-cca2-c426-5072-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="de24-cca2-c426-5072-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="de24-cca2-c426-5072-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="de24-cca2-c426-5072-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -15329,39 +15473,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="59ce-e1a7-6f92-4468-min-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="59ce-e1a7-6f92-4468-min-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="4901-2fa4-ee1e-1f94-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="4901-2fa4-ee1e-1f94-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="59ce-e1a7-6f92-4468-min-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="4901-2fa4-ee1e-1f94-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="59ce-e1a7-6f92-4468-min-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="4901-2fa4-ee1e-1f94-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="59ce-e1a7-6f92-4468-min-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="4901-2fa4-ee1e-1f94-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="59ce-e1a7-6f92-4468-min-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="4901-2fa4-ee1e-1f94-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="59ce-e1a7-6f92-4468-min-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="4901-2fa4-ee1e-1f94-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="59ce-e1a7-6f92-4468-min-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="4901-2fa4-ee1e-1f94-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="4901-2fa4-ee1e-1f94-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="4901-2fa4-ee1e-1f94-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="4901-2fa4-ee1e-1f94-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="4901-2fa4-ee1e-1f94-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="4901-2fa4-ee1e-1f94-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="4901-2fa4-ee1e-1f94-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -15634,39 +15922,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="56ef-3dad-332a-fa67-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="56ef-3dad-332a-fa67-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="6e39-09b1-5cf4-fd78-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="6e39-09b1-5cf4-fd78-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="56ef-3dad-332a-fa67-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="6e39-09b1-5cf4-fd78-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="56ef-3dad-332a-fa67-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="6e39-09b1-5cf4-fd78-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="56ef-3dad-332a-fa67-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="6e39-09b1-5cf4-fd78-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="56ef-3dad-332a-fa67-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="6e39-09b1-5cf4-fd78-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="56ef-3dad-332a-fa67-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="6e39-09b1-5cf4-fd78-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="56ef-3dad-332a-fa67-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="6e39-09b1-5cf4-fd78-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="6e39-09b1-5cf4-fd78-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="6e39-09b1-5cf4-fd78-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="6e39-09b1-5cf4-fd78-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="6e39-09b1-5cf4-fd78-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="6e39-09b1-5cf4-fd78-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="6e39-09b1-5cf4-fd78-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -15938,39 +16370,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="8221-2dca-e61b-34d0-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="8221-2dca-e61b-34d0-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="669c-db9f-2941-6bda-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="669c-db9f-2941-6bda-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="8221-2dca-e61b-34d0-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="669c-db9f-2941-6bda-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="8221-2dca-e61b-34d0-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="669c-db9f-2941-6bda-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="8221-2dca-e61b-34d0-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="669c-db9f-2941-6bda-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="8221-2dca-e61b-34d0-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="669c-db9f-2941-6bda-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="8221-2dca-e61b-34d0-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="669c-db9f-2941-6bda-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="8221-2dca-e61b-34d0-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="669c-db9f-2941-6bda-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="669c-db9f-2941-6bda-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="669c-db9f-2941-6bda-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="669c-db9f-2941-6bda-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="669c-db9f-2941-6bda-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="669c-db9f-2941-6bda-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="669c-db9f-2941-6bda-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -16242,39 +16818,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="3f7b-1c95-91c8-79f8-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="3f7b-1c95-91c8-79f8-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="bbb6-9d1d-53e5-6a23-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="bbb6-9d1d-53e5-6a23-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="3f7b-1c95-91c8-79f8-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="bbb6-9d1d-53e5-6a23-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="3f7b-1c95-91c8-79f8-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="bbb6-9d1d-53e5-6a23-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="3f7b-1c95-91c8-79f8-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="bbb6-9d1d-53e5-6a23-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="3f7b-1c95-91c8-79f8-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="bbb6-9d1d-53e5-6a23-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="3f7b-1c95-91c8-79f8-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="bbb6-9d1d-53e5-6a23-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="3f7b-1c95-91c8-79f8-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="bbb6-9d1d-53e5-6a23-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="bbb6-9d1d-53e5-6a23-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="bbb6-9d1d-53e5-6a23-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="bbb6-9d1d-53e5-6a23-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="bbb6-9d1d-53e5-6a23-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="bbb6-9d1d-53e5-6a23-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="bbb6-9d1d-53e5-6a23-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -16316,39 +17036,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
       <selectionEntryGroups>
         <selectionEntryGroup name="Spells from the Lore of Life" id="5376-05d7-fd54-9e38" hidden="false" sortIndex="3">
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="f346-e68a-9935-e3f5-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="f346-e68a-9935-e3f5-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="3ba2-cec3-d459-6c14-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="3ba2-cec3-d459-6c14-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="f346-e68a-9935-e3f5-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="3ba2-cec3-d459-6c14-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="f346-e68a-9935-e3f5-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="3ba2-cec3-d459-6c14-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="f346-e68a-9935-e3f5-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="3ba2-cec3-d459-6c14-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="f346-e68a-9935-e3f5-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="3ba2-cec3-d459-6c14-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="f346-e68a-9935-e3f5-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="3ba2-cec3-d459-6c14-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="f346-e68a-9935-e3f5-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="3ba2-cec3-d459-6c14-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="3ba2-cec3-d459-6c14-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="3ba2-cec3-d459-6c14-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="3ba2-cec3-d459-6c14-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="3ba2-cec3-d459-6c14-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="3ba2-cec3-d459-6c14-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="3ba2-cec3-d459-6c14-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <selectionEntries>
@@ -16850,39 +17714,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="5b95-37ee-5d5f-50f5-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="5b95-37ee-5d5f-50f5-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="d40a-8e5c-08ba-6ceb-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="d40a-8e5c-08ba-6ceb-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="5b95-37ee-5d5f-50f5-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="d40a-8e5c-08ba-6ceb-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="5b95-37ee-5d5f-50f5-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="d40a-8e5c-08ba-6ceb-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="5b95-37ee-5d5f-50f5-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="d40a-8e5c-08ba-6ceb-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="5b95-37ee-5d5f-50f5-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="d40a-8e5c-08ba-6ceb-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="5b95-37ee-5d5f-50f5-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="d40a-8e5c-08ba-6ceb-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="5b95-37ee-5d5f-50f5-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="d40a-8e5c-08ba-6ceb-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="d40a-8e5c-08ba-6ceb-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="d40a-8e5c-08ba-6ceb-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="d40a-8e5c-08ba-6ceb-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="d40a-8e5c-08ba-6ceb-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="d40a-8e5c-08ba-6ceb-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="d40a-8e5c-08ba-6ceb-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -17154,39 +18162,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="0d8c-2880-e3e4-7152-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0d8c-2880-e3e4-7152-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="a893-15ed-16b2-265a-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="a893-15ed-16b2-265a-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="0d8c-2880-e3e4-7152-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="a893-15ed-16b2-265a-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="0d8c-2880-e3e4-7152-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="a893-15ed-16b2-265a-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="0d8c-2880-e3e4-7152-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="a893-15ed-16b2-265a-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="0d8c-2880-e3e4-7152-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="a893-15ed-16b2-265a-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="0d8c-2880-e3e4-7152-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="a893-15ed-16b2-265a-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="0d8c-2880-e3e4-7152-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="a893-15ed-16b2-265a-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="a893-15ed-16b2-265a-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="a893-15ed-16b2-265a-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="a893-15ed-16b2-265a-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="a893-15ed-16b2-265a-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="a893-15ed-16b2-265a-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="a893-15ed-16b2-265a-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -17570,39 +18722,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="87bb-a946-5fff-1977-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="87bb-a946-5fff-1977-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="f703-8b7a-0396-333b-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="f703-8b7a-0396-333b-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="87bb-a946-5fff-1977-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="f703-8b7a-0396-333b-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="87bb-a946-5fff-1977-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="f703-8b7a-0396-333b-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="87bb-a946-5fff-1977-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="f703-8b7a-0396-333b-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="87bb-a946-5fff-1977-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="f703-8b7a-0396-333b-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="87bb-a946-5fff-1977-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="f703-8b7a-0396-333b-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="87bb-a946-5fff-1977-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="f703-8b7a-0396-333b-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="f703-8b7a-0396-333b-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="f703-8b7a-0396-333b-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="f703-8b7a-0396-333b-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="f703-8b7a-0396-333b-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="f703-8b7a-0396-333b-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="f703-8b7a-0396-333b-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -17658,7 +18954,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Fire" id="f53a-7223-a0d1-e317" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Spells from the Lore of Tzeentch" id="f53a-7223-a0d1-e317" hidden="false" sortIndex="3">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="12. Infernal Gateway" hidden="true" id="e756-09f0-58ca-ed4b" collective="false">
               <constraints>
@@ -17986,39 +19282,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="c658-bcac-3bf3-c7a3-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="c658-bcac-3bf3-c7a3-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="c658-bcac-3bf3-c7a3-min-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="c658-bcac-3bf3-c7a3-min-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="c658-bcac-3bf3-c7a3-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="c658-bcac-3bf3-c7a3-min-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="c658-bcac-3bf3-c7a3-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="c658-bcac-3bf3-c7a3-min-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="c658-bcac-3bf3-c7a3-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="c658-bcac-3bf3-c7a3-min-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="c658-bcac-3bf3-c7a3-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="c658-bcac-3bf3-c7a3-min-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="c658-bcac-3bf3-c7a3-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="c658-bcac-3bf3-c7a3-min-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="c658-bcac-3bf3-c7a3-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="c658-bcac-3bf3-c7a3-min-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="c658-bcac-3bf3-c7a3-min-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="c658-bcac-3bf3-c7a3-min-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="c658-bcac-3bf3-c7a3-min-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="c658-bcac-3bf3-c7a3-min-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="c658-bcac-3bf3-c7a3-min-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="c658-bcac-3bf3-c7a3-min-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -18074,7 +19514,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Fire" id="7f7c-e15f-b8e8-d1af" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Spells from the Lore of Nurgle" id="7f7c-e15f-b8e8-d1af" hidden="false" sortIndex="3">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="12. Rot, Glorious Rot" hidden="true" id="629e-6a0d-216f-a8a9" collective="false">
               <constraints>
@@ -18402,39 +19842,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="952c-b815-dcc2-0c75-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="952c-b815-dcc2-0c75-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="a8a2-f11a-5757-720c-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="a8a2-f11a-5757-720c-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="952c-b815-dcc2-0c75-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="a8a2-f11a-5757-720c-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="952c-b815-dcc2-0c75-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="a8a2-f11a-5757-720c-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="952c-b815-dcc2-0c75-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="a8a2-f11a-5757-720c-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="952c-b815-dcc2-0c75-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="a8a2-f11a-5757-720c-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="952c-b815-dcc2-0c75-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="a8a2-f11a-5757-720c-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="952c-b815-dcc2-0c75-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="a8a2-f11a-5757-720c-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="a8a2-f11a-5757-720c-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="a8a2-f11a-5757-720c-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="a8a2-f11a-5757-720c-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="a8a2-f11a-5757-720c-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="a8a2-f11a-5757-720c-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="a8a2-f11a-5757-720c-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -18490,7 +20074,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Fire" id="d5a8-14e5-85b4-b777" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Spells from the Lore of Slaanesh" id="d5a8-14e5-85b4-b777" hidden="false" sortIndex="3">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="12. Song of Seduction" hidden="true" id="3608-64a5-f3d8-40ae" collective="false">
               <constraints>
@@ -18818,39 +20402,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="08a2-8cf9-e467-d0b5-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="08a2-8cf9-e467-d0b5-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="fcd5-0772-431f-b76f-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="fcd5-0772-431f-b76f-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="08a2-8cf9-e467-d0b5-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="fcd5-0772-431f-b76f-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="08a2-8cf9-e467-d0b5-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="fcd5-0772-431f-b76f-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="08a2-8cf9-e467-d0b5-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="fcd5-0772-431f-b76f-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="08a2-8cf9-e467-d0b5-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="fcd5-0772-431f-b76f-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="08a2-8cf9-e467-d0b5-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="fcd5-0772-431f-b76f-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="08a2-8cf9-e467-d0b5-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="fcd5-0772-431f-b76f-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="fcd5-0772-431f-b76f-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="fcd5-0772-431f-b76f-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="fcd5-0772-431f-b76f-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="fcd5-0772-431f-b76f-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="fcd5-0772-431f-b76f-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="fcd5-0772-431f-b76f-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -19188,6 +20916,31 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <infoLink name="Buckler" id="2ca1-86fa-a28b-8bfb" hidden="false" targetId="1700-a7e5-d272-ef20" type="profile"/>
       </infoLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Loremaster" hidden="false" id="a2bf-14a5-6723-7157">
+      <infoLinks>
+        <infoLink name="Loremaster" id="db31-1473-718a-a423" hidden="false" type="rule" targetId="4cc1-bc54-7778-c333"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c605-baf4-bf9e-b43d-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c605-baf4-bf9e-b43d-max"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Warrior Familiar" hidden="false" id="6ba4-68a0-cd51-88ce" collective="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="368d-d51b-2d12-3600" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="937e-e453-33a4-97fb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Warrior Familiar" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="e342-0791-fb7a-a153" publicationId="9e23-79cb-pubN66727" page="119">
+          <characteristics>
+            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The model gains an additional Strength 3 Attack. This does not benefit from any weapon, item or special rule used by the character. You may still take another Enchanted Item in addition to the Warrior Familiar, and it also does not count against the maximum points limit of magic items normally allowed for the character.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="5"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="6cd2-3f4b-da2d-1ee9" name="Common Arcane Items" hidden="false" collective="false" import="true">
@@ -19195,7 +20948,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="271f-2a52-52aa-7ed9" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="fa16-077f-18b1-27d8" name="Channeling Staff" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="fa16-077f-18b1-27d8" name="Channeling Staff" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d34-21b9-f917-cb3a" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cc3a-6611-f489-63ee" type="max"/>
@@ -19203,39 +20956,42 @@ If you want to make a list using the allied rules, make separate rosters for eac
           <profiles>
             <profile id="2d29-f545-3f04-272e" name="Channeling Staff" publicationId="9e23-79cb-pubN66727" page="159" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Wizard adds +1 to all of their channelling attempts.</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Wizard rolls one additional dice whenever they attempt to channel power or dispel dice.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="40"/>
+            <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="60b4-7c66-f1ea-4a0a" name="Book of Ashur" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="60b4-7c66-f1ea-4a0a" name="Book of Ashur" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8114-9d43-2592-b073" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8d6c-9c6a-acb1-64fb" type="max"/>
           </constraints>
           <profiles>
-            <profile id="5e94-c8f9-ff18-3b00" name="Book of Ashur" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="5e94-c8f9-ff18-3b00" name="Book of Ashur" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Wizard gains Loremaster.</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Wizard gains the Loremaster special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="20"/>
+            <cost name="pts" typeId="points" value="30"/>
           </costs>
+          <entryLinks>
+            <entryLink import="true" name="Loremaster" hidden="false" id="de20-20a7-7094-a952" type="selectionEntry" targetId="a2bf-14a5-6723-7157"/>
+          </entryLinks>
         </selectionEntry>
-        <selectionEntry id="46f0-3898-3169-fa9b" name="Wand of Jet" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="46f0-3898-3169-fa9b" name="Wand of Jet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aa3f-65aa-0868-41ed" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8a30-e4bb-3eec-ac7a" type="max"/>
           </constraints>
           <profiles>
-            <profile id="038d-5c7c-eea0-59c9" name="Wand of Jet" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="038d-5c7c-eea0-59c9" name="Wand of Jet" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer gains a +1 bonus to the result of their spell casting attempts.</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer gains a +1 casting bonus.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19243,15 +20999,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ef27-b91f-9d88-e28c" name="Scepter of Stability" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ef27-b91f-9d88-e28c" name="Scepter of Stability" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cb47-fc0b-a8d5-4294" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a83f-c65d-e0f1-5024" type="max"/>
           </constraints>
           <profiles>
-            <profile id="c73d-0a87-ee0f-8000" name="Scepter of Stability" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="c73d-0a87-ee0f-8000" name="Scepter of Stability" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer gains a +1 bonus to the result of their spell dispelling attempts.</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer gains a +1 dispel bonus.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19259,29 +21015,29 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="da0c-a92d-bf2d-649c" name="Power Familiar" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="da0c-a92d-bf2d-649c" name="Power Familiar" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="69ba-2f1d-0b58-562f" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f438-f693-06a5-738b" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f5a6-13fe-eb0b-11f5" name="Power Familiar" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="f5a6-13fe-eb0b-11f5" name="Power Familiar" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Familiar adds one Power Dice in each of your Magic phases. Only the owner may use this power dice.</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Familiar adds one Power Dice in each of your Magic phases.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="20"/>
+            <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c5d0-4769-c76f-2cac" name="Spell Familiar" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="c5d0-4769-c76f-2cac" name="Spell Familiar" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="346a-1b27-22e9-7055" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b465-bf03-8e8a-9b49" type="max"/>
           </constraints>
           <profiles>
-            <profile id="8525-01e0-aa00-e63f" name="Spell Familiar" publicationId="9e23-79cb-pubN66727" page="161" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="8525-01e0-aa00-e63f" name="Spell Familiar" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Wizard knows one additional spell from those normally allowed to them.</characteristic>
               </characteristics>
@@ -19291,13 +21047,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="795a-417c-22af-7999" name="Wizard&apos;s Staff" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="795a-417c-22af-7999" name="Wizard&apos;s Staff" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f23d-6ff3-592c-92d9" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="09ff-c1b5-5c95-0cbb" type="max"/>
           </constraints>
           <profiles>
-            <profile id="2dce-f8d8-d396-08b4" name="Wizard&apos;s Staff" publicationId="9e23-79cb-pubN66727" page="161" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="2dce-f8d8-d396-08b4" name="Wizard&apos;s Staff" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Wizard&apos;s Staff allows the bearer to use one more dice than they are normally allowed to when casting a spell (eg, a Wizard that can normally use up to two dice to cast spells will be able to use up to three dice).</characteristic>
               </characteristics>
@@ -19307,13 +21063,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b80d-1dbf-b133-bef8" name="Rod of Power" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b80d-1dbf-b133-bef8" name="Rod of Power" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ab10-65bb-49d3-811a" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="18c0-5bce-e968-72d7" type="max"/>
           </constraints>
           <profiles>
-            <profile id="003d-64af-43b4-8139" name="Rod of Power" publicationId="9e23-79cb-pubN66727" page="159" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="003d-64af-43b4-8139" name="Rod of Power" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">At the end of each magic phase (yours and enemy&apos;s), you can save up to three unused power/dispel dice from the pool and store them in the rod. At the beginning of each successive magic phase (yours and enemy&apos;s), roll a dice. If the result is equal or higher to the number of dice stored, add them to the power/dispel dice pool, if the result is lower than the number of dice stored, they are lost.</characteristic>
               </characteristics>
@@ -19323,6 +21079,40 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="f260-82db-8ea6-ee77" name="Arcane Familiar" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="60e7-3864-6793-9321" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9720-f6b3-5e27-04d0" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e77d-8604-5eb8-9fc6" name="Arcane Familiar" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Wizard can choose one Signature spell as an additional spell from any of the eight Lores of Battle Magic in this book, even if they normally cannot choose that lore.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
+          </costs>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Signature Spells" id="8a6d-0d9f-68f0-be4f" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="0. Wyssan&apos;s Wildform" hidden="false" id="ade0-0b58-f6cf-6345" type="selectionEntry" targetId="0096-7e25-66b4-9cad"/>
+                <entryLink import="true" name="0. Dark Hand of Death" hidden="false" id="22a8-dc8c-228f-bad7" type="selectionEntry" targetId="3b38-7f74-f979-94f4"/>
+                <entryLink import="true" name="0. Fireball" hidden="false" id="3d51-2f2d-4245-c200" type="selectionEntry" targetId="e899-1538-32f0-e469"/>
+                <entryLink import="true" name="0. Harmonic Convergence" hidden="false" id="75ef-3351-71b7-2ec4" type="selectionEntry" targetId="e9eb-1db7-772d-1bb5"/>
+                <entryLink import="true" name="0. Earth Blood" hidden="false" id="3a4f-9e2e-8a87-6a62" type="selectionEntry" targetId="413a-6e59-0fd2-16a8"/>
+                <entryLink import="true" name="0. Shem&apos;s Burning Gaze" hidden="false" id="34f6-f684-d267-3fa7" type="selectionEntry" targetId="6287-ea6c-c498-b86a"/>
+                <entryLink import="true" name="0. Glittering Robe" hidden="false" id="4a6e-2516-7037-bc11" type="selectionEntry" targetId="2fbe-0ca5-12f1-b74b"/>
+                <entryLink import="true" name="0. Melkoth&apos;s Mystifying Miasma" hidden="false" id="f03b-525d-2f37-4adc" type="selectionEntry" targetId="dba6-e588-0a5b-69a1"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ebba-6e9b-03b1-5d08-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ebba-6e9b-03b1-5d08-max"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="5857-a7aa-f954-a027" name="Common Enchanted Items" hidden="false" collective="false" import="true">
@@ -19330,15 +21120,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b384-6d1c-fc8d-c77d" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="7d4f-ef41-7056-3a2b" name="Wizarding Hat" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7d4f-ef41-7056-3a2b" name="Wizarding Hat" hidden="false" collective="false" import="true" type="upgrade" sortIndex="15">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6c2c-3dad-95ce-4134" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cbc6-779a-3e05-fa4c" type="max"/>
           </constraints>
           <profiles>
-            <profile id="d95a-fbd7-8810-7cf7" name="Wizarding Hat" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="d95a-fbd7-8810-7cf7" name="Wizarding Hat" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The wearer is treated as being a Level 2 Wizard who can use a randomly chosen spell lore. However, they also have Stupidity.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The wearer is treated as being a Level 2 Wizard who can use a randomly chosen spell lore from any of the Eight Lores of Magic at the start of the game.
+However, they also have the Stupidity special rule.
+Note that they may not choose any Arcane Items.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19346,15 +21138,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="50"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="bd6c-37ab-5b12-f41e" name="Fozzrik&apos;s Folding Fortress" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="bd6c-37ab-5b12-f41e" name="Fozzrik&apos;s Folding Fortress" hidden="false" collective="false" import="true" type="upgrade" sortIndex="16">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d596-01ca-e2e8-c440" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a5bb-5b98-7b78-05a5" type="max"/>
           </constraints>
           <profiles>
-            <profile id="48c8-2e13-e426-6fcd" name="Fozzrik&apos;s Folding Fortress" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="48c8-2e13-e426-6fcd" name="Fozzrik&apos;s Folding Fortress" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">After deployment zones have been agreed, but before the armies have been deployed, place a watchtower building no more than 10x10 cm in base size in your deployment zone to represent the Folding Fortress. This is treated as a standard building. If you do not have a suitable building to place, you cannot use Fozzrik&apos;s Folding Fortress.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">After deployment zones have been agreed, but before the armies have been deployed, place a watchtower building no more than 10x10 cm in base size and a maximum of 3 floors in your deployment zone to represent the Folding Fortress. This is treated as a standard building. If you do not have a suitable building to place, you cannot use Fozzrik&apos;s Folding Fortress.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19362,13 +21154,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="100"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7814-f3d5-91f9-8974" name="Orb of Thunder" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7814-f3d5-91f9-8974" name="Orb of Thunder" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5689-cf6f-8526-6ee9" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c4fa-1dce-fe3c-d2ac" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f905-bfc7-b32f-9d87" name="Orb of Thunder" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="f905-bfc7-b32f-9d87" name="Orb of Thunder" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Bound Spell, Power Level 4. Remains in play. The Orb of Thunder contains a hex spell.</characteristic>
               </characteristics>
@@ -19379,7 +21171,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. The Orb of Thunder effects all Flying models. When cast, no models may use Fly and must move on the ground at their normal M.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. The Orb of Thunder effects all models with the Fly special rule. When cast, no models may use their Fly special rule and must move on the ground at their normal Movement rate.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19387,33 +21179,33 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d96f-5374-891c-549b" name="Ruby Ring of Ruin" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d96f-5374-891c-549b" name="Ruby Ring of Ruin" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7281-e446-48ee-504d" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="38a1-1a98-b4c1-6fc2" type="max"/>
           </constraints>
           <profiles>
-            <profile id="9314-4ee5-56eb-b392" name="Ruby Ring of Ruin" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="9314-4ee5-56eb-b392" name="Ruby Ring of Ruin" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Bound spell (power level 4). The Ruby Ring of Ruin contains the Fireball spell.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="9cf7-4747-fc06-bc41" name="Fireball" hidden="false" targetId="6e57-2cc3-96fc-7f01" type="profile"/>
             <infoLink id="902a-306d-3df9-f216" name="Kindleflame" hidden="false" targetId="c198-878a-0683-0889" type="profile"/>
+            <infoLink name="Fireball" id="9e0b-b70e-f60a-15c8" hidden="false" type="profile" targetId="6e57-2cc3-96fc-7f01"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e6a0-bf8d-ddbf-fda6" name="Crown of Command" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e6a0-bf8d-ddbf-fda6" name="Crown of Command" hidden="false" collective="false" import="true" type="upgrade" sortIndex="14">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f15d-ec38-e75b-50f5" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f47c-27b3-9edf-511b" type="max"/>
           </constraints>
           <profiles>
-            <profile id="205b-7c2f-1427-2817" name="Crown of Command" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="205b-7c2f-1427-2817" name="Crown of Command" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The Crown of Command gives the bearer and any unit they join Stubborn for as long as the bearer remains with the unit.</characteristic>
               </characteristics>
@@ -19423,29 +21215,29 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="293c-5322-82e4-3db6" name="Healing Potion" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="293c-5322-82e4-3db6" name="Healing Potion" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b0d0-7983-1c04-0015" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="100f-9395-351c-2c32" type="max"/>
           </constraints>
           <profiles>
-            <profile id="6e2a-fe07-c226-d0bd" name="Healing Potion" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="6e2a-fe07-c226-d0bd" name="Healing Potion" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Healing Potion can be drunk at the start of the controlling player&apos;s turn. The model immediately recovers D3 Wounds (ignoring any additional Wounds from mounts) up to their starting value.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="25"/>
+            <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="817f-d39e-da54-a4f9" name="The Terrifying Mask of Eee!" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="817f-d39e-da54-a4f9" name="The Terrifying Mask of Eee!" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3870-4799-8160-ce47" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cc54-ceef-45ef-1fea" type="max"/>
           </constraints>
           <profiles>
-            <profile id="2f6d-8270-dcea-3d13" name="The Terrifying Mask of Eee!" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="2f6d-8270-dcea-3d13" name="The Terrifying Mask of Eee!" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The wearer of this mask causes Terror. However, other models can never use their LD.</characteristic>
               </characteristics>
@@ -19455,7 +21247,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b9e5-d92f-9308-a868" name="Potion of Speed" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b9e5-d92f-9308-a868" name="Potion of Speed" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8c8b-1b27-f343-e44c" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a0b3-b929-f284-e14e" type="max"/>
@@ -19463,7 +21255,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
           <profiles>
             <profile id="56e5-f08d-7476-5f5e" name="Potion of Speed" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Potion of Speed can be drunk at the start of any phase. The imbiber has +D3 A until the end of the turn.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Potion of Speed can be drunk at the start of any phase. The character gains +D3 Attacks until the end of the turn.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19471,15 +21263,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c358-efc9-63a1-ef71" name="Potion of Strength" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="c358-efc9-63a1-ef71" name="Potion of Strength" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aa19-55c5-ebfe-91af" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b06c-5575-9b8f-f843" type="max"/>
           </constraints>
           <profiles>
-            <profile id="428c-c4eb-4bc0-a597" name="Potion of Strength" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="428c-c4eb-4bc0-a597" name="Potion of Strength" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Potion of Strength can be drunk at the start of any phase. The imbiber has +D3 S until the end of the turn.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Potion of Strength can be drunk at the start of any phase. The character gains +D3 Strength until the end of the turn.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19487,13 +21279,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2dcc-7b33-ad44-8ec9" name="The Other Trickster&apos;s Shard" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="2dcc-7b33-ad44-8ec9" name="The Other Trickster&apos;s Shard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2746-14ab-aa38-e80b" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="99c8-3735-ee15-cf1f" type="max"/>
           </constraints>
           <profiles>
-            <profile id="0e40-7b19-6cd8-5370" name="The Other Trickster&apos;s Shard" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="0e40-7b19-6cd8-5370" name="The Other Trickster&apos;s Shard" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The bearer, and all units in base contact with them (friend and foe) must re-roll successful ward saves.</characteristic>
               </characteristics>
@@ -19503,31 +21295,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="43f4-029e-c9a6-e069" name="Ironcurse Icon" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="43f4-029e-c9a6-e069" name="Ironcurse Icon" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="458a-a366-b470-f3f6" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bc21-fe92-f52c-1623" type="max"/>
           </constraints>
           <profiles>
-            <profile id="26c2-d30a-6795-a7bd" name="Ironcurse Icon" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="26c2-d30a-6795-a7bd" name="Ironcurse Icon" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The character (and any unit they are with) gain a Ward save (6+) against war machine weapons.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b706-ccc0-394e-89a2" name="Potion of Toughness" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="025c-4b98-8f3f-448c" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="51c3-7e65-55ab-3bdc" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="da0a-6b34-bfa5-6e42" name="Potion of Toughness" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Potion of Toughness can be drunk at the start of any phase. The imbiber has +D3 T until the end of the turn.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The character (and any unit they are with) gain a Ward save (6+) against artillery weapons.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19535,13 +21311,29 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0798-f56f-270c-8065" name="Arabyan Carpet" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b706-ccc0-394e-89a2" name="Potion of Toughness" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="025c-4b98-8f3f-448c" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="51c3-7e65-55ab-3bdc" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="da0a-6b34-bfa5-6e42" name="Potion of Toughness" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Potion of Toughness can be drunk at the start of any phase. The character gains +D3 Toughness until the end of the turn.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="0798-f56f-270c-8065" name="Arabyan Carpet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fa95-6461-18ce-fb66" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1886-65c5-f5a4-20a3" type="max"/>
           </constraints>
           <profiles>
-            <profile id="e1eb-687b-4f1a-dee2" name="Arabyan Carpet" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="e1eb-687b-4f1a-dee2" name="Arabyan Carpet" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Infantry models on foot only. The owner of this magical carpet has Fly (10). However, they cannot join units.</characteristic>
               </characteristics>
@@ -19551,15 +21343,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="90c1-2dc7-8dcf-d237" name="Boots of Flight" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="90c1-2dc7-8dcf-d237" name="Boots of Flight" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6b94-ec28-940c-54ad" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2c27-0dc3-2d98-ba76" type="max"/>
           </constraints>
           <profiles>
-            <profile id="8f84-e750-605e-17fb" name="Boots of Flight" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="8f84-e750-605e-17fb" name="Boots of Flight" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Model on foot only. The Boots of Flight gives the wearer M 10 as well as Strider and Swiftstride.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Model on foot only. The Boots of Flight gives the wearer Movement 10 as well as the Strider and Swiftstride special rules.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19567,13 +21359,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="aa6b-1051-6c06-4d1c" name="Lifestone of Ashraaz" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="aa6b-1051-6c06-4d1c" name="Lifestone of Ashraaz" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="271e-d9bf-ad7c-1cea" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b26b-3427-81e1-fb62" type="max"/>
           </constraints>
           <profiles>
-            <profile id="065e-53e2-2481-bc06" name="Lifestone of Ashraaz" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="065e-53e2-2481-bc06" name="Lifestone of Ashraaz" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Lifestone of Ashraaz can be used at the start of any close combat phase. The bearer can swap his current number Wounds with the current number of Wounds of any one enemy model in base contact. The effect lasts the remainder of the game.</characteristic>
               </characteristics>
@@ -19583,15 +21375,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Warrior Familiar" hidden="false" id="6ba4-68a0-cd51-88ce" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Potion of Foolhardiness" hidden="false" id="1a39-ee3f-58d4-f19f" collective="false" sortIndex="2">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="368d-d51b-2d12-3600" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="937e-e453-33a4-97fb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ad67-4922-8653-a924" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="90c3-d928-6da1-f475" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Warrior Familiar" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="e342-0791-fb7a-a153" publicationId="9e23-79cb-pubN66727" page="163">
+            <profile name="Potion of Foolhardiness" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="59ec-0843-e6cc-55c8" publicationId="9e23-79cb-pubN66727" page="119">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The model gains an additional S 3 Attack. This does not benefit from any weapon used by the character. You may still take another Enchanted Item in addition to the Warrior Familiar, and it also does not count against the maximum points limit of magic items normally allowed for the character.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Potion of Foolhardiness can be drunk at the start of any phase. The character gains the Frenzy special rule until the end of the turn.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19606,29 +21398,29 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fba2-f6b9-4fcc-98ac" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="94a6-7c7c-aad1-4193" name="Banner of Valour" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="94a6-7c7c-aad1-4193" name="Banner of Valour" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3253-1dc5-92ee-5b88" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2540-5b13-c727-ec0e" type="max"/>
           </constraints>
           <profiles>
-            <profile id="98fe-57c4-ccae-a2d4" name="Banner of Valour" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="98fe-57c4-ccae-a2d4" name="Banner of Valour" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains Immunity (Panic).</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="20"/>
+            <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7f82-e8a2-f27b-e9f2" name="War Banner" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7f82-e8a2-f27b-e9f2" name="War Banner" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1e47-9b7a-a4a9-5c27" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2f29-d64c-d1b6-e968" type="max"/>
           </constraints>
           <profiles>
-            <profile id="328d-4e82-59a2-84a8" name="War Banner" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="328d-4e82-59a2-84a8" name="War Banner" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard adds +1 to combat resolution.</characteristic>
               </characteristics>
@@ -19638,15 +21430,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a75f-e5aa-a6a4-14c4" name="Scarecrow Banner" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="a75f-e5aa-a6a4-14c4" name="Scarecrow Banner" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e34b-c9d6-ecc7-5c34" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9953-81e7-44ac-443e" type="max"/>
           </constraints>
           <profiles>
-            <profile id="a850-abd0-3a25-b4d0" name="Scarecrow Banner" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="a850-abd0-3a25-b4d0" name="Scarecrow Banner" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard causes Fear in models with Fly.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard causes Terror in models with the Fly special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19654,13 +21446,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f51c-f68c-46a5-16ce" name="Standard of Arcane Warding" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f51c-f68c-46a5-16ce" name="Standard of Arcane Warding" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5dc6-3c24-8559-5ec0" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3df3-6d35-797f-0b66" type="max"/>
           </constraints>
           <profiles>
-            <profile id="542a-4c76-c480-92fa" name="Standard of Arcane Warding" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="542a-4c76-c480-92fa" name="Standard of Arcane Warding" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains Magic Resistance (2).</characteristic>
               </characteristics>
@@ -19670,13 +21462,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="001c-8ede-5ac4-440c" name="Razor Standard" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="001c-8ede-5ac4-440c" name="Razor Standard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="16">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="76ca-1495-d39e-1f56" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c43c-f428-b317-b30e" type="max"/>
           </constraints>
           <profiles>
-            <profile id="af1e-d3de-2351-14e1" name="Razor Standard" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="af1e-d3de-2351-14e1" name="Razor Standard" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard have Armour Piercing (1).</characteristic>
               </characteristics>
@@ -19686,45 +21478,45 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1ee7-9599-e191-164e" name="Dread Banner" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1ee7-9599-e191-164e" name="Dread Banner" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3302-4883-25b8-aae9" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="79ae-bb31-5da1-f570" type="max"/>
           </constraints>
           <profiles>
-            <profile id="d1af-9055-f967-a190" name="Dread Banner" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="d1af-9055-f967-a190" name="Dread Banner" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard causes Fear.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="25"/>
+            <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="33ad-5917-0f38-70bc" name="Ranger&apos;s Standard" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="33ad-5917-0f38-70bc" name="Ranger&apos;s Standard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a3ff-ba79-6cd8-4e27" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5ef6-9920-3e29-7b1e" type="max"/>
           </constraints>
           <profiles>
-            <profile id="195d-20c5-02e2-73be" name="Ranger&apos;s Standard" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="195d-20c5-02e2-73be" name="Ranger&apos;s Standard" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains Strider. If the unit is riding a mount, the mount benefit from Strider as well.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="25"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d191-cd5f-c3c4-012f" name="Rampager&apos;s Standard" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d191-cd5f-c3c4-012f" name="Rampager&apos;s Standard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="17">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f8d1-22f9-18e0-fa27" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="756e-f805-e6d6-7bfc" type="max"/>
           </constraints>
           <profiles>
-            <profile id="6031-44f7-6873-9453" name="Rampager&apos;s Standard" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="6031-44f7-6873-9453" name="Rampager&apos;s Standard" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard can re-roll its charge distance dice.</characteristic>
               </characteristics>
@@ -19734,7 +21526,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="97d5-2db3-5d5c-0083" name="Wailing Banner" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="97d5-2db3-5d5c-0083" name="Wailing Banner" hidden="false" collective="false" import="true" type="upgrade" sortIndex="18">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2af4-0113-5a71-808c" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9a1f-761c-04e8-c9d8" type="max"/>
@@ -19742,21 +21534,21 @@ If you want to make a list using the allied rules, make separate rosters for eac
           <profiles>
             <profile id="735f-815b-b9e3-be11" name="Wailing Banner" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard causes Terror in its enemies.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this standard gains the Terror special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="50"/>
+            <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="dfcd-5a5d-cb6c-d2bb" name="Standard of Shielding" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="dfcd-5a5d-cb6c-d2bb" name="Standard of Shielding" hidden="false" collective="false" import="true" type="upgrade" sortIndex="14">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0492-0bb0-5078-47f9" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7b69-cfb3-5d61-f5aa" type="max"/>
           </constraints>
           <profiles>
-            <profile id="b5fd-7f4d-c4c1-bb5e" name="Standard of Shielding" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="b5fd-7f4d-c4c1-bb5e" name="Standard of Shielding" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains a Ward save (6+) against missile attacks.</characteristic>
               </characteristics>
@@ -19766,13 +21558,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1aac-8bc7-07ca-4810" name="Banner of Might" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1aac-8bc7-07ca-4810" name="Banner of Might" hidden="false" collective="false" import="true" type="upgrade" sortIndex="20">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d1e-dcaa-e624-59f9" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7631-5b1e-8d69-8074" type="max"/>
           </constraints>
           <profiles>
-            <profile id="1ccb-52e7-bc46-0f38" name="Banner of Might" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="1ccb-52e7-bc46-0f38" name="Banner of Might" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gain +1 To Hit in the first round of close combat.</characteristic>
               </characteristics>
@@ -19782,15 +21574,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="55"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7c2b-33d1-5ac9-7fe9" name="Banner of Duty" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7c2b-33d1-5ac9-7fe9" name="Banner of Duty" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a93b-cea9-665b-eb3e" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="67ad-9fa9-e35d-48c9" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f014-0f4f-6777-fa43" name="Banner of Duty" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="f014-0f4f-6777-fa43" name="Banner of Duty" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains +1 to their LD when taking Rally tests.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this standard automatically pass any Rally tests.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19798,31 +21590,31 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="cef5-266e-0f43-aead" name="Banner of Swiftness" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="cef5-266e-0f43-aead" name="Banner of Swiftness" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="baff-46c2-0997-bf51" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c0be-d090-e59b-a5f6" type="max"/>
           </constraints>
           <profiles>
-            <profile id="009b-5291-4a6a-2d06" name="Banner of Swiftness" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="009b-5291-4a6a-2d06" name="Banner of Swiftness" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains Swiftstride.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this standard gains Swiftstride.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="20"/>
+            <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8ff6-6287-7b98-4783" name="Standard of Discipline" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="8ff6-6287-7b98-4783" name="Standard of Discipline" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cf7f-e2d5-0343-0898" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="67e0-34f8-5bff-e1d4" type="max"/>
           </constraints>
           <profiles>
-            <profile id="3ca5-b1f2-ffd0-b846" name="Standard of Discipline" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="3ca5-b1f2-ffd0-b846" name="Standard of Discipline" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard has +1 LD, but cannot use the General&apos;s Inspiring Presence. If the General joins this unit, other units using their Inspiring Presence do not benefit from the +1 LD.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard has +1 LD, but cannot use the General&apos;s Inspiring Presence. If a model with this special rule joins this unit, other units using their Inspiring Presence do not benefit from the +1 Leadership.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19830,13 +21622,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ad77-141b-849a-4aea" name="Lichbone Pennant" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ad77-141b-849a-4aea" name="Lichbone Pennant" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="86bc-45b8-d384-a5ca" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="36ab-c5f2-f110-0235" type="max"/>
           </constraints>
           <profiles>
-            <profile id="d212-2fd5-37a7-0c87" name="Lichbone Pennant" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="d212-2fd5-37a7-0c87" name="Lichbone Pennant" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains Magic Resistance (1).</characteristic>
               </characteristics>
@@ -19846,15 +21638,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="870b-a8ab-ff7b-bb44" name="Banner of Eternal Flame" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="870b-a8ab-ff7b-bb44" name="Banner of Eternal Flame" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a2dd-7a1f-e276-ddc8" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1ff1-8b7f-bfe8-12fc" type="max"/>
           </constraints>
           <profiles>
-            <profile id="4a88-2418-1025-19aa" name="Banner of Eternal Flame" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="4a88-2418-1025-19aa" name="Banner of Eternal Flame" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains Flaming Attacks.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this standard gains the Magical Attacks and Flaming Attacks special rules.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19862,13 +21654,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0b5a-0ee8-979e-7837" name="Gleaming Pennant" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0b5a-0ee8-979e-7837" name="Gleaming Pennant" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2bba-254c-a9e3-facf" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4b65-8193-63c8-61d8" type="max"/>
           </constraints>
           <profiles>
-            <profile id="4eb8-3ff8-bdd8-dfbf" name="Gleaming Pennant" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="4eb8-3ff8-bdd8-dfbf" name="Gleaming Pennant" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">One use only. A unit with this magic standard can re-roll its first failed LD test.</characteristic>
               </characteristics>
@@ -19878,13 +21670,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="10b3-7a9e-1d69-01fc" name="Battle Banner" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="10b3-7a9e-1d69-01fc" name="Battle Banner" hidden="false" collective="false" import="true" type="upgrade" sortIndex="21">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d3c3-0282-f268-6619" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b3dc-0e24-5e6a-5ca1" type="max"/>
           </constraints>
           <profiles>
-            <profile id="fdb4-9681-b7f6-01e9" name="Battle Banner" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="fdb4-9681-b7f6-01e9" name="Battle Banner" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard adds +D6 to combat resolution, rolled each time it is used.</characteristic>
               </characteristics>
@@ -19894,36 +21686,52 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="70"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="457e-45ee-6303-e58c" name="Banner of Courage" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="457e-45ee-6303-e58c" name="Banner of Courage" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9b33-6039-e914-24de" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1521-5139-e9fa-035c" type="max"/>
           </constraints>
           <profiles>
-            <profile id="0556-d274-dde6-2c71" name="Banner of Courage" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="0556-d274-dde6-2c71" name="Banner of Courage" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard re-roll failed Break tests.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="15"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b06b-65e8-4616-8cd4" name="Banner of Defiance" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b06b-65e8-4616-8cd4" name="Banner of Defiance" hidden="false" collective="false" import="true" type="upgrade" sortIndex="19">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f909-450b-e5da-f98c" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ec88-f5a8-8b4e-dbc5" type="max"/>
           </constraints>
           <profiles>
-            <profile id="a31e-e0b7-4c5f-1200" name="Banner of Defiance" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="a31e-e0b7-4c5f-1200" name="Banner of Defiance" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this standard gains Stubborn.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this standard gains the Stubborn special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="50"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="bd93-a127-51fd-0c29" name="Banner of Iron Resolve" hidden="false" collective="false" import="true" type="upgrade" sortIndex="15">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f08c-8ef6-4fbb-9b42" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3a8e-256f-f579-9a9d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4061-b5f9-68cb-4dac" name="Banner of Iron Resolve" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this standard gains the Immunity (Psychology) special rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -19933,17 +21741,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e8bf-02bf-4af7-5efa" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="eea1-981c-1270-d7ba" name="Enchanted shield" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="eea1-981c-1270-d7ba" name="Enchanted shield" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="20da-3f95-f54e-9d08" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="21eb-a66f-cd50-6bda" type="max"/>
           </constraints>
           <profiles>
-            <profile id="365e-d800-8bd3-1edc" name="Enchanted shield" publicationId="9e23-79cb-pubN66727" page="157" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="365e-d800-8bd3-1edc" name="Enchanted shield" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">5+</characteristic>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">4+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Shield. 5+ Armour save instead of the 6+ that a normal shield would give.</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Shield. The bearer gains +2 to their armour save, rather than +1 that a normal shield would give.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19951,17 +21759,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="bdd6-bac4-600a-9d71" name="Trickster&apos;s Helm" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="bdd6-bac4-600a-9d71" name="Trickster&apos;s Helm" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2219-1a5b-1941-a8c8" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0b54-e129-3514-3d95" type="max"/>
           </constraints>
           <profiles>
-            <profile id="de13-7bdf-fcdf-ad13" name="Trickster&apos;s Helm" publicationId="9e23-79cb-pubN66727" page="156" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="de13-7bdf-fcdf-ad13" name="Trickster&apos;s Helm" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Model on foot only. Any successful roll to wound made against the wearer of the Trickster&apos;s Helm must be re-rolled.</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Model on foot only. The helmet gives the wearer a 6+ armour save. Any successful roll to wound made against the wearer of the Trickster&apos;s Helm must be re-rolled.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19969,17 +21777,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4808-e83d-ed68-7a23" name="Dragonhelm" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="4808-e83d-ed68-7a23" name="Dragonhelm" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5fce-4ce1-16bb-8493" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="beab-012a-f0b6-b37b" type="max"/>
           </constraints>
           <profiles>
-            <profile id="fcae-7696-3cb8-33fb" name="Dragonhelm" publicationId="9e23-79cb-pubN66727" page="157" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="fcae-7696-3cb8-33fb" name="Dragonhelm" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The wearer has Immunity (Flaming Attacks).</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The wearer has the Immunity (Flaming Attacks) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19987,13 +21795,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9a5c-0e4d-2974-23d9" name="Shield of Ptolos" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="9a5c-0e4d-2974-23d9" name="Shield of Ptolos" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8732-7946-be62-b114" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="55ab-bfc9-ab83-2670" type="max"/>
           </constraints>
           <profiles>
-            <profile id="daa7-f45b-e479-ec29" name="Shield of Ptolos" publicationId="9e23-79cb-pubN66727" page="157" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="daa7-f45b-e479-ec29" name="Shield of Ptolos" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">1+</characteristic>
@@ -20005,17 +21813,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="fdc2-057c-715c-557a" name="Glittering Scales" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="fdc2-057c-715c-557a" name="Glittering Scales" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0c85-0dcc-4c2d-d783" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="39f5-e577-e363-e6d3" type="max"/>
           </constraints>
           <profiles>
-            <profile id="573d-ad01-0e3f-f406" name="Glittering Scales" publicationId="9e23-79cb-pubN66727" page="157" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="573d-ad01-0e3f-f406" name="Glittering Scales" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Light armour. Enemies suffer a -1 to hit penalty when attempting to strike the wearer in close combat.</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Light armour. Enemy models suffer -1 To Hit the wearer in close combat.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20023,13 +21831,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d125-45e5-61e6-0926" name="Spellshield" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d125-45e5-61e6-0926" name="Spellshield" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6e48-aee7-31cd-f010" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="710a-3a50-aac9-4488" type="max"/>
           </constraints>
           <profiles>
-            <profile id="84be-4d1b-6664-fca4" name="Spellshield" publicationId="9e23-79cb-pubN66727" page="157" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="84be-4d1b-6664-fca4" name="Spellshield" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
@@ -20041,17 +21849,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8ceb-acc7-6436-3aef" name="Charmed Shield" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="8ceb-acc7-6436-3aef" name="Charmed Shield" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f84b-8692-9712-1937" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1150-ec24-0bd8-f228" type="max"/>
           </constraints>
           <profiles>
-            <profile id="2f6a-b82a-3b68-2140" name="Charmed Shield" publicationId="9e23-79cb-pubN66727" page="157" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="2f6a-b82a-3b68-2140" name="Charmed Shield" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Shield. One use only. The first hit suffered by the bearer of the Charmed Shield is ignored on a roll of 2+.</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Shield. One use only. The first hit suffered by the bearer of the Charmed Shield is ignored on a roll of 2+.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20059,35 +21867,35 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ecd0-0bdb-3b07-1502" name="Gambler&apos;s Armour" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ecd0-0bdb-3b07-1502" name="Gambler&apos;s Armour" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a389-51e9-f53f-20f0" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4d37-d30a-c1c3-d45a" type="max"/>
           </constraints>
           <profiles>
-            <profile id="1be5-6ccd-a197-da65" name="Gambler&apos;s Armour" publicationId="9e23-79cb-pubN66727" page="157" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="1be5-6ccd-a197-da65" name="Gambler&apos;s Armour" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Light armour. The Gambler&apos;s Armour grants the wearer a Ward save (6+).</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Light armour. The Gambler&apos;s Armour grants the wearer a Ward save (6+).</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="20"/>
+            <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7d0d-7b73-9561-a623" name="Armour of Fortune" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7d0d-7b73-9561-a623" name="Armour of Fortune" hidden="false" collective="false" import="true" type="upgrade" sortIndex="14">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="efe6-4605-7252-00c3" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c164-3d76-3d53-8e44" type="max"/>
           </constraints>
           <profiles>
-            <profile id="0a3f-93f5-ff58-3dab" name="Armour of Fortune" publicationId="9e23-79cb-pubN66727" page="156" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="0a3f-93f5-ff58-3dab" name="Armour of Fortune" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Medium armour. The Armour of Fortune grants the wearer a Ward save (5+).</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Medium armour. The wearer gains a Ward save (5+).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20095,17 +21903,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="07d9-a853-ebb5-839c" name="Armour of Destiny" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="07d9-a853-ebb5-839c" name="Armour of Destiny" hidden="false" collective="false" import="true" type="upgrade" sortIndex="15">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d4ac-251a-e143-cdca" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f2fa-2ccf-29b3-5c2d" type="max"/>
           </constraints>
           <profiles>
-            <profile id="ca91-841a-9736-fb2c" name="Armour of Destiny" publicationId="9e23-79cb-pubN66727" page="156" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="ca91-841a-9736-fb2c" name="Armour of Destiny" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. The Armour of Destiny grants the wearer a Ward save (4+).</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. The wearer gains a Ward save (4+).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20113,31 +21921,31 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="50"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a039-9655-2c7a-f788" name="Armour of Resilience" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="a039-9655-2c7a-f788" name="Armour of Resilience" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="24f2-1ce0-8c35-dd8a" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2af3-2b92-e65d-0d3a" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f02a-c178-e4a0-c988" name="Armour of Resilience" publicationId="9e23-79cb-pubN66727" page="156" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="f02a-c178-e4a0-c988" name="Armour of Resilience" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. The Armour of Resilience grants the wearer +1 T.</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. wearer gains +1 Toughness.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="30"/>
+            <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="472c-90d3-fd34-9c83" name="Armour of Silvered Steel" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="472c-90d3-fd34-9c83" name="Armour of Silvered Steel" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="04c8-4736-2d9b-20b7" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1b8f-25f0-ab4b-2d51" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f057-c450-e055-319b" name="Armour of Silvered Steel" publicationId="9e23-79cb-pubN66727" page="157" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="f057-c450-e055-319b" name="Armour of Silvered Steel" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">2+</characteristic>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">2+</characteristic>
@@ -20149,17 +21957,53 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c6cc-112f-6b7f-8fd9" name="Helm of Discord" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="c6cc-112f-6b7f-8fd9" name="Helm of Discord" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0238-f99e-92e2-c5e2" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fb84-d683-78c3-efa7" type="max"/>
           </constraints>
           <profiles>
-            <profile id="225f-e811-fae5-e4e7" name="Helm of Discord" publicationId="9e23-79cb-pubN66727" page="157" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="225f-e811-fae5-e4e7" name="Helm of Discord" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">At the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a LD test. If the test is failed, in this Close Combat phase, the victim cannot make attacks and is hit automatically.</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The helmet gives the wearer a 6+ armour save. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the victim cannot make attacks and is hit automatically in this Close Combat round.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="dc0f-7c28-57c7-7a29" name="Shield of the Warrior True" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c005-eba9-0a20-7112" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="82eb-174d-8982-cae3" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="04a1-cdfd-e636-9898" name="Shield of the Warrior True" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+              <characteristics>
+                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
+                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Shield. The bearer gains a Ward save (5+) against missile attacks.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1080-c6f8-f772-a1d3" name="Bedazzling Helm" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e8fd-0921-e9a8-1d42" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e67c-bb0d-fb55-ff03" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="02e6-d4dc-8dec-c276" name="Bedazzling Helm" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+              <characteristics>
+                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
+                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Enemy models targeting the wearer in close combat must re-roll 6&apos;s To Hit against them.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20174,13 +22018,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b9b8-0e2a-818c-ead7" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="4c3d-e616-bd50-f4e1" name="Giant Blade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="4c3d-e616-bd50-f4e1" name="Giant Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="25">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a9c6-28d9-7555-6288" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="112a-571b-10c9-3935" type="max"/>
           </constraints>
           <profiles>
-            <profile id="fcd4-edf6-4c50-b025" name="Giant Blade" publicationId="9e23-79cb-pubN66727" page="154" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="fcd4-edf6-4c50-b025" name="Giant Blade" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+3</characteristic>
@@ -20192,17 +22036,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="45"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f535-b3be-f6a7-edf5" name="Dragon Blade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f535-b3be-f6a7-edf5" name="Dragon Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="27">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d030-ead9-86ce-1409" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="414d-dc15-216b-fdde" type="max"/>
           </constraints>
           <profiles>
-            <profile id="0d26-5432-d0b1-ae60" name="Dragon Blade" publicationId="9e23-79cb-pubN66727" page="154" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="0d26-5432-d0b1-ae60" name="Dragon Blade" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Any successful To Hit rolls in close combat with this sword are multiplied into 2 Hits.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Any successful To Hit rolls in close combat with this sword are multiplied into 2 Hits.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20210,35 +22054,35 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="70"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f11c-e029-bc6c-58b6" name="Fencer&apos;s Blades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f11c-e029-bc6c-58b6" name="Fencer&apos;s Blades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="20">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ad4b-336b-5da3-dca6" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e991-1731-46eb-6b62" type="max"/>
           </constraints>
           <profiles>
-            <profile id="a2ee-fde7-53e5-05ef" name="Fencer&apos;s Blades" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="a2ee-fde7-53e5-05ef" name="Fencer&apos;s Blades" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Two/Additional Hand Weapons. The bearer has WS 10.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Two/Additional hand weapons. The bearer has Weapon Skill 10.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="25"/>
+            <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="035f-94c7-bfd6-7707" name="Sword of Swift Slaying" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="035f-94c7-bfd6-7707" name="Sword of Swift Slaying" hidden="false" collective="false" import="true" type="upgrade" sortIndex="19">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5caa-212b-ac28-0391" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f9e1-6b0a-dad5-8ea7" type="max"/>
           </constraints>
           <profiles>
-            <profile id="3c5a-61b9-e492-ee7f" name="Sword of Swift Slaying" publicationId="9e23-79cb-pubN66727" page="154" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="3c5a-61b9-e492-ee7f" name="Sword of Swift Slaying" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this sword gains Always Strike First.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Always Strikes First special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20246,17 +22090,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7dc7-1777-0f73-b72c" name="Sword of Anti-Heroes" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7dc7-1777-0f73-b72c" name="Sword of Anti-Heroes" hidden="false" collective="false" import="true" type="upgrade" sortIndex="22">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="47a2-75ab-278a-77dd" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="27e1-8a0a-6869-1d6e" type="max"/>
           </constraints>
           <profiles>
-            <profile id="3a2f-93e5-56ba-d30e" name="Sword of Anti-Heroes" publicationId="9e23-79cb-pubN66727" page="154" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="3a2f-93e5-56ba-d30e" name="Sword of Anti-Heroes" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The bearer has +1 S and +1 A for every enemy character in base contact with them or their unit. These bonuses are calculated at the start of each round of close combat and last until its end.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains +1 Strength and +1 Attack for every enemy character in base contact with them or their unit. These bonuses are calculated at the start of each round of close combat and last until its end.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20264,17 +22108,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="fba1-e5cc-7307-66db" name="Sword of Strife" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="fba1-e5cc-7307-66db" name="Sword of Strife" hidden="false" collective="false" import="true" type="upgrade" sortIndex="23">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aec0-0239-6401-05e3" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6ab8-a2d0-92fd-3b84" type="max"/>
           </constraints>
           <profiles>
-            <profile id="32ac-cafc-3e21-01a7" name="Sword of Strife" publicationId="9e23-79cb-pubN66727" page="154" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="32ac-cafc-3e21-01a7" name="Sword of Strife" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this blade gains +2 A.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this blade gains +2 on their Attacks characteristic.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20282,31 +22126,31 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="78b7-618e-b959-a341" name="Bone Blade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="78b7-618e-b959-a341" name="Bone Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b58d-0a65-6d82-0219" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4a79-9a8b-8c0a-2792" type="max"/>
           </constraints>
           <profiles>
-            <profile id="0988-c61d-85df-0246" name="Bone Blade" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="0988-c61d-85df-0246" name="Bone Blade" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Attacks made with the Bone Blade have Multiple Wounds (D3).</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Multiple Wounds (D3) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="20"/>
+            <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="6125-e784-5cfb-86e6" name="Ogre Blade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="6125-e784-5cfb-86e6" name="Ogre Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="21">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2dac-954c-21d8-8a44" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="101a-de5b-6df2-0091" type="max"/>
           </constraints>
           <profiles>
-            <profile id="39fd-7db9-5a2c-a5dc" name="Ogre Blade" publicationId="9e23-79cb-pubN66727" page="154" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="39fd-7db9-5a2c-a5dc" name="Ogre Blade" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+2</characteristic>
@@ -20318,17 +22162,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="76fa-697f-2504-d66f" name="Sword of Bloodshed" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="76fa-697f-2504-d66f" name="Sword of Bloodshed" hidden="false" collective="false" import="true" type="upgrade" sortIndex="26">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9e44-e6a5-913a-be12" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="22fe-94be-107a-14ec" type="max"/>
           </constraints>
           <profiles>
-            <profile id="ffe9-c7d8-595f-1e72" name="Sword of Bloodshed" publicationId="9e23-79cb-pubN66727" page="154" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="ffe9-c7d8-595f-1e72" name="Sword of Bloodshed" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this blade gains +3 A.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this blade gains +3 on their Attacks characteristic.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20336,17 +22180,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="45"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="aab5-e4ae-a6bc-ad4e" name="Parrying Blade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="aab5-e4ae-a6bc-ad4e" name="Parrying Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="16">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="44ca-9896-ea54-9017" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2114-37f8-2bf1-6c35" type="max"/>
           </constraints>
           <profiles>
-            <profile id="4d07-d8e3-411f-b179" name="Parrying Blade" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="4d07-d8e3-411f-b179" name="Parrying Blade" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The character wielding this blade gains Parry (5+).</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Parry (5+) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20354,13 +22198,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="438f-4d2e-cd3a-eb4d" name="Relic Sword" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="438f-4d2e-cd3a-eb4d" name="Relic Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0c10-0f48-b6c1-102e" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7e8e-e283-e017-7c8b" type="max"/>
           </constraints>
           <profiles>
-            <profile id="b737-c9f0-8cc9-d53b" name="Relic Sword" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="b737-c9f0-8cc9-d53b" name="Relic Sword" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
@@ -20369,20 +22213,20 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="20"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f49d-c7e7-cc03-6405" name="Sword of Fortitude" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f49d-c7e7-cc03-6405" name="Sword of Fortitude" hidden="false" collective="false" import="true" type="upgrade" sortIndex="17">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b6b6-3f43-6cf6-503d" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ba28-d682-f3aa-3ca2" type="max"/>
           </constraints>
           <profiles>
-            <profile id="ccda-8d97-ba0f-ca6c" name="Sword of Fortitude" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="ccda-8d97-ba0f-ca6c" name="Sword of Fortitude" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The character, and any unit they are with, gains Immunity (Psychology).</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The character, and any unit they are with, gains the Immunity (Psychology) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20390,13 +22234,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="bbc3-4ba6-2188-1131" name="Sword of Might" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="bbc3-4ba6-2188-1131" name="Sword of Might" hidden="false" collective="false" import="true" type="upgrade" sortIndex="14">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b9e4-ff8c-9caf-4461" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7301-093c-61b6-036a" type="max"/>
           </constraints>
           <profiles>
-            <profile id="7c47-fc43-28bd-02e5" name="Sword of Might" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="7c47-fc43-28bd-02e5" name="Sword of Might" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+1</characteristic>
@@ -20408,17 +22252,18 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a77f-027d-8eaa-c8ed" name="Sword of Battle" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="a77f-027d-8eaa-c8ed" name="Sword of Battle" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8561-6089-3abc-3f79" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ed10-bb95-098b-e65d" type="max"/>
           </constraints>
           <profiles>
-            <profile id="7b51-e10f-cac6-e67b" name="Sword of Battle" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="7b51-e10f-cac6-e67b" name="Sword of Battle" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this blade gains +1 A.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this blade gains +1 on their Attacks
+characteristic.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20426,17 +22271,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e086-0469-282a-38d4" name="Venom Sword" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e086-0469-282a-38d4" name="Venom Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="35f6-c0a5-d152-ed15" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d121-688a-9670-8775" type="max"/>
           </constraints>
           <profiles>
-            <profile id="dbdc-3022-1972-c708" name="Venom Sword" publicationId="9e23-79cb-pubN66727" page="156" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="dbdc-3022-1972-c708" name="Venom Sword" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Attacks made with the Venom Sword have Poisoned Attacks.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Poisoned Attacks special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20444,17 +22289,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9432-443c-e70e-26fe" name="Shrieking Blade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="9432-443c-e70e-26fe" name="Shrieking Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ef2c-97bc-99cb-e9d0" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3573-92bd-f40a-83bb" type="max"/>
           </constraints>
           <profiles>
-            <profile id="3a90-cf91-04cc-1484" name="Shrieking Blade" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="3a90-cf91-04cc-1484" name="Shrieking Blade" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder of the Shrieking Blade causes Fear.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Fear special rile.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20462,13 +22307,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9cca-c7c4-5cfb-39f0" name="Sword of Striking" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="9cca-c7c4-5cfb-39f0" name="Sword of Striking" hidden="false" collective="false" import="true" type="upgrade" sortIndex="15">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="595a-324c-c4d6-5b05" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3be0-39f4-e46e-f38a" type="max"/>
           </constraints>
           <profiles>
-            <profile id="349a-9bc4-d242-2258" name="Sword of Striking" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="349a-9bc4-d242-2258" name="Sword of Striking" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
@@ -20480,17 +22325,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0498-8444-7181-c861" name="Blade of Slicing" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0498-8444-7181-c861" name="Blade of Slicing" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0107-d561-761f-26ee" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d2a0-01ab-8cf2-ad64" type="max"/>
           </constraints>
           <profiles>
-            <profile id="117e-9060-1f72-0ec1" name="Blade of Slicing" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="117e-9060-1f72-0ec1" name="Blade of Slicing" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this blade gains Armour Piercing (2).</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Armour Piercing (2) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20498,17 +22343,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c0d8-7820-4d5c-71e9" name="Blade of Sea Gold" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="c0d8-7820-4d5c-71e9" name="Blade of Sea Gold" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="949f-0454-386d-ae24" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6499-51a0-0eac-3c7b" type="max"/>
           </constraints>
           <profiles>
-            <profile id="ce06-3eb8-7e35-9d65" name="Blade of Sea Gold" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="ce06-3eb8-7e35-9d65" name="Blade of Sea Gold" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this blade gains Armour Piercing (3).</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Armour Piercing (3) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20516,13 +22361,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4179-dadb-d8ab-8198" name="Warrior Bane" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="4179-dadb-d8ab-8198" name="Warrior Bane" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3d82-e13e-ef2f-2784" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="864a-f967-7fa8-bbd5" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f53d-fab5-5ed9-1606" name="Warrior Bane" publicationId="9e23-79cb-pubN66727" page="156" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="f53d-fab5-5ed9-1606" name="Warrior Bane" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
@@ -20534,13 +22379,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b2af-7c52-711a-5b67" name="Tormentor Sword" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b2af-7c52-711a-5b67" name="Tormentor Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9162-e13a-8a7e-ff7b" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ec45-2002-d9cc-0713" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f47f-6758-3d8a-785b" name="Tormentor Sword" publicationId="9e23-79cb-pubN66727" page="156" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="f47f-6758-3d8a-785b" name="Tormentor Sword" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
@@ -20552,17 +22397,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0d5f-ac3d-bcfc-759b" name="Biting Blade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0d5f-ac3d-bcfc-759b" name="Biting Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d8f1-4d69-0299-dbaf" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="383f-887e-b478-f1e4" type="max"/>
           </constraints>
           <profiles>
-            <profile id="d7a3-4ba9-47fe-960a" name="Biting Blade" publicationId="9e23-79cb-pubN66727" page="156" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="d7a3-4ba9-47fe-960a" name="Biting Blade" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this blade gains Armour Piercing (1).</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Armour Piercing (1) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20570,17 +22415,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="535a-42f2-c060-9efd" name="Berserker Sword" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="535a-42f2-c060-9efd" name="Berserker Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a8ef-49b7-5fcb-2411" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="69b5-7490-ddd7-7712" type="max"/>
           </constraints>
           <profiles>
-            <profile id="9a33-d93b-f040-e3c9" name="Berserker Sword" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="9a33-d93b-f040-e3c9" name="Berserker Sword" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The bearer has Frenzy and can never lose their Frenzy.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Frenzy special rule and can never lose their Frenzy.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20588,7 +22433,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3ed0-0a47-325e-a489" name="Obsidian Blade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="3ed0-0a47-325e-a489" name="Obsidian Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="18">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="db7f-9732-8ac2-b9db" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0efd-950b-b594-8b15" type="max"/>
@@ -20598,12 +22443,66 @@ If you want to make a list using the allied rules, make separate rosters for eac
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Close combat attacks made with this sword have Ignore Armour saves.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Ignores Armour Saves special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="25"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="429c-27ef-6970-d004" name="Burning Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6229-c49f-9660-596a" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="68e0-76d6-db2b-3c1f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="29f3-bdea-09f7-f3f2" name="Burning Blade" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
+                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Flaming Attacks special rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="78ba-4175-1a6d-d0ed" name="Headsman&apos;s Axe" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d6d1-bac6-b446-85a2" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fd12-53b6-2867-f32e" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="a387-a61f-8a56-d45b" name="Headsman&apos;s Axe" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
+                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Killing Blow special rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="847b-54eb-75f6-9e61" name="Dragon Slaying Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="24">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ce2c-b628-338d-dc1d" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="79d5-e438-ad8b-ef56" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="25cd-2132-efe7-74dc" name="Dragon Slaying Sword" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
+                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Heroic Killing Blow special rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -20613,13 +22512,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7ab9-cd2a-21c5-12a2" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="0a7e-5a63-d3ce-3253" name="Talisman of Protection" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0a7e-5a63-d3ce-3253" name="Talisman of Protection" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="994d-d6a8-869a-1cca" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fd21-14a4-0da1-c25d" type="max"/>
           </constraints>
           <profiles>
-            <profile id="ff22-ae39-28e0-103e" name="Talisman of Protection" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="ff22-ae39-28e0-103e" name="Talisman of Protection" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
                 <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Talisman of Protection grants the bearer a Ward save (6+).</characteristic>
               </characteristics>
@@ -20629,13 +22528,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="afd6-a153-299c-88c4" name="Talisman of Preservation" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="afd6-a153-299c-88c4" name="Talisman of Preservation" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5140-0413-2323-4a19" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8930-ddef-c302-de07" type="max"/>
           </constraints>
           <profiles>
-            <profile id="14ce-8170-050f-a735" name="Talisman of Preservation" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="14ce-8170-050f-a735" name="Talisman of Preservation" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
                 <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Talisman of Preservation grants the bearer a Ward save (4+).</characteristic>
               </characteristics>
@@ -20645,13 +22544,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="45"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f246-4c21-10b8-b186" name="Talisman of Endurance" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f246-4c21-10b8-b186" name="Talisman of Endurance" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5fbc-0381-f262-6f19" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d20d-3ef9-08ce-73aa" type="max"/>
           </constraints>
           <profiles>
-            <profile id="0e2a-aeca-b4d5-d1ee" name="Talisman of Endurance" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="0e2a-aeca-b4d5-d1ee" name="Talisman of Endurance" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
                 <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Talisman of Endurance grants the bearer a Ward save (5+).</characteristic>
               </characteristics>
@@ -20661,15 +22560,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="968a-ebf7-08e9-a735" name="Seed of Rebirth" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="968a-ebf7-08e9-a735" name="Seed of Rebirth" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="66bb-be35-ab67-fc13" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="73dd-da68-2d82-1817" type="max"/>
           </constraints>
           <profiles>
-            <profile id="96c5-a02f-37b4-4a32" name="Seed of Rebirth" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="96c5-a02f-37b4-4a32" name="Seed of Rebirth" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The bearer of the Seed of Rebirth has Regeneration (6+).</characteristic>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The bearer of the Seed of Rebirth has the Regeneration (6+) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20677,15 +22576,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9475-b023-f368-e7e9" name="Opal Amulet" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="9475-b023-f368-e7e9" name="Opal Amulet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eaf7-8d3f-e26a-6606" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="747a-2c30-c243-27e8" type="max"/>
           </constraints>
           <profiles>
-            <profile id="07d5-6885-3d15-d1dc" name="Opal Amulet" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="07d5-6885-3d15-d1dc" name="Opal Amulet" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">One use only. The Opal Amulet bestows a Ward save (2+) against the first unsaved wound suffered by the bearer, after which its power fades and it cannot be used again during the game.</characteristic>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">One use only. The Opal Amulet bestows a Ward save (2+) against the first unsaved wound suffered by the bearer, after which its power fades and it cannot be used again during the game.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20693,13 +22592,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="5ef5-bc7d-8e86-93a1" name="Obsidian Trinket" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="5ef5-bc7d-8e86-93a1" name="Obsidian Trinket" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eeef-e721-f785-a321" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9433-66af-7618-7696" type="max"/>
           </constraints>
           <profiles>
-            <profile id="7f52-5771-b4d0-f4c2" name="Obsidian Trinket" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="7f52-5771-b4d0-f4c2" name="Obsidian Trinket" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
                 <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Obsidian Trinket grants Magic Resistance (1).</characteristic>
               </characteristics>
@@ -20709,13 +22608,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="695d-1483-60be-3710" name="Obsidian Lodestone" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="695d-1483-60be-3710" name="Obsidian Lodestone" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a1c4-f6ae-6f67-fc20" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9ba9-0945-8668-3cb9" type="max"/>
           </constraints>
           <profiles>
-            <profile id="35a6-2a0b-d269-594c" name="Obsidian Lodestone" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="35a6-2a0b-d269-594c" name="Obsidian Lodestone" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
                 <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Obsidian Lodestone grants Magic Resistance (3).</characteristic>
               </characteristics>
@@ -20725,13 +22624,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e716-d445-d848-23cb" name="Obsidian Amulet" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e716-d445-d848-23cb" name="Obsidian Amulet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="beee-f435-1af9-3394" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="13bd-997c-79a2-5671" type="max"/>
           </constraints>
           <profiles>
-            <profile id="def0-21a1-97ff-909c" name="Obsidian Amulet" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="def0-21a1-97ff-909c" name="Obsidian Amulet" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
                 <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Obsidian Amulet grants the bearer Magic Resistance (2).</characteristic>
               </characteristics>
@@ -20741,15 +22640,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0291-b00a-a412-76e3" name="Lucky Trinket" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0291-b00a-a412-76e3" name="Lucky Trinket" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7bb9-59f1-b2f8-4406" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="148f-27a8-1918-22e8" type="max"/>
           </constraints>
           <profiles>
-            <profile id="24df-897d-3df3-9768" name="Lucky Trinket" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="24df-897d-3df3-9768" name="Lucky Trinket" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">One use only. The Lucky Trinket allows the bearer to re-roll a single failed armour or Ward save.</characteristic>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">One use only. The Lucky Trinket allows the bearer to re-roll a single failed armour or Ward save.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20757,15 +22656,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="089b-f3c4-8b35-2ed8" name="Dragonbane Gem" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="089b-f3c4-8b35-2ed8" name="Pigeon Plucker Pendant" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1fa7-4cb2-cc80-3604" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1897-8816-df18-9602" type="max"/>
           </constraints>
           <profiles>
-            <profile id="8618-74a7-0c3d-7877" name="Dragonbane Gem" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="8618-74a7-0c3d-7877" name="Pigeon Plucker Pendant" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The bearer of the Dragonbane Gem has Immunity (Flaming Attacks).</characteristic>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">This item grants the bearer a Ward save (4+) against wounds caused in close combat by models that have the Fly special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20773,20 +22672,36 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="44fe-7b40-47df-f1fc" name="Dawnstone" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="44fe-7b40-47df-f1fc" name="Dawnstone" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a495-d1d9-4b92-cf0f" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="00ce-69b4-4e2a-4d2a" type="max"/>
           </constraints>
           <profiles>
-            <profile id="283b-bcb5-7a79-c1bb" name="Dawnstone" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="283b-bcb5-7a79-c1bb" name="Dawnstone" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The bearer re-rolls failed armour saves.</characteristic>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">Models on foot only. The bearer re-rolls failed armour saves.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="25"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="886a-2f02-4fa6-a156" name="Dragonbane Gem" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8156-cd49-2e5c-d01b" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9b41-aab5-42fe-02d1" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="13b2-9a9c-e94f-a8e3" name="Dragonbane Gem" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The bearer of the Dragonbane Gem has the Immunity (Flaming Attacks) special rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -20796,15 +22711,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="01e6-93d4-45a5-e661" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="e42b-1e73-99be-4cb2" name="Earthing Rod" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e42b-1e73-99be-4cb2" name="Earthing Rod" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="73ac-3b2f-15e7-89d2" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d7d3-8408-c955-9f87" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f721-f7dd-3470-9339" name="Earthing Rod" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="f721-f7dd-3470-9339" name="Earthing Rod" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. If the wizard rolls on the miscast table they can re-roll the result.</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. If the wizard suffers a miscast, they do not add the number of power dice used to the result.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20812,13 +22727,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2e4f-5876-7c4f-afa8" name="Feedback Scroll" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="2e4f-5876-7c4f-afa8" name="Feedback Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="15">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="88d4-9e02-a3db-b04e" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6535-0430-75d7-7086" type="max"/>
           </constraints>
           <profiles>
-            <profile id="6b6d-6c3f-d896-c972" name="Feedback Scroll" publicationId="9e23-79cb-pubN66727" page="159" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="6b6d-6c3f-d896-c972" name="Feedback Scroll" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. When an enemy spell has been cast, a Wizard who has a Feedback Scroll can read it instead of attempting to dispel the spell. The spell is cast as normal, but, after the spell has been resolved, roll a dice for every dice used to cast the spell. The casting Wizard takes a wound for every result of 5+ rolled, with no armour saves allowed.</characteristic>
               </characteristics>
@@ -20828,13 +22743,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="64ba-7df7-6370-a03d" name="Destroy Magic Scroll" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="64ba-7df7-6370-a03d" name="Destroy Magic Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="14">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f970-e556-915b-db0a" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6eb4-b62c-f7dd-61ae" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f9ff-b85e-b7bb-58f6" name="Destroy Magic Scroll" publicationId="9e23-79cb-pubN66727" page="159" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="f9ff-b85e-b7bb-58f6" name="Destroy Magic Scroll" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. When an enemy cast a spell, the bearer may immediately counter its effects by reading the Destroy Magic Scroll to release the spell written upon it instead of attempting to dispel the spell by using dispel dice. This gives them 6 free dispel dice to attempt to dispel the spell, which cannot be combined with any other dispel dice (Ultimate Power applies as normal). In addition, roll a D6. On a 4+, the spell is destroyed and the enemy caster loses access to the spell for the rest of the game (note that this has no effect on Innate Bound spells).</characteristic>
               </characteristics>
@@ -20844,13 +22759,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1eab-a10f-79f9-0f31" name="Power Scroll" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1eab-a10f-79f9-0f31" name="Power Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3980-e4c3-d9db-402e" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="029c-5f4c-1044-5919" type="max"/>
           </constraints>
           <profiles>
-            <profile id="7e9a-ed9e-17ae-aae3" name="Power Scroll" publicationId="9e23-79cb-pubN66727" page="161" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="7e9a-ed9e-17ae-aae3" name="Power Scroll" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. A Power Scroll can be used when the Wizard makes a casting attempt. During that casting attempt, any roll of a double (except 1&apos;s) counts as a 6 for the purpose of resolving Ultimate Power.</characteristic>
               </characteristics>
@@ -20860,13 +22775,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1bca-76e7-989c-1492" name="Power Stone" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1bca-76e7-989c-1492" name="Power Stone" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ddf6-281f-bf14-1db3" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d4e0-5e64-88d3-13d2" type="max"/>
           </constraints>
           <profiles>
-            <profile id="071f-734a-988b-ec00" name="Power Stone" publicationId="9e23-79cb-pubN66727" page="161" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="071f-734a-988b-ec00" name="Power Stone" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Wizard can declare that they are using the power stone immediately before casting a spell If they do so, D3 dice are added to the power dice that they are going to roll (you still need to roll at least one dice from the power pool).</characteristic>
               </characteristics>
@@ -20876,15 +22791,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="fa6d-0d69-b2f0-fea1" name="Forbidden Rod" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="fa6d-0d69-b2f0-fea1" name="Forbidden Rod" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a257-ca79-c728-4902" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b7f3-7d0a-27b0-bbc1" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f8f8-7267-a4a3-754c" name="Forbidden Rod" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="f8f8-7267-a4a3-754c" name="Forbidden Rod" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The forbidden rod adds +D6 dice to the power pool at the start of the caster&apos;s own magic phase, but also inflicts 1 wounds on the bearer (with no armour saves allowed).</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Forbidden Rod adds +D6 dice to the power pool at the start of the caster&apos;s own magic phase, but also inflicts 1 Wound which Ignores Armour Saves on the bearer.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20892,13 +22807,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d037-6c00-769f-1ad5" name="Dispel Scroll" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d037-6c00-769f-1ad5" name="Dispel Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e13d-7c39-f2da-7b54" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="30a8-ba65-7bb3-238c" type="max"/>
           </constraints>
           <profiles>
-            <profile id="7138-9ba7-c563-e803" name="Dispel Scroll" publicationId="9e23-79cb-pubN66727" page="159" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="7138-9ba7-c563-e803" name="Dispel Scroll" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. When an enemy spell has been cast, a wizard who has a dispel scroll can read it instead of attempting to dispel the spell by using dispel dice. This gives them 6 free dice to attempt to dispel the spell, which cannot be combined with any other dispel dice. This may also be used to dispel spells that Remains in Play.</characteristic>
               </characteristics>
@@ -20908,15 +22823,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d683-a87d-6274-ce86" name="Luckstone" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d683-a87d-6274-ce86" name="Luckstone" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a066-9f1b-3fec-549b" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0144-dbe7-bb8b-3f28" type="max"/>
           </constraints>
           <profiles>
-            <profile id="a416-013d-d7bd-da32" name="Luckstone" publicationId="9e23-79cb-pubN66727" page="161" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="a416-013d-d7bd-da32" name="Luckstone" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. Once per battle, the bearer can re-roll all of the dice rolled to cast or dispel a spell. This can effectively cancel a miscast result, and cause Ultimate Power or a miscast.</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The bearer can re-roll all of the dice rolled to cast or dispel a spell. This can effectively cancel a miscast result, and cause Ultimate Power or a miscast.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20924,13 +22839,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b952-58d9-9e85-89c5" name="The Mystic Shield of Brag" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b952-58d9-9e85-89c5" name="The Mystic Shield of Brag" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5251-b9b6-7802-7f60" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e523-ef4a-572f-4de3" type="max"/>
           </constraints>
           <profiles>
-            <profile id="fde5-a92c-81ad-70eb" name="The Mystic Shield of Brag" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="fde5-a92c-81ad-70eb" name="The Mystic Shield of Brag" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Mystic Shield of Brag may be used against any enemy spell that directly targets any friendly unit. The enemy spell has no effect.</characteristic>
               </characteristics>
@@ -20940,15 +22855,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3959-2708-ac14-d394" name="Scroll of Shielding" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="3959-2708-ac14-d394" name="Scroll of Shielding" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eef5-b5a2-9073-077f" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7b55-2313-3b74-3f51" type="max"/>
           </constraints>
           <profiles>
-            <profile id="7ed3-78d9-47ec-98ef" name="Scroll of Shielding" publicationId="9e23-79cb-pubN66727" page="161" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="7ed3-78d9-47ec-98ef" name="Scroll of Shielding" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. When an enemy spell has been cast, a Wizard who has a Scroll of Shielding can read it instead of attempting to dispel the spell. The spell is cast as normal, but the target of the spell is granted Magic Resistance (4+) against the spell.</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. When an enemy spell has been cast, a Wizard who has a Scroll of Shielding can read it instead of attempting to dispel the spell. The spell is cast as normal, but the target of the spell is granted Magic Resistance (3) against the spell.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20956,29 +22871,29 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c2e4-9231-019b-032c" name="Trickster&apos;s Shard" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="c2e4-9231-019b-032c" name="Trickster&apos;s Shard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7793-ca87-7e37-215b" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="50d4-b387-bab7-9521" type="max"/>
           </constraints>
           <profiles>
-            <profile id="fcd2-f098-64b6-b785" name="Trickster&apos;s Shard" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="fcd2-f098-64b6-b785" name="Trickster&apos;s Shard" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. Declare you are using this item at the start of one of your magic phases. For the duration of the phase, when one of the bearer&apos;s spells is dispelled by an enemy wizard, roll a D6. On a 4+, that wizard suffers a wound with no armour saves allowed.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="20"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="bb99-1ac3-14c2-42bc" name="Scroll of Leeching" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="bb99-1ac3-14c2-42bc" name="Scroll of Leeching" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="024a-28e9-b4c2-82a6" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3ba4-967d-2331-8ee9" type="max"/>
           </constraints>
           <profiles>
-            <profile id="0c06-9d37-7112-96ad" name="Scroll of Leeching" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="0c06-9d37-7112-96ad" name="Scroll of Leeching" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. When an enemy spell has been cast, a Wizard who has a Scroll of Leeching can read it instead of attempting to dispel the spell. The spell is cast as normal, but, after the spell has been resolved, the bearer of the scroll adds a number of dispel dice to his pool equal to the number of dice used to cast the spell.</characteristic>
               </characteristics>
@@ -20988,13 +22903,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="5bd3-a6b3-4b76-e84a" name="Sivejir&apos;s Hex Scroll" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="5bd3-a6b3-4b76-e84a" name="Sivejir&apos;s Hex Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="16">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9f26-5fa5-baa2-a621" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e0b9-f1ce-b606-d256" type="max"/>
           </constraints>
           <profiles>
-            <profile id="767f-223e-8681-d4f5" name="Sivejir&apos;s Hex Scroll" publicationId="9e23-79cb-pubN66727" page="159" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="767f-223e-8681-d4f5" name="Sivejir&apos;s Hex Scroll" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. When an enemy spell has been cast, a Wizard who has a Hex Scroll can read it instead of attempting to dispel the spell. The spell is cast as normal, but a portion of the spell&apos;s energy is transformed and redirected at the caster. The enemy wizard can resist the spell&apos;s effects by rolling equal to or under his wizard level on a D6. If he fails, a he becomes a toad! Whilst transformed, the wizard cannot channel or cast spells, all of his magic items and mundane equipment (armour, weapons, etc.) temporarily stop working and all of his characteristics are reduced to 1 (except for his wounds, which are unaffected). His controlling player can roll a D6 at the start of each of his subsequent magic phases; the spell dissipates on a roll of 4+ and the wizard returns to his normal form.</characteristic>
               </characteristics>
@@ -21004,13 +22919,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9f44-d50e-1211-7778" name="Mystic Maze" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="9f44-d50e-1211-7778" name="Mystic Maze" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="de22-5186-82dc-ee4f" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5a96-0ead-e044-768f" type="max"/>
           </constraints>
           <profiles>
-            <profile id="6857-5447-3d98-7f51" name="Mystic Maze" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="6857-5447-3d98-7f51" name="Mystic Maze" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Mystic Maze may be used against any enemy spell that directly targets any friendly unit. Roll 3D6 measured from the centre of the unit; this is the distance the spell scatters in a random direction. Should the spell end up on another unit, this unit will become the target of the spell; otherwise the spell has no effect.</characteristic>
               </characteristics>
@@ -21020,15 +22935,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0b2c-e149-2e25-a59f" name="The Gem of Taranto" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0b2c-e149-2e25-a59f" name="The Gem of Taranto" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7a37-b09b-1872-ffd6" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="365c-c783-3e65-0d4f" type="max"/>
           </constraints>
           <profiles>
-            <profile id="9c70-a5bf-15fa-3600" name="The Gem of Taranto" publicationId="9e23-79cb-pubN66727" page="161" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="9c70-a5bf-15fa-3600" name="The Gem of Taranto" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Gem of Taranto can be used whenever you successfully dispel an enemy spell (except Bound Spells). The bearer of the Gem will be able to cast the spell themselves (limited by their Wizard level as normal) for the remainder of the game, even if it is from a lore not normally available to them.</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Gem of Taranto can be used whenever you successfully dispel an enemy spell (except Summoning or Innate Bound Spells). The bearer of the Gem will be able to cast the spell themselves (limited by their Wizard level as normal) for the remainder of the game, even if it is from a lore not normally available to them.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -21036,13 +22951,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c715-5311-5a0a-f397" name="Hypnotic Eye Scroll" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="c715-5311-5a0a-f397" name="Hypnotic Eye Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2fde-c310-ede5-7d9d" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dead-10da-aed7-c044" type="max"/>
           </constraints>
           <profiles>
-            <profile id="209c-7ef1-14e7-a227" name="Hypnotic Eye Scroll" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="209c-7ef1-14e7-a227" name="Hypnotic Eye Scroll" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Hypnotic Eye Scroll can be used whenever an enemy wizard successfully casts a spell instead of attempting to dispel. The casting wizard must pass a LD test; if failed, you may choose the target of the spell just as if you had cast the spell yourself. If no target can be chosen, the spell has no effect. Note that the spell is still cast from the original Wizard as normal.</characteristic>
               </characteristics>
@@ -21479,7 +23394,7 @@ A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Ter
       <description>If a weapon requires two hands to use, it is not possible for a model to use a shield or buckler alongside it in close combat (although a shield can still be used against wounds caused by shooting or magic).</description>
     </rule>
     <rule id="01e3-7f81-20e3-45fe" name="Mighty Blow (1)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
-      <description>Models with this rule gain a S bonus to all their close combat attacks (including Impact Hits and Stomps) equal to the number in the brackets in the first round of each new close combat they are involved in. Note that any attack made with a weapon that gives Strength Bonus only applies to attacks made with the weapon itself. This rule is cumulative with other sources of Strength Bonus.</description>
+      <description>Models with this rule gain a S bonus to all their close combat attacks (including Impact Hits and Stomps) equal to the number in the brackets in the first round of each new close combat they are involved in. Note that any attack made with a weapon that gives Mighty Blow only applies to attacks made with the weapon itself. This rule is cumulative with other sources of Mighty Blow.</description>
     </rule>
     <rule id="43ca-96e5-8a47-2d39" name="Volley Fire" publicationId="9e23-79cb-pubN66727" page="84" hidden="false">
       <description>Weapons with this rule allow the unit to fire with all models within range in the Shooting Phase as long as at least one model in the unit can draw Line of Sight to the target. However, if they do so, they suffer -1 To Hit. A unit cannot Volley Fire if it moved earlier in the turn or if the target is within half the weapon&apos;s maximum range. Note that Volley Fire cannot be used as Stand &amp; Shoot charge reaction.</description>
@@ -21861,7 +23776,7 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
       <description>Units entirely composed of models with this special rule do not need to pass a Leadership test in order to march, regardless of the proximity of enemy units.</description>
     </rule>
     <rule id="2017-de4c-6670-21ba" name="Choppas" publicationId="9e23-79cb-pubN78975" page="107" hidden="false">
-      <description>Models with Choppas get Strength Bonus (1).</description>
+      <description>Models with Choppas get Mighty Blow (1).</description>
     </rule>
     <rule id="4a8b-1056-0bcd-e293" name="Fall Over" publicationId="9e23-79cb-pubN67565" page="83" hidden="false">
       <description>A Giant must test to see whether it falls over if any of the following apply:
@@ -21912,7 +23827,7 @@ special rule in close combat. However, this cannot be
 used against enemies that attack before the model with
 Elven Grace.</description>
     </rule>
-    <rule id="eb46-96d2-9469-4905" name="Cold-Blooded" publicationId="9e23-79cb-pubN77402" page="59" hidden="false">
+    <rule id="eb46-96d2-9469-4905" name="Cold-Blooded" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>Whenever the model takes a LD test, it rolls an additional dice and discards the highest result.</description>
     </rule>
     <rule id="44e1-ad81-2f8b-49db" name="Divine Power" publicationId="315d-135b-135c-07ce" page="179" hidden="false">
@@ -22445,6 +24360,9 @@ Other than the aforementioned inaccuracy of the scatter, an indirect shot from 
     <rule name="Loner" id="32b6-55f6-6cc6-8fc4" hidden="false" publicationId="9e23-79cb-pubN66727" page="62">
       <description>A character with this special rule cannot be your Army General and cannot join a unit without this special rule. A unit with this special rule cannot be joined by a character without this special rule.</description>
     </rule>
+    <rule id="4cc1-bc54-7778-c333" name="Loremaster" publicationId="9e23-79cb-pubN66727" page="63" hidden="false">
+      <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="3ecc-5d9c-7d29-ee2f" name="Javelins" publicationId="9e23-79cb-pubN66727" page="81" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
@@ -22542,7 +24460,7 @@ Other than the aforementioned inaccuracy of the scatter, an indirect shot from 
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Strength Bonus (2), +2 I (Both, only in the turn the unit charges and only against the charged unit).</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Mighty Blow (2), +2 I (Both, only in the turn the unit charges and only against the charged unit).</characteristic>
       </characteristics>
     </profile>
     <profile id="487e-16a4-8ab8-2c85" name="Shortbow" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
