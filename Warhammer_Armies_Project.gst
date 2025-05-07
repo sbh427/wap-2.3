@@ -19188,6 +19188,11 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <infoLink name="Buckler" id="2ca1-86fa-a28b-8bfb" hidden="false" targetId="1700-a7e5-d272-ef20" type="profile"/>
       </infoLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Loremaster" hidden="false" id="a2bf-14a5-6723-7157">
+      <infoLinks>
+        <infoLink name="Loremaster" id="db31-1473-718a-a423" hidden="false" type="rule" targetId="4cc1-bc54-7778-c333"/>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="6cd2-3f4b-da2d-1ee9" name="Common Arcane Items" hidden="false" collective="false" import="true">
@@ -19195,7 +19200,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="271f-2a52-52aa-7ed9" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="fa16-077f-18b1-27d8" name="Channeling Staff" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
+        <selectionEntry id="fa16-077f-18b1-27d8" name="Channeling Staff" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d34-21b9-f917-cb3a" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cc3a-6611-f489-63ee" type="max"/>
@@ -19203,28 +19208,28 @@ If you want to make a list using the allied rules, make separate rosters for eac
           <profiles>
             <profile id="2d29-f545-3f04-272e" name="Channeling Staff" publicationId="9e23-79cb-pubN66727" page="159" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Wizard adds +1 to all of their channelling attempts.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="40"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="60b4-7c66-f1ea-4a0a" name="Book of Ashur" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8114-9d43-2592-b073" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8d6c-9c6a-acb1-64fb" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="5e94-c8f9-ff18-3b00" name="Book of Ashur" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Wizard gains Loremaster.</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Wizard rolls one additional dice whenever they attempt to channel power or dispel dice.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="60b4-7c66-f1ea-4a0a" name="Book of Ashur" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8114-9d43-2592-b073" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8d6c-9c6a-acb1-64fb" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="5e94-c8f9-ff18-3b00" name="Book of Ashur" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Wizard gains the Loremaster special rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="46f0-3898-3169-fa9b" name="Wand of Jet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
@@ -19233,9 +19238,9 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8a30-e4bb-3eec-ac7a" type="max"/>
           </constraints>
           <profiles>
-            <profile id="038d-5c7c-eea0-59c9" name="Wand of Jet" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="038d-5c7c-eea0-59c9" name="Wand of Jet" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer gains a +1 bonus to the result of their spell casting attempts.</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer gains a +1 casting bonus.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19249,9 +19254,9 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a83f-c65d-e0f1-5024" type="max"/>
           </constraints>
           <profiles>
-            <profile id="c73d-0a87-ee0f-8000" name="Scepter of Stability" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="c73d-0a87-ee0f-8000" name="Scepter of Stability" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer gains a +1 bonus to the result of their spell dispelling attempts.</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer gains a +1 dispel bonus.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19259,20 +19264,20 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="da0c-a92d-bf2d-649c" name="Power Familiar" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
+        <selectionEntry id="da0c-a92d-bf2d-649c" name="Power Familiar" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="69ba-2f1d-0b58-562f" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f438-f693-06a5-738b" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f5a6-13fe-eb0b-11f5" name="Power Familiar" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="f5a6-13fe-eb0b-11f5" name="Power Familiar" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Familiar adds one Power Dice in each of your Magic phases. Only the owner may use this power dice.</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Familiar adds one Power Dice in each of your Magic phases.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="20"/>
+            <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="c5d0-4769-c76f-2cac" name="Spell Familiar" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
@@ -19281,7 +19286,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b465-bf03-8e8a-9b49" type="max"/>
           </constraints>
           <profiles>
-            <profile id="8525-01e0-aa00-e63f" name="Spell Familiar" publicationId="9e23-79cb-pubN66727" page="161" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="8525-01e0-aa00-e63f" name="Spell Familiar" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Wizard knows one additional spell from those normally allowed to them.</characteristic>
               </characteristics>
@@ -19297,7 +19302,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="09ff-c1b5-5c95-0cbb" type="max"/>
           </constraints>
           <profiles>
-            <profile id="2dce-f8d8-d396-08b4" name="Wizard&apos;s Staff" publicationId="9e23-79cb-pubN66727" page="161" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="2dce-f8d8-d396-08b4" name="Wizard&apos;s Staff" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Wizard&apos;s Staff allows the bearer to use one more dice than they are normally allowed to when casting a spell (eg, a Wizard that can normally use up to two dice to cast spells will be able to use up to three dice).</characteristic>
               </characteristics>
@@ -19307,13 +19312,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b80d-1dbf-b133-bef8" name="Rod of Power" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
+        <selectionEntry id="b80d-1dbf-b133-bef8" name="Rod of Power" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ab10-65bb-49d3-811a" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="18c0-5bce-e968-72d7" type="max"/>
           </constraints>
           <profiles>
-            <profile id="003d-64af-43b4-8139" name="Rod of Power" publicationId="9e23-79cb-pubN66727" page="159" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="003d-64af-43b4-8139" name="Rod of Power" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">At the end of each magic phase (yours and enemy&apos;s), you can save up to three unused power/dispel dice from the pool and store them in the rod. At the beginning of each successive magic phase (yours and enemy&apos;s), roll a dice. If the result is equal or higher to the number of dice stored, add them to the power/dispel dice pool, if the result is lower than the number of dice stored, they are lost.</characteristic>
               </characteristics>
@@ -19321,6 +19326,22 @@ If you want to make a list using the allied rules, make separate rosters for eac
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="30"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="f260-82db-8ea6-ee77" name="Arcane Familiar" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="60e7-3864-6793-9321" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9720-f6b3-5e27-04d0" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="e77d-8604-5eb8-9fc6" name="Arcane Familiar" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Wizard can choose one Signature spell as an additional spell from any of the eight Lores of Battle Magic in this book, even if they normally cannot choose that lore.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -19955,11 +19976,11 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="21eb-a66f-cd50-6bda" type="max"/>
           </constraints>
           <profiles>
-            <profile id="365e-d800-8bd3-1edc" name="Enchanted shield" publicationId="9e23-79cb-pubN66727" page="157" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="365e-d800-8bd3-1edc" name="Enchanted shield" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">5+</characteristic>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">4+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Shield. 5+ Armour save instead of the 6+ that a normal shield would give.</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Shield. The bearer gains +2 to their armour save, rather than +1 that a normal shield would give.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19967,17 +19988,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="bdd6-bac4-600a-9d71" name="Trickster&apos;s Helm" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
+        <selectionEntry id="bdd6-bac4-600a-9d71" name="Trickster&apos;s Helm" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2219-1a5b-1941-a8c8" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0b54-e129-3514-3d95" type="max"/>
           </constraints>
           <profiles>
-            <profile id="de13-7bdf-fcdf-ad13" name="Trickster&apos;s Helm" publicationId="9e23-79cb-pubN66727" page="156" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="de13-7bdf-fcdf-ad13" name="Trickster&apos;s Helm" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Model on foot only. Any successful roll to wound made against the wearer of the Trickster&apos;s Helm must be re-rolled.</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Model on foot only. The helmet gives the wearer a 6+ armour save. Any successful roll to wound made against the wearer of the Trickster&apos;s Helm must be re-rolled.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19991,11 +20012,11 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="beab-012a-f0b6-b37b" type="max"/>
           </constraints>
           <profiles>
-            <profile id="fcae-7696-3cb8-33fb" name="Dragonhelm" publicationId="9e23-79cb-pubN66727" page="157" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="fcae-7696-3cb8-33fb" name="Dragonhelm" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The wearer has Immunity (Flaming Attacks).</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The wearer has the Immunity (Flaming Attacks) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20003,13 +20024,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9a5c-0e4d-2974-23d9" name="Shield of Ptolos" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
+        <selectionEntry id="9a5c-0e4d-2974-23d9" name="Shield of Ptolos" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8732-7946-be62-b114" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="55ab-bfc9-ab83-2670" type="max"/>
           </constraints>
           <profiles>
-            <profile id="daa7-f45b-e479-ec29" name="Shield of Ptolos" publicationId="9e23-79cb-pubN66727" page="157" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="daa7-f45b-e479-ec29" name="Shield of Ptolos" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">1+</characteristic>
@@ -20021,17 +20042,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="fdc2-057c-715c-557a" name="Glittering Scales" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
+        <selectionEntry id="fdc2-057c-715c-557a" name="Glittering Scales" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0c85-0dcc-4c2d-d783" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="39f5-e577-e363-e6d3" type="max"/>
           </constraints>
           <profiles>
-            <profile id="573d-ad01-0e3f-f406" name="Glittering Scales" publicationId="9e23-79cb-pubN66727" page="157" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="573d-ad01-0e3f-f406" name="Glittering Scales" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Light armour. Enemies suffer a -1 to hit penalty when attempting to strike the wearer in close combat.</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Light armour. Enemy models suffer -1 To Hit the wearer in close combat.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20039,13 +20060,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d125-45e5-61e6-0926" name="Spellshield" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
+        <selectionEntry id="d125-45e5-61e6-0926" name="Spellshield" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6e48-aee7-31cd-f010" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="710a-3a50-aac9-4488" type="max"/>
           </constraints>
           <profiles>
-            <profile id="84be-4d1b-6664-fca4" name="Spellshield" publicationId="9e23-79cb-pubN66727" page="157" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="84be-4d1b-6664-fca4" name="Spellshield" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
@@ -20063,11 +20084,11 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1150-ec24-0bd8-f228" type="max"/>
           </constraints>
           <profiles>
-            <profile id="2f6a-b82a-3b68-2140" name="Charmed Shield" publicationId="9e23-79cb-pubN66727" page="157" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="2f6a-b82a-3b68-2140" name="Charmed Shield" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Shield. One use only. The first hit suffered by the bearer of the Charmed Shield is ignored on a roll of 2+.</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Shield. One use only. The first hit suffered by the bearer of the Charmed Shield is ignored on a roll of 2+.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20075,35 +20096,35 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ecd0-0bdb-3b07-1502" name="Gambler&apos;s Armour" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
+        <selectionEntry id="ecd0-0bdb-3b07-1502" name="Gambler&apos;s Armour" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a389-51e9-f53f-20f0" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4d37-d30a-c1c3-d45a" type="max"/>
           </constraints>
           <profiles>
-            <profile id="1be5-6ccd-a197-da65" name="Gambler&apos;s Armour" publicationId="9e23-79cb-pubN66727" page="157" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="1be5-6ccd-a197-da65" name="Gambler&apos;s Armour" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Light armour. The Gambler&apos;s Armour grants the wearer a Ward save (6+).</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Light armour. The Gambler&apos;s Armour grants the wearer a Ward save (6+).</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="20"/>
+            <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7d0d-7b73-9561-a623" name="Armour of Fortune" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
+        <selectionEntry id="7d0d-7b73-9561-a623" name="Armour of Fortune" hidden="false" collective="false" import="true" type="upgrade" sortIndex="14">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="efe6-4605-7252-00c3" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c164-3d76-3d53-8e44" type="max"/>
           </constraints>
           <profiles>
-            <profile id="0a3f-93f5-ff58-3dab" name="Armour of Fortune" publicationId="9e23-79cb-pubN66727" page="156" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="0a3f-93f5-ff58-3dab" name="Armour of Fortune" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Medium armour. The Armour of Fortune grants the wearer a Ward save (5+).</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Medium armour. The wearer gains a Ward save (5+).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20111,17 +20132,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="07d9-a853-ebb5-839c" name="Armour of Destiny" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
+        <selectionEntry id="07d9-a853-ebb5-839c" name="Armour of Destiny" hidden="false" collective="false" import="true" type="upgrade" sortIndex="15">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d4ac-251a-e143-cdca" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f2fa-2ccf-29b3-5c2d" type="max"/>
           </constraints>
           <profiles>
-            <profile id="ca91-841a-9736-fb2c" name="Armour of Destiny" publicationId="9e23-79cb-pubN66727" page="156" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="ca91-841a-9736-fb2c" name="Armour of Destiny" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. The Armour of Destiny grants the wearer a Ward save (4+).</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. The wearer gains a Ward save (4+).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20135,25 +20156,25 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2af3-2b92-e65d-0d3a" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f02a-c178-e4a0-c988" name="Armour of Resilience" publicationId="9e23-79cb-pubN66727" page="156" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="f02a-c178-e4a0-c988" name="Armour of Resilience" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. The Armour of Resilience grants the wearer +1 T.</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. wearer gains +1 Toughness.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="30"/>
+            <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="472c-90d3-fd34-9c83" name="Armour of Silvered Steel" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
+        <selectionEntry id="472c-90d3-fd34-9c83" name="Armour of Silvered Steel" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="04c8-4736-2d9b-20b7" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1b8f-25f0-ab4b-2d51" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f057-c450-e055-319b" name="Armour of Silvered Steel" publicationId="9e23-79cb-pubN66727" page="157" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="f057-c450-e055-319b" name="Armour of Silvered Steel" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">2+</characteristic>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">2+</characteristic>
@@ -20165,17 +20186,53 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c6cc-112f-6b7f-8fd9" name="Helm of Discord" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
+        <selectionEntry id="c6cc-112f-6b7f-8fd9" name="Helm of Discord" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0238-f99e-92e2-c5e2" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fb84-d683-78c3-efa7" type="max"/>
           </constraints>
           <profiles>
-            <profile id="225f-e811-fae5-e4e7" name="Helm of Discord" publicationId="9e23-79cb-pubN66727" page="157" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="225f-e811-fae5-e4e7" name="Helm of Discord" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">At the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a LD test. If the test is failed, in this Close Combat phase, the victim cannot make attacks and is hit automatically.</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The helmet gives the wearer a 6+ armour save. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the victim cannot make attacks and is hit automatically in this Close Combat round.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="dc0f-7c28-57c7-7a29" name="Shield of the Warrior True" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c005-eba9-0a20-7112" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="82eb-174d-8982-cae3" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="04a1-cdfd-e636-9898" name="Shield of the Warrior True" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+              <characteristics>
+                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
+                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Shield. The bearer gains a Ward save (5+) against missile attacks.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="1080-c6f8-f772-a1d3" name="Bedazzling Helm" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e8fd-0921-e9a8-1d42" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e67c-bb0d-fb55-ff03" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="02e6-d4dc-8dec-c276" name="Bedazzling Helm" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+              <characteristics>
+                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
+                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Enemy models targeting the wearer in close combat must re-roll 6&apos;s To Hit against them.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20190,13 +20247,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b9b8-0e2a-818c-ead7" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="4c3d-e616-bd50-f4e1" name="Giant Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="22">
+        <selectionEntry id="4c3d-e616-bd50-f4e1" name="Giant Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="25">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a9c6-28d9-7555-6288" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="112a-571b-10c9-3935" type="max"/>
           </constraints>
           <profiles>
-            <profile id="fcd4-edf6-4c50-b025" name="Giant Blade" publicationId="9e23-79cb-pubN66727" page="154" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="fcd4-edf6-4c50-b025" name="Giant Blade" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+3</characteristic>
@@ -20208,17 +20265,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="45"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f535-b3be-f6a7-edf5" name="Dragon Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="24">
+        <selectionEntry id="f535-b3be-f6a7-edf5" name="Dragon Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="27">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d030-ead9-86ce-1409" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="414d-dc15-216b-fdde" type="max"/>
           </constraints>
           <profiles>
-            <profile id="0d26-5432-d0b1-ae60" name="Dragon Blade" publicationId="9e23-79cb-pubN66727" page="154" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="0d26-5432-d0b1-ae60" name="Dragon Blade" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Any successful To Hit rolls in close combat with this sword are multiplied into 2 Hits.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Any successful To Hit rolls in close combat with this sword are multiplied into 2 Hits.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20226,35 +20283,35 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="70"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f11c-e029-bc6c-58b6" name="Fencer&apos;s Blades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="16">
+        <selectionEntry id="f11c-e029-bc6c-58b6" name="Fencer&apos;s Blades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="20">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ad4b-336b-5da3-dca6" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e991-1731-46eb-6b62" type="max"/>
           </constraints>
           <profiles>
-            <profile id="a2ee-fde7-53e5-05ef" name="Fencer&apos;s Blades" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="a2ee-fde7-53e5-05ef" name="Fencer&apos;s Blades" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Two/Additional Hand Weapons. The bearer has WS 10.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Two/Additional hand weapons. The bearer has Weapon Skill 10.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="25"/>
+            <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="035f-94c7-bfd6-7707" name="Sword of Swift Slaying" hidden="false" collective="false" import="true" type="upgrade" sortIndex="18">
+        <selectionEntry id="035f-94c7-bfd6-7707" name="Sword of Swift Slaying" hidden="false" collective="false" import="true" type="upgrade" sortIndex="19">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5caa-212b-ac28-0391" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f9e1-6b0a-dad5-8ea7" type="max"/>
           </constraints>
           <profiles>
-            <profile id="3c5a-61b9-e492-ee7f" name="Sword of Swift Slaying" publicationId="9e23-79cb-pubN66727" page="154" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="3c5a-61b9-e492-ee7f" name="Sword of Swift Slaying" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this sword gains Always Strike First.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Always Strikes First special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20262,17 +20319,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7dc7-1777-0f73-b72c" name="Sword of Anti-Heroes" hidden="false" collective="false" import="true" type="upgrade" sortIndex="20">
+        <selectionEntry id="7dc7-1777-0f73-b72c" name="Sword of Anti-Heroes" hidden="false" collective="false" import="true" type="upgrade" sortIndex="22">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="47a2-75ab-278a-77dd" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="27e1-8a0a-6869-1d6e" type="max"/>
           </constraints>
           <profiles>
-            <profile id="3a2f-93e5-56ba-d30e" name="Sword of Anti-Heroes" publicationId="9e23-79cb-pubN66727" page="154" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="3a2f-93e5-56ba-d30e" name="Sword of Anti-Heroes" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The bearer has +1 S and +1 A for every enemy character in base contact with them or their unit. These bonuses are calculated at the start of each round of close combat and last until its end.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains +1 Strength and +1 Attack for every enemy character in base contact with them or their unit. These bonuses are calculated at the start of each round of close combat and last until its end.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20280,17 +20337,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="fba1-e5cc-7307-66db" name="Sword of Strife" hidden="false" collective="false" import="true" type="upgrade" sortIndex="21">
+        <selectionEntry id="fba1-e5cc-7307-66db" name="Sword of Strife" hidden="false" collective="false" import="true" type="upgrade" sortIndex="23">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aec0-0239-6401-05e3" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6ab8-a2d0-92fd-3b84" type="max"/>
           </constraints>
           <profiles>
-            <profile id="32ac-cafc-3e21-01a7" name="Sword of Strife" publicationId="9e23-79cb-pubN66727" page="154" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="32ac-cafc-3e21-01a7" name="Sword of Strife" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this blade gains +2 A.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this blade gains +2 on their Attacks characteristic.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20298,31 +20355,31 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="78b7-618e-b959-a341" name="Bone Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
+        <selectionEntry id="78b7-618e-b959-a341" name="Bone Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b58d-0a65-6d82-0219" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4a79-9a8b-8c0a-2792" type="max"/>
           </constraints>
           <profiles>
-            <profile id="0988-c61d-85df-0246" name="Bone Blade" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="0988-c61d-85df-0246" name="Bone Blade" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Attacks made with the Bone Blade have Multiple Wounds (D3).</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Multiple Wounds (D3) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="20"/>
+            <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="6125-e784-5cfb-86e6" name="Ogre Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="19">
+        <selectionEntry id="6125-e784-5cfb-86e6" name="Ogre Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="21">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2dac-954c-21d8-8a44" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="101a-de5b-6df2-0091" type="max"/>
           </constraints>
           <profiles>
-            <profile id="39fd-7db9-5a2c-a5dc" name="Ogre Blade" publicationId="9e23-79cb-pubN66727" page="154" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="39fd-7db9-5a2c-a5dc" name="Ogre Blade" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+2</characteristic>
@@ -20334,17 +20391,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="76fa-697f-2504-d66f" name="Sword of Bloodshed" hidden="false" collective="false" import="true" type="upgrade" sortIndex="23">
+        <selectionEntry id="76fa-697f-2504-d66f" name="Sword of Bloodshed" hidden="false" collective="false" import="true" type="upgrade" sortIndex="26">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9e44-e6a5-913a-be12" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="22fe-94be-107a-14ec" type="max"/>
           </constraints>
           <profiles>
-            <profile id="ffe9-c7d8-595f-1e72" name="Sword of Bloodshed" publicationId="9e23-79cb-pubN66727" page="154" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="ffe9-c7d8-595f-1e72" name="Sword of Bloodshed" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this blade gains +3 A.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this blade gains +3 on their Attacks characteristic.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20352,17 +20409,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="45"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="aab5-e4ae-a6bc-ad4e" name="Parrying Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
+        <selectionEntry id="aab5-e4ae-a6bc-ad4e" name="Parrying Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="16">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="44ca-9896-ea54-9017" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2114-37f8-2bf1-6c35" type="max"/>
           </constraints>
           <profiles>
-            <profile id="4d07-d8e3-411f-b179" name="Parrying Blade" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="4d07-d8e3-411f-b179" name="Parrying Blade" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The character wielding this blade gains Parry (5+).</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Parry (5+) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20370,13 +20427,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="438f-4d2e-cd3a-eb4d" name="Relic Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="14">
+        <selectionEntry id="438f-4d2e-cd3a-eb4d" name="Relic Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0c10-0f48-b6c1-102e" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7e8e-e283-e017-7c8b" type="max"/>
           </constraints>
           <profiles>
-            <profile id="b737-c9f0-8cc9-d53b" name="Relic Sword" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="b737-c9f0-8cc9-d53b" name="Relic Sword" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
@@ -20385,20 +20442,20 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="20"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f49d-c7e7-cc03-6405" name="Sword of Fortitude" hidden="false" collective="false" import="true" type="upgrade" sortIndex="15">
+        <selectionEntry id="f49d-c7e7-cc03-6405" name="Sword of Fortitude" hidden="false" collective="false" import="true" type="upgrade" sortIndex="17">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b6b6-3f43-6cf6-503d" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ba28-d682-f3aa-3ca2" type="max"/>
           </constraints>
           <profiles>
-            <profile id="ccda-8d97-ba0f-ca6c" name="Sword of Fortitude" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="ccda-8d97-ba0f-ca6c" name="Sword of Fortitude" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The character, and any unit they are with, gains Immunity (Psychology).</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The character, and any unit they are with, gains the Immunity (Psychology) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20406,13 +20463,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="bbc3-4ba6-2188-1131" name="Sword of Might" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
+        <selectionEntry id="bbc3-4ba6-2188-1131" name="Sword of Might" hidden="false" collective="false" import="true" type="upgrade" sortIndex="14">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b9e4-ff8c-9caf-4461" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7301-093c-61b6-036a" type="max"/>
           </constraints>
           <profiles>
-            <profile id="7c47-fc43-28bd-02e5" name="Sword of Might" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="7c47-fc43-28bd-02e5" name="Sword of Might" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+1</characteristic>
@@ -20424,17 +20481,18 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a77f-027d-8eaa-c8ed" name="Sword of Battle" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
+        <selectionEntry id="a77f-027d-8eaa-c8ed" name="Sword of Battle" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8561-6089-3abc-3f79" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ed10-bb95-098b-e65d" type="max"/>
           </constraints>
           <profiles>
-            <profile id="7b51-e10f-cac6-e67b" name="Sword of Battle" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="7b51-e10f-cac6-e67b" name="Sword of Battle" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this blade gains +1 A.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this blade gains +1 on their Attacks
+characteristic.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20442,17 +20500,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e086-0469-282a-38d4" name="Venom Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
+        <selectionEntry id="e086-0469-282a-38d4" name="Venom Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="35f6-c0a5-d152-ed15" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d121-688a-9670-8775" type="max"/>
           </constraints>
           <profiles>
-            <profile id="dbdc-3022-1972-c708" name="Venom Sword" publicationId="9e23-79cb-pubN66727" page="156" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="dbdc-3022-1972-c708" name="Venom Sword" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Attacks made with the Venom Sword have Poisoned Attacks.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Poisoned Attacks special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20460,17 +20518,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9432-443c-e70e-26fe" name="Shrieking Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
+        <selectionEntry id="9432-443c-e70e-26fe" name="Shrieking Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ef2c-97bc-99cb-e9d0" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3573-92bd-f40a-83bb" type="max"/>
           </constraints>
           <profiles>
-            <profile id="3a90-cf91-04cc-1484" name="Shrieking Blade" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="3a90-cf91-04cc-1484" name="Shrieking Blade" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder of the Shrieking Blade causes Fear.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Fear special rile.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20478,13 +20536,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9cca-c7c4-5cfb-39f0" name="Sword of Striking" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
+        <selectionEntry id="9cca-c7c4-5cfb-39f0" name="Sword of Striking" hidden="false" collective="false" import="true" type="upgrade" sortIndex="15">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="595a-324c-c4d6-5b05" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3be0-39f4-e46e-f38a" type="max"/>
           </constraints>
           <profiles>
-            <profile id="349a-9bc4-d242-2258" name="Sword of Striking" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="349a-9bc4-d242-2258" name="Sword of Striking" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
@@ -20496,17 +20554,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0498-8444-7181-c861" name="Blade of Slicing" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
+        <selectionEntry id="0498-8444-7181-c861" name="Blade of Slicing" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0107-d561-761f-26ee" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d2a0-01ab-8cf2-ad64" type="max"/>
           </constraints>
           <profiles>
-            <profile id="117e-9060-1f72-0ec1" name="Blade of Slicing" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="117e-9060-1f72-0ec1" name="Blade of Slicing" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this blade gains Armour Piercing (2).</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Armour Piercing (2) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20514,17 +20572,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c0d8-7820-4d5c-71e9" name="Blade of Sea Gold" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
+        <selectionEntry id="c0d8-7820-4d5c-71e9" name="Blade of Sea Gold" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="949f-0454-386d-ae24" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6499-51a0-0eac-3c7b" type="max"/>
           </constraints>
           <profiles>
-            <profile id="ce06-3eb8-7e35-9d65" name="Blade of Sea Gold" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="ce06-3eb8-7e35-9d65" name="Blade of Sea Gold" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this blade gains Armour Piercing (3).</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Armour Piercing (3) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20532,13 +20590,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4179-dadb-d8ab-8198" name="Warrior Bane" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
+        <selectionEntry id="4179-dadb-d8ab-8198" name="Warrior Bane" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3d82-e13e-ef2f-2784" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="864a-f967-7fa8-bbd5" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f53d-fab5-5ed9-1606" name="Warrior Bane" publicationId="9e23-79cb-pubN66727" page="156" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="f53d-fab5-5ed9-1606" name="Warrior Bane" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
@@ -20550,13 +20608,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b2af-7c52-711a-5b67" name="Tormentor Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
+        <selectionEntry id="b2af-7c52-711a-5b67" name="Tormentor Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9162-e13a-8a7e-ff7b" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ec45-2002-d9cc-0713" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f47f-6758-3d8a-785b" name="Tormentor Sword" publicationId="9e23-79cb-pubN66727" page="156" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="f47f-6758-3d8a-785b" name="Tormentor Sword" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
@@ -20574,11 +20632,11 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="383f-887e-b478-f1e4" type="max"/>
           </constraints>
           <profiles>
-            <profile id="d7a3-4ba9-47fe-960a" name="Biting Blade" publicationId="9e23-79cb-pubN66727" page="156" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="d7a3-4ba9-47fe-960a" name="Biting Blade" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this blade gains Armour Piercing (1).</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Armour Piercing (1) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20586,17 +20644,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="535a-42f2-c060-9efd" name="Berserker Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
+        <selectionEntry id="535a-42f2-c060-9efd" name="Berserker Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a8ef-49b7-5fcb-2411" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="69b5-7490-ddd7-7712" type="max"/>
           </constraints>
           <profiles>
-            <profile id="9a33-d93b-f040-e3c9" name="Berserker Sword" publicationId="9e23-79cb-pubN66727" page="155" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="9a33-d93b-f040-e3c9" name="Berserker Sword" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The bearer has Frenzy and can never lose their Frenzy.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Frenzy special rule and can never lose their Frenzy.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20604,7 +20662,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3ed0-0a47-325e-a489" name="Obsidian Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="17">
+        <selectionEntry id="3ed0-0a47-325e-a489" name="Obsidian Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="18">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="db7f-9732-8ac2-b9db" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0efd-950b-b594-8b15" type="max"/>
@@ -20614,12 +20672,66 @@ If you want to make a list using the allied rules, make separate rosters for eac
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Close combat attacks made with this sword have Ignore Armour saves.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Ignores Armour Saves special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="25"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="429c-27ef-6970-d004" name="Burning Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6229-c49f-9660-596a" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="68e0-76d6-db2b-3c1f" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="29f3-bdea-09f7-f3f2" name="Burning Blade" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
+                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Flaming Attacks special rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="78ba-4175-1a6d-d0ed" name="Headsman&apos;s Axe" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d6d1-bac6-b446-85a2" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fd12-53b6-2867-f32e" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="a387-a61f-8a56-d45b" name="Headsman&apos;s Axe" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
+                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Killing Blow special rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="847b-54eb-75f6-9e61" name="Dragon Slaying Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="24">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ce2c-b628-338d-dc1d" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="79d5-e438-ad8b-ef56" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="25cd-2132-efe7-74dc" name="Dragon Slaying Sword" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+              <characteristics>
+                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
+                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Heroic Killing Blow special rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -20629,13 +20741,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7ab9-cd2a-21c5-12a2" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="0a7e-5a63-d3ce-3253" name="Talisman of Protection" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
+        <selectionEntry id="0a7e-5a63-d3ce-3253" name="Talisman of Protection" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="994d-d6a8-869a-1cca" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fd21-14a4-0da1-c25d" type="max"/>
           </constraints>
           <profiles>
-            <profile id="ff22-ae39-28e0-103e" name="Talisman of Protection" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="ff22-ae39-28e0-103e" name="Talisman of Protection" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
                 <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Talisman of Protection grants the bearer a Ward save (6+).</characteristic>
               </characteristics>
@@ -20645,13 +20757,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="afd6-a153-299c-88c4" name="Talisman of Preservation" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
+        <selectionEntry id="afd6-a153-299c-88c4" name="Talisman of Preservation" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5140-0413-2323-4a19" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8930-ddef-c302-de07" type="max"/>
           </constraints>
           <profiles>
-            <profile id="14ce-8170-050f-a735" name="Talisman of Preservation" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="14ce-8170-050f-a735" name="Talisman of Preservation" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
                 <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Talisman of Preservation grants the bearer a Ward save (4+).</characteristic>
               </characteristics>
@@ -20661,13 +20773,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="45"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f246-4c21-10b8-b186" name="Talisman of Endurance" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
+        <selectionEntry id="f246-4c21-10b8-b186" name="Talisman of Endurance" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5fbc-0381-f262-6f19" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d20d-3ef9-08ce-73aa" type="max"/>
           </constraints>
           <profiles>
-            <profile id="0e2a-aeca-b4d5-d1ee" name="Talisman of Endurance" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="0e2a-aeca-b4d5-d1ee" name="Talisman of Endurance" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
                 <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Talisman of Endurance grants the bearer a Ward save (5+).</characteristic>
               </characteristics>
@@ -20677,15 +20789,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="968a-ebf7-08e9-a735" name="Seed of Rebirth" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
+        <selectionEntry id="968a-ebf7-08e9-a735" name="Seed of Rebirth" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="66bb-be35-ab67-fc13" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="73dd-da68-2d82-1817" type="max"/>
           </constraints>
           <profiles>
-            <profile id="96c5-a02f-37b4-4a32" name="Seed of Rebirth" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="96c5-a02f-37b4-4a32" name="Seed of Rebirth" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The bearer of the Seed of Rebirth has Regeneration (6+).</characteristic>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The bearer of the Seed of Rebirth has the Regeneration (6+) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20693,15 +20805,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9475-b023-f368-e7e9" name="Opal Amulet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
+        <selectionEntry id="9475-b023-f368-e7e9" name="Opal Amulet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eaf7-8d3f-e26a-6606" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="747a-2c30-c243-27e8" type="max"/>
           </constraints>
           <profiles>
-            <profile id="07d5-6885-3d15-d1dc" name="Opal Amulet" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="07d5-6885-3d15-d1dc" name="Opal Amulet" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">One use only. The Opal Amulet bestows a Ward save (2+) against the first unsaved wound suffered by the bearer, after which its power fades and it cannot be used again during the game.</characteristic>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">One use only. The Opal Amulet bestows a Ward save (2+) against the first unsaved wound suffered by the bearer, after which its power fades and it cannot be used again during the game.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20709,13 +20821,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="5ef5-bc7d-8e86-93a1" name="Obsidian Trinket" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
+        <selectionEntry id="5ef5-bc7d-8e86-93a1" name="Obsidian Trinket" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eeef-e721-f785-a321" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9433-66af-7618-7696" type="max"/>
           </constraints>
           <profiles>
-            <profile id="7f52-5771-b4d0-f4c2" name="Obsidian Trinket" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="7f52-5771-b4d0-f4c2" name="Obsidian Trinket" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
                 <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Obsidian Trinket grants Magic Resistance (1).</characteristic>
               </characteristics>
@@ -20725,13 +20837,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="695d-1483-60be-3710" name="Obsidian Lodestone" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
+        <selectionEntry id="695d-1483-60be-3710" name="Obsidian Lodestone" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a1c4-f6ae-6f67-fc20" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9ba9-0945-8668-3cb9" type="max"/>
           </constraints>
           <profiles>
-            <profile id="35a6-2a0b-d269-594c" name="Obsidian Lodestone" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="35a6-2a0b-d269-594c" name="Obsidian Lodestone" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
                 <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Obsidian Lodestone grants Magic Resistance (3).</characteristic>
               </characteristics>
@@ -20741,13 +20853,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e716-d445-d848-23cb" name="Obsidian Amulet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
+        <selectionEntry id="e716-d445-d848-23cb" name="Obsidian Amulet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="beee-f435-1af9-3394" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="13bd-997c-79a2-5671" type="max"/>
           </constraints>
           <profiles>
-            <profile id="def0-21a1-97ff-909c" name="Obsidian Amulet" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="def0-21a1-97ff-909c" name="Obsidian Amulet" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
                 <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Obsidian Amulet grants the bearer Magic Resistance (2).</characteristic>
               </characteristics>
@@ -20763,9 +20875,9 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="148f-27a8-1918-22e8" type="max"/>
           </constraints>
           <profiles>
-            <profile id="24df-897d-3df3-9768" name="Lucky Trinket" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="24df-897d-3df3-9768" name="Lucky Trinket" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">One use only. The Lucky Trinket allows the bearer to re-roll a single failed armour or Ward save.</characteristic>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">One use only. The Lucky Trinket allows the bearer to re-roll a single failed armour or Ward save.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20773,15 +20885,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="089b-f3c4-8b35-2ed8" name="Dragonbane Gem" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
+        <selectionEntry id="089b-f3c4-8b35-2ed8" name="Pigeon Plucker Pendant" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1fa7-4cb2-cc80-3604" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1897-8816-df18-9602" type="max"/>
           </constraints>
           <profiles>
-            <profile id="8618-74a7-0c3d-7877" name="Dragonbane Gem" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="8618-74a7-0c3d-7877" name="Pigeon Plucker Pendant" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The bearer of the Dragonbane Gem has Immunity (Flaming Attacks).</characteristic>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">This item grants the bearer a Ward save (4+) against wounds caused in close combat by models that have the Fly special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20789,20 +20901,36 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="44fe-7b40-47df-f1fc" name="Dawnstone" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
+        <selectionEntry id="44fe-7b40-47df-f1fc" name="Dawnstone" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a495-d1d9-4b92-cf0f" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="00ce-69b4-4e2a-4d2a" type="max"/>
           </constraints>
           <profiles>
-            <profile id="283b-bcb5-7a79-c1bb" name="Dawnstone" publicationId="9e23-79cb-pubN66727" page="158" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="283b-bcb5-7a79-c1bb" name="Dawnstone" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The bearer re-rolls failed armour saves.</characteristic>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">Models on foot only. The bearer re-rolls failed armour saves.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="25"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="886a-2f02-4fa6-a156" name="Dragonbane Gem" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8156-cd49-2e5c-d01b" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9b41-aab5-42fe-02d1" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="13b2-9a9c-e94f-a8e3" name="Dragonbane Gem" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The bearer of the Dragonbane Gem has the Immunity (Flaming Attacks) special rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -22460,6 +22588,9 @@ Other than the aforementioned inaccuracy of the scatter, an indirect shot from 
     </rule>
     <rule name="Loner" id="32b6-55f6-6cc6-8fc4" hidden="false" publicationId="9e23-79cb-pubN66727" page="62">
       <description>A character with this special rule cannot be your Army General and cannot join a unit without this special rule. A unit with this special rule cannot be joined by a character without this special rule.</description>
+    </rule>
+    <rule id="4cc1-bc54-7778-c333" name="Loremaster" publicationId="9e23-79cb-pubN66727" page="63" hidden="false">
+      <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
