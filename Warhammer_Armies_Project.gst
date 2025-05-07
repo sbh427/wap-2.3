@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="9e23-79cb-afed-cf4c" name="Warhammer Armies Project" revision="55" battleScribeVersion="2.03" authorName="L3610N 115" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="9e23-79cb-afed-cf4c" name="Warhammer Armies Project" revision="55" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://discordapp.com/invite/UrrPB3T</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publicationDate="07.09.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
