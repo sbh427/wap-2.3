@@ -3305,7 +3305,7 @@ Note that a shot from a war machine with an engineering rune is a magical attack
         </profile>
         <profile id="54ff-1639-66ce-b75c" name="1" publicationId="aa7b-3583-0834-7bfa" page="171" hidden="false" typeId="be65-e0af-7bd1-11ca" typeName="Boiler Incident Table">
           <characteristics>
-            <characteristic name="Result" typeId="27a6-de3a-b042-66d2">Remove the Deathroller as a casualty. All units in base contact with the Deathroller suffer D6 S 4 Hits with Armour Piercing (1).</characteristic>
+            <characteristic name="Result" typeId="27a6-de3a-b042-66d2">Remove the Deathroller as a casualty. All units in base contact with the Deathroller suffer D6 Strength 4 Hits with Armour Piercing (1).</characteristic>
           </characteristics>
         </profile>
         <profile id="6d61-92bc-0b5a-2651" name="02-04" publicationId="aa7b-3583-0834-7bfa" page="171" hidden="false" typeId="be65-e0af-7bd1-11ca" typeName="Boiler Incident Table">
@@ -3388,27 +3388,17 @@ Note that a shot from a war machine with an engineering rune is a magical attack
       </costs>
     </selectionEntry>
     <selectionEntry id="b3af-4ce8-e520-e652" name="Cannon" hidden="false" collective="false" import="true" type="model">
-      <profiles>
-        <profile id="f717-4ea9-ec9c-957d" name="Cannon" publicationId="aa7b-3583-0834-7bfa" page="165" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215"/>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35"/>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">7</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
-            <characteristic name="LD" typeId="a199-f10b-a038-5730"/>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Machine (Cannon)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <infoLinks>
         <infoLink id="dd95-54ee-54a4-ba74" name="Cannon" hidden="false" targetId="4f25-d6c7-f4da-a808" type="profile"/>
         <infoLink id="0bb0-b8fc-9977-d211" name="Grapeshot" hidden="false" targetId="78db-91d9-aaca-d5ba" type="profile"/>
         <infoLink name="Firing a Cannon" id="517e-8f92-8254-8915" hidden="false" type="rule" targetId="1b5a-8c3a-7e3d-0e2e"/>
         <infoLink name="Firing Grapeshot" id="c43b-9941-a7ce-0a78" hidden="false" type="rule" targetId="493e-43ce-ef2f-2beb"/>
+        <infoLink name="Warmachine" id="e3ab-91bf-eaa2-1ab6" hidden="false" type="profile" targetId="80b1-ed85-bde1-fa07">
+          <modifiers>
+            <modifier type="set" value="Cannon" field="name"/>
+            <modifier type="append" value="(Cannon)" field="13f9-a26b-05af-3459"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="119f-b0c7-ee30-2e0f" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -3471,25 +3461,15 @@ Note that a shot from a war machine with an engineering rune is a magical attack
       </costs>
     </selectionEntry>
     <selectionEntry id="b652-8f92-7472-2429" name="Grudge Thrower" hidden="false" collective="false" import="true" type="model">
-      <profiles>
-        <profile id="a4b4-d00b-5ec6-95de" name="Grudge Thrower" publicationId="aa7b-3583-0834-7bfa" page="166" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215"/>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35"/>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">7</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
-            <characteristic name="LD" typeId="a199-f10b-a038-5730"/>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Machine (Stone Thrower)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <infoLinks>
         <infoLink id="2758-793d-4723-26af" name="Stone Thrower" hidden="false" targetId="8651-78f3-14e9-f66b" type="profile"/>
         <infoLink name="Firing a Stone Thrower" id="4cac-159e-d9ab-ba52" hidden="false" type="rule" targetId="0638-a1ac-c907-7ee2"/>
+        <infoLink name="Warmachine" id="f60d-64eb-13ec-0bb7" hidden="false" type="profile" targetId="80b1-ed85-bde1-fa07">
+          <modifiers>
+            <modifier type="set" value="Grudge Thrower" field="name"/>
+            <modifier type="append" value="(Stone Thrower)" field="13f9-a26b-05af-3459"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8042-eae8-d3b1-a471" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -3552,25 +3532,15 @@ Note that a shot from a war machine with an engineering rune is a magical attack
       </costs>
     </selectionEntry>
     <selectionEntry id="f2b3-d6f7-270a-5dfd" name="Bolt Thrower" hidden="false" collective="false" import="true" type="model">
-      <profiles>
-        <profile id="53bc-38d1-e960-c320" name="Bolt Thrower" publicationId="aa7b-3583-0834-7bfa" page="167" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215"/>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35"/>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">7</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
-            <characteristic name="LD" typeId="a199-f10b-a038-5730"/>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Machine (Bolt Thrower)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <infoLinks>
         <infoLink id="ce3d-b6a1-814b-0e2b" name="Bolt Thrower" hidden="false" targetId="2d26-2a21-00a2-685d" type="profile"/>
         <infoLink name="Firing a Blot Thrower" id="0008-dd51-5fed-ef43" hidden="false" type="rule" targetId="f55b-b981-fae7-afa2"/>
+        <infoLink name="Warmachine" id="6c68-2101-9dfa-4ade" hidden="false" type="profile" targetId="80b1-ed85-bde1-fa07">
+          <modifiers>
+            <modifier type="set" value="Bolt Thrower" field="name"/>
+            <modifier type="append" value="(Bolt Thrower)" field="13f9-a26b-05af-3459"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="1304-7ddd-bede-f35a" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -3648,14 +3618,6 @@ Note that a shot from a war machine with an engineering rune is a magical attack
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Normal Infantry</characteristic>
           </characteristics>
         </profile>
-        <profile id="25f1-8083-aa91-7654" name="Firethrower" publicationId="aa7b-3583-0834-7bfa" page="170" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
-          <characteristics>
-            <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Fire Thrower</characteristic>
-            <characteristic name="Range" typeId="1c88-efb0-083f-b945"/>
-            <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4</characteristic>
-            <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Flaming Attacks. Slow to Fire.</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <rules>
         <rule id="755a-8fd5-d2eb-3756" name="Firethrower" publicationId="aa7b-3583-0834-7bfa" page="222" hidden="false">
@@ -3667,6 +3629,11 @@ Note that a shot from a war machine with an engineering rune is a magical attack
         <infoLink id="5088-1680-0a12-97d3" name="Resolute" hidden="false" targetId="7da8-9e3b-77c9-cc8a" type="rule"/>
         <infoLink id="fb7f-1f24-f137-f1ed" name="Relentless" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
         <infoLink name="Firing a Fire Thrower" id="d8b4-88b3-a64b-f8da" hidden="false" type="rule" targetId="5184-235f-3d04-5636"/>
+        <infoLink name="Fire Thrower" id="7ef0-ae2e-bc1c-8762" hidden="false" type="profile" targetId="d259-6f2a-d6a9-0eec">
+          <modifiers>
+            <modifier type="set" value="4" field="6ca0-d074-628f-e276"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ed4c-e03d-f607-b4f1" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -3993,14 +3960,6 @@ Additional hand weapon that does not give the model the Parry special rule.</cha
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Machine</characteristic>
           </characteristics>
         </profile>
-        <profile id="85af-4ae3-cbb7-f5e5" name="Organ Gun" publicationId="aa7b-3583-0834-7bfa" page="168" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
-          <characteristics>
-            <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">War Machine</characteristic>
-            <characteristic name="Range" typeId="1c88-efb0-083f-b945">30&quot;</characteristic>
-            <characteristic name="Strength" typeId="6ca0-d074-628f-e276">5</characteristic>
-            <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Armour Piercing (1). Multiple Shots (Artillery Dice + 2D6). Slow to Fire.</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <categoryLinks>
         <categoryLink id="eae0-4ed2-847e-cf7a" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -4063,33 +4022,15 @@ Additional hand weapon that does not give the model the Parry special rule.</cha
       </costs>
       <infoLinks>
         <infoLink name="Firing an Organ Gun" id="0b33-26a0-a258-e5be" hidden="false" type="rule" targetId="516f-a12a-2ccc-9ac7"/>
+        <infoLink name="Organ Gun" id="20e4-e659-177f-6f99" hidden="false" type="profile" targetId="a0a6-193b-9eb5-ffe9">
+          <modifiers>
+            <modifier type="set" value="30&quot;" field="1c88-efb0-083f-b945"/>
+            <modifier type="replace" value="+ 2D6" field="d3a4-721b-f750-5564" arg="+ D6"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
     </selectionEntry>
     <selectionEntry id="e585-57bc-25dc-59c4" name="Flame Cannon" hidden="false" collective="false" import="true" type="model">
-      <profiles>
-        <profile id="4a50-32f3-d440-67a4" name="Flame Cannon" publicationId="aa7b-3583-0834-7bfa" page="169" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215"/>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35"/>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">7</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
-            <characteristic name="LD" typeId="a199-f10b-a038-5730"/>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Machine (Fire Thrower)</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="d85c-e9cc-8979-f63c" name="Flame Cannon" publicationId="aa7b-3583-0834-7bfa" page="169" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
-          <characteristics>
-            <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Fire Thrower</characteristic>
-            <characteristic name="Range" typeId="1c88-efb0-083f-b945">12&quot;</characteristic>
-            <characteristic name="Strength" typeId="6ca0-d074-628f-e276">5</characteristic>
-            <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Flaming Attacks. Multiple Wounds (D3). Slow to Fire.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <categoryLinks>
         <categoryLink id="1a44-de1c-0f8c-9429" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
       </categoryLinks>
@@ -4151,6 +4092,19 @@ Additional hand weapon that does not give the model the Parry special rule.</cha
       </costs>
       <infoLinks>
         <infoLink name="Firing a Fire Thrower" id="7b42-af02-711d-68b9" hidden="false" type="rule" targetId="5184-235f-3d04-5636"/>
+        <infoLink name="Warmachine" id="8eda-faac-e7bd-1155" hidden="false" type="profile" targetId="80b1-ed85-bde1-fa07">
+          <modifiers>
+            <modifier type="set" value="Flame Cannon" field="name"/>
+            <modifier type="append" value="(Fire Thrower)" field="13f9-a26b-05af-3459"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Fire Thrower" id="b604-06d7-faaf-1706" hidden="false" type="profile" targetId="d259-6f2a-d6a9-0eec">
+          <modifiers>
+            <modifier type="set" value="Flame Cannon" field="name"/>
+            <modifier type="set" value="12&quot;" field="1c88-efb0-083f-b945"/>
+            <modifier type="append" value="Multiple Wounds (D3)" field="d3a4-721b-f750-5564"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
     </selectionEntry>
     <selectionEntry id="78f8-d239-5ba6-9977" name="Rune Guardians" hidden="false" collective="false" import="true" type="unit">
@@ -4260,7 +4214,7 @@ Additional hand weapon that does not give the model the Parry special rule.</cha
                   </constraints>
                   <rules>
                     <rule id="aafa-2f1a-2cc6-89d8" name="Rune of Warding" publicationId="aa7b-3583-0834-7bfa" page="172" hidden="false">
-                      <description>The Rune Guardian gains a Ward save (6+).</description>
+                      <description>The Rune Guardian gains a Ward Save (6+).</description>
                     </rule>
                   </rules>
                   <costs>
@@ -4371,7 +4325,7 @@ Additional hand weapon that does not give the model the Parry special rule.</cha
       </profiles>
       <rules>
         <rule id="8fa1-803d-73c4-7bf0" name="Disaster!" publicationId="aa7b-3583-0834-7bfa" page="177" hidden="false">
-          <description>If the Thunderbarge is destroyed it scatters 3D6&quot; in a random direction and then crashes to the ground. Place the large template with the hole under its final position. Any model touched by the template suffers a S 6 hit.</description>
+          <description>If the Thunderbarge is destroyed it scatters 3D6&quot; in a random direction and then crashes to the ground. Place the large template with the hole under its final position. Any model touched by the template suffers a Strength 6 hit.</description>
         </rule>
         <rule id="b70a-630d-cc2c-b393" name="Thunderbarge Cannon" publicationId="aa7b-3583-0834-7bfa" page="177" hidden="false">
           <description>The Thunderbarge is armed with a Cannon, which cannot fire grapeshot. The cannon can be fired even if the Thunderbarge marches. If the cannon misfires and roll a &quot;Destroyed!&quot; result, then the Thunderarge suffers D3 Wounds with no saves allowed, and the weapon may no longer be used for the remainder of the game. Other misfires are resolved as normal.</description>
@@ -4694,7 +4648,7 @@ If a Gyrocopter Dive Bombs, it cannot make any other shooting attacks in that tu
                     <rule name="Kraggi, Assitant at the Forge" id="fd12-2d82-a692-d950" hidden="false" publicationId="aa7b-3583-0834-7bfa" page="181">
                       <description>Kraggi is represented on the tabletop by a separate miniature that always remains as close as possible to Thorek’s Anvil of Doom. The model itself plays no part in the game; if it gets in the way, simply move it to one side. If Thorek is slain, Kraggi is also removed.
 
-Thorek can re-roll a single dice on a failed attempt to cast one of the innate bound spells of the Anvil of Doom per turn. If this re-rolled dice rolls a 1, Kraggi has done something wrong and Thorek takes a S 10 hit. Kraggi is then removed from play and the Kraggi, Assistant at the Forge rule cannot be used again for the rest of the game.</description>
+Thorek can re-roll a single dice on a failed attempt to cast one of the innate bound spells of the Anvil of Doom per turn. If this re-rolled dice rolls a 1, Kraggi has done something wrong and Thorek takes a Strength 10 hit. Kraggi is then removed from play and the Kraggi, Assistant at the Forge rule cannot be used again for the rest of the game.</description>
                     </rule>
                   </rules>
                   <selectionEntries>
@@ -4944,7 +4898,7 @@ Thorek can re-roll a single dice on a failed attempt to cast one of the innate b
                       <characteristics>
                         <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                         <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                        <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. The Armour of Skaldour is inscribed with the Master Rune of Skaldour which gives him a Ward save (4+), a Rune of Preservation and a Rune of Stone.</characteristic>
+                        <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. The Armour of Skaldour is inscribed with the Master Rune of Skaldour which gives him a Ward Save (4+), a Rune of Preservation and a Rune of Stone.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -5734,7 +5688,7 @@ Thorek can re-roll a single dice on a failed attempt to cast one of the innate b
                       <characteristics>
                         <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">1+.</characteristic>
                         <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">1+.</characteristic>
-                        <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The Armour of Glimril Scales gives the White Dwarf a Ward save (4+).</characteristic>
+                        <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The Armour of Glimril Scales gives the White Dwarf a Ward Save (4+).</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -5886,7 +5840,7 @@ Thorek can re-roll a single dice on a failed attempt to cast one of the innate b
                 </profile>
                 <profile id="2b71-7e59-6e58-bde1" name="05-06" publicationId="aa7b-3583-0834-7bfa" page="198" hidden="false" typeId="0a1b-c67c-10d3-713e" typeName="Liquid Fortification">
                   <characteristics>
-                    <characteristic name="Result" typeId="a586-177e-1b4d-a3b6">Leathered: Each member of the unit gains +1 T until the start of the next friendly turn.</characteristic>
+                    <characteristic name="Result" typeId="a586-177e-1b4d-a3b6">Leathered: Each member of the unit gains +1 Toughness until the start of the next friendly turn.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5990,7 +5944,7 @@ Thorek can re-roll a single dice on a failed attempt to cast one of the innate b
               </profiles>
               <rules>
                 <rule id="5b51-d6fc-97e3-4db2" name="Burlok&apos;s Ingenious Offensive New-matic Integrated Constrictor Arm" publicationId="aa7b-3583-0834-7bfa" page="195" hidden="false">
-                  <description>Burlok&apos;s artificial arm gives him +1 Attack with S 6 in close combat.</description>
+                  <description>Burlok&apos;s artificial arm gives him +1 Attack with Strength 6 in close combat.</description>
                 </rule>
               </rules>
               <infoLinks>
@@ -6238,7 +6192,7 @@ Thorek can re-roll a single dice on a failed attempt to cast one of the innate b
               </profiles>
               <rules>
                 <rule id="aedb-ffa2-f414-4955" name="The War-Mourner" publicationId="aa7b-3583-0834-7bfa" page="194" hidden="false">
-                  <description>Each Wound inflicted by Garagrim counts double towards that round&apos;s Combat Resolution. Against enemies with T 5 or higher, Garagrim causes Multiple Wounds (D6). However, Garagrim may never be the Army General.</description>
+                  <description>Each Wound inflicted by Garagrim counts double towards that round&apos;s Combat Resolution. Against enemies with Toughness 5 or higher, Garagrim causes Multiple Wounds (D6). However, Garagrim may never be the Army General.</description>
                 </rule>
               </rules>
               <infoLinks>
@@ -6936,7 +6890,7 @@ Any additional runes on the weapon will also take effect. After this, the weapon
       <profiles>
         <profile id="bf3d-3069-3d54-2b4d" name="Rune of Cleaving (x3)" publicationId="aa7b-3583-0834-7bfa" page="203" hidden="false" typeId="be21-8ba1-7009-d43e" typeName="Weapon Rune">
           <characteristics>
-            <characteristic name="Effect" typeId="daeb-8a2c-9eae-f2dd">A weapon engraved with three Runes of Cleaving has Armour Piercing (1), and additionally grants its wielder +1 S and Killing Blow.</characteristic>
+            <characteristic name="Effect" typeId="daeb-8a2c-9eae-f2dd">A weapon engraved with three Runes of Cleaving has Armour Piercing (1), and additionally grants its wielder +1 Strength and Killing Blow.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -6985,7 +6939,7 @@ bonus To Hit and To Wound and gains Multiple Wounds (D3).</characteristic>
         <profile id="b279-f9d9-1824-5450" name="Rune of Daemon Slaying (x3)" publicationId="aa7b-3583-0834-7bfa" page="202" hidden="false" typeId="be21-8ba1-7009-d43e" typeName="Weapon Rune">
           <characteristics>
             <characteristic name="Effect" typeId="daeb-8a2c-9eae-f2dd">Against any model with Daemonic, a weapon engraved with three Runes of Daemon Slaying hits and Wounds
-on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against it.</characteristic>
+on a roll of 2+, has Multiple Wounds (D3) and no Ward Saves can be taken against it.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -7041,7 +6995,7 @@ on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against
       <profiles>
         <profile id="9588-c740-aa05-195a" name="Rune of Fire (x2)" publicationId="aa7b-3583-0834-7bfa" page="203" hidden="false" typeId="be21-8ba1-7009-d43e" typeName="Weapon Rune">
           <characteristics>
-            <characteristic name="Effect" typeId="daeb-8a2c-9eae-f2dd">A weapon engraved with two Runes of Fire has Flaming Attacks, and grants its wielder a S 4 Breath Weapon with Flaming Attacks.</characteristic>
+            <characteristic name="Effect" typeId="daeb-8a2c-9eae-f2dd">A weapon engraved with two Runes of Fire has Flaming Attacks, and grants its wielder a Strength 4 Breath Weapon with Flaming Attacks.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -7057,7 +7011,7 @@ on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against
       <profiles>
         <profile id="3d73-d61c-5860-30de" name="Rune of Fire (x3)" publicationId="aa7b-3583-0834-7bfa" page="203" hidden="false" typeId="be21-8ba1-7009-d43e" typeName="Weapon Rune">
           <characteristics>
-            <characteristic name="Effect" typeId="daeb-8a2c-9eae-f2dd">A weapon engraved with three Runes of Fire has Flaming Attacks, and grants its wielder a S 4 Breath Weapon that has Flaming Attacks and Multiple Wounds (D3).</characteristic>
+            <characteristic name="Effect" typeId="daeb-8a2c-9eae-f2dd">A weapon engraved with three Runes of Fire has Flaming Attacks, and grants its wielder a Strength 4 Breath Weapon that has Flaming Attacks and Multiple Wounds (D3).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -7114,7 +7068,7 @@ on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against
       <profiles>
         <profile id="91c0-cde8-b4cf-6e51" name="Rune of Might (x1)" publicationId="aa7b-3583-0834-7bfa" page="203" hidden="false" typeId="be21-8ba1-7009-d43e" typeName="Weapon Rune">
           <characteristics>
-            <characteristic name="Effect" typeId="daeb-8a2c-9eae-f2dd">A weapon engraved with a Rune of Might doubles its wielder&apos;s S against foes of T 5 or higher in close combat.</characteristic>
+            <characteristic name="Effect" typeId="daeb-8a2c-9eae-f2dd">A weapon engraved with a Rune of Might doubles its wielder&apos;s Strength against foes of Toughness 5 or higher in close combat.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -7129,7 +7083,7 @@ on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against
       <profiles>
         <profile id="740b-78a1-262a-dba9" name="Rune of Might (x2)" publicationId="aa7b-3583-0834-7bfa" page="203" hidden="false" typeId="be21-8ba1-7009-d43e" typeName="Weapon Rune">
           <characteristics>
-            <characteristic name="Effect" typeId="daeb-8a2c-9eae-f2dd">A weapon engraved with two Runes of Might doubles its wielder&apos;s S against foes of T 5 or higher in close combat and causes Multiple Wounds (D3) against foes with T 5 or higher in close combat. A third Rune of Might has no further effect.</characteristic>
+            <characteristic name="Effect" typeId="daeb-8a2c-9eae-f2dd">A weapon engraved with two Runes of Might doubles its wielder&apos;s Strength against foes of Toughness 5 or higher in close combat and causes Multiple Wounds (D3) against foes with Toughness 5 or higher in close combat. A third Rune of Might has no further effect.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -7262,7 +7216,7 @@ on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against
       <profiles>
         <profile id="1f9f-287b-1fd1-41fe" name="Rune of Fortitude (x2)" publicationId="aa7b-3583-0834-7bfa" page="204" hidden="false" typeId="6aa2-7707-349b-6651" typeName="Armour Rune">
           <characteristics>
-            <characteristic name="Effect" typeId="c6f4-789d-d436-e4d0">Armour engraved with two Runes of Fortitude grants its wearer +1 T and a Ward save (5+).</characteristic>
+            <characteristic name="Effect" typeId="c6f4-789d-d436-e4d0">Armour engraved with two Runes of Fortitude grants its wearer +1 Toughness and a Ward Save (5+).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -7278,7 +7232,7 @@ on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against
       <profiles>
         <profile id="beab-9bc4-39cc-6037" name="Rune of Fortitude (x3)" publicationId="aa7b-3583-0834-7bfa" page="204" hidden="false" typeId="6aa2-7707-349b-6651" typeName="Armour Rune">
           <characteristics>
-            <characteristic name="Effect" typeId="c6f4-789d-d436-e4d0">Armour engraved with three Runes of Fortitude grants its wearer +1 T, a Ward save (5+) and Immunity (Multiple Wounds).</characteristic>
+            <characteristic name="Effect" typeId="c6f4-789d-d436-e4d0">Armour engraved with three Runes of Fortitude grants its wearer +1 T, a Ward Save (5+) and Immunity (Multiple Wounds).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -7339,7 +7293,7 @@ on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against
       <profiles>
         <profile id="52f9-69cb-8153-139a" name="Rune of Iron (x3)" publicationId="aa7b-3583-0834-7bfa" page="204" hidden="false" typeId="6aa2-7707-349b-6651" typeName="Armour Rune">
           <characteristics>
-            <characteristic name="Effect" typeId="c6f4-789d-d436-e4d0">Armour engraved with three Runes of Iron grants its wearer +1 W, +1 T and Regeneration (5+).</characteristic>
+            <characteristic name="Effect" typeId="c6f4-789d-d436-e4d0">Armour engraved with three Runes of Iron grants its wearer +1 W, +1 Toughness and Regeneration (5+).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -7491,7 +7445,7 @@ on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against
                   <profiles>
                     <profile id="2287-b973-55c9-bfce" name="Master Rune of Adamant" publicationId="aa7b-3583-0834-7bfa" page="204" hidden="false" typeId="6aa2-7707-349b-6651" typeName="Armour Rune">
                       <characteristics>
-                        <characteristic name="Effect" typeId="c6f4-789d-d436-e4d0">A model wearing armour engraved with the Master Rune of Adamant has T 10. This rune cannot be combined with any other armour runes.</characteristic>
+                        <characteristic name="Effect" typeId="c6f4-789d-d436-e4d0">A model wearing armour engraved with the Master Rune of Adamant has Toughness 10. This rune cannot be combined with any other armour runes.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -7600,7 +7554,7 @@ on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against
                       <characteristics>
                         <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                         <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                        <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. The Magnificent Armour of Borek Beetle brow grants a Ward save (3+) against all attacks of S 6 or higher.</characteristic>
+                        <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. The Magnificent Armour of Borek Beetle brow grants a Ward Save (3+) against all attacks of Strength 6 or higher.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -7703,7 +7657,7 @@ on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against
                   <profiles>
                     <profile id="4074-9e78-f1eb-9643" name="Master Rune of Grungni" publicationId="aa7b-3583-0834-7bfa" page="206" hidden="false" typeId="9fca-89e3-04a1-e4ae" typeName="Banner Rune">
                       <characteristics>
-                        <characteristic name="Effect" typeId="51cc-aa7c-4178-d853">A standard bearing the Master Rune of Grungni confers a 5+ ward save against Wounds caused by missile attacks to any friendly units within 12&quot; of the bearer.</characteristic>
+                        <characteristic name="Effect" typeId="51cc-aa7c-4178-d853">A standard bearing the Master Rune of Grungni confers a 5+ Ward Save against Wounds caused by missile attacks to any friendly units within 12&quot; of the bearer.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -7978,7 +7932,7 @@ on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against
                   <profiles>
                     <profile id="b105-ebc0-28f6-a554" name="Master Rune of Grimnir" publicationId="aa7b-3583-0834-7bfa" page="160" hidden="false" typeId="9fca-89e3-04a1-e4ae" typeName="Banner Rune">
                       <characteristics>
-                        <characteristic name="Effect" typeId="51cc-aa7c-4178-d853">Slayers only. Any friendly Slayer unit within 12&quot; of the standard gains a Ward save (5+) against any missile attacks.</characteristic>
+                        <characteristic name="Effect" typeId="51cc-aa7c-4178-d853">Slayers only. Any friendly Slayer unit within 12&quot; of the standard gains a Ward Save (5+) against any missile attacks.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -8180,7 +8134,7 @@ on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against
           <profiles>
             <profile id="d594-e7e3-e2ed-1da4" name="Fiery Ring of Thori" publicationId="aa7b-3583-0834-7bfa" page="199" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The Fiery Ring of Thori gives its bearer a S 4 Breath Weapon with Flaming Attacks.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The Fiery Ring of Thori gives its bearer a Strength 4 Breath Weapon with Flaming Attacks.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8196,7 +8150,7 @@ on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against
           <profiles>
             <profile id="e45a-346c-605d-aaf8" name="Golden Sceptre of Norgrim" publicationId="aa7b-3583-0834-7bfa" page="199" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">At the start of each of your turns, you may bestow either +1 M, S or Armour save onto the bearer and any unit he is with. Each bonus last until the start of your next turn.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">At the start of each of your turns, you may bestow either +1 M, Strength or Armour save onto the bearer and any unit he is with. Each bonus last until the start of your next turn.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8355,7 +8309,7 @@ on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against
           <profiles>
             <profile id="a7eb-c449-c041-eadb" name="Master Rune of Spite" publicationId="aa7b-3583-0834-7bfa" page="205" hidden="false" typeId="46dc-ac3a-6194-9dc2" typeName="Talismanic Rune">
               <characteristics>
-                <characteristic name="Effect" typeId="2019-7faf-64f7-0c61">Every time a model with the Master Rune of Spite is Hit in close combat, the model that struck the blow suffers a S 4 hit.</characteristic>
+                <characteristic name="Effect" typeId="2019-7faf-64f7-0c61">Every time a model with the Master Rune of Spite is Hit in close combat, the model that struck the blow suffers a Strength 4 hit.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8462,7 +8416,7 @@ on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against
           <profiles>
             <profile id="12be-70cf-6156-eb41" name="Rune of Fate" publicationId="aa7b-3583-0834-7bfa" page="205" hidden="false" typeId="46dc-ac3a-6194-9dc2" typeName="Talismanic Rune">
               <characteristics>
-                <characteristic name="Effect" typeId="2019-7faf-64f7-0c61">One use only. The model has a Ward save (2+) against the first unsaved Wound suffered. Multiples of this rune have no further effect.</characteristic>
+                <characteristic name="Effect" typeId="2019-7faf-64f7-0c61">One use only. The model has a Ward Save (2+) against the first unsaved Wound suffered. Multiples of this rune have no further effect.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8488,7 +8442,7 @@ on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against
           <profiles>
             <profile id="834e-4e27-de20-302a" name="Rune of the Luck" publicationId="aa7b-3583-0834-7bfa" page="205" hidden="false" typeId="46dc-ac3a-6194-9dc2" typeName="Talismanic Rune">
               <characteristics>
-                <characteristic name="Effect" typeId="2019-7faf-64f7-0c61">One use only. A model with a Rune of Luck can re-roll a single To Hit roll, To Wound roll, armour save, ward save or characteristic test during the game. Multiples of this rune have no further effect.</characteristic>
+                <characteristic name="Effect" typeId="2019-7faf-64f7-0c61">One use only. A model with a Rune of Luck can re-roll a single To Hit roll, To Wound roll, armour save, Ward Save or characteristic test during the game. Multiples of this rune have no further effect.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8526,7 +8480,7 @@ on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against
           <profiles>
             <profile id="df48-597f-1509-bc79" name="Master Rune of Immolation" publicationId="aa7b-3583-0834-7bfa" page="208" hidden="false" typeId="a099-45a8-556d-3912" typeName="Engineering Rune">
               <characteristics>
-                <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">One use only. A Dwarf player can cause a war machine engraved with the Master Rune of Immolation to explode at the end of any round of combat before determining the combat results. Both the war machine and all its remaining crew are instantly removed from play, and each enemy unit in combat with the war machine suffers 2D6 magical S 4 hits with Flaming Attacks, allocated as for shooting. Any surviving enemy units who charged that turn may make an overrun move as normal. This rune will also be triggered automatically when the war machine loses its last Wound in close combat.</characteristic>
+                <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">One use only. A Dwarf player can cause a war machine engraved with the Master Rune of Immolation to explode at the end of any round of combat before determining the combat results. Both the war machine and all its remaining crew are instantly removed from play, and each enemy unit in combat with the war machine suffers 2D6 magical Strength 4 hits with Flaming Attacks, allocated as for shooting. Any surviving enemy units who charged that turn may make an overrun move as normal. This rune will also be triggered automatically when the war machine loses its last Wound in close combat.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8542,7 +8496,7 @@ on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against
           <profiles>
             <profile id="872b-c593-2218-f5cb" name="Master Rune of Defence" publicationId="aa7b-3583-0834-7bfa" page="208" hidden="false" typeId="a099-45a8-556d-3912" typeName="Engineering Rune">
               <characteristics>
-                <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">The War Machine gains a Ward save (3+) against all missile attacks.</characteristic>
+                <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">The War Machine gains a Ward Save (3+) against all missile attacks.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8589,7 +8543,7 @@ on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against
           <profiles>
             <profile id="1f64-7295-c454-99e9" name="Rune of Penetrating (x1)" publicationId="aa7b-3583-0834-7bfa" page="208" hidden="false" typeId="a099-45a8-556d-3912" typeName="Engineering Rune">
               <characteristics>
-                <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">A war machine engraved with a Rune of Penetration increases the S of its shots by 1, to a maximum of 10.</characteristic>
+                <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">A war machine engraved with a Rune of Penetration increases the Strength of its shots by 1, to a maximum of 10.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8604,7 +8558,7 @@ on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against
           <profiles>
             <profile id="44b5-18f6-0f78-a8af" name="Rune of Penetrating (x2)" publicationId="aa7b-3583-0834-7bfa" page="208" hidden="false" typeId="a099-45a8-556d-3912" typeName="Engineering Rune">
               <characteristics>
-                <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">A war machine engraved with two Runes of Penetration increases the S of its shots by 1, to a maximum of 10, and allows the user to re-roll a single failed To Wound roll during the course of the battle. A third Rune of Penetration has no further effect. Note that in the case of a Grudge Thrower, this bonus increases the S of both S values in its profile.</characteristic>
+                <characteristic name="Effect" typeId="b5e6-a050-5ffa-0bb5">A war machine engraved with two Runes of Penetration increases the Strength of its shots by 1, to a maximum of 10, and allows the user to re-roll a single failed To Wound roll during the course of the battle. A third Rune of Penetration has no further effect. Note that in the case of a Grudge Thrower, this bonus increases the Strength of both Strength values in its profile.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8921,7 +8875,7 @@ on a roll of 2+, has Multiple Wounds (D3) and no ward saves can be taken against
           <profiles>
             <profile id="c028-1160-872c-a8cb" name="Heavy Metal Ingot" publicationId="aa7b-3583-0834-7bfa" page="199" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">This item allows the wielder to re-roll failed armour saves and ward saves in any turn they have not moved.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">This item allows the wielder to re-roll failed armour saves and Ward Saves in any turn they have not moved.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -9030,7 +8984,7 @@ the army. An entrenched war machine is treated as being in hard cover when shot 
       <description>The model has the Giant Slayer special rule. The model has the Multiple Wounds (D3) special rule when attacking Monstrous Creatures and Monsters.</description>
     </rule>
     <rule id="96e9-1cf9-efcf-5b46" name="Daemon Slayer" publicationId="aa7b-3583-0834-7bfa" page="160" hidden="false">
-      <description>The model has the Dragon Slayer special rule. In addition, any Ward saves successfully made against Attacks made by the model must be re-rolled.
+      <description>The model has the Dragon Slayer special rule. In addition, any Ward Saves successfully made against Attacks made by the model must be re-rolled.
 For each Daemon Slayer in your army, you may take one unit of Troll Slayers as a Core Unit.</description>
     </rule>
     <rule id="2bd3-01fb-eccb-bcca" name="Bombing Run" publicationId="aa7b-3583-0834-7bfa" page="176" hidden="false">
@@ -9209,7 +9163,7 @@ If the marker is under an enemy unit when the Miners emerge, the Miners are cons
     </profile>
     <profile id="63eb-ebea-8bb3-87bf" name="Wards of Grimnir" publicationId="aa7b-3583-0834-7bfa" page="163" hidden="false" typeId="5d59-caa8-545e-82b1" typeName="Slayer Skill">
       <characteristics>
-        <characteristic name="Effect" typeId="b55b-cf04-8b09-60ec">A model with Wards of Grimnir have a Ward save (6+) against missile and the Magic Resistance (1) special rule.</characteristic>
+        <characteristic name="Effect" typeId="b55b-cf04-8b09-60ec">A model with Wards of Grimnir have a Ward Save (6+) against missile and the Magic Resistance (1) special rule.</characteristic>
       </characteristics>
     </profile>
     <profile id="4b62-974b-2988-8198" name="Veteran" publicationId="aa7b-3583-0834-7bfa" page="148" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
@@ -9268,12 +9222,12 @@ If the marker is under an enemy unit when the Miners emerge, the Miners are cons
     </profile>
     <profile id="b1ed-2663-2429-529c" name="Rune of Shielding" publicationId="aa7b-3583-0834-7bfa" page="204" hidden="false" typeId="6aa2-7707-349b-6651" typeName="Armour Rune">
       <characteristics>
-        <characteristic name="Effect" typeId="c6f4-789d-d436-e4d0">Armour engraved with a Rune of Shielding grants its wearer a Ward save (2+) against Wounds caused by missile attacks. Multiples of this rune have no further effect.</characteristic>
+        <characteristic name="Effect" typeId="c6f4-789d-d436-e4d0">Armour engraved with a Rune of Shielding grants its wearer a Ward Save (2+) against Wounds caused by missile attacks. Multiples of this rune have no further effect.</characteristic>
       </characteristics>
     </profile>
     <profile id="78c9-075c-5c7b-5c1f" name="Rune of Warding (x2)" publicationId="aa7b-3583-0834-7bfa" page="205" hidden="false" typeId="46dc-ac3a-6194-9dc2" typeName="Talismanic Rune">
       <characteristics>
-        <characteristic name="Effect" typeId="2019-7faf-64f7-0c61">A model with two Runes of Warding has a Ward save (5+).</characteristic>
+        <characteristic name="Effect" typeId="2019-7faf-64f7-0c61">A model with two Runes of Warding has a Ward Save (5+).</characteristic>
       </characteristics>
     </profile>
     <profile id="fc28-c580-ca83-1e20" name="Master Rune of Death" publicationId="aa7b-3583-0834-7bfa" page="201" hidden="false" typeId="be21-8ba1-7009-d43e" typeName="Weapon Rune">
@@ -9303,7 +9257,7 @@ If the marker is under an enemy unit when the Miners emerge, the Miners are cons
     </profile>
     <profile id="6fbb-ddb9-af6e-9f58" name="Rune of Warding (x3)" publicationId="aa7b-3583-0834-7bfa" page="205" hidden="false" typeId="46dc-ac3a-6194-9dc2" typeName="Talismanic Rune">
       <characteristics>
-        <characteristic name="Effect" typeId="2019-7faf-64f7-0c61">A model with three Runes of Warding has a Ward save (4+).</characteristic>
+        <characteristic name="Effect" typeId="2019-7faf-64f7-0c61">A model with three Runes of Warding has a Ward Save (4+).</characteristic>
       </characteristics>
     </profile>
     <profile id="35ee-df2d-558c-f4b5" name="Rune of Fire (x1)" publicationId="aa7b-3583-0834-7bfa" page="203" hidden="false" typeId="be21-8ba1-7009-d43e" typeName="Weapon Rune">
@@ -9318,7 +9272,7 @@ If the marker is under an enemy unit when the Miners emerge, the Miners are cons
     </profile>
     <profile id="e3bc-ce77-6172-682c" name="Rune of Warding (x1)" publicationId="aa7b-3583-0834-7bfa" page="205" hidden="false" typeId="46dc-ac3a-6194-9dc2" typeName="Talismanic Rune">
       <characteristics>
-        <characteristic name="Effect" typeId="2019-7faf-64f7-0c61">A model with a Rune of Warding has a Ward save (6+).</characteristic>
+        <characteristic name="Effect" typeId="2019-7faf-64f7-0c61">A model with a Rune of Warding has a Ward Save (6+).</characteristic>
       </characteristics>
     </profile>
     <profile id="6c9e-6771-a70e-1214" name="Rune of Spellbreaking (x2)" publicationId="aa7b-3583-0834-7bfa" page="205" hidden="false" typeId="46dc-ac3a-6194-9dc2" typeName="Talismanic Rune">
@@ -9360,7 +9314,7 @@ A second Rune of Spell breaking maintains the previous effect and, after the spe
     </profile>
     <profile id="d359-dedc-e7e8-0406" name="01 (Bomb Misfire Chart)" publicationId="aa7b-3583-0834-7bfa" page="176" hidden="false" typeId="df3f-ace7-2da2-189d" typeName="Bomb Misfire Chart">
       <characteristics>
-        <characteristic name="Result" typeId="b4d1-43ca-8017-8090">Premature Detonation: The model suffers a S 6 hit with Multiple Wounds (D3).</characteristic>
+        <characteristic name="Result" typeId="b4d1-43ca-8017-8090">Premature Detonation: The model suffers a Strength 6 hit with Multiple Wounds (D3).</characteristic>
       </characteristics>
     </profile>
     <profile id="c9d3-268a-6e9f-04af" name="02-03 (Bomb Misfire Chart)" publicationId="aa7b-3583-0834-7bfa" page="176" hidden="false" typeId="df3f-ace7-2da2-189d" typeName="Bomb Misfire Chart">
@@ -9370,7 +9324,7 @@ A second Rune of Spell breaking maintains the previous effect and, after the spe
     </profile>
     <profile id="caaa-79d1-035f-b637" name="04-06 (Bomb Misfire Chart)" publicationId="aa7b-3583-0834-7bfa" page="176" hidden="false" typeId="df3f-ace7-2da2-189d" typeName="Bomb Misfire Chart">
       <characteristics>
-        <characteristic name="Result" typeId="b4d1-43ca-8017-8090">Dud: Only the model under the template&apos;s central hole is hit, suffering a single S 4 hit.</characteristic>
+        <characteristic name="Result" typeId="b4d1-43ca-8017-8090">Dud: Only the model under the template&apos;s central hole is hit, suffering a single Strength 4 hit.</characteristic>
       </characteristics>
     </profile>
     <profile id="9b51-f20e-5625-f49a" name="Blasting Charges" publicationId="aa7b-3583-0834-7bfa" page="153" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
@@ -9422,7 +9376,7 @@ A second Rune of Spell breaking maintains the previous effect and, after the spe
     </profile>
     <profile id="6dd3-4fe6-8684-0459" name="03-05 (Underground Mishap Table)" publicationId="aa7b-3583-0834-7bfa" page="153" hidden="false" typeId="1f08-094e-f67a-a3fa" typeName="Underground Mishap Table">
       <characteristics>
-        <characteristic name="Result" typeId="05b8-374f-46db-11d2">Partial Collapse: All models in the unit must pass a S test or be removed as
+        <characteristic name="Result" typeId="05b8-374f-46db-11d2">Partial Collapse: All models in the unit must pass a Strength test or be removed as
 casualties. Any models that survive may not move or charge on the turn they emerge after a Partial Collapse. If the models emerge into close combat they have Always Strikes Last for the remainder of the turn.</characteristic>
       </characteristics>
     </profile>
