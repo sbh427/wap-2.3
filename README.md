@@ -1,5 +1,5 @@
-Warhammer Armies Project - 2.3
-==============================
+Warhammer Armies Project - 9.2.3
+================================
 
 # Presentation
 
@@ -12,7 +12,7 @@ These datafiles correspond to the 2.3 version of the Warhammer Armies Project.
 The datafiles are still under heavy development. About 1 file every two or three week will be updated.
 I usually update armies one by one, sometimes skipping special characters.
 
-# Usage
+# New Recruit Usage
 
 1. Open [New Recruit roster editor][https://www.newrecruit.eu/app/MySystems]. You don't need to create an account.
 2. At the bottom of the list, click on "Add more games"
@@ -21,6 +21,18 @@ I usually update armies one by one, sometimes skipping special characters.
 5. In repository, enter "sbh427/wap-2.3"
 6. Click on the green +, wait until the files are uploaded in New Recruit
 7. Start building your list !
+
+# BattleScribe Usage
+1. Download and Open [Battlescribe][https://www.battlescribe.net/].
+2. Go to "Manage Data" and "Add data index URL"
+3. Type : **https://wap-fr.ovh/bsdata/repos.json**
+4. Add new repository
+5. Open the TAB **wap-fr Battlescribe data**
+6. Select repository (wap-fr English Rules 9.2.2 or 9.2.3)
+7. Update Data
+8. You can now create independant Rosters in 9.2.2 or 9.2.3
+
+PS: *I need to wrote a doc for switching Rosters between rules versions*
 
 # Bug report
 
