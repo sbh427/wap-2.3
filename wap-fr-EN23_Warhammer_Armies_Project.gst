@@ -8516,20 +8516,108 @@ If you want to make a list using the allied rules, make separate rosters for eac
           </costs>
           <selectionEntryGroups>
             <selectionEntryGroup name="Signature Spells" id="8a6d-0d9f-68f0-be4f" hidden="false">
-              <entryLinks>
-                <entryLink import="true" name="0. Wyssan&apos;s Wildform" hidden="false" id="ade0-0b58-f6cf-6345" type="selectionEntry" targetId="0096-7e25-66b4-9cad"/>
-                <entryLink import="true" name="0. Dark Hand of Death" hidden="false" id="22a8-dc8c-228f-bad7" type="selectionEntry" targetId="3b38-7f74-f979-94f4"/>
-                <entryLink import="true" name="0. Fireball" hidden="false" id="3d51-2f2d-4245-c200" type="selectionEntry" targetId="e899-1538-32f0-e469"/>
-                <entryLink import="true" name="0. Harmonic Convergence" hidden="false" id="75ef-3351-71b7-2ec4" type="selectionEntry" targetId="e9eb-1db7-772d-1bb5"/>
-                <entryLink import="true" name="0. Earth Blood" hidden="false" id="3a4f-9e2e-8a87-6a62" type="selectionEntry" targetId="413a-6e59-0fd2-16a8"/>
-                <entryLink import="true" name="0. Shem&apos;s Burning Gaze" hidden="false" id="34f6-f684-d267-3fa7" type="selectionEntry" targetId="6287-ea6c-c498-b86a"/>
-                <entryLink import="true" name="0. Glittering Robe" hidden="false" id="4a6e-2516-7037-bc11" type="selectionEntry" targetId="2fbe-0ca5-12f1-b74b"/>
-                <entryLink import="true" name="0. Melkoth&apos;s Mystifying Miasma" hidden="false" id="f03b-525d-2f37-4adc" type="selectionEntry" targetId="dba6-e588-0a5b-69a1"/>
-              </entryLinks>
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ebba-6e9b-03b1-5d08-min"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ebba-6e9b-03b1-5d08-max"/>
               </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="0. Wyssan&apos;s Wildform" hidden="false" id="635a-105c-f89b-3b84" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5ab5-2d30-3cd2-53fc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="8005-0a5b-9df9-4076" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Wyssan&apos;s Wildform" id="1d1e-36d3-3284-a3d8" hidden="false" targetId="bc40-b619-0977-f8ad" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="0. Dark Hand of Death" hidden="false" id="cd07-1506-779a-0071" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="16ec-2917-0260-b5ec" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="9267-5f68-90e6-841f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Dark Hand of Death" id="a621-3dca-efa9-54af" hidden="false" targetId="f560-2bd9-89c7-28bd" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="0. Fireball" hidden="false" id="b98b-9c00-ff17-cd90" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2793-90f3-61ae-4af3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="cd22-6253-48b3-d121" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Fireball" id="2122-e0e5-5c03-3027" hidden="false" targetId="6e57-2cc3-96fc-7f01" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="0. Harmonic Convergence" hidden="false" id="b2e2-4d34-0db7-3fc6" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d326-7283-1101-729e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="d23a-6a00-3902-0b34" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Harmonic Convergence" id="1bc4-1eaa-95bd-fd2f" hidden="false" targetId="91df-517b-9d00-5628" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="0. Earth Blood" hidden="false" id="721e-c21f-6103-6a6a" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="242b-31da-b8fb-1316" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="ba7b-d52d-dea0-c945" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Earth Blood" id="9837-bc46-717f-ec3b" hidden="false" targetId="c7c1-2e60-4710-1a6a" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="0. Shem&apos;s Burning Gaze" hidden="false" id="1e24-9fb6-f5e2-fefd" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d29e-8a3e-6364-442e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="3e19-c45d-a1fd-7052" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Shem&apos;s Burning Gaze" id="7eeb-9ba6-e516-2c6b" hidden="false" targetId="6508-2de1-8be5-0a2f" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="0. Glittering Robe" hidden="false" id="80c2-6bc0-25d0-d59e" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e3ab-24b2-ba9c-c9a7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="3442-1f88-21f0-a831"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Glittering Robe" id="edb0-0f3b-f5d3-399c" hidden="false" targetId="3c85-1552-3323-c4d3" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="0. Melkoth&apos;s Mystifying Miasma" hidden="false" id="7822-9084-1223-5172" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b13f-fe24-17f0-a8d5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="fb5d-7265-85ec-9025" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Melkoth&apos;s Mystifying Miasma" id="1614-9859-4cd3-eb6e" hidden="false" targetId="89e2-f22c-758d-a9d7" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
             </selectionEntryGroup>
           </selectionEntryGroups>
         </selectionEntry>
