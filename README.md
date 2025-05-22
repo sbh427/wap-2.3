@@ -1,55 +1,80 @@
-Warhammer Armies Project - 9.2.3
-================================
+# Warhammer Armies Project - v9.2.3 (Unofficial Battlescribe & New Recruit Files)
 
-# Presentation
+## Overview
 
-This repository contains Battlescribe data files compatible with the [New Recruit roster editor][https://www.newrecruit.eu/app/MySystems]
+This repository contains **Battlescribe-compatible data files** for the [New Recruit roster editor](https://www.newrecruit.eu/app/MySystems), based on version **9.2.3** of the **Warhammer Armies Project** (WAP).
 
-These datafiles correspond to the 2.3 version of the Warhammer Armies Project.
+These files are **unofficial** and maintained by the community to help players use the latest army book updates in digital list-building tools.
 
-# Development
+---
 
-The datafiles are still under heavy development. About 1 file every two or three week will be updated.
-I usually update armies one by one, sometimes skipping special characters.
+## Development Status
 
-# Usage
-## New Recruit
+The files are currently **under active development**. I typically update one army every 2–3 weeks. Updates are done army by army and may temporarily exclude special characters in early passes.
 
-1. Open [New Recruit roster editor][https://www.newrecruit.eu/app/MySystems]. You don't need to create an account.
-2. At the bottom of the list, click on "Add more games"
-3. Then select "Add from github"
-4. As version, select "custom", and enter "main". This is the most recent version, which will be regularly updated.
-5. In repository, enter "sbh427/wap-2.3"
-6. Click on the green +, wait until the files are uploaded in New Recruit
-7. Start building your list !
+---
 
-## BattleScribe
-1. Download and Open [Battlescribe][https://www.battlescribe.net/].
-2. Go to "Manage Data" and "Add data index URL"
-3. Type : **https://wap-fr.ovh/bsdata/repos.json**
-4. Add new repository
-5. Open the TAB **wap-fr Battlescribe data**
-6. Select repository (wap-fr English Rules 9.2.2 or 9.2.3)
-7. Update Data
-8. You can now create independant Rosters in 9.2.2 or 9.2.3
+## How to Use
 
-PS: *I need to wrote a doc for switching Rosters between rules versions*
+### New Recruit
 
-# Bug report
+1. Open the [New Recruit roster editor](https://www.newrecruit.eu/app/MySystems) — no account required.
+2. Scroll to the bottom and click **“Add more games.”**
+3. Select **“Add from GitHub.”**
+4. For **Version**, choose `custom`, and enter: `main`
+5. For **Repository**, enter: `sbh427/wap-2.3`
+6. Click the green `+` and wait for the upload to finish.
+7. You can now start building your list!
 
-# New Recruit
+### Battlescribe
 
-To report a bug with New Recruit, follow the instructions below:
-1. Click on `Report Issue` at the top right of the page
+1. Download and open [Battlescribe](https://www.battlescribe.net/).
+2. Go to **Manage Data > Add Data Index URL**
+3. Enter: `https://wap-fr.ovh/bsdata/repos.json`
+4. Add the repository.
+5. Open the tab: **“wap-fr Battlescribe data”**
+6. Choose the version (9.2.2 or 9.2.3).
+7. Update your data.
+8. You can now create rosters using the selected rule version.
 
-![Report Issue](./pictures/bug_report1.png)
+> **Note:** Switching rosters between rule versions is not possible, and probably won't be in the future.
 
-2. Select Game Data Issue
+---
 
-![Game Data Issue](./pictures/bug_report2.png)
+## Bug Reports
 
-3. Enter details about the issue you are faced with. There is a minimum limit of characters to ungrey the `send` button.
+### New Recruit
 
-![Details](./pictures/bug_report3.png)
+To report a bug within New Recruit:
 
-**Note** You can also create an issue directly in Github if you have a Github account.
+1. Click **`Report Issue`** (top right of the page).
+
+   ![Report Issue](./pictures/bug_report1.png)
+
+2. Select **Game Data Issue**.
+
+   ![Game Data Issue](./pictures/bug_report2.png)
+
+3. Describe the issue (minimum characters required to enable **Send**).
+
+   ![Details](./pictures/bug_report3.png)
+
+### GitHub
+
+Alternatively, you can report bugs by creating an [Issue on GitHub](https://github.com/sbh427/wap-2.3/issues) if you have a GitHub account.
+
+---
+
+## Disclaimer
+
+This is a **fan-made, unofficial project** and is **not affiliated** with Mathias Eliasson, the original WAP team, or the original Battlescribe file maintainers. All credit for the rules belongs to Mathias and the Warhammer Armies Project.
+
+---
+
+## Contributions Welcome
+
+If you'd like to help with updates, corrections, or testing, feel free to open an issue or submit a pull request.
+
+---
+
+**Happy list-building and may your dice roll true!**
