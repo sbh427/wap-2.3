@@ -227,7 +227,7 @@
     </profileType>
     <profileType name="Prayer" id="4608-9b35-b7dc-202d" hidden="false">
       <characteristicTypes>
-        <characteristicType name="Details" id="1f79-8144-edd6-8b51"/>
+        <characteristicType name="Effect" id="1f79-8144-edd6-8b51"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -7841,7 +7841,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
       <profiles>
         <profile name="Wizard Level 4" typeId="0ce6-a5f9-6184-218d" typeName="Wizard" hidden="false" id="882a-d31d-8747-e383">
           <characteristics>
-            <characteristic name="Wizard Level" typeId="7f8d-5707-7251-c1a5">1</characteristic>
+            <characteristic name="Wizard Level" typeId="7f8d-5707-7251-c1a5">4</characteristic>
             <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">5</characteristic>
             <characteristic name="Spell Level" typeId="c5a7-d8e1-9c88-2f0e">1-4</characteristic>
             <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">5</characteristic>
