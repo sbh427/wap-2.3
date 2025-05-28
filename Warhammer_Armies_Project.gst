@@ -19195,7 +19195,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="271f-2a52-52aa-7ed9" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="fa16-077f-18b1-27d8" name="Channeling Staff" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="fa16-077f-18b1-27d8" name="Channeling Staff" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d34-21b9-f917-cb3a" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cc3a-6611-f489-63ee" type="max"/>
@@ -19211,7 +19211,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="60b4-7c66-f1ea-4a0a" name="Book of Ashur" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="60b4-7c66-f1ea-4a0a" name="Book of Ashur" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8114-9d43-2592-b073" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8d6c-9c6a-acb1-64fb" type="max"/>
@@ -19227,7 +19227,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="46f0-3898-3169-fa9b" name="Wand of Jet" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="46f0-3898-3169-fa9b" name="Wand of Jet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aa3f-65aa-0868-41ed" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8a30-e4bb-3eec-ac7a" type="max"/>
@@ -19243,7 +19243,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ef27-b91f-9d88-e28c" name="Scepter of Stability" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ef27-b91f-9d88-e28c" name="Scepter of Stability" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cb47-fc0b-a8d5-4294" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a83f-c65d-e0f1-5024" type="max"/>
@@ -19259,7 +19259,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="da0c-a92d-bf2d-649c" name="Power Familiar" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="da0c-a92d-bf2d-649c" name="Power Familiar" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="69ba-2f1d-0b58-562f" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f438-f693-06a5-738b" type="max"/>
@@ -19275,7 +19275,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c5d0-4769-c76f-2cac" name="Spell Familiar" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="c5d0-4769-c76f-2cac" name="Spell Familiar" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="346a-1b27-22e9-7055" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b465-bf03-8e8a-9b49" type="max"/>
@@ -19291,7 +19291,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="795a-417c-22af-7999" name="Wizard&apos;s Staff" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="795a-417c-22af-7999" name="Wizard&apos;s Staff" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f23d-6ff3-592c-92d9" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="09ff-c1b5-5c95-0cbb" type="max"/>
@@ -19307,7 +19307,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b80d-1dbf-b133-bef8" name="Rod of Power" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b80d-1dbf-b133-bef8" name="Rod of Power" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ab10-65bb-49d3-811a" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="18c0-5bce-e968-72d7" type="max"/>
@@ -19330,7 +19330,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b384-6d1c-fc8d-c77d" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="7d4f-ef41-7056-3a2b" name="Wizarding Hat" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7d4f-ef41-7056-3a2b" name="Wizarding Hat" hidden="false" collective="false" import="true" type="upgrade" sortIndex="15">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6c2c-3dad-95ce-4134" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cbc6-779a-3e05-fa4c" type="max"/>
@@ -19346,7 +19346,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="50"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="bd6c-37ab-5b12-f41e" name="Fozzrik&apos;s Folding Fortress" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="bd6c-37ab-5b12-f41e" name="Fozzrik&apos;s Folding Fortress" hidden="false" collective="false" import="true" type="upgrade" sortIndex="16">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d596-01ca-e2e8-c440" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a5bb-5b98-7b78-05a5" type="max"/>
@@ -19362,7 +19362,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="100"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7814-f3d5-91f9-8974" name="Orb of Thunder" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7814-f3d5-91f9-8974" name="Orb of Thunder" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5689-cf6f-8526-6ee9" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c4fa-1dce-fe3c-d2ac" type="max"/>
@@ -19387,7 +19387,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d96f-5374-891c-549b" name="Ruby Ring of Ruin" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d96f-5374-891c-549b" name="Ruby Ring of Ruin" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7281-e446-48ee-504d" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="38a1-1a98-b4c1-6fc2" type="max"/>
@@ -19407,7 +19407,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e6a0-bf8d-ddbf-fda6" name="Crown of Command" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e6a0-bf8d-ddbf-fda6" name="Crown of Command" hidden="false" collective="false" import="true" type="upgrade" sortIndex="14">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f15d-ec38-e75b-50f5" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f47c-27b3-9edf-511b" type="max"/>
@@ -19423,7 +19423,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="293c-5322-82e4-3db6" name="Healing Potion" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="293c-5322-82e4-3db6" name="Healing Potion" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b0d0-7983-1c04-0015" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="100f-9395-351c-2c32" type="max"/>
@@ -19439,7 +19439,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="817f-d39e-da54-a4f9" name="The Terrifying Mask of Eee!" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="817f-d39e-da54-a4f9" name="The Terrifying Mask of Eee!" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3870-4799-8160-ce47" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cc54-ceef-45ef-1fea" type="max"/>
@@ -19455,7 +19455,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b9e5-d92f-9308-a868" name="Potion of Speed" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b9e5-d92f-9308-a868" name="Potion of Speed" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8c8b-1b27-f343-e44c" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a0b3-b929-f284-e14e" type="max"/>
@@ -19471,7 +19471,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c358-efc9-63a1-ef71" name="Potion of Strength" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="c358-efc9-63a1-ef71" name="Potion of Strength" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aa19-55c5-ebfe-91af" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b06c-5575-9b8f-f843" type="max"/>
@@ -19487,7 +19487,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2dcc-7b33-ad44-8ec9" name="The Other Trickster&apos;s Shard" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="2dcc-7b33-ad44-8ec9" name="The Other Trickster&apos;s Shard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2746-14ab-aa38-e80b" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="99c8-3735-ee15-cf1f" type="max"/>
@@ -19503,7 +19503,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="43f4-029e-c9a6-e069" name="Ironcurse Icon" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="43f4-029e-c9a6-e069" name="Ironcurse Icon" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="458a-a366-b470-f3f6" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bc21-fe92-f52c-1623" type="max"/>
@@ -19519,7 +19519,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b706-ccc0-394e-89a2" name="Potion of Toughness" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b706-ccc0-394e-89a2" name="Potion of Toughness" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="025c-4b98-8f3f-448c" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="51c3-7e65-55ab-3bdc" type="max"/>
@@ -19535,7 +19535,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0798-f56f-270c-8065" name="Arabyan Carpet" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0798-f56f-270c-8065" name="Arabyan Carpet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fa95-6461-18ce-fb66" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1886-65c5-f5a4-20a3" type="max"/>
@@ -19551,7 +19551,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="90c1-2dc7-8dcf-d237" name="Boots of Flight" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="90c1-2dc7-8dcf-d237" name="Boots of Flight" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6b94-ec28-940c-54ad" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2c27-0dc3-2d98-ba76" type="max"/>
@@ -19567,7 +19567,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="aa6b-1051-6c06-4d1c" name="Lifestone of Ashraaz" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="aa6b-1051-6c06-4d1c" name="Lifestone of Ashraaz" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="271e-d9bf-ad7c-1cea" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b26b-3427-81e1-fb62" type="max"/>
@@ -19583,7 +19583,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Warrior Familiar" hidden="false" id="6ba4-68a0-cd51-88ce" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Warrior Familiar" hidden="false" id="6ba4-68a0-cd51-88ce" collective="false" sortIndex="2">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="368d-d51b-2d12-3600" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="937e-e453-33a4-97fb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -19606,29 +19606,29 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fba2-f6b9-4fcc-98ac" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="94a6-7c7c-aad1-4193" name="Banner of Valour" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="94a6-7c7c-aad1-4193" name="Banner of Valour" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3253-1dc5-92ee-5b88" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2540-5b13-c727-ec0e" type="max"/>
           </constraints>
           <profiles>
-            <profile id="98fe-57c4-ccae-a2d4" name="Banner of Valour" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="98fe-57c4-ccae-a2d4" name="Banner of Valour" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains Immunity (Panic).</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="20"/>
+            <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7f82-e8a2-f27b-e9f2" name="War Banner" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7f82-e8a2-f27b-e9f2" name="War Banner" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1e47-9b7a-a4a9-5c27" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2f29-d64c-d1b6-e968" type="max"/>
           </constraints>
           <profiles>
-            <profile id="328d-4e82-59a2-84a8" name="War Banner" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="328d-4e82-59a2-84a8" name="War Banner" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard adds +1 to combat resolution.</characteristic>
               </characteristics>
@@ -19638,15 +19638,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a75f-e5aa-a6a4-14c4" name="Scarecrow Banner" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="a75f-e5aa-a6a4-14c4" name="Scarecrow Banner" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e34b-c9d6-ecc7-5c34" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9953-81e7-44ac-443e" type="max"/>
           </constraints>
           <profiles>
-            <profile id="a850-abd0-3a25-b4d0" name="Scarecrow Banner" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="a850-abd0-3a25-b4d0" name="Scarecrow Banner" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard causes Fear in models with Fly.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard causes Terror in models with the Fly special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19654,13 +19654,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f51c-f68c-46a5-16ce" name="Standard of Arcane Warding" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f51c-f68c-46a5-16ce" name="Standard of Arcane Warding" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5dc6-3c24-8559-5ec0" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3df3-6d35-797f-0b66" type="max"/>
           </constraints>
           <profiles>
-            <profile id="542a-4c76-c480-92fa" name="Standard of Arcane Warding" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="542a-4c76-c480-92fa" name="Standard of Arcane Warding" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains Magic Resistance (2).</characteristic>
               </characteristics>
@@ -19670,13 +19670,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="001c-8ede-5ac4-440c" name="Razor Standard" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="001c-8ede-5ac4-440c" name="Razor Standard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="16">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="76ca-1495-d39e-1f56" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c43c-f428-b317-b30e" type="max"/>
           </constraints>
           <profiles>
-            <profile id="af1e-d3de-2351-14e1" name="Razor Standard" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="af1e-d3de-2351-14e1" name="Razor Standard" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard have Armour Piercing (1).</characteristic>
               </characteristics>
@@ -19686,45 +19686,45 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1ee7-9599-e191-164e" name="Dread Banner" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1ee7-9599-e191-164e" name="Dread Banner" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3302-4883-25b8-aae9" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="79ae-bb31-5da1-f570" type="max"/>
           </constraints>
           <profiles>
-            <profile id="d1af-9055-f967-a190" name="Dread Banner" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="d1af-9055-f967-a190" name="Dread Banner" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard causes Fear.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="25"/>
+            <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="33ad-5917-0f38-70bc" name="Ranger&apos;s Standard" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="33ad-5917-0f38-70bc" name="Ranger&apos;s Standard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a3ff-ba79-6cd8-4e27" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5ef6-9920-3e29-7b1e" type="max"/>
           </constraints>
           <profiles>
-            <profile id="195d-20c5-02e2-73be" name="Ranger&apos;s Standard" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="195d-20c5-02e2-73be" name="Ranger&apos;s Standard" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains Strider. If the unit is riding a mount, the mount benefit from Strider as well.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="25"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d191-cd5f-c3c4-012f" name="Rampager&apos;s Standard" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d191-cd5f-c3c4-012f" name="Rampager&apos;s Standard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="17">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f8d1-22f9-18e0-fa27" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="756e-f805-e6d6-7bfc" type="max"/>
           </constraints>
           <profiles>
-            <profile id="6031-44f7-6873-9453" name="Rampager&apos;s Standard" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="6031-44f7-6873-9453" name="Rampager&apos;s Standard" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard can re-roll its charge distance dice.</characteristic>
               </characteristics>
@@ -19734,7 +19734,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="97d5-2db3-5d5c-0083" name="Wailing Banner" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="97d5-2db3-5d5c-0083" name="Wailing Banner" hidden="false" collective="false" import="true" type="upgrade" sortIndex="18">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2af4-0113-5a71-808c" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9a1f-761c-04e8-c9d8" type="max"/>
@@ -19742,21 +19742,21 @@ If you want to make a list using the allied rules, make separate rosters for eac
           <profiles>
             <profile id="735f-815b-b9e3-be11" name="Wailing Banner" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard causes Terror in its enemies.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this standard gains the Terror special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="50"/>
+            <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="dfcd-5a5d-cb6c-d2bb" name="Standard of Shielding" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="dfcd-5a5d-cb6c-d2bb" name="Standard of Shielding" hidden="false" collective="false" import="true" type="upgrade" sortIndex="14">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0492-0bb0-5078-47f9" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7b69-cfb3-5d61-f5aa" type="max"/>
           </constraints>
           <profiles>
-            <profile id="b5fd-7f4d-c4c1-bb5e" name="Standard of Shielding" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="b5fd-7f4d-c4c1-bb5e" name="Standard of Shielding" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains a Ward save (6+) against missile attacks.</characteristic>
               </characteristics>
@@ -19766,13 +19766,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1aac-8bc7-07ca-4810" name="Banner of Might" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1aac-8bc7-07ca-4810" name="Banner of Might" hidden="false" collective="false" import="true" type="upgrade" sortIndex="20">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d1e-dcaa-e624-59f9" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7631-5b1e-8d69-8074" type="max"/>
           </constraints>
           <profiles>
-            <profile id="1ccb-52e7-bc46-0f38" name="Banner of Might" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="1ccb-52e7-bc46-0f38" name="Banner of Might" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gain +1 To Hit in the first round of close combat.</characteristic>
               </characteristics>
@@ -19782,15 +19782,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="55"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7c2b-33d1-5ac9-7fe9" name="Banner of Duty" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7c2b-33d1-5ac9-7fe9" name="Banner of Duty" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a93b-cea9-665b-eb3e" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="67ad-9fa9-e35d-48c9" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f014-0f4f-6777-fa43" name="Banner of Duty" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="f014-0f4f-6777-fa43" name="Banner of Duty" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains +1 to their LD when taking Rally tests.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this standard automatically pass any Rally tests.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19798,31 +19798,31 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="cef5-266e-0f43-aead" name="Banner of Swiftness" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="cef5-266e-0f43-aead" name="Banner of Swiftness" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="baff-46c2-0997-bf51" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c0be-d090-e59b-a5f6" type="max"/>
           </constraints>
           <profiles>
-            <profile id="009b-5291-4a6a-2d06" name="Banner of Swiftness" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="009b-5291-4a6a-2d06" name="Banner of Swiftness" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains Swiftstride.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this standard gains Swiftstride.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="20"/>
+            <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8ff6-6287-7b98-4783" name="Standard of Discipline" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="8ff6-6287-7b98-4783" name="Standard of Discipline" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cf7f-e2d5-0343-0898" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="67e0-34f8-5bff-e1d4" type="max"/>
           </constraints>
           <profiles>
-            <profile id="3ca5-b1f2-ffd0-b846" name="Standard of Discipline" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="3ca5-b1f2-ffd0-b846" name="Standard of Discipline" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard has +1 LD, but cannot use the General&apos;s Inspiring Presence. If the General joins this unit, other units using their Inspiring Presence do not benefit from the +1 LD.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard has +1 LD, but cannot use the General&apos;s Inspiring Presence. If a model with this special rule joins this unit, other units using their Inspiring Presence do not benefit from the +1 Leadership.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19830,13 +19830,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ad77-141b-849a-4aea" name="Lichbone Pennant" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ad77-141b-849a-4aea" name="Lichbone Pennant" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="86bc-45b8-d384-a5ca" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="36ab-c5f2-f110-0235" type="max"/>
           </constraints>
           <profiles>
-            <profile id="d212-2fd5-37a7-0c87" name="Lichbone Pennant" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="d212-2fd5-37a7-0c87" name="Lichbone Pennant" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains Magic Resistance (1).</characteristic>
               </characteristics>
@@ -19846,15 +19846,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="870b-a8ab-ff7b-bb44" name="Banner of Eternal Flame" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="870b-a8ab-ff7b-bb44" name="Banner of Eternal Flame" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a2dd-7a1f-e276-ddc8" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1ff1-8b7f-bfe8-12fc" type="max"/>
           </constraints>
           <profiles>
-            <profile id="4a88-2418-1025-19aa" name="Banner of Eternal Flame" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="4a88-2418-1025-19aa" name="Banner of Eternal Flame" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains Flaming Attacks.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this standard gains the Magical Attacks and Flaming Attacks special rules.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19862,13 +19862,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0b5a-0ee8-979e-7837" name="Gleaming Pennant" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0b5a-0ee8-979e-7837" name="Gleaming Pennant" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2bba-254c-a9e3-facf" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4b65-8193-63c8-61d8" type="max"/>
           </constraints>
           <profiles>
-            <profile id="4eb8-3ff8-bdd8-dfbf" name="Gleaming Pennant" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="4eb8-3ff8-bdd8-dfbf" name="Gleaming Pennant" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">One use only. A unit with this magic standard can re-roll its first failed LD test.</characteristic>
               </characteristics>
@@ -19878,13 +19878,13 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="10b3-7a9e-1d69-01fc" name="Battle Banner" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="10b3-7a9e-1d69-01fc" name="Battle Banner" hidden="false" collective="false" import="true" type="upgrade" sortIndex="21">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d3c3-0282-f268-6619" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b3dc-0e24-5e6a-5ca1" type="max"/>
           </constraints>
           <profiles>
-            <profile id="fdb4-9681-b7f6-01e9" name="Battle Banner" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="fdb4-9681-b7f6-01e9" name="Battle Banner" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard adds +D6 to combat resolution, rolled each time it is used.</characteristic>
               </characteristics>
@@ -19894,36 +19894,52 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="70"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="457e-45ee-6303-e58c" name="Banner of Courage" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="457e-45ee-6303-e58c" name="Banner of Courage" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9b33-6039-e914-24de" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1521-5139-e9fa-035c" type="max"/>
           </constraints>
           <profiles>
-            <profile id="0556-d274-dde6-2c71" name="Banner of Courage" publicationId="9e23-79cb-pubN66727" page="164" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="0556-d274-dde6-2c71" name="Banner of Courage" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard re-roll failed Break tests.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="15"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b06b-65e8-4616-8cd4" name="Banner of Defiance" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b06b-65e8-4616-8cd4" name="Banner of Defiance" hidden="false" collective="false" import="true" type="upgrade" sortIndex="19">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f909-450b-e5da-f98c" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ec88-f5a8-8b4e-dbc5" type="max"/>
           </constraints>
           <profiles>
-            <profile id="a31e-e0b7-4c5f-1200" name="Banner of Defiance" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="a31e-e0b7-4c5f-1200" name="Banner of Defiance" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this standard gains Stubborn.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this standard gains the Stubborn special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="50"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="bd93-a127-51fd-0c29" name="Banner of Iron Resolve" hidden="false" collective="false" import="true" type="upgrade" sortIndex="15">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f08c-8ef6-4fbb-9b42" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3a8e-256f-f579-9a9d" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="4061-b5f9-68cb-4dac" name="Banner of Iron Resolve" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this standard gains the Immunity (Psychology) special rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -19933,7 +19949,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e8bf-02bf-4af7-5efa" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="eea1-981c-1270-d7ba" name="Enchanted shield" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="eea1-981c-1270-d7ba" name="Enchanted shield" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="20da-3f95-f54e-9d08" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="21eb-a66f-cd50-6bda" type="max"/>
@@ -19951,7 +19967,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="bdd6-bac4-600a-9d71" name="Trickster&apos;s Helm" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="bdd6-bac4-600a-9d71" name="Trickster&apos;s Helm" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2219-1a5b-1941-a8c8" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0b54-e129-3514-3d95" type="max"/>
@@ -19969,7 +19985,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4808-e83d-ed68-7a23" name="Dragonhelm" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="4808-e83d-ed68-7a23" name="Dragonhelm" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5fce-4ce1-16bb-8493" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="beab-012a-f0b6-b37b" type="max"/>
@@ -19987,7 +20003,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9a5c-0e4d-2974-23d9" name="Shield of Ptolos" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="9a5c-0e4d-2974-23d9" name="Shield of Ptolos" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8732-7946-be62-b114" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="55ab-bfc9-ab83-2670" type="max"/>
@@ -20005,7 +20021,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="fdc2-057c-715c-557a" name="Glittering Scales" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="fdc2-057c-715c-557a" name="Glittering Scales" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0c85-0dcc-4c2d-d783" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="39f5-e577-e363-e6d3" type="max"/>
@@ -20023,7 +20039,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d125-45e5-61e6-0926" name="Spellshield" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d125-45e5-61e6-0926" name="Spellshield" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6e48-aee7-31cd-f010" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="710a-3a50-aac9-4488" type="max"/>
@@ -20041,7 +20057,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8ceb-acc7-6436-3aef" name="Charmed Shield" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="8ceb-acc7-6436-3aef" name="Charmed Shield" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f84b-8692-9712-1937" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1150-ec24-0bd8-f228" type="max"/>
@@ -20059,7 +20075,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ecd0-0bdb-3b07-1502" name="Gambler&apos;s Armour" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ecd0-0bdb-3b07-1502" name="Gambler&apos;s Armour" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a389-51e9-f53f-20f0" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4d37-d30a-c1c3-d45a" type="max"/>
@@ -20077,7 +20093,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7d0d-7b73-9561-a623" name="Armour of Fortune" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7d0d-7b73-9561-a623" name="Armour of Fortune" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="efe6-4605-7252-00c3" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c164-3d76-3d53-8e44" type="max"/>
@@ -20095,7 +20111,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="07d9-a853-ebb5-839c" name="Armour of Destiny" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="07d9-a853-ebb5-839c" name="Armour of Destiny" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d4ac-251a-e143-cdca" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f2fa-2ccf-29b3-5c2d" type="max"/>
@@ -20113,7 +20129,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="50"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a039-9655-2c7a-f788" name="Armour of Resilience" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="a039-9655-2c7a-f788" name="Armour of Resilience" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="24f2-1ce0-8c35-dd8a" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2af3-2b92-e65d-0d3a" type="max"/>
@@ -20131,7 +20147,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="472c-90d3-fd34-9c83" name="Armour of Silvered Steel" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="472c-90d3-fd34-9c83" name="Armour of Silvered Steel" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="04c8-4736-2d9b-20b7" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1b8f-25f0-ab4b-2d51" type="max"/>
@@ -20149,7 +20165,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c6cc-112f-6b7f-8fd9" name="Helm of Discord" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="c6cc-112f-6b7f-8fd9" name="Helm of Discord" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0238-f99e-92e2-c5e2" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fb84-d683-78c3-efa7" type="max"/>
@@ -20174,7 +20190,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b9b8-0e2a-818c-ead7" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="4c3d-e616-bd50-f4e1" name="Giant Blade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="4c3d-e616-bd50-f4e1" name="Giant Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="22">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a9c6-28d9-7555-6288" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="112a-571b-10c9-3935" type="max"/>
@@ -20192,7 +20208,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="45"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f535-b3be-f6a7-edf5" name="Dragon Blade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f535-b3be-f6a7-edf5" name="Dragon Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="24">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d030-ead9-86ce-1409" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="414d-dc15-216b-fdde" type="max"/>
@@ -20210,7 +20226,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="70"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f11c-e029-bc6c-58b6" name="Fencer&apos;s Blades" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f11c-e029-bc6c-58b6" name="Fencer&apos;s Blades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="16">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ad4b-336b-5da3-dca6" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e991-1731-46eb-6b62" type="max"/>
@@ -20228,7 +20244,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="035f-94c7-bfd6-7707" name="Sword of Swift Slaying" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="035f-94c7-bfd6-7707" name="Sword of Swift Slaying" hidden="false" collective="false" import="true" type="upgrade" sortIndex="18">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5caa-212b-ac28-0391" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f9e1-6b0a-dad5-8ea7" type="max"/>
@@ -20246,7 +20262,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7dc7-1777-0f73-b72c" name="Sword of Anti-Heroes" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7dc7-1777-0f73-b72c" name="Sword of Anti-Heroes" hidden="false" collective="false" import="true" type="upgrade" sortIndex="20">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="47a2-75ab-278a-77dd" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="27e1-8a0a-6869-1d6e" type="max"/>
@@ -20264,7 +20280,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="fba1-e5cc-7307-66db" name="Sword of Strife" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="fba1-e5cc-7307-66db" name="Sword of Strife" hidden="false" collective="false" import="true" type="upgrade" sortIndex="21">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aec0-0239-6401-05e3" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6ab8-a2d0-92fd-3b84" type="max"/>
@@ -20282,7 +20298,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="78b7-618e-b959-a341" name="Bone Blade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="78b7-618e-b959-a341" name="Bone Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b58d-0a65-6d82-0219" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4a79-9a8b-8c0a-2792" type="max"/>
@@ -20300,7 +20316,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="6125-e784-5cfb-86e6" name="Ogre Blade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="6125-e784-5cfb-86e6" name="Ogre Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="19">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2dac-954c-21d8-8a44" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="101a-de5b-6df2-0091" type="max"/>
@@ -20318,7 +20334,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="76fa-697f-2504-d66f" name="Sword of Bloodshed" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="76fa-697f-2504-d66f" name="Sword of Bloodshed" hidden="false" collective="false" import="true" type="upgrade" sortIndex="23">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9e44-e6a5-913a-be12" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="22fe-94be-107a-14ec" type="max"/>
@@ -20336,7 +20352,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="45"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="aab5-e4ae-a6bc-ad4e" name="Parrying Blade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="aab5-e4ae-a6bc-ad4e" name="Parrying Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="44ca-9896-ea54-9017" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2114-37f8-2bf1-6c35" type="max"/>
@@ -20354,7 +20370,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="438f-4d2e-cd3a-eb4d" name="Relic Sword" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="438f-4d2e-cd3a-eb4d" name="Relic Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="14">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0c10-0f48-b6c1-102e" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7e8e-e283-e017-7c8b" type="max"/>
@@ -20372,7 +20388,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f49d-c7e7-cc03-6405" name="Sword of Fortitude" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f49d-c7e7-cc03-6405" name="Sword of Fortitude" hidden="false" collective="false" import="true" type="upgrade" sortIndex="15">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b6b6-3f43-6cf6-503d" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ba28-d682-f3aa-3ca2" type="max"/>
@@ -20390,7 +20406,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="bbc3-4ba6-2188-1131" name="Sword of Might" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="bbc3-4ba6-2188-1131" name="Sword of Might" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b9e4-ff8c-9caf-4461" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7301-093c-61b6-036a" type="max"/>
@@ -20408,7 +20424,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a77f-027d-8eaa-c8ed" name="Sword of Battle" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="a77f-027d-8eaa-c8ed" name="Sword of Battle" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8561-6089-3abc-3f79" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ed10-bb95-098b-e65d" type="max"/>
@@ -20426,7 +20442,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e086-0469-282a-38d4" name="Venom Sword" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e086-0469-282a-38d4" name="Venom Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="35f6-c0a5-d152-ed15" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d121-688a-9670-8775" type="max"/>
@@ -20444,7 +20460,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9432-443c-e70e-26fe" name="Shrieking Blade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="9432-443c-e70e-26fe" name="Shrieking Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ef2c-97bc-99cb-e9d0" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3573-92bd-f40a-83bb" type="max"/>
@@ -20462,7 +20478,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9cca-c7c4-5cfb-39f0" name="Sword of Striking" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="9cca-c7c4-5cfb-39f0" name="Sword of Striking" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="595a-324c-c4d6-5b05" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3be0-39f4-e46e-f38a" type="max"/>
@@ -20480,7 +20496,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0498-8444-7181-c861" name="Blade of Slicing" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0498-8444-7181-c861" name="Blade of Slicing" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0107-d561-761f-26ee" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d2a0-01ab-8cf2-ad64" type="max"/>
@@ -20498,7 +20514,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c0d8-7820-4d5c-71e9" name="Blade of Sea Gold" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="c0d8-7820-4d5c-71e9" name="Blade of Sea Gold" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="949f-0454-386d-ae24" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6499-51a0-0eac-3c7b" type="max"/>
@@ -20516,7 +20532,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="4179-dadb-d8ab-8198" name="Warrior Bane" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="4179-dadb-d8ab-8198" name="Warrior Bane" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3d82-e13e-ef2f-2784" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="864a-f967-7fa8-bbd5" type="max"/>
@@ -20534,7 +20550,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b2af-7c52-711a-5b67" name="Tormentor Sword" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b2af-7c52-711a-5b67" name="Tormentor Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9162-e13a-8a7e-ff7b" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ec45-2002-d9cc-0713" type="max"/>
@@ -20552,7 +20568,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0d5f-ac3d-bcfc-759b" name="Biting Blade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0d5f-ac3d-bcfc-759b" name="Biting Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d8f1-4d69-0299-dbaf" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="383f-887e-b478-f1e4" type="max"/>
@@ -20570,7 +20586,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="535a-42f2-c060-9efd" name="Berserker Sword" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="535a-42f2-c060-9efd" name="Berserker Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a8ef-49b7-5fcb-2411" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="69b5-7490-ddd7-7712" type="max"/>
@@ -20588,7 +20604,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3ed0-0a47-325e-a489" name="Obsidian Blade" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="3ed0-0a47-325e-a489" name="Obsidian Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="17">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="db7f-9732-8ac2-b9db" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0efd-950b-b594-8b15" type="max"/>
@@ -20613,7 +20629,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7ab9-cd2a-21c5-12a2" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="0a7e-5a63-d3ce-3253" name="Talisman of Protection" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0a7e-5a63-d3ce-3253" name="Talisman of Protection" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="994d-d6a8-869a-1cca" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fd21-14a4-0da1-c25d" type="max"/>
@@ -20629,7 +20645,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="afd6-a153-299c-88c4" name="Talisman of Preservation" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="afd6-a153-299c-88c4" name="Talisman of Preservation" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5140-0413-2323-4a19" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8930-ddef-c302-de07" type="max"/>
@@ -20645,7 +20661,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="45"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f246-4c21-10b8-b186" name="Talisman of Endurance" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f246-4c21-10b8-b186" name="Talisman of Endurance" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5fbc-0381-f262-6f19" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d20d-3ef9-08ce-73aa" type="max"/>
@@ -20661,7 +20677,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="968a-ebf7-08e9-a735" name="Seed of Rebirth" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="968a-ebf7-08e9-a735" name="Seed of Rebirth" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="66bb-be35-ab67-fc13" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="73dd-da68-2d82-1817" type="max"/>
@@ -20677,7 +20693,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9475-b023-f368-e7e9" name="Opal Amulet" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="9475-b023-f368-e7e9" name="Opal Amulet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eaf7-8d3f-e26a-6606" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="747a-2c30-c243-27e8" type="max"/>
@@ -20693,7 +20709,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="5ef5-bc7d-8e86-93a1" name="Obsidian Trinket" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="5ef5-bc7d-8e86-93a1" name="Obsidian Trinket" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eeef-e721-f785-a321" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9433-66af-7618-7696" type="max"/>
@@ -20709,7 +20725,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="695d-1483-60be-3710" name="Obsidian Lodestone" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="695d-1483-60be-3710" name="Obsidian Lodestone" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a1c4-f6ae-6f67-fc20" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9ba9-0945-8668-3cb9" type="max"/>
@@ -20725,7 +20741,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e716-d445-d848-23cb" name="Obsidian Amulet" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e716-d445-d848-23cb" name="Obsidian Amulet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="beee-f435-1af9-3394" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="13bd-997c-79a2-5671" type="max"/>
@@ -20741,7 +20757,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0291-b00a-a412-76e3" name="Lucky Trinket" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0291-b00a-a412-76e3" name="Lucky Trinket" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7bb9-59f1-b2f8-4406" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="148f-27a8-1918-22e8" type="max"/>
@@ -20757,7 +20773,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="089b-f3c4-8b35-2ed8" name="Dragonbane Gem" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="089b-f3c4-8b35-2ed8" name="Dragonbane Gem" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1fa7-4cb2-cc80-3604" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1897-8816-df18-9602" type="max"/>
@@ -20773,7 +20789,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="44fe-7b40-47df-f1fc" name="Dawnstone" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="44fe-7b40-47df-f1fc" name="Dawnstone" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a495-d1d9-4b92-cf0f" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="00ce-69b4-4e2a-4d2a" type="max"/>
@@ -20796,7 +20812,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="01e6-93d4-45a5-e661" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="e42b-1e73-99be-4cb2" name="Earthing Rod" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e42b-1e73-99be-4cb2" name="Earthing Rod" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="73ac-3b2f-15e7-89d2" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d7d3-8408-c955-9f87" type="max"/>
@@ -20812,7 +20828,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2e4f-5876-7c4f-afa8" name="Feedback Scroll" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="2e4f-5876-7c4f-afa8" name="Feedback Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="15">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="88d4-9e02-a3db-b04e" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6535-0430-75d7-7086" type="max"/>
@@ -20828,7 +20844,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="64ba-7df7-6370-a03d" name="Destroy Magic Scroll" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="64ba-7df7-6370-a03d" name="Destroy Magic Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="14">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f970-e556-915b-db0a" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6eb4-b62c-f7dd-61ae" type="max"/>
@@ -20844,7 +20860,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1eab-a10f-79f9-0f31" name="Power Scroll" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1eab-a10f-79f9-0f31" name="Power Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3980-e4c3-d9db-402e" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="029c-5f4c-1044-5919" type="max"/>
@@ -20860,7 +20876,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1bca-76e7-989c-1492" name="Power Stone" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1bca-76e7-989c-1492" name="Power Stone" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ddf6-281f-bf14-1db3" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d4e0-5e64-88d3-13d2" type="max"/>
@@ -20876,7 +20892,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="fa6d-0d69-b2f0-fea1" name="Forbidden Rod" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="fa6d-0d69-b2f0-fea1" name="Forbidden Rod" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a257-ca79-c728-4902" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b7f3-7d0a-27b0-bbc1" type="max"/>
@@ -20892,7 +20908,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d037-6c00-769f-1ad5" name="Dispel Scroll" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d037-6c00-769f-1ad5" name="Dispel Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e13d-7c39-f2da-7b54" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="30a8-ba65-7bb3-238c" type="max"/>
@@ -20908,7 +20924,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d683-a87d-6274-ce86" name="Luckstone" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d683-a87d-6274-ce86" name="Luckstone" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a066-9f1b-3fec-549b" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0144-dbe7-bb8b-3f28" type="max"/>
@@ -20924,7 +20940,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b952-58d9-9e85-89c5" name="The Mystic Shield of Brag" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b952-58d9-9e85-89c5" name="The Mystic Shield of Brag" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5251-b9b6-7802-7f60" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e523-ef4a-572f-4de3" type="max"/>
@@ -20940,7 +20956,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3959-2708-ac14-d394" name="Scroll of Shielding" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="3959-2708-ac14-d394" name="Scroll of Shielding" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eef5-b5a2-9073-077f" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7b55-2313-3b74-3f51" type="max"/>
@@ -20956,7 +20972,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c2e4-9231-019b-032c" name="Trickster&apos;s Shard" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="c2e4-9231-019b-032c" name="Trickster&apos;s Shard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7793-ca87-7e37-215b" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="50d4-b387-bab7-9521" type="max"/>
@@ -20972,7 +20988,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="bb99-1ac3-14c2-42bc" name="Scroll of Leeching" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="bb99-1ac3-14c2-42bc" name="Scroll of Leeching" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="024a-28e9-b4c2-82a6" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3ba4-967d-2331-8ee9" type="max"/>
@@ -20988,7 +21004,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="5bd3-a6b3-4b76-e84a" name="Sivejir&apos;s Hex Scroll" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="5bd3-a6b3-4b76-e84a" name="Sivejir&apos;s Hex Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="16">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9f26-5fa5-baa2-a621" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e0b9-f1ce-b606-d256" type="max"/>
@@ -21004,7 +21020,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9f44-d50e-1211-7778" name="Mystic Maze" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="9f44-d50e-1211-7778" name="Mystic Maze" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="de22-5186-82dc-ee4f" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5a96-0ead-e044-768f" type="max"/>
@@ -21020,7 +21036,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0b2c-e149-2e25-a59f" name="The Gem of Taranto" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0b2c-e149-2e25-a59f" name="The Gem of Taranto" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7a37-b09b-1872-ffd6" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="365c-c783-3e65-0d4f" type="max"/>
@@ -21036,7 +21052,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c715-5311-5a0a-f397" name="Hypnotic Eye Scroll" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="c715-5311-5a0a-f397" name="Hypnotic Eye Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2fde-c310-ede5-7d9d" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dead-10da-aed7-c044" type="max"/>
