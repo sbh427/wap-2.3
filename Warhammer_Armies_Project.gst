@@ -2,7 +2,7 @@
 <gameSystem id="9e23-79cb-afed-cf4c" name="Warhammer Armies Project" revision="55" battleScribeVersion="2.03" authorName="L3610N 115" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://discordapp.com/invite/UrrPB3T</readme>
   <publications>
-    <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.2" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publicationDate="07.09.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN67565" name="Albion v.1.5" shortName="Al" publisher="Warhammer - Albion 9th Ed 1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN71963" name="Beastmen v.1.6" shortName="BM" publisher="Warhammer - Beastmen 9th Ed 1.6" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN75312" name="Bretonnia v.1.5" shortName="Br" publisher="Warhammer - Bretonnia 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -12,7 +12,7 @@
     <publication id="9e23-79cb-pubN78137" name="Ogre Kingdoms v.1.5" shortName="OK" publisher="Warhammer - Ogre Kingdoms 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN78975" name="Orcs &amp; Goblins v.1.5" shortName="O&amp;G" publisher="Warhammer - Orcs &amp; Goblins 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN116235" name="Regiments of Renown v.1.3" shortName="RoR" publisher="Warhammer - Regiments of Renown 9th Ed 1.3" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="aa7b-3583-0834-7bfa" name="Dwarfs v.1.5" shortName="Dw" publisher="Warhammer - Dwarfs 9th Ed 1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="aa7b-3583-0834-7bfa" name="Dwarfs v.1.6" shortName="Dw" publisher="Warhammer - Dwarfs 9th Ed 1.6" publicationDate="18.05.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="b3a3-a398-4838-11a1" name="Imperial Knightly Orders v.1.3" shortName="Em" publisher="Warhammer - Imperial Knightly Orders 9th Ed v.1.3" publicationDate="27.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="d69c-a7ea-95db-6f56" name="Steam Tanks" shortName="Emp" publisher="Warhammer - Steam Tanks" publicationDate="14.02.2022" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="315d-135b-135c-07ce" name="Empire v.1.5" shortName="Em" publisher="Warhammer - Empire 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -22,7 +22,7 @@
     <publication id="eee5-f9c5-fa08-3f2e" name="Beastmen v.1.6, Daemons of Chaos v.1.62, Warriors of Chaos v.1.5" shortName="BM, DoC, WoC" publisher="Warhammer - Beastmen 9th Ed 1.6, Warhammer - Daemons of Chaos 1.62, Warhammer - Warriors of Chaos 9th Ed 1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="feeb-1927-4a99-f849" name="Tomb Kings v.1.5" shortName="TK" publisher="Warhammer - Tomb Kings 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="10a5-5781-61f5-86ae" name="Vampire Counts 1.63" shortName="VC" publisher="Warhammer - Vampire Counts 1.63" publicationDate="18.05.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="1a01-044f-047b-618f" name="Warriors of Chaos v.1.5" shortName="WoC" publisher="Warhammer - Warriors of Chaos 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="1a01-044f-047b-618f" name="Warriors of Chaos v.1.6" shortName="WoC" publisher="Warhammer - Warriors of Chaos 9th Ed v.1.6" publicationDate="20.08.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="bb4b-874f-580a-13d6" name="Beastmen v.1.6, Warriors of Chaos v.1.5" shortName="BM, WoC" publisher="Warhammer - Beastmen 9th Ed 1.6, Warhammer - Warriors of Chaos 9th Ed 1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="e967-620f-06be-096a" name="Wood Elves v.1.5" shortName="WE" publisher="Warhammer - Wood Elves 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="315c-6fd1-56a3-8b04" name="Amazons v.1.44" shortName="Am" publisher="Warhammer - Amazons 1.44" publicationDate="08.01.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -224,6 +224,11 @@
     <profileType id="9025-f9c9-08a1-7918" name="Animosity Chart">
       <characteristicTypes>
         <characteristicType id="fb86-d23a-8886-cc3b" name="Result"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Prayer" id="4608-9b35-b7dc-202d" hidden="false">
+      <characteristicTypes>
+        <characteristicType name="Details" id="1f79-8144-edd6-8b51"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -558,22 +563,6 @@ If you want to make a list using the allied rules, make separate rosters for eac
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="6ba4-68a0-cd51-88ce" name="Warrior Familiar" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="368d-d51b-2d12-3600" type="max"/>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="937e-e453-33a4-97fb" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="e342-0791-fb7a-a153" name="Warrior Familiar" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
-          <characteristics>
-            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The model gains an additional S 3 Attack. This does not benefit from any weapon used by the character. You may still take another Enchanted Item in addition to the Warrior Familiar, and it also does not count against the maximum points limit of magic items normally allowed for the character.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <costs>
-        <cost name="pts" typeId="points" value="5"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="4c5e-ad54-8a4a-e1eb" name="Battle Magic Belannar/LoH" hidden="false" collective="false" import="true" type="upgrade">
@@ -13573,7 +13562,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="f8ae-c81f-5f4a-b79b" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+            <infoLink id="f8ae-c81f-5f4a-b79b" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
           </infoLinks>
           <selectionEntries>
             <selectionEntry id="0202-f3fa-d97b-9355" name="Scimitar of Dakisir" hidden="false" collective="false" import="true" type="upgrade">
@@ -13747,7 +13736,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="4ddc-8e2e-b3bf-3b21" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink id="4ddc-8e2e-b3bf-3b21" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="fd27-f2f8-0fbd-86c2" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
@@ -13962,7 +13951,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="65c4-85fa-83bd-63c1" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink id="65c4-85fa-83bd-63c1" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="a4bb-0ad5-0d5f-0945" name="Blades of the Ancients" hidden="false" collective="false" import="true" type="upgrade">
@@ -14306,7 +14295,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="7017-7085-4ce9-6902" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink id="7017-7085-4ce9-6902" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="9412-e9f8-5586-2f28" name="Bear Fang" hidden="false" collective="false" import="true" type="upgrade">
@@ -14475,7 +14464,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="97a6-be26-9f8c-0dcd" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink id="97a6-be26-9f8c-0dcd" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="3a58-22e7-8453-04df" name="Crossbow" hidden="false" collective="false" import="true" type="upgrade">
@@ -14716,7 +14705,7 @@ In addition, as long as Bronzino is within 3&quot; of a Galloper Gun, he is allo
             </rule>
           </rules>
           <infoLinks>
-            <infoLink id="42e6-32c2-55bc-597d" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+            <infoLink id="42e6-32c2-55bc-597d" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
           </infoLinks>
           <selectionEntries>
             <selectionEntry id="1ac9-6e78-98bb-af8c" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
@@ -14871,7 +14860,7 @@ In addition, as long as Bronzino is within 3&quot; of a Galloper Gun, he is allo
                 </rule>
               </rules>
               <infoLinks>
-                <infoLink id="30fe-77d9-05c6-77fb" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink id="30fe-77d9-05c6-77fb" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="d501-c407-30c6-2899" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -15117,7 +15106,7 @@ In addition, as long as Bronzino is within 3&quot; of a Galloper Gun, he is allo
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="e95f-ae4c-08f5-b02c" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink id="e95f-ae4c-08f5-b02c" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="31e2-14bf-86fa-604f" name="Medium Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -15194,7 +15183,7 @@ order to march, regardless of the proximity of enemy units.</description>
           </rules>
           <infoLinks>
             <infoLink id="108a-8863-76f0-f870" name="Skirmishers" hidden="false" targetId="9a30-1c5c-12f4-5798" type="rule"/>
-            <infoLink id="14d7-b22a-4596-d022" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+            <infoLink id="14d7-b22a-4596-d022" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
           </infoLinks>
           <selectionEntries>
             <selectionEntry id="6350-3927-ee0c-45b8" name="Gotrek&apos;s Axe" hidden="false" collective="false" import="true" type="upgrade">
@@ -15394,7 +15383,7 @@ order to march, regardless of the proximity of enemy units.</description>
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="e64b-9f1c-795b-b53a" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink id="e64b-9f1c-795b-b53a" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="9e10-4973-db2d-9411" name="Medium Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -15544,7 +15533,7 @@ order to march, regardless of the proximity of enemy units.</description>
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="e944-db6f-4185-2d5a" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink id="e944-db6f-4185-2d5a" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="4edc-1634-cba5-8e35" name="Brace of Pistols" hidden="false" collective="false" import="true" type="upgrade">
@@ -15725,7 +15714,7 @@ order to march, regardless of the proximity of enemy units.</description>
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="cab7-bef7-e002-b542" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink id="cab7-bef7-e002-b542" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="2851-2162-bda0-1b55" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
@@ -15858,7 +15847,7 @@ For example, against a unit four ranks deep the Goblin-hewer fires 4D6 shots. If
             </rule>
           </rules>
           <infoLinks>
-            <infoLink id="aeaf-df03-91ae-d70a" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+            <infoLink id="aeaf-df03-91ae-d70a" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
           </infoLinks>
           <selectionEntries>
             <selectionEntry id="2167-b87e-900f-8d08" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
@@ -16076,7 +16065,7 @@ For example, against a unit four ranks deep the Goblin-hewer fires 4D6 shots. If
                 </rule>
               </rules>
               <infoLinks>
-                <infoLink id="cc1e-32e0-cea7-2b1e" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink id="cc1e-32e0-cea7-2b1e" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="2d80-718a-50b3-265c" name="Crossbow" hidden="false" collective="false" import="true" type="upgrade">
@@ -16282,7 +16271,7 @@ For example, against a unit four ranks deep the Goblin-hewer fires 4D6 shots. If
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="a4bb-b4be-9727-fc38" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink id="a4bb-b4be-9727-fc38" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="af53-68e5-71f7-f266" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
@@ -16501,7 +16490,7 @@ To determine what the unit does roll a D6 and consult the Treachery table. Note 
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="b9ac-5d38-8625-e3de" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink id="b9ac-5d38-8625-e3de" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="ed76-0f4b-cfd0-fe96" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
@@ -16656,7 +16645,7 @@ rolled.</characteristic>
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="f187-0590-3611-a655" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink id="f187-0590-3611-a655" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="cbf9-958a-c62f-b697" name="Medium Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -16902,7 +16891,7 @@ rolled.</characteristic>
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="92b8-c98c-2810-9c21" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink id="92b8-c98c-2810-9c21" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="a504-c9b0-c3f9-ca25" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -17074,7 +17063,7 @@ At the Start of the Turn roll a D6 for Ruglud&apos;s Armoured Orcs — on a 2+ t
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="6642-2e2b-cb47-8bb2" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink id="6642-2e2b-cb47-8bb2" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
                 <infoLink id="9ab8-26c6-1457-5a66" name="Choppas" hidden="false" targetId="2017-de4c-6670-21ba" type="rule"/>
               </infoLinks>
               <selectionEntries>
@@ -17305,7 +17294,7 @@ At the Start of the Turn roll a D6 for Ruglud&apos;s Armoured Orcs — on a 2+ t
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="c0cb-c496-48dc-c41f" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink id="c0cb-c496-48dc-c41f" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="c630-3638-fc47-c0c3" name="Medium Armour" hidden="false" collective="false" import="true" type="upgrade">
@@ -17446,7 +17435,7 @@ At the Start of the Turn roll a D6 for Ruglud&apos;s Armoured Orcs — on a 2+ t
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="473f-3f45-3ae7-3cbe" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink id="473f-3f45-3ae7-3cbe" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="a832-de66-3212-e916" name="Crossbow" hidden="false" collective="false" import="true" type="upgrade">
@@ -17625,7 +17614,7 @@ At the Start of the Turn roll a D6 for Ruglud&apos;s Armoured Orcs — on a 2+ t
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="5ff2-0976-5f7f-88be" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink id="5ff2-0976-5f7f-88be" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
                 <infoLink id="5603-4827-602b-b9aa" name="Hatred (Undead)" hidden="false" targetId="725b-14b3-0f42-bfc2" type="rule"/>
               </infoLinks>
               <selectionEntries>
@@ -17743,7 +17732,7 @@ At the Start of the Turn roll a D6 for Ruglud&apos;s Armoured Orcs — on a 2+ t
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="ced6-e4a3-5694-7d7f" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+            <infoLink id="ced6-e4a3-5694-7d7f" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
           </infoLinks>
           <selectionEntries>
             <selectionEntry id="6c19-34f0-d6a2-55d5" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
@@ -18039,7 +18028,7 @@ At the Start of the Turn roll a D6 for Ruglud&apos;s Armoured Orcs — on a 2+ t
           <infoLinks>
             <infoLink id="bd50-fa1c-ab98-9e77" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
             <infoLink id="eca5-019e-221c-1f69" name="Accusation" hidden="false" targetId="a2e7-0a0d-9844-7927" type="rule"/>
-            <infoLink id="77b7-3190-6458-e75a" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+            <infoLink id="77b7-3190-6458-e75a" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
             <infoLink id="fe0b-6fe8-d9ac-e2d1" name="Hatred" hidden="false" targetId="f6d7-9fbc-abc1-5cfc" type="rule"/>
           </infoLinks>
           <selectionEntries>
@@ -18215,7 +18204,7 @@ At the Start of the Turn roll a D6 for Ruglud&apos;s Armoured Orcs — on a 2+ t
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="096c-61a0-5eab-e84f" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink id="096c-61a0-5eab-e84f" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="07cf-f882-c2b2-b9bd" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
@@ -18360,7 +18349,7 @@ At the Start of the Turn roll a D6 for Ruglud&apos;s Armoured Orcs — on a 2+ t
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="e117-abe2-d650-68d1" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink id="e117-abe2-d650-68d1" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
                 <infoLink id="e5ba-a6bb-a7f9-7c93" name="Killing Blow" hidden="false" targetId="a711-7cf6-cd2b-1d29" type="rule"/>
               </infoLinks>
               <selectionEntries>
@@ -18552,7 +18541,7 @@ At the Start of the Turn roll a D6 for Ruglud&apos;s Armoured Orcs — on a 2+ t
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="b8ba-70ef-77b6-6032" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink id="b8ba-70ef-77b6-6032" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="f078-d4f0-bfa7-2f1f" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
@@ -20121,6 +20110,22 @@ At the Start of the Turn roll a D6 for Ruglud&apos;s Armoured Orcs — on a 2+ t
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="30"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Warrior Familiar" hidden="false" id="6ba4-68a0-cd51-88ce" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="368d-d51b-2d12-3600" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="937e-e453-33a4-97fb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Warrior Familiar" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="e342-0791-fb7a-a153" publicationId="9e23-79cb-pubN66727" page="163">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The model gains an additional S 3 Attack. This does not benefit from any weapon used by the character. You may still take another Enchanted Item in addition to the Warrior Familiar, and it also does not count against the maximum points limit of magic items normally allowed for the character.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
@@ -22871,7 +22876,7 @@ All shots aimed at a unit of two or more Skirmisher models with an individual Un
 Characters
 A character model that joins a unit of Skirmishers gains Skirmisher as long as they stay with the unit. Characters may only join Skirmishers with the same Troop Type as them.</description>
     </rule>
-    <rule id="9ff3-dda6-e142-5a77" name="Frenzy" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
+    <rule id="9ff3-dda6-e142-5a77" name="Frenzy" publicationId="9e23-79cb-pubN66727" page="60" hidden="false">
       <description>Frenzied troops gain +1 A and Immunity (Psychology).
 
 Berserk Rage
@@ -22881,14 +22886,20 @@ If, during the Charge sub-phase, a unit that includes one or more Frenzied model
 
 A unit that includes one or more Frenzied models that attempts to restrain pursuit if it beats a foe in close combat suffer a LD modifier equal to the result they won the combat against that unit by.
 
+
+Note that in case the enemy unit was completely wiped out, the Frenzied unit can choose whether to overrun or not as normal.
+
+
+If a model has the Frenzy special rule from two or more different sources (such as a combination of different special rules, spells or magic items), it gains +1 Attack. However, they must always pursue, with no chance to restrain.
+
 Losing Frenzy
 Frenzy can be lost. Models retain their Frenzy for the entire game unless beaten in combat.</description>
     </rule>
     <rule id="d56e-8ec7-dbcd-aeee" name="Stubborn" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
       <description>If the majority of the models in a unit are Stubborn, the unit is always Steadfast, whether or not they have a higher Unit Strength than their enemy or are disrupted.</description>
     </rule>
-    <rule id="e025-10f3-f893-4bd7" name="Devastating Charge" publicationId="9e23-79cb-pubN66727" page="73" hidden="false">
-      <description>The Models have +1 A during a turn in which they charge into combat. Unless otherwise noted, this only applies to rider in case of Cavalry or Monstrous Cavalry.</description>
+    <rule id="e025-10f3-f893-4bd7" name="Devastating Charge" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
+      <description>The Models have +1 A during a turn in which they charge into combat.</description>
     </rule>
     <rule id="ec58-b231-6a2f-a163" name="Flammable" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>If a Flammable model is attacked with a Flaming Attack, all failed To Wound rolls made by the attackers may be re-rolled.</description>
@@ -22906,10 +22917,13 @@ Characters that are Unbreakable may only join units that are also Unbreakable, a
 
 Unlike Unbreakable units, Unstable characters may join Unstable units. If an Unstable unit also contains Unstable characters, the controlling player first allocates wounds to the unit, then divides any remaining wounds (if any) as equally as possible amongst the characters.</description>
     </rule>
-    <rule id="9e47-05bc-376a-7463" name="Ethereal" publicationId="9e23-79cb-pubN66727" page="73" hidden="false">
+    <rule id="9e47-05bc-376a-7463" name="Ethereal" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>Ethereal creatures treat all terrain as open terrain for the purposes of movement. They may not finish their movement inside impassable terrain. They are never slowed by any special rule, spell or item that would otherwise reduce their movement or stop them from moving completely.
 
-Models with rule have both Magical Attacks and Unstable. Ethereal models have a 2+ Ward Save against mundane attacks. However, they only have a 5+ Ward save against magical attacks. Ethereal creatures block line of sight normally and cannot see through anything that would block the line of sight of normal units. Characters that are not themselves Ethereal are not permitted to join units that are (even if they become temporarily Ethereal for some reason).</description>
+Models with rule have both Magical Attacks and Unstable. Ethereal models have a 2+ Ward Save against mundane attacks. However, they only have a 5+ Ward save against magical attacks. Ethereal creatures block line of sight normally and cannot see through anything that would block the line of sight of normal units.
+
+
+Characters that are not themselves Ethereal are not permitted to join units that are (even if they become temporarily Ethereal for some reason).</description>
     </rule>
     <rule id="755c-61c2-fa25-f4ce" name="Stupidity" publicationId="9e23-79cb-pubN66727" page="83" hidden="false">
       <description>Provided that they are not engaged in close combat, a unit that contains one or more models with Stupidity must take a LD test at the start of its Movement phase. If the test is passed, the unit will act normally this turn.
@@ -22974,14 +22988,18 @@ A unit that is flying can march as normal, doubling its flying move.
 Flee and Pursue
 Flyers always move on the ground when attempting to flee or pursue.</description>
     </rule>
-    <rule id="777a-7a64-44fa-a78e" name="Champion" publicationId="9e23-79cb-pubN66727" page="97" hidden="false">
+    <rule id="777a-7a64-44fa-a78e" name="Leader" publicationId="9e23-79cb-pubN66727" page="97" hidden="false">
       <description>&quot;Follow Me!&quot;
-A unit that is accompanied by a champion may re-roll failed LD tests in the following scenarios:
+A unit that is accompanied by a Leader may re-roll failed LD tests in the following scenarios:
 
-• Attempting to March when within 8&quot; of enemy units.
-• Attempting to Redirect a Charge.
-• Reforming from Defeat after losing a round of close combat.
-• Restraining from Pursuit</description>
+• March when within 8&quot; of enemy units.
+• Redirecting a Charge.
+• Reforming from Defeat after losing a round of close combat.
+• Restraining from Pursuit
+• Swift Reform (see Musicians)
+
+
+Some Leaders also have the option to take specialised equipment. If this is the case, it is clearly stated in their entry in each separate army book.</description>
     </rule>
     <rule id="6002-29d0-d620-1bd0" name="Standard Bearer" publicationId="9e23-79cb-pubN66727" page="97" hidden="false">
       <description>Combat Resolution Bonus
@@ -23006,7 +23024,7 @@ A unit that is not fleeing and not engaged in combat can make a swift reform dur
     <rule id="7799-99da-2b8e-2941" name="Slow to Fire" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
       <description>Weapons with Slow to Fire cannot be used to Stand and Shoot.</description>
     </rule>
-    <rule id="7bd0-8602-4375-a731" name="Fear" publicationId="9e23-79cb-pubN66727" page="74" hidden="false">
+    <rule id="7bd0-8602-4375-a731" name="Fear" publicationId="9e23-79cb-pubN66727" page="60" hidden="false">
       <description>A unit containing one or more Fear-causing models gains +1 to its Combat Resolution score. If the Unit Strength of all Fear-causing models is double or more, the Combat Resolution score is increased by +2. Note that the bonus from Fear is otherwise not cumulative for having multiple units with Fear involved in the same combat.
 
 If the majority of the models in a unit cause Fear, they also gain Immunity (Fear), and thus the Combat Resolution bonus of their Fear-causing enemies is ignored for that unit.</description>
@@ -23035,8 +23053,8 @@ Impact Hits roll to wound using the S of the model making the Impact Hits. Any a
 
 Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
     </rule>
-    <rule id="b806-942b-15af-b309" name="Expendable" publicationId="9e23-79cb-pubN66727" page="73" hidden="false" type="upgrade">
-      <description>Models with this rule do not cause Panic to friendly units that are not Expendable themselves. Characters may not join a unit with this rule, unless specified.
+    <rule id="b806-942b-15af-b309" name="Expendable" publicationId="9e23-79cb-pubN66727" page="60" hidden="false" type="upgrade">
+      <description>Models with this rule do not cause Panic to friendly units that are not Expendable themselves. Characters may not join a unit with this rule, unless specified. Likewise, an Expendable character may not join a unit that is not Expendable.
 
 For every Core unit with Expendable rule in your army, you are required to include at least one other Core Unit without Expendable. For more information on this, see the Choosing Your Army chapter.</description>
     </rule>
@@ -23126,43 +23144,45 @@ Friendly models within 12&quot; of the Battle Standard Bearer re-roll failed Pan
 
 If your Battle Standard Bearer has a Line of Sight value of 5 or more, then the range of their Hold Your Ground ability is increased by 6&quot;.</description>
     </rule>
-    <rule id="00b2-9504-41a2-f664" name="Always Strikes First" publicationId="9e23-79cb-pubN66727" page="71" hidden="false">
+    <rule id="00b2-9504-41a2-f664" name="Always Strikes First" publicationId="9e23-79cb-pubN66727" page="58" hidden="false">
       <description>Models with this rule always strike first in close combat, regardless of I. If a model with this rule is fighting an enemy with the same ability, the model with the higher I will strike first.
 
 In addition, if the model&apos;s I is higher than their enemy&apos;s when it is their turn to attack, they can re-roll failed To Hit rolls when striking in close combat.</description>
     </rule>
-    <rule id="3a63-48ed-fe9a-ef02" name="Always Strikes Last" publicationId="9e23-79cb-pubN66727" page="71" hidden="false">
+    <rule id="3a63-48ed-fe9a-ef02" name="Always Strikes Last" publicationId="9e23-79cb-pubN66727" page="58" hidden="false">
       <description>A model with this rule always strikes last in close combat, regardless of I. If a model with this rule is fighting an enemy with the same ability, the model with the higher I will strike first. If a model has both this rule and Always Strikes First, the two cancel out and neither applies so use the model&apos;s I.
 
 In addition, if the model&apos;s I is lower than their enemy&apos;s when it is their turn to attack, they must re-roll successful To Hit rolls when striking in close combat.</description>
     </rule>
-    <rule id="bf4e-212e-fe1d-20c6" name="Armour Piercing (1)" publicationId="9e23-79cb-pubN66727" page="72" hidden="false">
+    <rule id="bf4e-212e-fe1d-20c6" name="Armour Piercing" publicationId="9e23-79cb-pubN66727" page="58" hidden="false">
       <description>Wounds caused in close combat by this model inflict a negative armour save modifier as indicated by the number in the brackets, in addition to those for S. If a model has a weapon with the Armour Piercing rule, only attacks made or shots fired with the weapon are Armour Piercing. This rule is cumulative with other sources of Armour Piercing.</description>
     </rule>
-    <rule id="3667-691b-abd9-7da6" name="Aquatic" publicationId="9e23-79cb-pubN66727" page="72" hidden="false">
-      <description>Aquatic models can move within any area of water on the battlefield as if it were open ground. They are still subject to any special effects that specific terrain may have.
+    <rule id="3667-691b-abd9-7da6" name="Aquatic" publicationId="9e23-79cb-pubN66727" page="58" hidden="false">
+      <description>Models with the Aquatic special rule can move within any area of water on the battlefield, including rivers and even deep water that players may have deemed impassable to other models, as if it were open ground.
+However, they are still subject to any special effects that specific terrain may have (e.g. we don&apos;t exempt Aquatic models from the dangers of marshes).
 
-The models can march, claim rank bonus and be steadfast even when in water. If every model in a unit is Aquatic, and the majority of the unit is within water terrain, enemies shooting at that unit suffer an additional -1 To Hit penalty.</description>
+
+In addition, models with this special rule can march, claim rank bonus and be steadfast even when in water. Furthermore, if every model in a unit has the Aquatic special rule, and the majority of the unit is within water terrain, enemies shooting at that unit suffer an additional -1 To Hit penalty.</description>
     </rule>
-    <rule id="51e2-219e-29cc-8aaf" name="Breath Weapons" publicationId="9e23-79cb-pubN66727" page="72" hidden="false">
+    <rule id="51e2-219e-29cc-8aaf" name="Breath Weapons" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>A model with a Breath Weapon can use it to make a special attack once per shooting or close combat phase. A model with two or more different Breath Weapons must choose which one they want to use. The form that this special attack takes depends on whether or not the creature is in close combat. In the event that a model has more than one Breath Weapon attack, it is permitted to attempt to use only one in a single turn.
 
 However, after each Breath Weapon has been used the first time, roll a D6 before attempting to use it again in later rounds. On 4+, it may be used as normal. On a 1- 3, the model is literally out of breath, and cannot use its Breath Weapon this round. It may choose to attack normally in close combat instead.
 
-Note that Breath Weapons are not physical attacks, and certain models may be Immune to the effects of some Breath Weapons. However, all Breath weapons have Ignore Cover.
+Note that Breath Weapons are not physical attacks, and certain models may be Immune to the effects of some Breath Weapons.
 
 Breath Weapon Shooting Attack
 Provided the model is not in close combat, it can use its Breath Weapon during its Shooting phase. A Breath Weapon shooting attack can be made even if the model marched or reformed during the same turn, but it cannot be used as a Stand and Shoot charge reaction.
 
-To perform the attack, place the flame template so that it lies entirely within the model&apos;s forward arc, with the narrow end touching the model&apos;s base, and so that it is not touching any friendly units or enemy units that are in close combat. All models that are even partially under the template are automatically hit, following the normal rules for the flame template.
+To perform the attack, place the flame template so that it lies entirely within the model&apos;s forward arc, with the narrow end touching the model&apos;s base, and so that it is not touching any friendly units or enemy units that are in close combat. All models that are even partially under the template are automatically hit, following the normal rules for the flame template. The Strength and any special effects of the creature&apos;s Breath Weapon will be covered in its rules.
 
 Breath Weapon Close Combat Attack
 If the model with this special rule is in close combat, it can use the Breath Weapon instead of using its normal attacks. A model that makes a breath weapon attack in this way inflicts 2D6 automatic hits (resolved like shooting) on a single enemy unit in base contact – if there is more than one enemy unit in base contact with the model, the controlling player chooses which enemy unit suffers the hits. Note that no single model in the target unit may be Hit more than once from the same breath weapon attack – any excess hits are ignored. As with breath weapon attacks made in the Shooting phase, the Strength and any special effects of the creature&apos;s Breath Weapon will be covered in its rules. Wounds caused by a Breath Weapon in close combat count towards combat resolution.</description>
     </rule>
-    <rule id="3d84-8ad0-b310-e355" name="Fight in Extra Ranks (1)" publicationId="9e23-79cb-pubN66727" page="74" hidden="false">
+    <rule id="3d84-8ad0-b310-e355" name="Fight in Extra Ranks (1)" publicationId="9e23-79cb-pubN66727" page="60" hidden="false">
       <description>If a unit has this rule then supporting attacks can be made by one more rank than normal for each number indicated in the bracket. This rule is cumulative with other sources of Fight in Extra Ranks.</description>
     </rule>
-    <rule id="8600-a090-2761-d661" name="Flaming Attacks" publicationId="9e23-79cb-pubN66727" page="74" hidden="false">
+    <rule id="8600-a090-2761-d661" name="Flaming Attacks" publicationId="9e23-79cb-pubN66727" page="60" hidden="false">
       <description>Models with Flaming Attacks cause Fear in War Beasts, Cavalry, Chariots and Flammable creatures. Any Panic test taken by any of these Troop Types from a Flaming Attack suffer -1 to their LD when taking the test.
 
 Unless otherwise stated, a model with this rule has both Flaming shooting and close combat attacks (though any spells cast by the model or special attacks are unaffected).</description>
@@ -23195,7 +23215,7 @@ Unless otherwise stated, a model with this rule has both Lightning shooting and 
     <rule id="37a5-2f70-159f-adfd" name="Move or Fire" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
       <description>A weapon with Move or Fire cannot be fired in the Shooting phase if the model moved earlier in the turn, including rallying, reforming and pivoting on the spot (except for Lone Models, who can pivot and fire in the same turn). This even applies if the model in question was forced to move as the result of a spell or other such compulsory action. Mounted models with Move or Fire weapons may still move and fire, but they will suffer an additional -1 To Hit if they do so, unless specified. Mounted models with Move or Fire weapons may still move and fire, but they may not March if they do so, unless specified.</description>
     </rule>
-    <rule id="0a0c-35fd-e8ef-5f4e" name="Multiple Shots (2)" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
+    <rule id="0a0c-35fd-e8ef-5f4e" name="Multiple Shots" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
       <description>The weapon enables its wielder to fire several shots at a time, rather than a single shot. The number of shots the weapon can fire is stated in brackets. Such weapons can either fire once without penalty, or as many times as indicated in the bracket with a -1 To Hit penalty (in addition to any other modifiers To Hit). War Machines with this rule do not suffer -1 To Hit for firing Multiple Shots.
 
 All models in the unit (excluding characters) must fire either single or Multiple Shots.</description>
@@ -23237,7 +23257,7 @@ A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Ter
     <rule id="554e-99aa-3930-447f" name="Requires Two Hands" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
       <description>If a weapon requires two hands to use, it is not possible for a model to use a shield or buckler alongside it in close combat (although a shield can still be used against wounds caused by shooting or magic).</description>
     </rule>
-    <rule id="01e3-7f81-20e3-45fe" name="Strength Bonus (1)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
+    <rule id="01e3-7f81-20e3-45fe" name="Mighty Blow (1)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
       <description>Models with this rule gain a S bonus to all their close combat attacks (including Impact Hits and Stomps) equal to the number in the brackets in the first round of each new close combat they are involved in. Note that any attack made with a weapon that gives Strength Bonus only applies to attacks made with the weapon itself. This rule is cumulative with other sources of Strength Bonus.</description>
     </rule>
     <rule id="43ca-96e5-8a47-2d39" name="Volley Fire" publicationId="9e23-79cb-pubN66727" page="84" hidden="false">
@@ -23332,8 +23352,8 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
 
 If a character with Magic Resistance joins a unit, all models in the unit benefit from the Magic Resistance as long as they are part of the unit. If a model or unit has two sets of Magic Resistance, the two combine to a maximum of Magic Resistance (3), unless specified.</description>
     </rule>
-    <rule id="738b-aca4-740c-e425" name="Animated Construct" publicationId="9e23-79cb-pubN66727" page="72" hidden="false">
-      <description>Animated Constructs have Immunity (Poisoned Attacks) and Unbreakable. However, they may not march.</description>
+    <rule id="738b-aca4-740c-e425" name="Animated Construct" publicationId="9e23-79cb-pubN66727" page="58" hidden="false">
+      <description>Animated Constructs have the Unbreakable special rule. However, they may not march.</description>
     </rule>
     <rule id="9b99-4e37-be08-231a" name="Magic Resistance (3)" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
       <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
@@ -23492,7 +23512,7 @@ If two or more models in a unit have the Random Movement, pivot the unit about i
 
 A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Terrain test, unless the model is making a charge, pursuit or flee move, in which case it counts as a move of the appropriate type.</description>
     </rule>
-    <rule id="5e3f-9736-a9c0-4a1c" name="Dodge (4+)" publicationId="9e23-79cb-pubN66727" page="73" hidden="false">
+    <rule id="5e3f-9736-a9c0-4a1c" name="Dodge (4+)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>Models with this rule gain a Ward save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have Always Strikes First, nor can it be used if the model is subject to Always Strikes Last. Finally, Dodge cannot be used by mounted models, unless specified.</description>
     </rule>
     <rule id="4d40-9a96-4af8-e943" name="Random Movement (Variable)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
@@ -23575,10 +23595,10 @@ Some models may be allowed to re-roll a Ward save from a specific source. In tha
     <rule id="6112-6e8d-a942-fcba" name="Hatred (Lizardmen)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
     </rule>
-    <rule id="cfff-6563-d1c6-820c" name="Dodge (5+)" publicationId="9e23-79cb-pubN66727" page="73" hidden="false">
+    <rule id="cfff-6563-d1c6-820c" name="Dodge (5+)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>Models with this rule gain a Ward save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have Always Strikes First, nor can it be used if the model is subject to Always Strikes Last. Finally, Dodge cannot be used by mounted models, unless specified.</description>
     </rule>
-    <rule id="bf3d-abaf-45ca-3477" name="Dodge (6+)" publicationId="9e23-79cb-pubN66727" page="73" hidden="false">
+    <rule id="bf3d-abaf-45ca-3477" name="Dodge (6+)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>Models with this rule gain a Ward save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have Always Strikes First, nor can it be used if the model is subject to Always Strikes Last. Finally, Dodge cannot be used by mounted models, unless specified.</description>
     </rule>
     <rule id="e20a-3f4d-cc8c-06bc" name="Random Attacks (D3+1)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
@@ -23604,11 +23624,6 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
     <rule id="f210-1e7c-a315-2849" name="Parry (5+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>Models with this rule gain a Ward save in close combat as indicated in the brackets. This is cumulative with other sources of Parry. It cannot be used against attacks made against the model&apos;s flank or rear, nor can it be used against attacks that Hit automatically, attacks that are made at +3 S over the model&apos;s own S value, nor can it be used by mounted models, unless specified.</description>
     </rule>
-    <rule id="3c4c-827c-fe44-7b5c" name="Multiple Shots (3)" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
-      <description>The weapon enables its wielder to fire several shots at a time, rather than a single shot. The number of shots the weapon can fire is stated in brackets. Such weapons can either fire once without penalty, or as many times as indicated in the bracket with a -1 To Hit penalty (in addition to any other modifiers To Hit). War Machines with this rule do not suffer -1 To Hit for firing Multiple Shots.
-
-All models in the unit (excluding characters) must fire either single or Multiple Shots.</description>
-    </rule>
     <rule id="3efd-81b2-458e-604e" name="Loremaster (Hedge Magic)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
     </rule>
@@ -23619,10 +23634,10 @@ All models in the unit (excluding characters) must fire either single or Multipl
       <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
     </rule>
     <rule id="73fd-d115-269d-bd0a" name="Ancestral Grudge" publicationId="aa7b-3583-0834-7bfa" page="136" hidden="false">
-      <description>Dwarfs always have Hatred (Orcs &amp; Goblins, Skaven, Hobgoblins).</description>
+      <description>Dwarfs have the Hatred (Orcs, Goblins, Trolls, Skaven) special rule.</description>
     </rule>
     <rule id="db34-00cf-d5b6-9a4d" name="Relentless" publicationId="aa7b-3583-0834-7bfa" page="136" hidden="false">
-      <description>Units entirely composed of models with this rule do not need to pass a LD test in order to march, regardless of the proximity of enemy units.</description>
+      <description>Units entirely composed of models with this special rule do not need to pass a Leadership test in order to march, regardless of the proximity of enemy units.</description>
     </rule>
     <rule id="2017-de4c-6670-21ba" name="Choppas" publicationId="9e23-79cb-pubN78975" page="107" hidden="false">
       <description>Models with Choppas get Strength Bonus (1).</description>
@@ -23676,7 +23691,7 @@ special rule in close combat. However, this cannot be
 used against enemies that attack before the model with
 Elven Grace.</description>
     </rule>
-    <rule id="eb46-96d2-9469-4905" name="Cold-Blooded" publicationId="9e23-79cb-pubN77402" page="132" hidden="false">
+    <rule id="eb46-96d2-9469-4905" name="Cold-Blooded" publicationId="9e23-79cb-pubN77402" page="59" hidden="false">
       <description>Whenever the model takes a LD test, it rolls an additional dice and discards the highest result.</description>
     </rule>
     <rule id="44e1-ad81-2f8b-49db" name="Divine Power" publicationId="315d-135b-135c-07ce" page="179" hidden="false">
@@ -23690,9 +23705,6 @@ Elven Grace.</description>
     </rule>
     <rule id="d75e-a845-77aa-679b" name="Loremaster (Lore of Slaanesh)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
-    </rule>
-    <rule id="43e0-4e6d-8776-0252" name="Large Target (10)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight value equal to the number in the bracket. This replaces their normal Line of Sight value normally assigned for their Troop Type.</description>
     </rule>
     <rule id="2ba2-2aaa-3f36-4b24" name="Fly (9)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>Flying models follow the rules for Skirmishers. However, they cannot use Feigned Flight, and if they have a Unit Strength above 2 and/or a close combat armour save better than 4+, they cannot use Vanguard.
@@ -23764,23 +23776,11 @@ A unit that is flying can march as normal, doubling its flying move.
 Flee and Pursue
 Flyers always move on the ground when attempting to flee or pursue.</description>
     </rule>
-    <rule id="1b3d-4a57-6f3e-25d7" name="Large Target (5)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight value equal to the number in the bracket. This replaces their normal Line of Sight value normally assigned for their Troop Type.</description>
-    </rule>
-    <rule id="94f0-53dc-6b11-2290" name="Large Target (4)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight value equal to the number in the bracket. This replaces their normal Line of Sight value normally assigned for their Troop Type.</description>
-    </rule>
     <rule id="4740-7f33-d5b8-5563" name="Slayer" publicationId="aa7b-3583-0834-7bfa" page="160" hidden="false">
       <description>Slayers always Wound on a To Wound roll of 4+, unless they would need a lower result. Use the Slayer&apos;s S to determine the armour save modifier for any successful Wounds.</description>
     </rule>
     <rule id="390b-8c96-7c3a-9598" name="Orc Animosity" publicationId="8ada-88a0-cdcd-9b5e" page="60" hidden="false">
       <description>Units with this  rule must roll a D6 and consult the orc animosity chart in the Charge subphase after all other charges have been declared, unless they have declared a charge, are already in combat, fleeing, or have less than 5 models.</description>
-    </rule>
-    <rule id="e267-b037-e703-ace7" name="Large Target (2)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight value equal to the number in the bracket. This replaces their normal Line of Sight value normally assigned for their Troop Type.</description>
-    </rule>
-    <rule id="fadb-967d-6cb8-ed08" name="Large Target (6)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight value equal to the number in the bracket. This replaces their normal Line of Sight value normally assigned for their Troop Type.</description>
     </rule>
     <rule id="7366-8bcf-f881-7f30" name="Hatred (Chaos)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
@@ -23811,61 +23811,467 @@ Impact Hits roll to wound using the S of the model making the Impact Hits. Any a
 
 Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
     </rule>
-    <rule id="18cb-1dc6-4139-8c3" name="Large Target (1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight value equal to the number in the bracket. This replaces their normal Line of Sight value normally assigned for their Troop Type.</description>
+    <rule id="18cb-1dc6-4139-8c3" name="Line of Sight (0)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Line of Sight of 0.</description>
     </rule>
-    <rule id="aa3f-b179-12a1-b4c3" name="Large Target (3)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight value equal to the number in the bracket. This replaces their normal Line of Sight value normally assigned for their Troop Type.</description>
+    <rule name="Swarms" id="f4d1-e978-a3ed-869b" hidden="false">
+      <description>Complete Ranks (3). Supporting Attacks (5). Unit Strength (3). Line of Sight (0). Expendable. Skirmishers. Unstable.
+
+
+Other models can fire through them at targets behind them with no To Hit penalty. However, any Swarm base that is hit by a template attack suffers Multiple Wounds (D6) rather than 1.</description>
+    </rule>
+    <rule name="Large Infantry" id="501d-e1d6-df0e-d961" hidden="false">
+      <description>Complete Ranks (4). Supporting Attacks (2). Unit Strength (1). Line of Sight (1)</description>
+    </rule>
+    <rule name="Monstrous Infantry" id="0997-a400-8b77-fa7c" hidden="false">
+      <description>Complete Ranks (3). Supporting Attacks (2). Unit Strength (2). Line of Sight (2). Swiftstride. Fear.</description>
+    </rule>
+    <rule name="Normal Cavalry" id="f299-b4f5-2ed1-08ce" hidden="false">
+      <description>Complete Ranks (5). Supporting Attacks (1+1). Unit Strength (2). Line of Sight (2). Split Profile (Cavalry). Impact Hits (1). Swiftstride.
+
+Note that the Impact Hits are resolved at the Strength of the mount, not the rider.
+
+Any special rules listed for Cavalry units only apply to rider, unless they specifically mention the mount. There are, however, a few exceptions. If either the rider or the mount has one of the following special rules, then the whole model has it:
+• Always Strikes Last
+• Ambushers
+• Berserk Rage (see Frenzy)
+• Ethereal
+• Fast Cavalry
+• Fear
+• Fly (*)
+• Immunity (*)
+• Scouts
+• Stupidity
+• Stubborn
+• Terror
+• Vanguard
+
+
+Terrain
+Cavalry have to take Dangerous Terrain tests if they move march, charge, flee or pursue over anything other than open ground or hills.</description>
+    </rule>
+    <rule name="Split Profile (Cavalry)" id="5b89-991d-792a-8260" hidden="false">
+      <description>Although a cavalry model has two sets of characteristics, one for the rider and one for the mount, it is treated in all respects as a single model – the rider cannot dismount. When moving, the cavalry model always uses the Movement characteristic of the mount, and never that of the rider.
+
+
+The rider and mount use their own Weapon Skill, Strength, Initiative and Attacks characteristics when they attack. Each can attack any opponent that the cavalry model is in base contact with.
+
+
+The mount&apos;s Leadership is never used, unless a spell or special rule states otherwise.
+If the rider has a missile weapon, they always use their own Ballistic Skill, rather than that of their mount.
+
+
+When attacking a Cavalry model, always use the
+highest Weapon Skill, Toughness and Wounds value from either the rider or the mount.
+
+
+If the rider and the mount both have armour saves or ward saves these may be combined as normal.
+
+
+Any equipment or magic items the model might
+otherwise have only apply to the rider, not the mount (unless specified).
+
+
+Any effect that would modify the model&apos;s Characteristics affect both the rider and mount, unless specified.</description>
+    </rule>
+    <rule name="Complete Ranks" id="0a17-1f20-86b0-bded" hidden="false">
+      <description>A complete rank is formed by as many models as indicated between brackets.</description>
+    </rule>
+    <rule id="564d-ded4-217d-827c" name="Line of Sight (5)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Line of Sight of 5.</description>
+    </rule>
+    <rule id="8105-29db-5491-77cf" name="Line of Sight (4)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Line of Sight of 4.</description>
+    </rule>
+    <rule id="22a9-3a2f-b7b7-b00e" name="Line of Sight (3)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Line of Sight of 3.</description>
+    </rule>
+    <rule id="40b4-9828-f47e-28c9" name="Line of Sight (2)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Line of Sight of 2.</description>
+    </rule>
+    <rule id="52e5-3a13-39b1-aa8c" name="Supporting Attacks (1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule may make up to 1 supporting attack.</description>
+    </rule>
+    <rule id="577c-10f5-bad5-5ce5" name="Unit Strength (2)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Unit Strength of 2.</description>
+    </rule>
+    <rule id="fe8b-fd33-652e-4e2f" name="Unit Strength (3)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Unit Strength of 3.</description>
+    </rule>
+    <rule id="23fb-913b-b02d-9e0a" name="Unit Strength (4)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Unit Strength of 4.</description>
+    </rule>
+    <rule id="c397-b441-9fd6-89bb" name="Unit Strength (1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Unit Strength of 1.</description>
+    </rule>
+    <rule id="e258-e9d1-9c61-af0f" name="Supporting Attacks (1+2)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule may make up to 1 supporting attack from the rider and 2 from the mount, or 3 in total if the model does not have a split profile.</description>
+    </rule>
+    <rule id="2ef1-02b9-7b03-9204" name="Supporting Attacks (3)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule may make up to 3 supporting attacks.</description>
+    </rule>
+    <rule id="7b58-67f7-4fd1-8a61" name="Supporting Attacks (1+1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule may make up to 1 supporting attack from the rider and 1 from the mount, or 2 in total if the model does not have a split profile.</description>
+    </rule>
+    <rule id="f139-6d06-3167-b314" name="Supporting Attacks (2)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule may make up to 2 supporting attacks.</description>
+    </rule>
+    <rule name="Monstrous Cavalry" id="2b42-ec95-c1af-bc30" hidden="false">
+      <description>Complete Ranks (3). Supporting Attacks (1+2). Unit Strength (3). Line of Sight (3). Fear. Normal Cavalry.</description>
+    </rule>
+    <rule name="War Machine" id="9960-d3ce-efdf-06ae" hidden="false">
+      <description>Line of Sight (1). Move or Fire.
+
+Unless specified, any special rules a War Machine
+might have apply to both the War Machine and the
+crew.
+
+
+War Machines have a Unit Strength equal to their
+current number of crew.</description>
+    </rule>
+    <rule id="ddb1-e80d-9bb6-bd15" name="Supporting Attacks (5)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule may make up to 5 supporting attacks.</description>
+    </rule>
+    <rule id="8f97-966e-ddb2-f7bb" name="Line of Sight (1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Line of Sight of 1.</description>
+    </rule>
+    <rule name="Normal Infantry" id="5669-ecc5-1f66-edd8" hidden="false">
+      <description>Complete Ranks (5). Supporting Attacks (1). Unit Strength (1). Line of Sight (1)</description>
+    </rule>
+    <rule name="Monster" id="b965-f383-1052-74df" hidden="false">
+      <description>Line of Sight (5). Stomp (D6). Terror. Swiftstride.
+
+Split profile
+Ridden Monsters follow the Split Profile (Cavalry) rule. However, they may only have an armour save of a total of 2+ instead of the normal 1+. The riders can fire in 360 degrees around them, rather than only firing at targets within their front arc. This only applies to any missile weapons carried by the crew themselves, any missile weapons mounted on the Monster itself can only fire in the model&apos;s forward arc as normal. Any crew member that chooses to fire the mounted weapon cannot fire their own weapon in the same turn.
+
+
+Character mount
+Some characters can ride Monsters. If a character has a ridden Monster, the whole model is treated as having the troop type Monster and thus follows all the rules for both characters and Monster models including the Split Profile rules above. A character on a ridden Monster cannot join other units.
+
+
+Unit strength
+Monsters have a Unit Strength of double their original starting number of Wounds. Ridden Monsters add the number of riders to their Unit Strength.</description>
+    </rule>
+    <rule name="Monstrous Beasts" id="c629-2c10-da21-4037" hidden="false">
+      <description>Complete Ranks (3). Supporting Attacks (2). Unit Strength (2). Line of Sight (2). Fear. Swiftstride.
+
+Character mount
+Some characters can ride monstrous beasts, in which case the model uses the rules for Monstrous Cavalry.</description>
+    </rule>
+    <rule name="Monstrous Creatures" id="11c6-a1a7-95cd-f9e8" hidden="false">
+      <description>Unit Strength (4). Line of Sight (3). Stomp (D3). Fear. Swiftstride.
+
+Character mount
+Some characters can ride Monstrous Creatures. If a character has a ridden Monstrous Creature, the whole model is treated as having the troop type Monstrous Creatures and thus follows all the rules for both characters and Monstrous Creature models including the Split Profile rules for Cavalry. A character on a ridden Monstrous Creature cannot join other units.
+
+Unit strength
+Ridden Monstrous Creatures add the number of riders to their Unit Strength.
+
+Line of sight
+Ridden Monstrous Creatures have Line of Sight (4).</description>
+    </rule>
+    <rule name="Chariot" id="8595-878d-d839-775d" hidden="false">
+      <description>Complete Ranks (3). Line of Sight (2). Split Profile (Chariots). Impact Hits (D6). Swiftstride.
+
+
+Armour Saves
+Many Chariots have an armour save detailed in their army list entry, which is combined with any armour the crew might have.
+
+
+Character mounts
+Some characters can ride Chariots. If a character has taken a Chariot as a mount, the whole model is treated as having the troop type &apos;Chariot&apos; and follows all the rules for both characters and chariot models. A chariot mount otherwise follows all the rules for Cavalry in regard to Split Profile. If the Chariot includes any crew in addition to the character, their armour saves are ignored when calculating the overall armour save of the model – only the character&apos;s own armour save is used.
+
+
+
+Supporting attacks
+Chariots cannot make supporting attacks. However, Chariots in the second rank add +D3 Impact Hits to the chariots in the first rank.
+
+
+Special Rules
+Some chariots are equipped with massive scythes and instead have Impact Hits (D6+1). This will be specified in their entry.
+Just as with cavalry, we assume that special rules that apply to the mounts do not normally also apply to the chariot or its crew, and vice versa. Remember though that there are exceptions, as detailed under the rules for cavalry.
+
+
+Terrain
+Chariots have to take Dangerous Terrain tests if they move march, charge, flee or pursue over anything other than open ground or hills.
+
+
+Unit strength
+Chariots have a Unit Strength equal to their starting number of Wounds (unless specified) and add the number of additional crew and/or mounts purchased to their Unit Strength.</description>
+    </rule>
+    <rule name="Split Profile (Chariots)" id="b0c5-0f5c-a6c8-2cb0" hidden="false">
+      <description>In a similar manner to cavalry, a chariot has more than one set of characteristics, one for the beasts, one for the crew and one for the chariot itself, and is treated as a single model.
+
+
+When moving, the chariot model always uses its own Movement characteristic. However, it may not pivot on the spot like other lone models without Reforming. The crew and the creatures pulling the chariot use their own Weapon Skill, Strength, Initiative and Attacks characteristics when they attack. Each can attack any opponent that the chariot model is in base contact with, although the beasts can only fight enemies to the front.
+
+
+The Wounds and Toughness of the crew and the
+creatures are never used – hits are resolved against the chariot&apos;s Wounds and Toughness. It is the crew&apos;s Weapon Skill that is used for the purposes of the enemy rolling to hit, just as with cavalry.
+
+
+Any missile weapons use the Ballistic Skill of the crew when making Shooting attacks. The crew can fire in 360 degrees around them, rather than only firing at targets within their front arc. This only applies to any missile weapons carried by the crew themselves; any missile weapons mounted on the chariot itself can only fire in the model&apos;s forward arc as normal. Any crew member that chooses to fire the mounted weapon cannot fire their own weapon in the same turn.</description>
+    </rule>
+    <rule name="Firing an Organ Gun" id="516f-a12a-2ccc-9ac7" hidden="false" publicationId="9e23-79cb-pubN66727" page="85">
+      <description>To fire an organ gun, select a target according to the normal rules for shooting. Determine the number of shots following the rule for Multiple Shots. Roll to hit using the crew&apos;s Ballistic Skill, just as you would for a normal missile weapon.
+
+
+If a misfire is rolled, roll immediately on the Black Powder Misfire chart.</description>
+    </rule>
+    <rule name="War Beast" id="42ce-1113-52c7-5ef8" hidden="false">
+      <description>Complete Ranks (5). Supporting Attacks (1). Unit Strength (1). Line of Sight (1). Expendable. Swiftstride. Vanguard.
+
+
+Some characters can ride war beasts, in which case the model uses the rules for Normal Cavalry.</description>
+    </rule>
+    <rule name="Split Profile (Shrines)" id="6331-09f9-0580-9ac8" hidden="false">
+      <description>In a similar manner to a Chariot, a Shrine can often have more than one set of characteristics, one for the creatures pulling or carrying the Shrine, one for the crew and one for the shrine itself, and is treated as a single model.
+
+
+Unlike most other units, a shrine may join other units of Infantry (except Skirmishers) following the rules for Characters and Units in the Characters chapter.
+
+
+When moving, the shrine model uses its own Movement characteristic. The crew and the creatures pulling the Shrine use their own Weapon Skill, Strength, Initiative and Attacks characteristics when they attack. Each can attack any opponent that the shrine model is in base contact with. If the crew models have missile weapons, they use their own Ballistic Skill when making Shooting attacks.
+
+
+The Wounds and Toughness of the crew and the creatures are never used – hits are resolved against the shrine&apos;s Wounds and Toughness. It is the crew&apos;s Weapon Skill that is used for the purposes of the enemy rolling to hit, just as with cavalry.</description>
+    </rule>
+    <rule name="Shrine" id="3952-6c6d-75ce-9b60" hidden="false">
+      <description>Line of Sight (1). Split Profile (Shrines).
+
+Armour Saves
+Some Shrines have an armour save detailed in their army list entry, which is combined with any armour the crew might have.
+
+Character mounts
+Some characters can be mounted upon shrines. If a character has taken a shrine as a mount, the whole model is treated as having the troop type &apos;Shrine&apos; and follows all the rules for both characters and Shrine models. A Shrine mount otherwise follows all the rules for Cavalry in regard to Split Profile. If the Shrine includes any crew in addition to the character, their armour saves are ignored when calculating the overall armour save of the model – only the character&apos;s own armour save is used.
+
+Terrain
+Shrines have to take Dangerous Terrain tests if they move march, charge, flee or pursue over anything other than open ground or hills.
+
+Unit strength
+Shrines have a Unit Strength equal to their starting number of Wounds.</description>
+    </rule>
+    <rule name="Firing a Fire Thrower" id="5184-235f-3d04-5636" hidden="false" publicationId="9e23-79cb-pubN66727" page="85">
+      <description>Place the teardrop-shaped template with its narrow end touching the fire thrower barrel and the large end aimed at any enemy model or building in line of sight. Roll the artillery dice and move the template directly forward the number of inches indicated. Some fire throwers might also have a range value. In this case, place the template with its narrow end anywhere within this range, measured from the fire thrower barrel as normal.
+
+
+All models underneath the template are hit automatically. A unit suffering any casualties must take a Panic test. Fire throwers are not physical attacks.
+
+
+If a misfire is rolled, roll immediately on the Black Powder Misfire chart.</description>
+    </rule>
+    <rule id="224d-6096-4dc6-a3fb" name="Line of Sight (10)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Line of Sight of 10.</description>
+    </rule>
+    <rule id="eb51-dc6d-1086-01d0" name="Line of Sight (6)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Line of Sight of 6.</description>
+    </rule>
+    <rule name="Hold Your Ground" id="11f5-d3db-5513-f168" hidden="false">
+      <description>A model with Hold Your Ground allows all friendly units within a distance equal to the number in the brackets to re-roll failed Panic and Break tests. This ability cannot be used if the model with Hold Your Ground is also fleeing.
+
+
+This rule is cumulative with other sources of Hold Your Ground. If the model has a Line of Sight value of 4 or more, then the range of their Inspiring Presence rule is increased by 6.</description>
+    </rule>
+    <rule name="Daemonic" id="a6d9-b8e9-21b2-96ff" hidden="false" publicationId="1a01-044f-047b-618f" page="162">
+      <description>Models with this rule have Fear and Magical Attacks special rules. In addition, models that are not mounts have a 5+ Ward save which gets reduced to a 6+ Ward save against Magical Attacks.</description>
+    </rule>
+    <rule name="Daemon of Khorne" id="a356-05c9-d963-c1bb" hidden="false" publicationId="1a01-044f-047b-618f" page="171">
+      <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
+
+A Daemon of Khorne has Hatred (Daemons of Slaanesh), Magic Resistance (1) and Mighty Blow (1).</description>
+    </rule>
+    <rule name="Daemon of Nurgle" id="0b9b-1baf-5bcd-1ec3" hidden="false" publicationId="1a01-044f-047b-618f" page="171">
+      <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
+
+A Daemon of Nurgle has Hatred (Daemons of Tzeentch), and enemy models in base contact suffer -1 to their WS.</description>
+    </rule>
+    <rule name="Daemon of Slaanesh" id="2ad0-3e18-aba8-5e68" hidden="false" publicationId="1a01-044f-047b-618f" page="171">
+      <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
+
+A Daemon of Slaanesh has the Hatred (Daemons of Khorne) and Armour Piercing (1) special rules. Each To Hit roll of 6 generates an additional Attack. These additional Attacks cannot generate further attacks.</description>
+    </rule>
+    <rule name="Daemon of Tzeentch" id="fe9a-f478-5bcc-57a8" hidden="false" publicationId="1a01-044f-047b-618f" page="171">
+      <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
+
+A Daemon of Tzeentch has Hatred (Daemons of Nurgle) and Ward save (6+). Wizards with the Daemon of Tzeentch upgrade can also re-roll channelling results of 1.</description>
+    </rule>
+    <rule name="Mark of Khorne" id="Mark of Khorne" hidden="false" publicationId="1a01-044f-047b-618f" page="163">
+      <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
+
+Models with the Mark of Khorne have Frenzy.</description>
+    </rule>
+    <rule name="Mark of Nurgle" id="Mark of Nurgle" hidden="false" publicationId="1a01-044f-047b-618f" page="163">
+      <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
+
+Models with the Mark of Nurgle add +1 to their T.</description>
+    </rule>
+    <rule name="Mark of Slaanesh" id="Mark of Slaanesh" hidden="false" publicationId="1a01-044f-047b-618f" page="163">
+      <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
+
+Models with the Mark of Slaanesh have Immunity (Psychology) and Stubborn.</description>
+    </rule>
+    <rule name="Mark of Tzeentch" id="Mark of Tzeentch" hidden="false" publicationId="1a01-044f-047b-618f" page="163">
+      <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
+
+Models with the Mark of Tzeentch have Magic Resistance (1) and Ward save (6+).</description>
+    </rule>
+    <rule id="92ff-eedb-a738-a73b" name="Ponderous" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
+      <description>Weapons with this rule suffer an additional -1 To Hit penalty if they move and shoot in the same turn.</description>
+    </rule>
+    <rule id="6068-f53d-1b7e-d503" name="Rapid Fire" publicationId="9e23-79cb-pubN66727" page="65" hidden="false">
+      <description>Models or weapons with this special rule do not suffer
+the usual -1 To Hit penalty for firing Multiple Shots.</description>
+    </rule>
+    <rule name="Firing a Blot Thrower" id="f55b-b981-fae7-afa2" hidden="false" publicationId="9e23-79cb-pubN66727" page="82">
+      <description>To fire a bolt thrower, select a target according to the normal rules for shooting. Roll to hit using the crew&apos;s Ballistic Skill, just as you would for a normal missile weapon.
+
+
+Resolving Hits
+If the target is a unit of five or more ranked-up models, the bolt will always strike a regular trooper (as opposed to a character in the unit) in the unit&apos;s first rank if the bolt thrower is in the unit&apos;s front arc, or the last rank if the bolt thrower is in the unit&apos;s rear arc. If the bolt thrower is in the target unit&apos;s flank, the target&apos;s files count as ranks for the purposes of resolving the shot.
+
+
+If the shot hits, resolve damage against the target using the bolt thrower&apos;s full Strength of 6. The bolt then hits one of the warriors in the rank behind with -1 Strength (normally Strength 5). A model in the next rank is hit at -2 Strength (normally Strength 4) and so on, until the unit runs out of ranks.
+
+
+If the rank hit by the bolt is made entirely of characters, or if the total number of rank and file models in the unit is less than five, it will be necessary to randomise which model in the rank is hit.
+
+
+Note that repeating bolts do not pierce ranks.</description>
+    </rule>
+    <rule name="Firing Grapeshot" id="493e-43ce-ef2f-2beb" hidden="false" publicationId="9e23-79cb-pubN66727" page="84">
+      <description>To fire grapeshot, select a target according to the normal rules for shooting. With the target chosen, roll an artillery dice and a D6 to find out how many shots are fired. If the artillery dice result is a misfire, roll a D6 on the Black Powder War Machine Misfire chart to find out what has gone wrong.
+
+
+Assuming that a misfire did not occur, roll to hit the target with a number of shots equal to the number rolled on the artillery dice plus the D6, resolving any successful hits using the grapeshot profile.</description>
+    </rule>
+    <rule name="Firing a Cannon" id="1b5a-8c3a-7e3d-0e2e" hidden="false" publicationId="9e23-79cb-pubN66727" page="83">
+      <description>To fire a cannon, first pivot to face the target following the normal rules for war machines. Then, nominate a model or building within the cannon&apos;s line of sight, outside of its minimum range and within its maximum range.
+
+
+When you have chosen your target, place a small marker over your target as a reminder of where the shot is intended to land.
+
+
+Once the marker has been placed, roll for scatter using a scatter dice and an artillery dice. Assuming that you didn&apos;t roll a misfire on the artillery dice, it&apos;s now time to find out whether or not your shot was on target.
+
+
+If a hit is rolled on the scatter dice, the shot has landed on target. In this case, we ignore the number shown on the artillery dice – the hit is all we need.
+
+
+If an arrow is rolled, the shot has missed its original target and scatters off elsewhere. Move the marker a distance in inches equal to the result of the artillery dice divided by half, in the direction shown on the scatter dice.
+
+
+Using your tape measure, extend a &apos;shot&apos; line from the cannon&apos;s barrel all the way to the marker – this is the direction the cannonball travels straight forward.
+If you roll a misfire, roll on the Black Powder Misfire chart. Regardless of the result rolled, the cannon does not shoot this turn.
+
+
+Bounce
+Assuming that the cannon did not misfire, then hopefully the cannonball will bounce straight forward and crush any targets in its path.
+To determine how far the cannonball bounces, roll the artillery dice again. If the result is a misfire then the cannonball does not bounce – it thuds into the ground and comes to rest. Any model under the spot where the cannonball comes to rest is hit, but they are the only victim!
+Assuming you don&apos;t roll a misfire, then the cannonball bounces the distance rolled – extend your tape measure a distance equal to the roll of the dice. If the cannonball bounces into impassable terrain that would, in reality, stand in the way of the shot, such as a sheer cliff, it stops immediately.
+
+
+The bounce of the cannonball is determined using the line template. On most occasions, any model whose base is between the point where the cannonball first strikes the ground and where it eventually comes to land is hit automatically. Note that a maximum of one model per rank struck can be hit. If the cannon is in the target&apos;s flank, the target&apos;s files count as ranks.
+
+
+Direct Hit
+Damage is resolved differently depending on whether or not the cannon ball hits a model directly or not.
+Normal Cannons have both the Multiple Wounds (D6) and (D3) special rules. It inflicts D6 Wounds only if the cannon ball lands directly on a model (that is, where the marker is placed after the first artillery and scatter dice are rolled), models hit by the bounce only suffer D3 Wounds. Great Cannons on the other hand, inflict D6 Wounds on both direct hits and the bounce.</description>
+    </rule>
+    <rule name="Firing a Stone Thrower" id="0638-a1ac-c907-7ee2" hidden="false" publicationId="9e23-79cb-pubN66727" page="84">
+      <description>Nominate a model or building within the stone thrower&apos;s line of sight (ignoring other models within the same unit), outside of its minimum range and within its maximum range. Then, take the small round template and place it with the centre directly over the target. Mortars use the large round template by default.
+
+
+The template cannot be placed over friendly models, or enemy models from a unit that is engaged in combat, as the crew refuse to deliberately target their allies (although the shot might well go wide and hit friends by mistake as we will discover later).
+
+
+Scatter
+Once the template has been placed, roll for scatter using a scatter dice and an artillery dice. If a misfire is rolled on the artillery dice, roll on the Stone Thrower Misfire chart. Mortars and Rocket Launchers roll on the Black Powder Misfire chart instead. Regardless of the result rolled, the stone thrower does not shoot this turn.
+
+
+Assuming that you did not roll a misfire on the artillery dice, it is now time to find out whether or not your shot was on target.
+
+
+If a hit is rolled on the scatter dice, the shot has landed on target. In this case, we ignore the number shown on the artillery dice – the hit is all we need.
+
+
+If an arrow is rolled, the shot has missed its original target and scatters off elsewhere. Move the template a distance in inches equal to the result of the artillery dice, in the direction shown on the scatter dice.
+
+
+Damage
+Regardless of whether or not your shot landed exactly where you intended, it&apos;s time to see who&apos;s been flattened by it.
+
+
+The model (if there is one) under the template&apos;s central hole take an automatic hit at the higher of the stone thrower&apos;s two Strengths (if they have one listed). If the template has scattered, there&apos;s a good chance the centre hole will lie over two or more models. Nonetheless, only one can be hit by the higher Strength, so select one randomly.
+
+
+Other models wholly or partially beneath the template are hit automatically at the stone thrower&apos;s lower Strength (normally 4).
+
+
+The stone thrower&apos;s Multiple Wounds (D3) special rule applies only to the high-Strength hit caused against the model under the template&apos;s central hole – unsaved wounds from the low Strength hit are not multiplied.
+
+
+Firing Indirectly
+If you wish to fire indirectly, declare that you will do so before taking the stone thrower&apos;s shot. An indirect shot does not require line of sight but is otherwise treated as a normal shot and has the usual requirements (the target needs to be in range and outside the minimum range of the stone thrower).
+
+
+If an arrow is rolled on the scatter dice, resolve the scatter as normal. If however, you roll a Hit! on the scatter dice, the shot does not land on target but merely scatters less – how much less depends greatly on the skill of the crew. The distance travelled is equal to the score shown on the artillery dice minus the crew&apos;s Ballistic Skill characteristic (to a minimum of zero!).
+
+
+Other than the aforementioned inaccuracy of the scatter, an indirect shot from a stone thrower is treated exactly according to the rules given for normal shots given above.</description>
+    </rule>
+    <rule id="adee-efa4-db8e-2fb1" name="Fight in Extra Ranks" publicationId="9e23-79cb-pubN66727" page="60" hidden="false">
+      <description>If a unit has this rule then supporting attacks can be made by one more rank than normal for each number indicated in the bracket. This rule is cumulative with other sources of Fight in Extra Ranks.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
-    <profile id="3ecc-5d9c-7d29-ee2f" name="Javelins" publicationId="9e23-79cb-pubN66727" page="94" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+    <profile id="3ecc-5d9c-7d29-ee2f" name="Javelins" publicationId="9e23-79cb-pubN66727" page="81" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
         <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1). Quick to Fire. Volley Fire.</characteristic>
       </characteristics>
     </profile>
-    <profile id="4a5d-0b6d-f6ac-fd7d" name="Two/Additional Hand Weapons" publicationId="9e23-79cb-pubN66727" page="92" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+    <profile id="4a5d-0b6d-f6ac-fd7d" name="Two/Additional Hand Weapons" publicationId="9e23-79cb-pubN66727" page="79" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
         <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Parry (6+). Requires Two Hands. +1 A.</characteristic>
       </characteristics>
     </profile>
-    <profile id="be39-37ac-ac20-5053" name="Spear (On Foot)" publicationId="9e23-79cb-pubN66727" page="92" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+    <profile id="be39-37ac-ac20-5053" name="Spear" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Fight in Extra Ranks (1). Strength Bonus (1), +1 I (Both, only if the unit got charged to its front by WB, Ca, MI, MB, MC, Ch and Mo).</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">+1 I, Fight in Extra Ranks (1). In turns in which the model is charged to its front, it receives an additional +1 to its Initiative. Mighty Blow (1) (Only applies in turns the model is charged to its front. Mighty Blow does not apply towards Infantry, Large Infantry, Swarms and Shrines.).</characteristic>
       </characteristics>
     </profile>
-    <profile id="193e-bc43-b252-8eff" name="Great Weapon" publicationId="9e23-79cb-pubN66727" page="92" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+    <profile id="193e-bc43-b252-8eff" name="Great Weapon" publicationId="9e23-79cb-pubN66727" page="79" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Requires Two Hands. Strength Bonus (1). -2 I.</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Requires Two Hands. Mighty Blow (1). -2 I.</characteristic>
       </characteristics>
     </profile>
-    <profile id="b2d2-2eb6-2bd2-ddbb" name="Spear (Mounted)" publicationId="9e23-79cb-pubN66727" page="92" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+    <profile id="b2d2-2eb6-2bd2-ddbb" name="Light Lance" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Strength Bonus (1), +1 I (Both, only in the turn the unit charges and only against the charged unit).</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Mighty Blow (1), +1 I (Both, only in the turn the unit charges and only against the charged unit).</characteristic>
       </characteristics>
     </profile>
     <profile id="8bf1-244f-c642-d43f" name="Shield" publicationId="9e23-79cb-pubN66727" page="95" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour">
       <characteristics>
         <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
-        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+**</characteristic>
-        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Parry (6+) (Only applies if used with a hand weapon.). **(Infantry armed with shields get an additional +1 to their armour save against missile attacks to their front. However, no Troop Type gains any armour saves from shields against missile attacks to their rear.</characteristic>
+        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+*</characteristic>
+        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Parry (6+) (Only applies if used with a hand weapon.). *(Models armed with shields get an additional +1 to their armour save against missile attacks to their front. Shields do not add any armour against missile attacks to the rear.)</characteristic>
       </characteristics>
     </profile>
-    <profile id="e43e-5153-eeec-36be" name="Polearm/Halberd" publicationId="9e23-79cb-pubN66727" page="91" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+    <profile id="e43e-5153-eeec-36be" name="Polearm/Halberd" publicationId="9e23-79cb-pubN66727" page="79" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Requires Two Hands.</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">+1 Initiative. Requires Two Hands.</characteristic>
       </characteristics>
     </profile>
     <profile id="d083-b2f1-d1c5-e4f7" name="Sling" publicationId="9e23-79cb-pubN66727" page="94" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
@@ -23875,14 +24281,14 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
         <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1). Multiple Shots (2) (Only applies in turns the model has not moved. Cannot be used to Stand and Shoot.).</characteristic>
       </characteristics>
     </profile>
-    <profile id="9dcd-3be8-08b0-96ab" name="Bow" publicationId="9e23-79cb-pubN66727" page="93" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+    <profile id="9dcd-3be8-08b0-96ab" name="Bow" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">24&quot;</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">3</characteristic>
         <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (2) (Only applies in turns the model has not moved. Cannot be used as a charge reaction.). Volley Fire.</characteristic>
       </characteristics>
     </profile>
-    <profile id="493b-1f46-43ce-a18f" name="Throwing Axes" publicationId="9e23-79cb-pubN66727" page="94" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+    <profile id="493b-1f46-43ce-a18f" name="Throwing Axes" publicationId="9e23-79cb-pubN66727" page="81" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">6&quot;</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
@@ -23896,70 +24302,70 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
         <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
       </characteristics>
     </profile>
-    <profile id="f6da-d707-0cd6-b1dd" name="Hand Weapon" publicationId="9e23-79cb-pubN66727" page="91" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+    <profile id="f6da-d707-0cd6-b1dd" name="Hand Weapon" publicationId="9e23-79cb-pubN66727" page="79" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
         <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac"/>
       </characteristics>
     </profile>
-    <profile id="2c1e-e11e-fadf-b4cf" name="Pike" publicationId="9e23-79cb-pubN66727" page="92" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+    <profile id="2c1e-e11e-fadf-b4cf" name="Pike" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Fight in Extra Ranks (3). Requires Two Hands. Strength Bonus (1), +3 I (Both, only if the unit got charged to its front by WB, Ca, MI, MB, MC, Ch and Mo).</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">+2 I. Fight in Extra Ranks (3). Requires Two Hands. In turns in which the model is charged to its front, it receives an additional +1 to its Initiative. Mighty Blow (1) (Only applies in turns the model is charged to its front. Mighty Blow does not apply towards Infantry, Large Infantry, Swarms and Shrines.)</characteristic>
       </characteristics>
     </profile>
-    <profile id="e56e-fedf-c550-5d81" name="Lance (Mounted)" publicationId="9e23-79cb-pubN66727" page="92" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+    <profile id="e56e-fedf-c550-5d81" name="Heavy Lance" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
         <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Strength Bonus (2), +2 I (Both, only in the turn the unit charges and only against the charged unit).</characteristic>
       </characteristics>
     </profile>
-    <profile id="487e-16a4-8ab8-2c85" name="Shortbow" publicationId="9e23-79cb-pubN66727" page="93" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+    <profile id="487e-16a4-8ab8-2c85" name="Shortbow" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">18&quot;</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">3</characteristic>
         <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (2) (Only applies in turns the model has not moved. Cannot be used as a charge reaction.). Volley Fire.</characteristic>
       </characteristics>
     </profile>
-    <profile id="cde7-c47d-3818-1e9d" name="Longbow" publicationId="9e23-79cb-pubN66727" page="93" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+    <profile id="cde7-c47d-3818-1e9d" name="Longbow" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">30&quot;</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">3</characteristic>
         <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (2) (Only applies in turns the model has not moved. Cannot be used as a charge reaction.). Volley Fire.</characteristic>
       </characteristics>
     </profile>
-    <profile id="844f-f2d8-d2d9-61d4" name="Crossbow" publicationId="9e23-79cb-pubN66727" page="93" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+    <profile id="844f-f2d8-d2d9-61d4" name="Crossbow" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">30&quot;</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Move or Fire.</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Ponderous</characteristic>
       </characteristics>
     </profile>
     <profile id="f106-ee33-4ec8-292a" name="Blowpipe" publicationId="9e23-79cb-pubN66727" page="93" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">1</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (2). Quick to Fire. Poisoned Attacks.</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (2). Quick to Fire. Poisoned Attacks. Rapid Fire.</characteristic>
       </characteristics>
     </profile>
-    <profile id="bd57-9e45-342f-ee49" name="Handgun" publicationId="9e23-79cb-pubN66727" page="93" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+    <profile id="bd57-9e45-342f-ee49" name="Handgun" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">24&quot;</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Move or Fire. Armour Piercing (1).</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Ponderous. Armour Piercing (1).</characteristic>
       </characteristics>
     </profile>
-    <profile id="aa4f-83e3-8259-924a" name="Pistol" publicationId="9e23-79cb-pubN66727" page="93" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+    <profile id="aa4f-83e3-8259-924a" name="Pistol" publicationId="9e23-79cb-pubN66727" page="81" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Quick to Fire. Armour Piercing (1). +1 A*. Requires Two Hands*. (*If combined with a hand weapon)</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Quick to Fire. Armour Piercing (1). In close combat, a pistol counts as an additional hand weapon that does not give the model the Parry special rule.</characteristic>
       </characteristics>
     </profile>
-    <profile id="fdcd-6526-0b8e-b291" name="Throwing Weapons" publicationId="9e23-79cb-pubN66727" page="94" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+    <profile id="fdcd-6526-0b8e-b291" name="Throwing Weapons" publicationId="9e23-79cb-pubN66727" page="81" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">8&quot;</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
@@ -23983,8 +24389,8 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
     <profile id="1700-a7e5-d272-ef20" name="Buckler" publicationId="9e23-79cb-pubN66727" page="95" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour">
       <characteristics>
         <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
-        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca"/>
-        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Parry (6+) (Only applies if used with a hand weapon.).</characteristic>
+        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+*</characteristic>
+        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Parry (6+) (Only applies if used with a hand weapon.). *(Only applies to models on foot against missile attacks to the front.)</characteristic>
       </characteristics>
     </profile>
     <profile id="7228-95d3-3384-f234" name="Barding" publicationId="9e23-79cb-pubN66727" page="95" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour">
@@ -23997,41 +24403,41 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
     <profile id="7e43-605b-bfde-13c3" name="Great Cannon" publicationId="9e23-79cb-pubN66727" page="111" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Great Cannon</characteristic>
-        <characteristic name="Range" typeId="1c88-efb0-083f-b945">60&quot;</characteristic>
+        <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-60&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">10</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D6).</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D6). Slow to Fire.</characteristic>
       </characteristics>
     </profile>
-    <profile id="2d26-2a21-00a2-685d" name="Bolt Thrower" publicationId="9e23-79cb-pubN66727" page="110" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
+    <profile id="2d26-2a21-00a2-685d" name="Bolt Thrower" publicationId="9e23-79cb-pubN66727" page="82" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Bolt Thrower</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">48&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">6</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Armour Piercing (1).</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Armour Piercing (1). Slow to Fire.</characteristic>
       </characteristics>
     </profile>
-    <profile id="4f25-d6c7-f4da-a808" name="Cannon" publicationId="9e23-79cb-pubN66727" page="111" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
+    <profile id="4f25-d6c7-f4da-a808" name="Cannon" publicationId="9e23-79cb-pubN66727" page="83" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Cannon</characteristic>
-        <characteristic name="Range" typeId="1c88-efb0-083f-b945">48&quot;</characteristic>
+        <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-48&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">10</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D6/D3).</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D6/D3). Slow to Fire.</characteristic>
       </characteristics>
     </profile>
-    <profile id="78db-91d9-aaca-d5ba" name="Grapeshot" publicationId="9e23-79cb-pubN66727" page="113" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
+    <profile id="78db-91d9-aaca-d5ba" name="Grapeshot" publicationId="9e23-79cb-pubN66727" page="84" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Grapeshot</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">5</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Armour Piercing (1).</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Armour Piercing (1). Slow to Fire.</characteristic>
       </characteristics>
     </profile>
-    <profile id="8651-78f3-14e9-f66b" name="Stone Thrower" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
+    <profile id="8651-78f3-14e9-f66b" name="Stone Thrower" publicationId="9e23-79cb-pubN66727" page="85" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Stone Thrower</characteristic>
-        <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-60&quot;</characteristic>
-        <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4(10)</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D6).</characteristic>
+        <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-48&quot;</characteristic>
+        <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4(8)</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Slow to Fire.</characteristic>
       </characteristics>
     </profile>
     <profile id="d259-6f2a-d6a9-0eec" name="Fire Thrower" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
@@ -24042,18 +24448,18 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
         <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Flaming Attacks.</characteristic>
       </characteristics>
     </profile>
-    <profile id="7259-6759-3c5f-ce3c" name="Brace of Pistols" publicationId="9e23-79cb-pubN66727" page="93" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+    <profile id="7259-6759-3c5f-ce3c" name="Brace of Pistols" publicationId="9e23-79cb-pubN66727" page="81" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Quick to Fire. Armour Piercing (1). Multiple Shots (2). +1 A. Requires Two Hands.</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Quick to Fire. Armour Piercing (1). Multiple Shots (2). In close combat, a pistol counts as an additional hand weapon that does not give the model the Parry special rule.</characteristic>
       </characteristics>
     </profile>
     <profile id="7f6a-b8b2-8978-4f35" name="Flail" publicationId="9e23-79cb-pubN66727" page="92" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Requires Two Hands. Strength Bonus (2).</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Requires Two Hands. Mighty Blow (2).</characteristic>
       </characteristics>
     </profile>
     <profile id="c198-878a-0683-0889" name="Kindleflame" publicationId="9e23-79cb-pubN66727" page="145" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -25410,13 +25816,13 @@ In subsequent turns, Kraken&apos;s Pull travels in a random direction and moves 
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). If successfully cast, the target must pass a LD test on 3D6. If failed, the target suffers 1 Wound which Ignores Armour saves for every point they failed the LD test by.</characteristic>
       </characteristics>
     </profile>
-    <profile id="a012-5764-3f62-c2bb" name="Pavane of Slaanesh (Bound Spell 5+)" publicationId="eee5-f9c5-fa08-3f2e" page="114, 7, 240" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+    <profile id="a012-5764-3f62-c2bb" name="Pavane of Slaanesh (Bound Spell 3+)" publicationId="eee5-f9c5-fa08-3f2e" page="114, 7, 240" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). If successfully cast, the target must pass a Psychology test on 3D6. If failed, the target suffers 1 Wound which Ignores Armour saves for every point they failed the Psychology test by.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). If successfully cast, the target must pass a Leadership test on their own unmodified Leadership or suffer 1 Wound which Ignores Armour Saves for every point they failed the test by.</characteristic>
       </characteristics>
     </profile>
     <profile id="57b2-6f4a-b820-f178" name="Phantasmagoria" publicationId="eee5-f9c5-fa08-3f2e" page="114, 7, 240" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -25959,6 +26365,59 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Summons the 5&quot; template. While the spell is in effect, the template counts as Dangerous Terrain, and enemy units within 6&quot; of it suffer -1 to their LD.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="a0a6-193b-9eb5-ffe9" name="Organ Gun" publicationId="9e23-79cb-pubN66727" page="111" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
+      <characteristics>
+        <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Organ Gun</characteristic>
+        <characteristic name="Range" typeId="1c88-efb0-083f-b945">24&quot;</characteristic>
+        <characteristic name="Strength" typeId="6ca0-d074-628f-e276">5</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Armour Piercing (1), Multiple Shots (Artillery Dice + D6), Rapid Fire, Slow to Fire</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="51ac-33e6-8924-39dc" name="Warbow" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">30&quot;</characteristic>
+        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (2) (Only applies in turns the model has not moved. Cannot be used as a charge reaction.). Volley Fire.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="31b5-2b7d-e620-19f6" name="Greatbow" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">36&quot;</characteristic>
+        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">5</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (2) (Only applies in turns the model has not moved. Cannot be used as a charge reaction.). Volley Fire.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="a9ad-a872-79a3-c503" name="Blunderbuss" publicationId="9e23-79cb-pubN66727" page="81" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
+        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">3</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1), Multiple Shots (3), Quick to Fire, Rapid Fire. Blunderbusses do not suffer any penalties To Hit for Stand and Shoot.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="9765-f312-5a8b-5cb8" name="Repeater Bolt Thrower" publicationId="9e23-79cb-pubN66727" page="82" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
+      <characteristics>
+        <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Bolt Thrower</characteristic>
+        <characteristic name="Range" typeId="1c88-efb0-083f-b945">48&quot;</characteristic>
+        <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Shots (6). Armour Piercing (1). Slow to Fire. Rapid Fire.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="c5ac-9a35-f3cf-7c0a" name="Stone Thrower" publicationId="9e23-79cb-pubN66727" page="85" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
+      <characteristics>
+        <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Stone Thrower</characteristic>
+        <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-48&quot;</characteristic>
+        <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4(8)</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Slow to Fire.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="7c7a-74eb-5d2b-bc04" name="Stone Thrower" publicationId="9e23-79cb-pubN66727" page="85" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
+      <characteristics>
+        <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Stone Thrower</characteristic>
+        <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-48&quot;</characteristic>
+        <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4(8)</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Slow to Fire.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
