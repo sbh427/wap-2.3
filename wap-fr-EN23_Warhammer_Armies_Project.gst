@@ -227,7 +227,7 @@
     </profileType>
     <profileType name="Prayer" id="4608-9b35-b7dc-202d" hidden="false">
       <characteristicTypes>
-        <characteristicType name="Details" id="1f79-8144-edd6-8b51"/>
+        <characteristicType name="Effect" id="1f79-8144-edd6-8b51"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -7841,7 +7841,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
       <profiles>
         <profile name="Wizard Level 4" typeId="0ce6-a5f9-6184-218d" typeName="Wizard" hidden="false" id="882a-d31d-8747-e383">
           <characteristics>
-            <characteristic name="Wizard Level" typeId="7f8d-5707-7251-c1a5">1</characteristic>
+            <characteristic name="Wizard Level" typeId="7f8d-5707-7251-c1a5">4</characteristic>
             <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">5</characteristic>
             <characteristic name="Spell Level" typeId="c5a7-d8e1-9c88-2f0e">1-4</characteristic>
             <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">5</characteristic>
@@ -8360,6 +8360,78 @@ If you want to make a list using the allied rules, make separate rosters for eac
       <infoLinks>
         <infoLink name="Throwing Weapons" id="e8d0-51dc-661f-7527" hidden="false" targetId="fdcd-6526-0b8e-b291" type="profile"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Cold One" hidden="false" id="8b53-7da4-587d-872a" collective="false" subType="mount">
+      <infoLinks>
+        <infoLink name="Fear" id="8802-18ce-455b-03ed" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
+        <infoLink name="Natural Armour (6+)" id="6eb6-3c47-52a9-56aa" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
+        <infoLink name="Stupidity" id="b642-3a4e-290f-0ea9" hidden="false" targetId="755c-61c2-fa25-f4ce" type="rule"/>
+        <infoLink name="Cold One" id="c2ee-bfa7-7f15-e8b7" hidden="false" targetId="be87-1185-25f0-2de4" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="(Mount)" hidden="false" id="a5BN-nEPG-i4j3-5qeA" targetId="(Mount)" primary="false"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Manticore" hidden="false" id="9266-aada-bbfd-09d0" collective="false" subType="mount">
+      <infoLinks>
+        <infoLink name="Killing Blow" id="bdd3-462c-c7e5-4c0f" hidden="false" targetId="a711-7cf6-cd2b-1d29" type="rule"/>
+        <infoLink name="Frenzy" id="b516-0a20-e899-b86d" hidden="false" targetId="9ff3-dda6-e142-5a77" type="rule"/>
+        <infoLink name="Fly (8)" id="fc81-e45f-d9de-2f1f" hidden="false" targetId="0a9a-bfcb-1a9d-5609" type="rule"/>
+        <infoLink name="Manticore" id="86bb-ad9f-8e30-968e" hidden="false" targetId="0c00-4af1-49a1-dbd1" type="profile"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="2e20-bc4c-b810-abf4" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Bloodrage" hidden="false" id="b648-ae77-7fb4-b428" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5e9d-3490-d511-3d4b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Bloodrage" id="9df4-67f9-b094-a2b6" hidden="false" targetId="fc43-3fac-4ae1-1606" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Iron-hard Skin" hidden="false" id="aad1-d2eb-5334-638c" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f251-ebde-176f-51a7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Iron-hard Skin" id="ec83-0155-1f49-1eaa" hidden="false" targetId="1569-a18d-c1a5-c774" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Rending Fangs" hidden="false" id="9b49-bfa6-c391-7bcc" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3fea-c946-b9d3-f21c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Rending Fangs" id="77dc-4e5e-470d-0174" hidden="false" targetId="38dc-ae6d-82d1-e44b" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Venom Tail" hidden="false" id="9ed0-8f71-17cb-7449" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2d39-089c-abd9-3cd7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Venom Tail" id="c96e-2355-ea97-8bdd" hidden="false" targetId="9513-e549-4849-a0dd" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="(Mount)" hidden="false" id="9153-3281-5b6f-3461" targetId="(Mount)" primary="false"/>
+      </categoryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -11349,14 +11421,11 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
     <rule id="03d6-87a5-ffd8-93ba" name="Duck &amp; Weave" publicationId="0545-ea23-873c-f668" page="3" hidden="false">
       <description>Enemies attacking Infantry models with this rule suffer 1 To Hit in close combat.</description>
     </rule>
-    <rule id="1451-9754-507c-44a8" name="Murderous Prowess" publicationId="9e23-79cb-pubN76150" page="114" hidden="false">
+    <rule id="1451-9754-507c-44a8" name="Murderous Prowess" publicationId="9e23-79cb-pubN76150" page="3" hidden="false">
       <description>Models with this rule may re-roll all To Wound rolls of 1 when making close combat attacks.</description>
     </rule>
     <rule id="8c96-c7fe-2a85-f2f9" name="Elven Grace" publicationId="9e23-79cb-pubN77092" page="138" hidden="false">
-      <description>Models with this special rule have Dodge (6+)
-special rule in close combat. However, this cannot be
-used against enemies that attack before the model with
-Elven Grace.</description>
+      <description>Models with this special rule have Dodge (6+) special rule in close combat. However, this cannot be used against enemies that attack before the model with Elven Grace.</description>
     </rule>
     <rule id="eb46-96d2-9469-4905" name="Cold-Blooded" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>Whenever the model takes a LD test, it rolls an additional dice and discards the highest result.</description>
@@ -11929,6 +11998,18 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
     </rule>
     <rule id="051c-2a46-ef94-4703" name="Hatred (Monstrous Creatures)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
+    </rule>
+    <rule name="Bloodrage" id="fc43-3fac-4ae1-1606" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
+      <description>The Manticore gains Hatred.</description>
+    </rule>
+    <rule name="Iron-hard Skin" id="1569-a18d-c1a5-c774" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
+      <description>The Manticore gains Natural Armour (5+).</description>
+    </rule>
+    <rule name="Venom Tail" id="9513-e549-4849-a0dd" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
+      <description>The Manticore gains an additional Attack that has Poisoned Attacks.</description>
+    </rule>
+    <rule name="Rending Fangs" id="38dc-ae6d-82d1-e44b" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
+      <description>The Manticore gains Armour Piercing (1).</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -12947,51 +13028,6 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Can be cast on an unengaged unit. Until the start of the caster&apos;s next Magic phase, the target gains the Unbreakable special rule, cannot move and is treated as impassable terrain for the purpose of movement.</characteristic>
       </characteristics>
     </profile>
-    <profile id="2a6c-20a9-1718-e49f" name="Anchan-Rogar the Soul Stealer" publicationId="9e23-79cb-pubN76150" page="170" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">5</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+/14+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;/36&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the small round template within range of the Wizard – it then scatters D6&quot;. All models hit by the template suffer a Strength 2 hit with no armour saves allowed. Roll a D6 for each unsaved Wound inflicted by Soul Stealer. For each roll of 4+, the caster immediately gains a single Wound (to a maximum of 10).</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="fb00-bdd7-7146-e848" name="Arnzipal&apos;s Black Horror" publicationId="9e23-79cb-pubN76150" page="170" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">6</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+/25+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Uses the small/large round template. Once the template is placed, the player then nominates a direction in which the Black Horror will move. To determine how many inches the template moves, roll an artillery dice and multiply the result by the caster&apos;s Wizard level. Any model touched by, or passed over by the template must pass a Strength test or be slain outright with no armour saves allowed. If the result on the artillery dice is a misfire, centre the template on the caster and roll both a scatter dice and a D6. The template moves a number of inches equal to the result of the D6, in the direction shown on the scatter dice (if you roll a Hit!, use the little arrow shown on the Hit! symbol). In either event, in subsequent turns, the Black Horror travels in a random direction and moves a number of inches equal to the roll on an artillery dice. If a misfire is rolled in subsequent turns, the Black Horror collapses in on itself and is removed.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="c97c-7b02-3192-da50" name="Bladewind" publicationId="9e23-79cb-pubN76150" page="170" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Every model in the target unit must pass a WS test or suffer a Strength 4 hit with Armour Piercing (1).</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="5eed-29da-240a-e4f0" name="Chroesh - Word of Pain" publicationId="9e23-79cb-pubN76150" page="170" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+/14+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;/24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit suffer -D3 to both their WS and BS until the start of the caster&apos;s next Magic phase (roll once for both). Boosted version also inflicts the -D3 penalty to their Strength and I (to a minimum of 1).</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="83ce-8b5d-eef3-f48d" name="Doombolt of Kharaidon" publicationId="9e23-79cb-pubN76150" page="168" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+/12+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;/18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6/2D6 Strength 5 hits.</characteristic>
-      </characteristics>
-    </profile>
     <profile id="2897-e2c7-a845-ee02" name="Doombolt of Kharaidon (Bound Spell 4+)" publicationId="9e23-79cb-pubN76150" page="168" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
@@ -13001,24 +13037,6 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 5 hits.</characteristic>
       </characteristics>
     </profile>
-    <profile id="6029-2904-b7c5-17fe" name="Nagaelythe the Chillwind" publicationId="9e23-79cb-pubN76150" page="170" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strength 2 hits. If the target suffers any unsaved Wounds, all models in the unit suffer a -1 penalty to their BS until the start of the caster&apos;s next Magic phase.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="5346-38c9-7041-bdd8" name="Power of Darkness" publicationId="9e23-79cb-pubN76150" page="170" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit have a +1 bonus to their Strength until the start of the caster&apos;s next Magic phase. Then add D3 power dice to your power pool. If a natural 6 is rolled when generating these power dice, the caster suffers a Wound with the Ignores Armour Saves special rule.</characteristic>
-      </characteristics>
-    </profile>
     <profile id="9138-efc9-8b35-fc6d" name="Power of Darkness (Bound Spell 8+)" publicationId="9e23-79cb-pubN76150" page="170" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
@@ -13026,24 +13044,6 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit have a +1 bonus to their Strength until the start of the caster&apos;s next Magic phase. Then add D3 power dice to your power pool. If a natural 6 is rolled when generating these power dice, the caster suffers a Wound with the Ignores Armour Saves special rule.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="e25d-cae3-46e2-0cb7" name="Shroud of Despair" publicationId="9e23-79cb-pubN76150" page="170" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets all enemy units within range. Until the start of the caster&apos;s next Magic phase, the targets cannot benefit from the Hold Your Ground! or Inspiring Presence rules. In addition, whenever a target unit fails a LD test of any kind, all target units (including the one that failed) suffer -1 to their LD until the start of the caster&apos;s next Magic phase (this effect is cumulative with itself).</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="111d-86fc-0ac2-aa2e" name="Spiteful Conjuration" publicationId="9e23-79cb-pubN76150" page="170" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">When a Wizard successfully casts a hex, magic missile or direct damage spell from this lore, and the casting roll contains any double, the spell&apos;s target suffers 2D6 Strength 2 hits with Armour Piercing (1). If the casting roll contains any treble, the spell&apos;s target instead suffers 3D6 hits instead. In either case, the hits are resolved after the spell has been resolved.</characteristic>
       </characteristics>
     </profile>
     <profile id="b344-84f7-9d42-97e8" name="Apotheosis" publicationId="b724-d2c4-d151-2d9e" page="201, 187" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -14643,6 +14643,34 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
         <characteristic name="LD" typeId="a199-f10b-a038-5730"/>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Machine</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Cold One" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="be87-1185-25f0-2de4" publicationId="9e23-79cb-pubN76150" page="131">
+      <characteristics>
+        <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+        <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+        <characteristic name="LD" typeId="a199-f10b-a038-5730">3</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Manticore" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0c00-4af1-49a1-dbd1" publicationId="1a01-044f-047b-618f" page="26">
+      <characteristics>
+        <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+        <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+        <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
+        <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
+        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+        <characteristic name="LD" typeId="a199-f10b-a038-5730">5</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Creature (Chaos Beast)</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
