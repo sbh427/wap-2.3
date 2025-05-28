@@ -12,7 +12,8 @@ These datafiles correspond to the 2.3 version of the Warhammer Armies Project.
 The datafiles are still under heavy development. About 1 file every two or three week will be updated.
 I usually update armies one by one, sometimes skipping special characters.
 
-# New Recruit Usage
+# Usage
+## New Recruit
 
 1. Open [New Recruit roster editor][https://www.newrecruit.eu/app/MySystems]. You don't need to create an account.
 2. At the bottom of the list, click on "Add more games"
@@ -22,7 +23,7 @@ I usually update armies one by one, sometimes skipping special characters.
 6. Click on the green +, wait until the files are uploaded in New Recruit
 7. Start building your list !
 
-# BattleScribe Usage
+## BattleScribe
 1. Download and Open [Battlescribe][https://www.battlescribe.net/].
 2. Go to "Manage Data" and "Add data index URL"
 3. Type : **https://wap-fr.ovh/bsdata/repos.json**
@@ -36,5 +37,19 @@ PS: *I need to wrote a doc for switching Rosters between rules versions*
 
 # Bug report
 
-I haven't set up a bug reporting system yet. If you have a github account, or want to create one, you will be able to create an Issue, from a bug report template.
-If you don't have a github account and don't want to create one : I will soon implement another way to report bugs, no worries.s
+# New Recruit
+
+To report a bug with New Recruit, follow the instructions below:
+1. Click on `Report Issue` at the top right of the page
+
+![Report Issue](./pictures/bug_report1.png)
+
+2. Select Game Data Issue
+
+![Game Data Issue](./pictures/bug_report2.png)
+
+3. Enter details about the issue you are faced with. There is a minimum limit of characters to ungrey the `send` button.
+
+![Details](./pictures/bug_report3.png)
+
+**Note** You can also create an issue directly in Github if you have a Github account.
