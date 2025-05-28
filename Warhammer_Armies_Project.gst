@@ -20941,6 +20941,28 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <cost name="pts" typeId="points" value="5"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Barding" hidden="false" id="17ec-ae05-605b-27ce" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e4bc-a24f-6b99-c09b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Barding" id="ac19-ee70-49fb-49b7" hidden="false" targetId="7228-95d3-3384-f234" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Scythes" hidden="false" id="865f-edfe-e4fd-d28e" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8ec4-3081-a854-3007" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Scythes" id="8019-e9ad-382b-f3d3" hidden="false" targetId="d896-d52f-cc64-ab43" type="rule"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="6cd2-3f4b-da2d-1ee9" name="Common Arcane Items" hidden="false" collective="false" import="true">
@@ -24210,7 +24232,7 @@ If a misfire is rolled, roll immediately on the Black Powder Misfire chart.</de
 This rule is cumulative with other sources of Hold Your Ground. If the model has a Line of Sight value of 4 or more, then the range of their Inspiring Presence rule is increased by 6.</description>
     </rule>
     <rule name="Daemonic" id="a6d9-b8e9-21b2-96ff" hidden="false" publicationId="1a01-044f-047b-618f" page="162">
-      <description>Models with this rule have Fear and Magical Attacks special rules. In addition, models that are not mounts have a 5+ Ward save which gets reduced to a 6+ Ward save against Magical Attacks.</description>
+      <description>Models with this rule have Fear and Magical Attacks special rules. In addition, models that are not mounts have a Ward Save (5+) which gets reduced to a Ward Save (6+) against Magical Attacks.</description>
     </rule>
     <rule name="Daemon of Khorne" id="a356-05c9-d963-c1bb" hidden="false" publicationId="1a01-044f-047b-618f" page="171">
       <description>A Daemon of Khorne has Hatred (Daemons of Slaanesh), Magic Resistance (1) and Mighty Blow (1).</description>
@@ -24362,6 +24384,18 @@ Other than the aforementioned inaccuracy of the scatter, an indirect shot from 
     </rule>
     <rule id="4cc1-bc54-7778-c333" name="Loremaster" publicationId="9e23-79cb-pubN66727" page="63" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
+    </rule>
+    <rule name="Inspiring Presence" id="1c71-6c8f-f47a-0a91" hidden="false">
+      <description>A model with Inspiring Presence allows all friendly units within a distance equal to the number in the brackets to use their Leadership instead of their own, unless specified (such as having to use their unmodified Leadership). This rule cannot be used if the model with Inspiring Presence is also fleeing.
+
+
+This rule is cumulative with other sources of Inspiring Presence. If the model has a Line of Sight value of 4 or more, then the range of their Inspiring Presence rule is increased by 6.
+
+
+If a unit taking a Leadership test has a modifier to its Leadership, this modifier still applies if the unit uses the Inspiring Presence.
+
+
+If a unit is Steadfast, it may use the Leadership of the model for Break tests if it is higher than their own Leadership after applying all negative modifiers from combat resolution. Otherwise, they will use their own Leadership.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
