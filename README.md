@@ -28,7 +28,7 @@ I usually update armies one by one, sometimes skipping special characters.
 3. Type : **https://wap-fr.ovh/bsdata/repos.json**
 4. Add new repository
 5. Open the TAB **wap-fr Battlescribe data**
-6. Select repository (wap-fr English Rules 9.2.2 ou 9.2.3)
+6. Select repository (wap-fr English Rules 9.2.2 or 9.2.3)
 7. Update Data
 8. You can now create independant Rosters in 9.2.2 or 9.2.3
 
