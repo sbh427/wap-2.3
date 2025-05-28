@@ -15025,39 +15025,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="d622-c310-d94d-c6d3-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="d622-c310-d94d-c6d3-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="de24-cca2-c426-5072-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="de24-cca2-c426-5072-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="d622-c310-d94d-c6d3-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="de24-cca2-c426-5072-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="d622-c310-d94d-c6d3-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="de24-cca2-c426-5072-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="d622-c310-d94d-c6d3-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="de24-cca2-c426-5072-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="d622-c310-d94d-c6d3-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="de24-cca2-c426-5072-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="d622-c310-d94d-c6d3-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="de24-cca2-c426-5072-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="d622-c310-d94d-c6d3-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="de24-cca2-c426-5072-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="de24-cca2-c426-5072-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="de24-cca2-c426-5072-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="de24-cca2-c426-5072-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="de24-cca2-c426-5072-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="de24-cca2-c426-5072-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="de24-cca2-c426-5072-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -15329,39 +15473,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="59ce-e1a7-6f92-4468-min-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="59ce-e1a7-6f92-4468-min-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="4901-2fa4-ee1e-1f94-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="4901-2fa4-ee1e-1f94-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="59ce-e1a7-6f92-4468-min-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="4901-2fa4-ee1e-1f94-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="59ce-e1a7-6f92-4468-min-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="4901-2fa4-ee1e-1f94-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="59ce-e1a7-6f92-4468-min-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="4901-2fa4-ee1e-1f94-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="59ce-e1a7-6f92-4468-min-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="4901-2fa4-ee1e-1f94-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="59ce-e1a7-6f92-4468-min-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="4901-2fa4-ee1e-1f94-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="59ce-e1a7-6f92-4468-min-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="4901-2fa4-ee1e-1f94-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="4901-2fa4-ee1e-1f94-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="4901-2fa4-ee1e-1f94-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="4901-2fa4-ee1e-1f94-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="4901-2fa4-ee1e-1f94-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="4901-2fa4-ee1e-1f94-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="4901-2fa4-ee1e-1f94-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -15634,39 +15922,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="56ef-3dad-332a-fa67-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="56ef-3dad-332a-fa67-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="6e39-09b1-5cf4-fd78-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="6e39-09b1-5cf4-fd78-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="56ef-3dad-332a-fa67-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="6e39-09b1-5cf4-fd78-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="56ef-3dad-332a-fa67-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="6e39-09b1-5cf4-fd78-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="56ef-3dad-332a-fa67-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="6e39-09b1-5cf4-fd78-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="56ef-3dad-332a-fa67-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="6e39-09b1-5cf4-fd78-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="56ef-3dad-332a-fa67-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="6e39-09b1-5cf4-fd78-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="56ef-3dad-332a-fa67-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="6e39-09b1-5cf4-fd78-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="6e39-09b1-5cf4-fd78-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="6e39-09b1-5cf4-fd78-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="6e39-09b1-5cf4-fd78-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="6e39-09b1-5cf4-fd78-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="6e39-09b1-5cf4-fd78-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="6e39-09b1-5cf4-fd78-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -15938,39 +16370,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="8221-2dca-e61b-34d0-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="8221-2dca-e61b-34d0-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="669c-db9f-2941-6bda-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="669c-db9f-2941-6bda-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="8221-2dca-e61b-34d0-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="669c-db9f-2941-6bda-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="8221-2dca-e61b-34d0-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="669c-db9f-2941-6bda-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="8221-2dca-e61b-34d0-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="669c-db9f-2941-6bda-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="8221-2dca-e61b-34d0-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="669c-db9f-2941-6bda-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="8221-2dca-e61b-34d0-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="669c-db9f-2941-6bda-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="8221-2dca-e61b-34d0-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="669c-db9f-2941-6bda-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="669c-db9f-2941-6bda-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="669c-db9f-2941-6bda-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="669c-db9f-2941-6bda-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="669c-db9f-2941-6bda-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="669c-db9f-2941-6bda-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="669c-db9f-2941-6bda-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -16242,39 +16818,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="3f7b-1c95-91c8-79f8-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="3f7b-1c95-91c8-79f8-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="bbb6-9d1d-53e5-6a23-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="bbb6-9d1d-53e5-6a23-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="3f7b-1c95-91c8-79f8-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="bbb6-9d1d-53e5-6a23-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="3f7b-1c95-91c8-79f8-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="bbb6-9d1d-53e5-6a23-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="3f7b-1c95-91c8-79f8-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="bbb6-9d1d-53e5-6a23-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="3f7b-1c95-91c8-79f8-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="bbb6-9d1d-53e5-6a23-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="3f7b-1c95-91c8-79f8-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="bbb6-9d1d-53e5-6a23-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="3f7b-1c95-91c8-79f8-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="bbb6-9d1d-53e5-6a23-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="bbb6-9d1d-53e5-6a23-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="bbb6-9d1d-53e5-6a23-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="bbb6-9d1d-53e5-6a23-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="bbb6-9d1d-53e5-6a23-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="bbb6-9d1d-53e5-6a23-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="bbb6-9d1d-53e5-6a23-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -16316,39 +17036,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
       <selectionEntryGroups>
         <selectionEntryGroup name="Spells from the Lore of Life" id="5376-05d7-fd54-9e38" hidden="false" sortIndex="3">
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="f346-e68a-9935-e3f5-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="f346-e68a-9935-e3f5-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="3ba2-cec3-d459-6c14-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="3ba2-cec3-d459-6c14-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="f346-e68a-9935-e3f5-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="3ba2-cec3-d459-6c14-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="f346-e68a-9935-e3f5-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="3ba2-cec3-d459-6c14-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="f346-e68a-9935-e3f5-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="3ba2-cec3-d459-6c14-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="f346-e68a-9935-e3f5-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="3ba2-cec3-d459-6c14-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="f346-e68a-9935-e3f5-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="3ba2-cec3-d459-6c14-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="f346-e68a-9935-e3f5-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="3ba2-cec3-d459-6c14-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="3ba2-cec3-d459-6c14-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="3ba2-cec3-d459-6c14-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="3ba2-cec3-d459-6c14-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="3ba2-cec3-d459-6c14-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="3ba2-cec3-d459-6c14-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="3ba2-cec3-d459-6c14-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <selectionEntries>
@@ -16850,39 +17714,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="5b95-37ee-5d5f-50f5-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="5b95-37ee-5d5f-50f5-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="d40a-8e5c-08ba-6ceb-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="d40a-8e5c-08ba-6ceb-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="5b95-37ee-5d5f-50f5-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="d40a-8e5c-08ba-6ceb-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="5b95-37ee-5d5f-50f5-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="d40a-8e5c-08ba-6ceb-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="5b95-37ee-5d5f-50f5-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="d40a-8e5c-08ba-6ceb-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="5b95-37ee-5d5f-50f5-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="d40a-8e5c-08ba-6ceb-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="5b95-37ee-5d5f-50f5-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="d40a-8e5c-08ba-6ceb-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="5b95-37ee-5d5f-50f5-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="d40a-8e5c-08ba-6ceb-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="d40a-8e5c-08ba-6ceb-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="d40a-8e5c-08ba-6ceb-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="d40a-8e5c-08ba-6ceb-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="d40a-8e5c-08ba-6ceb-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="d40a-8e5c-08ba-6ceb-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="d40a-8e5c-08ba-6ceb-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -17154,39 +18162,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="0d8c-2880-e3e4-7152-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0d8c-2880-e3e4-7152-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="a893-15ed-16b2-265a-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="a893-15ed-16b2-265a-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="0d8c-2880-e3e4-7152-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="a893-15ed-16b2-265a-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="0d8c-2880-e3e4-7152-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="a893-15ed-16b2-265a-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="0d8c-2880-e3e4-7152-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="a893-15ed-16b2-265a-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="0d8c-2880-e3e4-7152-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="a893-15ed-16b2-265a-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="0d8c-2880-e3e4-7152-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="a893-15ed-16b2-265a-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="0d8c-2880-e3e4-7152-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="a893-15ed-16b2-265a-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="a893-15ed-16b2-265a-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="a893-15ed-16b2-265a-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="a893-15ed-16b2-265a-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="a893-15ed-16b2-265a-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="a893-15ed-16b2-265a-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="a893-15ed-16b2-265a-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -17570,39 +18722,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="87bb-a946-5fff-1977-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="87bb-a946-5fff-1977-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="f703-8b7a-0396-333b-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="f703-8b7a-0396-333b-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="87bb-a946-5fff-1977-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="f703-8b7a-0396-333b-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="87bb-a946-5fff-1977-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="f703-8b7a-0396-333b-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="87bb-a946-5fff-1977-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="f703-8b7a-0396-333b-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="87bb-a946-5fff-1977-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="f703-8b7a-0396-333b-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="87bb-a946-5fff-1977-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="f703-8b7a-0396-333b-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="87bb-a946-5fff-1977-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="f703-8b7a-0396-333b-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="f703-8b7a-0396-333b-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="f703-8b7a-0396-333b-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="f703-8b7a-0396-333b-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="f703-8b7a-0396-333b-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="f703-8b7a-0396-333b-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="f703-8b7a-0396-333b-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -17658,7 +18954,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Fire" id="f53a-7223-a0d1-e317" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Spells from the Lore of Tzeentch" id="f53a-7223-a0d1-e317" hidden="false" sortIndex="3">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="12. Infernal Gateway" hidden="true" id="e756-09f0-58ca-ed4b" collective="false">
               <constraints>
@@ -17986,39 +19282,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="c658-bcac-3bf3-c7a3-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="c658-bcac-3bf3-c7a3-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="c658-bcac-3bf3-c7a3-min-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="c658-bcac-3bf3-c7a3-min-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="c658-bcac-3bf3-c7a3-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="c658-bcac-3bf3-c7a3-min-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="c658-bcac-3bf3-c7a3-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="c658-bcac-3bf3-c7a3-min-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="c658-bcac-3bf3-c7a3-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="c658-bcac-3bf3-c7a3-min-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="c658-bcac-3bf3-c7a3-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="c658-bcac-3bf3-c7a3-min-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="c658-bcac-3bf3-c7a3-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="c658-bcac-3bf3-c7a3-min-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="c658-bcac-3bf3-c7a3-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="c658-bcac-3bf3-c7a3-min-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="c658-bcac-3bf3-c7a3-min-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="c658-bcac-3bf3-c7a3-min-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="c658-bcac-3bf3-c7a3-min-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="c658-bcac-3bf3-c7a3-min-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="c658-bcac-3bf3-c7a3-min-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="c658-bcac-3bf3-c7a3-min-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -18074,7 +19514,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Fire" id="7f7c-e15f-b8e8-d1af" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Spells from the Lore of Nurgle" id="7f7c-e15f-b8e8-d1af" hidden="false" sortIndex="3">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="12. Rot, Glorious Rot" hidden="true" id="629e-6a0d-216f-a8a9" collective="false">
               <constraints>
@@ -18402,39 +19842,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="952c-b815-dcc2-0c75-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="952c-b815-dcc2-0c75-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="a8a2-f11a-5757-720c-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="a8a2-f11a-5757-720c-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="952c-b815-dcc2-0c75-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="a8a2-f11a-5757-720c-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="952c-b815-dcc2-0c75-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="a8a2-f11a-5757-720c-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="952c-b815-dcc2-0c75-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="a8a2-f11a-5757-720c-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="952c-b815-dcc2-0c75-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="a8a2-f11a-5757-720c-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="952c-b815-dcc2-0c75-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="a8a2-f11a-5757-720c-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="952c-b815-dcc2-0c75-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="a8a2-f11a-5757-720c-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="a8a2-f11a-5757-720c-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="a8a2-f11a-5757-720c-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="a8a2-f11a-5757-720c-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="a8a2-f11a-5757-720c-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="a8a2-f11a-5757-720c-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="a8a2-f11a-5757-720c-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -18490,7 +20074,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Fire" id="d5a8-14e5-85b4-b777" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Spells from the Lore of Slaanesh" id="d5a8-14e5-85b4-b777" hidden="false" sortIndex="3">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="12. Song of Seduction" hidden="true" id="3608-64a5-f3d8-40ae" collective="false">
               <constraints>
@@ -18818,39 +20402,183 @@ If you want to make a list using the allied rules, make separate rosters for eac
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="08a2-8cf9-e467-d0b5-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="08a2-8cf9-e467-d0b5-max"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="fcd5-0772-431f-b76f-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="fcd5-0772-431f-b76f-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="08a2-8cf9-e467-d0b5-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="fcd5-0772-431f-b76f-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="08a2-8cf9-e467-d0b5-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="fcd5-0772-431f-b76f-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="08a2-8cf9-e467-d0b5-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="fcd5-0772-431f-b76f-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="08a2-8cf9-e467-d0b5-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-              </conditions>
+            <modifier type="set" value="4" field="fcd5-0772-431f-b76f-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="08a2-8cf9-e467-d0b5-min">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="fcd5-0772-431f-b76f-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="08a2-8cf9-e467-d0b5-max">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
+            <modifier type="set" value="5" field="fcd5-0772-431f-b76f-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="fcd5-0772-431f-b76f-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="fcd5-0772-431f-b76f-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="fcd5-0772-431f-b76f-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="fcd5-0772-431f-b76f-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="fcd5-0772-431f-b76f-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="fcd5-0772-431f-b76f-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -19192,6 +20920,26 @@ If you want to make a list using the allied rules, make separate rosters for eac
       <infoLinks>
         <infoLink name="Loremaster" id="db31-1473-718a-a423" hidden="false" type="rule" targetId="4cc1-bc54-7778-c333"/>
       </infoLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c605-baf4-bf9e-b43d-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c605-baf4-bf9e-b43d-max"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Warrior Familiar" hidden="false" id="6ba4-68a0-cd51-88ce" collective="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="368d-d51b-2d12-3600" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="937e-e453-33a4-97fb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Warrior Familiar" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="e342-0791-fb7a-a153" publicationId="9e23-79cb-pubN66727" page="119">
+          <characteristics>
+            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The model gains an additional Strength 3 Attack. This does not benefit from any weapon, item or special rule used by the character. You may still take another Enchanted Item in addition to the Warrior Familiar, and it also does not count against the maximum points limit of magic items normally allowed for the character.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <costs>
+        <cost name="pts" typeId="points" value="5"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -19231,6 +20979,9 @@ If you want to make a list using the allied rules, make separate rosters for eac
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
+          <entryLinks>
+            <entryLink import="true" name="Loremaster" hidden="false" id="de20-20a7-7094-a952" type="selectionEntry" targetId="a2bf-14a5-6723-7157"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry id="46f0-3898-3169-fa9b" name="Wand of Jet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
@@ -19343,6 +21094,24 @@ If you want to make a list using the allied rules, make separate rosters for eac
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Signature Spells" id="8a6d-0d9f-68f0-be4f" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="0. Wyssan&apos;s Wildform" hidden="false" id="ade0-0b58-f6cf-6345" type="selectionEntry" targetId="0096-7e25-66b4-9cad"/>
+                <entryLink import="true" name="0. Dark Hand of Death" hidden="false" id="22a8-dc8c-228f-bad7" type="selectionEntry" targetId="3b38-7f74-f979-94f4"/>
+                <entryLink import="true" name="0. Fireball" hidden="false" id="3d51-2f2d-4245-c200" type="selectionEntry" targetId="e899-1538-32f0-e469"/>
+                <entryLink import="true" name="0. Harmonic Convergence" hidden="false" id="75ef-3351-71b7-2ec4" type="selectionEntry" targetId="e9eb-1db7-772d-1bb5"/>
+                <entryLink import="true" name="0. Earth Blood" hidden="false" id="3a4f-9e2e-8a87-6a62" type="selectionEntry" targetId="413a-6e59-0fd2-16a8"/>
+                <entryLink import="true" name="0. Shem&apos;s Burning Gaze" hidden="false" id="34f6-f684-d267-3fa7" type="selectionEntry" targetId="6287-ea6c-c498-b86a"/>
+                <entryLink import="true" name="0. Glittering Robe" hidden="false" id="4a6e-2516-7037-bc11" type="selectionEntry" targetId="2fbe-0ca5-12f1-b74b"/>
+                <entryLink import="true" name="0. Melkoth&apos;s Mystifying Miasma" hidden="false" id="f03b-525d-2f37-4adc" type="selectionEntry" targetId="dba6-e588-0a5b-69a1"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ebba-6e9b-03b1-5d08-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ebba-6e9b-03b1-5d08-max"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -19357,9 +21126,11 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cbc6-779a-3e05-fa4c" type="max"/>
           </constraints>
           <profiles>
-            <profile id="d95a-fbd7-8810-7cf7" name="Wizarding Hat" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="d95a-fbd7-8810-7cf7" name="Wizarding Hat" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The wearer is treated as being a Level 2 Wizard who can use a randomly chosen spell lore. However, they also have Stupidity.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The wearer is treated as being a Level 2 Wizard who can use a randomly chosen spell lore from any of the Eight Lores of Magic at the start of the game.
+However, they also have the Stupidity special rule.
+Note that they may not choose any Arcane Items.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19373,9 +21144,9 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a5bb-5b98-7b78-05a5" type="max"/>
           </constraints>
           <profiles>
-            <profile id="48c8-2e13-e426-6fcd" name="Fozzrik&apos;s Folding Fortress" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="48c8-2e13-e426-6fcd" name="Fozzrik&apos;s Folding Fortress" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">After deployment zones have been agreed, but before the armies have been deployed, place a watchtower building no more than 10x10 cm in base size in your deployment zone to represent the Folding Fortress. This is treated as a standard building. If you do not have a suitable building to place, you cannot use Fozzrik&apos;s Folding Fortress.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">After deployment zones have been agreed, but before the armies have been deployed, place a watchtower building no more than 10x10 cm in base size and a maximum of 3 floors in your deployment zone to represent the Folding Fortress. This is treated as a standard building. If you do not have a suitable building to place, you cannot use Fozzrik&apos;s Folding Fortress.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19389,7 +21160,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c4fa-1dce-fe3c-d2ac" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f905-bfc7-b32f-9d87" name="Orb of Thunder" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="f905-bfc7-b32f-9d87" name="Orb of Thunder" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Bound Spell, Power Level 4. Remains in play. The Orb of Thunder contains a hex spell.</characteristic>
               </characteristics>
@@ -19400,7 +21171,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. The Orb of Thunder effects all Flying models. When cast, no models may use Fly and must move on the ground at their normal M.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. The Orb of Thunder effects all models with the Fly special rule. When cast, no models may use their Fly special rule and must move on the ground at their normal Movement rate.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19414,15 +21185,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="38a1-1a98-b4c1-6fc2" type="max"/>
           </constraints>
           <profiles>
-            <profile id="9314-4ee5-56eb-b392" name="Ruby Ring of Ruin" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="9314-4ee5-56eb-b392" name="Ruby Ring of Ruin" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Bound spell (power level 4). The Ruby Ring of Ruin contains the Fireball spell.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="9cf7-4747-fc06-bc41" name="Fireball" hidden="false" targetId="6e57-2cc3-96fc-7f01" type="profile"/>
             <infoLink id="902a-306d-3df9-f216" name="Kindleflame" hidden="false" targetId="c198-878a-0683-0889" type="profile"/>
+            <infoLink name="Fireball" id="9e0b-b70e-f60a-15c8" hidden="false" type="profile" targetId="6e57-2cc3-96fc-7f01"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="35"/>
@@ -19434,7 +21205,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f47c-27b3-9edf-511b" type="max"/>
           </constraints>
           <profiles>
-            <profile id="205b-7c2f-1427-2817" name="Crown of Command" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="205b-7c2f-1427-2817" name="Crown of Command" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The Crown of Command gives the bearer and any unit they join Stubborn for as long as the bearer remains with the unit.</characteristic>
               </characteristics>
@@ -19450,14 +21221,14 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="100f-9395-351c-2c32" type="max"/>
           </constraints>
           <profiles>
-            <profile id="6e2a-fe07-c226-d0bd" name="Healing Potion" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="6e2a-fe07-c226-d0bd" name="Healing Potion" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Healing Potion can be drunk at the start of the controlling player&apos;s turn. The model immediately recovers D3 Wounds (ignoring any additional Wounds from mounts) up to their starting value.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="25"/>
+            <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="817f-d39e-da54-a4f9" name="The Terrifying Mask of Eee!" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
@@ -19466,7 +21237,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cc54-ceef-45ef-1fea" type="max"/>
           </constraints>
           <profiles>
-            <profile id="2f6d-8270-dcea-3d13" name="The Terrifying Mask of Eee!" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="2f6d-8270-dcea-3d13" name="The Terrifying Mask of Eee!" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The wearer of this mask causes Terror. However, other models can never use their LD.</characteristic>
               </characteristics>
@@ -19484,7 +21255,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
           <profiles>
             <profile id="56e5-f08d-7476-5f5e" name="Potion of Speed" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Potion of Speed can be drunk at the start of any phase. The imbiber has +D3 A until the end of the turn.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Potion of Speed can be drunk at the start of any phase. The character gains +D3 Attacks until the end of the turn.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19498,9 +21269,9 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b06c-5575-9b8f-f843" type="max"/>
           </constraints>
           <profiles>
-            <profile id="428c-c4eb-4bc0-a597" name="Potion of Strength" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="428c-c4eb-4bc0-a597" name="Potion of Strength" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Potion of Strength can be drunk at the start of any phase. The imbiber has +D3 S until the end of the turn.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Potion of Strength can be drunk at the start of any phase. The character gains +D3 Strength until the end of the turn.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19514,7 +21285,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="99c8-3735-ee15-cf1f" type="max"/>
           </constraints>
           <profiles>
-            <profile id="0e40-7b19-6cd8-5370" name="The Other Trickster&apos;s Shard" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="0e40-7b19-6cd8-5370" name="The Other Trickster&apos;s Shard" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The bearer, and all units in base contact with them (friend and foe) must re-roll successful ward saves.</characteristic>
               </characteristics>
@@ -19530,14 +21301,14 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bc21-fe92-f52c-1623" type="max"/>
           </constraints>
           <profiles>
-            <profile id="26c2-d30a-6795-a7bd" name="Ironcurse Icon" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="26c2-d30a-6795-a7bd" name="Ironcurse Icon" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The character (and any unit they are with) gain a Ward save (6+) against war machine weapons.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The character (and any unit they are with) gain a Ward save (6+) against artillery weapons.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="5"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="b706-ccc0-394e-89a2" name="Potion of Toughness" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
@@ -19548,7 +21319,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
           <profiles>
             <profile id="da0a-6b34-bfa5-6e42" name="Potion of Toughness" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Potion of Toughness can be drunk at the start of any phase. The imbiber has +D3 T until the end of the turn.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Potion of Toughness can be drunk at the start of any phase. The character gains +D3 Toughness until the end of the turn.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19562,7 +21333,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1886-65c5-f5a4-20a3" type="max"/>
           </constraints>
           <profiles>
-            <profile id="e1eb-687b-4f1a-dee2" name="Arabyan Carpet" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="e1eb-687b-4f1a-dee2" name="Arabyan Carpet" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Infantry models on foot only. The owner of this magical carpet has Fly (10). However, they cannot join units.</characteristic>
               </characteristics>
@@ -19578,9 +21349,9 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2c27-0dc3-2d98-ba76" type="max"/>
           </constraints>
           <profiles>
-            <profile id="8f84-e750-605e-17fb" name="Boots of Flight" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="8f84-e750-605e-17fb" name="Boots of Flight" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Model on foot only. The Boots of Flight gives the wearer M 10 as well as Strider and Swiftstride.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Model on foot only. The Boots of Flight gives the wearer Movement 10 as well as the Strider and Swiftstride special rules.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -19594,7 +21365,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b26b-3427-81e1-fb62" type="max"/>
           </constraints>
           <profiles>
-            <profile id="065e-53e2-2481-bc06" name="Lifestone of Ashraaz" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="065e-53e2-2481-bc06" name="Lifestone of Ashraaz" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Lifestone of Ashraaz can be used at the start of any close combat phase. The bearer can swap his current number Wounds with the current number of Wounds of any one enemy model in base contact. The effect lasts the remainder of the game.</characteristic>
               </characteristics>
@@ -19604,15 +21375,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Warrior Familiar" hidden="false" id="6ba4-68a0-cd51-88ce" collective="false" sortIndex="2">
+        <selectionEntry type="upgrade" import="true" name="Potion of Foolhardiness" hidden="false" id="1a39-ee3f-58d4-f19f" collective="false" sortIndex="2">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="368d-d51b-2d12-3600" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="937e-e453-33a4-97fb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ad67-4922-8653-a924" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="90c3-d928-6da1-f475" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Warrior Familiar" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="e342-0791-fb7a-a153" publicationId="9e23-79cb-pubN66727" page="163">
+            <profile name="Potion of Foolhardiness" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="59ec-0843-e6cc-55c8" publicationId="9e23-79cb-pubN66727" page="119">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The model gains an additional S 3 Attack. This does not benefit from any weapon used by the character. You may still take another Enchanted Item in addition to the Warrior Familiar, and it also does not count against the maximum points limit of magic items normally allowed for the character.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Potion of Foolhardiness can be drunk at the start of any phase. The character gains the Frenzy special rule until the end of the turn.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20940,15 +22711,15 @@ characteristic.</characteristic>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="01e6-93d4-45a5-e661" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="e42b-1e73-99be-4cb2" name="Earthing Rod" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
+        <selectionEntry id="e42b-1e73-99be-4cb2" name="Earthing Rod" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="73ac-3b2f-15e7-89d2" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d7d3-8408-c955-9f87" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f721-f7dd-3470-9339" name="Earthing Rod" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="f721-f7dd-3470-9339" name="Earthing Rod" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. If the wizard rolls on the miscast table they can re-roll the result.</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. If the wizard suffers a miscast, they do not add the number of power dice used to the result.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -20962,7 +22733,7 @@ characteristic.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6535-0430-75d7-7086" type="max"/>
           </constraints>
           <profiles>
-            <profile id="6b6d-6c3f-d896-c972" name="Feedback Scroll" publicationId="9e23-79cb-pubN66727" page="159" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="6b6d-6c3f-d896-c972" name="Feedback Scroll" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. When an enemy spell has been cast, a Wizard who has a Feedback Scroll can read it instead of attempting to dispel the spell. The spell is cast as normal, but, after the spell has been resolved, roll a dice for every dice used to cast the spell. The casting Wizard takes a wound for every result of 5+ rolled, with no armour saves allowed.</characteristic>
               </characteristics>
@@ -20978,7 +22749,7 @@ characteristic.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6eb4-b62c-f7dd-61ae" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f9ff-b85e-b7bb-58f6" name="Destroy Magic Scroll" publicationId="9e23-79cb-pubN66727" page="159" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="f9ff-b85e-b7bb-58f6" name="Destroy Magic Scroll" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. When an enemy cast a spell, the bearer may immediately counter its effects by reading the Destroy Magic Scroll to release the spell written upon it instead of attempting to dispel the spell by using dispel dice. This gives them 6 free dispel dice to attempt to dispel the spell, which cannot be combined with any other dispel dice (Ultimate Power applies as normal). In addition, roll a D6. On a 4+, the spell is destroyed and the enemy caster loses access to the spell for the rest of the game (note that this has no effect on Innate Bound spells).</characteristic>
               </characteristics>
@@ -20988,13 +22759,13 @@ characteristic.</characteristic>
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1eab-a10f-79f9-0f31" name="Power Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
+        <selectionEntry id="1eab-a10f-79f9-0f31" name="Power Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3980-e4c3-d9db-402e" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="029c-5f4c-1044-5919" type="max"/>
           </constraints>
           <profiles>
-            <profile id="7e9a-ed9e-17ae-aae3" name="Power Scroll" publicationId="9e23-79cb-pubN66727" page="161" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="7e9a-ed9e-17ae-aae3" name="Power Scroll" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. A Power Scroll can be used when the Wizard makes a casting attempt. During that casting attempt, any roll of a double (except 1&apos;s) counts as a 6 for the purpose of resolving Ultimate Power.</characteristic>
               </characteristics>
@@ -21010,7 +22781,7 @@ characteristic.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d4e0-5e64-88d3-13d2" type="max"/>
           </constraints>
           <profiles>
-            <profile id="071f-734a-988b-ec00" name="Power Stone" publicationId="9e23-79cb-pubN66727" page="161" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="071f-734a-988b-ec00" name="Power Stone" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Wizard can declare that they are using the power stone immediately before casting a spell If they do so, D3 dice are added to the power dice that they are going to roll (you still need to roll at least one dice from the power pool).</characteristic>
               </characteristics>
@@ -21020,15 +22791,15 @@ characteristic.</characteristic>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="fa6d-0d69-b2f0-fea1" name="Forbidden Rod" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
+        <selectionEntry id="fa6d-0d69-b2f0-fea1" name="Forbidden Rod" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a257-ca79-c728-4902" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b7f3-7d0a-27b0-bbc1" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f8f8-7267-a4a3-754c" name="Forbidden Rod" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="f8f8-7267-a4a3-754c" name="Forbidden Rod" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The forbidden rod adds +D6 dice to the power pool at the start of the caster&apos;s own magic phase, but also inflicts 1 wounds on the bearer (with no armour saves allowed).</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Forbidden Rod adds +D6 dice to the power pool at the start of the caster&apos;s own magic phase, but also inflicts 1 Wound which Ignores Armour Saves on the bearer.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -21042,7 +22813,7 @@ characteristic.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="30a8-ba65-7bb3-238c" type="max"/>
           </constraints>
           <profiles>
-            <profile id="7138-9ba7-c563-e803" name="Dispel Scroll" publicationId="9e23-79cb-pubN66727" page="159" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="7138-9ba7-c563-e803" name="Dispel Scroll" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. When an enemy spell has been cast, a wizard who has a dispel scroll can read it instead of attempting to dispel the spell by using dispel dice. This gives them 6 free dice to attempt to dispel the spell, which cannot be combined with any other dispel dice. This may also be used to dispel spells that Remains in Play.</characteristic>
               </characteristics>
@@ -21058,9 +22829,9 @@ characteristic.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0144-dbe7-bb8b-3f28" type="max"/>
           </constraints>
           <profiles>
-            <profile id="a416-013d-d7bd-da32" name="Luckstone" publicationId="9e23-79cb-pubN66727" page="161" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="a416-013d-d7bd-da32" name="Luckstone" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. Once per battle, the bearer can re-roll all of the dice rolled to cast or dispel a spell. This can effectively cancel a miscast result, and cause Ultimate Power or a miscast.</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The bearer can re-roll all of the dice rolled to cast or dispel a spell. This can effectively cancel a miscast result, and cause Ultimate Power or a miscast.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -21074,7 +22845,7 @@ characteristic.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e523-ef4a-572f-4de3" type="max"/>
           </constraints>
           <profiles>
-            <profile id="fde5-a92c-81ad-70eb" name="The Mystic Shield of Brag" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="fde5-a92c-81ad-70eb" name="The Mystic Shield of Brag" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Mystic Shield of Brag may be used against any enemy spell that directly targets any friendly unit. The enemy spell has no effect.</characteristic>
               </characteristics>
@@ -21090,9 +22861,9 @@ characteristic.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7b55-2313-3b74-3f51" type="max"/>
           </constraints>
           <profiles>
-            <profile id="7ed3-78d9-47ec-98ef" name="Scroll of Shielding" publicationId="9e23-79cb-pubN66727" page="161" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="7ed3-78d9-47ec-98ef" name="Scroll of Shielding" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. When an enemy spell has been cast, a Wizard who has a Scroll of Shielding can read it instead of attempting to dispel the spell. The spell is cast as normal, but the target of the spell is granted Magic Resistance (4+) against the spell.</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. When an enemy spell has been cast, a Wizard who has a Scroll of Shielding can read it instead of attempting to dispel the spell. The spell is cast as normal, but the target of the spell is granted Magic Resistance (3) against the spell.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -21100,20 +22871,20 @@ characteristic.</characteristic>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c2e4-9231-019b-032c" name="Trickster&apos;s Shard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
+        <selectionEntry id="c2e4-9231-019b-032c" name="Trickster&apos;s Shard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7793-ca87-7e37-215b" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="50d4-b387-bab7-9521" type="max"/>
           </constraints>
           <profiles>
-            <profile id="fcd2-f098-64b6-b785" name="Trickster&apos;s Shard" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="fcd2-f098-64b6-b785" name="Trickster&apos;s Shard" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. Declare you are using this item at the start of one of your magic phases. For the duration of the phase, when one of the bearer&apos;s spells is dispelled by an enemy wizard, roll a D6. On a 4+, that wizard suffers a wound with no armour saves allowed.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="20"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
         <selectionEntry id="bb99-1ac3-14c2-42bc" name="Scroll of Leeching" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
@@ -21122,7 +22893,7 @@ characteristic.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3ba4-967d-2331-8ee9" type="max"/>
           </constraints>
           <profiles>
-            <profile id="0c06-9d37-7112-96ad" name="Scroll of Leeching" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="0c06-9d37-7112-96ad" name="Scroll of Leeching" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. When an enemy spell has been cast, a Wizard who has a Scroll of Leeching can read it instead of attempting to dispel the spell. The spell is cast as normal, but, after the spell has been resolved, the bearer of the scroll adds a number of dispel dice to his pool equal to the number of dice used to cast the spell.</characteristic>
               </characteristics>
@@ -21138,7 +22909,7 @@ characteristic.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e0b9-f1ce-b606-d256" type="max"/>
           </constraints>
           <profiles>
-            <profile id="767f-223e-8681-d4f5" name="Sivejir&apos;s Hex Scroll" publicationId="9e23-79cb-pubN66727" page="159" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="767f-223e-8681-d4f5" name="Sivejir&apos;s Hex Scroll" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. When an enemy spell has been cast, a Wizard who has a Hex Scroll can read it instead of attempting to dispel the spell. The spell is cast as normal, but a portion of the spell&apos;s energy is transformed and redirected at the caster. The enemy wizard can resist the spell&apos;s effects by rolling equal to or under his wizard level on a D6. If he fails, a he becomes a toad! Whilst transformed, the wizard cannot channel or cast spells, all of his magic items and mundane equipment (armour, weapons, etc.) temporarily stop working and all of his characteristics are reduced to 1 (except for his wounds, which are unaffected). His controlling player can roll a D6 at the start of each of his subsequent magic phases; the spell dissipates on a roll of 4+ and the wizard returns to his normal form.</characteristic>
               </characteristics>
@@ -21148,13 +22919,13 @@ characteristic.</characteristic>
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9f44-d50e-1211-7778" name="Mystic Maze" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
+        <selectionEntry id="9f44-d50e-1211-7778" name="Mystic Maze" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="de22-5186-82dc-ee4f" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5a96-0ead-e044-768f" type="max"/>
           </constraints>
           <profiles>
-            <profile id="6857-5447-3d98-7f51" name="Mystic Maze" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="6857-5447-3d98-7f51" name="Mystic Maze" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Mystic Maze may be used against any enemy spell that directly targets any friendly unit. Roll 3D6 measured from the centre of the unit; this is the distance the spell scatters in a random direction. Should the spell end up on another unit, this unit will become the target of the spell; otherwise the spell has no effect.</characteristic>
               </characteristics>
@@ -21170,9 +22941,9 @@ characteristic.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="365c-c783-3e65-0d4f" type="max"/>
           </constraints>
           <profiles>
-            <profile id="9c70-a5bf-15fa-3600" name="The Gem of Taranto" publicationId="9e23-79cb-pubN66727" page="161" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="9c70-a5bf-15fa-3600" name="The Gem of Taranto" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Gem of Taranto can be used whenever you successfully dispel an enemy spell (except Bound Spells). The bearer of the Gem will be able to cast the spell themselves (limited by their Wizard level as normal) for the remainder of the game, even if it is from a lore not normally available to them.</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Gem of Taranto can be used whenever you successfully dispel an enemy spell (except Summoning or Innate Bound Spells). The bearer of the Gem will be able to cast the spell themselves (limited by their Wizard level as normal) for the remainder of the game, even if it is from a lore not normally available to them.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -21180,13 +22951,13 @@ characteristic.</characteristic>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c715-5311-5a0a-f397" name="Hypnotic Eye Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
+        <selectionEntry id="c715-5311-5a0a-f397" name="Hypnotic Eye Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2fde-c310-ede5-7d9d" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dead-10da-aed7-c044" type="max"/>
           </constraints>
           <profiles>
-            <profile id="209c-7ef1-14e7-a227" name="Hypnotic Eye Scroll" publicationId="9e23-79cb-pubN66727" page="160" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+            <profile id="209c-7ef1-14e7-a227" name="Hypnotic Eye Scroll" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
                 <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Hypnotic Eye Scroll can be used whenever an enemy wizard successfully casts a spell instead of attempting to dispel. The casting wizard must pass a LD test; if failed, you may choose the target of the spell just as if you had cast the spell yourself. If no target can be chosen, the spell has no effect. Note that the spell is still cast from the original Wizard as normal.</characteristic>
               </characteristics>
@@ -21623,7 +23394,7 @@ A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Ter
       <description>If a weapon requires two hands to use, it is not possible for a model to use a shield or buckler alongside it in close combat (although a shield can still be used against wounds caused by shooting or magic).</description>
     </rule>
     <rule id="01e3-7f81-20e3-45fe" name="Mighty Blow (1)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
-      <description>Models with this rule gain a S bonus to all their close combat attacks (including Impact Hits and Stomps) equal to the number in the brackets in the first round of each new close combat they are involved in. Note that any attack made with a weapon that gives Strength Bonus only applies to attacks made with the weapon itself. This rule is cumulative with other sources of Strength Bonus.</description>
+      <description>Models with this rule gain a S bonus to all their close combat attacks (including Impact Hits and Stomps) equal to the number in the brackets in the first round of each new close combat they are involved in. Note that any attack made with a weapon that gives Mighty Blow only applies to attacks made with the weapon itself. This rule is cumulative with other sources of Mighty Blow.</description>
     </rule>
     <rule id="43ca-96e5-8a47-2d39" name="Volley Fire" publicationId="9e23-79cb-pubN66727" page="84" hidden="false">
       <description>Weapons with this rule allow the unit to fire with all models within range in the Shooting Phase as long as at least one model in the unit can draw Line of Sight to the target. However, if they do so, they suffer -1 To Hit. A unit cannot Volley Fire if it moved earlier in the turn or if the target is within half the weapon&apos;s maximum range. Note that Volley Fire cannot be used as Stand &amp; Shoot charge reaction.</description>
@@ -22005,7 +23776,7 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
       <description>Units entirely composed of models with this special rule do not need to pass a Leadership test in order to march, regardless of the proximity of enemy units.</description>
     </rule>
     <rule id="2017-de4c-6670-21ba" name="Choppas" publicationId="9e23-79cb-pubN78975" page="107" hidden="false">
-      <description>Models with Choppas get Strength Bonus (1).</description>
+      <description>Models with Choppas get Mighty Blow (1).</description>
     </rule>
     <rule id="4a8b-1056-0bcd-e293" name="Fall Over" publicationId="9e23-79cb-pubN67565" page="83" hidden="false">
       <description>A Giant must test to see whether it falls over if any of the following apply:
@@ -22056,7 +23827,7 @@ special rule in close combat. However, this cannot be
 used against enemies that attack before the model with
 Elven Grace.</description>
     </rule>
-    <rule id="eb46-96d2-9469-4905" name="Cold-Blooded" publicationId="9e23-79cb-pubN77402" page="59" hidden="false">
+    <rule id="eb46-96d2-9469-4905" name="Cold-Blooded" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>Whenever the model takes a LD test, it rolls an additional dice and discards the highest result.</description>
     </rule>
     <rule id="44e1-ad81-2f8b-49db" name="Divine Power" publicationId="315d-135b-135c-07ce" page="179" hidden="false">
@@ -22689,7 +24460,7 @@ Other than the aforementioned inaccuracy of the scatter, an indirect shot from 
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Strength Bonus (2), +2 I (Both, only in the turn the unit charges and only against the charged unit).</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Mighty Blow (2), +2 I (Both, only in the turn the unit charges and only against the charged unit).</characteristic>
       </characteristics>
     </profile>
     <profile id="487e-16a4-8ab8-2c85" name="Shortbow" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
