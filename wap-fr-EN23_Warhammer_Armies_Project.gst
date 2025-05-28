@@ -43,7 +43,6 @@
     <publication id="079e-9b65-30b3-2c59" name="Zombie Pirates of the Vampire Coast v.1.4" shortName="ZP" publisher="Warhammer - Zombie Pirates of the Vampire Coast 9th Ed v.1.4" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="4ff3-b09f-ec27-d6ec" name="Vampire Counts v.1.63, Zombie Pirates of the Vampire Coast v.1.3" shortName="VC, ZP" publisher="Warhammer - Vampire Counts 1.63, Warhammer - Zombie Pirates of the Vampire Coast 9th Ed v.1.3" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="a873-5a26-f107-1c0b" name="Pirates of Sartosa v.1.2, Zombie Pirates of the Vampire Coast v.1.4" shortName="PoS, ZP" publisher="Warhammer - Pirates of Sartosa 9th Ed v.1.2, Warhammer - Zombie Pirates of the Vampire Coast 9th Ed v.1.4" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="dcfc-4992-9141-dee0" name="Empire Special Characters v.1.6" shortName="Em" publisher="Warhammer - Empire Special Characters 1.6" publicationDate="27.02.2022" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="15a5-c139-f130-a940" name="Orcs &amp; Goblins Special Characters 1.1" shortName="O&amp;G" publisher="Warhammer - Orcs &amp; Goblins Special Characters 1.1" publicationDate="14.02.2022" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="ff43-3b22-4e64-1d31" name="Bretonnia Special Characters v.1.3" shortName="Br" publisher="Warhammer - Bretonnia Special Characters 1.3" publicationDate="28.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="fef7-683c-50d7-d1bb" name="Dwarfs Special Characters v.1.0" shortName="Dw" publisher="Warhammer - Dwarfs Special Characters 1.0" publicationDate="14.02.2022" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -402,17 +401,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
         </profile>
         <profile id="a511-7f28-0f3b-1a91" name="7" publicationId="9e23-79cb-pubN66727" page="40" hidden="false" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table">
           <characteristics>
-            <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Detonation: The Wizard and all models in base contact with him suffer a S 10 hit.</characteristic>
+            <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Detonation: The Wizard and all models in base contact with him suffer a Strength 10 hit.</characteristic>
           </characteristics>
         </profile>
         <profile id="bc70-79a8-a31c-c477" name="5" publicationId="9e23-79cb-pubN66727" page="40" hidden="false" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table">
           <characteristics>
-            <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Magical Feedback: The Wizard and every model on the same side within 12&quot; that can channel/generate power or dispel dice suffer a S 4 hit as a result of the magical backlash. The Wizard cannot attempt to cast further spells this phase.</characteristic>
+            <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Magical Feedback: The Wizard and every model on the same side within 12&quot; that can channel/generate power or dispel dice suffer a Strength 4 hit as a result of the magical backlash. The Wizard cannot attempt to cast further spells this phase.</characteristic>
           </characteristics>
         </profile>
         <profile id="d716-289e-2d74-e0c5" name="9" publicationId="9e23-79cb-pubN66727" page="40" hidden="false" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table">
           <characteristics>
-            <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Calamitous Detonation: Centre the small round template over the Wizard – every model underneath the template suffers a S 10 hit (including the Wizard – they do not benefit from Look Out Sir! in this case).</characteristic>
+            <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Calamitous Detonation: Centre the small round template over the Wizard – every model underneath the template suffers a Strength 10 hit (including the Wizard – they do not benefit from Look Out Sir! in this case).</characteristic>
           </characteristics>
         </profile>
         <profile id="f0b3-811a-2c59-1669" name="8" publicationId="9e23-79cb-pubN66727" page="40" hidden="false" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table">
@@ -427,12 +426,12 @@ If you want to make a list using the allied rules, make separate rosters for eac
         </profile>
         <profile id="1a08-69de-ebfa-da11" name="11" publicationId="9e23-79cb-pubN66727" page="40" hidden="false" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table">
           <characteristics>
-            <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Dimensional Cascade: Centre the large round template over the Wizard – every model underneath the template (including the Wizard – they do not benefit from Look Out Sir! in this case) suffers a S 10 hit.</characteristic>
+            <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Dimensional Cascade: Centre the large round template over the Wizard – every model underneath the template (including the Wizard – they do not benefit from Look Out Sir! in this case) suffers a Strength 10 hit.</characteristic>
           </characteristics>
         </profile>
         <profile id="3893-4961-bc56-1cb8" name="10" publicationId="9e23-79cb-pubN66727" page="40" hidden="false" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table">
           <characteristics>
-            <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Deamonic Poessession: The caster suffers one S 10 hit and loses a Wizard level and their highest levelled spell. If the caster reaches Level 0, he stops counting as a Wizard for all purposes and therefore will not be able to use any arcane magic items he is carrying.</characteristic>
+            <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Deamonic Poessession: The caster suffers one Strength 10 hit and loses a Wizard level and their highest levelled spell. If the caster reaches Level 0, he stops counting as a Wizard for all purposes and therefore will not be able to use any arcane magic items he is carrying.</characteristic>
           </characteristics>
         </profile>
         <profile id="92e1-d44e-2735-96fc" name="6" publicationId="9e23-79cb-pubN66727" page="40" hidden="false" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table">
@@ -5850,7 +5849,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 3D6 Strength 5 hits. However, if the spell fails to reach its casting value, the caster suffers 1 Wound which Ignores Armour Saves.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 3D6 Strength 5 hits. However, if the spell fails to reach its casting value, the caster suffers 1 Wound with the Ignores Armour Saves special rule.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6151,7 +6150,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers D3 Strength D6 Hits which Ignores Armour Saves. If a 3 is rolled for the number of Hits, it suffers an additional D3 hits.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers D3 Strength D6 Hits with the Ignores Armour Saves special rule. If a 3 is rolled for the number of Hits, it suffers an additional D3 hits.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6285,7 +6284,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target may re-roll armour and Ward save rolls of 1 until the start of the caster’s next Magic phase.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target may re-roll armour and Ward Save rolls of 1 until the start of the caster’s next Magic phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6833,7 +6832,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large round template with the centre anywhere within this range; it scatters like a stone thrower. If a misfire is rolled, the caster suffers 1 Wound which Ignores Armour Saves. Any model hit suffer a Strength 1 Hit with the Ignores Armour Saves special rule.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large round template with the centre anywhere within this range; it scatters like a stone thrower. If a misfire is rolled, the caster suffers 1 Wound with the Ignores Armour Saves special rule. Any model hit suffer a Strength 1 Hit with the Ignores Armour Saves special rule.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -8354,6 +8353,14 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <infoLink name="Blunderbuss" id="312d-13d6-91b9-09c9" hidden="false" type="profile" targetId="a9ad-a872-79a3-c503"/>
       </infoLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Throwing Weapons" hidden="false" id="8013-6f6f-96e1-1acc" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1f83-7ea8-982f-35c5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Throwing Weapons" id="e8d0-51dc-661f-7527" hidden="false" targetId="fdcd-6526-0b8e-b291" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="6cd2-3f4b-da2d-1ee9" name="Common Arcane Items" hidden="false" collective="false" import="true">
@@ -8700,7 +8707,7 @@ Note that they may not choose any Arcane Items.</characteristic>
           <profiles>
             <profile id="0e40-7b19-6cd8-5370" name="The Other Trickster&apos;s Shard" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The bearer, and all units in base contact with them (friend and foe) must re-roll successful ward saves.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The bearer, and all units in base contact with them (friend and foe) must re-roll successful Ward Saves.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8986,7 +8993,7 @@ Note that they may not choose any Arcane Items.</characteristic>
           <profiles>
             <profile id="b5fd-7f4d-c4c1-bb5e" name="Standard of Shielding" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains a Ward save (6+) against missile attacks.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains a Ward Save (6+) against missile attacks.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -9313,7 +9320,7 @@ Note that they may not choose any Arcane Items.</characteristic>
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Light armour. The Gambler&apos;s Armour grants the wearer a Ward save (6+).</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Light armour. The Gambler&apos;s Armour grants the wearer a Ward Save (6+).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -9331,7 +9338,7 @@ Note that they may not choose any Arcane Items.</characteristic>
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Medium armour. The wearer gains a Ward save (5+).</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Medium armour. The wearer gains a Ward Save (5+).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -9349,7 +9356,7 @@ Note that they may not choose any Arcane Items.</characteristic>
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. The wearer gains a Ward save (4+).</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. The wearer gains a Ward Save (4+).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -9421,7 +9428,7 @@ Note that they may not choose any Arcane Items.</characteristic>
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Shield. The bearer gains a Ward save (5+) against missile attacks.</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Shield. The bearer gains a Ward Save (5+) against missile attacks.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -9956,7 +9963,7 @@ characteristic.</characteristic>
           <profiles>
             <profile id="ff22-ae39-28e0-103e" name="Talisman of Protection" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Talisman of Protection grants the bearer a Ward save (6+).</characteristic>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Talisman of Protection grants the bearer a Ward Save (6+).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -9972,7 +9979,7 @@ characteristic.</characteristic>
           <profiles>
             <profile id="14ce-8170-050f-a735" name="Talisman of Preservation" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Talisman of Preservation grants the bearer a Ward save (4+).</characteristic>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Talisman of Preservation grants the bearer a Ward Save (4+).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -9988,7 +9995,7 @@ characteristic.</characteristic>
           <profiles>
             <profile id="0e2a-aeca-b4d5-d1ee" name="Talisman of Endurance" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Talisman of Endurance grants the bearer a Ward save (5+).</characteristic>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Talisman of Endurance grants the bearer a Ward Save (5+).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -10020,7 +10027,7 @@ characteristic.</characteristic>
           <profiles>
             <profile id="07d5-6885-3d15-d1dc" name="Opal Amulet" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">One use only. The Opal Amulet bestows a Ward save (2+) against the first unsaved wound suffered by the bearer, after which its power fades and it cannot be used again during the game.</characteristic>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">One use only. The Opal Amulet bestows a Ward Save (2+) against the first unsaved wound suffered by the bearer, after which its power fades and it cannot be used again during the game.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -10084,7 +10091,7 @@ characteristic.</characteristic>
           <profiles>
             <profile id="24df-897d-3df3-9768" name="Lucky Trinket" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">One use only. The Lucky Trinket allows the bearer to re-roll a single failed armour or Ward save.</characteristic>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">One use only. The Lucky Trinket allows the bearer to re-roll a single failed armour or Ward Save.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -10100,7 +10107,7 @@ characteristic.</characteristic>
           <profiles>
             <profile id="8618-74a7-0c3d-7877" name="Pigeon Plucker Pendant" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">This item grants the bearer a Ward save (4+) against wounds caused in close combat by models that have the Fly special rule.</characteristic>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">This item grants the bearer a Ward Save (4+) against wounds caused in close combat by models that have the Fly special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -10492,7 +10499,7 @@ Unlike Unbreakable units, Unstable characters may join Unstable units. If an Uns
     <rule id="9e47-05bc-376a-7463" name="Ethereal" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>Ethereal creatures treat all terrain as open terrain for the purposes of movement. They may not finish their movement inside impassable terrain. They are never slowed by any special rule, spell or item that would otherwise reduce their movement or stop them from moving completely.
 
-Models with rule have both Magical Attacks and Unstable. Ethereal models have a 2+ Ward Save against mundane attacks. However, they only have a 5+ Ward save against magical attacks. Ethereal creatures block line of sight normally and cannot see through anything that would block the line of sight of normal units.
+Models with rule have both Magical Attacks and Unstable. Ethereal models have a 2+ Ward Save against mundane attacks. However, they only have a 5+ Ward Save against magical attacks. Ethereal creatures block line of sight normally and cannot see through anything that would block the line of sight of normal units.
 
 
 Characters that are not themselves Ethereal are not permitted to join units that are (even if they become temporarily Ethereal for some reason).</description>
@@ -10516,13 +10523,13 @@ Models that are Immune to all three above effects have Immunity (Psychology). Th
 test).</description>
     </rule>
     <rule id="4b60-6477-75a8-f6dd" name="Ward Save (5+)" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
-      <description>The value of a ward save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward saves as normal. The key difference between ward saves and armour saves is that ward saves are never modified by the S of the attack. However, no model may have a Ward save better than 4+ by combining multiple Ward saves regardless of source.
+      <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
 
-Note that does not stop single Ward saves from being used, such as a model having a listed 2+ or 3+ Ward save; the above limitation only applies to combining Ward saves.
+Note that does not stop single Ward Saves from being used, such as a model having a listed 2+ or 3+ Ward Save; the above limitation only applies to combining Ward Saves.
 
-Sometimes a model has both an armour save and a Ward save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward save.
+Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
 
-Some models may be allowed to re-roll a Ward save from a specific source. In that case, the re-roll will only apply to that specific Ward save, and not the model&apos;s total Ward save.</description>
+Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
     </rule>
     <rule id="f366-0f91-841f-cf80" name="Ambushers" publicationId="9e23-79cb-pubN66727" page="72" hidden="false">
       <description>A unit with the Ambushers rule can choose to not deploy at the start of the battle. Instead, from Turn 2 onwards, the controlling player rolls a dice at the start of their turn for each unit of their Ambushers that have yet to arrive. On a 1 or 2, the Ambushers have been delayed – roll for them again next turn. On a 3 or more, the unit of Ambushers arrives, and will enter the board during the Remaining Moves sub-phase. If the Ambushers do not turn up for the entire game, they are assumed to have got lost, and are treated as having fled the battle for the purposes of determining the victor. 
@@ -10536,7 +10543,7 @@ In addition, for every Core unit that deploys as Ambushers in your army, you are
 
 Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
 
-Impact Hits roll to wound using the S of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
+Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
 
 Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
     </rule>
@@ -10621,7 +10628,7 @@ Fleeing/Pursuing: 3D6 (discard the lowest)</description>
 
 Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
 
-Impact Hits roll to wound using the S of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
+Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
 
 Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
     </rule>
@@ -10641,7 +10648,7 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
 
 Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
 
-Impact Hits roll to wound using the S of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
+Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
 
 Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
     </rule>
@@ -10830,7 +10837,7 @@ A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Ter
       <description>If a weapon requires two hands to use, it is not possible for a model to use a shield or buckler alongside it in close combat (although a shield can still be used against wounds caused by shooting or magic).</description>
     </rule>
     <rule id="01e3-7f81-20e3-45fe" name="Mighty Blow (1)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
-      <description>Models with this rule gain a S bonus to all their close combat attacks (including Impact Hits and Stomps) equal to the number in the brackets in the first round of each new close combat they are involved in. Note that any attack made with a weapon that gives Mighty Blow only applies to attacks made with the weapon itself. This rule is cumulative with other sources of Mighty Blow.</description>
+      <description>Models with this rule gain a Strength bonus to all their close combat attacks (including Impact Hits and Stomps) equal to the number in the brackets in the first round of each new close combat they are involved in. Note that any attack made with a weapon that gives Mighty Blow only applies to attacks made with the weapon itself. This rule is cumulative with other sources of Mighty Blow.</description>
     </rule>
     <rule id="43ca-96e5-8a47-2d39" name="Volley Fire" publicationId="9e23-79cb-pubN66727" page="84" hidden="false">
       <description>Weapons with this rule allow the unit to fire with all models within range in the Shooting Phase as long as at least one model in the unit can draw Line of Sight to the target. However, if they do so, they suffer -1 To Hit. A unit cannot Volley Fire if it moved earlier in the turn or if the target is within half the weapon&apos;s maximum range. Note that Volley Fire cannot be used as Stand &amp; Shoot charge reaction.</description>
@@ -10842,7 +10849,7 @@ A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Ter
       <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.</description>
     </rule>
     <rule id="a711-7cf6-cd2b-1d29" name="Killing Blow" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>If a model with Killing Blow rolls a 6 to wound in close combat, they automatically slay their opponent – regardless of the number of wounds on the victim&apos;s profile. Armour saves and regeneration saves cannot be taken against a Killing Blow. Ward saves may be taken as normal.
+      <description>If a model with Killing Blow rolls a 6 to wound in close combat, they automatically slay their opponent – regardless of the number of wounds on the victim&apos;s profile. Armour saves and regeneration saves cannot be taken against a Killing Blow. Ward Saves may be taken as normal.
 
 Killing Blow is only effective against Infantry, Cavalry and War beasts. Against other troop types, a successful Killing Blow only inflicts one Wound which Ignores Armour saves and Regeneration.
 
@@ -10853,7 +10860,7 @@ For the purposes of combat resolution, successful Killing Blows score the same a
 Unless specified, Killing Blow only applies to the model&apos;s normal Close Combat attacks.</description>
     </rule>
     <rule id="4dc2-df44-cb9c-2c9b" name="Heroic Killing Blow" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>If a model with Killing Blow rolls a 6 to wound in close combat, they automatically slay their opponent – regardless of the number of wounds on the victim&apos;s profile. Armour saves and regeneration saves cannot be taken against a Killing Blow. Ward saves may be taken as normal.
+      <description>If a model with Killing Blow rolls a 6 to wound in close combat, they automatically slay their opponent – regardless of the number of wounds on the victim&apos;s profile. Armour saves and regeneration saves cannot be taken against a Killing Blow. Ward Saves may be taken as normal.
 
 Heroic Killing Blow is effective against all troop types except Swarms.
 
@@ -10879,7 +10886,7 @@ Where the number of Multiple Wounds is generated by a dice roll, roll a dice sep
 Unless otherwise specified, Multiple Wounds only apply to close combat attacks.</description>
     </rule>
     <rule id="7ed4-9d31-09c3-6bf9" name="Magic Resistance (1)" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
-      <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
+      <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward Save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
 
 If a character with Magic Resistance joins a unit, all models in the unit benefit from the Magic Resistance as long as they are part of the unit. If a model or unit has two sets of Magic Resistance, the two combine to a maximum of Magic Resistance (3), unless specified.</description>
     </rule>
@@ -10888,7 +10895,7 @@ If a character with Magic Resistance joins a unit, all models in the unit benefi
 
 Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
 
-Impact Hits roll to wound using the S of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
+Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
 
 Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
     </rule>
@@ -10906,7 +10913,7 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
 
 Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
 
-Impact Hits roll to wound using the S of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
+Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
 
 Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
     </rule>
@@ -10915,12 +10922,12 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
 
 Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
 
-Impact Hits roll to wound using the S of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
+Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
 
 Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
     </rule>
     <rule id="0e09-3526-25d5-2646" name="Magic Resistance (2)" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
-      <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
+      <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward Save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
 
 If a character with Magic Resistance joins a unit, all models in the unit benefit from the Magic Resistance as long as they are part of the unit. If a model or unit has two sets of Magic Resistance, the two combine to a maximum of Magic Resistance (3), unless specified.</description>
     </rule>
@@ -10928,12 +10935,12 @@ If a character with Magic Resistance joins a unit, all models in the unit benefi
       <description>Animated Constructs have the Unbreakable special rule. However, they may not march.</description>
     </rule>
     <rule id="9b99-4e37-be08-231a" name="Magic Resistance (3)" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
-      <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
+      <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward Save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
 
 If a character with Magic Resistance joins a unit, all models in the unit benefit from the Magic Resistance as long as they are part of the unit. If a model or unit has two sets of Magic Resistance, the two combine to a maximum of Magic Resistance (3), unless specified.</description>
     </rule>
     <rule id="e56f-d7d4-8987-dbdb" name="Parry (6+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with this rule gain a Ward save in close combat as indicated in the brackets. This is cumulative with other sources of Parry. It cannot be used against attacks made against the model&apos;s flank or rear, nor can it be used against attacks that Hit automatically, attacks that are made at +3 S over the model&apos;s own S value, nor can it be used by mounted models, unless specified.</description>
+      <description>Models with this rule gain a Ward Save in close combat as indicated in the brackets. This is cumulative with other sources of Parry. It cannot be used against attacks made against the model&apos;s flank or rear, nor can it be used against attacks that Hit automatically, attacks that are made at +3 Strength over the model&apos;s own Strength value, nor can it be used by mounted models, unless specified.</description>
     </rule>
     <rule id="c270-3956-9b64-b587" name="Strider" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
       <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
@@ -11016,13 +11023,13 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
     </rule>
     <rule id="d45b-0036-b5ef-951b" name="Ward Save (4+)" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
-      <description>The value of a ward save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward saves as normal. The key difference between ward saves and armour saves is that ward saves are never modified by the S of the attack. However, no model may have a Ward save better than 4+ by combining multiple Ward saves regardless of source.
+      <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
 
-Note that does not stop single Ward saves from being used, such as a model having a listed 2+ or 3+ Ward save; the above limitation only applies to combining Ward saves.
+Note that does not stop single Ward Saves from being used, such as a model having a listed 2+ or 3+ Ward Save; the above limitation only applies to combining Ward Saves.
 
-Sometimes a model has both an armour save and a Ward save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward save.
+Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
 
-Some models may be allowed to re-roll a Ward save from a specific source. In that case, the re-roll will only apply to that specific Ward save, and not the model&apos;s total Ward save.</description>
+Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
     </rule>
     <rule id="48d5-6bee-c3f6-cec8" name="Strider (River)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
       <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
@@ -11040,7 +11047,7 @@ Some models may be allowed to re-roll a Ward save from a specific source. In tha
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
     </rule>
     <rule id="76e1-4919-c7d3-29df" name="Magic Resistance (4)" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
-      <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
+      <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward Save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
 
 If a character with Magic Resistance joins a unit, all models in the unit benefit from the Magic Resistance as long as they are part of the unit. If a model or unit has two sets of Magic Resistance, the two combine to a maximum of Magic Resistance (3), unless specified.</description>
     </rule>
@@ -11067,7 +11074,7 @@ If a character with Magic Resistance joins a unit, all models in the unit benefi
 
 Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
 
-Impact Hits roll to wound using the S of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
+Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
 
 Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
     </rule>
@@ -11085,7 +11092,7 @@ If two or more models in a unit have the Random Movement, pivot the unit about i
 A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Terrain test, unless the model is making a charge, pursuit or flee move, in which case it counts as a move of the appropriate type.</description>
     </rule>
     <rule id="5e3f-9736-a9c0-4a1c" name="Dodge (4+)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
-      <description>Models with this rule gain a Ward save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have Always Strikes First, nor can it be used if the model is subject to Always Strikes Last. Finally, Dodge cannot be used by mounted models, unless specified.</description>
+      <description>Models with this rule gain a Ward Save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have Always Strikes First, nor can it be used if the model is subject to Always Strikes Last. Finally, Dodge cannot be used by mounted models, unless specified.</description>
     </rule>
     <rule id="4d40-9a96-4af8-e943" name="Random Movement (Variable)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
       <description>Models with Random Movement do not have a normal M characteristic, but rather a dice roll, (as indicated in the
@@ -11106,7 +11113,7 @@ A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Ter
 
 Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
 
-Impact Hits roll to wound using the S of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
+Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
 
 Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
     </rule>
@@ -11117,13 +11124,13 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
       <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
     </rule>
     <rule id="7323-b2a0-af7b-3ec6" name="Ward Save (3+)" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
-      <description>The value of a ward save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward saves as normal. The key difference between ward saves and armour saves is that ward saves are never modified by the S of the attack. However, no model may have a Ward save better than 4+ by combining multiple Ward saves regardless of source.
+      <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
 
-Note that does not stop single Ward saves from being used, such as a model having a listed 2+ or 3+ Ward save; the above limitation only applies to combining Ward saves.
+Note that does not stop single Ward Saves from being used, such as a model having a listed 2+ or 3+ Ward Save; the above limitation only applies to combining Ward Saves.
 
-Sometimes a model has both an armour save and a Ward save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward save.
+Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
 
-Some models may be allowed to re-roll a Ward save from a specific source. In that case, the re-roll will only apply to that specific Ward save, and not the model&apos;s total Ward save.</description>
+Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
     </rule>
     <rule id="5b16-622a-da0d-d50b" name="Random Attacks (D6)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
@@ -11144,13 +11151,13 @@ Some models may be allowed to re-roll a Ward save from a specific source. In tha
       <description>A model with Regeneration gains a Ward Save (indicated by the number in the brackets). This is cumulative with other sources of Regeneration. Regeneration may not be used against Flaming Attacks, successful Killing Blows (including Heroic Killing Blow) or wounds caused due the unit being Unstable.</description>
     </rule>
     <rule id="5c26-a043-8535-5f4f" name="Ward Save (6+)" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
-      <description>The value of a ward save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward saves as normal. The key difference between ward saves and armour saves is that ward saves are never modified by the S of the attack. However, no model may have a Ward save better than 4+ by combining multiple Ward saves regardless of source.
+      <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
 
-Note that does not stop single Ward saves from being used, such as a model having a listed 2+ or 3+ Ward save; the above limitation only applies to combining Ward saves.
+Note that does not stop single Ward Saves from being used, such as a model having a listed 2+ or 3+ Ward Save; the above limitation only applies to combining Ward Saves.
 
-Sometimes a model has both an armour save and a Ward save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward save.
+Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
 
-Some models may be allowed to re-roll a Ward save from a specific source. In that case, the re-roll will only apply to that specific Ward save, and not the model&apos;s total Ward save.</description>
+Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
     </rule>
     <rule id="fb5f-f956-90e7-af6f" name="Loremaster (Lore of Tzeentch)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
@@ -11168,10 +11175,10 @@ Some models may be allowed to re-roll a Ward save from a specific source. In tha
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
     </rule>
     <rule id="cfff-6563-d1c6-820c" name="Dodge (5+)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
-      <description>Models with this rule gain a Ward save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have Always Strikes First, nor can it be used if the model is subject to Always Strikes Last. Finally, Dodge cannot be used by mounted models, unless specified.</description>
+      <description>Models with this rule gain a Ward Save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have Always Strikes First, nor can it be used if the model is subject to Always Strikes Last. Finally, Dodge cannot be used by mounted models, unless specified.</description>
     </rule>
     <rule id="bf3d-abaf-45ca-3477" name="Dodge (6+)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
-      <description>Models with this rule gain a Ward save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have Always Strikes First, nor can it be used if the model is subject to Always Strikes Last. Finally, Dodge cannot be used by mounted models, unless specified.</description>
+      <description>Models with this rule gain a Ward Save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have Always Strikes First, nor can it be used if the model is subject to Always Strikes Last. Finally, Dodge cannot be used by mounted models, unless specified.</description>
     </rule>
     <rule id="e20a-3f4d-cc8c-06bc" name="Random Attacks (D3+1)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
@@ -11194,13 +11201,13 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
     </rule>
     <rule id="f210-1e7c-a315-2849" name="Parry (5+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with this rule gain a Ward save in close combat as indicated in the brackets. This is cumulative with other sources of Parry. It cannot be used against attacks made against the model&apos;s flank or rear, nor can it be used against attacks that Hit automatically, attacks that are made at +3 S over the model&apos;s own S value, nor can it be used by mounted models, unless specified.</description>
+      <description>Models with this rule gain a Ward Save in close combat as indicated in the brackets. This is cumulative with other sources of Parry. It cannot be used against attacks made against the model&apos;s flank or rear, nor can it be used against attacks that Hit automatically, attacks that are made at +3 Strength over the model&apos;s own Strength value, nor can it be used by mounted models, unless specified.</description>
     </rule>
     <rule id="3efd-81b2-458e-604e" name="Loremaster (Hedge Magic)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
     </rule>
     <rule id="9a24-f1a2-aac3-de3b" name="Breath Weapon (Monster of Kadon)" publicationId="9e23-79cb-pubN66727" page="147" hidden="false">
-      <description>S 4, Flaming Attacks.</description>
+      <description>Strength 4, Flaming Attacks.</description>
     </rule>
     <rule id="1234-eaf6-f3f7-4a67" name="Natural Armour (1+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
@@ -11222,7 +11229,7 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
 - If the Giant decides to Jump Up and Down on an enemy. Test immediately beforehand.
 
 
-To see if a Giant falls over roll a D6. On a roll of 1, the Giant falls over. A slain Giant falls over automatically. To determine in which direction the Giant falls, roll a scatter dice. Place the small template in base contact with the Giant in the direction of the scatter dice, measured from the centre of the Giant&apos;s base. A model hit by a falling Giant suffers a S 6 Hit with Multiple Wounds (D3). If the unit is in combat and the Giant has fallen over whilst attempting to Jump Up and Down, wounds inflicted by a falling Giant count towards the combat result. A Giant that falls over automatically suffers 1 wound. If the Giant is in combat then this Wound counts towards combat resolution.
+To see if a Giant falls over roll a D6. On a roll of 1, the Giant falls over. A slain Giant falls over automatically. To determine in which direction the Giant falls, roll a scatter dice. Place the small template in base contact with the Giant in the direction of the scatter dice, measured from the centre of the Giant&apos;s base. A model hit by a falling Giant suffers a Strength 6 Hit with Multiple Wounds (D3). If the unit is in combat and the Giant has fallen over whilst attempting to Jump Up and Down, wounds inflicted by a falling Giant count towards the combat result. A Giant that falls over automatically suffers 1 wound. If the Giant is in combat then this Wound counts towards combat resolution.
 
 
 Once on the ground, a Giant may get up in his following Movement phase, but may not move in the Movement phase that turn. Whilst on the ground a Giant may not attack, but he can still defend himself after a fashion so the enemy must still roll to score hits on him. If forced to flee whilst on the ground the Giant is slain the enemy swarm over him and cut him to pieces. If t he Giant gets the opportunity to pursue his foes whilst he&apos;s on the ground he stands up instead. A Giant may attack in close combat as usual on the turn he stands up.</description>
@@ -11266,10 +11273,7 @@ Elven Grace.</description>
     <rule id="eb46-96d2-9469-4905" name="Cold-Blooded" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>Whenever the model takes a LD test, it rolls an additional dice and discards the highest result.</description>
     </rule>
-    <rule id="44e1-ad81-2f8b-49db" name="Divine Power" publicationId="315d-135b-135c-07ce" page="179" hidden="false">
-      <description>The model can channel power and dispel dice in the same manner as a Level 1 Wizard.</description>
-    </rule>
-    <rule id="2fc8-8eef-c508-0f80" name="Battle Prayers" publicationId="315d-135b-135c-07ce" page="179" hidden="false">
+    <rule id="2fc8-8eef-c508-0f80" name="Battle Prayers" publicationId="315d-135b-135c-07ce" page="17" hidden="false">
       <description>A model with this special rule knows three Battle Prayers. They may attempt to use one at the start of each of your turns by taking a Leadership test on their own unmodified Leadership. If passed, the prayer is answered and take immediate effect. A friendly unit can only be under the effect of one Battle Prayer at a time.</description>
     </rule>
     <rule id="d75e-a845-77aa-679b" name="Loremaster (Lore of Slaanesh)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
@@ -11346,7 +11350,7 @@ Flee and Pursue
 Flyers always move on the ground when attempting to flee or pursue.</description>
     </rule>
     <rule id="4740-7f33-d5b8-5563" name="Slayer" publicationId="aa7b-3583-0834-7bfa" page="160" hidden="false">
-      <description>Slayers always Wound on a To Wound roll of 4+, unless they would need a lower result. Use the Slayer&apos;s S to determine the armour save modifier for any successful Wounds.</description>
+      <description>Slayers always Wound on a To Wound roll of 4+, unless they would need a lower result. Use the Slayer&apos;s Strength to determine the armour save modifier for any successful Wounds.</description>
     </rule>
     <rule id="390b-8c96-7c3a-9598" name="Orc Animosity" publicationId="8ada-88a0-cdcd-9b5e" page="60" hidden="false">
       <description>Units with this  rule must roll a D6 and consult the orc animosity chart in the Charge subphase after all other charges have been declared, unless they have declared a charge, are already in combat, fleeing, or have less than 5 models.</description>
@@ -11376,7 +11380,7 @@ Flyers always move on the ground when attempting to flee or pursue.</description
 
 Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
 
-Impact Hits roll to wound using the S of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
+Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
 
 Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
     </rule>
@@ -11434,7 +11438,7 @@ When attacking a Cavalry model, always use the
 highest Weapon Skill, Toughness and Wounds value from either the rider or the mount.
 
 
-If the rider and the mount both have armour saves or ward saves these may be combined as normal.
+If the rider and the mount both have armour saves or Ward Saves these may be combined as normal.
 
 
 Any equipment or magic items the model might
@@ -11655,7 +11659,7 @@ This rule is cumulative with other sources of Hold Your Ground. If the model ha
       <description>A Daemon of Slaanesh has the Hatred (Daemons of Khorne) and Armour Piercing (1) special rules. Each To Hit roll of 6 generates an additional Attack. These additional Attacks cannot generate further attacks.</description>
     </rule>
     <rule name="Daemon of Tzeentch" id="fe9a-f478-5bcc-57a8" hidden="false" publicationId="1a01-044f-047b-618f" page="171">
-      <description>A Daemon of Tzeentch has Hatred (Daemons of Nurgle) and Ward save (6+). Wizards with the Daemon of Tzeentch upgrade can also re-roll channelling results of 1.</description>
+      <description>A Daemon of Tzeentch has Hatred (Daemons of Nurgle) and Ward Save (6+). Wizards with the Daemon of Tzeentch upgrade can also re-roll channelling results of 1.</description>
     </rule>
     <rule name="Mark of Khorne" id="Mark of Khorne" hidden="false" publicationId="1a01-044f-047b-618f" page="163">
       <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
@@ -11675,7 +11679,7 @@ Models with the Mark of Slaanesh have Immunity (Psychology) and Stubborn.</descr
     <rule name="Mark of Tzeentch" id="Mark of Tzeentch" hidden="false" publicationId="1a01-044f-047b-618f" page="163">
       <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
 
-Models with the Mark of Tzeentch have Magic Resistance (1) and Ward save (6+).</description>
+Models with the Mark of Tzeentch have Magic Resistance (1) and Ward Save (6+).</description>
     </rule>
     <rule id="92ff-eedb-a738-a73b" name="Ponderous" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>Weapons with this rule suffer an additional -1 To Hit penalty if they move and shoot in the same turn.</description>
@@ -11834,6 +11838,9 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
     </rule>
     <rule id="e69f-18b7-b8ee-1f0c" name="Unit Strength (8)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Unit Strength of 8.</description>
+    </rule>
+    <rule id="051c-2a46-ef94-4703" name="Hatred (Monstrous Creatures)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
+      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -12107,7 +12114,7 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">30&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 S 4 hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 4 hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="1d55-f70f-d713-0f87" name="Fireball (Bound Spell 3+)" publicationId="9e23-79cb-pubN66727" page="145" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12116,7 +12123,7 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 S 4 hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 4 hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="0958-a1b9-1238-c0e7" name="Metallic Attraction" publicationId="9e23-79cb-pubN66727" page="121" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12197,7 +12204,7 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 S 4 hits with the Flaming Attacks special rule.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 4 hits with the Flaming Attacks special rule.</characteristic>
       </characteristics>
     </profile>
     <profile id="1685-1790-fbf5-ac7c" name="Shem&apos;s Burning Gaze (Bound Spell 3+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12206,7 +12213,7 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 S 4 hits which count as Flaming Attacks. Against models with Daemonic, Undead or Vampiric, this is increased to 2D6 Hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 4 hits which count as Flaming Attacks. Against models with Daemonic, Undead or Vampiric, this is increased to 2D6 Hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="4fcb-a016-2721-ff01" name="Steed of Shadows" publicationId="9e23-79cb-pubN66727" page="126" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12251,7 +12258,7 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). Both caster and target roll a D6 and add their respective unmodified LD values. For every point the caster wins by, the target suffers a Wound which Ignores Armour saves.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). Both caster and target roll a D6 and add their respective unmodified LD values. For every point the caster wins by, the target suffers a Wound with the Ignores Armour Saves special rule.</characteristic>
       </characteristics>
     </profile>
     <profile id="0aa7-6fa8-e84e-677a" name="Monster of Kadon" publicationId="9e23-79cb-pubN66727" page="146" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
@@ -12283,7 +12290,7 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 S 4 hits. If the target is within 6&quot; of a forest, the number of hits is increased to 2D6.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 4 hits. If the target is within 6&quot; of a forest, the number of hits is increased to 2D6.</characteristic>
       </characteristics>
     </profile>
     <profile id="2edd-04e5-9a13-d757" name="Banishment" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12301,7 +12308,7 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers 2D6 hits. Against models with Daemonic, Undead or Vampiric, this is increased to 3D6 Hits. The S of the hits is equal to 4 plus the number of Wizards that know spells from the Lore of Light within 12&quot; of the caster (not counting the caster them self). Successful Ward saves taken against Banishment must be re-rolled.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers 2D6 hits. Against models with Daemonic, Undead or Vampiric, this is increased to 3D6 Hits. The Strength of the hits is equal to 4 plus the number of Wizards that know spells from the Lore of Light within 12&quot; of the caster (not counting the caster them self). Successful Ward Saves taken against Banishment must be re-rolled.</characteristic>
       </characteristics>
     </profile>
     <profile id="8e76-49b5-99ad-b4aa" name="Birona&apos;s Timewarp (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12427,7 +12434,7 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit has +2 to its T value until the start of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit has +2 to its Toughness value until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="9526-a4e9-7b88-9276" name="Fulminating Flame Cage" publicationId="9e23-79cb-pubN66727" page="145" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12499,7 +12506,7 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit must pass a S test every time it moves in the Movement phase, shoots or casts spells until the start of the caster&apos;s next Magic phase. If the test is passed, the target acts normally. If the test is failed, the unit is unable to perform the desired action, remaining in place and taking D6 S 4 hits. Against models with Daemonic, Undead or Vampiric, this is increased to 2D6 Hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit must pass a Strength test every time it moves in the Movement phase, shoots or casts spells until the start of the caster&apos;s next Magic phase. If the test is passed, the target acts normally. If the test is failed, the unit is unable to perform the desired action, remaining in place and taking D6 Strength 4 hits. Against models with Daemonic, Undead or Vampiric, this is increased to 2D6 Hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="2e7f-7e2c-e4e0-a10a" name="Okkam&apos;s Mindrazor" publicationId="9e23-79cb-pubN66727" page="151" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12600,7 +12607,7 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target has -1 S and -1 T (to a minimum of 1) until the start of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target has -1 Strength and -1 Toughness (to a minimum of 1) until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="e037-ebb5-dade-80d4" name="Steed of Shadows" publicationId="9e23-79cb-pubN66727" page="151" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12645,7 +12652,7 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Extend a straight line, within the caster&apos;s front arc and directly away from their base. Each model in the way (determined using the line template) suffers a S 4 hit. A unit that suffers one or more casualties from the Burning Head must take a Panic test.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Extend a straight line, within the caster&apos;s front arc and directly away from their base. Each model in the way (determined using the line template) suffers a Strength 4 hit. A unit that suffers one or more casualties from the Burning Head must take a Panic test.</characteristic>
       </characteristics>
     </profile>
     <profile id="eaec-4553-445b-fdc7" name="The Caress of Laniph" publicationId="9e23-79cb-pubN66727" page="127" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12681,7 +12688,7 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. All models in the target unit have their S reduced by 1 (to a minimum of 1) for the duration of the spell.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. All models in the target unit have their Strength reduced by 1 (to a minimum of 1) for the duration of the spell.</characteristic>
       </characteristics>
     </profile>
     <profile id="9fd3-2187-1379-dcdb" name="The Fate of Bjuna" publicationId="9e23-79cb-pubN66727" page="127" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12699,7 +12706,7 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 3D6 S 2 hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 3D6 Strength 2 hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="e002-fb6a-9442-ebcf" name="The Penumbral Pendulum" publicationId="9e23-79cb-pubN66727" page="151" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12753,7 +12760,7 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. All models in the target unit have their T reduced by 1 (to a minimum of 1) for the duration of the spell.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. All models in the target unit have their Toughness reduced by 1 (to a minimum of 1) for the duration of the spell.</characteristic>
       </characteristics>
     </profile>
     <profile id="1635-78a9-dace-f919" name="Throne of Vines" publicationId="9e23-79cb-pubN66727" page="122" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12804,7 +12811,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 S 5 hits with the Lightning Attacks special rule.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 5 hits with the Lightning Attacks special rule.</characteristic>
       </characteristics>
     </profile>
     <profile id="4768-022d-5e1d-bbc0" name="Urannon&apos;s Thunderbolt (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="149" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12813,7 +12820,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 S 6 hits with Lightning Attacks.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 6 hits with Lightning Attacks.</characteristic>
       </characteristics>
     </profile>
     <profile id="686c-0b9d-0bd1-75c3" name="Wind Blast" publicationId="9e23-79cb-pubN66727" page="149" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12822,7 +12829,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+/14+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;/24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target is &apos;pushed&apos; 2D3&quot;/2D6&quot; directly away from the caster (it does not change facing). If the target unit comes into contact with impassable terrain it stops 1&quot; away and suffers D6 S 3 hits. If the target unit comes into contact with another unit it stops 1&quot; away and both units suffer D6 S 3 hits. Targets that cannot move are not pushed back at all, but still suffer D6 S 3 hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target is &apos;pushed&apos; 2D3&quot;/2D6&quot; directly away from the caster (it does not change facing). If the target unit comes into contact with impassable terrain it stops 1&quot; away and suffers D6 Strength 3 hits. If the target unit comes into contact with another unit it stops 1&quot; away and both units suffer D6 Strength 3 hits. Targets that cannot move are not pushed back at all, but still suffer D6 Strength 3 hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="33a9-6204-9a61-a07a" name="Wind Blast (Bound Spell 3+)" publicationId="9e23-79cb-pubN66727" page="149" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12831,7 +12838,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target is &apos;pushed&apos; 2D3&quot; directly away from the caster (it does not change facing). If the target unit comes into contact with impassable terrain it stops 1&quot; away and suffers D6 S 3 hits. If the target unit comes into contact with another unit it stops 1&quot; away and both units suffer D6 S 3 hits. Targets that cannot move are not pushed back at all, but still suffer D6 S 3 hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target is &apos;pushed&apos; 2D3&quot; directly away from the caster (it does not change facing). If the target unit comes into contact with impassable terrain it stops 1&quot; away and suffers D6 Strength 3 hits. If the target unit comes into contact with another unit it stops 1&quot; away and both units suffer D6 Strength 3 hits. Targets that cannot move are not pushed back at all, but still suffer D6 Strength 3 hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="bd35-6d41-ee5b-045f" name="Wind Blast (Bound Spell 4+)" publicationId="9e23-79cb-pubN66727" page="149" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12840,7 +12847,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target is &apos;pushed&apos; 2D3&quot; directly away from the caster (it does not change facing). If the target unit comes into contact with impassable terrain it stops 1&quot; away and suffers D6 S 3 hits. If the target unit comes into contact with another unit it stops 1&quot; away and both units suffer D6 S 3 hits. Targets that cannot move are not pushed back at all, but still suffer D6 S 3 hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target is &apos;pushed&apos; 2D3&quot; directly away from the caster (it does not change facing). If the target unit comes into contact with impassable terrain it stops 1&quot; away and suffers D6 Strength 3 hits. If the target unit comes into contact with another unit it stops 1&quot; away and both units suffer D6 Strength 3 hits. Targets that cannot move are not pushed back at all, but still suffer D6 Strength 3 hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="51f1-f0f3-356e-2520" name="Transmutation of Lead" publicationId="9e23-79cb-pubN66727" page="121" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12858,7 +12865,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+/14+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;/36&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the small round template within range of the Wizard – it then scatters D6&quot;. All models hit by the template suffer a S 2 hit with no armour saves allowed. Roll a D6 for each unsaved Wound inflicted by Soul Stealer. For each roll of 4+, the caster immediately gains a single Wound (to a maximum of 10).</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the small round template within range of the Wizard – it then scatters D6&quot;. All models hit by the template suffer a Strength 2 hit with no armour saves allowed. Roll a D6 for each unsaved Wound inflicted by Soul Stealer. For each roll of 4+, the caster immediately gains a single Wound (to a maximum of 10).</characteristic>
       </characteristics>
     </profile>
     <profile id="fb00-bdd7-7146-e848" name="Arnzipal&apos;s Black Horror" publicationId="9e23-79cb-pubN76150" page="170" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12867,7 +12874,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+/25+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Uses the small/large round template. Once the template is placed, the player then nominates a direction in which the Black Horror will move. To determine how many inches the template moves, roll an artillery dice and multiply the result by the caster&apos;s Wizard level. Any model touched by, or passed over by the template must pass a S test or be slain outright with no armour saves allowed. If the result on the artillery dice is a misfire, centre the template on the caster and roll both a scatter dice and a D6. The template moves a number of inches equal to the result of the D6, in the direction shown on the scatter dice (if you roll a Hit!, use the little arrow shown on the Hit! symbol). In either event, in subsequent turns, the Black Horror travels in a random direction and moves a number of inches equal to the roll on an artillery dice. If a misfire is rolled in subsequent turns, the Black Horror collapses in on itself and is removed.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Uses the small/large round template. Once the template is placed, the player then nominates a direction in which the Black Horror will move. To determine how many inches the template moves, roll an artillery dice and multiply the result by the caster&apos;s Wizard level. Any model touched by, or passed over by the template must pass a Strength test or be slain outright with no armour saves allowed. If the result on the artillery dice is a misfire, centre the template on the caster and roll both a scatter dice and a D6. The template moves a number of inches equal to the result of the D6, in the direction shown on the scatter dice (if you roll a Hit!, use the little arrow shown on the Hit! symbol). In either event, in subsequent turns, the Black Horror travels in a random direction and moves a number of inches equal to the roll on an artillery dice. If a misfire is rolled in subsequent turns, the Black Horror collapses in on itself and is removed.</characteristic>
       </characteristics>
     </profile>
     <profile id="c97c-7b02-3192-da50" name="Bladewind" publicationId="9e23-79cb-pubN76150" page="170" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12876,7 +12883,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Every model in the target unit must pass a WS test or suffer a S 4 hit with Armour Piercing (1).</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Every model in the target unit must pass a WS test or suffer a Strength 4 hit with Armour Piercing (1).</characteristic>
       </characteristics>
     </profile>
     <profile id="5eed-29da-240a-e4f0" name="Chroesh - Word of Pain" publicationId="9e23-79cb-pubN76150" page="170" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12885,7 +12892,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+/14+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;/24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit suffer -D3 to both their WS and BS until the start of the caster&apos;s next Magic phase (roll once for both). Boosted version also inflicts the -D3 penalty to their S and I (to a minimum of 1).</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit suffer -D3 to both their WS and BS until the start of the caster&apos;s next Magic phase (roll once for both). Boosted version also inflicts the -D3 penalty to their Strength and I (to a minimum of 1).</characteristic>
       </characteristics>
     </profile>
     <profile id="83ce-8b5d-eef3-f48d" name="Doombolt of Kharaidon" publicationId="9e23-79cb-pubN76150" page="168" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12894,7 +12901,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+/12+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;/18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6/2D6 S 5 hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6/2D6 Strength 5 hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="2897-e2c7-a845-ee02" name="Doombolt of Kharaidon (Bound Spell 4+)" publicationId="9e23-79cb-pubN76150" page="168" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12903,7 +12910,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 S 5 hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 5 hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="6029-2904-b7c5-17fe" name="Nagaelythe the Chillwind" publicationId="9e23-79cb-pubN76150" page="170" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12912,7 +12919,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 S 2 hits. If the target suffers any unsaved Wounds, all models in the unit suffer a -1 penalty to their BS until the start of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strength 2 hits. If the target suffers any unsaved Wounds, all models in the unit suffer a -1 penalty to their BS until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="5346-38c9-7041-bdd8" name="Power of Darkness" publicationId="9e23-79cb-pubN76150" page="170" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12921,7 +12928,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit have a +1 bonus to their S until the start of the caster&apos;s next Magic phase. Then add D3 power dice to your power pool. If a natural 6 is rolled when generating these power dice, the caster suffers a Wound which Ignores Armour saves.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit have a +1 bonus to their Strength until the start of the caster&apos;s next Magic phase. Then add D3 power dice to your power pool. If a natural 6 is rolled when generating these power dice, the caster suffers a Wound with the Ignores Armour Saves special rule.</characteristic>
       </characteristics>
     </profile>
     <profile id="9138-efc9-8b35-fc6d" name="Power of Darkness (Bound Spell 8+)" publicationId="9e23-79cb-pubN76150" page="170" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12930,7 +12937,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit have a +1 bonus to their S until the start of the caster&apos;s next Magic phase. Then add D3 power dice to your power pool. If a natural 6 is rolled when generating these power dice, the caster suffers a Wound which Ignores Armour saves.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit have a +1 bonus to their Strength until the start of the caster&apos;s next Magic phase. Then add D3 power dice to your power pool. If a natural 6 is rolled when generating these power dice, the caster suffers a Wound with the Ignores Armour Saves special rule.</characteristic>
       </characteristics>
     </profile>
     <profile id="e25d-cae3-46e2-0cb7" name="Shroud of Despair" publicationId="9e23-79cb-pubN76150" page="170" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12948,7 +12955,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">When a Wizard successfully casts a hex, magic missile or direct damage spell from this lore, and the casting roll contains any double, the spell&apos;s target suffers 2D6 S 2 hits with Armour Piercing (1). If the casting roll contains any treble, the spell&apos;s target instead suffers 3D6 hits instead. In either case, the hits are resolved after the spell has been resolved.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">When a Wizard successfully casts a hex, magic missile or direct damage spell from this lore, and the casting roll contains any double, the spell&apos;s target suffers 2D6 Strength 2 hits with Armour Piercing (1). If the casting roll contains any treble, the spell&apos;s target instead suffers 3D6 hits instead. In either case, the hits are resolved after the spell has been resolved.</characteristic>
       </characteristics>
     </profile>
     <profile id="b344-84f7-9d42-97e8" name="Apotheosis" publicationId="b724-d2c4-d151-2d9e" page="201, 187" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13002,7 +13009,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">19+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in Play. Every model in the target unit takes a S 4 hit with Flaming Attacks. At the end of every subsequent Magic phase, every model in the target unit suffers a S 4 hit with Flaming Attacks.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in Play. Every model in the target unit takes a Strength 4 hit with Flaming Attacks. At the end of every subsequent Magic phase, every model in the target unit suffers a Strength 4 hit with Flaming Attacks.</characteristic>
       </characteristics>
     </profile>
     <profile id="cf15-4b57-8f5a-e6d9" name="Hand of Glory" publicationId="b724-d2c4-d151-2d9e" page="201, 187" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13020,7 +13027,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each time a spell from this lore is successfully cast, the caster and their unit immediately gain a Ward save (6+) (which can then be increased by further castings thanks to this lore attribute) until the beginning of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each time a spell from this lore is successfully cast, the caster and their unit immediately gain a Ward Save (6+) (which can then be increased by further castings thanks to this lore attribute) until the beginning of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="6afd-f301-ebb3-e51a" name="Soul Quench" publicationId="b724-d2c4-d151-2d9e" page="201, 187" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13029,7 +13036,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+/12+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;/18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6/3D6 S 4 hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6/3D6 Strength 4 hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="bfdd-7aed-5578-4031" name="Soul Quench (Bound Spell 4+)" publicationId="b724-d2c4-d151-2d9e" page="201, 187" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13038,7 +13045,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 S 4 hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strength 4 hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="5259-be66-9299-80a9" name="Tempest" publicationId="b724-d2c4-d151-2d9e" page="201, 187" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13047,7 +13054,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">30&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large round template anywhere within 30&quot; of the Wizard – it then scatters D6&quot;. All models hit by the template suffer a S 3 hit (models with Fly suffer a S 4 hit instead). If a unit suffers any unsaved Wounds from this spell, it suffers a -1 modifier to all To Hit rolls (both shooting and close combat) until the start of the caster&apos;s next Magic phase (shooting attacks that do not use BS must roll 4+ on a D6 before firing, or the shot(s) are lost).</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large round template anywhere within 30&quot; of the Wizard – it then scatters D6&quot;. All models hit by the template suffer a Strength 3 hit (models with Fly suffer a Strength 4 hit instead). If a unit suffers any unsaved Wounds from this spell, it suffers a -1 modifier to all To Hit rolls (both shooting and close combat) until the start of the caster&apos;s next Magic phase (shooting attacks that do not use BS must roll 4+ on a D6 before firing, or the shot(s) are lost).</characteristic>
       </characteristics>
     </profile>
     <profile id="82f8-dd54-9293-63b2" name="Walk Between Worlds" publicationId="b724-d2c4-d151-2d9e" page="201, 187" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13065,7 +13072,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in Play. When cast, roll a D6 for every model in the target unit - on a score of 6 the model suffers a Wound which Ignores Armour Saves. At the end of the next Magic phase, roll again for each model in the unit, they will suffer a Wound on a 5+, and so on, to a maximum of 2+.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in Play. When cast, roll a D6 for every model in the target unit - on a score of 6 the model suffers a Wound with the Ignores Armour Saves special rule. At the end of the next Magic phase, roll again for each model in the unit, they will suffer a Wound on a 5+, and so on, to a maximum of 2+.</characteristic>
       </characteristics>
     </profile>
     <profile id="92c2-d7f9-a91b-7c5a" name="Gaze of Nagash" publicationId="4ff3-b09f-ec27-d6ec" page="4, 44" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13074,7 +13081,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 S 4 hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strength 4 hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="b215-84f3-231c-b9df" name="Gaze of Nagash (Bound Spell 4+)" publicationId="10a5-5781-61f5-86ae" page="4" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13083,7 +13090,7 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 S 4 hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strength 4 hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="90c0-d007-9eda-3ad6" name="Hellish Vigour" publicationId="4ff3-b09f-ec27-d6ec" page="4, 44" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13179,7 +13186,7 @@ attribute may still apply.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">targets all enemy units within range. Each enemy unit suffer D6 S 3 Hits which Ignores Armour Saves. In addition, if the spell causes any Wounds, a unit of Spirit Hosts is created within 12&quot; of the caster, just like a summoning spell. This unit has a number of Wounds equal to the number of Wounds caused by the spell.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">targets all enemy units within range. Each enemy unit suffer D6 Strength 3 Hits with the Ignores Armour Saves special rule. In addition, if the spell causes any Wounds, a unit of Spirit Hosts is created within 12&quot; of the caster, just like a summoning spell. This unit has a number of Wounds equal to the number of Wounds caused by the spell.</characteristic>
       </characteristics>
     </profile>
     <profile id="477e-cbd8-907d-4c5b" name="Born of Damnation" publicationId="ee54-3543-b9db-fe40" page="7" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13260,7 +13267,7 @@ attribute may still apply.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+/8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;/48&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 S D6+1 hits with Flaming Attacks.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength D6+1 hits with Flaming Attacks.</characteristic>
       </characteristics>
     </profile>
     <profile id="4c51-7bd8-93b6-cac6" name="Bolt of Change" publicationId="eee5-f9c5-fa08-3f2e" page="112, 5, 238" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13269,7 +13276,7 @@ attribute may still apply.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Inflicts a single S D6+4 hit with Multiple Wounds (D3), Ignores Armour Saves and Flaming Attacks, and then penetrates ranks in the same manner as a shot from a bolt thrower.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Inflicts a single Strength D6+4 hit with Multiple Wounds (D3), Ignores Armour Saves and Flaming Attacks, and then penetrates ranks in the same manner as a shot from a bolt thrower.</characteristic>
       </characteristics>
     </profile>
     <profile id="6882-88e4-9cfc-032b" name="Boon of Magic" publicationId="bb4b-874f-580a-13d6" page="112, 238" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13296,7 +13303,7 @@ attribute may still apply.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment/Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+/13+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;/36&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Can be cast on any unit (friend or foe) within range. If cast on a friendly unit, Curse of the Leper is an Augment spell that increases the target unit&apos;s T by D3 (to a maximum of 10) until the start of the caster&apos;s next Magic phase. If Curse of the Leper is cast on an enemy unit, it is a Hex spell that reduces the target unit&apos;s T by D3 (to a minimum of 1) until the start of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Can be cast on any unit (friend or foe) within range. If cast on a friendly unit, Curse of the Leper is an Augment spell that increases the target unit&apos;s Toughness by D3 (to a maximum of 10) until the start of the caster&apos;s next Magic phase. If Curse of the Leper is cast on an enemy unit, it is a Hex spell that reduces the target unit&apos;s Toughness by D3 (to a minimum of 1) until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="3bb7-0c80-2250-1ed0" name="Denizens of the Deep" publicationId="a873-5a26-f107-1c0b" page="77, 45" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13305,7 +13312,7 @@ attribute may still apply.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+/9+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;/48&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 S 3 hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strength 3 hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="69b1-5c46-83d1-d9a4" name="Eye of the Storm" publicationId="a873-5a26-f107-1c0b" page="77, 45" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13314,7 +13321,7 @@ attribute may still apply.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Is cast on the Wizard and any unit they are with. Until the start of the caster&apos;s next Magic Phase, any missile fire directed from or against the Wizard or their unit suffer -1 To Hit. Any missile attacks that do not roll to Hit must first roll a 4+ on a D6 to be able to target the unit. Any unit in base contact with the Wizard or their unit suffer D6 S 5 Hits at the start of each Magic Phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Is cast on the Wizard and any unit they are with. Until the start of the caster&apos;s next Magic Phase, any missile fire directed from or against the Wizard or their unit suffer -1 To Hit. Any missile attacks that do not roll to Hit must first roll a 4+ on a D6 to be able to target the unit. Any unit in base contact with the Wizard or their unit suffer D6 Strength 5 Hits at the start of each Magic Phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="4f9a-1da0-5247-f420" name="Fleshy Abundance" publicationId="eee5-f9c5-fa08-3f2e" page="113, 6, 239" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13341,7 +13348,7 @@ attribute may still apply.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy Wizard within range. The caster and the target both roll a D6 and add their Wizard level to the score. If the target&apos;s total is higher than the caster&apos;s, nothing happens. Otherwise, the target suffers a S 4 hit with Flaming Attacks, loses one Wizard level (to a minimum of 0) including forgetting one randomly determined spell (this cannot be a bound spell). If the caster does not already know this spell, they immediately gain it and can cast it just like any of his other spells. When casting a stolen spell, always substitute its lore attribute with the Lore of Tzeentch&apos;s lore attribute.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy Wizard within range. The caster and the target both roll a D6 and add their Wizard level to the score. If the target&apos;s total is higher than the caster&apos;s, nothing happens. Otherwise, the target suffers a Strength 4 hit with Flaming Attacks, loses one Wizard level (to a minimum of 0) including forgetting one randomly determined spell (this cannot be a bound spell). If the caster does not already know this spell, they immediately gain it and can cast it just like any of his other spells. When casting a stolen spell, always substitute its lore attribute with the Lore of Tzeentch&apos;s lore attribute.</characteristic>
       </characteristics>
     </profile>
     <profile id="798a-1c4a-ebdf-a01d" name="Hysterical Frenzy" publicationId="eee5-f9c5-fa08-3f2e" page="114, 7, 240" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13350,7 +13357,7 @@ attribute may still apply.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment/Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Hysterical Frenzy can be cast on any unit (friend or foe) within range. If cast on a friendly unit, Hysterical Frenzy is an Augment spell. If Hysterical Frenzy is cast on an enemy unit, it is a Hex spell. For the duration of the spell, the target gains Frenzy (which is not lost if the unit is defeated in close combat). If the target unit already has Frenzy, that Frenzy grants +2 Ainstead of just +1. In addition, for the duration of the spell, the target of Hysterical Frenzy suffers D6 S 3 hits at the end of each of the caster&apos;s Magic phases.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Hysterical Frenzy can be cast on any unit (friend or foe) within range. If cast on a friendly unit, Hysterical Frenzy is an Augment spell. If Hysterical Frenzy is cast on an enemy unit, it is a Hex spell. For the duration of the spell, the target gains Frenzy (which is not lost if the unit is defeated in close combat). If the target unit already has Frenzy, that Frenzy grants +2 Ainstead of just +1. In addition, for the duration of the spell, the target of Hysterical Frenzy suffers D6 Strength 3 hits at the end of each of the caster&apos;s Magic phases.</characteristic>
       </characteristics>
     </profile>
     <profile id="402c-33cd-03a0-0634" name="Infernal Gateway" publicationId="eee5-f9c5-fa08-3f2e" page="112, 5, 238" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13359,7 +13366,7 @@ attribute may still apply.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">16+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers 2D6 S 2D6 hits with Flaming Attacks. Roll for the S first. If an 11 or 12 is rolled when determining the spell&apos;s S value, the hits are resolved at S 10, and the unit suffers 3D6 hits rather than 2D6.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers 2D6 Strength 2D6 hits with Flaming Attacks. Roll for the Strength first. If an 11 or 12 is rolled when determining the spell&apos;s Strength value, the hits are resolved at Strength 10, and the unit suffers 3D6 hits rather than 2D6.</characteristic>
       </characteristics>
     </profile>
     <profile id="61de-4ea8-ff54-83a2" name="Kiss of the Deep" publicationId="a873-5a26-f107-1c0b" page="77, 36" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13368,7 +13375,7 @@ attribute may still apply.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Whenever a spell from the Lore of the Deep is cast on an enemy unit, that unit also suffer D6 S 1 Hits which Ignores
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Whenever a spell from the Lore of the Deep is cast on an enemy unit, that unit also suffer D6 Strength 1 Hits which Ignores
 Armour Saves in addition to the effects of the spell.</characteristic>
       </characteristics>
     </profile>
@@ -13378,7 +13385,7 @@ Armour Saves in addition to the effects of the spell.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+/25+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in Play.  Uses the small/large round template. Once the template is placed, the player nominates the direction in which the Kraken&apos;s Pull will move. To determine how many inches the template moves, roll 3D6. Any model touched by the template must pass a S test or suffer 1 Wound with no Armour Saves allowed. Any surviving models will have their M value lowered by half until the start of the caster&apos;s next Magic Phase.
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in Play.  Uses the small/large round template. Once the template is placed, the player nominates the direction in which the Kraken&apos;s Pull will move. To determine how many inches the template moves, roll 3D6. Any model touched by the template must pass a Strength test or suffer 1 Wound with no Armour Saves allowed. Any surviving models will have their M value lowered by half until the start of the caster&apos;s next Magic Phase.
 
 In subsequent turns, Kraken&apos;s Pull travels in a random direction and moves a number of inches equal to 2D6. If a double is rolled in subsequent turns, Kraken&apos;s Pull is removed.</characteristic>
       </characteristics>
@@ -13389,7 +13396,7 @@ In subsequent turns, Kraken&apos;s Pull travels in a random direction and moves 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Extend a straight line 24&quot; in length, within the caster&apos;s forward arc and directly from his base. Any model whose base falls under the line (determined using the line template) suffers a S 4 hit with Armour Piercing (1). Any unit that suffers a casualty from this spell may not march in its next Movement phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Extend a straight line 24&quot; in length, within the caster&apos;s forward arc and directly from his base. Any model whose base falls under the line (determined using the line template) suffers a Strength 4 hit with Armour Piercing (1). Any unit that suffers a casualty from this spell may not march in its next Movement phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="a22b-12af-efd7-84fc" name="Miasma of Pestilence" publicationId="eee5-f9c5-fa08-3f2e" page="113, 6, 239" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13443,7 +13450,7 @@ In subsequent turns, Kraken&apos;s Pull travels in a random direction and moves 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the teardrop-shaped template with its narrow end touching the front of the Wizard&apos;s base and the large end aimed at the target. Roll 2D6 and move the template directly forwards the number of inches indicated. All models underneath the template suffer a S D6+1 hit with Flaming Attacks (roll once for the S and use that value for all hits).</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the teardrop-shaped template with its narrow end touching the front of the Wizard&apos;s base and the large end aimed at the target. Roll 2D6 and move the template directly forwards the number of inches indicated. All models underneath the template suffer a Strength D6+1 hit with Flaming Attacks (roll once for the Strength and use that value for all hits).</characteristic>
       </characteristics>
     </profile>
     <profile id="620d-993b-8dbe-ad17" name="Plague Wind" publicationId="eee5-f9c5-fa08-3f2e" page="113, 6, 239" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13452,7 +13459,7 @@ In subsequent turns, Kraken&apos;s Pull travels in a random direction and moves 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+/25&quot;</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Plague Wind uses the small/large round template. Once the template is placed, the player then nominates the direction in which the Plague Wind will move. To determine how many inches the template moves, roll an artillery dice and multiply the result by the caster&apos;s Wizard level. If the result on the artillery dice is a misfire, centre the template on the caster instead and roll a scatter dice; the template moves a number of inches equal to the caster&apos;s Wizard level, in the direction shown by the scatter dice (if you roll a Hit!, the template remains where it is). Any model touched by the template must pass a T test or suffer a single automatic Wound, which Ignores Armour saves.
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Plague Wind uses the small/large round template. Once the template is placed, the player then nominates the direction in which the Plague Wind will move. To determine how many inches the template moves, roll an artillery dice and multiply the result by the caster&apos;s Wizard level. If the result on the artillery dice is a misfire, centre the template on the caster instead and roll a scatter dice; the template moves a number of inches equal to the caster&apos;s Wizard level, in the direction shown by the scatter dice (if you roll a Hit!, the template remains where it is). Any model touched by the template must pass a Toughness test or suffer a single automatic Wound, with the Ignores Armour Saves special rule.
 
 In subsequent turns, the Plague Wind travels in a random direction and moves a number of inches equal to the roll of an artillery dice (if a misfire is rolled, the Plague Wind dissipates and is removed).</characteristic>
       </characteristics>
@@ -13463,7 +13470,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Inflicts D6 S 5 hits. The target unit must then immediately pass a T test or suffer a further D6 S 5 hits. The target must keep testing its T in this manner until a test is passed, or the target is removed as a casualty.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Inflicts D6 Strength 5 hits. The target unit must then immediately pass a Toughness test or suffer a further D6 Strength 5 hits. The target must keep testing its Toughness in this manner until a test is passed, or the target is removed as a casualty.</characteristic>
       </characteristics>
     </profile>
     <profile id="4c78-9e0c-d24a-d6da" name="Rancid Visitations (Bound Spell 5+)" publicationId="eee5-f9c5-fa08-3f2e" page="113, 6, 239" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13472,7 +13479,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Inflicts D6 S 5 hits. The target unit must then immediately pass a T test or suffer a further D6 S 5 hits. The target must keep testing its T in this manner until a test is passed, or the target is removed as a casualty.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Inflicts D6 Strength 5 hits. The target unit must then immediately pass a Toughness test or suffer a further D6 Strength 5 hits. The target must keep testing its Toughness in this manner until a test is passed, or the target is removed as a casualty.</characteristic>
       </characteristics>
     </profile>
     <profile id="a543-eec5-2be6-556b" name="Rip Tide (Bound Spell 5+)" publicationId="2053-6f2b-423f-8b0f" page="77" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13481,7 +13488,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each model in the target unit must take a S test or suffer 1 Wound with no armour save allowed.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each model in the target unit must take a Strength test or suffer 1 Wound with no armour save allowed.</characteristic>
       </characteristics>
     </profile>
     <profile id="582b-da6b-ae94-c53e" name="Slicing Shards" publicationId="eee5-f9c5-fa08-3f2e" page="114, 7, 240" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13490,7 +13497,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Inflicts D6 S 4 hits with Armour Piercing (1). The target must then immediately pass a LD test, or suffer a further D6 S 4 hits with Armour Piercing (1). The target must keep testing its LD in this manner until a test is passed, or the target is removed as a casualty.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Inflicts D6 Strength 4 hits with Armour Piercing (1). The target must then immediately pass a LD test, or suffer a further D6 Strength 4 hits with Armour Piercing (1). The target must keep testing its LD in this manner until a test is passed, or the target is removed as a casualty.</characteristic>
       </characteristics>
     </profile>
     <profile id="1146-2b63-8bfc-ab96" name="Stream of Corruption" publicationId="eee5-f9c5-fa08-3f2e" page="113, 6, 239" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13499,7 +13506,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The caster makes a Breath Weapon Attack. This may be cast in close combat, following the normal rules for Breath Weapons. All models Hit must pass a T test or suffer a Wound with Ignores Armour saves.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The caster makes a Breath Weapon Attack. This may be cast in close combat, following the normal rules for Breath Weapons. All models Hit must pass a Toughness test or suffer a Wound with the Ignores Armour Saves special rule.</characteristic>
       </characteristics>
     </profile>
     <profile id="2c45-68b7-52fb-12e7" name="Stromfels&apos; Jaws" publicationId="a873-5a26-f107-1c0b" page="77, 45" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13508,7 +13515,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">14+/17+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;/18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the small/large template anywhere within range; it will scatter D6&quot;/2D6&quot;. Any model touched by the template takes a S 5 hit with Multiple Wounds (D3).</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the small/large template anywhere within range; it will scatter D6&quot;/2D6&quot;. Any model touched by the template takes a Strength 5 hit with Multiple Wounds (D3).</characteristic>
       </characteristics>
     </profile>
     <profile id="2f19-a75f-095d-caac" name="Tidecall" publicationId="a873-5a26-f107-1c0b" page="77, 45" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13517,7 +13524,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The caster makes a S 2 Breath Weapon Attack. This may be cast in close combat, following the normal rules for Breath Weapons. Until the start of the caster&apos;s next Magic Phase, any unit Hit will suffer -D6&quot; to any Move they make as well as being Disrupted.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The caster makes a Strength 2 Breath Weapon Attack. This may be cast in close combat, following the normal rules for Breath Weapons. Until the start of the caster&apos;s next Magic Phase, any unit Hit will suffer -D6&quot; to any Move they make as well as being Disrupted.</characteristic>
       </characteristics>
     </profile>
     <profile id="9809-0d7b-f693-60b4" name="Treason of Tzeentch" publicationId="eee5-f9c5-fa08-3f2e" page="112, 5, 238" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13578,7 +13585,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
     </profile>
     <profile id="8a42-5b93-bd50-784e" name="05-06 (Big Things)" publicationId="9e23-79cb-pubN67565" page="84" hidden="false" typeId="b3fd-45e2-9ae1-9532" typeName="Big Things Chart (Giant)">
       <characteristics>
-        <characteristic name="Result" typeId="a40b-4ad2-71bd-7318">&apos;Eadbutt: The Giant head butts a single enemy model from the target unit, automatically inflicting D3 wounds which Ignores Armour Saves. If the victim is wounded but not slain, then it loses all of its following attacks. If the target has not yet attacked in that combat round, it loses those attacks; if it has already attacked, then it loses the next round&apos;s attacks.</characteristic>
+        <characteristic name="Result" typeId="a40b-4ad2-71bd-7318">&apos;Eadbutt: The Giant head butts a single enemy model from the target unit, automatically inflicting D3 wounds with the Ignores Armour Saves special rule. If the victim is wounded but not slain, then it loses all of its following attacks. If the target has not yet attacked in that combat round, it loses those attacks; if it has already attacked, then it loses the next round&apos;s attacks.</characteristic>
       </characteristics>
     </profile>
     <profile id="b8b8-f1ce-c6c8-0b05" name="01 (Man-sized Things)" publicationId="9e23-79cb-pubN67565" page="84" hidden="false" typeId="41e4-fd40-7b32-f71e" typeName="Man-sized Things Chart (Giant)">
@@ -13608,12 +13615,12 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
     </profile>
     <profile id="8845-1216-ef80-8109" name="02 (Pick Up and...)" publicationId="9e23-79cb-pubN67565" page="84" hidden="false" typeId="771a-abec-4083-83d2" typeName="Pick up and... Chart">
       <characteristics>
-        <characteristic name="Result" typeId="6486-077d-3077-6419">Throw Back into Combat: The victim is hurled into its own unit like a living missile. The victim suffers D3 S 6 Hits which Ignores Armour saves, and D6 S 3 hits are inflicted on the unit (save as normal).</characteristic>
+        <characteristic name="Result" typeId="6486-077d-3077-6419">Throw Back into Combat: The victim is hurled into its own unit like a living missile. The victim suffers D3 Strength 6 Hits which Ignores Armour saves, and D6 Strength 3 hits are inflicted on the unit (save as normal).</characteristic>
       </characteristics>
     </profile>
     <profile id="f05e-b4ef-d493-96f3" name="03 (Pick Up and...)" publicationId="9e23-79cb-pubN67565" page="84" hidden="false" typeId="771a-abec-4083-83d2" typeName="Pick up and... Chart">
       <characteristics>
-        <characteristic name="Result" typeId="6486-077d-3077-6419">Hurl: The victim is hurled into an enemy unit within 12&quot; of the Giant randomly determine which. The victim is removed as a casualty, and the unit takes D6 S 3 hits. Unsaved Wounds from these hits count towards the Giant&apos;s combat result. If no enemy units are in range, treat this as a Throw Back into Combat result instead.</characteristic>
+        <characteristic name="Result" typeId="6486-077d-3077-6419">Hurl: The victim is hurled into an enemy unit within 12&quot; of the Giant randomly determine which. The victim is removed as a casualty, and the unit takes D6 Strength 3 hits. Unsaved Wounds from these hits count towards the Giant&apos;s combat result. If no enemy units are in range, treat this as a Throw Back into Combat result instead.</characteristic>
       </characteristics>
     </profile>
     <profile id="af1a-be06-2fc6-a34f" name="04 (Pick Up and...)" publicationId="9e23-79cb-pubN67565" page="84" hidden="false" typeId="771a-abec-4083-83d2" typeName="Pick up and... Chart">
@@ -13636,33 +13643,6 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Combat" typeId="168d-1cc2-66f3-e766"/>
         <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca"/>
         <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Heavy Armour. Dragon armour grants the wearer Immunity (Flaming Attacks).</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="adec-808a-e49a-d7c9" name="Hammer of Sigmar" publicationId="315d-135b-135c-07ce" page="179" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Innate Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The Warrior Priest and his unit reroll all failed To Wound rolls in close combat until the start of the next friendly Magic phase.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="742a-aa0e-34c7-ae36" name="Shield of Faith" publicationId="315d-135b-135c-07ce" page="179" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Innate Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The Warrior Priest and his unit gain a Ward save (5+) against all Wounds inflicted in close combat until the start of the next friendly Magic phase.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="dd1f-6720-2d30-c6e8" name="Soulfire" publicationId="315d-135b-135c-07ce" page="179" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Innate Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The Warrior Priest and his unit gain Magical and Flaming Attacks until the start of the next friendly Magic phase. In addition, when cast, all enemy models in base contact with the Warrior Priest suffer a S 4 hit. Models with Daemonic, Undead or Vampiric in base contact suffer a S 5 hit instead, which Ignores Armour Saves.</characteristic>
       </characteristics>
     </profile>
     <profile id="c82f-108c-17d8-ecfc" name="Arabyan Steed" publicationId="d221-484d-439d-4310" page="62" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
@@ -13742,7 +13722,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 S 4 hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 4 hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="1cf4-60b2-c05f-5ce5" name="Transmutation of Lead (Bound Spell 12+)" publicationId="9e23-79cb-pubN66727" page="146" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13760,7 +13740,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 S 4 hits which count as Flaming Attacks. Against models with Daemonic, Undead or Vampiric, this is increased to 2D6 Hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 4 hits which count as Flaming Attacks. Against models with Daemonic, Undead or Vampiric, this is increased to 2D6 Hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="515a-4044-48ba-a907" name="The Speed of Light (Bound Spell 4+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13787,7 +13767,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit must pass a S test every time it moves in the Movement phase, shoots or casts spells until the start of the caster&apos;s next Magic phase. If the test is passed, the target acts normally. If the test is failed, the unit is unable to perform the desired action, remaining in place and taking D6 S 4 hits. Against models with Daemonic, Undead or Vampiric, this is increased to 2D6 Hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit must pass a Strength test every time it moves in the Movement phase, shoots or casts spells until the start of the caster&apos;s next Magic phase. If the test is passed, the target acts normally. If the test is failed, the unit is unable to perform the desired action, remaining in place and taking D6 Strength 4 hits. Against models with Daemonic, Undead or Vampiric, this is increased to 2D6 Hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="395a-53de-245d-c0d3" name="Light of Battle (Bound Spell 4+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13814,7 +13794,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers 2D6 hits. Against models with Daemonic, Undead or Vampiric, this is increased to 3D6 Hits. The S of the hits is equal to 4 plus the number of Wizards that know spells from the Lore of Light within 12&quot; of the caster (not counting the caster them self). Successful Ward saves taken against Banishment must be re-rolled.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers 2D6 hits. Against models with Daemonic, Undead or Vampiric, this is increased to 3D6 Hits. The Strength of the hits is equal to 4 plus the number of Wizards that know spells from the Lore of Light within 12&quot; of the caster (not counting the caster them self). Successful Ward Saves taken against Banishment must be re-rolled.</characteristic>
       </characteristics>
     </profile>
     <profile id="c5ea-2c79-61b7-d6ee" name="The Enfeebling Foe (Bound Spell 8+)" publicationId="9e23-79cb-pubN66727" page="151" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13823,7 +13803,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. All models in the target unit have their S reduced by D3 (to a minimum of 1) for the duration of the spell.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. All models in the target unit have their Strength reduced by D3 (to a minimum of 1) for the duration of the spell.</characteristic>
       </characteristics>
     </profile>
     <profile id="88ed-e199-2942-a431" name="The Withering (Bound Spell 8+)" publicationId="9e23-79cb-pubN66727" page="151" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13832,7 +13812,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. All models in the target unit have their T reduced by D3 (to a minimum of 1) for the duration of the spell.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. All models in the target unit have their Toughness reduced by D3 (to a minimum of 1) for the duration of the spell.</characteristic>
       </characteristics>
     </profile>
     <profile id="df8-187e-6984-cac7" name="Regrowth (Bound Spell 7+)" publicationId="9e23-79cb-pubN66727" page="147" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13850,7 +13830,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 S 4 hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 4 hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="3bd9-27dd-37c2-f2b" name="Searing Doom (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="146" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13895,7 +13875,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 S 4 hits which count as Flaming Attacks. Against models with Daemonic, Undead or Vampiric, this is increased to 2D6 Hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 4 hits which count as Flaming Attacks. Against models with Daemonic, Undead or Vampiric, this is increased to 2D6 Hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="80be-37ce-4901-6cf9" name="Melkoth&apos;s Mystifying Miasma (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="151" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13913,7 +13893,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). Both caster and target roll a D6 and add their respective unmodified LD values. For every point the caster wins by, the target suffers a Wound which Ignores Armour saves.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). Both caster and target roll a D6 and add their respective unmodified LD values. For every point the caster wins by, the target suffers a Wound with the Ignores Armour Saves special rule.</characteristic>
       </characteristics>
     </profile>
     <profile name="Hand of Dust" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="dec1-ac22-9286-efd9" publicationId="4ff3-b09f-ec27-d6ec" page="4, 44">
@@ -13940,7 +13920,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, the target gains a Ward save (6+) against non-magical attacks and Terror.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, the target gains a Ward Save (6+) against non-magical attacks and Terror.</characteristic>
       </characteristics>
     </profile>
     <profile name="Unquiet Spirits" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="36f5-d125-e749-b811" publicationId="10a5-5781-61f5-86ae" page="4">
@@ -13949,7 +13929,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, the target gains a Ward save (6+) against non-magical attacks and Terror.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, the target gains a Ward Save (6+) against non-magical attacks and Terror.</characteristic>
       </characteristics>
     </profile>
     <profile name="Malediction of Nagash" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="446f-6c4f-ce7e-9df2" publicationId="4ff3-b09f-ec27-d6ec" page="4, 44">
@@ -13958,7 +13938,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target halves their S (rounding down) until the start of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target halves their Strength (rounding down) until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile name="Spiritual Vortex" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="64ed-3892-cb76-e274" publicationId="4ff3-b09f-ec27-d6ec" page="4, 44">
@@ -14056,7 +14036,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains a Ward save (6+) in close combat until the start of the caster&apos;s next Magic phase. For each successful Ward save roll of 6, the attacking model/unit suffers a Wound themselves (saves taken as normal using the Strength of the attacking model).</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains a Ward Save (6+) in close combat until the start of the caster&apos;s next Magic phase. For each successful Ward Save roll of 6, the attacking model/unit suffers a Wound themselves (saves taken as normal using the Strength of the attacking model).</characteristic>
       </characteristics>
     </profile>
     <profile id="b430-484b-7538-1e90" name="The Beast Cowers" publicationId="9e23-79cb-pubN66727" page="123" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -14101,7 +14081,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 S 5 hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 5 hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="2f8f-6377-5c15-49b6" name="Sweltering Heat" publicationId="9e23-79cb-pubN66727" page="120" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -14185,7 +14165,7 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains a 4+ Ward save until the start of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains a 4+ Ward Save until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="84c6-faad-709b-99ad" name="Quicksilver Sword" publicationId="9e23-79cb-pubN66727" page="121" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -14221,7 +14201,7 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains a Ward save (4+) against non-magical missile attacks until the start of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains a Ward Save (4+) against non-magical missile attacks until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="dec0-3cf7-c1ed-4428" name="Sign of Amul" publicationId="9e23-79cb-pubN66727" page="124" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -14491,7 +14471,7 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 S 4 hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strength 4 hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="90cc-1209-6eb5-4598" name="Drain Life" publicationId="9e23-79cb-pubN66727" page="127" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
