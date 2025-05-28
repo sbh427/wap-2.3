@@ -13482,198 +13482,6 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="28f2-a4fb-e807-228f" name="Golgfag&apos;s Mercenary Ogres" hidden="false" collective="false" import="true" type="unit">
-      <constraints>
-        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="aea2-bb2d-a9fc-49d8" type="max"/>
-      </constraints>
-      <infoLinks>
-        <infoLink id="acb9-ed94-8f3a-d916" name="Mercenaries" hidden="false" targetId="8a53-e985-f3f0-a91b" type="rule"/>
-        <infoLink id="2954-88e2-f486-5dab" name="Ogre Charge" hidden="false" targetId="d041-af68-1592-6f88" type="rule"/>
-        <infoLink id="5fa6-4d14-c7b4-9078" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-        <infoLink id="e2ef-68a1-e6c7-1510" name="Fear" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
-      </infoLinks>
-      <selectionEntries>
-        <selectionEntry id="30c1-d19f-30bb-f989" name="Ogre" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="3" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1051-ff84-cd48-e2ea" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="74f9-5b80-bedd-e651" name="Ogre" publicationId="9e23-79cb-pubN116235" page="36" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">2</characteristic>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                <characteristic name="LD" typeId="a199-f10b-a038-5730">7</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Ogre)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <selectionEntries>
-            <selectionEntry id="c339-9fcf-614b-91b3" name="Light Armour" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d760-178e-91d2-2969" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0e42-1e7d-97bc-e016" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="40b1-d32f-36e9-c0d2" name="Light Armour" hidden="false" targetId="4129-1acd-3564-d3ea" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="34ce-ec56-9c2a-0ec6" name="Two/Additional Hand Weapons" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7208-63fd-8e78-1ca6" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c103-df01-c3ce-a193" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="6d14-9d1d-ad5b-9a43" name="Two/Additional Hand Weapons" hidden="false" targetId="4a5d-0b6d-f6ac-fd7d" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="pts" typeId="points" value="31"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="bc2f-6bdb-10c0-0d09" name="Command Group" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="0a45-b5a4-63da-f7e5" name="Skaff" hidden="false" collective="false" import="true" type="model">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b04b-d373-f1cd-2924" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ebb4-54a8-2b89-57c7" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="8b72-e204-47b2-08e7" name="Skaff" publicationId="9e23-79cb-pubN116235" page="36" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">2</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">7</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Special Character, Ogre)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="51ca-b0d5-1deb-654a" name="Standard Bearer" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
-              </infoLinks>
-              <selectionEntries>
-                <selectionEntry id="f866-7648-5c94-45d3" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="34eb-529b-3df4-51bc" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="419a-f57c-66fc-e59d" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="6da0-1159-ceb7-a9b2" name="Light Armour" hidden="false" targetId="4129-1acd-3564-d3ea" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="5e52-3077-65be-bf94" name="Two/Additional Hand Weapons" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a303-d511-a9d7-7717" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5bc3-0317-9e7f-ae95" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="2d7b-7f94-8881-bf65" name="Two/Additional Hand Weapons" hidden="false" targetId="4a5d-0b6d-f6ac-fd7d" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="ee4d-2485-ccd4-eb94" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="19f4-2127-fa0f-30a7" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="993f-33fe-1c18-a3f3" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="0030-460b-539f-bb35" name="Musician" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="85b6-0b20-5a89-3e4a" name="Golgfag" hidden="false" collective="false" import="true" type="model">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6cd4-bb85-3c32-e953" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d38b-c3f9-703b-c758" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="3654-a430-991f-0118" name="Golgfag" publicationId="9e23-79cb-pubN116235" page="36" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">2</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">8</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Special Character, Ogre)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="e95f-ae4c-08f5-b02c" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
-              </infoLinks>
-              <selectionEntries>
-                <selectionEntry id="31e2-14bf-86fa-604f" name="Medium Armour" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0b35-a4c7-8c0e-5dd7" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="63fb-bb8d-bb2d-0d34" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="493b-d029-f1d2-0a23" name="Medium Armour" hidden="false" targetId="6d9a-c9f8-e013-e77f" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="f63b-4681-22eb-2a3e" name="Two/Additional Hand Weapons" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="aa98-eb8c-c20e-1c23" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f29a-543d-d43b-d65c" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="5274-8a4c-8bc3-6eab" name="Two/Additional Hand Weapons" hidden="false" targetId="4a5d-0b6d-f6ac-fd7d" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="161"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="6d4b-d3cc-bdbe-1bfc" name="Lore of Slaanesh DoC 4 Loremaster" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="00e1-a27f-349d-b119" type="max"/>
@@ -20292,10 +20100,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <infoLink name="Light Lance" id="9bf5-3090-f8d2-c49b" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb"/>
       </infoLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-          </conditions>
+        <modifier type="add" value="{this} is not allowed if not mounted" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="parent" childId="d989-1124-0dea-ae27" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -20307,10 +20120,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <infoLink name="Heavy Lance" id="db17-dc76-d785-1431" hidden="false" type="profile" targetId="e56e-fedf-c550-5d81"/>
       </infoLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-          </conditions>
+        <modifier type="add" value="{this} is not allowed if not mounted" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="parent" childId="0548-4aeb-a60c-b378" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -20575,6 +20393,38 @@ If you want to make a list using the allied rules, make separate rosters for eac
       </constraints>
       <infoLinks>
         <infoLink name="Ambushers" id="5296-0c7e-b49f-994e" hidden="false" targetId="f366-0f91-841f-cf80" type="rule"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Longbow" hidden="false" id="f6cc-1342-64fe-6a3e" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="61f3-1504-6951-ab9e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Longbow" id="e493-3e01-29e6-edb8" hidden="false" type="profile" targetId="cde7-c47d-3818-1e9d"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Ogre Pistol" hidden="false" id="9c06-bad6-8730-a29f" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="32c0-bfc7-0926-7b6b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Ogre Pistol" id="6391-a0fe-a411-37b7" hidden="false" type="profile" targetId="fe15-07b8-cf24-36ce"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Ogre Handgun" hidden="false" id="9397-1034-78d6-d8b6" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7ba3-52ca-2487-04bd" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Ogre Handgun" id="7c32-9194-b30d-eab9" hidden="false" type="profile" targetId="8252-279b-4741-e9d7"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Blunderbuss" hidden="false" id="dc92-514e-0596-fd55" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5bf7-8984-e4b2-5ae4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Blunderbuss" id="312d-13d6-91b9-09c9" hidden="false" type="profile" targetId="a9ad-a872-79a3-c503"/>
       </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -23468,8 +23318,8 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
     <rule id="2342-7a24-9b21-0185" name="Valour of Ages" publicationId="9e23-79cb-pubN77092" page="138" hidden="false">
       <description>If your opponent&apos;s army roster contains one or more models from Warhammer: Dark Elves, models with this special rule re-roll all failed Panic tests and have Immunity (Fear).</description>
     </rule>
-    <rule id="d041-af68-1592-6f88" name="Ogre Charge" publicationId="9e23-79cb-pubN78137" page="56" hidden="false">
-      <description>Ogres have the Impact Hits (1) special rule. A unit of Ogres adds its current Rank Bonus to the Strength of any Impact Hits they inflict.</description>
+    <rule id="d041-af68-1592-6f88" name="Ogre Charge" publicationId="315d-135b-135c-07ce" page="37" hidden="false">
+      <description>Each model with this special rule that successfully charges an enemy has the Impact Hits (1) special rule. Models with this special rule that are part of a unit with ranks add their current Rank Bonus to the Strength of the Impact Hits they inflict. In addition, they count as having one more rank than their actual number for the purpose of determining Steadfast in any turn that they charge.</description>
     </rule>
     <rule id="fb9d-b6f0-9c84-38e2" name="Dwarf Rum" publicationId="9e23-79cb-pubN116235" page="32" hidden="false">
       <description>Enemy models in base contact with models with this rule suffer -1 to their WS in Close Combat. This does not affect Undead, Daemonic or Mark of Nurgle models. The Slayer Pirates may not be deployed closer than 6&quot; to any other unit in the army at the start of the battle.</description>
@@ -24042,6 +23892,21 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
     </rule>
     <rule name="Swooping Strike" id="032a-fddc-ad13-76d6" hidden="false">
       <description>The Griffon gains the Devastating Charge special rule.</description>
+    </rule>
+    <rule name="Inspiring Presence (6)" id="7687-32b8-13f1-97b4" hidden="false">
+      <description>A model with Inspiring Presence allows all friendly units within a distance equal to the number in the brackets to use their Leadership instead of their own, unless specified (such as having to use their unmodified Leadership). This rule cannot be used if the model with Inspiring Presence is also fleeing.
+
+
+This rule is cumulative with other sources of Inspiring Presence. If the model has a Line of Sight value of 4 or more, then the range of their Inspiring Presence rule is increased by 6.
+
+
+If a unit taking a Leadership test has a modifier to its Leadership, this modifier still applies if the unit uses the Inspiring Presence.
+
+
+If a unit is Steadfast, it may use the Leadership of the model for Break tests if it is higher than their own Leadership after applying all negative modifiers from combat resolution. Otherwise, they will use their own Leadership.</description>
+    </rule>
+    <rule id="e69f-18b7-b8ee-1f0c" name="Unit Strength (8)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Unit Strength of 8.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -26215,20 +26080,20 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Shots (6). Armour Piercing (1). Slow to Fire. Rapid Fire.</characteristic>
       </characteristics>
     </profile>
-    <profile id="c5ac-9a35-f3cf-7c0a" name="Stone Thrower" publicationId="9e23-79cb-pubN66727" page="85" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
+    <profile id="c5ac-9a35-f3cf-7c0a" name="Mortar" publicationId="9e23-79cb-pubN66727" page="85" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
       <characteristics>
-        <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Stone Thrower</characteristic>
+        <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Mortar</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-48&quot;</characteristic>
-        <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4(8)</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Slow to Fire.</characteristic>
+        <characteristic name="Strength" typeId="6ca0-d074-628f-e276">3(6)</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Slow to Fire. Armour Piercing (1).</characteristic>
       </characteristics>
     </profile>
-    <profile id="7c7a-74eb-5d2b-bc04" name="Stone Thrower" publicationId="9e23-79cb-pubN66727" page="85" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
+    <profile id="7c7a-74eb-5d2b-bc04" name="Rocket Launcher" publicationId="9e23-79cb-pubN66727" page="85" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
       <characteristics>
-        <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Stone Thrower</characteristic>
+        <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Rocket Launcher</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-48&quot;</characteristic>
-        <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4(8)</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Slow to Fire.</characteristic>
+        <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Flaming Attacks. Slow to Fire.</characteristic>
       </characteristics>
     </profile>
     <profile id="bd05-6040-b879-d61a" name="The Eagle&apos;s Cry" publicationId="9e23-79cb-pubN66727" page="123" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -26755,6 +26620,34 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
         <characteristic name="LD" typeId="a199-f10b-a038-5730">7</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Creature (Animal)</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="fe15-07b8-cf24-36ce" name="Ogre Pistol" publicationId="315d-135b-135c-07ce" page="37" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">24&quot;</characteristic>
+        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Quick to Fire. Armour Piercing (1). In close combat, an ogre pistol counts as an additional hand weapon that does not give the model the Parry special rule.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="8252-279b-4741-e9d7" name="Ogre Handgun" publicationId="315d-135b-135c-07ce" page="37" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+      <characteristics>
+        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">36&quot;</characteristic>
+        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">5</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1). Ponderous.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Warmachine" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="80b1-ed85-bde1-fa07">
+      <characteristics>
+        <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+        <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
+        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+        <characteristic name="S" typeId="edd2-7979-54a4-6b35"/>
+        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">7</characteristic>
+        <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
+        <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
+        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
+        <characteristic name="LD" typeId="a199-f10b-a038-5730"/>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Machine</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
