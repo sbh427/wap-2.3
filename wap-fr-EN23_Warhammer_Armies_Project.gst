@@ -13775,7 +13775,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
         <characteristic name="LD" typeId="a199-f10b-a038-5730">3</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast, Animal</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
       </characteristics>
     </profile>
     <profile id="1c38-2830-10db-579c" name="Warhorse" publicationId="315d-135b-135c-07ce" page="216" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
