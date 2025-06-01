@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="56" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/XwjPS8c9TB" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="57" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/XwjPS8c9TB" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://discordapp.com/invite/UrrPB3T</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publicationDate="07.09.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -8031,7 +8031,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <conditionGroup type="and">
               <conditions>
                 <condition type="equalTo" value="1" field="selections" scope="parent" childId="d989-1124-0dea-ae27" shared="true"/>
-                <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
