@@ -51,6 +51,7 @@
     <publication id="fe07-d23f-5110-8489" name="Lizardmen Special Characters v.1.2" shortName="LM" publisher="Warhammer - Lizardmen Special Characters 1.2" publicationDate="14.02.2022" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="72a4-a4fc-cfd6-d138" name="Dogs of War Special Characters v.1.2" shortName="DoW" publisher="Warhammer - Dogs of War Special Characters 1.2" publicationDate="30.05.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="f46b-8c4e-ed82-05f7" name="Warriors of Chaos Special Characters v.1.3" shortName="WoC" publisher="Warhammer - Warriors of Chaos Special Characters 1.3" publicationDate="27.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication name="Github" id="8db3-575d-91b-47f8" hidden="false" shortName="sbh427/wap-2.3" publisherUrl="https://github.com/sbh427/wap-2.3"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
