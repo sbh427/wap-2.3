@@ -12014,6 +12014,12 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
     <rule name="Rending Fangs" id="38dc-ae6d-82d1-e44b" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
       <description>The Manticore gains Armour Piercing (1).</description>
     </rule>
+    <rule id="1d10-62be-aac7-35f6" name="Unit Strength (6)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Unit Strength of 6.</description>
+    </rule>
+    <rule id="cd03-1b6a-2a80-dd1a" name="Unit Strength (5)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Unit Strength of 5.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="3ecc-5d9c-7d29-ee2f" name="Javelins" publicationId="9e23-79cb-pubN66727" page="81" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
@@ -14674,6 +14680,20 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
         <characteristic name="LD" typeId="a199-f10b-a038-5730">5</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Creature (Chaos Beast)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Giant" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="fddd-b77e-9876-320d" publicationId="9e23-79cb-pubN78975" page="175">
+      <characteristics>
+        <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+        <characteristic name="S" typeId="edd2-7979-54a4-6b35">6</characteristic>
+        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
+        <characteristic name="W" typeId="27ee-0675-122f-a1b1">6</characteristic>
+        <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
+        <characteristic name="LD" typeId="a199-f10b-a038-5730">10</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Giant)</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
