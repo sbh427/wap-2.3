@@ -72,7 +72,7 @@
         <characteristicType id="27ee-0675-122f-a1b1" name="W"/>
         <characteristicType id="7cca-e51f-edc2-7322" name="I"/>
         <characteristicType id="bfa2-d38d-7c93-d3f0" name="A"/>
-        <characteristicType id="a199-f10b-a038-5730" name="LD"/>
+        <characteristicType id="a199-f10b-a038-5730" name="Ld"/>
         <characteristicType id="13f9-a26b-05af-3459" name="Type"/>
       </characteristicTypes>
     </profileType>
@@ -526,7 +526,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
       <profiles>
         <profile id="a101-5e2b-67a0-8c50" name="01-03 (Mercenary Loyalty)" publicationId="9e23-79cb-pubN116235" page="5" hidden="false" typeId="591c-24ac-19bd-3b4b" typeName="Mercenary Loyalty Table">
           <characteristics>
-            <characteristic name="Result" typeId="c8b7-e979-95fd-ac37">Wavering Loyalty: The unit flees as normal, and all models in the unit suffer a -1 modifier to their LD for the rest of the battle.</characteristic>
+            <characteristic name="Result" typeId="c8b7-e979-95fd-ac37">Wavering Loyalty: The unit flees as normal, and all models in the unit suffer a -1 modifier to their Leadership for the rest of the battle.</characteristic>
           </characteristics>
         </profile>
         <profile id="470e-cba4-9f8d-62c3" name="04-05 (Mercenary Loyalty)" publicationId="9e23-79cb-pubN116235" page="5" hidden="false" typeId="591c-24ac-19bd-3b4b" typeName="Mercenary Loyalty Table">
@@ -8465,7 +8465,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <characteristic name="W" typeId="27ee-0675-122f-a1b1">8</characteristic>
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">1</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
-            <characteristic name="LD" typeId="a199-f10b-a038-5730">10</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster</characteristic>
           </characteristics>
         </profile>
@@ -9030,7 +9030,7 @@ Note that they may not choose any Arcane Items.</characteristic>
           <profiles>
             <profile id="2f6d-8270-dcea-3d13" name="The Terrifying Mask of Eee!" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The wearer of this mask causes Terror. However, other models can never use their LD.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The wearer of this mask causes Terror. However, other models can never use their Ld.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -9428,7 +9428,7 @@ Note that they may not choose any Arcane Items.</characteristic>
           <profiles>
             <profile id="3ca5-b1f2-ffd0-b846" name="Standard of Discipline" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard has +1 LD, but cannot use the General&apos;s Inspiring Presence. If a model with this special rule joins this unit, other units using their Inspiring Presence do not benefit from the +1 Leadership.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard has +1 Ld, but cannot use the General&apos;s Inspiring Presence. If a model with this special rule joins this unit, other units using their Inspiring Presence do not benefit from the +1 Leadership.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -9476,7 +9476,7 @@ Note that they may not choose any Arcane Items.</characteristic>
           <profiles>
             <profile id="4eb8-3ff8-bdd8-dfbf" name="Gleaming Pennant" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">One use only. A unit with this magic standard can re-roll its first failed LD test.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">One use only. A unit with this magic standard can re-roll its first failed Leadership test.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -10773,7 +10773,7 @@ characteristic.</characteristic>
           <profiles>
             <profile id="209c-7ef1-14e7-a227" name="Hypnotic Eye Scroll" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Hypnotic Eye Scroll can be used whenever an enemy wizard successfully casts a spell instead of attempting to dispel. The casting wizard must pass a LD test; if failed, you may choose the target of the spell just as if you had cast the spell yourself. If no target can be chosen, the spell has no effect. Note that the spell is still cast from the original Wizard as normal.</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Hypnotic Eye Scroll can be used whenever an enemy wizard successfully casts a spell instead of attempting to dispel. The casting wizard must pass a Leadership test; if failed, you may choose the target of the spell just as if you had cast the spell yourself. If no target can be chosen, the spell has no effect. Note that the spell is still cast from the original Wizard as normal.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -10832,9 +10832,9 @@ A character model that joins a unit of Skirmishers gains Skirmisher as long as t
 Berserk Rage
 A unit that includes one or more Frenzied models can only choose Hold or Stand &amp; Shoot as a charge reaction.
 
-If, during the Charge sub-phase, a unit that includes one or more Frenzied models could declare a charge, then it must do so unless a LD test is passed. If the LD test is failed, the Frenzied unit must declare a charge against the nearest viable enemy.
+If, during the Charge sub-phase, a unit that includes one or more Frenzied models could declare a charge, then it must do so unless a Leadership test is passed. If the Leadership test is failed, the Frenzied unit must declare a charge against the nearest viable enemy.
 
-A unit that includes one or more Frenzied models that attempts to restrain pursuit if it beats a foe in close combat suffer a LD modifier equal to the result they won the combat against that unit by.
+A unit that includes one or more Frenzied models that attempts to restrain pursuit if it beats a foe in close combat suffer a Leadership modifier equal to the result they won the combat against that unit by.
 
 
 Note that in case the enemy unit was completely wiped out, the Frenzied unit can choose whether to overrun or not as normal.
@@ -10876,7 +10876,7 @@ Models with rule have both Magical Attacks and Unstable. Ethereal models have a 
 Characters that are not themselves Ethereal are not permitted to join units that are (even if they become temporarily Ethereal for some reason).</description>
     </rule>
     <rule id="755c-61c2-fa25-f4ce" name="Stupidity" publicationId="9e23-79cb-pubN66727" page="83" hidden="false">
-      <description>Provided that they are not engaged in close combat, a unit that contains one or more models with Stupidity must take a LD test at the start of its Movement phase. If the test is passed, the unit will act normally this turn.
+      <description>Provided that they are not engaged in close combat, a unit that contains one or more models with Stupidity must take a Leadership test at the start of its Movement phase. If the test is passed, the unit will act normally this turn.
 
 If the test is failed, it moves directly forwards using Random Movement (D6) in the Compulsory Movement sub-phase. The Stupid unit cannot take any further action that turn, so cannot declare charges or make a shooting attack. However, a unit that has failed a Stupidity test can still be forced to move, or perform any other action, by a spell, or other special rule/magic item.
 
@@ -10940,7 +10940,7 @@ Flyers always move on the ground when attempting to flee or pursue.</description
     </rule>
     <rule id="777a-7a64-44fa-a78e" name="Leader" publicationId="9e23-79cb-pubN66727" page="97" hidden="false">
       <description>&quot;Follow Me!&quot;
-A unit that is accompanied by a Leader may re-roll failed LD tests in the following scenarios:
+A unit that is accompanied by a Leader may re-roll failed Leadership tests in the following scenarios:
 
 • March when within 8&quot; of enemy units.
 • Redirecting a Charge.
@@ -10960,7 +10960,7 @@ If a unit includes a standard bearer, it adds +1 to its combat result.</descript
 The side that has a musician in its front rank of one or more of its units wins any drawn close combat by 1, unless the opposing side has a musician also, in which case they cancel each other out.
 
 &quot;Form on Me!&quot;
-If a fleeing unit has a musician, it may re-roll its LD test whenever it attempts to rally. Fast Cavalry and Skirmishers that have fled using Feigned Flight automatically rallies.
+If a fleeing unit has a musician, it may re-roll its Leadership test whenever it attempts to rally. Fast Cavalry and Skirmishers that have fled using Feigned Flight automatically rallies.
 
 Swift Reform
 A unit that is not fleeing and not engaged in combat can make a swift reform during the Remaining Moves sub-phase if it has a musician. A swift reform is treated exactly like a reform manoeuvre, however the following exceptions apply:
@@ -11069,13 +11069,13 @@ Units containing one or more models with an unmodified close combat armour save 
     </rule>
     <rule id="fcc3-a722-a9e4-9c94" name="General" publicationId="9e23-79cb-pubN66727" page="106, 132" hidden="false">
       <description>Inspiring Presence
-Providing that the General is not fleeing, all friendly units within 12&quot; may use their LD instead of their own, unless specified.
+Providing that the General is not fleeing, all friendly units within 12&quot; may use their Leadership instead of their own, unless specified.
 
 If your General has a Line of Sight value of 5 or more, then the range of their Inspiring Presence ability is increased by 6&quot;.
 
-If a unit taking a LD test has a modifier to its LD, this modifier still applies if the unit uses the General’s LD.
+If a unit taking a Leadership test has a modifier to its Ld, this modifier still applies if the unit uses the General’s Ld.
 
-If a unit is Steadfast, it may use the LD of the General for Break tests if it is higher than their own LD after applying all negative modifiers from combat resolution. Otherwise, they will use their own LD.
+If a unit is Steadfast, it may use the Leadership of the General for Break tests if it is higher than their own Leadership after applying all negative modifiers from combat resolution. Otherwise, they will use their own Ld.
 
 Every army must have a General. If your army includes both Lords and Heroes, you must choose a Lord to be the army&apos;s General.</description>
     </rule>
@@ -11133,7 +11133,7 @@ If the model with this special rule is in close combat, it can use the Breath We
       <description>If a unit has this rule then supporting attacks can be made by one more rank than normal for each number indicated in the bracket. This rule is cumulative with other sources of Fight in Extra Ranks.</description>
     </rule>
     <rule id="8600-a090-2761-d661" name="Flaming Attacks" publicationId="9e23-79cb-pubN66727" page="60" hidden="false">
-      <description>Models with Flaming Attacks cause Fear in War Beasts, Cavalry, Chariots and Flammable creatures. Any Panic test taken by any of these Troop Types from a Flaming Attack suffer -1 to their LD when taking the test.
+      <description>Models with Flaming Attacks cause Fear in War Beasts, Cavalry, Chariots and Flammable creatures. Any Panic test taken by any of these Troop Types from a Flaming Attack suffer -1 to their Leadership when taking the test.
 
 Unless otherwise stated, a model with this rule has both Flaming shooting and close combat attacks (though any spells cast by the model or special attacks are unaffected).</description>
     </rule>
@@ -11144,7 +11144,7 @@ A hidden model is not placed on the table during deployment, but is revealed lat
 
 
 Hidden models may be revealed at the beginning of any of your Movement phases, or at the start of any Close Combat phase. Declare that the unit contains a hidden model and place the model in the front rank of that unit, displacing models as you normally would if a character had joined the unit.
-A model with this rule cannot be your army General. Furthermore, other units can never use their LD value.</description>
+A model with this rule cannot be your army General. Furthermore, other units can never use their Leadership value.</description>
     </rule>
     <rule id="fa30-0410-43da-e1d7" name="Ice Attacks" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
       <description>Models with Ice Attacks cause all enemy models in base contact with them to be subject to Always Strikes Last. Spells or missile attacks that are Ice Attacks cause the enemy to be subject to Always Strikes Last until the start of your next turn if they are successfully cast or Hit. Models with Ice Attacks have Immunity (Ice Attacks).
@@ -11244,7 +11244,7 @@ Unless specified, Killing Blow only applies to the model&apos;s normal Close Com
     <rule id="e00a-3a09-9b67-e994" name="Mixed Unit" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
       <description>A Mixed Unit most often consist of two different Troop Types, with one or more handlers that drive the rest of the unit forward. The handler(s) must be deployed in the rear rank(s) of the unit, as centrally as possible. Mixed Units cannot be joined by characters, unless specified.
 
-If a Mixed unit is required to take a characteristic test, this is done using the characteristics of the unit itself, not the handlers. The only exception is LD tests, which are taken using the unit’s highest LD value. When the models in a unit with Mixed Unit have different M allowances, the handlers M value is ignored, unless they are the only models remaining. Any special rules that the unit might have do not apply to the Handlers unless specified. Note that if the unit has Expendable, Swiftstride or Vanguard, this also applies to the Handlers.
+If a Mixed unit is required to take a characteristic test, this is done using the characteristics of the unit itself, not the handlers. The only exception is Leadership tests, which are taken using the unit’s highest Leadership value. When the models in a unit with Mixed Unit have different M allowances, the handlers M value is ignored, unless they are the only models remaining. Any special rules that the unit might have do not apply to the Handlers unless specified. Note that if the unit has Expendable, Swiftstride or Vanguard, this also applies to the Handlers.
 
 As long as the unit (but not the handlers) have a unit strength of 5 or more, any missile hits are resolved against the unit itself. At less than unit strength 5, the controlling player decides who is hit, but must allocate one hit on each model before they can add a second hit on a model; they must allocate two hits on each model before they can allocate a third, and so on. Hits from templates are resolved against the handlers as normal. In close combat, the handlers can only be attacked by models who are in base contact with them.</description>
     </rule>
@@ -11636,7 +11636,7 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
       <description>Models with this special rule have Dodge (6+) special rule in close combat. However, this cannot be used against enemies that attack before the model with Elven Grace.</description>
     </rule>
     <rule id="eb46-96d2-9469-4905" name="Cold-Blooded" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
-      <description>Whenever the model takes a LD test, it rolls an additional dice and discards the highest result.</description>
+      <description>Whenever the model takes a Leadership test, it rolls an additional dice and discards the highest result.</description>
     </rule>
     <rule id="2fc8-8eef-c508-0f80" name="Battle Prayers" publicationId="315d-135b-135c-07ce" page="17" hidden="false">
       <description>A model with this special rule knows three Battle Prayers. They may attempt to use one at the start of each of your turns by taking a Leadership test on their own unmodified Leadership. If passed, the prayer is answered and take immediate effect. A friendly unit can only be under the effect of one Battle Prayer at a time.</description>
@@ -12563,7 +12563,7 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+/9+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;/48&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers a -1 to their WS, BS and LD until the start of the caster&apos;s next Magic phase. Shooting attacks that do not use BS must roll 4+ on a D6 before firing, or the shot(s) is lost. This is an Ice Attack.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers a -1 to their WS, BS and Leadership until the start of the caster&apos;s next Magic phase. Shooting attacks that do not use BS must roll 4+ on a D6 before firing, or the shot(s) is lost. This is an Ice Attack.</characteristic>
       </characteristics>
     </profile>
     <profile id="0ece-506a-9882-5f13" name="Iceshard Blizzard (Bound Spell 4+)" publicationId="9e23-79cb-pubN66727" page="149" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12572,7 +12572,7 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers a -1 to their WS, BS and LD until the start of the caster&apos;s next Magic phase. Shooting attacks that do not use BS must roll 4+ on a D6 before firing, or the shot(s) is lost. This is an Ice Attack.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers a -1 to their WS, BS and Leadership until the start of the caster&apos;s next Magic phase. Shooting attacks that do not use BS must roll 4+ on a D6 before firing, or the shot(s) is lost. This is an Ice Attack.</characteristic>
       </characteristics>
     </profile>
     <profile id="cd1f-0bc5-ab83-af06" name="Focus Energy" publicationId="9e23-79cb-pubN66727" page="125" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12644,7 +12644,7 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). Both caster and target roll a D6 and add their respective unmodified LD values. For every point the caster wins by, the target suffers a Wound with the Ignores Armour Saves special rule.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). Both caster and target roll a D6 and add their respective unmodified Leadership values. For every point the caster wins by, the target suffers a Wound with the Ignores Armour Saves special rule.</characteristic>
       </characteristics>
     </profile>
     <profile id="0aa7-6fa8-e84e-677a" name="Monster of Kadon" publicationId="9e23-79cb-pubN66727" page="146" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
@@ -12657,7 +12657,7 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="W" typeId="27ee-0675-122f-a1b1">6</characteristic>
         <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
-        <characteristic name="LD" typeId="a199-f10b-a038-5730">8</characteristic>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster</characteristic>
       </characteristics>
     </profile>
@@ -12757,7 +12757,7 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in Play. The target suffers a -3 penalty to its LD.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in Play. The target suffers a -3 penalty to its Ld.</characteristic>
       </characteristics>
     </profile>
     <profile id="bdf2-5d59-034f-39d3" name="Enchanted Blades of Aiban" publicationId="9e23-79cb-pubN66727" page="121" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12865,7 +12865,7 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If fleeing, the target rallies immediately. Additionally, the target will pass all LD tests (regardless of modifiers) until the start of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If fleeing, the target rallies immediately. Additionally, the target will pass all Leadership tests (regardless of modifiers) until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="1635-9e12-e315-6de7" name="Light of Battle (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12874,7 +12874,7 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If fleeing, the target rallies immediately. Additionally, the target will pass all LD tests (regardless of modifiers) until the start of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If fleeing, the target rallies immediately. Additionally, the target will pass all Leadership tests (regardless of modifiers) until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="2eb0-98f2-3158-46ee" name="Net of Amyntok" publicationId="9e23-79cb-pubN66727" page="125" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13644,7 +13644,7 @@ attribute may still apply.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+/12+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;/48&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in Play. All models in the target unit suffer -1 to their WS and LD.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in Play. All models in the target unit suffer -1 to their WS and Ld.</characteristic>
       </characteristics>
     </profile>
     <profile id="6790-32ca-fb54-f081" name="Glean Magic" publicationId="eee5-f9c5-fa08-3f2e" page="112, 5, 238" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13719,7 +13719,7 @@ In subsequent turns, Kraken&apos;s Pull travels in a random direction and moves 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+/14+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;/12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, the target unit must use the lowest LD value in the unit (including that of mounts) and cannot benefit from Inspiring Presence or Hold Your Ground!. This spell has no effect on units with Immunity (Psychology). The boosted version affects all enemy units within range.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, the target unit must use the lowest Leadership value in the unit (including that of mounts) and cannot benefit from Inspiring Presence or Hold Your Ground!. This spell has no effect on units with Immunity (Psychology). The boosted version affects all enemy units within range.</characteristic>
       </characteristics>
     </profile>
     <profile id="5338-8b26-f6be-4c74" name="Pavane of Slaanesh" publicationId="eee5-f9c5-fa08-3f2e" page="114, 7, 240" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13728,7 +13728,7 @@ In subsequent turns, Kraken&apos;s Pull travels in a random direction and moves 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). If successfully cast, the target must pass a LD test on 3D6. If failed, the target suffers 1 Wound which Ignores Armour saves for every point they failed the LD test by.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). If successfully cast, the target must pass a Leadership test on 3D6. If failed, the target suffers 1 Wound which Ignores Armour saves for every point they failed the Leadership test by.</characteristic>
       </characteristics>
     </profile>
     <profile id="a012-5764-3f62-c2bb" name="Pavane of Slaanesh (Bound Spell 3+)" publicationId="eee5-f9c5-fa08-3f2e" page="114, 7, 240" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13746,7 +13746,7 @@ In subsequent turns, Kraken&apos;s Pull travels in a random direction and moves 
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+/20+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;/12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, the target unit must roll an additional D6 whenever it takes a LD test, discarding the lowest result rolled.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, the target unit must roll an additional D6 whenever it takes a Leadership test, discarding the lowest result rolled.</characteristic>
       </characteristics>
     </profile>
     <profile id="75f5-0942-b785-d105" name="Pink Fire of Tzeentch" publicationId="eee5-f9c5-fa08-3f2e" page="112, 5, 238" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13802,7 +13802,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Inflicts D6 Strength 4 hits with Armour Piercing (1). The target must then immediately pass a LD test, or suffer a further D6 Strength 4 hits with Armour Piercing (1). The target must keep testing its LD in this manner until a test is passed, or the target is removed as a casualty.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Inflicts D6 Strength 4 hits with Armour Piercing (1). The target must then immediately pass a Leadership test, or suffer a further D6 Strength 4 hits with Armour Piercing (1). The target must keep testing its Leadership in this manner until a test is passed, or the target is removed as a casualty.</characteristic>
       </characteristics>
     </profile>
     <profile id="1146-2b63-8bfc-ab96" name="Stream of Corruption" publicationId="eee5-f9c5-fa08-3f2e" page="113, 6, 239" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13874,7 +13874,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
         <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-        <characteristic name="LD" typeId="a199-f10b-a038-5730">7</characteristic>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Human)</characteristic>
       </characteristics>
     </profile>
@@ -13955,7 +13955,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
         <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-        <characteristic name="LD" typeId="a199-f10b-a038-5730">5</characteristic>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
       </characteristics>
     </profile>
@@ -13969,7 +13969,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
         <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-        <characteristic name="LD" typeId="a199-f10b-a038-5730">3</characteristic>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730">3</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast</characteristic>
       </characteristics>
     </profile>
@@ -13983,7 +13983,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
         <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-        <characteristic name="LD" typeId="a199-f10b-a038-5730">3</characteristic>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730">3</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
       </characteristics>
     </profile>
@@ -13997,7 +13997,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
         <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-        <characteristic name="LD" typeId="a199-f10b-a038-5730">5</characteristic>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
       </characteristics>
     </profile>
@@ -14076,7 +14076,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If fleeing, the target rallies immediately. Additionally, the target will pass all LD tests (regardless of modifiers) until the start of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If fleeing, the target rallies immediately. Additionally, the target will pass all Leadership tests (regardless of modifiers) until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="c43f-8a6d-9ec1-f15c" name="Birona&apos;s Timewarp (Bound Spell 4+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -14166,7 +14166,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers a -1 to their WS, BS and LD until the start of the caster&apos;s next Magic phase. Shooting attacks that do not use BS must roll 4+ on a D6 before firing, or the shot(s) is lost. This is an Ice Attack.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers a -1 to their WS, BS and Leadership until the start of the caster&apos;s next Magic phase. Shooting attacks that do not use BS must roll 4+ on a D6 before firing, or the shot(s) is lost. This is an Ice Attack.</characteristic>
       </characteristics>
     </profile>
     <profile id="b403-209d-9d3a-eedc" name="Shem&apos;s Burning Gaze (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -14193,7 +14193,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). Both caster and target roll a D6 and add their respective unmodified LD values. For every point the caster wins by, the target suffers a Wound with the Ignores Armour Saves special rule.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). Both caster and target roll a D6 and add their respective unmodified Leadership values. For every point the caster wins by, the target suffers a Wound with the Ignores Armour Saves special rule.</characteristic>
       </characteristics>
     </profile>
     <profile name="Hand of Dust" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="dec1-ac22-9286-efd9" publicationId="4ff3-b09f-ec27-d6ec" page="4, 44">
@@ -14247,7 +14247,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Summoning</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Summons the 5&quot; template. While the spell is in effect, the template counts as Dangerous Terrain, and enemy units within 6&quot; of it suffer -1 to their LD.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Summons the 5&quot; template. While the spell is in effect, the template counts as Dangerous Terrain, and enemy units within 6&quot; of it suffer -1 to their Ld.</characteristic>
       </characteristics>
     </profile>
     <profile id="a0a6-193b-9eb5-ffe9" name="Organ Gun" publicationId="9e23-79cb-pubN66727" page="111" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
@@ -14811,7 +14811,7 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
         <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-        <characteristic name="LD" typeId="a199-f10b-a038-5730">6</characteristic>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
       </characteristics>
     </profile>
@@ -14825,7 +14825,7 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
         <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-        <characteristic name="LD" typeId="a199-f10b-a038-5730">7</characteristic>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Creature (Animal)</characteristic>
       </characteristics>
     </profile>
@@ -14853,7 +14853,7 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
         <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
-        <characteristic name="LD" typeId="a199-f10b-a038-5730"/>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Machine</characteristic>
       </characteristics>
     </profile>
@@ -14867,7 +14867,7 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
         <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-        <characteristic name="LD" typeId="a199-f10b-a038-5730">3</characteristic>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730">3</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
       </characteristics>
     </profile>
@@ -14881,7 +14881,7 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
         <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-        <characteristic name="LD" typeId="a199-f10b-a038-5730">5</characteristic>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Creature (Chaos Beast)</characteristic>
       </characteristics>
     </profile>
@@ -14895,7 +14895,7 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="W" typeId="27ee-0675-122f-a1b1">6</characteristic>
         <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
-        <characteristic name="LD" typeId="a199-f10b-a038-5730">10</characteristic>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Giant)</characteristic>
       </characteristics>
     </profile>
