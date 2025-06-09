@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="56" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/XwjPS8c9TB" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="57" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/XwjPS8c9TB" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://discordapp.com/invite/UrrPB3T</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publicationDate="07.09.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -39,7 +39,6 @@
     <publication id="5ff9-69dd-8810-183f" name="Nippon v.1.2" shortName="Ni" publisher="Warhammer - Nippon 9th Ed v.1.2" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="5884-1659-bf10-0d5a" name="Norsca v.1.1" shortName="No" publisher="Warhammer - Norsca 9th Ed v.1.1" publicationDate="10.11.2022" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="2053-6f2b-423f-8b0f" name="Pirates of Sartosa v.1.2" shortName="PoS" publisher="Warhammer - Pirates of Sartosa 9th Ed v.1.2" publicationDate="27.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="e3da-3848-ff08-a482" name="Magic Items v.1.3" shortName="MI" publisher="Warhammer - Magic Items v.1.3" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="079e-9b65-30b3-2c59" name="Zombie Pirates of the Vampire Coast v.1.4" shortName="ZP" publisher="Warhammer - Zombie Pirates of the Vampire Coast 9th Ed v.1.4" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="4ff3-b09f-ec27-d6ec" name="Vampire Counts v.1.63, Zombie Pirates of the Vampire Coast v.1.3" shortName="VC, ZP" publisher="Warhammer - Vampire Counts 1.63, Warhammer - Zombie Pirates of the Vampire Coast 9th Ed v.1.3" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="a873-5a26-f107-1c0b" name="Pirates of Sartosa v.1.2, Zombie Pirates of the Vampire Coast v.1.4" shortName="PoS, ZP" publisher="Warhammer - Pirates of Sartosa 9th Ed v.1.2, Warhammer - Zombie Pirates of the Vampire Coast 9th Ed v.1.4" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -52,6 +51,7 @@
     <publication id="fe07-d23f-5110-8489" name="Lizardmen Special Characters v.1.2" shortName="LM" publisher="Warhammer - Lizardmen Special Characters 1.2" publicationDate="14.02.2022" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="72a4-a4fc-cfd6-d138" name="Dogs of War Special Characters v.1.2" shortName="DoW" publisher="Warhammer - Dogs of War Special Characters 1.2" publicationDate="30.05.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="f46b-8c4e-ed82-05f7" name="Warriors of Chaos Special Characters v.1.3" shortName="WoC" publisher="Warhammer - Warriors of Chaos Special Characters 1.3" publicationDate="27.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication name="Github" id="8db3-575d-91b-47f8" hidden="false" shortName="sbh427/wap-2.3" publisherUrl="https://github.com/sbh427/wap-2.3"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
@@ -228,6 +228,26 @@
     <profileType name="Prayer" id="4608-9b35-b7dc-202d" hidden="false">
       <characteristicTypes>
         <characteristicType name="Effect" id="1f79-8144-edd6-8b51"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Big Things Chart (Bonegrinder Giant)" id="c247-d962-75fa-d212" hidden="false">
+      <characteristicTypes>
+        <characteristicType name="Result" id="020b-7dac-6a63-4525"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Man-sized Things Chart (Bonegrinder Giant)" id="cc23-fbd5-942e-c3d8" hidden="false">
+      <characteristicTypes>
+        <characteristicType name="Result" id="17f4-32f7-ddb9-dbe3"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Grapple and... Chart" id="0e2f-426f-5aed-ef49" hidden="false">
+      <characteristicTypes>
+        <characteristicType name="Result" id="5530-99d4-2acf-168d"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Bigger Things Chart" id="451e-6d91-893e-45c6" hidden="false">
+      <characteristicTypes>
+        <characteristicType name="Result" id="6713-6d4f-f3d5-ab1c"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -8031,7 +8051,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <conditionGroup type="and">
               <conditions>
                 <condition type="equalTo" value="1" field="selections" scope="parent" childId="d989-1124-0dea-ae27" shared="true"/>
-                <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -8432,6 +8452,197 @@ If you want to make a list using the allied rules, make separate rosters for eac
       <categoryLinks>
         <categoryLink name="(Mount)" hidden="false" id="9153-3281-5b6f-3461" targetId="(Mount)" primary="false"/>
       </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Bonegrinder Giant" hidden="false" id="a449-7bcf-5f21-2dee" collective="false">
+      <profiles>
+        <profile name="Bonegrinder Giant" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="532e-8294-c55a-2f71" publicationId="9e23-79cb-pubN67565" page="85">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">10</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">8</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">8</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">8</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">1</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
+            <characteristic name="LD" typeId="a199-f10b-a038-5730">10</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="01 (Big Things)" typeId="c247-d962-75fa-d212" typeName="Big Things Chart (Bonegrinder Giant)" hidden="false" id="d1d9-242b-7149-146e" publicationId="9e23-79cb-pubN67565" page="86">
+          <characteristics>
+            <characteristic name="Result" typeId="020b-7dac-6a63-4525"/>
+          </characteristics>
+        </profile>
+        <profile name="02 (Big Things)" typeId="c247-d962-75fa-d212" typeName="Big Things Chart (Bonegrinder Giant)" hidden="false" id="4eb9-4451-b17c-8cbd" publicationId="9e23-79cb-pubN67565" page="86">
+          <characteristics>
+            <characteristic name="Result" typeId="020b-7dac-6a63-4525"/>
+          </characteristics>
+        </profile>
+        <profile name="03 (Big Things)" typeId="c247-d962-75fa-d212" typeName="Big Things Chart (Bonegrinder Giant)" hidden="false" id="6944-bcfd-0f5e-7530" publicationId="9e23-79cb-pubN67565" page="86">
+          <characteristics>
+            <characteristic name="Result" typeId="020b-7dac-6a63-4525"/>
+          </characteristics>
+        </profile>
+        <profile name="04-06 (Big Things)" typeId="c247-d962-75fa-d212" typeName="Big Things Chart (Bonegrinder Giant)" hidden="false" id="96a6-f7eb-caa1-2c32" publicationId="9e23-79cb-pubN67565" page="86">
+          <characteristics>
+            <characteristic name="Result" typeId="020b-7dac-6a63-4525"/>
+          </characteristics>
+        </profile>
+        <profile name="01 (Bigger Things)" typeId="451e-6d91-893e-45c6" typeName="Bigger Things Chart" hidden="false" id="ee06-8dd2-57ff-8172" publicationId="9e23-79cb-pubN67565" page="86">
+          <characteristics>
+            <characteristic name="Result" typeId="6713-6d4f-f3d5-ab1c"/>
+          </characteristics>
+        </profile>
+        <profile name="02-03 (Bigger Things)" typeId="451e-6d91-893e-45c6" typeName="Bigger Things Chart" hidden="false" id="1c63-8bbf-5163-9edf" publicationId="9e23-79cb-pubN67565" page="86">
+          <characteristics>
+            <characteristic name="Result" typeId="6713-6d4f-f3d5-ab1c"/>
+          </characteristics>
+        </profile>
+        <profile name="04-05 (Bigger Things)" typeId="451e-6d91-893e-45c6" typeName="Bigger Things Chart" hidden="false" id="4e49-4097-3cc7-ca94" publicationId="9e23-79cb-pubN67565" page="86">
+          <characteristics>
+            <characteristic name="Result" typeId="6713-6d4f-f3d5-ab1c"/>
+          </characteristics>
+        </profile>
+        <profile name="06 (Bigger Things)" typeId="451e-6d91-893e-45c6" typeName="Bigger Things Chart" hidden="false" id="6eaa-c20d-a8df-3140" publicationId="9e23-79cb-pubN67565" page="86">
+          <characteristics>
+            <characteristic name="Result" typeId="6713-6d4f-f3d5-ab1c"/>
+          </characteristics>
+        </profile>
+        <profile name="01-02 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="fc1f-c0d5-7640-347a" publicationId="9e23-79cb-pubN67565" page="86">
+          <characteristics>
+            <characteristic name="Result" typeId="5530-99d4-2acf-168d"/>
+          </characteristics>
+        </profile>
+        <profile name="03 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="624e-df32-84a0-f5d8" publicationId="9e23-79cb-pubN67565" page="86">
+          <characteristics>
+            <characteristic name="Result" typeId="5530-99d4-2acf-168d"/>
+          </characteristics>
+        </profile>
+        <profile name="04 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="0c88-4d80-16fc-06b8" publicationId="9e23-79cb-pubN67565" page="86">
+          <characteristics>
+            <characteristic name="Result" typeId="5530-99d4-2acf-168d"/>
+          </characteristics>
+        </profile>
+        <profile name="05 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="6345-3add-3126-a802" publicationId="9e23-79cb-pubN67565" page="86">
+          <characteristics>
+            <characteristic name="Result" typeId="5530-99d4-2acf-168d"/>
+          </characteristics>
+        </profile>
+        <profile name="06 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="af0c-5317-203a-cc5c" publicationId="9e23-79cb-pubN67565" page="86">
+          <characteristics>
+            <characteristic name="Result" typeId="5530-99d4-2acf-168d"/>
+          </characteristics>
+        </profile>
+        <profile name="01 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="a7ed-3da3-ebc8-e7d8" publicationId="9e23-79cb-pubN67565" page="86">
+          <characteristics>
+            <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3"/>
+          </characteristics>
+        </profile>
+        <profile name="02 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="bf32-1b1f-0a67-7577" publicationId="9e23-79cb-pubN67565" page="86">
+          <characteristics>
+            <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3"/>
+          </characteristics>
+        </profile>
+        <profile name="03 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="6aed-0da6-9dd1-4417" publicationId="9e23-79cb-pubN67565" page="86">
+          <characteristics>
+            <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3"/>
+          </characteristics>
+        </profile>
+        <profile name="04 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="4bc0-a5ac-d639-937c" publicationId="9e23-79cb-pubN67565" page="86">
+          <characteristics>
+            <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3"/>
+          </characteristics>
+        </profile>
+        <profile name="05 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="9ae1-6ea5-f865-a467" publicationId="9e23-79cb-pubN67565" page="86">
+          <characteristics>
+            <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3"/>
+          </characteristics>
+        </profile>
+        <profile name="06 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="b91f-e62b-0ec4-65ee" publicationId="9e23-79cb-pubN67565" page="86">
+          <characteristics>
+            <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule name="Bonegrinder Giant Special Attacks" id="1d41-bec2-e5cf-c1fe" hidden="false" publicationId="9e23-79cb-pubN67565" page="86">
+          <description>To determine what happens in each Close Combat phase, pick a unit in base contact with the Bonegrinder Giant and roll a D6 on one of the tables. Which table you use depends on the size of the Bonegrinder Giant&apos;s victim. Use the Man-sized Things Chart when fighting Infantry, Cavalry, War Beasts or Swarms. Use the Big Things Chart when fighting monstrous beasts, monstrous infantry, monstrous cavalry, chariots and war machines. Use the Bigger Things Chart when fighting anything with</description>
+        </rule>
+        <rule name="Fall Over" id="2027-07f3-868b-3269" hidden="false" publicationId="9e23-79cb-pubN67565" page="85">
+          <description>A Giant must test to see whether it falls over if any of the following apply:
+
+ If it is beaten in close combat. Test once results are established but before taking a Break test.
+ If it is fleeing at the start of the Movement phase.
+ When it crosses an obstacle. Test when the obstacle is reached.
+ If the Giant decides to Jump Up and Down on an enemy. Test immediately beforehand.
+
+To see if a Giant falls over roll a D6. On a roll of 1, the Giant falls over. A slain Giant falls over automatically.
+
+To determine in which direction the Giant falls, roll a scatter dice. Place the large template in base contact with the Giant in the direction of the scatter dice, measured from the centre of the Giant&apos;s base. A model hit by the falling Giant suffers 3D6 S 8 Hits that have Multiple Wounds (D6), though no single model may suffer more than 1 Hit – any excess Hits are ignored. If the unit is in combat and the Giant has fallen over whilst attempting to Jump Up and Down, wounds inflicted by a falling Giant count towards the combat result.
+
+A Giant that falls over automatically suffers 1 wound. If the Giant is in combat then this wound counts towards combat resolution.
+
+Once on the ground a Giant may get up in his following Movement phase, but may not move that turn. Whilst on the ground a Giant may not attack, but he can still defend himself after a fashion so the enemy must still roll to score hits on him. If forced to flee whilst on the ground the Giant is slain. If the Giant gets the opportunity to pursue his foes whilst he&apos;s on the ground he stands up instead. A Giant may attack in close combat as usual on the turn he stands up..</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink name="01 (Pick Up and...)" id="61a3-db8c-d431-60d4" hidden="false" targetId="b0eb-eada-2e6d-dc42" type="profile"/>
+        <infoLink name="Stubborn" id="565d-afd8-caa8-7480" hidden="false" targetId="d56e-8ec7-dbcd-aeee" type="rule"/>
+        <infoLink name="Immunity (Psychology)" id="9191-a0a4-41d9-5f2c" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
+        <infoLink name="03 (Pick Up and...)" id="e30a-87b6-69b8-a329" hidden="false" targetId="f05e-b4ef-d493-96f3" type="profile"/>
+        <infoLink name="04 (Pick Up and...)" id="fb54-bddf-c6dc-5dc2" hidden="false" targetId="af1a-be06-2fc6-a34f" type="profile"/>
+        <infoLink name="06 (Pick Up and...)" id="8956-459e-524c-d47c" hidden="false" targetId="985e-ec4a-2847-118b" type="profile"/>
+        <infoLink name="02 (Pick Up and...)" id="1279-a72e-b1d7-75c3" hidden="false" targetId="8845-1216-ef80-8109" type="profile"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="f709-ffd7-45f1-9aa6" targetId="0eb4-f376-7725-b05b" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Hand Weapon" hidden="false" id="f71f-e45d-df0b-e0bc" collective="false" sortIndex="1">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="87de-d912-50d1-638f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d530-eddd-ed3e-c46c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Hand Weapon" id="07a2-7b81-0523-8ed7" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Giant" hidden="false" id="ff3c-af52-ca36-3847" collective="false">
+      <infoLinks>
+        <infoLink name="Stubborn" id="b6f9-6590-9ad7-d096" hidden="false" targetId="d56e-8ec7-dbcd-aeee" type="rule"/>
+        <infoLink name="Giant Special Attacks" id="ec1b-a08f-9345-5d90" hidden="false" targetId="fba8-fc55-f60b-edd8" type="rule"/>
+        <infoLink name="Fall Over" id="de74-ec6d-8aef-9dbe" hidden="false" targetId="4a8b-1056-0bcd-e293" type="rule"/>
+        <infoLink name="Immunity (Psychology)" id="7a99-05ba-359f-4358" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
+        <infoLink name="01 (Big Things)" id="3547-d310-fc51-69f1" hidden="false" targetId="8c21-37de-1b89-a1aa" type="profile"/>
+        <infoLink name="02-04 (Big Things)" id="ccff-ceb4-7337-eb81" hidden="false" targetId="4fc5-e450-33ef-b6d9" type="profile"/>
+        <infoLink name="05-06 (Big Things)" id="ee62-22ea-125b-ad42" hidden="false" targetId="8a42-5b93-bd50-784e" type="profile"/>
+        <infoLink name="01 (Man-sized Things)" id="c22d-ae0e-23e2-406c" hidden="false" targetId="b8b8-f1ce-c6c8-0b05" type="profile"/>
+        <infoLink name="02 (Man-sized Things)" id="1c75-0f6f-4553-3ddf" hidden="false" targetId="b2e1-ecf2-bf44-91d5" type="profile"/>
+        <infoLink name="03 (Man-sized Things)" id="bcdb-536b-ea4e-87ca" hidden="false" targetId="473d-503e-6b10-8a6a" type="profile"/>
+        <infoLink name="04-06 (Man-sized Things)" id="0c36-e02b-03eb-fe8c" hidden="false" targetId="de13-cc1b-5d8f-27dd" type="profile"/>
+        <infoLink name="01 (Pick Up and...)" id="b89a-b14a-f837-f3a0" hidden="false" targetId="b0eb-eada-2e6d-dc42" type="profile"/>
+        <infoLink name="02 (Pick Up and...)" id="e1da-5beb-78b7-553c" hidden="false" targetId="8845-1216-ef80-8109" type="profile"/>
+        <infoLink name="03 (Pick Up and...)" id="afdd-de50-c060-e8f9" hidden="false" targetId="f05e-b4ef-d493-96f3" type="profile"/>
+        <infoLink name="04-05 (Pick Up and...)" id="f6d7-ca9c-0066-120a" hidden="false" targetId="af1a-be06-2fc6-a34f" type="profile"/>
+        <infoLink name="06 (Pick Up and...)" id="7aa9-52f9-3311-9c1a" hidden="false" targetId="985e-ec4a-2847-118b" type="profile"/>
+        <infoLink name="Giant" id="3ca8-9ddf-35b0-4705" hidden="false" type="profile" targetId="fddd-b77e-9876-320d"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="b2c5-5dcd-05dd-889c" targetId="0eb4-f376-7725-b05b" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Hand Weapon" hidden="false" id="3a08-11d8-9130-1c10" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="932b-b07e-2cb1-2d88"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -11378,9 +11589,6 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
     <rule id="db34-00cf-d5b6-9a4d" name="Relentless" publicationId="aa7b-3583-0834-7bfa" page="136" hidden="false">
       <description>Units entirely composed of models with this special rule do not need to pass a Leadership test in order to march, regardless of the proximity of enemy units.</description>
     </rule>
-    <rule id="2017-de4c-6670-21ba" name="Choppas" publicationId="9e23-79cb-pubN78975" page="107" hidden="false">
-      <description>Models with Choppas get Mighty Blow (1).</description>
-    </rule>
     <rule id="4a8b-1056-0bcd-e293" name="Fall Over" publicationId="9e23-79cb-pubN67565" page="83" hidden="false">
       <description>A Giant must test to see whether it falls over if any of the following apply:
 - If it is beaten in close combat. Test once results are established but before taking a Break test.
@@ -11999,6 +12207,9 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
     <rule id="051c-2a46-ef94-4703" name="Hatred (Monstrous Creatures)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
     </rule>
+    <rule id="9c98-f97f-344b-9e4b" name="Mighty Blow (2)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
+      <description>Models with this rule gain a Strength bonus to all their close combat attacks (including Impact Hits and Stomps) equal to the number in the brackets in the first round of each new close combat they are involved in. Note that any attack made with a weapon that gives Mighty Blow only applies to attacks made with the weapon itself. This rule is cumulative with other sources of Mighty Blow.</description>
+    </rule>
     <rule name="Bloodrage" id="fc43-3fac-4ae1-1606" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
       <description>The Manticore gains Hatred.</description>
     </rule>
@@ -12010,6 +12221,12 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
     </rule>
     <rule name="Rending Fangs" id="38dc-ae6d-82d1-e44b" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
       <description>The Manticore gains Armour Piercing (1).</description>
+    </rule>
+    <rule id="1d10-62be-aac7-35f6" name="Unit Strength (6)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Unit Strength of 6.</description>
+    </rule>
+    <rule id="cd03-1b6a-2a80-dd1a" name="Unit Strength (5)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Unit Strength of 5.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -13711,14 +13928,9 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Result" typeId="6486-077d-3077-6419">Hurl: The victim is hurled into an enemy unit within 12&quot; of the Giant randomly determine which. The victim is removed as a casualty, and the unit takes D6 Strength 3 hits. Unsaved Wounds from these hits count towards the Giant&apos;s combat result. If no enemy units are in range, treat this as a Throw Back into Combat result instead.</characteristic>
       </characteristics>
     </profile>
-    <profile id="af1a-be06-2fc6-a34f" name="04 (Pick Up and...)" publicationId="9e23-79cb-pubN67565" page="84" hidden="false" typeId="771a-abec-4083-83d2" typeName="Pick up and... Chart">
+    <profile id="af1a-be06-2fc6-a34f" name="04-05 (Pick Up and...)" publicationId="9e23-79cb-pubN67565" page="84" hidden="false" typeId="771a-abec-4083-83d2" typeName="Pick up and... Chart">
       <characteristics>
         <characteristic name="Result" typeId="6486-077d-3077-6419">Squash: The model is removed as a casualty.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="e9ae-c46b-2062-acad" name="05 (Pick Up and...)" publicationId="9e23-79cb-pubN67565" page="84" hidden="false" typeId="771a-abec-4083-83d2" typeName="Pick up and... Chart">
-      <characteristics>
-        <characteristic name="Result" typeId="6486-077d-3077-6419">Eat: The model is removed as a casualty.</characteristic>
       </characteristics>
     </profile>
     <profile id="985e-ec4a-2847-118b" name="06 (Pick Up and...)" publicationId="9e23-79cb-pubN67565" page="84" hidden="false" typeId="771a-abec-4083-83d2" typeName="Pick up and... Chart">
@@ -13772,7 +13984,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
         <characteristic name="LD" typeId="a199-f10b-a038-5730">3</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast, Animal</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
       </characteristics>
     </profile>
     <profile id="1c38-2830-10db-579c" name="Warhorse" publicationId="315d-135b-135c-07ce" page="216" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
@@ -14671,6 +14883,116 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
         <characteristic name="LD" typeId="a199-f10b-a038-5730">5</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Creature (Chaos Beast)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Giant" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="fddd-b77e-9876-320d" publicationId="9e23-79cb-pubN78975" page="175">
+      <characteristics>
+        <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+        <characteristic name="S" typeId="edd2-7979-54a4-6b35">6</characteristic>
+        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
+        <characteristic name="W" typeId="27ee-0675-122f-a1b1">6</characteristic>
+        <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
+        <characteristic name="LD" typeId="a199-f10b-a038-5730">10</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Giant)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="01 (Big Things)" typeId="c247-d962-75fa-d212" typeName="Big Things Chart (Bonegrinder Giant)" hidden="false" id="ca1e-c15e-e7c3-62cf" publicationId="9e23-79cb-pubN78975" page="65">
+      <characteristics>
+        <characteristic name="Result" typeId="020b-7dac-6a63-4525">Yell and Bawl: Neither the Bonegrinder Giant nor models in contact with it fight if they have not already
+done so this round. The Bonegrinder Giant automatically wins the combat by 3 points.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="02 (Big Things)" typeId="c247-d962-75fa-d212" typeName="Big Things Chart (Bonegrinder Giant)" hidden="false" id="c22c-a995-598c-fd8a" publicationId="9e23-79cb-pubN78975" page="65">
+      <characteristics>
+        <characteristic name="Result" typeId="020b-7dac-6a63-4525">Jump Up and Down: The Bonegrinder Giant must test to determine if it falls over (see previous page). If it falls over, work out where it falls and calculate damage as already described. Any wounds caused by the fall (on either side) count towards the combat result. Otherwise, it will attack using the Stomp (3D6) special rule. A Bonegrinder Giant that starts to Jump Up and Down will therefore continue to do so on the same target until it falls over, the target is destroyed, or the combat ends.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="03 (Big Things)" typeId="c247-d962-75fa-d212" typeName="Big Things Chart (Bonegrinder Giant)" hidden="false" id="163a-4591-5d83-7032" publicationId="9e23-79cb-pubN78975" page="65">
+      <characteristics>
+        <characteristic name="Result" typeId="020b-7dac-6a63-4525">Pick Up and...: The Bonegrinder Giant stoops down and grabs a single Character in base contact from the target unit (Bonegrinder Giant player&apos;s choice). The Bonegrinder Giant grabs the model and the player rolls a D6 on the PickUp and... Table to see what happens next</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="04-06 (Big Things)" typeId="c247-d962-75fa-d212" typeName="Big Things Chart (Bonegrinder Giant)" hidden="false" id="dcb6-97b9-0705-9b52" publicationId="9e23-79cb-pubN78975" page="65">
+      <characteristics>
+        <characteristic name="Result" typeId="020b-7dac-6a63-4525">Swing with Club: The Bonegrinder Giant fights using the Random Attacks (3D6) special rule this round.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="01 (Bigger Things)" typeId="451e-6d91-893e-45c6" typeName="Bigger Things Chart" hidden="false" id="111e-431e-a1a7-3e94" publicationId="9e23-79cb-pubN78975" page="65">
+      <characteristics>
+        <characteristic name="Result" typeId="6713-6d4f-f3d5-ab1c">Yell and Bawl: Neither the Bonegrinder Giant nor models in contact with it fight if they have not already done so this round. The Bonegrinder Giant automatically wins the combat by 3 points.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="02-03 (Bigger Things)" typeId="451e-6d91-893e-45c6" typeName="Bigger Things Chart" hidden="false" id="0434-8305-c832-f9a3" publicationId="9e23-79cb-pubN78975" page="65">
+      <characteristics>
+        <characteristic name="Result" typeId="6713-6d4f-f3d5-ab1c">Thump with Club: The Bonegrinder Giant chooses a single model from the target unit that is in base contact. The target may attempt to avoid the blow by passing an Initiative test (use the lowest if the model has several different values). If the test is failed, the model takes 2D6 Wounds which Ignores Armour Saves. If a double is rolled the Bonegrinder Giant cannot attack at all in the following round of the same combat.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="04-05 (Bigger Things)" typeId="451e-6d91-893e-45c6" typeName="Bigger Things Chart" hidden="false" id="6de0-155a-a6a7-18fd" publicationId="9e23-79cb-pubN78975" page="65">
+      <characteristics>
+        <characteristic name="Result" typeId="6713-6d4f-f3d5-ab1c">&apos;Eadbutt: The Bonegrinder Giant automatically inflicts D6 Wounds which Ignores Armour Saves. If the victim is wounded but not slain, then it loses all of its following attacks. If the target has not yet attacked in that combat round, it loses those attacks; if it has already attacked, then it loses the next round&apos;s attacks.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="06 (Bigger Things)" typeId="451e-6d91-893e-45c6" typeName="Bigger Things Chart" hidden="false" id="a5b5-7a5c-c3ce-4f0f" publicationId="9e23-79cb-pubN78975" page="65">
+      <characteristics>
+        <characteristic name="Result" typeId="6713-6d4f-f3d5-ab1c">Grapple and...: Roll a D6 and consult theGrapple and... table.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="01-02 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="81d2-e31b-3d99-5cb0" publicationId="9e23-79cb-pubN78975" page="65">
+      <characteristics>
+        <characteristic name="Result" typeId="5530-99d4-2acf-168d">Knobbly Knee: The victim immediately suffers D3 Wounds which Ignores Armour Saves and has their Weapon Skill and Initiative reduced to 1 until the end of the next player turn.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="03 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="2c68-a409-ee85-8156" publicationId="9e23-79cb-pubN78975" page="65">
+      <characteristics>
+        <characteristic name="Result" typeId="5530-99d4-2acf-168d">Slam: The victim immediately suffers 2D3 Wounds which Ignores Armour Saves. If there is another enemy unit in base contact with the Bonegrinder Giant, that unit also suffers 2D3 Wounds which Ignores Armour Saves. If there are two or more other enemy units in base contact with the Bonegrinder Giant, randomise to see which is slammed.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="04 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="f428-c5d4-2e27-406e" publicationId="9e23-79cb-pubN78975" page="65">
+      <characteristics>
+        <characteristic name="Result" typeId="5530-99d4-2acf-168d">Bear Hug: Roll 2D6 and add the Bonegrinder Giant&apos;s Strength. Your opponent rolls 2D6 and adds the victim&apos;s Toughness. If the Bonegrinder Giant&apos;s score is higher, the victim is removed as a casualty with no saves of any kind allowed.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="05 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="ae3a-4798-5072-2cfd" publicationId="9e23-79cb-pubN78975" page="65">
+      <characteristics>
+        <characteristic name="Result" typeId="5530-99d4-2acf-168d">Fall Over: Roll 2D6 and add the Bonegrinder Giant&apos;s Strength. Your opponent rolls 2D6 and adds the victim&apos;s Toughness. If the Bonegrinder Giant&apos;s score is higher, the victim is removed as a casualty with no saves of any kind allowed. Then continue to resolve the Bonegrinder Giant falling over, in the direction of the target.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="06 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="ef57-54ee-5128-2759" publicationId="9e23-79cb-pubN78975" page="65">
+      <characteristics>
+        <characteristic name="Result" typeId="5530-99d4-2acf-168d">Punch, and...: The victim suffers D3 Wounds which Ignores Armour Saves, then roll again on this table.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="01 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="68ca-0a61-0b9d-3135" publicationId="9e23-79cb-pubN78975" page="64">
+      <characteristics>
+        <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3">Yell and Bawl: Neither the Bonegrinder Giant nor models in contact with it fight if they have not already done so this round. The Bonegrinder Giant automatically wins the combat by 3 points.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="02 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="c460-1506-87db-07a9" publicationId="9e23-79cb-pubN78975" page="65">
+      <characteristics>
+        <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3">Jump Up and Down: The Bonegrinder Giant must test to determine if it falls over (see previous page). If it falls over, work out where it falls and calculate damage as already described. Any wounds caused by the fall (on either side) count towards the combat result. Otherwise, it will attack using the Stomp (3D6) special rule. A Bonegrinder Giant that starts to Jump Up and Down will therefore continue to do so on the same target until it falls over, the target is destroyed, or the combat ends.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="03 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="9440-7354-fb23-6511" publicationId="9e23-79cb-pubN78975" page="65">
+      <characteristics>
+        <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3">Pick Up and...: The Bonegrinder Giant stoops down and grabs a single Character in base contact from the target unit (Bonegrinder Giant player&apos;s choice). The Bonegrinder Giant grabs the model and the player rolls a D6 on the PickUp and... Table to see what happens next</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="04 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="6e85-ca64-51d0-3b4b" publicationId="9e23-79cb-pubN78975" page="65">
+      <characteristics>
+        <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3">Vomit: Place the flame template so that the narrow end is in base contact with the Bonegrinder Giant and the body of the template is over at least one other unit. All models (friendly and enemy) under the template suffer an automatic Strength 5 hit which Ignores Armour Saves. All unsaved Wounds from these hits count towards the combat result (unsaved Wounds on friendly models count to your opponent&apos;s combat result). Once damage has been resolved, roll a D6. On a roll of 1-3, the Bonegrinder Giant falls over.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="05 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="c396-684f-e733-4e62" publicationId="9e23-79cb-pubN78975" page="65">
+      <characteristics>
+        <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3">Choose a model in base contact with the Bonegrinder Giant That model immediately receives a brutal toe-punt and is removed as a casualty. However, the victim&apos;s remains hurtle through its unit in the same manner as a shot from a bolt thrower (Look Out Sir! Applies as normal). The model immediately behind the victim suffers a Strength 8 hit with the Multiple Wounds (D3) special rule. If he is slain, the model behind him suffers a Strength 7 hit with the Multiple Wounds (D3) special rule, and so on, until the soggy remains fail to cause a casualty; or the unit runs out of ranks/files.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="06 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="043e-ed32-9b7c-006a" publicationId="9e23-79cb-pubN67565" page="86">
+      <characteristics>
+        <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3">Crush!: Place the small round template so that it is at least partially covering one or more models in base contact with the Giant, but not the Giant himself. The model under the centre of the template suffers an automatic Strength 10 hit with the Multiple Wounds (D6) special rule. Models around him might get lucky – the Giant&apos;s aim may be off; and only strike them a glancing blow (not that a glancing blow from a Giant is anything to be thankful for). Roll an artillery dice and halve the result – all other models (friendly and enemy) under the template suffer an automatic hit of this Strength. If the roll is a: misfire, the Giant manages to miss the rest of the unit.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
