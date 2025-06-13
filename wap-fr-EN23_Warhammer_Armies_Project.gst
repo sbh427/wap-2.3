@@ -8718,6 +8718,479 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
         </modifier>
       </modifiers>
     </selectionEntry>
+    <selectionEntry id="42e7-cbd3-5a8c-ab18" name="Lore of High Magic" hidden="false" collective="false" import="true" type="upgrade">
+      <constraints>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="10dc-c769-1f83-a06a" type="max"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry id="6913-b873-3636-022a" name="Shield of Saphery" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6a47-387c-ed87-5bc9" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e951-01ee-21a3-a192" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="0dd3-c222-e822-7f78" name="Shield of Saphery" hidden="false" targetId="ff25-2053-f2fe-dd3b" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="d028-4f62-7e31-9e11" name="0. Drain Magic" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8a32-a99e-bf3a-0625" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7350-617f-e4bf-9090" type="min"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="b767-6ebb-7de4-c9d1" name="Drain Magic" hidden="false" targetId="e957-2176-d2c1-a5d1" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Spells from the Lore of High Magic" id="33b7-e0ee-03b8-ab2c" hidden="false" sortIndex="3">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="12. Fiery Convocation" hidden="true" id="2b89-be70-b604-4775" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a922-410c-1f70-70b8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Fiery Convocation" id="52a7-5a31-d517-f732" hidden="false" targetId="76b3-39db-a4a7-e39c" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="1. Apotheosis" hidden="false" id="e0e2-115b-c12e-cfe7" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="15ab-f41f-ae73-e3f4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Apotheosis" id="b033-1a9d-e22c-263c" hidden="false" targetId="b344-84f7-9d42-97e8" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="2. Hand of Glory" hidden="false" id="0874-29ad-0a85-8272" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="570d-1eac-2b00-04aa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Hand of Glory" id="d588-95d8-b0c3-e6da" hidden="false" targetId="cf15-4b57-8f5a-e6d9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="3. Coruscating Fulcrum" hidden="false" id="9b4e-de37-232e-f2c0" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4a8b-79dd-912e-e505" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Coruscating Fulcrum" id="4a88-2a0e-8e71-a0fe" hidden="false" targetId="7595-e6e1-4079-a9a0" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="4. Fortune is Fickle" hidden="true" id="0568-c4a4-4ab1-6133" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="91bc-4b20-2fbd-1e6d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Fortune is Fickle" id="bd26-c348-9e35-0fee" hidden="false" targetId="d87c-0394-d4ab-e281" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="5. Curse of Arrow Attraction" hidden="true" id="704f-f0f3-53e9-894a" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="71ab-e64a-b258-1ade" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Curse of Arrow Attraction" id="b486-f448-b0dd-cf60" hidden="false" targetId="34cd-ed9c-336b-0594" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="6. Soul Quench" hidden="true" id="f214-28c7-afd3-abeb" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7356-b81e-444c-ef60" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Soul Quench" id="21ff-dbb1-dcd0-dbea" hidden="false" targetId="6afd-f301-ebb3-e51a" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="7. Unyielding Courage" hidden="true" id="a6b8-b56a-4d58-01d1" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f2e0-212d-59a6-ce2e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Unyielding Courage" id="d60a-76ca-7ce5-0153" hidden="false" targetId="a668-aea7-fc7c-3b31" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="8. Walk Between Worlds" hidden="true" id="a9d5-137c-07bf-ec83" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5467-12da-52c5-c8c4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Walk Between Worlds" id="f166-fc1b-c4dc-d5e1" hidden="false" targetId="82f8-dd54-9293-63b2" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="9. Corporeal Unmaking" hidden="true" id="a17c-acb0-5e40-2248" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a5ed-5449-8f6e-0a00" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Corporeal Unmaking" id="1183-a9e4-367d-70f0" hidden="false" targetId="258b-510c-a387-19ad" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="10. Tempest" hidden="true" id="9534-e8ec-6596-5135" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1442-99b4-de3b-0a4a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Tempest" id="a722-edaf-d234-2ffa" hidden="false" targetId="5259-be66-9299-80a9" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="11. Arcane Unforging" hidden="true" id="0058-9909-b432-f0f4" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5643-3d3d-2541-954c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Arcane Unforging" id="32de-2c86-c2fd-216c" hidden="false" targetId="43e5-7eef-b9fa-6266" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="49c2-102e-57c9-8962"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="380b-a133-3804-b380"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="3" field="49c2-102e-57c9-8962">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="3" field="380b-a133-3804-b380">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="4" field="49c2-102e-57c9-8962">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="4" field="380b-a133-3804-b380">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="5" field="49c2-102e-57c9-8962">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="5" field="380b-a133-3804-b380">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="49c2-102e-57c9-8962">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="6" field="380b-a133-3804-b380">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="49c2-102e-57c9-8962">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="380b-a133-3804-b380">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="49c2-102e-57c9-8962">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="380b-a133-3804-b380">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Elven Steed" hidden="false" id="4612-bb63-8653-cb34" subType="mount" collective="true">
+      <infoLinks>
+        <infoLink name="Elven Steed" id="ed87-985a-5f09-6902" hidden="false" type="profile" targetId="9d3c-c7f3-e374-745d"/>
+      </infoLinks>
+    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Sling" hidden="false" id="72e8-531c-b5af-3b91" collective="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0199-ec62-b303-3ffd" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -11704,11 +12177,11 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
     <rule id="7da8-9e3b-77c9-cc8a" name="Resolute" publicationId="aa7b-3583-0834-7bfa" page="136" hidden="false">
       <description>When taking Break tests, models with this rule count as having lost the combat with 1 point fewer than they actually have.</description>
     </rule>
-    <rule id="74ff-21a4-9c8c-8156" name="Martial Prowess" publicationId="9e23-79cb-pubN77092" page="138" hidden="false">
-      <description>Models with this rule (but not any mounts) may re-roll all To Hit rolls of 1 when making close combat attacks.</description>
+    <rule id="74ff-21a4-9c8c-8156" name="Martial Prowess" publicationId="9e23-79cb-pubN77092" page="3" hidden="false">
+      <description>Models with this special rule may re-roll all To Hit rolls of 1 when making close combat attacks.</description>
     </rule>
-    <rule id="2342-7a24-9b21-0185" name="Valour of Ages" publicationId="9e23-79cb-pubN77092" page="138" hidden="false">
-      <description>If your opponent&apos;s army roster contains one or more models from Warhammer: Dark Elves, models with this special rule re-roll all failed Panic tests and have Immunity (Fear).</description>
+    <rule id="2342-7a24-9b21-0185" name="Valour of Ages" publicationId="9e23-79cb-pubN77092" page="3" hidden="false">
+      <description>Models with this special rule re-roll all failed Panic tests caused by Dark Elves.</description>
     </rule>
     <rule id="d041-af68-1592-6f88" name="Ogre Charge" publicationId="315d-135b-135c-07ce" page="37" hidden="false">
       <description>Each model with this special rule that successfully charges an enemy has the Impact Hits (1) special rule. Models with this special rule that are part of a unit with ranks add their current Rank Bonus to the Strength of the Impact Hits they inflict. In addition, they count as having one more rank than their actual number for the purpose of determining Steadfast in any turn that they charge.</description>
@@ -12318,6 +12791,14 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
     <rule id="cd03-1b6a-2a80-dd1a" name="Unit Strength (5)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Unit Strength of 5.</description>
     </rule>
+    <rule id="a4e2-d94c-e906-a868" name="Multiple Wounds (2)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
+      <description>Each wound inflicted by an attack with Multiple Wounds (after saves) is multiplied into
+more than one wound (remember that a model cannot suffer more wounds than it has on its profile). The exact number of wounds caused will normally be shown in brackets as part of the rule. If a model is granted two sets of Multiple Wounds (like D3 and D6), use only the highest set before rolling.
+
+Where the number of Multiple Wounds is generated by a dice roll, roll a dice separately for each unsaved wound and use the total of all the dice rolled for the final number of wounds inflicted.
+
+Unless otherwise specified, Multiple Wounds only apply to close combat attacks.</description>
+    </rule>
     <rule name="Weapon team" id="409d-a7ab-f540-c35c" hidden="false" publicationId="9e23-79cb-pubN66727" page="67">
       <description>If a model with this special rule is hit by a missile attack and is within 3&quot; of a friendly unit consisting of five or more rank and file models of the same troop type within 3&quot;, roll a D6. On a roll of 4+, the hit is transferred to a model in the friendly unit (if there is more than one eligible unit within 3&quot;, the controlling player can decide which). Otherwise, the hit is resolved against the Weapon Team as normal.</description>
     </rule>
@@ -12596,15 +13077,6 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 4 hits.</characteristic>
       </characteristics>
     </profile>
-    <profile id="1d55-f70f-d713-0f87" name="Fireball (Bound Spell 3+)" publicationId="9e23-79cb-pubN66727" page="145" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 4 hits.</characteristic>
-      </characteristics>
-    </profile>
     <profile id="0958-a1b9-1238-c0e7" name="Metallic Attraction" publicationId="9e23-79cb-pubN66727" page="121" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
@@ -12659,15 +13131,6 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers a -1 to their WS, BS and Leadership until the start of the caster&apos;s next Magic phase. Shooting attacks that do not use BS must roll 4+ on a D6 before firing, or the shot(s) is lost. This is an Ice Attack.</characteristic>
       </characteristics>
     </profile>
-    <profile id="0ece-506a-9882-5f13" name="Iceshard Blizzard (Bound Spell 4+)" publicationId="9e23-79cb-pubN66727" page="149" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers a -1 to their WS, BS and Leadership until the start of the caster&apos;s next Magic phase. Shooting attacks that do not use BS must roll 4+ on a D6 before firing, or the shot(s) is lost. This is an Ice Attack.</characteristic>
-      </characteristics>
-    </profile>
     <profile id="cd1f-0bc5-ab83-af06" name="Focus Energy" publicationId="9e23-79cb-pubN66727" page="125" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
@@ -12684,15 +13147,6 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 4 hits with the Flaming Attacks special rule.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="1685-1790-fbf5-ac7c" name="Shem&apos;s Burning Gaze (Bound Spell 3+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 4 hits which count as Flaming Attacks. Against models with Daemonic, Undead or Vampiric, this is increased to 2D6 Hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="4fcb-a016-2721-ff01" name="Steed of Shadows" publicationId="9e23-79cb-pubN66727" page="126" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12729,15 +13183,6 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy Monstrous Creature, Monster or character (even in a unit). Both caster and target roll a D6 and add their respective Leadership values. If the caster scores higher, the target suffers a -1 penalty to their Strength and Toughness for the remainder of the battle.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="6b1a-c795-4066-75c9" name="Spirit Leech (Bound Spell 7+)" publicationId="9e23-79cb-pubN66727" page="152" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). Both caster and target roll a D6 and add their respective unmodified Leadership values. For every point the caster wins by, the target suffers a Wound with the Ignores Armour Saves special rule.</characteristic>
       </characteristics>
     </profile>
     <profile id="0aa7-6fa8-e84e-677a" name="Monster of Kadon" publicationId="9e23-79cb-pubN66727" page="146" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
@@ -12779,24 +13224,6 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 hits. The Strength of the hits is equal to 4 plus the number of Wizards that know spells from the Lore of Light within 12&quot; of the caster (not counting the caster themself). Each additional Wizard added adds +2 to the casting difficulty.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="ff7e-9796-a8b9-4e5e" name="Banishment (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers 2D6 hits. Against models with Daemonic, Undead or Vampiric, this is increased to 3D6 Hits. The Strength of the hits is equal to 4 plus the number of Wizards that know spells from the Lore of Light within 12&quot; of the caster (not counting the caster them self). Successful Ward Saves taken against Banishment must be re-rolled.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="8e76-49b5-99ad-b4aa" name="Birona&apos;s Timewarp (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit&apos;s M is doubled, its I is raised to 10, and its A is increased by 1 until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="3667-afc7-2861-4d54" name="Birona&apos;s Timewarp" publicationId="9e23-79cb-pubN66727" page="125" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12889,15 +13316,6 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit (except mounts) has a +1 bonus when rolling To Wound with all shooting and close combat attacks until the start of the caster&apos;s next Magic phase. The target unit also counts as having both Magical Attacks and Flaming Attacks.</characteristic>
       </characteristics>
     </profile>
-    <profile id="da1f-0914-1ccf-d707" name="Flaming Sword of Rhuin (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="145" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit (except mounts) has a +1 bonus when rolling To Wound with all shooting and close combat attacks until the start of the caster&apos;s next Magic phase. The target unit also counts as having both Magical Attacks and Flaming Attacks.</characteristic>
-      </characteristics>
-    </profile>
     <profile id="2e0a-69a8-1ef0-5f2d" name="Flesh to Stone" publicationId="9e23-79cb-pubN66727" page="122" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
@@ -12905,15 +13323,6 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains +1 to its Toughness value until the start of the caster&apos;s next Magic phase.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="f9e4-8ae2-fe0f-02ae" name="Flesh to Stone (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="147" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit has +2 to its Toughness value until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="9526-a4e9-7b88-9276" name="Fulminating Flame Cage" publicationId="9e23-79cb-pubN66727" page="145" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12961,15 +13370,6 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If fleeing, the target rallies immediately. Additionally, the target will pass all Leadership tests (regardless of modifiers) until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
-    <profile id="1635-9e12-e315-6de7" name="Light of Battle (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If fleeing, the target rallies immediately. Additionally, the target will pass all Leadership tests (regardless of modifiers) until the start of the caster&apos;s next Magic phase.</characteristic>
-      </characteristics>
-    </profile>
     <profile id="2eb0-98f2-3158-46ee" name="Net of Amyntok" publicationId="9e23-79cb-pubN66727" page="125" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
@@ -12977,15 +13377,6 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, every time the target attempts to move in the Movement phase, shoot or cast one or more spells the target suffers D6 Strength 4 hits and must then pass a Strength test (using the Strength of the majority of models in the unit). If the test is passed, the target acts normally. If the test is failed, the unit is unable to perform the desired action, remaining in place.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="e9ec-caf8-9298-da51" name="Net of Amyntok (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit must pass a Strength test every time it moves in the Movement phase, shoots or casts spells until the start of the caster&apos;s next Magic phase. If the test is passed, the target acts normally. If the test is failed, the unit is unable to perform the desired action, remaining in place and taking D6 Strength 4 hits. Against models with Daemonic, Undead or Vampiric, this is increased to 2D6 Hits.</characteristic>
       </characteristics>
     </profile>
     <profile id="2e7f-7e2c-e4e0-a10a" name="Okkam&apos;s Mindrazor" publicationId="9e23-79cb-pubN66727" page="151" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13014,15 +13405,6 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All attacks against the target unit (shooting or close combat) suffer a -1 penalty To Hit until the start of the caster&apos;s next Magic phase. Shooting attacks that do not use BS must roll 4+ on a D6 before firing, or the shot(s) is lost.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="16d6-648c-3c70-9ff0" name="Pha&apos;s Protection (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All attacks against the target unit (shooting or close combat) suffer a -1 penalty To Hit until the start of the caster&apos;s next Magic phase. Shooting attacks that do not use BS must roll 4+ on a D6 before firing, or the shot(s) is lost.</characteristic>
       </characteristics>
     </profile>
@@ -13062,15 +13444,6 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit instantly recovers D6+1 Wounds&apos; worth of models slain earlier in the battle, just like a summoning spell.</characteristic>
       </characteristics>
     </profile>
-    <profile id="462d-e08c-2aba-a7b8" name="Regrowth (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="147" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit instantly recovers D3+1 Wounds&apos; worth of models slain earlier in the battle (Cavalry count as 2 models). The wounds in the unit are regained in a strict order. First the musician and then the standard bearer is resurrected, displacing rank-and-file models as required. Then rank-and-file models with multiple Wounds are healed to their starting value. Finally, any remaining wounds resurrect rank and file models (in the case of multiple wound rank and file models, the first resurrected models must be fully healed before another can be resurrected, and so on). These are added to the front or rear of the unit as you wish as long as the unit keeps a legal formation. If the unit already has more than one rank, models can only be added to the rear rank. Regrowth cannot take a unit beyond its starting size, and cannot be used to heal characters or their mounts.</characteristic>
-      </characteristics>
-    </profile>
     <profile id="73e5-14c3-e54b-2c31" name="Shield of Thorns" publicationId="9e23-79cb-pubN66727" page="122" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
@@ -13098,15 +13471,6 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Can be cast on Infantry character (including the Wizard) within range. The target immediately makes a move using Fly (10) as if it were the Remaining Moves sub-phase. In addition, the target will count as being Ethereal for the purpose of resolving missile attacks against it until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
-    <profile id="c42b-21dc-06e9-25a2" name="Steed of Shadows (Bound Spell 3+)" publicationId="9e23-79cb-pubN66727" page="151" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Can be cast on Infantry character (including the Wizard) within range. The target immediately makes a move using Fly (10) as if it were the Remaining Moves sub-phase. In addition, the target will count as being Ethereal for the purpose of resolving missile attacks against it until the start of the caster&apos;s next Magic phase.</characteristic>
-      </characteristics>
-    </profile>
     <profile id="5a5d-30a8-b377-cad8" name="The Amber Spear" publicationId="9e23-79cb-pubN66727" page="123" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
@@ -13123,15 +13487,6 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Extend a straight line, 12&quot; in length, with its starting point anywhere within 18&quot; from the caster. Each model in the way (determined using the line template) suffers a Strength 4 hit. A unit that suffers one or more casualties from the Burning Head must take a Panic test.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="1d61-566b-e816-883d" name="The Burning Head (Bound Spell 4+)" publicationId="9e23-79cb-pubN66727" page="145" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Extend a straight line, within the caster&apos;s front arc and directly away from their base. Each model in the way (determined using the line template) suffers a Strength 4 hit. A unit that suffers one or more casualties from the Burning Head must take a Panic test.</characteristic>
       </characteristics>
     </profile>
     <profile id="eaec-4553-445b-fdc7" name="The Caress of Laniph" publicationId="9e23-79cb-pubN66727" page="127" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13224,15 +13579,6 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains the Always Strikes First special rule until the start of the caster&apos;s next Magic phase</characteristic>
       </characteristics>
     </profile>
-    <profile id="9579-8aa8-6eff-8a6a" name="The Speed of Light (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains Always Strikes First until the start of the caster&apos;s next Magic phase.</characteristic>
-      </characteristics>
-    </profile>
     <profile id="37c7-763b-0d45-9041" name="The Withering" publicationId="9e23-79cb-pubN66727" page="126" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
@@ -13273,17 +13619,6 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
 of their Magic Phases.</characteristic>
       </characteristics>
     </profile>
-    <profile id="db05-ce95-2cf2-8200" name="Transformation of Kadon (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="148" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Can only be cast upon the Wizard, and only if they are on foot. Whilst the spell is in effect, the Wizard transmogrifies itself into a Monster. 
-
-If the Wizard is in a unit, they can remain within the unit, even though they are now technically a monster. If they cannot be placed because there is not enough room, the spell does not work. Whilst transformed, the Wizard cannot channel or cast spells, and all of their magic items and mundane equipment (armour, weapons, etc.) temporarily stop working. Any wounds suffered by the Wizard are not carried over between transformations.</characteristic>
-      </characteristics>
-    </profile>
     <profile id="8bc4-459f-268d-0259" name="Urannon&apos;s Thunderbolt" publicationId="9e23-79cb-pubN66727" page="124" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
@@ -13291,15 +13626,6 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 5 hits with the Lightning Attacks special rule.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="4768-022d-5e1d-bbc0" name="Urannon&apos;s Thunderbolt (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="149" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 6 hits with Lightning Attacks.</characteristic>
       </characteristics>
     </profile>
     <profile id="686c-0b9d-0bd1-75c3" name="Wind Blast" publicationId="9e23-79cb-pubN66727" page="149" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13311,24 +13637,6 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target is &apos;pushed&apos; 2D3&quot;/2D6&quot; directly away from the caster (it does not change facing). If the target unit comes into contact with impassable terrain it stops 1&quot; away and suffers D6 Strength 3 hits. If the target unit comes into contact with another unit it stops 1&quot; away and both units suffer D6 Strength 3 hits. Targets that cannot move are not pushed back at all, but still suffer D6 Strength 3 hits.</characteristic>
       </characteristics>
     </profile>
-    <profile id="33a9-6204-9a61-a07a" name="Wind Blast (Bound Spell 3+)" publicationId="9e23-79cb-pubN66727" page="149" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target is &apos;pushed&apos; 2D3&quot; directly away from the caster (it does not change facing). If the target unit comes into contact with impassable terrain it stops 1&quot; away and suffers D6 Strength 3 hits. If the target unit comes into contact with another unit it stops 1&quot; away and both units suffer D6 Strength 3 hits. Targets that cannot move are not pushed back at all, but still suffer D6 Strength 3 hits.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="bd35-6d41-ee5b-045f" name="Wind Blast (Bound Spell 4+)" publicationId="9e23-79cb-pubN66727" page="149" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target is &apos;pushed&apos; 2D3&quot; directly away from the caster (it does not change facing). If the target unit comes into contact with impassable terrain it stops 1&quot; away and suffers D6 Strength 3 hits. If the target unit comes into contact with another unit it stops 1&quot; away and both units suffer D6 Strength 3 hits. Targets that cannot move are not pushed back at all, but still suffer D6 Strength 3 hits.</characteristic>
-      </characteristics>
-    </profile>
     <profile id="51f1-f0f3-356e-2520" name="Transmutation of Lead" publicationId="9e23-79cb-pubN66727" page="121" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
@@ -13338,49 +13646,22 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Can be cast on an unengaged unit. Until the start of the caster&apos;s next Magic phase, the target gains the Unbreakable special rule, cannot move and is treated as impassable terrain for the purpose of movement.</characteristic>
       </characteristics>
     </profile>
-    <profile id="2897-e2c7-a845-ee02" name="Doombolt of Kharaidon (Bound Spell 4+)" publicationId="9e23-79cb-pubN76150" page="168" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 5 hits.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="9138-efc9-8b35-fc6d" name="Power of Darkness (Bound Spell 8+)" publicationId="9e23-79cb-pubN76150" page="170" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit have a +1 bonus to their Strength until the start of the caster&apos;s next Magic phase. Then add D3 power dice to your power pool. If a natural 6 is rolled when generating these power dice, the caster suffers a Wound with the Ignores Armour Saves special rule.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="b344-84f7-9d42-97e8" name="Apotheosis" publicationId="b724-d2c4-d151-2d9e" page="201, 187" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+    <profile id="b344-84f7-9d42-97e8" name="Apotheosis" publicationId="9e23-79cb-pubN77092" page="4" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+/10+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;/18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target immediately regains 1/D3 lost Wound. Note that this may not take the model above its starting value of Wounds. Regardless of how many lost Wounds (if any) are recovered, the target also gains Fear until the start of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single model within 18&quot;. The target immediately regains a single lost Wound and the Fear special rule until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
-    <profile id="43e5-7eef-b9fa-6266" name="Arcane Unforging" publicationId="b724-d2c4-d151-2d9e" page="201, 187" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+    <profile id="43e5-7eef-b9fa-6266" name="Arcane Unforging" publicationId="9e23-79cb-pubN77092" page="4" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">5</characteristic>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">13+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy character (even if in a unit). The target suffers a single Wound which Ignores Armour saves on a dice roll greater than or equal to the model&apos;s unmodified armour save (excluding Natural Armour, models without an armour save cannot be wounded). The owning player must then reveal to the caster all the magic items possessed by the target (if any). If the target has one or more magic items, randomly select one of them – that item is immediately destroyed on the roll of 2+ and cannot be used for the rest of the game. Note that this spell has no effect on magic items that are mounts, magic items that contain bound spells that have miscast during the game, and any magic items labelled as &apos;one use only&apos; that have already been used during the game – do not include these when randomly selecting a magic item.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="3779-c51d-6f3c-8ecb" name="Arcane Unforging (Bound Spell 5+)" publicationId="b724-d2c4-d151-2d9e" page="201, 187" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy character (even if in a unit). The target suffers a single Wound which Ignores Armour saves on a dice roll greater than or equal to the model&apos;s unmodified armour save (excluding Natural Armour, models without an armour save cannot be wounded). The owning player must then reveal to the caster all the magic items possessed by the target (if any). If the target has one or more magic items, randomly select one of them – that item is immediately destroyed on the roll of 2+ and cannot be used for the rest of the game. Note that this spell has no effect on magic items that are mounts, magic items that contain bound spells that have miscast during the game, and any magic items labelled as &apos;one use only&apos; that have already been used during the game – do not include these when randomly selecting a magic item.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). The target suffers a single Wound on a dice roll greater than or equal to the model&apos;s unmodified armour save (excluding Natural Armour, models without an armour save cannot be wounded). No armour saves are permitted against a Wound caused by this spell. The owning player must then reveal to the caster all the magic items possessed by the target (if any). If the target has one or more magic items, select one of them – on the roll of 2+, that item is immediately destroyed and cannot be used for the rest of the game.</characteristic>
       </characteristics>
     </profile>
     <profile id="53b3-8ab8-e5dc-c640" name="Contemplations" publicationId="9e23-79cb-pubN77402" page="187" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13392,76 +13673,67 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If a spell from the Lore of High Magic is successfully cast by a Wizard from Warhammer: Lizardmen, the caster can immediately choose a new spell of the same level or lower (Signature Spells can always be chosen) from one of the eight Lores of Magic in the Warhammer rulebook which they can cast for the remainder of the Magic phase. If the Wizard chooses a spell from a different lore, that newly chosen spell will always use that spell lore&apos;s lore attribute.</characteristic>
       </characteristics>
     </profile>
-    <profile id="e957-2176-d2c1-a5d1" name="Drain Magic" publicationId="b724-d2c4-d151-2d9e" page="201, 187" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+    <profile id="e957-2176-d2c1-a5d1" name="Drain Magic" publicationId="9e23-79cb-pubN77092" page="4" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment/Hex</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+/14+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;/12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If the target is a friendly unit, Drain Magic is an augment spell. If the target is an enemy unit, Drain Magic is a hex spell. In either case, all Remains in Play spells affecting the target unit are immediately dispelled, and the effects of all other spells on the target unit immediately come to an end. Boosted version targets all units (friend and foe) within range.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="76b3-39db-a4a7-e39c" name="Fiery Convocation" publicationId="b724-d2c4-d151-2d9e" page="201, 187" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">6</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">19+</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in Play. Every model in the target unit takes a Strength 4 hit with Flaming Attacks. At the end of every subsequent Magic phase, every model in the target unit suffers a Strength 4 hit with Flaming Attacks.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If the target is a friendly unit, Drain Magic is an augment spell. If the target is an enemy unit, Drain Magic is a hex spell. In either case, all Remains in Play spells affecting the target unit are immediately dispelled, and the effects of all other spells on the target unit immediately come to an end.</characteristic>
       </characteristics>
     </profile>
-    <profile id="cf15-4b57-8f5a-e6d9" name="Hand of Glory" publicationId="b724-d2c4-d151-2d9e" page="201, 187" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+    <profile id="76b3-39db-a4a7-e39c" name="Fiery Convocation" publicationId="9e23-79cb-pubN77092" page="4" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+/10+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;/18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit&apos;s M, WS, BS or I (you choose which) is increased by D3 until the start of the caster&apos;s next Magic phase. Boosted version increases all four characteristics (make one roll and apply it to all four characteristics).</characteristic>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in Play. Every model in the target unit takes a Strength 3 hit with the Flaming Attacks special rule. At the end of every subsequent Magic phase, every model in the target unit suffers another hit with the Flaming Attacks special rule, with the Strength of each Hit increasing by 1 every time.</characteristic>
       </characteristics>
     </profile>
-    <profile id="ff25-2053-f2fe-dd3b" name="Shield of Saphery" publicationId="9e23-79cb-pubN77092" page="201" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+    <profile id="cf15-4b57-8f5a-e6d9" name="Hand of Glory" publicationId="9e23-79cb-pubN77092" page="4" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target&apos;s Weapon Skill, Ballistic Skill, Initiative or Movement (choose one) is increased by D3 until the start of the caster&apos;s next Magic phase.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="ff25-2053-f2fe-dd3b" name="Shield of Saphery" publicationId="9e23-79cb-pubN77092" page="4" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each time a spell from this lore is successfully cast, the caster and their unit immediately gain a Ward Save (6+) (which can then be increased by further castings thanks to this lore attribute) until the beginning of the caster&apos;s next Magic phase.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each time a spell from the Lore of High Magic is successfully cast, the caster and their unit immediately gain a 6+ Ward save until the beginning of the caster&apos;s next Magic phase. This bonus is cumulative.</characteristic>
       </characteristics>
     </profile>
-    <profile id="6afd-f301-ebb3-e51a" name="Soul Quench" publicationId="b724-d2c4-d151-2d9e" page="201, 187" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+    <profile id="6afd-f301-ebb3-e51a" name="Soul Quench" publicationId="9e23-79cb-pubN77092" page="4" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+/12+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;/18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6/3D6 Strength 4 hits.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="bfdd-7aed-5578-4031" name="Soul Quench (Bound Spell 4+)" publicationId="b724-d2c4-d151-2d9e" page="201, 187" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strength 4 hits.</characteristic>
       </characteristics>
     </profile>
-    <profile id="5259-be66-9299-80a9" name="Tempest" publicationId="b724-d2c4-d151-2d9e" page="201, 187" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+    <profile id="5259-be66-9299-80a9" name="Tempest" publicationId="9e23-79cb-pubN77092" page="4" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">30&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large round template anywhere within 30&quot; of the Wizard – it then scatters D6&quot;. All models hit by the template suffer a Strength 3 hit (models with Fly suffer a Strength 4 hit instead). If a unit suffers any unsaved Wounds from this spell, it suffers a -1 modifier to all To Hit rolls (both shooting and close combat) until the start of the caster&apos;s next Magic phase (shooting attacks that do not use BS must roll 4+ on a D6 before firing, or the shot(s) are lost).</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large round template anywhere within 30&quot; of the Wizard – it then scatters D3&quot;. All models hit by the template suffer a Strength 3 hit (models with the Fly special rule suffer a Strength 4 hit instead). Any unit under the template suffers a -1 modifier to all To Hit rolls (both shooting and close combat) until the start of the caster&apos;s next Magic phase (shooting attacks that do not use Ballistic Skill must roll 4+ on a D6 before firing, or the shot(s) are lost).</characteristic>
       </characteristics>
     </profile>
-    <profile id="82f8-dd54-9293-63b2" name="Walk Between Worlds" publicationId="b724-d2c4-d151-2d9e" page="201, 187" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+    <profile id="82f8-dd54-9293-63b2" name="Walk Between Worlds" publicationId="9e23-79cb-pubN77092" page="4" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+/16+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;/24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single unengaged unit within range. The target gains Ethereal until the end of the phase and can immediately move up to 10&quot;/20&quot; as if it were the Remaining Moves sub-phase.</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains the Ethereal special rule until the end of the phase and can immediately move up to 10&quot; as if it were the Remaining Moves sub-phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="35c2-f26a-2814-dcf4" name="Curse of Years" publicationId="4ff3-b09f-ec27-d6ec" page="4, 44" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13482,29 +13754,11 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strength 4 hits.</characteristic>
       </characteristics>
     </profile>
-    <profile id="b215-84f3-231c-b9df" name="Gaze of Nagash (Bound Spell 4+)" publicationId="10a5-5781-61f5-86ae" page="4" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strength 4 hits.</characteristic>
-      </characteristics>
-    </profile>
     <profile id="90c0-d007-9eda-3ad6" name="Hellish Vigour" publicationId="4ff3-b09f-ec27-d6ec" page="4, 44" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All Undead models in the unit gain Always Strikes First and may re-roll failed To Hit rolls in Close Combat until the start of the caster&apos;s next Magic phase.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="f8fe-06ac-9d38-eb14" name="Hellish Vigour (Bound Spell 4+)" publicationId="10a5-5781-61f5-86ae" page="4" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All Undead models in the unit gain Always Strikes First and may re-roll failed To Hit rolls in Close Combat until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
@@ -13525,18 +13779,6 @@ If the Wizard is in a unit, they can remain within the unit, even though they ar
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+/12+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Brings a unit of Zombies/Skeleton Warriors with shields into play. Roll 2D6+3. This is how many models comprise the new unit.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="dc96-4835-7143-539b" name="Raise Dead (ZP Bound Spell 4+)" publicationId="079e-9b65-30b3-2c59" page="44" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Brings a brand new unit of Zombie Pirate Deckhands into play. Choose a point on the battlefield – that point need not lie in the caster&apos;s line of sight or forward arc. Next, roll 2D6+3. This is how many models comprise the new unit.
-
-When placing this unit, it must be wholly within the spell&apos;s range and at least 1&quot; away from all units, buildings and impassable terrain. It can be placed facing any direction, and in any legal formation, as long as the unit&apos;s front rank contains at least five models. This unit does not have any upgrades or command models. Units summoned by this spell cannot be dispelled, and do not award victory points under any circumstances. Finally, if a summoned unit cannot be placed because there is not enough room, the unit does not enter play at all, though the spell&apos;s lore
-attribute may still apply.</characteristic>
       </characteristics>
     </profile>
     <profile id="e9d3-fbfa-6cd7-032e" name="Raise Dead (ZP)" publicationId="079e-9b65-30b3-2c59" page="44" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -13565,15 +13807,6 @@ attribute may still apply.</characteristic>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets Undead. The target can immediately make a normal move as if it were the Remaining Moves sub-phase (including any Characters in the unit).</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="33ac-cce9-8a53-c1ef" name="Vanhel&apos;s Danse Macabre (Bound Spell 4+)" publicationId="10a5-5781-61f5-86ae" page="4" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets Undead. The target can immediately make a normal move as if it were the Remaining Moves sub-phase (including any Characters in the unit).</characteristic>
       </characteristics>
@@ -13620,15 +13853,6 @@ attribute may still apply.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+/11+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;/48&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit is subject to Always Strikes Last and Random Movement (D6) until the start of the caster&apos;s next Magic phase.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="0f39-2dfe-12ce-91b5" name="Acquiescence (Bound Spell 3+)" publicationId="eee5-f9c5-fa08-3f2e" page="114, 7, 240" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit is subject to Always Strikes Last and Random Movement (D6) until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
@@ -13824,15 +14048,6 @@ In subsequent turns, Kraken&apos;s Pull travels in a random direction and moves 
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). If successfully cast, the target must pass a Leadership test on 3D6. If failed, the target suffers 1 Wound which Ignores Armour saves for every point they failed the Leadership test by.</characteristic>
       </characteristics>
     </profile>
-    <profile id="a012-5764-3f62-c2bb" name="Pavane of Slaanesh (Bound Spell 3+)" publicationId="eee5-f9c5-fa08-3f2e" page="114, 7, 240" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). If successfully cast, the target must pass a Leadership test on their own unmodified Leadership or suffer 1 Wound which Ignores Armour Saves for every point they failed the test by.</characteristic>
-      </characteristics>
-    </profile>
     <profile id="57b2-6f4a-b820-f178" name="Phantasmagoria" publicationId="eee5-f9c5-fa08-3f2e" page="114, 7, 240" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">5</characteristic>
@@ -13867,15 +14082,6 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Inflicts D6 Strength 5 hits. The target unit must then immediately pass a Toughness test or suffer a further D6 Strength 5 hits. The target must keep testing its Toughness in this manner until a test is passed, or the target is removed as a casualty.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="4c78-9e0c-d24a-d6da" name="Rancid Visitations (Bound Spell 5+)" publicationId="eee5-f9c5-fa08-3f2e" page="113, 6, 239" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Inflicts D6 Strength 5 hits. The target unit must then immediately pass a Toughness test or suffer a further D6 Strength 5 hits. The target must keep testing its Toughness in this manner until a test is passed, or the target is removed as a casualty.</characteristic>
       </characteristics>
@@ -14031,13 +14237,6 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Result" typeId="6486-077d-3077-6419">Pick Another: Treat the attack as if the Giant had rolled the Stuff into Bag result, above, and then choose another victim. Roll again on this table to see what the Giant does with it.</characteristic>
       </characteristics>
     </profile>
-    <profile id="210d-ef7e-786e-4ec8" name="Dragon Armour" publicationId="9e23-79cb-pubN77092" page="166" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour">
-      <characteristics>
-        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766"/>
-        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca"/>
-        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Heavy Armour. Dragon armour grants the wearer Immunity (Flaming Attacks).</characteristic>
-      </characteristics>
-    </profile>
     <profile id="c82f-108c-17d8-ecfc" name="Arabyan Steed" publicationId="d221-484d-439d-4310" page="62" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">9</characteristic>
@@ -14107,186 +14306,6 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
     <profile id="2624-b6e6-e171-5b72" name="06 (Animosity Chart)" publicationId="8ada-88a0-cdcd-9b5e" page="60" hidden="false" typeId="9025-f9c9-08a1-7918" typeName="Animosity Chart">
       <characteristics>
         <characteristic name="Result" typeId="fb86-d23a-8886-cc3b">We&apos;ll Show &apos;Em: Pivot the unit on the spot to face the nearest visible enemy unit, and then make a full (non-march) move in a straight line towards it. If there is no visible enemy, the unit must move straight ahead instead. If it is impossible for the unit to pivot to face the closest enemy, it will pivot towards it as far as it can, and will then move as far forward as it can while still keeping the enemy within its forward arc. After the move is complete the unit must immediately declare a charge against the closest visible enemy unit, if it is possible to do so. If the unit cannot declare a charge then it may carry on with the rest of its turn normally, as if it had not yet moved this turn.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="a2ab-616d-3db2-492a" name="Fireball (Bound Spell 4+)" publicationId="9e23-79cb-pubN66727" page="145" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 4 hits.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="1cf4-60b2-c05f-5ce5" name="Transmutation of Lead (Bound Spell 12+)" publicationId="9e23-79cb-pubN66727" page="146" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers a -1 penalty to Hit in close combat and with missile weapons, -1 I and -1 to its armour saves until the start of the caster&apos;s next Magic phase.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="b641-93cc-e21a-b9fc" name="Shem&apos;s Burning Gaze (Bound Spell 4+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 4 hits which count as Flaming Attacks. Against models with Daemonic, Undead or Vampiric, this is increased to 2D6 Hits.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="515a-4044-48ba-a907" name="The Speed of Light (Bound Spell 4+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains Always Strikes First until the start of the caster&apos;s next Magic phase.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="4127-6277-3555-ff27" name="Pha&apos;s Protection (Bound Spell 4+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All attacks against the target unit (shooting or close combat) suffer a -1 penalty To Hit until the start of the caster&apos;s next Magic phase. Shooting attacks that do not use BS must roll 4+ on a D6 before firing, or the shot(s) is lost.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="1059-54cf-60ca-abbb" name="Net of Amyntok (Bound Spell 4+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit must pass a Strength test every time it moves in the Movement phase, shoots or casts spells until the start of the caster&apos;s next Magic phase. If the test is passed, the target acts normally. If the test is failed, the unit is unable to perform the desired action, remaining in place and taking D6 Strength 4 hits. Against models with Daemonic, Undead or Vampiric, this is increased to 2D6 Hits.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="395a-53de-245d-c0d3" name="Light of Battle (Bound Spell 4+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If fleeing, the target rallies immediately. Additionally, the target will pass all Leadership tests (regardless of modifiers) until the start of the caster&apos;s next Magic phase.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="c43f-8a6d-9ec1-f15c" name="Birona&apos;s Timewarp (Bound Spell 4+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit&apos;s M is doubled, its I is raised to 10, and its A is increased by 1 until the start of the caster&apos;s next Magic phase.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="2804-2536-752f-f0ff" name="Banishment (Bound Spell 4+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers 2D6 hits. Against models with Daemonic, Undead or Vampiric, this is increased to 3D6 Hits. The Strength of the hits is equal to 4 plus the number of Wizards that know spells from the Lore of Light within 12&quot; of the caster (not counting the caster them self). Successful Ward Saves taken against Banishment must be re-rolled.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="c5ea-2c79-61b7-d6ee" name="The Enfeebling Foe (Bound Spell 8+)" publicationId="9e23-79cb-pubN66727" page="151" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. All models in the target unit have their Strength reduced by D3 (to a minimum of 1) for the duration of the spell.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="88ed-e199-2942-a431" name="The Withering (Bound Spell 8+)" publicationId="9e23-79cb-pubN66727" page="151" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. All models in the target unit have their Toughness reduced by D3 (to a minimum of 1) for the duration of the spell.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="df8-187e-6984-cac7" name="Regrowth (Bound Spell 7+)" publicationId="9e23-79cb-pubN66727" page="147" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit instantly recovers D3+1 Wounds&apos; worth of models slain earlier in the battle (Cavalry count as 2 models). The wounds in the unit are regained in a strict order. First the musician and then the standard bearer is resurrected, displacing rank-and-file models as required. Then rank-and-file models with multiple Wounds are healed to their starting value. Finally, any remaining wounds resurrect rank and file models (in the case of multiple wound rank and file models, the first resurrected models must be fully healed before another can be resurrected, and so on). These are added to the front or rear of the unit as you wish as long as the unit keeps a legal formation. If the unit already has more than one rank, models can only be added to the rear rank. Regrowth cannot take a unit beyond its starting size, and cannot be used to heal characters or their mounts.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="8115-7fe0-73a6-360c" name="Fireball (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="145" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 4 hits.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="3bd9-27dd-37c2-f2b" name="Searing Doom (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="146" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 hits with Ignores Armour saves and Flaming Attacks. The To Wound score is equal to the unmodified close combat armour save of the target (excluding Natural Armour). Models without an armour save cannot be wounded.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="6264-dcb8-7b47-d645" name="Earth Blood (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="147" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Is cast on the Wizard itself and any unit they are with. The target unit gains Regeneration (5+) until the start of the caster&apos;s next Magic phase. Alternatively, the Wizard can choose to target one unit within 12&quot;. If they do so, the target gains Regeneration (6+) instead of Regeneration (5+).</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="d0e9-ce85-b12a-a614" name="Wyssan&apos;s Wildform (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="123" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit may re-roll failed rolls To Wound in close combat until the start of the caster&apos;s next Magic phase.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="cd6d-c56c-332-533a" name="Iceshard Blizzard (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="149" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers a -1 to their WS, BS and Leadership until the start of the caster&apos;s next Magic phase. Shooting attacks that do not use BS must roll 4+ on a D6 before firing, or the shot(s) is lost. This is an Ice Attack.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="b403-209d-9d3a-eedc" name="Shem&apos;s Burning Gaze (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="150" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 4 hits which count as Flaming Attacks. Against models with Daemonic, Undead or Vampiric, this is increased to 2D6 Hits.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="80be-37ce-4901-6cf9" name="Melkoth&apos;s Mystifying Miasma (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="151" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit&apos;s WS, BS, I or M (you choose which) is reduced by D3 (to a minimum of 1) until the start of the caster&apos;s next Magic phase.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="cb88-b796-3856-9102" name="Spirit Leech (Bound Spell 5+)" publicationId="9e23-79cb-pubN66727" page="152" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). Both caster and target roll a D6 and add their respective unmodified Leadership values. For every point the caster wins by, the target suffers a Wound with the Ignores Armour Saves special rule.</characteristic>
       </characteristics>
     </profile>
     <profile name="Hand of Dust" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="dec1-ac22-9286-efd9" publicationId="4ff3-b09f-ec27-d6ec" page="4, 44">
@@ -15086,6 +15105,66 @@ done so this round. The Bonegrinder Giant automatically wins the combat by 3 poi
     <profile name="06 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="043e-ed32-9b7c-006a" publicationId="9e23-79cb-pubN67565" page="86">
       <characteristics>
         <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3">Crush!: Place the small round template so that it is at least partially covering one or more models in base contact with the Giant, but not the Giant himself. The model under the centre of the template suffers an automatic Strength 10 hit with the Multiple Wounds (D6) special rule. Models around him might get lucky – the Giant&apos;s aim may be off; and only strike them a glancing blow (not that a glancing blow from a Giant is anything to be thankful for). Roll an artillery dice and halve the result – all other models (friendly and enemy) under the template suffer an automatic hit of this Strength. If the roll is a: misfire, the Giant manages to miss the rest of the unit.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="7595-e6e1-4079-a9a0" name="Coruscating Fulcrum" publicationId="9e23-79cb-pubN77092" page="4" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">self</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Cast on the Wizard itself. While the spell is in effect, the Wizard add 12&quot; to the range of all their spells, can draw Line of Sight in any direction and counts as having a Line of Sight value of 5.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="d87c-0394-d4ab-e281" name="Fortune is Fickle" publicationId="9e23-79cb-pubN77092" page="4" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets an enemy wizard. Until the start of the caster&apos;s next Magic phase, whenever the targets roll a double when casting spells, that counts as a Miscast.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="34cd-ed9c-336b-0594" name="Curse of Arrow Attraction" publicationId="9e23-79cb-pubN77092" page="4" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Any missile attacks against the target may re-roll To Hit until the start of the caster&apos;s next Magic phase.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="a668-aea7-fc7c-3b31" name="Unyielding Courage" publicationId="9e23-79cb-pubN77092" page="4" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">self</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Cast on the Wizard itself. All friendly units within 6&quot; gain the Stubborn special rule until the start of the caster&apos;s next
+Magic phase.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="258b-510c-a387-19ad" name="Corporeal Unmaking" publicationId="9e23-79cb-pubN77092" page="4" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 5 Hits which Ignores Armour Saves and Regeneration.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="9d3c-c7f3-e374-745d" name="Elven Steed" publicationId="9e23-79cb-pubN77092" page="20" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+      <characteristics>
+        <characteristic name="M" typeId="09ad-18df-607b-1215">9</characteristic>
+        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+        <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+        <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
