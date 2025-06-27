@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="57" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="58" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publicationDate="07.09.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -7969,7 +7969,21 @@ If you want to make a list using the allied rules, make separate rosters for eac
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Warhorse" hidden="false" id="a7d2-4d12-77bb-99a0" subType="mount" collective="true">
       <infoLinks>
-        <infoLink name="Warhorse" id="1028-04d2-2293-bf84" hidden="false" type="profile" targetId="1c38-2830-10db-579c"/>
+        <infoLink name="Warhorse" id="1028-04d2-2293-bf84" hidden="false" type="profile" targetId="1c38-2830-10db-579c">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
+                <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
+                <modifier type="set" value="" field="a199-f10b-a038-5730"/>
+                <modifier type="set" value="" field="09ad-18df-607b-1215"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="crew" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
+        </infoLink>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Flail" hidden="false" id="d509-46a8-2dc7-0eb9" collective="true">
@@ -8386,7 +8400,21 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <infoLink name="Fear" id="8802-18ce-455b-03ed" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
         <infoLink name="Natural Armour (6+)" id="6eb6-3c47-52a9-56aa" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
         <infoLink name="Stupidity" id="b642-3a4e-290f-0ea9" hidden="false" targetId="755c-61c2-fa25-f4ce" type="rule"/>
-        <infoLink name="Cold One" id="c2ee-bfa7-7f15-e8b7" hidden="false" targetId="be87-1185-25f0-2de4" type="profile"/>
+        <infoLink name="Cold One" id="c2ee-bfa7-7f15-e8b7" hidden="false" targetId="be87-1185-25f0-2de4" type="profile">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
+                <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
+                <modifier type="set" value="" field="a199-f10b-a038-5730"/>
+                <modifier type="set" value="" field="09ad-18df-607b-1215"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="crew" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="(Mount)" hidden="false" id="a5BN-nEPG-i4j3-5qeA" targetId="(Mount)" primary="false"/>
@@ -8591,7 +8619,7 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
         <infoLink name="Stubborn" id="565d-afd8-caa8-7480" hidden="false" targetId="d56e-8ec7-dbcd-aeee" type="rule"/>
         <infoLink name="Immunity (Psychology)" id="9191-a0a4-41d9-5f2c" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
         <infoLink name="03 (Pick Up and...)" id="e30a-87b6-69b8-a329" hidden="false" targetId="f05e-b4ef-d493-96f3" type="profile"/>
-        <infoLink name="04 (Pick Up and...)" id="fb54-bddf-c6dc-5dc2" hidden="false" targetId="af1a-be06-2fc6-a34f" type="profile"/>
+        <infoLink name="04-05 (Pick Up and...)" id="fb54-bddf-c6dc-5dc2" hidden="false" targetId="af1a-be06-2fc6-a34f" type="profile"/>
         <infoLink name="06 (Pick Up and...)" id="8956-459e-524c-d47c" hidden="false" targetId="985e-ec4a-2847-118b" type="profile"/>
         <infoLink name="02 (Pick Up and...)" id="1279-a72e-b1d7-75c3" hidden="false" targetId="8845-1216-ef80-8109" type="profile"/>
       </infoLinks>
@@ -8643,6 +8671,52 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
           </constraints>
         </entryLink>
       </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Hand Weapon &amp; Shield" hidden="false" id="8613-9419-33a1-5aaf" collective="true">
+      <infoLinks>
+        <infoLink name="Hand Weapon" id="530c-eb28-4bce-f897" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
+        <infoLink name="Shield" id="3560-32e1-5fa3-17eb" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6688-fbd9-3fae-e968"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Spear &amp; Shield" hidden="false" id="aaa7-e3bd-6fea-79c2" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5a08-e3c6-6044-02f3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Spear" id="f975-6dae-c4fe-d412" hidden="false" type="profile" targetId="be39-37ac-ac20-5053"/>
+        <infoLink name="Shield" id="2681-2c50-d382-e868" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Light Lance &amp; Shield" hidden="false" id="a50e-145b-8639-0387" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="45ce-82a5-f6b8-bbec" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Light Lance" id="c6df-159c-6f81-50f5" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb"/>
+        <infoLink name="Shield" id="f64d-c789-8bae-1d4d" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="add" value="{this} is not allowed if not mounted" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="parent" childId="a50e-145b-8639-0387" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>

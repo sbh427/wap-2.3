@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="aea5-0b49-3f3d-0e16" name="Orcs &amp; Goblins wap-fr EN 2.3" revision="45" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="aea5-0b49-3f3d-0e16" name="Orcs &amp; Goblins wap-fr EN 2.3" revision="46" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <profileTypes>
     <profileType id="bf00-3101-4063-678b" name="Animosity Table">
@@ -1189,15 +1189,13 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
                 <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
                 <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
                 <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Forest Goblin)</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Goblin)</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="4bbc-2108-b8c8-abb7" name="Fear Elves" hidden="false" targetId="8568-17b2-9805-2665" type="rule"/>
             <infoLink id="a91a-111e-5db8-f6a4" name="Animosity" hidden="false" targetId="cd91-cbe9-af5c-3d55" type="rule"/>
             <infoLink id="ee7c-c436-a5d8-abaa" name="Fast Cavalry" hidden="false" targetId="8877-a5de-cc9c-9142" type="rule"/>
-            <infoLink name="Poisoned Attacks" id="257a-798e-ca36-9308" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule"/>
             <infoLink name="Ambushers" id="2693-53f5-dd39-36bf" hidden="true" type="rule" targetId="f366-0f91-841f-cf80">
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
@@ -1227,7 +1225,7 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
             </infoLink>
           </infoLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup id="3a39-0934-e467-6d7f" name="Equipment" hidden="false" collective="false" import="true" sortIndex="2">
+            <selectionEntryGroup id="3a39-0934-e467-6d7f" name="Equipment" hidden="false" collective="false" import="true" sortIndex="3">
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="de34-db98-3ba9-3321" type="min"/>
               </constraints>
@@ -1254,15 +1252,21 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
             <cost name="pts" typeId="points" value="11"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="57b0-30ff-002f-9fc4" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="57b0-30ff-002f-9fc4" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="2">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2110-decd-dd52-bd45"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Giant Spider" hidden="false" id="c38b-3656-1563-7b64" type="selectionEntry" targetId="1bca-95b4-30e5-1d1c">
+            <entryLink import="true" name="Giant Spider" hidden="false" id="c38b-3656-1563-7b64" type="selectionEntry" targetId="1bca-95b4-30e5-1d1c" sortIndex="4">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="25f1-5007-5b48-8b1b-min"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="25f1-5007-5b48-8b1b-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Forest Goblin" hidden="false" id="e770-0d05-9142-7a43" type="selectionEntry" targetId="1452-72a8-f5d5-225f" sortIndex="1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="df63-3f8c-43ee-42f4-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="df63-3f8c-43ee-42f4-max"/>
               </constraints>
             </entryLink>
           </entryLinks>
@@ -7235,9 +7239,6 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
       </costs>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Orc Boar Chariot" hidden="false" id="7b2c-d7e5-2911-f0e9" collective="false">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="48cd-2b43-1e2b-5c99" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
       <infoLinks>
         <infoLink name="Orc Boar Chariot" id="4251-ddab-184d-1c42" hidden="false" targetId="70e5-fd20-6b1d-1889" type="profile"/>
       </infoLinks>
@@ -7293,9 +7294,6 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Goblin Wolf Chariot" hidden="false" id="a32b-d76f-1d6a-9339" collective="false">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c15b-057a-24b2-453a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
       <infoLinks>
         <infoLink name="Goblin Wolf Chariot" id="d0b8-2884-5c23-db63" hidden="false" targetId="13dd-ee68-6b4f-ef1b" type="profile"/>
       </infoLinks>
@@ -10218,7 +10216,21 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="631c-ef7b-6fc2-8a78" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="War Boar" id="baf4-4b4b-351f-ec80" hidden="false" targetId="e5ff-5bf1-2cf1-e269" type="profile"/>
+        <infoLink name="War Boar" id="baf4-4b4b-351f-ec80" hidden="false" targetId="e5ff-5bf1-2cf1-e269" type="profile">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
+                <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
+                <modifier type="set" value="" field="a199-f10b-a038-5730"/>
+                <modifier type="set" value="" field="09ad-18df-607b-1215"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="crew" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
+        </infoLink>
         <infoLink name="Natural Armour (6+)" id="869d-0422-5345-4d90" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
         <infoLink name="Mighty Blow (1)" id="7695-1e33-42e2-44a0" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
       </infoLinks>
@@ -10382,7 +10394,7 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Common Orc)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Common Orc</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -10575,7 +10587,21 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Giant Wolf" hidden="false" id="96e3-75e1-fef2-bb2e" collective="true" subType="mount">
       <infoLinks>
-        <infoLink name="Giant Wolf" id="1e5f-4509-4fb7-402b" hidden="false" targetId="c9fd-63d4-3152-6f25" type="profile"/>
+        <infoLink name="Giant Wolf" id="1e5f-4509-4fb7-402b" hidden="false" targetId="c9fd-63d4-3152-6f25" type="profile">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
+                <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
+                <modifier type="set" value="" field="a199-f10b-a038-5730"/>
+                <modifier type="set" value="" field="09ad-18df-607b-1215"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="crew" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="(Mount)" hidden="false" id="5b53-52da-ed2b-e6d2" targetId="(Mount)" primary="false"/>
@@ -10629,7 +10655,6 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
     <selectionEntry type="model" import="true" name="Goblin Crew" hidden="false" id="4fcb-cdc0-35b1-d835" collective="false" subType="crew">
       <infoLinks>
         <infoLink name="Fear Elves" id="b639-f02e-514f-df8d" hidden="false" targetId="8568-17b2-9805-2665" type="rule"/>
-        <infoLink name="Goblin Crew" id="d470-07db-6bf3-02a4" hidden="false" targetId="a192-80fe-be85-1f28" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="3"/>
@@ -10649,6 +10674,22 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
         <entryLink import="true" name="Shortbow" hidden="false" id="64d8-9c55-add5-6222" type="selectionEntry" targetId="b2c6-18cc-9482-8f48"/>
       </entryLinks>
       <comment>Chariot</comment>
+      <profiles>
+        <profile name="Goblin Crew" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="a090-cae6-ab06-ad1f" publicationId="9e23-79cb-pubN78975" page="134">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Common Goblin</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Arachnarok Spider" hidden="false" id="7c19-6488-9604-e1d2" collective="false" subType="mount">
       <infoLinks>
@@ -10835,7 +10876,6 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
         <constraint type="max" value="3" field="selections" scope="parent" shared="false" id="a3c6-969e-077b-e5b3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Goblin Crew" id="aa10-5f3d-061f-306a" hidden="false" targetId="a192-80fe-be85-1f28" type="profile"/>
         <infoLink name="Fear Elves" id="938c-ac00-49af-9166" hidden="false" targetId="8568-17b2-9805-2665" type="rule"/>
       </infoLinks>
       <costs>
@@ -10849,6 +10889,22 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
         </entryLink>
       </entryLinks>
       <comment>War Machine</comment>
+      <profiles>
+        <profile name="Goblin Crew" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="a192-80fe-be85-1f28" publicationId="9e23-79cb-pubN78975" page="134">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Common Goblin</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Brute" hidden="false" id="e588-cae3-5e34-71e8" subType="crew">
       <infoLinks>
@@ -14329,20 +14385,6 @@ must roll on the Animosity table.</description>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour save 6+)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="a192-80fe-be85-1f28" name="Goblin Crew" publicationId="9e23-79cb-pubN78975" page="134" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Common Goblin)</characteristic>
       </characteristics>
     </profile>
     <profile id="7f15-453f-0862-37e8" name="Arachnarok Spider" publicationId="9e23-79cb-pubN78975" page="162" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">

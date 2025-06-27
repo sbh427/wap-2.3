@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1194-2922-b8ab-2f1d" name="Dark Elves wap-fr EN 2.3" revision="43" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="1194-2922-b8ab-2f1d" name="Dark Elves wap-fr EN 2.3" revision="44" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <profileTypes>
     <profileType id="4d67-b1d7-6891-ce0e" name="Gift of Khaine">
@@ -346,11 +346,7 @@
         </entryLink>
         <entryLink import="true" name="Magic Items &amp; Gifts of Khaine" hidden="false" id="2f69-bee3-3833-9260" type="selectionEntryGroup" targetId="7985-79f4-81f6-4db5" sortIndex="5">
           <modifiers>
-            <modifier type="increment" value="100" field="7ace-31ce-dbd3-026e">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
+            <modifier type="increment" value="100" field="7ace-31ce-dbd3-026e"/>
           </modifiers>
         </entryLink>
       </entryLinks>
@@ -578,7 +574,11 @@
         </entryLink>
         <entryLink import="true" name="Magic Items" hidden="false" id="491c-79d5-4ae8-a5db" type="selectionEntryGroup" targetId="e04a-3fa9-8b73-b6ff" sortIndex="8">
           <modifiers>
-            <modifier type="increment" value="50" field="d2f8-929f-b3e7-a3f7"/>
+            <modifier type="increment" value="50" field="d2f8-929f-b3e7-a3f7">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="9519-df8f-0af4-1995" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
             <modifier type="set" value="25" field="d2f8-929f-b3e7-a3f7">
               <conditions>
                 <condition type="equalTo" value="1" field="selections" scope="parent" childId="9519-df8f-0af4-1995" shared="true" includeChildSelections="true"/>
@@ -884,10 +884,10 @@
           <modifiers>
             <modifier type="increment" value="50" field="7ace-31ce-dbd3-026e">
               <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="9519-df8f-0af4-1995" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
-            <modifier type="set" value="25" field="d2f8-929f-b3e7-a3f7">
+            <modifier type="set" value="25" field="7ace-31ce-dbd3-026e">
               <conditions>
                 <condition type="equalTo" value="1" field="selections" scope="parent" childId="9519-df8f-0af4-1995" shared="true" includeChildSelections="true"/>
               </conditions>
@@ -1381,187 +1381,6 @@
                   </constraints>
                 </entryLink>
               </entryLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="2a44-d801-434f-7fcd" name="City Guard" hidden="false" collective="false" import="true" type="unit">
-      <categoryLinks>
-        <categoryLink id="3a59-bf9e-6270-2307" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="7637-851b-8007-06cf" name="City Guard (Crossbow)" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7d85-bb29-a31b-d1ee" type="min"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="8824-e8d4-e43d-3831" name="Elven Grace" hidden="false" targetId="8c96-c7fe-2a85-f2f9" type="rule"/>
-            <infoLink id="3897-e540-3581-a706" name="Murderous Prowess" hidden="false" targetId="1451-9754-507c-44a8" type="rule"/>
-            <infoLink id="6924-7e0b-0cf0-7c35" name="Mixed Formation" hidden="false" targetId="b3ad-14ab-b631-e50d" type="rule"/>
-            <infoLink id="ad54-2518-246e-27cf" name="City Guard" hidden="false" targetId="5f01-04b5-c4a7-b54e" type="profile"/>
-            <infoLink id="bcb6-39fd-3025-d04d" name="Hatred (High Elves)" hidden="false" targetId="a0a3-ddd4-b1ed-1054" type="rule"/>
-          </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="3105-792f-f597-3286" name="Medium Armour" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ace7-f278-afbd-e3e6" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bc35-cf67-6831-5e34" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="6383-778a-1dc8-0453" name="Medium Armour" hidden="false" targetId="6d9a-c9f8-e013-e77f" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="53da-87a0-2ed5-0f91" name="Shield" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="72a9-d8f0-64f7-5c62" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="505e-201a-84a2-2cff" name="Shield" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="60f2-0b51-9629-afa6" name="Hand Weapon" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="27f1-9378-c208-2956" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9584-953a-e418-789f" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="6e19-e708-fbed-d162" name="Hand Weapon" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="974c-0b42-7d21-3ea7" name="Repeater Crossbow" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="df76-73ac-1511-2853" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9280-6f80-1e64-c9f4" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="70a6-1b30-c186-9ab2" name="Hand Weapon" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-                <infoLink id="79ad-5836-db06-5fa1" name="Deathrain Crossbow" hidden="false" targetId="92df-4d61-e793-1d63" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="pts" typeId="points" value="12"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e324-f815-da80-c91a" name="City Guard (Spear)" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1744-6147-f693-c431" type="min"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="b2ad-0e2f-9e8c-ac24" name="Elven Grace" hidden="false" targetId="8c96-c7fe-2a85-f2f9" type="rule"/>
-            <infoLink id="ea06-77a2-de7a-8c5b" name="Murderous Prowess" hidden="false" targetId="1451-9754-507c-44a8" type="rule"/>
-            <infoLink id="aee0-4809-ebed-726e" name="Mixed Formation" hidden="false" targetId="b3ad-14ab-b631-e50d" type="rule"/>
-            <infoLink id="49b6-a252-29fb-527b" name="City Guard" hidden="false" targetId="5f01-04b5-c4a7-b54e" type="profile"/>
-            <infoLink id="49ce-7d96-59f5-25ea" name="Hatred (High Elves)" hidden="false" targetId="a0a3-ddd4-b1ed-1054" type="rule"/>
-          </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="9287-2cb5-3633-1adb" name="Medium Armour" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8c35-4bc5-d1dc-8ee9" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="68db-dea0-4597-d7e5" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="4ef7-f67d-ca2b-bd04" name="Medium Armour" hidden="false" targetId="6d9a-c9f8-e013-e77f" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="d454-a685-58ce-32b7" name="Shield" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f4de-fadb-0295-e76a" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="0400-813e-45ff-7812" name="Shield" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="7adf-5beb-7f93-18a2" name="Spear (On Foot)" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="04eb-f3d9-1cee-58c1" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fd9d-61d2-70e4-a587" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="4568-2317-d213-0036" name="Spear" hidden="false" targetId="be39-37ac-ac20-5053" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="pts" typeId="points" value="9"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="654e-6572-2f79-adb5" name="Command Group" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="bbc3-7a4b-6084-0911" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0b6e-3e07-8765-77f3" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="21bb-1ea1-418c-3c63" name="Standard Bearer" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
-              </infoLinks>
-              <selectionEntries>
-                <selectionEntry id="2e4e-a82a-50ce-ca9c" name="Magic Standards" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="09be-a640-3c15-2a41" type="max"/>
-                    <constraint field="points" scope="parent" value="25" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e276-1671-f327-9144" type="max"/>
-                  </constraints>
-                  <entryLinks>
-                    <entryLink id="fb4b-ca8b-d9b1-5601" name="Magic Standards" hidden="false" collective="false" import="true" targetId="51a1-dbb0-b84e-1038" type="selectionEntryGroup"/>
-                  </entryLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="8449-8211-b732-57e8" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="50de-23b8-d222-3ac7" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="783b-50bb-fd37-6771" name="Musician" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="2c9f-ff16-0741-14f8" name="Lordling" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="548f-5123-4250-3429" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="e75b-9b3a-48fb-82f6" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
-                <infoLink id="3067-1b7e-4034-88fb" name="Lordling" hidden="false" targetId="244e-aa3b-7ee1-bf91" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2317,9 +2136,6 @@
           </constraints>
         </entryLink>
       </entryLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c747-4c62-9d1e-cb78" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
     </selectionEntry>
     <selectionEntry id="2c5a-fd8d-76f0-d0f2" name="Scourgerunner Chariot" hidden="false" collective="false" import="true" type="model">
       <infoLinks>
@@ -4590,11 +4406,7 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
         </entryLink>
         <entryLink import="true" name="Magic Items" hidden="false" id="1807-dee4-01d8-2233" type="selectionEntryGroup" targetId="e04a-3fa9-8b73-b6ff" sortIndex="4">
           <modifiers>
-            <modifier type="increment" value="50" field="d2f8-929f-b3e7-a3f7">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
+            <modifier type="increment" value="50" field="d2f8-929f-b3e7-a3f7"/>
           </modifiers>
         </entryLink>
       </entryLinks>
@@ -4682,105 +4494,6 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="190"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="de1c-e943-5bd7-c601" name="Melusai Steelscale" hidden="false" collective="false" import="true" type="model">
-      <profiles>
-        <profile id="1a74-8a71-fa57-2d3d" name="Melusai Steelscale" publicationId="9e23-79cb-pubN76150" page="138" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559">7</characteristic>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">6</characteristic>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322">8</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Large Infantry (Character)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <rules>
-        <rule id="1011-3460-b031-8bef" name="Gory Offering" publicationId="9e23-79cb-pubN76150" page="143" hidden="false">
-          <description>If any enemy models are slain by a Melusai Ironscale in close combat, any Melusai in the same unit as her gain Frenzy for the remainder of the close combat phase.</description>
-        </rule>
-        <rule id="dabc-4f4f-6796-ad55" name="Wrath of the Melusai" publicationId="9e23-79cb-pubN76150" page="143" hidden="false">
-          <description>Any unit of Melusai joined by a Melusai Ironscale can re-roll failed charge and pursue distances.</description>
-        </rule>
-      </rules>
-      <infoLinks>
-        <infoLink id="8800-3822-c33a-2805" name="Murderous Prowess" hidden="false" targetId="1451-9754-507c-44a8" type="rule"/>
-        <infoLink id="3889-738e-5b90-10c0" name="Elven Grace" hidden="false" targetId="8c96-c7fe-2a85-f2f9" type="rule"/>
-        <infoLink id="99de-03a0-f6d3-4ed5" name="Magic Resistance (1)" hidden="false" targetId="7ed4-9d31-09c3-6bf9" type="rule"/>
-        <infoLink id="a425-39f7-9ae1-5cb0" name="Killing Blow" hidden="false" targetId="a711-7cf6-cd2b-1d29" type="rule"/>
-        <infoLink id="b012-a596-a3ee-6d0d" name="Khainite" hidden="false" targetId="fb7f-921b-b1e1-a5e7" type="rule"/>
-        <infoLink id="48e6-cfd5-199b-ee71" name="Hatred (Slaanesh)" hidden="false" targetId="b6f8-9d4f-4c93-cb8b" type="rule"/>
-        <infoLink id="459b-ebfc-17fd-d7f7" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink id="b6a4-e1c7-af27-08a2" name="Lords" hidden="false" targetId="d280-b7df-c185-2ba5" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="f29b-1e6c-d1ed-6363" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6edc-8d90-f8f6-0286" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="3217-66d4-9eef-1789" name="Light Armour" hidden="false" targetId="4129-1acd-3564-d3ea" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="2"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="17ff-ffbb-1701-6a31" name="Keldrisaíth" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cff1-df10-5959-d699" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4ed3-710c-2c1e-270e" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="fe7d-a562-3652-3ee7" name="Keldrisaíth (Combat)" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="59f2-3142-82d5-4f43"/>
-                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Polearm/Halberd.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="0ea8-9d96-d35f-433e" name="Keldrisaíth (Shooting)" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="59f2-3142-82d5-4f43">24&quot;</characteristic>
-                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Killing Blow. Magical Attacks. Multiple Shots (2). Quick to Fire.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="eb3c-ece6-c11a-fbf7" name="Gifts of Khaine and Magic Items" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6e82-847b-0ad1-8ee6" type="max"/>
-            <constraint field="points" scope="parent" value="100" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="4a8e-ba76-dd25-05ea" type="max"/>
-          </constraints>
-          <entryLinks>
-            <entryLink id="80f2-d7a3-95cb-6829" name="Enchanted Items" hidden="false" collective="false" import="true" targetId="ab8c-5b16-b817-8e8b" type="selectionEntryGroup"/>
-            <entryLink id="ba75-e19f-6a59-03ef" name="Talismans" hidden="false" collective="false" import="true" targetId="4532-6583-16b4-4c92" type="selectionEntryGroup"/>
-            <entryLink id="56af-850c-5066-62fd" name="Magic Weapons" hidden="false" collective="false" import="true" targetId="9d45-9519-de85-24bc" type="selectionEntryGroup"/>
-            <entryLink id="0cad-e09e-7115-23cd" name="Magic Armour" hidden="false" collective="false" import="true" targetId="a31f-8c65-324b-4b37" type="selectionEntryGroup"/>
-            <entryLink id="a73e-bd55-d1f1-088d" name="Gifts of Khaine" hidden="false" collective="false" import="true" targetId="f310-9ba8-f900-e01d" type="selectionEntryGroup"/>
-          </entryLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink id="80b6-6d7b-0dea-3dac" name="Warrior Familiar" hidden="false" collective="false" import="true" targetId="6ba4-68a0-cd51-88ce" type="selectionEntry"/>
-        <entryLink id="df71-0232-f258-7ef0" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="275"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="8193-390d-4fde-0001" name="Shadowstalkers" hidden="false" collective="false" import="true" type="unit">
@@ -5529,7 +5242,21 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Dark Steed" hidden="false" id="044f-3175-ae8b-a01f" collective="false" subType="mount">
       <infoLinks>
-        <infoLink name="Dark Steed" id="f52d-36f1-3f4f-fafe" hidden="false" targetId="47f9-c021-c0f9-abc8" type="profile"/>
+        <infoLink name="Dark Steed" id="f52d-36f1-3f4f-fafe" hidden="false" targetId="47f9-c021-c0f9-abc8" type="profile">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
+                <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
+                <modifier type="set" value="" field="a199-f10b-a038-5730"/>
+                <modifier type="set" value="" field="09ad-18df-607b-1215"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="crew" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="(Mount)" hidden="false" id="1B23-MeWX-MjPt-3uZT" targetId="(Mount)" primary="false"/>
@@ -5609,23 +5336,16 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
         <infoLink name="Poisoned Attacks" id="f814-e32f-a943-1406" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule"/>
         <infoLink name="Hatred (High Elves)" id="ed5a-7098-e37f-9674" hidden="false" targetId="a0a3-ddd4-b1ed-1054" type="rule"/>
       </infoLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Two/Additional Hand Weapons" hidden="false" id="1a26-ce98-2f4d-0f07" collective="true">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="c129-6b47-9cbb-abe6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="047a-b52f-a0d4-e956" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Two/Additional Hand Weapons" id="ef81-2613-536e-e3c4" hidden="false" targetId="4a5d-0b6d-f6ac-fd7d" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="abd5-091d-11b8-06c2" type="selectionEntry" targetId="7617-f4b5-02ac-3d15">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7512-2d61-216f-8606"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Beastmaster Crew" hidden="false" id="40a5-1d11-f6ff-9626" collective="false" subType="crew">
       <infoLinks>
@@ -7743,7 +7463,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">(Dark Elf)</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Dark Elf</characteristic>
       </characteristics>
     </profile>
     <profile id="716e-e63c-ea9b-0ace" name="Cauldron of Blood" publicationId="9e23-79cb-pubN76150" page="32" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
@@ -7771,7 +7491,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459"/>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Dark Elf</characteristic>
       </characteristics>
     </profile>
     <profile id="055a-8484-ac61-b2ce" name="Beastmaster Crew" publicationId="9e23-79cb-pubN76150" page="118" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">

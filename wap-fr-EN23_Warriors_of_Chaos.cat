@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ce3b-bf93-496e-a65c" name="Warriors of Chaos wap-fr EN 2.3" revision="41" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="ce3b-bf93-496e-a65c" name="Warriors of Chaos wap-fr EN 2.3" revision="42" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <profileTypes>
     <profileType id="49dc-2fd8-b942-dbc2" name="Chaos Mutations and Powers">
@@ -414,36 +414,20 @@
                 <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
                 <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
                 <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Normal Cavalry (human)</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (human)</characteristic>
               </characteristics>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="increment" value="1" field="edd2-7979-54a4-6b35"/>
+                    <modifier type="increment" value="1" field="7cca-e51f-edc2-7322"/>
+                    <modifier type="set" value="Marauder Horseman Champion" field="name"/>
+                  </modifiers>
                   <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="unit" childId="eb41-e4ed-e619-75ef" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="unit" childId="3f58-8a52-3de3-175f" shared="true" includeChildSelections="true"/>
                   </conditions>
-                </modifier>
-              </modifiers>
-            </profile>
-            <profile name="Marauder Horseman Champions" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="9fc3-e1f4-93dd-8013" publicationId="1a01-044f-047b-618f" page="29">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Normal Cavalry (Human)</characteristic>
-              </characteristics>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="eb41-e4ed-e619-75ef" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </profile>
           </profiles>
           <infoLinks>
@@ -457,17 +441,17 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="299c-670f-789b-1e4a" type="min"/>
               </constraints>
               <entryLinks>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="1ef7-5ae5-1cc5-7343" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
                 <entryLink import="true" name="Flail" hidden="false" id="0408-6d27-fe32-d9f9" type="selectionEntry" targetId="d509-46a8-2dc7-0eb9" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Light Lance" hidden="false" id="c6c4-ae19-a76d-ecfa" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="3">
+                <entryLink import="true" name="Light Lance &amp; Shield" hidden="false" id="c6c4-ae19-a76d-ecfa" type="selectionEntry" targetId="a50e-145b-8639-0387" sortIndex="3" collective="false">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
                 </entryLink>
+                <entryLink import="true" name="Hand Weapon &amp; Shield" hidden="false" id="ef6e-aa8f-0a1d-fdda" type="selectionEntry" targetId="8613-9419-33a1-5aaf" sortIndex="1"/>
               </entryLinks>
             </selectionEntryGroup>
             <selectionEntryGroup id="8c49-cfeb-212d-094e" name="Secondary Weapon" hidden="false" collective="false" import="true" sortIndex="3">
@@ -536,7 +520,7 @@
                   <modifiers>
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="unit" childId="eb41-e4ed-e619-75ef" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="unit" childId="3b06-f9eb-1580-7397" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
                   </modifiers>
@@ -548,19 +532,7 @@
             <cost name="pts" typeId="points" value="12"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Shield" hidden="false" id="e66a-d552-7123-1576" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="5">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="d509-46a8-2dc7-0eb9" shared="true" includeChildSelections="false"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d3db-6c7f-0d73-c368"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Warhorse" hidden="false" id="fdb7-f2b3-35b6-cdf8" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0" sortIndex="6">
+            <entryLink import="true" name="Warhorse" hidden="false" id="fdb7-f2b3-35b6-cdf8" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0" sortIndex="5">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="650f-fbf0-7631-ad86-min"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="650f-fbf0-7631-ad86-max"/>
@@ -568,40 +540,12 @@
             </entryLink>
           </entryLinks>
           <modifiers>
-            <modifier type="set" value="Marauder Horseman Champion" field="name">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="unit" childId="eb41-e4ed-e619-75ef" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Marauder Champions" hidden="false" id="eb41-e4ed-e619-75ef">
-          <modifiers>
             <modifier type="increment" value="2" field="points">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="acdd-a2c9-0fd3-8d3d" shared="true" roundUp="false" includeChildSelections="true"/>
-              </repeats>
-            </modifier>
-            <modifier type="decrement" value="1" field="164c-d06e-0e93-ece5">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="force" childId="3f58-8a52-3de3-175f" shared="true" roundUp="false" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="increment" value="1" field="164c-d06e-0e93-ece5">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="force" childId="2ff2-4b7c-b337-1fa7" shared="true" roundUp="false" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="set" field="164c-d06e-0e93-ece5" value="-1">
               <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="force" childId="8ceb-a110-4174-2796" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="unit" childId="3f58-8a52-3de3-175f" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
-          <constraints>
-            <constraint type="max" value="0" field="selections" scope="force" shared="true" id="164c-d06e-0e93-ece5" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b47f-6569-8ae6-752a"/>
-          </constraints>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -653,6 +597,9 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Marauder Champions" hidden="false" id="3b06-f9eb-1580-7397" type="selectionEntry" targetId="3f58-8a52-3de3-175f"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry id="8cdb-f7a0-9ebc-1109" name="Chaos Warhounds" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -1088,12 +1035,12 @@
         <categoryLink id="958a-f578-88f0-7d74" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="5568-54a0-26f8-c6e8" name="Marauder" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="5568-54a0-26f8-c6e8" name="Marauder" hidden="false" collective="false" import="true" type="model" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c7c2-1191-5bcc-53dc" type="min"/>
           </constraints>
           <profiles>
-            <profile id="ee4c-32e5-4ea3-0abc" name="Marauder" publicationId="1a01-044f-047b-618f" page="173" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+            <profile id="ee4c-32e5-4ea3-0abc" name="Marauder" publicationId="1a01-044f-047b-618f" page="29" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
               <characteristics>
                 <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
                 <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
@@ -1104,36 +1051,20 @@
                 <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
                 <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
                 <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Normal Infantry (Human)</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Human)</characteristic>
               </characteristics>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="increment" value="1" field="edd2-7979-54a4-6b35"/>
+                    <modifier type="increment" value="1" field="7cca-e51f-edc2-7322"/>
+                    <modifier type="set" value="Marauder Champion" field="name"/>
+                  </modifiers>
                   <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="unit" childId="eb41-e4ed-e619-75ef" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="unit" childId="3f58-8a52-3de3-175f" shared="true" includeChildSelections="true"/>
                   </conditions>
-                </modifier>
-              </modifiers>
-            </profile>
-            <profile name="Marauder Champions" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="1c54-2464-ea44-eca1" publicationId="1a01-044f-047b-618f" page="29">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Normal Infantry (Human)</characteristic>
-              </characteristics>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="eb41-e4ed-e619-75ef" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </profile>
           </profiles>
           <infoLinks>
@@ -1151,11 +1082,6 @@
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Spear" hidden="false" id="143a-238c-a633-3117" type="selectionEntry" targetId="a901-4548-955d-623c" sortIndex="2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="0.5"/>
-                  </costs>
-                </entryLink>
                 <entryLink import="true" name="Flail" hidden="false" id="8b0d-e1cc-6d71-6d16" type="selectionEntry" targetId="d509-46a8-2dc7-0eb9" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
@@ -1166,7 +1092,12 @@
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="483b-8a53-7df4-8f99" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+                <entryLink import="true" name="Hand Weapon &amp; Shield" hidden="false" id="9034-ee46-537b-c208" type="selectionEntry" targetId="8613-9419-33a1-5aaf" sortIndex="1"/>
+                <entryLink import="true" name="Spear &amp; Shield" hidden="false" id="ac96-ffd9-3888-8f3a" type="selectionEntry" targetId="aaa7-e3bd-6fea-79c2" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0.5"/>
+                  </costs>
+                </entryLink>
               </entryLinks>
             </selectionEntryGroup>
             <selectionEntryGroup name="Mark of Chaos" id="12a3-4498-693c-5399" hidden="false" collective="false" import="true" sortIndex="1">
@@ -1210,6 +1141,13 @@
                   <costs>
                     <cost name="pts" typeId="points" value="1.5"/>
                   </costs>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="unit" childId="3f58-8a52-3de3-175f" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </entryLink>
               </entryLinks>
             </selectionEntryGroup>
@@ -1217,64 +1155,17 @@
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <entryLinks>
-            <entryLink import="true" name="Shield" hidden="false" id="cba2-fd48-369f-4a0c" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="4">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="a658-337d-0cbd-a38c" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="a901-4548-955d-623c" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-          <modifiers>
-            <modifier type="set" value="Marauder Champion" field="name">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="unit" childId="eb41-e4ed-e619-75ef" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Marauder Champions" hidden="false" id="3f58-8a52-3de3-175f">
           <modifiers>
             <modifier type="increment" value="2" field="points">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="acdd-a2c9-0fd3-8d3d" shared="true" roundUp="false" includeChildSelections="true"/>
-              </repeats>
-            </modifier>
-            <modifier type="decrement" value="1" field="cc45-d96f-81d1-f62f">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="force" childId="eb41-e4ed-e619-75ef" shared="true" roundUp="false" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="increment" value="1" field="cc45-d96f-81d1-f62f">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="force" childId="2ff2-4b7c-b337-1fa7" shared="true" roundUp="false" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="set" field="cc45-d96f-81d1-f62f" value="-1">
               <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="force" childId="8ceb-a110-4174-2796" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="unit" childId="3f58-8a52-3de3-175f" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
-          <constraints>
-            <constraint type="max" value="0" field="selections" scope="force" shared="true" id="cc45-d96f-81d1-f62f" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e174-d4c6-ce04-7918"/>
-          </constraints>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="7a66-a761-58db-b2e7" name="Command Group" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="7a66-a761-58db-b2e7" name="Command Group" hidden="false" collective="false" import="true" sortIndex="3">
           <selectionEntries>
             <selectionEntry id="7011-f783-be42-a0b0" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
@@ -1322,6 +1213,9 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Marauder Champions" hidden="false" id="60e2-8b08-9540-6345" type="selectionEntry" targetId="3f58-8a52-3de3-175f" sortIndex="1"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry id="c767-b0ed-defe-70dc" name="Chaos Cultists" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -3173,7 +3067,12 @@
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c465-3d7b-6a3f-00bc"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Juggernaut of Khorne" hidden="false" id="c941-508d-bffb-5855" type="selectionEntry" targetId="4c0a-27d1-5a06-bbe8" sortIndex="4"/>
+            <entryLink import="true" name="Juggernaut of Khorne" hidden="false" id="c941-508d-bffb-5855" type="selectionEntry" targetId="4c0a-27d1-5a06-bbe8" sortIndex="4">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="31bc-b638-c5f7-a336-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="31bc-b638-c5f7-a336-max"/>
+              </constraints>
+            </entryLink>
             <entryLink import="true" name="Mark of Khorne" hidden="false" id="c898-5a7c-f7f7-3f61" type="selectionEntry" targetId="2211-a88b-c358-2e91" sortIndex="5">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="224f-5877-4214-6974-min"/>
@@ -4271,8 +4170,18 @@ If you do not have a spare Daemon Prince model, or if it cannot be placed on the
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6de3-5682-57f0-d98b"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Rot Beast of Nurgle" hidden="false" id="b824-4a5d-30d0-a1e7" type="selectionEntry" targetId="114c-1ea0-c4d4-b734"/>
-            <entryLink import="true" name="Mark of Nurgle" hidden="false" id="3fc4-b440-c8e5-259c" type="selectionEntry" targetId="fce4-1eaa-170d-634c"/>
+            <entryLink import="true" name="Rot Beast of Nurgle" hidden="false" id="b824-4a5d-30d0-a1e7" type="selectionEntry" targetId="114c-1ea0-c4d4-b734">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="883c-e90f-ff61-fb15-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="883c-e90f-ff61-fb15-max"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Mark of Nurgle" hidden="false" id="3fc4-b440-c8e5-259c" type="selectionEntry" targetId="fce4-1eaa-170d-634c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="761c-868a-1392-54da-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="761c-868a-1392-54da-max"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
           <profiles>
             <profile name="Rot Knight" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="7a0f-a6ff-9d45-aeab">
@@ -8409,6 +8318,13 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               <costs>
                 <cost name="pts" typeId="points" value="24"/>
               </costs>
+              <entryLinks>
+                <entryLink import="true" name="Barding" hidden="false" id="3207-fb9e-84da-69da" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
             </entryLink>
             <entryLink import="true" name="Rot Fly of Nurgle" hidden="false" id="9433-c224-ad51-50b4" type="selectionEntry" targetId="3b62-252e-721b-1425" sortIndex="5">
               <costs>
@@ -9201,7 +9117,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
     </selectionEntry>
     <selectionEntry id="185a-6e11-d196-96d8" name="Slickblade Seekers" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink id="6518-5d76-d728-35b5" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
+        <categoryLink name="Rare" hidden="false" id="364f-ded0-37e6-db7d" targetId="0eb4-f376-7725-b05b" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="8085-ae24-4024-671e" name="Slickblade Seeker" hidden="false" collective="false" import="true" type="model">
@@ -9331,7 +9247,21 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
   <sharedSelectionEntries>
     <selectionEntry type="model" import="true" name="Chaos Steed" hidden="false" id="b00b-4a51-ae10-9998" collective="true" subType="mount">
       <infoLinks>
-        <infoLink name="Chaos Steed" id="f1d7-2f56-dea3-323b" hidden="false" targetId="3d10-3e8e-2041-eeb0" type="profile"/>
+        <infoLink name="Chaos Steed" id="f1d7-2f56-dea3-323b" hidden="false" targetId="3d10-3e8e-2041-eeb0" type="profile">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
+                <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
+                <modifier type="set" value="" field="a199-f10b-a038-5730"/>
+                <modifier type="set" value="" field="09ad-18df-607b-1215"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="crew" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="(Mount)" hidden="false" id="79ee-c02d-8c14-4f12" targetId="(Mount)" primary="false"/>
@@ -9367,7 +9297,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditions>
-            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="b570-8e89-e752-8902" shared="true"/>
+            <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -9392,7 +9322,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditions>
-            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="fce4-1eaa-170d-634c" shared="true"/>
+            <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -9410,7 +9340,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditions>
-            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="a5c6-cd36-6ce9-c322" shared="true"/>
+            <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -9446,7 +9376,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditions>
-            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="2211-a88b-c358-2e91" shared="true"/>
+            <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="2211-a88b-c358-2e91" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -9465,7 +9395,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditions>
-            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="fce4-1eaa-170d-634c" shared="true"/>
+            <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -9824,6 +9754,24 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
           </constraints>
         </entryLink>
       </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Marauder Champions" hidden="false" id="3f58-8a52-3de3-175f">
+      <modifiers>
+        <modifier type="increment" value="1" field="cc45-d96f-81d1-f62f">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="force" childId="2ff2-4b7c-b337-1fa7" shared="true" roundUp="false" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="-1" field="cc45-d96f-81d1-f62f">
+          <conditions>
+            <condition type="equalTo" value="1" field="selections" scope="force" childId="8ceb-a110-4174-2796" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="cc45-d96f-81d1-f62f" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e174-d4c6-ce04-7918"/>
+      </constraints>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -15611,7 +15559,7 @@ that do not roll To Hit.</characteristic>
     </profile>
     <profile id="1847-c0e4-4eac-56a7" name="Marauder Charioteer" publicationId="1a01-044f-047b-618f" page="174" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
       <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+        <characteristic name="M" typeId="09ad-18df-607b-1215"/>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
         <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
         <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
