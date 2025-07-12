@@ -12318,6 +12318,9 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
     <rule id="cd03-1b6a-2a80-dd1a" name="Unit Strength (5)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Unit Strength of 5.</description>
     </rule>
+    <rule name="Weapon team" id="409d-a7ab-f540-c35c" hidden="false" publicationId="9e23-79cb-pubN66727" page="67">
+      <description>If a model with this special rule is hit by a missile attack and is within 3&quot; of a friendly unit consisting of five or more rank and file models of the same troop type within 3&quot;, roll a D6. On a roll of 4+, the hit is transferred to a model in the friendly unit (if there is more than one eligible unit within 3&quot;, the controlling player can decide which). Otherwise, the hit is resolved against the Weapon Team as normal.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="3ecc-5d9c-7d29-ee2f" name="Javelins" publicationId="9e23-79cb-pubN66727" page="81" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
