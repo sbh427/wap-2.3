@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="58" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="59" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publicationDate="07.09.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -7973,10 +7973,10 @@ If you want to make a list using the allied rules, make separate rosters for eac
           <modifierGroups>
             <modifierGroup type="and">
               <modifiers>
-                <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
-                <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
-                <modifier type="set" value="" field="a199-f10b-a038-5730"/>
-                <modifier type="set" value="" field="09ad-18df-607b-1215"/>
+                <modifier type="set" field="df90-5cbd-8cf9-95b2"/>
+                <modifier type="set" field="27ee-0675-122f-a1b1"/>
+                <modifier type="set" field="a199-f10b-a038-5730"/>
+                <modifier type="set" field="09ad-18df-607b-1215"/>
               </modifiers>
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="crew" shared="true" includeChildSelections="true"/>
@@ -8404,10 +8404,10 @@ If you want to make a list using the allied rules, make separate rosters for eac
           <modifierGroups>
             <modifierGroup type="and">
               <modifiers>
-                <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
-                <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
-                <modifier type="set" value="" field="a199-f10b-a038-5730"/>
-                <modifier type="set" value="" field="09ad-18df-607b-1215"/>
+                <modifier type="set" field="df90-5cbd-8cf9-95b2"/>
+                <modifier type="set" field="27ee-0675-122f-a1b1"/>
+                <modifier type="set" field="a199-f10b-a038-5730"/>
+                <modifier type="set" field="09ad-18df-607b-1215"/>
               </modifiers>
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="crew" shared="true" includeChildSelections="true"/>
@@ -8717,6 +8717,22 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
           </conditionGroups>
         </modifier>
       </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Sling" hidden="false" id="72e8-531c-b5af-3b91" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0199-ec62-b303-3ffd" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Sling" id="6335-e388-4e3b-0044" hidden="false" type="profile" targetId="d083-b2f1-d1c5-e4f7"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Blowpipe" hidden="false" id="8f37-a8ec-e1ba-2551" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7085-33f3-1590-2e78" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Blowpipe" id="d6a9-6105-a942-d01f" hidden="false" targetId="f106-ee33-4ec8-292a" type="profile"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -12301,6 +12317,9 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
     </rule>
     <rule id="cd03-1b6a-2a80-dd1a" name="Unit Strength (5)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Unit Strength of 5.</description>
+    </rule>
+    <rule name="Weapon team" id="409d-a7ab-f540-c35c" hidden="false" publicationId="9e23-79cb-pubN66727" page="67">
+      <description>If a model with this special rule is hit by a missile attack and is within 3&quot; of a friendly unit consisting of five or more rank and file models of the same troop type within 3&quot;, roll a D6. On a roll of 4+, the hit is transferred to a model in the friendly unit (if there is more than one eligible unit within 3&quot;, the controlling player can decide which). Otherwise, the hit is resolved against the Weapon Team as normal.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
