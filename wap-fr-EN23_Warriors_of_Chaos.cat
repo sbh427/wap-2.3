@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ce3b-bf93-496e-a65c" name="Warriors of Chaos wap-fr EN 2.3" revision="43" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="ce3b-bf93-496e-a65c" name="Warriors of Chaos wap-fr EN 2.3" revision="44" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <profileTypes>
     <profileType id="49dc-2fd8-b942-dbc2" name="Chaos Mutations and Powers">
@@ -3786,7 +3786,7 @@ Unlike other random movement, an Unbound Slaughterbrute can move into base conta
         <categoryLink id="8626-1cc8-8727-b0b8" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="240"/>
+        <cost name="pts" typeId="points" value="255"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="670b-dfca-1cbd-356a" name="Hellcannon" hidden="false" collective="false" import="true" type="model">
@@ -9243,6 +9243,83 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Dragon Ogres (Shaggoth)" hidden="false" id="d781-5ec4-8381-16d5">
+      <categoryLinks>
+        <categoryLink name="Special" hidden="false" id="5d8a-0763-d2a0-4988" targetId="fc26-7737-f7cb-8977" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Dragon Ogre" hidden="false" id="ab1b-0ac6-0430-cfe4" type="selectionEntry" targetId="7d5f-f65e-9739-0714"/>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Command Group" id="1810-f8b6-0571-33b5" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="b4cb-526d-6152-50ba" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b553-4a6a-07cb-7675" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Leader" id="9fc0-4fe3-93a3-1cf7" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="force" childId="67de-5882-a257-da2e" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="9ac9-5d75-316b-cb1d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="increment" value="1" field="6596-d86c-19e0-1034">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="force" childId="9ac9-5d75-316b-cb1d" shared="true" roundUp="false" includeChildSelections="true"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="6596-d86c-19e0-1034" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Dragon Ogres" hidden="false" id="40ad-4612-7809-d541">
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="fb5d-d4e8-e4c8-25e5" targetId="0eb4-f376-7725-b05b" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Command Group" id="7d32-bf8a-cf7d-5d63" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="f9d1-8b80-0c23-d788" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7da5-8e19-8be8-b461" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Leader" id="5453-d92e-771a-ca37" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Dragon Ogre" hidden="false" id="1325-eda5-d6e8-52b1" type="selectionEntry" targetId="7d5f-f65e-9739-0714"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category">
+          <conditions>
+            <condition type="equalTo" value="1" field="selections" scope="force" childId="67de-5882-a257-da2e" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
     <selectionEntry type="model" import="true" name="Chaos Steed" hidden="false" id="b00b-4a51-ae10-9998" collective="true" subType="mount">
@@ -9535,130 +9612,6 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Dragon Ogres" hidden="false" id="7f65-0c59-2fc4-e4ae" collective="false">
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="Dragon Ogre" hidden="false" id="7d5f-f65e-9739-0714" collective="false">
-          <constraints>
-            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="7477-94c7-7a73-3d2a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Dragon Ogre" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="2a14-dc71-d95e-8ef1" publicationId="1a01-044f-047b-618f" page="201">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">2</characteristic>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Cavalry (Dragon Ogre)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Natural Armour (5+)" id="5ea9-2321-e792-791f" hidden="false" targetId="306d-711a-1300-587f" type="rule"/>
-            <infoLink name="Storm Rage" id="cd1f-0641-0130-a1ae" hidden="false" type="rule" targetId="9cd6-64c7-e7c5-4ef6"/>
-          </infoLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Primary Weapon" id="7801-5fd9-c6a6-d6a5" hidden="false" collective="false" import="true" defaultSelectionEntryId="55a8-a71f-9ed3-0436" sortIndex="1">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="f794-d592-7b4f-d4df-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f794-d592-7b4f-d4df-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Great Weapon" hidden="false" id="bd11-90c4-670c-f719" collective="true" sortIndex="4">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3bf0-a04b-7dd3-a296" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Great Weapon" id="93d6-490a-1a84-de3a" hidden="false" targetId="193e-bc43-b252-8eff" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="9"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Two/Additional Hand Weapons" hidden="false" id="a902-0056-0bb9-1dd3" collective="true" sortIndex="2">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b951-bfaa-85f9-9faf" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Two/Additional Hand Weapons" id="f62d-9b78-5c88-5f80" hidden="false" targetId="4a5d-0b6d-f6ac-fd7d" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="4"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Hand Weapon" hidden="false" id="55a8-a71f-9ed3-0436" collective="true" sortIndex="1">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="bab3-eb01-ebe9-244e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Hand Weapon" id="b705-3602-bc5a-eb1a" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Polearm/Halberd" hidden="false" id="19bc-80a1-d2b8-464d" collective="true" sortIndex="3">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a78f-9840-7172-2159" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Polearm/Halberd" id="9b89-6ab4-f267-acaa" hidden="false" targetId="e43e-5153-eeec-36be" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="6"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-            <selectionEntryGroup name="Armour" id="fabf-375b-bff6-6f30" hidden="false" collective="false" import="true" sortIndex="2">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="1987-17ec-0adb-1e83-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1987-17ec-0adb-1e83-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <entryLinks>
-                <entryLink import="true" name="Light Armour" hidden="false" id="34f0-e9c2-e2f4-5d5d" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="1">
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Medium Armour" hidden="false" id="638b-78b0-41f3-18db" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="8"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="55"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="7d32-bf8a-cf7d-5d63" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="f9d1-8b80-0c23-d788" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7da5-8e19-8be8-b461" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Leader" id="5453-d92e-771a-ca37" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Spawn of Khorne" hidden="false" id="1a77-d1dc-4b1b-c1be" collective="false">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4d51-5a1d-1daa-0039" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9772,6 +9725,106 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <constraint type="max" value="0" field="selections" scope="force" shared="true" id="cc45-d96f-81d1-f62f" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e174-d4c6-ce04-7918"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Dragon Ogre" hidden="false" id="7d5f-f65e-9739-0714" collective="false">
+      <constraints>
+        <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="7477-94c7-7a73-3d2a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Dragon Ogre" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="2a14-dc71-d95e-8ef1" publicationId="1a01-044f-047b-618f" page="201">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">2</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Cavalry (Dragon Ogre)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Natural Armour (5+)" id="5ea9-2321-e792-791f" hidden="false" targetId="306d-711a-1300-587f" type="rule"/>
+        <infoLink name="Storm Rage" id="cd1f-0641-0130-a1ae" hidden="false" type="rule" targetId="9cd6-64c7-e7c5-4ef6"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Primary Weapon" id="7801-5fd9-c6a6-d6a5" hidden="false" collective="false" import="true" defaultSelectionEntryId="55a8-a71f-9ed3-0436" sortIndex="1">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="f794-d592-7b4f-d4df-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f794-d592-7b4f-d4df-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Great Weapon" hidden="false" id="bd11-90c4-670c-f719" collective="true" sortIndex="4">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3bf0-a04b-7dd3-a296" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Great Weapon" id="93d6-490a-1a84-de3a" hidden="false" targetId="193e-bc43-b252-8eff" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="9"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Two/Additional Hand Weapons" hidden="false" id="a902-0056-0bb9-1dd3" collective="true" sortIndex="2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b951-bfaa-85f9-9faf" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Two/Additional Hand Weapons" id="f62d-9b78-5c88-5f80" hidden="false" targetId="4a5d-0b6d-f6ac-fd7d" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="4"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Hand Weapon" hidden="false" id="55a8-a71f-9ed3-0436" collective="true" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="bab3-eb01-ebe9-244e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Hand Weapon" id="b705-3602-bc5a-eb1a" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Polearm/Halberd" hidden="false" id="19bc-80a1-d2b8-464d" collective="true" sortIndex="3">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a78f-9840-7172-2159" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Polearm/Halberd" id="9b89-6ab4-f267-acaa" hidden="false" targetId="e43e-5153-eeec-36be" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="6"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Armour" id="fabf-375b-bff6-6f30" hidden="false" collective="false" import="true" sortIndex="2">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="1987-17ec-0adb-1e83-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1987-17ec-0adb-1e83-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Light Armour" hidden="false" id="34f0-e9c2-e2f4-5d5d" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Medium Armour" hidden="false" id="638b-78b0-41f3-18db" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="8"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="55"/>
+      </costs>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -15803,33 +15856,6 @@ that do not roll To Hit.</characteristic>
     </profile>
   </sharedProfiles>
   <entryLinks>
-    <entryLink import="true" name="Dragon Ogres" hidden="false" id="0b76-f132-e8df-a454" type="selectionEntry" targetId="7f65-0c59-2fc4-e4ae">
-      <categoryLinks>
-        <categoryLink name="Special" hidden="false" id="bb14-a46c-0f89-65fe" targetId="fc26-7737-f7cb-8977" primary="true"/>
-      </categoryLinks>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="872b-7e10-93b4-422d" includeChildSelections="true"/>
-      </constraints>
-      <modifiers>
-        <modifier type="increment" value="1" field="872b-7e10-93b4-422d">
-          <repeats>
-            <repeat value="1" repeats="1" field="selections" scope="force" childId="9ac9-5d75-316b-cb1d" shared="true" roundUp="false" includeChildSelections="true"/>
-          </repeats>
-        </modifier>
-      </modifiers>
-    </entryLink>
-    <entryLink import="true" name="Dragon Ogres" hidden="false" id="cfa5-769b-3eed-7e22" type="selectionEntry" targetId="7f65-0c59-2fc4-e4ae">
-      <categoryLinks>
-        <categoryLink name="Rare" hidden="false" id="d711-69f4-f792-5dab" targetId="0eb4-f376-7725-b05b" primary="true"/>
-      </categoryLinks>
-      <modifiers>
-        <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category">
-          <conditions>
-            <condition type="equalTo" value="1" field="selections" scope="force" childId="67de-5882-a257-da2e" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-    </entryLink>
     <entryLink import="true" name="Giant" hidden="false" id="da2f-9679-12bb-1d51" type="selectionEntry" targetId="ff3c-af52-ca36-3847">
       <selectionEntryGroups>
         <selectionEntryGroup name="Mark of Chaos" id="ace6-7ed6-d025-dc17" hidden="false" collective="false" import="true">
