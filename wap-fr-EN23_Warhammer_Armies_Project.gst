@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="59" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="60" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publicationDate="07.09.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -9207,6 +9207,59 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
         <infoLink name="Blowpipe" id="d6a9-6105-a942-d01f" hidden="false" targetId="f106-ee33-4ec8-292a" type="profile"/>
       </infoLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Extra spell selection" hidden="false" id="c5d0-4769-c76f-2cac">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="621c-3761-7574-7ea5-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="621c-3761-7574-7ea5-max"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Extra Wizard Level" hidden="false" id="0b04-11f6-6811-c5fc">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f8a7-be1d-dd64-87b5-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f8a7-be1d-dd64-87b5-max"/>
+      </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 2" hidden="true" id="e6f8-59ec-ef33-9d57" type="selectionEntry" targetId="801a-bc0a-a767-61db">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="75f5-0e3e-230f-8e82-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="75f5-0e3e-230f-8e82-max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="model-or-unit" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Wizard Level 3" hidden="true" id="f510-8785-c1f1-8844" type="selectionEntry" targetId="1670-dca4-294b-7d9b">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b06e-63d8-a4bc-0f08-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b06e-63d8-a4bc-0f08-max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="model-or-unit" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Wizard Level 4" hidden="true" id="a3fe-303c-df1a-37a2" type="selectionEntry" targetId="5460-3929-58ef-71ba">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ac52-5335-7e8c-4692-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ac52-5335-7e8c-4692-max"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="model-or-unit" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="6cd2-3f4b-da2d-1ee9" name="Common Arcane Items" hidden="false" collective="false" import="true">
@@ -9297,7 +9350,7 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c5d0-4769-c76f-2cac" name="Spell Familiar" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
+        <selectionEntry id="c5d0-4769-c76f-2cad" name="Spell Familiar" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="346a-1b27-22e9-7055" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b465-bf03-8e8a-9b49" type="max"/>
@@ -9312,6 +9365,9 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
+          <entryLinks>
+            <entryLink import="true" name="Extra spell selection" hidden="false" id="9f7f-ca27-79f9-75bb" type="selectionEntry" targetId="c5d0-4769-c76f-2cac"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry id="795a-417c-22af-7999" name="Wizard&apos;s Staff" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
