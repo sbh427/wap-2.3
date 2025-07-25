@@ -9260,6 +9260,98 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
         </entryLink>
       </entryLinks>
     </selectionEntry>
+    <selectionEntry type="model" import="true" name="Great Eagle" hidden="false" id="4790-dfb5-2054-2f88" collective="false" subType="mount">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2b02-590e-20e4-b6c2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Fly (9)" id="381d-cc92-761e-885b" hidden="false" targetId="2ba2-2aaa-3f36-4b24" type="rule"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="3922-9a9c-285a-9357" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Shredding Talons" hidden="false" id="44a5-2f6e-f9f1-d92c" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2dc0-e256-34ae-7677" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+              <rules>
+                <rule name="Shredding Talons" id="9e3d-1310-6e26-37de" hidden="false" publicationId="9e23-79cb-pubN77092" page="21">
+                  <description>The model gains Armour Piercing (1).</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Swiftsense" hidden="false" id="04d5-2f11-c737-152c" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1148-8d47-b33a-6181" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+              <rules>
+                <rule name="Swiftsense" id="dd27-cab8-48e1-6354" hidden="false" publicationId="9e23-79cb-pubN77092" page="21">
+                  <description>The model gains the Always Strikes First special rule in any turn that they charge.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="(Mount)" hidden="false" id="3cfa-4c32-b9c3-508c" targetId="(Mount)" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Great Eagle" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="1ef4-a0a6-240d-c10d" publicationId="9e23-79cb-pubN77092" page="21">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">2</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Animal)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Unicorn" hidden="false" id="1173-189a-7606-0c37" collective="false" subType="mount">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="35a5-8dd0-7403-169e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Magic Resistance (2)" id="f7a0-9739-0265-d018" hidden="false" targetId="0e09-3526-25d5-2646" type="rule"/>
+        <infoLink name="Magical Attacks" id="cd1d-da86-4a3f-e93f" hidden="false" targetId="03db-d81f-f264-84b8" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="(Mount)" hidden="false" id="d197-3a02-e995-b8ab" targetId="(Mount)" primary="false"/>
+      </categoryLinks>
+      <rules>
+        <rule name="Impale" id="0eea-3c8d-ec56-3333" hidden="false" publicationId="9e23-79cb-pubN77092" page="20">
+          <description>Unicorns gain +1 S to their Impact Hits.</description>
+        </rule>
+      </rules>
+      <profiles>
+        <profile name="Unicorn" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="ac61-4f02-1003-6696" publicationId="9e23-79cb-pubN77092" page="20">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">10</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="6cd2-3f4b-da2d-1ee9" name="Common Arcane Items" hidden="false" collective="false" import="true">
