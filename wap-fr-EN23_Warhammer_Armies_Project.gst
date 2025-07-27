@@ -8173,7 +8173,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Arabian Steed" hidden="false" id="ac96-1c86-3a61-e422" collective="true">
+    <selectionEntry type="model" import="true" name="Arabian Steed" hidden="false" id="ac96-1c86-3a61-e422" collective="true" subType="mount">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1a20-73cd-3b87-1abe" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
@@ -9188,7 +9188,21 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Elven Steed" hidden="false" id="4612-bb63-8653-cb34" subType="mount" collective="true">
       <infoLinks>
-        <infoLink name="Elven Steed" id="ed87-985a-5f09-6902" hidden="false" type="profile" targetId="9d3c-c7f3-e374-745d"/>
+        <infoLink name="Elven Steed" id="ed87-985a-5f09-6902" hidden="false" type="profile" targetId="9d3c-c7f3-e374-745d">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
+                <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
+                <modifier type="set" value="" field="a199-f10b-a038-5730"/>
+                <modifier type="set" value="" field="09ad-18df-607b-1215"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="crew" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
+        </infoLink>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Sling" hidden="false" id="72e8-531c-b5af-3b91" collective="true">
@@ -9266,58 +9280,14 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
       </constraints>
       <infoLinks>
         <infoLink name="Fly (9)" id="381d-cc92-761e-885b" hidden="false" targetId="2ba2-2aaa-3f36-4b24" type="rule"/>
+        <infoLink name="Great Eagle" id="aae1-2902-6152-e932" hidden="false" type="profile" targetId="f7ff-29f2-e07a-c621"/>
       </infoLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Upgrades" id="3922-9a9c-285a-9357" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Shredding Talons" hidden="false" id="44a5-2f6e-f9f1-d92c" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2dc0-e256-34ae-7677" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <rules>
-                <rule name="Shredding Talons" id="9e3d-1310-6e26-37de" hidden="false" publicationId="9e23-79cb-pubN77092" page="21">
-                  <description>The model gains Armour Piercing (1).</description>
-                </rule>
-              </rules>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Swiftsense" hidden="false" id="04d5-2f11-c737-152c" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1148-8d47-b33a-6181" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <rules>
-                <rule name="Swiftsense" id="dd27-cab8-48e1-6354" hidden="false" publicationId="9e23-79cb-pubN77092" page="21">
-                  <description>The model gains the Always Strikes First special rule in any turn that they charge.</description>
-                </rule>
-              </rules>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="(Mount)" hidden="false" id="3cfa-4c32-b9c3-508c" targetId="(Mount)" primary="false"/>
       </categoryLinks>
-      <profiles>
-        <profile name="Great Eagle" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="1ef4-a0a6-240d-c10d" publicationId="9e23-79cb-pubN77092" page="21">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215">2</characteristic>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Animal)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="Upgrades" hidden="false" id="5b1e-5982-c649-2f88" type="selectionEntryGroup" targetId="3922-9a9c-285a-9357"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Unicorn" hidden="false" id="1173-189a-7606-0c37" collective="false" subType="mount">
       <constraints>
@@ -11493,6 +11463,37 @@ characteristic.</characteristic>
           </costs>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Upgrades" id="3922-9a9c-285a-9357" hidden="false" collective="false" import="true">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Shredding Talons" hidden="false" id="44a5-2f6e-f9f1-d92c" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2dc0-e256-34ae-7677" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+          <rules>
+            <rule name="Shredding Talons" id="9e3d-1310-6e26-37de" hidden="false" publicationId="9e23-79cb-pubN77092" page="21">
+              <description>The model gains Armour Piercing (1).</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Swiftsense" hidden="false" id="04d5-2f11-c737-152c" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1148-8d47-b33a-6181" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
+          <rules>
+            <rule name="Swiftsense" id="dd27-cab8-48e1-6354" hidden="false" publicationId="9e23-79cb-pubN77092" page="21">
+              <description>The model gains the Always Strikes First special rule in any turn that they charge.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+      <comment>Great Eagle</comment>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
@@ -15313,6 +15314,20 @@ Magic phase.</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Great Eagle" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f7ff-29f2-e07a-c621" publicationId="9e23-79cb-pubN77092" page="21">
+      <characteristics>
+        <characteristic name="M" typeId="09ad-18df-607b-1215">2</characteristic>
+        <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+        <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+        <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Animal)</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
