@@ -190,6 +190,9 @@
               </costs>
             </entryLink>
           </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eed3-9a07-0d60-a719"/>
+          </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -572,6 +575,9 @@
               </costs>
             </entryLink>
           </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="69bb-4efa-03c0-0f0a"/>
+          </constraints>
         </selectionEntryGroup>
         <selectionEntryGroup name="Armour" id="90db-5704-53bf-560b" hidden="false" collective="false" import="true" defaultSelectionEntryId="8bfb-475d-343a-5f1b" sortIndex="3">
           <constraints>
@@ -6817,7 +6823,7 @@ Strength penalty.</characteristic>
         <entryLink id="1fc2-f04e-5464-6b3b" name="Common Talismans" hidden="false" collective="false" import="true" targetId="946f-a470-9912-9301" type="selectionEntryGroup" sortIndex="12"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="1007-728a-27a4-a388" name="Arcane Items (One use only)" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="1007-728a-27a4-a388" name="Arcane Items (One use only)" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3c61-c4ef-bc7e-3df3" type="max"/>
       </constraints>
@@ -6948,7 +6954,7 @@ Strength penalty.</characteristic>
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="equalTo" value="1" field="selections" scope="model" childId="cf83-d864-2305-a7a8" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="mount" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="mount" shared="true" includeChildSelections="true"/>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="ecb7-3add-14ec-d6f7" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
@@ -7097,26 +7103,31 @@ the model is a Lord, they may be mounted on a Star Dragon. If the model is a He
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="model" childId="b70c-e9d9-3254-75c3" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="model" childId="mount" shared="true" includeChildSelections="true"/>
                       </conditions>
                       <conditionGroups>
                         <conditionGroup type="and">
                           <conditions>
-                            <condition type="equalTo" value="0" field="selections" scope="model" childId="73af-4435-d249-663b" shared="true" includeChildSelections="true"/>
-                            <condition type="equalTo" value="0" field="selections" scope="model" childId="4612-bb63-8653-cb34" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </conditionGroup>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="instanceOf" value="0" field="selections" scope="primary-category" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="model" childId="0c24-8d85-560a-5a6a" shared="true" includeChildSelections="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="model" childId="b70c-e9d9-3254-75c3" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="model" childId="mount" shared="true" includeChildSelections="true"/>
                             <condition type="equalTo" value="0" field="selections" scope="model" childId="6a34-265c-7929-7900" shared="true" includeChildSelections="true"/>
                           </conditions>
-                        </conditionGroup>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="instanceOf" value="0" field="selections" scope="primary-category" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
-                            <condition type="equalTo" value="0" field="selections" scope="model" childId="0c24-8d85-560a-5a6a" shared="true" includeChildSelections="true"/>
-                          </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditionGroups>
+                                <conditionGroup type="and">
+                                  <conditions>
+                                    <condition type="atLeast" value="1" field="selections" scope="model" childId="4612-bb63-8653-cb34" shared="true" includeChildSelections="true"/>
+                                    <condition type="equalTo" value="0" field="selections" scope="model" childId="73af-4435-d249-663b" shared="true" includeChildSelections="true"/>
+                                  </conditions>
+                                </conditionGroup>
+                              </conditionGroups>
+                              <conditions>
+                                <condition type="equalTo" value="0" field="selections" scope="model" childId="4612-bb63-8653-cb34" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
                         </conditionGroup>
                       </conditionGroups>
                     </conditionGroup>
@@ -7200,6 +7211,9 @@ distances.</description>
           </constraints>
         </selectionEntry>
       </selectionEntries>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8a0a-947c-4380-a633"/>
+      </constraints>
     </selectionEntryGroup>
     <selectionEntryGroup name="Magic Items &amp; Elven Honours" id="8d09-fed1-9517-18b5" hidden="false">
       <constraints>

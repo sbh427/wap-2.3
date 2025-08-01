@@ -2242,21 +2242,6 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
             <infoLink id="0920-843a-1b02-b0d4" name="Strength in Numbers" hidden="false" targetId="337b-11fe-1de2-0cd0" type="rule"/>
             <infoLink name="Skirmishers" id="9d49-500a-7559-bb9a" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Range Weapon" hidden="false" id="6865-09b9-6e44-8ced">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8dd8-1ce0-109f-e3ed" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <entryLinks>
-                <entryLink import="true" name="Sling" hidden="false" id="55d9-b205-6f89-60a1" type="selectionEntry" targetId="72e8-531c-b5af-3b91" sortIndex="2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="2"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Throwing Weapons" hidden="false" id="bdf5-03f8-9ce9-2aea" type="selectionEntry" targetId="8013-6f6f-96e1-1acc" sortIndex="1"/>
-              </entryLinks>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="6"/>
           </costs>
@@ -2267,6 +2252,22 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
               </constraints>
             </entryLink>
           </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Range Weapon" id="b728-d480-79a3-ef39" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Throwing Weapons" hidden="false" id="bdf5-03f8-9ce9-2aea" type="selectionEntry" targetId="8013-6f6f-96e1-1acc"/>
+                <entryLink import="true" name="Sling" hidden="false" id="55d9-b205-6f89-60a1" type="selectionEntry" targetId="72e8-531c-b5af-3b91">
+                  <costs>
+                    <cost name="pts" typeId="points" value="2"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="8dd8-1ce0-109f-e3ed-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8dd8-1ce0-109f-e3ed-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -2524,20 +2525,6 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
                 <cost name="pts" typeId="points" value="2"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Range Weapon" hidden="false" id="ae27-e17e-7f28-55cf" sortIndex="2">
-              <entryLinks>
-                <entryLink import="true" name="Sling" hidden="false" id="5f4c-1746-d72e-10a4" type="selectionEntry" targetId="72e8-531c-b5af-3b91" sortIndex="2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="2"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Throwing Weapons" hidden="false" id="b239-4779-7019-c271" type="selectionEntry" targetId="8013-6f6f-96e1-1acc" sortIndex="1"/>
-              </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="be87-7096-df5e-3353-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="be87-7096-df5e-3353-max"/>
-              </constraints>
-            </selectionEntry>
           </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
@@ -2549,6 +2536,22 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
               </constraints>
             </entryLink>
           </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Range Weapon" id="a44d-623b-4c7c-5c1c" hidden="false" sortIndex="2">
+              <entryLinks>
+                <entryLink import="true" name="Throwing Weapons" hidden="false" id="b239-4779-7019-c271" type="selectionEntry" targetId="8013-6f6f-96e1-1acc" sortIndex="1"/>
+                <entryLink import="true" name="Sling" hidden="false" id="5f4c-1746-d72e-10a4" type="selectionEntry" targetId="72e8-531c-b5af-3b91" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="2"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="be87-7096-df5e-3353-max"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="be87-7096-df5e-3353-min"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -3012,12 +3015,12 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
           <modifiers>
             <modifier type="increment" value="1" field="367f-a617-ad9e-a273-min">
               <repeats>
-                <repeat value="2" repeats="1" field="selections" scope="parent" childId="ac20-2e82-04c7-5d21" shared="true" roundUp="true" id="1f1d-9aac-16-b10f" percentValue="false"/>
+                <repeat value="2" repeats="1" field="selections" scope="unit" childId="ac20-2e82-04c7-5d21" shared="true" roundUp="true" id="1f1d-9aac-16-b10f" percentValue="false" includeChildSelections="true"/>
               </repeats>
             </modifier>
             <modifier type="increment" value="1" field="367f-a617-ad9e-a273-max">
               <repeats>
-                <repeat value="2" repeats="1" field="selections" scope="parent" childId="ac20-2e82-04c7-5d21" shared="true" roundUp="true" id="1f1d-9aac-16-b10f" percentValue="false"/>
+                <repeat value="2" repeats="1" field="selections" scope="unit" childId="ac20-2e82-04c7-5d21" shared="true" roundUp="true" id="1f1d-9aac-16-b10f" percentValue="false" includeChildSelections="true"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -7916,7 +7919,7 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Whip" hidden="false" id="a8d5-bafb-6900-5e3c" collective="false">
+    <selectionEntry type="upgrade" import="true" name="Whip" hidden="false" id="a8d5-bafb-6900-5e3c" collective="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2936-89fa-d28a-6302" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
@@ -7930,7 +7933,7 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Plague Censer" hidden="false" id="4909-176d-c110-580a" collective="false">
+    <selectionEntry type="upgrade" import="true" name="Plague Censer" hidden="false" id="4909-176d-c110-580a" collective="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="47d4-b0d3-42a9-a364" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
@@ -7991,7 +7994,7 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
         </rule>
       </rules>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Warpvolt Obliterator" hidden="false" id="82c0-c1f0-fb01-047a">
+    <selectionEntry type="upgrade" import="true" name="Warpvolt Obliterator" hidden="false" id="82c0-c1f0-fb01-047a" collective="false">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0a31-648f-d899-c11f"/>
       </constraints>
@@ -8208,11 +8211,11 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditionGroups>
-                    <conditionGroup type="or">
+                    <conditionGroup type="and">
                       <conditions>
                         <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="e7cc-2891-79c2-d6b3" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="d650-df10-5f47-6993" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="8286-f4c0-7ab5-30bc" shared="true" includeChildSelections="true"/>
+                        <condition type="notInstanceOf" value="0" field="selections" scope="model" childId="d650-df10-5f47-6993" shared="true" includeChildSelections="true"/>
+                        <condition type="notInstanceOf" value="0" field="selections" scope="model" childId="8286-f4c0-7ab5-30bc" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
