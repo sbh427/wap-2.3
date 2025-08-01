@@ -8263,11 +8263,17 @@ If you want to make a list using the allied rules, make separate rosters for eac
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b3c3-9c97-2821-1969"/>
+              </constraints>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Swooping Strike" hidden="false" id="c08e-a7d2-ff63-edf2">
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e624-0bf3-d74b-31c1"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -9192,10 +9198,10 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
           <modifierGroups>
             <modifierGroup type="and">
               <modifiers>
-                <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
-                <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
-                <modifier type="set" value="" field="a199-f10b-a038-5730"/>
-                <modifier type="set" value="" field="09ad-18df-607b-1215"/>
+                <modifier type="set" field="df90-5cbd-8cf9-95b2"/>
+                <modifier type="set" field="27ee-0675-122f-a1b1"/>
+                <modifier type="set" field="a199-f10b-a038-5730"/>
+                <modifier type="set" field="09ad-18df-607b-1215"/>
               </modifiers>
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="crew" shared="true" includeChildSelections="true"/>
