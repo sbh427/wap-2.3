@@ -2,24 +2,24 @@
 <gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="61" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
-    <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publicationDate="" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN67565" name="Albion v.1.5" shortName="Al" publisher="Warhammer - Albion 9th Ed 1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="9e23-79cb-pubN71963" name="Beastmen v.1.7" shortName="BM" publisher="Warhammer - Beastmen 9th Ed 1.6" publicationDate="" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="9e23-79cb-pubN71963" name="Beastmen v.1.7" shortName="BM" publisher="Warhammer - Beastmen 9th Ed 1.6" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN75312" name="Bretonnia v.1.5" shortName="Br" publisher="Warhammer - Bretonnia 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="9e23-79cb-pubN76150" name="Dark Elves v.1.71" shortName="DE" publisher="Warhammer - Dark Elves 9th Ed 1.6" publicationDate="" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="9e23-79cb-pubN77092" name="High Elves v.1.6" shortName="HE" publisher="Warhammer - High Elves 9th Ed v.1.5" publicationDate="" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="9e23-79cb-pubN76150" name="Dark Elves v.1.71" shortName="DE" publisher="Warhammer - Dark Elves 9th Ed 1.6" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="9e23-79cb-pubN77092" name="High Elves v.1.6" shortName="HE" publisher="Warhammer - High Elves 9th Ed v.1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN77402" name="Lizardmen v.1.5" shortName="LM" publisher="Warhammer - Lizardmen 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN78137" name="Ogre Kingdoms v.1.5" shortName="OK" publisher="Warhammer - Ogre Kingdoms 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="9e23-79cb-pubN78975" name="Orcs &amp; Goblins v.1.6" shortName="O&amp;G" publisher="Warhammer - Orcs &amp; Goblins 9th Ed v.1.5" publicationDate="" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="aa7b-3583-0834-7bfa" name="Dwarfs v.1.6" shortName="Dw" publisher="Warhammer - Dwarfs 9th Ed 1.6" publicationDate="" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="315d-135b-135c-07ce" name="Empire v.1.7" shortName="Em" publisher="Warhammer - Empire 9th Ed v.1.5" publicationDate="" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="4086-1ccd-f433-39a2" name="Skaven v.1.9" shortName="Sk" publisher="Warhammer - Skaven 9th Ed v.1.8" publicationDate="" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="9e23-79cb-pubN78975" name="Orcs &amp; Goblins v.1.6" shortName="O&amp;G" publisher="Warhammer - Orcs &amp; Goblins 9th Ed v.1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="aa7b-3583-0834-7bfa" name="Dwarfs v.1.6" shortName="Dw" publisher="Warhammer - Dwarfs 9th Ed 1.6" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="315d-135b-135c-07ce" name="Empire v.1.7" shortName="Em" publisher="Warhammer - Empire 9th Ed v.1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="4086-1ccd-f433-39a2" name="Skaven v.1.9" shortName="Sk" publisher="Warhammer - Skaven 9th Ed v.1.8" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="ee54-3543-b9db-fe40" name="Daemons of Chaos 1.62" shortName="DoC" publisher="Warhammer - Daemons of Chaos 1.62" publicationDate="26.10.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="b724-d2c4-d151-2d9e" name="High Elves v.1.4, Lizardmen v.1.4" shortName="HE, LM" publisher="Warhammer - High Elves 9th Ed v.1.4, Warhammer - Lizardmen 9th Ed v.1.4" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="eee5-f9c5-fa08-3f2e" name="Beastmen v.1.6, Daemons of Chaos v.1.62, Warriors of Chaos v.1.5" shortName="BM, DoC, WoC" publisher="Warhammer - Beastmen 9th Ed 1.6, Warhammer - Daemons of Chaos 1.62, Warhammer - Warriors of Chaos 9th Ed 1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="feeb-1927-4a99-f849" name="Tomb Kings v.1.6" shortName="TK" publisher="Warhammer - Tomb Kings v.1.6" publicationDate="24.08.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="10a5-5781-61f5-86ae" name="Vampire Counts 1.63" shortName="VC" publisher="Warhammer - Vampire Counts 1.63" publicationDate="18.05.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="1a01-044f-047b-618f" name="Warriors of Chaos v.1.6" shortName="WoC" publisher="Warhammer - Warriors of Chaos 9th Ed v.1.6" publicationDate="" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="1a01-044f-047b-618f" name="Warriors of Chaos v.1.6" shortName="WoC" publisher="Warhammer - Warriors of Chaos 9th Ed v.1.6" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="e967-620f-06be-096a" name="Wood Elves v.1.5" shortName="WE" publisher="Warhammer - Wood Elves 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="315c-6fd1-56a3-8b04" name="Amazons v.1.44" shortName="Am" publisher="Warhammer - Amazons 1.44" publicationDate="08.01.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="d221-484d-439d-4310" name="Araby v.1.5" shortName="Ar" publisher="Warhammer - Araby 9th Ed 1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -9324,6 +9324,76 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
         <infoLink name="Greatbow" id="5c4d-d963-85d7-06ec" hidden="false" type="profile" targetId="31b5-2b7d-e620-19f6"/>
       </infoLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Javelins &amp; Shields" hidden="false" id="1715-a24f-ede6-9e9f" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b4ec-3318-9f4e-ff53" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Javelins" id="a7e8-4e8f-4edb-d036" hidden="false" targetId="3ecc-5d9c-7d29-ee2f" type="profile"/>
+        <infoLink name="Shield" id="9782-3dd8-eef8-5698" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Chaos Warhounds" hidden="false" id="8cdb-f7a0-9ebc-1109" collective="false">
+      <categoryLinks>
+        <categoryLink name="Core" hidden="false" id="ca26-d3c2-e28d-5689" targetId="b876-2856-f1c2-c4f0" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Chaos Warhound" hidden="false" id="9a50-3179-2076-d48f" collective="false">
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="65c2-4c44-29b9-00d4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Chaos Warhound" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="a4ff-60e6-98b7-125e" publicationId="9e23-79cb-pubN71963" page="71">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Chaos Beast)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Natural Armour" hidden="false" id="2725-3413-74b2-42d3" collective="true">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="073d-0b41-b389-cf00" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Natural Armour (6+)" id="90a2-9c54-d1bd-206d" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.5"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Poisoned Attacks" hidden="false" id="6b59-6f49-1f24-4f8b" collective="true">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fca3-e779-76de-0e60" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Poisoned Attacks" id="187d-c8df-d601-f31b" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="1"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="pts" typeId="points" value="6"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Expendable" hidden="false" id="44a2-3cdd-ff46-2569" collective="false" targetId="b90d-9045-a6d5-9e7d" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="6cd2-3f4b-da2d-1ee9" name="Common Arcane Items" hidden="false" collective="false" import="true">
@@ -11203,7 +11273,7 @@ characteristic.</characteristic>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="3dfd-c3fd-5a56-45f1" name="Arcane Items (One use only)" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="3dfd-c3fd-5a56-45f1" name="Common Arcane Items (One use only)" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="01e6-93d4-45a5-e661" type="max"/>
       </constraints>
