@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="60" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="61" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publicationDate="07.09.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -20,7 +20,7 @@
     <publication id="ee54-3543-b9db-fe40" name="Daemons of Chaos 1.62" shortName="DoC" publisher="Warhammer - Daemons of Chaos 1.62" publicationDate="26.10.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="b724-d2c4-d151-2d9e" name="High Elves v.1.4, Lizardmen v.1.4" shortName="HE, LM" publisher="Warhammer - High Elves 9th Ed v.1.4, Warhammer - Lizardmen 9th Ed v.1.4" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="eee5-f9c5-fa08-3f2e" name="Beastmen v.1.6, Daemons of Chaos v.1.62, Warriors of Chaos v.1.5" shortName="BM, DoC, WoC" publisher="Warhammer - Beastmen 9th Ed 1.6, Warhammer - Daemons of Chaos 1.62, Warhammer - Warriors of Chaos 9th Ed 1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="feeb-1927-4a99-f849" name="Tomb Kings v.1.5" shortName="TK" publisher="Warhammer - Tomb Kings 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="feeb-1927-4a99-f849" name="Tomb Kings v.1.6" shortName="TK" publisher="Warhammer - Tomb Kings v.1.6" publicationDate="24.08.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="10a5-5781-61f5-86ae" name="Vampire Counts 1.63" shortName="VC" publisher="Warhammer - Vampire Counts 1.63" publicationDate="18.05.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="1a01-044f-047b-618f" name="Warriors of Chaos v.1.6" shortName="WoC" publisher="Warhammer - Warriors of Chaos 9th Ed v.1.6" publicationDate="20.08.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="bb4b-874f-580a-13d6" name="Beastmen v.1.6, Warriors of Chaos v.1.5" shortName="BM, WoC" publisher="Warhammer - Beastmen 9th Ed 1.6, Warhammer - Warriors of Chaos 9th Ed 1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -9328,6 +9328,22 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
         </profile>
       </profiles>
     </selectionEntry>
+    <selectionEntry type="model" import="true" name="Skeletal Steed" hidden="false" id="84c5-3d1e-305d-05f0" collective="true" subType="mount">
+      <infoLinks>
+        <infoLink name="Skeletal Steed" id="0e37-14eb-9e61-e462" hidden="false" type="profile" targetId="5e37-4591-f72b-0e5e"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Greatbow" hidden="false" id="1f9e-9932-b92d-9734" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d6dc-864f-0fa1-15c5" includeChildSelections="false"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Greatbow" id="5c4d-d963-85d7-06ec" hidden="false" type="profile" targetId="31b5-2b7d-e620-19f6"/>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup id="6cd2-3f4b-da2d-1ee9" name="Common Arcane Items" hidden="false" collective="false" import="true">
@@ -15334,6 +15350,20 @@ Magic phase.</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Animal)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Skeletal Steed" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="5e37-4591-f72b-0e5e">
+      <characteristics>
+        <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
+        <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
+        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+        <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+        <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730">3</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
