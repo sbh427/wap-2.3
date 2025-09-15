@@ -837,6 +837,33 @@ of the initial target, which also suffers the effects of the Light of Death. Kee
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="94d7-b0fe-b4af-2980" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Blessing of Asaph" hidden="true" id="44a7-5981-d3a2-35f1" collective="true" collapsible="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b6b4-4ef5-de4d-89c3" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ee23-de55-b7e4-16c1" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="2" field="points" scope="parent" affects="entries.model">
+          <conditions>
+            <condition type="notInstanceOf" value="0" field="selections" scope="self" childId="fbcb-b03a-7919-f2b5" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Poisoned Attacks" id="feac-4553-57ce-25ea" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef">
+          <modifiers>
+            <modifier type="append" value="Shooting Attacks" field="annotation" join="()"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
     <profile name="1-2 Reclaimed by the Deser" typeId="6165-cbfd-239a-6742" typeName="Entombed Beneath the Sands Mishap Table" hidden="false" id="c96d-dc06-299e-4064">
@@ -1936,6 +1963,9 @@ If, at the start of any of your turns following the death of the Hierophant, the
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Blessing of Asaph" hidden="false" id="3568-97b8-c29a-9278" type="selectionEntry" targetId="44a7-5981-d3a2-35f1" sortIndex="-1"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Skeleton Skirmishers" hidden="false" id="5f3a-6229-b473-5874" sortIndex="9">
       <categoryLinks>
@@ -2132,12 +2162,51 @@ If, at the start of any of your turns following the death of the Hierophant, the
                 <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
                 <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Undead)</characteristic>
               </characteristics>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="Scythan Warrior" field="name"/>
+                    <modifier type="increment" value="1" field="f049-8a65-9c04-1559"/>
+                    <modifier type="increment" value="2" field="a199-f10b-a038-5730"/>
+                    <modifier type="increment" value="1" field="7b67-9dfa-eeac-d007"/>
+                    <modifier type="increment" value="1" field="7cca-e51f-edc2-7322"/>
+                  </modifiers>
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="unit" childId="4a21-e321-5a87-4635" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifierGroup>
+              </modifierGroups>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Undead" id="7415-aa87-d971-6015" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
+            <infoLink name="Undead" id="7415-aa87-d971-6015" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="unit" childId="4a21-e321-5a87-4635" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
             <infoLink name="Fast Cavalry" id="396d-a535-a911-a5ca" hidden="false" type="rule" targetId="8877-a5de-cc9c-9142"/>
-            <infoLink name="Arrows of Asaph" id="3fb2-50da-1a80-83e8" hidden="false" type="rule" targetId="4503-7ae5-be26-e5b1"/>
+            <infoLink name="Arrows of Asaph" id="3fb2-50da-1a80-83e8" hidden="false" type="rule" targetId="4503-7ae5-be26-e5b1">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="unit" childId="4a21-e321-5a87-4635" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Immunity (Fear)" id="6982-cd7c-f2f2-ef1b" hidden="true" type="rule" targetId="9fed-6076-6c75-b774">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="unit" childId="4a21-e321-5a87-4635" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="Hand Weapon" hidden="false" id="a63d-b7d4-c7cb-f4b4" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
@@ -2150,15 +2219,72 @@ If, at the start of any of your turns following the death of the Hierophant, the
                 <cost name="pts" typeId="points" value="1"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Skeletal Steed" hidden="false" id="5396-2b47-9dc4-2774" type="selectionEntry" targetId="a440-163d-31eb-cdf7">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6614-1ac2-9b7f-0b30" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
           </entryLinks>
           <constraints>
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="ef39-7c70-f988-82ba" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="2" field="points">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="unit" childId="4a21-e321-5a87-4635" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Skeletal Steed" hidden="false" id="40c6-ae2a-5797-ef1a" subType="mount" collective="true">
+              <infoLinks>
+                <infoLink name="Skeletal Steed" id="c11b-dfe4-c99c-45ae" hidden="false" type="profile" targetId="5e37-4591-f72b-0e5e">
+                  <comment>Scythan Warrior</comment>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="unit" childId="4a21-e321-5a87-4635" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                      <modifiers>
+                        <modifier type="increment" value="1" field="7cca-e51f-edc2-7322"/>
+                        <modifier type="increment" value="1" field="f049-8a65-9c04-1559"/>
+                        <modifier type="increment" value="1" field="09ad-18df-607b-1215"/>
+                      </modifiers>
+                      <comment>Scythan Warrior</comment>
+                    </modifierGroup>
+                  </modifierGroups>
+                </infoLink>
+                <infoLink name="Undead" id="37e2-7c48-ed97-0355" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="unit" childId="4a21-e321-5a87-4635" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="73e0-f353-3f71-b811-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="73e0-f353-3f71-b811-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Scythan Warriors" hidden="true" id="4a21-e321-5a87-4635" collective="true" collapsible="false" sortIndex="-2">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d7a2-08e4-d07d-f428" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a420-a497-9edc-a51d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+          <rules>
+            <rule name="Scythan Warriors" id="5642-f2e2-c93f-94ba" hidden="false">
+              <description>Scythan Warriors always treat Tutankhanut as the Army General for all purposes.</description>
+            </rule>
+          </rules>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -2189,6 +2315,9 @@ If, at the start of any of your turns following the death of the Hierophant, the
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Blessing of Asaph" hidden="false" id="6b43-0de4-b903-0a53" type="selectionEntry" targetId="44a7-5981-d3a2-35f1" sortIndex="-1" collective="false"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Tomb Guard" hidden="false" id="f209-2324-32b5-17ec" sortIndex="14">
       <selectionEntries>
@@ -4233,6 +4362,7 @@ Strength 2 hits which Ignores Armour saves</description>
             </selectionEntry>
           </selectionEntries>
         </entryLink>
+        <entryLink import="true" name="Blessing of Asaph" hidden="false" id="6230-39fc-ad66-792d" type="selectionEntry" targetId="44a7-5981-d3a2-35f1" sortIndex="-1"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Ushabti" hidden="false" id="c5db-de5b-7130-4ca6" sortIndex="17">
