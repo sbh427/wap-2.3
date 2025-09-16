@@ -9328,11 +9328,6 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Skeletal Steed" hidden="false" id="84c5-3d1e-305d-05f0" collective="true" subType="mount">
-      <infoLinks>
-        <infoLink name="Skeletal Steed" id="0e37-14eb-9e61-e462" hidden="false" type="profile" targetId="5e37-4591-f72b-0e5e"/>
-      </infoLinks>
-    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Greatbow" hidden="false" id="1f9e-9932-b92d-9734" collective="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d6dc-864f-0fa1-15c5" includeChildSelections="false"/>
