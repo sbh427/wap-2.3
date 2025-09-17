@@ -10,10 +10,10 @@
           <modifierGroups>
             <modifierGroup type="and">
               <modifiers>
-                <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
-                <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
-                <modifier type="set" value="" field="a199-f10b-a038-5730"/>
-                <modifier type="set" value="" field="09ad-18df-607b-1215"/>
+                <modifier type="set" field="df90-5cbd-8cf9-95b2"/>
+                <modifier type="set" field="27ee-0675-122f-a1b1"/>
+                <modifier type="set" field="a199-f10b-a038-5730"/>
+                <modifier type="set" field="09ad-18df-607b-1215"/>
               </modifiers>
               <conditionGroups>
                 <conditionGroup type="or">
@@ -463,7 +463,7 @@ of the initial target, which also suffers the effects of the Light of Death. Kee
       <constraints>
         <constraint type="min" value="1" field="selections" scope="force" shared="true" id="4108-e6db-46a6-9423-min" includeChildSelections="true" includeChildForces="true"/>
         <constraint type="max" value="1" field="selections" scope="force" shared="true" id="4108-e6db-46a6-9423-max" includeChildSelections="true" includeChildForces="true"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ee10-4328-ddd5-1d58" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="1" field="selections" scope="root-entry" shared="true" id="ee10-4328-ddd5-1d58" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Lore of Nehekhara" hidden="false" id="0779-440c-f407-02b8">
@@ -696,21 +696,57 @@ of the initial target, which also suffers the effects of the Light of Death. Kee
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="0f17-b6d5-67e9-c453"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="3624-98bb-728d-febc"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="3624-98bb-728d-febc-min"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="3624-98bb-728d-febc-max"/>
           </constraints>
           <modifiers>
-            <modifier type="set" value="3" field="0f17-b6d5-67e9-c453">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="3624-98bb-728d-febc-min">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="3" field="3624-98bb-728d-febc">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-              </conditions>
+            <modifier type="set" value="3" field="3624-98bb-728d-febc-max">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="0f17-b6d5-67e9-c453">
+            <modifier type="set" value="4" field="3624-98bb-728d-febc-min">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -723,17 +759,11 @@ of the initial target, which also suffers the effects of the Light of Death. Kee
                         <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="4" field="3624-98bb-728d-febc">
+            <modifier type="set" value="4" field="3624-98bb-728d-febc-max">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -746,17 +776,11 @@ of the initial target, which also suffers the effects of the Light of Death. Kee
                         <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
                   </conditionGroups>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="0f17-b6d5-67e9-c453">
+            <modifier type="set" value="5" field="3624-98bb-728d-febc-min">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -773,7 +797,7 @@ of the initial target, which also suffers the effects of the Light of Death. Kee
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="5" field="3624-98bb-728d-febc">
+            <modifier type="set" value="5" field="3624-98bb-728d-febc-max">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -790,13 +814,13 @@ of the initial target, which also suffers the effects of the Light of Death. Kee
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="6" field="0f17-b6d5-67e9-c453">
+            <modifier type="set" value="6" field="3624-98bb-728d-febc-min">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
                         <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
@@ -810,13 +834,13 @@ of the initial target, which also suffers the effects of the Light of Death. Kee
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="6" field="3624-98bb-728d-febc">
+            <modifier type="set" value="6" field="3624-98bb-728d-febc-max">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
                         <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
@@ -830,7 +854,27 @@ of the initial target, which also suffers the effects of the Light of Death. Kee
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="8" field="0f17-b6d5-67e9-c453">
+            <modifier type="set" value="9" field="3624-98bb-728d-febc-min">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="9" field="3624-98bb-728d-febc-max">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="12" field="3624-98bb-728d-febc-min">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
@@ -840,7 +884,7 @@ of the initial target, which also suffers the effects of the Light of Death. Kee
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="8" field="3624-98bb-728d-febc">
+            <modifier type="set" value="12" field="3624-98bb-728d-febc-max">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
