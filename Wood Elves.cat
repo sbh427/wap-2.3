@@ -12,6 +12,28 @@ you still cannot place the forest, or if the scenario means that the Wood Elf a
         </rule>
       </rules>
     </selectionEntry>
+    <selectionEntry type="model" import="true" name="New Entry" hidden="false" id="5a1c-e4ae-ae3a-3161">
+      <entryLinks>
+        <entryLink import="true" name="Magic Items" hidden="false" id="ce2a-38c3-5e50-f273" type="selectionEntryGroup" targetId="e1f0-e61a-8c81-4eb0"/>
+        <entryLink import="true" name="Arabian Steed" hidden="false" id="fa2d-59db-deab-ad33" type="selectionEntry" targetId="ac96-1c86-3a61-e422"/>
+      </entryLinks>
+      <profiles>
+        <profile name="New Entry" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="1127-7f19-5a0e-b857">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35"/>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459"/>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </selectionEntries>
   <sharedRules>
     <rule name="Asrai Archery" id="7a83-61cd-defa-0796" hidden="false">
@@ -489,9 +511,9 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
               <comment>Enter all Wild Hunters here</comment>
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="any" shared="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or"/>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </selectionEntry>
@@ -530,9 +552,9 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
               </constraints>
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="any" shared="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or"/>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <comment>Enter all Shadowdancer here</comment>
@@ -604,6 +626,13 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3aae-735e-af1e-e2e5" includeChildSelections="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="add" value="Speer / licht lance option must be aviable" field="info">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="ce2a-38c3-5e50-f273" childId="c6de-f901-bc70-5a87" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Daith&apos;s Reaper" hidden="false" id="65d4-76e0-1abd-5c76" sortIndex="14">
               <profiles>
@@ -644,12 +673,12 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3d9f-3551-fd1c-069e"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Common Magic Weapons" hidden="false" id="f582-7cd6-7a66-98ed" type="selectionEntryGroup" targetId="6820-41cc-94f6-87c1" sortIndex="99" collapsible="true"/>
+            <entryLink import="true" name="Common Magic Weapons" hidden="false" id="f582-7cd6-7a66-98ed" type="selectionEntryGroup" targetId="6820-41cc-94f6-87c1" sortIndex="16" collapsible="true" flatten="true"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Magic Armour" id="16a0-7be6-7f1e-f0fa" hidden="false" collapsible="true" defaultSelectionEntryId="none" sortIndex="2">
+        <selectionEntryGroup name="Magic Armour" id="16a0-7be6-7f1e-f0fa" hidden="false" collapsible="true" defaultSelectionEntryId="none" sortIndex="2" flatten="false">
           <entryLinks>
-            <entryLink import="true" name="Common Magic Armour" hidden="false" id="bd2a-92d1-68d2-7ad4" type="selectionEntryGroup" targetId="557c-c8c5-0c0f-d2b3" collapsible="true" sortIndex="99"/>
+            <entryLink import="true" name="Common Magic Armour" hidden="false" id="bd2a-92d1-68d2-7ad4" type="selectionEntryGroup" targetId="557c-c8c5-0c0f-d2b3" collapsible="true" sortIndex="99" flatten="true"/>
           </entryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="adb7-0122-2742-f904"/>
@@ -712,7 +741,7 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="mount" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="mount" shared="true" includeChildSelections="true" includeChildForces="false"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -767,6 +796,25 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="New Group" id="0693-3a02-835b-6a03" hidden="false" sortIndex="3">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="39fc-b44f-13bd-4dd0" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Common Talismans" hidden="false" id="8ef2-39a5-42e0-8597" type="selectionEntryGroup" targetId="946f-a470-9912-9301" sortIndex="99" flatten="true"/>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Deepmire Cloak" hidden="false" id="f621-923e-a870-5ec1" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="mount" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
