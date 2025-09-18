@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="61" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="62" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
-    <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publicationDate="07.09.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN67565" name="Albion v.1.5" shortName="Al" publisher="Warhammer - Albion 9th Ed 1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="9e23-79cb-pubN71963" name="Beastmen v.1.6" shortName="BM" publisher="Warhammer - Beastmen 9th Ed 1.6" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="9e23-79cb-pubN71963" name="Beastmen v.1.7" shortName="BM" publisher="Warhammer - Beastmen 9th Ed 1.6" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN75312" name="Bretonnia v.1.5" shortName="Br" publisher="Warhammer - Bretonnia 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="9e23-79cb-pubN76150" name="Dark Elves v.1.6" shortName="DE" publisher="Warhammer - Dark Elves 9th Ed 1.6" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="9e23-79cb-pubN77092" name="High Elves v.1.5" shortName="HE" publisher="Warhammer - High Elves 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="9e23-79cb-pubN76150" name="Dark Elves v.1.71" shortName="DE" publisher="Warhammer - Dark Elves 9th Ed 1.6" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="9e23-79cb-pubN77092" name="High Elves v.1.6" shortName="HE" publisher="Warhammer - High Elves 9th Ed v.1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN77402" name="Lizardmen v.1.5" shortName="LM" publisher="Warhammer - Lizardmen 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN78137" name="Ogre Kingdoms v.1.5" shortName="OK" publisher="Warhammer - Ogre Kingdoms 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="9e23-79cb-pubN78975" name="Orcs &amp; Goblins v.1.5" shortName="O&amp;G" publisher="Warhammer - Orcs &amp; Goblins 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="9e23-79cb-pubN116235" name="Regiments of Renown v.1.3" shortName="RoR" publisher="Warhammer - Regiments of Renown 9th Ed 1.3" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="aa7b-3583-0834-7bfa" name="Dwarfs v.1.6" shortName="Dw" publisher="Warhammer - Dwarfs 9th Ed 1.6" publicationDate="18.05.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="b3a3-a398-4838-11a1" name="Imperial Knightly Orders v.1.3" shortName="Em" publisher="Warhammer - Imperial Knightly Orders 9th Ed v.1.3" publicationDate="27.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="d69c-a7ea-95db-6f56" name="Steam Tanks" shortName="Emp" publisher="Warhammer - Steam Tanks" publicationDate="14.02.2022" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="315d-135b-135c-07ce" name="Empire v.1.5" shortName="Em" publisher="Warhammer - Empire 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="4086-1ccd-f433-39a2" name="Skaven v.1.8" shortName="Sk" publisher="Warhammer - Skaven 9th Ed v.1.8" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="9e23-79cb-pubN78975" name="Orcs &amp; Goblins v.1.6" shortName="O&amp;G" publisher="Warhammer - Orcs &amp; Goblins 9th Ed v.1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="aa7b-3583-0834-7bfa" name="Dwarfs v.1.6" shortName="Dw" publisher="Warhammer - Dwarfs 9th Ed 1.6" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="315d-135b-135c-07ce" name="Empire v.1.7" shortName="Em" publisher="Warhammer - Empire 9th Ed v.1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="4086-1ccd-f433-39a2" name="Skaven v.1.9" shortName="Sk" publisher="Warhammer - Skaven 9th Ed v.1.8" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="ee54-3543-b9db-fe40" name="Daemons of Chaos 1.62" shortName="DoC" publisher="Warhammer - Daemons of Chaos 1.62" publicationDate="26.10.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="b724-d2c4-d151-2d9e" name="High Elves v.1.4, Lizardmen v.1.4" shortName="HE, LM" publisher="Warhammer - High Elves 9th Ed v.1.4, Warhammer - Lizardmen 9th Ed v.1.4" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="eee5-f9c5-fa08-3f2e" name="Beastmen v.1.6, Daemons of Chaos v.1.62, Warriors of Chaos v.1.5" shortName="BM, DoC, WoC" publisher="Warhammer - Beastmen 9th Ed 1.6, Warhammer - Daemons of Chaos 1.62, Warhammer - Warriors of Chaos 9th Ed 1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="feeb-1927-4a99-f849" name="Tomb Kings v.1.6" shortName="TK" publisher="Warhammer - Tomb Kings v.1.6" publicationDate="24.08.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="10a5-5781-61f5-86ae" name="Vampire Counts 1.63" shortName="VC" publisher="Warhammer - Vampire Counts 1.63" publicationDate="18.05.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="1a01-044f-047b-618f" name="Warriors of Chaos v.1.6" shortName="WoC" publisher="Warhammer - Warriors of Chaos 9th Ed v.1.6" publicationDate="20.08.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="bb4b-874f-580a-13d6" name="Beastmen v.1.6, Warriors of Chaos v.1.5" shortName="BM, WoC" publisher="Warhammer - Beastmen 9th Ed 1.6, Warhammer - Warriors of Chaos 9th Ed 1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="1a01-044f-047b-618f" name="Warriors of Chaos v.1.6" shortName="WoC" publisher="Warhammer - Warriors of Chaos 9th Ed v.1.6" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="e967-620f-06be-096a" name="Wood Elves v.1.5" shortName="WE" publisher="Warhammer - Wood Elves 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="315c-6fd1-56a3-8b04" name="Amazons v.1.44" shortName="Am" publisher="Warhammer - Amazons 1.44" publicationDate="08.01.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="d221-484d-439d-4310" name="Araby v.1.5" shortName="Ar" publisher="Warhammer - Araby 9th Ed 1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -40,17 +36,6 @@
     <publication id="5884-1659-bf10-0d5a" name="Norsca v.1.1" shortName="No" publisher="Warhammer - Norsca 9th Ed v.1.1" publicationDate="10.11.2022" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="2053-6f2b-423f-8b0f" name="Pirates of Sartosa v.1.2" shortName="PoS" publisher="Warhammer - Pirates of Sartosa 9th Ed v.1.2" publicationDate="27.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="079e-9b65-30b3-2c59" name="Zombie Pirates of the Vampire Coast v.1.4" shortName="ZP" publisher="Warhammer - Zombie Pirates of the Vampire Coast 9th Ed v.1.4" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="4ff3-b09f-ec27-d6ec" name="Vampire Counts v.1.63, Zombie Pirates of the Vampire Coast v.1.3" shortName="VC, ZP" publisher="Warhammer - Vampire Counts 1.63, Warhammer - Zombie Pirates of the Vampire Coast 9th Ed v.1.3" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="a873-5a26-f107-1c0b" name="Pirates of Sartosa v.1.2, Zombie Pirates of the Vampire Coast v.1.4" shortName="PoS, ZP" publisher="Warhammer - Pirates of Sartosa 9th Ed v.1.2, Warhammer - Zombie Pirates of the Vampire Coast 9th Ed v.1.4" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="15a5-c139-f130-a940" name="Orcs &amp; Goblins Special Characters 1.1" shortName="O&amp;G" publisher="Warhammer - Orcs &amp; Goblins Special Characters 1.1" publicationDate="14.02.2022" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="ff43-3b22-4e64-1d31" name="Bretonnia Special Characters v.1.3" shortName="Br" publisher="Warhammer - Bretonnia Special Characters 1.3" publicationDate="28.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="fef7-683c-50d7-d1bb" name="Dwarfs Special Characters v.1.0" shortName="Dw" publisher="Warhammer - Dwarfs Special Characters 1.0" publicationDate="14.02.2022" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="1354-aa33-a41b-202a" name="High Elves Special Characters v.1.3" shortName="HE" publisher="Warhammer - High Elves Special Characters 1.3" publicationDate="14.02.2022" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="47b1-3485-34cf-bc48" name="Skaven Special Characters v.1.1" shortName="Sk" publisher="Warhammer - Skaven Special Characters 1.1" publicationDate="14.02.2022" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="f4eb-8c89-b57e-d2df" name="Wood Elves Special Characters v.1.2" shortName="WE" publisher="Warhammer - Wood Elves Special Characters 1.2" publicationDate="27.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="fe07-d23f-5110-8489" name="Lizardmen Special Characters v.1.2" shortName="LM" publisher="Warhammer - Lizardmen Special Characters 1.2" publicationDate="14.02.2022" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="72a4-a4fc-cfd6-d138" name="Dogs of War Special Characters v.1.2" shortName="DoW" publisher="Warhammer - Dogs of War Special Characters 1.2" publicationDate="30.05.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="f46b-8c4e-ed82-05f7" name="Warriors of Chaos Special Characters v.1.3" shortName="WoC" publisher="Warhammer - Warriors of Chaos Special Characters 1.3" publicationDate="27.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication name="Github" id="8db3-575d-91b-47f8" hidden="false" shortName="sbh427/wap-2.3" publisherUrl="https://github.com/sbh427/wap-2.3"/>
   </publications>
   <costTypes>
@@ -8436,7 +8421,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
       <selectionEntryGroups>
         <selectionEntryGroup name="Upgrades" id="2e20-bc4c-b810-abf4" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Bloodrage" hidden="false" id="b648-ae77-7fb4-b428" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Bloodrage" hidden="false" id="b648-ae77-7fb4-b428" collective="false" sortIndex="2">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5e9d-3490-d511-3d4b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -8447,7 +8432,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Iron-hard Skin" hidden="false" id="aad1-d2eb-5334-638c" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Iron-hard Skin" hidden="false" id="aad1-d2eb-5334-638c" collective="false" sortIndex="3">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f251-ebde-176f-51a7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -8458,7 +8443,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Rending Fangs" hidden="false" id="9b49-bfa6-c391-7bcc" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Rending Fangs" hidden="false" id="9b49-bfa6-c391-7bcc" collective="false" sortIndex="1">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3fea-c946-b9d3-f21c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -8469,7 +8454,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Venom Tail" hidden="false" id="9ed0-8f71-17cb-7449" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Venom Tail" hidden="false" id="9ed0-8f71-17cb-7449" collective="false" sortIndex="4">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2d39-089c-abd9-3cd7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -9338,6 +9323,690 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
       <infoLinks>
         <infoLink name="Greatbow" id="5c4d-d963-85d7-06ec" hidden="false" type="profile" targetId="31b5-2b7d-e620-19f6"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Javelins &amp; Shields" hidden="false" id="1715-a24f-ede6-9e9f" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b4ec-3318-9f4e-ff53" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Javelins" id="a7e8-4e8f-4edb-d036" hidden="false" targetId="3ecc-5d9c-7d29-ee2f" type="profile"/>
+        <infoLink name="Shield" id="9782-3dd8-eef8-5698" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Chaos Warhounds" hidden="false" id="8cdb-f7a0-9ebc-1109" collective="false">
+      <categoryLinks>
+        <categoryLink name="Core" hidden="false" id="ca26-d3c2-e28d-5689" targetId="b876-2856-f1c2-c4f0" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Chaos Warhound" hidden="false" id="9a50-3179-2076-d48f" collective="false">
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="65c2-4c44-29b9-00d4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Chaos Warhound" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="a4ff-60e6-98b7-125e" publicationId="9e23-79cb-pubN71963" page="71">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Chaos Beast)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Natural Armour" hidden="false" id="2725-3413-74b2-42d3" collective="true">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="073d-0b41-b389-cf00" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Natural Armour (6+)" id="90a2-9c54-d1bd-206d" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.5"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Poisoned Attacks" hidden="false" id="6b59-6f49-1f24-4f8b" collective="true">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fca3-e779-76de-0e60" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Poisoned Attacks" id="187d-c8df-d601-f31b" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="1"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <costs>
+            <cost name="pts" typeId="points" value="6"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Expendable" hidden="false" id="44a2-3cdd-ff46-2569" collective="false" targetId="b90d-9045-a6d5-9e7d" type="selectionEntry"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Light Lance &amp; Bucklers" hidden="false" id="91b7-7d92-aacd-9c32" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5969-eb74-ea27-da0a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Light Lance" id="279f-9d16-e0f2-8bfd" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb"/>
+        <infoLink name="Buckler" id="14ea-98de-97ef-1704" hidden="false" targetId="1700-a7e5-d272-ef20" type="profile"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="add" value="{this} is not allowed if not mounted" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="parent" childId="91b7-7d92-aacd-9c32" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Chaos Trolls" hidden="false" id="a318-4aee-10c0-31b8" collective="false">
+      <categoryLinks>
+        <categoryLink name="Special" hidden="false" id="773d-e971-07ca-387b" targetId="fc26-7737-f7cb-8977" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Chaos Troll" hidden="false" id="29f1-bd7b-cab0-eeb5" collective="false">
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="400a-3a7e-d68f-e7ec" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Regeneration (4+)" id="683a-3bb2-622b-9805" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
+            <infoLink name="Stupidity" id="f8ab-6416-1232-1005" hidden="false" targetId="755c-61c2-fa25-f4ce" type="rule"/>
+            <infoLink name="Natural Armour (6+)" id="aa27-2457-7564-caf8" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
+            <infoLink name="Troll Vomit" id="18ce-3f9a-85bc-502d" hidden="false" type="rule" targetId="42ef-fb9e-e70b-55e0"/>
+            <infoLink name="Loner" id="fb18-2490-495c-7baa" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Primary Weapon" id="a6a2-2ea8-0bc6-73d6" hidden="false" collective="false" import="true" defaultSelectionEntryId="209c-d774-4f40-3c05" sortIndex="2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c65d-0ee2-e810-39d9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="8ab4-60da-d6a0-ae6a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="8702-77b4-afcc-a202" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="f3af-18d6-6bff-e258" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="3"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Great Weapon" hidden="false" id="91aa-c0e2-28f1-6ce2" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="9"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="Mark of Chaos" id="f676-228d-0f3e-499c" hidden="false" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3807-c0f3-7687-ca1b"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Mark of Khorne" hidden="false" id="1ca2-1954-8b3a-defc" type="selectionEntry" targetId="2211-a88b-c358-2e91" sortIndex="1">
+                  <costs>
+                    <cost name="pts" typeId="points" value="3"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Mark of Nurgle" hidden="false" id="b268-fc58-ab4a-d2ee" type="selectionEntry" targetId="fce4-1eaa-170d-634c" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="6"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Mark of Slaanesh" hidden="false" id="194a-f797-1aa5-bdbc" type="selectionEntry" targetId="b570-8e89-e752-8902" sortIndex="4">
+                  <costs>
+                    <cost name="pts" typeId="points" value="6"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Mark of Tzeentch" hidden="false" id="37d1-9f5f-ee88-f13f" type="selectionEntry" targetId="a5c6-cd36-6ce9-c322" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="3"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="pts" typeId="points" value="46"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="Light Armour" hidden="false" id="3f1d-d72c-394a-6f3c" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+              <costs>
+                <cost name="pts" typeId="points" value="3"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+          <profiles>
+            <profile name="Chaos Troll" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="974b-bafc-dcc7-8f21" publicationId="1a01-044f-047b-618f" page="198">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">1</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">1</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Troll)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="force" shared="true" id="85f8-a8e2-7e92-cfd2" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Harpies" hidden="false" id="e13e-de12-d6ec-c8a7" collective="false">
+      <categoryLinks>
+        <categoryLink name="Core" hidden="false" id="20bc-02fd-7f31-99cf" targetId="b876-2856-f1c2-c4f0" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Harpy" hidden="false" id="ef3c-f2de-29b6-bbb3" collective="false">
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="ea4e-54a1-e5f8-3c9d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Harpy" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="4cc6-b110-bbd3-1683" publicationId="9e23-79cb-pubN76150" page="146">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Harpy)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Fly (10)" id="5193-3e33-8240-984c" hidden="false" targetId="953a-d5a4-ee81-4093" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="12"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Command Group" id="2a1c-f0cf-0d3d-a917" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="4f98-bc01-5aee-f7f0" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="aa63-be38-1426-4103" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Leader" id="2ee5-387d-839d-5fb8" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Expendable" hidden="false" id="927c-63ba-6259-3140" type="selectionEntry" targetId="b90d-9045-a6d5-9e7d"/>
+      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Chaos Spawn" hidden="false" id="eb04-809f-24c4-89ec" collective="false">
+      <categoryLinks>
+        <categoryLink name="Special" hidden="false" id="2fd1-8fa6-61f1-adf9" targetId="fc26-7737-f7cb-8977" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Chaos Spawn" hidden="false" id="daf1-45ba-8314-7445" collective="false">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="15e7-d194-cf92-7f48" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="false" id="c2b2-2aff-f458-911b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Chaos Spawn" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="8daa-c99a-8a39-ca3e" publicationId="1a01-044f-047b-618f" page="197">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Chaos Beast)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Chaos Spawn" id="f190-eb25-2838-67c6" hidden="false" publicationId="1a01-044f-047b-618f" page="264">
+              <description>You may take 1-2 lone Chaos Spawn as a single Special choice.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink name="Random Attacks (D6+1)" id="447d-754b-6418-d38f" hidden="false" targetId="183a-6a6f-951c-1663" type="rule"/>
+            <infoLink name="Random Movement (3D6)" id="da98-57e8-c930-c503" hidden="false" targetId="0877-cd17-c381-a045" type="rule"/>
+            <infoLink name="Unbreakable" id="8808-241c-8ba7-003d" hidden="false" targetId="1c9d-2d99-6222-2853" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="40"/>
+          </costs>
+          <categoryLinks>
+            <categoryLink name="Special" hidden="false" id="ea0f-c556-3015-4399" targetId="fc26-7737-f7cb-8977" primary="true"/>
+          </categoryLinks>
+          <entryLinks>
+            <entryLink import="true" name="Spawn of Chaos" hidden="false" id="eae3-e941-62f6-186f" type="selectionEntryGroup" targetId="71e8-374b-3fb2-2eb9"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Giant Chaos Spawn" hidden="false" id="c75c-0942-751a-598c" collective="false">
+      <profiles>
+        <profile name="Giant Chaos Spawn" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="77f2-125c-b416-ee9b" publicationId="1a01-044f-047b-618f" page="47">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Chaos Beast)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Random Attacks (2D6)" id="4f94-d2bd-a8d5-6c80" hidden="false" targetId="065b-1f43-47e5-70cb" type="rule"/>
+        <infoLink name="Random Movement (3D6)" id="8548-9b45-67ba-54d3" hidden="false" targetId="0877-cd17-c381-a045" type="rule"/>
+        <infoLink name="Unbreakable" id="30d7-f8f0-9c1a-948f" hidden="false" targetId="1c9d-2d99-6222-2853" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="e02d-9d58-0b36-d760" targetId="0eb4-f376-7725-b05b" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="195"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="Spawn of Chaos" hidden="false" id="3c19-c909-7001-5b46" type="selectionEntryGroup" targetId="71e8-374b-3fb2-2eb9"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Chimera" hidden="false" id="9369-395a-8e7e-3937" collective="false">
+      <profiles>
+        <profile name="Chimera" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f2b0-b7d7-35a6-a55d" publicationId="1a01-044f-047b-618f" page="212">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">6</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Chaos Beast)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Fly (8)" id="7434-3afa-bbe6-767f" hidden="false" targetId="0a9a-bfcb-1a9d-5609" type="rule"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="15e6-094e-5229-e0e3" targetId="0eb4-f376-7725-b05b" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Upgrades" id="f007-8d08-6604-0dad" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Flaming Breath" hidden="false" id="8f9b-61d1-2afc-27ce" collective="false" sortIndex="4">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c3c1-c948-c5ad-7d06" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <rules>
+                <rule name="Flaming Breath" id="6713-2b8f-1c33-56a2" hidden="false" publicationId="1a01-044f-047b-618f" page="212">
+                  <description>The Chimera gains a Strength 4 Breath Weapon which has Flaming Attacks.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Iron-hard Skin" hidden="false" id="6baf-b2b2-b454-fc92" collective="false" sortIndex="3">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7883-8bc2-876a-6607" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <rules>
+                <rule name="Iron-hard Skin" id="d6bc-9585-8716-99be" hidden="false" publicationId="1a01-044f-047b-618f" page="212">
+                  <description>The Chimera gains Natural Armour (4+).</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Regenerating Flesh" hidden="false" id="258c-000e-2188-d0b7" collective="false" sortIndex="5">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="97df-e5b3-8df6-41ca" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <rules>
+                <rule name="Regenerating Flesh" id="5f52-a029-d56d-2e7e" hidden="false" publicationId="1a01-044f-047b-618f" page="212">
+                  <description>The Chimera gains Regeneration (4+).</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="points" value="40"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fiend Tail" hidden="false" id="572b-9624-c875-b62b" collective="false" sortIndex="2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a71b-c39e-3532-4ce5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <rules>
+                <rule name="Fiend Tail" id="84ca-33e4-3560-0389" hidden="false" publicationId="1a01-044f-047b-618f" page="212">
+                  <description>The Chimera gains +1 A.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Venemous Ooze" hidden="false" id="8029-66de-d052-179b" collective="false" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d0a1-d9a3-1220-f7a1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <rules>
+                <rule name="Venemous Ooze" id="a5cf-c476-26fe-7910" hidden="false" publicationId="1a01-044f-047b-618f" page="212">
+                  <description>The Chimera gains Poisoned Attacks.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="190"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Dragon Ogres (Shaggoth)" hidden="false" id="d781-5ec4-8381-16d5">
+      <categoryLinks>
+        <categoryLink name="Special" hidden="false" id="5d8a-0763-d2a0-4988" targetId="fc26-7737-f7cb-8977" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Dragon Ogre" hidden="false" id="ab1b-0ac6-0430-cfe4" type="selectionEntry" targetId="7d5f-f65e-9739-0714"/>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Command Group" id="1810-f8b6-0571-33b5" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="b4cb-526d-6152-50ba" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b553-4a6a-07cb-7675" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Leader" id="9fc0-4fe3-93a3-1cf7" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="equalTo" value="0" field="selections" scope="force" childId="9ac9-5d75-316b-cb1d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="1" field="6596-d86c-19e0-1034">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="force" childId="9ac9-5d75-316b-cb1d" shared="true" roundUp="false" includeChildSelections="true"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="6596-d86c-19e0-1034" includeChildSelections="true"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Dragon Ogre Shaggoth" hidden="false" id="9ac9-5d75-316b-cb1d" collective="false">
+      <profiles>
+        <profile name="Dragon Ogre Shaggoth" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="5484-8834-b066-3614" publicationId="9e23-79cb-pubN71963" page="86">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">6</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">6</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Dragon Ogre)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Natural Armour (5+)" id="3159-f771-30a4-e871" hidden="false" targetId="306d-711a-1300-587f" type="rule"/>
+        <infoLink name="Impact Hits (D3)" id="a24f-65a3-8c34-c8d4" hidden="false" targetId="f30d-0b61-2836-689e" type="rule"/>
+        <infoLink name="Storm Rage" id="6f5d-a791-f583-4c7c" hidden="false" type="rule" targetId="9cd6-64c7-e7c5-4ef6"/>
+        <infoLink name="Storm Call" id="a6b9-8531-1e0d-f760" hidden="false" type="profile" targetId="db98-698f-5fae-ba03"/>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="d4ee-0c92-1015-328b" targetId="0eb4-f376-7725-b05b" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Primary Weapon" id="cebd-9c8b-035d-e7d7" hidden="false" collective="false" import="true" defaultSelectionEntryId="be5c-cb48-ba09-303c" sortIndex="1">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="34b4-6d60-3b44-84d4-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="34b4-6d60-3b44-84d4-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Great Weapon" hidden="false" id="5f69-a322-2fa4-55c1" collective="false" sortIndex="3">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0c45-d94c-0671-df5b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Great Weapon" id="2f85-f151-107b-0464" hidden="false" targetId="193e-bc43-b252-8eff" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Two/Additional Hand Weapons" hidden="false" id="453f-3fc7-eff2-3ea4" collective="false" sortIndex="2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9f34-3c6e-5e13-6b6b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Two/Additional Hand Weapons" id="3944-34cf-6d10-cc4d" hidden="false" targetId="4a5d-0b6d-f6ac-fd7d" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="6"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Hand Weapon" hidden="false" id="be5c-cb48-ba09-303c" collective="false" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fe07-c950-e63c-8009" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Hand Weapon" id="aabf-6f2a-b7c7-45e1" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Armour" id="a8cf-9ff6-af8d-c9c6" hidden="false" collective="false" import="true" sortIndex="2">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="1d68-9ba5-2d76-b2c7-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1d68-9ba5-2d76-b2c7-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Light Armour" hidden="false" id="3b7c-b2e7-1b43-f3fd" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Medium Armour" hidden="false" id="55db-85f0-0359-44ff" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="12"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="235"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Dragon Ogre" hidden="false" id="7d5f-f65e-9739-0714" collective="false">
+      <constraints>
+        <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="7477-94c7-7a73-3d2a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Dragon Ogre" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="2a14-dc71-d95e-8ef1" publicationId="1a01-044f-047b-618f" page="201">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">2</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Cavalry (Dragon Ogre)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Natural Armour (5+)" id="5ea9-2321-e792-791f" hidden="false" targetId="306d-711a-1300-587f" type="rule"/>
+        <infoLink name="Storm Rage" id="cd1f-0641-0130-a1ae" hidden="false" type="rule" targetId="9cd6-64c7-e7c5-4ef6"/>
+      </infoLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Primary Weapon" id="7801-5fd9-c6a6-d6a5" hidden="false" collective="false" import="true" defaultSelectionEntryId="55a8-a71f-9ed3-0436" sortIndex="1">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="f794-d592-7b4f-d4df-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f794-d592-7b4f-d4df-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Great Weapon" hidden="false" id="bd11-90c4-670c-f719" collective="true" sortIndex="4">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3bf0-a04b-7dd3-a296" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Great Weapon" id="93d6-490a-1a84-de3a" hidden="false" targetId="193e-bc43-b252-8eff" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="9"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Two/Additional Hand Weapons" hidden="false" id="a902-0056-0bb9-1dd3" collective="true" sortIndex="2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b951-bfaa-85f9-9faf" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Two/Additional Hand Weapons" id="f62d-9b78-5c88-5f80" hidden="false" targetId="4a5d-0b6d-f6ac-fd7d" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="4"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Hand Weapon" hidden="false" id="55a8-a71f-9ed3-0436" collective="true" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="bab3-eb01-ebe9-244e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Hand Weapon" id="b705-3602-bc5a-eb1a" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Polearm/Halberd" hidden="false" id="19bc-80a1-d2b8-464d" collective="true" sortIndex="3">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a78f-9840-7172-2159" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Polearm/Halberd" id="9b89-6ab4-f267-acaa" hidden="false" targetId="e43e-5153-eeec-36be" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="6"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Armour" id="fabf-375b-bff6-6f30" hidden="false" collective="false" import="true" sortIndex="2">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="1987-17ec-0adb-1e83-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1987-17ec-0adb-1e83-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Light Armour" hidden="false" id="34f0-e9c2-e2f4-5d5d" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Medium Armour" hidden="false" id="638b-78b0-41f3-18db" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="8"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <costs>
+        <cost name="pts" typeId="points" value="55"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Dragon Ogres" hidden="false" id="40ad-4612-7809-d541">
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="fb5d-d4e8-e4c8-25e5" targetId="0eb4-f376-7725-b05b" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Command Group" id="7d32-bf8a-cf7d-5d63" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="f9d1-8b80-0c23-d788" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7da5-8e19-8be8-b461" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Leader" id="5453-d92e-771a-ca37" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Dragon Ogre" hidden="false" id="1325-eda5-d6e8-52b1" type="selectionEntry" targetId="7d5f-f65e-9739-0714"/>
+      </entryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -11218,7 +11887,7 @@ characteristic.</characteristic>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup id="3dfd-c3fd-5a56-45f1" name="Arcane Items (One use only)" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="3dfd-c3fd-5a56-45f1" name="Common Arcane Items (One use only)" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="01e6-93d4-45a5-e661" type="max"/>
       </constraints>
@@ -11511,6 +12180,57 @@ characteristic.</characteristic>
         </selectionEntry>
       </selectionEntries>
       <comment>Great Eagle</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Spawn of Chaos" id="71e8-374b-3fb2-2eb9" hidden="false" collective="false" import="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0131-c786-315c-9dbe" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Spawn of Khorne" hidden="false" id="1a77-d1dc-4b1b-c1be" collective="false" sortIndex="3">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4d51-5a1d-1daa-0039" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Spawn of Khorne" id="6bfe-ac8c-cffc-2488" hidden="false" targetId="9342-d93f-e118-0b55" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Spawn of Nurgle" hidden="false" id="cb46-c117-d1aa-d001" collective="false" sortIndex="1">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f5e6-ea76-8495-eb06" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Spawn of Nurgle" id="65d6-005d-b04a-0e06" hidden="false" targetId="ad42-5a49-bd23-db76" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Spawn of Slaanesh" hidden="false" id="563c-108d-ecbb-f64a" collective="false" sortIndex="2">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e1e0-8a91-0eb4-8210" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Spawn of Slaanesh" id="c993-78f6-8da8-9588" hidden="false" targetId="4cca-bef4-9da0-60ee" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Spawn of Tzeentch" hidden="false" id="62cd-e66c-6de9-33a4" collective="false" sortIndex="4">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="08a5-e047-6ce3-98b9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Spawn of Tzeentch" id="eaf4-27ed-b2bf-5bfb" hidden="false" targetId="cfa3-ff7d-5a8e-de9b" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
@@ -12967,6 +13687,21 @@ Unless otherwise specified, Multiple Wounds only apply to close combat attacks.<
     </rule>
     <rule name="Weapon team" id="409d-a7ab-f540-c35c" hidden="false" publicationId="9e23-79cb-pubN66727" page="67">
       <description>If a model with this special rule is hit by a missile attack and is within 3&quot; of a friendly unit consisting of five or more rank and file models of the same troop type within 3&quot;, roll a D6. On a roll of 4+, the hit is transferred to a model in the friendly unit (if there is more than one eligible unit within 3&quot;, the controlling player can decide which). Otherwise, the hit is resolved against the Weapon Team as normal.</description>
+    </rule>
+    <rule name="Spawn of Khorne" id="9342-d93f-e118-0b55" hidden="false" publicationId="1a01-044f-047b-618f" page="197">
+      <description>A Spawn of Khorne has +1 S.</description>
+    </rule>
+    <rule name="Spawn of Nurgle" id="ad42-5a49-bd23-db76" hidden="false" publicationId="1a01-044f-047b-618f" page="197">
+      <description>A Spawn of Nurgle has Poisoned Attacks.</description>
+    </rule>
+    <rule name="Spawn of Slaanesh" id="4cca-bef4-9da0-60ee" hidden="false" publicationId="1a01-044f-047b-618f" page="197">
+      <description>A Spawn of Slaanesh rolls an additional D6 for their Random Movement result.</description>
+    </rule>
+    <rule name="Spawn of Tzeentch" id="cfa3-ff7d-5a8e-de9b" hidden="false" publicationId="1a01-044f-047b-618f" page="197">
+      <description>A Spawn of Tzeentch has a Strength 3 Breath Weapon that has Flaming Attacks.</description>
+    </rule>
+    <rule name="Storm Rage" id="9cd6-64c7-e7c5-4ef6" hidden="false" page="46" publicationId="1a01-044f-047b-618f">
+      <description>Dragon Ogres have the Immunity (Lightning Attacks) special rule. In addition, if they are hit with a Lightning Attack, they immediately gain the Frenzy special rule.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -15359,6 +16094,15 @@ Magic phase.</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730">3</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Storm Call" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="db98-698f-5fae-ba03" publicationId="1a01-044f-047b-618f" page="46">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Innate Bound Spell</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">6&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets all units within a 6&quot; radius (friend or foe). The target units suffer D3 Strength 4 Hits with the Lightning Attacks special rule.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
