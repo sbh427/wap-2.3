@@ -1276,7 +1276,7 @@
         <categoryLink id="9010-9b2d-0350-1bd7" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="526d-f50a-5e0c-a655" name="Centigor" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="526d-f50a-5e0c-a655" name="Centigor" hidden="false" collective="false" import="true" type="model" subType="mount">
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f66d-3eb6-fe23-ca5d" type="min"/>
           </constraints>
@@ -1294,6 +1294,13 @@
                 <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
                 <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Beastmen, Centigor)</characteristic>
               </characteristics>
+              <modifiers>
+                <modifier type="increment" value="1" field="f049-8a65-9c04-1559">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="unit" childId="8907-0a93-227a-88eb" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <infoLinks>
@@ -1340,6 +1347,25 @@
               </costs>
             </entryLink>
           </entryLinks>
+          <modifiers>
+            <modifier type="increment" value="1" field="points">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="unit" childId="8907-0a93-227a-88eb" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="The Sons of Ghorros" hidden="true" id="8907-0a93-227a-88eb">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="force" childId="1869-6740-649f-4e91" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="4635-30fe-9458-d6bc" includeChildSelections="true"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1681,7 +1707,7 @@
       </profiles>
       <rules>
         <rule id="d0be-26e4-9fd3-2665" name="Aura of Madness" publicationId="9e23-79cb-pubN71963" page="36" hidden="false">
-          <description>Each enemy unit within 12&quot; of one or more Jabberslythes at the beginning of the Beastmen Magic phase must take a LD test. For every point by which a unit fails its test, it suffers a wound with no armour saves allowed. This has no effect on units that are Immune to Psychology.</description>
+          <description>Each enemy unit within 12&quot; of one or more Jabberslythes at the beginning of the Beastmen Magic phase must take a Ld test. For every point by which a unit fails its test, it suffers a wound with no armour saves allowed. This has no effect on units that are Immune to Psychology.</description>
         </rule>
         <rule id="ce9f-c0e2-b779-c56b" name="Spurting Bile-Blood" publicationId="9e23-79cb-pubN71963" page="36" hidden="false">
           <description>For every wound caused on a Jabberslythe in close combat, the attacking unit immediately suffers a S 5 hit.</description>
@@ -1752,7 +1778,7 @@
       </profiles>
       <rules>
         <rule id="9e21-0047-985a-eb14" name="Constant Wailing" publicationId="9e23-79cb-pubN71963" page="36" hidden="false">
-          <description>Enemy units within 6&quot; suffer -1 to their LD. This has no effect on units with Immunity (Psychology).</description>
+          <description>Enemy units within 6&quot; suffer -1 to their Ld. This has no effect on units with Immunity (Psychology).</description>
         </rule>
         <rule id="cdb6-3a26-8c86-5764" name="Flailing Appendages" publicationId="9e23-79cb-pubN71963" page="36" hidden="false">
           <description>A Hag Tree counts as having no Flanks or Rear for the purposes of Combat Resolution.</description>
@@ -1802,194 +1828,6 @@
           </constraints>
         </entryLink>
       </entryLinks>
-    </selectionEntry>
-    <selectionEntry id="3a14-19b1-b661-f660" name="The Sons of Ghorros" hidden="true" collective="false" import="true" type="unit">
-      <modifiers>
-        <modifier type="set" field="103e-df03-eac0-c076" value="1">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1869-6740-649f-4e91" type="atLeast"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" field="hidden" value="false">
-          <conditions>
-            <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1869-6740-649f-4e91" type="atLeast"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="force" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="103e-df03-eac0-c076" type="max"/>
-        <constraint field="selections" scope="force" value="0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="9d56-67c6-45c5-5ab3" type="min"/>
-      </constraints>
-      <categoryLinks>
-        <categoryLink id="bd05-4ce0-5d0d-a87f" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="a7a3-0c98-1522-7628" name="Centigor" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="42e8-1a76-4e01-0a29" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="fdda-1bbe-f105-06ae" name="Centigor" publicationId="9e23-79cb-pubN71963" page="80" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-                <characteristic name="LD" typeId="a199-f10b-a038-5730">7</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="25b2-2c85-dffb-f5d1" name="Primal Fury" hidden="false" targetId="80ca-7f30-49ff-4274" type="rule"/>
-            <infoLink id="16ed-d57b-3fdd-1a02" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-            <infoLink id="a7b9-2336-b7c6-a7f3" name="Drunken" hidden="false" targetId="e266-edfb-e9f4-02d1" type="rule"/>
-            <infoLink id="4363-e7c7-3d1b-2189" name="Strider (Forest)" hidden="false" targetId="8d09-c701-2658-67e8" type="rule"/>
-            <infoLink id="36e4-940a-3e0a-6a69" name="05-06" hidden="false" targetId="dc96-3f8c-befe-1533" type="profile"/>
-            <infoLink id="1c99-4143-5cc5-0718" name="03-04" hidden="false" targetId="1823-42ce-82a9-75a2" type="profile"/>
-            <infoLink id="e7c5-c42d-cb89-8d13" name="01-02" hidden="false" targetId="26c8-8fd3-7a0a-e24c" type="profile"/>
-            <infoLink id="4dbe-9ec5-ed0b-7548" name="Impact Hits (1)" hidden="false" targetId="bb3b-3ca8-fcbc-a78b" type="rule"/>
-            <infoLink id="e914-4290-191c-d676" name="Fast Cavalry" hidden="false" targetId="8877-a5de-cc9c-9142" type="rule"/>
-          </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="3859-9251-5df8-aed4" name="Light Armour" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eff5-e6a1-8ffe-a870" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="9fb4-481f-373c-d0ed" name="Light Armour" hidden="false" targetId="4129-1acd-3564-d3ea" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0fa1-9887-8ac7-60f8" name="Throwing Axes" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3d4d-3735-4602-8561" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="2ba5-f051-2cf1-686c" name="Throwing Axes" hidden="false" targetId="493b-1f46-43ce-a18f" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="a495-3846-b8f0-40c9" name="Primary Weapon" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1330-e499-bcd4-325f" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b600-7705-5821-0f96" type="min"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="c503-6c68-0cb0-32ea" name="Great Weapon" hidden="false" collective="true" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f97c-8061-0bcb-0b39" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="d564-0b3a-7e4c-1681" name="Great Weapon" hidden="false" targetId="193e-bc43-b252-8eff" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="cfb1-2f92-c74e-9818" name="Spear (Mounted) &amp; Shield" hidden="false" collective="true" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9d91-7778-b830-8a5a" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a7c0-78ca-316f-25ca" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="1278-c58d-74db-f163" name="Light Lance" hidden="false" targetId="b2d2-2eb6-2bd2-ddbb" type="profile"/>
-                    <infoLink id="d646-aa1b-5460-172c" name="Shield" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="18"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="449c-57b9-ac0d-addf" name="Command Group" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="fc99-195d-17e3-a235" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="175e-09d6-5cce-d0ff" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="ff9a-a0dc-7235-f462" name="Standard Bearer" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
-              </infoLinks>
-              <selectionEntries>
-                <selectionEntry id="9224-efa3-ccd1-1315" name="Magic Standard" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="65b1-e010-6e96-ce05" type="max"/>
-                    <constraint field="points" scope="parent" value="25" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="49fa-8361-2851-f03e" type="max"/>
-                  </constraints>
-                  <entryLinks>
-                    <entryLink id="93c1-f0c3-62a5-13ea" name="Magic Standards" hidden="false" collective="false" import="true" targetId="7a65-1758-870e-b49d" type="selectionEntryGroup"/>
-                  </entryLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="c6ba-51c6-0b9b-a690" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c925-2444-edd9-8c11" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="72da-0794-a5c9-9c3c" name="Musician" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="eb0f-67a1-a8d1-1772" name="Gorehoof" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="995b-445c-d276-6526" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="13b1-ab44-99d3-63d9" name="Gorehoof" publicationId="9e23-79cb-pubN71963" page="80" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">7</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="3180-bd3b-be61-38e2" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
     </selectionEntry>
     <selectionEntry id="8e07-08fe-08be-5478" name="Minotaurs (Taurox, Doombull or Gorebull as general)" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
@@ -2155,26 +1993,26 @@
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e9dc-8ad2-8da3-c266" type="max"/>
               </constraints>
               <profiles>
-                <profile id="ffdd-2425-ad75-b93b" name="Malagor" publicationId="9e23-79cb-pubN71963" page="105" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+                <profile id="ffdd-2425-ad75-b93b" name="Malagor" publicationId="9e23-79cb-pubN71963" page="43" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
                   <characteristics>
                     <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
                     <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
                     <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
                     <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">8</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character)</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Beastman, Gor)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <rules>
-                <rule id="d475-d082-cf71-543c" name="Something Wicked this Way Comes" publicationId="9e23-79cb-pubN71963" page="105" hidden="false">
+                <rule id="d475-d082-cf71-543c" name="Something Wicked this Way Comes" publicationId="9e23-79cb-pubN71963" page="43" hidden="false">
                   <description>Enemy units within 6&quot; of Malagor may not use their General&apos;s Inspiring Presence.</description>
                 </rule>
-                <rule id="4f0e-79a9-c80c-3c81" name="Unholy Power" publicationId="9e23-79cb-pubN71963" page="105" hidden="false">
+                <rule id="4f0e-79a9-c80c-3c81" name="Unholy Power" publicationId="9e23-79cb-pubN71963" page="43" hidden="false">
                   <description>For every spell Malagor casts that is not dispelled he gets a cumulative +1 on subsequent casting attempts for the rest of the Magic phase.</description>
                 </rule>
               </rules>
@@ -2191,7 +2029,7 @@
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ca3b-55a6-571a-244b" type="max"/>
                   </constraints>
                   <profiles>
-                    <profile id="ca10-eda5-34e3-20cd" name="Icons of Vilification" publicationId="9e23-79cb-pubN71963" page="105" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+                    <profile id="ca10-eda5-34e3-20cd" name="Icons of Vilification" publicationId="9e23-79cb-pubN71963" page="43" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
                       <characteristics>
                         <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">All friendly units within 6&quot; of Malagor may re-roll failed Primal Fury tests.</characteristic>
                       </characteristics>
@@ -2201,61 +2039,108 @@
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="dea0-ffe5-aeae-0741" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="73fd-eefa-52d3-9afd" type="min"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="58d3-b7be-433d-8869" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="2126-a0e0-f1a6-266e" name="Hand Weapon" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="8836-7252-0b0d-9c26" name="Wizard Level 4" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c20e-34e4-5962-b61c" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8f22-ed69-46bf-d33b" type="min"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="90c7-0bfd-ca18-ae25" name="Malagor, the Dark Omen" publicationId="9e23-79cb-pubN71963" page="105" hidden="false" typeId="0ce6-a5f9-6184-218d" typeName="Wizard">
-                      <characteristics>
-                        <characteristic name="Wizard Level" typeId="7f8d-5707-7251-c1a5">4</characteristic>
-                        <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">4</characteristic>
-                        <characteristic name="Spell Level" typeId="c5a7-d8e1-9c88-2f0e">1-6</characteristic>
-                        <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">6</characteristic>
-                        <characteristic name="Bonus to Casting/Dispel Value" typeId="7261-e23f-ab6d-b4af">2</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <selectionEntryGroups>
-                    <selectionEntryGroup id="7892-cee7-b840-846f" name="Lore of Magic" hidden="false" collective="false" import="true">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dee5-c3eb-3fab-301d" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c254-fa3a-1fc2-3980" type="max"/>
-                      </constraints>
-                      <entryLinks>
-                        <entryLink id="5ab4-a5ff-8052-15de" name="Lore of Beasts 4" hidden="false" collective="false" import="true" targetId="3e80-c99a-cef9-4598" type="selectionEntry"/>
-                        <entryLink id="3b41-ab56-1889-a2ef" name="Lore of Death 4" hidden="false" collective="false" import="true" targetId="5995-b154-0501-6799" type="selectionEntry"/>
-                        <entryLink id="f038-3568-2996-3def" name="Lore of Shadow 4" hidden="false" collective="false" import="true" targetId="ee91-ed67-6c90-eca4" type="selectionEntry"/>
-                        <entryLink id="d121-8e12-2595-6f8c" name="Lore of the Wild" hidden="false" collective="false" import="true" targetId="6b7b-067e-e19f-2870" type="selectionEntry"/>
-                      </entryLinks>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
               </selectionEntries>
               <entryLinks>
                 <entryLink id="aad0-766d-4a0f-3a18" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry"/>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="252d-b48c-ebd2-f72f" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="13b7-f265-7096-313d"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Wizard Level 4" hidden="false" id="ace5-7308-afef-f5ed" type="selectionEntry" targetId="5460-3929-58ef-71ba">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="39ae-3a63-d672-a53c-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="39ae-3a63-d672-a53c-max"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="340"/>
               </costs>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Lore of Magic" id="ce25-f2e2-4a3a-f19f" hidden="false" defaultSelectionEntryId="34e8-c8fc-7612-64f6">
+                  <entryLinks>
+                    <entryLink import="true" name="Lore of Death" hidden="false" id="3891-d219-aa69-84d6" type="selectionEntry" targetId="bc0d-47f8-7220-1e16">
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Lore of Shadow" hidden="false" id="5a08-0ca6-9f05-eb02" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67">
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Lore of the Wild" hidden="false" id="927c-cd02-748f-db5d" type="selectionEntry" targetId="6b7b-067e-e19f-2870">
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Lore of Beasts" hidden="false" id="5c66-91db-c42c-7f65" type="selectionEntry" targetId="b436-b410-dd41-304f">
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c202-7b4c-15d5-ec5c"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="03e2-c66b-f549-cbdb"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
-            <selectionEntry id="ee30-57d7-fc63-65d9" name="Gorthor, the Beastlord" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="ee30-57d7-fc63-65d9" name="Gorthor, the Cruel" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="048e-8b53-f82b-45ca" type="max"/>
               </constraints>
@@ -2270,22 +2155,23 @@
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">9</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character)</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Beastman, Gor)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <rules>
-                <rule id="e08f-6ebd-40a6-a757" name="The Favoured of Chaos" publicationId="9e23-79cb-pubN71963" page="100" hidden="false">
+                <rule id="e08f-6ebd-40a6-a757" name="The Favoured of Chaos" publicationId="9e23-79cb-pubN71963" page="40" hidden="false">
                   <description>Gorthor must be the Army General. Gorthor, and any unit he joins, may re-roll failed Psychology and Break tests.</description>
                 </rule>
-                <rule id="e974-5a80-3f02-d11b" name="Scion of the Dark Gods" publicationId="9e23-79cb-pubN71963" page="100" hidden="false">
+                <rule id="e974-5a80-3f02-d11b" name="Scion of the Dark Gods" publicationId="9e23-79cb-pubN71963" page="40" hidden="false">
                   <description>At the start of each friendly Magic phase randomly generate a spell from the Lore of Death. Gorthor may use this spell during this Magic phase as a Bound Spell, with a Power Level equal to half the casting value of the spell, rounding up. Gorthor may not exchange the result for the Signature spell if he prefers.</description>
                 </rule>
               </rules>
               <infoLinks>
                 <infoLink id="05f0-e6ca-b9a0-4445" name="Primal Fury" hidden="false" targetId="80ca-7f30-49ff-4274" type="rule"/>
                 <infoLink id="f8a4-835a-5e23-fb57" name="Strider (Forest)" hidden="false" targetId="8d09-c701-2658-67e8" type="rule"/>
+                <infoLink name="Beastmen Ambush" id="13f4-ac97-82f3-2bdd" hidden="false" type="rule" targetId="ac57-e28c-5e7b-ba9c"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="f9dd-3c98-7246-e27f" name="Cloak of the Beastlord" hidden="false" collective="false" import="true" type="upgrade">
@@ -2294,9 +2180,9 @@
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3b8b-a488-5f4b-167f" type="max"/>
                   </constraints>
                   <profiles>
-                    <profile id="bae5-f011-6142-2ed8" name="Cloak of the Beastlord" publicationId="9e23-79cb-pubN71963" page="100" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+                    <profile id="bae5-f011-6142-2ed8" name="Cloak of the Beastlord" publicationId="9e23-79cb-pubN71963" page="40" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
                       <characteristics>
-                        <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The Cloak gives Gorthor a Ward save equal to the S of the attack that hit him. Against Attacks that do not have a S value, it provides a Ward Save (6+). In addition, his Inspiring Presence is increased to 18&quot;.</characteristic>
+                        <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The Cloak gives Gorthor a Ward save equal to the S of the attack that hit him. Against Attacks that do not have a S value, it provides a Ward Save (6+). In addition, he gains the Inspiring Presence (6) special rule.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -2310,11 +2196,11 @@
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e71d-8a19-4742-b054" type="max"/>
                   </constraints>
                   <profiles>
-                    <profile id="ce46-8e7f-181d-ce84" name="The Impaler" publicationId="9e23-79cb-pubN71963" page="100" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+                    <profile id="ce46-8e7f-181d-ce84" name="The Impaler" publicationId="9e23-79cb-pubN71963" page="40" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
                       <characteristics>
                         <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                         <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Spear. The Impaler gives Gorthor Multiple Wounds (D3). If Gorthor rolls any doubles or triples of successful rolls To Hit, these attacks automatically Wound.</characteristic>
+                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Light Lance/Spear. The Impaler gives Gorthor Multiple Wounds (D3). If Gorthor rolls any doubles or triples of successful rolls To Hit, these attacks automatically Wound.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -2322,156 +2208,47 @@
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Skull of Murgrar" hidden="false" id="6ebe-efae-609e-e897">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a740-262b-f6ad-d9f3-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a740-262b-f6ad-d9f3-max"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Skull of Murgrar" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="db2e-aa4e-4865-8039" publicationId="9e23-79cb-pubN71963" page="40">
+                      <characteristics>
+                        <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Chariot only. When rolling for the chariot&apos;s impact hits, the Skull of Mugrar allows an extra dice to be rolled, and the highest result to be chosen. In addition, it gives Gorthor the Immunity (Multiple Wounds) special rule.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
               </selectionEntries>
               <selectionEntryGroups>
                 <selectionEntryGroup id="fd37-6160-14c7-05e3" name="Mount" hidden="false" collective="false" import="true">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3e7d-90e1-5dde-2497" type="max"/>
                   </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="2636-5fcf-3791-bcea" name="Tuskgor Chariot" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0c0c-fcbe-109c-0166" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="ce3f-1c23-96ad-f686" name="Tuskgor Chariot" hidden="false" targetId="0dff-73c8-3bc1-ada1" type="profile"/>
-                        <infoLink id="11df-3adb-ee99-2496" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                        <infoLink id="b562-0e80-ebd6-0f54" name="Impact Hits (D6)" hidden="false" targetId="e9e6-66cc-623f-8e94" type="rule"/>
-                      </infoLinks>
-                      <selectionEntries>
-                        <selectionEntry id="6258-5213-0617-9c3a" name="Bagrar" hidden="false" collective="false" import="true" type="upgrade">
-                          <constraints>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c1ce-d37b-cff3-b1bd" type="min"/>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="38dc-0047-bc93-4201" type="max"/>
-                          </constraints>
-                          <infoLinks>
-                            <infoLink id="306a-f930-1e54-8055" name="Bagrar the Tamer" hidden="false" targetId="a0e0-e4fa-1f28-cff8" type="rule"/>
-                            <infoLink id="7872-ab77-e3e9-a2ee" name="Primal Fury" hidden="false" targetId="80ca-7f30-49ff-4274" type="rule"/>
-                            <infoLink id="0c51-8874-c6a2-8f80" name="Bagrar" hidden="false" targetId="0ba1-bdf2-b59b-c042" type="profile"/>
-                          </infoLinks>
-                          <selectionEntries>
-                            <selectionEntry id="573e-15d7-5175-826c" name="Spear (Mounted)" hidden="false" collective="false" import="true" type="upgrade">
-                              <constraints>
-                                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="961d-d7ab-7fa5-d2d2" type="max"/>
-                                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5ab1-8edf-296b-aac9" type="min"/>
-                              </constraints>
-                              <infoLinks>
-                                <infoLink id="cbf9-b7cd-2f2c-f7f1" name="Light Lance" hidden="false" targetId="b2d2-2eb6-2bd2-ddbb" type="profile"/>
-                              </infoLinks>
-                              <costs>
-                                <cost name="pts" typeId="points" value="0"/>
-                              </costs>
-                            </selectionEntry>
-                          </selectionEntries>
-                          <costs>
-                            <cost name="pts" typeId="points" value="0"/>
-                          </costs>
-                        </selectionEntry>
-                        <selectionEntry id="94be-d2ac-56ea-2697" name="Tuskgor" hidden="false" collective="false" import="true" type="upgrade">
-                          <constraints>
-                            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="93e0-b79d-45d9-e5e2" type="max"/>
-                            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2662-e831-778c-4f60" type="min"/>
-                          </constraints>
-                          <infoLinks>
-                            <infoLink id="218e-0c2b-bf97-3d0e" name="Tuskgor" hidden="false" targetId="00d0-3973-6454-616a" type="profile"/>
-                          </infoLinks>
-                          <costs>
-                            <cost name="pts" typeId="points" value="0"/>
-                          </costs>
-                        </selectionEntry>
-                        <selectionEntry id="6852-160a-d772-57ad" name="Skull of Mugrar" hidden="false" collective="false" import="true" type="upgrade">
-                          <constraints>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="11fe-a917-f3ef-c168" type="min"/>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="beb0-74f5-f912-1764" type="max"/>
-                          </constraints>
-                          <infoLinks>
-                            <infoLink id="5e82-3636-e38f-8d7b" name="Skull of Mugrar" hidden="false" targetId="2bf7-0aa7-6086-a349" type="profile"/>
-                          </infoLinks>
-                          <costs>
-                            <cost name="pts" typeId="points" value="0"/>
-                          </costs>
-                        </selectionEntry>
-                      </selectionEntries>
+                  <entryLinks>
+                    <entryLink import="true" name="Tuskgor Chariot" hidden="false" id="c680-95df-de51-db88" type="selectionEntry" targetId="74ef-669b-983e-a5e4">
                       <costs>
-                        <cost name="pts" typeId="points" value="110"/>
+                        <cost name="pts" typeId="points" value="75"/>
                       </costs>
-                      <categoryLinks>
-                        <categoryLink id="PK3p-wfRT-azFV-ff45" name="(Mount)" hidden="false" targetId="(Mount)" primary="false"/>
-                      </categoryLinks>
-                    </selectionEntry>
-                    <selectionEntry id="08f7-be40-8a4b-eadd" name="Razorgor Chariot" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b9c2-db89-3ab6-4a4f" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="d39a-b3b1-9677-6647" name="Razorgor Chariot" hidden="false" targetId="060d-87a3-6e9d-70f0" type="profile"/>
-                        <infoLink id="2148-4fb0-d255-6d64" name="Fear" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
-                        <infoLink id="ed03-e5bc-3b8a-7840" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                        <infoLink id="6e4e-3037-1415-ab48" name="Impact Hits (D6)" hidden="false" targetId="e9e6-66cc-623f-8e94" type="rule"/>
-                      </infoLinks>
-                      <selectionEntries>
-                        <selectionEntry id="c3e1-abff-2674-57a9" name="Razorgor" hidden="false" collective="false" import="true" type="upgrade">
-                          <constraints>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="78f7-6e7e-479a-6269" type="max"/>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="00fc-db62-a151-421f" type="min"/>
-                          </constraints>
-                          <infoLinks>
-                            <infoLink id="f13c-8713-79b0-bf31" name="Razorgor" hidden="false" targetId="b564-a41f-f391-8c9e" type="profile"/>
-                            <infoLink id="2301-2456-0c27-a1a9" name="Thunderous Charge" hidden="false" targetId="0ca0-8541-95c8-2de3" type="rule"/>
-                          </infoLinks>
-                          <costs>
-                            <cost name="pts" typeId="points" value="0"/>
-                          </costs>
-                        </selectionEntry>
-                        <selectionEntry id="6921-4ca7-6037-bfa6" name="Bagrar" hidden="false" collective="false" import="true" type="upgrade">
-                          <constraints>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7ef2-0b06-2f2d-a97f" type="min"/>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2c00-4b1d-57f9-09fa" type="max"/>
-                          </constraints>
-                          <infoLinks>
-                            <infoLink id="ec30-1a83-f3e6-dafb" name="Bagrar the Tamer" hidden="false" targetId="a0e0-e4fa-1f28-cff8" type="rule"/>
-                            <infoLink id="6701-2a42-5bcd-bed0" name="Primal Fury" hidden="false" targetId="80ca-7f30-49ff-4274" type="rule"/>
-                            <infoLink id="8f59-4b2a-b893-2d0e" name="Bagrar" hidden="false" targetId="0ba1-bdf2-b59b-c042" type="profile"/>
-                          </infoLinks>
-                          <selectionEntries>
-                            <selectionEntry id="d70f-032b-9e9e-0d30" name="Spear (Mounted)" hidden="false" collective="false" import="true" type="upgrade">
-                              <constraints>
-                                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ab57-93e0-9fad-c1de" type="max"/>
-                                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a8dc-4e5c-4449-535e" type="min"/>
-                              </constraints>
-                              <infoLinks>
-                                <infoLink id="1c6e-44e1-f385-2f58" name="Light Lance" hidden="false" targetId="b2d2-2eb6-2bd2-ddbb" type="profile"/>
-                              </infoLinks>
-                              <costs>
-                                <cost name="pts" typeId="points" value="0"/>
-                              </costs>
-                            </selectionEntry>
-                          </selectionEntries>
-                          <costs>
-                            <cost name="pts" typeId="points" value="0"/>
-                          </costs>
-                        </selectionEntry>
-                        <selectionEntry id="77c7-ec25-8f60-0512" name="Skull of Mugrar" hidden="false" collective="false" import="true" type="upgrade">
-                          <constraints>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="251c-1a30-f433-60dd" type="min"/>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="60b2-cbd6-bc4a-64cd" type="max"/>
-                          </constraints>
-                          <infoLinks>
-                            <infoLink id="811d-eaf3-2c5e-015a" name="Skull of Mugrar" hidden="false" targetId="2bf7-0aa7-6086-a349" type="profile"/>
-                          </infoLinks>
-                          <costs>
-                            <cost name="pts" typeId="points" value="0"/>
-                          </costs>
-                        </selectionEntry>
-                      </selectionEntries>
+                      <rules>
+                        <rule name="Bagrar the Tamer" id="7dcd-2912-4234-f120" hidden="false" publicationId="9e23-79cb-pubN71963" page="40">
+                          <description>If Gorthor is mounted on a Chariot, he may re-roll all Fleeing and Pursuit distance rolls. If Gorthor is on foot, Bagrar is not included in the game.</description>
+                        </rule>
+                      </rules>
+                    </entryLink>
+                    <entryLink import="true" name="Razorgor Chariot" hidden="false" id="4a23-daae-ca4c-495f" type="selectionEntry" targetId="f34b-227e-56b8-2c66">
                       <costs>
-                        <cost name="pts" typeId="points" value="140"/>
+                        <cost name="pts" typeId="points" value="95"/>
                       </costs>
-                      <categoryLinks>
-                        <categoryLink id="YXC5-XxXt-OmxY-k043" name="(Mount)" hidden="false" targetId="(Mount)" primary="false"/>
-                      </categoryLinks>
-                    </selectionEntry>
-                  </selectionEntries>
+                      <rules>
+                        <rule name="Bagrar the Tamer" id="354d-0851-9b20-06a8" hidden="false" publicationId="9e23-79cb-pubN71963" page="40">
+                          <description>If Gorthor is mounted on a Chariot, he may re-roll all Fleeing and Pursuit distance rolls. If Gorthor is on foot, Bagrar is not included in the game.</description>
+                        </rule>
+                      </rules>
+                    </entryLink>
+                  </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <entryLinks>
@@ -2500,23 +2277,23 @@
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">9</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character)</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Beastman, Gor)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <rules>
-                <rule id="0b22-1a9e-e655-5bef" name="Packmaster" publicationId="9e23-79cb-pubN71963" page="102" hidden="false">
-                  <description>All Warhounds in an army led by Khazrak have LD 6 and Ambushers.</description>
+                <rule id="0b22-1a9e-e655-5bef" name="Packmaster" publicationId="9e23-79cb-pubN71963" page="41" hidden="false">
+                  <description>All Warhounds in an army led by Khazrak have Ld 6 and Ambushers.</description>
                 </rule>
-                <rule id="67e8-9928-b314-844c" name="Bestial Cunning" publicationId="9e23-79cb-pubN71963" page="102" hidden="false">
+                <rule id="67e8-9928-b314-844c" name="Bestial Cunning" publicationId="9e23-79cb-pubN71963" page="41" hidden="false">
                   <description>All units that deploy as Ambushers in the same army as Khazrak may choose to re-roll the dice to see when they enter play.</description>
                 </rule>
               </rules>
               <infoLinks>
-                <infoLink id="bbd7-fa36-0f7b-377c" name="Ambushers" hidden="false" targetId="f366-0f91-841f-cf80" type="rule"/>
                 <infoLink id="1251-94e4-0f7d-4649" name="Strider (Forest)" hidden="false" targetId="8d09-c701-2658-67e8" type="rule"/>
                 <infoLink id="e912-7ceb-ed5a-fad3" name="Primal Fury" hidden="false" targetId="80ca-7f30-49ff-4274" type="rule"/>
+                <infoLink name="Beastmen Ambush" id="1d3f-ad5c-08da-2c36" hidden="false" type="rule" targetId="ac57-e28c-5e7b-ba9c"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="435a-d7ba-5823-a2fa" name="Scourge" hidden="false" collective="false" import="true" type="upgrade">
@@ -2525,7 +2302,7 @@
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5aca-a849-c6bb-fc18" type="max"/>
                   </constraints>
                   <profiles>
-                    <profile id="2e4c-89ef-6db1-e6ef" name="Scourge" publicationId="9e23-79cb-pubN71963" page="102" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+                    <profile id="2e4c-89ef-6db1-e6ef" name="Scourge" publicationId="9e23-79cb-pubN71963" page="41" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
                       <characteristics>
                         <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                         <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
@@ -2543,10 +2320,10 @@
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="17b5-fdd9-a472-4699" type="max"/>
                   </constraints>
                   <profiles>
-                    <profile id="6516-de52-8168-69c8" name="The Dark Mail" publicationId="9e23-79cb-pubN71963" page="102" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+                    <profile id="6516-de52-8168-69c8" name="The Dark Mail" publicationId="9e23-79cb-pubN71963" page="41" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
                       <characteristics>
-                        <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">2+.</characteristic>
-                        <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">2+.</characteristic>
+                        <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">2+</characteristic>
+                        <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">2+</characteristic>
                         <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Negates the power of any magic or runic weapons carried by models in base contact — treat them as ordinary non-magical weapons of their type.</characteristic>
                       </characteristics>
                     </profile>
@@ -2560,7 +2337,7 @@
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0c17-74d5-f9b6-ceb4" type="max"/>
                   </constraints>
                   <profiles>
-                    <profile id="7323-f677-ca4f-103f" name="Red Maw" publicationId="9e23-79cb-pubN71963" page="102" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+                    <profile id="7323-f677-ca4f-103f" name="Red Maw" publicationId="9e23-79cb-pubN71963" page="41" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
                       <characteristics>
                         <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
                         <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
@@ -2570,13 +2347,13 @@
                         <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
                         <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
                         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-                        <characteristic name="LD" typeId="a199-f10b-a038-5730">6</characteristic>
-                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Special Character)</characteristic>
+                        <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
+                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Chaos Beast)</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
                   <rules>
-                    <rule id="a14e-2305-41c4-212d" name="Redmaw" publicationId="9e23-79cb-pubN71963" page="102" hidden="false">
+                    <rule id="a14e-2305-41c4-212d" name="Redmaw" publicationId="9e23-79cb-pubN71963" page="41" hidden="false">
                       <description>If Redmaw the Chaos Warhound is included in your army he forms a unit with Khazrak, though they may both join other units as normal. If Khazrak is slain, Redmaw is subject to Hatred and Frenzy for the remainder of the game.</description>
                     </rule>
                   </rules>
@@ -2597,7 +2374,7 @@
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="ae82-48ee-6671-12cc" type="max"/>
               </constraints>
               <profiles>
-                <profile id="9639-ab70-a65a-3c8a" name="Taurox" publicationId="9e23-79cb-pubN71963" page="106" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+                <profile id="9639-ab70-a65a-3c8a" name="Taurox" publicationId="9e23-79cb-pubN71963" page="43" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
                   <characteristics>
                     <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
                     <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
@@ -2607,23 +2384,21 @@
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">8</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Special Character)</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Special Character, Beastman, Minotaur)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <rules>
-                <rule id="a0b5-49da-63ee-f2be" name="Brass Body" publicationId="9e23-79cb-pubN71963" page="106" hidden="false">
-                  <description>Taurox has a 1+ armour save. However, if an attack rolls a &apos;6&apos; To Hit and then a &apos;6&apos; To Wound then Taurox will be slain outright if he fails his saving throw.</description>
+                <rule id="a0b5-49da-63ee-f2be" name="Brass Body" publicationId="9e23-79cb-pubN71963" page="43" hidden="false">
+                  <description>Taurox has the Natural Armour (2+) special rule. However, if an attack rolls a natural 6 To Hit and then a natural 6 To Wound then Taurox will be slain outright if he fails his saving throw.</description>
                 </rule>
               </rules>
               <infoLinks>
                 <infoLink id="c462-b3eb-e101-1dca" name="Bloodgreed" hidden="false" targetId="3bde-1140-28c7-8bfd" type="rule"/>
-                <infoLink id="18ab-b8e8-c174-c446" name="Fear" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
                 <infoLink id="15c9-23e2-22bb-c82b" name="Frenzy" hidden="false" targetId="9ff3-dda6-e142-5a77" type="rule"/>
                 <infoLink id="c4cf-dc8f-7bec-4e3d" name="Impact Hits (D3+1)" hidden="false" targetId="16ae-a437-29a7-e714" type="rule"/>
                 <infoLink id="5c27-93ab-3333-3bf9" name="Slaughterer&apos;s Call" hidden="false" targetId="bac0-d624-4a87-c6a6" type="rule"/>
-                <infoLink id="8203-d724-6e4c-612f" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="32ca-7373-b55f-4578" name="Rune-tortured Axes" hidden="false" collective="false" import="true" type="upgrade">
@@ -2632,7 +2407,7 @@
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="19b0-413c-266a-acc1" type="max"/>
                   </constraints>
                   <profiles>
-                    <profile id="bb18-9f92-4e7c-3f70" name="Rune-tortured Axes" publicationId="9e23-79cb-pubN71963" page="106" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+                    <profile id="bb18-9f92-4e7c-3f70" name="Rune-tortured Axes" publicationId="9e23-79cb-pubN71963" page="43" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
                       <characteristics>
                         <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                         <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
@@ -2652,14 +2427,14 @@
                 <cost name="pts" typeId="points" value="310"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="4ca6-3023-f7a0-c8ec" name="Morghur" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="4ca6-3023-f7a0-c8ec" name="Morghur The Shadowgave" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="3c3c-62f7-daf6-03d1" type="max"/>
               </constraints>
               <profiles>
-                <profile id="22c2-9f35-457e-35cb" name="Morghur" publicationId="9e23-79cb-pubN71963" page="104" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+                <profile id="22c2-9f35-457e-35cb" name="Morghur" publicationId="9e23-79cb-pubN71963" page="41" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
                   <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215"/>
                     <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
                     <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
                     <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
@@ -2667,25 +2442,25 @@
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">8</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character)</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Beastman, Gor)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <rules>
-                <rule id="73eb-2472-dcf0-fcea" name="Aura of Transmutation" publicationId="9e23-79cb-pubN71963" page="104" hidden="false">
+                <rule id="73eb-2472-dcf0-fcea" name="Aura of Transmutation" publicationId="9e23-79cb-pubN71963" page="42" hidden="false">
                   <description>Morghur cannot be harmed in any way by missile attacks or spells, unless the model which is the source of the attack is within 12&quot; of him. Furthermore, at the beginning of each round of close combat, all enemy models in base contact take a S 3 hit with no armour save allowed.</description>
                 </rule>
-                <rule id="401e-7bb2-d75d-b4cc" name="Spirit-essence of Chaos" publicationId="9e23-79cb-pubN71963" page="104" hidden="false">
-                  <description>At the beginning of your Magic phase, all units within 8&quot; of Morghur must pass a LD test or suffer D6 S 4 Hits which Ignore Armour Saves. If one or more Wounds are inflicted, you may place a Chaos Spawn within 3&quot; of the spot vacated, provided there is space, and you have the appropriate model available. When the Spawn appears it must be placed more than 1&quot; away from other models.</description>
+                <rule id="401e-7bb2-d75d-b4cc" name="Spirit-essence of Chaos" publicationId="9e23-79cb-pubN71963" page="42" hidden="false">
+                  <description>At the beginning of your Magic phase, all units within 8&quot; of Morghur must pass a Ld test or suffer D6 S 4 Hits which Ignore Armour Saves. If one or more Wounds are inflicted, you may place a Chaos Spawn within 3&quot; of the spot vacated, provided there is space, and you have the appropriate model available. When the Spawn appears it must be placed more than 1&quot; away from other models.</description>
                 </rule>
-                <rule id="4e4b-6301-2d13-4eab" name="The Taint" publicationId="9e23-79cb-pubN71963" page="104" hidden="false">
-                  <description>If Morghur is within 12&quot; of a forest, all enemy units even partially within that forest suffer -1 to their LD.</description>
+                <rule id="4e4b-6301-2d13-4eab" name="The Taint" publicationId="9e23-79cb-pubN71963" page="42" hidden="false">
+                  <description>If Morghur is within 12&quot; of a forest, all enemy units even partially within that forest suffer -1 to their Ld.</description>
                 </rule>
-                <rule id="af20-e065-521d-94a2" name="The Beast-Roar" publicationId="9e23-79cb-pubN71963" page="104" hidden="false">
+                <rule id="af20-e065-521d-94a2" name="The Beast-Roar" publicationId="9e23-79cb-pubN71963" page="42" hidden="false">
                   <description>All friendly Beastmen models within 12&quot; of Morghur may re-roll failed Rally Tests.</description>
                 </rule>
-                <rule id="0a00-7e78-3f34-81fe" name="The Hordes of Morghur" publicationId="9e23-79cb-pubN71963" page="104" hidden="false">
+                <rule id="0a00-7e78-3f34-81fe" name="The Hordes of Morghur" publicationId="9e23-79cb-pubN71963" page="42" hidden="false">
                   <description>A Beastmen army containing Morghur must re-roll all successful Unruly tests.</description>
                 </rule>
               </rules>
@@ -2694,6 +2469,7 @@
                 <infoLink id="077f-79b8-1a4d-af0a" name="Unbreakable" hidden="false" targetId="1c9d-2d99-6222-2853" type="rule"/>
                 <infoLink id="4323-3d2e-7e24-a6a9" name="Random Movement (2D6)" hidden="false" targetId="4918-5aef-8930-27ec" type="rule"/>
                 <infoLink id="bc9e-b1db-8167-d672" name="Strider (Forest)" hidden="false" targetId="8d09-c701-2658-67e8" type="rule"/>
+                <infoLink name="Beastmen Ambush" id="263a-432e-fcc7-ee57" hidden="false" type="rule" targetId="ac57-e28c-5e7b-ba9c"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="7c1b-894f-966c-af4a" name="Bray-Staff of Morghur &amp; the Stones of the Skull Cave" hidden="false" collective="false" import="true" type="upgrade">
@@ -2702,7 +2478,7 @@
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="194a-2674-6737-2f5b" type="max"/>
                   </constraints>
                   <profiles>
-                    <profile id="e9cd-beb1-674d-d9d7" name="Bray-Staff of Morghur &amp; the Stones of the Skull Cave" publicationId="9e23-79cb-pubN71963" page="104" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
+                    <profile id="e9cd-beb1-674d-d9d7" name="Bray-Staff of Morghur &amp; the Stones of the Skull Cave" publicationId="9e23-79cb-pubN71963" page="42" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
                       <characteristics>
                         <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">If any Wizard (friend or foe) within 12&quot; of Morghur rolls a 6 when rolling on the Miscast table, then the unfortunate Wizard is instantly turned into a Chaos Spawn under the control of the Beastmen player, and the rolled result on the Miscast table is ignored. The Spawn has as many wounds as the Wizard did when he Miscast. If you do not have a Spawn model to replace the Wizard then he simply counts as slain. If the Wizard is within an enemy unit, follow the same rules described under the Spirit-Essence of Chaos, above. This newly created unit does not award Victory points. In addition, Morghur generates two Dispel dice to be added to the Beastmen player&apos;s Dispel dice pool.</characteristic>
                       </characteristics>
@@ -2718,7 +2494,7 @@
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="765d-6694-eb4c-64c9" type="max"/>
                   </constraints>
                   <profiles>
-                    <profile id="cc55-2c1b-4d5a-d6a7" name="Skull-Weave" publicationId="9e23-79cb-pubN71963" page="104" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+                    <profile id="cc55-2c1b-4d5a-d6a7" name="Skull-Weave" publicationId="9e23-79cb-pubN71963" page="42" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
                       <characteristics>
                         <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Morghur causes Terror. Any model attempting to attack Morghur in close combat suffers -1 to Hit.</characteristic>
                       </characteristics>
@@ -2728,21 +2504,14 @@
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="f754-b12b-1ccf-76b3" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="154e-4617-d1e6-fbf1" type="min"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7d81-06cf-20d2-3b35" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="0afb-ffaa-1c44-98da" name="Hand Weapon" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
               </selectionEntries>
               <entryLinks>
                 <entryLink id="fb53-f24e-be87-79bf" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry"/>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="aa28-5100-fc4f-6be3" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6180-24ae-f748-1220"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="335"/>
@@ -2768,18 +2537,22 @@
           <selectionEntries>
             <selectionEntry id="e4b2-6fcb-2267-c04e" name="Ungrol Four-Horn" hidden="false" collective="false" import="true" type="model">
               <modifiers>
-                <modifier type="set" field="fdc8-52f2-cd63-2f79" value="1">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1bb0-d30a-99db-d88b" type="atLeast"/>
-                  </conditions>
+                <modifier type="add" value=".Ungrol must deploy with a unit of Ungors," field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="force" childId="1bb0-d30a-99db-d88b" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="e4b2-6fcb-2267-c04e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="force" value="0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="fdc8-52f2-cd63-2f79" type="max"/>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="8cf7-cb5b-bf9c-56cc" type="max"/>
               </constraints>
               <profiles>
-                <profile id="34c1-c200-17f9-2b28" name="Ungrol" publicationId="9e23-79cb-pubN71963" page="110" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+                <profile id="34c1-c200-17f9-2b28" name="Ungrol" publicationId="9e23-79cb-pubN71963" page="45" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
                   <characteristics>
                     <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
                     <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
@@ -2789,14 +2562,14 @@
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">7</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character)</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Beastman, Ungor)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <rules>
-                <rule id="f2bf-3095-5859-bbfc" name="Bruised and Bitter" publicationId="9e23-79cb-pubN71963" page="110" hidden="false">
-                  <description>Ungrol must deploy with a unit of Ungors, and may never leave it. Ungrol and his unit may re-roll failed Primal Fury tests when in combat against units from the Empire, Bretonnia and Beastmen army books. However, Ungrol&apos;s unit may not use the Army General&apos;s LD, and no other characters may join the unit.</description>
+                <rule id="f2bf-3095-5859-bbfc" name="Bruised and Bitter" publicationId="9e23-79cb-pubN71963" page="45" hidden="false">
+                  <description>Ungrol must deploy with a unit of Ungors, and may never leave it. Ungrol and his unit may re-roll failed Primal Fury tests when in combat against units from the Empire, Bretonnia and Beastmen army books. However, Ungrol&apos;s unit may not use the Army General&apos;s Ld, and no other characters may join the unit.</description>
                 </rule>
               </rules>
               <infoLinks>
@@ -2805,27 +2578,15 @@
                 <infoLink id="d5b-7a31-902c-77ac" name="Beastmen Ambush" hidden="false" targetId="ac57-e28c-5e7b-ba9c" type="rule"/>
               </infoLinks>
               <selectionEntries>
-                <selectionEntry id="5441-1757-ed89-6b6f" name="Two/Additional Hand Weapons" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bb3d-d3c1-f113-2278" type="min"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a2b0-ba15-f1a2-c6db" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="a528-fea6-6afd-aa88" name="Two/Additional Hand Weapons" hidden="false" targetId="4a5d-0b6d-f6ac-fd7d" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
                 <selectionEntry id="bec3-4d3b-7d4b-6d41" name="The Stolen Crowns" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e824-ab4c-2f3d-d1d3" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2432-612d-59aa-0ee6" type="max"/>
                   </constraints>
                   <profiles>
-                    <profile id="9eaf-3d55-9a59-a392" name="The Stolen Crowns" publicationId="9e23-79cb-pubN71963" page="110" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+                    <profile id="9eaf-3d55-9a59-a392" name="The Stolen Crowns" publicationId="9e23-79cb-pubN71963" page="45" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
                       <characteristics>
-                        <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Take a LD test at the beginning of each turn. If passed, the model gains +2 WS and +1 S until the start of its next turn. If failed, the model counts as a level 1 wizard and generates a random spell from the Lore of the Wilds.</characteristic>
+                        <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Take a Ld test at the beginning of each turn. If passed, the model gains +2 WS and +1 S until the start of its next turn. If failed, the model counts as a level 1 wizard and generates a random spell from the Lore of the Wilds.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -2836,6 +2597,11 @@
               </selectionEntries>
               <entryLinks>
                 <entryLink id="99a6-5f24-9e97-6729" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry"/>
+                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="88cd-6f77-eea3-bc9a" type="selectionEntry" targetId="7617-f4b5-02ac-3d15">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5816-a565-5cca-0fb5"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="70"/>
@@ -2846,7 +2612,7 @@
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c90d-7b17-0ff3-96f8" type="max"/>
               </constraints>
               <profiles>
-                <profile id="c30d-ae42-6159-4818" name="Slugtongue" publicationId="9e23-79cb-pubN71963" page="108" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+                <profile id="c30d-ae42-6159-4818" name="Slugtongue" publicationId="9e23-79cb-pubN71963" page="44" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
                   <characteristics>
                     <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
                     <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
@@ -2856,13 +2622,13 @@
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">7</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character)</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Beastman, Gor)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <rules>
-                <rule id="f722-fcee-fe52-7dcd" name="Curse of the Famine-fiend" publicationId="9e23-79cb-pubN71963" page="108" hidden="false">
+                <rule id="f722-fcee-fe52-7dcd" name="Curse of the Famine-fiend" publicationId="9e23-79cb-pubN71963" page="44" hidden="false">
                   <description>At the start of each of your turns, all enemy units within 18&quot; of Slugtongue must pass D3 T tests or suffer a Wound which Ignores Armour Saves for every failed T test.</description>
                 </rule>
               </rules>
@@ -2886,52 +2652,72 @@
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="e21d-da36-f8ab-0267" name="Wizard Level 2" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0030-5e01-8797-b27d" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="754f-8783-e60a-2137" type="min"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="b2d3-c660-542b-01f0" name="Molokh Slugtongue" publicationId="9e23-79cb-pubN71963" page="108" hidden="false" typeId="0ce6-a5f9-6184-218d" typeName="Wizard">
-                      <characteristics>
-                        <characteristic name="Wizard Level" typeId="7f8d-5707-7251-c1a5">2</characteristic>
-                        <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">2</characteristic>
-                        <characteristic name="Spell Level" typeId="c5a7-d8e1-9c88-2f0e">1-4</characteristic>
-                        <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">3</characteristic>
-                        <characteristic name="Bonus to Casting/Dispel Value" typeId="7261-e23f-ab6d-b4af">1</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <selectionEntryGroups>
-                    <selectionEntryGroup id="ac37-0041-fa81-2a3e" name="Lore of Magic" hidden="false" collective="false" import="true">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c796-52b8-fc78-a6ac" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5791-8d6e-ab5f-35d6" type="max"/>
-                      </constraints>
-                      <entryLinks>
-                        <entryLink id="ae18-3840-00f1-5c8b" name="Lore of the Wild 2" hidden="false" collective="false" import="true" targetId="c3ce-b2bb-254a-9928" type="selectionEntry"/>
-                        <entryLink id="b253-6f89-1d6a-5555" name="Lore of Death 2" hidden="false" collective="false" import="true" targetId="7970-3c13-23f3-0e8e" type="selectionEntry"/>
-                      </entryLinks>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
               </selectionEntries>
               <entryLinks>
                 <entryLink id="d14b-6cd8-742f-81e2" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry"/>
+                <entryLink import="true" name="Wizard Level 2" hidden="false" id="8492-db4a-7ad3-1e91" type="selectionEntry" targetId="801a-bc0a-a767-61db">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4c1e-f394-cccc-c486-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4c1e-f394-cccc-c486-max"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="190"/>
               </costs>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Lore of Magic" id="3574-6884-6cd2-4148" hidden="false" defaultSelectionEntryId="34e8-c8fc-7612-64f6">
+                  <entryLinks>
+                    <entryLink import="true" name="Lore of Death" hidden="false" id="ad7c-586e-c17e-c3a6" type="selectionEntry" targetId="bc0d-47f8-7220-1e16">
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Lore of the Wild" hidden="false" id="5be7-5cc7-fb39-2e6d" type="selectionEntry" targetId="6b7b-067e-e19f-2870">
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c6ba-0189-568e-573d"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="501a-e5c6-8dd9-dca2"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
             <selectionEntry id="098e-96f5-5e0a-f2cc" name="Moonclaw, Son of Moorslieb" hidden="false" collective="false" import="true" type="model">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e195-c8dd-968e-5b78" type="max"/>
               </constraints>
               <profiles>
-                <profile id="001b-af0a-862e-f8fd" name="Moonclaw" publicationId="9e23-79cb-pubN71963" page="109" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+                <profile id="001b-af0a-862e-f8fd" name="Moonclaw" publicationId="9e23-79cb-pubN71963" page="45" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
                   <characteristics>
                     <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
                     <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -2941,16 +2727,16 @@
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">7</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Special Character)</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Special Character, Beastman)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <rules>
-                <rule id="508a-a4e3-51b5-c634" name="Unholy Zenith" publicationId="9e23-79cb-pubN71963" page="109" hidden="false">
-                  <description>At the beginning of the game, secretly roll a D3 and record the number. In the turn that corresponds to this number, Morrslieb is full. For the entire duration of that turn Moonclaw has a +2 bonus to his casting rolls. Furthermore, to represent his ability to call down a shower of warpstone meteors, he may make D3 shooting attacks resolved as if he were a stone thrower for that turn only (even if he moved or marched during the Movement phase). Any results of a misfire cause a single wound upon Moonclaw that cannot be saved by any means.</description>
+                <rule id="508a-a4e3-51b5-c634" name="Unholy Zenith" publicationId="9e23-79cb-pubN71963" page="45" hidden="false">
+                  <description>At the beginning of the game, secretly roll a D3 and record the number. In the turn that corresponds to this number, Moonclaw has a +2 casting bonus. In addition, he may make D3 shooting attacks as if he were a Stone Thrower for that turn only (even if he moved or marched during the Movement phase). Any results of a misfire cause a single wound upon Moonclaw with no saves allowed.</description>
                 </rule>
-                <rule id="94a2-13ff-4ccf-d0d1" name="Wave of Insanity" publicationId="9e23-79cb-pubN71963" page="109" hidden="false">
+                <rule id="94a2-13ff-4ccf-d0d1" name="Wave of Insanity" publicationId="9e23-79cb-pubN71963" page="45" hidden="false">
                   <description>Every enemy unit within 12&quot; of Moonclaw must take a Stupidity test at the start of their turn.</description>
                 </rule>
               </rules>
@@ -2961,57 +2747,13 @@
                 <infoLink id="50f6-b7cd-475c-bfa8" name="Strider (Forest)" hidden="false" targetId="8d09-c701-2658-67e8" type="rule"/>
               </infoLinks>
               <selectionEntries>
-                <selectionEntry id="e2df-a3aa-bb17-42e9" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1454-4877-8a1f-c463" type="min"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5445-625b-90e4-8286" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="e68c-2606-4b29-10f5" name="Hand Weapon" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="a7ea-6e01-957d-6a42" name="Wizard Level 1" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="849f-dae4-83c5-f612" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="51db-5bb0-ef9c-318d" type="min"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="4db6-fe04-b4b5-d010" name="Moonclaw, Son of Moorslieb" publicationId="9e23-79cb-pubN71963" page="109" hidden="false" typeId="0ce6-a5f9-6184-218d" typeName="Wizard">
-                      <characteristics>
-                        <characteristic name="Wizard Level" typeId="7f8d-5707-7251-c1a5">1</characteristic>
-                        <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">1</characteristic>
-                        <characteristic name="Spell Level" typeId="c5a7-d8e1-9c88-2f0e">1-3</characteristic>
-                        <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">3</characteristic>
-                        <characteristic name="Bonus to Casting/Dispel Value" typeId="7261-e23f-ab6d-b4af">1</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <selectionEntryGroups>
-                    <selectionEntryGroup id="4b0c-82e4-f17d-aa8a" name="Lore of Magic" hidden="false" collective="false" import="true">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ffb3-c072-c1bd-aa53" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c4e4-4624-da20-4d57" type="max"/>
-                      </constraints>
-                      <entryLinks>
-                        <entryLink id="5732-ef4f-248a-c687" name="Lore of the Wild 1" hidden="false" collective="false" import="true" targetId="4858-c934-0c7e-d0db" type="selectionEntry"/>
-                        <entryLink id="4585-2a37-1849-c420" name="Lore of Shadow 1" hidden="false" collective="false" import="true" targetId="f528-9503-ec2f-a10e" type="selectionEntry"/>
-                      </entryLinks>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
                 <selectionEntry id="0947-47c9-84cf-ce4c" name="Umbralok" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7df3-6c98-03bc-119b" type="max"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="272f-ee66-4e26-6ab4" type="min"/>
                   </constraints>
                   <profiles>
-                    <profile id="7b4d-7511-6b4a-290a" name="Umbralok" publicationId="9e23-79cb-pubN71963" page="109" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+                    <profile id="7b4d-7511-6b4a-290a" name="Umbralok" publicationId="9e23-79cb-pubN71963" page="45" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
                       <characteristics>
                         <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
                         <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -3021,15 +2763,11 @@
                         <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
                         <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
                         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                        <characteristic name="LD" typeId="a199-f10b-a038-5730">6</characteristic>
-                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast</characteristic>
+                        <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
+                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Chaos Beast)</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
-                  <infoLinks>
-                    <infoLink id="106c-fa18-aa60-4e27" name="Impact Hits (1)" hidden="false" targetId="bb3b-3ca8-fcbc-a78b" type="rule"/>
-                    <infoLink id="ecd5-51a6-c893-f3e0" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                  </infoLinks>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
@@ -3037,22 +2775,83 @@
               </selectionEntries>
               <entryLinks>
                 <entryLink id="73f7-caff-9d5e-f68f" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry"/>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="fd24-1432-bb57-16d2" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4454-1a47-8436-52cf"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Wizard Level 1" hidden="false" id="4573-d0ec-51a9-1a63" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d1d4-b868-99e1-4c06-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d1d4-b868-99e1-4c06-max"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="200"/>
               </costs>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Lore of Magic" id="f1cf-23c8-6000-2e46" hidden="false" defaultSelectionEntryId="34e8-c8fc-7612-64f6">
+                  <entryLinks>
+                    <entryLink import="true" name="Lore of Shadow" hidden="false" id="abde-2c1f-cd57-2be6" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67">
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="Lore of the Wild" hidden="false" id="1b8d-3446-43cd-0d14" type="selectionEntry" targetId="6b7b-067e-e19f-2870">
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3a37-8991-9c4b-78ab"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d0d-a3ba-88a2-f124"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
             <selectionEntry id="1869-6740-649f-4e91" name="Ghorros Warhoof" hidden="false" collective="false" import="true" type="model">
               <modifiers>
-                <modifier type="set" field="bfa7-a4bd-3ab1-7b48" value="1">
-                  <conditions>
-                    <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="3a14-19b1-b661-f660" type="atLeast"/>
-                  </conditions>
+                <modifier type="add" value="Ghorros must be accompanied by a unit of Centigors with the Sons of Ghorros option." field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="force" childId="8907-0a93-227a-88eb" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="1869-6740-649f-4e91" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="8578-53c2-dda9-8ede" type="max"/>
-                <constraint field="selections" scope="force" value="0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="bfa7-a4bd-3ab1-7b48" type="min"/>
               </constraints>
               <profiles>
                 <profile id="77c3-93ed-6b4a-604a" name="Ghorros" publicationId="9e23-79cb-pubN71963" page="107" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
@@ -3065,24 +2864,22 @@
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">8</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Special Character)</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Special Character, Beastman, Centigor)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <rules>
-                <rule id="a7fd-d14a-f0f9-e674" name="Father of Beasts" publicationId="9e23-79cb-pubN71963" page="107" hidden="false">
-                  <description>Should Ghorros be killed, all Beastmen units in the army receive a +1 bonus to their LD when taking Primal Fury tests.</description>
+                <rule id="a7fd-d14a-f0f9-e674" name="Father of Beasts" publicationId="9e23-79cb-pubN71963" page="44" hidden="false">
+                  <description>Should Ghorros be killed, all Beastmen units in the army receive a +1 bonus to their Ld when taking Primal Fury tests.</description>
                 </rule>
                 <rule id="81f6-40bd-d4a3-34dd" name="The Sons of Ghorros" publicationId="9e23-79cb-pubN71963" page="107" hidden="false">
-                  <description>Ghorros must be deployed with a unit of Centigors, and may not leave it. His Centigor unit is comprised of his most able sons and has +1 WS. Such is his kin&apos;s devotion that Ghorros can always use the &apos;Look Out, Sir!&apos; rule, provided there is at least one other Centigor in his unit still alive.</description>
+                  <description>Ghorros must be accompanied by a unit of Centigors chosen from the army list at a cost of +1 point per model. This unit has +1 Weapon Skill. Ghorros can always use the &apos;Look Out, Sir!&apos; rule as long as there is at least one other Centigor in his unit still alive.</description>
                 </rule>
               </rules>
               <infoLinks>
                 <infoLink id="b02c-023e-d0fc-de6e" name="03-04" hidden="false" targetId="1823-42ce-82a9-75a2" type="profile"/>
-                <infoLink id="5e2c-dfd6-43e4-0cb2" name="Impact Hits (1)" hidden="false" targetId="bb3b-3ca8-fcbc-a78b" type="rule"/>
                 <infoLink id="8b98-b1a6-c986-1477" name="Primal Fury" hidden="false" targetId="80ca-7f30-49ff-4274" type="rule"/>
-                <infoLink id="9869-237e-f90d-145a" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
                 <infoLink id="9a50-d978-9d99-ab00" name="Strider (Forest)" hidden="false" targetId="8d09-c701-2658-67e8" type="rule"/>
                 <infoLink id="cdb6-a593-8771-b6e6" name="Drunken" hidden="false" targetId="e266-edfb-e9f4-02d1" type="rule"/>
                 <infoLink id="3b31-de8c-a1f4-692e" name="05-06" hidden="false" targetId="dc96-3f8c-befe-1533" type="profile"/>
@@ -3096,26 +2893,14 @@
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d001-bf4b-6da3-c9e4" type="max"/>
                   </constraints>
                   <profiles>
-                    <profile id="ef0a-53dc-70c5-35ac" name="Skull of the Unicorn Lord" publicationId="9e23-79cb-pubN71963" page="107" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+                    <profile id="ef0a-53dc-70c5-35ac" name="Skull of the Unicorn Lord" publicationId="9e23-79cb-pubN71963" page="44" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
                       <characteristics>
                         <characteristic name="Range" typeId="4285-3917-6bf9-348b">Melee</characteristic>
                         <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Ghorros has Magic Resistance (2). However, such is their desire to avenge the Unicorn Lord that all units in a Wood Elf army Hate Ghorros and his unit.</characteristic>
+                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Skull gives Ghorros Magic Resistance (2). However, all Wood Elves and Forest Spirits have the Hatred special rule against Ghorros and his unit.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="38eb-9c05-bef0-bcd4" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fd14-ea57-5f8c-c764" type="min"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c7f3-b105-c3dc-213c" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="2fa8-fc58-c884-9d9c" name="Light Armour" hidden="false" targetId="4129-1acd-3564-d3ea" type="profile"/>
-                  </infoLinks>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
@@ -3126,7 +2911,7 @@
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="34e1-9493-a72b-923b" type="max"/>
                   </constraints>
                   <profiles>
-                    <profile id="0ee9-9574-f879-835d" name="Mansmasher" publicationId="9e23-79cb-pubN71963" page="107" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+                    <profile id="0ee9-9574-f879-835d" name="Mansmasher" publicationId="9e23-79cb-pubN71963" page="44" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
                       <characteristics>
                         <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                         <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
@@ -3141,6 +2926,11 @@
               </selectionEntries>
               <entryLinks>
                 <entryLink id="3e73-bcf5-1ae6-b039" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry"/>
+                <entryLink import="true" name="Light Armour" hidden="false" id="fd67-4494-a3c3-f423" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="86c9-5ef7-5853-04ef"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="155"/>
@@ -5405,7 +5195,7 @@ Impact Hits (D3) special rule.</characteristic>
           <profiles>
             <profile id="8fe2-c16c-b5ae-56b8" name="Manbane Standard" publicationId="9e23-79cb-pubN71963" page="13" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">All enemy units within 6&quot; of the unit carrying the Manbane Standard suffer -1 to their LD characteristic.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">All enemy units within 6&quot; of the unit carrying the Manbane Standard suffer -1 to their Ld characteristic.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5553,7 +5343,7 @@ Impact Hits (D3) special rule.</characteristic>
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">When rolling To Wound, the owner&apos;s S is treated as equal to the unmodified LD value of the target model. This affects any armour saves the model might be required to take as well.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">When rolling To Wound, the owner&apos;s S is treated as equal to the unmodified Ld value of the target model. This affects any armour saves the model might be required to take as well.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5655,7 +5445,7 @@ Impact Hits (D3) special rule.</characteristic>
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The bearer gains Terror. In addition, any model wounded by this weapon loses 1 point of LD for each Wound it suffers.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The bearer gains Terror. In addition, any model wounded by this weapon loses 1 point of Ld for each Wound it suffers.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6177,7 +5967,7 @@ Weapons or attacks that do not use Ballistic Skill may only fire on the roll of
         <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
         <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
-        <characteristic name="LD" typeId="a199-f10b-a038-5730"/>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour Save 6+)</characteristic>
       </characteristics>
     </profile>
@@ -6205,7 +5995,7 @@ Weapons or attacks that do not use Ballistic Skill may only fire on the roll of
         <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
         <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
-        <characteristic name="LD" typeId="a199-f10b-a038-5730"/>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour Save 6+)</characteristic>
       </characteristics>
     </profile>
@@ -6266,9 +6056,9 @@ Weapons or attacks that do not use Ballistic Skill may only fire on the roll of
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="set" value="" field="09ad-18df-607b-1215"/>
-            <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
-            <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
+            <modifier type="set" field="09ad-18df-607b-1215"/>
+            <modifier type="set" field="df90-5cbd-8cf9-95b2"/>
+            <modifier type="set" field="27ee-0675-122f-a1b1"/>
           </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="3bd8-3c38-c257-2b4b" shared="true" includeChildSelections="true"/>
@@ -6300,7 +6090,7 @@ Weapons or attacks that do not use Ballistic Skill may only fire on the roll of
         <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
         <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-        <characteristic name="LD" typeId="a199-f10b-a038-5730">7</characteristic>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459"/>
       </characteristics>
     </profile>
