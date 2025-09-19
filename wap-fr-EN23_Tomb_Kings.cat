@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="489b-7a41-3ad0-e5eb" name="Tomb Kings wap-fr EN 2.3" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="60" revision="2" authorName="Leminge" battleScribeVersion="2.03" publicationId="feeb-1927-4a99-f849" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="Contact me via discord">
+<catalogue library="false" id="489b-7a41-3ad0-e5eb" name="Tomb Kings wap-fr EN 2.3" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="60" revision="3" authorName="Leminge" battleScribeVersion="2.03" publicationId="feeb-1927-4a99-f849" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="Contact me via discord">
   <sharedSelectionEntries>
     <selectionEntry type="model" import="true" name="Skeletal Steed" hidden="false" id="a440-163d-31eb-cdf7" collective="true" sortIndex="0" subType="mount">
       <constraints>
@@ -1213,7 +1213,11 @@ If, at the start of any of your turns following the death of the Hierophant, the
                 <cost name="pts" typeId="points" value="18"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Barding" hidden="false" id="c3a8-edef-d696-0900" type="selectionEntry" targetId="17ec-ae05-605b-27ce"/>
+                <entryLink import="true" name="Barding" hidden="false" id="c3a8-edef-d696-0900" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                </entryLink>
               </entryLinks>
             </entryLink>
             <entryLink import="true" name="Skeleton Chariot" hidden="false" id="4101-ee5b-4862-6a76" type="selectionEntry" targetId="3ec1-e263-5371-742a" sortIndex="3">
@@ -1221,7 +1225,11 @@ If, at the start of any of your turns following the death of the Hierophant, the
                 <cost name="pts" typeId="points" value="48"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Barding" hidden="false" id="076b-8945-f589-8bab" type="selectionEntry" targetId="17ec-ae05-605b-27ce"/>
+                <entryLink import="true" name="Barding" hidden="false" id="076b-8945-f589-8bab" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                </entryLink>
               </entryLinks>
             </entryLink>
             <entryLink import="true" name="Necroserpent" hidden="false" id="eb14-c65f-4326-41e7" type="selectionEntry" targetId="467c-c6c3-9482-9d5e" sortIndex="2">
@@ -1517,7 +1525,11 @@ If, at the start of any of your turns following the death of the Hierophant, the
                 <cost name="pts" typeId="points" value="12"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Barding" hidden="false" id="3233-7502-8ecf-9c31" type="selectionEntry" targetId="17ec-ae05-605b-27ce"/>
+                <entryLink import="true" name="Barding" hidden="false" id="3233-7502-8ecf-9c31" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                </entryLink>
               </entryLinks>
             </entryLink>
             <entryLink import="true" name="Skeleton Chariot" hidden="false" id="aab8-a99a-4f60-8d37" type="selectionEntry" targetId="3ec1-e263-5371-742a" sortIndex="3">
@@ -1525,7 +1537,11 @@ If, at the start of any of your turns following the death of the Hierophant, the
                 <cost name="pts" typeId="points" value="48"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Barding" hidden="false" id="be2a-23b3-b694-2d05" type="selectionEntry" targetId="17ec-ae05-605b-27ce"/>
+                <entryLink import="true" name="Barding" hidden="false" id="be2a-23b3-b694-2d05" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                </entryLink>
               </entryLinks>
             </entryLink>
             <entryLink import="true" name="Necroserpent" hidden="false" id="986c-e3b7-82c5-b359" type="selectionEntry" targetId="467c-c6c3-9482-9d5e" sortIndex="2">
@@ -1661,7 +1677,16 @@ If, at the start of any of your turns following the death of the Hierophant, the
         </entryLink>
         <entryLink import="true" name="Magic Items" hidden="false" id="f07c-c175-9b6a-5ca1" type="selectionEntryGroup" targetId="4a6c-a780-b910-e3b8" sortIndex="6">
           <modifiers>
-            <modifier type="set" value="50" field="6ee7-c31b-82f8-adfd"/>
+            <modifier type="increment" value="50" field="6ee7-c31b-82f8-adfd">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="model" childId="9519-df8f-0af4-1995" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="25" field="6ee7-c31b-82f8-adfd">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model" childId="9519-df8f-0af4-1995" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
       </entryLinks>
@@ -1721,7 +1746,11 @@ If, at the start of any of your turns following the death of the Hierophant, the
                 <cost name="pts" typeId="points" value="12"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Barding" hidden="false" id="fc84-de43-0740-31d6" type="selectionEntry" targetId="17ec-ae05-605b-27ce"/>
+                <entryLink import="true" name="Barding" hidden="false" id="fc84-de43-0740-31d6" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                </entryLink>
               </entryLinks>
             </entryLink>
             <entryLink import="true" name="Skeleton Chariot" hidden="false" id="16aa-4302-0cf4-598a" type="selectionEntry" targetId="3ec1-e263-5371-742a" sortIndex="3">
@@ -1729,7 +1758,11 @@ If, at the start of any of your turns following the death of the Hierophant, the
                 <cost name="pts" typeId="points" value="48"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Barding" hidden="false" id="2d0e-ddef-eb78-45c0" type="selectionEntry" targetId="17ec-ae05-605b-27ce"/>
+                <entryLink import="true" name="Barding" hidden="false" id="2d0e-ddef-eb78-45c0" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                </entryLink>
               </entryLinks>
             </entryLink>
             <entryLink import="true" name="Necroserpent" hidden="false" id="3e49-2d08-9175-b64a" type="selectionEntry" targetId="467c-c6c3-9482-9d5e" sortIndex="2">
@@ -5625,7 +5658,7 @@ Strength 2 hits which Ignores Armour saves</description>
             </modifier>
           </modifiers>
           <entryLinks>
-            <entryLink import="true" name="Arcane Items (One use only)" hidden="false" id="a9ff-1a29-fc9b-68ab" type="selectionEntryGroup" targetId="3dfd-c3fd-5a56-45f1" sortIndex="99"/>
+            <entryLink import="true" name="Common Arcane Items (One use only)" hidden="false" id="a9ff-1a29-fc9b-68ab" type="selectionEntryGroup" targetId="3dfd-c3fd-5a56-45f1" sortIndex="99"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
