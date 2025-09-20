@@ -2377,8 +2377,11 @@ you still cannot place the forest, or if the scenario means that the Wood Elf a
             <infoLink name="Leathal Shot" id="0230-d011-9b99-1d84" hidden="false" type="rule" targetId="e291-39f3-8f5e-54e2"/>
           </infoLinks>
           <modifiers>
-            <modifier type="append" value="Book says 10+ (bug)" field="annotation">
+            <modifier type="add" value="Book says 10+ (bug)" field="info">
               <comment>Remove after bugfix</comment>
+              <conditions>
+                <condition type="lessThan" value="10" field="selections" scope="parent" childId="9260-cda4-0f9f-7ff2" shared="true"/>
+              </conditions>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -2424,7 +2427,7 @@ you still cannot place the forest, or if the scenario means that the Wood Elf a
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Sisters of the Thorn " hidden="false" id="d270-cd05-e5a0-cabb" sortIndex="29">
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Sister of the Thorn" hidden="false" id="0533-b650-b9b7-b3d9">
+        <selectionEntry type="model" import="true" name="Sister of the Thorn" hidden="false" id="0533-b650-b9b7-b3d9" sortIndex="1">
           <constraints>
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="ed4f-91e0-762a-5bb6" includeChildSelections="false"/>
           </constraints>
@@ -2450,8 +2453,8 @@ you still cannot place the forest, or if the scenario means that the Wood Elf a
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Steed of Isha" hidden="false" id="92a7-19db-b0ee-f473" subType="mount" collective="true" sortIndex="1">
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1c38-b23b-525e-58ef-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1c38-b23b-525e-58ef-max" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="29c3-6523-4771-4fc5-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="29c3-6523-4771-4fc5-max" includeChildSelections="false"/>
               </constraints>
               <profiles>
                 <profile name="Steed of Isha" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="9c88-50e1-be99-2c75">
@@ -2487,31 +2490,7 @@ you still cannot place the forest, or if the scenario means that the Wood Elf a
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ddea-81d5-3e94-795c" includeChildSelections="false"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Wizard Level 1" hidden="false" id="f7ec-425f-e59b-df09" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8" sortIndex="5" collective="true">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="70f0-a223-7f5d-3f5e-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="70f0-a223-7f5d-3f5e-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
           </entryLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Lore" id="6e5b-4bb2-6419-c2e0" hidden="false" collective="true" sortIndex="6">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f30f-b280-d17c-cbb7-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f30f-b280-d17c-cbb7-max" includeChildSelections="false"/>
-              </constraints>
-              <entryLinks>
-                <entryLink import="true" name="Lore of Athel Loren" hidden="false" id="c836-2ce7-14ba-8227" type="selectionEntry" targetId="c85f-c430-1e4c-fc64" collective="true">
-                  <entryLinks>
-                    <entryLink import="true" name="Lore of Beasts" hidden="false" id="1c16-4da3-131f-1a8a" type="selectionEntry" targetId="b436-b410-dd41-304f" collective="true"/>
-                    <entryLink import="true" name="Lore of Life" hidden="false" id="1e47-fd40-12c5-2249" type="selectionEntry" targetId="968d-55ad-604c-f251" collective="true"/>
-                  </entryLinks>
-                </entryLink>
-                <entryLink import="true" name="Lore of Beasts" hidden="false" id="61bf-af95-dbb6-d2c3" type="selectionEntry" targetId="b436-b410-dd41-304f" collective="true"/>
-                <entryLink import="true" name="Lore of Life" hidden="false" id="df8b-b628-8a1b-a7fd" type="selectionEntry" targetId="968d-55ad-604c-f251" collective="true"/>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
           <infoLinks>
             <infoLink name="Ward Save (4+)" id="3fd1-00bf-eb82-14e9" hidden="false" type="rule" targetId="d45b-0036-b5ef-951b"/>
             <infoLink name="Asrai Archery" id="95e8-fdf3-8ff8-1549" hidden="false" type="rule" targetId="7a83-61cd-defa-0796"/>
@@ -2522,7 +2501,7 @@ you still cannot place the forest, or if the scenario means that the Wood Elf a
           </infoLinks>
           <rules>
             <rule name="Deepwood Coven" id="7330-6dc2-38bd-ed45" hidden="false">
-              <description> The unit receives an additional +1 to cast for each rank of 5 or more models it has, after the first, to a maximum of +3. Each time the unit casts a spell (or is targeted by a special rule that affects a Wizard), you must nominate one Sister of the Thorn as the caster (or target) for the purposes of line of sight, range, etc. In the event of a Sisters of the Thorn unit rolling a miscast, do not roll on the Miscast table. Instead, the unit suffers D3 Wounds with no saves of any kind allowed.</description>
+              <description>The unit receives an additional +1 to cast for each rank of 5 or more models it has, after the first, to a maximum of +3. Each time the unit casts a spell (or is targeted by a special rule that affects a Wizard), you must nominate one Sister of the Thorn as the caster (or target) for the purposes of line of sight, range, etc. In the event of a Sisters of the Thorn unit rolling a miscast, do not roll on the Miscast table. Instead, the unit suffers D3 Wounds with no saves of any kind allowed.</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -2531,7 +2510,7 @@ you still cannot place the forest, or if the scenario means that the Wood Elf a
         <categoryLink name="Rare" hidden="false" id="56a2-a4bf-9672-f1b9" targetId="0eb4-f376-7725-b05b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="c978-7dbb-885b-6363" hidden="false" collective="false" import="true">
+        <selectionEntryGroup name="Command Group" id="c978-7dbb-885b-6363" hidden="false" collective="false" import="true" sortIndex="4">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="0ebe-3ed5-7b7f-31ce" collective="false">
               <constraints>
@@ -2575,7 +2554,26 @@ you still cannot place the forest, or if the scenario means that the Wood Elf a
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Lore" id="6e5b-4bb2-6419-c2e0" hidden="false" collective="true" sortIndex="3">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2780-3e2a-ccb7-cd3b-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2780-3e2a-ccb7-cd3b-max" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Lore of Athel Loren" hidden="false" id="c836-2ce7-14ba-8227" type="selectionEntry" targetId="c85f-c430-1e4c-fc64" collective="true"/>
+            <entryLink import="true" name="Lore of Life" hidden="false" id="df8b-b628-8a1b-a7fd" type="selectionEntry" targetId="968d-55ad-604c-f251" collective="true"/>
+            <entryLink import="true" name="Lore of Beasts" hidden="false" id="61bf-af95-dbb6-d2c3" type="selectionEntry" targetId="b436-b410-dd41-304f" collective="true"/>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 1" hidden="false" id="f7ec-425f-e59b-df09" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8" collective="true" sortIndex="2">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="78a9-5a30-baa5-df48-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="78a9-5a30-baa5-df48-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Great Stag Knights" hidden="false" id="3b5b-6a17-d6ad-fc6c" sortIndex="30">
       <categoryLinks>
