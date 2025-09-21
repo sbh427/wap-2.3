@@ -471,13 +471,12 @@ you still cannot place the forest, or if the scenario means that the Wood Elf a
         <entryLink import="true" name="Lore of Athel Loren" hidden="false" id="cd58-4d0a-8c2a-1671" type="selectionEntry" targetId="c85f-c430-1e4c-fc64">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="44b9-c6b6-8485-b0a5-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="44b9-c6b6-8485-b0a5-max" includeChildSelections="false"/>
           </constraints>
         </entryLink>
         <entryLink import="true" name="General" hidden="false" id="0d81-cb88-1ee2-88af" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2"/>
         <entryLink import="true" name="Magic Items" hidden="false" id="e4f8-f1fd-1ec5-fa05" type="selectionEntryGroup" targetId="e1f0-e61a-8c81-4eb0" collective="true">
           <modifiers>
-            <modifier type="set" value="100" field="d364-5a06-f141-2697"/>
+            <modifier type="increment" value="100" field="d364-5a06-f141-2697"/>
           </modifiers>
         </entryLink>
       </entryLinks>
@@ -674,9 +673,14 @@ you still cannot place the forest, or if the scenario means that the Wood Elf a
                 <condition type="equalTo" value="1" field="selections" scope="parent" childId="745f-c8e7-be1d-a4d8" shared="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="1" field="590a-ff93-7ed3-a23e-min">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="parent" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="590a-ff93-7ed3-a23e-min" includeChildSelections="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="590a-ff93-7ed3-a23e-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="590a-ff93-7ed3-a23e-max" includeChildSelections="false"/>
           </constraints>
         </entryLink>
@@ -4717,7 +4721,7 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Athel Loren" id="2a32-3a99-5957-de5a" hidden="false" defaultSelectionEntryId="none">
+        <selectionEntryGroup name="Spells from the Lore of Athel Loren" id="2a32-3a99-5957-de5a" hidden="false">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Fury of the Forest" hidden="true" id="9084-803a-516e-e67d" sortIndex="1" collective="true">
               <constraints>
@@ -5103,7 +5107,7 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="6" field="e9ec-4197-0abd-8a0e">
+            <modifier type="set" value="9" field="e9ec-4197-0abd-8a0e">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditionGroups>
@@ -5123,7 +5127,7 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="6" field="b14f-f8a5-185c-deed">
+            <modifier type="set" value="9" field="b14f-f8a5-185c-deed">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditionGroups>
@@ -5143,7 +5147,7 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="8" field="e9ec-4197-0abd-8a0e">
+            <modifier type="set" value="12" field="e9ec-4197-0abd-8a0e">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
@@ -5153,7 +5157,7 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-            <modifier type="set" value="8" field="b14f-f8a5-185c-deed">
+            <modifier type="set" value="12" field="b14f-f8a5-185c-deed">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
@@ -5782,7 +5786,7 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="4a8c-09e3-faa4-c053" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="4a8c-09e3-faa4-c053" shared="true" includeChildSelections="false"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -6478,7 +6482,7 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
             </modifier>
           </modifiers>
           <entryLinks>
-            <entryLink import="true" name="Arcane Items (One use only)" hidden="false" id="bf26-e7a1-a557-754b" type="selectionEntryGroup" targetId="3dfd-c3fd-5a56-45f1" sortIndex="99"/>
+            <entryLink import="true" name="Common Arcane Items (One use only)" hidden="false" id="bf26-e7a1-a557-754b" type="selectionEntryGroup" targetId="3dfd-c3fd-5a56-45f1" sortIndex="99"/>
           </entryLinks>
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="The Vesperal Gem" hidden="false" id="e31b-10b5-b722-3c04" sortIndex="10">
