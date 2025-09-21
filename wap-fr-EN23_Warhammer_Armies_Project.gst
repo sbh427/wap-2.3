@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="62" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="63" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -12411,8 +12411,8 @@ The side that has a musician in its front rank of one or more of its units wins 
 &quot;Form on Me!&quot;
 If a fleeing unit has a musician, it may re-roll its Leadership test whenever it attempts to rally. Fast Cavalry and Skirmishers that have fled using Feigned Flight automatically rallies.
 
-Swift Reform
-A unit that is not fleeing and not engaged in combat can make a swift reform during the Remaining Moves sub-phase if it has a musician. A swift reform is treated exactly like a reform manoeuvre, however the following exceptions apply:
+&quot;Swift Reform&quot;
+A unit that is not fleeing and not engaged in combat can  attempt to make a swift reform during the Remaining Moves sub-phase if it has a musician, by taking a Leadership test. If the test is passed, the unit immediately makes a swift reform  - if failed, the unit makes a normal reform instead, with all the penalties that apply. A swift reform is treated exactly like a reform manoeuvre with the following exceptions:
 
  A unit performing a swift reform may not change their formation by decreasing or increasing their ranks. The unit may only turn on the spot by pivoting like a lone model.
 

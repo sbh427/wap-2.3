@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="489b-7a41-3ad0-e5eb" name="Tomb Kings wap-fr EN 2.3" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="60" revision="4" authorName="Leminge" battleScribeVersion="2.03" publicationId="feeb-1927-4a99-f849" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="Contact me via discord">
+<catalogue library="false" id="489b-7a41-3ad0-e5eb" name="Tomb Kings wap-fr EN 2.3" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="60" revision="5" authorName="Leminge" battleScribeVersion="2.03" publicationId="feeb-1927-4a99-f849" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="Contact me via discord">
   <sharedSelectionEntries>
     <selectionEntry type="model" import="true" name="Skeletal Steed" hidden="false" id="a440-163d-31eb-cdf7" collective="true" sortIndex="0" subType="mount">
       <constraints>
@@ -1556,7 +1556,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="High Priest" hidden="false" id="76f0-f047-36fa-a63c" sortIndex="4">
+    <selectionEntry type="model" import="true" name="Liche Priest" hidden="false" id="76f0-f047-36fa-a63c" sortIndex="4">
       <costs>
         <cost name="pts" typeId="points" value="65"/>
       </costs>
@@ -5760,7 +5760,7 @@ Strength 2 hits which Ignores Armour saves</description>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="mount" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="mount" shared="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -6087,8 +6087,8 @@ move as normal (including declaring charges).</characteristic>
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
-                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="0242-ffdf-b1f2-6053" shared="true"/>
-                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="f209-2324-32b5-17ec" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="0242-ffdf-b1f2-6053" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f209-2324-32b5-17ec" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -6109,7 +6109,7 @@ move as normal (including declaring charges).</characteristic>
   <entryLinks>
     <entryLink import="true" name="Khemrian Warsphinx " hidden="false" id="1b04-37e7-6cf7-cc85" type="selectionEntry" targetId="536c-6285-d0a4-6eb3" sortIndex="29">
       <costs>
-        <cost name="pts" typeId="points" value="300"/>
+        <cost name="pts" typeId="points" value="225"/>
       </costs>
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="9393-60a1-cee4-aeee" targetId="0eb4-f376-7725-b05b" primary="true"/>
