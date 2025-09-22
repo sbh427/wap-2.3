@@ -556,8 +556,8 @@ If you want to make a list using the allied rules, make separate rosters for eac
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Troop Types" hidden="false" id="d24f-26db-0c14-a9f6">
       <infoLinks>
-        <infoLink name="Normal Infantry" id="b888-7d50-8c9b-0ccd" hidden="false" type="rule" targetId="5669-ecc5-1f66-edd8"/>
-        <infoLink name="Normal Cavalry" id="6d75-c305-5cea-bfec" hidden="false" type="rule" targetId="f299-b4f5-2ed1-08ce"/>
+        <infoLink name="Infantry" id="b888-7d50-8c9b-0ccd" hidden="false" type="rule" targetId="5669-ecc5-1f66-edd8"/>
+        <infoLink name="Cavalry" id="6d75-c305-5cea-bfec" hidden="false" type="rule" targetId="f299-b4f5-2ed1-08ce"/>
         <infoLink name="Large Infantry" id="c02d-e97f-ea26-ac4c" hidden="false" type="rule" targetId="501d-e1d6-df0e-d961"/>
         <infoLink name="War Beast" id="3fe6-b6a2-9cf7-7e5b" hidden="false" type="rule" targetId="42ce-1113-52c7-5ef8"/>
         <infoLink name="War Machine" id="02f3-cbff-78b2-abef" hidden="false" type="rule" targetId="9960-d3ce-efdf-06ae"/>
@@ -13269,7 +13269,7 @@ Other models can fire through them at targets behind them with no To Hit penalt
     <rule name="Monstrous Infantry" id="0997-a400-8b77-fa7c" hidden="false">
       <description>Complete Ranks (3). Supporting Attacks (2). Unit Strength (2). Line of Sight (2). Swiftstride. Fear.</description>
     </rule>
-    <rule name="Normal Cavalry" id="f299-b4f5-2ed1-08ce" hidden="false">
+    <rule name="Cavalry" id="f299-b4f5-2ed1-08ce" hidden="false">
       <description>Complete Ranks (5). Supporting Attacks (1+1). Unit Strength (2). Line of Sight (2). Split Profile (Cavalry). Impact Hits (1). Swiftstride.
 
 Note that the Impact Hits are resolved at the Strength of the mount, not the rider.
@@ -13360,7 +13360,7 @@ Any effect that would modify the model&apos;s Characteristics affect both the r
       <description>Models with this rule may make up to 2 supporting attacks.</description>
     </rule>
     <rule name="Monstrous Cavalry" id="2b42-ec95-c1af-bc30" hidden="false">
-      <description>Complete Ranks (3). Supporting Attacks (1+2). Unit Strength (3). Line of Sight (3). Fear. Normal Cavalry.</description>
+      <description>Complete Ranks (3). Supporting Attacks (1+2). Unit Strength (3). Line of Sight (3). Fear. Cavalry.</description>
     </rule>
     <rule name="War Machine" id="9960-d3ce-efdf-06ae" hidden="false">
       <description>Line of Sight (1). Move or Fire.
@@ -13379,7 +13379,7 @@ current number of crew.</description>
     <rule id="8f97-966e-ddb2-f7bb" name="Line of Sight (1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Line of Sight of 1.</description>
     </rule>
-    <rule name="Normal Infantry" id="5669-ecc5-1f66-edd8" hidden="false">
+    <rule name="Infantry" id="5669-ecc5-1f66-edd8" hidden="false">
       <description>Complete Ranks (5). Supporting Attacks (1). Unit Strength (1). Line of Sight (1)</description>
     </rule>
     <rule name="Monster" id="b965-f383-1052-74df" hidden="false">
@@ -13466,7 +13466,7 @@ If a misfire is rolled, roll immediately on the Black Powder Misfire chart.</de
       <description>Complete Ranks (5). Supporting Attacks (1). Unit Strength (1). Line of Sight (1). Expendable. Swiftstride. Vanguard.
 
 
-Some characters can ride war beasts, in which case the model uses the rules for Normal Cavalry.</description>
+Some characters can ride war beasts, in which case the model uses the rules for Cavalry.</description>
     </rule>
     <rule name="Split Profile (Shrines)" id="6331-09f9-0580-9ac8" hidden="false">
       <description>In a similar manner to a Chariot, a Shrine can often have more than one set of characteristics, one for the creatures pulling or carrying the Shrine, one for the crew and one for the shrine itself, and is treated as a single model.
@@ -13758,6 +13758,9 @@ Unless otherwise specified, Multiple Wounds only apply to close combat attacks.<
     </rule>
     <rule name="Storm Rage" id="9cd6-64c7-e7c5-4ef6" hidden="false" page="46" publicationId="1a01-044f-047b-618f">
       <description>Dragon Ogres have the Immunity (Lightning Attacks) special rule. In addition, if they are hit with a Lightning Attack, they immediately gain the Frenzy special rule.</description>
+    </rule>
+    <rule id="d80a-79a1-ada7-5451" name="Hatred (Elves)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
+      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
