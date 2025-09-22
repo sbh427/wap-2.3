@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="64" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="64" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -8020,10 +8020,15 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <infoLink name="Spear" id="a7c9-bfc2-0a84-c110" hidden="false" type="profile" targetId="be39-37ac-ac20-5053"/>
       </infoLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-          </conditions>
+        <modifier type="add" value="{this} is not allowed if mounted" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="a901-4548-955d-623c" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -8047,7 +8052,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="parent" childId="d989-1124-0dea-ae27" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="d989-1124-0dea-ae27" shared="true"/>
                 <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
@@ -8067,7 +8072,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="parent" childId="0548-4aeb-a60c-b378" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="0548-4aeb-a60c-b378" shared="true"/>
                 <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true"/>
               </conditions>
             </conditionGroup>
@@ -8679,10 +8684,15 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
         <infoLink name="Shield" id="2681-2c50-d382-e868" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
       </infoLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-          </conditions>
+        <modifier type="add" value="{this} is not allowed if mounted" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="aaa7-e3bd-6fea-79c2" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -8699,7 +8709,7 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="parent" childId="a50e-145b-8639-0387" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="a50e-145b-8639-0387" shared="true"/>
                 <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
@@ -9405,7 +9415,7 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="parent" childId="91b7-7d92-aacd-9c32" shared="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="91b7-7d92-aacd-9c32" shared="true"/>
                 <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
