@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="62" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="63" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -12152,7 +12152,7 @@ characteristic.</characteristic>
     </selectionEntryGroup>
     <selectionEntryGroup name="Upgrades" id="3922-9a9c-285a-9357" hidden="false" collective="false" import="true">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Shredding Talons" hidden="false" id="44a5-2f6e-f9f1-d92c" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Shredding Talons" hidden="false" id="44a5-2f6e-f9f1-d92c" collective="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2dc0-e256-34ae-7677" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -12165,7 +12165,7 @@ characteristic.</characteristic>
             </rule>
           </rules>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Swiftsense" hidden="false" id="04d5-2f11-c737-152c" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Swiftsense" hidden="false" id="04d5-2f11-c737-152c" collective="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1148-8d47-b33a-6181" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
