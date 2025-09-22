@@ -10508,6 +10508,18 @@ Note that they may not choose any Arcane Items.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
+          <modifiers>
+            <modifier type="add" value="{this} is not allowed if mounted" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0798-f56f-270c-8065" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="90c1-2dc7-8dcf-d237" name="Boots of Flight" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
@@ -10524,6 +10536,18 @@ Note that they may not choose any Arcane Items.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
+          <modifiers>
+            <modifier type="add" value="{this} is not allowed if mounted" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="90c1-2dc7-8dcf-d237" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="aa6b-1051-6c06-4d1c" name="Lifestone of Ashraaz" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
           <constraints>
@@ -10965,6 +10989,18 @@ Note that they may not choose any Arcane Items.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
+          <modifiers>
+            <modifier type="add" value="{this} is not allowed if mounted" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="bdd6-bac4-600a-9d71" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="4808-e83d-ed68-7a23" name="Dragonhelm" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
@@ -11876,6 +11912,18 @@ characteristic.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
+          <modifiers>
+            <modifier type="add" value="{this} is not allowed if mounted" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="44fe-7b40-47df-f1fc" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="886a-2f02-4fa6-a156" name="Dragonbane Gem" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
