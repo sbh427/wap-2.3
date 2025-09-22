@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="63" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project wap-fr EN 2.3" revision="64" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -2730,7 +2730,6 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <selectionEntry type="upgrade" import="true" name="1. Searing Doom" hidden="false" id="644b-e439-7b01-d620" collective="false">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1a68-8380-9275-6741" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="25d9-f9cb-f0f5-eb50" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <infoLinks>
                 <infoLink name="Searing Doom" id="8da6-52e4-519c-01a9" hidden="false" targetId="6bd0-6da5-dee9-b098" type="profile"/>
@@ -2742,7 +2741,6 @@ If you want to make a list using the allied rules, make separate rosters for eac
             <selectionEntry type="upgrade" import="true" name="2. Law of Gold" hidden="false" id="80cb-0b29-5a85-f396" collective="false">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3547-fb30-3190-2749" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="5df3-a123-05eb-17b6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <infoLinks>
                 <infoLink name="Law of Gold" id="e965-f1e1-7ecd-38c8" hidden="false" targetId="9a24-30f9-2c95-cffd" type="profile"/>
