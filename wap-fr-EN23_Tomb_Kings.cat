@@ -1290,27 +1290,6 @@ If, at the start of any of your turns following the death of the Hierophant, the
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dbcd-2e6c-99fd-eb10-min" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dbcd-2e6c-99fd-eb10-max" includeChildSelections="false"/>
           </constraints>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden" affects="self.entries">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b08f-ec9b-c750-180a" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="0" field="dbcd-2e6c-99fd-eb10-min">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b08f-ec9b-c750-180a" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="0" field="dbcd-2e6c-99fd-eb10-max">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b08f-ec9b-c750-180a" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -2772,12 +2751,12 @@ If, at the start of any of your turns following the death of the Hierophant, the
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <modifiers>
-                <modifier type="decrement" value="1" field="points">
+                <modifier type="decrement" value="2" field="points">
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="2801-6314-0040-1908" childId="757a-ff3d-710c-2d8b" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="2801-6314-0040-1908" childId="d989-1124-0dea-ae27" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="757a-ff3d-710c-2d8b" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="d989-1124-0dea-ae27" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -2793,6 +2772,18 @@ If, at the start of any of your turns following the death of the Hierophant, the
               </costs>
             </entryLink>
           </entryLinks>
+          <modifiers>
+            <modifier type="increment" value="2" field="points">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="757a-ff3d-710c-2d8b" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="d989-1124-0dea-ae27" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </entryLink>
       </entryLinks>
       <modifiers>
@@ -4656,14 +4647,21 @@ Strength 2 hits which Ignores Armour saves</description>
                 </profile>
               </profiles>
               <modifiers>
-                <modifier type="decrement" value="2" field="points">
+                <modifier type="decrement" value="4" field="points">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="79e5-cd80-e3ff-cebc" childId="6bb1-79c9-4af5-ca72" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="6bb1-79c9-4af5-ca72" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="increment" value="4" field="points">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="6bb1-79c9-4af5-ca72" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </entryLink>
         <entryLink import="true" name="Blessing of Asaph" hidden="false" id="6230-39fc-ad66-792d" type="selectionEntry" targetId="44a7-5981-d3a2-35f1" sortIndex="-1"/>
       </entryLinks>
