@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="89a4-c9a0-f3a0-6dba" name="Araby WAP 1.72" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="61" revision="1" authorName="Xetolosch" battleScribeVersion="2.03" authorContact="Contact me via discord" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="89a4-c9a0-f3a0-6dba" name="Araby WAP 1.72" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="61" revision="2" authorName="Xetolosch" battleScribeVersion="2.03" authorContact="Contact me via discord" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Tactical Withdrawl" id="cf87-cae6-cc46-9094" hidden="false" publicationId="fd0a-6995-03c8-1dd6" page="3">
       <description>Models with this rule may re-roll the lowest dice roll for their flee distance when choosing Flee as a charge reaction.</description>
@@ -178,7 +178,7 @@
             <entryLink import="true" name="Common Arcane Items" hidden="false" id="1688-b3b3-ae5a-cad7" type="selectionEntryGroup" targetId="6cd2-3f4b-da2d-1ee9" sortIndex="99"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Arcane Items (One use only)" id="b51b-97a7-e3f7-f7c2" hidden="true" collective="false" import="true" sortIndex="4.5">
+        <selectionEntryGroup name="Arcane Items (One use only)" id="b51b-97a7-e3f7-f7c2" hidden="true" collective="false" import="true" sortIndex="4.5" collapsible="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2b81-4fa0-9e4c-876c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -1053,12 +1053,27 @@
       <rules>
         <rule name="Genie Binding" id="99ea-2cd3-16a0-1e07" hidden="false" publicationId="0896-cf2d-d305-6de3" page="13">
           <description>A Genie is not deployed on the table at the start of the battle, but may instead be summoned at the start of any of your turns (as long as they are not already summoned and alive) by the Magus who controls the Genie by passing a Leadership test (using their own Leadership characteristics). Place the Genie within 6&quot; of the Magus, at least 1&quot; away from other units or impassable terrain. It may act normally in the turn it is summoned. If the Genie is slain, it can be summoned back in a later turn, but the Magus will suffer a cumulative -1 penalty to the Leadership test required every time they try to do so. However, if the Magus is slain, the Genie is immediately removed as a casualty.</description>
+          <modifiers>
+            <modifier type="set" value="Genie only" field="annotation"/>
+          </modifiers>
         </rule>
       </rules>
       <infoLinks>
-        <infoLink name="Magical Attacks" id="655f-9cd8-4fac-7793" hidden="false" type="rule" targetId="03db-d81f-f264-84b8"/>
-        <infoLink name="Unstable" id="8c58-4040-a407-d0fb" hidden="false" type="rule" targetId="b779-6d7f-8298-7c82"/>
-        <infoLink name="Ward Save (5+)" id="937a-e8e9-197c-0f79" hidden="false" type="rule" targetId="4b60-6477-75a8-f6dd"/>
+        <infoLink name="Magical Attacks" id="655f-9cd8-4fac-7793" hidden="false" type="rule" targetId="03db-d81f-f264-84b8">
+          <modifiers>
+            <modifier type="set" value="Genie only" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Unstable" id="8c58-4040-a407-d0fb" hidden="false" type="rule" targetId="b779-6d7f-8298-7c82">
+          <modifiers>
+            <modifier type="set" value="Genie only" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Ward Save (5+)" id="937a-e8e9-197c-0f79" hidden="false" type="rule" targetId="4b60-6477-75a8-f6dd">
+          <modifiers>
+            <modifier type="set" value="Genie only" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8f01-aa3d-c881-8283"/>
@@ -1070,6 +1085,55 @@
         <entryLink import="true" name="Efreet" hidden="false" id="3236-19b1-f238-72f2" type="selectionEntry" targetId="bb7d-8adc-30e6-4b6a" sortIndex="4"/>
         <entryLink import="true" name="Khar-mel" hidden="false" id="14fc-ad3c-369c-6366" type="selectionEntry" targetId="7b77-720f-ffee-e2eb" sortIndex="5"/>
       </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Elephant Upgrades" id="6984-e2ed-20cd-2b8b" hidden="false" sortIndex="2" collective="true">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Mahout Expert" hidden="false" id="6d70-1bf9-aeab-97ca" sortIndex="1" collective="true">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Mahout Expert" id="8d9e-0b9a-6a59-d41f" hidden="false" type="rule" targetId="8dbd-66a4-a44e-6fce"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d1d5-e5fd-7c5e-bc99"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Spike Chanis" hidden="false" id="17be-6bbb-ab06-1c48" sortIndex="2" collective="true">
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Spike Chanis" id="ba11-dc56-4db8-30de" hidden="false" type="rule" targetId="b70c-7b8b-cee8-0f25"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="687e-28e3-e363-d33b"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Spiked Tusks" hidden="false" id="9dba-44e7-48fa-48ae" sortIndex="3" collective="true">
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Spiked Tusks" id="1be0-59cc-48c8-00f7" hidden="false" type="rule" targetId="5acd-8b34-76a0-6d71"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c337-d174-dd06-2f91"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Armour Plates" hidden="false" id="ccac-3222-1f26-e1ff" sortIndex="4" collective="true">
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Medium Armour" id="385b-ea91-30a0-7bda" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f"/>
+            <infoLink name="Armour Plates" id="dc16-53c4-301f-7ea0" hidden="false" type="rule" targetId="70ec-fb90-2c64-956f"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cc4f-97af-08ca-1d0b"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <selectionEntries>
@@ -1268,6 +1332,54 @@
               <costs>
                 <cost name="pts" typeId="points" value="115"/>
               </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7a8b-b88b-3b78-e558"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Crew" hidden="false" id="5594-eddb-6f94-05cd" type="selectionEntry" targetId="d922-dd02-eaf2-8b9b" collective="true" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d76a-345b-5c56-18ca"/>
+                    <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="3cd6-3641-3586-13ae"/>
+                  </constraints>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Ranged Weapons" id="424c-8245-7bde-347e" hidden="false">
+                      <entryLinks>
+                        <entryLink import="true" name="Shortbow" hidden="false" id="3dfa-d82e-7ea4-8f66" type="selectionEntry" targetId="b2c6-18cc-9482-8f48" sortIndex="1">
+                          <costs>
+                            <cost name="pts" typeId="points" value="0"/>
+                          </costs>
+                        </entryLink>
+                        <entryLink import="true" name="Bow" hidden="false" id="5e3a-feac-db54-35e9" type="selectionEntry" targetId="94ec-8421-59ea-a9d0" sortIndex="2">
+                          <costs>
+                            <cost name="pts" typeId="points" value="5"/>
+                          </costs>
+                        </entryLink>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="self" shared="true" id="18a9-d8de-ce64-15b9"/>
+                        <constraint type="max" value="1" field="selections" scope="self" shared="true" id="72d4-fe73-9707-ad13"/>
+                      </constraints>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                  <modifiers>
+                    <modifier type="decrement" value="5" field="points">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="self" childId="5e3a-feac-db54-35e9" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <modifiers>
+                <modifier type="increment" value="5" field="points">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="5e3a-feac-db54-35e9" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
             <entryLink import="true" name="Arabyan Steed" hidden="false" id="cf12-e45f-f01c-42f3" type="selectionEntry" targetId="ac96-1c86-3a61-e422" sortIndex="3">
               <costs>
@@ -1328,7 +1440,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="291d-9522-da68-e161-max"/>
           </constraints>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Lore" id="006d-4be3-2a16-c0df" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Lore" id="006d-4be3-2a16-c0df" hidden="false" sortIndex="3" collapsible="true">
           <entryLinks>
             <entryLink import="true" name="Lore of Death" hidden="false" id="2586-52e0-a5f4-6eed" type="selectionEntry" targetId="bc0d-47f8-7220-1e16" sortIndex="1"/>
             <entryLink import="true" name="Lore of Heavens" hidden="false" id="ad25-76bb-c060-c435" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee" sortIndex="2"/>
@@ -3253,23 +3365,6 @@
             <infoLink name="Tactical Withdrawl" id="70e6-1622-fe72-7d28" hidden="false" type="rule" targetId="cf87-cae6-cc46-9094"/>
             <infoLink name="Skirmishers" id="3f2a-60b0-0350-3f96" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Naphtha Bombs" hidden="false" id="ad29-6670-5453-b3a5" sortIndex="1">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ff65-63c4-4c29-85bc-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ff65-63c4-4c29-85bc-max"/>
-              </constraints>
-              <profiles>
-                <profile name="Naphtha Bombs" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="a5a7-5356-cd7d-ba52" publicationId="fd0a-6995-03c8-1dd6">
-                  <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">6&quot;</characteristic>
-                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Flaming Attacks, Ignores Armour Saves, Quick to Fire, An enemy unit taking a casualty from naphtha bombs must take a Panic test.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
           <constraints>
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="59bb-5bcf-04df-0012"/>
           </constraints>
@@ -3289,13 +3384,30 @@
               </characteristics>
             </profile>
           </profiles>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Naphtha Bombs" hidden="false" id="ad29-6670-5453-b3a5">
+              <profiles>
+                <profile name="Naphtha Bombs" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="a5a7-5356-cd7d-ba52" publicationId="fd0a-6995-03c8-1dd6">
+                  <characteristics>
+                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">6&quot;</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Flaming Attacks, Ignores Armour Saves, Quick to Fire, An enemy unit taking a casualty from naphtha bombs must take a Panic test.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e242-1926-74cf-9490-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e242-1926-74cf-9490-max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Naphtha Siphon" hidden="false" id="ef84-5d18-e3e1-6735">
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9173-88f7-6562-2ec5"/>
+            <constraint type="max" value="1" field="selections" scope="model-or-unit" shared="true" id="9173-88f7-6562-2ec5"/>
           </constraints>
           <profiles>
             <profile name="Naphtha Siphon" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="61f5-be2a-87ad-0c21" publicationId="fd0a-6995-03c8-1dd6">
@@ -3549,103 +3661,62 @@
       <categoryLinks>
         <categoryLink targetId="0eb4-f376-7725-b05b" id="c7e8-30eb-fa68-91fd" primary="true" name="Rare"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="War Elephant" hidden="false" id="d196-238a-ca7c-f110">
-          <costs>
-            <cost name="pts" typeId="points" value="110"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Zealotry" id="66f2-9a98-2c30-fc9e" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
-            <infoLink name="Impact Hits (D6+1)" id="26ce-bbb8-9daf-48cc" hidden="false" type="rule" targetId="a043-3e3c-9f8a-3661"/>
-            <infoLink name="Natural Armour (5+)" id="2caf-4013-95e4-7b38" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
-            <infoLink name="Stampede" id="2f0d-a9fe-f9ce-1714" hidden="false" type="rule" targetId="36ad-ca98-f939-3bb0"/>
-            <infoLink name="War Elephant" id="9446-1bb3-dab9-dab3" hidden="false" type="profile" targetId="85b3-745f-31ac-5024"/>
-          </infoLinks>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Mahout Expert" hidden="false" id="af05-7777-0deb-1723" sortIndex="3" collective="true">
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Mahout Expert" id="48dd-ebda-6e8b-9816" hidden="false" type="rule" targetId="8dbd-66a4-a44e-6fce"/>
-              </infoLinks>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="62a2-a6de-f435-85bf"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Spike Chanis" hidden="false" id="7a5a-1119-b262-d9eb" sortIndex="4" collective="true">
-              <costs>
-                <cost name="pts" typeId="points" value="15"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Spike Chanis" id="903f-750e-1093-620b" hidden="false" type="rule" targetId="b70c-7b8b-cee8-0f25"/>
-              </infoLinks>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c495-48f8-f81b-6134"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Spiked Tusks" hidden="false" id="0015-54f3-3bce-2dd2" sortIndex="5" collective="true">
-              <costs>
-                <cost name="pts" typeId="points" value="15"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Spiked Tusks" id="27e8-df50-9a48-bd8e" hidden="false" type="rule" targetId="5acd-8b34-76a0-6d71"/>
-              </infoLinks>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="85cf-8acd-19d1-4ec9"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Armour Plates" hidden="false" id="fc5f-8f9f-b6d3-49ba" sortIndex="6" collective="true">
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-              <infoLinks>
-                <infoLink name="Medium Armour" id="93e4-301a-2822-1d6a" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f"/>
-                <infoLink name="Armour Plates" id="f3ef-b6ba-b9ea-cbf1" hidden="false" type="rule" targetId="70ec-fb90-2c64-956f"/>
-              </infoLinks>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0fca-8860-b19b-47c2"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="model" import="true" name="Crew" hidden="false" id="58b1-2ddf-be90-600b" subType="crew" collective="true" sortIndex="7">
-              <constraints>
-                <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="a0f2-1ce6-d4d7-f73a"/>
-                <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="cf8e-a703-400e-675d"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Crew" id="1c1e-5a49-229f-368a" hidden="false" type="profile" targetId="41b5-17a0-7df0-8543"/>
-              </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="War Elephant" hidden="false" id="1081-4275-eea0-f13a" type="selectionEntry" targetId="cdcb-a83a-5267-d371">
+          <entryLinks>
+            <entryLink import="true" name="Crew" hidden="false" id="c424-6128-3b8e-090f" type="selectionEntry" targetId="d922-dd02-eaf2-8b9b" collective="true" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Ranged Weapons" id="c674-8dd9-8b42-a27f" hidden="false" sortIndex="1">
-              <entryLinks>
-                <entryLink import="true" name="Shortbow" hidden="false" id="2ee0-4817-eaa5-afa6" type="selectionEntry" targetId="b2c6-18cc-9482-8f48" sortIndex="1">
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Bow" hidden="false" id="f816-07c9-7c0b-8638" type="selectionEntry" targetId="94ec-8421-59ea-a9d0" sortIndex="2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="5"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="self" shared="true" id="c093-68eb-1bbf-ccd6"/>
-                <constraint type="max" value="1" field="selections" scope="self" shared="true" id="b890-2ddb-22d7-104b"/>
+                <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="da6e-d975-462c-138d"/>
+                <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="c536-c36a-c947-b33e"/>
               </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Ranged Weapons" id="4d52-41ad-40b0-c1ed" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Shortbow" hidden="false" id="8397-623c-6d9d-7312" type="selectionEntry" targetId="b2c6-18cc-9482-8f48" sortIndex="1">
+                      <costs>
+                        <cost name="pts" typeId="points" value="0"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Bow" hidden="false" id="d9cc-4cb1-6485-761b" type="selectionEntry" targetId="94ec-8421-59ea-a9d0" sortIndex="2">
+                      <costs>
+                        <cost name="pts" typeId="points" value="5"/>
+                      </costs>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="self" shared="true" id="70a0-562e-fba0-70b1"/>
+                    <constraint type="max" value="1" field="selections" scope="self" shared="true" id="d442-41e6-09e3-c98f"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <modifiers>
+                <modifier type="decrement" value="5" field="points">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="self" childId="d9cc-4cb1-6485-761b" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="110"/>
+          </costs>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c0d6-e955-594b-61c7"/>
-            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="52c7-79b7-a2ca-9edb"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5c48-c0b1-36ed-673f"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="83bd-58e2-cb2f-9bcf"/>
           </constraints>
-        </selectionEntry>
-      </selectionEntries>
+          <modifiers>
+            <modifier type="increment" value="5" field="points">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="d9cc-4cb1-6485-761b" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Cannon" hidden="false" id="2b53-0739-7b49-0a21" sortIndex="303">
       <selectionEntries>
@@ -4087,71 +4158,102 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e6f2-0cdc-67c0-aa83" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="model" import="true" name="The golden Magus" hidden="false" id="3619-56d9-64a7-06db" sortIndex="4">
-              <entryLinks>
-                <entryLink import="true" name="General" hidden="false" id="f1dd-979b-86d6-0048" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1"/>
-                <entryLink import="true" name="Wizard Level 3" hidden="false" id="22d5-e542-cbfe-add9" type="selectionEntry" targetId="1670-dca4-294b-7d9b" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e57b-ba49-f73f-f4eb-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e57b-ba49-f73f-f4eb-max"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
+            <selectionEntry type="unit" import="true" name="The golden Magus" hidden="false" id="3619-56d9-64a7-06db" sortIndex="4">
               <costs>
                 <cost name="pts" typeId="points" value="370"/>
               </costs>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="638a-c4fe-c049-8ec5" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
-              <infoLinks>
-                <infoLink name="Zealotry" id="4c1f-ba09-3c6e-4a7f" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
-              </infoLinks>
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="The Sword of Fiery Curses" hidden="false" id="e478-b632-7c01-7f80" sortIndex="4">
+                <selectionEntry type="model" import="true" name="The Golden Magus" hidden="false" id="1c26-5814-dde7-76ec" sortIndex="1">
                   <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1823-ef2d-6238-2f83-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1823-ef2d-6238-2f83-max"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f720-a1a7-2de0-b760-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f720-a1a7-2de0-b760-max"/>
                   </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="General" hidden="false" id="f1dd-979b-86d6-0048" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1"/>
+                    <entryLink import="true" name="Wizard Level 3" hidden="false" id="22d5-e542-cbfe-add9" type="selectionEntry" targetId="1670-dca4-294b-7d9b" sortIndex="2">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e57b-ba49-f73f-f4eb-min"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e57b-ba49-f73f-f4eb-max"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Lore" id="760c-7e44-6208-a2d4" hidden="false" sortIndex="3">
+                      <entryLinks>
+                        <entryLink import="true" name="Lore of Death" hidden="false" id="10af-b268-5de7-b295" type="selectionEntry" targetId="bc0d-47f8-7220-1e16" sortIndex="1"/>
+                        <entryLink import="true" name="Lore of Heavens" hidden="false" id="5601-ece3-9b82-eca7" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee" sortIndex="2"/>
+                        <entryLink import="true" name="Lore of Fire" hidden="false" id="38b2-a90f-b0e1-4ffe" type="selectionEntry" targetId="4d24-c803-7a05-0894" sortIndex="3"/>
+                        <entryLink import="true" name="Lore of Light" hidden="false" id="b95a-517d-fb0a-26e8" type="selectionEntry" targetId="c543-a893-3879-cf32" sortIndex="4"/>
+                        <entryLink import="true" name="Lore of Metal" hidden="false" id="066d-f31f-fa72-02d4" type="selectionEntry" targetId="527f-89f1-1b92-a01d" sortIndex="5"/>
+                        <entryLink import="true" name="Lore of Shadow" hidden="false" id="ef99-1bd5-af81-f704" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67" sortIndex="6"/>
+                      </entryLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8672-ebbb-7c3d-0ff4"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cec7-5d55-adc7-812b"/>
+                      </constraints>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="The Sword of Fiery Curses" hidden="false" id="e478-b632-7c01-7f80" sortIndex="4">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1823-ef2d-6238-2f83-min"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1823-ef2d-6238-2f83-max"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="The Sword of Fiery Curses" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="0ebc-4c1a-1cfa-7689" publicationId="fd0a-6995-03c8-1dd6" page="34">
+                          <characteristics>
+                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
+                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+1</characteristic>
+                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">This sword gives the Golden Magus the Flaming Attacks special rule. Any Flammable model that suffers an unsaved wound from this weapon is slain outright.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Golden Robe of Protection" hidden="false" id="a24a-1894-9ed8-4b05" sortIndex="5">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7e9e-167e-068a-3e4d-min"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7e9e-167e-068a-3e4d-max"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Golden Robe of Protection" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="5260-a209-5d03-3622" publicationId="fd0a-6995-03c8-1dd6" page="34">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Golden Robe grants the Golden Magus a Ward Save (5+). In addition, any attacks allocated towards him in close combat suffer -1 To Hit.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
                   <profiles>
-                    <profile name="The Sword of Fiery Curses" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="0ebc-4c1a-1cfa-7689" publicationId="fd0a-6995-03c8-1dd6" page="34">
+                    <profile name="The golden Magus" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="62c7-86ae-ec21-5ea2" publicationId="fd0a-6995-03c8-1dd6" page="34">
                       <characteristics>
-                        <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                        <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+1</characteristic>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">This sword gives the Golden Magus the Flaming Attacks special rule. Any Flammable model that suffers an unsaved wound from this weapon is slain outright.</characteristic>
+                        <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                        <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+                        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">2</characteristic>
+                        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                        <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+                        <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+                        <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Human)</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Golden Robe of Protection" hidden="false" id="a24a-1894-9ed8-4b05" sortIndex="5">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7e9e-167e-068a-3e4d-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7e9e-167e-068a-3e4d-max"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Golden Robe of Protection" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="5260-a209-5d03-3622" publicationId="fd0a-6995-03c8-1dd6" page="34">
-                      <characteristics>
-                        <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Golden Robe grants the Golden Magus a Ward Save (5+). In addition, any attacks allocated towards him in close combat suffer -1 To Hit.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
+                  <rules>
+                    <rule name="Conjure Genies" id="28a5-ac95-596d-ed40" hidden="false" publicationId="fd0a-6995-03c8-1dd6" page="34">
+                      <description>At the beginning of the Araby player&apos;s turn, the Golden Magus may summon either a Djinn, Efreet or Marid to do his bidding following the normal rules for Genie Binding. This model acts like a normal Genie in all respects. He may have a maximum of 3 Genies summoned at any one time, and every summoned Genie must be of a different type.</description>
+                    </rule>
+                  </rules>
+                  <infoLinks>
+                    <infoLink name="Zealotry" id="4c1f-ba09-3c6e-4a7f" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
+                  </infoLinks>
                 </selectionEntry>
               </selectionEntries>
               <selectionEntryGroups>
-                <selectionEntryGroup name="Lore" id="760c-7e44-6208-a2d4" hidden="false" sortIndex="3">
-                  <entryLinks>
-                    <entryLink import="true" name="Lore of Death" hidden="false" id="10af-b268-5de7-b295" type="selectionEntry" targetId="bc0d-47f8-7220-1e16" sortIndex="1"/>
-                    <entryLink import="true" name="Lore of Heavens" hidden="false" id="5601-ece3-9b82-eca7" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee" sortIndex="2"/>
-                    <entryLink import="true" name="Lore of Fire" hidden="false" id="38b2-a90f-b0e1-4ffe" type="selectionEntry" targetId="4d24-c803-7a05-0894" sortIndex="3"/>
-                    <entryLink import="true" name="Lore of Light" hidden="false" id="b95a-517d-fb0a-26e8" type="selectionEntry" targetId="c543-a893-3879-cf32" sortIndex="4"/>
-                    <entryLink import="true" name="Lore of Metal" hidden="false" id="066d-f31f-fa72-02d4" type="selectionEntry" targetId="527f-89f1-1b92-a01d" sortIndex="5"/>
-                    <entryLink import="true" name="Lore of Shadow" hidden="false" id="ef99-1bd5-af81-f704" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67" sortIndex="6"/>
-                  </entryLinks>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8672-ebbb-7c3d-0ff4"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cec7-5d55-adc7-812b"/>
-                  </constraints>
-                </selectionEntryGroup>
-                <selectionEntryGroup name="Genies" id="4049-1ac0-32e1-4f47" hidden="false" sortIndex="6">
+                <selectionEntryGroup name="Genies" id="4049-1ac0-32e1-4f47" hidden="false" sortIndex="2">
                   <entryLinks>
                     <entryLink import="true" name="Djinn" hidden="false" id="372f-ef67-77bd-6f82" type="selectionEntry" targetId="ced0-11df-ea9f-37f6" sortIndex="1">
                       <constraints>
@@ -4174,27 +4276,6 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                   </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
-              <rules>
-                <rule name="Conjure Genies" id="28a5-ac95-596d-ed40" hidden="false" publicationId="fd0a-6995-03c8-1dd6" page="34">
-                  <description>At the beginning of the Araby player&apos;s turn, the Golden Magus may summon either a Djinn, Efreet or Marid to do his bidding following the normal rules for Genie Binding. This model acts like a normal Genie in all respects. He may have a maximum of 3 Genies summoned at any one time, and every summoned Genie must be of a different type.</description>
-                </rule>
-              </rules>
-              <profiles>
-                <profile name="The golden Magus" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="62c7-86ae-ec21-5ea2" publicationId="fd0a-6995-03c8-1dd6" page="34">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">2</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Human)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -4384,7 +4465,7 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="model" import="true" name="Al Muktar" hidden="false" id="f0d9-99fc-a13d-edbc" sortIndex="3">
+            <selectionEntry type="unit" import="true" name="Al Muktar and the Desert Dogs" hidden="false" id="f0d9-99fc-a13d-edbc" sortIndex="3">
               <costs>
                 <cost name="pts" typeId="points" value="170"/>
               </costs>
@@ -4438,7 +4519,7 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                     </entryLink>
                   </entryLinks>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Sheikh Ahmed Shufti" hidden="false" id="dc16-3b9c-4f6a-2e4f" sortIndex="2">
+                <selectionEntry type="model" import="true" name="Sheikh Ahmed Shufti" hidden="false" id="dc16-3b9c-4f6a-2e4f" sortIndex="2">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4ef6-3d0b-34f7-fbed-min"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4ef6-3d0b-34f7-fbed-max"/>
@@ -4447,6 +4528,7 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                     <entryLink import="true" name="Magic Items" hidden="false" id="ddff-8731-67e3-40f6" type="selectionEntryGroup" targetId="d5c7-125a-f512-29e5">
                       <modifiers>
                         <modifier type="increment" value="25" field="4281-3d5b-825a-6bcf"/>
+                        <modifier type="set" value="true" field="hidden" affects="22cb-7492-eb53-25c1"/>
                       </modifiers>
                     </entryLink>
                     <entryLink import="true" name="Arabyan Steed" hidden="false" id="c396-5c85-1fb3-4d0a" type="selectionEntry" targetId="ac96-1c86-3a61-e422">
@@ -4774,7 +4856,7 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Desert Riders (Al Muktar)" hidden="false" id="d6e0-e7c7-ebf4-293b" sortIndex="107.5">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="b747-1908-cb27-abbe" hidden="false">
+        <selectionEntryGroup name="Command Group" id="b747-1908-cb27-abbe" hidden="false" sortIndex="3">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="96b8-a65f-437a-3ffc">
               <costs>
@@ -4788,38 +4870,11 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                 <infoLink name="Musician" id="117d-a736-99ee-1f56" hidden="false" type="rule" targetId="54c3-1d1b-3ffe-59a5"/>
               </infoLinks>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="7731-63b4-4329-2500">
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="de61-4866-90d4-f087-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de61-4866-90d4-f087-max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Standard Bearer" id="0e2c-7bbc-fa66-3099" hidden="false" type="rule" targetId="6002-29d0-d620-1bd0"/>
-              </infoLinks>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Black Banner of the Muktarhin" hidden="false" id="182f-b946-4ff5-0e69">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2693-c30a-8973-ffa1-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2693-c30a-8973-ffa1-max"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Black Banner of the Muktarhin" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="ee38-2d57-f425-ad83" publicationId="fd0a-6995-03c8-1dd6" page="36">
-                      <characteristics>
-                        <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The Desert Dogs add +D3 to their combat resolution. Roll at the end of each close combat.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Desert Rider" hidden="false" id="6120-cea9-4b0e-fecb">
+        <selectionEntry type="model" import="true" name="Desert Rider" hidden="false" id="6120-cea9-4b0e-fecb" sortIndex="1">
           <costs>
             <cost name="pts" typeId="points" value="11"/>
           </costs>
@@ -4831,7 +4886,7 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
             <infoLink name="Desert Rider" id="a64d-ab41-6fb3-f9ca" hidden="false" type="profile" targetId="59e7-67a5-7bcb-8600"/>
           </infoLinks>
           <constraints>
-            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="a7fc-fcfa-0de7-657c"/>
+            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="a7fc-fcfa-0de7-657c"/>
           </constraints>
           <entryLinks>
             <entryLink import="true" name="Arabyan Steed" hidden="false" id="bcce-2d94-5e56-ba49" type="selectionEntry" targetId="ac96-1c86-3a61-e422" sortIndex="1">
@@ -4844,6 +4899,57 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="348c-5a38-6a46-b4f2-min"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="348c-5a38-6a46-b4f2-max"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Ibn the Blind Beggar Boy" hidden="false" id="7731-63b4-4329-2500" sortIndex="2">
+          <costs>
+            <cost name="pts" typeId="points" value="21"/>
+          </costs>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="de61-4866-90d4-f087-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de61-4866-90d4-f087-max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Standard Bearer" id="0e2c-7bbc-fa66-3099" hidden="false" type="rule" targetId="6002-29d0-d620-1bd0"/>
+          </infoLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Black Banner of the Muktarhin" hidden="false" id="182f-b946-4ff5-0e69" sortIndex="2">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2693-c30a-8973-ffa1-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2693-c30a-8973-ffa1-max"/>
+              </constraints>
+              <profiles>
+                <profile name="Black Banner of the Muktarhin" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="ee38-2d57-f425-ad83" publicationId="fd0a-6995-03c8-1dd6" page="36">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The Desert Dogs add +D3 to their combat resolution. Roll at the end of each close combat.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <profiles>
+            <profile name="Ibn the Blind Beggar Boy" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0aa5-4286-c094-d843">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">0</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">0</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Special Character, Human)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Arabyan Steed" hidden="false" id="bb17-d7f1-eab8-ddc3" type="selectionEntry" targetId="ac96-1c86-3a61-e422" sortIndex="1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f385-5a01-fabc-3d2a"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4c9d-aaac-a5ac-664c"/>
               </constraints>
             </entryLink>
           </entryLinks>
@@ -5192,103 +5298,16 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
         <infoLink name="Natural Armour (5+)" id="f7d5-3c29-57ea-1d4c" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
         <infoLink name="Zealotry" id="ce53-ef52-66a7-d157" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
         <infoLink name="Stampede" id="97ec-30a0-02b2-905e" hidden="false" type="rule" targetId="36ad-ca98-f939-3bb0"/>
+        <infoLink name="War Elephant" id="df32-33df-c833-d3aa" hidden="false" type="profile" targetId="85b3-745f-31ac-5024"/>
       </infoLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Mahout Expert" hidden="false" id="cc9c-276c-119f-49ed" sortIndex="5">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Mahout Expert" id="ef51-3d61-4c15-2501" hidden="false" type="rule" targetId="8dbd-66a4-a44e-6fce"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7882-f60d-efe2-7de5"/>
-          </constraints>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Spike Chanis" hidden="false" id="17be-6bbb-ab06-1c48" sortIndex="6">
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Spike Chanis" id="ba11-dc56-4db8-30de" hidden="false" type="rule" targetId="b70c-7b8b-cee8-0f25"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="687e-28e3-e363-d33b"/>
-          </constraints>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Spiked Tusks" hidden="false" id="9dba-44e7-48fa-48ae" sortIndex="7">
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Spiked Tusks" id="1be0-59cc-48c8-00f7" hidden="false" type="rule" targetId="5acd-8b34-76a0-6d71"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c337-d174-dd06-2f91"/>
-          </constraints>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Armour Plates" hidden="false" id="ccac-3222-1f26-e1ff" sortIndex="8">
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Medium Armour" id="385b-ea91-30a0-7bda" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f"/>
-            <infoLink name="Armour Plates" id="dc16-53c4-301f-7ea0" hidden="false" type="rule" targetId="70ec-fb90-2c64-956f"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cc4f-97af-08ca-1d0b"/>
-          </constraints>
-        </selectionEntry>
-        <selectionEntry type="model" import="true" name="Crew" hidden="false" id="6f87-b5dc-205c-1dfb" sortIndex="2" subType="crew">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8225-6fe4-0fe0-0744"/>
-            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="1b21-e30e-d60d-6acb"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Crew" id="865c-7fab-a6c8-5b81" hidden="false" type="profile" targetId="41b5-17a0-7df0-8543"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="War Elephant" hidden="false" id="a13d-79f1-2d59-457a" sortIndex="1">
-          <infoLinks>
-            <infoLink name="War Elephant" id="df32-33df-c833-d3aa" hidden="false" type="profile" targetId="85b3-745f-31ac-5024"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="923e-703f-6e92-aadd-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="923e-703f-6e92-aadd-max"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Ranged Weapons" id="7c84-4fb2-0e9c-533e" hidden="false" sortIndex="3">
-          <entryLinks>
-            <entryLink import="true" name="Shortbow" hidden="false" id="4446-f1b3-ad67-8b79" type="selectionEntry" targetId="b2c6-18cc-9482-8f48" sortIndex="1">
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Bow" hidden="false" id="5ec3-1acf-39a3-1d85" type="selectionEntry" targetId="94ec-8421-59ea-a9d0" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="self" shared="true" id="26f0-c054-ae43-6553-min"/>
-            <constraint type="max" value="1" field="selections" scope="self" shared="true" id="26f0-c054-ae43-6553-max"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a800-bb7c-f260-d036"/>
-      </constraints>
       <categoryLinks>
         <categoryLink targetId="(Mount)" id="a4b3-5b32-5526-3970" primary="false" name="(Mount)"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Elephant Upgrades" hidden="false" id="a941-47fb-8490-5cc5" type="selectionEntryGroup" targetId="6984-e2ed-20cd-2b8b" sortIndex="1"/>
+      </entryLinks>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Marid" hidden="false" id="0dab-e01d-6762-48b4" subType="mount" sortIndex="6">
+    <selectionEntry type="model" import="true" name="Marid" hidden="false" id="0dab-e01d-6762-48b4" sortIndex="6">
       <profiles>
         <profile name="Marid" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="5b97-3475-61e5-44d1" publicationId="fd0a-6995-03c8-1dd6" page="13">
           <characteristics>
@@ -5306,8 +5325,16 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Magic Resistance (2)" id="2733-8592-7804-2e15" hidden="false" type="rule" targetId="0e09-3526-25d5-2646"/>
-        <infoLink name="Immunity (Ice Attacks)" id="4280-bf14-72a4-e1ae" hidden="false" type="rule" targetId="5dfb-b5c0-520b-ed68"/>
+        <infoLink name="Magic Resistance (2)" id="2733-8592-7804-2e15" hidden="false" type="rule" targetId="0e09-3526-25d5-2646">
+          <modifiers>
+            <modifier type="set" value="Marid only" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Immunity (Ice Attacks)" id="4280-bf14-72a4-e1ae" hidden="false" type="rule" targetId="5dfb-b5c0-520b-ed68">
+          <modifiers>
+            <modifier type="set" value="Marid only" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1e4a-499d-6019-8e27"/>
@@ -5316,7 +5343,7 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
         <cost name="pts" typeId="points" value="85"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Djinn" hidden="false" id="ced0-11df-ea9f-37f6" subType="mount" sortIndex="7">
+    <selectionEntry type="model" import="true" name="Djinn" hidden="false" id="ced0-11df-ea9f-37f6" sortIndex="7">
       <profiles>
         <profile name="Djinn" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6ed2-4a65-c15e-d3fc" publicationId="fd0a-6995-03c8-1dd6" page="13">
           <characteristics>
@@ -5334,7 +5361,11 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Fly (10)" id="2d69-e3a1-9cf2-d2ea" hidden="false" type="rule" targetId="953a-d5a4-ee81-4093"/>
+        <infoLink name="Fly (10)" id="2d69-e3a1-9cf2-d2ea" hidden="false" type="rule" targetId="953a-d5a4-ee81-4093">
+          <modifiers>
+            <modifier type="set" value="Djinn only" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b359-3938-5b69-5f80"/>
@@ -5343,7 +5374,7 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
         <cost name="pts" typeId="points" value="85"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Efreet" hidden="false" id="bb7d-8adc-30e6-4b6a" subType="mount" sortIndex="8">
+    <selectionEntry type="model" import="true" name="Efreet" hidden="false" id="bb7d-8adc-30e6-4b6a" sortIndex="8">
       <profiles>
         <profile name="Efreet" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="a12a-387c-6aae-d21d" publicationId="0896-cf2d-d305-6de3" page="13">
           <characteristics>
@@ -5361,9 +5392,21 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Hatred" id="ffe4-b832-514c-8858" hidden="false" type="rule" targetId="f6d7-9fbc-abc1-5cfc"/>
-        <infoLink name="Flaming Attacks" id="a8e2-f6a0-308b-58f7" hidden="false" type="rule" targetId="8600-a090-2761-d661"/>
-        <infoLink name="Immunity (Flaming Attacks)" id="74af-07d7-3d8e-ac6a" hidden="false" type="rule" targetId="49c7-526e-cb3e-d7b7"/>
+        <infoLink name="Hatred" id="ffe4-b832-514c-8858" hidden="false" type="rule" targetId="f6d7-9fbc-abc1-5cfc">
+          <modifiers>
+            <modifier type="set" value="Efreet only" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Flaming Attacks" id="a8e2-f6a0-308b-58f7" hidden="false" type="rule" targetId="8600-a090-2761-d661">
+          <modifiers>
+            <modifier type="set" value="Efreet only" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Immunity (Flaming Attacks)" id="74af-07d7-3d8e-ac6a" hidden="false" type="rule" targetId="49c7-526e-cb3e-d7b7">
+          <modifiers>
+            <modifier type="set" value="Efreet only" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c17d-6ee6-4c41-e425"/>
@@ -5372,7 +5415,7 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
         <cost name="pts" typeId="points" value="85"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Dao" hidden="false" id="c39e-a7ec-9c5c-7f08" subType="mount" sortIndex="5">
+    <selectionEntry type="model" import="true" name="Dao" hidden="false" id="c39e-a7ec-9c5c-7f08" sortIndex="5">
       <profiles>
         <profile name="Dao" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="c427-2656-f385-3ebf" publicationId="fd0a-6995-03c8-1dd6" page="13">
           <characteristics>
@@ -5390,7 +5433,11 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Natural Armour (4+)" id="e58e-fd80-0b5e-b25a" hidden="false" type="rule" targetId="6b43-9dda-f589-0509"/>
+        <infoLink name="Natural Armour (4+)" id="e58e-fd80-0b5e-b25a" hidden="false" type="rule" targetId="6b43-9dda-f589-0509">
+          <modifiers>
+            <modifier type="set" value="Dao only" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="32dc-91c5-dafb-8464"/>
@@ -5399,7 +5446,7 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
         <cost name="pts" typeId="points" value="85"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Khar-mel" hidden="false" id="7b77-720f-ffee-e2eb" subType="mount" sortIndex="9">
+    <selectionEntry type="model" import="true" name="Khar-mel" hidden="false" id="7b77-720f-ffee-e2eb" sortIndex="9">
       <costs>
         <cost name="pts" typeId="points" value="150"/>
       </costs>
@@ -5423,22 +5470,40 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Fly (10)" id="6df7-ee68-7e4e-e1b3" hidden="false" type="rule" targetId="953a-d5a4-ee81-4093"/>
+        <infoLink name="Fly (10)" id="6df7-ee68-7e4e-e1b3" hidden="false" type="rule" targetId="953a-d5a4-ee81-4093">
+          <modifiers>
+            <modifier type="set" value="Khar-mel only" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <rules>
         <rule name="Khar-mel&apos;s Curse" id="fb13-ba03-e2da-8efd" hidden="false" publicationId="0896-cf2d-d305-6de3" page="40">
           <description>All enemy units within 6&quot; of Khar-mel suffer a -1 modifier to their To Hit rolls for both close combat and missile attacks, as well as -1 to any armour, Ward or Regeneration saves they might have.</description>
+          <modifiers>
+            <modifier type="set" value="Khar-mel only" field="annotation"/>
+          </modifiers>
         </rule>
         <rule name="Khar-mel&apos;s Luck" id="4eaf-45ee-d4d5-db3e" hidden="false" publicationId="0896-cf2d-d305-6de3" page="40">
           <description>Khar-mel may re-roll failed Ward saves.</description>
+          <modifiers>
+            <modifier type="set" value="Khar-mel only" field="annotation"/>
+          </modifiers>
         </rule>
         <rule name="Wind Forms" id="6c8c-bb9c-67fb-d9e6" hidden="false" publicationId="0896-cf2d-d305-6de3" page="40">
           <description>Khar-mel can turn into one of the following Wind Forms at the start of each of your turns. The effect lasts until the start of your next turn. 
 - Heat Haze: All missile fire targeting Khar-mel suffer -1 To Hit. 
 - Dust Devil: All units that Khar-mel moves over during the Remaining Moves sub-phase suffer D6 Strength 2 Hits. 
 - Pillar of Fire: All enemy models in base contact with Khar-mel at the start of each round of close combat suffer a Strength 4 Hit with the Flaming Attacks special rule.</description>
+          <modifiers>
+            <modifier type="set" value="Khar-mel only" field="annotation"/>
+          </modifiers>
         </rule>
       </rules>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Crew" hidden="false" id="d922-dd02-eaf2-8b9b" subType="crew" sortIndex="10" collective="true">
+      <infoLinks>
+        <infoLink name="Crew" id="5450-e166-c2e9-b9bb" hidden="false" type="profile" targetId="41b5-17a0-7df0-8543"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
 </catalogue>
