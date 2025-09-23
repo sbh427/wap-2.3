@@ -474,7 +474,7 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="23fa-5c6c-e1b3-1b26" type="max"/>
           </constraints>
           <entryLinks>
-            <entryLink id="423b-9de3-0d9d-8d52" name="The War Altar of Sigmar" hidden="false" collective="false" import="true" targetId="8522-a781-ab57-8112" type="selectionEntry"/>
+            <entryLink id="423b-9de3-0d9d-8d52" name="War Altar of Sigmar" hidden="false" collective="false" import="true" targetId="8522-a781-ab57-8112" type="selectionEntry"/>
             <entryLink import="true" name="Warhorse" hidden="false" id="6760-5489-db29-0561" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0">
               <entryLinks>
                 <entryLink import="true" name="Barding" hidden="false" id="4074-482d-ed26-7e2b" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
@@ -3323,8 +3323,22 @@
               </modifiers>
             </infoLink>
           </infoLinks>
+          <modifiers>
+            <modifier type="set" value="Winter Wolf Knight" field="name">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="Winter Wolves Knights" field="name">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="7a0b-245c-26ce-14d5" name="Helblaster Volley Gun" hidden="false" collective="false" import="true" type="model">
       <rules>
@@ -4140,7 +4154,7 @@ In addition, all shots made with a Helstorm counts as being fired indirectly.</d
               </selectionEntries>
               <entryLinks>
                 <entryLink id="3ffb-7fa5-26a6-8616" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry"/>
-                <entryLink id="337d-078b-0872-d836" name="The War Altar of Sigmar" hidden="false" collective="false" import="true" targetId="8522-a781-ab57-8112" type="selectionEntry"/>
+                <entryLink id="337d-078b-0872-d836" name="War Altar of Sigmar" hidden="false" collective="false" import="true" targetId="8522-a781-ab57-8112" type="selectionEntry"/>
                 <entryLink import="true" name="Light Armour" hidden="false" id="7873-5fd7-0f86-08b5" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a0c5-6d76-bba7-fc55"/>
@@ -7002,7 +7016,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="any" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -7242,7 +7256,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
           <modifierGroups>
             <modifierGroup type="and">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="any" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
               </conditions>
               <modifiers>
                 <modifier type="set" value="9" field="09ad-18df-607b-1215"/>
@@ -7278,7 +7292,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="any" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -7287,7 +7301,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
       <modifiers>
         <modifier type="set" value="Winter Wolf" field="name">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="any" shared="true"/>
+            <condition type="instanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -7874,7 +7888,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="instanceOf" value="1" field="selections" scope="unit" childId="8ab3-de65-ec9d-09ba" shared="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="any" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -9882,7 +9896,7 @@ The Witch Hunter may re-roll all failed To Hit against this model. Every hit he 
       <description>Jubal Falk must be accompanied by a unit of Handgunners chosen from the army list at a cost of 10 points per model. This unit has medium armour and may re-roll 1&apos;s To Hit with missile attacks. The unit must be given a Standard Bearer and Musician. Jubal Falk is the unit&apos;s Leader and may never choose to leave this unit.</description>
     </rule>
     <rule name="Crush the Weak" id="da9f-06eb-7dc7-d6e4" hidden="false">
-      <description>Models with this special rule have the Hatred special rule against enemy models with a lower Weapon Skill, Strength, Toughness or Leadership characteristic than they have. </description>
+      <description>Models with this special rule have the Hatred special rule against enemy models with a lower Weapon Skill, Strength, Toughness or Leadership characteristic than they have.</description>
     </rule>
     <rule name="White Wolf Cloak" id="5a67-fccc-485d-134b" hidden="false">
       <description>White Wolf Cloaks give the wearer the Natural Armour (6+) special rule against missile attacks.</description>
