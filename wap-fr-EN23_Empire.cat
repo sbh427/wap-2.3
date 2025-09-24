@@ -7509,7 +7509,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7ddc-d895-f434-43b5" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="ba74-4484-7f71-c744" name="The Imperial Banner" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
+        <selectionEntry id="ba74-4484-7f71-c744" name="The Imperial Banner" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="94f4-c8ac-ce61-c514" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6c6a-194e-ecb2-1939" type="max"/>
@@ -7525,7 +7525,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
             <cost name="pts" typeId="points" value="65"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e34f-bef6-1f39-7d73" name="Griffon Standard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
+        <selectionEntry id="e34f-bef6-1f39-7d73" name="Griffon Standard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e0cd-dbd4-081a-c3ac" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5c76-f78a-a1a9-26e5" type="max"/>
@@ -7540,24 +7540,40 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
           <costs>
             <cost name="pts" typeId="points" value="50"/>
           </costs>
+          <comment>Sigmarite only</comment>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="f569-2bbc-6d1d-b9b1" name="Banner of Sigismund" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
+        <selectionEntry id="f569-2bbc-6d1d-b9b1" name="Tapestry of Sigmar&apos;s Triumph" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8612-7f20-69b9-7852" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ff39-6e34-7e81-f339" type="max"/>
           </constraints>
           <profiles>
-            <profile id="decb-e7b7-34d8-2860" name="Banner of Sigismund" publicationId="315d-135b-135c-07ce" page="8" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="decb-e7b7-34d8-2860" name="Tapestry of Sigmar&apos;s Triumph" publicationId="315d-135b-135c-07ce" page="8" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying the Banner of Sigismund gains Stubborn. If the unit is already Stubborn, they instead become Unbreakable.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying this standard may re- roll 1&apos;s To Wound in the first round of close combat.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="50"/>
+            <cost name="pts" typeId="points" value="15"/>
           </costs>
+          <comment>Sigmarite only</comment>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="0df7-1c29-5017-e05c" name="Steel Standard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
+        <selectionEntry id="0df7-1c29-5017-e05c" name="Steel Standard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f23d-7715-4414-e5f5" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cebf-bc54-f6eb-f3f5" type="max"/>
@@ -7565,15 +7581,27 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
           <profiles>
             <profile id="0dc6-5bd9-66d0-3353" name="Steel Standard" publicationId="315d-135b-135c-07ce" page="8" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">Cavalry or Monstrous Cavalry only. The unit carrying the Steel Standard ignores the Movement penalties from barding.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying the Steel Standard ignores the Movement penalties from barding.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="2e50-5817-ab5a-4b67" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="8ab3-de65-ec9d-09ba" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="bc01-1a1b-13eb-c4b4" name="Flag of the Conqueror" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
+        <selectionEntry id="bc01-1a1b-13eb-c4b4" name="Flag of the Conqueror" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0e7c-c8b7-8845-24df" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2d16-fdbb-dd36-aeb9" type="max"/>
@@ -7589,9 +7617,188 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
             <cost name="pts" typeId="points" value="50"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="a3ec-76fb-5e0e-05e1" name="Banner of the Knights Panther" hidden="true" collective="false" import="true" type="upgrade" sortIndex="7">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7975-006a-663a-7c20" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="431f-bff7-6940-4c44" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="b701-c828-2767-57ec" name="Banner of the Knights Panther" publicationId="315d-135b-135c-07ce" page="8" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying the Banner of Sigismund gains the Stubborn special rule and may re- roll failed Break tests</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="30"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="2e50-5817-ab5a-4b67" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="add" value="{this} requires the Knights Panther as Order" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="dc9f-a022-e771-d648" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="a3ec-76fb-5e0e-05e1" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="1b51-f433-7f4e-9847" name="Banner of Sigismund" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f080-3b96-6625-41f5" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4a64-607d-a3b9-2987" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="9ffb-8856-2368-987c" name="Banner of Sigismund" publicationId="315d-135b-135c-07ce" page="8" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying the Banner of Sigismund gains the Stubborn special rule and may re- roll failed Break tests</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="35"/>
+          </costs>
+          <comment>Sigmarite only</comment>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="d911-064d-a2f1-f487" name="Flag of the Conqueror" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5789-6d4d-265d-2e47" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="32b3-343a-10f2-8c07" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="c853-deea-78d4-f8b8" name="Flag of the Conqueror" publicationId="315d-135b-135c-07ce" page="8" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">All friendly units with the State Troops or Militia special rules within 12&quot; gain +1 to their Leadership.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="40"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="4ebf-2f62-9349-9d64" name="The Banner of Ulric" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="86bd-c9b3-7e93-f3ef" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a498-47ce-8946-01c7" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="0c92-0269-9c75-6b30" name="The Banner of Ulric" publicationId="315d-135b-135c-07ce" page="8" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying this standard causes Fear. When charging, they cause Terror.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="25"/>
+          </costs>
+          <comment>Ulric only</comment>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="62b0-1c10-9c20-ea9b" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="4e5c-c310-918a-3d0e" name="Banner of Middenheim" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="20a2-3494-9be7-8147" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="73d8-24fb-4a5a-4126" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="2312-0715-3933-8f9e" name="Banner of Middenheim" publicationId="315d-135b-135c-07ce" page="8" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying this banner gains the Immunity (Terror) special rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <comment>Ulric only</comment>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="cc17-62b6-3211-819b" name="Banner of the Warrior True" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4781-5971-f0f5-dbb5" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0290-25a6-4e72-70f1" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="f4d8-b8a7-309a-7c75" name="Banner of the Warrior True" publicationId="315d-135b-135c-07ce" page="8" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">When the unit carrying this banner takes a Break test, they count as having lost the combat by D3 fewer points than they really did. If this reduces the margin of the loss to 0 or lower, they still count as having lost the combat but test on their unmodified Leadership. </characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="30"/>
+          </costs>
+          <comment>Ulric only</comment>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry id="ab32-65c8-4354-cdd6" name="Standard of the White Wolf" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
+          <constraints>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a352-0945-c2ae-95df" type="max"/>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1493-703b-6191-9154" type="max"/>
+          </constraints>
+          <profiles>
+            <profile id="cf12-8aba-12a8-bdf5" name="Standard of the White Wolf" publicationId="315d-135b-135c-07ce" page="8" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">ll missile fire against the unit (including magic missiles) suffers a -1 penalty to its Strength. Other types of attack, including spells that are not magic missiles, are unaffected.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="25"/>
+          </costs>
+          <comment>Ulric only</comment>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="939c-3cc7-8923-7aed" name="Common Magic Standards" hidden="false" collective="false" import="true" targetId="2613-24d7-a26e-eb37" type="selectionEntryGroup" sortIndex="7"/>
+        <entryLink id="939c-3cc7-8923-7aed" name="Common Magic Standards" hidden="false" collective="false" import="true" targetId="2613-24d7-a26e-eb37" type="selectionEntryGroup" sortIndex="99"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Knightly Orders" id="8d18-9730-7685-8bec" hidden="false">
@@ -7862,7 +8069,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="instanceOf" value="1" field="selections" scope="unit" childId="8ab3-de65-ec9d-09ba" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -8576,20 +8783,20 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                 <cost name="pts" typeId="points" value="40"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Crystal Ball" hidden="false" id="71d9-b2f3-b42c-a47c" collective="false" sortIndex="1">
+            <selectionEntry type="upgrade" import="true" name="Tome of Midnight" hidden="false" id="71d9-b2f3-b42c-a47c" collective="false" sortIndex="1">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ca11-03e2-04c2-7229" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0eb5-2f97-e9db-34e2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Crystal Ball" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="f3d6-a117-26f2-feb0" publicationId="315d-135b-135c-07ce" page="7">
+                <profile name="Tome of Midnight" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="f3d6-a117-26f2-feb0" publicationId="315d-135b-135c-07ce" page="7">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Crystal Ball allows the wearer to pick one enemy unit anywhere on table at the start of each of your turns. Your opponent must reveal all Magic Items, Hidden models and the like that unit might have.</characteristic>
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer of this item gains a +1 casting bonus when using the Lore of Shadow or Death. In addition, they know one more spell than normal. However, they also have the Loner special rule. </characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <costs>
-                <cost name="pts" typeId="points" value="5"/>
+                <cost name="pts" typeId="points" value="20"/>
               </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Chalice of Fate" hidden="false" id="5e28-be81-31eb-eeff" collective="false" sortIndex="2">
@@ -8606,6 +8813,38 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
               </profiles>
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Crystal Ball" hidden="false" id="052e-7cf5-57a5-3ed5" collective="false" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="32b4-05d2-037a-4eb9" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a8b9-b2e9-3aa3-bdf2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Crystal Ball" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="65c9-7965-30a6-8342" publicationId="315d-135b-135c-07ce" page="7">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Crystal Ball allows the wearer to pick one enemy unit anywhere on table at the start of each of your turns. Your opponent must reveal all Magic Items, Hidden models and the like that unit might have.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Twin-Tailed Wand" hidden="false" id="725a-b4e6-0961-c99e" collective="false" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="03c9-c381-63f5-54f5" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5dd7-1613-90a8-469e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Twin-Tailed Wand" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="8277-732e-3d2e-1963" publicationId="315d-135b-135c-07ce" page="7">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">Once per turn, the bearer of this item may attempt to cast the same spell twice. However, any time they roll a miscast, they suffer a +1 modifier to the result on the Miscast table.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -8708,15 +8947,15 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0246-c3ed-0cac-c4a3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Van Horstmanns Speculum" hidden="false" id="cf8a-a076-9cbb-9c9e" collective="false" sortIndex="23">
+            <selectionEntry type="upgrade" import="true" name="Ranald&apos;s Coin" hidden="false" id="cf8a-a076-9cbb-9c9e" collective="false" sortIndex="35">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="93fc-086b-c540-7b67" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="94a3-0798-017e-fadb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Van Horstmanns Speculum" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="7cce-3f15-1ffc-df6f" publicationId="315d-135b-135c-07ce" page="7">
+                <profile name="Ranald&apos;s Coin" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="7cce-3f15-1ffc-df6f" publicationId="315d-135b-135c-07ce" page="7">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">When the wearer fights in a challenge, he must &apos;swap&apos; the WS, S, T, I and A characteristics on his profile with his enemy (but not the enemy&apos;s mount, if he has one). So, the wearer fights with his enemy&apos;s S, T, I and A whilst his enemy fights with the wearer&apos;s S, T, I and A. Note that you cannot choose not to use Van Horstmann&apos;s Speculum and you must swap all of the listed characteristics for the duration of the challenge, not just some of them.</characteristic>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The bearer of this item may re-roll 1&apos;s To Hit, To Wound, when taking armour saves and Ward saves.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -8724,23 +8963,23 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                 <cost name="pts" typeId="points" value="35"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Aldred&apos;s Casket of Sorcery" hidden="false" id="92bc-0280-4261-4fbd" collective="false" sortIndex="21">
+            <selectionEntry type="upgrade" import="true" name="Antler of the Blue Stag" hidden="false" id="92bc-0280-4261-4fbd" collective="false" sortIndex="30">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="13cf-1fd1-b641-1e06" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b483-f6f2-5bc7-ef4d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Aldred&apos;s Casket of Sorcery" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="b6cf-540d-7b79-c04b" publicationId="315d-135b-135c-07ce" page="7">
+                <profile name="Antler of the Blue Stag" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="b6cf-540d-7b79-c04b" publicationId="315d-135b-135c-07ce" page="7">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Bound Spell (power level variable). At the start of each of your Magic phases, the bearer may remove and capture one randomly determined spell up to Level 2 (excluding Signature Spells) from an enemy Wizard within 12&quot; of them on a roll of 4+. The bearer can then cast the captured spell in any of your Magic phases by releasing it from the casket just like from a Bound Spell. Any number of spells may be captured by the casket, and the bearer can successfully cast each one once, either over several magic phases or all at the same time if they prefer. The power level of the spell cast by the casket will be equivalent to the normal casting value of the spell.</characteristic>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The bearer of this item and any unit they join gain +1 Weapon Skill and Ballistic Skill.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <costs>
-                <cost name="pts" typeId="points" value="35"/>
+                <cost name="pts" typeId="points" value="30"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Ring of Volans" hidden="false" id="da3e-d073-7f5a-f9c5" collective="false" sortIndex="16">
+            <selectionEntry type="upgrade" import="true" name="Ring of Volans" hidden="false" id="da3e-d073-7f5a-f9c5" collective="false" sortIndex="23">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1453-c9ab-297e-29b2" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="653c-a659-b254-bdb2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -8862,7 +9101,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Doomfire Ring" hidden="false" id="2a34-8651-a2ab-85c0" collective="false" sortIndex="22">
+            <selectionEntry type="upgrade" import="true" name="Doomfire Ring" hidden="false" id="2a34-8651-a2ab-85c0" collective="false" sortIndex="34">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c431-9b1e-ee5e-6d4a" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a0f1-9aef-8259-5b40" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -8880,7 +9119,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                     <modifierGroup type="and">
                       <modifiers>
                         <modifier type="set" value="Bound Spell" field="576b-eaa1-0bd1-3f7a"/>
-                        <modifier type="set" value="6+" field="d6bf-647e-ba69-e8a0"/>
+                        <modifier type="set" value="5+" field="d6bf-647e-ba69-e8a0"/>
                       </modifiers>
                     </modifierGroup>
                   </modifierGroups>
@@ -8890,7 +9129,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                 <cost name="pts" typeId="points" value="35"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Icon of Magnus" hidden="false" id="82ea-b9e6-f7dc-cd3c" collective="false" sortIndex="7">
+            <selectionEntry type="upgrade" import="true" name="Icon of Magnus" hidden="false" id="82ea-b9e6-f7dc-cd3c" collective="false" sortIndex="16">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6ff4-02a2-eccd-2906" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="54ee-b8dc-f6ab-a3c0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -8905,8 +9144,16 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
+              <comment>Sigmarite only</comment>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Silver Horn" hidden="false" id="e1f9-0b5e-58de-2ed4" collective="false" sortIndex="12">
+            <selectionEntry type="upgrade" import="true" name="The Silver Horn" hidden="false" id="e1f9-0b5e-58de-2ed4" collective="false" sortIndex="29">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2af5-4d3c-3571-2b19" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fe91-c098-4d35-dade" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -8928,10 +9175,10 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                 </profile>
               </profiles>
               <costs>
-                <cost name="pts" typeId="points" value="15"/>
+                <cost name="pts" typeId="points" value="25"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Ring of St. Horst" hidden="false" id="2eca-48f6-5284-6dd8" collective="false" sortIndex="15">
+            <selectionEntry type="upgrade" import="true" name="Ring of St. Horst" hidden="false" id="2eca-48f6-5284-6dd8" collective="false" sortIndex="22">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3730-ff6e-f3ff-9c44" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7186-08d3-bbd5-1564" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -8946,8 +9193,16 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
+              <comment>Sigmarite only</comment>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Helsturm&apos;s Staff" hidden="false" id="d6ce-04b1-e0eb-94d0" collective="false" sortIndex="20">
+            <selectionEntry type="upgrade" import="true" name="Helsturm&apos;s Staff" hidden="false" id="d6ce-04b1-e0eb-94d0" collective="false" sortIndex="32">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e911-9b38-0742-383d" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5187-8aa3-78b6-82d1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -8970,7 +9225,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Skull Charm" hidden="false" id="45fc-5a25-ffd5-b548" collective="false" sortIndex="10">
+            <selectionEntry type="upgrade" import="true" name="Skull Charm" hidden="false" id="45fc-5a25-ffd5-b548" collective="false" sortIndex="19">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="12d2-e7be-92b4-6314" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8f70-c142-2eda-aa20" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9001,7 +9256,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Boots of Bovva" hidden="false" id="7c6b-573a-841d-d122" collective="false" sortIndex="6">
+            <selectionEntry type="upgrade" import="true" name="Boots of Bovva" hidden="false" id="7c6b-573a-841d-d122" collective="false" sortIndex="12">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c177-92f5-99f3-ad99" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="227e-18ce-86cb-d7b2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9016,86 +9271,78 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Dazh&apos;s Flint" hidden="false" id="fce5-549a-3ef4-00e3" collective="false" sortIndex="1">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4247-0b26-cb68-c2ce" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c60b-53c4-f3e8-3ade" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Dazh&apos;s Flint" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="d81c-9aa9-5258-b393" publicationId="315d-135b-135c-07ce" page="8">
-                  <characteristics>
-                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The model bearing Dazh&apos;s Flint gains Flaming Attacks.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Sheen of Truesilver" hidden="false" id="f5c0-51c6-e140-a05b" collective="false" sortIndex="3">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="dbe4-b173-b533-310e" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fd22-9dbe-080d-383a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Sheen of Truesilver" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="15c6-a6bc-80a8-4ec2" publicationId="315d-135b-135c-07ce" page="8">
-                  <characteristics>
-                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">At the end of any close combat in which a Monster suffers one or more unsaved Wounds from the bearer&apos;s close combat attacks, it must take a Toughness test for each such Wound inflict, and loses a Wound (with no saves allowed) for each test failed.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Fang of Orska" hidden="false" id="6af5-5ecc-3564-48c4" collective="false" sortIndex="4">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="84be-0c50-daed-9589" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a5d5-e00b-989f-1b48" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <profiles>
-                <profile name="The Fang of Orska" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="76f0-8e2e-ba63-c90c" publicationId="315d-135b-135c-07ce" page="8">
-                  <characteristics>
-                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Any War Beast, Monstrous Beast, Monstrous Creature or Monster attempting to strike blows against the bearer must first pass a Leadership test or automatically forfeit any attacks directed against the bearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Von Mecklenburg&apos;s Enchanted Shot" hidden="false" id="34dc-fb08-6f0c-18fe" collective="false" sortIndex="13">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="045d-dcec-bbfa-9a34" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="45f7-a5ef-0d1c-077f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Von Mecklenburg&apos;s Enchanted Shot" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="89ca-9171-719f-3a6e" publicationId="315d-135b-135c-07ce" page="8">
-                  <characteristics>
-                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Witch Hunter with Pistol only. Any shots fired from the bearer pistol(s) have the Magical Attacks special rule and automatically Wounds.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="15"/>
-              </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="add" value="{this} is not allowed if mounted" field="error">
                   <conditionGroups>
-                    <conditionGroup type="or">
+                    <conditionGroup type="and">
                       <conditions>
-                        <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="d662-4e5b-c4b7-8887" shared="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="model" childId="4883-fb9f-3893-0d9c" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="model" childId="a574-f633-253c-b619" shared="true" includeChildSelections="true"/>
-                        <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="fbe0-b3c6-8168-f0cb" shared="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="7c6b-573a-841d-d122" shared="true"/>
+                        <condition type="atLeast" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Sanctified Shard of Lichebone" hidden="false" id="49a7-5d91-f3e2-8b98" collective="false" sortIndex="9">
+            <selectionEntry type="upgrade" import="true" name="Ring of Fortune" hidden="false" id="f5c0-51c6-e140-a05b" collective="false" sortIndex="2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="dbe4-b173-b533-310e" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fd22-9dbe-080d-383a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Ring of Fortune" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="15c6-a6bc-80a8-4ec2" publicationId="315d-135b-135c-07ce" page="8">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The bearer (but not their mount) of this item can re-roll all failed To Wound rolls in close combat.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Von Mecklenburg&apos;s Enchanted Shot" hidden="true" id="6af5-5ecc-3564-48c4" collective="false" sortIndex="9">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="84be-0c50-daed-9589" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a5d5-e00b-989f-1b48" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Von Mecklenburg&apos;s Enchanted Shot" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="76f0-8e2e-ba63-c90c" publicationId="315d-135b-135c-07ce" page="8">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Any shots fired from the bearer weapons have the Magical Attacks special rule and automatically Wounds</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="d662-4e5b-c4b7-8887" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="fbe0-b3c6-8168-f0cb" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="add" value="{this} is not allowed if no Handgun or Pistol is Picked" field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="b177-ecbf-f68f-c9a3" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="b3ce-93c6-1ad6-25e4" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="4883-fb9f-3893-0d9c" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="a574-f633-253c-b619" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="213d-5b6d-2b0a-19ce" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="03d7-e75d-2d41-2cd3" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Sanctified Shard of Lichebone" hidden="false" id="49a7-5d91-f3e2-8b98" collective="false" sortIndex="18">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c8d9-87ab-3d2d-9cbd" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5ebe-075c-2cd2-a3b4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9119,7 +9366,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Reliquary of Lector Ostranald" hidden="false" id="48f2-82c2-bfe6-f853" collective="false" sortIndex="8">
+            <selectionEntry type="upgrade" import="true" name="Reliquary of Lector Ostranald" hidden="false" id="48f2-82c2-bfe6-f853" collective="false" sortIndex="17">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="097c-0ede-54b2-9ac7" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="754f-e49f-ba79-7656" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9134,8 +9381,16 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
+              <comment>Sigmarite only</comment>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Powders of Thrice-Damned Ossk" hidden="false" id="1fde-42a2-e793-a3fe" collective="false" sortIndex="11">
+            <selectionEntry type="upgrade" import="true" name="The Powders of Thrice-Damned Ossk" hidden="false" id="1fde-42a2-e793-a3fe" collective="false" sortIndex="20">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c438-2a04-abbc-91b8" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="061a-07d7-0c6f-86f9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9159,31 +9414,23 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Balestorm Orb" hidden="false" id="31f3-06b7-3670-bee2" collective="false" sortIndex="17">
+            <selectionEntry type="upgrade" import="true" name="Black Pomander" hidden="false" id="31f3-06b7-3670-bee2" collective="false" sortIndex="21">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4825-ffcd-3ed0-a255" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5185-e070-69da-aced" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Balestorm Orb" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="8c75-831f-407e-1eff" publicationId="315d-135b-135c-07ce" page="7">
+                <profile name="Black Pomander" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="8c75-831f-407e-1eff" publicationId="315d-135b-135c-07ce" page="7">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Witch Hunter only. Enemy Wizards within 24&quot; of the bearer suffer a -1 penalty to cast spell.</characteristic>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Any Undead unit in base contact with the bearer of this item suffer -1 to their Weapon Skill.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <costs>
-                <cost name="pts" typeId="points" value="25"/>
+                <cost name="pts" typeId="points" value="20"/>
               </costs>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="d662-4e5b-c4b7-8887" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="fbe0-b3c6-8168-f0cb" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Blessed Silver Hammer" hidden="false" id="846c-2052-d111-c19d" collective="false" sortIndex="14">
+            <selectionEntry type="upgrade" import="true" name="Blessed Silver Hammer" hidden="false" id="846c-2052-d111-c19d" collective="false" sortIndex="10">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1fad-58c5-2c19-9cec" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b240-ac22-f07f-dfd7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9196,10 +9443,18 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                 </profile>
               </profiles>
               <costs>
-                <cost name="pts" typeId="points" value="20"/>
+                <cost name="pts" typeId="points" value="15"/>
               </costs>
+              <comment>Sigmarite only</comment>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Eichelbaum&apos;s Scroll" hidden="false" id="0291-ef28-649e-85a5" collective="false" sortIndex="19">
+            <selectionEntry type="upgrade" import="true" name="Eichelbaum&apos;s Scroll" hidden="false" id="0291-ef28-649e-85a5" collective="false" sortIndex="31">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="021e-465f-eaf6-08d5" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e1ad-67b1-1727-b252" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9223,7 +9478,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Brazier of the Holy Flame" hidden="false" id="e495-6391-82e9-3e93" collective="false" sortIndex="18">
+            <selectionEntry type="upgrade" import="true" name="Brazier of the Holy Flame" hidden="false" id="e495-6391-82e9-3e93" collective="false" sortIndex="28">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="49ad-eb55-cb3d-10e5" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f90e-e462-51ad-6e58" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9239,7 +9494,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Book of Uncommon Prayer" hidden="false" id="1cfd-4c17-2eaf-372d" collective="false" sortIndex="5">
+            <selectionEntry type="upgrade" import="true" name="Book of Uncommon Prayer" hidden="false" id="1cfd-4c17-2eaf-372d" collective="false" sortIndex="11">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4686-934c-f4aa-b868" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="13fc-db05-28ab-9d85" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9255,7 +9510,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Sanctified Silver Bullets" hidden="false" id="9ce3-e666-3db6-fa2e" collective="false" sortIndex="2">
+            <selectionEntry type="upgrade" import="true" name="Sanctified Silver Bullets" hidden="true" id="9ce3-e666-3db6-fa2e" collective="false" sortIndex="3">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c111-c154-43c0-8bf2" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="60f5-f2f4-213f-a130" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9271,23 +9526,389 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="add" value="{this} is not allowed if no Handgun or Pistol is Picked" field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="b177-ecbf-f68f-c9a3" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="b3ce-93c6-1ad6-25e4" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="4883-fb9f-3893-0d9c" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="a574-f633-253c-b619" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="213d-5b6d-2b0a-19ce" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="03d7-e75d-2d41-2cd3" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="false" field="hidden">
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="model" childId="4883-fb9f-3893-0d9c" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="model" childId="a574-f633-253c-b619" shared="true" includeChildSelections="true"/>
-                        <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="d662-4e5b-c4b7-8887" shared="true"/>
-                        <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="fbe0-b3c6-8168-f0cb" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="d662-4e5b-c4b7-8887" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="model" childId="fbe0-b3c6-8168-f0cb" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
               </modifiers>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Sheen of Truesilver" hidden="false" id="e7d0-0321-588d-5dec" collective="false" sortIndex="4">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a258-407e-c8da-29f0" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9468-0f23-4cf8-9ea6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Sheen of Truesilver" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="bed2-c642-b6cb-bff6" publicationId="315d-135b-135c-07ce" page="8">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">At the end of any close combat in which a Monster suffers one or more unsaved Wounds from the bearer&apos;s close combat attacks, it must take a Toughness test for each such Wound inflict, and loses a Wound (with no saves allowed) for each test failed.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="The Fang of Orska" hidden="false" id="94b7-eae1-4705-b625" collective="false" sortIndex="5">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bc43-f08e-def4-aa0b" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7448-e9c4-11f2-9838" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="The Fang of Orska" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="ac63-9185-9824-dd38" publicationId="315d-135b-135c-07ce" page="8">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Any War Beast, Monstrous Beast, Monstrous Creature or Monster attempting to strike blows against the bearer must first pass a Leadership test or automatically forfeit any attacks directed against the bearer.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Balestorm Orb" hidden="false" id="28d9-52e1-fdb5-bf31" collective="false" sortIndex="26">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1e46-2f01-87b0-869c" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="dea7-761e-105d-f3a4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Balestorm Orb" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="dcde-9123-e278-8fbd" publicationId="315d-135b-135c-07ce" page="7">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Witch Hunter only. Enemy Wizards within 24&quot; of the bearer suffer a -1 penalty to cast spell.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="d662-4e5b-c4b7-8887" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="fbe0-b3c6-8168-f0cb" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Squintsoffen&apos;s Marvellous Magnifier" hidden="false" id="ad8a-0226-c6c7-8b6b" collective="false" sortIndex="24">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="be8f-e28c-6eac-a773" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="07cf-f36c-7c21-c94b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Squintsoffen&apos;s Marvellous Magnifier" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="da9c-1939-3950-69d2" publicationId="315d-135b-135c-07ce" page="7">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The bearer of this item and any unit they join may re- roll 1&apos;s To Hit with missile weapons</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Aldred&apos;s Casket of Sorcery" hidden="false" id="a2ff-29df-3369-8319" collective="false" sortIndex="33">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3e2b-ddff-d29d-0a5e" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a00b-52cb-67f8-97a2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Aldred&apos;s Casket of Sorcery" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="6ee7-a410-6dab-cb79" publicationId="315d-135b-135c-07ce" page="7">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Bound Spell (power level variable). At the start of each of your Magic phases, the bearer may remove and capture one randomly determined spell up to Level 2 (excluding Signature Spells) from an enemy Wizard within 12&quot; of them on a roll of 4+. The bearer can then cast the captured spell in any of your Magic phases by releasing it from the casket just like from a Bound Spell. Any number of spells may be captured by the casket, and the bearer can successfully cast each one once, either over several magic phases or all at the same time if they prefer. The power level of the spell cast by the casket will be equivalent to the normal casting value of the spell.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="35"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Ring of Taal" hidden="false" id="2435-cafb-e95c-aa12" collective="false" sortIndex="36">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="20f9-a61b-ebce-e685" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0355-c3d8-bc2c-3c98" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Ring of Taal" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="b651-0b77-f0d5-46fb" publicationId="315d-135b-135c-07ce" page="7">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Bound Spell, Power Level 3. This item contains the Shield of Thorns spell from the Lore of Life</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Shield of Thorns" id="8c19-05ab-022d-8b8f" hidden="false" type="profile" targetId="73e5-14c3-e54b-2c31">
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="Bound Spell" field="576b-eaa1-0bd1-3f7a"/>
+                        <modifier type="set" value="3+" field="d6bf-647e-ba69-e8a0"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                </infoLink>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="35"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fang of the Winter Wolf" hidden="false" id="6c99-de73-eee2-4961" collective="false" sortIndex="7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3ac6-622d-c1ed-02d6" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="742c-6b38-8a2f-d8ba" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Fang of the Winter Wolf" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="3c89-e4c0-1e55-7edc" publicationId="315d-135b-135c-07ce" page="7">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The bearer&apos;s Battle Prayer automatically succeeds this turn</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <comment>Ulric only</comment>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="7fe4-6e3e-863e-5f8a" shared="true" includeChildSelections="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="c14a-60f2-7653-3935" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Van Horstmanns Speculum" hidden="false" id="58f5-329d-e5b9-9d4a" collective="false" sortIndex="37">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3489-1b1d-212b-bd5e" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9269-e140-33cf-e8b2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Van Horstmanns Speculum" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="f337-730f-d190-9881" publicationId="315d-135b-135c-07ce" page="7">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">When the wearer fights in a challenge, he must &apos;swap&apos; the WS, S, T, I and A characteristics on his profile with his enemy (but not the enemy&apos;s mount, if he has one). So, the wearer fights with his enemy&apos;s S, T, I and A whilst his enemy fights with the wearer&apos;s S, T, I and A. Note that you cannot choose not to use Van Horstmann&apos;s Speculum and you must swap all of the listed characteristics for the duration of the challenge, not just some of them.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="35"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Bane of the Craven" hidden="false" id="b7f1-64ee-2995-3a7d" collective="false" sortIndex="27">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5c03-f83f-e1a9-beb2" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="be0d-e5f7-471b-eefb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Bane of the Craven" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="db2c-0e19-dc99-bd0c" publicationId="315d-135b-135c-07ce" page="7">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Neither the unit that carries the Bane of the Craven nor any unit they charge may ever voluntarily flee as a charge reaction</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+              <comment>Ulric only</comment>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Pelt of Horros" hidden="false" id="fbfa-e0a6-7fbc-2fa3" collective="false" sortIndex="8">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e177-969f-5c32-2d85" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fe4a-3b31-2881-4cec" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Pelt of Horros" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="19b7-fe22-2c16-db01" publicationId="315d-135b-135c-07ce" page="7">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The wearer may re-roll one failed to wound roll in each Close Combat phase</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <comment>Ulric only</comment>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Claw Totem" hidden="false" id="c81c-95a2-b132-23e3" collective="false" sortIndex="6">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="25b5-b92b-0d07-f328" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="896e-3e32-277d-71e5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Claw Totem" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="f791-75a1-efb7-15c0" publicationId="315d-135b-135c-07ce" page="7">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The character and any unit they are with can roll one additional dice when pursuing fleeing enemies, and discard the lowest roll.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <comment>Ulric only</comment>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fauschlag Ring" hidden="false" id="ffeb-551c-abfa-e16e" collective="false" sortIndex="13">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ceed-0e03-64ef-b850" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="177f-e89f-a088-3af5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Fauschlag Ring" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="4ba2-0ba1-8ddc-b924" publicationId="315d-135b-135c-07ce" page="7">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The wearer gains +1 to Hit in close combat.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+              <comment>Ulric only</comment>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Amber Fang" hidden="false" id="5dce-d201-3133-98aa" collective="false" sortIndex="25">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8f04-032c-2a3b-e4aa" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c304-fad3-0580-63ce" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Amber Fang" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="c954-a057-3575-9189" publicationId="315d-135b-135c-07ce" page="7">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">he bearer can use up to two Battle Prayers each turn. This overrides the normal limit of a unit not being able to be affected by two Battle Prayers at the same time</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+              <comment>Ulric only</comment>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="7fe4-6e3e-863e-5f8a" shared="true" includeChildSelections="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="c14a-60f2-7653-3935" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Ice Dagger" hidden="false" id="34a3-6d7e-07b6-9bfd" collective="false" sortIndex="15">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1875-7c76-0be0-6ebb" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5909-a212-3524-d712" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Ice Dagger" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="acba-0d00-fe53-ba3c" publicationId="315d-135b-135c-07ce" page="7">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The bearer may add the current rank bonus of the unit they accompany to their Leadership when using Battle Prayers.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+              <comment>Ulric only</comment>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="7fe4-6e3e-863e-5f8a" shared="true" includeChildSelections="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="c14a-60f2-7653-3935" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Horn of the White Wolf" hidden="false" id="9f8a-f9f9-01d2-ea6f" collective="false" sortIndex="14">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a8ae-e1e7-e7d1-2615" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f94a-19a3-5a0e-4481" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Horn of the White Wolf" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="0868-5c17-ef33-2368" publicationId="315d-135b-135c-07ce" page="7">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Whenever the bearer of this item declares a charge, the target must take a Panic test before choosing their charge reaction</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+              <comment>Ulric only</comment>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Common Enchanted Items" hidden="false" id="4f76-e473-afde-19a3" collective="false" targetId="5857-a7aa-f954-a027" type="selectionEntryGroup" sortIndex="24"/>
+            <entryLink import="true" name="Common Enchanted Items" hidden="false" id="4f76-e473-afde-19a3" collective="false" targetId="5857-a7aa-f954-a027" type="selectionEntryGroup" sortIndex="99"/>
           </entryLinks>
           <modifiers>
             <modifier type="set" value="2" field="0246-c3ed-0cac-c4a3">
