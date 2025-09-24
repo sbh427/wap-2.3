@@ -3344,7 +3344,7 @@
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Naffatun" hidden="false" id="ffb3-2504-70e5-ce29" sortIndex="207">
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Naffatah" hidden="false" id="aa50-264e-f418-7132">
+        <selectionEntry type="model" import="true" name="Naffatah" hidden="false" id="aa50-264e-f418-7132" sortIndex="1" collective="true">
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
@@ -3354,7 +3354,7 @@
             <infoLink name="Skirmishers" id="3f2a-60b0-0350-3f96" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
           </infoLinks>
           <constraints>
-            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="59bb-5bcf-04df-0012"/>
+            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="59bb-5bcf-04df-0012"/>
           </constraints>
           <profiles>
             <profile name="Naffatah" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="dd83-c6cb-05c8-b4d9" publicationId="fd0a-6995-03c8-1dd6" page="25">
@@ -3373,7 +3373,7 @@
             </profile>
           </profiles>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Naphtha Bombs" hidden="false" id="ad29-6670-5453-b3a5">
+            <selectionEntry type="upgrade" import="true" name="Naphtha Bombs" hidden="false" id="ad29-6670-5453-b3a5" collective="true">
               <profiles>
                 <profile name="Naphtha Bombs" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="a5a7-5356-cd7d-ba52" publicationId="fd0a-6995-03c8-1dd6">
                   <characteristics>
@@ -3389,23 +3389,79 @@
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <comment>Naphtha Bombs</comment>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Naphtha Siphon" hidden="false" id="ef84-5d18-e3e1-6735">
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
+        <selectionEntry type="model" import="true" name="Naffatah" hidden="false" id="b501-214d-5b65-59b4" sortIndex="2" collective="true">
+          <comment>Naphtha Siphon Option</comment>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="model-or-unit" shared="true" id="9173-88f7-6562-2ec5"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="af51-e84a-fa65-dae0-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="af51-e84a-fa65-dae0-max"/>
           </constraints>
+          <infoLinks>
+            <infoLink name="Zealotry" id="53c2-c91a-ed9a-0b37" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
+            <infoLink name="Skirmishers" id="5695-8421-932d-07ee" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
+            <infoLink name="Tactical Withdrawl" id="54ac-ee3b-8beb-d099" hidden="false" type="rule" targetId="cf87-cae6-cc46-9094"/>
+          </infoLinks>
           <profiles>
-            <profile name="Naphtha Siphon" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="61f5-be2a-87ad-0c21" publicationId="fd0a-6995-03c8-1dd6">
+            <profile name="Naffatah" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="67d8-7d56-b869-9166" publicationId="fd0a-6995-03c8-1dd6" page="25">
               <characteristics>
-                <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Breath Weapon</characteristic>
-                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">3</characteristic>
-                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Flaming Attacks, Ignores Armour Saves, An enemy unit taking a casualty from naphtha siphons must take a Panic test. Naptha siphons cannot be used in close combat, but may fire every round in the shooting phase without needing to roll a 4+ like with other Breath Weapons.</characteristic>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Human)</characteristic>
               </characteristics>
             </profile>
           </profiles>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Ranged Weapon" id="0d4e-23b9-c1c4-e023" hidden="false" sortIndex="1">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Naphtha Siphon" hidden="false" id="1b85-25b4-90b1-726d" collective="true" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="20"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="model-or-unit" shared="true" id="d7fa-7597-80fe-37d2"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Naphtha Siphon" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="fc3b-cfc1-f9eb-c15b" publicationId="fd0a-6995-03c8-1dd6">
+                      <characteristics>
+                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Breath Weapon</characteristic>
+                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">3</characteristic>
+                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Flaming Attacks, Ignores Armour Saves, An enemy unit taking a casualty from naphtha siphons must take a Panic test. Naptha siphons cannot be used in close combat, but may fire every round in the shooting phase without needing to roll a 4+ like with other Breath Weapons.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Naphtha Bombs" hidden="false" id="b8b7-0179-2dfb-332e" sortIndex="1" collective="true">
+                  <profiles>
+                    <profile name="Naphtha Bombs" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="99f6-af87-0bc0-ace0" publicationId="fd0a-6995-03c8-1dd6">
+                      <characteristics>
+                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">6&quot;</characteristic>
+                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
+                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Flaming Attacks, Ignores Armour Saves, Quick to Fire, An enemy unit taking a casualty from naphtha bombs must take a Panic test.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="05af-2d06-e922-b3ed"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a676-62f2-188c-45de-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a676-62f2-188c-45de-max"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <categoryLinks>
