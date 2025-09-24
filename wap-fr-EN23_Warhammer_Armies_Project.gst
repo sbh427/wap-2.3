@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="64" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="65" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -22,7 +22,7 @@
     <publication id="1a01-044f-047b-618f" name="Warriors of Chaos v.1.6" shortName="WoC" publisher="Warhammer - Warriors of Chaos 9th Ed v.1.6" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="e967-620f-06be-096a" name="Wood Elves v.1.5" shortName="WE" publisher="Warhammer - Wood Elves 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="315c-6fd1-56a3-8b04" name="Amazons v.1.44" shortName="Am" publisher="Warhammer - Amazons 1.44" publicationDate="08.01.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="d221-484d-439d-4310" name="Araby v.1.5" shortName="Ar" publisher="Warhammer - Araby 9th Ed 1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="d221-484d-439d-4310" name="Araby v.1.5" shortName="Ar" publisher="Warhammer - Araby 9th Ed 1.5" publicationDate="26.06.2025" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="8abe-59b3-1084-5e51" name="Grand Cathay 1.52" shortName="GC" publisher="Warhammer - Grand Cathay 1.52" publicationDate="11.09.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="faf5-2026-3cea-6e96" name="Chaos Dwarfs 1.5" shortName="CD" publisher="Warhammer - Chaos Dwarfs 9th Ed 1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="7f0c-7d47-a39d-8c68" name="Cult of Ulric 1.11" shortName="CoU" publisher="Warhammer - Cult of Ulric 1.11" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="15.11.2023"/>
@@ -37,6 +37,7 @@
     <publication id="2053-6f2b-423f-8b0f" name="Pirates of Sartosa v.1.2" shortName="PoS" publisher="Warhammer - Pirates of Sartosa 9th Ed v.1.2" publicationDate="27.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="079e-9b65-30b3-2c59" name="Zombie Pirates of the Vampire Coast v.1.4" shortName="ZP" publisher="Warhammer - Zombie Pirates of the Vampire Coast 9th Ed v.1.4" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication name="Github" id="8db3-575d-91b-47f8" hidden="false" shortName="sbh427/wap-2.3" publisherUrl="https://github.com/sbh427/wap-2.3"/>
+    <publication name="Araby v.1.72" id="fd0a-6995-03c8-1dd6" hidden="false" shortName="Ar" publisher="Warhammer - Araby 9th Ed 1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
@@ -569,6 +570,9 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <infoLink name="Chariot" id="86a9-1051-5322-f1cd" hidden="false" type="rule" targetId="8595-878d-d839-775d"/>
         <infoLink name="Shrine" id="ece0-075c-2c26-1d28" hidden="false" type="rule" targetId="3952-6c6d-75ce-9b60"/>
       </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="force" shared="false" id="f8b1-3254-6b54-ec6f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
@@ -8161,7 +8165,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Arabian Steed" hidden="false" id="ac96-1c86-3a61-e422" collective="true" subType="mount">
+    <selectionEntry type="model" import="true" name="Arabyan Steed" hidden="false" id="ac96-1c86-3a61-e422" collective="true" subType="mount" publicationId="fd0a-6995-03c8-1dd6" page="12">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1a20-73cd-3b87-1abe" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
