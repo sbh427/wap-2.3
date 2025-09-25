@@ -1416,6 +1416,7 @@
         </selectionEntryGroup>
         <selectionEntryGroup name="Mount" id="46a0-ef18-1b83-1da3" hidden="false" sortIndex="4">
           <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d188-ac73-a879-2c8c-min"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d188-ac73-a879-2c8c-max"/>
           </constraints>
           <entryLinks>
@@ -1502,11 +1503,6 @@
         <entryLink import="true" name="Magic Items" hidden="false" id="7dc9-54fb-beb9-ffa1" type="selectionEntryGroup" targetId="d5c7-125a-f512-29e5" sortIndex="7">
           <modifiers>
             <modifier type="increment" value="50" field="4281-3d5b-825a-6bcf"/>
-            <modifier type="decrement" value="25" field="4281-3d5b-825a-6bcf">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="74f2-4e11-0a7e-deac" shared="true"/>
-              </conditions>
-            </modifier>
           </modifiers>
         </entryLink>
       </entryLinks>
@@ -1715,6 +1711,7 @@
             <entryLink import="true" name="Genies" hidden="false" id="a55f-0bec-724a-dbfd" type="selectionEntryGroup" targetId="f24a-9804-50e2-77e3"/>
           </entryLinks>
           <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="56b9-d012-1ef6-8bb5"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="34c0-7876-abd2-c30a"/>
           </constraints>
         </selectionEntryGroup>
@@ -3346,89 +3343,52 @@
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Naffatun" hidden="false" id="ffb3-2504-70e5-ce29" sortIndex="207">
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Naffatah" hidden="false" id="aa50-264e-f418-7132" sortIndex="1" collective="true">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Zealotry" id="0502-1f5d-0088-a844" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
-            <infoLink name="Tactical Withdrawl" id="70e6-1622-fe72-7d28" hidden="false" type="rule" targetId="cf87-cae6-cc46-9094"/>
-            <infoLink name="Skirmishers" id="3f2a-60b0-0350-3f96" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="59bb-5bcf-04df-0012"/>
-          </constraints>
-          <profiles>
-            <profile name="Naffatah" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="dd83-c6cb-05c8-b4d9" publicationId="fd0a-6995-03c8-1dd6" page="25">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Human)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+        <selectionEntry type="upgrade" import="true" name="Naffatah" hidden="false" id="55c7-3741-ca03-ecbb">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Naphtha Bombs" hidden="false" id="ad29-6670-5453-b3a5" collective="true">
+            <selectionEntry type="model" import="true" name="Naffatah" hidden="false" id="b501-214d-5b65-59b4">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="af51-e84a-fa65-dae0-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="af51-e84a-fa65-dae0-max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Zealotry" id="53c2-c91a-ed9a-0b37" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
+                <infoLink name="Skirmishers" id="5695-8421-932d-07ee" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
+                <infoLink name="Tactical Withdrawl" id="54ac-ee3b-8beb-d099" hidden="false" type="rule" targetId="cf87-cae6-cc46-9094"/>
+              </infoLinks>
               <profiles>
-                <profile name="Naphtha Bombs" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="a5a7-5356-cd7d-ba52" publicationId="fd0a-6995-03c8-1dd6">
+                <profile name="Naffatah" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="67d8-7d56-b869-9166" publicationId="fd0a-6995-03c8-1dd6" page="25">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">6&quot;</characteristic>
-                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Flaming Attacks, Ignores Armour Saves, Quick to Fire, An enemy unit taking a casualty from naphtha bombs must take a Panic test.</characteristic>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Human)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e242-1926-74cf-9490-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e242-1926-74cf-9490-max"/>
-              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
-          <comment>Naphtha Bombs</comment>
-        </selectionEntry>
-        <selectionEntry type="model" import="true" name="Naffatah" hidden="false" id="b501-214d-5b65-59b4" sortIndex="2" collective="true">
-          <comment>Naphtha Siphon Option</comment>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="af51-e84a-fa65-dae0-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="af51-e84a-fa65-dae0-max"/>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="59bb-5bcf-04df-0012"/>
           </constraints>
-          <infoLinks>
-            <infoLink name="Zealotry" id="53c2-c91a-ed9a-0b37" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
-            <infoLink name="Skirmishers" id="5695-8421-932d-07ee" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
-            <infoLink name="Tactical Withdrawl" id="54ac-ee3b-8beb-d099" hidden="false" type="rule" targetId="cf87-cae6-cc46-9094"/>
-          </infoLinks>
-          <profiles>
-            <profile name="Naffatah" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="67d8-7d56-b869-9166" publicationId="fd0a-6995-03c8-1dd6" page="25">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Human)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <selectionEntryGroups>
-            <selectionEntryGroup name="Ranged Weapon" id="0d4e-23b9-c1c4-e023" hidden="false" sortIndex="1">
+            <selectionEntryGroup name="Ranged Weapon" id="0d4e-23b9-c1c4-e023" hidden="false">
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Naphtha Siphon" hidden="false" id="1b85-25b4-90b1-726d" collective="true" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="20"/>
                   </costs>
                   <constraints>
-                    <constraint type="max" value="1" field="selections" scope="model-or-unit" shared="true" id="d7fa-7597-80fe-37d2"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="175c-42c9-c4c4-dc5a"/>
+                    <constraint type="max" value="1" field="selections" scope="model-or-unit" shared="true" id="3cb0-034c-5124-ec30" includeChildSelections="true"/>
                   </constraints>
                   <profiles>
                     <profile name="Naphtha Siphon" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="fc3b-cfc1-f9eb-c15b" publicationId="fd0a-6995-03c8-1dd6">
@@ -3461,9 +3421,6 @@
               </constraints>
             </selectionEntryGroup>
           </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
         </selectionEntry>
       </selectionEntries>
       <categoryLinks>
