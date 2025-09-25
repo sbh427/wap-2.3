@@ -3167,41 +3167,16 @@
         <categoryLink id="395c-e593-9a68-7851" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="e3ec-61fe-855b-88d3" name="Outrider" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="5" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="e0e1-53a9-c053-b565" type="min"/>
-          </constraints>
-          <profiles>
-            <profile id="c2a9-402c-c93b-b5ea" name="Outrider" publicationId="315d-135b-135c-07ce" page="32" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Human)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="b881-1666-323d-6b5d" name="Fast Cavalry" hidden="false" targetId="8877-a5de-cc9c-9142" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
+        <selectionEntry type="model" import="true" name="Outrider" hidden="false" id="8e8b-18d6-7983-c292" collective="true" defaultAmount="" sortIndex="1">
           <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="f94c-a95a-8e27-874f" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4cff-0835-b467-b244"/>
-              </constraints>
-            </entryLink>
             <entryLink import="true" name="Repeater Handgun" hidden="false" id="2fcd-c0d2-6363-3495" type="selectionEntry" targetId="213d-5b6d-2b0a-19ce">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="58de-d2dd-eeab-94f9"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="f94c-a95a-8e27-874f" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4cff-0835-b467-b244"/>
               </constraints>
             </entryLink>
             <entryLink import="true" name="Medium Armour" hidden="false" id="ba44-76f1-7d67-88bf" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
@@ -3223,6 +3198,131 @@
               </entryLinks>
             </entryLink>
           </entryLinks>
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="042e-9440-d6f9-7a84"/>
+          </constraints>
+          <profiles>
+            <profile name="Outrider" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="c2a9-402c-c93b-b5ea" publicationId="315d-135b-135c-07ce" page="32">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Human)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Fast Cavalry" id="b881-1666-323d-6b5d" hidden="false" targetId="8877-a5de-cc9c-9142" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <modifiers>
+            <modifier type="decrement" value="1" field="042e-9440-d6f9-7a84">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="1381-559c-9b44-b113" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Leader" hidden="false" id="0935-db36-8821-eafb" collective="true" defaultAmount="">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="4eaa-2fc1-7eb2-20e6" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c59b-60e5-5f5b-9673"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Medium Armour" hidden="false" id="957d-2470-e649-ba41" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2080-bb47-5446-83d8"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Warhorse" hidden="false" id="85a7-7963-61e0-4767" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6b7f-e4a3-c258-7b4a"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="64cc-9165-9dc1-ebd7"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c68e-d275-b313-5704" includeChildSelections="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="88df-b903-70e8-146d" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Outrider" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0f5c-7cc2-9693-8b41" publicationId="315d-135b-135c-07ce" page="32">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Human)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Fast Cavalry" id="df6b-735d-ca24-4546" hidden="false" targetId="8877-a5de-cc9c-9142" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <modifiers>
+            <modifier type="set" value="1" field="88df-b903-70e8-146d">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="1381-559c-9b44-b113" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="1381-559c-9b44-b113" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1" field="points">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="17ec-ae05-605b-27ce" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="add" value="This Leader is an additional Model" field="info">
+              <conditions>
+                <condition type="equalTo" value="5" field="selections" scope="parent" childId="8e8b-18d6-7983-c292" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Primary Weapon" id="e0fc-87f5-c444-4d23" hidden="false" sortIndex="-1">
+              <entryLinks>
+                <entryLink import="true" name="Grenade Launching Blunderbuss" hidden="false" id="38f3-a053-9c63-c65a" type="selectionEntry" targetId="746b-7fdb-7464-d0d8" sortIndex="3"/>
+                <entryLink import="true" name="Repeater Handgun" hidden="false" id="0791-986e-2725-3706" type="selectionEntry" targetId="213d-5b6d-2b0a-19ce" sortIndex="1"/>
+                <entryLink import="true" name="Hochland Long Rifle" hidden="false" id="2005-7288-13a5-75da" type="selectionEntry" targetId="7cfd-bf2c-f7f2-6c34" sortIndex="4">
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cfbc-f0a2-5dc9-dfee-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cfbc-f0a2-5dc9-dfee-max" includeChildSelections="false"/>
+              </constraints>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Repeater Pistol &amp; Pistol" hidden="false" id="ea85-fa0d-3c67-29b8" sortIndex="2">
+                  <infoLinks>
+                    <infoLink name="Pistol" id="7496-5bf7-cf49-3ccc" hidden="false" type="profile" targetId="aa4f-83e3-8259-924a"/>
+                    <infoLink name="Repeater Pistol" id="bfa7-9dda-ca3d-dbd0" hidden="false" type="profile" targetId="a7ff-a800-3ccc-4381"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -3239,41 +3339,13 @@
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="efa7-035c-7ee4-570c" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="1381-559c-9b44-b113" collective="false">
               <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e7ed-7c7a-f879-01ae" type="max"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d81c-0750-2605-8314" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <infoLinks>
-                <infoLink id="3fba-e14e-488e-314d" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+                <infoLink name="Leader" id="ee00-06bc-791c-06ec" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
-              <selectionEntryGroups>
-                <selectionEntryGroup id="b29d-9708-6380-cd4d" name="Primary Weapon (Replace Repeater Handgun)" hidden="false" collective="false" import="true" defaultSelectionEntryId="85cc-7831-7c9a-ae09">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eea1-5a04-5b79-b70f" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b272-76cc-c329-406d" type="min"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Pistol and repeater pistol" hidden="false" id="c1ca-6570-62f4-6a7e">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8fcf-191c-dccf-5106"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink name="Repeater Pistol" id="3b6f-59b0-337b-b693" hidden="false" type="profile" targetId="a7ff-a800-3ccc-4381"/>
-                        <infoLink name="Pistol" id="667e-fa0d-e199-ac2a" hidden="false" type="profile" targetId="aa4f-83e3-8259-924a"/>
-                      </infoLinks>
-                    </selectionEntry>
-                  </selectionEntries>
-                  <entryLinks>
-                    <entryLink import="true" name="Grenade Launching Blunderbuss" hidden="false" id="1778-cbf6-b440-6c88" type="selectionEntry" targetId="746b-7fdb-7464-d0d8"/>
-                    <entryLink import="true" name="Hochland Long Rifle" hidden="false" id="b809-90e0-354a-fcbb" type="selectionEntry" targetId="7cfd-bf2c-f7f2-6c34">
-                      <costs>
-                        <cost name="pts" typeId="points" value="5"/>
-                      </costs>
-                    </entryLink>
-                    <entryLink import="true" name="Repeater Handgun" hidden="false" id="85cc-7831-7c9a-ae09" type="selectionEntry" targetId="213d-5b6d-2b0a-19ce"/>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
@@ -7230,7 +7302,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Hunting Hounds" hidden="false" id="23c9-2824-9906-e799" defaultAmount="1" sortIndex="21">
+    <selectionEntry type="unit" import="true" name="Hunting Hounds" hidden="false" id="23c9-2824-9906-e799" defaultAmount="" sortIndex="21">
       <categoryLinks>
         <categoryLink name="Core" hidden="false" id="9693-f4ea-50f6-66f5" targetId="b876-2856-f1c2-c4f0" primary="true"/>
       </categoryLinks>
