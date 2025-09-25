@@ -2,11 +2,6 @@
 <catalogue id="1530-30e9-f488-7652" name="Empire WAP 1.6" revision="42" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <profileTypes>
-    <profileType id="ffb8-c6d9-01f6-a218" name="Land Ship Calamity Chart">
-      <characteristicTypes>
-        <characteristicType id="8ded-8e12-6fec-9416" name="Result"/>
-      </characteristicTypes>
-    </profileType>
     <profileType id="67a8-8e11-eb1f-edcf" name="Mad Count Table">
       <characteristicTypes>
         <characteristicType id="203b-4486-9699-6178" name="Result"/>
@@ -22,11 +17,6 @@
         <characteristicType id="eeba-ed06-def1-905b" name="Result"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="e4fb-880a-5ade-4479" name="Steam Boiler Mishap Table">
-      <characteristicTypes>
-        <characteristicType id="929d-783f-9e0d-8628" name="Result"/>
-      </characteristicTypes>
-    </profileType>
     <profileType id="b1f4-c1bc-f17f-31d0" name="Storm of Shemtek Chart">
       <characteristicTypes>
         <characteristicType id="f38c-ba7a-9afa-9885" name="Result"/>
@@ -35,6 +25,12 @@
     <profileType id="8056-0487-e321-37dc" name="Skull Charm Chart">
       <characteristicTypes>
         <characteristicType id="9480-d650-0182-cf97" name="Result"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Steam Boiler Mishap Chart" id="b72c-c262-64a8-a221" hidden="false">
+      <characteristicTypes>
+        <characteristicType name="Steam Points" id="5f84-3d8b-f6f6-634c"/>
+        <characteristicType name="Result" id="b175-9c8d-dafe-2c40"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -2207,7 +2203,7 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="pts" typeId="points" value="9"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
           <entryLinks>
             <entryLink import="true" name="Great Weapon" hidden="false" id="3991-5d5a-fa72-94b4" type="selectionEntry" targetId="0473-857e-78d9-cb7c">
@@ -2282,6 +2278,13 @@
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
+              <entryLinks>
+                <entryLink import="true" name="Pistol" hidden="false" id="d3c4-6024-fb01-3815" type="selectionEntry" targetId="4883-fb9f-3893-0d9c">
+                  <costs>
+                    <cost name="pts" typeId="points" value="3"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2474,7 +2477,6 @@
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4139-7f22-e619-38fd" type="min"/>
               </constraints>
               <entryLinks>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="c07b-8e92-5f69-13f8" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
                 <entryLink import="true" name="Spear" hidden="false" id="188a-18e9-3d18-4641" type="selectionEntry" targetId="a901-4548-955d-623c" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="0.5"/>
@@ -2492,12 +2494,12 @@
                 </entryLink>
                 <entryLink import="true" name="Crossbow" hidden="false" id="4079-5ba5-20d6-76d3" type="selectionEntry" targetId="9936-c747-429f-6327" sortIndex="5">
                   <costs>
-                    <cost name="pts" typeId="points" value="5"/>
+                    <cost name="pts" typeId="points" value="6"/>
                   </costs>
                 </entryLink>
                 <entryLink import="true" name="Handgun" hidden="false" id="dea0-5741-d42e-48bf" type="selectionEntry" targetId="b177-ecbf-f68f-c9a3" sortIndex="6">
                   <costs>
-                    <cost name="pts" typeId="points" value="5"/>
+                    <cost name="pts" typeId="points" value="6"/>
                   </costs>
                 </entryLink>
               </entryLinks>
@@ -2529,7 +2531,7 @@
                 <cost name="pts" typeId="points" value="1"/>
               </costs>
               <modifiers>
-                <modifier type="add" value="{this} is only allowed when armed with Hand Weapons, Spears of Polearms." field="error">
+                <modifier type="add" value="{this} is not allowed when armed with Handgun, Crowwbow or Great Weapon." field="error">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditionGroups>
@@ -2549,7 +2551,18 @@
                 </modifier>
               </modifiers>
             </entryLink>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="c07b-8e92-5f69-13f8" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="0.5">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b481-8aa6-2f35-53cf-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b481-8aa6-2f35-53cf-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
+          <rules>
+            <rule name="Dwarf-crafted" id="a7a9-9156-6bfa-a306" hidden="false">
+              <description>Models with this special rule re-roll 1&apos;s when rolling To Hit with missile weapons.</description>
+            </rule>
+          </rules>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -2771,7 +2784,7 @@
                 </entryLink>
                 <entryLink import="true" name="Ogre Pistol" hidden="false" id="7d57-6e3a-175d-f501" type="selectionEntry" targetId="9c06-bad6-8730-a29f" sortIndex="2">
                   <costs>
-                    <cost name="pts" typeId="points" value="3"/>
+                    <cost name="pts" typeId="points" value="6"/>
                   </costs>
                 </entryLink>
                 <entryLink import="true" name="Ogre Handgun" hidden="false" id="7b02-c9c6-904b-0b80" type="selectionEntry" targetId="9397-1034-78d6-d8b6" sortIndex="3">
@@ -3006,7 +3019,7 @@
           </profiles>
           <rules>
             <rule id="5b2b-794b-15d0-8c1d" name="Faith in Sigmar" publicationId="315d-135b-135c-07ce" page="194" hidden="false">
-              <description>Any model in the unit gains +1 to their Leadership when attempting to use Battle Prayers of Sigmar for every 5 Sisters of Sigmar in the unit. In addition, if a unit of Sister of Sigmar is joined by a model with the Righteous Fury special rule, their Hatred special rule applies in every round of close combat.</description>
+              <description>If a model with the Battle Prayers of Sigmar special rule joins this unit, that model gains +1 to their Leadership when attempting to use their Battle Prayers for every 5 Sisters of Sigmar in the unit.</description>
             </rule>
           </rules>
           <infoLinks>
@@ -3055,8 +3068,16 @@
             </selectionEntryGroup>
             <selectionEntryGroup name="Armour" id="8185-20e4-4e73-b75f" hidden="false" sortIndex="4">
               <entryLinks>
-                <entryLink import="true" name="Light Armour" hidden="false" id="4405-587a-29c8-830c" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72"/>
-                <entryLink import="true" name="Medium Armour" hidden="false" id="b979-6daa-5a5a-8de1" type="selectionEntry" targetId="76a4-23c1-f96d-021e"/>
+                <entryLink import="true" name="Light Armour" hidden="false" id="4405-587a-29c8-830c" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0.5"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Medium Armour" hidden="false" id="b979-6daa-5a5a-8de1" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1.5"/>
+                  </costs>
+                </entryLink>
               </entryLinks>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c19c-5f47-54ac-8bce"/>
@@ -3107,6 +3128,19 @@
                   </constraints>
                 </entryLink>
               </entryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Augur" hidden="false" id="888c-9add-46be-ec9c" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="93ce-5b45-191e-8c25" includeChildSelections="false"/>
+              </constraints>
+              <rules>
+                <rule name="Augur" id="9f69-81b5-b390-5cd9" hidden="false">
+                  <description>A unit with an Augur may re-roll 1&apos;s To Hit and To Wound in close combat.</description>
+                </rule>
+              </rules>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -3657,95 +3691,109 @@ In addition, all shots made with a Helstorm counts as being fired indirectly.</d
     </selectionEntry>
     <selectionEntry id="9766-cb29-c448-e25b" name="Steam Tank" hidden="false" collective="false" import="true" type="model">
       <constraints>
-        <constraint field="selections" scope="force" value="8" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="e1f6-2b4a-42dd-2860" type="max"/>
+        <constraint field="selections" scope="roster" value="8" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="e1f6-2b4a-42dd-2860" type="max"/>
       </constraints>
       <categoryLinks>
         <categoryLink id="b788-7e2d-93e6-4161" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="4bc7-05e9-30d9-2b53" name="Variant" hidden="false" collective="false" import="true" defaultSelectionEntryId="1642-726c-963f-d064">
+        <selectionEntryGroup id="4bc7-05e9-30d9-2b53" name="Variant" hidden="false" collective="false" import="true" defaultSelectionEntryId="1642-726c-963f-d064" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4dfc-4741-0064-71e4" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="737f-bba5-4d4b-2796" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="1642-726c-963f-d064" name="Conqueror" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="1642-726c-963f-d064" name="Conqueror" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6bd7-4d36-d9a6-2f69" type="max"/>
               </constraints>
-              <infoLinks>
-                <infoLink id="841f-cc96-d0e4-5789" name="Steam Gun" hidden="false" targetId="3fc7-31c1-63c0-a728" type="rule"/>
-                <infoLink id="83d7-b5db-a166-4355" name="Steam Cannon" hidden="false" targetId="6ffb-96b5-de04-dfc4" type="rule"/>
-              </infoLinks>
               <entryLinks>
-                <entryLink import="true" name="Engineer Commander" hidden="false" id="24fe-5e67-b096-c2c8" type="selectionEntry" targetId="f3ed-7c52-8f3d-8571"/>
+                <entryLink import="true" name="Steam Canon" hidden="false" id="b287-f94d-9838-785c" type="selectionEntry" targetId="02a4-9e44-21aa-64c2"/>
+                <entryLink import="true" name="Steam Gun" hidden="false" id="03c3-e4c3-be7c-8212" type="selectionEntry" targetId="101d-b9f1-772a-150d"/>
               </entryLinks>
-              <profiles>
-                <profile name="Steam Cannon" typeId="781d-35fe-dd22-05d6" typeName="War Machine" hidden="false" id="1558-49d6-bfb8-eb95" publicationId="315d-135b-135c-07ce" page="213">
-                  <characteristics>
-                    <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Cannon</characteristic>
-                    <characteristic name="Range" typeId="1c88-efb0-083f-b945">12&quot;/24&quot;/36&quot;</characteristic>
-                    <characteristic name="Strength" typeId="6ca0-d074-628f-e276">10</characteristic>
-                    <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D6/D3)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
             </selectionEntry>
-            <selectionEntry id="ab2f-d5e6-da84-bb65" name="Old Reliable" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="ab2f-d5e6-da84-bb65" name="Old Reliable" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c682-2739-8e16-7eb3" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink name="Organ Gun" id="fe24-7419-b67f-d55e" hidden="false" type="profile" targetId="a0a6-193b-9eb5-ffe9"/>
+                <infoLink name="Organ Gun" id="fe24-7419-b67f-d55e" hidden="false" type="profile" targetId="a0a6-193b-9eb5-ffe9">
+                  <modifiers>
+                    <modifier type="prepend" value="Steam" field="name"/>
+                    <modifier type="append" value="
+
+If you roll a misfire, the Organ Gun does not fire and the Steam Tank immediately loses D3 Wounds which Ignores Armour Saves
+" field="d3a4-721b-f750-5564"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
-                <entryLink import="true" name="Engineer Commander" hidden="false" id="3a12-1221-3059-5661" type="selectionEntry" targetId="f3ed-7c52-8f3d-8571"/>
+                <entryLink import="true" name="Steam Gun" hidden="false" id="ca3d-13fd-bf61-4716" type="selectionEntry" targetId="101d-b9f1-772a-150d"/>
               </entryLinks>
               <rules>
                 <rule name="Old Reliable" id="2391-3cb0-ff1d-e79e" hidden="false" publicationId="315d-135b-135c-07ce" page="46">
                   <description>If you roll a misfire, the Organ Gun does not fire and the Steam Tank immediately loses D3 Wounds with the Ignores Armour Saves special rule.</description>
                 </rule>
               </rules>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Steam Organ Gun" hidden="false" id="8063-23c7-28ac-19fa">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="db90-ad21-6c07-ea69-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="db90-ad21-6c07-ea69-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
             </selectionEntry>
-            <selectionEntry id="0f6f-6afe-816c-a091" name="Implacable" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="0f6f-6afe-816c-a091" name="Implacable" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4c6f-1b25-afbd-166e" type="max"/>
               </constraints>
-              <profiles>
-                <profile id="e1a5-bce5-3461-54cb" name="Swivel Guns" publicationId="d69c-a7ea-95db-6f56" page="4" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">36&quot;</characteristic>
-                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">6</characteristic>
-                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1). Multiple Shots (2). Rapid Fire.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Mortar" id="3968-a38f-e065-ba60" hidden="false" type="profile" targetId="c5ac-9a35-f3cf-7c0a"/>
-              </infoLinks>
-              <entryLinks>
-                <entryLink import="true" name="Engineer Commander" hidden="false" id="ec4b-a4d3-0e5c-08b6" type="selectionEntry" targetId="f3ed-7c52-8f3d-8571"/>
-              </entryLinks>
-              <rules>
-                <rule name="Implacable" id="488f-06d4-3ecc-a497" hidden="false" publicationId="315d-135b-135c-07ce" page="46">
-                  <description>If the first artillery dice rolls a misfire, the Mortar does not fire and the Steam Tank immediately loses D3 Wounds which Ignores Armour Saves.</description>
-                </rule>
-              </rules>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Steam Mortar" hidden="false" id="9df0-43a5-b102-6d01">
+                  <infoLinks>
+                    <infoLink name="Mortar" id="3968-a38f-e065-ba60" hidden="false" type="profile" targetId="c5ac-9a35-f3cf-7c0a">
+                      <modifiers>
+                        <modifier type="prepend" value="Steam" field="name"/>
+                        <modifier type="append" value="
+
+If the first artillery dice rolls a misfire, the Mortar does not fire and the Steam Tank immediately loses D3 Wounds which Ignores Armour Saves.
+" field="d3a4-721b-f750-5564"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0191-2c87-48d9-a6c9-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0191-2c87-48d9-a6c9-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Swivel Guns" hidden="false" id="1a4e-20bd-bfc7-fa5b">
+                  <constraints>
+                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="3a1a-aad0-23c0-02c8-min" includeChildSelections="false"/>
+                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="3a1a-aad0-23c0-02c8-max" includeChildSelections="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Swivel Gun" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="e1a5-bce5-3461-54cb" publicationId="d69c-a7ea-95db-6f56" page="">
+                      <characteristics>
+                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">36&quot;</characteristic>
+                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">6</characteristic>
+                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1)</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
             </selectionEntry>
-            <selectionEntry id="9eb1-f9d2-e0ed-e8be" name="Sigmar&apos;s Hammer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="9eb1-f9d2-e0ed-e8be" name="Sigmar&apos;s Hammer" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8d87-def7-1f73-1907" type="max"/>
               </constraints>
               <rules>
                 <rule name="Sigmar&apos;s Hammer" id="5533-e791-e17b-bd66" hidden="false" publicationId="315d-135b-135c-07ce" page="46">
-                  <description>Sigmar&apos;s Hammer does not have a steam cannon or steam gun. When charging or using its grinding attack, the Sigmar&apos;s Hammer inflicts D6 hits per Steam point spent rather than D3. In addition, it may re-roll 1&apos;s when taking armour saves.</description>
+                  <description>igmar&apos;s Hammer have the Impact Hits (2D6) special rule and may use up to 4 Steam Points in each Movement and Close Combat phase. In addition, it may re-roll 1&apos;s when taking armour saves.</description>
                 </rule>
               </rules>
-              <entryLinks>
-                <entryLink import="true" name="Engineer Commander" hidden="false" id="ff44-d18b-a1c0-f1e6" type="selectionEntry" targetId="f3ed-7c52-8f3d-8571"/>
-              </entryLinks>
             </selectionEntry>
-            <selectionEntry id="e0c7-f7c6-2a23-ef03" name="Von Zeppel" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="e0c7-f7c6-2a23-ef03" name="Von Zeppel" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d2e6-ea09-6620-dc9f" type="max"/>
               </constraints>
@@ -3753,7 +3801,7 @@ In addition, all shots made with a Helstorm counts as being fired indirectly.</d
                 <infoLink name="Mixed Weaponry" id="8d00-0885-0900-2f27" hidden="false" type="rule" targetId="6d56-ac59-cc05-8972"/>
               </infoLinks>
               <selectionEntries>
-                <selectionEntry type="model" import="true" name="Engineer" hidden="false" id="693b-0a68-1624-5b44" collective="false" subType="crew">
+                <selectionEntry type="model" import="true" name="Engineer" hidden="false" id="693b-0a68-1624-5b44" collective="false" subType="crew" sortIndex="2">
                   <constraints>
                     <constraint type="min" value="6" field="selections" scope="parent" shared="true" id="c32f-6268-cf8a-5ec2"/>
                     <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="b5f5-1f78-51d0-799b"/>
@@ -3785,6 +3833,7 @@ In addition, all shots made with a Helstorm counts as being fired indirectly.</d
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1961-dd48-833f-15cf"/>
                   </constraints>
                 </entryLink>
+                <entryLink import="true" name="Steam Cannon" hidden="false" id="1f07-c143-7877-3d10" type="selectionEntry" targetId="02a4-9e44-21aa-64c2" sortIndex="1"/>
               </entryLinks>
             </selectionEntry>
           </selectionEntries>
@@ -3794,16 +3843,16 @@ In addition, all shots made with a Helstorm counts as being fired indirectly.</d
         <cost name="pts" typeId="points" value="250"/>
       </costs>
       <infoLinks>
-        <infoLink name="Animated Construct" id="25bd-d00d-be41-a53a" hidden="false" targetId="738b-aca4-740c-e425" type="rule"/>
-        <infoLink name="Terror" id="2807-98e7-3345-8407" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
-        <infoLink name="Line of Sight (4)" id="54e1-7967-ba01-ca7d" hidden="false" targetId="8105-29db-5491-77cf" type="rule"/>
-        <infoLink name="Steel Behemoth" id="35e4-9644-b3ee-cf55" hidden="false" targetId="07fc-03db-af2b-d3c1" type="rule"/>
-        <infoLink name="Steam Engine" id="13f4-8385-29cd-57e2" hidden="false" targetId="95a7-6380-2733-9d40" type="rule"/>
+        <infoLink name="Terror" id="467c-1ebe-1e00-1cce" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
+        <infoLink name="Unbreakable" id="8ef1-a58e-2012-9c17" hidden="false" targetId="1c9d-2d99-6222-2853" type="rule"/>
+        <infoLink name="Immunity (Poisoned Attacks)" id="4274-b875-c4c9-d69e" hidden="false" targetId="c09e-da06-27f2-fc7e" type="rule"/>
+        <infoLink name="Strider (Obstacle)" id="ea2a-4a7c-c2e7-9df8" hidden="false" targetId="f099-a712-8bb3-8162" type="rule"/>
+        <infoLink name="Line of Sight (4)" id="203b-e617-b4d4-dbb6" hidden="false" type="rule" targetId="8105-29db-5491-77cf"/>
       </infoLinks>
       <profiles>
         <profile name="Steam Tank" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="88cf-a84e-788e-feeb" publicationId="d69c-a7ea-95db-6f56" page="212">
           <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">*</characteristic>
             <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
             <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
             <characteristic name="S" typeId="edd2-7979-54a4-6b35">6</characteristic>
@@ -3815,32 +3864,70 @@ In addition, all shots made with a Helstorm counts as being fired indirectly.</d
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour save 1+)</characteristic>
           </characteristics>
         </profile>
-        <profile name="01-04 (Steam Boiler Mishap)" typeId="e4fb-880a-5ade-4479" typeName="Steam Boiler Mishap Table" hidden="false" id="c88f-7858-b7fa-e2d9" publicationId="315d-135b-135c-07ce" page="46">
+        <profile name="Minor Leak" typeId="b72c-c262-64a8-a221" typeName="Steam Boiler Mishap Chart" hidden="false" id="a221-9496-7c35-a080" noindex="true">
           <characteristics>
-            <characteristic name="Result" typeId="929d-783f-9e0d-8628">Valve Locked: Roll a D6. On a 1-2, you cannot expend Steam Points in the Steam Engine this turn. On a 3-4, you cannot expend Steam Points in the Steam Gun this turn. On a 5-6, you cannot expend Steam Points in the Steam Cannon this turn.</characteristic>
+            <characteristic name="Steam Points" typeId="5f84-3d8b-f6f6-634c">1-4</characteristic>
+            <characteristic name="Result" typeId="b175-9c8d-dafe-2c40">The Steam Tank immediately loses 1 Steam Point.</characteristic>
           </characteristics>
         </profile>
-        <profile name="05 (Steam Boiler Mishap)" typeId="e4fb-880a-5ade-4479" typeName="Steam Boiler Mishap Table" hidden="false" id="bb4f-b041-b20b-6b34" publicationId="315d-135b-135c-07ce" page="46">
+        <profile name="Emergency Vent" typeId="b72c-c262-64a8-a221" typeName="Steam Boiler Mishap Chart" hidden="false" id="055a-8f4d-fd7f-5e4f" noindex="true">
           <characteristics>
-            <characteristic name="Result" typeId="929d-783f-9e0d-8628">Minor Leak: The Steam Tank immediately loses D3 Steam Points.</characteristic>
+            <characteristic name="Steam Points" typeId="5f84-3d8b-f6f6-634c">7-8</characteristic>
+            <characteristic name="Result" typeId="b175-9c8d-dafe-2c40">The Steam Tank immediately loses D3 Steam Points. The Steam Tank, and any unit in base contact, immediately suffers 2D6 Strength 2 hits, distributed as from shooting (roll for each unit).</characteristic>
           </characteristics>
         </profile>
-        <profile name="06 (Steam Boiler Mishap)" typeId="e4fb-880a-5ade-4479" typeName="Steam Boiler Mishap Table" hidden="false" id="6f4b-53cf-ce88-f837" publicationId="315d-135b-135c-07ce" page="46">
+        <profile name="Valve Locked" typeId="b72c-c262-64a8-a221" typeName="Steam Boiler Mishap Chart" hidden="false" id="12f3-bd21-4760-6c94" noindex="true">
           <characteristics>
-            <characteristic name="Result" typeId="929d-783f-9e0d-8628">Emergency Vent: The Steam Tank immediately loses D6 Steam Points. The Steam Tank, and any unit in base contact, immediately suffers 2D6, Strength 2 hits, distributed as from shooting (roll for each unit).</characteristic>
+            <characteristic name="Steam Points" typeId="5f84-3d8b-f6f6-634c">5-6</characteristic>
+            <characteristic name="Result" typeId="b175-9c8d-dafe-2c40">The Steam Tank cannot expend Steam Points in the Steam Engine this turn.</characteristic>
           </characteristics>
         </profile>
-        <profile name="07 (Steam Boiler Mishap)" typeId="e4fb-880a-5ade-4479" typeName="Steam Boiler Mishap Table" hidden="false" id="277a-2746-31b0-69ae" publicationId="315d-135b-135c-07ce" page="46">
+        <profile name="Dangerous Overpressure" typeId="b72c-c262-64a8-a221" typeName="Steam Boiler Mishap Chart" hidden="false" id="969b-09b7-91aa-f5ff" noindex="true">
           <characteristics>
-            <characteristic name="Result" typeId="929d-783f-9e0d-8628">Dangerous Overpressure: Roll a D6. The Steam Tank immediately gains a number of Steam Points and loses a number of Wounds equal to the result.</characteristic>
+            <characteristic name="Steam Points" typeId="5f84-3d8b-f6f6-634c">9-10</characteristic>
+            <characteristic name="Result" typeId="b175-9c8d-dafe-2c40">Roll a D3. The Steam Tank immediately gains a number of Steam Points and loses a number of Wounds equal to the result.</characteristic>
           </characteristics>
         </profile>
-        <profile name="08 (Steam Boiler Mishap)" typeId="e4fb-880a-5ade-4479" typeName="Steam Boiler Mishap Table" hidden="false" id="d6a5-75ea-4b76-3c5e" publicationId="315d-135b-135c-07ce" page="46">
+        <profile name="Kaboom" typeId="b72c-c262-64a8-a221" typeName="Steam Boiler Mishap Chart" hidden="false" id="b05d-1be0-7e1a-a231">
           <characteristics>
-            <characteristic name="Result" typeId="929d-783f-9e0d-8628">Kaboom: All units within 6&quot; of the Steam Tank (Friend or foe) immediately suffer 2D6 Strength 4 hits, distributed as from shooting (roll for each unit). After resolving any damage, the Steam Tank is removed as a casualty.</characteristic>
+            <characteristic name="Steam Points" typeId="5f84-3d8b-f6f6-634c">11-12</characteristic>
+            <characteristic name="Result" typeId="b175-9c8d-dafe-2c40">All units within 6&quot; of the Steam Tank (friend or foe) immediately suffer 2D6 Strength 4 hits, distributed as from shooting (roll for each unit). After resolving any damage, the Steam Tank is removed as a casualty.</characteristic>
           </characteristics>
         </profile>
       </profiles>
+      <rules>
+        <rule name="Steam Engine" id="0344-5d7c-289e-c521" hidden="false">
+          <description>At the start of each turn, declare how many Steam Points your Steam Tank is generating – this can be any number between 0 and 6. After you have generated your Steam Points (if any), roll an artillery dice. If the result is greater than the Steam Tank&apos;s current number of Wounds, or if you roll a misfire, roll a D6 and then, for each Steam Point the Steam Tank currently has, add 1 to the result and consult the Steam Boiler Mishap chart.
+
+
+
+
+You can expend Steam Points in two ways: through the Steam Engine, or Steam Weapons. Any Steam Points left unused at the end of each turn are lost.
+
+
+
+
+The more Steam Points you expend in the Steam Engine, the further the Steam Tank moves in the Movement phase. Declare how many Steam Points you will expend in the Steam Engine before you attempt to move it. If you choose not to expend any Steam Points in the Steam Engine, the Steam Tank&apos;s Movement will be 0 that turn and it cannot move at all in the Movement phase. For each Steam Point you chose to expend (to a maximum of 3), the Steam Tank&apos;s Movement increases by 4&quot;. It gains +D6 Movement when charging. If the charge fails, it moves D3&quot; for every Steam Point used. 
+
+
+
+
+If the Steam Tank is in close combat with an enemy unit to its front, it can expend Steam Points in the Steam Engine to inflict D3 Stomps like a Monster on that unit for each Steam Point expended in this way (to a maximum of 3).
+
+</description>
+        </rule>
+      </rules>
+      <entryLinks>
+        <entryLink import="true" name="Engineer Commander" hidden="false" id="24fe-5e67-b096-c2c8" type="selectionEntry" targetId="f3ed-7c52-8f3d-8571" sortIndex="2">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="e0c7-f7c6-2a23-ef03" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry id="2ad6-afb8-1b6a-1e5b" name="The Nuln Ironsides" hidden="true" collective="false" import="true" type="unit">
       <modifiers>
@@ -3933,7 +4020,7 @@ In addition, all shots made with a Helstorm counts as being fired indirectly.</d
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8b12-ba4b-5f1e-f631" name="Special Characters" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="8b12-ba4b-5f1e-f631" name="Special Characters" hidden="false" collective="false" import="true" type="unit" sortIndex="" subType="unit-group">
       <categoryLinks>
         <categoryLink id="e6f1-4807-4785-d503" name="Lords" hidden="false" targetId="d280-b7df-c185-2ba5" primary="true"/>
         <categoryLink id="7869-8c49-e1d0-1662" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="false"/>
@@ -5091,8 +5178,9 @@ In addition, all shots made with a Helstorm counts as being fired indirectly.</d
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <comment>Lords</comment>
     </selectionEntry>
-    <selectionEntry id="a3ee-f688-7d78-3494" name="Special Characters" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="a3ee-f688-7d78-3494" name="Special Characters" hidden="false" collective="false" import="true" type="unit" subType="unit-group" sortIndex="">
       <categoryLinks>
         <categoryLink id="a2a4-57e4-040c-7ce1" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
       </categoryLinks>
@@ -5804,6 +5892,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <comment>Hoeroes</comment>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Imperial Knight" hidden="false" id="2e50-5817-ab5a-4b67">
       <selectionEntries>
@@ -6198,6 +6287,13 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
+              <entryLinks>
+                <entryLink import="true" name="Pistol" hidden="false" id="6261-78bb-3681-3b12" type="selectionEntry" targetId="4883-fb9f-3893-0d9c">
+                  <costs>
+                    <cost name="pts" typeId="points" value="3"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -6961,6 +7057,13 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
+              <entryLinks>
+                <entryLink import="true" name="Pistol" hidden="false" id="971b-2836-219a-76d3" type="selectionEntry" targetId="4883-fb9f-3893-0d9c">
+                  <costs>
+                    <cost name="pts" typeId="points" value="3"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -7021,6 +7124,201 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
           </modifiers>
         </entryLink>
       </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Roadwardens" hidden="false" id="24dc-2378-8589-8fac">
+      <categoryLinks>
+        <categoryLink name="Special" hidden="false" id="a735-8a5d-f747-a885" targetId="fc26-7737-f7cb-8977" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Roadwarden" hidden="false" id="893e-2a0f-b8bf-f5c0">
+          <profiles>
+            <profile name="Roadwarden" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="a560-ccc0-1ac3-b202">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Human)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Expert Rider" id="dd54-71d5-5972-ba3f" hidden="false">
+              <description>Models with this special rule may re-roll failed Dangerous Terrain tests. In addition, they ignore the Ponderous special rule.</description>
+            </rule>
+          </rules>
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="c454-4206-298c-dd62" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b861-8bd9-2c4b-5dcd-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b861-8bd9-2c4b-5dcd-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Crossbow" hidden="false" id="6a25-b2c9-071b-b5ec" type="selectionEntry" targetId="9936-c747-429f-6327" sortIndex="2">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d0fb-d4a7-d126-d1ce-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d0fb-d4a7-d126-d1ce-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Ambushers" hidden="false" id="1109-d710-cf31-348b" type="selectionEntry" targetId="7835-4593-c3a6-692d" sortIndex="4">
+              <costs>
+                <cost name="pts" typeId="points" value="1"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Warhorse" hidden="false" id="b6ed-7216-a882-3f96" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0" sortIndex="0.5">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5e2f-e63e-9e25-b778-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5e2f-e63e-9e25-b778-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Armour" id="6260-2e70-2e93-f82c" hidden="false" sortIndex="3">
+              <entryLinks>
+                <entryLink import="true" name="Light Armour" hidden="false" id="913f-c958-c243-3ec5" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72"/>
+                <entryLink import="true" name="Medium Armour" hidden="false" id="c0d9-f9c2-8a95-b444" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fe3a-3821-49a6-c748-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe3a-3821-49a6-c748-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="pts" typeId="points" value="16"/>
+          </costs>
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="d038-8131-a5d9-97bb" includeChildSelections="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Loner" id="4ced-58cd-ff8c-6d63" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+            <infoLink name="Fast Cavalry" id="b328-9e4d-033b-1758" hidden="false" type="rule" targetId="8877-a5de-cc9c-9142"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Command Group" id="bba8-1c5f-13e5-cc96" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="112f-bf2a-6941-b045" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="03c6-3d8c-0932-16de" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Musician" id="0d7d-3433-9d30-e173" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="f336-dfa7-c7ff-e5cf" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1389-1c58-e4f2-3eec" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Leader" id="4536-8bfe-493e-ab76" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Hunting Hounds" hidden="false" id="23c9-2824-9906-e799" defaultAmount="1">
+      <categoryLinks>
+        <categoryLink name="Core" hidden="false" id="9693-f4ea-50f6-66f5" targetId="b876-2856-f1c2-c4f0" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Hunt Master" hidden="false" id="b3eb-3e6d-9d38-abb2" defaultAmount="">
+          <costs>
+            <cost name="pts" typeId="points" value="12"/>
+          </costs>
+          <profiles>
+            <profile name="Hunt Master" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="59fd-6e99-168b-98c8">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Hunt Master (Human)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="Warhorse" hidden="false" id="4720-5058-6653-4c66" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a154-f505-8134-3eda-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a154-f505-8134-3eda-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Light Armour" hidden="false" id="2a0a-a682-d16e-34c6" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8730-c29c-be42-df5f-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8730-c29c-be42-df5f-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Light Lance" hidden="false" id="16bc-bb6d-f535-1ce7" type="selectionEntry" targetId="d989-1124-0dea-ae27">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8d23-0a1f-8052-6158-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8d23-0a1f-8052-6158-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bfb4-40f6-f681-d363"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="90fd-7293-c1d6-64d5" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="90fd-7293-c1d6-64d5">
+              <repeats>
+                <repeat value="10" repeats="1" field="selections" scope="parent" childId="ddd2-dbfd-b81b-09a9" shared="true" roundUp="false" includeChildSelections="true" percentValue="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="model" import="true" name="Hunting Hound" hidden="false" id="ddd2-dbfd-b81b-09a9" defaultAmount="">
+          <costs>
+            <cost name="pts" typeId="points" value="6"/>
+          </costs>
+          <profiles>
+            <profile name="Hunting Hound" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="dc01-a0dc-14a7-5a2f">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Canine)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="9" field="selections" scope="parent" shared="true" id="ca38-ef86-e69e-31c6"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
+      <infoLinks>
+        <infoLink name="Mixed Unit" id="5554-2ea1-ea45-48c7" hidden="false" type="rule" targetId="e00a-3a09-9b67-e994"/>
+      </infoLinks>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
@@ -7463,7 +7761,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="points" value="6"/>
+        <cost name="pts" typeId="points" value="5"/>
       </costs>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Engineer Commander" hidden="false" id="f3ed-7c52-8f3d-8571" collective="false" subType="crew">
@@ -7474,30 +7772,25 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
       <infoLinks>
         <infoLink name="Engineer Commander" id="c87e-2651-d22c-a775" hidden="false" targetId="d369-8351-4c0a-a5df" type="profile"/>
       </infoLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Primary Weapon" id="9663-9e8b-22c8-cb88" hidden="false" collective="false" import="true" defaultSelectionEntryId="0756-a005-9224-ed47">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="68a2-c4bb-808d-8f03" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="8280-0731-4a4a-a514" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Repeater Pistol" hidden="false" id="6b12-118a-9f39-106e" type="selectionEntry" targetId="03d7-e75d-2d41-2cd3" sortIndex="1"/>
-            <entryLink import="true" name="Hochland Long Rifle" hidden="false" id="57bf-ada1-b9ed-4fc7" type="selectionEntry" targetId="7cfd-bf2c-f7f2-6c34" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="Hand Weapon" hidden="false" id="76d2-2125-0d35-0889" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+        <entryLink import="true" name="Hand Weapon" hidden="false" id="76d2-2125-0d35-0889" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="acac-815b-ff79-0f31"/>
           </constraints>
+        </entryLink>
+        <entryLink import="true" name="Repeater Pistol" hidden="false" id="6b12-118a-9f39-106e" type="selectionEntry" targetId="03d7-e75d-2d41-2cd3" sortIndex="2">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9f14-d137-bba2-2feb-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9f14-d137-bba2-2feb-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+        <entryLink import="true" name="Hochland Long Rifle" hidden="false" id="57bf-ada1-b9ed-4fc7" type="selectionEntry" targetId="7cfd-bf2c-f7f2-6c34" sortIndex="3">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
         </entryLink>
       </entryLinks>
     </selectionEntry>
@@ -7594,6 +7887,50 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
       <categoryLinks>
         <categoryLink name="(Mount)" hidden="false" id="e2f8-913c-a6b4-aaaf" targetId="(Mount)" primary="false"/>
       </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Steam Cannon" hidden="false" id="02a4-9e44-21aa-64c2">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1673-e77f-99aa-6ea5-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1673-e77f-99aa-6ea5-max" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Steam Cannon" typeId="781d-35fe-dd22-05d6" typeName="War Machine" hidden="false" id="478e-66a9-fc0e-6e2d">
+          <characteristics>
+            <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Cannon</characteristic>
+            <characteristic name="Range" typeId="1c88-efb0-083f-b945">12/24/36&quot;</characteristic>
+            <characteristic name="Strength" typeId="6ca0-d074-628f-e276">10</characteristic>
+            <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D6/D3)
+
+
+The steam cannon&apos;s maximum range is dependent on how many Steam Points (see Steam Engine) that are expended. If you choose not to expend any Steam Points in the Steam Cannon, or if the Steam Tank is in base contact with an enemy unit, you cannot fire it that turn. 
+
+
+If you expend a single Steam Point, the Steam Cannon can fire with a maximum range of 12&quot;. For each additional Steam Point you expend, the maximum range of the Steam Cannon is increased by 12&quot; (to a maximum of 36&quot;).
+
+
+If the first artillery dice rolls a misfire, the Steam Cannon does not fire and the Steam Tank immediately loses D3 Wounds which Ignores Armour Saves. The Steam Cannon cannot fire grapeshot.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Steam Gun" hidden="false" id="101d-b9f1-772a-150d">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="424d-68b7-5534-1b15-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="424d-68b7-5534-1b15-max" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Steam Gun" typeId="781d-35fe-dd22-05d6" typeName="War Machine" hidden="false" id="7474-f43b-11b6-38d1">
+          <characteristics>
+            <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Breath Weapon</characteristic>
+            <characteristic name="Range" typeId="1c88-efb0-083f-b945">Flame Template</characteristic>
+            <characteristic name="Strength" typeId="6ca0-d074-628f-e276">2/3/4</characteristic>
+            <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Armour Piercing (1)
+
+This Breath wepon can be fired every turn. The steam gun&apos;s Strength is dependent on how many Steam Points (see Steam Engine) that are expended. If you choose not to expend any Steam Points in the Steam Gun, you cannot fire it that turn.
+</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -7849,7 +8186,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
           <profiles>
             <profile id="f4d8-b8a7-309a-7c75" name="Banner of the Warrior True" publicationId="315d-135b-135c-07ce" page="8" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">When the unit carrying this banner takes a Break test, they count as having lost the combat by D3 fewer points than they really did. If this reduces the margin of the loss to 0 or lower, they still count as having lost the combat but test on their unmodified Leadership. </characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">When the unit carrying this banner takes a Break test, they count as having lost the combat by D3 fewer points than they really did. If this reduces the margin of the loss to 0 or lower, they still count as having lost the combat but test on their unmodified Leadership.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8884,7 +9221,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
               <profiles>
                 <profile name="Tome of Midnight" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="f3d6-a117-26f2-feb0" publicationId="315d-135b-135c-07ce" page="7">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer of this item gains a +1 casting bonus when using the Lore of Shadow or Death. In addition, they know one more spell than normal. However, they also have the Loner special rule. </characteristic>
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer of this item gains a +1 casting bonus when using the Lore of Shadow or Death. In addition, they know one more spell than normal. However, they also have the Loner special rule.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -9329,17 +9666,17 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                     <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">At the start of the game, roll a D6 and consult the chart below to determine which effect the Skull Charm has on the wearer.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="1-2" typeId="8056-0487-e321-37dc" typeName="Skull Charm Chart" hidden="false" id="bce8-a9fc-8ad3-963b" publicationId="315d-135b-135c-07ce" page="8">
+                <profile name="1-2" typeId="8056-0487-e321-37dc" typeName="Skull Charm Chart" hidden="false" id="bce8-a9fc-8ad3-963b" publicationId="315d-135b-135c-07ce" page="8" noindex="true">
                   <characteristics>
                     <characteristic name="Result" typeId="9480-d650-0182-cf97">+1 WS.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="3-4" typeId="8056-0487-e321-37dc" typeName="Skull Charm Chart" hidden="false" id="722b-f3fe-a927-dbae" publicationId="315d-135b-135c-07ce" page="8">
+                <profile name="3-4" typeId="8056-0487-e321-37dc" typeName="Skull Charm Chart" hidden="false" id="722b-f3fe-a927-dbae" publicationId="315d-135b-135c-07ce" page="8" noindex="true">
                   <characteristics>
                     <characteristic name="Result" typeId="9480-d650-0182-cf97">+1 Ld.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="5-6" typeId="8056-0487-e321-37dc" typeName="Skull Charm Chart" hidden="false" id="ff7b-0ff8-aba8-7457" publicationId="315d-135b-135c-07ce" page="8">
+                <profile name="5-6" typeId="8056-0487-e321-37dc" typeName="Skull Charm Chart" hidden="false" id="ff7b-0ff8-aba8-7457" publicationId="315d-135b-135c-07ce" page="8" noindex="true">
                   <characteristics>
                     <characteristic name="Result" typeId="9480-d650-0182-cf97">+1 WS &amp; Ld.</characteristic>
                   </characteristics>
@@ -9653,7 +9990,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
               <profiles>
                 <profile name="Sheen of Truesilver" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="bed2-c642-b6cb-bff6" publicationId="315d-135b-135c-07ce" page="8">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">At the end of any close combat in which a Monstrous Infantry, Monstrous Beast, Monstrous Cavalry, Monstrous Creature or Monster model suffers one or more unsaved Wounds from the bearer&apos;s close combat attacks, it must take a Toughness test for each such Wound inflicted, and loses a Wound (with no saves allowed) for each test failed.. </characteristic>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">At the end of any close combat in which a Monstrous Infantry, Monstrous Beast, Monstrous Cavalry, Monstrous Creature or Monster model suffers one or more unsaved Wounds from the bearer&apos;s close combat attacks, it must take a Toughness test for each such Wound inflicted, and loses a Wound (with no saves allowed) for each test failed..</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10074,7 +10411,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                   <characteristics>
                     <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                     <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                    <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy Armour. Models attacking the wearer in close combat must pass a Strength test before rolling to hit for every Attack directed at the target. If the test is failed, the Attack is lost. Attacks that do not roll to Hit are unaffected. </characteristic>
+                    <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy Armour. Models attacking the wearer in close combat must pass a Strength test before rolling to hit for every Attack directed at the target. If the test is failed, the Attack is lost. Attacks that do not roll to Hit are unaffected.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10092,7 +10429,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                   <characteristics>
                     <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
                     <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                    <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Full plate armour. This item contains a Bound Spell, power level 3. This is a direct damage spell that causes 2D6 Strength 4 hits on one enemy unit in base contact with the caster. </characteristic>
+                    <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Full plate armour. This item contains a Bound Spell, power level 3. This is a direct damage spell that causes 2D6 Strength 4 hits on one enemy unit in base contact with the caster.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10206,7 +10543,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                   <characteristics>
                     <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
                     <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
-                    <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Heavy armour. Attacks against the wearer in close combat suffer a -1 Strength penalty. In addition, the wearer gains Immunity (Lore of Light). </characteristic>
+                    <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Heavy armour. Attacks against the wearer in close combat suffer a -1 Strength penalty. In addition, the wearer gains Immunity (Lore of Light).</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10489,7 +10826,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                   <characteristics>
                     <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                     <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">This weapon gives the wielder the Hatred (Undead, Vampires) special rule. In addition, no Undead or Vampires may take armour or Regeneration saves against it. </characteristic>
+                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">This weapon gives the wielder the Hatred (Undead, Vampires) special rule. In addition, no Undead or Vampires may take armour or Regeneration saves against it.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10543,7 +10880,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                   <characteristics>
                     <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                     <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">At the beginning of the battle, nominate one enemy Character; Monstrous Creature or Monster. The Sword of Fate will Wound that model on a 2+ with the Ignores Armour Saves and Multiple Wounds (D3) special rules. </characteristic>
+                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">At the beginning of the battle, nominate one enemy Character; Monstrous Creature or Monster. The Sword of Fate will Wound that model on a 2+ with the Ignores Armour Saves and Multiple Wounds (D3) special rules.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10637,7 +10974,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
               <profiles>
                 <profile name="Slayer&apos;s Hourglass" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="2126-f102-21b3-7ed2" publicationId="315d-135b-135c-07ce" page="7">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">Any Monstrous Beast, Monstrous Creature or Monster (including mounts, but not riders) in base contact with the bearer of this item gains the Always Strikes Last special rule. </characteristic>
+                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">Any Monstrous Beast, Monstrous Creature or Monster (including mounts, but not riders) in base contact with the bearer of this item gains the Always Strikes Last special rule.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -11038,31 +11375,7 @@ If a Support Fire action is declared, the unit makes an immediate, out of sequen
       <description>If a Grand Master joins a unit of Imperial Knights, Imperial Foot Knights or Demigryph Knights, the unit gains Immunity (Psychology).</description>
     </rule>
     <rule id="6d56-ac59-cc05-8972" name="Mixed Weaponry" publicationId="315d-135b-135c-07ce" page="210" hidden="false">
-      <description>Unlike other units, each crew model may choose to allocate their missile attack at a different target if they wish. The crew also ignore the Move or Fire of any weapon they carry.</description>
-    </rule>
-    <rule id="07fc-03db-af2b-d3c1" name="Steel Behemoth" publicationId="315d-135b-135c-07ce" page="46" hidden="false">
-      <description>A Steam Tank, and its crew, can shoot missile weapons with the Move or Fire special rule even if it moved in its Movement phase. In addition, a Steam Tank cannot overrun or pursue a fleeing enemy – it automatically restrains and is unable to perform combat reforms.</description>
-    </rule>
-    <rule id="95a7-6380-2733-9d40" name="Steam Engine" publicationId="315d-135b-135c-07ce" page="45" hidden="false">
-      <description>At the start of your turn, declare how many Steam Points your Steam Tank is generating – this can be any number between 0 and 5. After you have generated your Steam Points (if any), roll an artillery dice. If the result is greater than the Steam Tank&apos;s current number of Wounds, or if you roll a misfire, roll a D3 and then, for each Steam Point the Steam Tank currently has, add 1 to the result and consult the Steam Boiler Mishap chart.
-
-
-You can expend Steam Points in three ways: through the Steam Engine, or Steam Weapons. You can expend up to 3 Steam Points in each of these categories, as long as you have enough Steam Points remaining. Any Steam Points left unused at the end of your turn are lost.
-
-
-The more Steam Points you expend in the Steam Engine, the further the Steam Tank moves in the Movement phase. Declare how many Steam Points you will expend in the Steam Engine before you attempt to move it. If you choose not to expend any Steam Points in the Steam Engine, the Steam Tank&apos;s Movement will be 0 that turn and it cannot move at all in the Movement phase. For each Steam Point you chose to expend, the Steam Tank&apos;s Movement increases by 4&quot;. It does not gain any additional Movement when charging.
-
-
-If the Steam Tank charges an enemy unit, it will inflict an additional D3 Impact Hits for each Steam Point expended in the Steam Engine that turn.
-
-
-If the Steam Tank is in base contact with an enemy unit, it cannot move but can instead expend Steam Points in the Steam Engine to grind foes beneath its wheels in the close combat phase. Select one enemy unit in base contact – it immediately suffers D3 Impact Hits for each steam point expended in this way.</description>
-    </rule>
-    <rule id="3fc7-31c1-63c0-a728" name="Steam Gun" publicationId="315d-135b-135c-07ce" page="45" hidden="false">
-      <description>The steam gun is a Breath Weapon attack that can be fired every turn. The steam gun&apos;s Strength is dependent on how many Steam Points (see Steam Engine below) that are expended. If you choose not to expend any Steam Points in the Steam Gun, you cannot fire it that turn.
-
-
-If you expend a single Steam Point, the Steam Gun has Strength 2 Breath Weapon with the Armour Piercing (1) special rule, which uses the Engineer Commander&apos;s Initiative. The Strength of the Breath Weapon is increased by 1 for each additional Steam Point expended in the Steam Gun.</description>
+      <description>Unlike other units, each crew model may choose to allocate their missile attack at a different target if they wish.</description>
     </rule>
     <rule id="b342-0e62-8ff0-f955" name="Locus of Azyr" publicationId="315d-135b-135c-07ce" page="44" hidden="false">
       <description>For each friendly Celestial Hurricanum on the battlefield at the start of your magic phase, add 1 dice to your power pool.</description>
@@ -11090,15 +11403,6 @@ If you expend a single Steam Point, the Steam Gun has Strength 2 Breath Weapon w
     </rule>
     <rule id="d0ad-baad-f5c7-5fa9" name="Leader of Men" publicationId="315d-135b-135c-07ce" page="221" hidden="false">
       <description>The Emperor must be your Army General. He has Inspiring Presence (18) special rule in total, and any models using his Leadership may re-roll failed Panic tests. In addition, his Hold the Line special rule also affects units of Reiksguard Knights.</description>
-    </rule>
-    <rule id="6ffb-96b5-de04-dfc4" name="Steam Cannon" publicationId="315d-135b-135c-07ce" page="45" hidden="false">
-      <description>The steam cannon&apos;s maximum range is dependent on how many Steam Points (see Steam Engine below) that are expended. If you choose not to expend any Steam Points in the Steam Cannon, or if the Steam Tank is in base contact with an enemy unit, you cannot fire it that turn.
-
-
-If you expend a single Steam Point, the Steam Cannon can fire with a maximum range of 12&quot;. For each additional Steam Point you expend, the maximum range of the Steam Cannon is increased by 12&quot;. The Steam Cannon can only be fired directly ahead.
-
-
-If the first artillery dice rolls a misfire, the Steam Cannon does not fire and the Steam Tank immediately loses D3 Wounds with the Ignores Armour Saves special rule. The Steam Cannon cannot fire grapeshot.</description>
     </rule>
     <rule id="482b-fa6d-2435-131b" name="Grim Resolve" publicationId="315d-135b-135c-07ce" page="183" hidden="false">
       <description>Witch Hunters, and any unit they are in, have the  Immunity (Fear) special rule.</description>
@@ -11387,7 +11691,7 @@ The Witch Hunter may re-roll all failed To Hit against this model. Every hit he 
     </profile>
     <profile name="Winter&apos;s Chill" typeId="4608-9b35-b7dc-202d" typeName="Prayer" hidden="false" id="53a3-56a8-93c3-4a15">
       <characteristics>
-        <characteristic name="Effect" typeId="1f79-8144-edd6-8b51"> Any unit in base contact with the model suffer a -1 to hit until the start of your next turn.</characteristic>
+        <characteristic name="Effect" typeId="1f79-8144-edd6-8b51">Any unit in base contact with the model suffer a -1 to hit until the start of your next turn.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
