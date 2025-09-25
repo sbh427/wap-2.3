@@ -1511,7 +1511,7 @@
         <categoryLink id="39e8-1448-332e-ab73" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="929e-b60b-ada4-4a1d" name="Handgunner" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="929e-b60b-ada4-4a1d" name="Handgunner" hidden="false" collective="false" import="true" type="model" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4c9c-0d33-2f9a-a7d2" type="min"/>
           </constraints>
@@ -1540,7 +1540,7 @@
             </entryLink>
           </entryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Fireloques of Ferlangen" hidden="true" id="e913-e33b-9fa2-e3ee">
+        <selectionEntry type="upgrade" import="true" name="Fireloques of Ferlangen" hidden="true" id="e913-e33b-9fa2-e3ee" sortIndex="99">
           <modifiers>
             <modifier type="increment" value="1" field="points">
               <repeats>
@@ -1565,9 +1565,73 @@
             <infoLink name="Stubborn" id="8930-eb29-4581-ede7" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
           </infoLinks>
         </selectionEntry>
+        <selectionEntry type="model" import="true" name="Leader" hidden="false" id="190e-2c27-157a-9521" sortIndex="2">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="fa66-363d-0304-07ab" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a7b9-205e-c916-20a0"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6e22-4766-156a-73ae" includeChildSelections="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="c318-7bb3-04c3-4e90" includeChildSelections="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Handgunner" id="99ff-0f23-8dd4-ce61" hidden="false" targetId="92a4-0648-2c2a-617f" type="profile"/>
+            <infoLink name="State Troops" id="1929-16ff-c8ca-54c3" hidden="false" targetId="a805-76db-d1fc-6a51" type="rule"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Primary Weapon" id="ad36-62d8-5692-0f68" hidden="false" sortIndex="1" defaultSelectionEntryId="51d8-65aa-1544-8887">
+              <entryLinks>
+                <entryLink import="true" name="Hochland Long Rifle" hidden="false" id="7db5-6836-c2d2-ca4d" type="selectionEntry" targetId="7cfd-bf2c-f7f2-6c34" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Handgun" hidden="false" id="51d8-65aa-1544-8887" type="selectionEntry" targetId="b177-ecbf-f68f-c9a3" sortIndex="1"/>
+                <entryLink import="true" name="Brace of Pistols" hidden="false" id="4c41-832f-8d68-4dd2" type="selectionEntry" targetId="a574-f633-253c-b619" sortIndex="2"/>
+                <entryLink import="true" name="Repeater Handgun" hidden="false" id="c16b-e524-37ce-b360" type="selectionEntry" targetId="213d-5b6d-2b0a-19ce" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d712-1c7f-76ef-54ed-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d712-1c7f-76ef-54ed-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <modifiers>
+            <modifier type="set" value="1" field="c318-7bb3-04c3-4e90">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="7f8e-22f6-70a4-36d6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="7f8e-22f6-70a4-36d6" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="add" value="This Leader is an additional Model" field="info">
+              <conditions>
+                <condition type="equalTo" value="10" field="selections" scope="parent" childId="929e-b60b-ada4-4a1d" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="0.5" field="points">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="2ed9-379d-7299-c654" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="8"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="deff-2d78-659b-ef88" hidden="false" import="true">
+        <selectionEntryGroup name="Command Group" id="deff-2d78-659b-ef88" hidden="false" import="true" sortIndex="3">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="89af-62d0-de1f-003d" collective="false">
               <constraints>
@@ -1608,26 +1672,6 @@
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Primary Weapon (Replace Handgun)" id="316b-e809-d65f-462d" hidden="false">
-                  <entryLinks>
-                    <entryLink import="true" name="Brace of Pistols" hidden="false" id="d3b9-34df-1a64-99dd" type="selectionEntry" targetId="a574-f633-253c-b619"/>
-                    <entryLink import="true" name="Repeater Handgun" hidden="false" id="c407-7a26-bde0-013a" type="selectionEntry" targetId="213d-5b6d-2b0a-19ce">
-                      <costs>
-                        <cost name="pts" typeId="points" value="5"/>
-                      </costs>
-                    </entryLink>
-                    <entryLink import="true" name="Hochland Long Rifle" hidden="false" id="8e4a-e85f-66c0-1b45" type="selectionEntry" targetId="7cfd-bf2c-f7f2-6c34">
-                      <costs>
-                        <cost name="pts" typeId="points" value="10"/>
-                      </costs>
-                    </entryLink>
-                  </entryLinks>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fa99-11f3-05e5-dc16" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -3167,7 +3211,7 @@
         <categoryLink id="395c-e593-9a68-7851" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Outrider" hidden="false" id="8e8b-18d6-7983-c292" collective="true" defaultAmount="" sortIndex="1">
+        <selectionEntry type="model" import="true" name="Outrider" hidden="false" id="8e8b-18d6-7983-c292" collective="true" sortIndex="1">
           <entryLinks>
             <entryLink import="true" name="Repeater Handgun" hidden="false" id="2fcd-c0d2-6363-3495" type="selectionEntry" targetId="213d-5b6d-2b0a-19ce">
               <constraints>
@@ -3231,7 +3275,7 @@
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="model" import="true" name="Leader" hidden="false" id="0935-db36-8821-eafb" collective="true" defaultAmount="">
+        <selectionEntry type="model" import="true" name="Leader" hidden="false" id="0935-db36-8821-eafb" collective="true">
           <entryLinks>
             <entryLink import="true" name="Hand Weapon" hidden="false" id="4eaa-2fc1-7eb2-20e6" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
               <constraints>
@@ -4102,7 +4146,6 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
         <selectionEntryGroup id="1296-34c6-a59a-f1e0" name="Character" hidden="false" collective="false" import="true" defaultSelectionEntryId="none">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="96bd-1d47-7c8f-225a" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="33f3-7474-78ef-0289" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="1ac8-e348-e14e-6c5b" name="Valmir von Raukov" hidden="false" collective="false" import="true" type="model">
@@ -5261,7 +5304,6 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
         <selectionEntryGroup id="b1a2-7abd-e5fb-b34a" name="Character" hidden="false" collective="false" import="true" defaultSelectionEntryId="none">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="13e7-2ef2-6a68-991a" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e7d4-a401-5ede-fcac" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="0c27-2005-a5b4-8880" name="Valten" hidden="false" collective="false" import="true" type="model">
@@ -7302,7 +7344,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Hunting Hounds" hidden="false" id="23c9-2824-9906-e799" defaultAmount="" sortIndex="21">
+    <selectionEntry type="unit" import="true" name="Hunting Hounds" hidden="false" id="23c9-2824-9906-e799" sortIndex="21">
       <categoryLinks>
         <categoryLink name="Core" hidden="false" id="9693-f4ea-50f6-66f5" targetId="b876-2856-f1c2-c4f0" primary="true"/>
       </categoryLinks>
