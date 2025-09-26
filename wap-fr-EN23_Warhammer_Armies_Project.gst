@@ -13800,6 +13800,9 @@ Unless otherwise specified, Multiple Wounds only apply to close combat attacks.<
 
 Immunity can also include Panic, Fear and Terror. If the majority of the models in a unit have the Immunity (Panic, Fear or Terror) rule, the unit ignores the effects of Panic, Fear or Terror and any such tests it would otherwise had to take.</description>
     </rule>
+    <rule name="Undead" id="8786-eb6b-b0ac-a6d2" hidden="false" publicationId="feeb-1927-4a99-f849" page="4">
+      <description>All models with the Undead special rule have the Animated Construct, Fear, and Unstable special rules. However, they may make march moves if they are within 6&quot; of the Hierophant or are joined by a character with the My Will Be Done special rule.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="3ecc-5d9c-7d29-ee2f" name="Javelins" publicationId="9e23-79cb-pubN66727" page="81" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
