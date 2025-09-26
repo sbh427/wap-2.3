@@ -12547,8 +12547,7 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
 For every Core unit with Expendable rule in your army, you are required to include at least one other Core Unit without Expendable. For more information on this, see the Choosing Your Army chapter.</description>
     </rule>
     <rule id="668c-19e8-b764-8549" name="Stomp" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
-      <description>A model with this rule can make a Stomp in addition to its other close combat attacks (including Breath Weapons). A Stomp has Always Strikes Last, and inflicts D6 (or D3 against lone Infantry models and skirmishers) automatic hits, at the model&apos;s Strength, on one enemy Infantry, War Beasts or Swarm unit in base contact with the model and are
-randomised as Automatic Hits. 
+      <description>A model with this rule can make a Stomp in addition to its other close combat attacks (including Breath Weapons). A Stomp has Always Strikes Last, and inflicts D6 (or D3 against lone Infantry models and skirmishers) automatic hits, at the model&apos;s Strength, on one enemy Infantry, War Beasts or Swarm unit in base contact with the model and are randomised as Automatic Hits.
 
 Unless specified, any rules that apply to the model’s normal attacks do not apply to its Stomps.</description>
     </rule>
