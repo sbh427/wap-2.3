@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="aea5-0b49-3f3d-0e16" name="Orcs &amp; Goblins WAP 1.60" revision="50" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="aea5-0b49-3f3d-0e16" name="Orcs &amp; Goblins WAP 1.60" revision="51" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <profileTypes>
     <profileType id="bf00-3101-4063-678b" name="Animosity Table">
@@ -2001,15 +2001,9 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
                 <repeat field="selections" scope="5733-bbb3-f628-dd3a" value="5" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de73-48d8-36e0-606f" repeats="1" roundUp="false"/>
               </repeats>
             </modifier>
-            <modifier type="increment" field="bedf-3203-eab0-f9e8" value="1">
-              <repeats>
-                <repeat field="selections" scope="5733-bbb3-f628-dd3a" value="5" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="de73-48d8-36e0-606f" repeats="1" roundUp="false"/>
-              </repeats>
-            </modifier>
           </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6648-9542-9bf9-05cf" type="min"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bedf-3203-eab0-f9e8" type="max"/>
           </constraints>
           <profiles>
             <profile id="bb38-05bb-6ae2-ad92" name="Squig Herder" publicationId="9e23-79cb-pubN78975" page="147" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
@@ -7276,13 +7270,6 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
           </costs>
         </entryLink>
       </entryLinks>
-      <modifiers>
-        <modifier type="increment" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="7b2c-d7e5-2911-f0e9" childId="d989-1124-0dea-ae27" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="7fc5-9733-f10c-6faf" collective="false">
           <constraints>
@@ -7299,64 +7286,6 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="7048-487e-7150-a10a" targetId="fc26-7737-f7cb-8977" primary="true"/>
       </categoryLinks>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Goblin Wolf Chariot" hidden="false" id="a32b-d76f-1d6a-9339" collective="false">
-      <infoLinks>
-        <infoLink name="Goblin Wolf Chariot" id="d0b8-2884-5c23-db63" hidden="false" targetId="13dd-ee68-6b4f-ef1b" type="profile"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink name="Special" hidden="false" id="a387-e8ff-da34-1a84" targetId="fc26-7737-f7cb-8977" primary="true"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="Giant Wolf" hidden="false" id="a921-0a61-9bd3-1a97" type="selectionEntry" targetId="96e3-75e1-fef2-bb2e">
-          <constraints>
-            <constraint type="max" value="3" field="selections" scope="parent" shared="false" id="b12c-4bc1-7322-c012" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="false" id="b93e-7dba-6f01-dd32" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="3"/>
-          </costs>
-        </entryLink>
-        <entryLink import="true" name="Goblin Crew" hidden="false" id="091c-c937-4c2f-112a" type="selectionEntry" targetId="4fcb-cdc0-35b1-d835">
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="43de-762a-5515-7a5e"/>
-            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="85c1-a81a-e59a-2769"/>
-          </constraints>
-        </entryLink>
-        <entryLink import="true" name="Scythes" hidden="false" id="0249-31e5-2a9a-82c2" type="selectionEntry" targetId="865f-edfe-e4fd-d28e">
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
-      <modifiers>
-        <modifier type="increment" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="a32b-d76f-1d6a-9339" childId="d989-1124-0dea-ae27" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="increment" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="a32b-d76f-1d6a-9339" childId="b2c6-18cc-9482-8f48" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="b927-fbb8-0b24-beb3" collective="false">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e1b7-9014-2f69-305f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Standard Bearer" id="76e5-e8d2-1225-c419" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <costs>
-        <cost name="pts" typeId="points" value="33"/>
-      </costs>
     </selectionEntry>
     <selectionEntry id="3d45-ad2c-830a-876e" name="Gigantic Spider Riders" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -7982,6 +7911,58 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
           </conditions>
         </modifier>
       </modifiers>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Goblin Wolf Chariots" hidden="false" id="8d18-d88a-9917-8414">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Goblin Wolf Chariot" hidden="false" id="a32b-d76f-1d6a-9339" collective="false">
+          <infoLinks>
+            <infoLink name="Goblin Wolf Chariot" id="d0b8-2884-5c23-db63" hidden="false" targetId="13dd-ee68-6b4f-ef1b" type="profile"/>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Giant Wolf" hidden="false" id="a921-0a61-9bd3-1a97" type="selectionEntry" targetId="96e3-75e1-fef2-bb2e">
+              <constraints>
+                <constraint type="max" value="3" field="selections" scope="parent" shared="false" id="b12c-4bc1-7322-c012" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="false" id="b93e-7dba-6f01-dd32" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="3"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Goblin Crew" hidden="false" id="091c-c937-4c2f-112a" type="selectionEntry" targetId="4fcb-cdc0-35b1-d835" collective="true">
+              <constraints>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="43de-762a-5515-7a5e"/>
+                <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="85c1-a81a-e59a-2769"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Scythes" hidden="false" id="0249-31e5-2a9a-82c2" type="selectionEntry" targetId="865f-edfe-e4fd-d28e">
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="33"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="0ea5-1a44-045a-fc78"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f6a9-5edd-5d73-478d"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="b927-fbb8-0b24-beb3" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e1b7-9014-2f69-305f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Standard Bearer" id="76e5-e8d2-1225-c419" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink name="Special" hidden="false" id="1589-1bbb-34bc-b4ec" targetId="fc26-7737-f7cb-8977" primary="true"/>
+      </categoryLinks>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
@@ -10313,13 +10294,19 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
           </costs>
         </entryLink>
       </entryLinks>
-      <modifiers>
-        <modifier type="increment" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="6672-9da0-c31f-d0e8" childId="d989-1124-0dea-ae27" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="c8af-e3f5-3beb-6858" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c487-dd71-d1f0-3edb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Standard Bearer" id="859b-4c19-aa8c-a0a2" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Wyvern" hidden="false" id="b76c-2504-f081-9706" collective="false" subType="mount">
       <constraints>
@@ -10390,7 +10377,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d5b3-fc29-5b92-d0a9"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Light Lance" hidden="false" id="e694-c711-9631-fd64" type="selectionEntry" targetId="d989-1124-0dea-ae27"/>
+        <entryLink import="true" name="Light Lance" hidden="false" id="e694-c711-9631-fd64" type="selectionEntry" targetId="d989-1124-0dea-ae27">
+          <costs>
+            <cost name="pts" typeId="points" value="1"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <profiles>
         <profile name="Orc Crew" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="644a-38d4-6859-9925" publicationId="9e23-79cb-pubN78975" page="116">
@@ -10649,18 +10640,19 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
           </costs>
         </entryLink>
       </entryLinks>
-      <modifiers>
-        <modifier type="increment" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="7133-7f02-0d9f-4108" childId="d989-1124-0dea-ae27" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="increment" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="7133-7f02-0d9f-4108" childId="b2c6-18cc-9482-8f48" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="bfc0-2f82-93b0-219a" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f729-aa34-17a2-d1b3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Standard Bearer" id="4705-c381-b3c7-6c1a" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Goblin Crew" hidden="false" id="4fcb-cdc0-35b1-d835" collective="false" subType="crew">
       <infoLinks>
@@ -10680,8 +10672,16 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0573-a06b-0f32-dce8"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Light Lance" hidden="false" id="d22f-8e36-d347-f861" type="selectionEntry" targetId="d989-1124-0dea-ae27"/>
-        <entryLink import="true" name="Shortbow" hidden="false" id="64d8-9c55-add5-6222" type="selectionEntry" targetId="b2c6-18cc-9482-8f48"/>
+        <entryLink import="true" name="Light Lance" hidden="false" id="d22f-8e36-d347-f861" type="selectionEntry" targetId="d989-1124-0dea-ae27">
+          <costs>
+            <cost name="pts" typeId="points" value="1"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Shortbow" hidden="false" id="64d8-9c55-add5-6222" type="selectionEntry" targetId="b2c6-18cc-9482-8f48">
+          <costs>
+            <cost name="pts" typeId="points" value="1"/>
+          </costs>
+        </entryLink>
       </entryLinks>
       <comment>Chariot</comment>
       <profiles>
