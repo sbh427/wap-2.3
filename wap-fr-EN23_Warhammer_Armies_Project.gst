@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="65" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="66" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -296,6 +296,36 @@
     </categoryEntry>
     <categoryEntry name="(Mount)" hidden="false" id="(Mount)"/>
     <categoryEntry name="(Crew)" hidden="false" id="(Crew)"/>
+    <categoryEntry name="X Pike" id="e3de-a992-6a3e-5195" hidden="true"/>
+    <categoryEntry name="X Heavy Lance" id="b906-254a-7949-9e08" hidden="true"/>
+    <categoryEntry name="X Light Lance" id="7a83-6b11-9174-d3b2" hidden="true"/>
+    <categoryEntry name="X Additional Hand Weapon" id="c4b0-4ee4-7b99-843e" hidden="true"/>
+    <categoryEntry name="X Polearm" id="0b0c-acf4-8a6a-dd72" hidden="true"/>
+    <categoryEntry name="X Spear" id="c1f2-083a-aee2-6278" hidden="true"/>
+    <categoryEntry name="Y Handgun" id="6404-4b9f-1ab4-df17" hidden="true"/>
+    <categoryEntry name="Y Crossbow" id="7f3e-8bc2-6bb3-4aae" hidden="true"/>
+    <categoryEntry name="Y Warbow" id="64a6-9da0-afd1-0a7b" hidden="true"/>
+    <categoryEntry name="Y Bow" id="506f-f1ca-805e-a269" hidden="true"/>
+    <categoryEntry name="Y Blowpipe" id="7d94-b140-c653-6b75" hidden="true"/>
+    <categoryEntry name="Z Barding" id="e650-a901-f069-ca88" hidden="true"/>
+    <categoryEntry name="Z Buckler" id="4276-1ee4-016d-ac99" hidden="true"/>
+    <categoryEntry name="Z Heavy Armour" id="f667-6e97-ec08-38ea" hidden="true"/>
+    <categoryEntry name="Z Full Plate Armour" id="e4d2-4419-464f-fccb" hidden="true"/>
+    <categoryEntry name="Z Light Armour" id="fa51-55d0-00b9-c0e8" hidden="true"/>
+    <categoryEntry name="X Great Weapon" id="abcc-4aa7-4989-7189" hidden="true"/>
+    <categoryEntry name="X Flail" id="a86f-aab3-889c-0b6d" hidden="true"/>
+    <categoryEntry name="Y Shortbow" id="0369-7a21-9325-be6b" hidden="true"/>
+    <categoryEntry name="Y Greatbow" id="de63-4d11-ba2c-5742" hidden="true"/>
+    <categoryEntry name="Y Longbow" id="3ee8-1923-4565-e2b6" hidden="true"/>
+    <categoryEntry name="Y Blunderbuss" id="3be0-b6c8-e473-6ef5" hidden="true"/>
+    <categoryEntry name="Y Brace of Pistols" id="6754-79b4-168a-afc0" hidden="true"/>
+    <categoryEntry name="Y Javelins" id="0e7e-b113-620e-246b" hidden="true"/>
+    <categoryEntry name="Y Throwing Axes" id="9d4b-d685-b676-92a3" hidden="true"/>
+    <categoryEntry name="Y Throwing Weapons" id="fe9a-2efe-b32f-a8a0" hidden="true"/>
+    <categoryEntry name="Y Sling" id="d69b-acd0-f802-1e50" hidden="true"/>
+    <categoryEntry name="Y Pistol" id="28bf-f07c-9e13-4dd7" hidden="true"/>
+    <categoryEntry name="Z Medium Armour" id="222a-078c-ce85-fb16" hidden="true"/>
+    <categoryEntry name="Z Shield" id="0210-637d-ff12-a760" hidden="true"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="6ee4-77bf-4402-f8ab" name="Standard" hidden="false">
@@ -7962,7 +7992,6 @@ If you want to make a list using the allied rules, make separate rosters for eac
               <modifiers>
                 <modifier type="set" field="df90-5cbd-8cf9-95b2"/>
                 <modifier type="set" field="27ee-0675-122f-a1b1"/>
-                <modifier type="set" field="a199-f10b-a038-5730"/>
                 <modifier type="set" field="09ad-18df-607b-1215"/>
               </modifiers>
               <conditions>
@@ -12865,7 +12894,7 @@ A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Ter
     <rule id="49c7-526e-cb3e-d7b7" name="Immunity (Flaming Attacks)" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
       <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.</description>
     </rule>
-    <rule id="9fed-6076-6c75-b774" name="Immunity (Fear)" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
+    <rule id="9fed-6076-6c75-b774" name="Immunity" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
       <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.
 
 Immunity can also include Panic, Fear and Terror. If the majority of the models in a unit have the Immunity (Panic, Fear or Terror) rule, the unit ignores the effects of Panic, Fear or Terror and any such tests it would otherwise had to take.</description>
@@ -13765,6 +13794,11 @@ Unless otherwise specified, Multiple Wounds only apply to close combat attacks.<
     </rule>
     <rule id="d80a-79a1-ada7-5451" name="Hatred (Elves)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
+    </rule>
+    <rule id="8f93-30da-a9db-adc7" name="Immunity (Fear)" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
+      <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.
+
+Immunity can also include Panic, Fear and Terror. If the majority of the models in a unit have the Immunity (Panic, Fear or Terror) rule, the unit ignores the effects of Panic, Fear or Terror and any such tests it would otherwise had to take.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
