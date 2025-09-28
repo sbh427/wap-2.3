@@ -334,47 +334,33 @@
     <categoryEntry name="Y Pistol" id="28bf-f07c-9e13-4dd7" hidden="true"/>
     <categoryEntry name="Z Medium Armour" id="222a-078c-ce85-fb16" hidden="true"/>
     <categoryEntry name="Z Shield" id="0210-637d-ff12-a760" hidden="true"/>
-    <categoryEntry name="Wizard" id="1aae-2529-c509-7573" hidden="true">
-      <description/>
-    </categoryEntry>
+    <categoryEntry name="Wizard" id="1aae-2529-c509-7573" hidden="true"/>
     <categoryEntry name="Infantry" id="22c9-1606-58f8-2e60" hidden="false">
-      <profiles>
-        <profile name="Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="da88-6512-0cda-d157">
-          <characteristics>
-            <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">5</characteristic>
-            <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1</characteristic>
-            <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">1</characteristic>
-            <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
-          </characteristics>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
-      </profiles>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true"/>
             <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
     </categoryEntry>
-    <categoryEntry name="Monsters" id="e1a0-da31-05c5-9a15" hidden="false"/>
+    <categoryEntry name="Monster" id="e1a0-da31-05c5-9a15" hidden="false">
+      <infoLinks>
+        <infoLink name="Stomp" id="2cc9-54d7-9903-29c9" hidden="false" type="rule" targetId="668c-19e8-b764-8549">
+          <modifiers>
+            <modifier type="append" value="(D6)" field="name" join=" "/>
+            <modifier type="set" value="From Mount" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Terror" id="02ea-57d5-4bb7-bc2d" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
+        <infoLink name="Swiftstride" id="9700-feb5-c942-f86e" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
+      </infoLinks>
+    </categoryEntry>
     <categoryEntry name="Cavalry" id="bdee-b168-38ba-7d3c" hidden="false">
-      <profiles>
-        <profile name="Cavalry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="52fe-df0f-dfce-c2e6">
-          <characteristics>
-            <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">5</characteristic>
-            <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1(Rider), 1(Mount), 2(if non-split profiles)</characteristic>
-            <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">2</characteristic>
-            <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <infoLinks>
         <infoLink name="Swiftstride" id="0daf-9673-2f25-e019" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
         <infoLink name="Impact Hits (1)" id="db0b-afa8-dc86-9375" hidden="false" type="rule" targetId="bb3b-3ca8-fcbc-a78b">
@@ -384,14 +370,65 @@
         </infoLink>
       </infoLinks>
     </categoryEntry>
-    <categoryEntry name="Monstrous Cavalry" id="82d3-4589-72b4-b6ed" hidden="false"/>
-    <categoryEntry name="Swarms" id="f651-5580-8a7b-45eb" hidden="false"/>
-    <categoryEntry name="War Beasts" id="5c5d-6944-cd09-0db8" hidden="false"/>
-    <categoryEntry name="War Machines" id="d0ba-7b91-1049-d48b" hidden="false"/>
-    <categoryEntry name="Monstrous Creatures" id="b3e5-4b1b-7050-7e02" hidden="false"/>
-    <categoryEntry name="Monstrous Beasts" id="f98e-8d4f-7b1b-59cd" hidden="false"/>
-    <categoryEntry name="Chariots" id="7224-b7fd-d652-3ff2" hidden="false"/>
-    <categoryEntry name="Shrines" id="aff0-db72-0064-43fe" hidden="false"/>
+    <categoryEntry name="Monstrous Cavalry" id="82d3-4589-72b4-b6ed" hidden="false">
+      <infoLinks>
+        <infoLink name="Impact Hits (1)" id="7683-2a71-59fd-37ab" hidden="false" type="rule" targetId="bb3b-3ca8-fcbc-a78b">
+          <modifiers>
+            <modifier type="set" value="From Mount" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Fear" id="c2b9-c3ec-39ff-2d86" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
+        <infoLink name="Swiftstride" id="a92e-c732-6e1a-789f" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
+      </infoLinks>
+    </categoryEntry>
+    <categoryEntry name="Swarm" id="f651-5580-8a7b-45eb" hidden="false">
+      <infoLinks>
+        <infoLink name="Expendable" id="288d-141a-981d-8b60" hidden="false" type="rule" targetId="b806-942b-15af-b309"/>
+        <infoLink name="Skirmishers" id="fef5-1906-e36f-2b82" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
+        <infoLink name="Unstable" id="5367-b34c-298c-4436" hidden="false" type="rule" targetId="b779-6d7f-8298-7c82"/>
+      </infoLinks>
+    </categoryEntry>
+    <categoryEntry name="War Beast" id="5c5d-6944-cd09-0db8" hidden="false">
+      <infoLinks>
+        <infoLink name="Vanguard" id="bfc9-b0de-70e9-8331" hidden="false" type="rule" targetId="38ba-d48a-be97-f830"/>
+        <infoLink name="Swiftstride" id="833e-9ec6-9b65-6aef" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
+        <infoLink name="Expendable" id="b701-aa37-6ccd-0693" hidden="false" type="rule" targetId="b806-942b-15af-b309"/>
+      </infoLinks>
+    </categoryEntry>
+    <categoryEntry name="War Machine" id="d0ba-7b91-1049-d48b" hidden="false">
+      <infoLinks>
+        <infoLink name="Move or Fire" id="1c88-c14c-e0ca-cbaf" hidden="false" type="rule" targetId="37a5-2f70-159f-adfd"/>
+      </infoLinks>
+    </categoryEntry>
+    <categoryEntry name="Monstrous Creature" id="b3e5-4b1b-7050-7e02" hidden="false">
+      <infoLinks>
+        <infoLink name="Stomp" id="a3f5-8708-f4cc-306e" hidden="false" type="rule" targetId="668c-19e8-b764-8549">
+          <modifiers>
+            <modifier type="append" value="(D3)" field="name" join=" "/>
+            <modifier type="set" value="From Mount" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Swiftstride" id="9454-a2e6-d8f9-f5fa" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
+        <infoLink name="Terror" id="ee03-51b1-ba11-20ef" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
+      </infoLinks>
+    </categoryEntry>
+    <categoryEntry name="Monstrous Beasts" id="f98e-8d4f-7b1b-59cd" hidden="false">
+      <infoLinks>
+        <infoLink name="Fear" id="bd5f-9083-7a7d-64de" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
+        <infoLink name="Swiftstride" id="7733-1855-7ecf-09a5" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
+      </infoLinks>
+    </categoryEntry>
+    <categoryEntry name="Chariot" id="7224-b7fd-d652-3ff2" hidden="false">
+      <infoLinks>
+        <infoLink name="Swiftstride" id="ed85-9dfb-a95c-043e" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
+        <infoLink name="Impact Hits (D6)" id="5d7f-cb2c-7108-f4c7" hidden="false" type="rule" targetId="e9e6-66cc-623f-8e94">
+          <modifiers>
+            <modifier type="set" value="From Chariot" field="annotation"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </categoryEntry>
+    <categoryEntry name="Shrine" id="aff0-db72-0064-43fe" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="6ee4-77bf-4402-f8ab" name="Standard" hidden="false">
@@ -8067,6 +8104,9 @@ If you want to make a list using the allied rules, make separate rosters for eac
           </modifierGroups>
         </infoLink>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Cavalry" hidden="false" id="b658-87c1-a258-e591" targetId="bdee-b168-38ba-7d3c" primary="false"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Flail" hidden="false" id="d509-46a8-2dc7-0eb9" collective="true">
       <constraints>
@@ -8367,6 +8407,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="(Mount)" hidden="false" id="edd0-db74-8163-7afb" targetId="(Mount)" primary="false"/>
+        <categoryLink name="Monstrous Creatures" hidden="false" id="670f-069d-2fb4-0ed4" targetId="b3e5-4b1b-7050-7e02" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Pegasus" hidden="false" id="88ef-cc97-06b3-331e" collective="true" subType="mount">
@@ -8414,6 +8455,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="(Mount)" hidden="false" id="f726-06d0-b7c1-6650" targetId="(Mount)" primary="false"/>
+        <categoryLink name="Cavalry" hidden="false" id="dc33-3efe-0619-82ba" targetId="bdee-b168-38ba-7d3c" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Crossbow" hidden="false" id="9936-c747-429f-6327" collective="true">
