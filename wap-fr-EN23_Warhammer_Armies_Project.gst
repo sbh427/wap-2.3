@@ -7992,7 +7992,6 @@ If you want to make a list using the allied rules, make separate rosters for eac
               <modifiers>
                 <modifier type="set" field="df90-5cbd-8cf9-95b2"/>
                 <modifier type="set" field="27ee-0675-122f-a1b1"/>
-                <modifier type="set" field="a199-f10b-a038-5730"/>
                 <modifier type="set" field="09ad-18df-607b-1215"/>
               </modifiers>
               <conditions>
