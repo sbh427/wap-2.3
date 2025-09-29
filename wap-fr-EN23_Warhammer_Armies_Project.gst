@@ -302,8 +302,8 @@
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e0d7-75ba-de98-e3ff" type="min"/>
       </constraints>
     </categoryEntry>
-    <categoryEntry name="(Mount)" hidden="false" id="(Mount)"/>
-    <categoryEntry name="(Crew)" hidden="false" id="(Crew)"/>
+    <categoryEntry name="Mount" hidden="false" id="8b8a-34b1-ed30-df11"/>
+    <categoryEntry name="Crew" hidden="false" id="7b27-23f7-972d-c306"/>
     <categoryEntry name="X Pike" id="e3de-a992-6a3e-5195" hidden="true"/>
     <categoryEntry name="X Heavy Lance" id="b906-254a-7949-9e08" hidden="true"/>
     <categoryEntry name="X Light Lance" id="7a83-6b11-9174-d3b2" hidden="true"/>
@@ -338,13 +338,18 @@
     <categoryEntry name="Infantry" id="22c9-1606-58f8-2e60" hidden="false">
       <modifiers>
         <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true"/>
-            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
-            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
-            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
-            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="self" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="false"/>
+                <condition type="equalTo" value="1" field="selections" scope="self" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="false"/>
+                <condition type="equalTo" value="1" field="selections" scope="self" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="false"/>
+                <condition type="equalTo" value="1" field="selections" scope="self" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="false"/>
+                <condition type="equalTo" value="1" field="selections" scope="self" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="false"/>
+                <condition type="equalTo" value="1" field="selections" scope="self" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </categoryEntry>
@@ -8406,8 +8411,8 @@ If you want to make a list using the allied rules, make separate rosters for eac
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="(Mount)" hidden="false" id="edd0-db74-8163-7afb" targetId="(Mount)" primary="false"/>
-        <categoryLink name="Monstrous Creatures" hidden="false" id="670f-069d-2fb4-0ed4" targetId="b3e5-4b1b-7050-7e02" primary="false"/>
+        <categoryLink name="Monstrous Creature" hidden="false" id="670f-069d-2fb4-0ed4" targetId="b3e5-4b1b-7050-7e02" primary="false"/>
+        <categoryLink name="Mount" hidden="false" id="cee9-d8cf-3a55-25fe" targetId="8b8a-34b1-ed30-df11" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Pegasus" hidden="false" id="88ef-cc97-06b3-331e" collective="true" subType="mount">
@@ -8454,8 +8459,8 @@ If you want to make a list using the allied rules, make separate rosters for eac
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="(Mount)" hidden="false" id="f726-06d0-b7c1-6650" targetId="(Mount)" primary="false"/>
         <categoryLink name="Cavalry" hidden="false" id="dc33-3efe-0619-82ba" targetId="bdee-b168-38ba-7d3c" primary="false"/>
+        <categoryLink name="Mount" hidden="false" id="644f-10ca-9a0d-ae67" targetId="8b8a-34b1-ed30-df11" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Crossbow" hidden="false" id="9936-c747-429f-6327" collective="true">
@@ -8552,7 +8557,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
         </infoLink>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="(Mount)" hidden="false" id="a5BN-nEPG-i4j3-5qeA" targetId="(Mount)" primary="false"/>
+        <categoryLink name="Mount" hidden="false" id="be74-58a7-1609-0fbf" targetId="8b8a-34b1-ed30-df11" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Manticore" hidden="false" id="9266-aada-bbfd-09d0" collective="false" subType="mount">
@@ -8613,7 +8618,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="(Mount)" hidden="false" id="9153-3281-5b6f-3461" targetId="(Mount)" primary="false"/>
+        <categoryLink name="Mount" hidden="false" id="526f-4ce9-368f-9620" targetId="8b8a-34b1-ed30-df11" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Bonegrinder Giant" hidden="false" id="a449-7bcf-5f21-2dee" collective="false">
@@ -9423,7 +9428,8 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
         <infoLink name="Great Eagle" id="aae1-2902-6152-e932" hidden="false" type="profile" targetId="f7ff-29f2-e07a-c621"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="(Mount)" hidden="false" id="3cfa-4c32-b9c3-508c" targetId="(Mount)" primary="false"/>
+        <categoryLink name="Mount" hidden="false" id="abab-f020-a6d5-8ac5" targetId="8b8a-34b1-ed30-df11" primary="false"/>
+        <categoryLink name="Monstrous Beasts" hidden="false" id="db3b-0970-2a57-b16c" targetId="f98e-8d4f-7b1b-59cd" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Upgrades" hidden="false" id="5b1e-5982-c649-2f88" type="selectionEntryGroup" targetId="3922-9a9c-285a-9357"/>
@@ -9438,7 +9444,8 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
         <infoLink name="Magical Attacks" id="cd1d-da86-4a3f-e93f" hidden="false" targetId="03db-d81f-f264-84b8" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="(Mount)" hidden="false" id="d197-3a02-e995-b8ab" targetId="(Mount)" primary="false"/>
+        <categoryLink name="Mount" hidden="false" id="88ae-49a7-6206-6977" targetId="8b8a-34b1-ed30-df11" primary="false"/>
+        <categoryLink name="Cavalry" hidden="false" id="fff2-cd92-783d-c1ea" targetId="bdee-b168-38ba-7d3c" primary="false"/>
       </categoryLinks>
       <rules>
         <rule name="Impale" id="0eea-3c8d-ec56-3333" hidden="false" publicationId="9e23-79cb-pubN77092" page="20">
