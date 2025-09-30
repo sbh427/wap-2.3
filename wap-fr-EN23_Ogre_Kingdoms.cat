@@ -72,9 +72,7 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
       <characteristics>
         <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
         <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+*</characteristic>
-        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Buckler. If a model with an Ironfist rolls a natural 6 when making a Parry save, it automatically inflicts an extra Hit back onto the model or unit that struck the 
-blow. In addition, a model using an ironfist benefits from the Parry special rule even while mounted. *(Only applies to models on foot against missile attacks 
-to the front)</characteristic>
+        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Buckler. If a model with an Ironfist rolls a natural 6 when making a Parry save, it automatically inflicts an extra Hit back onto the model or unit that struck the blow. In addition, a model using an ironfist benefits from the Parry special rule even while mounted. *(Only applies to models on foot against missile attacks to the front)</characteristic>
       </characteristics>
     </profile>
     <profile name="Harpoon Launcher" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="eb7a-8cf6-e15c-cbb7" publicationId="dc4b-67ab-7b8e-baa5" page="3">
@@ -499,6 +497,13 @@ to the front)</characteristic>
         <characteristic name="Effect on Gorgers" typeId="9de7-dbbb-5fe1-e388">All Gorgers gain Regeneration (4+).</characteristic>
       </characteristics>
     </profile>
+    <profile name="Brace of Ogre Pistols" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="e45a-b25a-9cfe-b9c5" publicationId="dc4b-67ab-7b8e-baa5" page="3">
+      <characteristics>
+        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">24&quot;</characteristic>
+        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1), Mulltiple Shots (2), Quick to Fire, In close combat, a Ogre pistol counts as an additional hand weapon that does not give the model the Parry special rule.</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Blood Vulture" hidden="false" id="864f-1868-b2cb-22c5" collective="true" sortIndex="21">
@@ -535,12 +540,7 @@ to the front)</characteristic>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Brace of Ogre Pistols" hidden="false" id="3644-d33d-218c-a3c9" collective="true" sortIndex="25">
       <infoLinks>
-        <infoLink name="Ogre Pistol" id="392a-2ea6-13eb-ef33" hidden="false" type="profile" targetId="fe15-07b8-cf24-36ce">
-          <modifiers>
-            <modifier type="append" value="Multiple Shots (2)" field="de63-d6da-efa8-00ac" join=" "/>
-            <modifier type="set" value="Brace of Ogrer Pistols" field="name"/>
-          </modifiers>
-        </infoLink>
+        <infoLink name="Brace of Ogre Pistols" id="392a-2ea6-13eb-ef33" hidden="false" type="profile" targetId="e45a-b25a-9cfe-b9c5"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2448-13f0-7176-ac69"/>
@@ -1594,15 +1594,21 @@ to the front)</characteristic>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f1c8-b9fc-9c7e-b1ff" includeChildSelections="true" includeChildForces="true"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c25a-932b-56a2-6f0b"/>
           </constraints>
-          <profiles>
-            <profile name="Sky-Titan Scatter Pistols" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="071f-f6bf-0319-2f1e" publicationId="dc4b-67ab-7b8e-baa5" page="7">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">24&quot;</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">5</characteristic>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Brace of Ogre Pistols. All shots from these weapons are resolved at Strength 5.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink name="Brace of Ogre Pistols" id="dd84-14df-44e5-f449" hidden="false" type="profile" targetId="e45a-b25a-9cfe-b9c5">
+              <modifiers>
+                <modifier type="set" value="5" field="b80e-7dac-0dea-9add"/>
+                <modifier type="set" value="Sky-Titan Scatter Pistols" field="annotation"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="626e-6225-c3c9-c746" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="The Fang of Ghur" hidden="false" id="c612-3190-69e7-5cc7" sortIndex="6">
           <costs>
@@ -1630,22 +1636,26 @@ to the front)</characteristic>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4a16-f629-aa37-0ce5" includeChildSelections="true" includeChildForces="true"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ecf5-eb8c-13ae-80c0"/>
           </constraints>
-          <profiles>
-            <profile name="Frostshard Javelins" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="309e-35de-93be-3ebe" publicationId="dc4b-67ab-7b8e-baa5" page="7">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">18&quot;</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">As user</characteristic>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Hunter only. Great Throwing Spear. Attacks made with these javelins have the Ice Attacks special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="1f07-703e-f40f-b850" shared="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="162e-7203-2ff2-eef2" shared="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Great Throwing Spear" id="6bd9-2ddd-d070-5224" hidden="false" type="profile" targetId="6f25-b290-699f-ee0f">
+              <modifiers>
+                <modifier type="set" value="Frostshard Javelins" field="annotation"/>
+                <modifier type="append" value="Attacks made with these javelins have the Ice Attacks special rule." field="de63-d6da-efa8-00ac" join=", "/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Bloodcleaver" hidden="false" id="e98f-4804-96a3-6f68" sortIndex="8">
           <constraints>
@@ -1772,15 +1782,22 @@ to the front)</characteristic>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7ea0-bacc-b86c-3b08"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="28f4-9a28-a4c3-e349" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
-          <profiles>
-            <profile name="Skullplucker" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="729c-d324-2bca-602e" publicationId="dc4b-67ab-7b8e-baa5" page="8">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Ironfist. Any hits made with the Skullplucker have the Killing Blow special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink name="Ironfist" id="198a-419a-4863-7271" hidden="false" type="profile" targetId="0dfd-1ecf-97a2-5671">
+              <modifiers>
+                <modifier type="set" value="Skullplucker" field="annotation"/>
+                <modifier type="append" value="Any hits made with the Skullplucker have the Killing Blow special rule." field="ff58-91e4-84d7-e6e4" join=", "/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="8401-1354-b48e-0416" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden" scope="model-or-unit" affects="self.entries.recursive.4a96-6696-5613-32af"/>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Ice Mammoth Skull Plate" hidden="false" id="17c4-abb8-13ef-397f" sortIndex="2">
           <costs>
@@ -1790,26 +1807,24 @@ to the front)</characteristic>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="addd-4aa0-f7b2-55e2"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f735-d183-a06c-1cbd" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
-          <profiles>
-            <profile name="Ice Mammoth Skull Plate" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="eb6d-c61f-8eac-737d" publicationId="fd0a-6995-03c8-1dd6" page="8">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Gut-plate. The wearer may re-roll failed armour saves.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink name="Gut Plate" id="1b91-e07a-9a72-fef2" hidden="false" type="profile" targetId="bc67-a19e-91da-e74d">
+              <modifiers>
+                <modifier type="set" value="Ice Mammoth Skull Plate" field="annotation"/>
+                <modifier type="append" value="The wearer may re-roll failed armour saves." field="ff58-91e4-84d7-e6e4" join=", "/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="2a65-69be-a728-3666" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden" scope="model-or-unit" affects="self.entries.recursive.70bc-a2e4-d580-b03f"/>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Grawl&apos;s Gut Plate" hidden="false" id="fafc-5d3e-09c9-1ce3" sortIndex="3">
-          <profiles>
-            <profile name="Grawl&apos;s Gut Plate" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="0520-99b4-0498-9a38" publicationId="dc4b-67ab-7b8e-baa5" page="8">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Gut-plate. The bearer of this item and any unit they are with adds +D3&quot; to their charge distance while within 18&quot; of any enemy unit.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
@@ -1817,6 +1832,22 @@ to the front)</characteristic>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a1c4-6ba0-aa98-7178"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f551-38a7-b704-831d" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
+          <infoLinks>
+            <infoLink name="Gut Plate" id="6de7-074d-e34b-8d33" hidden="false" type="profile" targetId="bc67-a19e-91da-e74d">
+              <modifiers>
+                <modifier type="set" value="Grawl&apos;s Gut Plate" field="annotation"/>
+                <modifier type="append" value="The bearer of this item and any unit they are with adds +D3&quot; to their charge distance while within 18&quot; of any enemy unit." field="ff58-91e4-84d7-e6e4" join=", "/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="2a65-69be-a728-3666" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden" scope="model-or-unit" affects="self.entries.recursive.70bc-a2e4-d580-b03f"/>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Greatskull" hidden="false" id="a207-7c4c-132f-eaf6" sortIndex="4">
           <constraints>
@@ -1826,15 +1857,22 @@ to the front)</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
-          <profiles>
-            <profile name="Greatskull" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="f006-f8a8-98d0-2efd" publicationId="dc4b-67ab-7b8e-baa5" page="8">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Gut-plate. Any Wizard that targets the bearer with a spell will miscast on any roll of any double.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink name="Gut Plate" id="83c2-6187-164b-d91f" hidden="false" type="profile" targetId="bc67-a19e-91da-e74d">
+              <modifiers>
+                <modifier type="set" value="Greatskull" field="annotation"/>
+                <modifier type="append" value="Any Wizard that targets the bearer with a spell will miscast on any roll of any double." field="ff58-91e4-84d7-e6e4" join=", "/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="2a65-69be-a728-3666" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden" scope="model-or-unit" affects="self.entries.recursive.70bc-a2e4-d580-b03f"/>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Kattanak Browplate" hidden="false" id="5556-e666-5c71-4e1b" sortIndex="5">
           <costs>
@@ -1844,15 +1882,22 @@ to the front)</characteristic>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="29e3-a147-732b-d394"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="aec1-348c-665f-de0b" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
-          <profiles>
-            <profile name="Kattanak Browplate" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="1d9e-d0e5-5255-aa5b" publicationId="dc4b-67ab-7b8e-baa5" page="8">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Gut-plate. The wearer gains +1 Leadership. In addition, all War Beasts and Monstrous Beasts suffer -1 To Hit against him.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink name="Gut Plate" id="aacd-bffc-ffdc-e093" hidden="false" type="profile" targetId="bc67-a19e-91da-e74d">
+              <modifiers>
+                <modifier type="set" value="Kattanak Browplate" field="annotation"/>
+                <modifier type="append" value="The wearer gains +1 Leadership. In addition, all War Beasts and Monstrous Beasts suffer -1 To Hit against him." field="ff58-91e4-84d7-e6e4" join=", "/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="2a65-69be-a728-3666" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden" scope="model-or-unit" affects="self.entries.recursive.70bc-a2e4-d580-b03f"/>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Bullgut" hidden="false" id="a469-b04a-28ab-2af6" sortIndex="6">
           <costs>
@@ -1892,15 +1937,22 @@ to the front)</characteristic>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="144f-cb9f-68ce-84d7"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7484-6b43-85a2-d127" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
-          <profiles>
-            <profile name="Gut Maw" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="132c-345d-2c91-b1ad" publicationId="dc4b-67ab-7b8e-baa5" page="8">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Gut-plate. An Ogre wearing the Gut Maw has the Terror special rule. In addition, he recovers one lost Wound (up to his starting number) for each unsaved Wound he causes in a challenge.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink name="Gut Plate" id="5953-b0a3-e10d-a3c1" hidden="false" type="profile" targetId="bc67-a19e-91da-e74d">
+              <modifiers>
+                <modifier type="set" value="Gut Maw" field="annotation"/>
+                <modifier type="append" value="An Ogre wearing the Gut Maw has the Terror special rule. In addition, he recovers one lost Wound (up to his starting number) for each unsaved Wound he causes in a challenge." field="ff58-91e4-84d7-e6e4" join=", "/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="2a65-69be-a728-3666" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden" scope="model-or-unit" affects="self.entries.recursive.70bc-a2e4-d580-b03f"/>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Mastodon Armour" hidden="false" id="9dd7-607d-a4a0-0017" sortIndex="8">
           <costs>
@@ -1924,19 +1976,26 @@ to the front)</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="40"/>
           </costs>
-          <profiles>
-            <profile name="Greedy Fist" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="dd6b-3c68-46f4-a581" publicationId="dc4b-67ab-7b8e-baa5" page="8">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Ironfist. The wearer gains +1 Strength and a Ward save (6+). If a Magic Weapon inflicts a Wound that is saved by this Ward save, its magical properties are consumed by the Greedy Fist; from the end of this close combat it is treated as a normal, non-magical weapon of the same type for the remainder of the game. In addition, an enemy Wizard loses a Wizard level and a randomly selected spell each time they are hit by an Ogre wearing the Greedy Fist.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3a4f-05c1-6c98-46bc"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4bb4-ed20-4e47-895a" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
+          <infoLinks>
+            <infoLink name="Ironfist" id="4fe7-802d-1fa5-b602" hidden="false" type="profile" targetId="0dfd-1ecf-97a2-5671">
+              <modifiers>
+                <modifier type="set" value="Greedy Fist" field="annotation"/>
+                <modifier type="append" value="The wearer gains +1 Strength and a Ward save (6+). If a Magic Weapon inflicts a Wound that is saved by this Ward save, its magical properties are consumed by the Greedy Fist; from the end of this close combat it is treated as a normal, non-magical weapon of the same type for the remainder of the game. In addition, an enemy Wizard loses a Wizard level and a randomly selected spell each time they are hit by an Ogre wearing the Greedy Fist." field="ff58-91e4-84d7-e6e4" join=", "/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="8401-1354-b48e-0416" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden" scope="model-or-unit" affects="self.entries.recursive.4a96-6696-5613-32af"/>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -2808,7 +2867,6 @@ to the front)</characteristic>
         <entryLink import="true" name="Gut Plate" hidden="false" id="d1bc-0b14-d119-b291" type="selectionEntry" targetId="70bc-a2e4-d580-b03f" sortIndex="5">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b6b4-23c9-f337-f1cf-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b6b4-23c9-f337-f1cf-max"/>
           </constraints>
         </entryLink>
         <entryLink import="true" name="Ironfist" hidden="false" id="155e-c492-67a2-5810" type="selectionEntry" targetId="4a96-6696-5613-32af" sortIndex="4">
@@ -2846,6 +2904,17 @@ to the front)</characteristic>
       <categoryLinks>
         <categoryLink targetId="d280-b7df-c185-2ba5" id="289d-305f-aca2-a67b" primary="true" name="Lords"/>
         <categoryLink targetId="d38a-73da-883b-bab9" id="1675-f6e1-c6e4-c171" primary="false" name="Heroes"/>
+        <categoryLink name="X Additional Hand Weapon" hidden="false" id="e682-8b0f-7f60-4209" targetId="c4b0-4ee4-7b99-843e" primary="false"/>
+        <categoryLink name="X Spear" hidden="false" id="bc91-a629-ebe5-0c5a" targetId="c1f2-083a-aee2-6278" primary="false"/>
+        <categoryLink name="X Light Lance" hidden="false" id="5a04-6652-c202-e4bd" targetId="7a83-6b11-9174-d3b2" primary="false"/>
+        <categoryLink name="X Polearm" hidden="false" id="ffc9-3c7a-333e-799c" targetId="0b0c-acf4-8a6a-dd72" primary="false"/>
+        <categoryLink name="X Great Weapon" hidden="false" id="5af8-7300-6c02-1bdb" targetId="abcc-4aa7-4989-7189" primary="false"/>
+        <categoryLink name="Z Light Armour" hidden="false" id="05e5-ee8f-d5fc-c019" targetId="fa51-55d0-00b9-c0e8" primary="false"/>
+        <categoryLink name="Monstrous Infantry" hidden="false" id="0aa3-89bb-4527-64b6" targetId="5fc5-b80a-115f-bca3" primary="false"/>
+        <categoryLink name="X Brace of Ogre Pistols" hidden="false" id="441e-7096-c91d-a83c" targetId="626e-6225-c3c9-c746" primary="false"/>
+        <categoryLink name="X Ogre Pistol" hidden="false" id="8d99-b0aa-d6c3-ce04" targetId="f042-6ad5-b644-3476" primary="false"/>
+        <categoryLink name="X Ironfist" hidden="false" id="039c-d0f8-be34-1450" targetId="8401-1354-b48e-0416" primary="false"/>
+        <categoryLink name="Z Gut Plate" hidden="false" id="1247-a14c-1e3b-16c2" targetId="2a65-69be-a728-3666" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="215"/>
@@ -2953,6 +3022,16 @@ to the front)</characteristic>
     <selectionEntry type="model" import="true" name="Hunter" hidden="false" id="1f07-703e-f40f-b850" sortIndex="5">
       <categoryLinks>
         <categoryLink targetId="d38a-73da-883b-bab9" id="1855-a542-c198-8d44" primary="true" name="Heroes"/>
+        <categoryLink name="X Additional Hand Weapon" hidden="false" id="d68d-d182-cd60-51f4" targetId="c4b0-4ee4-7b99-843e" primary="false"/>
+        <categoryLink name="X Spear" hidden="false" id="605c-1918-e59d-c6bd" targetId="c1f2-083a-aee2-6278" primary="false"/>
+        <categoryLink name="X Light Lance" hidden="false" id="d867-2140-8b05-44d9" targetId="7a83-6b11-9174-d3b2" primary="false"/>
+        <categoryLink name="X Great Weapon" hidden="false" id="5d0c-b9d6-174d-8e7a" targetId="abcc-4aa7-4989-7189" primary="false"/>
+        <categoryLink name="Y Great Throwing Spear" hidden="false" id="63e6-0883-4460-0c42" targetId="162e-7203-2ff2-eef2" primary="false"/>
+        <categoryLink name="Z Gut Plate" hidden="false" id="c8b8-ba8b-5a9a-4ed5" targetId="2a65-69be-a728-3666" primary="false"/>
+        <categoryLink name="Monstrous Infantry" hidden="false" id="62a3-11b5-73f5-a676" targetId="5fc5-b80a-115f-bca3" primary="false"/>
+        <categoryLink name="Y Blood Vulture" hidden="false" id="518d-0ff0-dafb-2f2f" targetId="4d79-2a26-e0f1-ae37" primary="false"/>
+        <categoryLink name="Y Chaintrap" hidden="false" id="725d-d904-369d-7072" targetId="180b-9d6b-8e77-20f9" primary="false"/>
+        <categoryLink name="Y Harpoon Launcher" hidden="false" id="66b6-a0cc-5e6c-5ed3" targetId="82d2-8ce4-f56d-39bf" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Big Names of the Ogres and Magic Items" hidden="false" id="bbc8-1095-5aed-64ba" type="selectionEntryGroup" targetId="67c0-a6c6-2eb9-cfc0" sortIndex="4">
@@ -3093,6 +3172,9 @@ to the front)</characteristic>
     <selectionEntry type="model" import="true" name="Butcher" hidden="false" id="50ee-1fa1-c87d-f403" sortIndex="4">
       <categoryLinks>
         <categoryLink targetId="d38a-73da-883b-bab9" id="f59a-72e2-aa34-2c24" primary="true" name="Heroes"/>
+        <categoryLink name="X Additional Hand Weapon" hidden="false" id="a61e-9785-26b6-ab1f" targetId="c4b0-4ee4-7b99-843e" primary="false"/>
+        <categoryLink name="X Great Weapon" hidden="false" id="e29c-ab7f-8b77-4035" targetId="abcc-4aa7-4989-7189" primary="false"/>
+        <categoryLink name="Monstrous Infantry" hidden="false" id="8341-b9bf-b0f9-1e91" targetId="5fc5-b80a-115f-bca3" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="c4c1-98b2-bfb6-7008" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1"/>
@@ -3212,6 +3294,9 @@ to the front)</characteristic>
       <categoryLinks>
         <categoryLink targetId="d280-b7df-c185-2ba5" id="3d67-a673-520f-c0d9" primary="true" name="Lords"/>
         <categoryLink targetId="d38a-73da-883b-bab9" id="9d10-8623-0112-d7b9" primary="false" name="Heroes"/>
+        <categoryLink name="X Additional Hand Weapon" hidden="false" id="249d-4df8-b199-e384" targetId="c4b0-4ee4-7b99-843e" primary="false"/>
+        <categoryLink name="X Great Weapon" hidden="false" id="5f1b-95b3-1302-834b" targetId="abcc-4aa7-4989-7189" primary="false"/>
+        <categoryLink name="Monstrous Infantry" hidden="false" id="a08a-ebc1-0aee-d0b1" targetId="5fc5-b80a-115f-bca3" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="8615-8c29-2c03-33c6" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1"/>
@@ -3335,6 +3420,17 @@ to the front)</characteristic>
     <selectionEntry type="model" import="true" name="Bruiser" hidden="false" id="b318-d015-e6db-8672" sortIndex="3">
       <categoryLinks>
         <categoryLink targetId="d38a-73da-883b-bab9" id="e07f-8320-a7ae-084e" primary="true" name="Heroes"/>
+        <categoryLink name="X Additional Hand Weapon" hidden="false" id="fa38-a69c-63ef-2845" targetId="c4b0-4ee4-7b99-843e" primary="false"/>
+        <categoryLink name="X Spear" hidden="false" id="04fd-35dc-546f-17f7" targetId="c1f2-083a-aee2-6278" primary="false"/>
+        <categoryLink name="X Light Lance" hidden="false" id="1bb3-49f1-10c5-3840" targetId="7a83-6b11-9174-d3b2" primary="false"/>
+        <categoryLink name="X Polearm" hidden="false" id="9d64-bb99-7337-227c" targetId="0b0c-acf4-8a6a-dd72" primary="false"/>
+        <categoryLink name="X Great Weapon" hidden="false" id="80bd-db56-2951-e9be" targetId="abcc-4aa7-4989-7189" primary="false"/>
+        <categoryLink name="Y Ogre Pistol" hidden="false" id="9599-f8b9-bc1d-1527" targetId="f042-6ad5-b644-3476" primary="false"/>
+        <categoryLink name="Y Brace of Ogre Pistols" hidden="false" id="b70f-14d5-db5f-053e" targetId="626e-6225-c3c9-c746" primary="false"/>
+        <categoryLink name="Z Ironfist" hidden="false" id="04fb-91f7-8360-03e4" targetId="8401-1354-b48e-0416" primary="false"/>
+        <categoryLink name="Z Light Armour" hidden="false" id="e429-5a9a-30aa-4468" targetId="fa51-55d0-00b9-c0e8" primary="false"/>
+        <categoryLink name="Z Gut Plate" hidden="false" id="aee7-9678-9322-7854" targetId="2a65-69be-a728-3666" primary="false"/>
+        <categoryLink name="Monstrous Infantry" hidden="false" id="693e-5295-5b20-8f57" targetId="5fc5-b80a-115f-bca3" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Ironfist" hidden="false" id="e563-9cc9-5777-3e89" type="selectionEntry" targetId="4a96-6696-5613-32af" sortIndex="4">
@@ -3586,6 +3682,10 @@ to the front)</characteristic>
       </profiles>
       <categoryLinks>
         <categoryLink targetId="d38a-73da-883b-bab9" id="9ff3-eac7-a786-a121" primary="true" name="Heroes"/>
+        <categoryLink name="X Additional Hand Weapon" hidden="false" id="b795-bd3f-55c3-6128" targetId="c4b0-4ee4-7b99-843e" primary="false"/>
+        <categoryLink name="X Great Weapon" hidden="false" id="f68c-eb99-eca3-6064" targetId="abcc-4aa7-4989-7189" primary="false"/>
+        <categoryLink name="Z Gut Plate" hidden="false" id="f89d-d267-4dad-2499" targetId="2a65-69be-a728-3666" primary="false"/>
+        <categoryLink name="Monstrous Infantry" hidden="false" id="4023-d21d-da1a-8e02" targetId="5fc5-b80a-115f-bca3" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Yhetee Rimespeaker" hidden="false" id="a3bc-a37a-62d5-f011" sortIndex="7">
@@ -3652,11 +3752,19 @@ to the front)</characteristic>
       </costs>
       <categoryLinks>
         <categoryLink targetId="d38a-73da-883b-bab9" id="4370-864a-aa51-cfc2" primary="true" name="Heroes"/>
+        <categoryLink name="X Additional Hand Weapon" hidden="false" id="a7b5-4008-43e9-e454" targetId="c4b0-4ee4-7b99-843e" primary="false"/>
+        <categoryLink name="X Great Weapon" hidden="false" id="f620-0c02-2258-f949" targetId="abcc-4aa7-4989-7189" primary="false"/>
+        <categoryLink name="Monstrous Infantry" hidden="false" id="081e-38b3-82ed-4938" targetId="5fc5-b80a-115f-bca3" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Gnoblar Honcho" hidden="false" id="d6b8-65df-562c-350c" sortIndex="8">
       <categoryLinks>
         <categoryLink targetId="d38a-73da-883b-bab9" id="05ac-e914-1b9f-3773" primary="true" name="Heroes"/>
+        <categoryLink name="X Additional Hand Weapon" hidden="false" id="907f-2b57-04f1-38eb" targetId="c4b0-4ee4-7b99-843e" primary="false"/>
+        <categoryLink name="X Great Weapon" hidden="false" id="463e-3701-4bb0-20bc" targetId="abcc-4aa7-4989-7189" primary="false"/>
+        <categoryLink name="Y Throwing Weapons" hidden="false" id="1623-04f2-087b-08b8" targetId="fe9a-2efe-b32f-a8a0" primary="false"/>
+        <categoryLink name="Y Sling" hidden="false" id="a98c-b6e9-8e4f-427d" targetId="d69b-acd0-f802-1e50" primary="false"/>
+        <categoryLink name="Infantry" hidden="false" id="fde8-7e8c-f91e-f8f2" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="25"/>
@@ -3731,6 +3839,7 @@ to the front)</characteristic>
     <selectionEntry type="unit" import="true" name="Ogre Bulls" hidden="false" id="8ac0-ff2b-223e-b280" sortIndex="101">
       <categoryLinks>
         <categoryLink targetId="b876-2856-f1c2-c4f0" id="96b4-1de0-6602-5e1d" primary="true" name="Core"/>
+        <categoryLink name="Monstrous Infantry" hidden="false" id="21ff-2411-640e-ed6d" targetId="5fc5-b80a-115f-bca3" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Ogre Bull" hidden="false" id="d812-dfdf-80a7-50c0" sortIndex="1">
@@ -3994,6 +4103,7 @@ to the front)</characteristic>
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink targetId="b876-2856-f1c2-c4f0" id="acf6-7839-f054-4417" primary="true" name="Core"/>
+        <categoryLink name="Monstrous Infantry" hidden="false" id="dcfc-383d-2ffc-a4e1" targetId="5fc5-b80a-115f-bca3" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Gnoblar Fighters" hidden="false" id="4ba1-fda7-6f42-b9b8" sortIndex="103">
@@ -4096,6 +4206,7 @@ to the front)</characteristic>
       </selectionEntries>
       <categoryLinks>
         <categoryLink targetId="b876-2856-f1c2-c4f0" id="d05e-e617-5f94-ed76" primary="true" name="Core"/>
+        <categoryLink name="Infantry" hidden="false" id="cc56-f5f3-c243-ac3e" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Leadbelchers" hidden="false" id="5ad0-7bb8-5044-3e21" sortIndex="201">
@@ -4188,6 +4299,7 @@ to the front)</characteristic>
       </selectionEntries>
       <categoryLinks>
         <categoryLink targetId="fc26-7737-f7cb-8977" id="04d8-d7a1-6552-4758" primary="true" name="Special"/>
+        <categoryLink name="Monstrous Infantry" hidden="false" id="d947-1f55-4238-d9ca" targetId="5fc5-b80a-115f-bca3" primary="false"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category">
@@ -4283,6 +4395,7 @@ to the front)</characteristic>
       </selectionEntries>
       <categoryLinks>
         <categoryLink targetId="fc26-7737-f7cb-8977" id="9c2b-c56f-d15b-7510" primary="true" name="Special"/>
+        <categoryLink name="Monstrous Cavalry" hidden="false" id="ec11-2145-269c-0dc5" targetId="82d3-4589-72b4-b6ed" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Command Group" id="a93c-f006-abf2-349e" hidden="false" sortIndex="2">
@@ -4857,6 +4970,7 @@ to the front)</characteristic>
       </selectionEntries>
       <categoryLinks>
         <categoryLink targetId="fc26-7737-f7cb-8977" id="f4aa-aeb7-f483-cd88" primary="true" name="Special"/>
+        <categoryLink name="Monstrous Infantry" hidden="false" id="0511-a7d4-2797-b412" targetId="5fc5-b80a-115f-bca3" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Light Armour" hidden="false" id="c1fe-7aaf-ba6c-5537" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="2">
@@ -4880,9 +4994,6 @@ to the front)</characteristic>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Yhetees" hidden="false" id="ad74-fe89-9fd7-bf57" sortIndex="204">
-      <costs>
-        <cost name="pts" typeId="points" value="38"/>
-      </costs>
       <selectionEntryGroups>
         <selectionEntryGroup name="Command Group" id="3b4d-ea28-7d87-7bc6" hidden="false" sortIndex="2">
           <selectionEntries>
@@ -4943,6 +5054,7 @@ to the front)</characteristic>
       </selectionEntries>
       <categoryLinks>
         <categoryLink targetId="fc26-7737-f7cb-8977" id="8602-10da-f015-4fe4" primary="true" name="Special"/>
+        <categoryLink name="Monstrous Infantry" hidden="false" id="8e60-0abf-a913-4fbf" targetId="5fc5-b80a-115f-bca3" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Gorgers" hidden="false" id="074c-39bd-36ca-abe9" sortIndex="205">
@@ -5021,6 +5133,7 @@ to the front)</characteristic>
       </selectionEntries>
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="7562-55ee-ae23-9076" targetId="fc26-7737-f7cb-8977" primary="true"/>
+        <categoryLink name="Monstrous Infantry" hidden="false" id="050c-b704-951b-7cf2" targetId="5fc5-b80a-115f-bca3" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Sabertusks" hidden="false" id="4e4a-f291-4923-e26f" sortIndex="206">
@@ -5098,6 +5211,7 @@ to the front)</characteristic>
       </selectionEntries>
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="270c-c1d6-eb92-960b" targetId="fc26-7737-f7cb-8977" primary="true"/>
+        <categoryLink name="War Beast" hidden="false" id="f3c7-bd09-f263-af19" targetId="5c5d-6944-cd09-0db8" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Cragbeast" hidden="false" id="67b9-740c-b5e7-d53a" sortIndex="207">
@@ -5132,6 +5246,7 @@ to the front)</characteristic>
       </selectionEntries>
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="09b0-c7ee-05b5-aed3" targetId="fc26-7737-f7cb-8977" primary="true"/>
+        <categoryLink name="Monstrous Beasts" hidden="false" id="91ed-a8bc-2608-d26e" targetId="f98e-8d4f-7b1b-59cd" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Rhinox War Chariot" hidden="false" id="a15d-43fd-2913-2f59" sortIndex="208">
@@ -5165,6 +5280,7 @@ to the front)</characteristic>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="d095-d2e5-c621-14ba" targetId="fc26-7737-f7cb-8977" primary="true"/>
+        <categoryLink name="Chariot" hidden="false" id="ad9e-f3d4-c7b2-1e1f" targetId="7224-b7fd-d652-3ff2" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Gnoblar Trappers" hidden="false" id="8bc2-3be5-b456-afdb" sortIndex="209">
@@ -5216,6 +5332,7 @@ to the front)</characteristic>
       </selectionEntries>
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="be8f-4839-338a-a4e9" targetId="fc26-7737-f7cb-8977" primary="true"/>
+        <categoryLink name="Infantry" hidden="false" id="7194-7103-20ff-e896" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Gnoblar Scraplauncher" hidden="false" id="4b2f-00f8-c601-6f20" sortIndex="210">
@@ -5224,6 +5341,7 @@ to the front)</characteristic>
       </costs>
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="7d5c-1aba-827e-89dd" targetId="fc26-7737-f7cb-8977" primary="true"/>
+        <categoryLink name="Chariot" hidden="false" id="d4a7-7772-5d83-d03b" targetId="7224-b7fd-d652-3ff2" primary="false"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Young Rhinox" id="b24d-2fa0-657d-e597" hidden="false" type="profile" targetId="4051-311e-1a52-dbdd"/>
@@ -5320,11 +5438,13 @@ to the front)</characteristic>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="d98a-f58e-872e-66d1" targetId="fc26-7737-f7cb-8977" primary="true"/>
+        <categoryLink name="Chariot" hidden="false" id="1827-cbec-d6ac-2b3a" targetId="7224-b7fd-d652-3ff2" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Grimhorn Rhinox Riders" hidden="false" id="ccbb-2e7d-2253-c03f" sortIndex="301">
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="10d8-bde3-5cc9-203d" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Monstrous Creature" hidden="false" id="0bdf-f19d-9b62-7fe6" targetId="b3e5-4b1b-7050-7e02" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Command Group" id="b044-aea1-dbb6-33bf" hidden="false" sortIndex="2">
@@ -5478,6 +5598,7 @@ to the front)</characteristic>
     <selectionEntry type="model" import="true" name="Ironblaster" hidden="false" id="7397-1908-ccd7-3757" sortIndex="302">
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="0524-4222-470f-05e2" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Chariot" hidden="false" id="020e-b620-aaea-1173" targetId="7224-b7fd-d652-3ff2" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="180"/>
@@ -5587,6 +5708,7 @@ to the front)</characteristic>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="3f25-5632-2667-cfad" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Monster" hidden="false" id="9544-ad69-24c2-9c22" targetId="e1a0-da31-05c5-9a15" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Thundertusk" hidden="false" id="078c-5573-cc18-0527" sortIndex="304">
@@ -5682,11 +5804,13 @@ to the front)</characteristic>
       </selectionEntries>
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="4f26-97cd-a0c9-2bb6" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Monster" hidden="false" id="725a-e5f4-6129-37c1" targetId="e1a0-da31-05c5-9a15" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Ice Mammoth" hidden="false" id="1a9e-4f2d-aa09-943b" sortIndex="305">
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="6a66-2d66-7299-6ec2" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Monster" hidden="false" id="82b3-9b49-ab43-b65f" targetId="e1a0-da31-05c5-9a15" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Ice Mammoth" hidden="false" id="90ff-3dc8-3e72-253b">
@@ -5905,6 +6029,7 @@ If no suitable target is in base contact, roll again on the chart until you get 
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="bd82-bba8-d38f-e9d3" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Monster" hidden="false" id="8077-4e0a-02a1-81e0" targetId="e1a0-da31-05c5-9a15" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Special Characters" hidden="false" id="af5c-b3ee-7465-ec25" sortIndex="401" subType="unit-group">
@@ -6002,6 +6127,9 @@ If no suitable target is in base contact, roll again on the chart until you get 
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <categoryLinks>
+                <categoryLink name="Monstrous Infantry" hidden="false" id="084a-787c-9e8f-92d2" targetId="5fc5-b80a-115f-bca3" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Ghark Ironskin" hidden="false" id="047f-ec6f-514d-8197" sortIndex="2">
               <costs>
@@ -6027,15 +6155,14 @@ If no suitable target is in base contact, roll again on the chart until you get 
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0a24-d217-411b-3b15-min"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0a24-d217-411b-3b15-max"/>
                   </constraints>
-                  <profiles>
-                    <profile name="Ironskin Armrour" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="de1e-d3d6-5017-541d" publicationId="dc4b-67ab-7b8e-baa5" page="40">
-                      <characteristics>
-                        <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">5+</characteristic>
-                        <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">5+</characteristic>
-                        <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Medium armour. The Ironskin Armor gives Ghark a 6+ Ward save.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Medium Armour" id="0d71-e986-39d8-ee4e" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
+                      <modifiers>
+                        <modifier type="set" value="Ironskin Armour" field="annotation"/>
+                        <modifier type="append" value="The Ironskin Armor gives Ghark a 6+ Ward save." field="ff58-91e4-84d7-e6e4" join=", "/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
                 </selectionEntry>
                 <selectionEntry type="model" import="true" name="Iron Rhinox" hidden="false" id="3b8d-77c4-674a-4c30" sortIndex="4" subType="mount">
                   <infoLinks>
@@ -6095,6 +6222,11 @@ If no suitable target is in base contact, roll again on the chart until you get 
                   </characteristics>
                 </profile>
               </profiles>
+              <categoryLinks>
+                <categoryLink name="Monstrous Creature" hidden="false" id="3da5-ad8e-9c9a-5877" targetId="b3e5-4b1b-7050-7e02" primary="false"/>
+                <categoryLink name="Z Gut Plate" hidden="false" id="6097-be3a-029b-7720" targetId="2a65-69be-a728-3666" primary="false"/>
+                <categoryLink name="Z Medium Armour" hidden="false" id="96ba-b41b-74fb-adc6" targetId="222a-078c-ce85-fb16" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Skrag the Slaughterer" hidden="false" id="2374-25f0-9a93-3c81" sortIndex="3">
               <costs>
@@ -6164,6 +6296,9 @@ If no suitable target is in base contact, roll again on the chart until you get 
                   </characteristics>
                 </profile>
               </profiles>
+              <categoryLinks>
+                <categoryLink name="Monstrous Infantry" hidden="false" id="fbe7-e3f2-6ab9-1ea0" targetId="5fc5-b80a-115f-bca3" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Groth Onefinger" hidden="false" id="df24-3fd3-f7a7-77aa" sortIndex="4">
               <costs>
@@ -6239,6 +6374,9 @@ If no suitable target is in base contact, roll again on the chart until you get 
                   </characteristics>
                 </profile>
               </profiles>
+              <categoryLinks>
+                <categoryLink name="Monstrous Infantry" hidden="false" id="af6d-ebe3-21ef-66e8" targetId="5fc5-b80a-115f-bca3" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Morg Magmaborn" hidden="false" id="6027-539e-5db3-51a8" sortIndex="5">
               <costs>
@@ -6324,6 +6462,9 @@ If no suitable target is in base contact, roll again on the chart until you get 
                   </characteristics>
                 </profile>
               </profiles>
+              <categoryLinks>
+                <categoryLink name="Monstrous Infantry" hidden="false" id="61ba-52bd-6222-5fa7" targetId="5fc5-b80a-115f-bca3" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -6407,6 +6548,13 @@ If no suitable target is in base contact, roll again on the chart until you get 
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <categoryLinks>
+                <categoryLink name="Monstrous Infantry" hidden="false" id="abd7-1415-1b26-7412" targetId="5fc5-b80a-115f-bca3" primary="false"/>
+                <categoryLink name="X Additional Hand Weapon" hidden="false" id="a9d8-7d02-ef65-0f0d" targetId="c4b0-4ee4-7b99-843e" primary="false"/>
+                <categoryLink name="Y Ogre Pistol" hidden="false" id="a102-f71d-c310-46a8" targetId="f042-6ad5-b644-3476" primary="false"/>
+                <categoryLink name="Z Light Armour" hidden="false" id="1110-3929-2399-c907" targetId="fa51-55d0-00b9-c0e8" primary="false"/>
+                <categoryLink name="Z Gut Plate" hidden="false" id="3eb9-cef2-349e-bac2" targetId="2a65-69be-a728-3666" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Bragg the Gutsman" hidden="false" id="a343-a04d-1859-3ff9" sortIndex="2">
               <costs>
@@ -6437,7 +6585,7 @@ If no suitable target is in base contact, roll again on the chart until you get 
                       <characteristics>
                         <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                         <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Flail. While Bragg is involved in a challenge, he gains the Heroic Killing Blow special rule. In addition, if Bragg slays his foe in a challenge, any enemy units in base contact with him are Disrupted for the remainder of the turn. </characteristic>
+                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Flail. While Bragg is involved in a challenge, he gains the Heroic Killing Blow special rule. In addition, if Bragg slays his foe in a challenge, any enemy units in base contact with him are Disrupted for the remainder of the turn.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -6463,6 +6611,10 @@ If no suitable target is in base contact, roll again on the chart until you get 
                   </characteristics>
                 </profile>
               </profiles>
+              <categoryLinks>
+                <categoryLink name="Monstrous Infantry" hidden="false" id="de5b-2418-2e3a-724c" targetId="5fc5-b80a-115f-bca3" primary="false"/>
+                <categoryLink name="X Flail" hidden="false" id="a05e-6fd7-9095-6621" targetId="a86f-aab3-889c-0b6d" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Braugh Slavelord" hidden="false" id="836f-0d4a-28b9-ddd9" sortIndex="3">
               <costs>
@@ -6505,7 +6657,7 @@ If no suitable target is in base contact, roll again on the chart until you get 
                           <characteristics>
                             <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                             <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Two hand weapons. At the beginning of each close combat phase, Braugh may nominate one enemy model in base contact. That model loses D3 Attacks for that phase. </characteristic>
+                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Two hand weapons. At the beginning of each close combat phase, Braugh may nominate one enemy model in base contact. That model loses D3 Attacks for that phase.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -6530,6 +6682,9 @@ If no suitable target is in base contact, roll again on the chart until you get 
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4b04-26e7-5525-d2ad-min"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4b04-26e7-5525-d2ad-max"/>
                   </constraints>
+                  <categoryLinks>
+                    <categoryLink name="Monstrous Infantry" hidden="false" id="f1c9-dfa3-dd1c-43ff" targetId="5fc5-b80a-115f-bca3" primary="false"/>
+                  </categoryLinks>
                 </selectionEntry>
                 <selectionEntry type="model" import="true" name="Slave" hidden="false" id="ea4f-6667-5f11-5a74" sortIndex="3">
                   <constraints>
@@ -6552,11 +6707,14 @@ If no suitable target is in base contact, roll again on the chart until you get 
                       </characteristics>
                     </profile>
                   </profiles>
+                  <categoryLinks>
+                    <categoryLink name="Infantry" hidden="false" id="787a-1b16-299a-7789" targetId="22c9-1606-58f8-2e60" primary="false"/>
+                  </categoryLinks>
                 </selectionEntry>
               </selectionEntries>
               <rules>
                 <rule name="Slavelord" id="b3ad-e5ca-d1d6-0c2b" hidden="false" publicationId="fe27-09e1-b66a-ba42" page="45">
-                  <description>Braugh begins the game with 12 slaves, these must form up with Braugh placed in the centre of the unit. Braugh benefits from &quot;Look Out, Sir!&quot; as long as there are at least 5 slaves in the unit. He may not voluntarily leave the unit under any circumstances. In addition, as long as Braugh is alive, all slaves have the Regeneration (5+) and Stubborn special rules. </description>
+                  <description>Braugh begins the game with 12 slaves, these must form up with Braugh placed in the centre of the unit. Braugh benefits from &quot;Look Out, Sir!&quot; as long as there are at least 5 slaves in the unit. He may not voluntarily leave the unit under any circumstances. In addition, as long as Braugh is alive, all slaves have the Regeneration (5+) and Stubborn special rules.</description>
                 </rule>
               </rules>
             </selectionEntry>
@@ -6590,12 +6748,17 @@ If no suitable target is in base contact, roll again on the chart until you get 
               </infoLinks>
               <rules>
                 <rule name="Hunt-father" id="88c1-15a3-e46e-bf58" hidden="false" publicationId="dc4b-67ab-7b8e-baa5" page="45">
-                  <description>Jhared may re-roll To Hit and to Wound rolls of 1 when fighting War Beasts, Monstrous Beasts, Monstrous Cavalry, Monstrous Creatures and Monsters. In addition, he ignores Terror caused by Monstrous Creatures and Monsters. </description>
+                  <description>Jhared may re-roll To Hit and to Wound rolls of 1 when fighting War Beasts, Monstrous Beasts, Monstrous Cavalry, Monstrous Creatures and Monsters. In addition, he ignores Terror caused by Monstrous Creatures and Monsters.</description>
                 </rule>
                 <rule name="Running with the Pack" id="d00d-7694-ca99-d26f" hidden="false" publicationId="dc4b-67ab-7b8e-baa5" page="45">
-                  <description>If Jhared deploys as part of a Sabretusk pack, then both he and the pack have the Vanguard special rule. In addition, the entire unit may re-roll failed charge distances. </description>
+                  <description>If Jhared deploys as part of a Sabretusk pack, then both he and the pack have the Vanguard special rule. In addition, the entire unit may re-roll failed charge distances.</description>
                 </rule>
               </rules>
+              <categoryLinks>
+                <categoryLink name="Monstrous Infantry" hidden="false" id="d095-1f0b-ae39-8d55" targetId="5fc5-b80a-115f-bca3" primary="false"/>
+                <categoryLink name="Y Great Throwing Spear" hidden="false" id="a281-8595-e5fe-7270" targetId="162e-7203-2ff2-eef2" primary="false"/>
+                <categoryLink name="Z Gut Plate" hidden="false" id="d175-2c72-1bc2-0d8f" targetId="2a65-69be-a728-3666" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -6649,4 +6812,15 @@ If no suitable target is in base contact, roll again on the chart until you get 
       </characteristicTypes>
     </profileType>
   </profileTypes>
+  <categoryEntries>
+    <categoryEntry name="Z Ironfist" id="8401-1354-b48e-0416" hidden="false"/>
+    <categoryEntry name="Z Gut Plate" id="2a65-69be-a728-3666" hidden="false"/>
+    <categoryEntry name="Y Brace of Ogre Pistols" id="626e-6225-c3c9-c746" hidden="false"/>
+    <categoryEntry name="Y Ogre Pistol" id="f042-6ad5-b644-3476" hidden="false"/>
+    <categoryEntry name="Y Great Throwing Spear" id="162e-7203-2ff2-eef2" hidden="false"/>
+    <categoryEntry name="X Oriental Longsword" id="8a18-ac46-96a6-b213" hidden="false"/>
+    <categoryEntry name="Y Blood Vulture" id="4d79-2a26-e0f1-ae37" hidden="false"/>
+    <categoryEntry name="Y Chaintrap" id="180b-9d6b-8e77-20f9" hidden="false"/>
+    <categoryEntry name="Y Harpoon Launcher" id="82d2-8ce4-f56d-39bf" hidden="false"/>
+  </categoryEntries>
 </catalogue>
