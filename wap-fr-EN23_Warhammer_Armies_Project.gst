@@ -434,6 +434,28 @@
       </infoLinks>
     </categoryEntry>
     <categoryEntry name="Shrine" id="aff0-db72-0064-43fe" hidden="false"/>
+    <categoryEntry name="Monstrous Infantry" id="5fc5-b80a-115f-bca3" hidden="false">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="self" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="false"/>
+                <condition type="equalTo" value="1" field="selections" scope="self" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="false"/>
+                <condition type="equalTo" value="1" field="selections" scope="self" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="false"/>
+                <condition type="equalTo" value="1" field="selections" scope="self" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="false"/>
+                <condition type="equalTo" value="1" field="selections" scope="self" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="false"/>
+                <condition type="equalTo" value="1" field="selections" scope="self" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <infoLinks>
+        <infoLink name="Fear" id="ae76-3fa7-98f6-216f" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
+        <infoLink name="Swiftstride" id="fe8c-f458-cb21-7363" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
+      </infoLinks>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="6ee4-77bf-4402-f8ab" name="Standard" hidden="false">
