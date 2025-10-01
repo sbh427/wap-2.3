@@ -43,11 +43,6 @@
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
   </costTypes>
   <profileTypes>
-    <profileType id="fc80-e52f-edf4-4e7e" name="Magic Standard">
-      <characteristicTypes>
-        <characteristicType id="97aa-092b-c6fe-4f5a" name="Special Rules"/>
-      </characteristicTypes>
-    </profileType>
     <profileType id="d9ed-a507-0102-d498" name="Model">
       <characteristicTypes>
         <characteristicType id="09ad-18df-607b-1215" name="M"/>
@@ -60,21 +55,6 @@
         <characteristicType id="bfa2-d38d-7c93-d3f0" name="A"/>
         <characteristicType id="a199-f10b-a038-5730" name="Ld"/>
         <characteristicType id="13f9-a26b-05af-3459" name="Type"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="ff67-d27f-2eef-bb35" name="Enchanted Item">
-      <characteristicTypes>
-        <characteristicType id="9d2e-d14d-dd58-a829" name="Special Rules"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="065f-58ea-de5d-d3c6" name="Talisman">
-      <characteristicTypes>
-        <characteristicType id="08ca-4a32-203d-40c0" name="Special Rules"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="24d7-7f7d-a4d7-c26c" name="Arcane Item">
-      <characteristicTypes>
-        <characteristicType id="3df8-4ab0-c4bd-e2ad" name="Special Rules"/>
       </characteristicTypes>
     </profileType>
     <profileType id="cb92-d882-5ba8-11ab" name="Spell">
@@ -101,20 +81,6 @@
         <characteristicType id="1c88-efb0-083f-b945" name="Range"/>
         <characteristicType id="6ca0-d074-628f-e276" name="Strength"/>
         <characteristicType id="d3a4-721b-f750-5564" name="Special Rules"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="c119-42f4-2cbe-71a5" name="Magic Weapon">
-      <characteristicTypes>
-        <characteristicType id="4285-3917-6bf9-348b" name="Range"/>
-        <characteristicType id="a1a2-667b-2ec7-4ba7" name="Strength"/>
-        <characteristicType id="ce2d-df6c-9271-a2f8" name="Special Rules"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="7826-5c3d-faa6-1cb7" name="Magic Armour">
-      <characteristicTypes>
-        <characteristicType id="617f-cb5d-6c83-2017" name="Combat"/>
-        <characteristicType id="5b67-725f-ad85-da5b" name="Missile"/>
-        <characteristicType id="4e25-3626-a136-c38d" name="Special Rules"/>
       </characteristicTypes>
     </profileType>
     <profileType id="8625-abf8-a9a3-a423" name="Rare Duplicate Choice Table">
@@ -175,11 +141,6 @@
     <profileType id="4d1e-f578-3fd8-b4e1" name="Treacherous Gits Table">
       <characteristicTypes>
         <characteristicType id="9de9-c782-1356-dc92" name="Result"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="771a-abec-4083-83d2" name="Pick up and... Chart">
-      <characteristicTypes>
-        <characteristicType id="6486-077d-3077-6419" name="Result"/>
       </characteristicTypes>
     </profileType>
     <profileType id="9025-f9c9-08a1-7918" name="Animosity Chart">
@@ -11366,35 +11327,6 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit counts as moving through dangerous terrain until the start of the caster&apos;s next Magic phase. For every 4&quot; the unit moves while the spell is in effect, the chance of them failing the test increases by +1.</characteristic>
       </characteristics>
     </profile>
-    <profile id="3c25-7514-1f04-4c7c" name="Legionnaire" publicationId="9e23-79cb-pubN116235" page="9" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Human)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="c769-45c9-27cd-e14e" name="01 (Animosity Chart)" publicationId="8ada-88a0-cdcd-9b5e" page="60" hidden="false" typeId="9025-f9c9-08a1-7918" typeName="Animosity Chart">
-      <characteristics>
-        <characteristic name="Result" typeId="fb86-d23a-8886-cc3b">Squabble: The unit can do nothing this turn.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="df9f-2d15-5f0d-624a" name="02-05 (Animosity Chart)" publicationId="8ada-88a0-cdcd-9b5e" page="60" hidden="false" typeId="9025-f9c9-08a1-7918" typeName="Animosity Chart">
-      <characteristics>
-        <characteristic name="Result" typeId="fb86-d23a-8886-cc3b">Plan&apos;s a good &apos;un: The unit may act normally this turn.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="2624-b6e6-e171-5b72" name="06 (Animosity Chart)" publicationId="8ada-88a0-cdcd-9b5e" page="60" hidden="false" typeId="9025-f9c9-08a1-7918" typeName="Animosity Chart">
-      <characteristics>
-        <characteristic name="Result" typeId="fb86-d23a-8886-cc3b">We&apos;ll Show &apos;Em: Pivot the unit on the spot to face the nearest visible enemy unit, and then make a full (non-march) move in a straight line towards it. If there is no visible enemy, the unit must move straight ahead instead. If it is impossible for the unit to pivot to face the closest enemy, it will pivot towards it as far as it can, and will then move as far forward as it can while still keeping the enemy within its forward arc. After the move is complete the unit must immediately declare a charge against the closest visible enemy unit, if it is possible to do so. If the unit cannot declare a charge then it may carry on with the rest of its turn normally, as if it had not yet moved this turn.</characteristic>
-      </characteristics>
-    </profile>
     <profile name="Hand of Dust" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="dec1-ac22-9286-efd9" publicationId="4ff3-b09f-ec27-d6ec" page="4, 44">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
@@ -12049,4 +11981,25 @@ Magic phase.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
+  <sharedInfoGroups>
+    <infoGroup name="Aminosity Chart" id="cc7c-02cb-fdab-8b36" hidden="false">
+      <profiles>
+        <profile name="01 (Animosity Chart)" typeId="9025-f9c9-08a1-7918" typeName="Animosity Chart" hidden="false" id="c769-45c9-27cd-e14e" publicationId="8ada-88a0-cdcd-9b5e" page="60">
+          <characteristics>
+            <characteristic name="Result" typeId="fb86-d23a-8886-cc3b">Squabble: The unit can do nothing this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="02-05 (Animosity Chart)" typeId="9025-f9c9-08a1-7918" typeName="Animosity Chart" hidden="false" id="df9f-2d15-5f0d-624a" publicationId="8ada-88a0-cdcd-9b5e" page="60">
+          <characteristics>
+            <characteristic name="Result" typeId="fb86-d23a-8886-cc3b">Plan&apos;s a good &apos;un: The unit may act normally this turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="06 (Animosity Chart)" typeId="9025-f9c9-08a1-7918" typeName="Animosity Chart" hidden="false" id="2624-b6e6-e171-5b72" publicationId="8ada-88a0-cdcd-9b5e" page="60">
+          <characteristics>
+            <characteristic name="Result" typeId="fb86-d23a-8886-cc3b">We&apos;ll Show &apos;Em: Pivot the unit on the spot to face the nearest visible enemy unit, and then make a full (non-march) move in a straight line towards it. If there is no visible enemy, the unit must move straight ahead instead. If it is impossible for the unit to pivot to face the closest enemy, it will pivot towards it as far as it can, and will then move as far forward as it can while still keeping the enemy within its forward arc. After the move is complete the unit must immediately declare a charge against the closest visible enemy unit, if it is possible to do so. If the unit cannot declare a charge then it may carry on with the rest of its turn normally, as if it had not yet moved this turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+  </sharedInfoGroups>
 </gameSystem>
