@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="67" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="68" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -4615,7 +4615,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
       <selectionEntryGroups>
         <selectionEntryGroup name="Spells from the Lore of Shadow" id="3de4-d82e-f3ec-8038" hidden="false" sortIndex="3">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="12. Pit of Shades" hidden="false" id="3381-0a9e-89d1-461b" collective="false">
+            <selectionEntry type="upgrade" import="true" name="12. Pit of Shades" hidden="true" id="3381-0a9e-89d1-461b" collective="false">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3e80-8e86-149e-7490" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -12749,7 +12749,7 @@ A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Ter
       <description>Models with this rule gain a Strength bonus to all their close combat attacks (including Impact Hits and Stomps) equal to the number in the brackets in the first round of each new close combat they are involved in. Note that any attack made with a weapon that gives Mighty Blow only applies to attacks made with the weapon itself. This rule is cumulative with other sources of Mighty Blow.</description>
     </rule>
     <rule id="43ca-96e5-8a47-2d39" name="Volley Fire" publicationId="9e23-79cb-pubN66727" page="84" hidden="false">
-      <description>Weapons with this rule allow the unit to fire with all models within range in the Shooting Phase as long as at least one model in the unit can draw Line of Sight to the target. However, if they do so, they suffer -1 To Hit. A unit cannot Volley Fire if it moved earlier in the turn or if the target is within half the weapon&apos;s maximum range. Note that Volley Fire cannot be used as Stand &amp; Shoot charge reaction.</description>
+      <description>Weapons with this rule allow the unit to fire with all ranks within range in the Shooting Phase rather than just the first two. However, if they do so, all models in the third and subsequent ranks suffer -1 To Hit. A unit cannot Volley Fire if the target is within half the weapon&apos;s maximum range.</description>
     </rule>
     <rule id="917c-1397-bf0b-5856" name="Ignores Armour Saves" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
       <description>If a model has this rule, no armour saves may be taken at all, unless otherwise noted.</description>
