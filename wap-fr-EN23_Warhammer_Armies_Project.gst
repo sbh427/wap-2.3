@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="68" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="69" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -12547,8 +12547,7 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
 For every Core unit with Expendable rule in your army, you are required to include at least one other Core Unit without Expendable. For more information on this, see the Choosing Your Army chapter.</description>
     </rule>
     <rule id="668c-19e8-b764-8549" name="Stomp" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
-      <description>A model with this rule can make a Stomp in addition to its other close combat attacks (including Breath Weapons). A Stomp has Always Strikes Last, and inflicts D6 (or D3 against lone Infantry models and skirmishers) automatic hits, at the model&apos;s Strength, on one enemy Infantry, War Beasts or Swarm unit in base contact with the model and are
-randomised as Automatic Hits. 
+      <description>A model with this rule can make a Stomp in addition to its other close combat attacks (including Breath Weapons). A Stomp has Always Strikes Last, and inflicts D6 (or D3 against lone Infantry models and skirmishers) automatic hits, at the model&apos;s Strength, on one enemy Infantry, War Beasts or Swarm unit in base contact with the model and are randomised as Automatic Hits.
 
 Unless specified, any rules that apply to the model’s normal attacks do not apply to its Stomps.</description>
     </rule>
@@ -14750,15 +14749,6 @@ of their Magic Phases.</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strength 4 hits.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="90c0-d007-9eda-3ad6" name="Hellish Vigour" publicationId="4ff3-b09f-ec27-d6ec" page="4, 44" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All Undead models in the unit gain Always Strikes First and may re-roll failed To Hit rolls in Close Combat until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="6e49-e2c5-e1f2-6d5c" name="Invocation of Nehek" publicationId="4ff3-b09f-ec27-d6ec" page="4, 44" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
