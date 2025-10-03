@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="68" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="69" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -330,27 +330,27 @@
   <forceEntries>
     <forceEntry id="6ee4-77bf-4402-f8ab" name="Standard" hidden="false">
       <categoryLinks>
-        <categoryLink id="331b-a879-f664-e74e" name="_Lords_" hidden="false" targetId="d280-b7df-c185-2ba5" primary="false">
+        <categoryLink id="331b-a879-f664-e74e" name="Lords" hidden="false" targetId="d280-b7df-c185-2ba5" primary="false">
           <constraints>
             <constraint field="limit::points" scope="roster" value="25" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="8877-5cef-efc0-d65b" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="e3e8-f89d-a94a-776d" name="_Heroes_" hidden="false" targetId="d38a-73da-883b-bab9" primary="false">
+        <categoryLink id="e3e8-f89d-a94a-776d" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="false">
           <constraints>
             <constraint field="limit::points" scope="roster" value="35" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPercentage" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="ad45-e317-2036-b755" name="_Core_" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="false">
+        <categoryLink id="ad45-e317-2036-b755" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="false">
           <constraints>
             <constraint field="limit::points" scope="roster" value="25" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="minPercentage" type="min"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="9241-6f7e-063e-d674" name="_Special_" hidden="false" targetId="fc26-7737-f7cb-8977" primary="false">
+        <categoryLink id="9241-6f7e-063e-d674" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="false">
           <constraints>
             <constraint field="limit::points" scope="roster" value="50" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPercentage" type="max"/>
           </constraints>
         </categoryLink>
-        <categoryLink id="6655-f7c6-f26b-92b6" name="_Rare_" hidden="false" targetId="0eb4-f376-7725-b05b" primary="false">
+        <categoryLink id="6655-f7c6-f26b-92b6" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="false">
           <constraints>
             <constraint field="limit::points" scope="roster" value="25" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPercentage" type="max"/>
           </constraints>
@@ -8651,7 +8651,7 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
         <infoLink name="02 (Pick Up and...)" id="1279-a72e-b1d7-75c3" hidden="false" targetId="8845-1216-ef80-8109" type="profile"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="_Rare_" hidden="false" id="f709-ffd7-45f1-9aa6" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Rare" hidden="false" id="f709-ffd7-45f1-9aa6" targetId="0eb4-f376-7725-b05b" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Hand Weapon" hidden="false" id="f71f-e45d-df0b-e0bc" collective="false" sortIndex="1">
@@ -8689,7 +8689,7 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
         <infoLink name="Giant" id="3ca8-9ddf-35b0-4705" hidden="false" type="profile" targetId="fddd-b77e-9876-320d"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="_Rare_" hidden="false" id="b2c5-5dcd-05dd-889c" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Rare" hidden="false" id="b2c5-5dcd-05dd-889c" targetId="0eb4-f376-7725-b05b" primary="true"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Hand Weapon" hidden="false" id="3a08-11d8-9130-1c10" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
@@ -9376,7 +9376,7 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Chaos Warhounds" hidden="false" id="8cdb-f7a0-9ebc-1109" collective="false">
       <categoryLinks>
-        <categoryLink name="_Core_" hidden="false" id="ca26-d3c2-e28d-5689" targetId="b876-2856-f1c2-c4f0" primary="true"/>
+        <categoryLink name="Core" hidden="false" id="ca26-d3c2-e28d-5689" targetId="b876-2856-f1c2-c4f0" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Chaos Warhound" hidden="false" id="9a50-3179-2076-d48f" collective="false">
@@ -9458,7 +9458,7 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Chaos Trolls" hidden="false" id="a318-4aee-10c0-31b8" collective="false">
       <categoryLinks>
-        <categoryLink name="_Special_" hidden="false" id="773d-e971-07ca-387b" targetId="fc26-7737-f7cb-8977" primary="true"/>
+        <categoryLink name="Special" hidden="false" id="773d-e971-07ca-387b" targetId="fc26-7737-f7cb-8977" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Chaos Troll" hidden="false" id="29f1-bd7b-cab0-eeb5" collective="false">
@@ -9557,7 +9557,7 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Harpies" hidden="false" id="e13e-de12-d6ec-c8a7" collective="false">
       <categoryLinks>
-        <categoryLink name="_Core_" hidden="false" id="20bc-02fd-7f31-99cf" targetId="b876-2856-f1c2-c4f0" primary="true"/>
+        <categoryLink name="Core" hidden="false" id="20bc-02fd-7f31-99cf" targetId="b876-2856-f1c2-c4f0" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Harpy" hidden="false" id="ef3c-f2de-29b6-bbb3" collective="false">
@@ -9614,7 +9614,7 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Chaos Spawn" hidden="false" id="eb04-809f-24c4-89ec" collective="false">
       <categoryLinks>
-        <categoryLink name="_Special_" hidden="false" id="2fd1-8fa6-61f1-adf9" targetId="fc26-7737-f7cb-8977" primary="true"/>
+        <categoryLink name="Special" hidden="false" id="2fd1-8fa6-61f1-adf9" targetId="fc26-7737-f7cb-8977" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Chaos Spawn" hidden="false" id="daf1-45ba-8314-7445" collective="false">
@@ -9652,7 +9652,7 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
             <cost name="pts" typeId="points" value="40"/>
           </costs>
           <categoryLinks>
-            <categoryLink name="_Special_" hidden="false" id="ea0f-c556-3015-4399" targetId="fc26-7737-f7cb-8977" primary="true"/>
+            <categoryLink name="Special" hidden="false" id="ea0f-c556-3015-4399" targetId="fc26-7737-f7cb-8977" primary="true"/>
           </categoryLinks>
           <entryLinks>
             <entryLink import="true" name="Spawn of Chaos" hidden="false" id="eae3-e941-62f6-186f" type="selectionEntryGroup" targetId="71e8-374b-3fb2-2eb9"/>
@@ -9686,7 +9686,7 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
         <infoLink name="Unbreakable" id="30d7-f8f0-9c1a-948f" hidden="false" targetId="1c9d-2d99-6222-2853" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="_Rare_" hidden="false" id="e02d-9d58-0b36-d760" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Rare" hidden="false" id="e02d-9d58-0b36-d760" targetId="0eb4-f376-7725-b05b" primary="true"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="195"/>
@@ -9716,7 +9716,7 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
         <infoLink name="Fly (8)" id="7434-3afa-bbe6-767f" hidden="false" targetId="0a9a-bfcb-1a9d-5609" type="rule"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="_Rare_" hidden="false" id="15e6-094e-5229-e0e3" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Rare" hidden="false" id="15e6-094e-5229-e0e3" targetId="0eb4-f376-7725-b05b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Upgrades" id="f007-8d08-6604-0dad" hidden="false" collective="false" import="true">
@@ -9795,7 +9795,7 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Dragon Ogres (Shaggoth)" hidden="false" id="d781-5ec4-8381-16d5">
       <categoryLinks>
-        <categoryLink name="_Special_" hidden="false" id="5d8a-0763-d2a0-4988" targetId="fc26-7737-f7cb-8977" primary="true"/>
+        <categoryLink name="Special" hidden="false" id="5d8a-0763-d2a0-4988" targetId="fc26-7737-f7cb-8977" primary="true"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Dragon Ogre" hidden="false" id="ab1b-0ac6-0430-cfe4" type="selectionEntry" targetId="7d5f-f65e-9739-0714"/>
@@ -9857,7 +9857,7 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
         <infoLink name="Storm Call" id="a6b9-8531-1e0d-f760" hidden="false" type="profile" targetId="db98-698f-5fae-ba03"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink name="_Rare_" hidden="false" id="d4ee-0c92-1015-328b" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Rare" hidden="false" id="d4ee-0c92-1015-328b" targetId="0eb4-f376-7725-b05b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Primary Weapon" id="cebd-9c8b-035d-e7d7" hidden="false" collective="false" import="true" defaultSelectionEntryId="be5c-cb48-ba09-303c" sortIndex="1">
@@ -10026,7 +10026,7 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Dragon Ogres" hidden="false" id="40ad-4612-7809-d541">
       <categoryLinks>
-        <categoryLink name="_Rare_" hidden="false" id="fb5d-d4e8-e4c8-25e5" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Rare" hidden="false" id="fb5d-d4e8-e4c8-25e5" targetId="0eb4-f376-7725-b05b" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Command Group" id="7d32-bf8a-cf7d-5d63" hidden="false" collective="false" import="true">
