@@ -235,6 +235,7 @@
                 <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
                 <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true"/>
                 <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
