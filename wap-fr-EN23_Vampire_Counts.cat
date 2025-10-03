@@ -597,7 +597,7 @@
       <categoryLinks>
         <categoryLink id="2945-0459-7611-b653" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="true"/>
         <categoryLink name="Undead" hidden="false" id="897e-1014-3eea-c1fa" targetId="10fa-658f-38fd-4cad" primary="false"/>
-        <categoryLink name="Squeleton" hidden="false" id="6517-6971-e97a-e9ff" targetId="d7ff-30f3-911d-bde1" primary="false"/>
+        <categoryLink name="Skeleton" hidden="false" id="6517-6971-e97a-e9ff" targetId="d7ff-30f3-911d-bde1" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="f869-cd4f-51ba-a9c1" name="Skeleton Warrior" hidden="false" collective="false" import="true" type="model">
@@ -1362,6 +1362,29 @@
             </entryLink>
           </entryLinks>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="The Drakenhof Guard" hidden="false" id="5943-5b6e-1415-29c8" sortIndex="1">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="b7bd-65e7-331a-81fe" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="85a0-c944-d2d8-9118" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="points">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="unit" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="0ddd-29eb-4963-dc7c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <rules>
+            <rule name="The Drakenhof Guard" id="be05-90bd-beb4-8162" hidden="false">
+              <description>This unit ignores casualties caused by being Unstable.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="e723-38ac-6bd6-a102" name="Command Group" hidden="false" collective="false" import="true">
@@ -1723,6 +1746,28 @@
               </constraints>
             </entryLink>
           </entryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="The Devils of Schwartzhafen" hidden="false" id="4624-8b30-407e-6db2" sortIndex="1">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="60f3-a283-2e76-fc62" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7d3c-a9d8-1d91-5253" includeChildSelections="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="0ddd-29eb-4963-dc7c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="5" field="points">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="unit" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Terror" id="1981-8f9e-8f96-77dd" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
+            <infoLink name="Scouts" id="69af-9996-fbdd-6517" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -2491,7 +2536,7 @@ A unit cannot be taken beyond its starting size unless specified, and no single 
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="be70-827c-f9ca-2194" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="f555-67f2-f8e8-8991" name="Zacharias" hidden="false" collective="false" import="true" type="model" sortIndex="15">
+            <selectionEntry id="f555-67f2-f8e8-8991" name="Zacharias the Everliving" hidden="false" collective="false" import="true" type="model" sortIndex="15">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="46be-bb71-85ba-e6f9" type="max"/>
               </constraints>
@@ -2506,81 +2551,20 @@ A unit cannot be taken beyond its starting size unless specified, and no single 
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">9</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry, Special Character, Vampire, Necrarch</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Vampire, Necrarch)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <infoLinks>
                 <infoLink id="090b-9111-332e-66a6" name="The Red Thirst" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
                 <infoLink id="09e9-3358-d41c-afb9" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
-                <infoLink id="aeb8-4eb2-b8e6-cfff" name="The Generals of Undeath" hidden="false" targetId="f189-b1bd-2258-4c02" type="rule"/>
-                <infoLink id="ffcb-5178-e971-1d88" name="Characters and Units" hidden="false" targetId="6b8d-1936-904c-2fba" type="rule"/>
+                <infoLink name="Master of the Black Arts" id="1b62-b164-3178-efcc" hidden="false" type="profile" targetId="7bf8-c5c5-5a98-ba9d"/>
+                <infoLink name="Dark Acolyte" id="ff45-49fd-4249-14d7" hidden="false" type="profile" targetId="ae25-dd70-7c22-56e0"/>
+                <infoLink name="Forbidden Lore" id="6b65-099e-fbf1-0501" hidden="false" type="profile" targetId="503d-52fc-dcf6-5c46"/>
               </infoLinks>
               <selectionEntries>
-                <selectionEntry id="e0c4-005b-e10f-ebd4" name="Wizard Level 4" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9531-a14b-a54a-2c95" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="217f-b0eb-7cd9-2090" type="min"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="b232-1fba-719d-e89b" name="Zacharias" publicationId="10a5-5781-61f5-86ae" page="45" hidden="false" typeId="0ce6-a5f9-6184-218d" typeName="Wizard">
-                      <characteristics>
-                        <characteristic name="Wizard Level" typeId="7f8d-5707-7251-c1a5">4</characteristic>
-                        <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">5</characteristic>
-                        <characteristic name="Spell Level" typeId="c5a7-d8e1-9c88-2f0e">1-4</characteristic>
-                        <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">5</characteristic>
-                        <characteristic name="Bonus to Casting/Dispel Value" typeId="7261-e23f-ab6d-b4af">2</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <selectionEntryGroups>
-                    <selectionEntryGroup id="04df-6831-1adc-5eaa" name="Lore of Magic" hidden="false" collective="false" import="true">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="11d8-5283-a343-364b" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fa76-1c7b-5603-2743" type="max"/>
-                      </constraints>
-                      <entryLinks>
-                        <entryLink id="e73d-9030-de28-8948" name="Lore of Necromancy 4" hidden="false" collective="false" import="true" targetId="6911-7e7d-e0fe-98e9" type="selectionEntry"/>
-                        <entryLink id="0046-ae4e-ca27-dad8" name="Lore of Light 4" hidden="false" collective="false" import="true" targetId="d695-9fe8-75bd-4314" type="selectionEntry"/>
-                        <entryLink id="1326-4b82-d5a6-1758" name="Lore of Fire 4" hidden="false" collective="false" import="true" targetId="7267-3a87-9443-028f" type="selectionEntry"/>
-                        <entryLink id="247e-6ef1-a743-e807" name="Lore of Heavens 4" hidden="false" collective="false" import="true" targetId="5e84-f1f7-3b99-29be" type="selectionEntry"/>
-                        <entryLink id="b494-6905-ade0-187d" name="Lore of Metal 4" hidden="false" collective="false" import="true" targetId="0af6-662d-dbe4-b46f" type="selectionEntry"/>
-                        <entryLink id="05ec-b941-529d-181d" name="Lore of Shadow 4" hidden="false" collective="false" import="true" targetId="4a4e-256f-f9f4-9b77" type="selectionEntry"/>
-                        <entryLink id="1f76-9f03-e8f8-1706" name="Lore of Death 4" hidden="false" collective="false" import="true" targetId="da4f-9b5a-bc7d-f2e8" type="selectionEntry"/>
-                        <entryLink id="7923-fe9c-674d-ac23" name="Lore of Beasts 4" hidden="false" collective="false" import="true" targetId="7adf-a2bc-d490-bf01" type="selectionEntry"/>
-                      </entryLinks>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="6eb9-71f4-a5a8-33fb" name="Dark Acolyte" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="68b0-74ad-71ba-da6f" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9b29-9f1b-62ff-b579" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="beef-8462-d3fb-81e5" name="Dark Acolyte" hidden="false" targetId="ae25-dd70-7c22-56e0" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="fccc-ae05-734d-8ddd" name="Forbidden Lore" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a852-3557-5b31-9569" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="60b8-f0f0-c666-cbc9" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="c527-1475-3048-d73c" name="Forbidden Lore" hidden="false" targetId="503d-52fc-dcf6-5c46" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="6982-737d-b9e5-0c7a" name="Scrolls of Semhtep" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="6982-737d-b9e5-0c7a" name="Scrolls of Semhtep" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f239-7faa-f8b6-f941" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c4cd-361a-2c07-1ae5" type="max"/>
@@ -2596,39 +2580,7 @@ A unit cannot be taken beyond its starting size unless specified, and no single 
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="dc9b-9bff-2447-df97" name="Master of the Black Arts" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8ef1-b5ae-ee27-f65c" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0f5c-20c7-02da-a654" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="54eb-9034-c543-9b67" name="Master of the Black Arts" hidden="false" targetId="7bf8-c5c5-5a98-ba9d" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="25e4-41e4-4ead-87ec" name="Zombie Dragon" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f575-7174-4323-046f" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b2c5-0788-e787-77c4" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="ac08-9de6-77a5-f260" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-                    <infoLink id="42b6-bfc2-9875-0e02" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                    <infoLink id="7d34-90f4-d2f9-ba39" name="Stomp (1d6)" hidden="false" targetId="537e-8497-f0f2-8092" type="rule"/>
-                    <infoLink id="c9f8-4dd6-c49b-a86d" name="Zombie Dragon" hidden="false" targetId="50c3-d69e-27fe-c4f6" type="profile"/>
-                    <infoLink id="d10a-a2ec-4538-dbe7" name="Fly (7)" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
-                    <infoLink id="86fa-e72d-2f0f-e55d" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
-                    <infoLink id="e7e6-3861-e407-02ce" name="Swarm of Flies" hidden="false" targetId="ce29-896f-bc4f-f8ed" type="rule"/>
-                    <infoLink id="a699-3649-ac64-cd50" name="Pestilent Breath" hidden="false" targetId="e50e-8c70-0e06-e925" type="rule"/>
-                    <infoLink id="8b3b-3218-cf35-3444" name="Natural Armour (5+)" hidden="false" targetId="306d-711a-1300-587f" type="rule"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="52b8-a3a9-e301-3906" name="Book of Nagash" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="52b8-a3a9-e301-3906" name="Book of Nagash" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3c1b-4ff1-8770-7d75" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="782e-f386-1d6b-233c" type="max"/>
@@ -2636,7 +2588,7 @@ A unit cannot be taken beyond its starting size unless specified, and no single 
                   <profiles>
                     <profile id="c9a2-5c7c-6c71-6768" name="Book of Nagash" publicationId="10a5-5781-61f5-86ae" page="45" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
                       <characteristics>
-                        <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Book of Nagash allows Zacharias to restore 2D6 Wounds instead of D6 for Infantry when casting the spell Invocation of Nehek from the Lore of Necromancy.</characteristic>
+                        <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">When casting the spell Invocation of Nehek from the Lore of Necromancy, Zacharias restores 3D6 Wounds instead of 2D6 for Core Units and 2D6 Wounds for Special Units (except Cavalry) instead of D6. Characters, Special Units that are Cavalry and Rare Units regain D6 Wounds per successful casting.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -2644,7 +2596,7 @@ A unit cannot be taken beyond its starting size unless specified, and no single 
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="7d1f-7ed0-981e-9e5a" name="Circlet of Rathek" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="7d1f-7ed0-981e-9e5a" name="Circlet of Rathek" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a990-4217-a244-d51f" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5551-0cde-a29d-17b5" type="max"/>
@@ -2660,7 +2612,7 @@ A unit cannot be taken beyond its starting size unless specified, and no single 
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="de19-baac-61d7-6b3a" name="Staff of Kaphamon" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="de19-baac-61d7-6b3a" name="Staff of Kaphamon" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="704e-ff32-c102-1c6e" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2fde-6ba4-000a-0ba4" type="max"/>
@@ -2673,19 +2625,12 @@ A unit cannot be taken beyond its starting size unless specified, and no single 
                     </profile>
                   </profiles>
                   <infoLinks>
-                    <infoLink id="9f60-f746-9cb4-2c89" name="Gaze of Nagash (Bound Spell 4+)" hidden="false" targetId="b215-84f3-231c-b9df" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="6055-7f92-3c1d-19fc" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b28a-a730-24f2-fd4c" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a9cd-b5b6-67eb-eab4" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="a790-ca33-4afa-4331" name="Hand Weapon" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
+                    <infoLink id="9f60-f746-9cb4-2c89" name="Gaze of Nagash" hidden="false" targetId="92c2-d7f9-a91b-7c5a" type="profile">
+                      <modifiers>
+                        <modifier type="set" value="Bound Spell" field="576b-eaa1-0bd1-3f7a"/>
+                        <modifier type="set" value="4+" field="d6bf-647e-ba69-e8a0"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
@@ -2693,11 +2638,54 @@ A unit cannot be taken beyond its starting size unless specified, and no single 
                 </selectionEntry>
               </selectionEntries>
               <entryLinks>
-                <entryLink id="0386-8bb4-167f-7b4d" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry"/>
+                <entryLink id="0386-8bb4-167f-7b4d" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
+                <entryLink import="true" name="The Generals of Undeath" hidden="false" id="a86a-7e17-5b9f-4225" type="selectionEntry" targetId="02a1-7292-f96f-b6bf" sortIndex="2"/>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="2849-f8e4-5b4f-3810" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="2.5">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="821b-6a46-b832-2575"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Zombie Dragon" hidden="false" id="6eb1-23a8-c012-c0f2" type="selectionEntry" targetId="330e-f36d-9f8a-dce6" sortIndex="7">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a35b-0230-60be-0420"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Loremaster" hidden="false" id="cbe8-da57-471a-17fa" type="selectionEntry" targetId="a2bf-14a5-6723-7157" sortIndex="8"/>
+                <entryLink import="true" name="Wizard Level 4" hidden="false" id="4758-a15c-752e-1856" type="selectionEntry" targetId="5460-3929-58ef-71ba" sortIndex="9">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="19b6-1ed4-7cb2-d850-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="19b6-1ed4-7cb2-d850-max"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="725"/>
               </costs>
+              <categoryLinks>
+                <categoryLink name="Necrarch" hidden="false" id="c20c-6e23-e49a-68b5" targetId="9311-1c3e-4507-2477" primary="false"/>
+                <categoryLink name="Vampire" hidden="false" id="5caf-4efa-e567-d02a" targetId="27c2-45b8-9859-dda4" primary="false"/>
+              </categoryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Lores of Magic" id="18fa-9ba3-5c01-a797" hidden="false" sortIndex="10">
+                  <entryLinks>
+                    <entryLink import="true" name="Lore of Necromancy" hidden="false" id="c708-5007-c123-6a7c" type="selectionEntry" targetId="f945-02e4-f4ac-718e"/>
+                    <entryLink import="true" name="Lore of Fire" hidden="false" id="ba90-ee60-1d3e-ce79" type="selectionEntry" targetId="4d24-c803-7a05-0894"/>
+                    <entryLink import="true" name="Lore of Death" hidden="false" id="70e3-2b1d-6a73-bb9b" type="selectionEntry" targetId="bc0d-47f8-7220-1e16"/>
+                    <entryLink import="true" name="Lore of Heavens" hidden="false" id="7c94-f4ff-9a4d-3a72" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee"/>
+                    <entryLink import="true" name="Lore of Light" hidden="false" id="47f0-2ea1-559a-608a" type="selectionEntry" targetId="c543-a893-3879-cf32"/>
+                    <entryLink import="true" name="Lore of Metal" hidden="false" id="7065-721e-dce4-ad46" type="selectionEntry" targetId="527f-89f1-1b92-a01d"/>
+                    <entryLink import="true" name="Lore of Beasts" hidden="false" id="7904-637b-4247-b013" type="selectionEntry" targetId="b436-b410-dd41-304f"/>
+                    <entryLink import="true" name="Lore of Shadow" hidden="false" id="4e65-c984-a97f-ea93" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67"/>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1c07-d4df-40a4-5edd-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1c07-d4df-40a4-5edd-max"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
             <selectionEntry id="3e19-9866-95ed-f9fc" name="Belladamma Volga" hidden="false" collective="false" import="true" type="model" sortIndex="6">
               <constraints>
@@ -3033,8 +3021,8 @@ A unit cannot be taken beyond its starting size unless specified, and no single 
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">7</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">10</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry, Special Character, Vampire, Blood Dragon</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Vampire, Blood Dragon)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3043,91 +3031,29 @@ A unit cannot be taken beyond its starting size unless specified, and no single 
                 <infoLink id="53ac-92a2-7065-4fe8" name="The Red Thirst" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
                 <infoLink id="c4db-4b40-7ae7-83bb" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
                 <infoLink id="364b-b807-e5ba-fc2d" name="Martial Honour" hidden="false" targetId="05c0-34fc-bc0d-6972" type="rule"/>
-                <infoLink id="5ea4-15f0-b89e-599b" name="The Generals of Undeath" hidden="false" targetId="f189-b1bd-2258-4c02" type="rule"/>
-                <infoLink id="0364-f19e-5d5b-49ff" name="Characters and Units" hidden="false" targetId="6b8d-1936-904c-2fba" type="rule"/>
+                <infoLink name="Heart Piercing" id="7b1d-f082-60ea-74cb" hidden="false" type="profile" targetId="8c95-75e1-e402-7625"/>
+                <infoLink name="Red Fury" id="9ddf-2161-68a5-65e7" hidden="false" type="profile" targetId="7330-bede-2c21-f332"/>
+                <infoLink name="Honour or Death" id="ea40-bd6e-dd99-9a1a" hidden="false" type="profile" targetId="d716-077b-5be4-4e1f"/>
               </infoLinks>
               <selectionEntries>
-                <selectionEntry id="c75c-1b7a-ae27-70ef" name="Wizard Level 1" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c29b-0f51-082a-fc6c" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fd30-7144-1a50-621d" type="min"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="2a21-8912-64c6-438c" name="The Red Duke" publicationId="10a5-5781-61f5-86ae" page="49" hidden="false" typeId="0ce6-a5f9-6184-218d" typeName="Wizard">
-                      <characteristics>
-                        <characteristic name="Wizard Level" typeId="7f8d-5707-7251-c1a5">1</characteristic>
-                        <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">2</characteristic>
-                        <characteristic name="Spell Level" typeId="c5a7-d8e1-9c88-2f0e">1</characteristic>
-                        <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">2</characteristic>
-                        <characteristic name="Bonus to Casting/Dispel Value" typeId="7261-e23f-ab6d-b4af">1</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <selectionEntryGroups>
-                    <selectionEntryGroup id="3982-21c4-4ea8-942c" name="Lore of Magic" hidden="false" collective="false" import="true">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="197b-5c06-2711-61ac" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f022-0555-4643-6d08" type="max"/>
-                      </constraints>
-                      <entryLinks>
-                        <entryLink id="331b-7b37-640f-b6db" name="Lore of Necromancy VC 1" hidden="false" collective="false" import="true" targetId="78f7-c422-8bd9-c4a9" type="selectionEntry"/>
-                      </entryLinks>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="4ed7-bda3-29a2-f81e" name="The Armour of Blood" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="4ed7-bda3-29a2-f81e" name="The Armour of Blood" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d304-18ce-d46d-6015" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7c6f-60b4-6fbe-4d66" type="max"/>
                   </constraints>
-                  <profiles>
-                    <profile id="62a9-ae7b-a1ce-9caa" name="The Armour of Blood" publicationId="10a5-5781-61f5-86ae" page="49" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-                      <characteristics>
-                        <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                        <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                        <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. This item allows the wielder to automatically regain Wounds through the Red Thirst.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
-                </selectionEntry>
-                <selectionEntry id="f926-b4f1-50e9-6f78" name="Nightmare" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2cea-5508-ed0e-6d30" type="max"/>
-                  </constraints>
                   <infoLinks>
-                    <infoLink id="6909-1053-0350-b7e2" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-                    <infoLink id="b1e5-35e3-e175-7cc6" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                    <infoLink id="d10c-482f-9356-d64c" name="Impact Hits (1)" hidden="false" targetId="bb3b-3ca8-fcbc-a78b" type="rule"/>
-                    <infoLink id="fe7f-b0ab-e72d-e6d6" name="Nightmare" hidden="false" targetId="1028-e8c0-ed9b-343b" type="profile"/>
+                    <infoLink name="Heavy Armour" id="100d-2c86-98d9-9e8b" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
+                      <modifiers>
+                        <modifier type="append" value="This item allows the wielder to automatically regain Wounds through the Red Thirst." field="ff58-91e4-84d7-e6e4"/>
+                        <modifier type="set" value="The Armour of Blood" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
-                  <categoryLinks>
-                    <categoryLink id="fgmy-QnBx-OKLd-EMbi" name="(Mount)" hidden="false" targetId="(Mount)" primary="false"/>
-                  </categoryLinks>
-                  <selectionEntries>
-                    <selectionEntry id="d7f8-a234-8c1e-bc07" name="Barding" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="57ea-4603-cd67-d49f" type="max"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ec86-6299-0ee2-8b1a" type="min"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="9f92-783e-9307-3f2d" name="Barding" hidden="false" targetId="7228-95d3-3384-f234" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                  <costs>
-                    <cost name="pts" typeId="points" value="27"/>
-                  </costs>
                 </selectionEntry>
-                <selectionEntry id="4a22-6699-6a0d-c4fb" name="Golden Death" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="4a22-6699-6a0d-c4fb" name="Golden Death" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3017-99ab-cac5-5b90" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b646-35ab-bb20-826d" type="max"/>
@@ -3145,49 +3071,41 @@ A unit cannot be taken beyond its starting size unless specified, and no single 
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="7865-1723-a8d5-7346" name="Heart Piercing" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="85df-a7d2-985a-1d71" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7ec9-051f-cd21-c20e" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="6386-dfd7-b1fe-ada5" name="Heart Piercing" hidden="false" targetId="8c95-75e1-e402-7625" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="daed-c8ec-f8ee-bcb2" name="Honour or Death" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="af1d-5fad-c9b8-a883" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c02d-2859-15b9-50cf" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="caeb-bf46-a803-24e3" name="Honour or Death" hidden="false" targetId="d716-077b-5be4-4e1f" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="f7d2-ce8a-0b6c-ff3c" name="Red Fury" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1de4-5fff-6f66-cbb0" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4dd8-864f-bb25-e7e4" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="a8c3-0556-ca43-a8cf" name="Red Fury" hidden="false" targetId="7330-bede-2c21-f332" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
               </selectionEntries>
               <entryLinks>
-                <entryLink id="d1f8-6f12-d1b7-f417" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry"/>
+                <entryLink id="d1f8-6f12-d1b7-f417" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
+                <entryLink import="true" name="The Generals of Undeath" hidden="false" id="5870-46da-1b20-4d6c" type="selectionEntry" targetId="02a1-7292-f96f-b6bf" sortIndex="2"/>
+                <entryLink import="true" name="Nightmare" hidden="false" id="47ad-042e-b365-2661" type="selectionEntry" targetId="288d-c0a8-77de-61e7" sortIndex="5">
+                  <entryLinks>
+                    <entryLink import="true" name="Barding" hidden="false" id="ec12-caca-f4cc-0ef1" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2ac3-6298-d700-14aa"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="26"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Wizard Level 1" hidden="false" id="91bd-cb3a-c4e1-c376" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8" sortIndex="6">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e889-7b52-2e61-71e2-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e889-7b52-2e61-71e2-max"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Lore of Necromancy" hidden="false" id="d654-ddfd-0bd1-cf17" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="7">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4a9d-063a-cb96-5f27"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="375"/>
               </costs>
+              <categoryLinks>
+                <categoryLink name="Vampire" hidden="false" id="1148-591b-29a6-7d4c" targetId="27c2-45b8-9859-dda4" primary="false"/>
+                <categoryLink name="Blood Dragon" hidden="false" id="156f-a6e3-6613-9411" targetId="4b62-4ab2-2bd8-72e7" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry id="d2de-de9a-7d42-a21d" name="Vlad von Carstein" hidden="false" collective="false" import="true" type="model" sortIndex="8">
               <constraints>
@@ -3296,8 +3214,8 @@ A unit cannot be taken beyond its starting size unless specified, and no single 
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">7</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">10</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry, Special Character, Vampire, Blood Dragon</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Special Character, Vampire, Blood Dragon)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3311,11 +3229,12 @@ A unit cannot be taken beyond its starting size unless specified, and no single 
                 <infoLink id="3843-c8fe-37c3-b9f1" name="The Red Thirst" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
                 <infoLink id="5eba-49d6-3596-ba11" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
                 <infoLink id="983c-5ec6-4cb4-6ffb" name="Martial Honour" hidden="false" targetId="05c0-34fc-bc0d-6972" type="rule"/>
-                <infoLink id="9d57-e410-aebb-b73d" name="The Generals of Undeath" hidden="false" targetId="f189-b1bd-2258-4c02" type="rule"/>
-                <infoLink id="3407-afdb-d5a8-b3e3" name="Characters and Units" hidden="false" targetId="6b8d-1936-904c-2fba" type="rule"/>
+                <infoLink name="Doomrider" id="06a8-ebe0-6d54-dfb8" hidden="false" type="profile" targetId="26be-b783-daf0-5593"/>
+                <infoLink name="Warrior Pride" id="3614-d1ed-9805-8e44" hidden="false" type="profile" targetId="e321-5685-54ee-4447"/>
+                <infoLink name="Dread Knight" id="57e8-fdad-8808-3aed" hidden="false" type="profile" targetId="6eec-e089-ed07-e9e0"/>
               </infoLinks>
               <selectionEntries>
-                <selectionEntry id="4e96-e1f2-ba59-3223" name="Blood Chalice" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="4e96-e1f2-ba59-3223" name="Blood Chalice" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a169-648a-080b-f36b" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2687-0181-69c8-239a" type="max"/>
@@ -3335,56 +3254,24 @@ Blood Chalice allowing them to do one of the following:
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="2568-60a1-7d00-ee6b" name="Wizard Level 2" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e866-0a01-5395-0315" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0efa-fc9e-4700-bcf8" type="min"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="5d2f-dad0-764c-a94c" name="Walach Harkon" publicationId="10a5-5781-61f5-86ae" page="48" hidden="false" typeId="0ce6-a5f9-6184-218d" typeName="Wizard">
-                      <characteristics>
-                        <characteristic name="Wizard Level" typeId="7f8d-5707-7251-c1a5">2</characteristic>
-                        <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">3</characteristic>
-                        <characteristic name="Spell Level" typeId="c5a7-d8e1-9c88-2f0e">1-2</characteristic>
-                        <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">3</characteristic>
-                        <characteristic name="Bonus to Casting/Dispel Value" typeId="7261-e23f-ab6d-b4af">1</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <selectionEntryGroups>
-                    <selectionEntryGroup id="3581-234c-538e-07a9" name="Lore of Magic" hidden="false" collective="false" import="true" defaultSelectionEntryId="5b5a-b93e-ccc6-2d8e">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1b4a-5e0c-b924-f775" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="072c-bb20-19b8-13e7" type="max"/>
-                      </constraints>
-                      <entryLinks>
-                        <entryLink id="5b5a-b93e-ccc6-2d8e" name="Lore of Necromancy 2" hidden="false" collective="false" import="true" targetId="89b6-7ee0-f794-abe9" type="selectionEntry"/>
-                      </entryLinks>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="d5ea-5b41-d2e2-58ff" name="Walach&apos;s Bloody Hauberk" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="d5ea-5b41-d2e2-58ff" name="Walach&apos;s Bloody Hauberk" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="52cc-4141-a58e-d24e" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f5f5-ee75-47f4-98f7" type="max"/>
                   </constraints>
-                  <profiles>
-                    <profile id="a52f-6032-c6d2-19be" name="Walach&apos;s Bloody Hauberk" publicationId="10a5-5781-61f5-86ae" page="48" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-                      <characteristics>
-                        <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                        <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                        <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. This item gives the wielder a Ward save (5+).</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
+                  <infoLinks>
+                    <infoLink name="Heavy Armour" id="8060-3d8a-dc56-6f9d" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
+                      <modifiers>
+                        <modifier type="append" value="Ward save (5+)" field="ff58-91e4-84d7-e6e4"/>
+                        <modifier type="set" value="Walach&apos;s Bloody Hauberk" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
                 </selectionEntry>
-                <selectionEntry id="c7b2-4f19-38a5-808c" name="Blood Dragon Standard" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="c7b2-4f19-38a5-808c" name="Blood Dragon Standard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8caf-692d-9186-3d0e" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="81ae-2590-dae8-0ec4" type="max"/>
@@ -3400,7 +3287,7 @@ Blood Chalice allowing them to do one of the following:
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="97d3-55cc-d2f1-d9ee" name="Crimson Blade" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="97d3-55cc-d2f1-d9ee" name="Crimson Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b5e9-31ae-a29d-179a" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6d1e-73df-ee6f-84e0" type="max"/>
@@ -3433,117 +3320,61 @@ Blood Chalice allowing them to do one of the following:
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="51be-d04e-8068-84f3" name="Warrior Pride" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f528-dfd1-a5d5-8cbd" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2bb5-fe36-c114-fb2d" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="505f-210d-5484-a1b8" name="Warrior Pride" hidden="false" targetId="e321-5685-54ee-4447" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="6cff-b93b-0c12-97bf" name="Dread Knight" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fb05-7239-c622-e689" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="aeba-eec7-4749-fa36" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="1102-6a0d-92cd-4cd0" name="Dread Knight" hidden="false" targetId="6eec-e089-ed07-e9e0" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="4214-72c6-6f33-3881" name="Doomrider" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4348-4783-09ed-797a" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e2e4-a62e-be54-90fa" type="min"/>
-                  </constraints>
-                  <rules>
-                    <rule id="ab3b-5193-a3d0-2dd4" name="Model must be on a Nightmare" hidden="false">
-                      <description>Only for models on a Nightmare</description>
-                    </rule>
-                  </rules>
-                  <infoLinks>
-                    <infoLink id="9aa1-c496-0498-cd77" name="Doomrider" hidden="false" targetId="26be-b783-daf0-5593" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
               </selectionEntries>
               <selectionEntryGroups>
-                <selectionEntryGroup id="83bf-d768-2b6f-97ff" name="Mount" hidden="false" collective="false" import="true" defaultSelectionEntryId="76d3-f5e1-7333-3d94">
+                <selectionEntryGroup id="83bf-d768-2b6f-97ff" name="Mount" hidden="false" collective="false" import="true" defaultSelectionEntryId="76d3-f5e1-7333-3d94" sortIndex="7">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a263-c690-e99c-c355" type="max"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8fc1-918a-c975-9a38" type="min"/>
                   </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="76d3-f5e1-7333-3d94" name="Nightmare" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5e47-079b-5bf1-cdb6" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="fd53-27df-4f8e-6755" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-                        <infoLink id="cc63-a98f-d059-2313" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                        <infoLink id="8dbd-1176-10ea-7e57" name="Impact Hits (1)" hidden="false" targetId="bb3b-3ca8-fcbc-a78b" type="rule"/>
-                        <infoLink id="1d92-7e95-87ae-8779" name="Nightmare" hidden="false" targetId="1028-e8c0-ed9b-343b" type="profile"/>
-                      </infoLinks>
-                      <categoryLinks>
-                        <categoryLink id="hwfe-mLDx-z7lr-4qQl" name="(Mount)" hidden="false" targetId="(Mount)" primary="false"/>
-                      </categoryLinks>
-                      <selectionEntries>
-                        <selectionEntry id="f077-4fa7-bea3-2e5a" name="Barding" hidden="false" collective="false" import="true" type="upgrade">
+                  <entryLinks>
+                    <entryLink import="true" name="Nightmare" hidden="false" id="816c-8abd-6966-c204" type="selectionEntry" targetId="288d-c0a8-77de-61e7">
+                      <entryLinks>
+                        <entryLink import="true" name="Barding" hidden="false" id="2c8b-b162-42c4-5ba2" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
                           <constraints>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c358-a70e-2701-e315" type="max"/>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e4c0-8e87-de0f-776a" type="min"/>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d8f1-9327-2f08-db00"/>
                           </constraints>
-                          <infoLinks>
-                            <infoLink id="7537-7248-9897-1a7f" name="Barding" hidden="false" targetId="7228-95d3-3384-f234" type="profile"/>
-                          </infoLinks>
-                          <costs>
-                            <cost name="pts" typeId="points" value="0"/>
-                          </costs>
-                        </selectionEntry>
-                      </selectionEntries>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="8f81-b009-5b86-6a84" name="Zombie Dragon" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8a46-73d8-6c72-7a16" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="46ef-f31d-8a76-591d" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-                        <infoLink id="9e00-d7d1-3900-1791" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                        <infoLink id="8bdc-e2ef-c963-4d72" name="Stomp (1d6)" hidden="false" targetId="537e-8497-f0f2-8092" type="rule"/>
-                        <infoLink id="6a1c-3029-172f-4331" name="Zombie Dragon" hidden="false" targetId="50c3-d69e-27fe-c4f6" type="profile"/>
-                        <infoLink id="a57d-454a-3538-c2b2" name="Fly (7)" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
-                        <infoLink id="6780-1915-d730-1758" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
-                        <infoLink id="40fa-5673-3d52-9d5e" name="Swarm of Flies" hidden="false" targetId="ce29-896f-bc4f-f8ed" type="rule"/>
-                        <infoLink id="38a2-5d24-159c-927d" name="Pestilent Breath" hidden="false" targetId="e50e-8c70-0e06-e925" type="rule"/>
-                        <infoLink id="aa29-6001-d812-5580" name="Natural Armour (5+)" hidden="false" targetId="306d-711a-1300-587f" type="rule"/>
-                      </infoLinks>
-                      <categoryLinks>
-                        <categoryLink id="MWAT-1PcB-IYEy-mzpw" name="(Mount)" hidden="false" targetId="(Mount)" primary="false"/>
-                      </categoryLinks>
+                        </entryLink>
+                      </entryLinks>
+                    </entryLink>
+                    <entryLink import="true" name="Zombie Dragon" hidden="false" id="581c-2430-3123-8c36" type="selectionEntry" targetId="330e-f36d-9f8a-dce6">
                       <costs>
                         <cost name="pts" typeId="points" value="195"/>
                       </costs>
-                    </selectionEntry>
-                  </selectionEntries>
+                      <categoryLinks>
+                        <categoryLink name="(Mount)" hidden="false" id="b56f-1810-4155-39a2" targetId="(Mount)" primary="false"/>
+                      </categoryLinks>
+                    </entryLink>
+                  </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <entryLinks>
-                <entryLink id="17ea-b55d-ead2-6cb5" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry"/>
+                <entryLink id="17ea-b55d-ead2-6cb5" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
+                <entryLink import="true" name="The Generals of Undeath" hidden="false" id="62b2-ee05-62d5-c747" type="selectionEntry" targetId="02a1-7292-f96f-b6bf" sortIndex="2"/>
+                <entryLink import="true" name="Wizard Level 2" hidden="false" id="aa9f-4fad-6ad8-292a" type="selectionEntry" targetId="801a-bc0a-a767-61db" sortIndex="8">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6f47-b90e-d232-f3fd-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6f47-b90e-d232-f3fd-max"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Lore of Necromancy" hidden="false" id="c64b-1a42-b8ee-94a4" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="9">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fca8-f00e-d095-ffc8"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Army Battle Standard" hidden="false" id="6d98-67d3-629f-c418" type="selectionEntry" targetId="9519-df8f-0af4-1995" sortIndex="5.5">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="856c-3fb6-969d-2b3d"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="475"/>
               </costs>
+              <categoryLinks>
+                <categoryLink name="Vampire" hidden="false" id="91a2-615f-542c-c46d" targetId="27c2-45b8-9859-dda4" primary="false"/>
+                <categoryLink name="Blood Dragon" hidden="false" id="2aad-75ad-2275-90fd" targetId="4b62-4ab2-2bd8-72e7" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry id="8eae-1ecf-530a-dbb5" name="Radukar" hidden="false" collective="false" import="true" type="model" sortIndex="5">
               <constraints>
@@ -3654,7 +3485,7 @@ Blood Chalice allowing them to do one of the following:
                 <cost name="pts" typeId="points" value="380"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="be84-948a-4eda-1fe6" name="Melkhior" hidden="false" collective="false" import="true" type="model" sortIndex="9">
+            <selectionEntry id="be84-948a-4eda-1fe6" name="Melkhior the Ancient" hidden="false" collective="false" import="true" type="model" sortIndex="9">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="3327-d670-e08e-e756" type="max"/>
               </constraints>
@@ -3669,8 +3500,8 @@ Blood Chalice allowing them to do one of the following:
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">9</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry, Special Character, Vampire, Necrarch</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Vampire, Necrarch)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3679,11 +3510,12 @@ Blood Chalice allowing them to do one of the following:
                 <infoLink id="4579-9eb7-fccb-4b74" name="The Red Thirst" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
                 <infoLink id="d4af-5b88-a16d-6ba4" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
                 <infoLink id="6d40-bae7-901b-1576" name="Stupidity" hidden="false" targetId="755c-61c2-fa25-f4ce" type="rule"/>
-                <infoLink id="6df6-561a-a262-7e38" name="The Generals of Undeath" hidden="false" targetId="f189-b1bd-2258-4c02" type="rule"/>
-                <infoLink id="fb1f-2ebc-77d4-77fd" name="Characters and Units" hidden="false" targetId="6b8d-1936-904c-2fba" type="rule"/>
+                <infoLink name="Dark Acolyte" id="38b3-2d5a-51b7-7da3" hidden="false" type="profile" targetId="ae25-dd70-7c22-56e0"/>
+                <infoLink name="Forbidden Lore" id="97d1-7fbd-2ba1-1377" hidden="false" type="profile" targetId="503d-52fc-dcf6-5c46"/>
+                <infoLink name="Nehekhara&apos;s Noble Blood" id="d18f-247a-35a6-7c54" hidden="false" type="profile" targetId="828a-5bc1-7f2e-e556"/>
               </infoLinks>
               <selectionEntries>
-                <selectionEntry id="fa1b-0cc3-590b-0531" name="Painbringer" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="fa1b-0cc3-590b-0531" name="Painbringer" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="869e-8263-aa11-4075" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="757a-5fec-66e4-ba0b" type="max"/>
@@ -3701,115 +3533,7 @@ Blood Chalice allowing them to do one of the following:
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="71e2-7df7-2b11-206f" name="Wizard Level 4" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5bd0-bfbf-1349-e2b2" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ff42-1af4-d495-59c2" type="min"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="da6d-fa56-7c8b-c460" name="Melkhior the Ancient" publicationId="10a5-5781-61f5-86ae" page="46" hidden="false" typeId="0ce6-a5f9-6184-218d" typeName="Wizard">
-                      <characteristics>
-                        <characteristic name="Wizard Level" typeId="7f8d-5707-7251-c1a5">4</characteristic>
-                        <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">5</characteristic>
-                        <characteristic name="Spell Level" typeId="c5a7-d8e1-9c88-2f0e">1-4</characteristic>
-                        <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">5</characteristic>
-                        <characteristic name="Bonus to Casting/Dispel Value" typeId="7261-e23f-ab6d-b4af">2</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <selectionEntryGroups>
-                    <selectionEntryGroup id="8cd2-da64-3a1d-12e4" name="Lore of Magic" hidden="false" collective="false" import="true" defaultSelectionEntryId="c145-2ddc-1d23-1390">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9d3c-56ed-231c-2db7" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d21f-3f91-e7d3-9c28" type="max"/>
-                      </constraints>
-                      <entryLinks>
-                        <entryLink id="c145-2ddc-1d23-1390" name="Lore of Necromancy 4" hidden="false" collective="false" import="true" targetId="6911-7e7d-e0fe-98e9" type="selectionEntry"/>
-                      </entryLinks>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="813e-81f6-a313-004b" name="Nehekhara&apos;s Noble Blood" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ab11-a692-b1cd-d3ce" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c61f-2d5c-c36b-c313" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="b660-d15f-4c99-af3a" name="Nehekhara&apos;s Noble Blood" hidden="false" targetId="828a-5bc1-7f2e-e556" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="4766-009b-8a86-8da9" name="Dark Acolyte" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a822-f80d-88b9-bd7a" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d54e-3118-76e6-13ca" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="065c-4411-ec89-e008" name="Dark Acolyte" hidden="false" targetId="ae25-dd70-7c22-56e0" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="3369-1488-678b-ea66" name="Forbidden Lore" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7def-2859-2b67-3a3b" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7261-3585-48ee-dd4d" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="ca76-f409-8a54-9dc2" name="Forbidden Lore" hidden="false" targetId="503d-52fc-dcf6-5c46" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="1eed-02ec-edf1-8ef9" name="Abyssal Terror" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="28a8-92a8-5247-2c27" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="23aa-9d33-a99c-d2a4" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="37f1-c591-110c-2735" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-                    <infoLink id="9b95-c014-38e0-3e26" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                    <infoLink id="543a-11ac-c80f-8b59" name="Stomp (1d3)" hidden="false" targetId="2958-cfde-eaf8-fe87" type="rule"/>
-                    <infoLink id="fb46-6a40-8da5-e650" name="Abyssal Terror" hidden="false" targetId="2771-bcc4-dc70-6d84" type="profile"/>
-                    <infoLink id="dd05-33b2-0e85-9864" name="Fly (8)" hidden="false" targetId="0a9a-bfcb-1a9d-5609" type="rule"/>
-                    <infoLink id="e735-b007-16db-15d2" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
-                  </infoLinks>
-                  <selectionEntries>
-                    <selectionEntry id="b9b7-c4df-d135-8361" name="Poisonous Tail" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0716-d2f0-92fd-c3f7" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="37cf-7f0f-3f33-95c1" name="Poisonous Tail" hidden="false" targetId="1027-f487-d22f-f112" type="rule"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="10"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="c59c-190f-336c-13c4" name="Sword-claws" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3451-dee6-9c8a-bc1a" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="9ad0-0499-9823-bc6f" name="Sword-claws" hidden="false" targetId="683e-c9af-ddd5-c189" type="rule"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="5"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="4d54-fdeb-407e-f7f1" name="Grimoire Necronium" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="4d54-fdeb-407e-f7f1" name="Grimoire Necronium" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="21d1-d983-169f-eae6" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2223-ddbd-f9e5-ba0e" type="max"/>
@@ -3825,7 +3549,7 @@ Blood Chalice allowing them to do one of the following:
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="a31f-9262-7d6b-3b64" name="Black Cloak of Lahmia" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="a31f-9262-7d6b-3b64" name="Black Cloak of Lahmia" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e855-354c-0c40-1ab6" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3e7c-6d6e-93f0-b50e" type="max"/>
@@ -3843,11 +3567,33 @@ Blood Chalice allowing them to do one of the following:
                 </selectionEntry>
               </selectionEntries>
               <entryLinks>
-                <entryLink id="8341-4314-41ab-f80d" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry"/>
+                <entryLink id="8341-4314-41ab-f80d" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
+                <entryLink import="true" name="The Generals of Undeath" hidden="false" id="03c3-35a1-5526-fa9b" type="selectionEntry" targetId="02a1-7292-f96f-b6bf" sortIndex="2"/>
+                <entryLink import="true" name="Abyssal Terror" hidden="false" id="d9bf-99df-71c1-97b1" type="selectionEntry" targetId="9a59-eb87-1cf2-64b3" sortIndex="6">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Loremaster" hidden="false" id="3c55-bcf4-6ce1-efa1" type="selectionEntry" targetId="a2bf-14a5-6723-7157" sortIndex="7"/>
+                <entryLink import="true" name="Wizard Level 4" hidden="false" id="b238-765d-0057-5b06" type="selectionEntry" targetId="5460-3929-58ef-71ba" sortIndex="8">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a884-07bb-02ad-45ce-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a884-07bb-02ad-45ce-max"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Lore of Necromancy" hidden="false" id="ace3-76e6-9ffd-e99a" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="9">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4831-eb7c-12ea-bfd7"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="455"/>
               </costs>
+              <categoryLinks>
+                <categoryLink name="Vampire" hidden="false" id="9ae3-9065-153b-58d7" targetId="27c2-45b8-9859-dda4" primary="false"/>
+                <categoryLink name="Necrarch" hidden="false" id="d8bb-a2ea-4161-94ef" targetId="9311-1c3e-4507-2477" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry id="651d-1c8a-3316-1c57" name="Kurdoss Valentian" hidden="false" collective="false" import="true" type="model" sortIndex="1">
               <constraints>
@@ -3956,8 +3702,8 @@ Blood Chalice allowing them to do one of the following:
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">7</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">10</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster, Special Character, Vampire, Blood Dragon</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Special Character, Vampire, Blood Dragon)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3970,23 +3716,12 @@ Blood Chalice allowing them to do one of the following:
                 <infoLink id="18a6-68e9-ca87-3ca7" name="The Red Thirst" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
                 <infoLink id="dfe1-dca1-709d-acf4" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
                 <infoLink id="046d-038f-9814-373a" name="Martial Honour" hidden="false" targetId="05c0-34fc-bc0d-6972" type="rule"/>
-                <infoLink id="1fee-a140-6989-9017" name="The Generals of Undeath" hidden="false" targetId="f189-b1bd-2258-4c02" type="rule"/>
-                <infoLink id="73b4-fb5e-cb01-70c4" name="Characters and Units" hidden="false" targetId="6b8d-1936-904c-2fba" type="rule"/>
+                <infoLink name="Red Fury" id="5085-76e5-f526-e570" hidden="false" type="profile" targetId="7330-bede-2c21-f332"/>
+                <infoLink name="Heart Piercing" id="3468-5816-df0a-01f1" hidden="false" type="profile" targetId="8c95-75e1-e402-7625"/>
+                <infoLink name="Honour or Death" id="0b72-082d-fe8c-ee7d" hidden="false" type="profile" targetId="d716-077b-5be4-4e1f"/>
               </infoLinks>
               <selectionEntries>
-                <selectionEntry id="8172-1137-0920-56a3" name="Heart Piercing" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a43b-b012-cb73-0a08" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8e97-628c-d896-235c" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="7cf3-eda0-3868-50a6" name="Heart Piercing" hidden="false" targetId="8c95-75e1-e402-7625" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="99ac-21a2-5426-b165" name="Shordemaire" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="99ac-21a2-5426-b165" name="Shordemaire" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cdf7-5136-6404-f71a" type="max"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9621-e12d-41c7-55d1" type="min"/>
@@ -4002,8 +3737,8 @@ Blood Chalice allowing them to do one of the following:
                         <characteristic name="W" typeId="27ee-0675-122f-a1b1">6</characteristic>
                         <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
                         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
-                        <characteristic name="LD" typeId="a199-f10b-a038-5730">4</characteristic>
-                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster</characteristic>
+                        <characteristic name="Ld" typeId="a199-f10b-a038-5730">4</characteristic>
+                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Undead, Dragon)</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4014,10 +3749,7 @@ Blood Chalice allowing them to do one of the following:
                   </rules>
                   <infoLinks>
                     <infoLink id="29eb-a22d-af83-9acb" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-                    <infoLink id="8518-1b9c-2767-b5a3" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                    <infoLink id="8a9e-955e-faa6-ce92" name="Stomp (1d6)" hidden="false" targetId="537e-8497-f0f2-8092" type="rule"/>
                     <infoLink id="5cdc-2979-500f-7996" name="Fly (7)" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
-                    <infoLink id="be79-2d16-ecc1-7691" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
                     <infoLink id="5073-ec80-37b3-91bb" name="Swarm of Flies" hidden="false" targetId="ce29-896f-bc4f-f8ed" type="rule"/>
                     <infoLink id="1a7b-97ea-d558-f93c" name="Natural Armour (5+)" hidden="false" targetId="306d-711a-1300-587f" type="rule"/>
                   </infoLinks>
@@ -4025,110 +3757,56 @@ Blood Chalice allowing them to do one of the following:
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="ca18-271f-cf1b-73a7" name="Wizard Level 1" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="97c7-c54e-63ca-9505" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="de18-e830-b57f-e40c" type="min"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="0659-8a34-0931-64a2" name="Prince Vhordrai" publicationId="10a5-5781-61f5-86ae" page="50" hidden="false" typeId="0ce6-a5f9-6184-218d" typeName="Wizard">
-                      <characteristics>
-                        <characteristic name="Wizard Level" typeId="7f8d-5707-7251-c1a5">1</characteristic>
-                        <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">2</characteristic>
-                        <characteristic name="Spell Level" typeId="c5a7-d8e1-9c88-2f0e">1</characteristic>
-                        <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">2</characteristic>
-                        <characteristic name="Bonus to Casting/Dispel Value" typeId="7261-e23f-ab6d-b4af">1</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <selectionEntryGroups>
-                    <selectionEntryGroup id="2486-84f7-11e0-509c" name="Lore of Magic" hidden="false" collective="false" import="true" defaultSelectionEntryId="1193-9bbd-e31e-7a7e">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1960-e3da-5002-e183" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4232-4ce4-4b3e-f6f8" type="max"/>
-                      </constraints>
-                      <entryLinks>
-                        <entryLink id="1193-9bbd-e31e-7a7e" name="Lore of Necromancy VC 1" hidden="false" collective="false" import="true" targetId="78f7-c422-8bd9-c4a9" type="selectionEntry"/>
-                      </entryLinks>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="f160-131a-55c5-a72a" name="Bloodlance" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="f160-131a-55c5-a72a" name="Bloodlance" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fb5b-5cb9-1d51-46f0" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="20b1-4968-b265-4b0d" type="max"/>
                   </constraints>
-                  <profiles>
-                    <profile id="e8c6-0cf2-4c8e-c6b5" name="Bloodlance" publicationId="10a5-5781-61f5-86ae" page="50" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-                      <characteristics>
-                        <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                        <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Heavy lance. In any turn in which Prince Vhordrai charges, he gains the Multiple Wounds (D3) special rule.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
-                </selectionEntry>
-                <selectionEntry id="76f0-f5ef-b5b0-2cf4" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cc57-b4c7-8986-e9d7" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8c5a-4de1-71b2-5860" type="min"/>
-                  </constraints>
                   <infoLinks>
-                    <infoLink id="d00e-cb0d-1a27-f0d4" name="Heavy Armour" hidden="false" targetId="8e15-bc32-b40c-bad3" type="profile"/>
+                    <infoLink name="Heavy Lance" id="24df-30e6-1766-e84b" hidden="false" type="profile" targetId="e56e-fedf-c550-5d81">
+                      <modifiers>
+                        <modifier type="append" value="In any turn in which Prince Vhordrai charges, he gains the Multiple Wounds (D3) special rule." field="de63-d6da-efa8-00ac"/>
+                        <modifier type="set" value="Bloodlance" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="3a09-36f0-97fe-520b" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8af7-0d2f-07a0-4976" type="min"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9e5a-698a-e4bc-81b9" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="a4f9-6b09-d99a-a404" name="Shield" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="b520-8dd7-d38b-dbd7" name="Honour or Death" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2bb5-88ff-db45-cf5e" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="300a-54a8-647e-6c6" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="6e7e-eca6-2d7e-b071" name="Honour or Death" hidden="false" targetId="d716-077b-5be4-4e1f" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="63d9-d6c9-ed61-8f16" name="Red Fury" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4208-cb60-8e70-feb6" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f7bf-7bc7-e507-229e" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="d872-6289-11ad-dfcf" name="Red Fury" hidden="false" targetId="7330-bede-2c21-f332" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
                 </selectionEntry>
               </selectionEntries>
               <entryLinks>
-                <entryLink id="1c9e-75b8-a95b-ae79" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry"/>
+                <entryLink id="1c9e-75b8-a95b-ae79" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
+                <entryLink import="true" name="The Generals of Undeath" hidden="false" id="6224-0b34-a874-04b0" type="selectionEntry" targetId="02a1-7292-f96f-b6bf" sortIndex="2"/>
+                <entryLink import="true" name="Heavy Armour" hidden="false" id="423a-1751-5a8d-0376" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="4">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7259-1747-4f0c-fa07"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Shield" hidden="false" id="093e-6623-231b-8ec9" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="5">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b637-ed1c-8f49-eaf6"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Wizard Level 1" hidden="false" id="1a6f-2d0c-d877-1f86" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8" sortIndex="7">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f509-0ccf-5a5f-42e3-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f509-0ccf-5a5f-42e3-max"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Lore of Necromancy" hidden="false" id="bc3d-f3d2-d662-a248" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="8">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dcd8-faf3-d1a2-55c3"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="600"/>
               </costs>
+              <categoryLinks>
+                <categoryLink name="Vampire" hidden="false" id="e3d9-2b60-1063-847b" targetId="27c2-45b8-9859-dda4" primary="false"/>
+                <categoryLink name="Blood Dragon" hidden="false" id="e269-9b0a-7d66-b318" targetId="4b62-4ab2-2bd8-72e7" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry id="e2b9-f053-3cc6-0eaa" name="Heinrich Kemmler" hidden="false" collective="false" import="true" type="model" sortIndex="3">
               <constraints>
@@ -4261,8 +3939,17 @@ Blood Chalice allowing them to do one of the following:
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">9</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">10</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry, Special Character, Vampire, Lahmian</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Vampire, Lahmian)</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Shadowblood" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="348e-6674-7b84-7de9">
+                  <characteristics>
+                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Innate Bound Spell</characteristic>
+                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">When cast, Neferata must declare how many Wounds she is using to boost the effects of the spell. The spell causes D6 Strength 5 hits with the Flaming Attacks special rule plus an extra D6 hits for each wound Neferata expends. In addition, a unit suffering one or more wounds from this spell must immediately take a Panic test.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4277,12 +3964,13 @@ Blood Chalice allowing them to do one of the following:
               <infoLinks>
                 <infoLink id="2921-4f94-4b63-5b32" name="Dodge (6+)" hidden="false" targetId="bf3d-abaf-45ca-3477" type="rule"/>
                 <infoLink id="8cc2-96fe-eb0d-4979" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
-                <infoLink id="f78a-48f9-842b-4fa5" name="The Generals of Undeath" hidden="false" targetId="f189-b1bd-2258-4c02" type="rule"/>
-                <infoLink id="703f-0399-a08e-c134" name="Characters and Units" hidden="false" targetId="6b8d-1936-904c-2fba" type="rule"/>
                 <infoLink id="9cdc-8a78-7f7a-f34e" name="The Red Thirst" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
+                <infoLink name="Quickblood" id="0bf5-43f7-1ecb-75e8" hidden="false" type="profile" targetId="7214-e7a5-d1fd-50f2"/>
+                <infoLink name="Lightning Reflexes" id="3ea8-98b1-d410-4c1d" hidden="false" type="profile" targetId="27f6-29cf-89e9-b5b8"/>
+                <infoLink name="Seduction" id="3afc-c165-108f-ed33" hidden="false" type="profile" targetId="134a-0b9c-3f0c-32ee"/>
               </infoLinks>
               <selectionEntries>
-                <selectionEntry id="490e-97be-acca-358c" name="Bastet" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="490e-97be-acca-358c" name="Bastet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5c9a-8205-0da6-42da" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7920-a164-899f-07c3" type="max"/>
@@ -4298,51 +3986,7 @@ Blood Chalice allowing them to do one of the following:
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="47d6-328c-eaa5-2fd0" name="Medium Armour" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="436a-1ab9-c938-9377" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="c5d3-4abe-e850-aa49" name="Medium Armour" hidden="false" targetId="6d9a-c9f8-e013-e77f" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="9"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="6322-7227-f1bd-c7df" name="Wizard Level 3" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1ac7-53aa-32d5-7e8c" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5a8f-5d0f-9e63-8d51" type="min"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="2d40-16e3-e771-cf55" name="Neferata" publicationId="10a5-5781-61f5-86ae" page="47" hidden="false" typeId="0ce6-a5f9-6184-218d" typeName="Wizard">
-                      <characteristics>
-                        <characteristic name="Wizard Level" typeId="7f8d-5707-7251-c1a5">3</characteristic>
-                        <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">4</characteristic>
-                        <characteristic name="Spell Level" typeId="c5a7-d8e1-9c88-2f0e">1-3</characteristic>
-                        <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">4</characteristic>
-                        <characteristic name="Bonus to Casting/Dispel Value" typeId="7261-e23f-ab6d-b4af">2</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <selectionEntryGroups>
-                    <selectionEntryGroup id="779a-0527-6b68-7763" name="Lore of Magic" hidden="false" collective="false" import="true">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0228-31a1-17d4-0d20" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e6d7-0d1b-bd62-fdf4" type="max"/>
-                      </constraints>
-                      <entryLinks>
-                        <entryLink id="4237-e8ea-9076-4f2c" name="Lore of Shadow 3" hidden="false" collective="false" import="true" targetId="9179-6395-bb04-c9ee" type="selectionEntry"/>
-                        <entryLink id="a06b-29d0-caec-ea3e" name="Lore of Necromancy 3" hidden="false" collective="false" import="true" targetId="392a-8f11-c500-0065" type="selectionEntry"/>
-                        <entryLink id="cf5d-44dc-4cd5-2646" name="Lore of Death 3" hidden="false" collective="false" import="true" targetId="51e3-c4fe-25ab-8896" type="selectionEntry"/>
-                      </entryLinks>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="cebd-5ca9-0185-dfa4" name="Ruby of Lahmia" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="cebd-5ca9-0185-dfa4" name="Ruby of Lahmia" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e079-b1aa-5604-fe6a" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6e09-e530-de3b-7d3a" type="max"/>
@@ -4359,7 +4003,7 @@ Lahmia automatically lets them regain one Wound that they has lost during the ba
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="0ecb-1f20-88c3-6d6a" name="Dagger of Jet" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="0ecb-1f20-88c3-6d6a" name="Dagger of Jet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="00e2-e74c-e03a-2af5" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fcf0-7af6-4c5d-2263" type="max"/>
@@ -4377,7 +4021,7 @@ Lahmia automatically lets them regain one Wound that they has lost during the ba
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="9ccc-c1c4-62f3-d8fd" name="Staff of Pain" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="9ccc-c1c4-62f3-d8fd" name="Staff of Pain" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3272-6c20-e41e-e876" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1f46-8031-f0ff-3916" type="max"/>
@@ -4393,220 +4037,76 @@ Lahmia automatically lets them regain one Wound that they has lost during the ba
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="c6b1-47c1-8334-0f96" name="Lightning Reflexes" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ee36-0ed9-407c-fae0" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d62e-70de-d8f2-2ba3" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="4588-07c9-4464-3bf8" name="Lightning Reflexes" hidden="false" targetId="27f6-29cf-89e9-b5b8" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="edad-2b4a-48fd-5db6" name="Seduction" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6517-9a7a-6ed4-5b12" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="04db-f5da-980b-f484" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="4f0f-1778-0b30-da63" name="Seduction" hidden="false" targetId="134a-0b9c-3f0c-32ee" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="6f89-09b1-ab11-d90b" name="Quickblood" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9c2e-ec6c-5071-4eba" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="566d-e059-196c-9821" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="5880-dee8-c637-4cdf" name="Quickblood" hidden="false" targetId="7214-e7a5-d1fd-50f2" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
               </selectionEntries>
               <selectionEntryGroups>
-                <selectionEntryGroup id="d740-bf6f-4554-3d5b" name="Mount" hidden="false" collective="false" import="true">
+                <selectionEntryGroup id="d740-bf6f-4554-3d5b" name="Mount" hidden="false" collective="false" import="true" sortIndex="7">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8096-05cd-a89e-9096" type="max"/>
                   </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="8f91-1fc5-4b27-e02d" name="Nightmare" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="85b8-8bcf-c39e-13d2" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="ade2-d922-ca87-298d" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-                        <infoLink id="dbc5-4cf3-d504-4607" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                        <infoLink id="c4df-3716-4651-e594" name="Impact Hits (1)" hidden="false" targetId="bb3b-3ca8-fcbc-a78b" type="rule"/>
-                        <infoLink id="779e-0ffd-a22f-f49e" name="Nightmare" hidden="false" targetId="1028-e8c0-ed9b-343b" type="profile"/>
-                      </infoLinks>
-                      <categoryLinks>
-                        <categoryLink id="czE8-AXDm-esgA-NqAd" name="(Mount)" hidden="false" targetId="(Mount)" primary="false"/>
-                      </categoryLinks>
-                      <selectionEntries>
-                        <selectionEntry id="84b9-7e7c-9ae9-e9c4" name="Barding" hidden="false" collective="false" import="true" type="upgrade">
-                          <constraints>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="516e-7423-952a-bef9" type="max"/>
-                          </constraints>
-                          <infoLinks>
-                            <infoLink id="2f07-f69f-d46d-3605" name="Barding" hidden="false" targetId="7228-95d3-3384-f234" type="profile"/>
-                          </infoLinks>
-                          <costs>
-                            <cost name="pts" typeId="points" value="6"/>
-                          </costs>
-                        </selectionEntry>
-                      </selectionEntries>
-                      <costs>
-                        <cost name="pts" typeId="points" value="21"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="7222-aa91-e2d1-2193" name="Hellsteed" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="11af-3c2a-80b6-3b88" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="cfde-ba7b-f218-3d1c" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-                        <infoLink id="95b5-7f4c-7348-a203" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                        <infoLink id="4146-5dda-fa9d-7fb0" name="Impact Hits (1)" hidden="false" targetId="bb3b-3ca8-fcbc-a78b" type="rule"/>
-                        <infoLink id="76fb-51b1-d392-b90e" name="Hellsteed" hidden="false" targetId="43c3-7b6b-5d57-c78e" type="profile"/>
-                        <infoLink id="1be6-7c0d-9722-3f74" name="Fly (9)" hidden="false" targetId="2ba2-2aaa-3f36-4b24" type="rule"/>
-                      </infoLinks>
-                      <categoryLinks>
-                        <categoryLink id="buIj-HYvT-dcTF-6wpv" name="(Mount)" hidden="false" targetId="(Mount)" primary="false"/>
-                      </categoryLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="30"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="8a44-d454-382a-0092" name="Coven Throne" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a61e-e6f1-5696-2742" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="0f12-6833-83d2-d888" name="Ward Save (4+)" hidden="false" targetId="d45b-0036-b5ef-951b" type="rule"/>
-                        <infoLink id="6140-4638-2cce-0f3a" name="Coven Throne" hidden="false" targetId="2263-013f-d10c-1126" type="profile"/>
-                        <infoLink id="eb2d-8066-337d-757b" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                        <infoLink id="54e1-0c06-0209-7c4b" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-                        <infoLink id="55df-d738-ceab-ac94" name="Impact Hits (D6)" hidden="false" targetId="e9e6-66cc-623f-8e94" type="rule"/>
-                        <infoLink id="f07f-e527-86ea-8b16" name="Scrying Pool" hidden="false" targetId="e679-8675-a6b7-0bf1" type="profile"/>
-                        <infoLink id="6944-133a-35c3-071b" name="Battle of Wills" hidden="false" targetId="65af-deb9-9d8b-bedf" type="rule"/>
-                        <infoLink id="ccf8-565c-e08d-7bc4" name="00 or less" hidden="false" targetId="31d3-24fa-9e29-6b42" type="profile"/>
-                        <infoLink id="c836-dc60-9c46-d2b5" name="01-02" hidden="false" targetId="e6ed-bac9-2143-77bf" type="profile"/>
-                        <infoLink id="9380-1f91-b6c0-6da6" name="03-05" hidden="false" targetId="f16c-8986-09f9-acbe" type="profile"/>
-                        <infoLink id="07aa-7cac-1705-90cd" name="06+" hidden="false" targetId="a4ba-69ba-8de5-2c21" type="profile"/>
-                        <infoLink id="47d1-6b3a-f16a-0ff2" name="Large Target (5)" hidden="false" targetId="1b3d-4a57-6f3e-25d7" type="rule"/>
-                        <infoLink id="2eb9-21bc-7dda-f73b" name="Coven Throne" hidden="false" targetId="de41-19af-c64c-23c3" type="rule"/>
-                      </infoLinks>
-                      <categoryLinks>
-                        <categoryLink id="gyUC-W1vG-QFHa-CUKp" name="(Mount)" hidden="false" targetId="(Mount)" primary="false"/>
-                      </categoryLinks>
-                      <selectionEntries>
-                        <selectionEntry id="940e-8d03-acad-1ab6" name="Pallid Handmaiden" hidden="false" collective="false" import="true" type="upgrade">
-                          <constraints>
-                            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d292-6b0a-c8b7-3cea" type="max"/>
-                            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2161-15a4-5267-8c61" type="min"/>
-                          </constraints>
-                          <infoLinks>
-                            <infoLink id="cf92-8a37-e194-5ee7" name="Pallid Handmaiden" hidden="false" targetId="ea9f-5050-f1f2-9a14" type="profile"/>
-                            <infoLink id="2aa7-1224-3735-7287" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
-                          </infoLinks>
-                          <selectionEntries>
-                            <selectionEntry id="2819-78f7-d8d6-c34e" name="Hand Weapon" hidden="false" collective="true" import="true" type="upgrade">
-                              <constraints>
-                                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3af8-7829-8249-cbc5" type="max"/>
-                                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="30bf-0bee-813c-0146" type="min"/>
-                              </constraints>
-                              <infoLinks>
-                                <infoLink id="e4d2-1d9c-4afb-c2a9" name="Hand Weapon" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-                              </infoLinks>
-                              <costs>
-                                <cost name="pts" typeId="points" value="0"/>
-                              </costs>
-                            </selectionEntry>
-                          </selectionEntries>
-                          <costs>
-                            <cost name="pts" typeId="points" value="0"/>
-                          </costs>
-                        </selectionEntry>
-                        <selectionEntry id="1add-ecd6-dc01-aad7" name="Spirit Horde" hidden="false" collective="false" import="true" type="upgrade">
-                          <constraints>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="58d3-0cd9-a5bb-c5e2" type="max"/>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c7d1-65ec-d7d3-2177" type="min"/>
-                          </constraints>
-                          <infoLinks>
-                            <infoLink id="8b17-78ce-0dc3-e34c" name="Spirit Horde" hidden="false" targetId="1858-2b2a-2c49-dab9" type="profile"/>
-                            <infoLink id="ce66-93cf-7bbf-8e21" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-                            <infoLink id="93b7-34e8-9fc6-6033" name="Random Attacks (2D6)" hidden="false" targetId="065b-1f43-47e5-70cb" type="rule"/>
-                            <infoLink id="8347-932d-582b-696a" name="Spectral Steeds" hidden="false" targetId="1734-ad3c-cee7-c609" type="rule"/>
-                            <infoLink id="3c9-f8d4-bf8b-d54b" name="Fly (7)" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
-                          </infoLinks>
-                          <costs>
-                            <cost name="pts" typeId="points" value="0"/>
-                          </costs>
-                        </selectionEntry>
-                      </selectionEntries>
-                      <costs>
-                        <cost name="pts" typeId="points" value="200"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="dca4-18f4-1acb-8f9a" name="Abyssal Terror" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e0d4-f78f-11ff-2c30" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="9564-d9ab-19ac-875b" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-                        <infoLink id="701-7c2-de63-de9f" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                        <infoLink id="c4ef-2b40-bddb-bf41" name="Stomp (1d3)" hidden="false" targetId="2958-cfde-eaf8-fe87" type="rule"/>
-                        <infoLink id="196c-15dd-3cec-8622" name="Abyssal Terror" hidden="false" targetId="2771-bcc4-dc70-6d84" type="profile"/>
-                        <infoLink id="380d-69c0-c195-c682" name="Fly (8)" hidden="false" targetId="0a9a-bfcb-1a9d-5609" type="rule"/>
-                        <infoLink id="9e33-dae6-d37c-d4ba" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
-                      </infoLinks>
-                      <categoryLinks>
-                        <categoryLink id="4b1f-c771-b7c2-2067" name="(Mount)" hidden="false" targetId="(Mount)" primary="false"/>
-                      </categoryLinks>
-                      <selectionEntries>
-                        <selectionEntry id="eb4e-96e7-bdb9-e09b" name="Poisonous Tail" hidden="false" collective="false" import="true" type="upgrade">
-                          <constraints>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e3a7-23ad-5096-7926" type="max"/>
-                          </constraints>
-                          <infoLinks>
-                            <infoLink id="2949-623b-a972-dc98" name="Poisonous Tail" hidden="false" targetId="1027-f487-d22f-f112" type="rule"/>
-                          </infoLinks>
-                          <costs>
-                            <cost name="pts" typeId="points" value="10"/>
-                          </costs>
-                        </selectionEntry>
-                        <selectionEntry id="c095-947b-820c-a85e" name="Sword-claws" hidden="false" collective="false" import="true" type="upgrade">
-                          <constraints>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9cea-2535-b3e5-fc2b" type="max"/>
-                          </constraints>
-                          <infoLinks>
-                            <infoLink id="d952-a509-df05-e5a9" name="Sword-claws" hidden="false" targetId="683e-c9af-ddd5-c189" type="rule"/>
-                          </infoLinks>
+                  <entryLinks>
+                    <entryLink import="true" name="Nightmare" hidden="false" id="986c-d2df-d735-e853" type="selectionEntry" targetId="288d-c0a8-77de-61e7">
+                      <entryLinks>
+                        <entryLink import="true" name="Barding" hidden="false" id="b8a6-97e9-d116-3266" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
                           <costs>
                             <cost name="pts" typeId="points" value="5"/>
                           </costs>
-                        </selectionEntry>
-                      </selectionEntries>
+                        </entryLink>
+                      </entryLinks>
                       <costs>
-                        <cost name="pts" typeId="points" value="125"/>
+                        <cost name="pts" typeId="points" value="21"/>
                       </costs>
-                    </selectionEntry>
-                  </selectionEntries>
+                    </entryLink>
+                    <entryLink import="true" name="Hellsteed" hidden="false" id="8b40-5290-da96-0d79" type="selectionEntry" targetId="5ecd-9b99-4f8f-e3ab">
+                      <costs>
+                        <cost name="pts" typeId="points" value="30"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Abyssal Terror" hidden="false" id="1964-0e18-e130-2ce3" type="selectionEntry" targetId="9a59-eb87-1cf2-64b3"/>
+                    <entryLink import="true" name="Coven Throne" hidden="false" id="151e-310f-d631-05af" type="selectionEntry" targetId="5540-f11-f24c-97b9">
+                      <categoryLinks>
+                        <categoryLink name="(Mount)" hidden="false" id="8f4a-f3ab-7f7f-b4ab" targetId="(Mount)" primary="false"/>
+                      </categoryLinks>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="Lores of Magic" id="b872-22cf-ac11-3fe3" hidden="false" sortIndex="9">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7a70-7849-28ad-c844-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7a70-7849-28ad-c844-max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Lore of Necromancy" hidden="false" id="e8fb-1972-b90a-a3fe" type="selectionEntry" targetId="f945-02e4-f4ac-718e"/>
+                    <entryLink import="true" name="Lore of Death" hidden="false" id="7fc1-0d37-06d1-602e" type="selectionEntry" targetId="bc0d-47f8-7220-1e16"/>
+                    <entryLink import="true" name="Lore of Shadow" hidden="false" id="8340-1813-4b9a-ca1b" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67"/>
+                  </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <entryLinks>
-                <entryLink id="f4cd-cd28-8d21-5da1" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry"/>
+                <entryLink id="f4cd-cd28-8d21-5da1" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5117-ea87-4c37-f687"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="The Generals of Undeath" hidden="false" id="e360-12eb-9cb6-4de1" type="selectionEntry" targetId="02a1-7292-f96f-b6bf" sortIndex="2"/>
+                <entryLink import="true" name="Wizard Level 3" hidden="false" id="ecd3-baf5-f2af-24a3" type="selectionEntry" targetId="1670-dca4-294b-7d9b" sortIndex="8">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="08f5-6be8-c602-dc47-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="08f5-6be8-c602-dc47-max"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Medium Armour" hidden="false" id="1cdf-2705-ce38-a02f" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="3.5">
+                  <costs>
+                    <cost name="pts" typeId="points" value="9"/>
+                  </costs>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="510"/>
               </costs>
+              <categoryLinks>
+                <categoryLink name="Vampire" hidden="false" id="875e-3492-4f43-0781" targetId="27c2-45b8-9859-dda4" primary="false"/>
+                <categoryLink name="Lahmia" hidden="false" id="00c1-dfde-3ef2-bc9e" targetId="fd59-057a-5103-3761" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry id="0ddd-29eb-4963-dc7c" name="Mannfred von Carstein" hidden="false" collective="false" import="true" type="model" sortIndex="13">
               <constraints>
@@ -4623,21 +4123,20 @@ Lahmia automatically lets them regain one Wound that they has lost during the ba
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">7</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">10</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry, Special Character, Vampire, von Carstein</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Vampire, von Carstein)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="acc0-e1bb-3470-e799" name="Loremaster (Lore of Death)" hidden="false" targetId="75e4-06e8-d7aa-8514" type="rule"/>
                 <infoLink id="a3b8-e1b7-d1fb-afd8" name="The Red Thirst" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
                 <infoLink id="05a3-63ae-ed15-5380" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
-                <infoLink id="cc8b-4e0f-3151-45c4" name="Loremaster (Lore of Necromancy)" hidden="false" targetId="3b46-c6e4-f0af-cef8" type="rule"/>
-                <infoLink id="301b-51f8-238c-b93c" name="The Generals of Undeath" hidden="false" targetId="f189-b1bd-2258-4c02" type="rule"/>
-                <infoLink id="153a-4dee-96d5-9315" name="Characters and Units" hidden="false" targetId="6b8d-1936-904c-2fba" type="rule"/>
+                <infoLink name="Master of the Black Arts" id="da7a-063d-ac83-26aa" hidden="false" type="profile" targetId="7bf8-c5c5-5a98-ba9d"/>
+                <infoLink name="Dark Acolyte" id="f70e-fba3-4ac0-fc28" hidden="false" type="profile" targetId="ae25-dd70-7c22-56e0"/>
+                <infoLink name="Summon Creatures of the Night" id="6f2c-36d5-0e36-f192" hidden="false" type="profile" targetId="6410-f7dd-1f85-b6e9"/>
               </infoLinks>
               <selectionEntries>
-                <selectionEntry id="5696-18a7-7d1d-278c" name="Ebony Staff" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="5696-18a7-7d1d-278c" name="Ebony Staff" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="951d-bb92-c845-3416" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b0eb-ea12-28ab-3968" type="max"/>
@@ -4653,75 +4152,7 @@ Lahmia automatically lets them regain one Wound that they has lost during the ba
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="e38f-2213-ece2-bc6e" name="Wizard Level 4" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d572-4b49-4636-bbd3" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0a6c-0b26-b583-dc08" type="min"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="77ae-1c85-5919-674f" name="Mannfred von Carstein" publicationId="10a5-5781-61f5-86ae" page="44" hidden="false" typeId="0ce6-a5f9-6184-218d" typeName="Wizard">
-                      <characteristics>
-                        <characteristic name="Wizard Level" typeId="7f8d-5707-7251-c1a5">4</characteristic>
-                        <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">5</characteristic>
-                        <characteristic name="Spell Level" typeId="c5a7-d8e1-9c88-2f0e">1-4</characteristic>
-                        <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">5</characteristic>
-                        <characteristic name="Bonus to Casting/Dispel Value" typeId="7261-e23f-ab6d-b4af">2</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <selectionEntryGroups>
-                    <selectionEntryGroup id="0214-134e-1f99-2db8" name="Lore of Magic" hidden="false" collective="false" import="true">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2668-fe23-1609-c06a" type="min"/>
-                        <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4edd-7065-4222-14c3" type="max"/>
-                      </constraints>
-                      <entryLinks>
-                        <entryLink id="7d3d-204e-c912-8779" name="Lore of Death Loremaster" hidden="false" collective="false" import="true" targetId="2352-5154-baf3-e139" type="selectionEntry"/>
-                        <entryLink id="9e48-8cef-5072-6ad5" name="Lore of Necromancy Loremaster" hidden="false" collective="false" import="true" targetId="294b-ceaa-1e01-51cc" type="selectionEntry"/>
-                      </entryLinks>
-                    </selectionEntryGroup>
-                  </selectionEntryGroups>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="185a-be56-5762-163a" name="Summon Creatures of the Night" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="82d6-5ead-bed6-f8ed" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fc26-90e0-045a-fc85" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="1ec8-e791-602a-9d3d" name="Summon Creatures of the Night" hidden="false" targetId="6410-f7dd-1f85-b6e9" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="fa1e-48e7-38cf-6d22" name="Dark Acolyte" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ce71-e8ca-4976-33c3" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3cc4-8df6-a7b0-d456" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="8718-3efa-26c8-78c5" name="Dark Acolyte" hidden="false" targetId="ae25-dd70-7c22-56e0" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="cc9b-1d4e-ad56-e6c3" name="Master of the Black Arts" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8b95-75e1-12cf-2583" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="509b-f2d7-513d-d4b0" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="4c14-e100-f100-78ba" name="Master of the Black Arts" hidden="false" targetId="7bf8-c5c5-5a98-ba9d" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="84a0-d80c-e3ed-12e1" name="Cloak of Darkness" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="84a0-d80c-e3ed-12e1" name="Cloak of Darkness" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c2c8-ee09-c03b-35d5" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e0ab-504b-cd53-5781" type="max"/>
@@ -4737,7 +4168,7 @@ Lahmia automatically lets them regain one Wound that they has lost during the ba
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="b403-9d32-c1cc-fed7" name="Timor Noctis, the Sword of Unholy Power" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="b403-9d32-c1cc-fed7" name="Timor Noctis, the Sword of Unholy Power" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bf89-8216-9a55-d68f" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8791-80f8-3e9c-08bd" type="max"/>
@@ -4755,153 +4186,96 @@ Lahmia automatically lets them regain one Wound that they has lost during the ba
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="f2fe-77df-e0ab-4518" name="Armour of Templehof" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="f2fe-77df-e0ab-4518" name="Armour of Templehof" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a520-43a0-19d9-f3c0" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="306c-5d3e-e2a3-12c9" type="max"/>
                   </constraints>
-                  <profiles>
-                    <profile id="653e-b3ee-6d73-1364" name="Armour of Templehof" publicationId="10a5-5781-61f5-86ae" page="44" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-                      <characteristics>
-                        <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                        <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                        <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. This item gives the wearer +2 Wounds (in addition to any Wounds he would get from being mounted on a Monster).</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
+                  <infoLinks>
+                    <infoLink name="Heavy Armour" id="af9e-cafb-f0fb-d272" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
+                      <modifiers>
+                        <modifier type="append" value="This item gives the wearer +2 Wounds (in addition to any Wounds he would get from being mounted on a Monster)." field="ff58-91e4-84d7-e6e4"/>
+                        <modifier type="set" value="Armour of Templehof" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
                 </selectionEntry>
               </selectionEntries>
               <selectionEntryGroups>
-                <selectionEntryGroup id="a2d8-d3b4-d1e0-49cc" name="Mount" hidden="false" collective="false" import="true">
+                <selectionEntryGroup id="a2d8-d3b4-d1e0-49cc" name="Mount" hidden="false" collective="false" import="true" sortIndex="6.5">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2d07-0237-a3a4-ce1d" type="max"/>
                   </constraints>
-                  <selectionEntries>
-                    <selectionEntry id="337f-5383-53c5-8687" name="Nightmare" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f854-4fd0-26ec-b9ab" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="e2ca-7533-a762-117e" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-                        <infoLink id="f7c2-22cc-84d4-7cb9" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                        <infoLink id="29a0-e9ec-6989-0be8" name="Impact Hits (1)" hidden="false" targetId="bb3b-3ca8-fcbc-a78b" type="rule"/>
-                        <infoLink id="fac4-ec24-6ae8-809e" name="Nightmare" hidden="false" targetId="1028-e8c0-ed9b-343b" type="profile"/>
-                      </infoLinks>
-                      <categoryLinks>
-                        <categoryLink id="ECZK-zXBN-hJmQ-yR7V" name="(Mount)" hidden="false" targetId="(Mount)" primary="false"/>
-                      </categoryLinks>
-                      <selectionEntries>
-                        <selectionEntry id="d02c-9621-03b2-5edc" name="Barding" hidden="false" collective="false" import="true" type="upgrade">
-                          <constraints>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="194b-6652-8014-9315" type="max"/>
-                          </constraints>
-                          <infoLinks>
-                            <infoLink id="af63-6e97-1856-2818" name="Barding" hidden="false" targetId="7228-95d3-3384-f234" type="profile"/>
-                          </infoLinks>
-                          <costs>
-                            <cost name="pts" typeId="points" value="6"/>
-                          </costs>
-                        </selectionEntry>
-                      </selectionEntries>
+                  <entryLinks>
+                    <entryLink import="true" name="Nightmare" hidden="false" id="9062-4343-f412-3e9d" type="selectionEntry" targetId="288d-c0a8-77de-61e7" sortIndex="1">
                       <costs>
                         <cost name="pts" typeId="points" value="21"/>
                       </costs>
-                    </selectionEntry>
-                    <selectionEntry id="d576-40d9-b513-a880" name="Hellsteed" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6ae7-0acc-31a1-048e" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="c9f7-d490-7d07-a882" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-                        <infoLink id="910f-5b41-f194-a641" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                        <infoLink id="1e26-8bb9-bd67-d028" name="Impact Hits (1)" hidden="false" targetId="bb3b-3ca8-fcbc-a78b" type="rule"/>
-                        <infoLink id="b72a-954f-0507-981f" name="Hellsteed" hidden="false" targetId="43c3-7b6b-5d57-c78e" type="profile"/>
-                        <infoLink id="64e8-4024-2ad8-bdd9" name="Fly (9)" hidden="false" targetId="2ba2-2aaa-3f36-4b24" type="rule"/>
-                      </infoLinks>
-                      <categoryLinks>
-                        <categoryLink id="0f3q-PUjZ-4Vns-oL2b" name="(Mount)" hidden="false" targetId="(Mount)" primary="false"/>
-                      </categoryLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="30"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="1853-315e-2527-efdc" name="Abyssal Terror" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3ff2-10f3-36a9-acc0" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="f55f-cbc7-854d-f2fd" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-                        <infoLink id="1cfa-18c2-a6ee-be82" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                        <infoLink id="74c2-d3ab-255a-619a" name="Stomp (1d3)" hidden="false" targetId="2958-cfde-eaf8-fe87" type="rule"/>
-                        <infoLink id="a6ee-fc46-7192-7356" name="Abyssal Terror" hidden="false" targetId="2771-bcc4-dc70-6d84" type="profile"/>
-                        <infoLink id="096d-367e-a2ed-2e87" name="Fly (8)" hidden="false" targetId="0a9a-bfcb-1a9d-5609" type="rule"/>
-                        <infoLink id="113d-809f-78c3-99da" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
-                      </infoLinks>
-                      <categoryLinks>
-                        <categoryLink id="cmUM-rSxi-nHTz-cnsN" name="(Mount)" hidden="false" targetId="(Mount)" primary="false"/>
-                      </categoryLinks>
-                      <selectionEntries>
-                        <selectionEntry id="1f16-ddba-30db-7dd6" name="Poisonous Tail" hidden="false" collective="false" import="true" type="upgrade">
-                          <constraints>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1c30-0e4c-6061-9086" type="max"/>
-                          </constraints>
-                          <infoLinks>
-                            <infoLink id="3250-294e-da5a-dad8" name="Poisonous Tail" hidden="false" targetId="1027-f487-d22f-f112" type="rule"/>
-                          </infoLinks>
-                          <costs>
-                            <cost name="pts" typeId="points" value="10"/>
-                          </costs>
-                        </selectionEntry>
-                        <selectionEntry id="37bf-37f1-5599-114a" name="Sword-claws" hidden="false" collective="false" import="true" type="upgrade">
-                          <constraints>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6a33-8b07-78c4-0836" type="max"/>
-                          </constraints>
-                          <infoLinks>
-                            <infoLink id="a9e9-da14-73e1-b1df" name="Sword-claws" hidden="false" targetId="683e-c9af-ddd5-c189" type="rule"/>
-                          </infoLinks>
+                      <entryLinks>
+                        <entryLink import="true" name="Barding" hidden="false" id="5c71-9f91-836c-89fd" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
                           <costs>
                             <cost name="pts" typeId="points" value="5"/>
                           </costs>
-                        </selectionEntry>
-                      </selectionEntries>
-                      <costs>
-                        <cost name="pts" typeId="points" value="125"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="66e2-4275-5104-9c39" name="Zombie Dragon" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a097-17c3-6539-320a" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="2dd7-ab15-9cca-4495" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-                        <infoLink id="2b2c-3f9f-2ffe-99d7" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                        <infoLink id="88b6-af1d-0f5b-7296" name="Stomp (1d6)" hidden="false" targetId="537e-8497-f0f2-8092" type="rule"/>
-                        <infoLink id="facd-b3d3-00e0-03ac" name="Zombie Dragon" hidden="false" targetId="50c3-d69e-27fe-c4f6" type="profile"/>
-                        <infoLink id="87b7-d17a-c2a7-9d81" name="Fly (7)" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
-                        <infoLink id="eb40-3a9f-e1d2-7ba3" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
-                        <infoLink id="3d21-a1a7-6ef0-2f5a" name="Swarm of Flies" hidden="false" targetId="ce29-896f-bc4f-f8ed" type="rule"/>
-                        <infoLink id="38b5-bf54-1628-9f54" name="Pestilent Breath" hidden="false" targetId="e50e-8c70-0e06-e925" type="rule"/>
-                        <infoLink id="07e6-5bd1-f01a-bd8f" name="Natural Armour (5+)" hidden="false" targetId="306d-711a-1300-587f" type="rule"/>
-                      </infoLinks>
-                      <categoryLinks>
-                        <categoryLink id="d7pK-KToB-pxmr-uDf7" name="(Mount)" hidden="false" targetId="(Mount)" primary="false"/>
-                      </categoryLinks>
+                        </entryLink>
+                      </entryLinks>
+                    </entryLink>
+                    <entryLink import="true" name="Zombie Dragon" hidden="false" id="38a2-b94c-bb0b-f95c" type="selectionEntry" targetId="330e-f36d-9f8a-dce6" sortIndex="4">
                       <costs>
                         <cost name="pts" typeId="points" value="245"/>
                       </costs>
-                    </selectionEntry>
-                  </selectionEntries>
+                      <categoryLinks>
+                        <categoryLink name="(Mount)" hidden="false" id="941f-e8d8-739c-248c" targetId="(Mount)" primary="false"/>
+                      </categoryLinks>
+                    </entryLink>
+                    <entryLink import="true" name="Hellsteed" hidden="false" id="ac80-f283-1fcb-004c" type="selectionEntry" targetId="5ecd-9b99-4f8f-e3ab" sortIndex="2">
+                      <costs>
+                        <cost name="pts" typeId="points" value="30"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Abyssal Terror" hidden="false" id="00f3-28a4-c9e9-1936" type="selectionEntry" targetId="9a59-eb87-1cf2-64b3" sortIndex="3">
+                      <costs>
+                        <cost name="pts" typeId="points" value="125"/>
+                      </costs>
+                    </entryLink>
+                  </entryLinks>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <entryLinks>
-                <entryLink id="60ad-6638-d2b1-4023" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry"/>
+                <entryLink id="60ad-6638-d2b1-4023" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
+                <entryLink import="true" name="The Generals of Undeath" hidden="false" id="b1e8-53a2-2276-7465" type="selectionEntry" targetId="02a1-7292-f96f-b6bf" sortIndex="2"/>
+                <entryLink import="true" name="Wizard Level 4" hidden="false" id="8c85-7829-0c27-edc7" type="selectionEntry" targetId="5460-3929-58ef-71ba" sortIndex="8">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1418-aeaf-aaff-3371-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1418-aeaf-aaff-3371-max"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Loremaster" hidden="false" id="fad4-dc14-969e-514a" type="selectionEntry" targetId="a2bf-14a5-6723-7157" sortIndex="7">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8329-4c00-9316-86b7-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8329-4c00-9316-86b7-max"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Lore of Necromancy" hidden="false" id="c82e-bcd7-66b1-4738" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="9">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ba03-7599-c161-7401"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Lore of Death" hidden="false" id="035b-2c44-96b1-0838" type="selectionEntry" targetId="bc0d-47f8-7220-1e16" sortIndex="10">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="14bf-6b6d-8516-aa35"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="565"/>
               </costs>
+              <categoryLinks>
+                <categoryLink name="Vampire" hidden="false" id="3c37-05d3-57f6-a1a8" targetId="27c2-45b8-9859-dda4" primary="false"/>
+                <categoryLink name="Von Carstein" hidden="false" id="ce07-24ef-4265-4c6d" targetId="5491-dc3f-881f-5897" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry id="381b-a865-1537-d39b" name="Lady Olynder" hidden="false" collective="false" import="true" type="model" sortIndex="7">
               <constraints>
@@ -5743,8 +5117,6 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
                 <infoLink id="e9cf-0ac2-e51c-b14b" name="Killing Blow" hidden="false" targetId="a711-7cf6-cd2b-1d29" type="rule"/>
                 <infoLink id="d33c-24d4-e551-a7b1" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
                 <infoLink id="0e04-c864-70f3-688f" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-                <infoLink id="384c-1c9b-c13c-7622" name="The Generals of Undeath" hidden="false" targetId="f189-b1bd-2258-4c02" type="rule"/>
-                <infoLink id="5d21-2c77-5bfe-4663" name="Characters and Units" hidden="false" targetId="6b8d-1936-904c-2fba" type="rule"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="1a62-8237-c596-630d" name="The Black Axe of Krell" hidden="false" collective="false" import="true" type="upgrade">
