@@ -236,6 +236,13 @@
                 <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true"/>
                 <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
                 <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -270,6 +277,8 @@
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
                 <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -286,6 +295,20 @@
         <infoLink name="Fear" id="c2b9-c3ec-39ff-2d86" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
         <infoLink name="Swiftstride" id="a92e-c732-6e1a-789f" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Swarm" id="f651-5580-8a7b-45eb" hidden="false">
       <infoLinks>
@@ -300,6 +323,20 @@
         <infoLink name="Swiftstride" id="833e-9ec6-9b65-6aef" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
         <infoLink name="Expendable" id="b701-aa37-6ccd-0693" hidden="false" type="rule" targetId="b806-942b-15af-b309"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="War Machine" id="d0ba-7b91-1049-d48b" hidden="false">
       <infoLinks>
@@ -317,12 +354,40 @@
         <infoLink name="Swiftstride" id="9454-a2e6-d8f9-f5fa" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
         <infoLink name="Terror" id="ee03-51b1-ba11-20ef" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Monstrous Beasts" id="f98e-8d4f-7b1b-59cd" hidden="false">
       <infoLinks>
         <infoLink name="Fear" id="bd5f-9083-7a7d-64de" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
         <infoLink name="Swiftstride" id="7733-1855-7ecf-09a5" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </categoryEntry>
     <categoryEntry name="Chariot" id="7224-b7fd-d652-3ff2" hidden="false">
       <infoLinks>
