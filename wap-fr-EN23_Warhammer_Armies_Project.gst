@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="69" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="70" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -357,6 +357,8 @@
         <infoLink name="Swiftstride" id="fe8c-f458-cb21-7363" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
       </infoLinks>
     </categoryEntry>
+    <categoryEntry name="Handheld Armour" id="ba52-4f0c-71ae-b52d" hidden="true"/>
+    <categoryEntry name="Suits of Armour" id="9a61-618b-519a-807c" hidden="true"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="6ee4-77bf-4402-f8ab" name="Standard" hidden="false">
@@ -8645,87 +8647,158 @@
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup name="Upgrades" id="3922-9a9c-285a-9357" hidden="false" collective="false" import="true">
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Shredding Talons" hidden="false" id="44a5-2f6e-f9f1-d92c" collective="true">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2dc0-e256-34ae-7677" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-          <rules>
-            <rule name="Shredding Talons" id="9e3d-1310-6e26-37de" hidden="false" publicationId="9e23-79cb-pubN77092" page="21">
-              <description>The model gains Armour Piercing (1).</description>
-            </rule>
-          </rules>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Swiftsense" hidden="false" id="04d5-2f11-c737-152c" collective="true">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1148-8d47-b33a-6181" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-          <rules>
-            <rule name="Swiftsense" id="dd27-cab8-48e1-6354" hidden="false" publicationId="9e23-79cb-pubN77092" page="21">
-              <description>The model gains the Always Strikes First special rule in any turn that they charge.</description>
-            </rule>
-          </rules>
-        </selectionEntry>
-      </selectionEntries>
-      <comment>Great Eagle</comment>
-    </selectionEntryGroup>
-    <selectionEntryGroup name="Spawn of Chaos" id="71e8-374b-3fb2-2eb9" hidden="false" collective="false" import="true">
+    <selectionEntryGroup name="5. Handheld Armour" id="9015-46da-282c-713d" hidden="false">
+      <comment>Min 1</comment>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0131-c786-315c-9dbe" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3ea6-01bb-0b28-b780" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7cef-e90c-ff74-4c59" includeChildSelections="false"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Spawn of Khorne" hidden="false" id="1a77-d1dc-4b1b-c1be" collective="false" sortIndex="3">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4d51-5a1d-1daa-0039" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Spawn of Khorne" id="6bfe-ac8c-cffc-2488" hidden="false" targetId="9342-d93f-e118-0b55" type="rule"/>
-          </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="3ea6-01bb-0b28-b780"/>
+            <modifier type="set" value="0" field="7cef-e90c-ff74-4c59"/>
+            <modifier type="set" value="true" field="hidden"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="ba52-4f0c-71ae-b52d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="5. Handheld Armour" id="0420-92ca-bbfc-b5f2" hidden="false">
+      <comment>Min 0</comment>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b127-dfd3-1284-6bb1" includeChildSelections="false"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="b127-dfd3-1284-6bb1"/>
+            <modifier type="set" value="true" field="hidden"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="ba52-4f0c-71ae-b52d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="4. Suits of Armour" id="f7f7-2534-4683-595a" hidden="false">
+      <comment>Min 1</comment>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="71c5-9037-5bd4-fae9" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f5b7-0be5-74d6-45b2" includeChildSelections="false"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="71c5-9037-5bd4-fae9"/>
+            <modifier type="set" value="0" field="f5b7-0be5-74d6-45b2"/>
+            <modifier type="set" value="true" field="hidden"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="4. Suits of Armour" id="f56d-df75-2d0b-ce09" hidden="false">
+      <comment>Min 0</comment>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b3e8-624f-92d7-7b5b" includeChildSelections="false"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="b3e8-624f-92d7-7b5b"/>
+            <modifier type="set" value="true" field="hidden"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="1. Character Options" id="35f1-2fc8-9817-3171" hidden="false">
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="b476-13c2-7d75-fd02" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2"/>
+      </entryLinks>
+      <comment>General</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="2. Primary Weapon" id="350c-4b0b-93c1-4e47" hidden="false">
+      <comment>Min 1</comment>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e941-9082-0af2-8b43" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe22-ce5f-b23e-303d" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="6. Wizard Level" id="6921-bd2a-e7cb-9029" hidden="false">
+      <comment>1 &amp; 2</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 1" hidden="false" id="8fd0-2716-0bc4-0bf1" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8"/>
+        <entryLink import="true" name="Wizard Level 2" hidden="false" id="13d6-4aba-63b3-f649" type="selectionEntry" targetId="801a-bc0a-a767-61db">
           <costs>
-            <cost name="pts" typeId="points" value="15"/>
+            <cost name="pts" typeId="points" value="35"/>
           </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Spawn of Nurgle" hidden="false" id="cb46-c117-d1aa-d001" collective="false" sortIndex="1">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f5e6-ea76-8495-eb06" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Spawn of Nurgle" id="65d6-005d-b04a-0e06" hidden="false" targetId="ad42-5a49-bd23-db76" type="rule"/>
-          </infoLinks>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b037-9419-a136-e1f4-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b037-9419-a136-e1f4-max"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="1. Character Options" id="ae27-2a8a-5baf-c6b0" hidden="false">
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="367e-0382-12c9-fe54" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2"/>
+        <entryLink import="true" name="Army Battle Standard" hidden="false" id="eee6-905e-d46b-79d9" type="selectionEntry" targetId="9519-df8f-0af4-1995">
           <costs>
-            <cost name="pts" typeId="points" value="10"/>
+            <cost name="pts" typeId="points" value="25"/>
           </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Spawn of Slaanesh" hidden="false" id="563c-108d-ecbb-f64a" collective="false" sortIndex="2">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e1e0-8a91-0eb4-8210" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Spawn of Slaanesh" id="c993-78f6-8da8-9588" hidden="false" targetId="4cca-bef4-9da0-60ee" type="rule"/>
-          </infoLinks>
+        </entryLink>
+      </entryLinks>
+      <comment>General &amp; BSB</comment>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="212a-2e31-9c05-19b4"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="3. Secondary Weapon" id="f86c-485f-5cc1-2a43" hidden="false">
+      <comment>Min 1</comment>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5d91-5217-36bf-adeb" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d000-627b-af39-4fd6" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="6. Wizard Level" id="d1c2-3512-e5b6-7616" hidden="false">
+      <comment>3 &amp; 4</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 3" hidden="false" id="3f93-c8d9-edff-302a" type="selectionEntry" targetId="1670-dca4-294b-7d9b"/>
+        <entryLink import="true" name="Wizard Level 4" hidden="false" id="319e-d324-f104-4081" type="selectionEntry" targetId="5460-3929-58ef-71ba">
           <costs>
-            <cost name="pts" typeId="points" value="10"/>
+            <cost name="pts" typeId="points" value="35"/>
           </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Spawn of Tzeentch" hidden="false" id="62cd-e66c-6de9-33a4" collective="false" sortIndex="4">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="08a5-e047-6ce3-98b9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Spawn of Tzeentch" id="eaf4-27ed-b2bf-5bfb" hidden="false" targetId="cfa3-ff7d-5a8e-de9b" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8fb4-564a-87c3-1e3f-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8fb4-564a-87c3-1e3f-max"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="2. Primary Weapon" id="79e5-2d90-804e-64f9" hidden="false">
+      <comment>Min 0</comment>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="97da-05bf-cb8b-07f8" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="3. Secondary Weapon" id="9bf8-b456-dd2f-8826" hidden="false">
+      <comment>Min 0</comment>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="94cf-8482-9a4d-8204" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="7. Mount" id="d3f4-2566-96e2-e425" hidden="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7821-ebe3-f713-6916" includeChildSelections="false"/>
+      </constraints>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
