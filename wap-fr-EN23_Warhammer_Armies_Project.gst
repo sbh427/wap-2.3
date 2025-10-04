@@ -8799,7 +8799,7 @@
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="b476-13c2-7d75-fd02" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2"/>
       </entryLinks>
-      <comment>General</comment>
+      <comment>General min 0</comment>
     </selectionEntryGroup>
     <selectionEntryGroup name="20. Primary Weapon" id="350c-4b0b-93c1-4e47" hidden="false">
       <comment>Min 1</comment>
@@ -8874,6 +8874,79 @@
     <selectionEntryGroup name="70. Mount" id="d3f4-2566-96e2-e425" hidden="false">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7821-ebe3-f713-6916" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="10. Character Options" id="7853-6aa4-00e8-09e0" hidden="false">
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="976d-a350-4cdd-2146" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2b7c-f946-c239-e8bc"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <comment>General min 1</comment>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7b92-7094-337f-b1ec"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="1d19-3d5b-2087-e988" hidden="false">
+      <comment>1</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 1" hidden="false" id="2461-692e-68b5-a7e6" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0203-9259-3a51-4379-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0203-9259-3a51-4379-max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d105-c86d-4f31-8bbf"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eb49-60bf-ae39-3d68"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="2f28-d537-4a60-b96b" hidden="false">
+      <comment>2</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 2" hidden="false" id="fe72-909b-86dc-19a9" type="selectionEntry" targetId="801a-bc0a-a767-61db">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a3d6-b794-cc34-ff7d-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a3d6-b794-cc34-ff7d-max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f245-c4a2-0dc0-7290"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7123-9422-df65-8fe7"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="8e7d-af82-eb9b-19f2" hidden="false">
+      <comment>3</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 3" hidden="false" id="a7ee-378c-4129-9086" type="selectionEntry" targetId="1670-dca4-294b-7d9b">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5cc3-d8c0-480b-177f-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5cc3-d8c0-480b-177f-max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="932a-7783-f488-1592"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8e03-1da6-0c97-c947"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="e548-6739-0537-5d95" hidden="false">
+      <comment>4</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 4" hidden="false" id="8007-cef0-bcd7-935f" type="selectionEntry" targetId="5460-3929-58ef-71ba">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="80a5-ade6-c9f6-73ee-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="80a5-ade6-c9f6-73ee-max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="229a-2958-7715-127c"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ad8b-d3db-a04c-a906"/>
       </constraints>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
