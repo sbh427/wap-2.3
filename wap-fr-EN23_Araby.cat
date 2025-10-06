@@ -1186,7 +1186,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup name="80. Genies" id="f24a-9804-50e2-77e3" hidden="false" sortIndex="">
+    <selectionEntryGroup name="80. Genies" id="f24a-9804-50e2-77e3" hidden="false">
       <rules>
         <rule name="Genie Binding" id="99ea-2cd3-16a0-1e07" hidden="false" publicationId="0896-cf2d-d305-6de3" page="13">
           <description>A Genie is not deployed on the table at the start of the battle, but may instead be summoned at the start of any of your turns (as long as they are not already summoned and alive) by the Magus who controls the Genie by passing a Leadership test (using their own Leadership characteristics). Place the Genie within 6&quot; of the Magus, at least 1&quot; away from other units or impassable terrain. It may act normally in the turn it is summoned. If the Genie is slain, it can be summoned back in a later turn, but the Magus will suffer a cumulative -1 penalty to the Leadership test required every time they try to do so. However, if the Magus is slain, the Genie is immediately removed as a casualty.</description>
@@ -1258,7 +1258,7 @@
         </profile>
       </profiles>
       <entryLinks>
-        <entryLink import="true" name="Magic Items" hidden="false" id="50c1-f790-9807-2856" type="selectionEntryGroup" targetId="d5c7-125a-f512-29e5">
+        <entryLink import="true" name="90. Magic Items" hidden="false" id="50c1-f790-9807-2856" type="selectionEntryGroup" targetId="d5c7-125a-f512-29e5">
           <modifiers>
             <modifier type="increment" value="50" field="4281-3d5b-825a-6bcf"/>
           </modifiers>
@@ -1324,7 +1324,7 @@
         </profile>
       </profiles>
       <entryLinks>
-        <entryLink import="true" name="Magic Items" hidden="false" id="d3e3-ad1f-479a-8605" type="selectionEntryGroup" targetId="d5c7-125a-f512-29e5" sortIndex="">
+        <entryLink import="true" name="90. Magic Items" hidden="false" id="d3e3-ad1f-479a-8605" type="selectionEntryGroup" targetId="d5c7-125a-f512-29e5">
           <modifiers>
             <modifier type="increment" value="100" field="4281-3d5b-825a-6bcf"/>
           </modifiers>
@@ -1513,12 +1513,12 @@
         <cost name="pts" typeId="points" value="165"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="Genies" hidden="false" id="7cb0-c6a6-2ec1-abdb" type="selectionEntryGroup" targetId="f24a-9804-50e2-77e3" sortIndex="">
+        <entryLink import="true" name="80. Genies" hidden="false" id="7cb0-c6a6-2ec1-abdb" type="selectionEntryGroup" targetId="f24a-9804-50e2-77e3">
           <modifiers>
             <modifier type="set" value="2" field="8f01-aa3d-c881-8283"/>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="Magic Items" hidden="false" id="2533-1f95-d87b-0526" type="selectionEntryGroup" targetId="d5c7-125a-f512-29e5" sortIndex="">
+        <entryLink import="true" name="90. Magic Items" hidden="false" id="2533-1f95-d87b-0526" type="selectionEntryGroup" targetId="d5c7-125a-f512-29e5">
           <modifiers>
             <modifier type="increment" value="100" field="4281-3d5b-825a-6bcf"/>
           </modifiers>
@@ -1558,7 +1558,7 @@
         </entryLink>
       </entryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="61. Lore" id="006d-4be3-2a16-c0df" hidden="false" sortIndex="" collapsible="true">
+        <selectionEntryGroup name="61. Lore" id="006d-4be3-2a16-c0df" hidden="false" collapsible="true">
           <entryLinks>
             <entryLink import="true" name="Lore of Death" hidden="false" id="2586-52e0-a5f4-6eed" type="selectionEntry" targetId="bc0d-47f8-7220-1e16" sortIndex="1"/>
             <entryLink import="true" name="Lore of Heavens" hidden="false" id="ad25-76bb-c060-c435" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee" sortIndex="2"/>
@@ -1619,9 +1619,14 @@
         </profile>
       </profiles>
       <entryLinks>
-        <entryLink import="true" name="Magic Items" hidden="false" id="7dc9-54fb-beb9-ffa1" type="selectionEntryGroup" targetId="d5c7-125a-f512-29e5" sortIndex="">
+        <entryLink import="true" name="90. Magic Items" hidden="false" id="7dc9-54fb-beb9-ffa1" type="selectionEntryGroup" targetId="d5c7-125a-f512-29e5">
           <modifiers>
             <modifier type="increment" value="50" field="4281-3d5b-825a-6bcf"/>
+            <modifier type="decrement" value="25" field="4281-3d5b-825a-6bcf">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="5303-10d9-5c1f-09b9" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="56e6-9813-0797-7b4c" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
@@ -1687,7 +1692,15 @@
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="10. Character Options" hidden="false" id="d229-ae55-51ef-a655" type="selectionEntryGroup" targetId="ae27-2a8a-5baf-c6b0"/>
+        <entryLink import="true" name="10. Character Options" hidden="false" id="d229-ae55-51ef-a655" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
+          <entryLinks>
+            <entryLink import="true" name="Army Battle Standard" hidden="false" id="20e0-1bbe-fe11-a1c9" type="selectionEntry" targetId="9519-df8f-0af4-1995">
+              <entryLinks>
+                <entryLink import="true" name="Magic Standards" hidden="false" id="5303-10d9-5c1f-09b9" type="selectionEntryGroup" targetId="3335-4603-acc0-28b4"/>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
         <entryLink import="true" name="50. Handheld Armour" hidden="false" id="cddc-32fa-fcee-958b" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
           <entryLinks>
             <entryLink import="true" name="Shield" hidden="false" id="f785-941e-7715-27a8" type="selectionEntry" targetId="c068-0827-9931-d9bf">
@@ -1754,7 +1767,7 @@
         <cost name="pts" typeId="points" value="65"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="Magic Items" hidden="false" id="016f-f7af-f129-6aea" type="selectionEntryGroup" targetId="d5c7-125a-f512-29e5" sortIndex="">
+        <entryLink import="true" name="90. Magic Items" hidden="false" id="016f-f7af-f129-6aea" type="selectionEntryGroup" targetId="d5c7-125a-f512-29e5">
           <modifiers>
             <modifier type="increment" value="50" field="4281-3d5b-825a-6bcf"/>
           </modifiers>
@@ -1790,7 +1803,7 @@
         <entryLink import="true" name="80. Genies" hidden="false" id="bffb-fabc-3237-bb43" type="selectionEntryGroup" targetId="f24a-9804-50e2-77e3"/>
       </entryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="61. Lore" id="3b28-9095-87e4-cc8b" hidden="false" sortIndex="" collapsible="true">
+        <selectionEntryGroup name="61. Lore" id="3b28-9095-87e4-cc8b" hidden="false" collapsible="true">
           <entryLinks>
             <entryLink import="true" name="Lore of Death" hidden="false" id="b5e4-e27e-fcc9-3cc2" type="selectionEntry" targetId="bc0d-47f8-7220-1e16" sortIndex="1"/>
             <entryLink import="true" name="Lore of Heavens" hidden="false" id="6d8e-7545-1cc6-1b2c" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee" sortIndex="2"/>
@@ -1834,7 +1847,7 @@
         <cost name="pts" typeId="points" value="90"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="Magic Items" hidden="false" id="b998-27d9-1ba3-52e4" type="selectionEntryGroup" targetId="d5c7-125a-f512-29e5" sortIndex="">
+        <entryLink import="true" name="90. Magic Items" hidden="false" id="b998-27d9-1ba3-52e4" type="selectionEntryGroup" targetId="d5c7-125a-f512-29e5">
           <modifiers>
             <modifier type="increment" value="50" field="4281-3d5b-825a-6bcf"/>
           </modifiers>
@@ -4136,7 +4149,7 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                 <entryLink import="true" name="60. Wizard Level" hidden="false" id="4d8b-91dc-d59c-888b" type="selectionEntryGroup" targetId="e548-6739-0537-5d95"/>
               </entryLinks>
               <selectionEntryGroups>
-                <selectionEntryGroup name="61. Lore" id="fef3-a17c-1896-dfac" hidden="false" sortIndex="">
+                <selectionEntryGroup name="61. Lore" id="fef3-a17c-1896-dfac" hidden="false">
                   <entryLinks>
                     <entryLink import="true" name="Lore of Death" hidden="false" id="132f-a86e-b204-9555" type="selectionEntry" targetId="bc0d-47f8-7220-1e16" sortIndex="1"/>
                     <entryLink import="true" name="Lore of Shadow" hidden="false" id="3e8b-d1dc-a1c0-bdf6" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67" sortIndex="2"/>
@@ -4307,7 +4320,7 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="638a-c4fe-c049-8ec5" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
               <selectionEntryGroups>
-                <selectionEntryGroup name="80. Genies" id="4049-1ac0-32e1-4f47" hidden="false" sortIndex="">
+                <selectionEntryGroup name="80. Genies" id="4049-1ac0-32e1-4f47" hidden="false">
                   <entryLinks>
                     <entryLink import="true" name="Djinn" hidden="false" id="372f-ef67-77bd-6f82" type="selectionEntry" targetId="ced0-11df-ea9f-37f6" sortIndex="1">
                       <constraints>
@@ -4338,7 +4351,7 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                     </entryLink>
                   </entryLinks>
                 </selectionEntryGroup>
-                <selectionEntryGroup name="61. Lore" id="4627-3498-acba-2d42" hidden="false" sortIndex="">
+                <selectionEntryGroup name="61. Lore" id="4627-3498-acba-2d42" hidden="false">
                   <entryLinks>
                     <entryLink import="true" name="Lore of Death" hidden="false" id="592f-5aed-b213-d610" type="selectionEntry" targetId="bc0d-47f8-7220-1e16" sortIndex="1"/>
                     <entryLink import="true" name="Lore of Heavens" hidden="false" id="4ab1-a94b-b2de-ee92" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee" sortIndex="2"/>
@@ -4673,7 +4686,7 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="521f-6810-7ccf-cbac-max"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink import="true" name="Magic Items" hidden="false" id="2958-4435-ea7c-06d3" type="selectionEntryGroup" targetId="d5c7-125a-f512-29e5">
+                    <entryLink import="true" name="90. Magic Items" hidden="false" id="2958-4435-ea7c-06d3" type="selectionEntryGroup" targetId="d5c7-125a-f512-29e5">
                       <modifiers>
                         <modifier type="increment" value="50" field="4281-3d5b-825a-6bcf"/>
                       </modifiers>
@@ -4696,7 +4709,7 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4ef6-3d0b-34f7-fbed-max"/>
                   </constraints>
                   <entryLinks>
-                    <entryLink import="true" name="Magic Items" hidden="false" id="ddff-8731-67e3-40f6" type="selectionEntryGroup" targetId="d5c7-125a-f512-29e5">
+                    <entryLink import="true" name="90. Magic Items" hidden="false" id="ddff-8731-67e3-40f6" type="selectionEntryGroup" targetId="d5c7-125a-f512-29e5">
                       <modifiers>
                         <modifier type="increment" value="25" field="4281-3d5b-825a-6bcf"/>
                         <modifier type="set" value="true" field="hidden" affects="22cb-7492-eb53-25c1"/>
@@ -4877,7 +4890,7 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                 </profile>
               </profiles>
               <entryLinks>
-                <entryLink import="true" name="Genies" hidden="false" id="3923-8111-4d8b-d847" type="selectionEntryGroup" targetId="f24a-9804-50e2-77e3" sortIndex=""/>
+                <entryLink import="true" name="80. Genies" hidden="false" id="3923-8111-4d8b-d847" type="selectionEntryGroup" targetId="f24a-9804-50e2-77e3"/>
                 <entryLink import="true" name="60. Wizard Level" hidden="false" id="d342-9ece-e765-987c" type="selectionEntryGroup" targetId="2f28-d537-4a60-b96b"/>
               </entryLinks>
               <rules>
