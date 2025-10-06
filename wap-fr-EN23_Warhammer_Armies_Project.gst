@@ -8797,7 +8797,7 @@
     </selectionEntryGroup>
     <selectionEntryGroup name="10. Character Options" id="35f1-2fc8-9817-3171" hidden="false">
       <entryLinks>
-        <entryLink import="true" name="General" hidden="false" id="b476-13c2-7d75-fd02" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2"/>
+        <entryLink import="true" name="General" hidden="false" id="b476-13c2-7d75-fd02" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1"/>
       </entryLinks>
       <comment>General min 0</comment>
     </selectionEntryGroup>
@@ -8821,20 +8821,6 @@
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b037-9419-a136-e1f4-min"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b037-9419-a136-e1f4-max"/>
-      </constraints>
-    </selectionEntryGroup>
-    <selectionEntryGroup name="10. Character Options" id="ae27-2a8a-5baf-c6b0" hidden="false">
-      <entryLinks>
-        <entryLink import="true" name="General" hidden="false" id="367e-0382-12c9-fe54" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1"/>
-        <entryLink import="true" name="Army Battle Standard" hidden="false" id="eee6-905e-d46b-79d9" type="selectionEntry" targetId="9519-df8f-0af4-1995" sortIndex="2">
-          <costs>
-            <cost name="pts" typeId="points" value="25"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
-      <comment>General &amp; BSB</comment>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="212a-2e31-9c05-19b4"/>
       </constraints>
     </selectionEntryGroup>
     <selectionEntryGroup name="30. Secondary Weapon" id="f86c-485f-5cc1-2a43" hidden="false">
