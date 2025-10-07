@@ -183,7 +183,15 @@
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f412-f4d0-9f49-afab" type="min"/>
       </constraints>
     </categoryEntry>
-    <categoryEntry id="d38a-73da-883b-bab9" name="Heroes" hidden="false"/>
+    <categoryEntry id="d38a-73da-883b-bab9" name="Heroes" hidden="false">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
     <categoryEntry id="fc26-7737-f7cb-8977" name="Special" hidden="false">
       <modifiers>
         <modifier type="decrement" field="5e3c-b5d6-a059-b5ab" value="1">
