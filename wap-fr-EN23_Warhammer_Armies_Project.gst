@@ -8943,6 +8943,19 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ad8b-d3db-a04c-a906"/>
       </constraints>
     </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="e303-1f8c-2385-b1e5" hidden="false">
+      <comment>0 &amp; 1</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 1" hidden="false" id="705a-9d3b-4a08-08a7" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
+          <costs>
+            <cost name="pts" typeId="points" value="35"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d10-92f6-d5d5-f71d"/>
+      </constraints>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="6624-0b7b-c5b8-6397" name="Scouts" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
