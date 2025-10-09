@@ -123,11 +123,6 @@
         <characteristicType id="0256-a2e8-e71c-22cc" name="Result"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="a9be-6f35-44aa-bf7d" name="Stone Thrower Misfire Chart">
-      <characteristicTypes>
-        <characteristicType id="d187-dd40-0edb-b165" name="Result"/>
-      </characteristicTypes>
-    </profileType>
     <profileType id="591c-24ac-19bd-3b4b" name="Mercenary Loyalty Table">
       <characteristicTypes>
         <characteristicType id="c8b7-e979-95fd-ac37" name="Result"/>
@@ -160,6 +155,11 @@
         <characteristicType name="Unit Strength" id="ec2f-bc98-8ff4-9997"/>
         <characteristicType name="Line of Sight" id="6fa1-9401-65a0-4327"/>
         <characteristicType name="Default Special Rules" id="bedb-f7c8-dfb9-fa80"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Misfire Chart" id="c972-d0be-bd2e-332b" hidden="false">
+      <characteristicTypes>
+        <characteristicType name="Result" id="008a-8bda-9586-4ae1"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -482,26 +482,12 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="e8ed-fd7d-58d1-f615" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
-          <profiles>
-            <profile name="01-02" typeId="4537-0079-60d2-4469" typeName="Blackpowder Misfire Chart" hidden="false" id="385d-5c05-b088-169b" publicationId="9e23-79cb-pubN66727" page="113">
-              <characteristics>
-                <characteristic name="Result" typeId="0256-a2e8-e71c-22cc">Destroyed!: The war machine is destroyed.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="03-04" typeId="4537-0079-60d2-4469" typeName="Blackpowder Misfire Chart" hidden="false" id="1adf-38fa-f9cd-97c8" publicationId="9e23-79cb-pubN66727" page="113">
-              <characteristics>
-                <characteristic name="Result" typeId="0256-a2e8-e71c-22cc">Malfunction: The war machine cannot fire this turn or in the controlling player&apos;s next turn.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="05-06" typeId="4537-0079-60d2-4469" typeName="Blackpowder Misfire Chart" hidden="false" id="c47b-e500-a5b2-5143" publicationId="9e23-79cb-pubN66727" page="113">
-              <characteristics>
-                <characteristic name="Result" typeId="0256-a2e8-e71c-22cc">May not Shoot: The war machine can shoot as normal again in the controlling player&apos;s next turn.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Blackpowder Misfire Chart" id="00d1-c026-f8e6-c4c3" hidden="false" type="infoGroup" targetId="bb8f-7181-30f9-fc65"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Duplicate Choices" hidden="false" id="7637-1e6f-b1ba-1b46" collective="false">
           <constraints>
@@ -593,54 +579,54 @@
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="22de-1797-7260-b838" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="12" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="6fb3-b0c8-656e-d475" publicationId="9e23-79cb-pubN66727" page="40">
+            <profile name="12+ Damned by Chaos" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="6fb3-b0c8-656e-d475" publicationId="9e23-79cb-pubN66727" page="40">
               <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Damned by Chaos: The Wizard is immediately removed as a casualty, regardless of any protective magic item or rule they might have.</characteristic>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard is immediately removed as a casualty, regardless of any protective magic item or rule they might have.</characteristic>
               </characteristics>
             </profile>
-            <profile name="7" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="a511-7f28-0f3b-1a91" publicationId="9e23-79cb-pubN66727" page="40">
+            <profile name="7 Detonation" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="a511-7f28-0f3b-1a91" publicationId="9e23-79cb-pubN66727" page="40">
               <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Detonation: The Wizard and all models in base contact with him suffer a Strength 10 hit.</characteristic>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard and all models in base contact with him suffer a Strength 10 hit.</characteristic>
               </characteristics>
             </profile>
-            <profile name="5" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="bc70-79a8-a31c-c477" publicationId="9e23-79cb-pubN66727" page="40">
+            <profile name="5 Magical Feedback" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="bc70-79a8-a31c-c477" publicationId="9e23-79cb-pubN66727" page="40">
               <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Magical Feedback: The Wizard and every model on the same side within 12&quot; that can channel/generate power or dispel dice suffer a Strength 4 hit as a result of the magical backlash. The Wizard cannot attempt to cast further spells this phase.</characteristic>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard and every model on the same side within 12&quot; that can channel/generate power or dispel dice suffer a Strength 4 hit as a result of the magical backlash. The Wizard cannot attempt to cast further spells this phase.</characteristic>
               </characteristics>
             </profile>
-            <profile name="9" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="d716-289e-2d74-e0c5" publicationId="9e23-79cb-pubN66727" page="40">
+            <profile name="9 Calamitous Detonation" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="d716-289e-2d74-e0c5" publicationId="9e23-79cb-pubN66727" page="40">
               <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Calamitous Detonation: Centre the small round template over the Wizard – every model underneath the template suffers a Strength 10 hit (including the Wizard – they do not benefit from Look Out Sir! in this case).</characteristic>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Centre the small round template over the Wizard – every model underneath the template suffers a Strength 10 hit (including the Wizard – they do not benefit from Look Out Sir! in this case).</characteristic>
               </characteristics>
             </profile>
-            <profile name="8" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="f0b3-811a-2c59-1669" publicationId="9e23-79cb-pubN66727" page="40">
+            <profile name="8 Amnesia" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="f0b3-811a-2c59-1669" publicationId="9e23-79cb-pubN66727" page="40">
               <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Amnesia: The caster forgets how to cast the spell and will not be able to cast it again during this battle.</characteristic>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The caster forgets how to cast the spell and will not be able to cast it again during this battle.</characteristic>
               </characteristics>
             </profile>
-            <profile name="4" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="f267-0d21-8489-77a3" publicationId="9e23-79cb-pubN66727" page="40">
+            <profile name="4 Lost Concentration" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="f267-0d21-8489-77a3" publicationId="9e23-79cb-pubN66727" page="40">
               <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Lost Concentration: The opposing player may immediately cast any one of their own spells of the same casting difficulty rating or less. No casting roll is required – the spell is automatically cast – but it can be dispelled by the player whose turn it is as normal (by using power dice in the same way as dispel dice). They need to beat the basic casting value of the spell to dispel it.</characteristic>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The opposing player may immediately cast any one of their own spells of the same casting difficulty rating or less. No casting roll is required – the spell is automatically cast – but it can be dispelled by the player whose turn it is as normal (by using power dice in the same way as dispel dice). They need to beat the basic casting value of the spell to dispel it.</characteristic>
               </characteristics>
             </profile>
-            <profile name="11" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="1a08-69de-ebfa-da11" publicationId="9e23-79cb-pubN66727" page="40">
+            <profile name="11 Dimensional Cascade" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="1a08-69de-ebfa-da11" publicationId="9e23-79cb-pubN66727" page="40">
               <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Dimensional Cascade: Centre the large round template over the Wizard – every model underneath the template (including the Wizard – they do not benefit from Look Out Sir! in this case) suffers a Strength 10 hit.</characteristic>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Centre the large round template over the Wizard – every model underneath the template (including the Wizard – they do not benefit from Look Out Sir! in this case) suffers a Strength 10 hit.</characteristic>
               </characteristics>
             </profile>
-            <profile name="10" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="3893-4961-bc56-1cb8" publicationId="9e23-79cb-pubN66727" page="40">
+            <profile name="10 Deamonic Poessession" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="3893-4961-bc56-1cb8" publicationId="9e23-79cb-pubN66727" page="40">
               <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Deamonic Poessession: The caster suffers one Strength 10 hit and loses a Wizard level and their highest levelled spell. If the caster reaches Level 0, he stops counting as a Wizard for all purposes and therefore will not be able to use any arcane magic items he is carrying.</characteristic>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The caster suffers one Strength 10 hit and loses a Wizard level and their highest levelled spell. If the caster reaches Level 0, he stops counting as a Wizard for all purposes and therefore will not be able to use any arcane magic items he is carrying.</characteristic>
               </characteristics>
             </profile>
-            <profile name="6" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="92e1-d44e-2735-96fc" publicationId="9e23-79cb-pubN66727" page="40">
+            <profile name="6 Power Drain" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="92e1-d44e-2735-96fc" publicationId="9e23-79cb-pubN66727" page="40">
               <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Power Drain: The casting player loses D3 dice from the power pool.</characteristic>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The casting player loses D3 dice from the power pool.</characteristic>
               </characteristics>
             </profile>
-            <profile name="02-03" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="8424-e2b3-178b-a62c" publicationId="9e23-79cb-pubN66727" page="40">
+            <profile name="2-3 Loss of Power" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="8424-e2b3-178b-a62c" publicationId="9e23-79cb-pubN66727" page="40">
               <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Loss of Power: The Wizard cannot attempt to cast further spells this phase.</characteristic>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard cannot attempt to cast further spells this phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -652,26 +638,12 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="f2e5-059d-7b35-1ee2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
-          <profiles>
-            <profile name="1" typeId="a9be-6f35-44aa-bf7d" typeName="Stone Thrower Misfire Chart" hidden="false" id="f14c-d708-7ec1-d950" publicationId="9e23-79cb-pubN66727" page="115">
-              <characteristics>
-                <characteristic name="Result" typeId="d187-dd40-0edb-b165">Destroyed!: The war machine is destroyed.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="02-03" typeId="a9be-6f35-44aa-bf7d" typeName="Stone Thrower Misfire Chart" hidden="false" id="b7a8-f42f-997c-7958" publicationId="9e23-79cb-pubN66727" page="115">
-              <characteristics>
-                <characteristic name="Result" typeId="d187-dd40-0edb-b165">Disabled: The stone thrower suffers a wound, with no armour saves allowed. The stone thrower cannot fire this turn or in the controlling player&apos;s next turn.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="04-06" typeId="a9be-6f35-44aa-bf7d" typeName="Stone Thrower Misfire Chart" hidden="false" id="cf7e-50c9-f10c-da28" publicationId="9e23-79cb-pubN66727" page="115">
-              <characteristics>
-                <characteristic name="Result" typeId="d187-dd40-0edb-b165">May not Shoot: The stone thrower is unharmed and can shoot as normal again in the controlling player&apos;s next turn.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Stone Thrower Misfire Chart" id="8c7e-4b5f-cd3f-044b" hidden="false" type="infoGroup" targetId="f6f0-bb1f-f863-3e81"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Troop Types" hidden="false" id="d24f-26db-0c14-a9f6">
           <constraints>
@@ -8181,17 +8153,6 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c605-baf4-bf9e-b43d-max"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Scythes" hidden="false" id="865f-edfe-e4fd-d28e" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8ec4-3081-a854-3007" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Scythes" id="8019-e9ad-382b-f3d3" hidden="false" targetId="d896-d52f-cc64-ab43" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Skirmishers" hidden="false" id="468e-0a4a-682a-7de2" collective="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8ee8-e6bb-0c3e-f5e7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -12224,21 +12185,40 @@ Magic phase.</characteristic>
     </profile>
   </sharedProfiles>
   <sharedInfoGroups>
-    <infoGroup name="Aminosity Chart" id="cc7c-02cb-fdab-8b36" hidden="false">
+    <infoGroup name="Stone Thrower Misfire Chart" id="f6f0-bb1f-f863-3e81" hidden="false">
       <profiles>
-        <profile name="01 (Animosity Chart)" typeId="9025-f9c9-08a1-7918" typeName="Animosity Chart" hidden="false" id="c769-45c9-27cd-e14e" publicationId="8ada-88a0-cdcd-9b5e" page="60">
+        <profile name="1 Destroyed!" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="f14c-d708-7ec1-d950" publicationId="9e23-79cb-pubN66727" page="115">
           <characteristics>
-            <characteristic name="Result" typeId="fb86-d23a-8886-cc3b">Squabble: The unit can do nothing this turn.</characteristic>
+            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The war machine is destroyed.</characteristic>
           </characteristics>
         </profile>
-        <profile name="02-05 (Animosity Chart)" typeId="9025-f9c9-08a1-7918" typeName="Animosity Chart" hidden="false" id="df9f-2d15-5f0d-624a" publicationId="8ada-88a0-cdcd-9b5e" page="60">
+        <profile name="2-3 Disabled" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="b7a8-f42f-997c-7958" publicationId="9e23-79cb-pubN66727" page="115">
           <characteristics>
-            <characteristic name="Result" typeId="fb86-d23a-8886-cc3b">Plan&apos;s a good &apos;un: The unit may act normally this turn.</characteristic>
+            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The stone thrower suffers a wound, with no armour saves allowed. The stone thrower cannot fire this turn or in the controlling player&apos;s next turn.</characteristic>
           </characteristics>
         </profile>
-        <profile name="06 (Animosity Chart)" typeId="9025-f9c9-08a1-7918" typeName="Animosity Chart" hidden="false" id="2624-b6e6-e171-5b72" publicationId="8ada-88a0-cdcd-9b5e" page="60">
+        <profile name="4-6 May not Shoot" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="cf7e-50c9-f10c-da28" publicationId="9e23-79cb-pubN66727" page="115">
           <characteristics>
-            <characteristic name="Result" typeId="fb86-d23a-8886-cc3b">We&apos;ll Show &apos;Em: Pivot the unit on the spot to face the nearest visible enemy unit, and then make a full (non-march) move in a straight line towards it. If there is no visible enemy, the unit must move straight ahead instead. If it is impossible for the unit to pivot to face the closest enemy, it will pivot towards it as far as it can, and will then move as far forward as it can while still keeping the enemy within its forward arc. After the move is complete the unit must immediately declare a charge against the closest visible enemy unit, if it is possible to do so. If the unit cannot declare a charge then it may carry on with the rest of its turn normally, as if it had not yet moved this turn.</characteristic>
+            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The stone thrower is unharmed and can shoot as normal again in the controlling player&apos;s next turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup name="Blackpowder Misfire Chart" id="bb8f-7181-30f9-fc65" hidden="false">
+      <profiles>
+        <profile name="1-2 Destroyed!" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="385d-5c05-b088-169b" publicationId="9e23-79cb-pubN66727" page="113">
+          <characteristics>
+            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The war machine is destroyed.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="3-4 Malfunction" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="1adf-38fa-f9cd-97c8" publicationId="9e23-79cb-pubN66727" page="113">
+          <characteristics>
+            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The war machine cannot fire this turn or in the controlling player&apos;s next turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="5-6 May not Shoot" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="c47b-e500-a5b2-5143" publicationId="9e23-79cb-pubN66727" page="113">
+          <characteristics>
+            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The war machine can shoot as normal again in the controlling player&apos;s next turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
