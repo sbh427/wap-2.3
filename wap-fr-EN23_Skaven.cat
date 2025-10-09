@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="28da-4dfe-fb43-8a0c" name="Skaven WAP 1.9" revision="9" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/XwjPS8c9TB" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="40" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="28da-4dfe-fb43-8a0c" name="Skaven WAP 1.9" revision="10" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/XwjPS8c9TB" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="40" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://discordapp.com/invite/UrrPB3T</readme>
   <profileTypes>
     <profileType id="4d5d-95c5-9736-ddda" name="Ringing the Bell Table">
@@ -114,7 +114,7 @@
     </profileType>
   </profileTypes>
   <selectionEntries>
-    <selectionEntry id="e7cc-2891-79c2-d6b3" name="Grey Seer" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="e7cc-2891-79c2-d6b3" name="Grey Seer" hidden="false" collective="false" import="true" type="model" sortIndex="1">
       <profiles>
         <profile id="7980-254e-0a08-9d87" name="Grey Seer" publicationId="4086-1ccd-f433-39a2" page="147" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
           <characteristics>
@@ -139,14 +139,18 @@
       <categoryLinks>
         <categoryLink id="acd1-ad85-0924-e943" name="Lords" hidden="false" targetId="d280-b7df-c185-2ba5" primary="true"/>
         <categoryLink id="119e-c53d-f221-d323" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="false"/>
+        <categoryLink name="Infantry" hidden="false" id="3aff-9367-0ef1-f053" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="9b79-ace1-ccc6-04ee" name="Mount" hidden="false" collective="false" import="true" sortIndex="5">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cf55-84b5-47e5-bcea" type="max"/>
-          </constraints>
+      <entryLinks>
+        <entryLink import="true" name="90. Magic items" hidden="false" id="c9bd-d8d9-0eb3-d1c9" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67">
+          <modifiers>
+            <modifier type="increment" value="100" field="9147-3cbf-bb37-cfb3"/>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="60. Wizard Level" hidden="false" id="34e2-15e0-cfbe-c2e8" type="selectionEntryGroup" targetId="e548-6739-0537-5d95"/>
+        <entryLink import="true" name="70. Mount" hidden="false" id="c0fd-d3f3-4e65-005a" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="Screaming Bell" hidden="false" id="9ba1-fe21-a237-4091" collective="false" subType="mount">
+            <selectionEntry type="model" import="true" name="Screaming Bell" hidden="false" id="9ba1-fe21-a237-4091" collective="false" subType="mount" sortIndex="2">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c155-6c43-92f2-aa3a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -283,52 +287,46 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="War-Litter" hidden="false" id="feb1-ca86-4c66-60d8" type="selectionEntry" targetId="a214-99c0-8510-4a4a">
+            <entryLink import="true" name="War-Litter" hidden="false" id="feb1-ca86-4c66-60d8" type="selectionEntry" targetId="a214-99c0-8510-4a4a" sortIndex="1">
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
             </entryLink>
           </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="1ed1-ac8c-103b-dcf8" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
-        <entryLink import="true" name="Hand Weapon" hidden="false" id="3321-de4e-e275-5fa5" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="2">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d578-6937-3545-16cd"/>
-          </constraints>
         </entryLink>
-        <entryLink import="true" name="Magic items" hidden="false" id="c9bd-d8d9-0eb3-d1c9" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="6">
-          <modifiers>
-            <modifier type="increment" value="100" field="9147-3cbf-bb37-cfb3"/>
-          </modifiers>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="b1ec-0fc0-f937-7493" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="3321-de4e-e275-5fa5" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d578-6937-3545-16cd"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
-        <entryLink import="true" name="Wizard Level 4" hidden="false" id="8ce0-f905-3336-ba2f" type="selectionEntry" targetId="5460-3929-58ef-71ba" sortIndex="3">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d015-c022-463b-0744-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d015-c022-463b-0744-max"/>
-          </constraints>
+        <entryLink import="true" name="55. Equipment" hidden="false" id="e50d-7011-8631-aa01" type="selectionEntryGroup" targetId="2575-5193-15f7-421a">
+          <entryLinks>
+            <entryLink import="true" name="Warpstone Tokens" hidden="false" id="04c3-c20f-3b7a-8c16" type="selectionEntry" targetId="3277-5282-8e2f-5e94">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="5807-507e-03a3-0530"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
-        <entryLink import="true" name="Warpstone Tokens" hidden="false" id="04c3-c20f-3b7a-8c16" type="selectionEntry" targetId="3277-5282-8e2f-5e94" sortIndex="4">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="5807-507e-03a3-0530"/>
-          </constraints>
+        <entryLink import="true" name="65. Lore of Magic" hidden="false" id="51a8-8161-0bc1-2df0" type="selectionEntryGroup" targetId="758f-4e20-95b6-ffa5">
+          <entryLinks>
+            <entryLink import="true" name="Lore of Plague &amp; Ruin" hidden="false" id="1339-ffcd-2434-09be" type="selectionEntry" targetId="b697-2a33-b4eb-bfcf"/>
+          </entryLinks>
         </entryLink>
-        <entryLink import="true" name="Lore of Plague &amp; Ruin" hidden="false" id="1339-ffcd-2434-09be" type="selectionEntry" targetId="b697-2a33-b4eb-bfcf" sortIndex="7">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dbbe-d6d0-2475-80e7-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dbbe-d6d0-2475-80e7-max"/>
-          </constraints>
-        </entryLink>
+        <entryLink import="true" name="10. Character Options" hidden="false" id="131b-2da5-0b1c-6302" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="200"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="789e-e656-dd69-ffc2" name="Warlord" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="789e-e656-dd69-ffc2" name="Warlord" hidden="false" collective="false" import="true" type="model" sortIndex="2">
       <profiles>
         <profile id="89cc-ba3f-6fde-b298" name="Warlord" publicationId="4086-1ccd-f433-39a2" page="15" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
           <characteristics>
@@ -353,31 +351,18 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
       <categoryLinks>
         <categoryLink id="fa6b-c896-e90c-fcbb" name="Lords" hidden="false" targetId="d280-b7df-c185-2ba5" primary="true"/>
         <categoryLink id="bc57-4b93-4c18-72f6" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="false"/>
+        <categoryLink name="X Additional Hand Weapon" hidden="false" id="c4ad-619b-5699-0ad0" targetId="c4b0-4ee4-7b99-843e" primary="false"/>
+        <categoryLink name="X Polearm" hidden="false" id="6857-3c32-7d44-7b58" targetId="0b0c-acf4-8a6a-dd72" primary="false"/>
+        <categoryLink name="X Great Weapon" hidden="false" id="49e7-84c4-6fa4-7bcd" targetId="abcc-4aa7-4989-7189" primary="false"/>
+        <categoryLink name="Y Warplock Pistol" hidden="false" id="15ca-57fc-1b25-0d64" targetId="bdff-f0df-2bd4-5bed" primary="false"/>
+        <categoryLink name="Y Ratling Pistol" hidden="false" id="a61f-c953-bc6c-ff4e" targetId="fdb9-8203-7ba8-b59b" primary="false"/>
+        <categoryLink name="Z Heavy Armour" hidden="false" id="0d08-6f98-08b7-7c10" targetId="f667-6e97-ec08-38ea" primary="false"/>
+        <categoryLink name="Z Shield" hidden="false" id="1f0a-9e3e-7363-6e81" targetId="0210-637d-ff12-a760" primary="false"/>
+        <categoryLink name="Z Medium Armour" hidden="false" id="d69c-8c26-a3ee-c1d8" targetId="222a-078c-ce85-fb16" primary="false"/>
+        <categoryLink name="Infantry" hidden="false" id="45e7-bb1a-fd42-bca0" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Range Weapon" hidden="false" id="25ae-5845-8f6b-087d" sortIndex="3">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="99ce-ea5b-ebe0-ebe9"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Warplock Pistol" hidden="false" id="c852-d42e-fd36-8ac7" type="selectionEntry" targetId="2d6f-d5fa-12cd-172c" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="7"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Ratling Pistol" hidden="false" id="e0d9-36f3-4fa1-f953" type="selectionEntry" targetId="1272-6375-7976-4dd9" sortIndex="1">
-              <costs>
-                <cost name="pts" typeId="points" value="7"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="466f-fe54-313f-fec9" name="Mount" hidden="false" collective="false" import="true" sortIndex="8">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7712-7ab4-89e4-e76f" type="max"/>
-          </constraints>
+      <entryLinks>
+        <entryLink import="true" name="70. Mount" hidden="false" id="0346-3614-6942-7092" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
           <entryLinks>
             <entryLink import="true" name="War-Litter" hidden="false" id="67b7-00b0-a2db-d005" type="selectionEntry" targetId="a214-99c0-8510-4a4a" sortIndex="1">
               <costs>
@@ -405,12 +390,23 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
               </costs>
             </entryLink>
           </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="c64d-0c20-41be-da4f" name="Primary Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="c0fa-2e80-44ad-d7a3" sortIndex="2">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e190-fc03-52ce-aa72" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d590-4dd0-526c-a1af" type="min"/>
-          </constraints>
+        </entryLink>
+        <entryLink import="true" name="55. Equipment" hidden="false" id="b798-ef38-4bdb-d0e2" type="selectionEntryGroup" targetId="2575-5193-15f7-421a">
+          <entryLinks>
+            <entryLink import="true" name="Tail Weapon" hidden="false" id="5036-1042-1c67-6917" type="selectionEntry" targetId="d28c-61c9-e413-8d30">
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Rat Hound Bodyguard" hidden="false" id="082d-9100-220e-a5de" type="selectionEntry" targetId="1654-85e1-2f66-4119" collective="true">
+              <costs>
+                <cost name="pts" typeId="points" value="3"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="10. Character Options" hidden="false" id="0201-5b36-9200-71f2" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="75ac-3823-f20c-5805" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Hand Weapon" hidden="false" id="3ad5-3dfb-976b-a106" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
             <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="2dce-19a3-0b07-d400" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
@@ -429,12 +425,22 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
               </costs>
             </entryLink>
           </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="91dc-c705-c868-eb0b" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="f51e-e55e-001d-b1d3" sortIndex="4">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2024-53f1-3312-0158" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bbcb-c40b-eb0e-1995" type="min"/>
-          </constraints>
+        </entryLink>
+        <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="5067-3fe6-0af4-049a" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
+          <entryLinks>
+            <entryLink import="true" name="Ratling Pistol" hidden="false" id="e0d9-36f3-4fa1-f953" type="selectionEntry" targetId="1272-6375-7976-4dd9" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="points" value="7"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Warplock Pistol" hidden="false" id="c852-d42e-fd36-8ac7" type="selectionEntry" targetId="2d6f-d5fa-12cd-172c" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="7"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="cedb-4e6f-baf5-7ac0" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Medium Armour" hidden="false" id="a8f1-87eb-48cc-25b9" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="1"/>
             <entryLink import="true" name="Heavy Armour" hidden="false" id="08fb-fecf-d8ab-a7a3" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="2">
@@ -443,26 +449,17 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
               </costs>
             </entryLink>
           </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink id="9ebe-3dc6-ab62-77cc" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
-        <entryLink import="true" name="Shield" hidden="false" id="4efb-cccb-4666-f709" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="5">
-          <costs>
-            <cost name="pts" typeId="points" value="3"/>
-          </costs>
         </entryLink>
-        <entryLink import="true" name="Tail Weapon" hidden="false" id="5036-1042-1c67-6917" type="selectionEntry" targetId="d28c-61c9-e413-8d30" sortIndex="6">
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
+        <entryLink import="true" name="50. Handheld Armour" hidden="false" id="7d39-a7f3-b245-fde5" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
+          <entryLinks>
+            <entryLink import="true" name="Shield" hidden="false" id="4efb-cccb-4666-f709" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+              <costs>
+                <cost name="pts" typeId="points" value="3"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </entryLink>
-        <entryLink import="true" name="Rat Hound Bodyguard" hidden="false" id="082d-9100-220e-a5de" type="selectionEntry" targetId="1654-85e1-2f66-4119" sortIndex="7">
-          <costs>
-            <cost name="pts" typeId="points" value="3"/>
-          </costs>
-        </entryLink>
-        <entryLink import="true" name="Magic items" hidden="false" id="0346-3614-6942-7092" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="9">
+        <entryLink import="true" name="90. Magic items" hidden="false" id="946d-e2fd-1ddb-7fdc" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67">
           <modifiers>
             <modifier type="increment" value="100" field="9147-3cbf-bb37-cfb3"/>
           </modifiers>
@@ -607,7 +604,7 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
       </selectionEntryGroups>
       <entryLinks>
         <entryLink id="1da3-3fd5-a2db-ce38" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
-        <entryLink import="true" name="Magic items" hidden="false" id="a407-6104-46a8-8f0e" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="4">
+        <entryLink import="true" name="90. Magic items" hidden="false" id="a407-6104-46a8-8f0e" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="4">
           <modifiers>
             <modifier type="increment" value="100" field="9147-3cbf-bb37-cfb3"/>
           </modifiers>
@@ -629,7 +626,7 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
         <cost name="pts" typeId="points" value="190"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="f301-2c31-5f4f-af7e" name="Master Assassin" hidden="false" collective="false" import="true" type="model">
+    <selectionEntry id="f301-2c31-5f4f-af7e" name="Master Assassin" hidden="false" collective="false" import="true" type="model" sortIndex="4">
       <profiles>
         <profile id="fd3f-30ab-f0ab-3e17" name="Master Assassin" publicationId="4086-1ccd-f433-39a2" page="16" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
           <characteristics>
@@ -659,29 +656,41 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
       <categoryLinks>
         <categoryLink id="c4cd-3f5b-6b0c-52ad" name="Lords" hidden="false" targetId="d280-b7df-c185-2ba5" primary="true"/>
         <categoryLink id="1301-7426-071f-854d" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="false"/>
+        <categoryLink name="Clan Eshin" hidden="false" id="415b-4ba2-5fb3-f29c" targetId="0fad-863b-9e6b-dd1b" primary="false"/>
+        <categoryLink name="X Additional Hand Weapon" hidden="false" id="06ab-2f6d-94dc-4512" targetId="c4b0-4ee4-7b99-843e" primary="false"/>
+        <categoryLink name="Y Throwing Weapons" hidden="false" id="9409-fc1a-8ceb-3b6a" targetId="fe9a-2efe-b32f-a8a0" primary="false"/>
+        <categoryLink name="Y Blowpipe" hidden="false" id="2f64-f1a7-0630-4ce0" targetId="7d94-b140-c653-6b75" primary="false"/>
+        <categoryLink name="Y Sling" hidden="false" id="4b4a-b9bc-9167-3f6e" targetId="d69b-acd0-f802-1e50" primary="false"/>
+        <categoryLink name="Infantry" hidden="false" id="05ad-a1a7-8ce1-b3d8" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Range Weapon" hidden="false" id="23f8-5a8e-8279-b3b8" sortIndex="4">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="885e-ce31-f537-9b05"/>
-          </constraints>
+      <entryLinks>
+        <entryLink import="true" name="90. Magic items" hidden="false" id="7800-2392-8920-6f4f" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="">
+          <modifiers>
+            <modifier type="increment" value="100" field="9147-3cbf-bb37-cfb3"/>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="55. Equipment" hidden="false" id="8b12-46ec-7225-d0f4" type="selectionEntryGroup" targetId="2575-5193-15f7-421a">
           <entryLinks>
-            <entryLink import="true" name="Sling" hidden="false" id="239d-52d7-44b9-7a9f" type="selectionEntry" targetId="72e8-531c-b5af-3b91">
+            <entryLink import="true" name="Throwing Weapons" hidden="false" id="2ce5-4fa9-2a0d-a6d5" type="selectionEntry" targetId="8013-6f6f-96e1-1acc" sortIndex="1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4d6c-370a-839f-e4a8-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4d6c-370a-839f-e4a8-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Smoke Bombs" hidden="false" id="849a-91ea-c751-226e" type="selectionEntry" targetId="89be-04d6-e8fe-9955" sortIndex="2">
               <costs>
-                <cost name="pts" typeId="points" value="7"/>
+                <cost name="pts" typeId="points" value="5"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Blowpipe" hidden="false" id="aea4-638f-b0a1-518d" type="selectionEntry" targetId="8f37-a8ec-e1ba-2551">
+            <entryLink import="true" name="Tail Weapon" hidden="false" id="10f0-b32f-a1c2-27f3" type="selectionEntry" targetId="d28c-61c9-e413-8d30" sortIndex="3">
               <costs>
-                <cost name="pts" typeId="points" value="6"/>
+                <cost name="pts" typeId="points" value="5"/>
               </costs>
             </entryLink>
           </entryLinks>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Melee Weapon" hidden="false" id="383f-08f8-fd63-858f" sortIndex="2">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5188-14e0-8c75-2a04"/>
-          </constraints>
+        </entryLink>
+        <entryLink import="true" name="10. Character Options" hidden="false" id="f339-b5c8-8140-493d" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="25e6-9a46-5cda-a97f" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="b223-cf8b-e923-3267" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="1"/>
             <entryLink import="true" name="Weeping Blades" hidden="false" id="f503-e41c-b78f-ce58" type="selectionEntry" targetId="003f-747f-ef51-6391" sortIndex="2">
@@ -690,26 +699,20 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
               </costs>
             </entryLink>
           </entryLinks>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink id="d0f7-0a43-5abe-70c1" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
-        <entryLink import="true" name="Tail Weapon" hidden="false" id="10f0-b32f-a1c2-27f3" type="selectionEntry" targetId="d28c-61c9-e413-8d30" sortIndex="5">
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
         </entryLink>
-        <entryLink import="true" name="Smoke Bombs" hidden="false" id="849a-91ea-c751-226e" type="selectionEntry" targetId="89be-04d6-e8fe-9955" sortIndex="6">
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-        </entryLink>
-        <entryLink import="true" name="Throwing Weapons" hidden="false" id="2ce5-4fa9-2a0d-a6d5" type="selectionEntry" targetId="8013-6f6f-96e1-1acc" sortIndex="3"/>
-        <entryLink import="true" name="Clan Eshin" hidden="false" id="9122-a741-a863-4221" type="selectionEntry" targetId="3883-5bc4-ef88-76e1" sortIndex="7"/>
-        <entryLink import="true" name="Magic items" hidden="false" id="7800-2392-8920-6f4f" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="8">
-          <modifiers>
-            <modifier type="increment" value="100" field="9147-3cbf-bb37-cfb3"/>
-          </modifiers>
+        <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="04dd-831a-c5b0-00eb" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
+          <entryLinks>
+            <entryLink import="true" name="Blowpipe" hidden="false" id="aea4-638f-b0a1-518d" type="selectionEntry" targetId="8f37-a8ec-e1ba-2551" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="6"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Sling" hidden="false" id="239d-52d7-44b9-7a9f" type="selectionEntry" targetId="72e8-531c-b5af-3b91" sortIndex="3">
+              <costs>
+                <cost name="pts" typeId="points" value="7"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <costs>
@@ -813,7 +816,7 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </entryLink>
-        <entryLink import="true" name="Magic items" hidden="false" id="f2f1-cd91-5996-63d1" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="7">
+        <entryLink import="true" name="90. Magic items" hidden="false" id="f2f1-cd91-5996-63d1" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="7">
           <modifiers>
             <modifier type="increment" value="100" field="9147-3cbf-bb37-cfb3"/>
           </modifiers>
@@ -957,7 +960,7 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
             <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="cb04-6ed3-3ecf-a588"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Magic items" hidden="false" id="d0ba-d41f-c723-1f08" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="9">
+        <entryLink import="true" name="90. Magic items" hidden="false" id="d0ba-d41f-c723-1f08" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="9">
           <modifiers>
             <modifier type="increment" value="100" field="9147-3cbf-bb37-cfb3"/>
           </modifiers>
@@ -1104,7 +1107,7 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
             <cost name="pts" typeId="points" value="3"/>
           </costs>
         </entryLink>
-        <entryLink import="true" name="Magic items" hidden="false" id="e871-828d-dd9e-e694" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="8">
+        <entryLink import="true" name="90. Magic items" hidden="false" id="e871-828d-dd9e-e694" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="8">
           <modifiers>
             <modifier type="increment" value="50" field="9147-3cbf-bb37-cfb3">
               <conditions>
@@ -1177,7 +1180,7 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4c79-385a-3d91-c0b4"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Magic items" hidden="false" id="1f2f-b740-357b-495f" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="3">
+        <entryLink import="true" name="90. Magic items" hidden="false" id="1f2f-b740-357b-495f" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="3">
           <modifiers>
             <modifier type="increment" value="50" field="9147-3cbf-bb37-cfb3"/>
           </modifiers>
@@ -1354,7 +1357,7 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
         <cost name="pts" typeId="points" value="110"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="Magic items" hidden="false" id="706c-8e0c-5e59-190f" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="6">
+        <entryLink import="true" name="90. Magic items" hidden="false" id="706c-8e0c-5e59-190f" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="6">
           <modifiers>
             <modifier type="increment" value="50" field="9147-3cbf-bb37-cfb3"/>
           </modifiers>
@@ -1473,7 +1476,7 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </entryLink>
-        <entryLink import="true" name="Magic items" hidden="false" id="14f1-8a27-6283-8ee1" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="7">
+        <entryLink import="true" name="90. Magic items" hidden="false" id="14f1-8a27-6283-8ee1" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="7">
           <modifiers>
             <modifier type="increment" value="50" field="9147-3cbf-bb37-cfb3"/>
           </modifiers>
@@ -1638,7 +1641,7 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5f35-ee82-8a4d-282f"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Magic items" hidden="false" id="ce3d-2a75-a36b-52ec" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="9">
+        <entryLink import="true" name="90. Magic items" hidden="false" id="ce3d-2a75-a36b-52ec" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="9">
           <modifiers>
             <modifier type="increment" value="50" field="9147-3cbf-bb37-cfb3"/>
           </modifiers>
@@ -3957,7 +3960,7 @@ If you roll a misfire result something has gone awry. No more shots are fired th
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c937-23c9-1033-fd82"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Magic items" hidden="false" id="292f-2e56-3cac-5565" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="3">
+        <entryLink import="true" name="90. Magic items" hidden="false" id="292f-2e56-3cac-5565" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="3">
           <modifiers>
             <modifier type="increment" value="100" field="9147-3cbf-bb37-cfb3"/>
           </modifiers>
@@ -4100,7 +4103,7 @@ If you roll a misfire result something has gone awry. No more shots are fired th
               </selectionEntries>
               <entryLinks>
                 <entryLink id="9291-a153-942f-8e0d" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
-                <entryLink import="true" name="Magic items" hidden="false" id="a6a4-e52f-c2d8-4888" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="3">
+                <entryLink import="true" name="90. Magic items" hidden="false" id="a6a4-e52f-c2d8-4888" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67" sortIndex="3">
                   <modifiers>
                     <modifier type="increment" value="50" field="9147-3cbf-bb37-cfb3"/>
                   </modifiers>
@@ -4947,18 +4950,6 @@ cables out.</characteristic>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="f2a1-81d1-e342-6ab2" name="Doom Glaive" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b5b9-9455-17ea-652c" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fc03-6e43-9ef7-ed43" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="4153-1ce8-2c8f-97b2" name="Doom Glaive" hidden="false" targetId="c7d2-6d56-f983-fd42" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
               </selectionEntries>
               <costs>
                 <cost name="pts" typeId="points" value="470"/>
@@ -4971,6 +4962,7 @@ cables out.</characteristic>
                   </constraints>
                 </entryLink>
                 <entryLink import="true" name="Lore of Plague &amp; Ruin" hidden="false" id="5565-b4ba-cee4-acbc" type="selectionEntry" targetId="b697-2a33-b4eb-bfcf" sortIndex="4"/>
+                <entryLink import="true" name="Doom Glaive" hidden="false" id="6f5b-765a-e685-4f4a" type="selectionEntry" targetId="f6d6-c570-efb3-20fa" sortIndex="1"/>
               </entryLinks>
             </selectionEntry>
             <selectionEntry id="8050-4ee8-3c77-c3ce" name="Lord Skrolk" hidden="false" collective="false" import="true" type="model">
@@ -5859,10 +5851,7 @@ If you roll a misfire, or if for any reason some of the models in the unit canno
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Verminlord" hidden="false" id="7018-7ff4-e8a8-f540" collective="false">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="false" id="1b1b-a868-2482-f3d4" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-      </constraints>
+    <selectionEntry type="model" import="true" name="Verminlord" hidden="false" id="7018-7ff4-e8a8-f540" collective="false" sortIndex="3">
       <profiles>
         <profile name="Verminlord" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0fd5-9c5d-883f-04a1" publicationId="4086-1ccd-f433-39a2" page="16">
           <characteristics>
@@ -5877,240 +5866,292 @@ If you roll a misfire, or if for any reason some of the models in the unit canno
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Character, Daemon, Skaven)</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="set" value="Corruptor" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="066f-1aff-a7aa-d3f1" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="Deceiver" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="d26c-decb-d4a5-90df" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="Warbringer" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="bb5e-68c2-a862-6505" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="Warpseer" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="a6b2-ed26-c70e-13b0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink name="Daemonic" id="a31b-13e0-b63d-03bf" hidden="false" targetId="a6d9-b8e9-21b2-96ff" type="rule"/>
         <infoLink name="Daemonic Instability" id="0e69-05f7-c35d-2468" hidden="false" type="rule" targetId="c6ed-33cf-2be7-0cec"/>
       </infoLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Options" hidden="false" id="7af2-8dfb-57cd-2443" sortIndex="1">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Corruptor" hidden="false" id="066f-1aff-a7aa-d3f1" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <rules>
-                <rule name="Plaguemaster" id="06b2-8ee6-d4c0-85c6" hidden="false" publicationId="4086-1ccd-f433-39a2" page="17">
-                  <description>A Verminlord Corruptor must choose all its spells from the Lore of Plague, and can re-roll failed casting attempts when attempting to cast Plague.</description>
-                </rule>
-              </rules>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Plaguereapers" hidden="false" id="3c3d-0d03-589c-ae7a" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0e8b-53bb-1f8a-77fc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="7f94-8df5-897f-b475" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Plaguereapers" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="cfd4-0a00-ed46-c3d3" publicationId="4086-1ccd-f433-39a2" page="17">
-                      <characteristics>
-                        <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                        <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Two/Additional Hand Weapons. Attacks made with these weapons have the Always Strikes First special rule. This replaces the Doom-glaive.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <entryLinks>
-                <entryLink import="true" name="Lore of Plague" hidden="false" id="fcf8-1a5e-9df7-fc3a" type="selectionEntry" targetId="0fbe-0677-25c0-a75a">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e7e9-5e60-468e-9d06"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Deceiver" hidden="false" id="d26c-decb-d4a5-90df" sortIndex="3">
-              <costs>
-                <cost name="pts" typeId="points" value="25"/>
-              </costs>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Warpstiletto" hidden="false" id="29f5-6d5c-80ab-842b" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fda3-07e0-81e9-ab09" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="f562-436d-2d24-b6f6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Warpstiletto" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="ab54-b8be-aacc-e571" publicationId="4086-1ccd-f433-39a2" page="17">
-                      <characteristics>
-                        <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                        <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Attacks made with this weapon have the Armour Piercing (1) and Poisoned Attacks special rules. This replaces the Doom-glaive.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Doomstar" hidden="false" id="1597-4cdd-ca79-77e5" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b587-fb85-2c25-6bd1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="0ca6-1da1-6f4f-83d0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Doomstar" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="1fcf-e4d4-6e99-f8ef" publicationId="4086-1ccd-f433-39a2" page="17">
-                      <characteristics>
-                        <characteristic name="Range" typeId="4285-3917-6bf9-348b">12&quot;</characteristic>
-                        <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">User</characteristic>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Arcing Death. Quick to Fire. Poisoned Attacks.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <rules>
-                    <rule name="Arcing Death" id="2b2e-1c98-dc05-2ae1" hidden="false" publicationId="4086-1ccd-f433-39a2" page="17">
-                      <description>A weapon with this special rule makes as many shots as the number of models in the front rank of the target unit that are within range.</description>
-                    </rule>
-                  </rules>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <rules>
-                <rule name="Shadowstrider" id="80a8-1b74-45b4-df6e" hidden="false" publicationId="4086-1ccd-f433-39a2" page="17">
-                  <description>A Verminlord Deceiver must choose all its spells from the Lore of Stealth, and can re-roll failed casting attempts when attempting to cast the Skitterleap spell from the Lore of Stealth, and can choose itself as the target of this spell.</description>
-                </rule>
-                <rule name="Shrouded in Darkness" id="ea9d-2bd2-2e42-53c9" hidden="false" publicationId="4086-1ccd-f433-39a2" page="17">
-                  <description>Enemy units that target a Verminlord Deceiver with a shooting attack suffer a -1 To Hit modifier in addition to any other modifiers.</description>
-                </rule>
-              </rules>
-              <entryLinks>
-                <entryLink import="true" name="Lore of Stealth" hidden="false" id="95d7-e70a-c897-4830" type="selectionEntry" targetId="aeee-02c2-e2bf-a4d5">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="293f-3e2a-d863-6370"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Warpseer" hidden="false" id="a6b2-ed26-c70e-13b0" sortIndex="5">
-              <costs>
-                <cost name="pts" typeId="points" value="50"/>
-              </costs>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Scry-orb" hidden="false" id="878a-f89e-ed86-f4bf" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7ea4-fe11-13b6-91ed" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="ddad-d40e-74e9-8d77" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Scry-orb" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="32a0-3b35-04ad-1201" publicationId="4086-1ccd-f433-39a2" page="152">
-                      <characteristics>
-                        <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">A Verminlord Warpseer gains a 6+ Ward Save while it carries this item. Once per game, in the Shooting phase, you may choose to throw the Scry-orb. If you do so, the bonus to its Ward Save is immediately lost for the rest of the game. 
-
-
-To throw the Scry-orb, place the small round template with its centre anywhere within 12&quot; and line of sight of the Verminlord Warpseer – it scatters D3&quot;. Models touched by the template must pass an Initiative test or be destroyed, with no saves of any kind allowed</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <rules>
-                <rule name="Master of Lightning" id="18c1-1229-b40f-9213" hidden="false" publicationId="4086-1ccd-f433-39a2" page="152">
-                  <description>A Verminlord Warpseer must choose all its spells from the Lore of Ruin, and can reroll failed casting attempts when attempting to cast the Warp Lightning spell from the Lore of Ruin.</description>
-                </rule>
-              </rules>
-              <entryLinks>
-                <entryLink import="true" name="Lore of Ruin" hidden="false" id="cc3a-95dd-6a0e-35c7" type="selectionEntry" targetId="c62f-49fd-e206-9566">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e1f3-908c-e1d3-fa7b"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Warbringer" hidden="false" id="bb5e-68c2-a862-6505" sortIndex="4">
-              <costs>
-                <cost name="pts" typeId="points" value="25"/>
-              </costs>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Doom Glaive and Punch-dagger" hidden="false" id="16a0-b702-f151-e193" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8a98-5c23-d673-e34f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="74b1-15c0-17f7-cdd2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Doom Glaive and Punch-dagger" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="2917-b4d4-22dd-138a" publicationId="4086-1ccd-f433-39a2" page="153">
-                      <characteristics>
-                        <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                        <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Two/Additional Hand Weapons. Attacks made with these weapons have Killing Blow and Multiple Wounds (D3).</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <rules>
-                <rule name="Verminous Fury" id="5e00-b394-f1d1-f189" hidden="false" publicationId="4086-1ccd-f433-39a2" page="153">
-                  <description>A Verminlord Warbringer must choose all its spells from the Lore of Ruin, and can reroll failed casting attempts when attempting to cast Death Frenzy.</description>
-                </rule>
-              </rules>
-              <entryLinks>
-                <entryLink import="true" name="Lore of Ruin" hidden="false" id="6de1-e511-b6cd-ee7e" type="selectionEntry" targetId="c62f-49fd-e206-9566">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="699d-0150-ec1f-8d57"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Verminlord" hidden="false" id="cbcb-1d6d-7a41-9e87" publicationId="4086-1ccd-f433-39a2" page="16" sortIndex="1">
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Doom Glaive" hidden="false" id="8dee-9d11-2ea5-599b" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ef1b-6d2c-6b1b-7115" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="ed3d-d524-1688-576e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                  <profiles>
-                    <profile name="Doom Glaive" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="c7d2-6d56-f983-fd42" publicationId="4086-1ccd-f433-39a2" page="16">
-                      <characteristics>
-                        <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                        <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Attacks made with this weapon have Multiple Wounds (D3).</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-              </selectionEntries>
-              <entryLinks>
-                <entryLink import="true" name="Lore of Plague &amp; Ruin" hidden="false" id="5e2b-785b-f0b8-569a" type="selectionEntry" targetId="b697-2a33-b4eb-bfcf">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="97c5-f900-2dfd-30f6-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="97c5-f900-2dfd-30f6-max"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1755-238c-51b9-4d60-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1755-238c-51b9-4d60-max"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="450"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="Wizard Level 4" hidden="false" id="a772-a11c-1cdd-9ccc" type="selectionEntry" targetId="5460-3929-58ef-71ba" sortIndex="2">
+        <entryLink import="true" name="60. Wizard Level" hidden="false" id="654c-3fe1-48e0-4f0d" type="selectionEntryGroup" targetId="e548-6739-0537-5d95"/>
+        <entryLink import="true" name="10. Character Options" hidden="false" id="79c2-e658-309e-1ee7" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Options" id="141d-5e7d-7052-e943" hidden="false" flatten="true">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Verminlord" hidden="false" id="1796-e3a3-8c82-bf7d" defaultAmount="1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="83d0-d6d4-bde8-9b21" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="55. Equipment" hidden="false" id="82f5-f7ac-76c2-6e5d" type="selectionEntryGroup" targetId="2575-5193-15f7-421a">
+                      <entryLinks>
+                        <entryLink import="true" name="Doom Glaive" hidden="false" id="d171-a583-fc2f-ea0c" type="selectionEntry" targetId="f6d6-c570-efb3-20fa"/>
+                      </entryLinks>
+                    </entryLink>
+                    <entryLink import="true" name="65. Lore of Magic" hidden="false" id="b485-008d-c2de-6911" type="selectionEntryGroup" targetId="758f-4e20-95b6-ffa5">
+                      <entryLinks>
+                        <entryLink import="true" name="Lore of Plague &amp; Ruin" hidden="false" id="5e2b-785b-f0b8-569a" type="selectionEntry" targetId="b697-2a33-b4eb-bfcf" defaultAmount="1">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="97c5-f900-2dfd-30f6-max"/>
+                            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="499a-2d75-d1a2-7744" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Corruptor" hidden="false" id="066f-1aff-a7aa-d3f1">
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                  <rules>
+                    <rule name="Plaguemaster" id="06b2-8ee6-d4c0-85c6" hidden="false" publicationId="4086-1ccd-f433-39a2" page="17">
+                      <description>A Verminlord Corruptor must choose all its spells from the Lore of Plague, and can re-roll failed casting attempts when attempting to cast Plague.</description>
+                    </rule>
+                  </rules>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="50d3-b53c-7ab5-1d67" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="65. Lore of Magic" hidden="false" id="6b1b-ea83-0a86-29af" type="selectionEntryGroup" targetId="758f-4e20-95b6-ffa5">
+                      <entryLinks>
+                        <entryLink import="true" name="Lore of Plague" hidden="false" id="fcf8-1a5e-9df7-fc3a" type="selectionEntry" targetId="0fbe-0677-25c0-a75a">
+                          <constraints>
+                            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4236-d900-d93b-bf70" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </entryLink>
+                    <entryLink import="true" name="55. Equipment" hidden="false" id="989d-5ac6-7c69-be23" type="selectionEntryGroup" targetId="2575-5193-15f7-421a">
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Plaguereapers" hidden="false" id="00c7-a25a-19e8-05a4">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e156-0ebd-3ded-e3de-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e156-0ebd-3ded-e3de-max" includeChildSelections="false"/>
+                          </constraints>
+                          <infoLinks>
+                            <infoLink name="Two/Additional Hand Weapons" id="a7c4-b792-aa37-6f4b" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
+                              <modifiers>
+                                <modifier type="set" value="Plaguereapers" field="annotation"/>
+                                <modifier type="append" value="Attacks made with these weapons have the Always Strikes First special rule." field="de63-d6da-efa8-00ac"/>
+                              </modifiers>
+                            </infoLink>
+                          </infoLinks>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Deceiver" hidden="false" id="d26c-decb-d4a5-90df">
+                  <costs>
+                    <cost name="pts" typeId="points" value="25"/>
+                  </costs>
+                  <rules>
+                    <rule name="Shadowstrider" id="80a8-1b74-45b4-df6e" hidden="false" publicationId="4086-1ccd-f433-39a2" page="17">
+                      <description>A Verminlord Deceiver must choose all its spells from the Lore of Stealth, and can re-roll failed casting attempts when attempting to cast the Skitterleap spell from the Lore of Stealth, and can choose itself as the target of this spell.</description>
+                    </rule>
+                    <rule name="Shrouded in Darkness" id="ea9d-2bd2-2e42-53c9" hidden="false" publicationId="4086-1ccd-f433-39a2" page="17">
+                      <description>Enemy units that target a Verminlord Deceiver with a shooting attack suffer a -1 To Hit modifier in addition to any other modifiers.</description>
+                    </rule>
+                  </rules>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9bd8-0779-3d82-d013" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="65. Lore of Magic" hidden="false" id="fdac-db0b-47d1-ae0f" type="selectionEntryGroup" targetId="758f-4e20-95b6-ffa5">
+                      <entryLinks>
+                        <entryLink import="true" name="Lore of Stealth" hidden="false" id="95d7-e70a-c897-4830" type="selectionEntry" targetId="aeee-02c2-e2bf-a4d5">
+                          <constraints>
+                            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="b169-7349-e299-98dc" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </entryLink>
+                    <entryLink import="true" name="55. Equipment" hidden="false" id="82a3-d2b9-1a46-9566" type="selectionEntryGroup" targetId="2575-5193-15f7-421a">
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Warpstiletto" hidden="false" id="58a8-5d9a-244d-9ee6">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bd0a-fcb0-6010-81cd-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bd0a-fcb0-6010-81cd-max" includeChildSelections="false"/>
+                          </constraints>
+                          <profiles>
+                            <profile name="Warpstiletto" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="a52c-39dd-087e-8678">
+                              <characteristics>
+                                <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
+                                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Attacks made with this weapon have the Armour Piercing (1) and Poisoned
+Attacks special rules.</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="Doomstar" hidden="false" id="bdb3-e2a3-4c03-8eca">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6319-5920-ee67-3ed2-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6319-5920-ee67-3ed2-max" includeChildSelections="false"/>
+                          </constraints>
+                          <profiles>
+                            <profile name="Doomstar" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="5d7e-55a1-0c36-75f7">
+                              <characteristics>
+                                <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
+                                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">As User</characteristic>
+                                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Quick to Fire, Poisoned Attacks, This weapon makes as many shots as the number of models in the front rank of the target unit that are within range.</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Warbringer" hidden="false" id="bb5e-68c2-a862-6505">
+                  <costs>
+                    <cost name="pts" typeId="points" value="25"/>
+                  </costs>
+                  <rules>
+                    <rule name="Verminous Fury" id="5e00-b394-f1d1-f189" hidden="false" publicationId="4086-1ccd-f433-39a2" page="153">
+                      <description>A Verminlord Warbringer must choose all its spells from the Lore of Ruin, and can reroll failed casting attempts when attempting to cast Death Frenzy.</description>
+                    </rule>
+                  </rules>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5786-bd68-25cc-22d1" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="65. Lore of Magic" hidden="false" id="4bb6-55f4-97dc-2bcf" type="selectionEntryGroup" targetId="758f-4e20-95b6-ffa5">
+                      <entryLinks>
+                        <entryLink import="true" name="Lore of Ruin" hidden="false" id="4707-1653-000f-812f" type="selectionEntry" targetId="c62f-49fd-e206-9566">
+                          <constraints>
+                            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="f08b-fade-0b2a-2f2a" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </entryLink>
+                    <entryLink import="true" name="55. Equipment" hidden="false" id="0e3d-6135-f3d7-9ff2" type="selectionEntryGroup" targetId="2575-5193-15f7-421a">
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Doom Glaive and Punch-dagger" hidden="false" id="16a0-b702-f151-e193" collective="false">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="74b1-15c0-17f7-cdd2-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="74b1-15c0-17f7-cdd2-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                          </constraints>
+                          <costs>
+                            <cost name="pts" typeId="points" value="0"/>
+                          </costs>
+                          <infoLinks>
+                            <infoLink name="Two/Additional Hand Weapons" id="b778-9e78-e160-f7fb" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
+                              <modifiers>
+                                <modifier type="set" value="Doom Glaive and Punch-dagger" field="annotation"/>
+                                <modifier type="append" value="Attacks made with these weapons have Killing Blow and Multiple Wounds (D3)." field="de63-d6da-efa8-00ac"/>
+                              </modifiers>
+                            </infoLink>
+                          </infoLinks>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Warpseer" hidden="false" id="a6b2-ed26-c70e-13b0">
+                  <costs>
+                    <cost name="pts" typeId="points" value="50"/>
+                  </costs>
+                  <rules>
+                    <rule name="Master of Lightning" id="18c1-1229-b40f-9213" hidden="false" publicationId="4086-1ccd-f433-39a2" page="152">
+                      <description>A Verminlord Warpseer must choose all its spells from the Lore of Ruin, and can reroll failed casting attempts when attempting to cast the Warp Lightning spell from the Lore of Ruin.</description>
+                    </rule>
+                  </rules>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4877-cd32-27b2-503d" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="65. Lore of Magic" hidden="false" id="6a4c-e532-e0fe-0f18" type="selectionEntryGroup" targetId="758f-4e20-95b6-ffa5">
+                      <entryLinks>
+                        <entryLink import="true" name="Lore of Ruin" hidden="false" id="6de1-e511-b6cd-ee7e" type="selectionEntry" targetId="c62f-49fd-e206-9566">
+                          <constraints>
+                            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="934f-1b8d-1624-9cdb" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </entryLink>
+                    <entryLink import="true" name="55. Equipment" hidden="false" id="a3c3-4c1b-1b70-28e8" type="selectionEntryGroup" targetId="2575-5193-15f7-421a">
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Scry-orb" hidden="false" id="878a-f89e-ed86-f4bf" collective="false">
+                          <constraints>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7ea4-fe11-13b6-91ed" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="ddad-d40e-74e9-8d77" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                          </constraints>
+                          <profiles>
+                            <profile name="Scry-orb" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="32a0-3b35-04ad-1201" publicationId="4086-1ccd-f433-39a2" page="152">
+                              <characteristics>
+                                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">A Verminlord Warpseer gains a 6+ Ward Save while it carries this item. Once per game, in the Shooting phase, you may choose to throw the Scry-orb. If you do so, the bonus to its Ward Save is immediately lost for the rest of the game. 
+
+
+To throw the Scry-orb, place the small round template with its centre anywhere within 12&quot; and line of sight of the Verminlord Warpseer – it scatters D3&quot;. Models touched by the template must pass an Initiative test or be destroyed, with no saves of any kind allowed</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                          <costs>
+                            <cost name="pts" typeId="points" value="0"/>
+                          </costs>
+                        </selectionEntry>
+                      </selectionEntries>
+                      <entryLinks>
+                        <entryLink import="true" name="Doom Glaive" hidden="false" id="c18a-6252-8565-1d22" type="selectionEntry" targetId="f6d6-c570-efb3-20fa"/>
+                      </entryLinks>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e032-38eb-201e-9a36-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e032-38eb-201e-9a36-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1c8a-4754-e98c-57e7-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1c8a-4754-e98c-57e7-max"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bfb4-e373-7403-cbb3-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bfb4-e373-7403-cbb3-max" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="2" field="bfb4-e373-7403-cbb3-min">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="b476-13c2-7d75-fd02" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="2" field="bfb4-e373-7403-cbb3-max">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="b476-13c2-7d75-fd02" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </entryLink>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Lords" hidden="false" id="effa-49bf-f8fd-c420" targetId="d280-b7df-c185-2ba5" primary="true"/>
+        <categoryLink name="Monster" hidden="false" id="c347-a45d-ae77-5f6e" targetId="e1a0-da31-05c5-9a15" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Warpfire Thrower" hidden="false" id="35d9-408a-db7f-4f02" collective="false">
@@ -7792,7 +7833,7 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Rat Hound Bodyguard" hidden="false" id="1654-85e1-2f66-4119" collective="false">
+    <selectionEntry type="upgrade" import="true" name="Rat Hound Bodyguard" hidden="false" id="1654-85e1-2f66-4119" collective="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="831f-e6fa-e3df-ad31" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
@@ -7881,15 +7922,14 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="22e9-7299-4683-7c5c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
-      <profiles>
-        <profile name="Weeping Blades" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="0c16-56b5-9232-e677" publicationId="4086-1ccd-f433-39a2" page="7">
-          <characteristics>
-            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Two/Additional Hand Weapons. Poisoned Attacks, Magical Attacks, Armour Piercing (1), Multiple Wounds (D3).</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
+      <infoLinks>
+        <infoLink name="Two/Additional Hand Weapons" id="2415-d9b3-559b-de80" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
+          <modifiers>
+            <modifier type="set" value="Weeping Blades" field="annotation"/>
+            <modifier type="append" value="Magical Attacks, Armour Piercing (1), Multiple Wounds (D3)." field="de63-d6da-efa8-00ac"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Shock-Prod" hidden="false" id="dc78-e267-2d9c-4b0e">
       <profiles>
@@ -8329,11 +8369,29 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
         <categoryLink name="Mount" hidden="false" id="BBwX-mTT0-Ihm4-kAJe" targetId="8b8a-34b1-ed30-df11" primary="false"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Doom Glaive" hidden="false" id="f6d6-c570-efb3-20fa" collective="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ad90-e722-995c-7e28" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="a330-a9b5-618c-3f1b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="0"/>
+      </costs>
+      <profiles>
+        <profile name="Doom Glaive" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="6112-bf91-2793-5c51" publicationId="4086-1ccd-f433-39a2" page="16">
+          <characteristics>
+            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
+            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
+            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Attacks made with this weapon have Multiple Wounds (D3).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup name="Magic items" id="9764-a11a-9c24-ab67" hidden="false" collapsible="true">
+    <selectionEntryGroup name="90. Magic items" id="9764-a11a-9c24-ab67" hidden="false" collapsible="true">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Arcane Items" id="0f36-7336-7d11-28e6" hidden="false" collective="false" import="true" sortIndex="4">
+        <selectionEntryGroup name="Arcane Items" id="0f36-7336-7d11-28e6" hidden="false" collective="false" import="true" sortIndex="4" collapsible="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="cb59-9622-ac60-2ce0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -8397,7 +8455,7 @@ of Ruin.</characteristic>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Common Arcane Items" hidden="false" id="fb2e-40e3-19fd-2e08" collective="false" targetId="6cd2-3f4b-da2d-1ee9" type="selectionEntryGroup" sortIndex="4"/>
+            <entryLink import="true" name="Common Arcane Items" hidden="false" id="fb2e-40e3-19fd-2e08" collective="false" targetId="6cd2-3f4b-da2d-1ee9" type="selectionEntryGroup" sortIndex="4" flatten="true"/>
           </entryLinks>
           <modifiers>
             <modifier type="set" value="0" field="cb59-9622-ac60-2ce0">
@@ -8412,7 +8470,7 @@ of Ruin.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Arcane Items (One use only)" id="c027-0a07-e3cb-1039" hidden="false" collective="false" import="true" sortIndex="5">
+        <selectionEntryGroup name="Arcane Items (One use only)" id="c027-0a07-e3cb-1039" hidden="false" collective="false" import="true" sortIndex="5" collapsible="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b88e-92db-8c6c-6ef7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -8485,7 +8543,7 @@ of Ruin.</characteristic>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Common Arcane Items (One use only)" hidden="false" id="0278-7dfb-24e5-05af" collective="false" targetId="3dfd-c3fd-5a56-45f1" type="selectionEntryGroup" sortIndex="4"/>
+            <entryLink import="true" name="Common Arcane Items (One use only)" hidden="false" id="0278-7dfb-24e5-05af" collective="false" targetId="3dfd-c3fd-5a56-45f1" type="selectionEntryGroup" sortIndex="4" flatten="true"/>
           </entryLinks>
           <modifiers>
             <modifier type="set" value="0" field="b88e-92db-8c6c-6ef7">
@@ -8500,7 +8558,7 @@ of Ruin.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Enchanted Items" id="088a-0ef8-c21e-a74d" hidden="false" collective="false" import="true" sortIndex="6">
+        <selectionEntryGroup name="Enchanted Items" id="088a-0ef8-c21e-a74d" hidden="false" collective="false" import="true" sortIndex="6" collapsible="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5c32-3060-7d8c-dffc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -9041,10 +9099,10 @@ allowed.</characteristic>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Common Enchanted Items" hidden="false" id="6c2a-e64b-7f92-9024" collective="false" targetId="5857-a7aa-f954-a027" type="selectionEntryGroup" sortIndex="24"/>
+            <entryLink import="true" name="Common Enchanted Items" hidden="false" id="6c2a-e64b-7f92-9024" collective="false" targetId="5857-a7aa-f954-a027" type="selectionEntryGroup" sortIndex="24" flatten="true"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Magic Armour" id="75a7-06a3-6a2d-496c" hidden="false" collective="false" import="true" sortIndex="2">
+        <selectionEntryGroup name="Magic Armour" id="75a7-06a3-6a2d-496c" hidden="false" collective="false" import="true" sortIndex="2" collapsible="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="bdcc-e3a5-07a1-4787" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -9105,10 +9163,10 @@ allowed.</characteristic>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Common Magic Armour" hidden="false" id="ad15-bc13-dc26-9d14" collective="false" targetId="557c-c8c5-0c0f-d2b3" type="selectionEntryGroup" sortIndex="4"/>
+            <entryLink import="true" name="Common Magic Armour" hidden="false" id="ad15-bc13-dc26-9d14" collective="false" targetId="557c-c8c5-0c0f-d2b3" type="selectionEntryGroup" sortIndex="4" flatten="true"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Magic Weapons" id="e00e-6c4b-3cf0-6ce9" hidden="false" collective="false" import="true" sortIndex="1">
+        <selectionEntryGroup name="Magic Weapons" id="e00e-6c4b-3cf0-6ce9" hidden="false" collective="false" import="true" sortIndex="1" collapsible="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="639f-2e2d-946c-24c9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -9451,10 +9509,10 @@ allowed.</characteristic>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Common Magic Weapons" hidden="false" id="7347-6f03-0a44-3b82" collective="false" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="17"/>
+            <entryLink import="true" name="Common Magic Weapons" hidden="false" id="7347-6f03-0a44-3b82" collective="false" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="17" flatten="true"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Talismans" id="0098-9d97-94f7-91bc" hidden="false" collective="false" import="true" sortIndex="3">
+        <selectionEntryGroup name="Talismans" id="0098-9d97-94f7-91bc" hidden="false" collective="false" import="true" sortIndex="3" collapsible="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b861-bfd5-ab81-bace" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -9589,7 +9647,7 @@ allowed.</characteristic>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Common Talismans" hidden="false" id="7430-23bf-4336-c57c" collective="false" targetId="946f-a470-9912-9301" type="selectionEntryGroup" sortIndex="9"/>
+            <entryLink import="true" name="Common Talismans" hidden="false" id="7430-23bf-4336-c57c" collective="false" targetId="946f-a470-9912-9301" type="selectionEntryGroup" sortIndex="9" flatten="true"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -9604,7 +9662,7 @@ allowed.</characteristic>
         </modifier>
       </modifiers>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Magic Standards" id="cb40-c54f-5ef7-aa93" hidden="false" collective="false" import="true">
+    <selectionEntryGroup name="Magic Standards" id="cb40-c54f-5ef7-aa93" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="eed2-18c2-b67a-8b1c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
@@ -9817,8 +9875,15 @@ allowed.</characteristic>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink import="true" name="Common Magic Standards" hidden="false" id="479c-2c0f-6099-e4cb" collective="false" targetId="2613-24d7-a26e-eb37" type="selectionEntryGroup" sortIndex="13"/>
+        <entryLink import="true" name="Common Magic Standards" hidden="false" id="479c-2c0f-6099-e4cb" collective="false" targetId="2613-24d7-a26e-eb37" type="selectionEntryGroup" sortIndex="13" flatten="true"/>
       </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="55. Equipment" id="2575-5193-15f7-421a" hidden="false"/>
+    <selectionEntryGroup name="65. Lore of Magic" id="758f-4e20-95b6-ffa5" hidden="false">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b46b-7d12-5e03-6c6a-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b46b-7d12-5e03-6c6a-max" includeChildSelections="false"/>
+      </constraints>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
@@ -10149,4 +10214,14 @@ Roll an Artillery Dice to determine number of shots fired. After the first Artil
     <catalogueLink type="catalogue" name="Armoury" id="3a74-ac8a-40e6-8e3f" targetId="522e-5e2a-d54c-4959"/>
     <catalogueLink type="catalogue" name="Bestiary" id="1a1a-c73a-84fa-a9e2" targetId="1fc9-2903-cb19-5737"/>
   </catalogueLinks>
+  <categoryEntries>
+    <categoryEntry name="Clan Eshin" id="0fad-863b-9e6b-dd1b" hidden="false"/>
+    <categoryEntry name="Clan Moulder" id="bbc7-b72c-9cc5-965f" hidden="false"/>
+    <categoryEntry name="Clan Pestilens" id="2d2e-eeb5-e996-4850" hidden="false"/>
+    <categoryEntry name="Clan Skryre" id="c7a7-6f89-fd46-9eac" hidden="false"/>
+    <categoryEntry name="Y Warplock Pistol" id="bdff-f0df-2bd4-5bed" hidden="false"/>
+    <categoryEntry name="Y Warpvolt Obliterator" id="5983-5544-ce02-e3f4" hidden="false"/>
+    <categoryEntry name="Y Ratling Pistol" id="fdb9-8203-7ba8-b59b" hidden="false"/>
+    <categoryEntry name="Y Warpmusket" id="cf09-c125-c7d1-f57e" hidden="false"/>
+  </categoryEntries>
 </catalogue>
