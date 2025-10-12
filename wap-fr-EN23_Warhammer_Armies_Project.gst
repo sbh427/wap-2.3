@@ -128,19 +128,9 @@
         <characteristicType id="c8b7-e979-95fd-ac37" name="Result"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="f1ab-233e-f56c-1851" name="Animosity Table">
-      <characteristicTypes>
-        <characteristicType id="9fa5-364b-a53e-ec35" name="Result"/>
-      </characteristicTypes>
-    </profileType>
     <profileType id="4d1e-f578-3fd8-b4e1" name="Treacherous Gits Table">
       <characteristicTypes>
         <characteristicType id="9de9-c782-1356-dc92" name="Result"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="9025-f9c9-08a1-7918" name="Animosity Chart">
-      <characteristicTypes>
-        <characteristicType id="fb86-d23a-8886-cc3b" name="Result"/>
       </characteristicTypes>
     </profileType>
     <profileType name="Prayer" id="4608-9b35-b7dc-202d" hidden="false">
@@ -160,6 +150,11 @@
     <profileType name="Misfire Chart" id="c972-d0be-bd2e-332b" hidden="false">
       <characteristicTypes>
         <characteristicType name="Result" id="008a-8bda-9586-4ae1"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Mishap Chart" id="9881-2753-3a1a-d2ad" hidden="false">
+      <characteristicTypes>
+        <characteristicType name="Result" id="d9c7-3474-73f2-8aa4"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -8119,7 +8114,7 @@
         <infoLink name="Mark of Tzeentch" id="448a-fe5e-64c2-6989" hidden="false" type="rule" targetId="Mark of Tzeentch"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Expendable" hidden="false" id="b90d-9045-a6d5-9e7d" collective="false">
+    <selectionEntry type="upgrade" import="true" name="Expendable" hidden="false" id="b90d-9045-a6d5-9e7d" collective="true">
       <modifiers>
         <modifier type="increment" value="1" field="e43c-0af0-b8a2-9769">
           <repeats>
