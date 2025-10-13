@@ -118,19 +118,9 @@
         <characteristicType id="281f-07de-e7b1-1e4a" name="Result"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="4537-0079-60d2-4469" name="Blackpowder Misfire Chart">
-      <characteristicTypes>
-        <characteristicType id="0256-a2e8-e71c-22cc" name="Result"/>
-      </characteristicTypes>
-    </profileType>
     <profileType id="591c-24ac-19bd-3b4b" name="Mercenary Loyalty Table">
       <characteristicTypes>
         <characteristicType id="c8b7-e979-95fd-ac37" name="Result"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="4d1e-f578-3fd8-b4e1" name="Treacherous Gits Table">
-      <characteristicTypes>
-        <characteristicType id="9de9-c782-1356-dc92" name="Result"/>
       </characteristicTypes>
     </profileType>
     <profileType name="Prayer" id="4608-9b35-b7dc-202d" hidden="false">
@@ -155,6 +145,11 @@
     <profileType name="Mishap Chart" id="9881-2753-3a1a-d2ad" hidden="false">
       <characteristicTypes>
         <characteristicType name="Result" id="d9c7-3474-73f2-8aa4"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Table / Chart" id="d549-1f73-1ba5-861c" hidden="false">
+      <characteristicTypes>
+        <characteristicType name="Result" id="686b-22d8-d67f-02eb"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
