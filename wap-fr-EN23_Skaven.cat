@@ -1466,7 +1466,7 @@
             <infoLink id="690f-e915-6c8f-edce" name="Strength in Numbers" hidden="false" targetId="337b-11fe-1de2-0cd0" type="rule"/>
           </infoLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup id="e6e9-ef22-00e2-b5f4" name="Primary Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="fbfe-f4f0-e940-3e13" sortIndex="1">
+            <selectionEntryGroup id="e6e9-ef22-00e2-b5f4" name="Primary Weapon" hidden="false" collective="true" import="true" defaultSelectionEntryId="fbfe-f4f0-e940-3e13" sortIndex="1">
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="915b-7a59-2682-8783" type="max"/>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f74e-223e-18ca-e5d0" type="min"/>
@@ -1480,7 +1480,7 @@
                 </entryLink>
               </entryLinks>
             </selectionEntryGroup>
-            <selectionEntryGroup id="8971-dc54-4cef-5c81" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="e1ac-ce02-90e8-b32c" sortIndex="3">
+            <selectionEntryGroup id="8971-dc54-4cef-5c81" name="Armour" hidden="false" collective="true" import="true" defaultSelectionEntryId="e1ac-ce02-90e8-b32c" sortIndex="3">
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="11a1-b956-c873-d78e" type="max"/>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3aa9-78cd-df3f-78e9" type="min"/>
@@ -1505,20 +1505,18 @@
               </costs>
             </entryLink>
           </entryLinks>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="The Red Guard" hidden="false" id="bd01-f846-77f0-73b4" sortIndex="4">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="force" childId="9fb6-8bdf-b955-080f" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="The Red Guard" hidden="false" id="bd01-f846-77f0-73b4" collective="true">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="9fb6-8bdf-b955-080f" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="pts" typeId="points" value="2"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
