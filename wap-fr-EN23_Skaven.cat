@@ -253,6 +253,10 @@
         <categoryLink id="18c3-c3af-c51d-e768" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="false"/>
         <categoryLink name="Infantry" hidden="false" id="5717-52e6-bc8c-214f" targetId="22c9-1606-58f8-2e60" primary="false"/>
         <categoryLink name="Clan Pestilens" hidden="false" id="ae6d-eb1c-402d-5f0f" targetId="2d2e-eeb5-e996-4850" primary="false"/>
+        <categoryLink name="X Additional Hand Weapon" hidden="false" id="bc2b-500e-8891-66ad" targetId="c4b0-4ee4-7b99-843e" primary="false"/>
+        <categoryLink name="X Flail" hidden="false" id="fe06-1bfb-0f4f-76cb" targetId="a86f-aab3-889c-0b6d" primary="false"/>
+        <categoryLink name="X Great Weapon" hidden="false" id="6dfb-2a77-f03e-f52f" targetId="abcc-4aa7-4989-7189" primary="false"/>
+        <categoryLink name="X Plague Censer" hidden="false" id="ad97-346b-6d84-e381" targetId="fe54-7cb4-8af2-a88e" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="90. Magic items" hidden="false" id="a407-6104-46a8-8f0e" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67">
@@ -1350,30 +1354,38 @@
             <infoLink id="722a-7d42-e51d-c6b3" name="Scurry Away!" hidden="false" targetId="45db-9bbc-8b3b-4865" type="rule"/>
             <infoLink id="d8cc-039b-8cc5-9b8d" name="Strength in Numbers" hidden="false" targetId="337b-11fe-1de2-0cd0" type="rule"/>
           </infoLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="3a95-da19-5ec1-4366" name="Primary Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="5056-66fc-da89-b0bc" sortIndex="1">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="626a-87ba-cfb6-6e22" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b62c-7b9e-4a5d-8ac8" type="min"/>
-              </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="4"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="b69c-cf39-1e30-2b54" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
               <entryLinks>
-                <entryLink import="true" name="Hand Weapon &amp; Shield" hidden="false" id="bb60-7646-a075-b695" type="selectionEntry" targetId="8613-9419-33a1-5aaf"/>
-                <entryLink import="true" name="Spear &amp; Shield" hidden="false" id="28e1-6edc-ac4b-c167" type="selectionEntry" targetId="aaa7-e3bd-6fea-79c2">
+                <entryLink import="true" name="Light Armour" hidden="false" id="351c-2283-4ba0-b454" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="164d-790f-ee3c-7eeb"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="c2a5-5ff9-5408-6275" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="bb60-7646-a075-b695" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+                <entryLink import="true" name="Spear" hidden="false" id="28e1-6edc-ac4b-c167" type="selectionEntry" targetId="a901-4548-955d-623c" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="0.5"/>
                   </costs>
                 </entryLink>
               </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="4"/>
-          </costs>
-          <entryLinks>
-            <entryLink import="true" name="Light Armour" hidden="false" id="351c-2283-4ba0-b454" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="2">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="164d-790f-ee3c-7eeb"/>
-              </constraints>
+            </entryLink>
+            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="56cb-c3e1-31b4-fe47" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
+              <entryLinks>
+                <entryLink import="true" name="Shield" hidden="false" id="3007-3a11-0d9d-3c65" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4136-58e3-8313-4ae9-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4136-58e3-8313-4ae9-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -1465,44 +1477,38 @@
             <infoLink id="9fcf-4e8f-cb12-4d6d" name="Scurry Away!" hidden="false" targetId="45db-9bbc-8b3b-4865" type="rule"/>
             <infoLink id="690f-e915-6c8f-edce" name="Strength in Numbers" hidden="false" targetId="337b-11fe-1de2-0cd0" type="rule"/>
           </infoLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="e6e9-ef22-00e2-b5f4" name="Primary Weapon" hidden="false" collective="true" import="true" defaultSelectionEntryId="fbfe-f4f0-e940-3e13" sortIndex="1">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="915b-7a59-2682-8783" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f74e-223e-18ca-e5d0" type="min"/>
-              </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="6"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="e408-4947-9be7-51b4" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
               <entryLinks>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="c798-b38a-3fa5-17ca" type="selectionEntry" targetId="a658-337d-0cbd-a38c"/>
-                <entryLink import="true" name="Polearm/Halberd" hidden="false" id="385e-83ac-10af-37ca" type="selectionEntry" targetId="757a-ff3d-710c-2d8b">
+                <entryLink import="true" name="Shield" hidden="false" id="92a0-60ad-60db-43ac" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="09b1-2599-eb62-b4f4" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="c798-b38a-3fa5-17ca" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+                <entryLink import="true" name="Polearm/Halberd" hidden="false" id="385e-83ac-10af-37ca" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
                 </entryLink>
               </entryLinks>
-            </selectionEntryGroup>
-            <selectionEntryGroup id="8971-dc54-4cef-5c81" name="Armour" hidden="false" collective="true" import="true" defaultSelectionEntryId="e1ac-ce02-90e8-b32c" sortIndex="3">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="11a1-b956-c873-d78e" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3aa9-78cd-df3f-78e9" type="min"/>
-              </constraints>
+            </entryLink>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="68d7-704e-e9f6-5b9c" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
               <entryLinks>
+                <entryLink import="true" name="Medium Armour" hidden="false" id="abbd-abac-c160-c9fc" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="1"/>
                 <entryLink import="true" name="Heavy Armour" hidden="false" id="2f06-b423-b68d-3503" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="1.5"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Medium Armour" hidden="false" id="abbd-abac-c160-c9fc" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="1"/>
               </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="6"/>
-          </costs>
-          <entryLinks>
-            <entryLink import="true" name="Shield" hidden="false" id="92a0-60ad-60db-43ac" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -1726,10 +1732,9 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Pawleader" hidden="false" id="debe-2882-92f4-78ec" collective="false" defaultAmount="1" sortIndex="2">
+        <selectionEntry type="model" import="true" name="Pawleader" hidden="false" id="debe-2882-92f4-78ec" collective="false" defaultAmount="1" sortIndex="2">
           <constraints>
-            <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="d79a-979b-d289-875e-max-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-            <constraint type="max" value="0" field="selections" scope="parent" shared="false" id="d79a-979b-d289-875e-max-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="d79a-979b-d289-875e-max-min-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
             <profile name="Pawleader" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="7fe6-5923-c001-4d5f" publicationId="4086-1ccd-f433-39a2" page="31">
@@ -1751,17 +1756,24 @@
             <cost name="pts" typeId="points" value="15"/>
           </costs>
           <modifiers>
-            <modifier type="increment" value="1" field="d79a-979b-d289-875e-max-min">
-              <repeats>
-                <repeat value="20" repeats="1" field="selections" scope="unit" childId="576c-619e-0c73-17b0" shared="true" roundUp="false" includeChildSelections="true"/>
-              </repeats>
-            </modifier>
-            <modifier type="increment" value="1" field="d79a-979b-d289-875e-max-max">
+            <modifier type="increment" value="1" field="d79a-979b-d289-875e-max-min-min">
               <repeats>
                 <repeat value="20" repeats="1" field="selections" scope="unit" childId="576c-619e-0c73-17b0" shared="true" roundUp="false" includeChildSelections="true"/>
               </repeats>
             </modifier>
           </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="d0da-08b3-c5f2-e06c" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="e4c0-12b9-7fcc-3beb" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="46cf-1b38-83cb-526b-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="46cf-1b38-83cb-526b-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1834,10 +1846,15 @@
             </profile>
           </profiles>
           <entryLinks>
-            <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="5fa1-0e88-6a67-5d4c" type="selectionEntry" targetId="7617-f4b5-02ac-3d15">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5751-a5d2-7711-b039"/>
-              </constraints>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="866b-4eb0-6bf7-6311" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="5fa1-0e88-6a67-5d4c" type="selectionEntry" targetId="7617-f4b5-02ac-3d15">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4a02-9487-772d-f095-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4a02-9487-772d-f095-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -1950,28 +1967,26 @@
             <cost name="pts" typeId="points" value="6"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="ce7c-9186-57cc-3cab" type="selectionEntry" targetId="7617-f4b5-02ac-3d15">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ec1f-3829-82c6-4bce"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Range Weapon" id="b728-d480-79a3-ef39" hidden="false">
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="937b-0415-b838-c9b8" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
               <entryLinks>
-                <entryLink import="true" name="Throwing Weapons" hidden="false" id="bdf5-03f8-9ce9-2aea" type="selectionEntry" targetId="8013-6f6f-96e1-1acc"/>
-                <entryLink import="true" name="Sling" hidden="false" id="55d9-b205-6f89-60a1" type="selectionEntry" targetId="72e8-531c-b5af-3b91">
+                <entryLink import="true" name="Throwing Weapons" hidden="false" id="bdf5-03f8-9ce9-2aea" type="selectionEntry" targetId="8013-6f6f-96e1-1acc" sortIndex="1"/>
+                <entryLink import="true" name="Sling" hidden="false" id="55d9-b205-6f89-60a1" type="selectionEntry" targetId="72e8-531c-b5af-3b91" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
                 </entryLink>
               </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="8dd8-1ce0-109f-e3ed-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8dd8-1ce0-109f-e3ed-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="08ba-4ba4-2ede-c883" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="ce7c-9186-57cc-3cab" type="selectionEntry" targetId="7617-f4b5-02ac-3d15">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ec1f-3829-82c6-4bce"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -2054,45 +2069,18 @@
             <cost name="pts" typeId="points" value="2"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7c2d-cb84-3a31-d534" name="Packmaster" hidden="false" collective="false" import="true" type="model" defaultAmount="1">
-          <constraints>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d9df-a4f1-32b1-ab45-min" type="min"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d9df-a4f1-32b1-ab45-max" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="4042-12bd-228c-72b5" name="Packmaster" hidden="false" targetId="f8eb-0b2e-6bea-166b" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-          <modifiers>
-            <modifier type="increment" value="1" field="d9df-a4f1-32b1-ab45-min">
-              <repeats>
-                <repeat value="5" repeats="1" field="selections" scope="parent" childId="e391-6d8c-b7df-bcd1" shared="true" roundUp="true" id="acbb-55a1-72cc-6671" percentValue="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="increment" value="1" field="d9df-a4f1-32b1-ab45-max">
-              <repeats>
-                <repeat value="5" repeats="1" field="selections" scope="parent" childId="e391-6d8c-b7df-bcd1" shared="true" roundUp="true" id="acbb-55a1-72cc-6671" percentValue="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <entryLinks>
-            <entryLink import="true" name="Whip" hidden="false" id="f81b-fecc-b9e5-1888" type="selectionEntry" targetId="a8d5-bafb-6900-5e3c">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8955-f78e-26df-748a"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Light Armour" hidden="false" id="30f8-ab68-9741-7a5b" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="aefd-933c-c34f-9eb8"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntry>
       </selectionEntries>
       <entryLinks>
         <entryLink import="true" name="Expendable" hidden="false" id="9e61-0235-c753-470a" type="selectionEntry" targetId="b90d-9045-a6d5-9e7d"/>
+        <entryLink import="true" name="Packmaster" hidden="false" id="c2b1-450b-56c2-3bfa" type="selectionEntry" targetId="8e88-f41d-8ac4-95c3">
+          <modifiers>
+            <modifier type="increment" value="1" field="35f3-84d6-3c83-3bd0">
+              <repeats>
+                <repeat value="5" repeats="1" field="selections" scope="parent" childId="e391-6d8c-b7df-bcd1" shared="true" roundUp="true" id="fad6-af21-78e5-bbf8" percentValue="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </entryLink>
       </entryLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -2198,58 +2186,58 @@
             <infoLink id="fa0f-fa72-1407-9c17" name="Ambushers" hidden="false" targetId="f366-0f91-841f-cf80" type="rule"/>
             <infoLink id="992c-22fe-2ef7-1840" name="Strength in Numbers" hidden="false" targetId="337b-11fe-1de2-0cd0" type="rule"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="bc15-9d53-c4d0-93d8" name="Poisoned Attacks (excluding slings)" hidden="false" collective="true" import="true" type="upgrade" sortIndex="3">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a442-652d-766c-8f49" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="9b59-5430-f344-c9c6" name="Poisoned Attacks" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="948d-2ba7-820e-9e56" name="Snare-Nets" hidden="false" collective="true" import="true" type="upgrade" sortIndex="4">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="783d-b8ee-846b-8d99" type="max"/>
-              </constraints>
-              <rules>
-                <rule id="093c-2daa-c532-270a" name="Snare-Nets" publicationId="4086-1ccd-f433-39a2" page="34" hidden="false">
-                  <description>When it is their turn to attack, roll a D6 for each model armed with Snare-nets. On a 2+, one enemy model in base contact is ensnared and suffers -1 A (both rider and mount) for the remainder of the close combat phase.</description>
-                </rule>
-              </rules>
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="877e-6560-9bb8-53a0" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="1">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0341-0b3a-b222-c401"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Range Weapon" id="a44d-623b-4c7c-5c1c" hidden="false" sortIndex="2">
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="5b22-9917-b71d-3299" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
-                <entryLink import="true" name="Throwing Weapons" hidden="false" id="b239-4779-7019-c271" type="selectionEntry" targetId="8013-6f6f-96e1-1acc" sortIndex="1"/>
+                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="877e-6560-9bb8-53a0" type="selectionEntry" targetId="7617-f4b5-02ac-3d15">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0341-0b3a-b222-c401"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="55. Equipment" hidden="false" id="f4be-b0d4-d7c6-846d" type="selectionEntryGroup" targetId="2575-5193-15f7-421a">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Poisoned Attacks (excluding slings)" hidden="false" id="bc15-9d53-c4d0-93d8" collective="true" sortIndex="1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a442-652d-766c-8f49" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Poisoned Attacks" id="9b59-5430-f344-c9c6" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="2"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Snare-Nets" hidden="false" id="948d-2ba7-820e-9e56" collective="true" sortIndex="2">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="783d-b8ee-846b-8d99" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <rules>
+                    <rule name="Snare-Nets" id="093c-2daa-c532-270a" hidden="false" publicationId="4086-1ccd-f433-39a2" page="34">
+                      <description>When it is their turn to attack, roll a D6 for each model armed with Snare-nets. On a 2+, one enemy model in base contact is ensnared and suffers -1 A (both rider and mount) for the remainder of the close combat phase.</description>
+                    </rule>
+                  </rules>
+                  <costs>
+                    <cost name="pts" typeId="points" value="2"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </entryLink>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="fd1d-4199-0ec5-4c4e" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+              <entryLinks>
                 <entryLink import="true" name="Sling" hidden="false" id="5f4c-1746-d72e-10a4" type="selectionEntry" targetId="72e8-531c-b5af-3b91" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
                 </entryLink>
+                <entryLink import="true" name="Throwing Weapons" hidden="false" id="b239-4779-7019-c271" type="selectionEntry" targetId="8013-6f6f-96e1-1acc" sortIndex="1"/>
               </entryLinks>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="be87-7096-df5e-3353-max"/>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="be87-7096-df5e-3353-min"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -2273,7 +2261,7 @@
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="caa9-a242-d23b-706d" name="Plague Censer Bearers" hidden="false" collective="false" import="true" type="unit" sortIndex="24">
+    <selectionEntry id="caa9-a242-d23b-706d" name="Plague Censer Bearers" hidden="false" collective="false" import="true" type="unit" sortIndex="25">
       <categoryLinks>
         <categoryLink id="4c3d-2e66-93e9-a966" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
         <categoryLink name="Clan Pestilens" hidden="false" id="fa8a-92ac-591d-099b" targetId="2d2e-eeb5-e996-4850" primary="false"/>
@@ -2316,10 +2304,14 @@
             </rule>
           </rules>
           <entryLinks>
-            <entryLink import="true" name="Plague Censer" hidden="false" id="1534-cd3a-cd86-6e77" type="selectionEntry" targetId="4909-176d-c110-580a">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2762-2f49-f40b-ec24"/>
-              </constraints>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="58a0-d94b-eb30-3832" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Plague Censer" hidden="false" id="1534-cd3a-cd86-6e77" type="selectionEntry" targetId="4909-176d-c110-580a">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2762-2f49-f40b-ec24"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -2345,14 +2337,14 @@
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="9d9b-6738-c81c-9f8d" name="Plague Rats Swarm" hidden="false" collective="false" import="true" type="unit" sortIndex="25">
+    <selectionEntry id="9d9b-6738-c81c-9f8d" name="Plague Rat Swarm" hidden="false" collective="false" import="true" type="unit" sortIndex="26">
       <categoryLinks>
         <categoryLink id="392f-028f-1a97-76f5" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
         <categoryLink name="Clan Pestilens" hidden="false" id="a36d-2c19-fb7c-6f1d" targetId="2d2e-eeb5-e996-4850" primary="false"/>
         <categoryLink name="Swarm" hidden="false" id="af82-9c9e-26ce-0f75" targetId="f651-5580-8a7b-45eb" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="f91a-03dd-816a-1582" name="Plague Rats Swarm" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="f91a-03dd-816a-1582" name="Plague Rat Swarm" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f06d-ac91-3585-9aae" type="min"/>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d611-9c92-8411-b812" type="max"/>
@@ -2688,46 +2680,14 @@
             <cost name="pts" typeId="points" value="33"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="46df-ecda-3158-b833" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="83db-4fa3-8ae3-5527"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-        </selectionEntry>
-        <selectionEntry id="263b-a0e0-8a21-a37e" name="Packmaster" hidden="false" collective="false" import="true" type="model">
-          <constraints>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="367f-a617-ad9e-a273-min-min" type="min"/>
-            <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="367f-a617-ad9e-a273-min-max" type="max"/>
-          </constraints>
-          <infoLinks>
-            <infoLink id="b84a-c43c-2868-d568" name="Packmaster" hidden="false" targetId="f8eb-0b2e-6bea-166b" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-          <modifiers>
-            <modifier type="increment" value="1" field="367f-a617-ad9e-a273-min-min">
-              <repeats>
-                <repeat value="2" repeats="1" field="selections" scope="unit" childId="ac20-2e82-04c7-5d21" shared="true" roundUp="true" id="1f1d-9aac-16-b10f" percentValue="false" includeChildSelections="true"/>
-              </repeats>
-            </modifier>
-            <modifier type="increment" value="1" field="367f-a617-ad9e-a273-min-max">
-              <repeats>
-                <repeat value="2" repeats="1" field="selections" scope="unit" childId="ac20-2e82-04c7-5d21" shared="true" roundUp="true" id="1f1d-9aac-16-b10f" percentValue="false" includeChildSelections="true"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <entryLinks>
-            <entryLink import="true" name="Whip" hidden="false" id="750a-36e5-9363-d102" type="selectionEntry" targetId="a8d5-bafb-6900-5e3c">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ece3-b4d5-1cbb-bd2c"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Light Armour" hidden="false" id="62a0-d1e7-0d42-e9b3" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3620-50d6-dfc0-228b"/>
-              </constraints>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="ab4c-8fb3-115e-507e" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="46df-ecda-3158-b833" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="83db-4fa3-8ae3-5527"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -2735,20 +2695,31 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Packmaster" hidden="false" id="9a60-5911-3d62-9e87" type="selectionEntry" targetId="8e88-f41d-8ac4-95c3" defaultAmount="1">
+          <modifiers>
+            <modifier type="increment" value="1" field="35f3-84d6-3c83-3bd0">
+              <repeats>
+                <repeat value="2" repeats="1" field="selections" scope="parent" childId="c16c-5072-d189-60f2" shared="true" roundUp="true" id="46c7-09d9-c93e-2549" percentValue="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
-    <selectionEntry id="d15e-456a-a5b4-ed05" name="Poisoned Wind Globadiers" hidden="false" collective="false" import="true" type="unit" sortIndex="27">
+    <selectionEntry id="d15e-456a-a5b4-ed05" name="Poisoned Wind Globadiers" hidden="false" collective="false" import="true" type="unit" sortIndex="28">
       <categoryLinks>
         <categoryLink id="e30d-b3a4-5ada-9f6d" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
         <categoryLink name="Clan Skryre" hidden="false" id="98ae-26bf-f63b-a089" targetId="c7a7-6f89-fd46-9eac" primary="false"/>
         <categoryLink name="Infantry" hidden="false" id="90d0-70f8-7dc1-074c" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="abf8-c35d-2280-302c" name="Globadier" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="abf8-c35d-2280-302c" name="Poisoned Wind Globadier" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b9ec-60a1-3ff5-8a8d" type="min"/>
           </constraints>
           <profiles>
-            <profile id="f000-2c84-2b58-17c6" name="Globadier" publicationId="4086-1ccd-f433-39a2" page="37" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+            <profile id="f000-2c84-2b58-17c6" name="Poisoned Wind Globadier" publicationId="4086-1ccd-f433-39a2" page="37" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
               <characteristics>
                 <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
                 <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -2768,39 +2739,59 @@
             <infoLink id="260b-c61f-76c6-9202" name="Skirmishers" hidden="false" targetId="9a30-1c5c-12f4-5798" type="rule"/>
             <infoLink id="ded4-b869-caa4-2f7f" name="Scurry Away!" hidden="false" targetId="45db-9bbc-8b3b-4865" type="rule"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="2c79-f9d5-bb8f-76da" name="Poisoned Wind Globes" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ccac-7a72-d4ae-a4a6" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="43b4-d817-57f0-b80f" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="cac3-f066-1a88-a4ef" name="Poisoned Wind Globes" publicationId="4086-1ccd-f433-39a2" page="37" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">8&quot;</characteristic>
-                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Quick to Fire. Magical Attacks. Ignores Armour saves. Models hit by a Poisoned Wind Globe must pass a T test or suffer a Wound. On the To Hit roll of a 1, the Globadier hits himself (including when firing into close combat).</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="8"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="7923-7365-6b11-7f6d" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="671c-1398-82f7-58c3"/>
-              </constraints>
+            <entryLink import="true" name="55. Equipment" hidden="false" id="2e69-0cd7-8484-45f1" type="selectionEntryGroup" targetId="2575-5193-15f7-421a">
+              <entryLinks>
+                <entryLink import="true" name="Gas Mask" hidden="false" id="ba54-4c44-e340-21c7" type="selectionEntry" targetId="9a8c-d843-66af-1f6e">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c352-07ad-f352-685a-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c352-07ad-f352-685a-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Light Armour" hidden="false" id="406e-77b1-77b9-bb32" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <costs>
-                <cost name="pts" typeId="points" value="0.5"/>
-              </costs>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="ab73-1ff8-2575-2bbf" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Poisoned Wind Globes" hidden="false" id="2c79-f9d5-bb8f-76da" collective="true">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ccac-7a72-d4ae-a4a6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="43b4-d817-57f0-b80f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Poisoned Wind Globes" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="cac3-f066-1a88-a4ef" publicationId="4086-1ccd-f433-39a2" page="37">
+                      <characteristics>
+                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">8&quot;</characteristic>
+                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Quick to Fire. Magical Attacks. Ignores Armour saves. Models hit by a Poisoned Wind Globe must pass a T test or suffer a Wound. On the To Hit roll of a 1, the Globadier hits himself (including when firing into close combat).</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </entryLink>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="1e9a-9535-cfbc-30bb" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
+              <entryLinks>
+                <entryLink import="true" name="Light Armour" hidden="false" id="406e-77b1-77b9-bb32" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0.5"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="be60-2c24-0b4f-c9b0" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="5066-ff38-4f70-501b" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0bc8-3328-41f6-78eb"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -2826,14 +2817,14 @@
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="51d2-03b3-b5ec-1e93" name="Warplock Jezzails" hidden="false" collective="false" import="true" type="unit" sortIndex="26">
+    <selectionEntry id="51d2-03b3-b5ec-1e93" name="Warplock Jezzails" hidden="false" collective="false" import="true" type="unit" sortIndex="27">
       <categoryLinks>
         <categoryLink id="1d8a-6ea2-227d-af00" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
         <categoryLink name="Clan Skryre" hidden="false" id="ee8d-b042-80c9-2b2f" targetId="c7a7-6f89-fd46-9eac" primary="false"/>
         <categoryLink name="Infantry" hidden="false" id="353e-dede-1307-226f" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="a8b5-2d9e-dc97-ba19" name="Warplock Jezzails" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="a8b5-2d9e-dc97-ba19" name="Warplock Jezzail" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="3" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1201-b23a-fc11-a95c" type="min"/>
           </constraints>
@@ -2857,55 +2848,65 @@
             <infoLink id="5c34-5159-9416-1782" name="Scurry Away!" hidden="false" targetId="45db-9bbc-8b3b-4865" type="rule"/>
             <infoLink id="5543-9dd5-265f-cf15" name="Strength in Numbers" hidden="false" targetId="337b-11fe-1de2-0cd0" type="rule"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="a8ed-b4da-85e2-e24c" name="Warplock Jezzail" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9c64-7909-0072-b860" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="05e2-f5a1-82a1-f9a6" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="ae5f-a7c7-e5ab-74f5" name="Warplock Jezzail" publicationId="4086-1ccd-f433-39a2" page="37" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-                  <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">36&quot;</characteristic>
-                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">6</characteristic>
-                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Move or Fire. Armour Piercing (1). Magical Attacks. Unstable Ammunition.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="da55-a6ce-c2e5-afb2" name="Unstable Ammunition" hidden="false" targetId="1c5e-300c-39c9-1c62" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="bf03-2715-2115-fea0" name="Pavise" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="88fe-c138-f6e1-8c0b" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a19b-709b-7b10-9684" type="min"/>
-              </constraints>
-              <profiles>
-                <profile id="90ac-ff3f-31b4-536b" name="Pavise" publicationId="4086-1ccd-f433-39a2" page="37" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour">
-                  <characteristics>
-                    <characteristic name="Combat" typeId="168d-1cc2-66f3-e766"/>
-                    <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">4+</characteristic>
-                    <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Only applies to missile attacks in the front arc.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="9079-508c-4075-6f69" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0421-4ab4-0f10-c564"/>
-              </constraints>
+            <entryLink import="true" name="55. Equipment" hidden="false" id="490f-ac54-3258-1986" type="selectionEntryGroup" targetId="2575-5193-15f7-421a">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Pavise" hidden="false" id="bf03-2715-2115-fea0" collective="true">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="88fe-c138-f6e1-8c0b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="a19b-709b-7b10-9684" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Pavise" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="90ac-ff3f-31b4-536b" publicationId="4086-1ccd-f433-39a2" page="37">
+                      <characteristics>
+                        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766"/>
+                        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">4+</characteristic>
+                        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Only applies to missile attacks to the front arc.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="d3a3-bf79-10ea-3cdf" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Warplock Jezzail" hidden="false" id="a8ed-b4da-85e2-e24c" collective="true">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9c64-7909-0072-b860" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="05e2-f5a1-82a1-f9a6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Warplock Jezzail" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="ae5f-a7c7-e5ab-74f5" publicationId="4086-1ccd-f433-39a2" page="37">
+                      <characteristics>
+                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">36&quot;</characteristic>
+                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">6</characteristic>
+                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Move or Fire. Armour Piercing (1). Magical Attacks. Unstable Ammunition.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Unstable Ammunition" id="da55-a6ce-c2e5-afb2" hidden="false" targetId="1c5e-300c-39c9-1c62" type="rule"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </entryLink>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="45e4-227b-db2f-ae2a" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="9079-508c-4075-6f69" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0421-4ab4-0f10-c564"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -2947,6 +2948,7 @@
       <categoryLinks>
         <categoryLink id="0b09-d3ce-a054-fe91" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
         <categoryLink name="Monster" hidden="false" id="d3d0-cd54-f37d-05ff" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+        <categoryLink name="Clan Moulder" hidden="false" id="9761-0340-e475-10e5" targetId="bbc7-b72c-9cc5-965f" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Upgrades" id="5145-5bc4-b4c5-3bfd" hidden="false" collective="false" import="true">
@@ -3005,7 +3007,7 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0736-3178-dc25-1054" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry id="55ff-ac72-5881-36a3" name="Hell Pit Abomination" hidden="false" collective="false" import="true" type="model" sortIndex="36">
+    <selectionEntry id="55ff-ac72-5881-36a3" name="Hell Pit Abomination" hidden="false" collective="false" import="true" type="model" sortIndex="37">
       <profiles>
         <profile id="f042-5e41-ca8b-a846" name="Hell Pit Abomination" publicationId="4086-1ccd-f433-39a2" page="48" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
           <characteristics>
@@ -3043,22 +3045,8 @@
       <categoryLinks>
         <categoryLink id="6be2-1a89-baee-6796" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
         <categoryLink name="Monster" hidden="false" id="e4b1-24d2-9b49-d844" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+        <categoryLink name="Clan Moulder" hidden="false" id="5d20-d480-b347-914e" targetId="bbc7-b72c-9cc5-965f" primary="false"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="ebf1-85a7-03c2-3dcb" name="Warpstone Spikes" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5c71-1937-f0db-fdb8" type="max"/>
-          </constraints>
-          <rules>
-            <rule id="1a51-9b40-16a0-cc62" name="Warpstone Spikes" publicationId="4086-1ccd-f433-39a2" page="48" hidden="false">
-              <description>The Hell Pit Abomination gains Magic Resistance (6+) and Magical Attacks.</description>
-            </rule>
-          </rules>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="225"/>
       </costs>
@@ -3121,41 +3109,32 @@
           </profiles>
         </infoGroup>
       </infoGroups>
+      <entryLinks>
+        <entryLink import="true" name="55. Equipment" hidden="false" id="6e2a-0219-3df4-c87c" type="selectionEntryGroup" targetId="2575-5193-15f7-421a">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Warpstone Spikes" hidden="false" id="ebf1-85a7-03c2-3dcb" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5c71-1937-f0db-fdb8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <rules>
+                <rule name="Warpstone Spikes" id="1a51-9b40-16a0-cc62" hidden="false" publicationId="4086-1ccd-f433-39a2" page="48">
+                  <description>The Hell Pit Abomination gains Magic Resistance (6+) and Magical Attacks.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
-    <selectionEntry id="dc7f-65c1-fbf8-19f0" name="Stormfiends" hidden="false" collective="false" import="true" type="model" sortIndex="34">
+    <selectionEntry id="dc7f-65c1-fbf8-19f0" name="Stormfiends" hidden="false" collective="false" import="true" type="model" sortIndex="36">
       <categoryLinks>
         <categoryLink id="a0d6-3448-d8d0-03af" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
         <categoryLink name="Monstrous Creature" hidden="false" id="7358-ae12-aabe-469c" targetId="b3e5-4b1b-7050-7e02" primary="false"/>
+        <categoryLink name="Clan Moulder" hidden="false" id="bd86-8929-aa63-dd19" targetId="bbc7-b72c-9cc5-965f" primary="false"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Armour" hidden="false" id="6530-ac42-2db5-8354" sortIndex="3">
-          <entryLinks>
-            <entryLink import="true" name="Light Armour" hidden="false" id="4381-dab7-9f28-ac53" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72"/>
-            <entryLink import="true" name="Medium Armour" hidden="false" id="3316-fa45-258a-639f" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="model" childId="655a-d67a-3e8d-6212" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="model" childId="a3f4-863b-d447-b5c4" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="model" childId="ea17-d1d1-5f6a-f9b0" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-              <costs>
-                <cost name="pts" typeId="points" value="4"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="50b7-332f-854f-a2d5-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="50b7-332f-854f-a2d5-max"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="70"/>
       </costs>
@@ -3167,12 +3146,24 @@
       <infoLinks>
         <infoLink name="Scurry Away!" id="e8b5-2c33-6561-6857" hidden="false" targetId="45db-9bbc-8b3b-4865" type="rule"/>
       </infoLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Primary Weapon" id="f651-cae9-79f3-5c22" hidden="false" collective="false" import="true" defaultSelectionEntryId="655a-d67a-3e8d-6212" sortIndex="2">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f231-e4e5-305b-a382" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="0b23-9c8d-5663-4175" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
+      <profiles>
+        <profile name="Stormfiend" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="3cb7-d769-9d6b-449e" publicationId="4086-1ccd-f433-39a2" page="45">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Creature (Skaven, Clan Moulder)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="0329-a975-ee62-6836" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Warpfire Projectors" hidden="false" id="a9a0-a87e-693d-b674" collective="false" sortIndex="6">
               <constraints>
@@ -3197,51 +3188,21 @@
                 <cost name="pts" typeId="points" value="60"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Windlaunchers" hidden="false" id="f75b-1689-9664-4ad0" collective="false" sortIndex="5">
+            <selectionEntry type="upgrade" import="true" name="Doom-flayer Gauntlets" hidden="false" id="655a-d67a-3e8d-6212" collective="false" sortIndex="1">
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="372c-78b5-76ac-dd3f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1943-f0b6-810a-3d3b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Windlaunchers" typeId="781d-35fe-dd22-05d6" typeName="War Machine" hidden="false" id="f3ed-4fc1-cd5b-6e37" publicationId="4086-1ccd-f433-39a2" page="46">
+                <profile name="Doom-flayer Gauntlets" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="be17-5ad1-80af-0318" publicationId="4086-1ccd-f433-39a2" page="45">
                   <characteristics>
-                    <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Mortar</characteristic>
-                    <characteristic name="Range" typeId="1c88-efb0-083f-b945">8-36&quot;</characteristic>
-                    <characteristic name="Strength" typeId="6ca0-d074-628f-e276"/>
-                    <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Ignores Armour saves. Magical Attacks. Slow to Fire</characteristic>
+                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">As user</characteristic>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Impact Hits (D3). +2D3 A.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
-              <rules>
-                <rule name="Windlaunchers" id="4465-f44f-7a76-2502" hidden="false" publicationId="4086-1ccd-f433-39a2" page="46">
-                  <description>Models hit by a Plague Wind must pass a Toughness test or suffer a Wound. Successful tests must be re-rolled.
-Do not roll on the Stone Thrower Misfire chart if the Windlaunchers misfire. Instead, the template for the attack scatters 2D6&quot;</description>
-                </rule>
-              </rules>
               <costs>
-                <cost name="pts" typeId="points" value="50"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Ratling Cannons" hidden="false" id="ac25-ad25-76ff-4094" collective="false" sortIndex="4">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e173-d81f-acd6-8516" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Ratling Cannons" typeId="781d-35fe-dd22-05d6" typeName="War Machine" hidden="false" id="6fba-3313-fe0a-da3a" publicationId="4086-1ccd-f433-39a2" page="186">
-                  <characteristics>
-                    <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Artillery</characteristic>
-                    <characteristic name="Range" typeId="1c88-efb0-083f-b945">24&quot;</characteristic>
-                    <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4</characteristic>
-                    <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Armour Piercing (1). Multiple Shots (3D6). Magical Attacks. Rapid Fire</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <rules>
-                <rule name="Ratling Cannons" id="6973-2a23-620f-c590" hidden="false" publicationId="4086-1ccd-f433-39a2" page="45">
-                  <description>Each To Hit roll result of 1 inflicts one hit on the closest friendly unit in the firing unit&apos;s front arc that is within range. If there are no eligible friendly units, then the attack misses.</description>
-                </rule>
-              </rules>
-              <costs>
-                <cost name="pts" typeId="points" value="45"/>
+                <cost name="pts" typeId="points" value="15"/>
               </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Grinderfists" hidden="false" id="a3f4-863b-d447-b5c4" collective="false" sortIndex="2">
@@ -3281,23 +3242,6 @@ If you roll a misfire, or if for any reason some of the models in the unit canno
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Doom-flayer Gauntlets" hidden="false" id="655a-d67a-3e8d-6212" collective="false" sortIndex="1">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1943-f0b6-810a-3d3b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Doom-flayer Gauntlets" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="be17-5ad1-80af-0318" publicationId="4086-1ccd-f433-39a2" page="45">
-                  <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">As user</characteristic>
-                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Impact Hits (D3). +2D3 A.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="15"/>
-              </costs>
-            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Shock Gauntlets" hidden="false" id="ea17-d1d1-5f6a-f9b0" collective="false" sortIndex="3">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8e6b-e454-9bec-c79b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -3315,34 +3259,98 @@ If you roll a misfire, or if for any reason some of the models in the unit canno
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Ratling Cannons" hidden="false" id="ac25-ad25-76ff-4094" collective="false" sortIndex="4">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e173-d81f-acd6-8516" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Ratling Cannons" typeId="781d-35fe-dd22-05d6" typeName="War Machine" hidden="false" id="6fba-3313-fe0a-da3a" publicationId="4086-1ccd-f433-39a2" page="186">
+                  <characteristics>
+                    <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Artillery</characteristic>
+                    <characteristic name="Range" typeId="1c88-efb0-083f-b945">24&quot;</characteristic>
+                    <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4</characteristic>
+                    <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Armour Piercing (1). Multiple Shots (3D6). Magical Attacks. Rapid Fire</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule name="Ratling Cannons" id="6973-2a23-620f-c590" hidden="false" publicationId="4086-1ccd-f433-39a2" page="45">
+                  <description>Each To Hit roll result of 1 inflicts one hit on the closest friendly unit in the firing unit&apos;s front arc that is within range. If there are no eligible friendly units, then the attack misses.</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="points" value="45"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Windlaunchers" hidden="false" id="f75b-1689-9664-4ad0" collective="false" sortIndex="5">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="372c-78b5-76ac-dd3f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Windlaunchers" typeId="781d-35fe-dd22-05d6" typeName="War Machine" hidden="false" id="f3ed-4fc1-cd5b-6e37" publicationId="4086-1ccd-f433-39a2" page="46">
+                  <characteristics>
+                    <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Mortar</characteristic>
+                    <characteristic name="Range" typeId="1c88-efb0-083f-b945">8-36&quot;</characteristic>
+                    <characteristic name="Strength" typeId="6ca0-d074-628f-e276"/>
+                    <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Ignores Armour saves. Magical Attacks. Slow to Fire</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule name="Windlaunchers" id="4465-f44f-7a76-2502" hidden="false" publicationId="4086-1ccd-f433-39a2" page="46">
+                  <description>Models hit by a Plague Wind must pass a Toughness test or suffer a Wound. Successful tests must be re-rolled.
+Do not roll on the Stone Thrower Misfire chart if the Windlaunchers misfire. Instead, the template for the attack scatters 2D6&quot;</description>
+                </rule>
+              </rules>
+              <costs>
+                <cost name="pts" typeId="points" value="50"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <profiles>
-        <profile name="Stormfiend" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="3cb7-d769-9d6b-449e" publicationId="4086-1ccd-f433-39a2" page="45">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Creature (Skaven, Clan Moulder)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <entryLinks>
-        <entryLink import="true" name="Hand Weapon" hidden="false" id="0651-8a5a-df3d-8b02" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="579d-fc02-4cd1-e301"/>
-          </constraints>
+        </entryLink>
+        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="a5f4-6feb-7498-78e0" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+          <entryLinks>
+            <entryLink import="true" name="Light Armour" hidden="false" id="4381-dab7-9f28-ac53" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72"/>
+            <entryLink import="true" name="Medium Armour" hidden="false" id="3316-fa45-258a-639f" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
+              <modifiers>
+                <modifier type="add" value="{this} is only allowed if armed with Doom-flayer Gauntlets, Shock Gauntlets or Grinderfists" field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="model" childId="ac25-ad25-76ff-4094" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="model" childId="f75b-1689-9664-4ad0" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="model" childId="a9a0-a87e-693d-b674" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="3316-fa45-258a-639f" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="4"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="448b-4bc7-0d14-799e" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="435c-75f0-1039-a990" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c4a4-4865-396a-fc29-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c4a4-4865-396a-fc29-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry id="83aa-6169-a3e2-1aac" name="Plagueclaw Catapult" hidden="false" collective="false" import="true" type="model" sortIndex="37">
+    <selectionEntry id="83aa-6169-a3e2-1aac" name="Plagueclaw Catapult" hidden="false" collective="false" import="true" type="model" sortIndex="38">
       <profiles>
         <profile id="bc09-40da-7b80-9d94" name="Catapult" publicationId="4086-1ccd-f433-39a2" page="49" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
           <characteristics>
@@ -3427,7 +3435,7 @@ In case a Misfire is rolled, roll a D6 and consult the Plagueclaw Misfire chart.
         </infoGroup>
       </infoGroups>
     </selectionEntry>
-    <selectionEntry id="9da4-4086-bd39-ab63" name="Warp Lightning Cannon" hidden="false" collective="false" import="true" type="model" sortIndex="38">
+    <selectionEntry id="9da4-4086-bd39-ab63" name="Warp Lightning Cannon" hidden="false" collective="false" import="true" type="model" sortIndex="39">
       <profiles>
         <profile id="5994-2dd8-9b5d-d84a" name="Warp Lightning Cannon" publicationId="4086-1ccd-f433-39a2" page="50" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
           <characteristics>
@@ -3514,7 +3522,7 @@ The Warp Lightning Cannon cannot fire grapeshot.</description>
         </infoGroup>
       </infoGroups>
     </selectionEntry>
-    <selectionEntry id="cf50-ef09-d518-ae03" name="Doomwheel" hidden="false" collective="false" import="true" type="model" sortIndex="40">
+    <selectionEntry id="cf50-ef09-d518-ae03" name="Doomwheel" hidden="false" collective="false" import="true" type="model" sortIndex="41">
       <profiles>
         <profile id="d0f8-3aea-c687-fb1b" name="Doomwheel" publicationId="4086-1ccd-f433-39a2" page="52" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
           <characteristics>
@@ -3688,7 +3696,7 @@ If you roll a misfire result something has gone awry. No more shots are fired th
         <cost name="pts" typeId="points" value="190"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8f9c-645a-5406-6f8e" name="Eshin Triad" hidden="false" collective="false" import="true" type="unit" sortIndex="33">
+    <selectionEntry id="8f9c-645a-5406-6f8e" name="Eshin Triad" hidden="false" collective="false" import="true" type="unit" sortIndex="35">
       <categoryLinks>
         <categoryLink id="39e7-64af-2696-b803" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
         <categoryLink name="Clan Eshin" hidden="false" id="ecd3-32d6-3bcb-8f47" targetId="0fad-863b-9e6b-dd1b" primary="false"/>
@@ -3728,25 +3736,37 @@ If you roll a misfire result something has gone awry. No more shots are fired th
             <cost name="pts" typeId="points" value="35"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="2897-6590-627f-087c" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fe8f-fe5f-a04b-b87d"/>
-              </constraints>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="c4b3-7cf3-3c7f-4172" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+              <entryLinks>
+                <entryLink import="true" name="Throwing Weapons" hidden="false" id="0dc4-b200-a629-5c70" type="selectionEntry" targetId="8013-6f6f-96e1-1acc">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fd61-2fb4-3ed7-68b3"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Throwing Weapons" hidden="false" id="0dc4-b200-a629-5c70" type="selectionEntry" targetId="8013-6f6f-96e1-1acc" sortIndex="1">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fd61-2fb4-3ed7-68b3"/>
-              </constraints>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="1488-3acf-ef55-f161" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="2897-6590-627f-087c" type="selectionEntry" targetId="7617-f4b5-02ac-3d15">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fe8f-fe5f-a04b-b87d"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Tail Weapon" hidden="false" id="7e92-d993-4647-418d" type="selectionEntry" targetId="d28c-61c9-e413-8d30" sortIndex="3">
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Smoke Bombs" hidden="false" id="0c27-1ce3-1739-5bd5" type="selectionEntry" targetId="89be-04d6-e8fe-9955" sortIndex="4">
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
+            <entryLink import="true" name="55. Equipment" hidden="false" id="1898-aa1f-9d82-6132" type="selectionEntryGroup" targetId="2575-5193-15f7-421a">
+              <entryLinks>
+                <entryLink import="true" name="Smoke Bombs" hidden="false" id="0c27-1ce3-1739-5bd5" type="selectionEntry" targetId="89be-04d6-e8fe-9955" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Tail Weapon" hidden="false" id="7e92-d993-4647-418d" type="selectionEntry" targetId="d28c-61c9-e413-8d30" sortIndex="1">
+                  <costs>
+                    <cost name="pts" typeId="points" value="2"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -5334,7 +5354,7 @@ cables out.</characteristic>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Poisoned Wind Mortar" hidden="false" id="7c5e-06d2-acb0-18ac" sortIndex="31">
+    <selectionEntry type="model" import="true" name="Poisoned Wind Mortar" hidden="false" id="7c5e-06d2-acb0-18ac" sortIndex="32">
       <costs>
         <cost name="pts" typeId="points" value="60"/>
       </costs>
@@ -5356,15 +5376,23 @@ cables out.</characteristic>
         </rule>
       </rules>
       <entryLinks>
-        <entryLink import="true" name="Gas Mask" hidden="false" id="9a1b-664d-97c5-59d5" type="selectionEntry" targetId="9a8c-d843-66af-1f6e">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ac7e-00ea-f97a-3bd3"/>
-          </constraints>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="51db-7415-56b8-d1f6" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="0cd9-3557-b376-20af" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a9c0-545c-25a4-9bc1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
-        <entryLink import="true" name="Hand Weapon" hidden="false" id="3133-8288-38cb-e38f" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c4cd-4a3b-c904-134c"/>
-          </constraints>
+        <entryLink import="true" name="55. Equipment" hidden="false" id="1354-12da-487d-8c05" type="selectionEntryGroup" targetId="2575-5193-15f7-421a">
+          <entryLinks>
+            <entryLink import="true" name="Gas Mask" hidden="false" id="9a1b-664d-97c5-59d5" type="selectionEntry" targetId="9a8c-d843-66af-1f6e">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ac7e-00ea-f97a-3bd3"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <infoGroups>
@@ -5389,7 +5417,7 @@ cables out.</characteristic>
         </infoGroup>
       </infoGroups>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Doom-flayer" hidden="false" id="134e-a9c1-d9be-9f00" sortIndex="33">
+    <selectionEntry type="model" import="true" name="Doom-flayer" hidden="false" id="134e-a9c1-d9be-9f00" sortIndex="34">
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Crew" hidden="false" id="ae4c-c0da-3b8f-f5fb" subType="crew">
           <constraints>
@@ -5400,19 +5428,27 @@ cables out.</characteristic>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="1711-f850-61a3-b799" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c295-a183-8ed2-ac59"/>
-              </constraints>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="06ad-0669-c280-0f7a" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+              <entryLinks>
+                <entryLink import="true" name="Light Armour" hidden="false" id="fb8b-9d67-53d8-ad42" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e195-1726-448b-3d60"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Light Armour" hidden="false" id="fb8b-9d67-53d8-ad42" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e195-1726-448b-3d60"/>
-              </constraints>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="1273-4c4b-cda3-a057" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="1711-f850-61a3-b799" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c295-a183-8ed2-ac59"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
           <profiles>
-            <profile name="Crew" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="b13c-fd4c-aa33-d9ff" publicationId="4086-1ccd-f433-39a2" page="43">
+            <profile name="Crew" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="b13c-fd4c-aa33-d9ff" publicationId="4086-1ccd-f433-39a2" page="43" noindex="true">
               <characteristics>
                 <characteristic name="M" typeId="09ad-18df-607b-1215"/>
                 <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -5486,15 +5522,12 @@ cables out.</characteristic>
         </infoGroup>
       </infoGroups>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Warp-Grinder" hidden="false" id="af8b-6489-c1b3-8719" sortIndex="32">
+    <selectionEntry type="model" import="true" name="Warp-Grinder" hidden="false" id="af8b-6489-c1b3-8719" sortIndex="33">
       <categoryLinks>
         <categoryLink targetId="fc26-7737-f7cb-8977" id="1df1-75c1-b396-6699" primary="true" name="Special"/>
         <categoryLink name="Clan Skryre" hidden="false" id="1323-74f4-078c-0746" targetId="c7a7-6f89-fd46-9eac" primary="false"/>
         <categoryLink name="Infantry" hidden="false" id="29c0-b70a-a5eb-0e55" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0d73-004c-0e50-e5ef" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
       <infoLinks>
         <infoLink name="Weapon Team" id="d5ed-9ca0-fa81-60e7" hidden="false" targetId="9a1c-90ac-a3ff-5ba0" type="profile"/>
         <infoLink name="Scurry Away!" id="12e4-d808-f52e-952c" hidden="false" targetId="45db-9bbc-8b3b-4865" type="rule"/>
@@ -5519,10 +5552,14 @@ If you roll a misfire, or if for any reason some of the models in the unit canno
         </rule>
       </rules>
       <entryLinks>
-        <entryLink import="true" name="Hand Weapon" hidden="false" id="8221-e778-d159-a01c" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1559-70fe-fdb3-053f"/>
-          </constraints>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="b828-f728-a872-b701" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="b99f-ecc9-1ad2-0767" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="193a-55b3-5964-1560"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <profiles>
@@ -5556,7 +5593,7 @@ If you roll a misfire, or if for any reason some of the models in the unit canno
         </infoGroup>
       </infoGroups>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Warpvolt Scourger" hidden="false" id="24fe-7a38-eb8f-f2b2" sortIndex="30">
+    <selectionEntry type="model" import="true" name="Warpvolt Scourger" hidden="false" id="24fe-7a38-eb8f-f2b2" sortIndex="31">
       <categoryLinks>
         <categoryLink targetId="fc26-7737-f7cb-8977" id="10d3-4483-4fb6-eeae" primary="true" name="Special"/>
         <categoryLink name="Clan Skryre" hidden="false" id="485a-8b6b-c07e-846a" targetId="c7a7-6f89-fd46-9eac" primary="false"/>
@@ -5577,10 +5614,14 @@ If you roll a misfire, or if for any reason some of the models in the unit canno
         </rule>
       </rules>
       <entryLinks>
-        <entryLink import="true" name="Hand Weapon" hidden="false" id="0421-fc05-12e3-d928" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3de7-7b63-2a5f-d25d"/>
-          </constraints>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="6a3b-ac4d-b8e9-1ee5" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="68c9-22b7-4770-b030" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cf1d-3e7d-b89a-cb79"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <profiles>
@@ -5615,10 +5656,11 @@ If you roll a misfire, or if for any reason some of the models in the unit canno
         </infoGroup>
       </infoGroups>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Ratling Warpblaster" hidden="false" id="3ef3-8dae-2bdc-3b91" sortIndex="39">
+    <selectionEntry type="model" import="true" name="Ratling Warpblaster" hidden="false" id="3ef3-8dae-2bdc-3b91" sortIndex="40">
       <categoryLinks>
         <categoryLink targetId="0eb4-f376-7725-b05b" id="b8e6-978c-e5e1-2403" primary="true" name="Rare"/>
         <categoryLink name="War Machine" hidden="false" id="c71b-4d4b-8f57-e5db" targetId="d0ba-7b91-1049-d48b" primary="false"/>
+        <categoryLink name="Clan Skryre" hidden="false" id="0f71-5a56-5e09-9532" targetId="c7a7-6f89-fd46-9eac" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
@@ -5987,10 +6029,7 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
         <categoryLink name="Monster" hidden="false" id="c347-a45d-ae77-5f6e" targetId="e1a0-da31-05c5-9a15" primary="false"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Warpfire Thrower" hidden="false" id="35d9-408a-db7f-4f02" collective="false" sortIndex="28">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e9be-6aff-4f95-59cf" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
+    <selectionEntry type="model" import="true" name="Warpfire Thrower" hidden="false" id="35d9-408a-db7f-4f02" collective="false" sortIndex="29">
       <infoLinks>
         <infoLink name="Scurry Away!" id="c9d3-9c9b-a26f-bcf7" hidden="false" targetId="45db-9bbc-8b3b-4865" type="rule"/>
         <infoLink name="Weapon Team" id="0a40-969e-1027-e62d" hidden="false" targetId="9a1c-90ac-a3ff-5ba0" type="profile"/>
@@ -6002,10 +6041,14 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
         <cost name="pts" typeId="points" value="65"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="Hand Weapon" hidden="false" id="404d-c10b-7c64-1b1a" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="81f1-17bb-8316-65b2"/>
-          </constraints>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="e7be-fdfa-e35c-6dfc" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="404d-c10b-7c64-1b1a" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="81f1-17bb-8316-65b2"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <categoryLinks>
@@ -6035,10 +6078,7 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
         </infoGroup>
       </infoGroups>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Ratling Gun" hidden="false" id="f41a-42db-b139-fd67" collective="false" sortIndex="29">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7944-7bc7-bf2c-7eb4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
+    <selectionEntry type="model" import="true" name="Ratling Gun" hidden="false" id="f41a-42db-b139-fd67" collective="false" sortIndex="30">
       <infoLinks>
         <infoLink name="Scurry Away!" id="603e-5dde-0381-4d64" hidden="false" targetId="45db-9bbc-8b3b-4865" type="rule"/>
         <infoLink name="Weapon Team" id="9384-8486-1f78-a1db" hidden="false" targetId="9a1c-90ac-a3ff-5ba0" type="profile"/>
@@ -6049,10 +6089,14 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
         <cost name="pts" typeId="points" value="55"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="Hand Weapon" hidden="false" id="3b33-8dea-72b9-55bf" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="80e1-df7e-5bd7-c39d"/>
-          </constraints>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="80b9-0766-a2fb-24b1" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="2f20-5296-2455-325a" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8963-f4ec-55b3-2bfc"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <profiles>
@@ -7824,43 +7868,25 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ce47-ff81-b411-0a01" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
-      <profiles>
-        <profile name="Things-Catcher" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="baf9-427f-22e3-45ec" publicationId="4086-1ccd-f433-39a2" page="7">
-          <characteristics>
-            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Polearm. Killing Blow.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
+      <infoLinks>
+        <infoLink name="Things-Catcher" id="e78b-edb8-9d46-4a97" hidden="false" type="profile" targetId="baf9-427f-22e3-45ec"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Whip" hidden="false" id="a8d5-bafb-6900-5e3c" collective="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2936-89fa-d28a-6302" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
-      <profiles>
-        <profile name="Whip" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="2218-f882-4600-cf0c" publicationId="4086-1ccd-f433-39a2" page="7">
-          <characteristics>
-            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">A whip gives the wielder +1 A and Fight in Extra Ranks (2). In addition, they may make supporting attacks equal to their A characteristic.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
+      <infoLinks>
+        <infoLink name="Whip" id="a8f8-beab-26eb-96e1" hidden="false" type="profile" targetId="2218-f882-4600-cf0c"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Plague Censer" hidden="false" id="4909-176d-c110-580a" collective="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="47d4-b0d3-42a9-a364" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
-      <profiles>
-        <profile name="Plague Censer" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="1878-fabb-bbf5-e9d7" publicationId="4086-1ccd-f433-39a2" page="7">
-          <characteristics>
-            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Flail/ At the start of each round of close combat, all enemy models in base contact with one or more models bearing a plague censer, as well the Censer Bearers themselves that are allowed to fight this round, must pass a T test or suffer a single wound with Ignores Armour Saves and Magical Attacks. All Clan Pestilens models gain a +1 bonus for these tests.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
+      <infoLinks>
+        <infoLink name="Plague Censer" id="7e62-2389-a21c-064f" hidden="false" type="profile" targetId="1878-fabb-bbf5-e9d7"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Warpmusket" hidden="false" id="ee2e-4af4-6c99-fce9" collective="false">
       <constraints>
@@ -8514,6 +8540,39 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
         </entryLink>
       </entryLinks>
     </selectionEntry>
+    <selectionEntry type="model" import="true" name="Packmaster" hidden="false" id="8e88-f41d-8ac4-95c3" defaultAmount="2">
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="35f3-84d6-3c83-3bd0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Packmaster" id="a8b9-3c54-bf55-b3d6" hidden="false" targetId="f8eb-0b2e-6bea-166b" type="profile"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="5"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="0c8d-5537-587a-90ee" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+          <entryLinks>
+            <entryLink import="true" name="Light Armour" hidden="false" id="2883-e1ab-0f31-e621" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2b90-e0fa-bfb5-1b77-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2b90-e0fa-bfb5-1b77-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="0f73-bc7c-4250-2bf9" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Whip" hidden="false" id="ed66-2455-7a36-92f6" type="selectionEntry" targetId="a8d5-bafb-6900-5e3c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1892-5160-68c0-a95c-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1892-5160-68c0-a95c-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="90. Magic items" id="9764-a11a-9c24-ab67" hidden="false" collapsible="true">
@@ -8556,7 +8615,7 @@ dispelled.</characteristic>
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Esoteric Resonnator" hidden="false" id="a878-5d0c-d4e1-193d" sortIndex="2">
+            <selectionEntry type="upgrade" import="true" name="Esoteric Warp Resonnator" hidden="false" id="a878-5d0c-d4e1-193d" sortIndex="2">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0960-0df4-affb-0d0b" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3826-0f15-43ca-05ff" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9257,42 +9316,54 @@ allowed.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="87a1-4205-f510-941e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="813b-abe3-68a3-0369" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </constraints>
-              <profiles>
-                <profile name="Rust Armour" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="ffa1-a00a-f183-e468" publicationId="4086-1ccd-f433-39a2" page="9">
-                  <characteristics>
-                    <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                    <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                    <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Medium armour. The first time the wearer is wounded by a S high enough to completely cancel his armour save, or is not permitted an armour save for any reason, the wound is discounted, but the armour is completely destroyed.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
               <categoryLinks>
                 <categoryLink name="Suits of Armour" hidden="false" id="f266-6ce1-9362-414f" targetId="9a61-618b-519a-807c" primary="false"/>
               </categoryLinks>
+              <infoLinks>
+                <infoLink name="Medium Armour" id="c08d-d69a-84f5-fde6" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
+                  <modifiers>
+                    <modifier type="append" value="The first time the wearer is wounded by a S high enough to completely cancel his armour save, or is not permitted an armour save for any reason, the wound is discounted, but the armour is completely destroyed." field="ff58-91e4-84d7-e6e4"/>
+                    <modifier type="set" value="Rust Armour" field="annotation"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true" includeChildForces="false" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Shield of Distraction" hidden="false" id="f7c4-af9a-43c8-fb9a" collective="false" sortIndex="3">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d813-568f-859e-f15a" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c688-ad15-7432-4a1d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
-              <profiles>
-                <profile name="Shield of Distraction" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="aa81-6d52-ed42-89e3" publicationId="4086-1ccd-f433-39a2" page="9">
-                  <characteristics>
-                    <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                    <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                    <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Shield. The Shield of Distraction causes all enemies in base contact with the bearer to suffer -1 A.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
               <categoryLinks>
                 <categoryLink name="Handheld Armour" hidden="false" id="3049-e894-f78c-99a1" targetId="ba52-4f0c-71ae-b52d" primary="false"/>
               </categoryLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="0210-637d-ff12-a760" shared="true" includeChildForces="false" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <infoLinks>
+                <infoLink name="Shield" id="7ab2-8e39-75c5-b6f3" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
+                  <modifiers>
+                    <modifier type="append" value="The Shield of Distraction causes all enemies in base contact with the bearer to suffer -1 A." field="ff58-91e4-84d7-e6e4"/>
+                    <modifier type="set" value="Shield of Distraction" field="annotation"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Foulhide" hidden="false" id="b24e-2b09-2669-3e2a" sortIndex="2">
               <constraints>
@@ -9302,18 +9373,24 @@ allowed.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
-              <profiles>
-                <profile name="Foulhide" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="205f-5e29-3128-d0cd" publicationId="4086-1ccd-f433-39a2" page="9">
-                  <characteristics>
-                    <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                    <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                    <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Medium armour. This armour gives the wearer the Regeneration (4+) special rule.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <categoryLinks>
                 <categoryLink name="Suits of Armour" hidden="false" id="2818-3071-939a-7f11" targetId="9a61-618b-519a-807c" primary="false"/>
               </categoryLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true" includeChildForces="false" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <infoLinks>
+                <infoLink name="Medium Armour" id="55fe-ab3e-6e6f-9f23" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
+                  <modifiers>
+                    <modifier type="append" value=" This armour gives the wearer the Regeneration (4+) special rule." field="ff58-91e4-84d7-e6e4"/>
+                    <modifier type="set" value="Foulhide" field="annotation"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
@@ -9445,15 +9522,6 @@ allowed.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="229d-5a08-8bc9-3fce" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9347-aec3-dc86-4d88" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
-              <profiles>
-                <profile name="Headsplitter" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="b4a3-9413-c45c-5072" publicationId="4086-1ccd-f433-39a2" page="9">
-                  <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Comabt</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Sling. Against models with T 5 or more, Headsplitter automatically Wounds on the roll of 2+ with Ignores Armour Saves.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
@@ -9463,7 +9531,20 @@ allowed.</characteristic>
                     <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="0fad-863b-9e6b-dd1b" shared="true" includeChildForces="false" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d69b-acd0-f802-1e50" shared="true" includeChildForces="false" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Sling" id="0c65-af6f-eeb1-6ce4" hidden="false" type="profile" targetId="d083-b2f1-d1c5-e4f7">
+                  <modifiers>
+                    <modifier type="append" value="Against models with T 5 or more, Headsplitter automatically Wounds on the roll of 2+ with Ignores Armour Saves." field="de63-d6da-efa8-00ac"/>
+                    <modifier type="set" value="Headsplitter" field="annotation"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Electro-Whip" hidden="false" id="1edb-f1cd-70b6-2be9" sortIndex="15">
               <costs>
@@ -9473,47 +9554,55 @@ allowed.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fa13-b97c-498f-025c" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="09cf-f8d5-4855-271f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
-              <profiles>
-                <profile name="Electro-Whip" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="ed6a-d634-c23f-d254" publicationId="4086-1ccd-f433-39a2" page="9">
-                  <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Whip. An Electro-whip gives the wielder +D3 Attacks rather than 1 as well as the Lightning Attacks special rule.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
                     <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="bbc7-b72c-9cc5-965f" shared="true" includeChildForces="false" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="a2da-ddf0-8a29-a7d1" shared="true" includeChildForces="false" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Whip" id="e028-6152-05e4-a4ac" hidden="false" type="profile" targetId="2218-f882-4600-cf0c">
+                  <modifiers>
+                    <modifier type="set" value="Electro-Whip" field="annotation"/>
+                    <modifier type="append" value="An Electro-whip gives the wielder +D3 Attacks rather than 1 as well as the Lightning Attacks special rule." field="de63-d6da-efa8-00ac" join=""/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="The Fumigatous" hidden="false" id="f15b-4515-3873-6344" sortIndex="13">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a663-e506-14c9-2409" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d16d-4d16-c355-6786" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
-              <profiles>
-                <profile name="The Fumigatous" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="4cad-d18b-724d-c8d7" publicationId="4086-1ccd-f433-39a2" page="9">
-                  <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Plague Censer. All Toughness tests taken from this weapon suffer a -1 modifier.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="0fad-863b-9e6b-dd1b" shared="true" includeChildForces="false" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="2d2e-eeb5-e996-4850" shared="true" includeChildForces="false" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fe54-7cb4-8af2-a88e" shared="true" includeChildForces="false" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Plague Censer" id="ac4c-7aac-a1e9-8e53" hidden="false" type="profile" targetId="1878-fabb-bbf5-e9d7">
+                  <modifiers>
+                    <modifier type="append" value="All Toughness tests taken from this weapon suffer a -1 modifier." field="de63-d6da-efa8-00ac"/>
+                    <modifier type="set" value="The Fumigatous" field="annotation"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Warpforged Blade" hidden="false" id="5fb5-d628-fa91-addb" collective="false" sortIndex="3">
               <constraints>
@@ -9558,21 +9647,17 @@ allowed.</characteristic>
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden" scope="root-entry" affects="self.entries.d28c-61c9-e413-8d30"/>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="c4b0-4ee4-7b99-843e" shared="true" includeChildForces="false" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Snap-Snap Snarepole" hidden="false" id="34e1-0115-c589-bdf8" sortIndex="9">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
-              <profiles>
-                <profile name="Snap-Snap Snarepole" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="5bb0-c003-1966-dc15" publicationId="4086-1ccd-f433-39a2" page="9">
-                  <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Things-catcher. One enemy model of your choice suffer a -1 penalty to their Attacks.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8128-3eaa-8811-bb87" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7108-c29f-4287-2bc4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9583,7 +9668,20 @@ allowed.</characteristic>
                     <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="bbc7-b72c-9cc5-965f" shared="true" includeChildForces="false" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="edab-9646-f035-31e7" shared="true" includeChildForces="false" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Things-Catcher" id="2169-b4a3-e5fa-17ac" hidden="false" type="profile" targetId="baf9-427f-22e3-45ec">
+                  <modifiers>
+                    <modifier type="set" value="Snap-Snap Snarepole" field="annotation"/>
+                    <modifier type="append" value="One enemy model of your choice suffer a -1 penalty to their Attacks." field="de63-d6da-efa8-00ac"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Gnaswhard" hidden="false" id="cf33-ef06-b305-a0a2" sortIndex="5">
               <constraints>
@@ -9647,22 +9745,26 @@ allowed.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
-              <profiles>
-                <profile name="Lash of fangs" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="8b3e-f649-b7d8-1890" publicationId="4086-1ccd-f433-39a2" page="9">
-                  <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b"/>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Whip. Any character, Monstrous Creature or Monster that suffers one or more unsaved Wounds from this weapon are subject to the Stupidity special rule for the remainder of the game.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
                     <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="bbc7-b72c-9cc5-965f" shared="true" includeChildForces="false" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="a2da-ddf0-8a29-a7d1" shared="true" includeChildForces="false" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Whip" id="37eb-2b58-5f9e-121b" hidden="false" type="profile" targetId="2218-f882-4600-cf0c">
+                  <modifiers>
+                    <modifier type="set" value="Lash of fangs" field="annotation"/>
+                    <modifier type="append" value="Any character, Monstrous Creature or Monster that suffers one or more unsaved Wounds from this weapon are subject to the Stupidity special rule for the remainder of the game." field="de63-d6da-efa8-00ac" join=""/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
@@ -10221,7 +10323,7 @@ Roll an Artillery Dice to determine number of shots fired. After the first Artil
         <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Flaming Attacks. Magical Attacks. Multiple Wounds (D3). Slow to Fire.</characteristic>
       </characteristics>
     </profile>
-    <profile id="4433-2e8a-11a3-64c0" name="Plague Monk Crew" publicationId="4086-1ccd-f433-39a2" page="166" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="4433-2e8a-11a3-64c0" name="Plague Monk Crew" publicationId="4086-1ccd-f433-39a2" page="166" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215"/>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -10262,7 +10364,7 @@ Roll an Artillery Dice to determine number of shots fired. After the first Artil
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target is immediately picked up and may be moved to any position on the battlefield within 24&quot; of their original position, just like a summoning spell.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Crew" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="ee7f-b6c3-64bc-d753" publicationId="4086-1ccd-f433-39a2" page="200">
+    <profile name="Crew" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="ee7f-b6c3-64bc-d753" publicationId="4086-1ccd-f433-39a2" page="200" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -10274,6 +10376,27 @@ Roll an Artillery Dice to determine number of shots fired. After the first Artil
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Skaven</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Plague Censer" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="1878-fabb-bbf5-e9d7" publicationId="4086-1ccd-f433-39a2" page="7">
+      <characteristics>
+        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
+        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Requires Two Hands. Mighty Blow (2). At the start of each round of close combat, all enemy models in base contact with one or more models bearing a plague censer, as well the Censer Bearers themselves that are allowed to fight this round, must pass a T test or suffer a single wound with Ignores Armour Saves and Magical Attacks. All Clan Pestilens models gain a +1 bonus for these tests.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Whip" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="2218-f882-4600-cf0c" publicationId="4086-1ccd-f433-39a2" page="7">
+      <characteristics>
+        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
+        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">A whip gives the wielder +1 A and Fight in Extra Ranks (2). In addition, they may make supporting attacks equal to their A characteristic.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Things-Catcher" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="baf9-427f-22e3-45ec" publicationId="4086-1ccd-f433-39a2" page="7">
+      <characteristics>
+        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
+        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">+1 Initiative. Requires Two Hands. Killing Blow.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
