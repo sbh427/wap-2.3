@@ -1971,7 +1971,6 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="e650-a901-f069-ca88" shared="true"/>
                     <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="4276-1ee4-016d-ac99" shared="true"/>
                     <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f667-6e97-ec08-38ea" shared="true"/>
                     <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
@@ -2018,15 +2017,21 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f26a-7a9c-63c0-9da3"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b2e5-9ce5-a7ac-de27" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
-          <profiles>
-            <profile name="Mastodon Armour" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="0366-143a-e56b-3170" publicationId="dc4b-67ab-7b8e-baa5" page="8">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Light armour. If the wearer is killed by an attack that is not made in close combat, roll a D6; on a 2+, they will remain in play with one Wound remaining.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink name="Light Armour" id="91a4-960a-4e6c-e571" hidden="false" type="profile" targetId="4129-1acd-3564-d3ea">
+              <modifiers>
+                <modifier type="set" value="Mastodon Armour" field="annotation"/>
+                <modifier type="append" value="If the wearer is killed by an attack that is not made in close combat, roll a D6; on a 2+, they will remain in play with one Wound remaining." field="ff58-91e4-84d7-e6e4" join=", "/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Greedy Fist" hidden="false" id="8682-008d-1724-56c5" sortIndex="9">
           <costs>
