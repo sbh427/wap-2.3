@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2572-4a7a-3823-e3b2" name="Vampire Counts WAP 1.7" revision="4" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="38" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2572-4a7a-3823-e3b2" name="Vampire Counts WAP 1.7" revision="5" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="38" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <profileTypes>
     <profileType id="21e6-6317-460c-b75f" name="Vampiric Power">
       <characteristicTypes>
@@ -8101,7 +8101,7 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="f95f-cacf-d784-2d8a" name="Arcane Items" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="f95f-cacf-d784-2d8a" name="Arcane Items" hidden="true" collective="false" import="true" collapsible="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="893b-c116-8cd8-3b84" type="max"/>
       </constraints>
@@ -8382,10 +8382,34 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="3000-ac84-d855-9cda" name="Common Arcane Items" hidden="false" collective="false" import="true" targetId="6cd2-3f4b-da2d-1ee9" type="selectionEntryGroup" sortIndex="12"/>
+        <entryLink id="3000-ac84-d855-9cda" name="Common Arcane Items" hidden="false" collective="false" import="true" targetId="6cd2-3f4b-da2d-1ee9" type="selectionEntryGroup" sortIndex="12" flatten="true"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="893b-c116-8cd8-3b84">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="model" childId="db27-b8a6-8e1f-2a53" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-category" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
-    <selectionEntryGroup id="60d4-ceaa-5198-1353" name="Enchanted Items" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="60d4-ceaa-5198-1353" name="Enchanted Items" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4ac1-274f-fabd-546d" type="max"/>
       </constraints>
@@ -8921,10 +8945,10 @@ the start of any round of Close Combat. When it is, the bearer suffers 1 Wound 
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="133c-eeb2-35e9-312a" name="Common Enchanted Items" hidden="false" collective="false" import="true" targetId="5857-a7aa-f954-a027" type="selectionEntryGroup" sortIndex="25"/>
+        <entryLink id="133c-eeb2-35e9-312a" name="Common Enchanted Items" hidden="false" collective="false" import="true" targetId="5857-a7aa-f954-a027" type="selectionEntryGroup" sortIndex="25" flatten="true"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="8d7f-61fb-44ba-0b6c" name="Magic Armour" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="8d7f-61fb-44ba-0b6c" name="Magic Armour" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dcf8-4479-3f15-5959" type="max"/>
       </constraints>
@@ -9214,10 +9238,10 @@ the start of any round of Close Combat. When it is, the bearer suffers 1 Wound 
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="5ece-e462-1890-6f42" name="Common Magic Armour" hidden="false" collective="false" import="true" targetId="557c-c8c5-0c0f-d2b3" type="selectionEntryGroup" sortIndex="11"/>
+        <entryLink id="5ece-e462-1890-6f42" name="Common Magic Armour" hidden="false" collective="false" import="true" targetId="557c-c8c5-0c0f-d2b3" type="selectionEntryGroup" sortIndex="11" flatten="true"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="a3ca-ccf2-444b-f177" name="Magic Standards" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="a3ca-ccf2-444b-f177" name="Magic Standards" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0024-de67-28d0-0f56" type="max"/>
       </constraints>
@@ -9240,7 +9264,7 @@ the start of any round of Close Combat. When it is, the bearer suffers 1 Wound 
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
                     <condition type="notInstanceOf" value="1" field="selections" scope="unit" childId="690c-c730-6330-9416" shared="true"/>
                     <condition type="equalTo" value="0" field="selections" scope="force" childId="4b62-4ab2-2bd8-72e7" shared="true" includeChildSelections="true"/>
@@ -9591,10 +9615,10 @@ the start of any round of Close Combat. When it is, the bearer suffers 1 Wound 
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="ef4d-17c0-e30a-b19a" name="Common Magic Standards" hidden="false" collective="false" import="true" targetId="2613-24d7-a26e-eb37" type="selectionEntryGroup" sortIndex="17"/>
+        <entryLink id="ef4d-17c0-e30a-b19a" name="Common Magic Standards" hidden="false" collective="false" import="true" targetId="2613-24d7-a26e-eb37" type="selectionEntryGroup" sortIndex="17" flatten="true"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="65a4-2cd8-a0c9-8a92" name="Magic Weapons" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="65a4-2cd8-a0c9-8a92" name="Magic Weapons" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="af32-bdcb-3f47-c8e4" type="max"/>
       </constraints>
@@ -9883,10 +9907,10 @@ the start of any round of Close Combat. When it is, the bearer suffers 1 Wound 
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="cc5b-db55-d62f-98d7" name="Common Magic Weapons" hidden="false" collective="false" import="true" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="12"/>
+        <entryLink id="cc5b-db55-d62f-98d7" name="Common Magic Weapons" hidden="false" collective="false" import="true" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="12" flatten="true"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="4215-2a8d-e599-7c88" name="Talismans" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="4215-2a8d-e599-7c88" name="Talismans" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="07be-ac26-1f6c-1af4" type="max"/>
       </constraints>
@@ -10018,10 +10042,10 @@ the start of any round of Close Combat. When it is, the bearer suffers 1 Wound 
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="82f7-4eb3-b622-6517" name="Common Talismans" hidden="false" collective="false" import="true" targetId="946f-a470-9912-9301" type="selectionEntryGroup" sortIndex="8"/>
+        <entryLink id="82f7-4eb3-b622-6517" name="Common Talismans" hidden="false" collective="false" import="true" targetId="946f-a470-9912-9301" type="selectionEntryGroup" sortIndex="8" flatten="true"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup id="db27-b8a6-8e1f-2a53" name="Arcane Items (One use only)" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="db27-b8a6-8e1f-2a53" name="Arcane Items (One use only)" hidden="true" collective="false" import="true" collapsible="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1d03-cdde-44e8-bfa1" type="max"/>
       </constraints>
@@ -10060,10 +10084,34 @@ the start of any round of Close Combat. When it is, the bearer suffers 1 Wound 
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="eed1-ee6f-9e33-f86" name="Common Arcane Items (One use only)" hidden="false" collective="false" import="true" targetId="3dfd-c3fd-5a56-45f1" type="selectionEntryGroup" sortIndex="3"/>
+        <entryLink id="eed1-ee6f-9e33-f86" name="Common Arcane Items (One use only)" hidden="false" collective="false" import="true" targetId="3dfd-c3fd-5a56-45f1" type="selectionEntryGroup" sortIndex="3" flatten="true"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="0" field="1d03-cdde-44e8-bfa1">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="model" childId="f95f-cacf-d784-2d8a" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-category" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Vampiric Powers" id="5a97-5781-86b4-0c9d" hidden="false">
+    <selectionEntryGroup name="Vampiric Powers" id="5a97-5781-86b4-0c9d" hidden="false" collapsible="true">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Blademaster" hidden="false" id="57b8-8deb-61b3-5814" collective="false" sortIndex="3">
           <constraints>
@@ -11193,7 +11241,7 @@ the start of any round of Close Combat. When it is, the bearer suffers 1 Wound 
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Magic Items" id="aacd-d6ac-7b61-9f10" hidden="false">
+    <selectionEntryGroup name="Magic Items" id="aacd-d6ac-7b61-9f10" hidden="false" collapsible="true">
       <entryLinks>
         <entryLink import="true" name="Magic Weapons" hidden="false" id="7941-9e13-b528-4072" collective="false" targetId="65a4-2cd8-a0c9-8a92" type="selectionEntryGroup" sortIndex="1"/>
         <entryLink import="true" name="Magic Armour" hidden="false" id="270a-adb5-12fa-5a5d" collective="false" targetId="8d7f-61fb-44ba-0b6c" type="selectionEntryGroup" sortIndex="2"/>
@@ -11213,7 +11261,7 @@ the start of any round of Close Combat. When it is, the bearer suffers 1 Wound 
         </modifier>
       </modifiers>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Vampiric Powers &amp; Magic Items" id="0175-7a22-f4a1-c988" hidden="false">
+    <selectionEntryGroup name="Vampiric Powers &amp; Magic Items" id="0175-7a22-f4a1-c988" hidden="false" collapsible="true">
       <entryLinks>
         <entryLink import="true" name="Magic Weapons" hidden="false" id="8e67-bece-51af-5f24" collective="false" targetId="65a4-2cd8-a0c9-8a92" type="selectionEntryGroup" sortIndex="1"/>
         <entryLink import="true" name="Magic Armour" hidden="false" id="7823-8ad5-0b3e-96b3" collective="false" targetId="8d7f-61fb-44ba-0b6c" type="selectionEntryGroup" sortIndex="2"/>
