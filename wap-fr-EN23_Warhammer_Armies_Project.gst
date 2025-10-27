@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="70" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="71" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -8680,13 +8680,46 @@
         </entryLink>
       </entryLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="7456-81f5-9a96-d59e" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aa1b-c20e-42aa-52e7" includeChildSelections="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Leader" id="f8c2-0094-8296-277c" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="5"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="d3ec-3cba-c1d6-8c0f" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="770c-368b-932e-904c" includeChildSelections="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Standard Bearer" id="e1f9-7db4-2d8d-3ee3" hidden="false" type="rule" targetId="6002-29d0-d620-1bd0"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="10"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="ecde-db3e-9381-c190" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8fd5-38f5-2f70-0fd8" includeChildSelections="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Musician" id="73c9-9eb6-dd73-8e91" hidden="false" type="rule" targetId="54c3-1d1b-3ffe-59a5"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="5"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="50. Handheld Armour" id="9015-46da-282c-713d" hidden="false">
       <comment>Min 1</comment>
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3ea6-01bb-0b28-b780" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7cef-e90c-ff74-4c59" includeChildSelections="false"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3ea6-01bb-0b28-b780" includeChildSelections="false" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7cef-e90c-ff74-4c59" includeChildSelections="false" automatic="true"/>
       </constraints>
       <modifierGroups>
         <modifierGroup type="and">
@@ -8704,7 +8737,7 @@
     <selectionEntryGroup name="50. Handheld Armour" id="0420-92ca-bbfc-b5f2" hidden="false">
       <comment>Min 0</comment>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b127-dfd3-1284-6bb1" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b127-dfd3-1284-6bb1" includeChildSelections="false" automatic="true"/>
       </constraints>
       <modifierGroups>
         <modifierGroup type="and">
@@ -8721,8 +8754,8 @@
     <selectionEntryGroup name="40. Suits of Armour" id="f7f7-2534-4683-595a" hidden="false">
       <comment>Min 1</comment>
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="71c5-9037-5bd4-fae9" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f5b7-0be5-74d6-45b2" includeChildSelections="false"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="71c5-9037-5bd4-fae9" includeChildSelections="false" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f5b7-0be5-74d6-45b2" includeChildSelections="false" automatic="true"/>
       </constraints>
       <modifierGroups>
         <modifierGroup type="and">
@@ -8740,7 +8773,7 @@
     <selectionEntryGroup name="40. Suits of Armour" id="f56d-df75-2d0b-ce09" hidden="false">
       <comment>Min 0</comment>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b3e8-624f-92d7-7b5b" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b3e8-624f-92d7-7b5b" includeChildSelections="false" automatic="true"/>
       </constraints>
       <modifierGroups>
         <modifierGroup type="and">
@@ -8763,8 +8796,8 @@
     <selectionEntryGroup name="20. Primary Weapon" id="350c-4b0b-93c1-4e47" hidden="false">
       <comment>Min 1</comment>
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e941-9082-0af2-8b43" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe22-ce5f-b23e-303d" includeChildSelections="false"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e941-9082-0af2-8b43" includeChildSelections="false" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe22-ce5f-b23e-303d" includeChildSelections="false" automatic="true"/>
       </constraints>
     </selectionEntryGroup>
     <selectionEntryGroup name="60. Wizard Level" id="6921-bd2a-e7cb-9029" hidden="false">
@@ -8785,8 +8818,8 @@
     <selectionEntryGroup name="30. Secondary Weapon" id="f86c-485f-5cc1-2a43" hidden="false">
       <comment>Min 1</comment>
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5d91-5217-36bf-adeb" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d000-627b-af39-4fd6" includeChildSelections="false"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5d91-5217-36bf-adeb" includeChildSelections="false" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d000-627b-af39-4fd6" includeChildSelections="false" automatic="true"/>
       </constraints>
     </selectionEntryGroup>
     <selectionEntryGroup name="60. Wizard Level" id="d1c2-3512-e5b6-7616" hidden="false">
@@ -8804,21 +8837,15 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8fb4-564a-87c3-1e3f-max"/>
       </constraints>
     </selectionEntryGroup>
-    <selectionEntryGroup name="20. Primary Weapon" id="79e5-2d90-804e-64f9" hidden="false">
-      <comment>Min 0</comment>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="97da-05bf-cb8b-07f8" includeChildSelections="false"/>
-      </constraints>
-    </selectionEntryGroup>
     <selectionEntryGroup name="30. Secondary Weapon" id="9bf8-b456-dd2f-8826" hidden="false">
       <comment>Min 0</comment>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="94cf-8482-9a4d-8204" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="94cf-8482-9a4d-8204" includeChildSelections="false" automatic="true"/>
       </constraints>
     </selectionEntryGroup>
     <selectionEntryGroup name="70. Mount" id="d3f4-2566-96e2-e425" hidden="false">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7821-ebe3-f713-6916" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7821-ebe3-f713-6916" includeChildSelections="false" automatic="true"/>
       </constraints>
     </selectionEntryGroup>
     <selectionEntryGroup name="10. Character Options" id="7853-6aa4-00e8-09e0" hidden="false">
@@ -8906,6 +8933,82 @@
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d10-92f6-d5d5-f71d"/>
       </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="65. Lore of Magic" id="6704-e54c-3f8f-1d32" hidden="false">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="495e-ce6f-a51c-e06f-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="495e-ce6f-a51c-e06f-max" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="f5c2-4dd8-a449-65ce" hidden="false">
+      <comment>2 &amp; 3</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 2" hidden="false" id="a89f-3add-1137-53f7" type="selectionEntry" targetId="801a-bc0a-a767-61db"/>
+        <entryLink import="true" name="Wizard Level 3" hidden="false" id="d302-4799-0462-394e" type="selectionEntry" targetId="1670-dca4-294b-7d9b">
+          <costs>
+            <cost name="pts" typeId="points" value="35"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1f12-c809-0735-bc8e"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="99. Command Group" id="11f9-4ce5-7246-17b0" hidden="false">
+      <comment>Empty</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="99. Command Group" id="8168-5cd0-d346-39c6" hidden="false">
+      <comment>Full</comment>
+      <entryLinks>
+        <entryLink import="true" name="Musician" hidden="false" id="55ac-b71b-dd5c-838d" type="selectionEntry" targetId="ecde-db3e-9381-c190"/>
+        <entryLink import="true" name="Leader" hidden="false" id="d0ab-b340-8139-17ea" type="selectionEntry" targetId="7456-81f5-9a96-d59e"/>
+        <entryLink import="true" name="Standard Bearer" hidden="false" id="fca6-9ed2-7bf5-45df" type="selectionEntry" targetId="d3ec-3cba-c1d6-8c0f"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="99. Command Group" id="6d24-2d46-8718-0b8f" hidden="false">
+      <comment>L&amp;M (for magical Standards)</comment>
+      <entryLinks>
+        <entryLink import="true" name="Musician" hidden="false" id="2d25-4fdb-750e-aa97" type="selectionEntry" targetId="ecde-db3e-9381-c190"/>
+        <entryLink import="true" name="Leader" hidden="false" id="9c80-846d-fedb-99de" type="selectionEntry" targetId="7456-81f5-9a96-d59e"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="99. Command Group" id="f786-b0b9-e5d8-3395" hidden="false">
+      <comment>L</comment>
+      <entryLinks>
+        <entryLink import="true" name="Leader" hidden="false" id="9406-f791-4579-fbec" type="selectionEntry" targetId="7456-81f5-9a96-d59e"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="99. Command Group" id="e1e9-84f4-4f5a-8023" hidden="false">
+      <comment>L&amp;S</comment>
+      <entryLinks>
+        <entryLink import="true" name="Leader" hidden="false" id="142e-2373-6843-d0cf" type="selectionEntry" targetId="7456-81f5-9a96-d59e"/>
+        <entryLink import="true" name="Standard Bearer" hidden="false" id="7a16-ab94-3409-e3f6" type="selectionEntry" targetId="d3ec-3cba-c1d6-8c0f"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="99. Command Group" id="2019-74db-324c-3229" hidden="false">
+      <comment>S</comment>
+      <entryLinks>
+        <entryLink import="true" name="Standard Bearer" hidden="false" id="5152-a007-adbc-14db" type="selectionEntry" targetId="d3ec-3cba-c1d6-8c0f"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="99. Command Group" id="2e07-3fe6-d529-15fd" hidden="false">
+      <comment>M</comment>
+      <entryLinks>
+        <entryLink import="true" name="Musician" hidden="false" id="fa2e-99cf-6bc0-5c69" type="selectionEntry" targetId="ecde-db3e-9381-c190"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="99. Command Group" id="51a7-944a-1f2e-1f83" hidden="false">
+      <comment>M&amp;S</comment>
+      <entryLinks>
+        <entryLink import="true" name="Standard Bearer" hidden="false" id="f815-3142-9e8c-348a" type="selectionEntry" targetId="d3ec-3cba-c1d6-8c0f"/>
+        <entryLink import="true" name="Musician" hidden="false" id="4a7c-3f84-88f7-f889" type="selectionEntry" targetId="ecde-db3e-9381-c190"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="35. Equipment" id="6423-df0f-15a7-7575" hidden="false">
+      <comment>Min 0</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="36. Upgrades" id="f845-cd7c-43ba-0c0d" hidden="false">
+      <comment>Min 0</comment>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>

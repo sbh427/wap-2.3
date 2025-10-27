@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="28da-4dfe-fb43-8a0c" name="Skaven WAP 1.9" revision="10" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/XwjPS8c9TB" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="40" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="28da-4dfe-fb43-8a0c" name="Skaven WAP 1.9" revision="11" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/XwjPS8c9TB" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="40" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://discordapp.com/invite/UrrPB3T</readme>
   <selectionEntries>
     <selectionEntry id="e7cc-2891-79c2-d6b3" name="Grey Seer" hidden="false" collective="false" import="true" type="model" sortIndex="1">
@@ -1734,7 +1734,8 @@
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Pawleader" hidden="false" id="debe-2882-92f4-78ec" collective="false" defaultAmount="1" sortIndex="2">
           <constraints>
-            <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="d79a-979b-d289-875e-max-min-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="false" id="d79a-979b-d289-875e-max-min-min" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="0afd-264a-8f62-4b84" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
           </constraints>
           <profiles>
             <profile name="Pawleader" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="7fe6-5923-c001-4d5f" publicationId="4086-1ccd-f433-39a2" page="31">
@@ -1758,7 +1759,12 @@
           <modifiers>
             <modifier type="increment" value="1" field="d79a-979b-d289-875e-max-min-min">
               <repeats>
-                <repeat value="20" repeats="1" field="selections" scope="unit" childId="576c-619e-0c73-17b0" shared="true" roundUp="false" includeChildSelections="true"/>
+                <repeat value="20" repeats="1" field="selections" scope="unit" childId="576c-619e-0c73-17b0" shared="true" roundUp="true" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="1" field="0afd-264a-8f62-4b84">
+              <repeats>
+                <repeat value="20" repeats="1" field="selections" scope="unit" childId="576c-619e-0c73-17b0" shared="true" roundUp="true" includeChildSelections="true"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2077,6 +2083,11 @@
             <modifier type="increment" value="1" field="35f3-84d6-3c83-3bd0">
               <repeats>
                 <repeat value="5" repeats="1" field="selections" scope="parent" childId="e391-6d8c-b7df-bcd1" shared="true" roundUp="true" id="fad6-af21-78e5-bbf8" percentValue="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="1" field="161b-1820-67dd-3ef2">
+              <repeats>
+                <repeat value="5" repeats="1" field="selections" scope="parent" childId="e391-6d8c-b7df-bcd1" shared="true" roundUp="true" id="348d-3e48-2d17-ae4a" percentValue="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -2542,7 +2553,7 @@
         <categoryLink name="Monstrous Infantry" hidden="false" id="c7b7-2829-fdc4-6854" targetId="5fc5-b80a-115f-bca3" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="ac20-2e82-04c7-5d21" name="Rat Ogre" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="ac20-2e82-04c7-5d21" name="Rat Ogre" hidden="false" collective="false" import="true" type="model" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0c8f-57b9-18ca-867a" type="min"/>
           </constraints>
@@ -2698,9 +2709,14 @@
       <entryLinks>
         <entryLink import="true" name="Packmaster" hidden="false" id="9a60-5911-3d62-9e87" type="selectionEntry" targetId="8e88-f41d-8ac4-95c3" defaultAmount="1">
           <modifiers>
+            <modifier type="increment" value="1" field="161b-1820-67dd-3ef2">
+              <repeats>
+                <repeat value="2" repeats="1" field="selections" scope="parent" childId="ac20-2e82-04c7-5d21" shared="true" roundUp="true" id="46c7-09d9-c93e-2549" percentValue="false"/>
+              </repeats>
+            </modifier>
             <modifier type="increment" value="1" field="35f3-84d6-3c83-3bd0">
               <repeats>
-                <repeat value="2" repeats="1" field="selections" scope="parent" childId="c16c-5072-d189-60f2" shared="true" roundUp="true" id="46c7-09d9-c93e-2549" percentValue="false"/>
+                <repeat value="2" repeats="1" field="selections" scope="parent" childId="ac20-2e82-04c7-5d21" shared="true" roundUp="true" id="7dc7-2adc-a908-589e" percentValue="false"/>
               </repeats>
             </modifier>
           </modifiers>
@@ -8542,7 +8558,8 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Packmaster" hidden="false" id="8e88-f41d-8ac4-95c3" defaultAmount="2">
       <constraints>
-        <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="35f3-84d6-3c83-3bd0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="max" value="0" field="selections" scope="parent" shared="false" id="35f3-84d6-3c83-3bd0" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="161b-1820-67dd-3ef2" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
       </constraints>
       <infoLinks>
         <infoLink name="Packmaster" id="a8b9-3c54-bf55-b3d6" hidden="false" targetId="f8eb-0b2e-6bea-166b" type="profile"/>
@@ -9921,7 +9938,7 @@ allowed.</characteristic>
         </modifier>
       </modifiers>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Magic Standards" id="cb40-c54f-5ef7-aa93" hidden="false" collective="false" import="true" collapsible="true">
+    <selectionEntryGroup name="91. Magic Standards" id="cb40-c54f-5ef7-aa93" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="eed2-18c2-b67a-8b1c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
