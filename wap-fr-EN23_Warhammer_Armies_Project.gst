@@ -8010,6 +8010,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="parent"/>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Wizard Level 2" hidden="false" id="801a-bc0a-a767-61db">
       <profiles>
@@ -8023,6 +8026,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="parent"/>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Wizard Level 3" hidden="false" id="1670-dca4-294b-7d9b">
       <profiles>
@@ -8036,6 +8042,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="parent"/>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Wizard Level 4" hidden="false" id="5460-3929-58ef-71ba">
       <profiles>
@@ -8049,6 +8058,9 @@
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="parent"/>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="9519-df8f-0af4-1995" name="Army Battle Standard" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
