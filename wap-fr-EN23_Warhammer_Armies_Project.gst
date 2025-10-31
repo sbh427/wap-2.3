@@ -154,7 +154,11 @@
     </profileType>
   </profileTypes>
   <categoryEntries>
-    <categoryEntry id="d280-b7df-c185-2ba5" name="Lords" hidden="false"/>
+    <categoryEntry id="d280-b7df-c185-2ba5" name="Lords" hidden="false">
+      <constraints>
+        <constraint type="max" value="25" field="limit::points" scope="roster" shared="false" id="8877-5cef-efc0-d65b" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
+      </constraints>
+    </categoryEntry>
     <categoryEntry id="b876-2856-f1c2-c4f0" name="Core" hidden="false">
       <modifiers>
         <modifier type="decrement" field="f412-f4d0-9f49-afab" value="1">
@@ -171,6 +175,7 @@
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f412-f4d0-9f49-afab" type="min"/>
+        <constraint type="min" value="25" field="limit::points" scope="roster" shared="false" id="minPercentage" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
       </constraints>
     </categoryEntry>
     <categoryEntry id="d38a-73da-883b-bab9" name="Heroes" hidden="false">
@@ -181,6 +186,9 @@
           </conditions>
         </modifier>
       </modifiers>
+      <constraints>
+        <constraint type="max" value="35" field="limit::points" scope="roster" shared="false" id="1ec9-e189-0563-2616" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
+      </constraints>
     </categoryEntry>
     <categoryEntry id="fc26-7737-f7cb-8977" name="Special" hidden="false">
       <modifiers>
@@ -198,6 +206,7 @@
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5e3c-b5d6-a059-b5ab" type="min"/>
+        <constraint type="max" value="50" field="limit::points" scope="roster" shared="false" id="a416-d971-876c-770d" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
       </constraints>
     </categoryEntry>
     <categoryEntry id="0eb4-f376-7725-b05b" name="Rare" hidden="false">
@@ -216,6 +225,7 @@
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e0d7-75ba-de98-e3ff" type="min"/>
+        <constraint type="max" value="25" field="limit::points" scope="roster" shared="false" id="maxPercentage" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
       </constraints>
     </categoryEntry>
     <categoryEntry name="Mount" hidden="true" id="8b8a-34b1-ed30-df11"/>
@@ -437,31 +447,11 @@
   <forceEntries>
     <forceEntry id="6ee4-77bf-4402-f8ab" name="Standard" hidden="false">
       <categoryLinks>
-        <categoryLink id="331b-a879-f664-e74e" name="Lords" hidden="false" targetId="d280-b7df-c185-2ba5" primary="false">
-          <constraints>
-            <constraint field="limit::points" scope="roster" value="25" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="8877-5cef-efc0-d65b" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="e3e8-f89d-a94a-776d" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="false">
-          <constraints>
-            <constraint field="limit::points" scope="roster" value="35" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="ad45-e317-2036-b755" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="false">
-          <constraints>
-            <constraint field="limit::points" scope="roster" value="25" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="minPercentage" type="min"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="9241-6f7e-063e-d674" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="false">
-          <constraints>
-            <constraint field="limit::points" scope="roster" value="50" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="6655-f7c6-f26b-92b6" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="false">
-          <constraints>
-            <constraint field="limit::points" scope="roster" value="25" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryLink>
+        <categoryLink id="331b-a879-f664-e74e" name="Lords" hidden="false" targetId="d280-b7df-c185-2ba5" primary="false"/>
+        <categoryLink id="e3e8-f89d-a94a-776d" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="false"/>
+        <categoryLink id="ad45-e317-2036-b755" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="false"/>
+        <categoryLink id="9241-6f7e-063e-d674" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="false"/>
+        <categoryLink id="6655-f7c6-f26b-92b6" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="false"/>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
