@@ -38,6 +38,7 @@
     <publication id="079e-9b65-30b3-2c59" name="Zombie Pirates of the Vampire Coast v.1.4" shortName="ZP" publisher="Warhammer - Zombie Pirates of the Vampire Coast 9th Ed v.1.4" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication name="Github" id="8db3-575d-91b-47f8" hidden="false" shortName="sbh427/wap-2.3" publisherUrl="https://github.com/sbh427/wap-2.3"/>
     <publication name="Araby v.1.72" id="fd0a-6995-03c8-1dd6" hidden="false" shortName="Ar" publisher="Warhammer - Araby 9th Ed 1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication name="Chaos Dwarfs v.1.71" id="53f5-3638-a9ce-8dd3" hidden="false" shortName="CD" publisher="Warhammer - Chaos Dwarfs 9th Ed 1.71" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="20.04.2025"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
@@ -2424,7 +2425,7 @@
     </selectionEntry>
     <selectionEntry id="4d24-c803-7a05-0894" name="Lore of Fire" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1c55-bc61-cc88-d303" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1c55-bc61-cc88-d303" type="max" automatic="false"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="fff3-d6d4-bcac-0a6a" name="Kindleflame" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
@@ -2892,7 +2893,7 @@
     </selectionEntry>
     <selectionEntry id="527f-89f1-1b92-a01d" name="Lore of Metal" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6cdd-e249-97f2-2c76" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6cdd-e249-97f2-2c76" type="max" automatic="false"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="6387-34cd-3446-5e8d" name="Metallic Attraction" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
@@ -8731,6 +8732,14 @@
       <costs>
         <cost name="pts" typeId="points" value="5"/>
       </costs>
+	</selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Scouts" hidden="false" id="069d-dd8a-dce4-1413" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="33b4-953e-c16c-7ef7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Scouts" id="67e4-25e2-a92b-02ae" hidden="false" targetId="6624-0b7b-c5b8-6397" type="rule"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -10556,6 +10565,9 @@ Unless otherwise specified, Multiple Wounds only apply to close combat attacks.<
       <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.
 
 Immunity can also include Panic, Fear and Terror. If the majority of the models in a unit have the Immunity (Panic, Fear or Terror) rule, the unit ignores the effects of Panic, Fear or Terror and any such tests it would otherwise had to take.</description>
+    </rule>
+    <rule id="1642-08f0-d390-16ae" name="Line of Sight (8)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Line of Sight of 8.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
