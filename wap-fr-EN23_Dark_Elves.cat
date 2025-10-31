@@ -4735,7 +4735,7 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Lore of Dark Magic" hidden="false" id="2627-5189-8fe6-dfd3" collective="false">
+    <selectionEntry type="upgrade" import="true" name="Lore of Dark Magic" hidden="false" id="2627-5189-8fe6-dfd3" collective="false" collapsible="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="14a7-c221-4ece-e6b7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
@@ -4766,7 +4766,7 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Dark Magic" id="0e62-11d2-35bc-130e" hidden="false" collective="false" import="true">
+        <selectionEntryGroup name="Spells from the Lore of Dark Magic" id="0e62-11d2-35bc-130e" hidden="false" collective="false" import="true" collapsible="true">
           <modifiers>
             <modifier type="set" value="3" field="e8cd-3442-3ab6-31d8">
               <conditionGroups>
@@ -6900,7 +6900,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <entryLink import="true" name="Common Talismans" hidden="false" id="490f-2b26-c66a-be83" collective="false" targetId="946f-a470-9912-9301" type="selectionEntryGroup" sortIndex="14" flatten="true"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Arcane Items" id="f2f6-3423-c328-2b48" hidden="true" collective="false" import="true" collapsible="true">
+    <selectionEntryGroup name="Arcane Items" id="f2f6-3423-c328-2b48" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b3b8-efca-5908-63ce" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
@@ -7085,17 +7085,10 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <entryLink import="true" name="Common Arcane Items" hidden="false" id="161a-dd90-59ff-dbc4" collective="false" targetId="6cd2-3f4b-da2d-1ee9" type="selectionEntryGroup" sortIndex="11" flatten="true"/>
       </entryLinks>
       <modifiers>
-        <modifier type="set" value="false" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true"/>
+          </conditions>
         </modifier>
         <modifier type="set" value="0" field="b3b8-efca-5908-63ce">
           <conditionGroups>
@@ -7109,7 +7102,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         </modifier>
       </modifiers>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Arcane Items (One use only)" id="a82a-50f0-1d18-1fb1" hidden="true" collective="false" import="true" collapsible="true">
+    <selectionEntryGroup name="Arcane Items (One use only)" id="a82a-50f0-1d18-1fb1" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9ac0-9e35-05ab-0e81" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
@@ -7135,18 +7128,6 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <entryLink import="true" name="Common Arcane Items (One use only)" hidden="false" id="8e67-0237-90e0-a265" collective="false" targetId="3dfd-c3fd-5a56-45f1" type="selectionEntryGroup" flatten="true"/>
       </entryLinks>
       <modifiers>
-        <modifier type="set" value="false" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
         <modifier type="set" value="0" field="9ac0-9e35-05ab-0e81">
           <conditionGroups>
             <conditionGroup type="and">
@@ -7156,6 +7137,11 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
               </conditions>
             </conditionGroup>
           </conditionGroups>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true"/>
+          </conditions>
         </modifier>
       </modifiers>
     </selectionEntryGroup>

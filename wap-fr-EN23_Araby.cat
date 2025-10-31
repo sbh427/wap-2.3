@@ -32,7 +32,7 @@
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="90. Magic Items" id="d5c7-125a-f512-29e5" hidden="false" collapsible="true">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Arcane Items" id="1159-6bfd-84e7-79a0" hidden="true" sortIndex="4" collapsible="true">
+        <selectionEntryGroup name="Arcane Items" id="1159-6bfd-84e7-79a0" hidden="false" sortIndex="4" collapsible="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4400-a14b-92ef-0982" includeChildSelections="false"/>
           </constraints>
@@ -151,17 +151,10 @@
             </selectionEntry>
           </selectionEntries>
           <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true"/>
+              </conditions>
             </modifier>
             <modifier type="set" value="0" field="4400-a14b-92ef-0982">
               <conditionGroups>
@@ -178,7 +171,7 @@
             <entryLink import="true" name="Common Arcane Items" hidden="false" id="1688-b3b3-ae5a-cad7" type="selectionEntryGroup" targetId="6cd2-3f4b-da2d-1ee9" sortIndex="99" flatten="true"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Arcane Items (One use only)" id="b51b-97a7-e3f7-f7c2" hidden="true" collective="false" import="true" sortIndex="4.5" collapsible="true">
+        <selectionEntryGroup name="Arcane Items (One use only)" id="b51b-97a7-e3f7-f7c2" hidden="false" collective="false" import="true" sortIndex="4.5" collapsible="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2b81-4fa0-9e4c-876c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -204,18 +197,6 @@
             <entryLink import="true" name="Common Arcane Items (One use only)" hidden="false" id="44f5-54cf-44b2-6947" type="selectionEntryGroup" targetId="3dfd-c3fd-5a56-45f1" sortIndex="99" flatten="true"/>
           </entryLinks>
           <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
             <modifier type="set" value="0" field="2b81-4fa0-9e4c-876c">
               <conditionGroups>
                 <conditionGroup type="and">
@@ -225,6 +206,11 @@
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true"/>
+              </conditions>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
