@@ -253,6 +253,8 @@
                 <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true" includeChildForces="false"/>
                 <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5fc5-b80a-115f-bca3" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="5fc5-b80a-115f-bca3" shared="true" includeChildSelections="true" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -443,6 +445,34 @@
     </categoryEntry>
     <categoryEntry name="Handheld Armour" id="ba52-4f0c-71ae-b52d" hidden="true"/>
     <categoryEntry name="Suits of Armour" id="9a61-618b-519a-807c" hidden="true"/>
+    <categoryEntry name="Large Infantry" id="7a21-ba63-63e2-7d8e" hidden="false">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="6ee4-77bf-4402-f8ab" name="Standard" hidden="false">
@@ -8064,19 +8094,6 @@
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Character Option" hidden="false" id="fd10-1876-16d9-600d">
-      <entryLinks>
-        <entryLink import="true" name="General" hidden="false" id="3d25-61e2-da7b-beee" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1"/>
-        <entryLink import="true" name="Army Battle Standard" hidden="false" id="60fb-0b3b-1d83-80d9" type="selectionEntry" targetId="9519-df8f-0af4-1995" sortIndex="2">
-          <costs>
-            <cost name="pts" typeId="points" value="25"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a998-3770-27cc-8b3d"/>
-      </constraints>
-    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Mark of Khorne" hidden="false" id="2211-a88b-c358-2e91">
       <infoLinks>
         <infoLink name="Mark of Khorne" id="c228-d93a-5887-3a4e" hidden="false" type="rule" targetId="Mark of Khorne"/>
@@ -8934,6 +8951,34 @@
       </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d10-92f6-d5d5-f71d"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="15bd-038f-34c8-b3b8" hidden="false">
+      <comment>1 &amp; 2 &amp; 3 &amp; 4</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 3" hidden="false" id="82ac-b815-0329-1372" type="selectionEntry" targetId="1670-dca4-294b-7d9b">
+          <costs>
+            <cost name="pts" typeId="points" value="105"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Wizard Level 4" hidden="false" id="e3b4-02fe-bc54-f0e5" type="selectionEntry" targetId="5460-3929-58ef-71ba">
+          <costs>
+            <cost name="pts" typeId="points" value="140"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Wizard Level 1" hidden="false" id="c483-25de-1beb-ca94" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
+          <costs>
+            <cost name="pts" typeId="points" value="35"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Wizard Level 2" hidden="false" id="4764-9424-fb3e-e7ff" type="selectionEntry" targetId="801a-bc0a-a767-61db">
+          <costs>
+            <cost name="pts" typeId="points" value="70"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="39d2-dced-cde4-7657"/>
       </constraints>
     </selectionEntryGroup>
     <selectionEntryGroup name="65. Lore of Magic" id="6704-e54c-3f8f-1d32" hidden="false">
