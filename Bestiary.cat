@@ -65,20 +65,24 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="f709-ffd7-45f1-9aa6" targetId="0eb4-f376-7725-b05b" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Hand Weapon" hidden="false" id="f71f-e45d-df0b-e0bc" collective="false" sortIndex="1">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="87de-d912-50d1-638f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d530-eddd-ed3e-c46c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Hand Weapon" id="07a2-7b81-0523-8ed7" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="97f1-2fe7-8699-323f" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Hand Weapon" hidden="false" id="f71f-e45d-df0b-e0bc" collective="false">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="87de-d912-50d1-638f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d530-eddd-ed3e-c46c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Hand Weapon" id="07a2-7b81-0523-8ed7" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Chaos Spawn" hidden="false" id="eb04-809f-24c4-89ec" collective="false">
       <categoryLinks>
@@ -748,10 +752,14 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
         <categoryLink name="Rare" hidden="false" id="b2c5-5dcd-05dd-889c" targetId="0eb4-f376-7725-b05b" primary="true"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="Hand Weapon" hidden="false" id="3a08-11d8-9130-1c10" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="932b-b07e-2cb1-2d88"/>
-          </constraints>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="70aa-9195-bed4-0d9a" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="3a08-11d8-9130-1c10" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="932b-b07e-2cb1-2d88"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
     </selectionEntry>
@@ -1249,214 +1257,187 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
       </characteristics>
     </profile>
   </sharedProfiles>
-  <profileTypes>
-    <profileType name="Big Things Chart" id="b3fd-45e2-9ae1-9532" hidden="false">
-      <characteristicTypes>
-        <characteristicType name="Result" id="a40b-4ad2-71bd-7318"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType name="Bigger Things Chart" id="451e-6d91-893e-45c6" hidden="false">
-      <characteristicTypes>
-        <characteristicType name="Result" id="6713-6d4f-f3d5-ab1c"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType name="Grapple and... Chart" id="0e2f-426f-5aed-ef49" hidden="false">
-      <characteristicTypes>
-        <characteristicType name="Result" id="5530-99d4-2acf-168d"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType name="Man-sized Things Chart" id="41e4-fd40-7b32-f71e" hidden="false">
-      <characteristicTypes>
-        <characteristicType name="Result" id="8db9-ceea-0832-d910"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType name="Pick up and... Chart" id="771a-abec-4083-83d2" hidden="false">
-      <characteristicTypes>
-        <characteristicType name="Result" id="6486-077d-3077-6419"/>
-      </characteristicTypes>
-    </profileType>
-  </profileTypes>
   <sharedInfoGroups>
     <infoGroup name="Big Things Chart (Bonegrinder Giant)" id="cd74-41b0-3495-f47b" hidden="false">
       <profiles>
-        <profile name="01 (Big Things)" typeId="b3fd-45e2-9ae1-9532" typeName="Big Things Chart" hidden="false" id="ca1e-c15e-e7c3-62cf" publicationId="9e23-79cb-pubN78975" page="65">
+        <profile name="1 Yell and Bawl" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="ca1e-c15e-e7c3-62cf" publicationId="9e23-79cb-pubN78975" page="65">
           <characteristics>
-            <characteristic name="Result" typeId="a40b-4ad2-71bd-7318">Yell and Bawl: Neither the Bonegrinder Giant nor models in contact with it fight if they have not already
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">Neither the Bonegrinder Giant nor models in contact with it fight if they have not already
 done so this round. The Bonegrinder Giant automatically wins the combat by 3 points.</characteristic>
           </characteristics>
         </profile>
-        <profile name="02 (Big Things)" typeId="b3fd-45e2-9ae1-9532" typeName="Big Things Chart" hidden="false" id="c22c-a995-598c-fd8a" publicationId="9e23-79cb-pubN78975" page="65">
+        <profile name="2 Jump Up and Down" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="c22c-a995-598c-fd8a" publicationId="9e23-79cb-pubN78975" page="65">
           <characteristics>
-            <characteristic name="Result" typeId="a40b-4ad2-71bd-7318">Jump Up and Down: The Bonegrinder Giant must test to determine if it falls over (see previous page). If it falls over, work out where it falls and calculate damage as already described. Any wounds caused by the fall (on either side) count towards the combat result. Otherwise, it will attack using the Stomp (3D6) special rule. A Bonegrinder Giant that starts to Jump Up and Down will therefore continue to do so on the same target until it falls over, the target is destroyed, or the combat ends.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The Bonegrinder Giant must test to determine if it falls over (see previous page). If it falls over, work out where it falls and calculate damage as already described. Any wounds caused by the fall (on either side) count towards the combat result. Otherwise, it will attack using the Stomp (3D6) special rule. A Bonegrinder Giant that starts to Jump Up and Down will therefore continue to do so on the same target until it falls over, the target is destroyed, or the combat ends.</characteristic>
           </characteristics>
         </profile>
-        <profile name="03 (Big Things)" typeId="b3fd-45e2-9ae1-9532" typeName="Big Things Chart" hidden="false" id="163a-4591-5d83-7032" publicationId="9e23-79cb-pubN78975" page="65">
+        <profile name="3 Pick Up and..." typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="163a-4591-5d83-7032" publicationId="9e23-79cb-pubN78975" page="65">
           <characteristics>
-            <characteristic name="Result" typeId="a40b-4ad2-71bd-7318">Pick Up and...: The Bonegrinder Giant stoops down and grabs a single Character in base contact from the target unit (Bonegrinder Giant player&apos;s choice). The Bonegrinder Giant grabs the model and the player rolls a D6 on the PickUp and... Table to see what happens next</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The Bonegrinder Giant stoops down and grabs a single Character in base contact from the target unit (Bonegrinder Giant player&apos;s choice). The Bonegrinder Giant grabs the model and the player rolls a D6 on the PickUp and... Table to see what happens next</characteristic>
           </characteristics>
         </profile>
-        <profile name="04-06 (Big Things)" typeId="b3fd-45e2-9ae1-9532" typeName="Big Things Chart" hidden="false" id="dcb6-97b9-0705-9b52" publicationId="9e23-79cb-pubN78975" page="65">
+        <profile name="4-6 Swing with Club" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="dcb6-97b9-0705-9b52" publicationId="9e23-79cb-pubN78975" page="65">
           <characteristics>
-            <characteristic name="Result" typeId="a40b-4ad2-71bd-7318">Swing with Club: The Bonegrinder Giant fights using the Random Attacks (3D6) special rule this round.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The Bonegrinder Giant fights using the Random Attacks (3D6) special rule this round.</characteristic>
           </characteristics>
         </profile>
       </profiles>
     </infoGroup>
     <infoGroup name="Bigger Things Chart" id="27a8-4b57-4e9f-2560" hidden="false">
       <profiles>
-        <profile name="06 (Bigger Things)" typeId="451e-6d91-893e-45c6" typeName="Bigger Things Chart" hidden="false" id="a5b5-7a5c-c3ce-4f0f" publicationId="9e23-79cb-pubN78975" page="65">
+        <profile name="1 Yell and Bawl" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="111e-431e-a1a7-3e94" publicationId="9e23-79cb-pubN78975" page="65">
           <characteristics>
-            <characteristic name="Result" typeId="6713-6d4f-f3d5-ab1c">Grapple and...: Roll a D6 and consult theGrapple and... table.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">Neither the Bonegrinder Giant nor models in contact with it fight if they have not already done so this round. The Bonegrinder Giant automatically wins the combat by 3 points.</characteristic>
           </characteristics>
         </profile>
-        <profile name="01 (Bigger Things)" typeId="451e-6d91-893e-45c6" typeName="Bigger Things Chart" hidden="false" id="111e-431e-a1a7-3e94" publicationId="9e23-79cb-pubN78975" page="65">
+        <profile name="2-3 Thump with Club" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="0434-8305-c832-f9a3" publicationId="9e23-79cb-pubN78975" page="65">
           <characteristics>
-            <characteristic name="Result" typeId="6713-6d4f-f3d5-ab1c">Yell and Bawl: Neither the Bonegrinder Giant nor models in contact with it fight if they have not already done so this round. The Bonegrinder Giant automatically wins the combat by 3 points.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The Bonegrinder Giant chooses a single model from the target unit that is in base contact. The target may attempt to avoid the blow by passing an Initiative test (use the lowest if the model has several different values). If the test is failed, the model takes 2D6 Wounds which Ignores Armour Saves. If a double is rolled the Bonegrinder Giant cannot attack at all in the following round of the same combat.</characteristic>
           </characteristics>
         </profile>
-        <profile name="02-03 (Bigger Things)" typeId="451e-6d91-893e-45c6" typeName="Bigger Things Chart" hidden="false" id="0434-8305-c832-f9a3" publicationId="9e23-79cb-pubN78975" page="65">
+        <profile name="4-5 &apos;Eadbutt" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="6de0-155a-a6a7-18fd" publicationId="9e23-79cb-pubN78975" page="65">
           <characteristics>
-            <characteristic name="Result" typeId="6713-6d4f-f3d5-ab1c">Thump with Club: The Bonegrinder Giant chooses a single model from the target unit that is in base contact. The target may attempt to avoid the blow by passing an Initiative test (use the lowest if the model has several different values). If the test is failed, the model takes 2D6 Wounds which Ignores Armour Saves. If a double is rolled the Bonegrinder Giant cannot attack at all in the following round of the same combat.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The Bonegrinder Giant automatically inflicts D6 Wounds which Ignores Armour Saves. If the victim is wounded but not slain, then it loses all of its following attacks. If the target has not yet attacked in that combat round, it loses those attacks; if it has already attacked, then it loses the next round&apos;s attacks.</characteristic>
           </characteristics>
         </profile>
-        <profile name="04-05 (Bigger Things)" typeId="451e-6d91-893e-45c6" typeName="Bigger Things Chart" hidden="false" id="6de0-155a-a6a7-18fd" publicationId="9e23-79cb-pubN78975" page="65">
+        <profile name="6 Grapple and..." typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="0ac5-d498-b97d-6b1b" publicationId="9e23-79cb-pubN78975" page="65">
           <characteristics>
-            <characteristic name="Result" typeId="6713-6d4f-f3d5-ab1c">&apos;Eadbutt: The Bonegrinder Giant automatically inflicts D6 Wounds which Ignores Armour Saves. If the victim is wounded but not slain, then it loses all of its following attacks. If the target has not yet attacked in that combat round, it loses those attacks; if it has already attacked, then it loses the next round&apos;s attacks.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">Roll a D6 and consult theGrapple and... table.</characteristic>
           </characteristics>
         </profile>
       </profiles>
     </infoGroup>
     <infoGroup name="Grapple and... Chart" id="f40f-0386-960a-cf77" hidden="false">
       <profiles>
-        <profile name="01-02 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="81d2-e31b-3d99-5cb0" publicationId="9e23-79cb-pubN78975" page="65">
+        <profile name="1-2 Knobbly Knee" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="81d2-e31b-3d99-5cb0" publicationId="9e23-79cb-pubN78975" page="65">
           <characteristics>
-            <characteristic name="Result" typeId="5530-99d4-2acf-168d">Knobbly Knee: The victim immediately suffers D3 Wounds which Ignores Armour Saves and has their Weapon Skill and Initiative reduced to 1 until the end of the next player turn.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The victim immediately suffers D3 Wounds which Ignores Armour Saves and has their Weapon Skill and Initiative reduced to 1 until the end of the next player turn.</characteristic>
           </characteristics>
         </profile>
-        <profile name="03 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="2c68-a409-ee85-8156" publicationId="9e23-79cb-pubN78975" page="65">
+        <profile name="3 Slam" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="2c68-a409-ee85-8156" publicationId="9e23-79cb-pubN78975" page="65">
           <characteristics>
-            <characteristic name="Result" typeId="5530-99d4-2acf-168d">Slam: The victim immediately suffers 2D3 Wounds which Ignores Armour Saves. If there is another enemy unit in base contact with the Bonegrinder Giant, that unit also suffers 2D3 Wounds which Ignores Armour Saves. If there are two or more other enemy units in base contact with the Bonegrinder Giant, randomise to see which is slammed.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The victim immediately suffers 2D3 Wounds which Ignores Armour Saves. If there is another enemy unit in base contact with the Bonegrinder Giant, that unit also suffers 2D3 Wounds which Ignores Armour Saves. If there are two or more other enemy units in base contact with the Bonegrinder Giant, randomise to see which is slammed.</characteristic>
           </characteristics>
         </profile>
-        <profile name="04 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="f428-c5d4-2e27-406e" publicationId="9e23-79cb-pubN78975" page="65">
+        <profile name="4 Bear Hug" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="f428-c5d4-2e27-406e" publicationId="9e23-79cb-pubN78975" page="65">
           <characteristics>
-            <characteristic name="Result" typeId="5530-99d4-2acf-168d">Bear Hug: Roll 2D6 and add the Bonegrinder Giant&apos;s Strength. Your opponent rolls 2D6 and adds the victim&apos;s Toughness. If the Bonegrinder Giant&apos;s score is higher, the victim is removed as a casualty with no saves of any kind allowed.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">Roll 2D6 and add the Bonegrinder Giant&apos;s Strength. Your opponent rolls 2D6 and adds the victim&apos;s Toughness. If the Bonegrinder Giant&apos;s score is higher, the victim is removed as a casualty with no saves of any kind allowed.</characteristic>
           </characteristics>
         </profile>
-        <profile name="05 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="ae3a-4798-5072-2cfd" publicationId="9e23-79cb-pubN78975" page="65">
+        <profile name="5 Fall Over" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="ae3a-4798-5072-2cfd" publicationId="9e23-79cb-pubN78975" page="65">
           <characteristics>
-            <characteristic name="Result" typeId="5530-99d4-2acf-168d">Fall Over: Roll 2D6 and add the Bonegrinder Giant&apos;s Strength. Your opponent rolls 2D6 and adds the victim&apos;s Toughness. If the Bonegrinder Giant&apos;s score is higher, the victim is removed as a casualty with no saves of any kind allowed. Then continue to resolve the Bonegrinder Giant falling over, in the direction of the target.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">Roll 2D6 and add the Bonegrinder Giant&apos;s Strength. Your opponent rolls 2D6 and adds the victim&apos;s Toughness. If the Bonegrinder Giant&apos;s score is higher, the victim is removed as a casualty with no saves of any kind allowed. Then continue to resolve the Bonegrinder Giant falling over, in the direction of the target.</characteristic>
           </characteristics>
         </profile>
-        <profile name="06 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="ef57-54ee-5128-2759" publicationId="9e23-79cb-pubN78975" page="65">
+        <profile name="6 Punch, and..." typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="ef57-54ee-5128-2759" publicationId="9e23-79cb-pubN78975" page="65">
           <characteristics>
-            <characteristic name="Result" typeId="5530-99d4-2acf-168d">Punch, and...: The victim suffers D3 Wounds which Ignores Armour Saves, then roll again on this table.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The victim suffers D3 Wounds which Ignores Armour Saves, then roll again on this table.</characteristic>
           </characteristics>
         </profile>
       </profiles>
     </infoGroup>
     <infoGroup name="Man-sized Things Chart (Giant)" id="4c74-f8f1-9bdd-ee0d" hidden="false">
       <profiles>
-        <profile name="01 (Man-sized Things)" typeId="41e4-fd40-7b32-f71e" typeName="Man-sized Things Chart (Giant)" hidden="false" id="b8b8-f1ce-c6c8-0b05" publicationId="9e23-79cb-pubN67565" page="84">
+        <profile name="1 Yell and Bawl" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="b8b8-f1ce-c6c8-0b05" publicationId="9e23-79cb-pubN67565" page="84">
           <characteristics>
-            <characteristic name="Result" typeId="8db9-ceea-0832-d910">Yell and Bawl: Neither the Giant nor models in contact with it actually fight if they have not already done so this round. The Giant automatically wins the combat by 2 points or more. This result has no effect against Animated Constructs.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">Neither the Giant nor models in contact with it actually fight if they have not already done so this round. The Giant automatically wins the combat by 2 points or more. This result has no effect against Animated Constructs.</characteristic>
           </characteristics>
         </profile>
-        <profile name="02 (Man-sized Things)" typeId="41e4-fd40-7b32-f71e" typeName="Man-sized Things Chart (Giant)" hidden="false" id="b2e1-ecf2-bf44-91d5" publicationId="9e23-79cb-pubN67565" page="84">
+        <profile name="2 Jump Up and Down" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="b2e1-ecf2-bf44-91d5" publicationId="9e23-79cb-pubN67565" page="84">
           <characteristics>
-            <characteristic name="Result" typeId="8db9-ceea-0832-d910">Jump Up and Down: The Giant jumps up and down vigorously on top of the enemy. Before it starts, the Giant must test to determine if it falls over. If it falls over, work out where it falls and calculate damage. Any wounds caused by the fall (on either side) count towards the combat result. If the Giant remains on its feet, it will inflict two Stomp attacks. Giants enjoy jumping up and down on their enemies so much that a Giant that does so in one comb at round will automatically do so in the following round if it is able to, assuming that it did not fall over in the previous round. A Giant that starts to Jump Up and Down will therefore continue to do so on the same target until it falls over, the target is destroyed, or the combat ends.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The Giant jumps up and down vigorously on top of the enemy. Before it starts, the Giant must test to determine if it falls over. If it falls over, work out where it falls and calculate damage. Any wounds caused by the fall (on either side) count towards the combat result. If the Giant remains on its feet, it will inflict two Stomp attacks. Giants enjoy jumping up and down on their enemies so much that a Giant that does so in one comb at round will automatically do so in the following round if it is able to, assuming that it did not fall over in the previous round. A Giant that starts to Jump Up and Down will therefore continue to do so on the same target until it falls over, the target is destroyed, or the combat ends.</characteristic>
           </characteristics>
         </profile>
-        <profile name="03 (Man-sized Things)" typeId="41e4-fd40-7b32-f71e" typeName="Man-sized Things Chart (Giant)" hidden="false" id="473d-503e-6b10-8a6a" publicationId="9e23-79cb-pubN67565" page="84">
+        <profile name="3 Pick Up and..." typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="473d-503e-6b10-8a6a" publicationId="9e23-79cb-pubN67565" page="84">
           <characteristics>
-            <characteristic name="Result" typeId="8db9-ceea-0832-d910">Pick Up and...: The Giant stoops down and grabs a single Character in base contact from the target unit (Giant player&apos;s choice). The Giant grabs the model and the player rolls a D6 on the &quot;Pick up and...&quot; table to see what happens next.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The Giant stoops down and grabs a single Character in base contact from the target unit (Giant player&apos;s choice). The Giant grabs the model and the player rolls a D6 on the &quot;Pick up and...&quot; table to see what happens next.</characteristic>
           </characteristics>
         </profile>
-        <profile name="04-06 (Man-sized Things)" typeId="41e4-fd40-7b32-f71e" typeName="Man-sized Things Chart (Giant)" hidden="false" id="de13-cc1b-5d8f-27dd" publicationId="9e23-79cb-pubN67565" page="84">
+        <profile name="4-6 Swing with club" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="de13-cc1b-5d8f-27dd" publicationId="9e23-79cb-pubN67565" page="84">
           <characteristics>
-            <characteristic name="Result" typeId="8db9-ceea-0832-d910">Swing with club: The Giant fights using Random Attacks (2D6) this round.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The Giant fights using Random Attacks (2D6) this round.</characteristic>
           </characteristics>
         </profile>
       </profiles>
     </infoGroup>
     <infoGroup name="Man-sized Things Chart (Bonegrinder Giant)" id="b64d-0aa7-ef88-bb2c" hidden="false">
       <profiles>
-        <profile name="01 (Man-sized Things)" typeId="41e4-fd40-7b32-f71e" typeName="Man-sized Things Chart" hidden="false" id="68ca-0a61-0b9d-3135" publicationId="9e23-79cb-pubN78975" page="64">
+        <profile name="1 Yell and Bawl: " typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="68ca-0a61-0b9d-3135" publicationId="9e23-79cb-pubN78975" page="64">
           <characteristics>
-            <characteristic name="Result" typeId="8db9-ceea-0832-d910">Yell and Bawl: Neither the Bonegrinder Giant nor models in contact with it fight if they have not already done so this round. The Bonegrinder Giant automatically wins the combat by 3 points.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">Neither the Bonegrinder Giant nor models in contact with it fight if they have not already done so this round. The Bonegrinder Giant automatically wins the combat by 3 points.</characteristic>
           </characteristics>
         </profile>
-        <profile name="02 (Man-sized Things)" typeId="41e4-fd40-7b32-f71e" typeName="Man-sized Things Chart" hidden="false" id="c460-1506-87db-07a9" publicationId="9e23-79cb-pubN78975" page="65">
+        <profile name="2 Jump Up and Down" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="c460-1506-87db-07a9" publicationId="9e23-79cb-pubN78975" page="65">
           <characteristics>
-            <characteristic name="Result" typeId="8db9-ceea-0832-d910">Jump Up and Down: The Bonegrinder Giant must test to determine if it falls over (see previous page). If it falls over, work out where it falls and calculate damage as already described. Any wounds caused by the fall (on either side) count towards the combat result. Otherwise, it will attack using the Stomp (3D6) special rule. A Bonegrinder Giant that starts to Jump Up and Down will therefore continue to do so on the same target until it falls over, the target is destroyed, or the combat ends.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The Bonegrinder Giant must test to determine if it falls over (see previous page). If it falls over, work out where it falls and calculate damage as already described. Any wounds caused by the fall (on either side) count towards the combat result. Otherwise, it will attack using the Stomp (3D6) special rule. A Bonegrinder Giant that starts to Jump Up and Down will therefore continue to do so on the same target until it falls over, the target is destroyed, or the combat ends.</characteristic>
           </characteristics>
         </profile>
-        <profile name="03 (Man-sized Things)" typeId="41e4-fd40-7b32-f71e" typeName="Man-sized Things Chart" hidden="false" id="9440-7354-fb23-6511" publicationId="9e23-79cb-pubN78975" page="65">
+        <profile name="3 Pick Up and..." typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="9440-7354-fb23-6511" publicationId="9e23-79cb-pubN78975" page="65">
           <characteristics>
-            <characteristic name="Result" typeId="8db9-ceea-0832-d910">Pick Up and...: The Bonegrinder Giant stoops down and grabs a single Character in base contact from the target unit (Bonegrinder Giant player&apos;s choice). The Bonegrinder Giant grabs the model and the player rolls a D6 on the PickUp and... Table to see what happens next</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The Bonegrinder Giant stoops down and grabs a single Character in base contact from the target unit (Bonegrinder Giant player&apos;s choice). The Bonegrinder Giant grabs the model and the player rolls a D6 on the PickUp and... Table to see what happens next</characteristic>
           </characteristics>
         </profile>
-        <profile name="04 (Man-sized Things)" typeId="41e4-fd40-7b32-f71e" typeName="Man-sized Things Chart" hidden="false" id="6e85-ca64-51d0-3b4b" publicationId="9e23-79cb-pubN78975" page="65">
+        <profile name="4 Vomit" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="6e85-ca64-51d0-3b4b" publicationId="9e23-79cb-pubN78975" page="65">
           <characteristics>
-            <characteristic name="Result" typeId="8db9-ceea-0832-d910">Vomit: Place the flame template so that the narrow end is in base contact with the Bonegrinder Giant and the body of the template is over at least one other unit. All models (friendly and enemy) under the template suffer an automatic Strength 5 hit which Ignores Armour Saves. All unsaved Wounds from these hits count towards the combat result (unsaved Wounds on friendly models count to your opponent&apos;s combat result). Once damage has been resolved, roll a D6. On a roll of 1-3, the Bonegrinder Giant falls over.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">Place the flame template so that the narrow end is in base contact with the Bonegrinder Giant and the body of the template is over at least one other unit. All models (friendly and enemy) under the template suffer an automatic Strength 5 hit which Ignores Armour Saves. All unsaved Wounds from these hits count towards the combat result (unsaved Wounds on friendly models count to your opponent&apos;s combat result). Once damage has been resolved, roll a D6. On a roll of 1-3, the Bonegrinder Giant falls over.</characteristic>
           </characteristics>
         </profile>
-        <profile name="05 (Man-sized Things)" typeId="41e4-fd40-7b32-f71e" typeName="Man-sized Things Chart" hidden="false" id="c396-684f-e733-4e62" publicationId="9e23-79cb-pubN78975" page="65">
+        <profile name="5 Kick" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="c396-684f-e733-4e62" publicationId="9e23-79cb-pubN78975" page="65">
           <characteristics>
-            <characteristic name="Result" typeId="8db9-ceea-0832-d910">Choose a model in base contact with the Bonegrinder Giant That model immediately receives a brutal toe-punt and is removed as a casualty. However, the victim&apos;s remains hurtle through its unit in the same manner as a shot from a bolt thrower (Look Out Sir! Applies as normal). The model immediately behind the victim suffers a Strength 8 hit with the Multiple Wounds (D3) special rule. If he is slain, the model behind him suffers a Strength 7 hit with the Multiple Wounds (D3) special rule, and so on, until the soggy remains fail to cause a casualty; or the unit runs out of ranks/files.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">Choose a model in base contact with the Bonegrinder Giant That model immediately receives a brutal toe-punt and is removed as a casualty. However, the victim&apos;s remains hurtle through its unit in the same manner as a shot from a bolt thrower (Look Out Sir! Applies as normal). The model immediately behind the victim suffers a Strength 8 hit with the Multiple Wounds (D3) special rule. If he is slain, the model behind him suffers a Strength 7 hit with the Multiple Wounds (D3) special rule, and so on, until the soggy remains fail to cause a casualty; or the unit runs out of ranks/files.</characteristic>
           </characteristics>
         </profile>
-        <profile name="06 (Man-sized Things)" typeId="41e4-fd40-7b32-f71e" typeName="Man-sized Things Chart" hidden="false" id="043e-ed32-9b7c-006a" publicationId="9e23-79cb-pubN67565" page="86">
+        <profile name="6 Crush" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="043e-ed32-9b7c-006a" publicationId="9e23-79cb-pubN67565" page="86">
           <characteristics>
-            <characteristic name="Result" typeId="8db9-ceea-0832-d910">Crush!: Place the small round template so that it is at least partially covering one or more models in base contact with the Giant, but not the Giant himself. The model under the centre of the template suffers an automatic Strength 10 hit with the Multiple Wounds (D6) special rule. Models around him might get lucky – the Giant&apos;s aim may be off; and only strike them a glancing blow (not that a glancing blow from a Giant is anything to be thankful for). Roll an artillery dice and halve the result – all other models (friendly and enemy) under the template suffer an automatic hit of this Strength. If the roll is a: misfire, the Giant manages to miss the rest of the unit.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">Place the small round template so that it is at least partially covering one or more models in base contact with the Giant, but not the Giant himself. The model under the centre of the template suffers an automatic Strength 10 hit with the Multiple Wounds (D6) special rule. Models around him might get lucky – the Giant&apos;s aim may be off; and only strike them a glancing blow (not that a glancing blow from a Giant is anything to be thankful for). Roll an artillery dice and halve the result – all other models (friendly and enemy) under the template suffer an automatic hit of this Strength. If the roll is a: misfire, the Giant manages to miss the rest of the unit.</characteristic>
           </characteristics>
         </profile>
       </profiles>
     </infoGroup>
     <infoGroup name="Pick up and... Chart" id="9636-1143-7911-ac44" hidden="false">
       <profiles>
-        <profile name="01 (Pick Up and...)" typeId="771a-abec-4083-83d2" typeName="Pick up and... Chart" hidden="false" id="b0eb-eada-2e6d-dc42" publicationId="9e23-79cb-pubN67565" page="84">
+        <profile name="1 Stuff into Bag" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="b0eb-eada-2e6d-dc42" publicationId="9e23-79cb-pubN67565" page="84">
           <characteristics>
-            <characteristic name="Result" typeId="6486-077d-3077-6419">Stuff into Bag: The model is effectively removed as a casualty and can do nothing whilst in the bag, but if the Giant should be slain, any enemy trapped in its bag are freed at the end of the battle, and no longer counts as casualties.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The model is effectively removed as a casualty and can do nothing whilst in the bag, but if the Giant should be slain, any enemy trapped in its bag are freed at the end of the battle, and no longer counts as casualties.</characteristic>
           </characteristics>
         </profile>
-        <profile name="02 (Pick Up and...)" typeId="771a-abec-4083-83d2" typeName="Pick up and... Chart" hidden="false" id="8845-1216-ef80-8109" publicationId="9e23-79cb-pubN67565" page="84">
+        <profile name="2 Throw Back into Combat" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="8845-1216-ef80-8109" page="84">
           <characteristics>
-            <characteristic name="Result" typeId="6486-077d-3077-6419">Throw Back into Combat: The victim is hurled into its own unit like a living missile. The victim suffers D3 Strength 6 Hits which Ignores Armour saves, and D6 Strength 3 hits are inflicted on the unit (save as normal).</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The victim is hurled into its own unit like a living missile. The victim suffers D3 Strength 6 Hits which Ignores Armour saves, and D6 Strength 3 hits are inflicted on the unit (save as normal).</characteristic>
           </characteristics>
         </profile>
-        <profile name="03 (Pick Up and...)" typeId="771a-abec-4083-83d2" typeName="Pick up and... Chart" hidden="false" id="f05e-b4ef-d493-96f3" publicationId="9e23-79cb-pubN67565" page="84">
+        <profile name="3 Hurl" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="f05e-b4ef-d493-96f3" publicationId="9e23-79cb-pubN67565" page="84">
           <characteristics>
-            <characteristic name="Result" typeId="6486-077d-3077-6419">Hurl: The victim is hurled into an enemy unit within 12&quot; of the Giant randomly determine which. The victim is removed as a casualty, and the unit takes D6 Strength 3 hits. Unsaved Wounds from these hits count towards the Giant&apos;s combat result. If no enemy units are in range, treat this as a Throw Back into Combat result instead.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The victim is hurled into an enemy unit within 12&quot; of the Giant randomly determine which. The victim is removed as a casualty, and the unit takes D6 Strength 3 hits. Unsaved Wounds from these hits count towards the Giant&apos;s combat result. If no enemy units are in range, treat this as a Throw Back into Combat result instead.</characteristic>
           </characteristics>
         </profile>
-        <profile name="04-05 (Pick Up and...)" typeId="771a-abec-4083-83d2" typeName="Pick up and... Chart" hidden="false" id="af1a-be06-2fc6-a34f" publicationId="9e23-79cb-pubN67565" page="84">
+        <profile name="4-5 Squash" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="af1a-be06-2fc6-a34f" publicationId="9e23-79cb-pubN67565" page="84">
           <characteristics>
-            <characteristic name="Result" typeId="6486-077d-3077-6419">Squash: The model is removed as a casualty.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The model is removed as a casualty.</characteristic>
           </characteristics>
         </profile>
-        <profile name="06 (Pick Up and...)" typeId="771a-abec-4083-83d2" typeName="Pick up and... Chart" hidden="false" id="985e-ec4a-2847-118b" publicationId="9e23-79cb-pubN67565" page="84">
+        <profile name="6 Pick Another" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="985e-ec4a-2847-118b" publicationId="9e23-79cb-pubN67565" page="84">
           <characteristics>
-            <characteristic name="Result" typeId="6486-077d-3077-6419">Pick Another: Treat the attack as if the Giant had rolled the Stuff into Bag result, above, and then choose another victim. Roll again on this table to see what the Giant does with it.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">Treat the attack as if the Giant had rolled the Stuff into Bag result, above, and then choose another victim. Roll again on this table to see what the Giant does with it.</characteristic>
           </characteristics>
         </profile>
       </profiles>
     </infoGroup>
     <infoGroup name="Big Things Chart (Giant)" id="fe35-1d09-0e78-ebb9" hidden="false">
       <profiles>
-        <profile name="01 (Big Things)" typeId="b3fd-45e2-9ae1-9532" typeName="Big Things Chart" hidden="false" id="8c21-37de-1b89-a1aa" publicationId="9e23-79cb-pubN67565" page="84">
+        <profile name="1 Yell and Bawl" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="8c21-37de-1b89-a1aa" publicationId="9e23-79cb-pubN67565" page="84">
           <characteristics>
-            <characteristic name="Result" typeId="a40b-4ad2-71bd-7318">Yell and Bawl: Neither the Giant nor models in contact with it actually fight if they have not already done so this round. The Giant automatically wins the combat by 2 points or more. This result has no effect against Animated Constructs.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">Neither the Giant nor models in contact with it actually fight if they have not already done so this round. The Giant automatically wins the combat by 2 points or more. This result has no effect against Animated Constructs.</characteristic>
           </characteristics>
         </profile>
-        <profile name="02-04 (Big Things)" typeId="b3fd-45e2-9ae1-9532" typeName="Big Things Chart (Giant)" hidden="false" id="4fc5-e450-33ef-b6d9" publicationId="9e23-79cb-pubN67565" page="84">
+        <profile name="2-4 Thump with Club" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="4fc5-e450-33ef-b6d9" publicationId="9e23-79cb-pubN67565" page="84">
           <characteristics>
-            <characteristic name="Result" typeId="a40b-4ad2-71bd-7318">Thump with Club: The Giant brings down its club on a single model from the target unit that is in base contact. The target may attempt to avoid the blow by passing an I test (use the lowest if the model has several different values). If the test is failed, the model takes 2D3 wounds which Ignores Armour Saves. If a double is rolled the Giant&apos;s club embeds itself in the ground and the Giant cannot attack at all in the following round of the same combat.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The Giant brings down its club on a single model from the target unit that is in base contact. The target may attempt to avoid the blow by passing an I test (use the lowest if the model has several different values). If the test is failed, the model takes 2D3 wounds which Ignores Armour Saves. If a double is rolled the Giant&apos;s club embeds itself in the ground and the Giant cannot attack at all in the following round of the same combat.</characteristic>
           </characteristics>
         </profile>
-        <profile name="05-06 (Big Things)" typeId="b3fd-45e2-9ae1-9532" typeName="Big Things Chart (Giant)" hidden="false" id="8a42-5b93-bd50-784e" publicationId="9e23-79cb-pubN67565" page="84">
+        <profile name="5-6 &apos;Eadbutt" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="8a42-5b93-bd50-784e" publicationId="9e23-79cb-pubN67565" page="84">
           <characteristics>
-            <characteristic name="Result" typeId="a40b-4ad2-71bd-7318">&apos;Eadbutt: The Giant head butts a single enemy model from the target unit, automatically inflicting D3 wounds with the Ignores Armour Saves special rule. If the victim is wounded but not slain, then it loses all of its following attacks. If the target has not yet attacked in that combat round, it loses those attacks; if it has already attacked, then it loses the next round&apos;s attacks.</characteristic>
+            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The Giant head butts a single enemy model from the target unit, automatically inflicting D3 wounds with the Ignores Armour Saves special rule. If the victim is wounded but not slain, then it loses all of its following attacks. If the target has not yet attacked in that combat round, it loses those attacks; if it has already attacked, then it loses the next round&apos;s attacks.</characteristic>
           </characteristics>
         </profile>
       </profiles>
