@@ -9004,10 +9004,10 @@
         <entryLink import="true" name="Musician" hidden="false" id="4a7c-3f84-88f7-f889" type="selectionEntry" targetId="ecde-db3e-9381-c190"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup name="35. Equipment" id="6423-df0f-15a7-7575" hidden="false">
+    <selectionEntryGroup name="55. Equipment" id="6423-df0f-15a7-7575" hidden="false">
       <comment>Min 0</comment>
     </selectionEntryGroup>
-    <selectionEntryGroup name="36. Upgrades" id="f845-cd7c-43ba-0c0d" hidden="false">
+    <selectionEntryGroup name="56. Upgrades" id="f845-cd7c-43ba-0c0d" hidden="false">
       <comment>Min 0</comment>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
