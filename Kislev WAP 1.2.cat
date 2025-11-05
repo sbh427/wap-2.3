@@ -5163,12 +5163,12 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
                 <entryLink import="true" name="Hand Weapon" hidden="false" id="8eba-4403-9d24-c646" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
                 <entryLink import="true" name="Flail" hidden="false" id="bcdd-3308-4a8b-bfc3" type="selectionEntry" targetId="d509-46a8-2dc7-0eb9" sortIndex="2">
                   <costs>
-                    <cost name="pts" typeId="points" value="2"/>
+                    <cost name="pts" typeId="points" value="12"/>
                   </costs>
                 </entryLink>
                 <entryLink import="true" name="Polearm/Halberd" hidden="false" id="0918-b3c7-1542-cf5c" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="3">
                   <costs>
-                    <cost name="pts" typeId="points" value="2"/>
+                    <cost name="pts" typeId="points" value="12"/>
                   </costs>
                 </entryLink>
               </entryLinks>
@@ -5177,17 +5177,17 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
               <entryLinks>
                 <entryLink import="true" name="Bow" hidden="false" id="6d34-edaa-8708-2d8f" type="selectionEntry" targetId="94ec-8421-59ea-a9d0" sortIndex="1">
                   <costs>
-                    <cost name="pts" typeId="points" value="2"/>
+                    <cost name="pts" typeId="points" value="12"/>
                   </costs>
                 </entryLink>
                 <entryLink import="true" name="Crossbow" hidden="false" id="e5dd-8ada-bde7-7f7f" type="selectionEntry" targetId="9936-c747-429f-6327" sortIndex="2">
                   <costs>
-                    <cost name="pts" typeId="points" value="5"/>
+                    <cost name="pts" typeId="points" value="30"/>
                   </costs>
                 </entryLink>
                 <entryLink import="true" name="Handgun" hidden="false" id="f05f-345b-94b4-5aa1" type="selectionEntry" targetId="b177-ecbf-f68f-c9a3" sortIndex="3">
                   <costs>
-                    <cost name="pts" typeId="points" value="5"/>
+                    <cost name="pts" typeId="points" value="30"/>
                   </costs>
                 </entryLink>
               </entryLinks>
@@ -5200,6 +5200,33 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
           <description>At the start of any phase, the War Wagon may elect to fortify itself by releasing the horses (remove these from the unit, keeping only the base of the War Wagon). If they choose to do so, the War Wagon cannot move for the rest of the game, and will be Unbreakable. For purposes of shooting, the Crew can fire all round.</description>
         </rule>
       </rules>
+      <modifiers>
+        <modifier type="decrement" value="60" field="points">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="bcdd-3308-4a8b-bfc3" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="0918-b3c7-1542-cf5c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="150" field="points">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="f05f-345b-94b4-5aa1" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="e5dd-8ada-bde7-7f7f" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="decrement" value="60" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="6d34-edaa-8708-2d8f" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Cannon" hidden="false" id="aedb-ce21-c7a3-9434" sortIndex="303">
       <costs>
