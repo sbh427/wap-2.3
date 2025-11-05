@@ -8952,6 +8952,7 @@
       </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1f12-c809-0735-bc8e"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7647-6036-27f1-8c48"/>
       </constraints>
     </selectionEntryGroup>
     <selectionEntryGroup name="99. Command Group" id="11f9-4ce5-7246-17b0" hidden="false">
