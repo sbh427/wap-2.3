@@ -30,6 +30,7 @@
     <categoryEntry name="Z Light Armour" id="fa51-55d0-00b9-c0e8" hidden="true"/>
     <categoryEntry name="Z Medium Armour" id="222a-078c-ce85-fb16" hidden="true"/>
     <categoryEntry name="Z Shield" id="0210-637d-ff12-a760" hidden="true"/>
+    <categoryEntry name="Z Armour" id="387c-2b7c-0a30-7305" hidden="false"/>
   </categoryEntries>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Blunderbuss" hidden="false" id="dc92-514e-0596-fd55" collective="true">
@@ -61,7 +62,7 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Bow" hidden="false" id="94ec-8421-59ea-a9d0" collective="true">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="32dd-51bc-02f7-4599" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="32dd-51bc-02f7-4599" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="false"/>
       </constraints>
       <infoLinks>
         <infoLink name="Bow" id="488e-db26-6791-d730" hidden="false" type="profile" targetId="9dcd-3be8-08b0-96ab"/>
@@ -328,7 +329,7 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Polearm/Halberd" hidden="false" id="757a-ff3d-710c-2d8b" collective="true">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="86ad-a362-8a86-339c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="86ad-a362-8a86-339c" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
       </constraints>
       <infoLinks>
         <infoLink name="Polearm/Halberd" id="afb7-247b-d3cc-f804" hidden="false" targetId="e43e-5153-eeec-36be" type="profile"/>
@@ -499,6 +500,22 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Hand Weapon &amp; Buckler" hidden="false" id="ae2b-eee3-83a8-131d" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8570-1a1f-f70e-a4a3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Buckler" id="d2dd-656a-de4e-4bd9" hidden="false" targetId="1700-a7e5-d272-ef20" type="profile"/>
+        <infoLink name="Hand Weapon" id="9287-c500-c190-bb83" hidden="false" type="profile" targetId="f6da-d707-0cd6-b1dd"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="ba52-4f0c-71ae-b52d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
@@ -1705,17 +1722,9 @@ Note that they may not choose any Arcane Items.</characteristic>
               </conditionGroups>
             </modifier>
             <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="4276-1ee4-016d-ac99" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f667-6e97-ec08-38ea" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="0210-637d-ff12-a760" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="387c-2b7c-0a30-7305" shared="true"/>
+              </conditions>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -1738,17 +1747,9 @@ Note that they may not choose any Arcane Items.</characteristic>
           </costs>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="4276-1ee4-016d-ac99" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f667-6e97-ec08-38ea" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="0210-637d-ff12-a760" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="387c-2b7c-0a30-7305" shared="true"/>
+              </conditions>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -1797,9 +1798,15 @@ Note that they may not choose any Arcane Items.</characteristic>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f667-6e97-ec08-38ea" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <categoryLinks>
@@ -1878,9 +1885,15 @@ Note that they may not choose any Arcane Items.</characteristic>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f667-6e97-ec08-38ea" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <categoryLinks>
@@ -1905,9 +1918,14 @@ Note that they may not choose any Arcane Items.</characteristic>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f667-6e97-ec08-38ea" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <categoryLinks>
@@ -2016,17 +2034,9 @@ Note that they may not choose any Arcane Items.</characteristic>
           </costs>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="4276-1ee4-016d-ac99" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f667-6e97-ec08-38ea" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="0210-637d-ff12-a760" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="387c-2b7c-0a30-7305" shared="true"/>
+              </conditions>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -2076,17 +2086,9 @@ Note that they may not choose any Arcane Items.</characteristic>
           </costs>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="4276-1ee4-016d-ac99" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f667-6e97-ec08-38ea" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="0210-637d-ff12-a760" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="387c-2b7c-0a30-7305" shared="true"/>
+              </conditions>
             </modifier>
           </modifiers>
         </selectionEntry>
