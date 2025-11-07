@@ -2412,10 +2412,10 @@
         <infoLink name="Line of Sight (2)" id="50d1-901a-01c7-7cfe" hidden="false" type="rule" targetId="40b4-9828-f47e-28c9"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Plague Toad" hidden="false" id="48dd-17f7-3e09-4619" sortIndex="24" collective="true">
+    <selectionEntry type="model" import="true" name="Plague Toad" hidden="false" id="48dd-17f7-3e09-4619" sortIndex="24" collective="true" subType="mount">
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="8af3-1fe9-706f-136c" targetId="8b8a-34b1-ed30-df11" primary="false"/>
-        <categoryLink name="Monstrous Beasts" hidden="false" id="d792-7eae-0196-7e63" targetId="f98e-8d4f-7b1b-59cd" primary="false"/>
+        <categoryLink name="Monstrous Cavalry" hidden="false" id="a2e4-2ff9-01b8-7173" targetId="82d3-4589-72b4-b6ed" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="80. Daemonic Alignement" hidden="false" id="16a1-1540-b331-3aa9" type="selectionEntryGroup" targetId="ceac-7fb3-4e67-7b8a">
@@ -2423,6 +2423,15 @@
             <entryLink import="true" name="Daemon of Nurgle" hidden="false" id="0b14-60d0-b554-0f7e" type="selectionEntry" targetId="50ca-5cc6-77f5-7a6f">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6100-b2c5-bfac-6c5b"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="4433-6993-2414-1a3e" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="e9e7-3e75-835f-e5c5" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8d30-58dc-d1c0-2194"/>
               </constraints>
             </entryLink>
           </entryLinks>
@@ -2447,26 +2456,6 @@
       <infoLinks>
         <infoLink name="Strider (Marsh)" id="e6a3-3276-28f5-18c6" hidden="false" type="rule" targetId="686b-8e1b-4d01-05ba"/>
       </infoLinks>
-      <modifiers>
-        <modifier type="remove" value="f98e-8d4f-7b1b-59cd" field="category">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="3b8b-4c1b-208b-e839" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="add" value="82d3-4589-72b4-b6ed" field="category">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="3b8b-4c1b-208b-e839" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Rot Fly" hidden="false" id="9758-5849-8ddc-4655" sortIndex="25" subType="mount" collective="true">
       <entryLinks>
@@ -2620,7 +2609,7 @@
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Exalted Seeker Chariot" hidden="false" id="e901-5efc-f690-5b3a" sortIndex="29">
+    <selectionEntry type="model" import="true" name="Exalted Seeker Chariot" hidden="false" id="e901-5efc-f690-5b3a" sortIndex="29" subType="mount">
       <categoryLinks>
         <categoryLink name="Chariot" hidden="false" id="b7ce-7ad6-73ac-d15c" targetId="7224-b7fd-d652-3ff2" primary="false"/>
       </categoryLinks>
@@ -2673,18 +2662,17 @@
                 <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="da26-751f-becc-f349" automatic="true"/>
                 <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="c4e2-b32c-ce09-dac9" automatic="true"/>
               </constraints>
-              <modifiers>
-                <modifier type="set" value="2" field="da26-751f-becc-f349">
+              <modifierGroups>
+                <modifierGroup type="and">
                   <conditions>
                     <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="36d7-3323-d35d-d9f0" shared="true"/>
                   </conditions>
-                </modifier>
-                <modifier type="set" value="2" field="c4e2-b32c-ce09-dac9">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="36d7-3323-d35d-d9f0" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
+                  <modifiers>
+                    <modifier type="set" value="2" field="da26-751f-becc-f349"/>
+                    <modifier type="set" value="2" field="c4e2-b32c-ce09-dac9"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
@@ -2709,7 +2697,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Burning Chariot" hidden="false" id="6fee-ddfd-9f9b-74ba" sortIndex="30">
+    <selectionEntry type="model" import="true" name="Burning Chariot" hidden="false" id="6fee-ddfd-9f9b-74ba" sortIndex="30" subType="mount">
       <entryLinks>
         <entryLink import="true" name="80. Daemonic Alignement" hidden="false" id="cc6b-f753-55eb-facc" type="selectionEntryGroup" targetId="ceac-7fb3-4e67-7b8a">
           <entryLinks>
@@ -2759,43 +2747,26 @@
         <selectionEntryGroup name="69. Crew" id="79d1-418a-0ef6-3302" hidden="false">
           <entryLinks>
             <entryLink import="true" name="Exalted Flamer" hidden="false" id="4d53-fa34-f2c7-5394" type="selectionEntry" targetId="f71c-53f1-ae76-d857" sortIndex="1">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8f7f-faa7-b395-476b" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="0" field="dc13-c646-0294-171e-min">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8f7f-faa7-b395-476b" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="0" field="dc13-c646-0294-171e-max">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8f7f-faa7-b395-476b" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dc13-c646-0294-171e-min" automatic="true"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dc13-c646-0294-171e-max" automatic="true"/>
               </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8f7f-faa7-b395-476b" shared="true"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden"/>
+                    <modifier type="set" value="0" field="dc13-c646-0294-171e-min"/>
+                    <modifier type="set" value="0" field="dc13-c646-0294-171e-max"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
           </entryLinks>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Blue Horrors" hidden="false" id="7023-16ce-2b60-8cdc" sortIndex="2">
+            <selectionEntry type="upgrade" import="true" name="3 Blue Horrors" hidden="false" id="7023-16ce-2b60-8cdc" sortIndex="2">
               <entryLinks>
                 <entryLink import="true" name="Blue Horror" hidden="false" id="bbf2-cdab-2fd5-ea63" type="selectionEntry" targetId="70ac-dd67-51c3-70e2">
                   <constraints>
@@ -2823,7 +2794,7 @@
         </rule>
       </rules>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Screamer" hidden="false" id="43be-9a13-1fef-317a" sortIndex="105" subType="crew">
+    <selectionEntry type="model" import="true" name="Screamer" hidden="false" id="43be-9a13-1fef-317a" sortIndex="105" subType="mount">
       <entryLinks>
         <entryLink import="true" name="80. Daemonic Alignement" hidden="false" id="dd17-b263-10bc-405f" type="selectionEntryGroup" targetId="ceac-7fb3-4e67-7b8a">
           <entryLinks>
@@ -2834,34 +2805,20 @@
             </entryLink>
           </entryLinks>
         </entryLink>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="c505-452b-9609-38f9" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="93f3-ff29-e409-0e0d" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6faa-9a8a-17cf-8050"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Fly (9)" id="20aa-5afc-c997-62d0" hidden="false" type="rule" targetId="2ba2-2aaa-3f36-4b24">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8f7f-faa7-b395-476b" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6fee-ddfd-9f9b-74ba" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink name="Multiple Wounds (2)" id="5743-30d4-2318-24e5" hidden="false" type="rule" targetId="a4e2-d94c-e906-a868">
           <modifiers>
-            <modifier type="set" value="Screamer only" field="annotation">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8f7f-faa7-b395-476b" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6fee-ddfd-9f9b-74ba" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
+            <modifier type="set" value="Screamer only" field="annotation"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -2881,76 +2838,6 @@
           </characteristics>
         </profile>
       </profiles>
-      <categoryLinks>
-        <categoryLink name="War Beast" hidden="false" id="6b86-b66e-5f9a-dbbd" targetId="5c5d-6944-cd09-0db8" primary="false"/>
-      </categoryLinks>
-      <rules>
-        <rule name="Slashing Attack" id="c686-7e81-33d1-0878" hidden="false" publicationId="314a-aacb-0877-4081" page="39">
-          <description>If a unit of Screamers moves over one or more unengaged enemy units in the Remaining Moves sub-phase, each of those units suffer one Strength 4 Hit per Screamer, distributed as shooting attacks.</description>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8f7f-faa7-b395-476b" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6fee-ddfd-9f9b-74ba" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </rule>
-      </rules>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="81. Upgrades" id="75c1-2c77-febc-08b9" hidden="false">
-          <entryLinks>
-            <entryLink import="true" name="Summoned from Beyond" hidden="false" id="630b-ebf5-a12e-9dab" type="selectionEntry" targetId="25fc-a6ca-3f9e-c4a3">
-              <costs>
-                <cost name="pts" typeId="points" value="4"/>
-              </costs>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6fee-ddfd-9f9b-74ba" shared="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="6fee-ddfd-9f9b-74ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </entryLink>
-          </entryLinks>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8f7f-faa7-b395-476b" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6fee-ddfd-9f9b-74ba" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d829-c498-d908-d5f5"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <modifiers>
-        <modifier type="remove" value="5c5d-6944-cd09-0db8" field="category">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8f7f-faa7-b395-476b" shared="true"/>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6fee-ddfd-9f9b-74ba" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Summoned from Beyond" hidden="false" id="25fc-a6ca-3f9e-c4a3" collective="true">
       <infoLinks>
@@ -2975,37 +2862,23 @@
             </entryLink>
           </entryLinks>
         </entryLink>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="1c38-2cd3-6024-a749" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="bd52-0995-4b62-3e92" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1be3-7948-1229-3f47"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Exalted Flamer" hidden="false" id="f71c-53f1-ae76-d857" sortIndex="108" subType="crew">
       <infoLinks>
         <infoLink name="Exalted Flamer" id="36a8-a145-c013-1393" hidden="false" type="profile" targetId="4bc7-c60a-1bf4-76ca"/>
-        <infoLink name="Strider" id="acac-3e4b-7d30-05b5" hidden="false" type="rule" targetId="c270-3956-9b64-b587">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8f7f-faa7-b395-476b" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6fee-ddfd-9f9b-74ba" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink name="Flaming Attacks" id="6fa8-9ec8-a07c-b189" hidden="false" type="rule" targetId="8600-a090-2761-d661">
           <modifiers>
-            <modifier type="set" value="Exalted Flamer only" field="annotation">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8f7f-faa7-b395-476b" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6fee-ddfd-9f9b-74ba" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
+            <modifier type="set" value="Exalted Flamer only" field="annotation"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -3019,46 +2892,16 @@
             </entryLink>
           </entryLinks>
         </entryLink>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="05fe-e3dd-ed09-6927" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="c01f-af36-2053-659e" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5363-a61e-68c7-2607"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
-      <infoGroups>
-        <infoGroup name="Exalted Fire of Tzeentch" id="b0b0-c5d0-4c69-f378" hidden="false">
-          <rules>
-            <rule name="Exalted Fire of Tzeentch" id="3d62-efd4-2039-ffb4" hidden="false" publicationId="314a-aacb-0877-4081" page="46">
-              <description>During the Shooting phase, the Exalted Flamer can shoot either Pink Fire or Blue Fire below. If a misfire is rolled when resolving Pink Fire or Blue Fire, the Exalted Flamer suffers D6 Strength D6 hits with the Flaming Attacks special rule.</description>
-            </rule>
-          </rules>
-          <profiles>
-            <profile name="Blue Fire" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="3a21-e120-0892-28e3" publicationId="314a-aacb-0877-4081" page="46">
-              <characteristics>
-                <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
-                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">D3+3</characteristic>
-                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Flaming Attacks, Multiple Shots (Artillery Dice + D6), Rapid Fire, Slow to Fire</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Fire Thrower" id="c26f-263d-f0c8-1b33" hidden="false" type="profile" targetId="d259-6f2a-d6a9-0eec">
-              <modifiers>
-                <modifier type="set" value="D6" field="6ca0-d074-628f-e276"/>
-                <modifier type="set" value="Pink Fire" field="name"/>
-                <modifier type="append" value="Slow to Fire" field="d3a4-721b-f750-5564" join=", "/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8f7f-faa7-b395-476b" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6fee-ddfd-9f9b-74ba" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </infoGroup>
-      </infoGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Daemonette" hidden="false" id="ff12-7133-c3d6-7d5e" sortIndex="103" subType="crew">
       <infoLinks>
@@ -3074,32 +2917,16 @@
             </entryLink>
           </entryLinks>
         </entryLink>
-      </entryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="81. Upgrades" id="ae21-db77-fad7-c8f9" hidden="false">
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="c599-0bb1-9a0e-dfc2" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
-            <entryLink import="true" name="Summoned from Beyond" hidden="false" id="2522-7b7d-71a3-73cb" type="selectionEntry" targetId="25fc-a6ca-3f9e-c4a3" sortIndex="1">
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="ace6-e56a-1df2-11bf" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cef1-0e72-04ed-0079"/>
+              </constraints>
             </entryLink>
           </entryLinks>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="36d7-3323-d35d-d9f0" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="627d-726e-c6b0-cdd6" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="e901-5efc-f690-5b3a" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="2247-4f02-3cb8-e538" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Alluress" hidden="false" id="38e7-a835-858c-d918" sortIndex="107" subType="crew">
       <infoLinks>
@@ -3115,6 +2942,15 @@
             </entryLink>
           </entryLinks>
         </entryLink>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="0c8d-c542-6ae8-3c7b" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="af7f-4898-af03-3f86" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8e7a-24f3-a664-9e59"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Bloodletter" hidden="false" id="ffb0-5d81-9c15-3094" sortIndex="101" subType="crew">
@@ -3122,22 +2958,6 @@
         <infoLink name="Killing Blow" id="b293-06eb-1a2f-c03a" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29">
           <modifiers>
             <modifier type="set" value="Bloodletter only" field="annotation">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="629d-3c51-25af-23aa" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="470d-3122-001a-ea21" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="3512-18ae-b023-a9b1" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1fd9-9c57-c499-6304" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Natural Armour (6+)" id="37d0-eb33-7e8b-f4e5" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
               <conditionGroups>
                 <conditionGroup type="or">
                   <conditions>
@@ -3165,54 +2985,14 @@
         </entryLink>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="c091-cc2a-0cbc-01ea" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="1f01-5b3a-19f3-8de1" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
-            <entryLink import="true" name="Great Weapon" hidden="false" id="4749-06db-86c5-1d63" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="1f01-5b3a-19f3-8de1" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="adde-9aa5-ada7-3f49"/>
+              </constraints>
             </entryLink>
           </entryLinks>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="629d-3c51-25af-23aa" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="470d-3122-001a-ea21" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="3512-18ae-b023-a9b1" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1fd9-9c57-c499-6304" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
         </entryLink>
       </entryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="81. Upgrades" id="c965-62b6-046a-2454" hidden="false">
-          <entryLinks>
-            <entryLink import="true" name="Summoned from Beyond" hidden="false" id="af31-54be-ee48-7536" type="selectionEntry" targetId="25fc-a6ca-3f9e-c4a3" sortIndex="1">
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="629d-3c51-25af-23aa" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="470d-3122-001a-ea21" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="3512-18ae-b023-a9b1" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1fd9-9c57-c499-6304" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="0. Blue Fire of Tzeentch" hidden="false" id="d760-acbb-99bb-d332" sortIndex="4.5">
       <constraints>
@@ -3231,7 +3011,7 @@
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Beast of Nurgle" hidden="false" id="b317-50ee-3ed0-3657" sortIndex="106">
+    <selectionEntry type="model" import="true" name="Beast of Nurgle" hidden="false" id="b317-50ee-3ed0-3657" sortIndex="106" subType="mount">
       <profiles>
         <profile name="Beast of Nurgle" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="a932-b044-05d5-40ea" publicationId="314a-aacb-0877-4081" page="43">
           <characteristics>
@@ -3261,19 +3041,20 @@
             </entryLink>
           </entryLinks>
         </entryLink>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="59c5-1d22-24f9-118f" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="707a-2f0d-f3c5-8134" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9d6e-3194-7adc-7f7c"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
       <infoLinks>
         <infoLink name="Random Attacks (D6+1)" id="d8db-d8bf-687a-b2e3" hidden="false" type="rule" targetId="183a-6a6f-951c-1663">
           <modifiers>
-            <modifier type="set" value="Beast of Nurgle only" field="annotation">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="67d1-a021-e035-e96e" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
+            <modifier type="set" value="Beast of Nurgle only" field="annotation"/>
           </modifiers>
         </infoLink>
         <infoLink name="Regeneration (6+)" id="0fa9-2522-4996-a349" hidden="false" type="rule" targetId="6f3b-cd4f-062d-7f26"/>
@@ -3286,35 +3067,21 @@
       </rules>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Plaguebearer" hidden="false" id="5d12-f2ae-969d-71ed" sortIndex="102" subType="crew">
-      <selectionEntryGroups>
-        <selectionEntryGroup name="81. Upgrades" id="56a8-6548-3dbd-938a" hidden="false">
-          <entryLinks>
-            <entryLink import="true" name="Summoned from Beyond" hidden="false" id="d25e-25ae-4f16-44ee" type="selectionEntry" targetId="25fc-a6ca-3f9e-c4a3" sortIndex="1">
-              <costs>
-                <cost name="pts" typeId="points" value="2"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="67d1-a021-e035-e96e" shared="true"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="e98e-31e3-8050-9594" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="80. Daemonic Alignement" hidden="false" id="2f77-cd4b-9f31-5c37" type="selectionEntryGroup" targetId="ceac-7fb3-4e67-7b8a">
           <entryLinks>
             <entryLink import="true" name="Daemon of Nurgle" hidden="false" id="7117-4a0d-811f-a686" type="selectionEntry" targetId="50ca-5cc6-77f5-7a6f">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dc69-5b2c-6184-3c22"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="c225-8506-e064-f5d7" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="fa84-aab2-1ede-17e6" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="74ca-ca34-2e74-d802"/>
               </constraints>
             </entryLink>
           </entryLinks>
@@ -5238,9 +5005,15 @@ Once the final position is established, place the unit so it can touch the mark
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f667-6e97-ec08-38ea" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
@@ -5266,9 +5039,14 @@ Once the final position is established, place the unit so it can touch the mark
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f667-6e97-ec08-38ea" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <constraints>
@@ -6485,6 +6263,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
             <modifier type="increment" value="100" field="bcd1-b66e-060b-b8ea"/>
           </modifiers>
         </entryLink>
+        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="8d69-2122-f31f-5ef0" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+          <entryLinks>
+            <entryLink import="true" name="Medium Armour" hidden="false" id="a349-7956-1166-2301" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dadb-d6a4-96d5-c3ae"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Lords" hidden="false" id="3089-75d9-5b04-988e" targetId="d280-b7df-c185-2ba5" primary="true"/>
@@ -6493,6 +6280,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
         <categoryLink name="Z Medium Armour" hidden="false" id="0639-ce1a-7624-79a5" targetId="222a-078c-ce85-fb16" primary="false"/>
         <categoryLink name="X Great Weapon" hidden="false" id="0f67-fd90-814e-ebc9" targetId="abcc-4aa7-4989-7189" primary="false"/>
         <categoryLink name="Monster" hidden="false" id="348f-9163-448d-954e" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+        <categoryLink name="Z Armour" hidden="false" id="1b81-d540-f807-cd61" targetId="387c-2b7c-0a30-7305" primary="false"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -6635,6 +6423,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
             </entryLink>
           </entryLinks>
         </entryLink>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="48e0-2e6b-bc94-c1ee" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="a063-7b58-b7eb-ea85" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9679-8623-9878-77e1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="61. Lore" id="572c-9eca-8970-dcbf" hidden="false">
@@ -6656,6 +6453,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
         <categoryLink name="Heroes" hidden="false" id="a1f9-d5ec-e397-b2f2" targetId="d38a-73da-883b-bab9" primary="false"/>
         <categoryLink name="Z Buckler" hidden="false" id="3490-923e-7e28-cd81" targetId="4276-1ee4-016d-ac99" primary="false"/>
         <categoryLink name="Monster" hidden="false" id="1fed-ef47-e042-2fa4" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+        <categoryLink name="Z Armour" hidden="false" id="32ef-e618-e166-4bc4" targetId="387c-2b7c-0a30-7305" primary="false"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -6712,6 +6510,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
           </modifiers>
         </entryLink>
         <entryLink import="true" name="60. Wizard Level" hidden="false" id="f097-dcd7-8fa3-326d" type="selectionEntryGroup" targetId="dfa3-8bd2-341f-852a"/>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="57ef-542e-7834-61fa" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="442e-f5b2-2d83-0c98" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9da0-0a28-1646-afc2"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="61. Lore" id="58a8-69e0-0342-e892" hidden="false">
@@ -6751,6 +6558,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
         <categoryLink name="Z Light Armour" hidden="false" id="460a-5b11-f467-dfb5" targetId="fa51-55d0-00b9-c0e8" primary="false"/>
         <categoryLink name="Z Medium Armour" hidden="false" id="5988-f9c8-8d7d-4c67" targetId="222a-078c-ce85-fb16" primary="false"/>
         <categoryLink name="Monstrous Creature" hidden="false" id="4551-fd85-15b6-3c09" targetId="b3e5-4b1b-7050-7e02" primary="false"/>
+        <categoryLink name="Z Armour" hidden="false" id="ca20-b837-3f4f-53bb" targetId="387c-2b7c-0a30-7305" primary="false"/>
       </categoryLinks>
       <profiles>
         <profile name="Daemon Prince" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="8256-4380-14c4-fc10" publicationId="314a-aacb-0877-4081" page="19">
@@ -6867,6 +6675,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
           </modifiers>
         </entryLink>
         <entryLink import="true" name="10. Character Options " hidden="false" id="5e6e-184e-12e9-81af" type="selectionEntryGroup" targetId="f355-7a26-c779-da20"/>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="7d86-9535-810e-c704" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="eead-1e15-3566-b725" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f445-6634-7ae5-5d5c"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="81. Upgrades" id="34dd-854b-7af0-8217" hidden="false">
@@ -7088,6 +6905,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
             </entryLink>
           </entryLinks>
         </entryLink>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="f36b-4459-5e3d-95ab" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="54a2-165b-0c4e-90de" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="096b-9856-e319-a9d0"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="61. Lore" id="60cf-30e3-370d-70ed" hidden="false">
@@ -7156,6 +6982,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
         <categoryLink name="Z Light Armour" hidden="false" id="0385-f93d-0f68-02d8" targetId="fa51-55d0-00b9-c0e8" primary="false"/>
         <categoryLink name="Z Medium Armour" hidden="false" id="3329-c683-f8b3-157b" targetId="222a-078c-ce85-fb16" primary="false"/>
         <categoryLink name="Monstrous Infantry" hidden="false" id="f73f-4734-c301-dfa3" targetId="5fc5-b80a-115f-bca3" primary="false"/>
+        <categoryLink name="Z Armour" hidden="false" id="6876-7cb0-02b2-8dbc" targetId="387c-2b7c-0a30-7305" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="10. Character Options " hidden="false" id="fcc2-78c8-858f-45c9" type="selectionEntryGroup" targetId="f355-7a26-c779-da20">
@@ -7262,6 +7089,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
               </conditions>
             </modifier>
           </modifiers>
+        </entryLink>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="f068-4093-4d89-6d5d" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="561b-d8a0-09de-c3ef" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="48ff-a122-94fa-b121"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <selectionEntryGroups>
@@ -7492,6 +7328,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
         <categoryLink name="X Great Weapon" hidden="false" id="ad86-65d1-3015-f511" targetId="abcc-4aa7-4989-7189" primary="false"/>
         <categoryLink name="Z Light Armour" hidden="false" id="67ae-adda-b710-24d6" targetId="fa51-55d0-00b9-c0e8" primary="false"/>
         <categoryLink name="Infantry" hidden="false" id="9ace-439c-4482-e44e" targetId="22c9-1606-58f8-2e60" primary="false"/>
+        <categoryLink name="Z Armour" hidden="false" id="be58-a4b8-3f20-0523" targetId="387c-2b7c-0a30-7305" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="10. Character Options " hidden="false" id="5a3f-d0e0-b0bf-1b0b" type="selectionEntryGroup" targetId="f355-7a26-c779-da20">
@@ -7658,6 +7495,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="60. Wizard Level" hidden="false" id="fb4a-6c09-bf3a-4887" type="selectionEntryGroup" targetId="d0a0-b36d-0420-dd76"/>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="56f4-78e8-1471-712b" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="fc6e-a788-7c1d-057f" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b2ae-3e81-c312-2e5e"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
       <profiles>
         <profile name="Poxbringer" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="769b-f199-eda1-046c" publicationId="314a-aacb-0877-4081" page="25">
@@ -7751,6 +7597,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
             <modifier type="increment" value="50" field="bcd1-b66e-060b-b8ea"/>
           </modifiers>
         </entryLink>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="bb47-460c-74c5-f6a0" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="ed37-bdcb-91fa-47d7" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="363c-f9c7-42a6-68b3"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
       <profiles>
         <profile name="Sloppity Bilepiper" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="d726-b862-b382-3fed" publicationId="314a-aacb-0877-4081" page="26">
@@ -7817,6 +7672,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
           <modifiers>
             <modifier type="increment" value="50" field="bcd1-b66e-060b-b8ea"/>
           </modifiers>
+        </entryLink>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="b84f-e4a4-efff-9080" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="cefe-3edd-cc5f-887a" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="20fc-60f1-6637-fdd2"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <profiles>
@@ -7924,6 +7788,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
             </modifier>
           </modifiers>
         </entryLink>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="f83b-3cc9-fa18-f689" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="422a-9862-8647-f59b" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b84b-2a0e-92ba-9e55"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="61. Lore" id="b771-9673-a9e0-cca6" hidden="false">
@@ -8020,6 +7893,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
           <modifiers>
             <modifier type="increment" value="50" field="bcd1-b66e-060b-b8ea"/>
           </modifiers>
+        </entryLink>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="1214-65b1-3499-7a35" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="1b9c-939e-841c-aa2e" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1866-26f3-c483-3241"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <profiles>
@@ -8145,6 +8027,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
             </entryLink>
           </entryLinks>
         </entryLink>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="de38-3e04-24cb-8f6c" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="088f-8d9c-c8e9-0757" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7b1a-878e-ca4c-828f"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
       <profiles>
         <profile name="Changecaster" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="5982-f5d4-cf2a-0039" publicationId="314a-aacb-0877-4081" page="29">
@@ -8191,16 +8082,6 @@ Cursed terrain features placed in this way must be positioned touching an exist
       </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Screamers" hidden="false" id="c726-2bb5-0355-2c85" sortIndex="142">
-      <entryLinks>
-        <entryLink import="true" name="Screamer" hidden="false" id="08b4-4243-bba7-fdb6" type="selectionEntry" targetId="43be-9a13-1fef-317a">
-          <costs>
-            <cost name="pts" typeId="points" value="32"/>
-          </costs>
-          <constraints>
-            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="1e28-804f-2296-db07"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
       <categoryLinks>
         <categoryLink name="Core" hidden="false" id="df02-7e6e-3dfe-ae06" targetId="b876-2856-f1c2-c4f0" primary="true"/>
         <categoryLink name="War Beast" hidden="false" id="0c9b-a89b-1d59-d914" targetId="5c5d-6944-cd09-0db8" primary="false"/>
@@ -8217,18 +8098,89 @@ Cursed terrain features placed in this way must be positioned touching an exist
           </conditionGroups>
         </modifier>
       </modifiers>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Daemonettes" hidden="false" id="6a78-d13e-93c9-b793" sortIndex="131">
-      <entryLinks>
-        <entryLink import="true" name="Daemonette" hidden="false" id="c998-2d16-8b62-da76" type="selectionEntry" targetId="ff12-7133-c3d6-7d5e" sortIndex="1">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Screamer" hidden="false" id="a06b-9c87-86e7-252e">
+          <entryLinks>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="c038-b18b-74b2-c640" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="29a4-e396-7580-e10b" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1762-1a07-f1e3-87f5"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="80. Daemonic Alignement" hidden="false" id="1c23-a87f-acae-8d99" type="selectionEntryGroup" targetId="ceac-7fb3-4e67-7b8a">
+              <entryLinks>
+                <entryLink import="true" name="Daemon of Tzeentch" hidden="false" id="cc05-e546-cb57-2192" type="selectionEntry" targetId="d633-4c27-1ab0-31d9">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ed05-650a-c7aa-24b7"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="81. Upgrades" id="e273-4af2-2cf0-91dd" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Summoned from Beyond" hidden="false" id="7748-8fdc-18e7-06cd" type="selectionEntry" targetId="25fc-a6ca-3f9e-c4a3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="4"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="6fee-ddfd-9f9b-74ba" shared="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="6fee-ddfd-9f9b-74ba" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4abe-7832-f44d-7090"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <profiles>
+            <profile name="Screamer" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="711e-b9d4-2b9b-dcac" publicationId="314a-aacb-0877-4081" page="39">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">1</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Daemon)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Fly (9)" id="8b3d-1374-2ca0-8b9b" hidden="false" type="rule" targetId="2ba2-2aaa-3f36-4b24"/>
+            <infoLink name="Multiple Wounds (2)" id="a6d0-bed0-991c-7165" hidden="false" type="rule" targetId="a4e2-d94c-e906-a868"/>
+          </infoLinks>
+          <rules>
+            <rule name="Slashing Attack" id="32bf-2bb4-8f05-3134" hidden="false" publicationId="314a-aacb-0877-4081" page="39">
+              <description>If a unit of Screamers moves over one or more unengaged enemy units in the Remaining Moves sub-phase, each of those units suffer one Strength 4 Hit per Screamer, distributed as shooting attacks.</description>
+            </rule>
+          </rules>
           <constraints>
-            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="3d5d-36ad-7645-dd97"/>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="d1d9-bbec-98fb-d93f"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="12"/>
+            <cost name="pts" typeId="points" value="32"/>
           </costs>
-        </entryLink>
-      </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Daemonettes" hidden="false" id="6a78-d13e-93c9-b793" sortIndex="131">
       <selectionEntryGroups>
         <selectionEntryGroup name="Command Group" id="f512-7f23-df8a-bce1" hidden="false" sortIndex="2">
           <selectionEntries>
@@ -8291,6 +8243,50 @@ Cursed terrain features placed in this way must be positioned touching an exist
           </conditionGroups>
         </modifier>
       </modifiers>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Daemonette" hidden="false" id="9831-dd75-6017-8bd8" sortIndex="1">
+          <costs>
+            <cost name="pts" typeId="points" value="12"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="a08c-979a-bccf-3a7f" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="854f-533b-be59-bc69" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2845-9807-d867-47a8"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="80. Daemonic Alignement" hidden="false" id="d275-e029-cf02-16eb" type="selectionEntryGroup" targetId="ceac-7fb3-4e67-7b8a">
+              <entryLinks>
+                <entryLink import="true" name="Daemon of Slaanesh" hidden="false" id="4e6a-7537-17b0-5caf" type="selectionEntry" targetId="2703-6202-c21b-c2cb">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ca9d-e1ee-7fe5-e0b5"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="81. Upgrades" id="8b12-353d-9a72-371f" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Summoned from Beyond" hidden="false" id="a6fb-fda2-1694-d4c3" type="selectionEntry" targetId="25fc-a6ca-3f9e-c4a3" sortIndex="1">
+                  <costs>
+                    <cost name="pts" typeId="points" value="2"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <infoLinks>
+            <infoLink name="Daemonette" id="efd7-d223-fa01-7425" hidden="false" type="profile" targetId="ea8a-c917-0e40-9d57"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="618e-2aa3-d8d6-4c3a"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Chaos Furies" hidden="false" id="1f3d-8fa7-3a71-e981" sortIndex="101">
       <categoryLinks>
@@ -8385,6 +8381,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 </entryLink>
               </entryLinks>
             </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="2b9b-7d7a-dac0-831d" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="b0d6-2e9c-f65c-a128" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9673-79a9-8949-730c"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
           <infoLinks>
             <infoLink name="Undivided Daemon" id="5961-e4a5-7100-bc60" hidden="false" type="infoGroup" targetId="aced-5181-c6f8-6341">
@@ -8468,6 +8473,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 </entryLink>
               </entryLinks>
             </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="4777-b417-33f4-ea86" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="d861-072f-3d73-2b0e" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="51cf-4a54-9e21-74f1"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
           <infoLinks>
             <infoLink name="Undivided Daemon" id="621b-6bb5-000b-275f" hidden="false" type="infoGroup" targetId="aced-5181-c6f8-6341">
@@ -8515,16 +8529,6 @@ Cursed terrain features placed in this way must be positioned touching an exist
       </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Bloodletters" hidden="false" id="05f9-53c2-6ee0-cbcc" sortIndex="111">
-      <entryLinks>
-        <entryLink import="true" name="Bloodletter" hidden="false" id="f1df-5dbd-bc15-677c" type="selectionEntry" targetId="ffb0-5d81-9c15-3094" sortIndex="1">
-          <costs>
-            <cost name="pts" typeId="points" value="13"/>
-          </costs>
-          <constraints>
-            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="1205-479d-2496-3521"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
       <categoryLinks>
         <categoryLink name="Core" hidden="false" id="9a15-5dd1-0465-7659" targetId="b876-2856-f1c2-c4f0" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="72a0-06c0-229b-e2a6" targetId="22c9-1606-58f8-2e60" primary="false"/>
@@ -8587,6 +8591,57 @@ Cursed terrain features placed in this way must be positioned touching an exist
           </conditionGroups>
         </modifier>
       </modifiers>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Bloodletter" hidden="false" id="5987-7d65-e788-0231" sortIndex="1">
+          <costs>
+            <cost name="pts" typeId="points" value="13"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="a673-fd42-0305-eae8" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="957f-66a1-63e5-25d2" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
+                  <constraints>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="3999-544a-afd4-32df"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Great Weapon" hidden="false" id="9e04-6874-242e-71f6" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="2"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="80. Daemonic Alignement" hidden="false" id="d8c8-a986-c446-2138" type="selectionEntryGroup" targetId="ceac-7fb3-4e67-7b8a">
+              <entryLinks>
+                <entryLink import="true" name="Daemon of Khorne" hidden="false" id="9fe6-56d7-dbde-5f27" type="selectionEntry" targetId="e567-8ed8-31d7-1247">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ddfb-8829-239c-f02b"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="81. Upgrades" id="b21a-1db9-1f60-b16b" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Summoned from Beyond" hidden="false" id="0082-3fff-e654-a556" type="selectionEntry" targetId="25fc-a6ca-3f9e-c4a3" sortIndex="1">
+                  <costs>
+                    <cost name="pts" typeId="points" value="2"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <infoLinks>
+            <infoLink name="Bloodletter" id="bf53-5d6e-26e8-4b7c" hidden="false" type="profile" targetId="a00b-c7d3-97a0-8051"/>
+            <infoLink name="Killing Blow" id="6fe6-b51e-8cfd-6e9e" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29"/>
+            <infoLink name="Natural Armour (6+)" id="b101-66d2-adfa-5459" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
+          </infoLinks>
+          <constraints>
+            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="744d-b51b-5fe6-7ed8"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Flesh Hounds" hidden="false" id="1a49-925f-39dd-3632" sortIndex="112">
       <selectionEntries>
@@ -8603,6 +8658,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 <entryLink import="true" name="Daemon of Khorne" hidden="false" id="9919-3491-c76b-628c" type="selectionEntry" targetId="e567-8ed8-31d7-1247">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="04c8-4971-e491-7f9b"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="bbfa-7747-baa7-8775" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="8775-ecbd-8712-ba03" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2e96-6dfe-6e00-ff56"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
@@ -8711,16 +8775,6 @@ Cursed terrain features placed in this way must be positioned touching an exist
         <categoryLink name="Core" hidden="false" id="fe7b-752e-80b2-382f" targetId="b876-2856-f1c2-c4f0" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="58ad-83c9-71a6-4c5d" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="Plaguebearer" hidden="false" id="d3f0-509f-5aeb-9035" type="selectionEntry" targetId="5d12-f2ae-969d-71ed" sortIndex="1">
-          <costs>
-            <cost name="pts" typeId="points" value="13"/>
-          </costs>
-          <constraints>
-            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="459d-fa05-3090-8855"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -8733,32 +8787,52 @@ Cursed terrain features placed in this way must be positioned touching an exist
           </conditionGroups>
         </modifier>
       </modifiers>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Plague Toads" hidden="false" id="2af6-5008-dfd3-cabc" sortIndex="122">
-      <entryLinks>
-        <entryLink import="true" name="Plague Toad" hidden="false" id="b578-799f-8b8a-05b1" type="selectionEntry" targetId="48dd-17f7-3e09-4619" sortIndex="1">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Plaguebearer" hidden="false" id="aaac-db11-e552-4ef5" sortIndex="1">
           <costs>
-            <cost name="pts" typeId="points" value="31"/>
+            <cost name="pts" typeId="points" value="13"/>
           </costs>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="81. Upgrades" id="161f-5035-5edd-0842" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="09a6-872c-c9aa-ec4f" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
-                <entryLink import="true" name="Summoned from Beyond" hidden="false" id="8411-56f4-2794-0c24" type="selectionEntry" targetId="25fc-a6ca-3f9e-c4a3">
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="95a4-6828-6275-c9c4" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d7d7-cf3c-d82a-24cb"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="80. Daemonic Alignement" hidden="false" id="ccd7-9811-2628-8745" type="selectionEntryGroup" targetId="ceac-7fb3-4e67-7b8a">
+              <entryLinks>
+                <entryLink import="true" name="Daemon of Nurgle" hidden="false" id="690c-d1e3-88a5-a65c" type="selectionEntry" targetId="50ca-5cc6-77f5-7a6f">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4e5b-6cb7-6db4-b73a"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="81. Upgrades" id="48a2-62e1-5f0f-f84d" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Summoned from Beyond" hidden="false" id="38b8-e3df-a757-bf47" type="selectionEntry" targetId="25fc-a6ca-3f9e-c4a3" sortIndex="1">
                   <costs>
-                    <cost name="pts" typeId="points" value="4"/>
+                    <cost name="pts" typeId="points" value="2"/>
                   </costs>
                 </entryLink>
               </entryLinks>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="18f5-a1c8-f220-8be8"/>
-              </constraints>
             </selectionEntryGroup>
           </selectionEntryGroups>
+          <infoLinks>
+            <infoLink name="Plaguebearer" id="12e6-ae08-d44d-1763" hidden="false" type="profile" targetId="eec1-56a4-7675-f8a2"/>
+          </infoLinks>
           <constraints>
-            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="9cd4-bc32-5994-d369"/>
+            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="2f9b-4f33-a622-5286"/>
           </constraints>
-        </entryLink>
-      </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Plague Toads" hidden="false" id="2af6-5008-dfd3-cabc" sortIndex="122">
       <categoryLinks>
         <categoryLink name="Core" hidden="false" id="d4c4-8a73-e661-d2f4" targetId="b876-2856-f1c2-c4f0" primary="true"/>
         <categoryLink name="Monstrous Beasts" hidden="false" id="d46f-1e73-f600-d4f4" targetId="f98e-8d4f-7b1b-59cd" primary="false"/>
@@ -8775,6 +8849,69 @@ Cursed terrain features placed in this way must be positioned touching an exist
           </conditionGroups>
         </modifier>
       </modifiers>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Plague Toad" hidden="false" id="bc23-9494-b944-e7c3">
+          <entryLinks>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="704e-c0ac-5a6b-f130" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="9d60-24a7-9819-8032" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3632-aa2b-d436-94d4"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="80. Daemonic Alignement" hidden="false" id="85e5-d96b-d86d-9ef9" type="selectionEntryGroup" targetId="ceac-7fb3-4e67-7b8a">
+              <entryLinks>
+                <entryLink import="true" name="Daemon of Nurgle" hidden="false" id="ed98-981d-af93-38f2" type="selectionEntry" targetId="50ca-5cc6-77f5-7a6f">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b40f-1e16-08a6-4efa"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+          <profiles>
+            <profile name="Plague Toad" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f078-cd87-9e03-b818" publicationId="314a-aacb-0877-4081" page="31">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">1</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Daemon)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Strider (Marsh)" id="fc17-8572-cb28-4801" hidden="false" type="rule" targetId="686b-8e1b-4d01-05ba"/>
+          </infoLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="81. Upgrades" id="e27b-28bf-64f9-13c0" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Summoned from Beyond" hidden="false" id="2cf8-e9ff-6b58-3f52" type="selectionEntry" targetId="25fc-a6ca-3f9e-c4a3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="4"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fbb2-8295-a409-c5f0"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="c815-fa2a-6eb3-12c2"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="31"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Nurglings" hidden="false" id="4d4e-1d4d-7b09-1db8" sortIndex="123">
       <selectionEntries>
@@ -8788,6 +8925,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 <entryLink import="true" name="Daemon of Nurgle" hidden="false" id="596e-23d1-071c-fa4d" type="selectionEntry" targetId="50ca-5cc6-77f5-7a6f">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0268-35d2-7229-f2a6"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="4bd8-c73e-7b38-f977" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="f976-8a91-5ab0-63e9" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c60a-5932-0280-0852"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
@@ -8938,6 +9084,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 </entryLink>
               </entryLinks>
             </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="a772-dd7f-aa00-d9e2" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="c915-397e-c418-c05c" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1e2d-f245-4a5c-67b7"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
           <constraints>
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="a19b-977f-b5f2-f035"/>
@@ -8972,6 +9127,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 <entryLink import="true" name="Daemon of Tzeentch" hidden="false" id="28e7-eaa0-cd15-3b32" type="selectionEntry" targetId="d633-4c27-1ab0-31d9">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fcc4-8791-a215-cdb2"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="217f-c7fe-1695-3dd3" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="0c32-0505-c6c2-0496" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bf4a-24ce-63cf-bf82"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
@@ -9140,6 +9304,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 <entryLink import="true" name="Daemon of Tzeentch" hidden="false" id="d523-d84e-adc4-753e" type="selectionEntry" targetId="d633-4c27-1ab0-31d9">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="be30-a13c-197d-56b6"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="a5e9-7eab-083e-5892" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="eb32-8e6a-e5d7-129d" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e649-babf-c718-b520"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
@@ -9354,6 +9527,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b502-6c8c-7733-751f"/>
               </constraints>
             </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="accc-28ff-f9a9-bf26" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="30bc-0105-48eb-be1c" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fce6-546e-a98e-3526"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
           <infoLinks>
             <infoLink name="Bloodletter" id="9f94-975a-e04c-7885" hidden="false" type="profile" targetId="a00b-c7d3-97a0-8051"/>
@@ -9522,6 +9704,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 </entryLink>
               </entryLinks>
             </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="6a43-85fc-b4de-93f5" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="827f-9d8f-4862-09b6" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="48c8-ff1f-30dd-2533"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
           <infoLinks>
             <infoLink name="Natural Armour (6+)" id="be31-1ddf-42c6-9a71" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
@@ -9624,6 +9815,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 </entryLink>
               </entryLinks>
             </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="91ad-b7e4-3545-5171" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="5a21-63a8-7898-842f" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="484d-d792-2bda-4d7d"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
           <constraints>
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="c6ef-d58a-efe1-c2ed"/>
@@ -9648,13 +9848,6 @@ Cursed terrain features placed in this way must be positioned touching an exist
         <categoryLink name="Special" hidden="false" id="ed99-faf4-5abc-a78e" targetId="fc26-7737-f7cb-8977" primary="true"/>
         <categoryLink name="Monstrous Beasts" hidden="false" id="91f0-3ea3-d444-1ebc" targetId="f98e-8d4f-7b1b-59cd" primary="false"/>
       </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="Beast of Nurgle" hidden="false" id="c57b-da1a-1ceb-8853" type="selectionEntry" targetId="b317-50ee-3ed0-3657">
-          <costs>
-            <cost name="pts" typeId="points" value="55"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -9667,6 +9860,62 @@ Cursed terrain features placed in this way must be positioned touching an exist
           </conditionGroups>
         </modifier>
       </modifiers>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Beast of Nurgle" hidden="false" id="c521-33c6-c872-0f76" sortIndex="1">
+          <entryLinks>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="0938-24a0-0848-79dd" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="5f16-f8a4-bdf8-28d4" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3b35-cb8e-1107-c79c"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="80. Daemonic Alignement" hidden="false" id="19ca-ac85-2838-8755" type="selectionEntryGroup" targetId="ceac-7fb3-4e67-7b8a">
+              <entryLinks>
+                <entryLink import="true" name="Daemon of Nurgle" hidden="false" id="0892-8c02-2903-a24c" type="selectionEntry" targetId="50ca-5cc6-77f5-7a6f">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8b76-5fe8-e3c2-c575"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="47da-fa51-be55-dd10"/>
+          </constraints>
+          <profiles>
+            <profile name="Beast of Nurgle" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="fe38-3bf0-9dcc-bb95" publicationId="314a-aacb-0877-4081" page="43">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">*</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Daemon)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Attention Seeker" id="c84e-07bc-46ff-d6ab" hidden="false" publicationId="314a-aacb-0877-4081" page="43">
+              <description>Beasts of Nurgle can issue and accept challenges as if they were Characters.</description>
+            </rule>
+          </rules>
+          <infoLinks>
+            <infoLink name="Random Attacks (D6+1)" id="b49d-0d80-f26d-1826" hidden="false" type="rule" targetId="183a-6a6f-951c-1663"/>
+            <infoLink name="Regeneration (6+)" id="82bb-ac8f-22d4-cd02" hidden="false" type="rule" targetId="6f3b-cd4f-062d-7f26"/>
+            <infoLink name="Slime Trail" id="b749-a429-be9f-a1d0" hidden="false" type="rule" targetId="ab92-e6de-efb5-59c7"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="55"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Plague Chariot" hidden="false" id="67d1-a021-e035-e96e" sortIndex="223">
       <categoryLinks>
@@ -9795,6 +10044,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8c6a-61f6-eeab-b417-min"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c6a-61f6-eeab-b417-max"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="7ef6-bfef-7785-66b8" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="718c-d1a9-6203-1acc" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7e3a-6189-9d51-62bb"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
@@ -9970,6 +10228,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 </entryLink>
               </entryLinks>
             </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="8470-95eb-9c7c-c9dc" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="645b-cacd-b9f0-204a" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="aec4-a8de-b92a-cb54"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
           <profiles>
             <profile name="Fiends" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="14ee-dcb2-4c93-5571" publicationId="314a-aacb-0877-4081" page="45">
@@ -10055,6 +10322,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 </entryLink>
               </entryLinks>
             </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="a609-2aac-57bb-f33b" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="f92f-7d55-7b13-bcef" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9f1d-7635-4231-f283"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
         </selectionEntry>
       </selectionEntries>
@@ -10120,6 +10396,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 <entryLink import="true" name="Daemon of Tzeentch" hidden="false" id="3794-28eb-ccdb-e972" type="selectionEntry" targetId="d633-4c27-1ab0-31d9">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fa15-5af9-9a45-d026"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="06fa-d7e4-a836-efcf" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="1c70-d8dc-d1ae-989c" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="89fe-6049-52d2-ae0c"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
@@ -10309,6 +10594,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
             </selectionEntry>
           </selectionEntries>
         </entryLink>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="a4fb-dc09-f1b6-4000" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="5687-4dd3-c3e9-a5ef" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d4d0-4c4c-ea00-4b0c"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
       <rules>
         <rule name="Caught by the Iron Claw" id="a632-ceb8-39f3-4ee6" hidden="false" publicationId="314a-aacb-0877-4081" page="47">
@@ -10478,6 +10772,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 </selectionEntry>
               </selectionEntries>
             </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="f5c0-9483-cdad-1004" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="8dad-809a-1b2a-ea7e" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="402d-c758-39a9-e329"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
           <constraints>
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="2493-db74-7b59-e120"/>
@@ -10624,7 +10927,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
           <description>You may take 1-2 Hellflayers as a single Rare choice</description>
         </rule>
         <rule name="Soulscent" id="89e7-c60b-fd5b-9dcc" hidden="false" publicationId="314a-aacb-0877-4081" page="49">
-          <description>If a Hellflayer causes one or more unsaved Wounds with its Impact Hits, all crew members receive a number of bonus Attacks equal to the number of unsaved Wounds caused. This bonus lasts until the end of the turn. </description>
+          <description>If a Hellflayer causes one or more unsaved Wounds with its Impact Hits, all crew members receive a number of bonus Attacks equal to the number of unsaved Wounds caused. This bonus lasts until the end of the turn.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -10757,6 +11060,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4c6e-0ce6-d1be-868d-min"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4c6e-0ce6-d1be-868d-max"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="741d-f9ae-d4b6-3bed" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="0261-119d-cf49-a3f1" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="82da-b5db-c098-8bb9"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
@@ -11142,6 +11454,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                     </entryLink>
                   </entryLinks>
                 </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="753f-9e6e-bd9d-2aa9" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="548b-4bc3-4d28-ff42" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ff10-b519-7e79-f79c"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
               </entryLinks>
               <selectionEntryGroups>
                 <selectionEntryGroup name="61. Lore" id="4d24-f481-8471-eb02" hidden="false">
@@ -11249,6 +11570,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                   </entryLinks>
                 </entryLink>
                 <entryLink import="true" name="60. Wizard Level" hidden="false" id="5783-835c-f6be-7327" type="selectionEntryGroup" targetId="8e7d-af82-eb9b-19f2"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="60ee-e303-6074-e09c" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="97e4-705a-5518-8c10" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5d77-425d-71a1-68dd"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
               </entryLinks>
               <selectionEntryGroups>
                 <selectionEntryGroup name="61. Lore" id="1045-76b7-78f2-ba64" hidden="false">
@@ -11846,6 +12176,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                     </entryLink>
                   </entryLinks>
                 </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="40dd-4e19-9bf6-6427" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="19ab-ecc8-21f0-dd0c" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="73b0-16d8-7750-70aa"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
               </entryLinks>
               <selectionEntryGroups>
                 <selectionEntryGroup name="90. Daemonic Gifts &amp; Magic Items" id="95d3-88b4-201d-2c6f" hidden="false">
@@ -11911,6 +12250,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                     <entryLink import="true" name="Daemon of Slaanesh" hidden="false" id="0026-7aee-698d-5536" type="selectionEntry" targetId="2703-6202-c21b-c2cb">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="32f5-803e-c005-0b24"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="d0e1-bd8e-0945-e682" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="f522-88a7-4da4-88c1" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5ece-64c2-d3ab-4765"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
@@ -12013,6 +12361,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                     <entryLink import="true" name="Daemon of Tzeentch" hidden="false" id="813e-d109-8738-ddfc" type="selectionEntry" targetId="d633-4c27-1ab0-31d9">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="46a6-be34-84e7-6386"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="41c2-7bdd-6aeb-60d2" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="b571-e7af-bb53-2c85" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bd6e-6d93-dec9-e47a"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
@@ -12287,6 +12644,9 @@ Cursed terrain features placed in this way must be positioned touching an exist
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3357-396f-eb7a-98ef" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
+              <categoryLinks>
+                <categoryLink name="Monster" hidden="false" id="17c2-752d-ab7c-9adf" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Amon&apos;Chakai" hidden="false" id="fa56-caa3-4d07-e756" sortIndex="42">
               <costs>
@@ -12303,6 +12663,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                     <entryLink import="true" name="Daemon of Tzeentch" hidden="false" id="8355-b23f-3209-3ead" type="selectionEntry" targetId="d633-4c27-1ab0-31d9">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a1d9-eb59-9f8a-9f64"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="fd2c-3bdc-1c0f-cdac" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="45ac-095a-fada-fb99" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e309-60ba-785d-fe6b"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
@@ -12513,6 +12882,9 @@ Cursed terrain features placed in this way must be positioned touching an exist
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7300-af96-c205-0740" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="7057-1aef-aee8-7b2f" targetId="22c9-1606-58f8-2e60" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Karanak" hidden="false" id="cde7-8c1b-d7e0-0977" sortIndex="12">
               <costs>
@@ -12527,6 +12899,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                     <entryLink import="true" name="Daemon of Khorne" hidden="false" id="379b-c411-4704-46a5" type="selectionEntry" targetId="e567-8ed8-31d7-1247">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="42eb-bed9-ef41-5ab9"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="0822-4424-7cc6-dccc" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="ffa9-0e77-547f-5e87" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fc9b-bbde-231e-1ef8"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
@@ -12603,6 +12984,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                     <entryLink import="true" name="Daemon of Khorne" hidden="false" id="3d06-def4-81d7-71ab" type="selectionEntry" targetId="e567-8ed8-31d7-1247">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6cbb-c147-ece2-08dd"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="1040-2fa3-28c0-c725" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="c1a7-73df-cb68-8ed0" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="10df-acc6-827e-f80c"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
@@ -12692,6 +13082,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d06e-69f0-eff9-da7d-min"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d06e-69f0-eff9-da7d-max"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="7c2c-bc8f-c7f2-4e62" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="9fe9-acbd-8161-a907" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2265-727d-4d07-1641"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
@@ -12799,6 +13198,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                     </entryLink>
                   </entryLinks>
                 </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="0687-c93a-80f6-ee9b" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="67cf-a60a-1bef-76ad" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a183-64e5-4ae0-3b30"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
               </entryLinks>
               <selectionEntryGroups>
                 <selectionEntryGroup name="90. Daemonic Gifts &amp; Magic Items" id="f013-d135-d7ce-c1f9" hidden="false">
@@ -12865,6 +13273,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                     <entryLink import="true" name="Daemon of Slaanesh" hidden="false" id="d07d-f961-ea32-4d54" type="selectionEntry" targetId="2703-6202-c21b-c2cb">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ff51-393e-deef-c624"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="135f-10ea-2e9a-c0b9" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="bee9-7dee-5f1f-b3ba" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3394-0ecb-410d-04d0"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
@@ -12951,6 +13368,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                     <entryLink import="true" name="Daemon of Tzeentch" hidden="false" id="a958-84b4-4e64-c85d" type="selectionEntry" targetId="d633-4c27-1ab0-31d9">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e211-72d4-92dd-59db"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="13a3-4bf9-8dee-6abb" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="31f2-5b15-b458-c98e" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="33cd-e090-a558-f93c"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
@@ -13048,6 +13474,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                   </entryLinks>
                 </entryLink>
                 <entryLink import="true" name="60. Wizard Level" hidden="false" id="0a73-c9fa-f6ac-1983" type="selectionEntryGroup" targetId="1d19-3d5b-2087-e988"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="6026-8661-77ce-3d65" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="b845-317d-e3dc-5e85" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bb7f-4fbe-7e10-5a18"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
               </entryLinks>
               <selectionEntryGroups>
                 <selectionEntryGroup name="61. Lore" id="97dd-b33d-120f-3c01" hidden="false">
@@ -13080,6 +13515,9 @@ Cursed terrain features placed in this way must be positioned touching an exist
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="06c6-9125-7c65-3ead" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="a376-9305-c28c-156f" targetId="22c9-1606-58f8-2e60" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -13360,6 +13798,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 </entryLink>
               </entryLinks>
             </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="cb30-ea8a-17ac-26db" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="9431-25cc-6a70-dc5b" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="888b-fa4d-ae31-2929"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="81. Upgrades" id="64e9-f42f-1b98-0890" hidden="false">
@@ -13489,6 +13936,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 </entryLink>
               </entryLinks>
             </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="d12d-9950-e1cd-53d1" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="ec3b-753b-d084-a0c5" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cc6a-6ac5-31a1-c93a"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="81. Upgrades" id="5bc8-be10-9bc7-1d4c" hidden="false">
@@ -13545,6 +14001,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 <entryLink import="true" name="Daemon of Tzeentch" hidden="false" id="d7c7-0907-08e0-ad9d" type="selectionEntry" targetId="d633-4c27-1ab0-31d9">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3ed3-1575-8a56-7cb7"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="db13-5535-7d20-a863" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="3c1a-ea49-3241-3734" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d8b4-2ac3-1a57-49f2"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
@@ -13696,6 +14161,15 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 </entryLink>
               </entryLinks>
             </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="13af-72bb-fa6e-ea67" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="35da-2ef0-b88a-b974" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ca94-4044-af7f-cd4b"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
           <infoLinks>
             <infoLink name="Natural Armour (6+)" id="a310-ee9e-a157-b382" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
@@ -13767,6 +14241,285 @@ Cursed terrain features placed in this way must be positioned touching an exist
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6ec8-d4d6-b516-36c1" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Exalted Seeker Chariot" hidden="false" id="c5ca-c336-0bd6-90fb" sortIndex="331">
+      <costs>
+        <cost name="pts" typeId="points" value="210"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="106e-07c1-482c-5aeb" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Chariot" hidden="false" id="85a0-036b-8a66-8e39" targetId="7224-b7fd-d652-3ff2" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="80. Daemonic Alignement" hidden="false" id="04b3-893f-7bd0-3fc6" type="selectionEntryGroup" targetId="ceac-7fb3-4e67-7b8a">
+          <entryLinks>
+            <entryLink import="true" name="Daemon of Slaanesh" hidden="false" id="1a8a-8917-138e-c3d9" type="selectionEntry" targetId="2703-6202-c21b-c2cb">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="84ea-99c9-f507-2afe"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="69. Crew" id="902d-befc-9e02-dc0f" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Alluress" hidden="false" id="3136-269b-9287-cdf7" type="selectionEntry" targetId="38e7-a835-858c-d918">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="596a-d82a-ee89-4809"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="68de-d98d-ff6a-c189"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Daemonette" hidden="false" id="6b1e-01ec-b8f1-5bbf" type="selectionEntry" targetId="ff12-7133-c3d6-7d5e">
+              <constraints>
+                <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="60df-ec20-1541-6817" automatic="true"/>
+                <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="0f1e-6779-5a00-57b2" automatic="true"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="70. Mounts" id="0954-b16c-f6e5-3796" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Steed of Slaanesh" hidden="false" id="3176-4731-3bd8-9825" type="selectionEntry" targetId="cd93-59a2-5b19-200f">
+              <constraints>
+                <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="14d7-27aa-4de3-3903"/>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="8cbe-7f9a-f475-3d05"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="81. Upgrades" id="7704-434e-dbd1-2192" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Scythes" hidden="false" id="eddd-e229-451b-6026" type="selectionEntry" targetId="865f-edfe-e4fd-d28e">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="26a1-4bf8-28ef-367d"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="forces" scope="6ee4-77bf-4402-f8ab" childId="force" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="forces" scope="ba04-e381-5855-8f34" childId="force" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Exalted Seeker Chariot" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6ea0-e0e5-d3c8-e9f7" publicationId="314a-aacb-0877-4081" page="49">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">9</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">8</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour Save 6+)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Impact Hits (3D6)" id="b029-f820-e9b8-227a" hidden="false" type="rule" targetId="ba8d-3b7f-3ea7-977b"/>
+      </infoLinks>
+      <rules>
+        <rule name="Totem of Endless Pleasure" id="12a7-b7e8-c7e5-cbf9" hidden="false" publicationId="314a-aacb-0877-4081" page="49">
+          <description>Any Daemon of Slaanesh unit within 6&quot; of an Exalted Chariot gains the Always Strikes First special rule.</description>
+        </rule>
+      </rules>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Burning Chariot" hidden="false" id="6bd1-0902-b4b4-4306" sortIndex="342">
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+      </costs>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="69. Crew" id="9901-49e6-8d57-10ab" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Exalted Flamer" hidden="false" id="1fdf-e485-d8d3-3b33" type="selectionEntry" targetId="f71c-53f1-ae76-d857" sortIndex="1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="39d1-46e2-0253-cd0c" automatic="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3d3a-39e5-fd33-7e61" automatic="true"/>
+              </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="8f7f-faa7-b395-476b" shared="true"/>
+                  </conditions>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden"/>
+                    <modifier type="set" value="0" field="39d1-46e2-0253-cd0c"/>
+                    <modifier type="set" value="0" field="3d3a-39e5-fd33-7e61"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+            </entryLink>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="3 Blue Horrors" hidden="false" id="3dde-a86c-12b3-d5bf" sortIndex="2">
+              <entryLinks>
+                <entryLink import="true" name="Blue Horror" hidden="false" id="6eaf-8859-ec82-ac7a" type="selectionEntry" targetId="70ac-dd67-51c3-70e2">
+                  <constraints>
+                    <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="4e8e-156d-3d12-a70f"/>
+                    <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="99f6-e36c-f091-1b7e"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="12"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="817f-313c-a703-3083"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="70. Mounts" id="8b77-3c4b-0cf8-5f34" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Screamer" hidden="false" id="ba21-137e-009c-2e5d" type="selectionEntry" targetId="43be-9a13-1fef-317a">
+              <constraints>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="8464-bc7c-4726-323f"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="444d-d122-afd0-39ea"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="a19c-0b02-904c-f5fd" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Chariot" hidden="false" id="4f00-9810-4289-1ecc" targetId="7224-b7fd-d652-3ff2" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="forces" scope="6ee4-77bf-4402-f8ab" childId="force" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="forces" scope="8f04-0b23-1850-fa9c" childId="force" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="80. Daemonic Alignement" hidden="false" id="a805-be39-46c3-059e" type="selectionEntryGroup" targetId="ceac-7fb3-4e67-7b8a">
+          <entryLinks>
+            <entryLink import="true" name="Daemon of Tzeentch" hidden="false" id="1da9-1499-80d3-6e3c" type="selectionEntry" targetId="d633-4c27-1ab0-31d9">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2e0c-c3d8-ecea-95be"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <categoryLinks>
+            <categoryLink name="Mount" hidden="false" id="f59d-45b8-417b-e4ca" targetId="8b8a-34b1-ed30-df11" primary="false"/>
+            <categoryLink name="Chariot" hidden="false" id="d9be-e0c0-b17a-d139" targetId="7224-b7fd-d652-3ff2" primary="false"/>
+          </categoryLinks>
+        </entryLink>
+      </entryLinks>
+      <profiles>
+        <profile name="Burning Chariot" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="3fad-da85-6b6e-cac3" publicationId="314a-aacb-0877-4081" page="51">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Daemon)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Exalted Flames of Tzeentch" id="6fe9-4f6d-ff52-25de" hidden="false" type="profile" targetId="5e5e-8634-ae86-ba2c"/>
+        <infoLink name="Fly (8)" id="fdc8-9954-4ded-be43" hidden="false" type="rule" targetId="0a9a-bfcb-1a9d-5609"/>
+      </infoLinks>
+      <rules>
+        <rule name="Slashing Attack" id="b72a-c334-977b-983d" hidden="false" publicationId="314a-aacb-0877-4081" page="51">
+          <description>If a Burning Chariot moves over one or more unengaged enemy units in the Remaining Moves sub-phase, each of those units suffer two Strength 4 Hits, distributed as shooting attacks.</description>
+        </rule>
+      </rules>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Exalted Flamer" hidden="false" id="e7cc-5f22-da11-f043" sortIndex="242">
+      <costs>
+        <cost name="pts" typeId="points" value="70"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Special" hidden="false" id="2e75-6078-faf9-e1ec" targetId="fc26-7737-f7cb-8977" primary="true"/>
+        <categoryLink name="Monstrous Infantry" hidden="false" id="ae40-59bc-f293-14ea" targetId="5fc5-b80a-115f-bca3" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="1382-2b67-707d-9502" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="c66d-33cd-d531-363d" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5c84-ef05-6045-6af3"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="80. Daemonic Alignement" hidden="false" id="e54c-ccfa-8d09-3d6c" type="selectionEntryGroup" targetId="ceac-7fb3-4e67-7b8a">
+          <entryLinks>
+            <entryLink import="true" name="Daemon of Tzeentch" hidden="false" id="5d4c-7962-1418-d27f" type="selectionEntry" targetId="d633-4c27-1ab0-31d9">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2358-c61d-e9eb-ec70"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Exalted Flamer" id="f2cf-de96-e77e-ca6f" hidden="false" type="profile" targetId="4bc7-c60a-1bf4-76ca"/>
+        <infoLink name="Flaming Attacks" id="7112-aadc-62d2-45f2" hidden="false" type="rule" targetId="8600-a090-2761-d661"/>
+        <infoLink name="Strider" id="50a3-091f-7776-ddf9" hidden="false" type="rule" targetId="c270-3956-9b64-b587"/>
+      </infoLinks>
+      <infoGroups>
+        <infoGroup name="Exalted Fire of Tzeentch" id="0d87-3123-9093-e092" hidden="false">
+          <rules>
+            <rule name="Exalted Fire of Tzeentch" id="f336-4e45-2c78-c8db" hidden="false" publicationId="314a-aacb-0877-4081" page="46">
+              <description>During the Shooting phase, the Exalted Flamer can shoot either Pink Fire or Blue Fire below. If a misfire is rolled when resolving Pink Fire or Blue Fire, the Exalted Flamer suffers D6 Strength D6 hits with the Flaming Attacks special rule.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile name="Blue Fire" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="19a4-c383-815f-0d4d" publicationId="314a-aacb-0877-4081" page="46">
+              <characteristics>
+                <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">D3+3</characteristic>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Flaming Attacks, Multiple Shots (Artillery Dice + D6), Rapid Fire, Slow to Fire</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Fire Thrower" id="0152-431c-2537-de59" hidden="false" type="profile" targetId="d259-6f2a-d6a9-0eec">
+              <modifiers>
+                <modifier type="set" value="D6" field="6ca0-d074-628f-e276"/>
+                <modifier type="set" value="Pink Fire" field="name"/>
+                <modifier type="append" value="Slow to Fire" field="d3a4-721b-f750-5564" join=", "/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </infoGroup>
+      </infoGroups>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="forces" scope="6ee4-77bf-4402-f8ab" childId="force" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="1" field="forces" scope="8f04-0b23-1850-fa9c" childId="force" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </selectionEntries>
   <sharedProfiles>
@@ -14078,68 +14831,6 @@ Cursed terrain features placed in this way must be positioned touching an exist
       </infoLinks>
     </infoGroup>
   </sharedInfoGroups>
-  <entryLinks>
-    <entryLink import="true" name="Burning Chariot" hidden="false" id="a32e-0b46-32ef-d8fa" type="selectionEntry" targetId="6fee-ddfd-9f9b-74ba" sortIndex="342">
-      <categoryLinks>
-        <categoryLink name="Rare" hidden="false" id="8b42-07cf-c270-ef03" targetId="0eb4-f376-7725-b05b" primary="true"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="120"/>
-      </costs>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="6ee4-77bf-4402-f8ab" childId="force" shared="true" includeChildSelections="true"/>
-                <condition type="notInstanceOf" value="1" field="forces" scope="8f04-0b23-1850-fa9c" childId="force" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-    </entryLink>
-    <entryLink import="true" name="Exalted Seeker Chariot" hidden="false" id="ccaa-ccfc-123f-7125" type="selectionEntry" targetId="e901-5efc-f690-5b3a" sortIndex="331">
-      <categoryLinks>
-        <categoryLink name="Rare" hidden="false" id="0a0f-0c0a-6d3e-cc6e" targetId="0eb4-f376-7725-b05b" primary="true"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="210"/>
-      </costs>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="6ee4-77bf-4402-f8ab" childId="force" shared="true" includeChildSelections="true"/>
-                <condition type="notInstanceOf" value="1" field="forces" scope="ba04-e381-5855-8f34" childId="force" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-    </entryLink>
-    <entryLink import="true" name="Exalted Flamer" hidden="false" id="50e4-67a0-5099-e289" type="selectionEntry" targetId="f71c-53f1-ae76-d857" sortIndex="242">
-      <categoryLinks>
-        <categoryLink name="Special" hidden="false" id="6a24-4b22-4212-db5a" targetId="fc26-7737-f7cb-8977" primary="true"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="70"/>
-      </costs>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="forces" scope="6ee4-77bf-4402-f8ab" childId="force" shared="true" includeChildSelections="true"/>
-                <condition type="notInstanceOf" value="1" field="forces" scope="8f04-0b23-1850-fa9c" childId="force" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-    </entryLink>
-  </entryLinks>
   <forceEntries>
     <forceEntry name="Khorne Army" id="c0c1-70f7-a974-af37" hidden="false">
       <categoryLinks>
