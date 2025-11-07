@@ -1219,6 +1219,37 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="467b-19b0-412b-86b5"/>
       </constraints>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Handweapon &amp; Ironfist" hidden="false" id="affb-b060-2905-606a" collective="true" sortIndex="33">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7872-5a88-342f-560f"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Ironfist" id="210e-8cb4-409a-101f" hidden="false" type="profile" targetId="0dfd-1ecf-97a2-5671"/>
+        <infoLink name="Hand Weapon" id="0110-04ad-7750-5abe" hidden="false" type="profile" targetId="f6da-d707-0cd6-b1dd"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="ba52-4f0c-71ae-b52d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="The Lazarghs" hidden="false" id="27b6-66ea-d493-9599">
+      <infoLinks>
+        <infoLink name="Terror" id="73d8-fb15-c2b0-45bb" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5c57-74c7-b158-d789" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="df24-3fd3-f7a7-77aa" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Big Names of the Ogres" id="9e13-1e13-243e-d38b" hidden="false" sortIndex="10">
@@ -3902,33 +3933,30 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
           <costs>
             <cost name="pts" typeId="points" value="29"/>
           </costs>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Primary Weapon" id="fd1c-0ca2-d814-6193" hidden="false" sortIndex="1">
+          <entryLinks>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="d0f6-23be-323c-5853" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="de8d-e0d8-06a4-a641" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
                 <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="9073-4b5e-d616-60c7" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="de8d-e0d8-06a4-a641" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
-                <entryLink import="true" name="Ironfist" hidden="false" id="634d-f040-d1ec-8f1d" type="selectionEntry" targetId="4a96-6696-5613-32af" sortIndex="3">
+                <entryLink import="true" name="Handweapon &amp; Ironfist" hidden="false" id="634d-f040-d1ec-8f1d" type="selectionEntry" targetId="affb-b060-2905-606a" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
                 </entryLink>
               </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0918-8609-66a1-ea33"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cbce-ea08-9f3d-9584"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <entryLinks>
-            <entryLink import="true" name="Gut Plate" hidden="false" id="dd15-365e-5300-d7c2" type="selectionEntry" targetId="70bc-a2e4-d580-b03f" sortIndex="2">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1766-33a6-82f9-53e6-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1766-33a6-82f9-53e6-max"/>
-              </constraints>
+            </entryLink>
+            <entryLink import="true" name="41. Gut Plate" hidden="false" id="96a5-0fa2-c818-b240" type="selectionEntryGroup" targetId="6cfc-d55c-2cdf-5629">
+              <entryLinks>
+                <entryLink import="true" name="Gut Plate" hidden="false" id="dd15-365e-5300-d7c2" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1766-33a6-82f9-53e6-min"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
           <infoLinks>
@@ -3954,31 +3982,6 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
           <constraints>
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="82c5-71c7-c553-39aa"/>
           </constraints>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="The Lazarghs" hidden="false" id="27b6-66ea-d493-9599" sortIndex="2">
-          <infoLinks>
-            <infoLink name="Terror" id="73d8-fb15-c2b0-45bb" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5c57-74c7-b158-d789" includeChildSelections="true" includeChildForces="true"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="roster" childId="df24-3fd3-f7a7-77aa" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="add" value="Only 1 unit of Ogre Bulls or Ironguts can be Tha Lazarghs" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="27b6-66ea-d493-9599" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="da92-9943-beb4-2276" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -4028,6 +4031,9 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <entryLinks>
+        <entryLink import="true" name="The Lazarghs" hidden="false" id="e8bf-0bc8-dfcf-a425" type="selectionEntry" targetId="27b6-66ea-d493-9599" sortIndex="2"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Ironguts" hidden="false" id="9fb2-46fa-a60a-4015" sortIndex="102">
       <selectionEntries>
@@ -4036,23 +4042,33 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <cost name="pts" typeId="points" value="43"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Great Weapon" hidden="false" id="9e30-d0e6-8584-9c0d" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="1">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="58e5-3310-9089-9def-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="58e5-3310-9089-9def-max"/>
-              </constraints>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="216a-d0ed-0c62-4a79" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Great Weapon" hidden="false" id="9e30-d0e6-8584-9c0d" type="selectionEntry" targetId="0473-857e-78d9-cb7c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="58e5-3310-9089-9def-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="58e5-3310-9089-9def-max"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Gut Plate" hidden="false" id="0470-3a66-7204-fc0c" type="selectionEntry" targetId="70bc-a2e4-d580-b03f" sortIndex="3">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="54c4-ee16-22c6-1e57"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="16bc-e4e2-a1a7-cc96"/>
-              </constraints>
+            <entryLink import="true" name="41. Gut Plate" hidden="false" id="110e-9ee7-7f48-c215" type="selectionEntryGroup" targetId="6cfc-d55c-2cdf-5629">
+              <entryLinks>
+                <entryLink import="true" name="Gut Plate" hidden="false" id="d29b-af85-a183-20e6" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d068-9bfe-5608-e1dd"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Light Armour" hidden="false" id="0ca2-b455-0fbc-1d87" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="2">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3762-bfb9-8c1e-260a-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3762-bfb9-8c1e-260a-max"/>
-              </constraints>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="1f3d-0771-2a7c-bfa4" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+              <entryLinks>
+                <entryLink import="true" name="Light Armour" hidden="false" id="0ca2-b455-0fbc-1d87" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3762-bfb9-8c1e-260a-min"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
           <infoLinks>
@@ -4083,31 +4099,6 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
               <description>If a friendly unit of Ogres within 6&quot; of an Irongut unit breaks from combat, the Ironguts may re-roll 1&apos;s when rolling To Hit and To Wound in close combat this turn.</description>
             </rule>
           </rules>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="The Lazarghs" hidden="false" id="da92-9943-beb4-2276" sortIndex="2">
-          <infoLinks>
-            <infoLink name="Terror" id="4ab3-ed44-e28c-f546" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2213-fcd8-66c9-0353" includeChildSelections="true" includeChildForces="true"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="roster" childId="df24-3fd3-f7a7-77aa" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="add" value="Only 1 unit of Ogre Bulls or Ironguts can be Tha Lazarghs" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="27b6-66ea-d493-9599" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="da92-9943-beb4-2276" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -4161,6 +4152,9 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
         <categoryLink targetId="b876-2856-f1c2-c4f0" id="acf6-7839-f054-4417" primary="true" name="Core"/>
         <categoryLink name="Monstrous Infantry" hidden="false" id="dcfc-383d-2ffc-a4e1" targetId="5fc5-b80a-115f-bca3" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="The Lazarghs" hidden="false" id="117d-79c5-bcb7-3454" type="selectionEntry" targetId="27b6-66ea-d493-9599" sortIndex="3"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Gnoblar Fighters" hidden="false" id="4ba1-fda7-6f42-b9b8" sortIndex="103">
       <selectionEntryGroups>
@@ -4207,8 +4201,8 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
           <costs>
             <cost name="pts" typeId="points" value="2.5"/>
           </costs>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Primary Equipement" id="fcd1-2e38-c9d5-2a42" hidden="false" sortIndex="1">
+          <entryLinks>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="b1ea-2a8b-6cb8-99dc" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Hand Weapon" hidden="false" id="e350-8785-7bbb-a5f4" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
                 <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="1e6c-8f58-c0d5-704b" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
@@ -4222,17 +4216,15 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                   </costs>
                 </entryLink>
               </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1115-ee5e-dea4-8079-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1115-ee5e-dea4-8079-max"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <entryLinks>
-            <entryLink import="true" name="Throwing Weapons" hidden="false" id="1042-928f-37e0-099c" type="selectionEntry" targetId="8013-6f6f-96e1-1acc" sortIndex="2">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a8c1-0524-bc28-ba6a"/>
-              </constraints>
+            </entryLink>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="c590-7d4c-0907-5a08" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+              <entryLinks>
+                <entryLink import="true" name="Throwing Weapons" hidden="false" id="1042-928f-37e0-099c" type="selectionEntry" targetId="8013-6f6f-96e1-1acc">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a8c1-0524-bc28-ba6a"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
           <infoLinks>
@@ -4327,30 +4319,44 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="4d4f-7851-788e-480b"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Gut Plate" hidden="false" id="0e0e-2a86-531a-2cc0" type="selectionEntry" targetId="70bc-a2e4-d580-b03f" sortIndex="2">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4596-00a1-f92d-b75b"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b002-b24d-a00e-e7c6"/>
-              </constraints>
+            <entryLink import="true" name="41. Gut Plate" hidden="false" id="acbf-ed35-9aec-caec" type="selectionEntryGroup" targetId="6cfc-d55c-2cdf-5629">
+              <entryLinks>
+                <entryLink import="true" name="Gut Plate" hidden="false" id="4806-b449-d5da-979d" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3f46-3a83-901f-8a36"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="16a1-cc99-76bd-f389" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Leadbelcher gun" hidden="false" id="98dd-4a8d-4f57-c99b" collective="true">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ac57-2194-618e-4e23-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ac57-2194-618e-4e23-max"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Leadbelcher gun" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="c4aa-4d4f-6d68-349f" publicationId="dc4b-67ab-7b8e-baa5" page="23">
+                      <characteristics>
+                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">24&quot;</characteristic>
+                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
+                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1), Multiple Shots (D6), Rapid Fire, Slow to Fire</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="61b6-13f3-eb46-f4e9" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="c6ee-d1e8-8771-ecd6" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e359-689b-14e4-31d0"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Leadbelcher gun" hidden="false" id="98dd-4a8d-4f57-c99b" sortIndex="1" collective="true">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ac57-2194-618e-4e23-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ac57-2194-618e-4e23-max"/>
-              </constraints>
-              <profiles>
-                <profile name="Leadbelcher gun" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="c4aa-4d4f-6d68-349f" publicationId="dc4b-67ab-7b8e-baa5" page="23">
-                  <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">24&quot;</characteristic>
-                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1), Multiple Shots (D6), Rapid Fire, Slow to Fire</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
         </selectionEntry>
       </selectionEntries>
       <categoryLinks>
@@ -4359,19 +4365,17 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
       </categoryLinks>
       <modifiers>
         <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b83c-fd66-0ff0-5800" shared="true" includeChildSelections="true" includeChildForces="true">
-                  <comment>Ghark Ironskin General</comment>
-                </condition>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="b44a-cdd1-af7d-51a5" shared="true" includeChildSelections="true" includeChildForces="true">
+              <comment>Ghark Ironskin General</comment>
+            </condition>
+          </conditions>
         </modifier>
         <modifier type="remove" value="fc26-7737-f7cb-8977" field="category">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="047f-ec6f-514d-8197" shared="true" includeChildSelections="true" includeChildForces="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="b44a-cdd1-af7d-51a5" shared="true" includeChildSelections="true" includeChildForces="true">
+              <comment>Ghark Ironskin General</comment>
+            </condition>
           </conditions>
         </modifier>
       </modifiers>
@@ -4379,11 +4383,11 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
     <selectionEntry type="unit" import="true" name="Mournfang Cavalry" hidden="false" id="368f-19ab-57fd-3075" sortIndex="202">
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Mournfang Cavalry" hidden="false" id="8287-a72f-6772-b84b" sortIndex="1">
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Primary Weapon" id="0eb5-8c19-e71d-0300" hidden="false" sortIndex="1">
+          <entryLinks>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="bbde-8850-844e-7a00" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Hand Weapon" hidden="false" id="237c-9bb3-7b5a-b6b2" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
-                <entryLink import="true" name="Ironfist" hidden="false" id="fcba-e4bc-4d78-0e2d" type="selectionEntry" targetId="4a96-6696-5613-32af" sortIndex="2">
+                <entryLink import="true" name="Handweapon &amp; Ironfist" hidden="false" id="fcba-e4bc-4d78-0e2d" type="selectionEntry" targetId="affb-b060-2905-606a" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
@@ -4394,28 +4398,35 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                   </costs>
                 </entryLink>
               </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0e7c-8714-9493-86a0"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e3a7-90a3-6d40-e660"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <entryLinks>
-            <entryLink import="true" name="Light Armour" hidden="false" id="280e-100d-ba6e-b576" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="2">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2d8a-1d37-084f-8103"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="62c5-3dd7-07a5-c716"/>
-              </constraints>
             </entryLink>
-            <entryLink import="true" name="Gut Plate" hidden="false" id="48b8-b5fa-a268-45f7" type="selectionEntry" targetId="70bc-a2e4-d580-b03f" sortIndex="3">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0f61-f3c5-c113-889c"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0d56-2805-f5bd-2913"/>
-              </constraints>
+            <entryLink import="true" name="41. Gut Plate" hidden="false" id="1605-397d-a6ac-ebc7" type="selectionEntryGroup" targetId="6cfc-d55c-2cdf-5629">
+              <entryLinks>
+                <entryLink import="true" name="Gut Plate" hidden="false" id="ba48-a29a-1cd5-d2b9" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d894-a0af-16a3-dada"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Mournfang" hidden="false" id="cf59-6f75-05d2-2cdb" type="selectionEntry" targetId="4fd0-c74b-3830-d8f9" sortIndex="4">
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="2d45-7823-fecd-b191" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+              <entryLinks>
+                <entryLink import="true" name="Light Armour" hidden="false" id="215c-d0e8-7dba-0fee" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7b47-6883-7101-35f6"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="70. Mount" hidden="false" id="5c60-9c9e-7074-2d3b" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+              <entryLinks>
+                <entryLink import="true" name="Mournfang" hidden="false" id="cf59-6f75-05d2-2cdb" type="selectionEntry" targetId="4fd0-c74b-3830-d8f9">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c7a4-1ec6-fbcf-8fbd"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c7a4-1ec6-fbcf-8fbd"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="55c6-8fce-1aa0-ad67"/>
               </constraints>
             </entryLink>
           </entryLinks>
@@ -4505,60 +4516,16 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
               </entryLinks>
             </selectionEntry>
           </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Command Group" id="8cce-8f8b-c078-f50f" hidden="false">
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="cbc8-4443-426d-c4f2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="5"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b726-bc0e-c28f-9df4"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Leader" id="1067-09fa-2f42-8d83" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
-                  </infoLinks>
-                  <entryLinks>
-                    <entryLink import="true" name="Brace of Ogre Pistols" hidden="false" id="8148-e3e7-2ef3-3580" type="selectionEntry" targetId="3644-d33d-218c-a3c9">
-                      <costs>
-                        <cost name="pts" typeId="points" value="6"/>
-                      </costs>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="4f06-4248-52f5-6faa">
-                  <costs>
-                    <cost name="pts" typeId="points" value="5"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="39cf-8532-68c0-63eb"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Musician" id="2a32-80e3-2c52-9c1e" hidden="false" type="rule" targetId="54c3-1d1b-3ffe-59a5"/>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="cb6a-97fb-816d-d361">
-                  <costs>
-                    <cost name="pts" typeId="points" value="10"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="874a-ce74-e88c-8f0c"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Standard Bearer" id="620c-6d00-00f3-af2a" hidden="false" type="rule" targetId="6002-29d0-d620-1bd0"/>
-                  </infoLinks>
-                  <entryLinks>
-                    <entryLink import="true" name="Magic Standards" hidden="false" id="7462-ba68-001f-5ee2" type="selectionEntryGroup" targetId="f43b-339a-4591-11fe">
-                      <constraints>
-                        <constraint type="max" value="25" field="points" scope="parent" shared="false" id="37d8-92a8-0285-c757" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                      </constraints>
-                    </entryLink>
-                    <entryLink import="true" name="Look-out Gnoblar" hidden="false" id="d432-6ad4-3054-ffa5" type="selectionEntry" targetId="ab4f-f365-83a1-9b65"/>
-                  </entryLinks>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="442f-2f3b-bb05-20bd"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="3" field="442f-2f3b-bb05-20bd">
+              <conditions>
+                <condition type="atLeast" value="3" field="selections" scope="unit" childId="8287-a72f-6772-b84b" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -4589,8 +4556,8 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f6bf-2232-c4ba-c0b2"/>
-                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="1a6e-a212-4cae-5682"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f6bf-2232-c4ba-c0b2" automatic="true"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="1a6e-a212-4cae-5682" automatic="true"/>
               </constraints>
               <infoLinks>
                 <infoLink name="Musician" id="fae1-825f-f761-0e99" hidden="false" type="rule" targetId="54c3-1d1b-3ffe-59a5"/>
@@ -4640,10 +4607,136 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                     <constraint type="max" value="50" field="points" scope="parent" shared="false" id="ae31-f95d-d33d-d94c" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                   </constraints>
                 </entryLink>
-                <entryLink import="true" name="Gut Plate" hidden="false" id="b888-9f83-35ae-1d87" type="selectionEntry" targetId="70bc-a2e4-d580-b03f" sortIndex="3">
+                <entryLink import="true" name="41. Gut Plate" hidden="false" id="04d0-453d-6a0e-a9bc" type="selectionEntryGroup" targetId="6cfc-d55c-2cdf-5629" sortIndex="1">
+                  <entryLinks>
+                    <entryLink import="true" name="Gut Plate" hidden="false" id="60b4-1fe4-25ab-5176" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dcdb-5cdd-248a-8922"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="55. Equipment" hidden="false" id="0181-1ee1-d3b6-9c52" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575" sortIndex="2">
                   <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c9c9-65db-79c9-7235"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f045-44e1-5b63-682d"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3479-b358-6de0-f575"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bc52-3ace-7403-d13f"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="184b-b81f-b630-1c28" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+                    <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="c5ae-c9b4-7df3-b209" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
+                      <costs>
+                        <cost name="pts" typeId="points" value="3"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Handweapon &amp; Ironfist" hidden="false" id="bf7d-82dd-6fa8-0f95" type="selectionEntry" targetId="affb-b060-2905-606a" sortIndex="3">
+                      <costs>
+                        <cost name="pts" typeId="points" value="3"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Oriental Longsword" hidden="false" id="7edf-dd44-f385-ceec" type="selectionEntry" targetId="0b80-7cdb-7e60-815c" sortIndex="4">
+                      <costs>
+                        <cost name="pts" typeId="points" value="3"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Ogre Pistol" hidden="false" id="15a6-0f9f-8b62-f7ed" type="selectionEntry" targetId="9c06-bad6-8730-a29f" sortIndex="5">
+                      <costs>
+                        <cost name="pts" typeId="points" value="6"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Polearm/Halberd" hidden="false" id="5eb9-ed89-f24d-1ac7" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="6">
+                      <costs>
+                        <cost name="pts" typeId="points" value="6"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Brace of Ogre Pistols" hidden="false" id="23af-829e-b362-aa60" type="selectionEntry" targetId="3644-d33d-218c-a3c9" sortIndex="7">
+                      <costs>
+                        <cost name="pts" typeId="points" value="9"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Great Weapon" hidden="false" id="7107-f95d-a27a-5985" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="8">
+                      <costs>
+                        <cost name="pts" typeId="points" value="9"/>
+                      </costs>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="56. Upgrades" hidden="false" id="d9b0-8bda-1443-466e" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d" sortIndex="3">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Armour Piercing (1)" hidden="false" id="1b91-699d-cc39-6aca" sortIndex="1">
+                      <costs>
+                        <cost name="pts" typeId="points" value="1"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Armour Piercing" id="5bde-f631-93a4-e372" hidden="false" type="rule" targetId="bf4e-212e-fe1d-20c6">
+                          <modifiers>
+                            <modifier type="append" value="1" field="annotation"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Devastating Charge" hidden="false" id="d7cb-e726-105a-f6ed" sortIndex="2">
+                      <costs>
+                        <cost name="pts" typeId="points" value="1"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Devastating Charge" id="61b1-7371-e82c-12fd" hidden="false" type="rule" targetId="e025-10f3-f893-4bd7"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Killing Blow" hidden="false" id="a043-b933-6c8c-b0b0" sortIndex="3">
+                      <costs>
+                        <cost name="pts" typeId="points" value="2"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Killing Blow" id="b6b5-183e-9f55-902f" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Mighty Blow (1)" hidden="false" id="51c3-0fd7-d2db-51da" sortIndex="4">
+                      <costs>
+                        <cost name="pts" typeId="points" value="2"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Mighty Blow (1)" id="d5d7-6d70-20f0-3730" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Multiple Wounds (2)" hidden="false" id="c30f-5653-d893-4b86" sortIndex="5">
+                      <costs>
+                        <cost name="pts" typeId="points" value="2"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Multiple Wounds (2)" id="ff9d-30cb-d1bf-ad14" hidden="false" type="rule" targetId="a4e2-d94c-e906-a868"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Parry (6+)" hidden="false" id="022e-0486-f0ba-4dc6" sortIndex="6">
+                      <costs>
+                        <cost name="pts" typeId="points" value="2"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Parry (6+)" id="1094-261a-d2a8-a7a3" hidden="false" type="rule" targetId="e56f-d7d4-8987-dbdb"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Poisoned Attacks (close combat only)" hidden="false" id="0995-a701-0ed5-7ca0" sortIndex="7">
+                      <costs>
+                        <cost name="pts" typeId="points" value="2"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Poisoned Attacks" id="3d85-6fb3-659b-f4eb" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef">
+                          <modifiers>
+                            <modifier type="append" value="close combat only" field="annotation"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Hatred" hidden="false" id="3628-6b65-ac0b-ff0b" sortIndex="8">
+                      <costs>
+                        <cost name="pts" typeId="points" value="3"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Hatred" id="2b5a-5c45-ff0a-eac1" hidden="false" type="rule" targetId="f6d7-9fbc-abc1-5cfc"/>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3fd2-6753-3562-7180"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
@@ -4687,131 +4780,6 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                   </characteristics>
                 </profile>
               </profiles>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Weapon" id="b220-faf7-7212-58ff" hidden="false" sortIndex="1" defaultSelectionEntryId="afee-91cb-dd63-b4e5">
-                  <entryLinks>
-                    <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="20fd-bd30-eb42-881b" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
-                      <costs>
-                        <cost name="pts" typeId="points" value="3"/>
-                      </costs>
-                    </entryLink>
-                    <entryLink import="true" name="Hand Weapon" hidden="false" id="afee-91cb-dd63-b4e5" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
-                    <entryLink import="true" name="Ironfist" hidden="false" id="223f-ad85-cbed-a6fe" type="selectionEntry" targetId="4a96-6696-5613-32af" sortIndex="3">
-                      <costs>
-                        <cost name="pts" typeId="points" value="3"/>
-                      </costs>
-                    </entryLink>
-                    <entryLink import="true" name="Oriental Longsword" hidden="false" id="4691-e70a-9cea-c2d2" type="selectionEntry" targetId="0b80-7cdb-7e60-815c" sortIndex="4">
-                      <costs>
-                        <cost name="pts" typeId="points" value="3"/>
-                      </costs>
-                    </entryLink>
-                    <entryLink import="true" name="Ogre Pistol" hidden="false" id="9c75-8b33-2e5e-46fa" type="selectionEntry" targetId="9c06-bad6-8730-a29f" sortIndex="5">
-                      <costs>
-                        <cost name="pts" typeId="points" value="6"/>
-                      </costs>
-                    </entryLink>
-                    <entryLink import="true" name="Polearm/Halberd" hidden="false" id="eb53-207c-f165-2374" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="6">
-                      <costs>
-                        <cost name="pts" typeId="points" value="6"/>
-                      </costs>
-                    </entryLink>
-                    <entryLink import="true" name="Brace of Ogre Pistols" hidden="false" id="413b-629d-bbe6-5d7f" type="selectionEntry" targetId="3644-d33d-218c-a3c9" sortIndex="7">
-                      <costs>
-                        <cost name="pts" typeId="points" value="9"/>
-                      </costs>
-                    </entryLink>
-                    <entryLink import="true" name="Great Weapon" hidden="false" id="6ec4-acfb-230e-0207" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="8">
-                      <costs>
-                        <cost name="pts" typeId="points" value="9"/>
-                      </costs>
-                    </entryLink>
-                  </entryLinks>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0c3f-dcf1-e23d-f06e"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="50e5-dc4e-dac0-2912"/>
-                  </constraints>
-                </selectionEntryGroup>
-                <selectionEntryGroup name="Special Rules" id="ab99-526c-a592-1dcc" hidden="false" sortIndex="2">
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Armour Piercing (1)" hidden="false" id="2193-53dc-fcff-c6f4" sortIndex="1">
-                      <costs>
-                        <cost name="pts" typeId="points" value="1"/>
-                      </costs>
-                      <infoLinks>
-                        <infoLink name="Armour Piercing" id="400e-df58-2173-dc73" hidden="false" type="rule" targetId="bf4e-212e-fe1d-20c6">
-                          <modifiers>
-                            <modifier type="append" value="1" field="annotation"/>
-                          </modifiers>
-                        </infoLink>
-                      </infoLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Devastating Charge" hidden="false" id="cb5c-e438-f1da-27ea" sortIndex="2">
-                      <costs>
-                        <cost name="pts" typeId="points" value="1"/>
-                      </costs>
-                      <infoLinks>
-                        <infoLink name="Devastating Charge" id="64b7-29f3-333e-915f" hidden="false" type="rule" targetId="e025-10f3-f893-4bd7"/>
-                      </infoLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Killing Blow" hidden="false" id="dac4-6a0f-78fe-a691" sortIndex="3">
-                      <costs>
-                        <cost name="pts" typeId="points" value="2"/>
-                      </costs>
-                      <infoLinks>
-                        <infoLink name="Killing Blow" id="05a8-7cc8-517f-78da" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29"/>
-                      </infoLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Mighty Blow (1)" hidden="false" id="3ee6-a0b5-1fba-200c" sortIndex="4">
-                      <costs>
-                        <cost name="pts" typeId="points" value="2"/>
-                      </costs>
-                      <infoLinks>
-                        <infoLink name="Mighty Blow (1)" id="05dd-6ab8-6425-763e" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
-                      </infoLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Multiple Wounds (2)" hidden="false" id="7e06-759d-b2de-3792" sortIndex="5">
-                      <costs>
-                        <cost name="pts" typeId="points" value="2"/>
-                      </costs>
-                      <infoLinks>
-                        <infoLink name="Multiple Wounds (2)" id="e96f-c3ff-5aee-e666" hidden="false" type="rule" targetId="a4e2-d94c-e906-a868"/>
-                      </infoLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Parry (6+)" hidden="false" id="3cfa-f2d1-fe3a-c3bc" sortIndex="6">
-                      <costs>
-                        <cost name="pts" typeId="points" value="2"/>
-                      </costs>
-                      <infoLinks>
-                        <infoLink name="Parry (6+)" id="a0cc-431b-eda2-5d2e" hidden="false" type="rule" targetId="e56f-d7d4-8987-dbdb"/>
-                      </infoLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Poisoned Attacks (close combat only)" hidden="false" id="3586-7208-c5bd-e133" sortIndex="7">
-                      <costs>
-                        <cost name="pts" typeId="points" value="2"/>
-                      </costs>
-                      <infoLinks>
-                        <infoLink name="Poisoned Attacks" id="3f0c-91f0-8c19-4a40" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef">
-                          <modifiers>
-                            <modifier type="append" value="close combat only" field="annotation"/>
-                          </modifiers>
-                        </infoLink>
-                      </infoLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Hatred" hidden="false" id="3445-36d6-2d7d-f738" sortIndex="8">
-                      <costs>
-                        <cost name="pts" typeId="points" value="3"/>
-                      </costs>
-                      <infoLinks>
-                        <infoLink name="Hatred" id="259a-3806-3d74-70c8" hidden="false" type="rule" targetId="f6d7-9fbc-abc1-5cfc"/>
-                      </infoLinks>
-                    </selectionEntry>
-                  </selectionEntries>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6399-e0c6-f825-72c3"/>
-                  </constraints>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4856,140 +4824,141 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
               </profiles>
             </selectionEntry>
           </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Weapon" id="182f-d24b-ff7c-3717" hidden="false" sortIndex="2">
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="7d02-fd47-0cac-3365"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="41. Gut Plate" hidden="false" id="9866-8238-09ad-46d0" type="selectionEntryGroup" targetId="6cfc-d55c-2cdf-5629">
               <entryLinks>
-                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="e2a5-7b46-6588-a349" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="3"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="b67c-381b-6085-1eb1" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
-                <entryLink import="true" name="Ironfist" hidden="false" id="200f-5c65-66b5-b84e" type="selectionEntry" targetId="4a96-6696-5613-32af" sortIndex="3">
-                  <costs>
-                    <cost name="pts" typeId="points" value="3"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Oriental Longsword" hidden="false" id="b5fb-c8bf-8d55-d614" type="selectionEntry" targetId="0b80-7cdb-7e60-815c" sortIndex="4">
-                  <costs>
-                    <cost name="pts" typeId="points" value="3"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Ogre Pistol" hidden="false" id="8653-3a70-8cbc-6e2f" type="selectionEntry" targetId="9c06-bad6-8730-a29f" sortIndex="5">
-                  <costs>
-                    <cost name="pts" typeId="points" value="6"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Polearm/Halberd" hidden="false" id="08c9-5ff9-9544-4182" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="6">
-                  <costs>
-                    <cost name="pts" typeId="points" value="6"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Brace of Ogre Pistols" hidden="false" id="a2e0-88ff-486a-d2fe" type="selectionEntry" targetId="3644-d33d-218c-a3c9" sortIndex="7">
-                  <costs>
-                    <cost name="pts" typeId="points" value="9"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Great Weapon" hidden="false" id="5c0a-a5cc-e576-e848" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="8">
-                  <costs>
-                    <cost name="pts" typeId="points" value="9"/>
-                  </costs>
+                <entryLink import="true" name="Gut Plate" hidden="false" id="a6f9-7064-9901-d40b" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="badd-c097-ffbc-abd1"/>
+                  </constraints>
                 </entryLink>
               </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f5c3-3001-aed9-9221-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f5c3-3001-aed9-9221-max"/>
-              </constraints>
-            </selectionEntryGroup>
-            <selectionEntryGroup name="Special Rules" id="06a4-f587-5cda-e5c0" hidden="false" sortIndex="3">
+            </entryLink>
+            <entryLink import="true" name="56. Upgrades" hidden="false" id="c69d-8801-9a90-b35e" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Armour Piercing (1)" hidden="false" id="7d2b-a47e-bb5b-162d" sortIndex="1">
+                <selectionEntry type="upgrade" import="true" name="Armour Piercing (1)" hidden="false" id="1998-9349-cfbd-7a1e" sortIndex="1">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
                   <infoLinks>
-                    <infoLink name="Armour Piercing" id="6149-fbf7-c02c-0b08" hidden="false" type="rule" targetId="bf4e-212e-fe1d-20c6">
+                    <infoLink name="Armour Piercing" id="3340-6c35-d88d-f1ab" hidden="false" type="rule" targetId="bf4e-212e-fe1d-20c6">
                       <modifiers>
                         <modifier type="append" value="1" field="annotation"/>
                       </modifiers>
                     </infoLink>
                   </infoLinks>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Devastating Charge" hidden="false" id="dcee-191d-657f-7f5f" sortIndex="2">
+                <selectionEntry type="upgrade" import="true" name="Devastating Charge" hidden="false" id="c547-cd5a-5f6a-9d9f" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
                   <infoLinks>
-                    <infoLink name="Devastating Charge" id="cb3a-674d-80fa-fb1a" hidden="false" type="rule" targetId="e025-10f3-f893-4bd7"/>
+                    <infoLink name="Devastating Charge" id="0455-a0de-ef88-fb3a" hidden="false" type="rule" targetId="e025-10f3-f893-4bd7"/>
                   </infoLinks>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Killing Blow" hidden="false" id="7100-da57-f52f-839c" sortIndex="3">
+                <selectionEntry type="upgrade" import="true" name="Killing Blow" hidden="false" id="ec74-df68-5029-c545" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
                   <infoLinks>
-                    <infoLink name="Killing Blow" id="7f23-3201-1c36-dd6d" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29"/>
+                    <infoLink name="Killing Blow" id="0877-1a24-25e6-c642" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29"/>
                   </infoLinks>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Mighty Blow (1)" hidden="false" id="af2d-fca6-5e4b-39f3" sortIndex="4">
+                <selectionEntry type="upgrade" import="true" name="Mighty Blow (1)" hidden="false" id="420b-1fff-1bb1-b247" sortIndex="4">
                   <costs>
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
                   <infoLinks>
-                    <infoLink name="Mighty Blow (1)" id="f01a-7a43-70b5-b58f" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
+                    <infoLink name="Mighty Blow (1)" id="ac16-e20f-0e6a-f8eb" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
                   </infoLinks>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Multiple Wounds (2)" hidden="false" id="2629-01a0-5bb0-e0e1" sortIndex="5">
+                <selectionEntry type="upgrade" import="true" name="Multiple Wounds (2)" hidden="false" id="f29f-31a1-a55f-2a26" sortIndex="5">
                   <costs>
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
                   <infoLinks>
-                    <infoLink name="Multiple Wounds (2)" id="96ee-7b57-cef6-1e4e" hidden="false" type="rule" targetId="a4e2-d94c-e906-a868"/>
+                    <infoLink name="Multiple Wounds (2)" id="b4a9-699d-5e59-6436" hidden="false" type="rule" targetId="a4e2-d94c-e906-a868"/>
                   </infoLinks>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Parry (6+)" hidden="false" id="dd14-421a-d166-5c98" sortIndex="6">
+                <selectionEntry type="upgrade" import="true" name="Parry (6+)" hidden="false" id="124b-78d7-0b17-1f1d" sortIndex="6">
                   <costs>
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
                   <infoLinks>
-                    <infoLink name="Parry (6+)" id="6b15-aa65-fcbe-3207" hidden="false" type="rule" targetId="e56f-d7d4-8987-dbdb"/>
+                    <infoLink name="Parry (6+)" id="29a8-6b3c-6109-2650" hidden="false" type="rule" targetId="e56f-d7d4-8987-dbdb"/>
                   </infoLinks>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Poisoned Attacks (close combat only)" hidden="false" id="c944-edd2-34ba-58c0" sortIndex="7">
+                <selectionEntry type="upgrade" import="true" name="Poisoned Attacks (close combat only)" hidden="false" id="5e31-0d89-00fb-932c" sortIndex="7">
                   <costs>
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
                   <infoLinks>
-                    <infoLink name="Poisoned Attacks" id="c4dc-8e98-a349-b69a" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef">
+                    <infoLink name="Poisoned Attacks" id="cd02-01ae-2c33-d703" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef">
                       <modifiers>
                         <modifier type="append" value="close combat only" field="annotation"/>
                       </modifiers>
                     </infoLink>
                   </infoLinks>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Hatred" hidden="false" id="3d20-0659-d5ea-6fd4" sortIndex="8">
+                <selectionEntry type="upgrade" import="true" name="Hatred" hidden="false" id="28ba-de12-9b9a-3a89" sortIndex="8">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
                   <infoLinks>
-                    <infoLink name="Hatred" id="fe78-c17c-d1a5-c6cf" hidden="false" type="rule" targetId="f6d7-9fbc-abc1-5cfc"/>
+                    <infoLink name="Hatred" id="609f-ee8b-4a06-fb57" hidden="false" type="rule" targetId="f6d7-9fbc-abc1-5cfc"/>
                   </infoLinks>
                 </selectionEntry>
               </selectionEntries>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e361-411e-15a3-ee53"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8cda-9ad2-8f74-1eac"/>
               </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <constraints>
-            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="7d02-fd47-0cac-3365"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Gut Plate" hidden="false" id="fe3b-e90d-d39b-bae0" type="selectionEntry" targetId="70bc-a2e4-d580-b03f" sortIndex="4">
+            </entryLink>
+            <entryLink import="true" name="55. Equipment" hidden="false" id="7b11-5d78-ca7f-f935" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8624-40ce-093b-7483"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dbb0-fcf9-1d83-5a60"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="da09-d40b-297a-7a52-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da09-d40b-297a-7a52-max"/>
               </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="3aef-c951-7968-c64c" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="80de-4b5a-bc3b-2573" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="3"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Handweapon &amp; Ironfist" hidden="false" id="a3de-0990-5731-2f74" type="selectionEntry" targetId="affb-b060-2905-606a" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="3"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Oriental Longsword" hidden="false" id="74b3-fc0d-a760-6c79" type="selectionEntry" targetId="0b80-7cdb-7e60-815c" sortIndex="4">
+                  <costs>
+                    <cost name="pts" typeId="points" value="3"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Ogre Pistol" hidden="false" id="fc3f-2ecf-9648-4a8f" type="selectionEntry" targetId="9c06-bad6-8730-a29f" sortIndex="5">
+                  <costs>
+                    <cost name="pts" typeId="points" value="6"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Polearm/Halberd" hidden="false" id="4553-be53-bb2d-d026" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="6">
+                  <costs>
+                    <cost name="pts" typeId="points" value="6"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Brace of Ogre Pistols" hidden="false" id="2924-2adb-2754-e66f" type="selectionEntry" targetId="3644-d33d-218c-a3c9" sortIndex="7">
+                  <costs>
+                    <cost name="pts" typeId="points" value="9"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Great Weapon" hidden="false" id="eec2-780a-9031-bc01" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="8">
+                  <costs>
+                    <cost name="pts" typeId="points" value="9"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
           <modifiers>
@@ -5029,23 +4998,23 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
         <categoryLink name="Monstrous Infantry" hidden="false" id="0511-a7d4-2797-b412" targetId="5fc5-b80a-115f-bca3" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="Light Armour" hidden="false" id="c1fe-7aaf-ba6c-5537" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="2">
-          <costs>
-            <cost name="pts" typeId="points" value="3"/>
-          </costs>
-          <modifiers>
-            <modifier type="increment" value="3" field="points">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="63c2-0d43-b6c3-2bfc" shared="true" roundUp="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="decrement" value="3" field="points"/>
-            <modifier type="increment" value="3" field="points">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="e1d5-d1e2-d474-8057" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
+        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="7ad5-8d3a-d3a6-b5d0" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09" sortIndex="2">
+          <entryLinks>
+            <entryLink import="true" name="Light Armour" hidden="false" id="c1fe-7aaf-ba6c-5537" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+              <modifiers>
+                <modifier type="increment" value="3" field="points">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="63c2-0d43-b6c3-2bfc" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" value="3" field="points">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="e1d5-d1e2-d474-8057" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
     </selectionEntry>
@@ -5081,10 +5050,14 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <infoLink name="Loner" id="1cfc-9667-34a8-90b0" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="c99b-bb1a-cd0e-26f8" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="1">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7ec2-c548-1ed4-fda4"/>
-              </constraints>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="7d11-c872-9676-16da" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="c99b-bb1a-cd0e-26f8" type="selectionEntry" targetId="7617-f4b5-02ac-3d15">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7ec2-c548-1ed4-fda4"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
           <profiles>
@@ -5164,8 +5137,8 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3646-cd50-f94b-2f73"/>
             <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="194e-4cdb-caf2-1a44"/>
           </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Primary Weapon" id="475c-c033-b054-82db" hidden="false" sortIndex="1">
+          <entryLinks>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="fd3e-e541-dc2f-c9ab" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Hand Weapon" hidden="false" id="11b0-bbb2-5c1c-5806" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
                 <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="9fea-cee6-e44c-b6e4" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
@@ -5179,12 +5152,8 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                   </costs>
                 </entryLink>
               </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b0d0-938e-be04-0218-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b0d0-938e-be04-0218-max"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <categoryLinks>
@@ -5202,48 +5171,6 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <infoLink name="Natural Armour (6+)" id="a8a8-8185-f92d-cd8e" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
             <infoLink name="Fear" id="490f-6c65-cdf3-28ca" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
           </infoLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Upgrades" id="3d20-9cb3-7f43-b83e" hidden="false" sortIndex="1">
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Ambushers" hidden="false" id="4c33-5b82-9b49-72c5" sortIndex="1" collective="true">
-                  <costs>
-                    <cost name="pts" typeId="points" value="1"/>
-                  </costs>
-                  <infoLinks>
-                    <infoLink name="Ambushers" id="6da5-b62e-d121-9ec2" hidden="false" type="rule" targetId="f366-0f91-841f-cf80"/>
-                  </infoLinks>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c65d-7e6b-f95c-1f40"/>
-                  </constraints>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Killing Blow" hidden="false" id="e7fd-91e2-c69f-3cbf" sortIndex="2" collective="true">
-                  <costs>
-                    <cost name="pts" typeId="points" value="1"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7c7c-e9d1-d3c8-10ae"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Killing Blow" id="1b00-5fc8-4c40-4304" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29"/>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Scouts" hidden="false" id="08b8-b661-715e-adf1" sortIndex="3" collective="true">
-                  <costs>
-                    <cost name="pts" typeId="points" value="1"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cac2-79aa-5534-f839"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Scouts" id="165e-ed22-383b-0dee" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
-                  </infoLinks>
-                </selectionEntry>
-              </selectionEntries>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="80c2-4bfb-6643-8542"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
           <profiles>
             <profile name="Sabretusk" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="ffd8-ce27-68bf-6b87" publicationId="dc4b-67ab-7b8e-baa5" page="27">
               <characteristics>
@@ -5263,6 +5190,48 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
           <constraints>
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="7b0f-1be8-315c-610b"/>
           </constraints>
+          <entryLinks>
+            <entryLink import="true" name="56. Upgrades" hidden="false" id="6ec0-9b0b-cff2-28c1" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Ambushers" hidden="false" id="8b1c-3274-4047-d019" collective="true" sortIndex="1">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
+                  <infoLinks>
+                    <infoLink name="Ambushers" id="26a5-50b8-c674-794a" hidden="false" type="rule" targetId="f366-0f91-841f-cf80"/>
+                  </infoLinks>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1991-e9f3-5e9d-1487"/>
+                  </constraints>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Killing Blow" hidden="false" id="4f8e-7f9c-69d8-a04b" collective="true" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="baf9-9eca-b36f-db9f"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Killing Blow" id="fbfc-1439-94ef-9f4b" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Scouts" hidden="false" id="b86b-f636-c774-6722" collective="true" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c726-9798-2eac-d69a"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Scouts" id="e9b2-ccd2-5650-6e08" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dc48-8c7d-2e46-a2fd"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <categoryLinks>
@@ -5317,10 +5286,23 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Crew" hidden="false" id="6bff-2a67-2ea6-f488" sortIndex="1">
               <entryLinks>
-                <entryLink import="true" name="Gut Plate" hidden="false" id="8daa-74a6-3358-412f" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bfe3-2b69-8b4c-a27d"/>
-                  </constraints>
+                <entryLink import="true" name="41. Gut Plate" hidden="false" id="2075-57ac-dd37-111d" type="selectionEntryGroup" targetId="6cfc-d55c-2cdf-5629">
+                  <entryLinks>
+                    <entryLink import="true" name="Gut Plate" hidden="false" id="419d-d6fe-cf49-afa7" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5594-1124-474f-1fd5"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="845c-d11f-22d8-6cd0" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="77fd-48be-63b5-0a63" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="33c0-80fe-9c19-7548"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
               </entryLinks>
               <infoLinks>
@@ -5374,10 +5356,23 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <cost name="pts" typeId="points" value="6"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Throwing Weapons" hidden="false" id="d7ac-ac6f-252b-4365" type="selectionEntry" targetId="8013-6f6f-96e1-1acc" sortIndex="1">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7d92-15c4-0894-1a5e"/>
-              </constraints>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="8955-4073-0b9c-dde9" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+              <entryLinks>
+                <entryLink import="true" name="Throwing Weapons" hidden="false" id="d7ac-ac6f-252b-4365" type="selectionEntry" targetId="8013-6f6f-96e1-1acc">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7d92-15c4-0894-1a5e"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="4fa5-a8a5-b5bc-3778" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="af04-9dcc-d7eb-47b6" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b769-9d4f-2e73-5362"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
           <constraints>
@@ -5438,6 +5433,17 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
           <infoLinks>
             <infoLink name="Scrapper" id="7401-1a00-9e86-f205" hidden="false" type="profile" targetId="151b-37fa-131c-aeb9"/>
           </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="ba79-832f-7c75-9b7f" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="b7db-3329-4c4b-9b82" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0e20-00ce-f596-3552"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
@@ -5454,6 +5460,17 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
           <infoLinks>
             <infoLink name="Scrapper" id="ff38-0069-1f89-4a48" hidden="false" type="profile" targetId="151b-37fa-131c-aeb9"/>
           </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="c839-2cca-cc9f-c218" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="0303-d7ff-b734-23d4" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3123-7e9a-c7eb-0447"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <profiles>
@@ -5548,6 +5565,16 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
               </entryLinks>
             </selectionEntry>
           </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="b57e-f032-f415-c822"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="3" field="b57e-f032-f415-c822">
+              <conditions>
+                <condition type="atLeast" value="3" field="selections" scope="unit" childId="e544-744e-53c0-d223" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <selectionEntries>
@@ -5580,42 +5607,44 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
               <description>Grimhorn Rhinox Riders follow the rules for Ranks and Supporting Attacks from Monstrous Cavalry.</description>
             </rule>
           </rules>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Primary Weapon" id="ddb4-9ce4-decf-da72" hidden="false" sortIndex="1">
+          <entryLinks>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="1789-4418-516b-e75e" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="bc26-e9ab-402f-c288" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
-                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="6ca7-a447-0d59-8fde" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="5a39-8904-c0d5-da39" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="309d-a006-722c-3cf8" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Ironfist" hidden="false" id="309d-fbb6-2841-fddb" type="selectionEntry" targetId="4a96-6696-5613-32af" sortIndex="3">
+                <entryLink import="true" name="Handweapon &amp; Ironfist" hidden="false" id="b825-506b-c62d-024e" type="selectionEntry" targetId="affb-b060-2905-606a" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Great Weapon" hidden="false" id="d09f-218b-0e32-8d53" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="4">
+                <entryLink import="true" name="Great Weapon" hidden="false" id="8eee-0d29-6151-eaa8" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="4">
                   <costs>
                     <cost name="pts" typeId="points" value="9"/>
                   </costs>
                 </entryLink>
               </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ee59-444b-c380-330c-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ee59-444b-c380-330c-max"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <entryLinks>
-            <entryLink import="true" name="Light Armour" hidden="false" id="0cee-15a0-a3e9-c135" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="2">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d3ca-afb1-69c8-d4f2"/>
-              </constraints>
             </entryLink>
-            <entryLink import="true" name="Gut Plate" hidden="false" id="5502-75e8-a303-9236" type="selectionEntry" targetId="70bc-a2e4-d580-b03f" sortIndex="3">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c309-62e2-b005-8853"/>
-              </constraints>
+            <entryLink import="true" name="41. Gut Plate" hidden="false" id="0a5e-75d6-ebdf-5934" type="selectionEntryGroup" targetId="6cfc-d55c-2cdf-5629">
+              <entryLinks>
+                <entryLink import="true" name="Gut Plate" hidden="false" id="e12c-d631-c47f-9d58" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6b7f-0f64-2857-4629"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="d5fc-1814-4e10-8cbf" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+              <entryLinks>
+                <entryLink import="true" name="Light Armour" hidden="false" id="0cee-15a0-a3e9-c135" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d3ca-afb1-69c8-d4f2"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
           <costs>
@@ -5628,19 +5657,17 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
       </selectionEntries>
       <modifiers>
         <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="b83c-fd66-0ff0-5800" shared="true" includeChildSelections="true" includeChildForces="true">
-                  <comment>Ghark Ironskin General</comment>
-                </condition>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="b44a-cdd1-af7d-51a5" shared="true" includeChildSelections="true" includeChildForces="true">
+              <comment>Ghark Ironskin General</comment>
+            </condition>
+          </conditions>
         </modifier>
         <modifier type="remove" value="0eb4-f376-7725-b05b" field="category">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="047f-ec6f-514d-8197" shared="true" includeChildSelections="true" includeChildForces="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="b44a-cdd1-af7d-51a5" shared="true" includeChildSelections="true" includeChildForces="true">
+              <comment>Ghark Ironskin General</comment>
+            </condition>
           </conditions>
         </modifier>
       </modifiers>
@@ -5664,6 +5691,17 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
               <infoLinks>
                 <infoLink name="Scrapper" id="df1b-9fdb-1200-7333" hidden="false" type="profile" targetId="151b-37fa-131c-aeb9"/>
               </infoLinks>
+              <entryLinks>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="57be-39fc-4e35-ac35" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="47b4-a018-3c35-78c5" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5b38-432c-c56e-2c5a"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+              </entryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Leadbelcher" hidden="false" id="08b3-7001-1fe1-6125" sortIndex="1">
               <constraints>
@@ -5674,10 +5712,23 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                 <infoLink name="Leadbelcher" id="ec19-c101-765b-7149" hidden="false" type="profile" targetId="f223-deeb-6ce1-ba18"/>
               </infoLinks>
               <entryLinks>
-                <entryLink import="true" name="Gut Plate" hidden="false" id="42d1-356c-d9b1-ed66" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9dfe-0898-ac06-6007"/>
-                  </constraints>
+                <entryLink import="true" name="41. Gut Plate" hidden="false" id="5e9c-c3c3-4964-0334" type="selectionEntryGroup" targetId="6cfc-d55c-2cdf-5629">
+                  <entryLinks>
+                    <entryLink import="true" name="Gut Plate" hidden="false" id="3bdb-9996-a15c-3837" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fee5-d365-7344-3adf"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="22ae-4a28-d7a8-3ba8" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="e7d3-b228-a1e5-e6cc" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="db9e-1fbc-4720-1aef"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
               </entryLinks>
             </selectionEntry>
@@ -5730,22 +5781,34 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
               <infoLinks>
                 <infoLink name="Beast Rider" id="3693-4620-9789-dbb5" hidden="false" type="profile" targetId="c0c6-82ac-5607-b3f6"/>
               </infoLinks>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Weapon" id="28f4-091c-8db9-0f28" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="55. Equipment" hidden="false" id="9641-33e8-71a9-8c15" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="60c7-388f-792c-581b-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="60c7-388f-792c-581b-max"/>
+                  </constraints>
                   <entryLinks>
-                    <entryLink import="true" name="Light Lance" hidden="false" id="992d-631a-06bb-9cfc" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="1"/>
-                    <entryLink import="true" name="Blood Vulture" hidden="false" id="cf25-31bd-4993-d04f" type="selectionEntry" targetId="864f-1868-b2cb-22c5" sortIndex="2">
+                    <entryLink import="true" name="Light Lance" hidden="false" id="15e6-115a-a091-01c6" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="1"/>
+                    <entryLink import="true" name="Blood Vulture" hidden="false" id="46af-76ea-70d7-6ee1" type="selectionEntry" targetId="864f-1868-b2cb-22c5" sortIndex="2">
                       <costs>
                         <cost name="pts" typeId="points" value="3"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Hand Weapon" id="d563-73cb-4872-280e" hidden="false" type="profile" targetId="f6da-d707-0cd6-b1dd"/>
+                      </infoLinks>
                     </entryLink>
                   </entryLinks>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e83e-c9da-3159-20b0-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e83e-c9da-3159-20b0-max"/>
-                  </constraints>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
+                </entryLink>
+                <entryLink import="true" name="41. Gut Plate" hidden="false" id="2757-2134-571f-75e4" type="selectionEntryGroup" targetId="6cfc-d55c-2cdf-5629">
+                  <entryLinks>
+                    <entryLink import="true" name="Gut Plate" hidden="false" id="48aa-6c64-db80-8714" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1194-c355-f7b0-b362"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+              </entryLinks>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -5774,15 +5837,32 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                 <infoLink name="Beast Rider" id="b6fe-a6a1-61ae-4119" hidden="false" type="profile" targetId="c0c6-82ac-5607-b3f6"/>
               </infoLinks>
               <entryLinks>
-                <entryLink import="true" name="Chaintrap" hidden="false" id="e5a3-c21e-511e-9669" type="selectionEntry" targetId="1883-598c-3361-b165" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="42df-95f7-5330-721b"/>
-                  </constraints>
+                <entryLink import="true" name="41. Gut Plate" hidden="false" id="a7a5-64da-bd82-988d" type="selectionEntryGroup" targetId="6cfc-d55c-2cdf-5629">
+                  <entryLinks>
+                    <entryLink import="true" name="Gut Plate" hidden="false" id="7c57-0f14-b565-b31e" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bad5-d1fb-0a5e-d87e"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
-                <entryLink import="true" name="Gut Plate" hidden="false" id="9b2f-18cc-fea4-d1c6" type="selectionEntry" targetId="70bc-a2e4-d580-b03f" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8827-0629-dc57-cc92"/>
-                  </constraints>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="b0a0-dc34-6c87-51e1" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="0186-06a1-3d68-daac" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1575-0b94-3cad-1021"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="b835-ec6d-fb1b-26a1" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                  <entryLinks>
+                    <entryLink import="true" name="Chaintrap" hidden="false" id="e5a3-c21e-511e-9669" type="selectionEntry" targetId="1883-598c-3361-b165">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="42df-95f7-5330-721b"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
               </entryLinks>
             </selectionEntry>
@@ -5795,15 +5875,32 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                 <infoLink name="Beast Rider" id="7311-ce91-f04b-23c6" hidden="false" type="profile" targetId="c0c6-82ac-5607-b3f6"/>
               </infoLinks>
               <entryLinks>
-                <entryLink import="true" name="Harpoon Launcher" hidden="false" id="f6e1-59c1-c771-101d" type="selectionEntry" targetId="962d-fe48-39e9-5a2b" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7180-4c7a-c231-9be4"/>
-                  </constraints>
+                <entryLink import="true" name="41. Gut Plate" hidden="false" id="2c43-64d8-3584-e96d" type="selectionEntryGroup" targetId="6cfc-d55c-2cdf-5629">
+                  <entryLinks>
+                    <entryLink import="true" name="Gut Plate" hidden="false" id="14a8-922a-4f57-3d29" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="855e-75ec-c231-8567"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
-                <entryLink import="true" name="Gut Plate" hidden="false" id="9c1b-7379-dcf0-ec31" type="selectionEntry" targetId="70bc-a2e4-d580-b03f" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="44a7-c4e7-4fee-743d"/>
-                  </constraints>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="73ea-521a-c7b2-82fc" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="ee06-13d0-5197-3019" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="075a-4a02-1218-8eaa"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="39e8-45ce-7e60-6edd" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                  <entryLinks>
+                    <entryLink import="true" name="Harpoon Launcher" hidden="false" id="f6e1-59c1-c771-101d" type="selectionEntry" targetId="962d-fe48-39e9-5a2b">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7180-4c7a-c231-9be4"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
               </entryLinks>
             </selectionEntry>
@@ -5871,15 +5968,32 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                 <infoLink name="Beast Rider" id="78aa-58f7-2379-7da5" hidden="false" type="profile" targetId="c0c6-82ac-5607-b3f6"/>
               </infoLinks>
               <entryLinks>
-                <entryLink import="true" name="Chaintrap" hidden="false" id="f76a-4d6d-21cd-b1ff" type="selectionEntry" targetId="1883-598c-3361-b165" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="974e-4de0-170a-1762"/>
-                  </constraints>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="9b5b-302b-fc01-0099" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="2217-e90d-48cb-bb20" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3de0-fc57-aba4-d437"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
-                <entryLink import="true" name="Gut Plate" hidden="false" id="07f5-ac69-f8c6-c48e" type="selectionEntry" targetId="70bc-a2e4-d580-b03f" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3a8f-a05b-e338-5142"/>
-                  </constraints>
+                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="481f-22c1-fb45-6c9c" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                  <entryLinks>
+                    <entryLink import="true" name="Chaintrap" hidden="false" id="95cd-0d1d-0565-8f47" type="selectionEntry" targetId="1883-598c-3361-b165">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5d0d-3217-3946-71ae"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="41. Gut Plate" hidden="false" id="f546-7733-5c92-bf6a" type="selectionEntryGroup" targetId="6cfc-d55c-2cdf-5629">
+                  <entryLinks>
+                    <entryLink import="true" name="Gut Plate" hidden="false" id="ef02-a09b-aaae-03e5" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f4ec-08c9-6216-f78c"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
               </entryLinks>
             </selectionEntry>
@@ -5892,15 +6006,32 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                 <infoLink name="Beast Rider" id="9766-b2a5-a21b-45ea" hidden="false" type="profile" targetId="c0c6-82ac-5607-b3f6"/>
               </infoLinks>
               <entryLinks>
-                <entryLink import="true" name="Gut Plate" hidden="false" id="d08d-52a5-79c9-5f93" type="selectionEntry" targetId="70bc-a2e4-d580-b03f" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b75e-adef-0b04-297e"/>
-                  </constraints>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="f2d7-4b97-a672-bbb9" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="0c31-cabb-2ae4-483b" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d71f-8c85-5b7b-8f83"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
-                <entryLink import="true" name="Harpoon Launcher" hidden="false" id="d121-8329-8706-bc6e" type="selectionEntry" targetId="962d-fe48-39e9-5a2b" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e7e5-070d-cd2d-1017"/>
-                  </constraints>
+                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="e1d0-642b-80f1-55b3" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                  <entryLinks>
+                    <entryLink import="true" name="Harpoon Launcher" hidden="false" id="979a-ec94-9828-3777" type="selectionEntry" targetId="962d-fe48-39e9-5a2b">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fa96-65fa-64e2-e9cf"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="41. Gut Plate" hidden="false" id="5920-55dd-d90c-3ac1" type="selectionEntryGroup" targetId="6cfc-d55c-2cdf-5629">
+                  <entryLinks>
+                    <entryLink import="true" name="Gut Plate" hidden="false" id="e54c-eaa9-f63a-74c0" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b8cf-23d4-733b-e285"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
               </entryLinks>
             </selectionEntry>
@@ -5912,24 +6043,31 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                 <infoLink name="Beast Rider" id="cbbf-c826-f105-d533" hidden="false" type="profile" targetId="c0c6-82ac-5607-b3f6"/>
               </infoLinks>
               <entryLinks>
-                <entryLink import="true" name="Gut Plate" hidden="false" id="c62f-1b1a-b688-1146" type="selectionEntry" targetId="70bc-a2e4-d580-b03f" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e88e-0124-3e51-ee66"/>
-                  </constraints>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="6514-c045-de65-7e7a" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="ca15-97f1-a839-069d" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f4e2-656a-3cac-f50e"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="39e8-8b47-f49b-fb5f" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                  <entryLinks>
+                    <entryLink import="true" name="Harpoon Launcher" hidden="false" id="20ee-f4af-fd4c-d613" type="selectionEntry" targetId="962d-fe48-39e9-5a2b"/>
+                    <entryLink import="true" name="Chaintrap" hidden="false" id="272f-9f19-2b9c-4d7b" type="selectionEntry" targetId="1883-598c-3361-b165"/>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="41. Gut Plate" hidden="false" id="3fae-04e6-5afc-a938" type="selectionEntryGroup" targetId="6cfc-d55c-2cdf-5629">
+                  <entryLinks>
+                    <entryLink import="true" name="Gut Plate" hidden="false" id="d11d-6260-6efd-6029" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f7c1-aab2-b147-cd22"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
               </entryLinks>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Ranged Weapon" id="0e3a-621e-bfaa-9df0" hidden="false" sortIndex="1">
-                  <entryLinks>
-                    <entryLink import="true" name="Chaintrap" hidden="false" id="37dd-a53f-e1f4-af98" type="selectionEntry" targetId="1883-598c-3361-b165" sortIndex="1"/>
-                    <entryLink import="true" name="Harpoon Launcher" hidden="false" id="ff7f-b9d3-5f44-2416" type="selectionEntry" targetId="962d-fe48-39e9-5a2b" sortIndex="2"/>
-                  </entryLinks>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dcae-af80-6804-2f61-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dcae-af80-6804-2f61-max"/>
-                  </constraints>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
@@ -6051,18 +6189,18 @@ If no suitable target is in base contact, roll again on the chart until you get 
         <cost name="pts" typeId="points" value="155"/>
       </costs>
       <infoLinks>
-        <infoLink name="01 (Big Things)" id="3055-7fef-08d9-16e5" hidden="false" targetId="8c21-37de-1b89-a1aa" type="profile"/>
-        <infoLink name="01 (Man-sized Things)" id="3deb-865e-18ae-749f" hidden="false" targetId="b8b8-f1ce-c6c8-0b05" type="profile"/>
-        <infoLink name="01 (Pick Up and...)" id="06e7-f7cf-972b-b4ee" hidden="false" targetId="b0eb-eada-2e6d-dc42" type="profile"/>
-        <infoLink name="02 (Man-sized Things)" id="0428-6def-dc34-b07e" hidden="false" targetId="b2e1-ecf2-bf44-91d5" type="profile"/>
-        <infoLink name="02 (Pick Up and...)" id="da92-a2b3-3c4c-83ae" hidden="false" targetId="8845-1216-ef80-8109" type="profile"/>
-        <infoLink name="02-04 (Big Things)" id="f9dd-4b80-c98c-7d70" hidden="false" targetId="4fc5-e450-33ef-b6d9" type="profile"/>
-        <infoLink name="03 (Man-sized Things)" id="5abc-3851-5893-d8ea" hidden="false" targetId="473d-503e-6b10-8a6a" type="profile"/>
-        <infoLink name="03 (Pick Up and...)" id="2c9b-5483-28d3-7e19" hidden="false" targetId="f05e-b4ef-d493-96f3" type="profile"/>
-        <infoLink name="04-05 (Pick Up and...)" id="a59b-0a21-61a2-672b" hidden="false" targetId="af1a-be06-2fc6-a34f" type="profile"/>
-        <infoLink name="04-06 (Man-sized Things)" id="c84d-560d-4e28-ac49" hidden="false" targetId="de13-cc1b-5d8f-27dd" type="profile"/>
-        <infoLink name="05-06 (Big Things)" id="c1bf-3a59-3c92-cd56" hidden="false" targetId="8a42-5b93-bd50-784e" type="profile"/>
-        <infoLink name="06 (Pick Up and...)" id="7261-ce91-689e-f170" hidden="false" targetId="985e-ec4a-2847-118b" type="profile"/>
+        <infoLink name="1 Yell and Bawl" id="3055-7fef-08d9-16e5" hidden="false" targetId="8c21-37de-1b89-a1aa" type="profile"/>
+        <infoLink name="1 Yell and Bawl" id="3deb-865e-18ae-749f" hidden="false" targetId="b8b8-f1ce-c6c8-0b05" type="profile"/>
+        <infoLink name="1 Stuff into Bag" id="06e7-f7cf-972b-b4ee" hidden="false" targetId="b0eb-eada-2e6d-dc42" type="profile"/>
+        <infoLink name="2 Jump Up and Down" id="0428-6def-dc34-b07e" hidden="false" targetId="b2e1-ecf2-bf44-91d5" type="profile"/>
+        <infoLink name="2 Throw Back into Combat" id="da92-a2b3-3c4c-83ae" hidden="false" targetId="8845-1216-ef80-8109" type="profile"/>
+        <infoLink name="2-4 Thump with Club" id="f9dd-4b80-c98c-7d70" hidden="false" targetId="4fc5-e450-33ef-b6d9" type="profile"/>
+        <infoLink name="3 Pick Up and..." id="5abc-3851-5893-d8ea" hidden="false" targetId="473d-503e-6b10-8a6a" type="profile"/>
+        <infoLink name="3 Hurl" id="2c9b-5483-28d3-7e19" hidden="false" targetId="f05e-b4ef-d493-96f3" type="profile"/>
+        <infoLink name="4-5 Squash" id="a59b-0a21-61a2-672b" hidden="false" targetId="af1a-be06-2fc6-a34f" type="profile"/>
+        <infoLink name="4-6 Swing with club" id="c84d-560d-4e28-ac49" hidden="false" targetId="de13-cc1b-5d8f-27dd" type="profile"/>
+        <infoLink name="5-6 &apos;Eadbutt" id="c1bf-3a59-3c92-cd56" hidden="false" targetId="8a42-5b93-bd50-784e" type="profile"/>
+        <infoLink name="6 Pick Another" id="7261-ce91-689e-f170" hidden="false" targetId="985e-ec4a-2847-118b" type="profile"/>
         <infoLink name="Giant" id="f644-d9ba-be8d-ee28" hidden="false" type="profile" targetId="fddd-b77e-9876-320d">
           <modifiers>
             <modifier type="set" value="Slave Giant" field="name"/>
@@ -6078,6 +6216,17 @@ If no suitable target is in base contact, roll again on the chart until you get 
         <categoryLink name="Rare" hidden="false" id="bd82-bba8-d38f-e9d3" targetId="0eb4-f376-7725-b05b" primary="true"/>
         <categoryLink name="Monster" hidden="false" id="8077-4e0a-02a1-81e0" targetId="e1a0-da31-05c5-9a15" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="dde0-4366-16f2-6671" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="5b4e-7525-51c4-839e" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a590-afea-0967-14d9"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Special Characters" hidden="false" id="af5c-b3ee-7465-ec25" sortIndex="401" subType="unit-group">
       <categoryLinks>
@@ -6122,43 +6271,17 @@ If no suitable target is in base contact, roll again on the chart until you get 
                 </rule>
               </rules>
               <entryLinks>
-                <entryLink import="true" name="General" hidden="false" id="3dad-019f-16ae-5253" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1"/>
-                <entryLink import="true" name="Light Armour" hidden="false" id="4c0d-2890-c3f1-c24f" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="82f3-aa0c-2887-6c16"/>
-                  </constraints>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="e146-a4de-2744-515d" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="f302-31f0-17c8-915d" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <entryLinks>
+                    <entryLink import="true" name="Light Armour" hidden="false" id="4c0d-2890-c3f1-c24f" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="82f3-aa0c-2887-6c16"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
               </entryLinks>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Scepter of the Titans" hidden="false" id="3b2e-5f2d-a123-5c0a" sortIndex="3">
-                  <profiles>
-                    <profile name="Scepter of the Titans" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="287a-6535-9cfe-e578" publicationId="dc4b-67ab-7b8e-baa5" page="39">
-                      <characteristics>
-                        <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                        <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">10</characteristic>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Any friendly Ogre Kingdoms unit that is fleeing at the beginning of the Ogre player&apos;s turn, and is within 12&quot; from Greasus, rallies automatically. All close combat attacks made with this weapon have a Strength of 10 and the Multiple Wounds (D3) special rule.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3fe9-c7e8-7730-7b5f-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3fe9-c7e8-7730-7b5f-max"/>
-                  </constraints>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Overtyrant&apos;s Crown" hidden="false" id="0b50-8bb1-902d-0318" sortIndex="4" publicationId="dc4b-67ab-7b8e-baa5" page="39">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e970-6a16-d3e1-2b1f-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e970-6a16-d3e1-2b1f-max"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Overtyrant&apos;s Crown" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="d6c4-7f39-3c97-b41e" publicationId="dc4b-67ab-7b8e-baa5" page="39">
-                      <characteristics>
-                        <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Overtyrant&apos;s Crown gives Greasus a 4+ Ward save. In addition, Greasus and any unit he joins have the Immunity (Psychology) special rule.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-              </selectionEntries>
               <costs>
                 <cost name="pts" typeId="points" value="370"/>
               </costs>
@@ -6180,70 +6303,114 @@ If no suitable target is in base contact, roll again on the chart until you get 
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4066-e8ce-e4ee-f636" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="90. Magic Items" id="d5f6-e639-ef59-1e63" hidden="false">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Scepter of the Titans" hidden="false" id="3b2e-5f2d-a123-5c0a" sortIndex="1">
+                      <profiles>
+                        <profile name="Scepter of the Titans" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="287a-6535-9cfe-e578" publicationId="dc4b-67ab-7b8e-baa5" page="39">
+                          <characteristics>
+                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
+                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">10</characteristic>
+                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Any friendly Ogre Kingdoms unit that is fleeing at the beginning of the Ogre player&apos;s turn, and is within 12&quot; from Greasus, rallies automatically. All close combat attacks made with this weapon have a Strength of 10 and the Multiple Wounds (D3) special rule.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3fe9-c7e8-7730-7b5f-min"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3fe9-c7e8-7730-7b5f-max"/>
+                      </constraints>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Overtyrant&apos;s Crown" hidden="false" id="0b50-8bb1-902d-0318" publicationId="dc4b-67ab-7b8e-baa5" page="39" sortIndex="2">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e970-6a16-d3e1-2b1f-min"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e970-6a16-d3e1-2b1f-max"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Overtyrant&apos;s Crown" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="d6c4-7f39-3c97-b41e" publicationId="dc4b-67ab-7b8e-baa5" page="39">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Overtyrant&apos;s Crown gives Greasus a 4+ Ward save. In addition, Greasus and any unit he joins have the Immunity (Psychology) special rule.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Ghark Ironskin" hidden="false" id="047f-ec6f-514d-8197" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="385"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="General" hidden="false" id="b83c-fd66-0ff0-5800" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1"/>
-                <entryLink import="true" name="Gut Plate" hidden="false" id="48bd-6509-3e2a-ee8b" type="selectionEntry" targetId="70bc-a2e4-d580-b03f" sortIndex="3">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ca8d-d31e-db2e-2b51"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="90. Magic Items" hidden="false" id="12cc-165b-7d3f-d328" type="selectionEntryGroup" targetId="0e65-7821-5c99-81c5" sortIndex="5">
+                <entryLink import="true" name="90. Magic Items" hidden="false" id="12cc-165b-7d3f-d328" type="selectionEntryGroup" targetId="0e65-7821-5c99-81c5" sortIndex="">
                   <modifiers>
                     <modifier type="increment" value="75" field="edf7-f3cf-0f31-9195"/>
                     <modifier type="set" value="true" field="hidden" affects="1fcb-a9a9-9368-afd2"/>
                   </modifiers>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Ironskin Armrour" hidden="false" id="2dc4-d2d7-d1de-498f">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0a24-d217-411b-3b15-min"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0a24-d217-411b-3b15-max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Medium Armour" id="0d71-e986-39d8-ee4e" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
+                          <modifiers>
+                            <modifier type="set" value="Ironskin Armour" field="annotation"/>
+                            <modifier type="append" value="The Ironskin Armor gives Ghark a 6+ Ward save." field="ff58-91e4-84d7-e6e4" join=", "/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="41. Gut Plate" hidden="false" id="c613-6f2a-e8b3-542d" type="selectionEntryGroup" targetId="6cfc-d55c-2cdf-5629">
+                  <entryLinks>
+                    <entryLink import="true" name="Gut Plate" hidden="false" id="17fb-7393-0d1a-349e" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="35a8-7bc7-0cbc-376b"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="70. Mount" hidden="false" id="27d6-7b46-a63c-0b9c" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+                  <selectionEntries>
+                    <selectionEntry type="model" import="true" name="Iron Rhinox" hidden="false" id="3b8d-77c4-674a-4c30" subType="mount">
+                      <infoLinks>
+                        <infoLink name="Frenzy" id="c830-6991-6235-a385" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77">
+                          <modifiers>
+                            <modifier type="set" value="Iron Rhinox only" field="annotation"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                      <profiles>
+                        <profile name="Iron Rhinox" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="3438-e8de-33d6-50eb" publicationId="dc4b-67ab-7b8e-baa5" page="40">
+                          <characteristics>
+                            <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+                            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+                            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+                            <characteristic name="S" typeId="edd2-7979-54a4-6b35">6</characteristic>
+                            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+                            <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
+                            <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
+                            <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
+                            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Iron Rhinox (Daemon)</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="962c-4755-06f4-1279-min"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="962c-4755-06f4-1279-max"/>
+                      </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b492-ad0e-9d4c-1bf0"/>
+                  </constraints>
                 </entryLink>
               </entryLinks>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Ironskin Armrour" hidden="false" id="2dc4-d2d7-d1de-498f" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0a24-d217-411b-3b15-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0a24-d217-411b-3b15-max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Medium Armour" id="0d71-e986-39d8-ee4e" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
-                      <modifiers>
-                        <modifier type="set" value="Ironskin Armour" field="annotation"/>
-                        <modifier type="append" value="The Ironskin Armor gives Ghark a 6+ Ward save." field="ff58-91e4-84d7-e6e4" join=", "/>
-                      </modifiers>
-                    </infoLink>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry type="model" import="true" name="Iron Rhinox" hidden="false" id="3b8d-77c4-674a-4c30" sortIndex="4" subType="mount">
-                  <infoLinks>
-                    <infoLink name="Frenzy" id="c830-6991-6235-a385" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77">
-                      <modifiers>
-                        <modifier type="set" value="Iron Rhinox only" field="annotation"/>
-                      </modifiers>
-                    </infoLink>
-                  </infoLinks>
-                  <profiles>
-                    <profile name="Iron Rhinox" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="3438-e8de-33d6-50eb" publicationId="dc4b-67ab-7b8e-baa5" page="40">
-                      <characteristics>
-                        <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
-                        <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-                        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-                        <characteristic name="S" typeId="edd2-7979-54a4-6b35">6</characteristic>
-                        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-                        <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
-                        <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-                        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
-                        <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Iron Rhinox (Daemon)</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="962c-4755-06f4-1279-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="962c-4755-06f4-1279-max"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
               <infoLinks>
                 <infoLink name="Impact Hits (D3+1)" id="903a-7cae-5dd4-ec2d" hidden="false" type="rule" targetId="16ae-a437-29a7-e714"/>
                 <infoLink name="Natural Armour (3+)" id="1f5b-ae0e-768b-2a00" hidden="false" type="rule" targetId="32e8-b4ad-3e59-a3c7"/>
@@ -6280,51 +6447,68 @@ If no suitable target is in base contact, roll again on the chart until you get 
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b5e3-6b1d-9796-b094" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="10. Character Options" id="7918-683a-df1c-aee2" hidden="false">
+                  <comment>Ghark Ironskin</comment>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="General" hidden="false" id="b44a-cdd1-af7d-51a5">
+                      <comment>Ghark Ironskin</comment>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0d0d-30c8-1481-a052" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="41b9-ad6c-6472-9b73" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="348d-a81f-074a-f710" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="General" id="68a3-fb23-2a55-c984" hidden="false" targetId="fcc3-a722-a9e4-9c94" type="rule"/>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Skrag the Slaughterer" hidden="false" id="2374-25f0-9a93-3c81" sortIndex="3">
               <costs>
                 <cost name="pts" typeId="points" value="460"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="General" hidden="false" id="5de3-c478-a548-1094" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1"/>
-                <entryLink import="true" name="Light Armour" hidden="false" id="7b8b-8547-788d-a1b8" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="4">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="74fa-f348-c203-4c49"/>
-                  </constraints>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="8617-174d-86f1-e497" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="60. Wizard Level" hidden="false" id="b512-37e6-e48e-f21e" type="selectionEntryGroup" targetId="e548-6739-0537-5d95"/>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="03a9-84ca-1df5-ecd2" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <entryLinks>
+                    <entryLink import="true" name="Light Armour" hidden="false" id="7b8b-8547-788d-a1b8" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="74fa-f348-c203-4c49"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
-                <entryLink import="true" name="Wizard Level 4" hidden="false" id="60d2-61f7-2cbd-126a" type="selectionEntry" targetId="5460-3929-58ef-71ba" sortIndex="2">
+                <entryLink import="true" name="70. Mount" hidden="false" id="c5eb-62f3-2d7e-69df" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Cauldron of the Great Maw" hidden="false" id="cf0e-9359-fb58-6172">
+                      <profiles>
+                        <profile name="Cauldron of the Great Maw" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="62d3-152e-fa8d-c17c" publicationId="dc4b-67ab-7b8e-baa5" page="41">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Skrag and all Gorgers in the army receive the blessings of their ever-hungry god according to the &quot;Cauldron of the Great Maw table&quot;. The &apos;Models Killed&apos; column refers to models killed by Skrag in close combat. Models killed by spells or that were pursued and caught when fleeing do not count towards this total. When a new level is reached, bonuses take effect immediately and are cumulative.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <infoLinks>
+                        <infoLink name="1+ Models Killed" id="4c9e-1dfd-bbf9-e03a" hidden="false" type="profile" targetId="4f88-8f3b-64db-b5f7"/>
+                        <infoLink name="5+ Models Killed" id="913d-4044-5770-0aee" hidden="false" type="profile" targetId="09c4-6d9c-62af-c771"/>
+                        <infoLink name="10+ Models Killed" id="d30d-60aa-8788-798d" hidden="false" type="profile" targetId="fa45-e0bf-ec8c-ee6a"/>
+                        <infoLink name="15+ Models Killed" id="9970-c5d8-793c-f3d7" hidden="false" type="profile" targetId="9944-7c42-8d1e-3178"/>
+                      </infoLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b210-a662-1bad-45ec-min"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b210-a662-1bad-45ec-max"/>
+                      </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
                   <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="75ac-ec64-e7be-d932-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="75ac-ec64-e7be-d932-max"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="Lore of the Great Maw" hidden="false" id="8e5e-76f1-8082-bb50" type="selectionEntry" targetId="93e7-a1a1-69c9-26a4" sortIndex="3">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0ea9-5755-ee2b-338a"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8ef4-4f2f-77c9-4c7e"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Cauldron of the Great Maw" hidden="false" id="cf0e-9359-fb58-6172" sortIndex="5">
-                  <profiles>
-                    <profile name="Cauldron of the Great Maw" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="62d3-152e-fa8d-c17c" publicationId="dc4b-67ab-7b8e-baa5" page="41">
-                      <characteristics>
-                        <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Skrag and all Gorgers in the army receive the blessings of their ever-hungry god according to the &quot;Cauldron of the Great Maw table&quot;. The &apos;Models Killed&apos; column refers to models killed by Skrag in close combat. Models killed by spells or that were pursued and caught when fleeing do not count towards this total. When a new level is reached, bonuses take effect immediately and are cumulative.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <infoLinks>
-                    <infoLink name="1+ Models Killed" id="4c9e-1dfd-bbf9-e03a" hidden="false" type="profile" targetId="4f88-8f3b-64db-b5f7"/>
-                    <infoLink name="5+ Models Killed" id="913d-4044-5770-0aee" hidden="false" type="profile" targetId="09c4-6d9c-62af-c771"/>
-                    <infoLink name="10+ Models Killed" id="d30d-60aa-8788-798d" hidden="false" type="profile" targetId="fa45-e0bf-ec8c-ee6a"/>
-                    <infoLink name="15+ Models Killed" id="9970-c5d8-793c-f3d7" hidden="false" type="profile" targetId="9944-7c42-8d1e-3178"/>
-                  </infoLinks>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b210-a662-1bad-45ec-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b210-a662-1bad-45ec-max"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
               <infoLinks>
                 <infoLink name="Terror" id="f509-8e2a-7b83-854b" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
                 <infoLink name="Frenzy" id="b31d-e57d-22d7-4730" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
@@ -6355,48 +6539,68 @@ If no suitable target is in base contact, roll again on the chart until you get 
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2e2b-3883-e708-769c" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="61. Lore" id="1773-d9f8-0a72-42c5" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Lore of the Great Maw" hidden="false" id="8e5e-76f1-8082-bb50" type="selectionEntry" targetId="93e7-a1a1-69c9-26a4">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0ea9-5755-ee2b-338a"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="be59-217f-4d4f-db18-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="be59-217f-4d4f-db18-max"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Groth Onefinger" hidden="false" id="df24-3fd3-f7a7-77aa" sortIndex="4">
               <costs>
                 <cost name="pts" typeId="points" value="360"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="General" hidden="false" id="0c29-e4e1-f389-e380" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1"/>
-                <entryLink import="true" name="Wizard Level 4" hidden="false" id="46db-02b1-ffc3-5ed2" type="selectionEntry" targetId="5460-3929-58ef-71ba" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d16f-d793-f2dd-84b5-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d16f-d793-f2dd-84b5-max"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="Lore of the Great Maw" hidden="false" id="fef0-a8d8-2493-dcb3" type="selectionEntry" targetId="93e7-a1a1-69c9-26a4" sortIndex="3">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bcf8-352e-bab5-09d7"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="4. Scalp-Gnoblars" hidden="false" id="e3a3-bf46-20bf-f05c" type="selectionEntry" targetId="a21f-3fec-ee21-94ed" sortIndex="4">
-                  <constraints>
-                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="7f1b-f00e-361f-a9e2"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="5. Tooth-Gnoblars" hidden="false" id="46ba-bf01-86c6-a504" type="selectionEntry" targetId="49fe-2aa8-6ce3-a4b1" sortIndex="5">
-                  <constraints>
-                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="3287-5f9a-888d-4e79"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="Great Mawpot" hidden="false" id="1669-8de7-8c19-6f75" type="selectionEntry" targetId="2988-37cf-96e6-4933" sortIndex="6">
-                  <costs>
-                    <cost name="pts" typeId="points" value="50"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="90. Magic Items" hidden="false" id="9d32-2919-98e0-2c6b" type="selectionEntryGroup" targetId="0e65-7821-5c99-81c5" sortIndex="7">
+                <entryLink import="true" name="90. Magic Items" hidden="false" id="9d32-2919-98e0-2c6b" type="selectionEntryGroup" targetId="0e65-7821-5c99-81c5" sortIndex="">
                   <modifiers>
                     <modifier type="increment" value="50" field="edf7-f3cf-0f31-9195"/>
                   </modifiers>
                 </entryLink>
-                <entryLink import="true" name="Loremaster (Lore of the Great Maw)" hidden="false" id="b4ac-40e4-049d-2e0a" type="selectionEntry" targetId="31ef-4909-1f7b-074d" sortIndex="4">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8396-3c4d-a832-3d05"/>
-                  </constraints>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="c22c-dda5-22b9-1154" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="60. Wizard Level" hidden="false" id="3d6d-6a41-5fa8-5784" type="selectionEntryGroup" targetId="e548-6739-0537-5d95">
+                  <entryLinks>
+                    <entryLink import="true" name="Loremaster (Lore of the Great Maw)" hidden="false" id="b4ac-40e4-049d-2e0a" type="selectionEntry" targetId="31ef-4909-1f7b-074d">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8396-3c4d-a832-3d05"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <modifiers>
+                    <modifier type="set" value="2" field="229a-2958-7715-127c"/>
+                    <modifier type="set" value="2" field="ad8b-d3db-a04c-a906"/>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="70. Mount" hidden="false" id="c034-cf85-a497-020b" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+                  <entryLinks>
+                    <entryLink import="true" name="Great Mawpot" hidden="false" id="1669-8de7-8c19-6f75" type="selectionEntry" targetId="2988-37cf-96e6-4933">
+                      <costs>
+                        <cost name="pts" typeId="points" value="50"/>
+                      </costs>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="56. Upgrades" hidden="false" id="3309-5c08-b32c-0288" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
+                  <entryLinks>
+                    <entryLink import="true" name="4. Scalp-Gnoblars" hidden="false" id="e3a3-bf46-20bf-f05c" type="selectionEntry" targetId="a21f-3fec-ee21-94ed">
+                      <constraints>
+                        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="7f1b-f00e-361f-a9e2"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="5. Tooth-Gnoblars" hidden="false" id="46ba-bf01-86c6-a504" type="selectionEntry" targetId="49fe-2aa8-6ce3-a4b1">
+                      <constraints>
+                        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="3287-5f9a-888d-4e79"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
               </entryLinks>
               <infoLinks>
@@ -6436,61 +6640,49 @@ If no suitable target is in base contact, roll again on the chart until you get 
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7958-39a5-08bc-64e7" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="61. Lore" id="12c9-b9a9-7bab-868e" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Lore of the Great Maw" hidden="false" id="6f4d-513a-1fb0-0151" type="selectionEntry" targetId="93e7-a1a1-69c9-26a4">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1e58-2034-1b92-85a9"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="731f-5169-8fb7-df12-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="731f-5169-8fb7-df12-max"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <modifiers>
+                <modifier type="add" value="{this} needs one more selection of The Lazarghs (Ogre Bulls or Ironguts)" field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="df24-3fd3-f7a7-77aa" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="27b6-66ea-d493-9599" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Morg Magmaborn" hidden="false" id="6027-539e-5db3-51a8" sortIndex="5">
               <costs>
                 <cost name="pts" typeId="points" value="340"/>
               </costs>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="The Basalt Staff" hidden="false" id="8116-76ae-3a18-c96d" sortIndex="5">
-                  <profiles>
-                    <profile name="The Basalt Staff" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="2613-bc27-f06f-cc2a" publicationId="dc4b-67ab-7b8e-baa5" page="43">
-                      <characteristics>
-                        <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                        <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Morg’s close combat attacks have the Armour Piercing (1) special rule. In addition, the Staff contains a Bound Spell, power level 3, which casts the Fire Ball spell from the Lore of Fire.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <infoLinks>
-                    <infoLink name="Fireball" id="2219-fdb0-294c-10e9" hidden="false" type="profile" targetId="6e57-2cc3-96fc-7f01">
-                      <modifiers>
-                        <modifier type="set" value="Bound Spell" field="576b-eaa1-0bd1-3f7a"/>
-                        <modifier type="set" value="3+" field="d6bf-647e-ba69-e8a0"/>
-                        <modifier type="set" value="The Basalt Staff" field="annotation"/>
-                      </modifiers>
-                    </infoLink>
-                    <infoLink name="Armour Piercing" id="e07c-27bb-7c22-31a5" hidden="false" type="rule" targetId="bf4e-212e-fe1d-20c6">
-                      <modifiers>
-                        <modifier type="set" value="1" field="annotation"/>
-                      </modifiers>
-                    </infoLink>
-                  </infoLinks>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bc49-3629-ec06-23b2-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bc49-3629-ec06-23b2-max"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
               <entryLinks>
-                <entryLink import="true" name="General" hidden="false" id="7d93-2e79-7262-117c" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1"/>
-                <entryLink import="true" name="Wizard Level 3" hidden="false" id="a695-5bd5-95fb-3fe8" type="selectionEntry" targetId="1670-dca4-294b-7d9b" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e4a4-a507-30bc-eba5-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e4a4-a507-30bc-eba5-max"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="Gut Plate" hidden="false" id="b118-ac2e-1106-5912" type="selectionEntry" targetId="70bc-a2e4-d580-b03f" sortIndex="4">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6645-48d4-1f4c-4255-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6645-48d4-1f4c-4255-max"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="Lore of Fire" hidden="false" id="b6e2-7a5b-fafb-c668" type="selectionEntry" targetId="4d24-c803-7a05-0894" sortIndex="3">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="69c2-8048-9c35-f713-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="69c2-8048-9c35-f713-max"/>
-                  </constraints>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="2ae9-b00a-75e1-cb57" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="60. Wizard Level" hidden="false" id="73d6-df83-3dae-6d60" type="selectionEntryGroup" targetId="8e7d-af82-eb9b-19f2"/>
+                <entryLink import="true" name="41. Gut Plate" hidden="false" id="997b-794c-3fe5-e320" type="selectionEntryGroup" targetId="6cfc-d55c-2cdf-5629">
+                  <entryLinks>
+                    <entryLink import="true" name="Gut Plate" hidden="false" id="b332-4bc9-de22-c5d4" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f89f-e819-3aff-2f2a"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
               </entryLinks>
               <infoLinks>
@@ -6527,6 +6719,54 @@ If no suitable target is in base contact, roll again on the chart until you get 
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4ad8-210e-5b9e-ff6e" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="61. Lore" id="8066-e556-0e36-0f9f" hidden="false">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8fcc-e504-5b66-9b30-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8fcc-e504-5b66-9b30-max"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Lore of Fire" hidden="false" id="b6e2-7a5b-fafb-c668" type="selectionEntry" targetId="4d24-c803-7a05-0894">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="69c2-8048-9c35-f713-min"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+                <selectionEntryGroup name="90. Magic Items" id="b18e-6748-2098-e17d" hidden="false">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="The Basalt Staff" hidden="false" id="8116-76ae-3a18-c96d">
+                      <profiles>
+                        <profile name="The Basalt Staff" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="2613-bc27-f06f-cc2a" publicationId="dc4b-67ab-7b8e-baa5" page="43">
+                          <characteristics>
+                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
+                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
+                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Morg’s close combat attacks have the Armour Piercing (1) special rule. In addition, the Staff contains a Bound Spell, power level 3, which casts the Fire Ball spell from the Lore of Fire.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <infoLinks>
+                        <infoLink name="Fireball" id="2219-fdb0-294c-10e9" hidden="false" type="profile" targetId="6e57-2cc3-96fc-7f01">
+                          <modifiers>
+                            <modifier type="set" value="Bound Spell" field="576b-eaa1-0bd1-3f7a"/>
+                            <modifier type="set" value="3+" field="d6bf-647e-ba69-e8a0"/>
+                            <modifier type="set" value="The Basalt Staff" field="annotation"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Armour Piercing" id="e07c-27bb-7c22-31a5" hidden="false" type="rule" targetId="bf4e-212e-fe1d-20c6">
+                          <modifiers>
+                            <modifier type="set" value="1" field="annotation"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bc49-3629-ec06-23b2-min"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bc49-3629-ec06-23b2-max"/>
+                      </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -6544,31 +6784,47 @@ If no suitable target is in base contact, roll again on the chart until you get 
                 <cost name="pts" typeId="points" value="155"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="09e4-bf19-6bf7-a2a7" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="617a-b801-56aa-a763"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="General" hidden="false" id="4efe-08b1-231a-4456" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1"/>
-                <entryLink import="true" name="Ogre Pistol" hidden="false" id="bb24-a26f-47e6-2d39" type="selectionEntry" targetId="9c06-bad6-8730-a29f" sortIndex="3">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="37a9-6f2d-389b-12cc"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="Gut Plate" hidden="false" id="dc4c-2f57-73c3-3d5e" type="selectionEntry" targetId="70bc-a2e4-d580-b03f" sortIndex="5">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d70b-5579-85b0-1a62"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="Light Armour" hidden="false" id="92a3-7d72-1c8c-13c4" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="4">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0387-64ca-f3ef-e08f"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="90. Magic Items" hidden="false" id="4b8c-483b-0997-7409" type="selectionEntryGroup" targetId="0e65-7821-5c99-81c5" sortIndex="6">
+                <entryLink import="true" name="90. Magic Items" hidden="false" id="4b8c-483b-0997-7409" type="selectionEntryGroup" targetId="0e65-7821-5c99-81c5" sortIndex="">
                   <modifiers>
                     <modifier type="increment" value="50" field="edf7-f3cf-0f31-9195"/>
                   </modifiers>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="8e7c-9eb6-dd28-ee33" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="e199-5082-1926-34cd" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="09e4-bf19-6bf7-a2a7" type="selectionEntry" targetId="7617-f4b5-02ac-3d15">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="617a-b801-56aa-a763"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="f598-ed8f-965c-acef" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                  <entryLinks>
+                    <entryLink import="true" name="Ogre Pistol" hidden="false" id="bb24-a26f-47e6-2d39" type="selectionEntry" targetId="9c06-bad6-8730-a29f">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="37a9-6f2d-389b-12cc"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="3a14-01b5-65be-5982" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <entryLinks>
+                    <entryLink import="true" name="Light Armour" hidden="false" id="92a3-7d72-1c8c-13c4" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0387-64ca-f3ef-e08f"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="41. Gut Plate" hidden="false" id="6de2-a41b-ec69-ebca" type="selectionEntryGroup" targetId="6cfc-d55c-2cdf-5629">
+                  <entryLinks>
+                    <entryLink import="true" name="Gut Plate" hidden="false" id="b9de-a248-ae1f-bba1" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a2b4-850d-5d0b-5dac"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
               </entryLinks>
               <profiles>
@@ -6626,36 +6882,40 @@ If no suitable target is in base contact, roll again on the chart until you get 
                 <cost name="pts" typeId="points" value="150"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="General" hidden="false" id="fd9e-4eda-f532-9ad1" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1"/>
-                <entryLink import="true" name="90. Magic Items" hidden="false" id="0bc7-bdbe-1ccb-5033" type="selectionEntryGroup" targetId="0e65-7821-5c99-81c5" sortIndex="4">
+                <entryLink import="true" name="90. Magic Items" hidden="false" id="0bc7-bdbe-1ccb-5033" type="selectionEntryGroup" targetId="0e65-7821-5c99-81c5" sortIndex="">
                   <modifiers>
                     <modifier type="increment" value="25" field="edf7-f3cf-0f31-9195"/>
                     <modifier type="set" value="true" field="hidden" affects="9d24-a7c4-35bb-6362"/>
                   </modifiers>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Great Gutgouger" hidden="false" id="3b33-87bc-10bc-e3bc">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0c71-74b6-3256-93d0-min"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0c71-74b6-3256-93d0-max"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Great Gutgouger" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="58e5-138a-6d7d-cb11" publicationId="fe27-09e1-b66a-ba42" page="44">
+                          <characteristics>
+                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
+                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
+                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Flail. While Bragg is involved in a challenge, he gains the Heroic Killing Blow special rule. In addition, if Bragg slays his foe in a challenge, any enemy units in base contact with him are Disrupted for the remainder of the turn.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
                 </entryLink>
-                <entryLink import="true" name="Gut Plate" hidden="false" id="eba8-b86f-cb68-fc60" type="selectionEntry" targetId="70bc-a2e4-d580-b03f" sortIndex="3">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6e86-38b9-bb08-49e6"/>
-                  </constraints>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="ebd0-b2cb-2b44-c4c2" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="41. Gut Plate" hidden="false" id="0ad8-34c5-7fda-f7ed" type="selectionEntryGroup" targetId="6cfc-d55c-2cdf-5629">
+                  <entryLinks>
+                    <entryLink import="true" name="Gut Plate" hidden="false" id="e2e3-d9f7-1e43-7b1c" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9e0e-8c44-3802-46bc"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
               </entryLinks>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Great Gutgouger" hidden="false" id="3b33-87bc-10bc-e3bc" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0c71-74b6-3256-93d0-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0c71-74b6-3256-93d0-max"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Great Gutgouger" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="58e5-138a-6d7d-cb11" publicationId="fe27-09e1-b66a-ba42" page="44">
-                      <characteristics>
-                        <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                        <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Flail. While Bragg is involved in a challenge, he gains the Heroic Killing Blow special rule. In addition, if Bragg slays his foe in a challenge, any enemy units in base contact with him are Disrupted for the remainder of the turn.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-              </selectionEntries>
               <infoLinks>
                 <infoLink name="Natural Armour (6+)" id="3e0b-650f-426c-2b1d" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
                 <infoLink name="Ogre Charge" id="5f8d-b3c7-5291-4be9" hidden="false" type="rule" targetId="5357-5a65-849a-76c2"/>
@@ -6693,11 +6953,8 @@ If no suitable target is in base contact, roll again on the chart until you get 
                 <infoLink name="Ogre Charge" id="6ae0-3b27-e42c-1a65" hidden="false" type="rule" targetId="5357-5a65-849a-76c2"/>
                 <infoLink name="Stubborn" id="177b-7c2a-de94-6134" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
               </infoLinks>
-              <entryLinks>
-                <entryLink import="true" name="General" hidden="false" id="75f7-b852-d9f4-ba7d" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1"/>
-              </entryLinks>
               <selectionEntries>
-                <selectionEntry type="model" import="true" name="Braugh Slavelord" hidden="false" id="14ea-52a8-2112-a8fa" sortIndex="2">
+                <selectionEntry type="model" import="true" name="Braugh Slavelord" hidden="false" id="14ea-52a8-2112-a8fa" sortIndex="1">
                   <profiles>
                     <profile name="Braugh Slavelord" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="da76-d6be-0466-7960" publicationId="fe27-09e1-b66a-ba42" page="45">
                       <characteristics>
@@ -6714,38 +6971,6 @@ If no suitable target is in base contact, roll again on the chart until you get 
                       </characteristics>
                     </profile>
                   </profiles>
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Soul-binder Chains" hidden="false" id="425f-cd66-4f81-e2f6" sortIndex="1">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="91c2-4d3a-c952-aa1f-min"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="91c2-4d3a-c952-aa1f-max"/>
-                      </constraints>
-                      <profiles>
-                        <profile name="Soul-binder Chains" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="6d57-af43-7ae0-761b" publicationId="fe27-09e1-b66a-ba42" page="45">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Two hand weapons. At the beginning of each close combat phase, Braugh may nominate one enemy model in base contact. That model loses D3 Attacks for that phase.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="The Great Bullplate" hidden="false" id="dcf2-a779-1e64-0560" sortIndex="2">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6dae-f229-a8a3-3dd7-min"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6dae-f229-a8a3-3dd7-max"/>
-                      </constraints>
-                      <profiles>
-                        <profile name="The Great Bullplate" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="fe9c-042f-48fd-c0c1" publicationId="fe27-09e1-b66a-ba42" page="45">
-                          <characteristics>
-                            <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+*</characteristic>
-                            <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+*</characteristic>
-                            <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Gut-plate. The Bullplate gives Braugh and his unit the Swiftstride special rule when charging. *(Only applies to attacks to the front)</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                    </selectionEntry>
-                  </selectionEntries>
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4b04-26e7-5525-d2ad-min"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4b04-26e7-5525-d2ad-max"/>
@@ -6753,8 +6978,47 @@ If no suitable target is in base contact, roll again on the chart until you get 
                   <categoryLinks>
                     <categoryLink name="Monstrous Infantry" hidden="false" id="f1c9-dfa3-dd1c-43ff" targetId="5fc5-b80a-115f-bca3" primary="false"/>
                   </categoryLinks>
+                  <entryLinks>
+                    <entryLink import="true" name="10. Character Options" hidden="false" id="1fea-9de5-3a50-c8f7" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                  </entryLinks>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="90. Magic Items" id="3e29-3437-787a-749d" hidden="false">
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Soul-binder Chains" hidden="false" id="425f-cd66-4f81-e2f6" sortIndex="1">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="91c2-4d3a-c952-aa1f-min"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="91c2-4d3a-c952-aa1f-max"/>
+                          </constraints>
+                          <profiles>
+                            <profile name="Soul-binder Chains" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="6d57-af43-7ae0-761b" publicationId="fe27-09e1-b66a-ba42" page="45">
+                              <characteristics>
+                                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
+                                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
+                                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Two hand weapons. At the beginning of each close combat phase, Braugh may nominate one enemy model in base contact. That model loses D3 Attacks for that phase.</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                        </selectionEntry>
+                        <selectionEntry type="upgrade" import="true" name="The Great Bullplate" hidden="false" id="dcf2-a779-1e64-0560" sortIndex="2">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6dae-f229-a8a3-3dd7-min"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6dae-f229-a8a3-3dd7-max"/>
+                          </constraints>
+                          <profiles>
+                            <profile name="The Great Bullplate" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="fe9c-042f-48fd-c0c1" publicationId="fe27-09e1-b66a-ba42" page="45">
+                              <characteristics>
+                                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+*</characteristic>
+                                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+*</characteristic>
+                                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Gut-plate. The Bullplate gives Braugh and his unit the Swiftstride special rule when charging. *(Only applies to attacks to the front)</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
                 </selectionEntry>
-                <selectionEntry type="model" import="true" name="Slave" hidden="false" id="ea4f-6667-5f11-5a74" sortIndex="3">
+                <selectionEntry type="model" import="true" name="Slave" hidden="false" id="ea4f-6667-5f11-5a74" sortIndex="2">
                   <constraints>
                     <constraint type="min" value="12" field="selections" scope="parent" shared="true" id="5e1a-0a42-4917-53f4-min"/>
                     <constraint type="max" value="12" field="selections" scope="parent" shared="true" id="5e1a-0a42-4917-53f4-max"/>
@@ -6794,20 +7058,28 @@ If no suitable target is in base contact, roll again on the chart until you get 
                 <cost name="pts" typeId="points" value="160"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Great Throwing Spear" hidden="false" id="b8b9-776c-7e6e-731c" type="selectionEntry" targetId="9f4f-cead-1851-b4e4" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="86bd-1dd2-0c6e-64df"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="Gut Plate" hidden="false" id="b553-647a-def9-e5ef" type="selectionEntry" targetId="70bc-a2e4-d580-b03f" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4810-cd44-800e-8184"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="90. Magic Items" hidden="false" id="058d-76e9-e85c-5aaf" type="selectionEntryGroup" targetId="0e65-7821-5c99-81c5" sortIndex="3">
+                <entryLink import="true" name="90. Magic Items" hidden="false" id="058d-76e9-e85c-5aaf" type="selectionEntryGroup" targetId="0e65-7821-5c99-81c5" sortIndex="">
                   <modifiers>
                     <modifier type="increment" value="50" field="edf7-f3cf-0f31-9195"/>
                   </modifiers>
+                </entryLink>
+                <entryLink import="true" name="41. Gut Plate" hidden="false" id="30ea-d045-17ba-9e26" type="selectionEntryGroup" targetId="6cfc-d55c-2cdf-5629">
+                  <entryLinks>
+                    <entryLink import="true" name="Gut Plate" hidden="false" id="7805-061b-a756-45af" type="selectionEntry" targetId="70bc-a2e4-d580-b03f">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ec7a-eb74-217d-0f43"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="42c6-7c9c-5acf-320d" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                  <entryLinks>
+                    <entryLink import="true" name="Great Throwing Spear" hidden="false" id="b8b9-776c-7e6e-731c" type="selectionEntry" targetId="9f4f-cead-1851-b4e4">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="86bd-1dd2-0c6e-64df"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
               </entryLinks>
               <infoLinks>
