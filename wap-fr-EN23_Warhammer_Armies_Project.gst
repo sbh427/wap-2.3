@@ -9058,6 +9058,27 @@
     <selectionEntryGroup name="56. Upgrades" id="f845-cd7c-43ba-0c0d" hidden="false">
       <comment>Min 0</comment>
     </selectionEntryGroup>
+    <selectionEntryGroup name="30. Secondary Weapon" id="cdd5-56e6-35d1-e299" hidden="false">
+      <comment>No constraints</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="1ddb-c467-cc40-8edd" hidden="false">
+      <comment>1 &amp; 2 Optional</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 1" hidden="false" id="0441-4a66-fd68-afbb" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
+          <costs>
+            <cost name="pts" typeId="points" value="35"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Wizard Level 2" hidden="false" id="e946-35c3-a15b-b762" type="selectionEntry" targetId="801a-bc0a-a767-61db">
+          <costs>
+            <cost name="pts" typeId="points" value="70"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3942-e6b5-d38c-9eef"/>
+      </constraints>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="6624-0b7b-c5b8-6397" name="Scouts" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
