@@ -8094,7 +8094,7 @@
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Mark of Khorne" hidden="false" id="2211-a88b-c358-2e91">
+    <selectionEntry type="upgrade" import="true" name="Mark of Khorne" hidden="false" id="2211-a88b-c358-2e91" collective="true">
       <infoLinks>
         <infoLink name="Mark of Khorne" id="c228-d93a-5887-3a4e" hidden="false" type="rule" targetId="Mark of Khorne"/>
       </infoLinks>
@@ -8113,17 +8113,17 @@
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Mark of Nurgle" hidden="false" id="fce4-1eaa-170d-634c">
+    <selectionEntry type="upgrade" import="true" name="Mark of Nurgle" hidden="false" id="fce4-1eaa-170d-634c" collective="true">
       <infoLinks>
         <infoLink name="Mark of Nurgle" id="9cff-491b-7124-ad14" hidden="false" type="rule" targetId="Mark of Nurgle"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Mark of Slaanesh" hidden="false" id="b570-8e89-e752-8902">
+    <selectionEntry type="upgrade" import="true" name="Mark of Slaanesh" hidden="false" id="b570-8e89-e752-8902" collective="true">
       <infoLinks>
         <infoLink name="Mark of Slaanesh" id="65ae-4c9d-1932-d190" hidden="false" type="rule" targetId="Mark of Slaanesh"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Mark of Tzeentch" hidden="false" id="a5c6-cd36-6ce9-c322">
+    <selectionEntry type="upgrade" import="true" name="Mark of Tzeentch" hidden="false" id="a5c6-cd36-6ce9-c322" collective="true">
       <infoLinks>
         <infoLink name="Mark of Tzeentch" id="448a-fe5e-64c2-6989" hidden="false" type="rule" targetId="Mark of Tzeentch"/>
       </infoLinks>
