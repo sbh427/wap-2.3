@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="71" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="70" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -230,7 +230,7 @@
     </categoryEntry>
     <categoryEntry name="Mount" hidden="true" id="8b8a-34b1-ed30-df11"/>
     <categoryEntry name="Crew" hidden="true" id="7b27-23f7-972d-c306"/>
-    <categoryEntry name="Wizard" id="1aae-2529-c509-7573" hidden="true"/>
+    <categoryEntry name="Wizard" id="1aae-2529-c509-7573" hidden="false"/>
     <categoryEntry name="Infantry" id="22c9-1606-58f8-2e60" hidden="false">
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -253,6 +253,8 @@
                 <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true" includeChildForces="false"/>
                 <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
                 <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5fc5-b80a-115f-bca3" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="5fc5-b80a-115f-bca3" shared="true" includeChildSelections="true" includeChildForces="false"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -443,6 +445,34 @@
     </categoryEntry>
     <categoryEntry name="Handheld Armour" id="ba52-4f0c-71ae-b52d" hidden="true"/>
     <categoryEntry name="Suits of Armour" id="9a61-618b-519a-807c" hidden="true"/>
+    <categoryEntry name="Large Infantry" id="7a21-ba63-63e2-7d8e" hidden="false">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="6ee4-77bf-4402-f8ab" name="Standard" hidden="false">
@@ -8001,7 +8031,7 @@
         </profile>
       </profiles>
       <modifiers>
-        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="parent"/>
+        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="model-or-unit"/>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Wizard Level 2" hidden="false" id="801a-bc0a-a767-61db">
@@ -8017,7 +8047,7 @@
         </profile>
       </profiles>
       <modifiers>
-        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="parent"/>
+        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="model-or-unit"/>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Wizard Level 3" hidden="false" id="1670-dca4-294b-7d9b">
@@ -8033,7 +8063,7 @@
         </profile>
       </profiles>
       <modifiers>
-        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="parent"/>
+        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="model-or-unit"/>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Wizard Level 4" hidden="false" id="5460-3929-58ef-71ba">
@@ -8049,7 +8079,7 @@
         </profile>
       </profiles>
       <modifiers>
-        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="parent"/>
+        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="model-or-unit"/>
       </modifiers>
     </selectionEntry>
     <selectionEntry id="9519-df8f-0af4-1995" name="Army Battle Standard" hidden="false" collective="false" import="true" type="upgrade">
@@ -8063,19 +8093,6 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Character Option" hidden="false" id="fd10-1876-16d9-600d">
-      <entryLinks>
-        <entryLink import="true" name="General" hidden="false" id="3d25-61e2-da7b-beee" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1"/>
-        <entryLink import="true" name="Army Battle Standard" hidden="false" id="60fb-0b3b-1d83-80d9" type="selectionEntry" targetId="9519-df8f-0af4-1995" sortIndex="2">
-          <costs>
-            <cost name="pts" typeId="points" value="25"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a998-3770-27cc-8b3d"/>
-      </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Mark of Khorne" hidden="false" id="2211-a88b-c358-2e91">
       <infoLinks>
@@ -8936,6 +8953,34 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d10-92f6-d5d5-f71d"/>
       </constraints>
     </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="15bd-038f-34c8-b3b8" hidden="false">
+      <comment>1 &amp; 2 &amp; 3 &amp; 4</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 3" hidden="false" id="82ac-b815-0329-1372" type="selectionEntry" targetId="1670-dca4-294b-7d9b">
+          <costs>
+            <cost name="pts" typeId="points" value="105"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Wizard Level 4" hidden="false" id="e3b4-02fe-bc54-f0e5" type="selectionEntry" targetId="5460-3929-58ef-71ba">
+          <costs>
+            <cost name="pts" typeId="points" value="140"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Wizard Level 1" hidden="false" id="c483-25de-1beb-ca94" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
+          <costs>
+            <cost name="pts" typeId="points" value="35"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Wizard Level 2" hidden="false" id="4764-9424-fb3e-e7ff" type="selectionEntry" targetId="801a-bc0a-a767-61db">
+          <costs>
+            <cost name="pts" typeId="points" value="70"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="39d2-dced-cde4-7657"/>
+      </constraints>
+    </selectionEntryGroup>
     <selectionEntryGroup name="65. Lore of Magic" id="6704-e54c-3f8f-1d32" hidden="false">
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="495e-ce6f-a51c-e06f-min" includeChildSelections="false"/>
@@ -9012,6 +9057,27 @@
     </selectionEntryGroup>
     <selectionEntryGroup name="56. Upgrades" id="f845-cd7c-43ba-0c0d" hidden="false">
       <comment>Min 0</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="30. Secondary Weapon" id="cdd5-56e6-35d1-e299" hidden="false">
+      <comment>No constraints</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="1ddb-c467-cc40-8edd" hidden="false">
+      <comment>1 &amp; 2 Optional</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 1" hidden="false" id="0441-4a66-fd68-afbb" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
+          <costs>
+            <cost name="pts" typeId="points" value="35"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Wizard Level 2" hidden="false" id="e946-35c3-a15b-b762" type="selectionEntry" targetId="801a-bc0a-a767-61db">
+          <costs>
+            <cost name="pts" typeId="points" value="70"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3942-e6b5-d38c-9eef"/>
+      </constraints>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
