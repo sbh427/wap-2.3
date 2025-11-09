@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="71" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="70" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -230,7 +230,7 @@
     </categoryEntry>
     <categoryEntry name="Mount" hidden="true" id="8b8a-34b1-ed30-df11"/>
     <categoryEntry name="Crew" hidden="true" id="7b27-23f7-972d-c306"/>
-    <categoryEntry name="Wizard" id="1aae-2529-c509-7573" hidden="true"/>
+    <categoryEntry name="Wizard" id="1aae-2529-c509-7573" hidden="false"/>
     <categoryEntry name="Infantry" id="22c9-1606-58f8-2e60" hidden="false">
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -8031,7 +8031,7 @@
         </profile>
       </profiles>
       <modifiers>
-        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="parent"/>
+        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="model-or-unit"/>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Wizard Level 2" hidden="false" id="801a-bc0a-a767-61db">
@@ -8047,7 +8047,7 @@
         </profile>
       </profiles>
       <modifiers>
-        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="parent"/>
+        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="model-or-unit"/>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Wizard Level 3" hidden="false" id="1670-dca4-294b-7d9b">
@@ -8063,7 +8063,7 @@
         </profile>
       </profiles>
       <modifiers>
-        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="parent"/>
+        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="model-or-unit"/>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Wizard Level 4" hidden="false" id="5460-3929-58ef-71ba">
@@ -8079,7 +8079,7 @@
         </profile>
       </profiles>
       <modifiers>
-        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="parent"/>
+        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="model-or-unit"/>
       </modifiers>
     </selectionEntry>
     <selectionEntry id="9519-df8f-0af4-1995" name="Army Battle Standard" hidden="false" collective="false" import="true" type="upgrade">
