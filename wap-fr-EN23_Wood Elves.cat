@@ -119,6 +119,7 @@
         <categoryLink name="Z Shield" hidden="false" id="5c42-bedf-70c6-bf7a" targetId="0210-637d-ff12-a760" primary="false"/>
         <categoryLink name="Z Light Armour" hidden="false" id="d744-62e9-3875-73a7" targetId="fa51-55d0-00b9-c0e8" primary="false"/>
         <categoryLink name="Infantry" hidden="false" id="fb78-6061-d39e-84d7" targetId="22c9-1606-58f8-2e60" primary="false"/>
+        <categoryLink name="Z Armour" hidden="false" id="0f3b-f96a-215f-b86a" targetId="387c-2b7c-0a30-7305" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="120"/>
@@ -261,6 +262,7 @@
         <categoryLink name="Z Shield" hidden="false" id="9344-3ace-2350-97b1" targetId="0210-637d-ff12-a760" primary="false"/>
         <categoryLink name="Z Light Armour" hidden="false" id="b6dc-8fda-acd0-8d88" targetId="fa51-55d0-00b9-c0e8" primary="false"/>
         <categoryLink name="Infantry" hidden="false" id="5e6e-1d53-0367-9f2e" targetId="22c9-1606-58f8-2e60" primary="false"/>
+        <categoryLink name="Z Armour" hidden="false" id="9546-93fa-f333-2edf" targetId="387c-2b7c-0a30-7305" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="55"/>
@@ -376,6 +378,7 @@
         <categoryLink name="Z Shield" hidden="false" id="863f-a154-a6f8-663b" targetId="0210-637d-ff12-a760" primary="false"/>
         <categoryLink name="Infantry" hidden="false" id="b992-af7e-f12f-c0cf" targetId="22c9-1606-58f8-2e60" primary="false"/>
         <categoryLink name="Forest Spirit" hidden="false" id="7f8e-8ce4-c3a5-f3c3" targetId="97e1-639e-c76c-da93" primary="false"/>
+        <categoryLink name="Z Armour" hidden="false" id="f38d-a6ac-4553-7952" targetId="387c-2b7c-0a30-7305" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="160"/>
@@ -719,6 +722,7 @@
         <categoryLink name="Z Light Armour" hidden="false" id="396d-cb59-36ea-0bef" targetId="fa51-55d0-00b9-c0e8" primary="false"/>
         <categoryLink name="Cavalry" hidden="false" id="001e-fa51-8c40-8e54" targetId="bdee-b168-38ba-7d3c" primary="false"/>
         <categoryLink name="Forest Spirit" hidden="false" id="e352-31b6-14f3-a378" targetId="97e1-639e-c76c-da93" primary="false"/>
+        <categoryLink name="Z Armour" hidden="false" id="30cf-96a5-475e-8cd0" targetId="387c-2b7c-0a30-7305" primary="false"/>
       </categoryLinks>
       <profiles>
         <profile name="Wild Hunter" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="4b7a-0d6b-b1c0-7599">
@@ -3581,6 +3585,7 @@
                 <categoryLink name="Z Light Armour" hidden="false" id="4fb4-3562-f1f7-0462" targetId="fa51-55d0-00b9-c0e8" primary="false"/>
                 <categoryLink name="Z Shield" hidden="false" id="24d5-dcc6-b701-0ffe" targetId="0210-637d-ff12-a760" primary="false"/>
                 <categoryLink name="Infantry" hidden="false" id="a35a-38d7-28a4-b732" targetId="22c9-1606-58f8-2e60" primary="false"/>
+                <categoryLink name="Z Armour" hidden="false" id="64be-7cb6-0bc7-6254" targetId="387c-2b7c-0a30-7305" primary="false"/>
               </categoryLinks>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Thalandor Doomstar" hidden="false" id="6195-0278-8840-9ca5" sortIndex="5">
@@ -3665,6 +3670,7 @@
               <categoryLinks>
                 <categoryLink name="Z Shield" hidden="false" id="c242-a482-802e-ebae" targetId="0210-637d-ff12-a760" primary="false"/>
                 <categoryLink name="Monstrous Cavalry" hidden="false" id="2388-0ede-648b-c06f" targetId="82d3-4589-72b4-b6ed" primary="false"/>
+                <categoryLink name="Z Armour" hidden="false" id="94e8-0f7f-7653-eb87" targetId="387c-2b7c-0a30-7305" primary="false"/>
               </categoryLinks>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Durthu Oakheart" hidden="false" id="3829-76d6-30d1-4eda" sortIndex="6">
@@ -6109,9 +6115,15 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f667-6e97-ec08-38ea" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </selectionEntry>
@@ -6133,9 +6145,14 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
               </costs>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="dd38-8471-2c86-0008" shared="true" includeChildSelections="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="dd38-8471-2c86-0008" shared="true" includeChildSelections="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="387c-2b7c-0a30-7305" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </selectionEntry>
@@ -6158,9 +6175,15 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
                   </conditionGroups>
                 </modifier>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f667-6e97-ec08-38ea" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <infoLinks>
@@ -6192,9 +6215,15 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f667-6e97-ec08-38ea" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <categoryLinks>
@@ -6218,9 +6247,15 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f667-6e97-ec08-38ea" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <categoryLinks>
@@ -6253,9 +6288,15 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="fa51-55d0-00b9-c0e8" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f667-6e97-ec08-38ea" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <categoryLinks>
