@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="69" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="70" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -43,11 +43,6 @@
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
   </costTypes>
   <profileTypes>
-    <profileType id="fc80-e52f-edf4-4e7e" name="Magic Standard">
-      <characteristicTypes>
-        <characteristicType id="97aa-092b-c6fe-4f5a" name="Special Rules"/>
-      </characteristicTypes>
-    </profileType>
     <profileType id="d9ed-a507-0102-d498" name="Model">
       <characteristicTypes>
         <characteristicType id="09ad-18df-607b-1215" name="M"/>
@@ -60,35 +55,6 @@
         <characteristicType id="bfa2-d38d-7c93-d3f0" name="A"/>
         <characteristicType id="a199-f10b-a038-5730" name="Ld"/>
         <characteristicType id="13f9-a26b-05af-3459" name="Type"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="884c-d50e-eeb6-eda0" name="Armour">
-      <characteristicTypes>
-        <characteristicType id="168d-1cc2-66f3-e766" name="Combat"/>
-        <characteristicType id="97ea-ecf7-8d24-b2ca" name="Missile"/>
-        <characteristicType id="ff58-91e4-84d7-e6e4" name="Special Rules"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="ff67-d27f-2eef-bb35" name="Enchanted Item">
-      <characteristicTypes>
-        <characteristicType id="9d2e-d14d-dd58-a829" name="Special Rules"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="065f-58ea-de5d-d3c6" name="Talisman">
-      <characteristicTypes>
-        <characteristicType id="08ca-4a32-203d-40c0" name="Special Rules"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="6f70-cea1-702c-43bc" name="Weapon">
-      <characteristicTypes>
-        <characteristicType id="59f2-3142-82d5-4f43" name="Range"/>
-        <characteristicType id="b80e-7dac-0dea-9add" name="Strength"/>
-        <characteristicType id="de63-d6da-efa8-00ac" name="Special Rules"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="24d7-7f7d-a4d7-c26c" name="Arcane Item">
-      <characteristicTypes>
-        <characteristicType id="3df8-4ab0-c4bd-e2ad" name="Special Rules"/>
       </characteristicTypes>
     </profileType>
     <profileType id="cb92-d882-5ba8-11ab" name="Spell">
@@ -115,20 +81,6 @@
         <characteristicType id="1c88-efb0-083f-b945" name="Range"/>
         <characteristicType id="6ca0-d074-628f-e276" name="Strength"/>
         <characteristicType id="d3a4-721b-f750-5564" name="Special Rules"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="c119-42f4-2cbe-71a5" name="Magic Weapon">
-      <characteristicTypes>
-        <characteristicType id="4285-3917-6bf9-348b" name="Range"/>
-        <characteristicType id="a1a2-667b-2ec7-4ba7" name="Strength"/>
-        <characteristicType id="ce2d-df6c-9271-a2f8" name="Special Rules"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="7826-5c3d-faa6-1cb7" name="Magic Armour">
-      <characteristicTypes>
-        <characteristicType id="617f-cb5d-6c83-2017" name="Combat"/>
-        <characteristicType id="5b67-725f-ad85-da5b" name="Missile"/>
-        <characteristicType id="4e25-3626-a136-c38d" name="Special Rules"/>
       </characteristicTypes>
     </profileType>
     <profileType id="8625-abf8-a9a3-a423" name="Rare Duplicate Choice Table">
@@ -166,49 +118,9 @@
         <characteristicType id="281f-07de-e7b1-1e4a" name="Result"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="4537-0079-60d2-4469" name="Blackpowder Misfire Chart">
-      <characteristicTypes>
-        <characteristicType id="0256-a2e8-e71c-22cc" name="Result"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="a9be-6f35-44aa-bf7d" name="Stone Thrower Misfire Chart">
-      <characteristicTypes>
-        <characteristicType id="d187-dd40-0edb-b165" name="Result"/>
-      </characteristicTypes>
-    </profileType>
     <profileType id="591c-24ac-19bd-3b4b" name="Mercenary Loyalty Table">
       <characteristicTypes>
         <characteristicType id="c8b7-e979-95fd-ac37" name="Result"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="f1ab-233e-f56c-1851" name="Animosity Table">
-      <characteristicTypes>
-        <characteristicType id="9fa5-364b-a53e-ec35" name="Result"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="4d1e-f578-3fd8-b4e1" name="Treacherous Gits Table">
-      <characteristicTypes>
-        <characteristicType id="9de9-c782-1356-dc92" name="Result"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="b3fd-45e2-9ae1-9532" name="Big Things Chart (Giant)">
-      <characteristicTypes>
-        <characteristicType id="a40b-4ad2-71bd-7318" name="Result"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="41e4-fd40-7b32-f71e" name="Man-sized Things Chart (Giant)">
-      <characteristicTypes>
-        <characteristicType id="8db9-ceea-0832-d910" name="Result"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="771a-abec-4083-83d2" name="Pick up and... Chart">
-      <characteristicTypes>
-        <characteristicType id="6486-077d-3077-6419" name="Result"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="9025-f9c9-08a1-7918" name="Animosity Chart">
-      <characteristicTypes>
-        <characteristicType id="fb86-d23a-8886-cc3b" name="Result"/>
       </characteristicTypes>
     </profileType>
     <profileType name="Prayer" id="4608-9b35-b7dc-202d" hidden="false">
@@ -216,29 +128,37 @@
         <characteristicType name="Effect" id="1f79-8144-edd6-8b51"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Big Things Chart (Bonegrinder Giant)" id="c247-d962-75fa-d212" hidden="false">
+    <profileType name="Troop Type" id="3adc-2604-f88f-aa41" hidden="false">
       <characteristicTypes>
-        <characteristicType name="Result" id="020b-7dac-6a63-4525"/>
+        <characteristicType name="Min. Files for Rank Bonus" id="e21c-5a94-1922-5dd8"/>
+        <characteristicType name="Max. Number of Supporting Attacks" id="882b-4e9f-a4d6-182a"/>
+        <characteristicType name="Unit Strength" id="ec2f-bc98-8ff4-9997"/>
+        <characteristicType name="Line of Sight" id="6fa1-9401-65a0-4327"/>
+        <characteristicType name="Default Special Rules" id="bedb-f7c8-dfb9-fa80"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Man-sized Things Chart (Bonegrinder Giant)" id="cc23-fbd5-942e-c3d8" hidden="false">
+    <profileType name="Misfire Chart" id="c972-d0be-bd2e-332b" hidden="false">
       <characteristicTypes>
-        <characteristicType name="Result" id="17f4-32f7-ddb9-dbe3"/>
+        <characteristicType name="Result" id="008a-8bda-9586-4ae1"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Grapple and... Chart" id="0e2f-426f-5aed-ef49" hidden="false">
+    <profileType name="Mishap Chart" id="9881-2753-3a1a-d2ad" hidden="false">
       <characteristicTypes>
-        <characteristicType name="Result" id="5530-99d4-2acf-168d"/>
+        <characteristicType name="Result" id="d9c7-3474-73f2-8aa4"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Bigger Things Chart" id="451e-6d91-893e-45c6" hidden="false">
+    <profileType name="Table / Chart" id="d549-1f73-1ba5-861c" hidden="false">
       <characteristicTypes>
-        <characteristicType name="Result" id="6713-6d4f-f3d5-ab1c"/>
+        <characteristicType name="Result" id="686b-22d8-d67f-02eb"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
   <categoryEntries>
-    <categoryEntry id="d280-b7df-c185-2ba5" name="Lords" hidden="false"/>
+    <categoryEntry id="d280-b7df-c185-2ba5" name="Lords" hidden="false">
+      <constraints>
+        <constraint type="max" value="25" field="limit::points" scope="roster" shared="false" id="8877-5cef-efc0-d65b" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
+      </constraints>
+    </categoryEntry>
     <categoryEntry id="b876-2856-f1c2-c4f0" name="Core" hidden="false">
       <modifiers>
         <modifier type="decrement" field="f412-f4d0-9f49-afab" value="1">
@@ -255,9 +175,21 @@
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="f412-f4d0-9f49-afab" type="min"/>
+        <constraint type="min" value="25" field="limit::points" scope="roster" shared="false" id="minPercentage" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
       </constraints>
     </categoryEntry>
-    <categoryEntry id="d38a-73da-883b-bab9" name="Heroes" hidden="false"/>
+    <categoryEntry id="d38a-73da-883b-bab9" name="Heroes" hidden="false">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="35" field="limit::points" scope="roster" shared="false" id="1ec9-e189-0563-2616" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
+      </constraints>
+    </categoryEntry>
     <categoryEntry id="fc26-7737-f7cb-8977" name="Special" hidden="false">
       <modifiers>
         <modifier type="decrement" field="5e3c-b5d6-a059-b5ab" value="1">
@@ -274,6 +206,7 @@
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5e3c-b5d6-a059-b5ab" type="min"/>
+        <constraint type="max" value="50" field="limit::points" scope="roster" shared="false" id="a416-d971-876c-770d" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
       </constraints>
     </categoryEntry>
     <categoryEntry id="0eb4-f376-7725-b05b" name="Rare" hidden="false">
@@ -292,317 +225,552 @@
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="e0d7-75ba-de98-e3ff" type="min"/>
+        <constraint type="max" value="25" field="limit::points" scope="roster" shared="false" id="maxPercentage" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
       </constraints>
     </categoryEntry>
-    <categoryEntry name="(Mount)" hidden="false" id="(Mount)"/>
-    <categoryEntry name="(Crew)" hidden="false" id="(Crew)"/>
-    <categoryEntry name="X Pike" id="e3de-a992-6a3e-5195" hidden="true"/>
-    <categoryEntry name="X Heavy Lance" id="b906-254a-7949-9e08" hidden="true"/>
-    <categoryEntry name="X Light Lance" id="7a83-6b11-9174-d3b2" hidden="true"/>
-    <categoryEntry name="X Additional Hand Weapon" id="c4b0-4ee4-7b99-843e" hidden="true"/>
-    <categoryEntry name="X Polearm" id="0b0c-acf4-8a6a-dd72" hidden="true"/>
-    <categoryEntry name="X Spear" id="c1f2-083a-aee2-6278" hidden="true"/>
-    <categoryEntry name="Y Handgun" id="6404-4b9f-1ab4-df17" hidden="true"/>
-    <categoryEntry name="Y Crossbow" id="7f3e-8bc2-6bb3-4aae" hidden="true"/>
-    <categoryEntry name="Y Warbow" id="64a6-9da0-afd1-0a7b" hidden="true"/>
-    <categoryEntry name="Y Bow" id="506f-f1ca-805e-a269" hidden="true"/>
-    <categoryEntry name="Y Blowpipe" id="7d94-b140-c653-6b75" hidden="true"/>
-    <categoryEntry name="Z Barding" id="e650-a901-f069-ca88" hidden="true"/>
-    <categoryEntry name="Z Buckler" id="4276-1ee4-016d-ac99" hidden="true"/>
-    <categoryEntry name="Z Heavy Armour" id="f667-6e97-ec08-38ea" hidden="true"/>
-    <categoryEntry name="Z Full Plate Armour" id="e4d2-4419-464f-fccb" hidden="true"/>
-    <categoryEntry name="Z Light Armour" id="fa51-55d0-00b9-c0e8" hidden="true"/>
-    <categoryEntry name="X Great Weapon" id="abcc-4aa7-4989-7189" hidden="true"/>
-    <categoryEntry name="X Flail" id="a86f-aab3-889c-0b6d" hidden="true"/>
-    <categoryEntry name="Y Shortbow" id="0369-7a21-9325-be6b" hidden="true"/>
-    <categoryEntry name="Y Greatbow" id="de63-4d11-ba2c-5742" hidden="true"/>
-    <categoryEntry name="Y Longbow" id="3ee8-1923-4565-e2b6" hidden="true"/>
-    <categoryEntry name="Y Blunderbuss" id="3be0-b6c8-e473-6ef5" hidden="true"/>
-    <categoryEntry name="Y Brace of Pistols" id="6754-79b4-168a-afc0" hidden="true"/>
-    <categoryEntry name="Y Javelins" id="0e7e-b113-620e-246b" hidden="true"/>
-    <categoryEntry name="Y Throwing Axes" id="9d4b-d685-b676-92a3" hidden="true"/>
-    <categoryEntry name="Y Throwing Weapons" id="fe9a-2efe-b32f-a8a0" hidden="true"/>
-    <categoryEntry name="Y Sling" id="d69b-acd0-f802-1e50" hidden="true"/>
-    <categoryEntry name="Y Pistol" id="28bf-f07c-9e13-4dd7" hidden="true"/>
-    <categoryEntry name="Z Medium Armour" id="222a-078c-ce85-fb16" hidden="true"/>
-    <categoryEntry name="Z Shield" id="0210-637d-ff12-a760" hidden="true"/>
+    <categoryEntry name="Mount" hidden="true" id="8b8a-34b1-ed30-df11"/>
+    <categoryEntry name="Crew" hidden="true" id="7b27-23f7-972d-c306"/>
+    <categoryEntry name="Wizard" id="1aae-2529-c509-7573" hidden="false"/>
+    <categoryEntry name="Infantry" id="22c9-1606-58f8-2e60" hidden="false">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5fc5-b80a-115f-bca3" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="5fc5-b80a-115f-bca3" shared="true" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
+    <categoryEntry name="Monster" id="e1a0-da31-05c5-9a15" hidden="false">
+      <infoLinks>
+        <infoLink name="Stomp" id="2cc9-54d7-9903-29c9" hidden="false" type="rule" targetId="668c-19e8-b764-8549">
+          <modifiers>
+            <modifier type="append" value="(D6)" field="name" join=" "/>
+            <modifier type="set" value="From Mount" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Terror" id="02ea-57d5-4bb7-bc2d" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
+        <infoLink name="Swiftstride" id="9700-feb5-c942-f86e" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
+      </infoLinks>
+    </categoryEntry>
+    <categoryEntry name="Cavalry" id="bdee-b168-38ba-7d3c" hidden="false">
+      <infoLinks>
+        <infoLink name="Swiftstride" id="0daf-9673-2f25-e019" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
+        <infoLink name="Impact Hits (1)" id="db0b-afa8-dc86-9375" hidden="false" type="rule" targetId="bb3b-3ca8-fcbc-a78b">
+          <modifiers>
+            <modifier type="set" value="From Mount" field="annotation"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
+    <categoryEntry name="Monstrous Cavalry" id="82d3-4589-72b4-b6ed" hidden="false">
+      <infoLinks>
+        <infoLink name="Impact Hits (1)" id="7683-2a71-59fd-37ab" hidden="false" type="rule" targetId="bb3b-3ca8-fcbc-a78b">
+          <modifiers>
+            <modifier type="set" value="From Mount" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Fear" id="c2b9-c3ec-39ff-2d86" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
+        <infoLink name="Swiftstride" id="a92e-c732-6e1a-789f" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
+    <categoryEntry name="Swarm" id="f651-5580-8a7b-45eb" hidden="false">
+      <infoLinks>
+        <infoLink name="Expendable" id="288d-141a-981d-8b60" hidden="false" type="rule" targetId="b806-942b-15af-b309"/>
+        <infoLink name="Skirmishers" id="fef5-1906-e36f-2b82" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
+        <infoLink name="Unstable" id="5367-b34c-298c-4436" hidden="false" type="rule" targetId="b779-6d7f-8298-7c82"/>
+      </infoLinks>
+    </categoryEntry>
+    <categoryEntry name="War Beast" id="5c5d-6944-cd09-0db8" hidden="false">
+      <infoLinks>
+        <infoLink name="Vanguard" id="bfc9-b0de-70e9-8331" hidden="false" type="rule" targetId="38ba-d48a-be97-f830"/>
+        <infoLink name="Swiftstride" id="833e-9ec6-9b65-6aef" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
+        <infoLink name="Expendable" id="b701-aa37-6ccd-0693" hidden="false" type="rule" targetId="b806-942b-15af-b309"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
+    <categoryEntry name="War Machine" id="d0ba-7b91-1049-d48b" hidden="false">
+      <infoLinks>
+        <infoLink name="Move or Fire" id="1c88-c14c-e0ca-cbaf" hidden="false" type="rule" targetId="37a5-2f70-159f-adfd"/>
+      </infoLinks>
+    </categoryEntry>
+    <categoryEntry name="Monstrous Creature" id="b3e5-4b1b-7050-7e02" hidden="false">
+      <infoLinks>
+        <infoLink name="Stomp" id="a3f5-8708-f4cc-306e" hidden="false" type="rule" targetId="668c-19e8-b764-8549">
+          <modifiers>
+            <modifier type="append" value="(D3)" field="name" join=" "/>
+            <modifier type="set" value="From Mount" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Swiftstride" id="9454-a2e6-d8f9-f5fa" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
+        <infoLink name="Terror" id="ee03-51b1-ba11-20ef" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
+    <categoryEntry name="Monstrous Beasts" id="f98e-8d4f-7b1b-59cd" hidden="false">
+      <infoLinks>
+        <infoLink name="Fear" id="bd5f-9083-7a7d-64de" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
+        <infoLink name="Swiftstride" id="7733-1855-7ecf-09a5" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
+    <categoryEntry name="Chariot" id="7224-b7fd-d652-3ff2" hidden="false">
+      <infoLinks>
+        <infoLink name="Swiftstride" id="ed85-9dfb-a95c-043e" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
+        <infoLink name="Impact Hits (D6)" id="5d7f-cb2c-7108-f4c7" hidden="false" type="rule" targetId="e9e6-66cc-623f-8e94">
+          <modifiers>
+            <modifier type="set" value="From Chariot" field="annotation"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </categoryEntry>
+    <categoryEntry name="Shrine" id="aff0-db72-0064-43fe" hidden="false"/>
+    <categoryEntry name="Monstrous Infantry" id="5fc5-b80a-115f-bca3" hidden="false">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <infoLinks>
+        <infoLink name="Fear" id="ae76-3fa7-98f6-216f" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
+        <infoLink name="Swiftstride" id="fe8c-f458-cb21-7363" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
+      </infoLinks>
+    </categoryEntry>
+    <categoryEntry name="Handheld Armour" id="ba52-4f0c-71ae-b52d" hidden="true"/>
+    <categoryEntry name="Suits of Armour" id="9a61-618b-519a-807c" hidden="true"/>
+    <categoryEntry name="Large Infantry" id="7a21-ba63-63e2-7d8e" hidden="false">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true" includeChildForces="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="6ee4-77bf-4402-f8ab" name="Standard" hidden="false">
       <categoryLinks>
-        <categoryLink id="331b-a879-f664-e74e" name="Lords" hidden="false" targetId="d280-b7df-c185-2ba5" primary="false">
-          <constraints>
-            <constraint field="limit::points" scope="roster" value="25" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="8877-5cef-efc0-d65b" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="e3e8-f89d-a94a-776d" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="false">
-          <constraints>
-            <constraint field="limit::points" scope="roster" value="35" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="ad45-e317-2036-b755" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="false">
-          <constraints>
-            <constraint field="limit::points" scope="roster" value="25" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="minPercentage" type="min"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="9241-6f7e-063e-d674" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="false">
-          <constraints>
-            <constraint field="limit::points" scope="roster" value="50" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink id="6655-f7c6-f26b-92b6" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="false">
-          <constraints>
-            <constraint field="limit::points" scope="roster" value="25" percentValue="true" shared="false" includeChildSelections="true" includeChildForces="false" id="maxPercentage" type="max"/>
-          </constraints>
-        </categoryLink>
+        <categoryLink id="331b-a879-f664-e74e" name="Lords" hidden="false" targetId="d280-b7df-c185-2ba5" primary="false"/>
+        <categoryLink id="e3e8-f89d-a94a-776d" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="false"/>
+        <categoryLink id="ad45-e317-2036-b755" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="false"/>
+        <categoryLink id="9241-6f7e-063e-d674" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="false"/>
+        <categoryLink id="6655-f7c6-f26b-92b6" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="false"/>
       </categoryLinks>
     </forceEntry>
   </forceEntries>
   <selectionEntries>
-    <selectionEntry id="7637-1e6f-b1ba-1b46" name="Duplicate Choices" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="force" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6ec5-6fa2-e308-c279" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="3960-49ef-a904-73cf" name="Allowed Rare Duplicates" publicationId="9e23-79cb-pubN66727" page="133" hidden="false" typeId="8625-abf8-a9a3-a423" typeName="Rare Duplicate Choice Table">
-          <characteristics>
-            <characteristic name="0-999 pts" typeId="4d76-ee2f-5e2c-e078">1</characteristic>
-            <characteristic name="1000-1999 pts" typeId="780c-b7b0-c2d2-3e3b">1</characteristic>
-            <characteristic name="2000-2999 pts" typeId="bcf6-e4b3-a0b5-3512">1</characteristic>
-            <characteristic name="3000-3999 pts" typeId="8c51-da81-5d97-a745">2</characteristic>
-            <characteristic name="4000-4999 pts" typeId="9869-b51f-1605-8a32">3</characteristic>
-            <characteristic name="Each +1000pts" typeId="11c6-43db-a860-183a">+1</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="6d6a-7bdc-129c-0242" name="Allowed Special Duplicates" publicationId="9e23-79cb-pubN66727" page="133" hidden="false" typeId="3a6c-dc7b-2dc3-7a23" typeName="Special Duplicate Choice Table">
-          <characteristics>
-            <characteristic name="0-999 pts" typeId="0150-b3f1-e702-b3a1">1</characteristic>
-            <characteristic name="1000-1999 pts" typeId="ac21-243e-6d07-85db">2</characteristic>
-            <characteristic name="2000-2999 pts" typeId="c689-4343-e15e-089c">3</characteristic>
-            <characteristic name="3000-3999 pts" typeId="21bd-8489-e79e-8efa">4</characteristic>
-            <characteristic name="4000-4999 pts" typeId="6159-0a42-a77c-6b39">5</characteristic>
-            <characteristic name="Each +1000pts" typeId="91fb-666c-daf9-b7a1">+1</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <rules>
-        <rule id="9c6a-1990-ad07-074b" name="Duplicate Choices" publicationId="9e23-79cb-pubN66727" page="133" hidden="false">
-          <description>There is a limit on how many duplicates of each unit type you can include in your army. Remember, this limit applies only to duplicate Special or Rare unit choices, not to the total number of Special and Rare units overall. Note that this limit applies to the basic unit type and isn&apos;t dependent on the size of the unit or optional wargear. If a character has a Monster, Chariot or Shrine mount that is available as a Special or Rare choice, then these will also count towards the limit of duplicate choices.</description>
-        </rule>
-      </rules>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="c499-0467-232f-7466" name="FAQ about BS and the WAP files" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="force" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c87b-2f0e-27b0-02b1" type="max"/>
-      </constraints>
-      <rules>
-        <rule id="d8a1-3a01-a893-f82c" name="FAQ about BS and the WAP files" hidden="false">
-          <description>Q: I can&apos;t find the data anymore in the list of downloadable data.
-A: Read the following: https://github.com/BSData/wh40k/issues/1706 Then do this: https://github.com/BSData/gallery#usage
-
-Q: I am on mobile and can not select Marks of Chaos/Vampire Bloodlines/Greenskin types/Special characters/RoR.
-A: Click the circle to select the variant.
-
-Q: Why is is magic item/rune X among the options of character/unit Y, even though Y can&apos;t equip the item according to the rules?
-A: Where it is sensible, this has been taken care of. Yet there are still cases in which a character has items displayed that they can not equip according to the rules. This is mostly the case for the generic magic items and factions that can&apos;t equip the mundane version of the item. 
-For example, Ogres have generic magic shields listed among their options but can&apos;t equip a shield. 
-Other example, Wood Elfs have magical plate armor listed but can&apos;t equip mundane plate armor.
-Another example is that Organ Guns have all runes listed but can&apos;t take some of them.
-This can&apos;t be changed efficiently. You just have to know your army and be aware of what you can equip and what you can&apos;t.
-
-Q: Something is wrong with the allowances.
-A: If you want BS to calculate your allowed percentage of allowances, you need to set a point limit. By default each list has a -1 point limit, which means you can do whatever you want. You have to set a point limit for your game for the allowances to be calculated.
-
-Q: Something is wrong with the allowances of my allied list.
-A: Do not put multiple forces into one roster. If you do, BS will calculate the allowances for the whole roster instead of calculating it for each army separately.
-If you want to make a list using the allied rules, make separate rosters for each army.</description>
-        </rule>
-      </rules>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="a92c-dee5-1aa8-4a42" name="Miscast Table" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="force" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="22de-1797-7260-b838" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="6fb3-b0c8-656e-d475" name="12" publicationId="9e23-79cb-pubN66727" page="40" hidden="false" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table">
-          <characteristics>
-            <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Damned by Chaos: The Wizard is immediately removed as a casualty, regardless of any protective magic item or rule they might have.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="a511-7f28-0f3b-1a91" name="7" publicationId="9e23-79cb-pubN66727" page="40" hidden="false" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table">
-          <characteristics>
-            <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Detonation: The Wizard and all models in base contact with him suffer a Strength 10 hit.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="bc70-79a8-a31c-c477" name="5" publicationId="9e23-79cb-pubN66727" page="40" hidden="false" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table">
-          <characteristics>
-            <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Magical Feedback: The Wizard and every model on the same side within 12&quot; that can channel/generate power or dispel dice suffer a Strength 4 hit as a result of the magical backlash. The Wizard cannot attempt to cast further spells this phase.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="d716-289e-2d74-e0c5" name="9" publicationId="9e23-79cb-pubN66727" page="40" hidden="false" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table">
-          <characteristics>
-            <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Calamitous Detonation: Centre the small round template over the Wizard – every model underneath the template suffers a Strength 10 hit (including the Wizard – they do not benefit from Look Out Sir! in this case).</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="f0b3-811a-2c59-1669" name="8" publicationId="9e23-79cb-pubN66727" page="40" hidden="false" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table">
-          <characteristics>
-            <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Amnesia: The caster forgets how to cast the spell and will not be able to cast it again during this battle.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="f267-0d21-8489-77a3" name="4" publicationId="9e23-79cb-pubN66727" page="40" hidden="false" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table">
-          <characteristics>
-            <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Lost Concentration: The opposing player may immediately cast any one of their own spells of the same casting difficulty rating or less. No casting roll is required – the spell is automatically cast – but it can be dispelled by the player whose turn it is as normal (by using power dice in the same way as dispel dice). They need to beat the basic casting value of the spell to dispel it.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="1a08-69de-ebfa-da11" name="11" publicationId="9e23-79cb-pubN66727" page="40" hidden="false" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table">
-          <characteristics>
-            <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Dimensional Cascade: Centre the large round template over the Wizard – every model underneath the template (including the Wizard – they do not benefit from Look Out Sir! in this case) suffers a Strength 10 hit.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="3893-4961-bc56-1cb8" name="10" publicationId="9e23-79cb-pubN66727" page="40" hidden="false" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table">
-          <characteristics>
-            <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Deamonic Poessession: The caster suffers one Strength 10 hit and loses a Wizard level and their highest levelled spell. If the caster reaches Level 0, he stops counting as a Wizard for all purposes and therefore will not be able to use any arcane magic items he is carrying.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="92e1-d44e-2735-96fc" name="6" publicationId="9e23-79cb-pubN66727" page="40" hidden="false" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table">
-          <characteristics>
-            <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Power Drain: The casting player loses D3 dice from the power pool.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="8424-e2b3-178b-a62c" name="02-03" publicationId="9e23-79cb-pubN66727" page="40" hidden="false" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table">
-          <characteristics>
-            <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Loss of Power: The Wizard cannot attempt to cast further spells this phase.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="fa37-e5db-5351-a408" name="Blackpowder Misfire Chart" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="force" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e8ed-fd7d-58d1-f615" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="385d-5c05-b088-169b" name="01-02" publicationId="9e23-79cb-pubN66727" page="113" hidden="false" typeId="4537-0079-60d2-4469" typeName="Blackpowder Misfire Chart">
-          <characteristics>
-            <characteristic name="Result" typeId="0256-a2e8-e71c-22cc">Destroyed!: The war machine is destroyed.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="1adf-38fa-f9cd-97c8" name="03-04" publicationId="9e23-79cb-pubN66727" page="113" hidden="false" typeId="4537-0079-60d2-4469" typeName="Blackpowder Misfire Chart">
-          <characteristics>
-            <characteristic name="Result" typeId="0256-a2e8-e71c-22cc">Malfunction: The war machine cannot fire this turn or in the controlling player&apos;s next turn.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="c47b-e500-a5b2-5143" name="05-06" publicationId="9e23-79cb-pubN66727" page="113" hidden="false" typeId="4537-0079-60d2-4469" typeName="Blackpowder Misfire Chart">
-          <characteristics>
-            <characteristic name="Result" typeId="0256-a2e8-e71c-22cc">May not Shoot: The war machine can shoot as normal again in the controlling player&apos;s next turn.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="f7e0-ba91-0886-7916" name="Stone Thrower Misfire Chart" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="force" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f2e5-059d-7b35-1ee2" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="f14c-d708-7ec1-d950" name="1" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="a9be-6f35-44aa-bf7d" typeName="Stone Thrower Misfire Chart">
-          <characteristics>
-            <characteristic name="Result" typeId="d187-dd40-0edb-b165">Destroyed!: The war machine is destroyed.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="b7a8-f42f-997c-7958" name="02-03" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="a9be-6f35-44aa-bf7d" typeName="Stone Thrower Misfire Chart">
-          <characteristics>
-            <characteristic name="Result" typeId="d187-dd40-0edb-b165">Disabled: The stone thrower suffers a wound, with no armour saves allowed. The stone thrower cannot fire this turn or in the controlling player&apos;s next turn.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="cf7e-50c9-f10c-da28" name="04-06" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="a9be-6f35-44aa-bf7d" typeName="Stone Thrower Misfire Chart">
-          <characteristics>
-            <characteristic name="Result" typeId="d187-dd40-0edb-b165">May not Shoot: The stone thrower is unharmed and can shoot as normal again in the controlling player&apos;s next turn.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="c4d4-84a1-e0af-7f27" name="Mercenary Loyalty Table" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="force" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9883-e05a-3d2f-7388" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="a101-5e2b-67a0-8c50" name="01-03 (Mercenary Loyalty)" publicationId="9e23-79cb-pubN116235" page="5" hidden="false" typeId="591c-24ac-19bd-3b4b" typeName="Mercenary Loyalty Table">
-          <characteristics>
-            <characteristic name="Result" typeId="c8b7-e979-95fd-ac37">Wavering Loyalty: The unit flees as normal, and all models in the unit suffer a -1 modifier to their Leadership for the rest of the battle.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="470e-cba4-9f8d-62c3" name="04-05 (Mercenary Loyalty)" publicationId="9e23-79cb-pubN116235" page="5" hidden="false" typeId="591c-24ac-19bd-3b4b" typeName="Mercenary Loyalty Table">
-          <characteristics>
-            <characteristic name="Result" typeId="c8b7-e979-95fd-ac37">Soldier On: The unit flees as normal.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="bfaf-e5c1-c865-f3e9" name="06 (Mercenary Loyalty)" publicationId="9e23-79cb-pubN116235" page="5" hidden="false" typeId="591c-24ac-19bd-3b4b" typeName="Mercenary Loyalty Table">
-          <characteristics>
-            <characteristic name="Result" typeId="c8b7-e979-95fd-ac37">Stand Fast!: The unit counts as having passed its Break test.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="7fcc-68a5-3a08-941c" name="Minimum Units" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="force" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f169-3a49-b864-af03" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="2099-fb98-e433-bc47" name="Minimum Unit Requirement" publicationId="9e23-79cb-pubN66727" page="132" hidden="false" typeId="121a-930d-b248-ee3e" typeName="Minimum Units">
-          <characteristics>
-            <characteristic name="0-500 pts" typeId="5f2a-99ce-f8a3-eac9">1</characteristic>
-            <characteristic name="501-1000 pts" typeId="221f-5ad7-8b1c-4337">2</characteristic>
-            <characteristic name="1001-1500 pts" typeId="b079-6a7a-787c-584d">3</characteristic>
-            <characteristic name="1501-2000 pts" typeId="c5dd-526f-37a8-3c15">4</characteristic>
-            <characteristic name="2001-2500 pts" typeId="415d-0476-97ff-9680">5</characteristic>
-            <characteristic name="Each +500" typeId="5e64-d73e-fa3a-3c61">+1</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <rules>
-        <rule id="241f-72a2-9188-b2b7" name="Minimum Unit Requirement" publicationId="9e23-79cb-pubN66727" page="132" hidden="false">
-          <description>An army just isn&apos;t an army unless it has plenty of warriors in its ranks. An army must contain at least one Core, Special or Rare unit for every 500 points played. So, at 750 points you need two units, at 1250 points you need three units, at 2500 points you need 5 units and so on.</description>
-        </rule>
-      </rules>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Troop Types" hidden="false" id="d24f-26db-0c14-a9f6">
-      <infoLinks>
-        <infoLink name="Infantry" id="b888-7d50-8c9b-0ccd" hidden="false" type="rule" targetId="5669-ecc5-1f66-edd8"/>
-        <infoLink name="Cavalry" id="6d75-c305-5cea-bfec" hidden="false" type="rule" targetId="f299-b4f5-2ed1-08ce"/>
-        <infoLink name="Large Infantry" id="c02d-e97f-ea26-ac4c" hidden="false" type="rule" targetId="501d-e1d6-df0e-d961"/>
-        <infoLink name="War Beast" id="3fe6-b6a2-9cf7-7e5b" hidden="false" type="rule" targetId="42ce-1113-52c7-5ef8"/>
-        <infoLink name="War Machine" id="02f3-cbff-78b2-abef" hidden="false" type="rule" targetId="9960-d3ce-efdf-06ae"/>
-        <infoLink name="Monstrous Beasts" id="f437-ab16-8138-29c9" hidden="false" type="rule" targetId="c629-2c10-da21-4037"/>
-        <infoLink name="Monstrous Cavalry" id="9802-1ec7-60ad-6086" hidden="false" type="rule" targetId="2b42-ec95-c1af-bc30"/>
-        <infoLink name="Monstrous Infantry" id="d93b-5080-e6be-2367" hidden="false" type="rule" targetId="0997-a400-8b77-fa7c"/>
-        <infoLink name="Monstrous Creatures" id="2cb9-7743-5b1f-044e" hidden="false" type="rule" targetId="11c6-a1a7-95cd-f9e8"/>
-        <infoLink name="Monster" id="cab5-cd7c-cc0a-eeee" hidden="false" type="rule" targetId="b965-f383-1052-74df"/>
-        <infoLink name="Chariot" id="86a9-1051-5322-f1cd" hidden="false" type="rule" targetId="8595-878d-d839-775d"/>
-        <infoLink name="Shrine" id="ece0-075c-2c26-1d28" hidden="false" type="rule" targetId="3952-6c6d-75ce-9b60"/>
-      </infoLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="false" id="f8b1-3254-6b54-ec6f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
+    <selectionEntry type="upgrade" import="true" name="Tables &amp; Charts" hidden="false" id="8607-a440-1e4a-de26">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Blackpowder Misfire Chart" hidden="false" id="fa37-e5db-5351-a408" collective="false" sortIndex="1">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="false" id="e8ed-fd7d-58d1-f615" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Blackpowder Misfire Chart" id="00d1-c026-f8e6-c4c3" hidden="false" type="infoGroup" targetId="bb8f-7181-30f9-fc65"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Duplicate Choices" hidden="false" id="7637-1e6f-b1ba-1b46" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="false" id="6ec5-6fa2-e308-c279" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Allowed Rare Duplicates" typeId="8625-abf8-a9a3-a423" typeName="Rare Duplicate Choice Table" hidden="false" id="3960-49ef-a904-73cf" publicationId="9e23-79cb-pubN66727" page="133">
+              <characteristics>
+                <characteristic name="0-999 pts" typeId="4d76-ee2f-5e2c-e078">1</characteristic>
+                <characteristic name="1000-1999 pts" typeId="780c-b7b0-c2d2-3e3b">1</characteristic>
+                <characteristic name="2000-2999 pts" typeId="bcf6-e4b3-a0b5-3512">1</characteristic>
+                <characteristic name="3000-3999 pts" typeId="8c51-da81-5d97-a745">2</characteristic>
+                <characteristic name="4000-4999 pts" typeId="9869-b51f-1605-8a32">3</characteristic>
+                <characteristic name="Each +1000pts" typeId="11c6-43db-a860-183a">+1</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Allowed Special Duplicates" typeId="3a6c-dc7b-2dc3-7a23" typeName="Special Duplicate Choice Table" hidden="false" id="6d6a-7bdc-129c-0242" publicationId="9e23-79cb-pubN66727" page="133">
+              <characteristics>
+                <characteristic name="0-999 pts" typeId="0150-b3f1-e702-b3a1">1</characteristic>
+                <characteristic name="1000-1999 pts" typeId="ac21-243e-6d07-85db">2</characteristic>
+                <characteristic name="2000-2999 pts" typeId="c689-4343-e15e-089c">3</characteristic>
+                <characteristic name="3000-3999 pts" typeId="21bd-8489-e79e-8efa">4</characteristic>
+                <characteristic name="4000-4999 pts" typeId="6159-0a42-a77c-6b39">5</characteristic>
+                <characteristic name="Each +1000pts" typeId="91fb-666c-daf9-b7a1">+1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Duplicate Choices" id="9c6a-1990-ad07-074b" hidden="false" publicationId="9e23-79cb-pubN66727" page="133">
+              <description>There is a limit on how many duplicates of each unit type you can include in your army. Remember, this limit applies only to duplicate Special or Rare unit choices, not to the total number of Special and Rare units overall. Note that this limit applies to the basic unit type and isn&apos;t dependent on the size of the unit or optional wargear. If a character has a Monster, Chariot or Shrine mount that is available as a Special or Rare choice, then these will also count towards the limit of duplicate choices.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Mercenary Loyalty Table" hidden="false" id="c4d4-84a1-e0af-7f27" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="false" id="9883-e05a-3d2f-7388" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="01-03 (Mercenary Loyalty)" typeId="591c-24ac-19bd-3b4b" typeName="Mercenary Loyalty Table" hidden="false" id="a101-5e2b-67a0-8c50" publicationId="9e23-79cb-pubN116235" page="5">
+              <characteristics>
+                <characteristic name="Result" typeId="c8b7-e979-95fd-ac37">Wavering Loyalty: The unit flees as normal, and all models in the unit suffer a -1 modifier to their Leadership for the rest of the battle.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="04-05 (Mercenary Loyalty)" typeId="591c-24ac-19bd-3b4b" typeName="Mercenary Loyalty Table" hidden="false" id="470e-cba4-9f8d-62c3" publicationId="9e23-79cb-pubN116235" page="5">
+              <characteristics>
+                <characteristic name="Result" typeId="c8b7-e979-95fd-ac37">Soldier On: The unit flees as normal.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="06 (Mercenary Loyalty)" typeId="591c-24ac-19bd-3b4b" typeName="Mercenary Loyalty Table" hidden="false" id="bfaf-e5c1-c865-f3e9" publicationId="9e23-79cb-pubN116235" page="5">
+              <characteristics>
+                <characteristic name="Result" typeId="c8b7-e979-95fd-ac37">Stand Fast!: The unit counts as having passed its Break test.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Minimum Units" hidden="false" id="7fcc-68a5-3a08-941c" collective="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="false" id="f169-3a49-b864-af03" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Minimum Unit Requirement" typeId="121a-930d-b248-ee3e" typeName="Minimum Units" hidden="false" id="2099-fb98-e433-bc47" publicationId="9e23-79cb-pubN66727" page="132">
+              <characteristics>
+                <characteristic name="0-500 pts" typeId="5f2a-99ce-f8a3-eac9">1</characteristic>
+                <characteristic name="501-1000 pts" typeId="221f-5ad7-8b1c-4337">2</characteristic>
+                <characteristic name="1001-1500 pts" typeId="b079-6a7a-787c-584d">3</characteristic>
+                <characteristic name="1501-2000 pts" typeId="c5dd-526f-37a8-3c15">4</characteristic>
+                <characteristic name="2001-2500 pts" typeId="415d-0476-97ff-9680">5</characteristic>
+                <characteristic name="Each +500" typeId="5e64-d73e-fa3a-3c61">+1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Minimum Unit Requirement" id="241f-72a2-9188-b2b7" hidden="false" publicationId="9e23-79cb-pubN66727" page="132">
+              <description>An army just isn&apos;t an army unless it has plenty of warriors in its ranks. An army must contain at least one Core, Special or Rare unit for every 500 points played. So, at 750 points you need two units, at 1250 points you need three units, at 2500 points you need 5 units and so on.</description>
+            </rule>
+          </rules>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Miscast Table" hidden="false" id="a92c-dee5-1aa8-4a42" collective="false" sortIndex="3">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="false" id="22de-1797-7260-b838" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="12+ Damned by Chaos" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="6fb3-b0c8-656e-d475" publicationId="9e23-79cb-pubN66727" page="40">
+              <characteristics>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard is immediately removed as a casualty, regardless of any protective magic item or rule they might have.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="7 Detonation" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="a511-7f28-0f3b-1a91" publicationId="9e23-79cb-pubN66727" page="40">
+              <characteristics>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard and all models in base contact with him suffer a Strength 10 hit.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="5 Magical Feedback" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="bc70-79a8-a31c-c477" publicationId="9e23-79cb-pubN66727" page="40">
+              <characteristics>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard and every model on the same side within 12&quot; that can channel/generate power or dispel dice suffer a Strength 4 hit as a result of the magical backlash. The Wizard cannot attempt to cast further spells this phase.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="9 Calamitous Detonation" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="d716-289e-2d74-e0c5" publicationId="9e23-79cb-pubN66727" page="40">
+              <characteristics>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Centre the small round template over the Wizard – every model underneath the template suffers a Strength 10 hit (including the Wizard – they do not benefit from Look Out Sir! in this case).</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="8 Amnesia" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="f0b3-811a-2c59-1669" publicationId="9e23-79cb-pubN66727" page="40">
+              <characteristics>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The caster forgets how to cast the spell and will not be able to cast it again during this battle.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="4 Lost Concentration" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="f267-0d21-8489-77a3" publicationId="9e23-79cb-pubN66727" page="40">
+              <characteristics>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The opposing player may immediately cast any one of their own spells of the same casting difficulty rating or less. No casting roll is required – the spell is automatically cast – but it can be dispelled by the player whose turn it is as normal (by using power dice in the same way as dispel dice). They need to beat the basic casting value of the spell to dispel it.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="11 Dimensional Cascade" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="1a08-69de-ebfa-da11" publicationId="9e23-79cb-pubN66727" page="40">
+              <characteristics>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Centre the large round template over the Wizard – every model underneath the template (including the Wizard – they do not benefit from Look Out Sir! in this case) suffers a Strength 10 hit.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="10 Deamonic Poessession" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="3893-4961-bc56-1cb8" publicationId="9e23-79cb-pubN66727" page="40">
+              <characteristics>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The caster suffers one Strength 10 hit and loses a Wizard level and their highest levelled spell. If the caster reaches Level 0, he stops counting as a Wizard for all purposes and therefore will not be able to use any arcane magic items he is carrying.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="6 Power Drain" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="92e1-d44e-2735-96fc" publicationId="9e23-79cb-pubN66727" page="40">
+              <characteristics>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The casting player loses D3 dice from the power pool.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="2-3 Loss of Power" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="8424-e2b3-178b-a62c" publicationId="9e23-79cb-pubN66727" page="40">
+              <characteristics>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard cannot attempt to cast further spells this phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Stone Thrower Misfire Chart" hidden="false" id="f7e0-ba91-0886-7916" collective="false" sortIndex="2">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="false" id="f2e5-059d-7b35-1ee2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="Stone Thrower Misfire Chart" id="8c7e-4b5f-cd3f-044b" hidden="false" type="infoGroup" targetId="f6f0-bb1f-f863-3e81"/>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Troop Types" hidden="false" id="d24f-26db-0c14-a9f6">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="force" shared="false" id="f8b1-3254-6b54-ec6f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Cavalry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="673b-7c68-b72a-80a9">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">5</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1+1 (2 for non-split profiles)</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">2</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Impact Hits (1), Swiftstride</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Chariots" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="1db4-a25b-c45f-f01a">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Starting Wounds (+1 for each additional Crew &amp; Mount)</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327"/>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80"/>
+              </characteristics>
+            </profile>
+            <profile name="Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="cd26-319b-8477-3e7f">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">5</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">1</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Monsters" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="72e8-5b9e-bf24-b9bf">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Double Starting Wounds (+1 for each Rider)</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">5</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D6), Swiftstride, Terror</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Monstrous Beasts" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="d563-68dc-9d48-87ba">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">2</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">2</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Swiftstride</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Monstrous Cavalry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="eea7-5e88-55dc-9b0d">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1+2 (3 for non-split profiles)</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">3</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">3</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Impact Hits (1), Swiftstride</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Monstrous Creatures" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="0bb7-f712-d89d-3dd7">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">4 (+1 for each rider)</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">3 (or 4 if ridden)</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D3), Swiftstride, Terror</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Monstrous Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="0326-f2c0-835a-1ab9">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">2</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">2</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Swiftstride</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Shrines" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="2ea0-20ac-0251-e18e">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Starting Wounds</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Swarms" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="c256-e4c0-9042-6f91">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">5</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">3</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">0</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Expendable, Skirmishers, Unstable</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="War Beasts" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="a8d0-cc85-e2d0-3f6b">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">5</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">1</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Expendable, Swiftstride, Vanguard</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="War Machines" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="d79a-9ca4-4700-f6bd">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Starting Wounds</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Move or Fire</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
@@ -927,11 +1095,26 @@ If you want to make a list using the allied rules, make separate rosters for eac
                         <infoLink id="1d4e-d98a-4487-ff33" name="Fly (7)" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
                         <infoLink id="9ea0-1f7e-c558-4db2" name="Stomp" hidden="false" targetId="668c-19e8-b764-8549" type="rule"/>
                         <infoLink id="a59d-3864-e2b9-74d8" name="Breath Weapon (Monster of Kadon)" hidden="false" targetId="9a24-f1a2-aac3-de3b" type="rule"/>
-                        <infoLink id="e2b1-bd62-b7dc-4b4c" name="Monster of Kadon" hidden="false" targetId="0aa7-6fa8-e84e-677a" type="profile"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <profiles>
+                        <profile name="Monster of Kadon" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0aa7-6fa8-e84e-677a" publicationId="9e23-79cb-pubN66727" page="146">
+                          <characteristics>
+                            <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+                            <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+                            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+                            <characteristic name="S" typeId="edd2-7979-54a4-6b35">6</characteristic>
+                            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
+                            <characteristic name="W" typeId="27ee-0675-122f-a1b1">6</characteristic>
+                            <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
+                            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
                     </selectionEntry>
                   </selectionEntries>
                   <costs>
@@ -7847,6 +8030,9 @@ If you want to make a list using the allied rules, make separate rosters for eac
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="model-or-unit"/>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Wizard Level 2" hidden="false" id="801a-bc0a-a767-61db">
       <profiles>
@@ -7860,6 +8046,9 @@ If you want to make a list using the allied rules, make separate rosters for eac
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="model-or-unit"/>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Wizard Level 3" hidden="false" id="1670-dca4-294b-7d9b">
       <profiles>
@@ -7873,6 +8062,9 @@ If you want to make a list using the allied rules, make separate rosters for eac
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="model-or-unit"/>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Wizard Level 4" hidden="false" id="5460-3929-58ef-71ba">
       <profiles>
@@ -7886,6 +8078,9 @@ If you want to make a list using the allied rules, make separate rosters for eac
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="model-or-unit"/>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="9519-df8f-0af4-1995" name="Army Battle Standard" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -7899,58 +8094,7 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Character Option" hidden="false" id="fd10-1876-16d9-600d">
-      <entryLinks>
-        <entryLink import="true" name="General" hidden="false" id="3d25-61e2-da7b-beee" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1"/>
-        <entryLink import="true" name="Army Battle Standard" hidden="false" id="60fb-0b3b-1d83-80d9" type="selectionEntry" targetId="9519-df8f-0af4-1995" sortIndex="2">
-          <costs>
-            <cost name="pts" typeId="points" value="25"/>
-          </costs>
-        </entryLink>
-      </entryLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a998-3770-27cc-8b3d"/>
-      </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Daemon of Tzeentch" hidden="false" id="2639-87cf-ddd7-ac2d">
-      <infoLinks>
-        <infoLink name="Daemon of Tzeentch" id="1500-5e31-ac81-46f2" hidden="false" type="rule" targetId="fe9a-f478-5bcc-57a8"/>
-        <infoLink name="Daemonic" id="8828-fef9-55f4-3947" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Daemon of Khorne" hidden="false" id="7a64-1c48-ee17-d64f">
-      <infoLinks>
-        <infoLink name="Daemon of Khorne" id="6996-804b-a457-de84" hidden="false" type="rule" targetId="a356-05c9-d963-c1bb"/>
-        <infoLink name="Daemonic" id="7ac3-1236-301e-2746" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
-      </infoLinks>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Daemon of Nurgle" hidden="false" id="47e8-9faa-b387-1bad">
-      <infoLinks>
-        <infoLink name="Daemon of Nurgle" id="b9aa-473a-4642-95c2" hidden="false" type="rule" targetId="0b9b-1baf-5bcd-1ec3"/>
-        <infoLink name="Daemonic" id="aa6b-08d1-fa08-c137" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Daemon of Slaanesh" hidden="false" id="58e6-5e97-fb48-f325">
-      <infoLinks>
-        <infoLink name="Daemon of Slaanesh" id="7437-a8c0-a303-1dc4" hidden="false" type="rule" targetId="2ad0-3e18-aba8-5e68"/>
-        <infoLink name="Daemonic" id="b31b-0f1f-6f8f-c7b9" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Mark of Khorne" hidden="false" id="2211-a88b-c358-2e91">
+    <selectionEntry type="upgrade" import="true" name="Mark of Khorne" hidden="false" id="2211-a88b-c358-2e91" collective="true">
       <infoLinks>
         <infoLink name="Mark of Khorne" id="c228-d93a-5887-3a4e" hidden="false" type="rule" targetId="Mark of Khorne"/>
       </infoLinks>
@@ -7969,207 +8113,22 @@ If you want to make a list using the allied rules, make separate rosters for eac
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Mark of Nurgle" hidden="false" id="fce4-1eaa-170d-634c">
+    <selectionEntry type="upgrade" import="true" name="Mark of Nurgle" hidden="false" id="fce4-1eaa-170d-634c" collective="true">
       <infoLinks>
         <infoLink name="Mark of Nurgle" id="9cff-491b-7124-ad14" hidden="false" type="rule" targetId="Mark of Nurgle"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Mark of Slaanesh" hidden="false" id="b570-8e89-e752-8902">
+    <selectionEntry type="upgrade" import="true" name="Mark of Slaanesh" hidden="false" id="b570-8e89-e752-8902" collective="true">
       <infoLinks>
         <infoLink name="Mark of Slaanesh" id="65ae-4c9d-1932-d190" hidden="false" type="rule" targetId="Mark of Slaanesh"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Mark of Tzeentch" hidden="false" id="a5c6-cd36-6ce9-c322">
+    <selectionEntry type="upgrade" import="true" name="Mark of Tzeentch" hidden="false" id="a5c6-cd36-6ce9-c322" collective="true">
       <infoLinks>
         <infoLink name="Mark of Tzeentch" id="448a-fe5e-64c2-6989" hidden="false" type="rule" targetId="Mark of Tzeentch"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Warhorse" hidden="false" id="a7d2-4d12-77bb-99a0" subType="mount" collective="true">
-      <infoLinks>
-        <infoLink name="Warhorse" id="1028-04d2-2293-bf84" hidden="false" type="profile" targetId="1c38-2830-10db-579c">
-          <modifierGroups>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="set" field="df90-5cbd-8cf9-95b2"/>
-                <modifier type="set" field="27ee-0675-122f-a1b1"/>
-                <modifier type="set" field="09ad-18df-607b-1215"/>
-              </modifiers>
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="crew" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifierGroup>
-          </modifierGroups>
-        </infoLink>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Flail" hidden="false" id="d509-46a8-2dc7-0eb9" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9a62-6f2b-ec60-1573" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Flail" id="497c-4cae-f8eb-1f1b" hidden="false" targetId="7f6a-b8b2-8978-4f35" type="profile"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Great Weapon" hidden="false" id="0473-857e-78d9-cb7c" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4fc2-f1e9-73bb-48d6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Great Weapon" id="3157-5597-cc37-aeb6" hidden="false" targetId="193e-bc43-b252-8eff" type="profile"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Hand Weapon" hidden="false" id="a658-337d-0cbd-a38c" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0e5a-c680-7fa4-685d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Hand Weapon" id="37d2-c35a-c0ee-0449" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Polearm/Halberd" hidden="false" id="757a-ff3d-710c-2d8b" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="86ad-a362-8a86-339c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Polearm/Halberd" id="afb7-247b-d3cc-f804" hidden="false" targetId="e43e-5153-eeec-36be" type="profile"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Two/Additional Hand Weapons" hidden="false" id="7617-f4b5-02ac-3d15" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f956-f565-3d36-b632" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Two/Additional Hand Weapons" id="5e96-af7a-dae3-cc67" hidden="false" targetId="4a5d-0b6d-f6ac-fd7d" type="profile"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Spear" hidden="false" id="a901-4548-955d-623c" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ebfc-0219-3a07-b87c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Spear" id="a7c9-bfc2-0a84-c110" hidden="false" type="profile" targetId="be39-37ac-ac20-5053"/>
-      </infoLinks>
-      <modifiers>
-        <modifier type="add" value="{this} is not allowed if mounted" field="error">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="a901-4548-955d-623c" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Shield" hidden="false" id="c068-0827-9931-d9bf" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="af56-60a7-18d1-6f4f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Shield" id="be32-d054-1088-b539" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Light Lance" hidden="false" id="d989-1124-0dea-ae27" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a304-918a-8319-8c31" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Light Lance" id="9bf5-3090-f8d2-c49b" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb"/>
-      </infoLinks>
-      <modifiers>
-        <modifier type="add" value="{this} is not allowed if not mounted" field="error">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="d989-1124-0dea-ae27" shared="true"/>
-                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Heavy Lance" hidden="false" id="0548-4aeb-a60c-b378" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5868-c3d2-7e90-5ed0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Heavy Lance" id="db17-dc76-d785-1431" hidden="false" type="profile" targetId="e56e-fedf-c550-5d81"/>
-      </infoLinks>
-      <modifiers>
-        <modifier type="add" value="{this} is not allowed if not mounted" field="error">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="0548-4aeb-a60c-b378" shared="true"/>
-                <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Light Armour" hidden="false" id="6bb1-79c9-4af5-ca72" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="bd12-6b92-8aca-f4e2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Light Armour" id="9d99-7c79-a397-9915" hidden="false" type="profile" targetId="4129-1acd-3564-d3ea"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Medium Armour" hidden="false" id="76a4-23c1-f96d-021e" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="aaab-a191-d887-0e14" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Medium Armour" id="4e8a-8a77-e813-8de1" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Heavy Armour" hidden="false" id="30e0-7325-ea6b-af97" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="409c-38d4-353b-134c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Heavy Armour" id="5f58-0527-bce3-79ff" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Shortbow" hidden="false" id="b2c6-18cc-9482-8f48" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="6d7b-5879-5989-8cec" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Shortbow" id="067d-bd5a-00df-0e85" hidden="false" targetId="487e-16a4-8ab8-2c85" type="profile"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Bow" hidden="false" id="94ec-8421-59ea-a9d0" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="32dd-51bc-02f7-4599" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Bow" id="488e-db26-6791-d730" hidden="false" type="profile" targetId="9dcd-3be8-08b0-96ab"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Javelins" hidden="false" id="a923-e8b1-94c0-3f2c" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="bda0-31ce-fdcc-29e6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Javelins" id="8889-e7f7-1825-4a20" hidden="false" targetId="3ecc-5d9c-7d29-ee2f" type="profile"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Throwing Axes" hidden="false" id="4206-830c-785a-3707" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4a34-da8f-768e-08b6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Throwing Axes" id="5fe6-3476-ea03-9a28" hidden="false" targetId="493b-1f46-43ce-a18f" type="profile"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Expendable" hidden="false" id="b90d-9045-a6d5-9e7d" collective="false">
+    <selectionEntry type="upgrade" import="true" name="Expendable" hidden="false" id="b90d-9045-a6d5-9e7d" collective="true">
       <modifiers>
         <modifier type="increment" value="1" field="e43c-0af0-b8a2-9769">
           <repeats>
@@ -8194,25 +8153,6 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Arabyan Steed" hidden="false" id="ac96-1c86-3a61-e422" collective="true" subType="mount" publicationId="fd0a-6995-03c8-1dd6" page="12">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1a20-73cd-3b87-1abe" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Arabyan Steed" id="eeff-83c6-0c85-dce5" hidden="false" targetId="c82f-108c-17d8-ecfc" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Buckler" hidden="false" id="b785-38e4-3e4a-9385" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d939-23d6-2a8e-e332" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Buckler" id="2ca1-86fa-a28b-8bfb" hidden="false" targetId="1700-a7e5-d272-ef20" type="profile"/>
-      </infoLinks>
-    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Loremaster" hidden="false" id="a2bf-14a5-6723-7157">
       <infoLinks>
         <infoLink name="Loremaster" id="db31-1473-718a-a423" hidden="false" type="rule" targetId="4cc1-bc54-7778-c333"/>
@@ -8221,150 +8161,6 @@ If you want to make a list using the allied rules, make separate rosters for eac
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c605-baf4-bf9e-b43d-min"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c605-baf4-bf9e-b43d-max"/>
       </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Barding" hidden="false" id="17ec-ae05-605b-27ce" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e4bc-a24f-6b99-c09b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Barding" id="ac19-ee70-49fb-49b7" hidden="false" targetId="7228-95d3-3384-f234" type="profile"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Scythes" hidden="false" id="865f-edfe-e4fd-d28e" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8ec4-3081-a854-3007" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Scythes" id="8019-e9ad-382b-f3d3" hidden="false" targetId="d896-d52f-cc64-ab43" type="rule"/>
-      </infoLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Pistol" hidden="false" id="4883-fb9f-3893-0d9c" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d648-e247-77ea-67d9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Pistol" id="009c-01ec-0b16-9dbe" hidden="false" type="profile" targetId="aa4f-83e3-8259-924a"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Brace of Pistols" hidden="false" id="a574-f633-253c-b619" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c10d-f6af-a407-41cf" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Brace of Pistols" id="5f59-0fd3-7f80-af9d" hidden="false" type="profile" targetId="7259-6759-3c5f-ce3c"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Handgun" hidden="false" id="b177-ecbf-f68f-c9a3" collective="true">
-      <infoLinks>
-        <infoLink name="Handgun" id="8528-0939-763e-238f" hidden="false" type="profile" targetId="bd57-9e45-342f-ee49"/>
-      </infoLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c0c-f421-f84b-b7fc"/>
-      </constraints>
-    </selectionEntry>
-    <selectionEntry type="model" import="true" name="Griffon" hidden="false" id="50ee-083e-202b-89d0" collective="false" subType="mount">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="02ac-20cd-db08-f793" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Fly (8)" id="0bd1-8313-e3b8-282a" hidden="false" targetId="0a9a-bfcb-1a9d-5609" type="rule"/>
-        <infoLink name="Griffon" id="c32e-d4e2-e155-b72f" hidden="false" type="profile" targetId="65d1-ae0b-c4d5-0146"/>
-        <infoLink name="Natural Armour (6+)" id="4aa1-305b-599e-90e2" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
-      </infoLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Upgrades" id="0fcf-82bf-2896-69c5" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Shredding talons" hidden="false" id="d5c1-d381-eeed-a07e">
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b3c3-9c97-2821-1969"/>
-              </constraints>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Swooping Strike" hidden="false" id="c08e-a7d2-ff63-edf2">
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e624-0bf3-d74b-31c1"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink name="(Mount)" hidden="false" id="edd0-db74-8163-7afb" targetId="(Mount)" primary="false"/>
-      </categoryLinks>
-    </selectionEntry>
-    <selectionEntry type="model" import="true" name="Pegasus" hidden="false" id="88ef-cc97-06b3-331e" collective="true" subType="mount">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1c4a-5e99-a62f-2fbb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Pegasus" id="b627-b07a-4b77-91e5" hidden="false" targetId="768c-8291-b483-f024" type="profile"/>
-        <infoLink name="Fly (9)" id="45ce-5f57-b8b7-e450" hidden="false" targetId="2ba2-2aaa-3f36-4b24" type="rule"/>
-      </infoLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Upgrades" id="0c0a-ea1d-c48e-1fab" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Iron-hard Hooves" hidden="false" id="7ce6-0704-f78b-d02f" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7726-c8c0-19c8-8ad8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Iron-hard Hooves" id="eaba-bdf0-a78d-8d1e" hidden="false" type="rule" targetId="d3e1-3d43-c737-8137"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Swift as the Wind" hidden="false" id="0d8e-e3f1-be77-f893" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="199a-9c63-da4c-903e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Swift as the Wind" id="3f51-005c-6104-cd76" hidden="false" type="rule" targetId="81f2-e732-f272-822e"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="unit" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink name="(Mount)" hidden="false" id="f726-06d0-b7c1-6650" targetId="(Mount)" primary="false"/>
-      </categoryLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Crossbow" hidden="false" id="9936-c747-429f-6327" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="249d-fe25-ca99-9790" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Crossbow" id="5211-3bf0-3fe3-5324" hidden="false" type="profile" targetId="844f-f2d8-d2d9-61d4"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Pike" hidden="false" id="5d16-5965-b9d5-b411" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="085c-59a1-3255-ac35"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Pike" id="0b10-f04c-3911-929f" hidden="false" type="profile" targetId="2c1e-e11e-fadf-b4cf"/>
-      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Skirmishers" hidden="false" id="468e-0a4a-682a-7de2" collective="true">
       <constraints>
@@ -8381,374 +8177,6 @@ If you want to make a list using the allied rules, make separate rosters for eac
       <infoLinks>
         <infoLink name="Ambushers" id="5296-0c7e-b49f-994e" hidden="false" targetId="f366-0f91-841f-cf80" type="rule"/>
       </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Longbow" hidden="false" id="f6cc-1342-64fe-6a3e" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="61f3-1504-6951-ab9e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Longbow" id="e493-3e01-29e6-edb8" hidden="false" type="profile" targetId="cde7-c47d-3818-1e9d"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Ogre Pistol" hidden="false" id="9c06-bad6-8730-a29f" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="32c0-bfc7-0926-7b6b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Ogre Pistol" id="6391-a0fe-a411-37b7" hidden="false" type="profile" targetId="fe15-07b8-cf24-36ce"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Ogre Handgun" hidden="false" id="9397-1034-78d6-d8b6" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7ba3-52ca-2487-04bd" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Ogre Handgun" id="7c32-9194-b30d-eab9" hidden="false" type="profile" targetId="8252-279b-4741-e9d7"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Blunderbuss" hidden="false" id="dc92-514e-0596-fd55" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5bf7-8984-e4b2-5ae4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Blunderbuss" id="312d-13d6-91b9-09c9" hidden="false" type="profile" targetId="a9ad-a872-79a3-c503"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Throwing Weapons" hidden="false" id="8013-6f6f-96e1-1acc" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1f83-7ea8-982f-35c5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Throwing Weapons" id="e8d0-51dc-661f-7527" hidden="false" targetId="fdcd-6526-0b8e-b291" type="profile"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="model" import="true" name="Cold One" hidden="false" id="8b53-7da4-587d-872a" collective="false" subType="mount">
-      <infoLinks>
-        <infoLink name="Fear" id="8802-18ce-455b-03ed" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
-        <infoLink name="Natural Armour (6+)" id="6eb6-3c47-52a9-56aa" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
-        <infoLink name="Stupidity" id="b642-3a4e-290f-0ea9" hidden="false" targetId="755c-61c2-fa25-f4ce" type="rule"/>
-        <infoLink name="Cold One" id="c2ee-bfa7-7f15-e8b7" hidden="false" targetId="be87-1185-25f0-2de4" type="profile">
-          <modifierGroups>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="set" field="df90-5cbd-8cf9-95b2"/>
-                <modifier type="set" field="27ee-0675-122f-a1b1"/>
-                <modifier type="set" field="a199-f10b-a038-5730"/>
-                <modifier type="set" field="09ad-18df-607b-1215"/>
-              </modifiers>
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="crew" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifierGroup>
-          </modifierGroups>
-        </infoLink>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink name="(Mount)" hidden="false" id="a5BN-nEPG-i4j3-5qeA" targetId="(Mount)" primary="false"/>
-      </categoryLinks>
-    </selectionEntry>
-    <selectionEntry type="model" import="true" name="Manticore" hidden="false" id="9266-aada-bbfd-09d0" collective="false" subType="mount">
-      <infoLinks>
-        <infoLink name="Killing Blow" id="bdd3-462c-c7e5-4c0f" hidden="false" targetId="a711-7cf6-cd2b-1d29" type="rule"/>
-        <infoLink name="Frenzy" id="b516-0a20-e899-b86d" hidden="false" targetId="9ff3-dda6-e142-5a77" type="rule"/>
-        <infoLink name="Fly (8)" id="fc81-e45f-d9de-2f1f" hidden="false" targetId="0a9a-bfcb-1a9d-5609" type="rule"/>
-        <infoLink name="Manticore" id="86bb-ad9f-8e30-968e" hidden="false" targetId="0c00-4af1-49a1-dbd1" type="profile"/>
-      </infoLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Upgrades" id="2e20-bc4c-b810-abf4" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Bloodrage" hidden="false" id="b648-ae77-7fb4-b428" collective="false" sortIndex="2">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5e9d-3490-d511-3d4b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Bloodrage" id="9df4-67f9-b094-a2b6" hidden="false" targetId="fc43-3fac-4ae1-1606" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="15"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Iron-hard Skin" hidden="false" id="aad1-d2eb-5334-638c" collective="false" sortIndex="3">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f251-ebde-176f-51a7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Iron-hard Skin" id="ec83-0155-1f49-1eaa" hidden="false" targetId="1569-a18d-c1a5-c774" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="15"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Rending Fangs" hidden="false" id="9b49-bfa6-c391-7bcc" collective="false" sortIndex="1">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3fea-c946-b9d3-f21c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Rending Fangs" id="77dc-4e5e-470d-0174" hidden="false" targetId="38dc-ae6d-82d1-e44b" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Venom Tail" hidden="false" id="9ed0-8f71-17cb-7449" collective="false" sortIndex="4">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2d39-089c-abd9-3cd7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Venom Tail" id="c96e-2355-ea97-8bdd" hidden="false" targetId="9513-e549-4849-a0dd" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="15"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink name="(Mount)" hidden="false" id="9153-3281-5b6f-3461" targetId="(Mount)" primary="false"/>
-      </categoryLinks>
-    </selectionEntry>
-    <selectionEntry type="model" import="true" name="Bonegrinder Giant" hidden="false" id="a449-7bcf-5f21-2dee" collective="false">
-      <profiles>
-        <profile name="Bonegrinder Giant" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="532e-8294-c55a-2f71" publicationId="9e23-79cb-pubN67565" page="85">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215">10</characteristic>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35">8</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">8</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">8</characteristic>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322">1</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="01 (Big Things)" typeId="c247-d962-75fa-d212" typeName="Big Things Chart (Bonegrinder Giant)" hidden="false" id="d1d9-242b-7149-146e" publicationId="9e23-79cb-pubN67565" page="86">
-          <characteristics>
-            <characteristic name="Result" typeId="020b-7dac-6a63-4525"/>
-          </characteristics>
-        </profile>
-        <profile name="02 (Big Things)" typeId="c247-d962-75fa-d212" typeName="Big Things Chart (Bonegrinder Giant)" hidden="false" id="4eb9-4451-b17c-8cbd" publicationId="9e23-79cb-pubN67565" page="86">
-          <characteristics>
-            <characteristic name="Result" typeId="020b-7dac-6a63-4525"/>
-          </characteristics>
-        </profile>
-        <profile name="03 (Big Things)" typeId="c247-d962-75fa-d212" typeName="Big Things Chart (Bonegrinder Giant)" hidden="false" id="6944-bcfd-0f5e-7530" publicationId="9e23-79cb-pubN67565" page="86">
-          <characteristics>
-            <characteristic name="Result" typeId="020b-7dac-6a63-4525"/>
-          </characteristics>
-        </profile>
-        <profile name="04-06 (Big Things)" typeId="c247-d962-75fa-d212" typeName="Big Things Chart (Bonegrinder Giant)" hidden="false" id="96a6-f7eb-caa1-2c32" publicationId="9e23-79cb-pubN67565" page="86">
-          <characteristics>
-            <characteristic name="Result" typeId="020b-7dac-6a63-4525"/>
-          </characteristics>
-        </profile>
-        <profile name="01 (Bigger Things)" typeId="451e-6d91-893e-45c6" typeName="Bigger Things Chart" hidden="false" id="ee06-8dd2-57ff-8172" publicationId="9e23-79cb-pubN67565" page="86">
-          <characteristics>
-            <characteristic name="Result" typeId="6713-6d4f-f3d5-ab1c"/>
-          </characteristics>
-        </profile>
-        <profile name="02-03 (Bigger Things)" typeId="451e-6d91-893e-45c6" typeName="Bigger Things Chart" hidden="false" id="1c63-8bbf-5163-9edf" publicationId="9e23-79cb-pubN67565" page="86">
-          <characteristics>
-            <characteristic name="Result" typeId="6713-6d4f-f3d5-ab1c"/>
-          </characteristics>
-        </profile>
-        <profile name="04-05 (Bigger Things)" typeId="451e-6d91-893e-45c6" typeName="Bigger Things Chart" hidden="false" id="4e49-4097-3cc7-ca94" publicationId="9e23-79cb-pubN67565" page="86">
-          <characteristics>
-            <characteristic name="Result" typeId="6713-6d4f-f3d5-ab1c"/>
-          </characteristics>
-        </profile>
-        <profile name="06 (Bigger Things)" typeId="451e-6d91-893e-45c6" typeName="Bigger Things Chart" hidden="false" id="6eaa-c20d-a8df-3140" publicationId="9e23-79cb-pubN67565" page="86">
-          <characteristics>
-            <characteristic name="Result" typeId="6713-6d4f-f3d5-ab1c"/>
-          </characteristics>
-        </profile>
-        <profile name="01-02 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="fc1f-c0d5-7640-347a" publicationId="9e23-79cb-pubN67565" page="86">
-          <characteristics>
-            <characteristic name="Result" typeId="5530-99d4-2acf-168d"/>
-          </characteristics>
-        </profile>
-        <profile name="03 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="624e-df32-84a0-f5d8" publicationId="9e23-79cb-pubN67565" page="86">
-          <characteristics>
-            <characteristic name="Result" typeId="5530-99d4-2acf-168d"/>
-          </characteristics>
-        </profile>
-        <profile name="04 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="0c88-4d80-16fc-06b8" publicationId="9e23-79cb-pubN67565" page="86">
-          <characteristics>
-            <characteristic name="Result" typeId="5530-99d4-2acf-168d"/>
-          </characteristics>
-        </profile>
-        <profile name="05 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="6345-3add-3126-a802" publicationId="9e23-79cb-pubN67565" page="86">
-          <characteristics>
-            <characteristic name="Result" typeId="5530-99d4-2acf-168d"/>
-          </characteristics>
-        </profile>
-        <profile name="06 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="af0c-5317-203a-cc5c" publicationId="9e23-79cb-pubN67565" page="86">
-          <characteristics>
-            <characteristic name="Result" typeId="5530-99d4-2acf-168d"/>
-          </characteristics>
-        </profile>
-        <profile name="01 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="a7ed-3da3-ebc8-e7d8" publicationId="9e23-79cb-pubN67565" page="86">
-          <characteristics>
-            <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3"/>
-          </characteristics>
-        </profile>
-        <profile name="02 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="bf32-1b1f-0a67-7577" publicationId="9e23-79cb-pubN67565" page="86">
-          <characteristics>
-            <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3"/>
-          </characteristics>
-        </profile>
-        <profile name="03 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="6aed-0da6-9dd1-4417" publicationId="9e23-79cb-pubN67565" page="86">
-          <characteristics>
-            <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3"/>
-          </characteristics>
-        </profile>
-        <profile name="04 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="4bc0-a5ac-d639-937c" publicationId="9e23-79cb-pubN67565" page="86">
-          <characteristics>
-            <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3"/>
-          </characteristics>
-        </profile>
-        <profile name="05 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="9ae1-6ea5-f865-a467" publicationId="9e23-79cb-pubN67565" page="86">
-          <characteristics>
-            <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3"/>
-          </characteristics>
-        </profile>
-        <profile name="06 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="b91f-e62b-0ec4-65ee" publicationId="9e23-79cb-pubN67565" page="86">
-          <characteristics>
-            <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3"/>
-          </characteristics>
-        </profile>
-      </profiles>
-      <rules>
-        <rule name="Bonegrinder Giant Special Attacks" id="1d41-bec2-e5cf-c1fe" hidden="false" publicationId="9e23-79cb-pubN67565" page="86">
-          <description>To determine what happens in each Close Combat phase, pick a unit in base contact with the Bonegrinder Giant and roll a D6 on one of the tables. Which table you use depends on the size of the Bonegrinder Giant&apos;s victim. Use the Man-sized Things Chart when fighting Infantry, Cavalry, War Beasts or Swarms. Use the Big Things Chart when fighting monstrous beasts, monstrous infantry, monstrous cavalry, chariots and war machines. Use the Bigger Things Chart when fighting anything with</description>
-        </rule>
-        <rule name="Fall Over" id="2027-07f3-868b-3269" hidden="false" publicationId="9e23-79cb-pubN67565" page="85">
-          <description>A Giant must test to see whether it falls over if any of the following apply:
-
- If it is beaten in close combat. Test once results are established but before taking a Break test.
- If it is fleeing at the start of the Movement phase.
- When it crosses an obstacle. Test when the obstacle is reached.
- If the Giant decides to Jump Up and Down on an enemy. Test immediately beforehand.
-
-To see if a Giant falls over roll a D6. On a roll of 1, the Giant falls over. A slain Giant falls over automatically.
-
-To determine in which direction the Giant falls, roll a scatter dice. Place the large template in base contact with the Giant in the direction of the scatter dice, measured from the centre of the Giant&apos;s base. A model hit by the falling Giant suffers 3D6 S 8 Hits that have Multiple Wounds (D6), though no single model may suffer more than 1 Hit – any excess Hits are ignored. If the unit is in combat and the Giant has fallen over whilst attempting to Jump Up and Down, wounds inflicted by a falling Giant count towards the combat result.
-
-A Giant that falls over automatically suffers 1 wound. If the Giant is in combat then this wound counts towards combat resolution.
-
-Once on the ground a Giant may get up in his following Movement phase, but may not move that turn. Whilst on the ground a Giant may not attack, but he can still defend himself after a fashion so the enemy must still roll to score hits on him. If forced to flee whilst on the ground the Giant is slain. If the Giant gets the opportunity to pursue his foes whilst he&apos;s on the ground he stands up instead. A Giant may attack in close combat as usual on the turn he stands up..</description>
-        </rule>
-      </rules>
-      <infoLinks>
-        <infoLink name="01 (Pick Up and...)" id="61a3-db8c-d431-60d4" hidden="false" targetId="b0eb-eada-2e6d-dc42" type="profile"/>
-        <infoLink name="Stubborn" id="565d-afd8-caa8-7480" hidden="false" targetId="d56e-8ec7-dbcd-aeee" type="rule"/>
-        <infoLink name="Immunity (Psychology)" id="9191-a0a4-41d9-5f2c" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
-        <infoLink name="03 (Pick Up and...)" id="e30a-87b6-69b8-a329" hidden="false" targetId="f05e-b4ef-d493-96f3" type="profile"/>
-        <infoLink name="04-05 (Pick Up and...)" id="fb54-bddf-c6dc-5dc2" hidden="false" targetId="af1a-be06-2fc6-a34f" type="profile"/>
-        <infoLink name="06 (Pick Up and...)" id="8956-459e-524c-d47c" hidden="false" targetId="985e-ec4a-2847-118b" type="profile"/>
-        <infoLink name="02 (Pick Up and...)" id="1279-a72e-b1d7-75c3" hidden="false" targetId="8845-1216-ef80-8109" type="profile"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink name="Rare" hidden="false" id="f709-ffd7-45f1-9aa6" targetId="0eb4-f376-7725-b05b" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Hand Weapon" hidden="false" id="f71f-e45d-df0b-e0bc" collective="false" sortIndex="1">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="87de-d912-50d1-638f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d530-eddd-ed3e-c46c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Hand Weapon" id="07a2-7b81-0523-8ed7" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntry>
-    <selectionEntry type="model" import="true" name="Giant" hidden="false" id="ff3c-af52-ca36-3847" collective="false">
-      <infoLinks>
-        <infoLink name="Stubborn" id="b6f9-6590-9ad7-d096" hidden="false" targetId="d56e-8ec7-dbcd-aeee" type="rule"/>
-        <infoLink name="Giant Special Attacks" id="ec1b-a08f-9345-5d90" hidden="false" targetId="fba8-fc55-f60b-edd8" type="rule"/>
-        <infoLink name="Fall Over" id="de74-ec6d-8aef-9dbe" hidden="false" targetId="4a8b-1056-0bcd-e293" type="rule"/>
-        <infoLink name="Immunity (Psychology)" id="7a99-05ba-359f-4358" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
-        <infoLink name="01 (Big Things)" id="3547-d310-fc51-69f1" hidden="false" targetId="8c21-37de-1b89-a1aa" type="profile"/>
-        <infoLink name="02-04 (Big Things)" id="ccff-ceb4-7337-eb81" hidden="false" targetId="4fc5-e450-33ef-b6d9" type="profile"/>
-        <infoLink name="05-06 (Big Things)" id="ee62-22ea-125b-ad42" hidden="false" targetId="8a42-5b93-bd50-784e" type="profile"/>
-        <infoLink name="01 (Man-sized Things)" id="c22d-ae0e-23e2-406c" hidden="false" targetId="b8b8-f1ce-c6c8-0b05" type="profile"/>
-        <infoLink name="02 (Man-sized Things)" id="1c75-0f6f-4553-3ddf" hidden="false" targetId="b2e1-ecf2-bf44-91d5" type="profile"/>
-        <infoLink name="03 (Man-sized Things)" id="bcdb-536b-ea4e-87ca" hidden="false" targetId="473d-503e-6b10-8a6a" type="profile"/>
-        <infoLink name="04-06 (Man-sized Things)" id="0c36-e02b-03eb-fe8c" hidden="false" targetId="de13-cc1b-5d8f-27dd" type="profile"/>
-        <infoLink name="01 (Pick Up and...)" id="b89a-b14a-f837-f3a0" hidden="false" targetId="b0eb-eada-2e6d-dc42" type="profile"/>
-        <infoLink name="02 (Pick Up and...)" id="e1da-5beb-78b7-553c" hidden="false" targetId="8845-1216-ef80-8109" type="profile"/>
-        <infoLink name="03 (Pick Up and...)" id="afdd-de50-c060-e8f9" hidden="false" targetId="f05e-b4ef-d493-96f3" type="profile"/>
-        <infoLink name="04-05 (Pick Up and...)" id="f6d7-ca9c-0066-120a" hidden="false" targetId="af1a-be06-2fc6-a34f" type="profile"/>
-        <infoLink name="06 (Pick Up and...)" id="7aa9-52f9-3311-9c1a" hidden="false" targetId="985e-ec4a-2847-118b" type="profile"/>
-        <infoLink name="Giant" id="3ca8-9ddf-35b0-4705" hidden="false" type="profile" targetId="fddd-b77e-9876-320d"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink name="Rare" hidden="false" id="b2c5-5dcd-05dd-889c" targetId="0eb4-f376-7725-b05b" primary="true"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="Hand Weapon" hidden="false" id="3a08-11d8-9130-1c10" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="932b-b07e-2cb1-2d88"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Hand Weapon &amp; Shield" hidden="false" id="8613-9419-33a1-5aaf" collective="true">
-      <infoLinks>
-        <infoLink name="Hand Weapon" id="530c-eb28-4bce-f897" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-        <infoLink name="Shield" id="3560-32e1-5fa3-17eb" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
-      </infoLinks>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6688-fbd9-3fae-e968"/>
-      </constraints>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Spear &amp; Shield" hidden="false" id="aaa7-e3bd-6fea-79c2" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5a08-e3c6-6044-02f3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Spear" id="f975-6dae-c4fe-d412" hidden="false" type="profile" targetId="be39-37ac-ac20-5053"/>
-        <infoLink name="Shield" id="2681-2c50-d382-e868" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
-      </infoLinks>
-      <modifiers>
-        <modifier type="add" value="{this} is not allowed if mounted" field="error">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="aaa7-e3bd-6fea-79c2" shared="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Light Lance &amp; Shield" hidden="false" id="a50e-145b-8639-0387" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="45ce-82a5-f6b8-bbec" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Light Lance" id="c6df-159c-6f81-50f5" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb"/>
-        <infoLink name="Shield" id="f64d-c789-8bae-1d4d" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
-      </infoLinks>
-      <modifiers>
-        <modifier type="add" value="{this} is not allowed if not mounted" field="error">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="a50e-145b-8639-0387" shared="true"/>
-                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
     </selectionEntry>
     <selectionEntry id="42e7-cbd3-5a8c-ab18" name="Lore of High Magic" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
@@ -9218,41 +8646,6 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Elven Steed" hidden="false" id="4612-bb63-8653-cb34" subType="mount" collective="true">
-      <infoLinks>
-        <infoLink name="Elven Steed" id="ed87-985a-5f09-6902" hidden="false" type="profile" targetId="9d3c-c7f3-e374-745d">
-          <modifierGroups>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="set" field="df90-5cbd-8cf9-95b2"/>
-                <modifier type="set" field="27ee-0675-122f-a1b1"/>
-                <modifier type="set" field="a199-f10b-a038-5730"/>
-                <modifier type="set" field="09ad-18df-607b-1215"/>
-              </modifiers>
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="crew" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifierGroup>
-          </modifierGroups>
-        </infoLink>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Sling" hidden="false" id="72e8-531c-b5af-3b91" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0199-ec62-b303-3ffd" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Sling" id="6335-e388-4e3b-0044" hidden="false" type="profile" targetId="d083-b2f1-d1c5-e4f7"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Blowpipe" hidden="false" id="8f37-a8ec-e1ba-2551" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7085-33f3-1590-2e78" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Blowpipe" id="d6a9-6105-a942-d01f" hidden="false" targetId="f106-ee33-4ec8-292a" type="profile"/>
-      </infoLinks>
-    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Extra spell selection" hidden="false" id="c5d0-4769-c76f-2cac">
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="621c-3761-7574-7ea5-min"/>
@@ -9306,3020 +8699,385 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
         </entryLink>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Great Eagle" hidden="false" id="4790-dfb5-2054-2f88" collective="false" subType="mount">
+    <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="7456-81f5-9a96-d59e" collective="true">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2b02-590e-20e4-b6c2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aa1b-c20e-42aa-52e7" includeChildSelections="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Fly (9)" id="381d-cc92-761e-885b" hidden="false" targetId="2ba2-2aaa-3f36-4b24" type="rule"/>
-        <infoLink name="Great Eagle" id="aae1-2902-6152-e932" hidden="false" type="profile" targetId="f7ff-29f2-e07a-c621"/>
+        <infoLink name="Leader" id="f8c2-0094-8296-277c" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
       </infoLinks>
-      <categoryLinks>
-        <categoryLink name="(Mount)" hidden="false" id="3cfa-4c32-b9c3-508c" targetId="(Mount)" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="Upgrades" hidden="false" id="5b1e-5982-c649-2f88" type="selectionEntryGroup" targetId="3922-9a9c-285a-9357"/>
-      </entryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="5"/>
+      </costs>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Unicorn" hidden="false" id="1173-189a-7606-0c37" collective="false" subType="mount">
+    <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="d3ec-3cba-c1d6-8c0f" collective="true">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="35a5-8dd0-7403-169e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="770c-368b-932e-904c" includeChildSelections="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Magic Resistance (2)" id="f7a0-9739-0265-d018" hidden="false" targetId="0e09-3526-25d5-2646" type="rule"/>
-        <infoLink name="Magical Attacks" id="cd1d-da86-4a3f-e93f" hidden="false" targetId="03db-d81f-f264-84b8" type="rule"/>
+        <infoLink name="Standard Bearer" id="e1f9-7db4-2d8d-3ee3" hidden="false" type="rule" targetId="6002-29d0-d620-1bd0"/>
       </infoLinks>
-      <categoryLinks>
-        <categoryLink name="(Mount)" hidden="false" id="d197-3a02-e995-b8ab" targetId="(Mount)" primary="false"/>
-      </categoryLinks>
-      <rules>
-        <rule name="Impale" id="0eea-3c8d-ec56-3333" hidden="false" publicationId="9e23-79cb-pubN77092" page="20">
-          <description>Unicorns gain +1 S to their Impact Hits.</description>
-        </rule>
-      </rules>
-      <profiles>
-        <profile name="Unicorn" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="ac61-4f02-1003-6696" publicationId="9e23-79cb-pubN77092" page="20">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215">10</characteristic>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Greatbow" hidden="false" id="1f9e-9932-b92d-9734" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d6dc-864f-0fa1-15c5" includeChildSelections="false"/>
-      </constraints>
       <costs>
-        <cost name="pts" typeId="points" value="0"/>
+        <cost name="pts" typeId="points" value="10"/>
       </costs>
-      <infoLinks>
-        <infoLink name="Greatbow" id="5c4d-d963-85d7-06ec" hidden="false" type="profile" targetId="31b5-2b7d-e620-19f6"/>
-      </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Javelins &amp; Shields" hidden="false" id="1715-a24f-ede6-9e9f" collective="true">
+    <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="ecde-db3e-9381-c190" collective="true">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b4ec-3318-9f4e-ff53" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8fd5-38f5-2f70-0fd8" includeChildSelections="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Javelins" id="a7e8-4e8f-4edb-d036" hidden="false" targetId="3ecc-5d9c-7d29-ee2f" type="profile"/>
-        <infoLink name="Shield" id="9782-3dd8-eef8-5698" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
+        <infoLink name="Musician" id="73c9-9eb6-dd73-8e91" hidden="false" type="rule" targetId="54c3-1d1b-3ffe-59a5"/>
       </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Chaos Warhounds" hidden="false" id="8cdb-f7a0-9ebc-1109" collective="false">
-      <categoryLinks>
-        <categoryLink name="Core" hidden="false" id="ca26-d3c2-e28d-5689" targetId="b876-2856-f1c2-c4f0" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="Chaos Warhound" hidden="false" id="9a50-3179-2076-d48f" collective="false">
-          <constraints>
-            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="65c2-4c44-29b9-00d4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Chaos Warhound" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="a4ff-60e6-98b7-125e" publicationId="9e23-79cb-pubN71963" page="71">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Chaos Beast)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Natural Armour" hidden="false" id="2725-3413-74b2-42d3" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="073d-0b41-b389-cf00" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Natural Armour (6+)" id="90a2-9c54-d1bd-206d" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0.5"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Poisoned Attacks" hidden="false" id="6b59-6f49-1f24-4f8b" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fca3-e779-76de-0e60" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Poisoned Attacks" id="187d-c8df-d601-f31b" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <costs>
-            <cost name="pts" typeId="points" value="6"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink import="true" name="Expendable" hidden="false" id="44a2-3cdd-ff46-2569" collective="false" targetId="b90d-9045-a6d5-9e7d" type="selectionEntry"/>
-      </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="0"/>
+        <cost name="pts" typeId="points" value="5"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Light Lance &amp; Bucklers" hidden="false" id="91b7-7d92-aacd-9c32" collective="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5969-eb74-ea27-da0a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Light Lance" id="279f-9d16-e0f2-8bfd" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb"/>
-        <infoLink name="Buckler" id="14ea-98de-97ef-1704" hidden="false" targetId="1700-a7e5-d272-ef20" type="profile"/>
-      </infoLinks>
-      <modifiers>
-        <modifier type="add" value="{this} is not allowed if not mounted" field="error">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="91b7-7d92-aacd-9c32" shared="true"/>
-                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Chaos Trolls" hidden="false" id="a318-4aee-10c0-31b8" collective="false">
-      <categoryLinks>
-        <categoryLink name="Special" hidden="false" id="773d-e971-07ca-387b" targetId="fc26-7737-f7cb-8977" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="Chaos Troll" hidden="false" id="29f1-bd7b-cab0-eeb5" collective="false">
-          <constraints>
-            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="400a-3a7e-d68f-e7ec" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Regeneration (4+)" id="683a-3bb2-622b-9805" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
-            <infoLink name="Stupidity" id="f8ab-6416-1232-1005" hidden="false" targetId="755c-61c2-fa25-f4ce" type="rule"/>
-            <infoLink name="Natural Armour (6+)" id="aa27-2457-7564-caf8" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
-            <infoLink name="Troll Vomit" id="18ce-3f9a-85bc-502d" hidden="false" type="rule" targetId="42ef-fb9e-e70b-55e0"/>
-            <infoLink name="Loner" id="fb18-2490-495c-7baa" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
-          </infoLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Primary Weapon" id="a6a2-2ea8-0bc6-73d6" hidden="false" collective="false" import="true" defaultSelectionEntryId="209c-d774-4f40-3c05" sortIndex="2">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c65d-0ee2-e810-39d9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="8ab4-60da-d6a0-ae6a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <entryLinks>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="8702-77b4-afcc-a202" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
-                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="f3af-18d6-6bff-e258" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="3"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Great Weapon" hidden="false" id="91aa-c0e2-28f1-6ce2" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="3">
-                  <costs>
-                    <cost name="pts" typeId="points" value="9"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
-            </selectionEntryGroup>
-            <selectionEntryGroup name="Mark of Chaos" id="f676-228d-0f3e-499c" hidden="false" sortIndex="1">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3807-c0f3-7687-ca1b"/>
-              </constraints>
-              <entryLinks>
-                <entryLink import="true" name="Mark of Khorne" hidden="false" id="1ca2-1954-8b3a-defc" type="selectionEntry" targetId="2211-a88b-c358-2e91" sortIndex="1">
-                  <costs>
-                    <cost name="pts" typeId="points" value="3"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Mark of Nurgle" hidden="false" id="b268-fc58-ab4a-d2ee" type="selectionEntry" targetId="fce4-1eaa-170d-634c" sortIndex="3">
-                  <costs>
-                    <cost name="pts" typeId="points" value="6"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Mark of Slaanesh" hidden="false" id="194a-f797-1aa5-bdbc" type="selectionEntry" targetId="b570-8e89-e752-8902" sortIndex="4">
-                  <costs>
-                    <cost name="pts" typeId="points" value="6"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Mark of Tzeentch" hidden="false" id="37d1-9f5f-ee88-f13f" type="selectionEntry" targetId="a5c6-cd36-6ce9-c322" sortIndex="2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="3"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="46"/>
-          </costs>
-          <entryLinks>
-            <entryLink import="true" name="Light Armour" hidden="false" id="3f1d-d72c-394a-6f3c" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <costs>
-                <cost name="pts" typeId="points" value="3"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-          <profiles>
-            <profile name="Chaos Troll" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="974b-bafc-dcc7-8f21" publicationId="1a01-044f-047b-618f" page="198">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">1</characteristic>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">1</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Troll)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-        </selectionEntry>
-      </selectionEntries>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-      <constraints>
-        <constraint type="min" value="0" field="selections" scope="force" shared="true" id="85f8-a8e2-7e92-cfd2" includeChildSelections="true"/>
-      </constraints>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Harpies" hidden="false" id="e13e-de12-d6ec-c8a7" collective="false">
-      <categoryLinks>
-        <categoryLink name="Core" hidden="false" id="20bc-02fd-7f31-99cf" targetId="b876-2856-f1c2-c4f0" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="Harpy" hidden="false" id="ef3c-f2de-29b6-bbb3" collective="false">
-          <constraints>
-            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="ea4e-54a1-e5f8-3c9d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Harpy" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="4cc6-b110-bbd3-1683" publicationId="9e23-79cb-pubN76150" page="146">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-                <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Harpy)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink name="Fly (10)" id="5193-3e33-8240-984c" hidden="false" targetId="953a-d5a4-ee81-4093" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="12"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="2a1c-f0cf-0d3d-a917" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="4f98-bc01-5aee-f7f0" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="aa63-be38-1426-4103" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Leader" id="2ee5-387d-839d-5fb8" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink import="true" name="Expendable" hidden="false" id="927c-63ba-6259-3140" type="selectionEntry" targetId="b90d-9045-a6d5-9e7d"/>
-      </entryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Chaos Spawn" hidden="false" id="eb04-809f-24c4-89ec" collective="false">
-      <categoryLinks>
-        <categoryLink name="Special" hidden="false" id="2fd1-8fa6-61f1-adf9" targetId="fc26-7737-f7cb-8977" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="Chaos Spawn" hidden="false" id="daf1-45ba-8314-7445" collective="false">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="15e7-d194-cf92-7f48" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-            <constraint type="max" value="3" field="selections" scope="parent" shared="false" id="c2b2-2aff-f458-911b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Chaos Spawn" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="8daa-c99a-8a39-ca3e" publicationId="1a01-044f-047b-618f" page="197">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215"/>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
-                <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Chaos Beast)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <rules>
-            <rule name="Chaos Spawn" id="f190-eb25-2838-67c6" hidden="false" publicationId="1a01-044f-047b-618f" page="264">
-              <description>You may take 1-2 lone Chaos Spawn as a single Special choice.</description>
-            </rule>
-          </rules>
-          <infoLinks>
-            <infoLink name="Random Attacks (D6+1)" id="447d-754b-6418-d38f" hidden="false" targetId="183a-6a6f-951c-1663" type="rule"/>
-            <infoLink name="Random Movement (3D6)" id="da98-57e8-c930-c503" hidden="false" targetId="0877-cd17-c381-a045" type="rule"/>
-            <infoLink name="Unbreakable" id="8808-241c-8ba7-003d" hidden="false" targetId="1c9d-2d99-6222-2853" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="40"/>
-          </costs>
-          <categoryLinks>
-            <categoryLink name="Special" hidden="false" id="ea0f-c556-3015-4399" targetId="fc26-7737-f7cb-8977" primary="true"/>
-          </categoryLinks>
-          <entryLinks>
-            <entryLink import="true" name="Spawn of Chaos" hidden="false" id="eae3-e941-62f6-186f" type="selectionEntryGroup" targetId="71e8-374b-3fb2-2eb9"/>
-          </entryLinks>
-        </selectionEntry>
-      </selectionEntries>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry type="model" import="true" name="Giant Chaos Spawn" hidden="false" id="c75c-0942-751a-598c" collective="false">
-      <profiles>
-        <profile name="Giant Chaos Spawn" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="77f2-125c-b416-ee9b" publicationId="1a01-044f-047b-618f" page="47">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215"/>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Chaos Beast)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink name="Random Attacks (2D6)" id="4f94-d2bd-a8d5-6c80" hidden="false" targetId="065b-1f43-47e5-70cb" type="rule"/>
-        <infoLink name="Random Movement (3D6)" id="8548-9b45-67ba-54d3" hidden="false" targetId="0877-cd17-c381-a045" type="rule"/>
-        <infoLink name="Unbreakable" id="30d7-f8f0-9c1a-948f" hidden="false" targetId="1c9d-2d99-6222-2853" type="rule"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink name="Rare" hidden="false" id="e02d-9d58-0b36-d760" targetId="0eb4-f376-7725-b05b" primary="true"/>
-      </categoryLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="195"/>
-      </costs>
-      <entryLinks>
-        <entryLink import="true" name="Spawn of Chaos" hidden="false" id="3c19-c909-7001-5b46" type="selectionEntryGroup" targetId="71e8-374b-3fb2-2eb9"/>
-      </entryLinks>
-    </selectionEntry>
-    <selectionEntry type="model" import="true" name="Chimera" hidden="false" id="9369-395a-8e7e-3937" collective="false">
-      <profiles>
-        <profile name="Chimera" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f2b0-b7d7-35a6-a55d" publicationId="1a01-044f-047b-618f" page="212">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">6</characteristic>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Chaos Beast)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink name="Fly (8)" id="7434-3afa-bbe6-767f" hidden="false" targetId="0a9a-bfcb-1a9d-5609" type="rule"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink name="Rare" hidden="false" id="15e6-094e-5229-e0e3" targetId="0eb4-f376-7725-b05b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Upgrades" id="f007-8d08-6604-0dad" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Flaming Breath" hidden="false" id="8f9b-61d1-2afc-27ce" collective="false" sortIndex="4">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c3c1-c948-c5ad-7d06" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <rules>
-                <rule name="Flaming Breath" id="6713-2b8f-1c33-56a2" hidden="false" publicationId="1a01-044f-047b-618f" page="212">
-                  <description>The Chimera gains a Strength 4 Breath Weapon which has Flaming Attacks.</description>
-                </rule>
-              </rules>
-              <costs>
-                <cost name="pts" typeId="points" value="30"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Iron-hard Skin" hidden="false" id="6baf-b2b2-b454-fc92" collective="false" sortIndex="3">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7883-8bc2-876a-6607" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <rules>
-                <rule name="Iron-hard Skin" id="d6bc-9585-8716-99be" hidden="false" publicationId="1a01-044f-047b-618f" page="212">
-                  <description>The Chimera gains Natural Armour (4+).</description>
-                </rule>
-              </rules>
-              <costs>
-                <cost name="pts" typeId="points" value="25"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Regenerating Flesh" hidden="false" id="258c-000e-2188-d0b7" collective="false" sortIndex="5">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="97df-e5b3-8df6-41ca" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <rules>
-                <rule name="Regenerating Flesh" id="5f52-a029-d56d-2e7e" hidden="false" publicationId="1a01-044f-047b-618f" page="212">
-                  <description>The Chimera gains Regeneration (4+).</description>
-                </rule>
-              </rules>
-              <costs>
-                <cost name="pts" typeId="points" value="40"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fiend Tail" hidden="false" id="572b-9624-c875-b62b" collective="false" sortIndex="2">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a71b-c39e-3532-4ce5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <rules>
-                <rule name="Fiend Tail" id="84ca-33e4-3560-0389" hidden="false" publicationId="1a01-044f-047b-618f" page="212">
-                  <description>The Chimera gains +1 A.</description>
-                </rule>
-              </rules>
-              <costs>
-                <cost name="pts" typeId="points" value="15"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Venemous Ooze" hidden="false" id="8029-66de-d052-179b" collective="false" sortIndex="1">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d0a1-d9a3-1220-f7a1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <rules>
-                <rule name="Venemous Ooze" id="a5cf-c476-26fe-7910" hidden="false" publicationId="1a01-044f-047b-618f" page="212">
-                  <description>The Chimera gains Poisoned Attacks.</description>
-                </rule>
-              </rules>
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="190"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Dragon Ogres (Shaggoth)" hidden="false" id="d781-5ec4-8381-16d5">
-      <categoryLinks>
-        <categoryLink name="Special" hidden="false" id="5d8a-0763-d2a0-4988" targetId="fc26-7737-f7cb-8977" primary="true"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="Dragon Ogre" hidden="false" id="ab1b-0ac6-0430-cfe4" type="selectionEntry" targetId="7d5f-f65e-9739-0714"/>
-      </entryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="1810-f8b6-0571-33b5" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="b4cb-526d-6152-50ba" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b553-4a6a-07cb-7675" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Leader" id="9fc0-4fe3-93a3-1cf7" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="equalTo" value="0" field="selections" scope="force" childId="9ac9-5d75-316b-cb1d" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="increment" value="1" field="6596-d86c-19e0-1034">
-          <repeats>
-            <repeat value="1" repeats="1" field="selections" scope="force" childId="9ac9-5d75-316b-cb1d" shared="true" roundUp="false" includeChildSelections="true"/>
-          </repeats>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="force" shared="true" id="6596-d86c-19e0-1034" includeChildSelections="true"/>
-      </constraints>
-    </selectionEntry>
-    <selectionEntry type="model" import="true" name="Dragon Ogre Shaggoth" hidden="false" id="9ac9-5d75-316b-cb1d" collective="false">
-      <profiles>
-        <profile name="Dragon Ogre Shaggoth" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="5484-8834-b066-3614" publicationId="9e23-79cb-pubN71963" page="86">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35">6</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">6</characteristic>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Dragon Ogre)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink name="Natural Armour (5+)" id="3159-f771-30a4-e871" hidden="false" targetId="306d-711a-1300-587f" type="rule"/>
-        <infoLink name="Impact Hits (D3)" id="a24f-65a3-8c34-c8d4" hidden="false" targetId="f30d-0b61-2836-689e" type="rule"/>
-        <infoLink name="Storm Rage" id="6f5d-a791-f583-4c7c" hidden="false" type="rule" targetId="9cd6-64c7-e7c5-4ef6"/>
-        <infoLink name="Storm Call" id="a6b9-8531-1e0d-f760" hidden="false" type="profile" targetId="db98-698f-5fae-ba03"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink name="Rare" hidden="false" id="d4ee-0c92-1015-328b" targetId="0eb4-f376-7725-b05b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Primary Weapon" id="cebd-9c8b-035d-e7d7" hidden="false" collective="false" import="true" defaultSelectionEntryId="be5c-cb48-ba09-303c" sortIndex="1">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="34b4-6d60-3b44-84d4-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="34b4-6d60-3b44-84d4-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Great Weapon" hidden="false" id="5f69-a322-2fa4-55c1" collective="false" sortIndex="3">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0c45-d94c-0671-df5b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Great Weapon" id="2f85-f151-107b-0464" hidden="false" targetId="193e-bc43-b252-8eff" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="15"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Two/Additional Hand Weapons" hidden="false" id="453f-3fc7-eff2-3ea4" collective="false" sortIndex="2">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9f34-3c6e-5e13-6b6b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Two/Additional Hand Weapons" id="3944-34cf-6d10-cc4d" hidden="false" targetId="4a5d-0b6d-f6ac-fd7d" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="6"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Hand Weapon" hidden="false" id="be5c-cb48-ba09-303c" collective="false" sortIndex="1">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fe07-c950-e63c-8009" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Hand Weapon" id="aabf-6f2a-b7c7-45e1" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Armour" id="a8cf-9ff6-af8d-c9c6" hidden="false" collective="false" import="true" sortIndex="2">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="1d68-9ba5-2d76-b2c7-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1d68-9ba5-2d76-b2c7-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Light Armour" hidden="false" id="3b7c-b2e7-1b43-f3fd" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="1">
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Medium Armour" hidden="false" id="55db-85f0-0359-44ff" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="12"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="235"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry type="model" import="true" name="Dragon Ogre" hidden="false" id="7d5f-f65e-9739-0714" collective="false">
-      <constraints>
-        <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="7477-94c7-7a73-3d2a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <profiles>
-        <profile name="Dragon Ogre" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="2a14-dc71-d95e-8ef1" publicationId="1a01-044f-047b-618f" page="201">
-          <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">2</characteristic>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
-            <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Cavalry (Dragon Ogre)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink name="Natural Armour (5+)" id="5ea9-2321-e792-791f" hidden="false" targetId="306d-711a-1300-587f" type="rule"/>
-        <infoLink name="Storm Rage" id="cd1f-0641-0130-a1ae" hidden="false" type="rule" targetId="9cd6-64c7-e7c5-4ef6"/>
-      </infoLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Primary Weapon" id="7801-5fd9-c6a6-d6a5" hidden="false" collective="false" import="true" defaultSelectionEntryId="55a8-a71f-9ed3-0436" sortIndex="1">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="f794-d592-7b4f-d4df-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f794-d592-7b4f-d4df-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Great Weapon" hidden="false" id="bd11-90c4-670c-f719" collective="true" sortIndex="4">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3bf0-a04b-7dd3-a296" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Great Weapon" id="93d6-490a-1a84-de3a" hidden="false" targetId="193e-bc43-b252-8eff" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="9"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Two/Additional Hand Weapons" hidden="false" id="a902-0056-0bb9-1dd3" collective="true" sortIndex="2">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b951-bfaa-85f9-9faf" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Two/Additional Hand Weapons" id="f62d-9b78-5c88-5f80" hidden="false" targetId="4a5d-0b6d-f6ac-fd7d" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="4"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Hand Weapon" hidden="false" id="55a8-a71f-9ed3-0436" collective="true" sortIndex="1">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="bab3-eb01-ebe9-244e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Hand Weapon" id="b705-3602-bc5a-eb1a" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Polearm/Halberd" hidden="false" id="19bc-80a1-d2b8-464d" collective="true" sortIndex="3">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a78f-9840-7172-2159" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Polearm/Halberd" id="9b89-6ab4-f267-acaa" hidden="false" targetId="e43e-5153-eeec-36be" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="6"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Armour" id="fabf-375b-bff6-6f30" hidden="false" collective="false" import="true" sortIndex="2">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="1987-17ec-0adb-1e83-min" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1987-17ec-0adb-1e83-max" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Light Armour" hidden="false" id="34f0-e9c2-e2f4-5d5d" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="1">
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Medium Armour" hidden="false" id="638b-78b0-41f3-18db" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="8"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="55"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Dragon Ogres" hidden="false" id="40ad-4612-7809-d541">
-      <categoryLinks>
-        <categoryLink name="Rare" hidden="false" id="fb5d-d4e8-e4c8-25e5" targetId="0eb4-f376-7725-b05b" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="7d32-bf8a-cf7d-5d63" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="f9d1-8b80-0c23-d788" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7da5-8e19-8be8-b461" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Leader" id="5453-d92e-771a-ca37" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <entryLinks>
-        <entryLink import="true" name="Dragon Ogre" hidden="false" id="1325-eda5-d6e8-52b1" type="selectionEntry" targetId="7d5f-f65e-9739-0714"/>
-      </entryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="6cd2-3f4b-da2d-1ee9" name="Common Arcane Items" hidden="false" collective="false" import="true">
+    <selectionEntryGroup name="50. Handheld Armour" id="9015-46da-282c-713d" hidden="false">
+      <comment>Min 1</comment>
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="271f-2a52-52aa-7ed9" type="max"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3ea6-01bb-0b28-b780" includeChildSelections="false" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7cef-e90c-ff74-4c59" includeChildSelections="false" automatic="true"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="fa16-077f-18b1-27d8" name="Channeling Staff" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d34-21b9-f917-cb3a" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cc3a-6611-f489-63ee" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="2d29-f545-3f04-272e" name="Channeling Staff" publicationId="9e23-79cb-pubN66727" page="159" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Wizard rolls one additional dice whenever they attempt to channel power or dispel dice.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="60b4-7c66-f1ea-4a0a" name="Book of Ashur" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8114-9d43-2592-b073" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8d6c-9c6a-acb1-64fb" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="5e94-c8f9-ff18-3b00" name="Book of Ashur" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Wizard gains the Loremaster special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="30"/>
-          </costs>
-          <entryLinks>
-            <entryLink import="true" name="Loremaster" hidden="false" id="de20-20a7-7094-a952" type="selectionEntry" targetId="a2bf-14a5-6723-7157"/>
-          </entryLinks>
-        </selectionEntry>
-        <selectionEntry id="46f0-3898-3169-fa9b" name="Wand of Jet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aa3f-65aa-0868-41ed" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8a30-e4bb-3eec-ac7a" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="038d-5c7c-eea0-59c9" name="Wand of Jet" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer gains a +1 casting bonus.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="ef27-b91f-9d88-e28c" name="Scepter of Stability" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cb47-fc0b-a8d5-4294" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a83f-c65d-e0f1-5024" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="c73d-0a87-ee0f-8000" name="Scepter of Stability" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer gains a +1 dispel bonus.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="da0c-a92d-bf2d-649c" name="Power Familiar" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="69ba-2f1d-0b58-562f" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f438-f693-06a5-738b" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f5a6-13fe-eb0b-11f5" name="Power Familiar" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Familiar adds one Power Dice in each of your Magic phases.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="25"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="c5d0-4769-c76f-2cad" name="Spell Familiar" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="346a-1b27-22e9-7055" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b465-bf03-8e8a-9b49" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="8525-01e0-aa00-e63f" name="Spell Familiar" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Wizard knows one additional spell from those normally allowed to them.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-          <entryLinks>
-            <entryLink import="true" name="Extra spell selection" hidden="false" id="9f7f-ca27-79f9-75bb" type="selectionEntry" targetId="c5d0-4769-c76f-2cac"/>
-          </entryLinks>
-        </selectionEntry>
-        <selectionEntry id="795a-417c-22af-7999" name="Wizard&apos;s Staff" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f23d-6ff3-592c-92d9" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="09ff-c1b5-5c95-0cbb" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="2dce-f8d8-d396-08b4" name="Wizard&apos;s Staff" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Wizard&apos;s Staff allows the bearer to use one more dice than they are normally allowed to when casting a spell (eg, a Wizard that can normally use up to two dice to cast spells will be able to use up to three dice).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b80d-1dbf-b133-bef8" name="Rod of Power" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ab10-65bb-49d3-811a" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="18c0-5bce-e968-72d7" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="003d-64af-43b4-8139" name="Rod of Power" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">At the end of each magic phase (yours and enemy&apos;s), you can save up to three unused power/dispel dice from the pool and store them in the rod. At the beginning of each successive magic phase (yours and enemy&apos;s), roll a dice. If the result is equal or higher to the number of dice stored, add them to the power/dispel dice pool, if the result is lower than the number of dice stored, they are lost.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="30"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f260-82db-8ea6-ee77" name="Arcane Familiar" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="60e7-3864-6793-9321" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9720-f6b3-5e27-04d0" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e77d-8604-5eb8-9fc6" name="Arcane Familiar" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Wizard can choose one Signature spell as an additional spell from any of the eight Lores of Battle Magic in this book, even if they normally cannot choose that lore.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Signature Spells" id="8a6d-0d9f-68f0-be4f" hidden="false">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ebba-6e9b-03b1-5d08-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ebba-6e9b-03b1-5d08-max"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="0. Wyssan&apos;s Wildform" hidden="false" id="635a-105c-f89b-3b84" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5ab5-2d30-3cd2-53fc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="8005-0a5b-9df9-4076" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Wyssan&apos;s Wildform" id="1d1e-36d3-3284-a3d8" hidden="false" targetId="bc40-b619-0977-f8ad" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="0. Dark Hand of Death" hidden="false" id="cd07-1506-779a-0071" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="16ec-2917-0260-b5ec" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="9267-5f68-90e6-841f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Dark Hand of Death" id="a621-3dca-efa9-54af" hidden="false" targetId="f560-2bd9-89c7-28bd" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="0. Fireball" hidden="false" id="b98b-9c00-ff17-cd90" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2793-90f3-61ae-4af3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="cd22-6253-48b3-d121" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Fireball" id="2122-e0e5-5c03-3027" hidden="false" targetId="6e57-2cc3-96fc-7f01" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="0. Harmonic Convergence" hidden="false" id="b2e2-4d34-0db7-3fc6" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d326-7283-1101-729e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="d23a-6a00-3902-0b34" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Harmonic Convergence" id="1bc4-1eaa-95bd-fd2f" hidden="false" targetId="91df-517b-9d00-5628" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="0. Earth Blood" hidden="false" id="721e-c21f-6103-6a6a" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="242b-31da-b8fb-1316" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="ba7b-d52d-dea0-c945" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Earth Blood" id="9837-bc46-717f-ec3b" hidden="false" targetId="c7c1-2e60-4710-1a6a" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="0. Shem&apos;s Burning Gaze" hidden="false" id="1e24-9fb6-f5e2-fefd" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d29e-8a3e-6364-442e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="3e19-c45d-a1fd-7052" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Shem&apos;s Burning Gaze" id="7eeb-9ba6-e516-2c6b" hidden="false" targetId="6508-2de1-8be5-0a2f" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="0. Glittering Robe" hidden="false" id="80c2-6bc0-25d0-d59e" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e3ab-24b2-ba9c-c9a7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="3442-1f88-21f0-a831"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Glittering Robe" id="edb0-0f3b-f5d3-399c" hidden="false" targetId="3c85-1552-3323-c4d3" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="0. Melkoth&apos;s Mystifying Miasma" hidden="false" id="7822-9084-1223-5172" collective="false">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b13f-fe24-17f0-a8d5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                    <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="fb5d-7265-85ec-9025" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Melkoth&apos;s Mystifying Miasma" id="1614-9859-4cd3-eb6e" hidden="false" targetId="89e2-f22c-758d-a9d7" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="5857-a7aa-f954-a027" name="Common Enchanted Items" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b384-6d1c-fc8d-c77d" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="7d4f-ef41-7056-3a2b" name="Wizarding Hat" hidden="false" collective="false" import="true" type="upgrade" sortIndex="16">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6c2c-3dad-95ce-4134" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cbc6-779a-3e05-fa4c" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d95a-fbd7-8810-7cf7" name="Wizarding Hat" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The wearer is treated as being a Level 2 Wizard who can use a randomly chosen spell lore from any of the Eight Lores of Magic at the start of the game.
-However, they also have the Stupidity special rule.
-Note that they may not choose any Arcane Items.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="50"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="bd6c-37ab-5b12-f41e" name="Fozzrik&apos;s Folding Fortress" hidden="false" collective="false" import="true" type="upgrade" sortIndex="17">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d596-01ca-e2e8-c440" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a5bb-5b98-7b78-05a5" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="48c8-2e13-e426-6fcd" name="Fozzrik&apos;s Folding Fortress" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">After deployment zones have been agreed, but before the armies have been deployed, place a watchtower building no more than 10x10 cm in base size and a maximum of 3 floors in your deployment zone to represent the Folding Fortress. This is treated as a standard building. If you do not have a suitable building to place, you cannot use Fozzrik&apos;s Folding Fortress.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="100"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="7814-f3d5-91f9-8974" name="Orb of Thunder" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5689-cf6f-8526-6ee9" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c4fa-1dce-fe3c-d2ac" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f905-bfc7-b32f-9d87" name="Orb of Thunder" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Bound Spell, Power Level 4. Remains in play. The Orb of Thunder contains a hex spell.</characteristic>
-              </characteristics>
-            </profile>
-            <profile id="b26f-355c-8a01-be80" name="Orb of Thunder" publicationId="9e23-79cb-pubN66727" page="162" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-              <characteristics>
-                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
-                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. The Orb of Thunder effects all models with the Fly special rule. When cast, no models may use their Fly special rule and must move on the ground at their normal Movement rate.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="30"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d96f-5374-891c-549b" name="Ruby Ring of Ruin" hidden="false" collective="false" import="true" type="upgrade" sortIndex="14">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7281-e446-48ee-504d" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="38a1-1a98-b4c1-6fc2" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="9314-4ee5-56eb-b392" name="Ruby Ring of Ruin" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Bound spell (power level 4). The Ruby Ring of Ruin contains the Fireball spell.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="902a-306d-3df9-f216" name="Kindleflame" hidden="false" targetId="c198-878a-0683-0889" type="profile"/>
-            <infoLink name="Fireball" id="9e0b-b70e-f60a-15c8" hidden="false" type="profile" targetId="6e57-2cc3-96fc-7f01"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="35"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e6a0-bf8d-ddbf-fda6" name="Crown of Command" hidden="false" collective="false" import="true" type="upgrade" sortIndex="15">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f15d-ec38-e75b-50f5" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f47c-27b3-9edf-511b" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="205b-7c2f-1427-2817" name="Crown of Command" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The Crown of Command gives the bearer and any unit they join Stubborn for as long as the bearer remains with the unit.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="40"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="293c-5322-82e4-3db6" name="Healing Potion" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b0d0-7983-1c04-0015" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="100f-9395-351c-2c32" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="6e2a-fe07-c226-d0bd" name="Healing Potion" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Healing Potion can be drunk at the start of the controlling player&apos;s turn. The model immediately recovers D3 Wounds (ignoring any additional Wounds from mounts) up to their starting value.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="817f-d39e-da54-a4f9" name="The Terrifying Mask of Eee!" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3870-4799-8160-ce47" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cc54-ceef-45ef-1fea" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="2f6d-8270-dcea-3d13" name="The Terrifying Mask of Eee!" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The wearer of this mask causes Terror. However, other models can never use their Ld.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="25"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b9e5-d92f-9308-a868" name="Potion of Speed" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8c8b-1b27-f343-e44c" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a0b3-b929-f284-e14e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="56e5-f08d-7476-5f5e" name="Potion of Speed" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Potion of Speed can be drunk at the start of any phase. The character gains +D3 Attacks until the end of the turn.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="c358-efc9-63a1-ef71" name="Potion of Strength" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aa19-55c5-ebfe-91af" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b06c-5575-9b8f-f843" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="428c-c4eb-4bc0-a597" name="Potion of Strength" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Potion of Strength can be drunk at the start of any phase. The character gains +D3 Strength until the end of the turn.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2dcc-7b33-ad44-8ec9" name="The Other Trickster&apos;s Shard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2746-14ab-aa38-e80b" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="99c8-3735-ee15-cf1f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0e40-7b19-6cd8-5370" name="The Other Trickster&apos;s Shard" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The bearer, and all units in base contact with them (friend and foe) must re-roll successful Ward Saves.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="25"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="43f4-029e-c9a6-e069" name="Ironcurse Icon" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="458a-a366-b470-f3f6" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bc21-fe92-f52c-1623" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="26c2-d30a-6795-a7bd" name="Ironcurse Icon" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The character (and any unit they are with) gain a Ward save (6+) against artillery weapons.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b706-ccc0-394e-89a2" name="Potion of Toughness" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="025c-4b98-8f3f-448c" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="51c3-7e65-55ab-3bdc" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="da0a-6b34-bfa5-6e42" name="Potion of Toughness" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Potion of Toughness can be drunk at the start of any phase. The character gains +D3 Toughness until the end of the turn.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0798-f56f-270c-8065" name="Arabyan Carpet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fa95-6461-18ce-fb66" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1886-65c5-f5a4-20a3" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e1eb-687b-4f1a-dee2" name="Arabyan Carpet" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Infantry models on foot only. The owner of this magical carpet has Fly (10). However, they cannot join units.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="25"/>
-          </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
           <modifiers>
-            <modifier type="add" value="{this} is not allowed if mounted" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0798-f56f-270c-8065" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
+            <modifier type="set" value="0" field="3ea6-01bb-0b28-b780"/>
+            <modifier type="set" value="0" field="7cef-e90c-ff74-4c59"/>
+            <modifier type="set" value="true" field="hidden"/>
           </modifiers>
-        </selectionEntry>
-        <selectionEntry id="90c1-2dc7-8dcf-d237" name="Boots of Flight" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6b94-ec28-940c-54ad" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2c27-0dc3-2d98-ba76" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="8f84-e750-605e-17fb" name="Boots of Flight" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Model on foot only. The Boots of Flight gives the wearer Movement 10 as well as the Strider and Swiftstride special rules.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-          <modifiers>
-            <modifier type="add" value="{this} is not allowed if mounted" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="90c1-2dc7-8dcf-d237" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry id="aa6b-1051-6c06-4d1c" name="Lifestone of Ashraaz" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="271e-d9bf-ad7c-1cea" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b26b-3427-81e1-fb62" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="065e-53e2-2481-bc06" name="Lifestone of Ashraaz" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Lifestone of Ashraaz can be used at the start of any close combat phase. The bearer can swap his current number Wounds with the current number of Wounds of any one enemy model in base contact. The effect lasts the remainder of the game.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="30"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Potion of Foolhardiness" hidden="false" id="1a39-ee3f-58d4-f19f" collective="false" sortIndex="1">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ad67-4922-8653-a924" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="90c3-d928-6da1-f475" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Potion of Foolhardiness" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="59ec-0843-e6cc-55c8" publicationId="9e23-79cb-pubN66727" page="119">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Potion of Foolhardiness can be drunk at the start of any phase. The character gains the Frenzy special rule until the end of the turn.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Warrior Familiar" hidden="false" id="6ba4-68a0-cd51-88ce" collective="false" sortIndex="2">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="368d-d51b-2d12-3600" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="937e-e453-33a4-97fb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Warrior Familiar" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="e342-0791-fb7a-a153" publicationId="9e23-79cb-pubN66727" page="119">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The model gains an additional Strength 3 Attack. This does not benefit from any weapon, item or special rule used by the character. You may still take another Enchanted Item in addition to the Warrior Familiar, and it also does not count against the maximum points limit of magic items normally allowed for the character.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <modifiers>
-        <modifier type="set" value="2" field="b384-6d1c-fc8d-c77d">
           <conditions>
-            <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="ba52-4f0c-71ae-b52d" shared="true" includeChildSelections="true"/>
           </conditions>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntryGroup>
-    <selectionEntryGroup id="2613-24d7-a26e-eb37" name="Common Magic Standards" hidden="false" collective="false" import="true">
+    <selectionEntryGroup name="50. Handheld Armour" id="0420-92ca-bbfc-b5f2" hidden="false">
+      <comment>Min 0</comment>
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fba2-f6b9-4fcc-98ac" type="max"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b127-dfd3-1284-6bb1" includeChildSelections="false" automatic="true"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="94a6-7c7c-aad1-4193" name="Banner of Valour" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3253-1dc5-92ee-5b88" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2540-5b13-c727-ec0e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="98fe-57c4-ccae-a2d4" name="Banner of Valour" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains Immunity (Panic).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="7f82-e8a2-f27b-e9f2" name="War Banner" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1e47-9b7a-a4a9-5c27" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2f29-d64c-d1b6-e968" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="328d-4e82-59a2-84a8" name="War Banner" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard adds +1 to combat resolution.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a75f-e5aa-a6a4-14c4" name="Scarecrow Banner" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e34b-c9d6-ecc7-5c34" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9953-81e7-44ac-443e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="a850-abd0-3a25-b4d0" name="Scarecrow Banner" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard causes Terror in models with the Fly special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f51c-f68c-46a5-16ce" name="Standard of Arcane Warding" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5dc6-3c24-8559-5ec0" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3df3-6d35-797f-0b66" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="542a-4c76-c480-92fa" name="Standard of Arcane Warding" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains Magic Resistance (2).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="001c-8ede-5ac4-440c" name="Razor Standard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="16">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="76ca-1495-d39e-1f56" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c43c-f428-b317-b30e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="af1e-d3de-2351-14e1" name="Razor Standard" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard have Armour Piercing (1).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="30"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1ee7-9599-e191-164e" name="Dread Banner" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3302-4883-25b8-aae9" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="79ae-bb31-5da1-f570" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d1af-9055-f967-a190" name="Dread Banner" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard causes Fear.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="33ad-5917-0f38-70bc" name="Ranger&apos;s Standard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a3ff-ba79-6cd8-4e27" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5ef6-9920-3e29-7b1e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="195d-20c5-02e2-73be" name="Ranger&apos;s Standard" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains Strider. If the unit is riding a mount, the mount benefit from Strider as well.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d191-cd5f-c3c4-012f" name="Rampager&apos;s Standard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="17">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f8d1-22f9-18e0-fa27" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="756e-f805-e6d6-7bfc" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="6031-44f7-6873-9453" name="Rampager&apos;s Standard" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard can re-roll its charge distance dice.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="b127-dfd3-1284-6bb1"/>
+            <modifier type="set" value="true" field="hidden"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="ba52-4f0c-71ae-b52d" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="40. Suits of Armour" id="f7f7-2534-4683-595a" hidden="false">
+      <comment>Min 1</comment>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="71c5-9037-5bd4-fae9" includeChildSelections="false" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f5b7-0be5-74d6-45b2" includeChildSelections="false" automatic="true"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="71c5-9037-5bd4-fae9"/>
+            <modifier type="set" value="0" field="f5b7-0be5-74d6-45b2"/>
+            <modifier type="set" value="true" field="hidden"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="40. Suits of Armour" id="f56d-df75-2d0b-ce09" hidden="false">
+      <comment>Min 0</comment>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b3e8-624f-92d7-7b5b" includeChildSelections="false" automatic="true"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="0" field="b3e8-624f-92d7-7b5b"/>
+            <modifier type="set" value="true" field="hidden"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="10. Character Options" id="35f1-2fc8-9817-3171" hidden="false">
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="b476-13c2-7d75-fd02" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1"/>
+      </entryLinks>
+      <comment>General min 0</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="20. Primary Weapon" id="350c-4b0b-93c1-4e47" hidden="false">
+      <comment>Min 1</comment>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e941-9082-0af2-8b43" includeChildSelections="false" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe22-ce5f-b23e-303d" includeChildSelections="false" automatic="true"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="6921-bd2a-e7cb-9029" hidden="false">
+      <comment>1 &amp; 2</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 1" hidden="false" id="8fd0-2716-0bc4-0bf1" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8"/>
+        <entryLink import="true" name="Wizard Level 2" hidden="false" id="13d6-4aba-63b3-f649" type="selectionEntry" targetId="801a-bc0a-a767-61db">
           <costs>
             <cost name="pts" typeId="points" value="35"/>
           </costs>
-        </selectionEntry>
-        <selectionEntry id="97d5-2db3-5d5c-0083" name="Wailing Banner" hidden="false" collective="false" import="true" type="upgrade" sortIndex="18">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2af4-0113-5a71-808c" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9a1f-761c-04e8-c9d8" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="735f-815b-b9e3-be11" name="Wailing Banner" publicationId="9e23-79cb-pubN66727" page="163" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this standard gains the Terror special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b037-9419-a136-e1f4-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b037-9419-a136-e1f4-max"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="30. Secondary Weapon" id="f86c-485f-5cc1-2a43" hidden="false">
+      <comment>Min 1</comment>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5d91-5217-36bf-adeb" includeChildSelections="false" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d000-627b-af39-4fd6" includeChildSelections="false" automatic="true"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="d1c2-3512-e5b6-7616" hidden="false">
+      <comment>3 &amp; 4</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 3" hidden="false" id="3f93-c8d9-edff-302a" type="selectionEntry" targetId="1670-dca4-294b-7d9b"/>
+        <entryLink import="true" name="Wizard Level 4" hidden="false" id="319e-d324-f104-4081" type="selectionEntry" targetId="5460-3929-58ef-71ba">
           <costs>
-            <cost name="pts" typeId="points" value="40"/>
+            <cost name="pts" typeId="points" value="35"/>
           </costs>
-        </selectionEntry>
-        <selectionEntry id="dfcd-5a5d-cb6c-d2bb" name="Standard of Shielding" hidden="false" collective="false" import="true" type="upgrade" sortIndex="14">
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8fb4-564a-87c3-1e3f-min"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8fb4-564a-87c3-1e3f-max"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="30. Secondary Weapon" id="9bf8-b456-dd2f-8826" hidden="false">
+      <comment>Min 0</comment>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="94cf-8482-9a4d-8204" includeChildSelections="false" automatic="true"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="70. Mount" id="d3f4-2566-96e2-e425" hidden="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7821-ebe3-f713-6916" includeChildSelections="false" automatic="true"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="10. Character Options" id="7853-6aa4-00e8-09e0" hidden="false">
+      <entryLinks>
+        <entryLink import="true" name="General" hidden="false" id="976d-a350-4cdd-2146" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2">
           <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0492-0bb0-5078-47f9" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7b69-cfb3-5d61-f5aa" type="max"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2b7c-f946-c239-e8bc"/>
           </constraints>
-          <profiles>
-            <profile id="b5fd-7f4d-c4c1-bb5e" name="Standard of Shielding" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains a Ward Save (6+) against missile attacks.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+        </entryLink>
+      </entryLinks>
+      <comment>General min 1</comment>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7b92-7094-337f-b1ec"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="1d19-3d5b-2087-e988" hidden="false">
+      <comment>1</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 1" hidden="false" id="2461-692e-68b5-a7e6" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0203-9259-3a51-4379-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0203-9259-3a51-4379-max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d105-c86d-4f31-8bbf"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eb49-60bf-ae39-3d68"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="2f28-d537-4a60-b96b" hidden="false">
+      <comment>2</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 2" hidden="false" id="fe72-909b-86dc-19a9" type="selectionEntry" targetId="801a-bc0a-a767-61db">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a3d6-b794-cc34-ff7d-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a3d6-b794-cc34-ff7d-max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f245-c4a2-0dc0-7290"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7123-9422-df65-8fe7"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="8e7d-af82-eb9b-19f2" hidden="false">
+      <comment>3</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 3" hidden="false" id="a7ee-378c-4129-9086" type="selectionEntry" targetId="1670-dca4-294b-7d9b">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5cc3-d8c0-480b-177f-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5cc3-d8c0-480b-177f-max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="932a-7783-f488-1592"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8e03-1da6-0c97-c947"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="e548-6739-0537-5d95" hidden="false">
+      <comment>4</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 4" hidden="false" id="8007-cef0-bcd7-935f" type="selectionEntry" targetId="5460-3929-58ef-71ba">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="80a5-ade6-c9f6-73ee-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="80a5-ade6-c9f6-73ee-max"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="229a-2958-7715-127c"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ad8b-d3db-a04c-a906"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="e303-1f8c-2385-b1e5" hidden="false">
+      <comment>0 &amp; 1</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 1" hidden="false" id="705a-9d3b-4a08-08a7" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
           <costs>
-            <cost name="pts" typeId="points" value="25"/>
+            <cost name="pts" typeId="points" value="35"/>
           </costs>
-        </selectionEntry>
-        <selectionEntry id="1aac-8bc7-07ca-4810" name="Banner of Might" hidden="false" collective="false" import="true" type="upgrade" sortIndex="20">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7d1e-dcaa-e624-59f9" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7631-5b1e-8d69-8074" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="1ccb-52e7-bc46-0f38" name="Banner of Might" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gain +1 To Hit in the first round of close combat.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d10-92f6-d5d5-f71d"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="15bd-038f-34c8-b3b8" hidden="false">
+      <comment>1 &amp; 2 &amp; 3 &amp; 4</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 3" hidden="false" id="82ac-b815-0329-1372" type="selectionEntry" targetId="1670-dca4-294b-7d9b">
           <costs>
-            <cost name="pts" typeId="points" value="55"/>
+            <cost name="pts" typeId="points" value="105"/>
           </costs>
-        </selectionEntry>
-        <selectionEntry id="7c2b-33d1-5ac9-7fe9" name="Banner of Duty" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a93b-cea9-665b-eb3e" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="67ad-9fa9-e35d-48c9" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f014-0f4f-6777-fa43" name="Banner of Duty" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this standard automatically pass any Rally tests.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+        </entryLink>
+        <entryLink import="true" name="Wizard Level 4" hidden="false" id="e3b4-02fe-bc54-f0e5" type="selectionEntry" targetId="5460-3929-58ef-71ba">
           <costs>
-            <cost name="pts" typeId="points" value="5"/>
+            <cost name="pts" typeId="points" value="140"/>
           </costs>
-        </selectionEntry>
-        <selectionEntry id="cef5-266e-0f43-aead" name="Banner of Swiftness" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="baff-46c2-0997-bf51" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c0be-d090-e59b-a5f6" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="009b-5291-4a6a-2d06" name="Banner of Swiftness" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this standard gains Swiftstride.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+        </entryLink>
+        <entryLink import="true" name="Wizard Level 1" hidden="false" id="c483-25de-1beb-ca94" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
           <costs>
-            <cost name="pts" typeId="points" value="25"/>
+            <cost name="pts" typeId="points" value="35"/>
           </costs>
-        </selectionEntry>
-        <selectionEntry id="8ff6-6287-7b98-4783" name="Standard of Discipline" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cf7f-e2d5-0343-0898" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="67e0-34f8-5bff-e1d4" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="3ca5-b1f2-ffd0-b846" name="Standard of Discipline" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard has +1 Ld, but cannot use the General&apos;s Inspiring Presence. If a model with this special rule joins this unit, other units using their Inspiring Presence do not benefit from the +1 Leadership.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="ad77-141b-849a-4aea" name="Lichbone Pennant" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="86bc-45b8-d384-a5ca" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="36ab-c5f2-f110-0235" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d212-2fd5-37a7-0c87" name="Lichbone Pennant" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard gains Magic Resistance (1).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="870b-a8ab-ff7b-bb44" name="Banner of Eternal Flame" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a2dd-7a1f-e276-ddc8" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1ff1-8b7f-bfe8-12fc" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="4a88-2418-1025-19aa" name="Banner of Eternal Flame" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this standard gains the Magical Attacks and Flaming Attacks special rules.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0b5a-0ee8-979e-7837" name="Gleaming Pennant" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2bba-254c-a9e3-facf" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4b65-8193-63c8-61d8" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="4eb8-3ff8-bdd8-dfbf" name="Gleaming Pennant" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">One use only. A unit with this magic standard can re-roll its first failed Leadership test.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="10b3-7a9e-1d69-01fc" name="Battle Banner" hidden="false" collective="false" import="true" type="upgrade" sortIndex="21">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d3c3-0282-f268-6619" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b3dc-0e24-5e6a-5ca1" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="fdb4-9681-b7f6-01e9" name="Battle Banner" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard adds +D6 to combat resolution, rolled each time it is used.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+        </entryLink>
+        <entryLink import="true" name="Wizard Level 2" hidden="false" id="4764-9424-fb3e-e7ff" type="selectionEntry" targetId="801a-bc0a-a767-61db">
           <costs>
             <cost name="pts" typeId="points" value="70"/>
           </costs>
-        </selectionEntry>
-        <selectionEntry id="457e-45ee-6303-e58c" name="Banner of Courage" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9b33-6039-e914-24de" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1521-5139-e9fa-035c" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0556-d274-dde6-2c71" name="Banner of Courage" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this magic standard re-roll failed Break tests.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b06b-65e8-4616-8cd4" name="Banner of Defiance" hidden="false" collective="false" import="true" type="upgrade" sortIndex="19">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f909-450b-e5da-f98c" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ec88-f5a8-8b4e-dbc5" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="a31e-e0b7-4c5f-1200" name="Banner of Defiance" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this standard gains the Stubborn special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="50"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="bd93-a127-51fd-0c29" name="Banner of Iron Resolve" hidden="false" collective="false" import="true" type="upgrade" sortIndex="15">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f08c-8ef6-4fbb-9b42" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3a8e-256f-f579-9a9d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="4061-b5f9-68cb-4dac" name="Banner of Iron Resolve" publicationId="9e23-79cb-pubN66727" page="119" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">A unit with this standard gains the Immunity (Psychology) special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="30"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="557c-c8c5-0c0f-d2b3" name="Common Magic Armour" hidden="false" collective="false" import="true">
+        </entryLink>
+      </entryLinks>
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e8bf-02bf-4af7-5efa" type="max"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="39d2-dced-cde4-7657"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="eea1-981c-1270-d7ba" name="Enchanted shield" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="20da-3f95-f54e-9d08" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="21eb-a66f-cd50-6bda" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="365e-d800-8bd3-1edc" name="Enchanted shield" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">5+</characteristic>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">4+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Shield. The bearer gains +2 to their armour save, rather than +1 that a normal shield would give.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="bdd6-bac4-600a-9d71" name="Trickster&apos;s Helm" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2219-1a5b-1941-a8c8" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0b54-e129-3514-3d95" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="de13-7bdf-fcdf-ad13" name="Trickster&apos;s Helm" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Model on foot only. The helmet gives the wearer a 6+ armour save. Any successful roll to wound made against the wearer of the Trickster&apos;s Helm must be re-rolled.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="30"/>
-          </costs>
-          <modifiers>
-            <modifier type="add" value="{this} is not allowed if mounted" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="bdd6-bac4-600a-9d71" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry id="4808-e83d-ed68-7a23" name="Dragonhelm" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5fce-4ce1-16bb-8493" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="beab-012a-f0b6-b37b" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="fcae-7696-3cb8-33fb" name="Dragonhelm" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The wearer has the Immunity (Flaming Attacks) special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9a5c-0e4d-2974-23d9" name="Shield of Ptolos" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8732-7946-be62-b114" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="55ab-bfc9-ab83-2670" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="daa7-f45b-e479-ec29" name="Shield of Ptolos" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">1+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Shield. The bearer has a 1+ armour save against shooting attacks.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="fdc2-057c-715c-557a" name="Glittering Scales" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0c85-0dcc-4c2d-d783" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="39f5-e577-e363-e6d3" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="573d-ad01-0e3f-f406" name="Glittering Scales" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Light armour. Enemy models suffer -1 To Hit the wearer in close combat.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="25"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d125-45e5-61e6-0926" name="Spellshield" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6e48-aee7-31cd-f010" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="710a-3a50-aac9-4488" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="84be-4d1b-6664-fca4" name="Spellshield" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Shield. The bearer gains Magic Resistance (1).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="8ceb-acc7-6436-3aef" name="Charmed Shield" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f84b-8692-9712-1937" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1150-ec24-0bd8-f228" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="2f6a-b82a-3b68-2140" name="Charmed Shield" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Shield. One use only. The first hit suffered by the bearer of the Charmed Shield is ignored on a roll of 2+.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="ecd0-0bdb-3b07-1502" name="Gambler&apos;s Armour" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a389-51e9-f53f-20f0" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4d37-d30a-c1c3-d45a" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="1be5-6ccd-a197-da65" name="Gambler&apos;s Armour" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Light armour. The Gambler&apos;s Armour grants the wearer a Ward Save (6+).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="7d0d-7b73-9561-a623" name="Armour of Fortune" hidden="false" collective="false" import="true" type="upgrade" sortIndex="14">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="efe6-4605-7252-00c3" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c164-3d76-3d53-8e44" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0a3f-93f5-ff58-3dab" name="Armour of Fortune" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Medium armour. The wearer gains a Ward Save (5+).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="65. Lore of Magic" id="6704-e54c-3f8f-1d32" hidden="false">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="495e-ce6f-a51c-e06f-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="495e-ce6f-a51c-e06f-max" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="f5c2-4dd8-a449-65ce" hidden="false">
+      <comment>2 &amp; 3</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 2" hidden="false" id="a89f-3add-1137-53f7" type="selectionEntry" targetId="801a-bc0a-a767-61db"/>
+        <entryLink import="true" name="Wizard Level 3" hidden="false" id="d302-4799-0462-394e" type="selectionEntry" targetId="1670-dca4-294b-7d9b">
           <costs>
             <cost name="pts" typeId="points" value="35"/>
           </costs>
-        </selectionEntry>
-        <selectionEntry id="07d9-a853-ebb5-839c" name="Armour of Destiny" hidden="false" collective="false" import="true" type="upgrade" sortIndex="15">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d4ac-251a-e143-cdca" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f2fa-2ccf-29b3-5c2d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="ca91-841a-9736-fb2c" name="Armour of Destiny" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. The wearer gains a Ward Save (4+).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="50"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a039-9655-2c7a-f788" name="Armour of Resilience" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="24f2-1ce0-8c35-dd8a" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2af3-2b92-e65d-0d3a" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f02a-c178-e4a0-c988" name="Armour of Resilience" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. wearer gains +1 Toughness.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="25"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="472c-90d3-fd34-9c83" name="Armour of Silvered Steel" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="04c8-4736-2d9b-20b7" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1b8f-25f0-ab4b-2d51" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f057-c450-e055-319b" name="Armour of Silvered Steel" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">2+</characteristic>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">2+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. The Armour of Silvered Steel grants its wearer an armour save that cannot be improved by any means.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="25"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="c6cc-112f-6b7f-8fd9" name="Helm of Discord" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0238-f99e-92e2-c5e2" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fb84-d683-78c3-efa7" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="225f-e811-fae5-e4e7" name="Helm of Discord" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The helmet gives the wearer a 6+ armour save. In addition, at the start of each Close Combat phase, choose an enemy character in base contact with the bearer or his unit. That character must immediately take a Leadership test. If the test is failed, the victim cannot make attacks and is hit automatically in this Close Combat round.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="dc0f-7c28-57c7-7a29" name="Shield of the Warrior True" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c005-eba9-0a20-7112" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="82eb-174d-8982-cae3" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="04a1-cdfd-e636-9898" name="Shield of the Warrior True" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Shield. The bearer gains a Ward Save (5+) against missile attacks.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1080-c6f8-f772-a1d3" name="Bedazzling Helm" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e8fd-0921-e9a8-1d42" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e67c-bb0d-fb55-ff03" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="02e6-d4dc-8dec-c276" name="Bedazzling Helm" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Enemy models targeting the wearer in close combat must re-roll 6&apos;s To Hit against them.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="6820-41cc-94f6-87c1" name="Common Magic Weapons" hidden="false" collective="false" import="true">
+        </entryLink>
+      </entryLinks>
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b9b8-0e2a-818c-ead7" type="max"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1f12-c809-0735-bc8e"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7647-6036-27f1-8c48"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="4c3d-e616-bd50-f4e1" name="Giant Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="25">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a9c6-28d9-7555-6288" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="112a-571b-10c9-3935" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="fcd4-edf6-4c50-b025" name="Giant Blade" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+3</characteristic>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8"/>
-              </characteristics>
-            </profile>
-          </profiles>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="99. Command Group" id="11f9-4ce5-7246-17b0" hidden="false">
+      <comment>Empty</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="99. Command Group" id="8168-5cd0-d346-39c6" hidden="false">
+      <comment>Full</comment>
+      <entryLinks>
+        <entryLink import="true" name="Musician" hidden="false" id="55ac-b71b-dd5c-838d" type="selectionEntry" targetId="ecde-db3e-9381-c190"/>
+        <entryLink import="true" name="Leader" hidden="false" id="d0ab-b340-8139-17ea" type="selectionEntry" targetId="7456-81f5-9a96-d59e"/>
+        <entryLink import="true" name="Standard Bearer" hidden="false" id="fca6-9ed2-7bf5-45df" type="selectionEntry" targetId="d3ec-3cba-c1d6-8c0f"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="99. Command Group" id="6d24-2d46-8718-0b8f" hidden="false">
+      <comment>L&amp;M (for magical Standards)</comment>
+      <entryLinks>
+        <entryLink import="true" name="Musician" hidden="false" id="2d25-4fdb-750e-aa97" type="selectionEntry" targetId="ecde-db3e-9381-c190"/>
+        <entryLink import="true" name="Leader" hidden="false" id="9c80-846d-fedb-99de" type="selectionEntry" targetId="7456-81f5-9a96-d59e"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="99. Command Group" id="f786-b0b9-e5d8-3395" hidden="false">
+      <comment>L</comment>
+      <entryLinks>
+        <entryLink import="true" name="Leader" hidden="false" id="9406-f791-4579-fbec" type="selectionEntry" targetId="7456-81f5-9a96-d59e"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="99. Command Group" id="e1e9-84f4-4f5a-8023" hidden="false">
+      <comment>L&amp;S</comment>
+      <entryLinks>
+        <entryLink import="true" name="Leader" hidden="false" id="142e-2373-6843-d0cf" type="selectionEntry" targetId="7456-81f5-9a96-d59e"/>
+        <entryLink import="true" name="Standard Bearer" hidden="false" id="7a16-ab94-3409-e3f6" type="selectionEntry" targetId="d3ec-3cba-c1d6-8c0f"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="99. Command Group" id="2019-74db-324c-3229" hidden="false">
+      <comment>S</comment>
+      <entryLinks>
+        <entryLink import="true" name="Standard Bearer" hidden="false" id="5152-a007-adbc-14db" type="selectionEntry" targetId="d3ec-3cba-c1d6-8c0f"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="99. Command Group" id="2e07-3fe6-d529-15fd" hidden="false">
+      <comment>M</comment>
+      <entryLinks>
+        <entryLink import="true" name="Musician" hidden="false" id="fa2e-99cf-6bc0-5c69" type="selectionEntry" targetId="ecde-db3e-9381-c190"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="99. Command Group" id="51a7-944a-1f2e-1f83" hidden="false">
+      <comment>M&amp;S</comment>
+      <entryLinks>
+        <entryLink import="true" name="Standard Bearer" hidden="false" id="f815-3142-9e8c-348a" type="selectionEntry" targetId="d3ec-3cba-c1d6-8c0f"/>
+        <entryLink import="true" name="Musician" hidden="false" id="4a7c-3f84-88f7-f889" type="selectionEntry" targetId="ecde-db3e-9381-c190"/>
+      </entryLinks>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="55. Equipment" id="6423-df0f-15a7-7575" hidden="false">
+      <comment>Min 0</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="56. Upgrades" id="f845-cd7c-43ba-0c0d" hidden="false">
+      <comment>Min 0</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="30. Secondary Weapon" id="cdd5-56e6-35d1-e299" hidden="false">
+      <comment>No constraints</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="1ddb-c467-cc40-8edd" hidden="false">
+      <comment>1 &amp; 2 Optional</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 1" hidden="false" id="0441-4a66-fd68-afbb" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
           <costs>
-            <cost name="pts" typeId="points" value="45"/>
+            <cost name="pts" typeId="points" value="35"/>
           </costs>
-        </selectionEntry>
-        <selectionEntry id="f535-b3be-f6a7-edf5" name="Dragon Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="27">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d030-ead9-86ce-1409" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="414d-dc15-216b-fdde" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0d26-5432-d0b1-ae60" name="Dragon Blade" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Any successful To Hit rolls in close combat with this sword are multiplied into 2 Hits.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+        </entryLink>
+        <entryLink import="true" name="Wizard Level 2" hidden="false" id="e946-35c3-a15b-b762" type="selectionEntry" targetId="801a-bc0a-a767-61db">
           <costs>
             <cost name="pts" typeId="points" value="70"/>
           </costs>
-        </selectionEntry>
-        <selectionEntry id="f11c-e029-bc6c-58b6" name="Fencer&apos;s Blades" hidden="false" collective="false" import="true" type="upgrade" sortIndex="20">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ad4b-336b-5da3-dca6" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e991-1731-46eb-6b62" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="a2ee-fde7-53e5-05ef" name="Fencer&apos;s Blades" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Two/Additional hand weapons. The bearer has Weapon Skill 10.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="30"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="035f-94c7-bfd6-7707" name="Sword of Swift Slaying" hidden="false" collective="false" import="true" type="upgrade" sortIndex="19">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5caa-212b-ac28-0391" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f9e1-6b0a-dad5-8ea7" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="3c5a-61b9-e492-ee7f" name="Sword of Swift Slaying" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Always Strikes First special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="25"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="7dc7-1777-0f73-b72c" name="Sword of Anti-Heroes" hidden="false" collective="false" import="true" type="upgrade" sortIndex="22">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="47a2-75ab-278a-77dd" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="27e1-8a0a-6869-1d6e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="3a2f-93e5-56ba-d30e" name="Sword of Anti-Heroes" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains +1 Strength and +1 Attack for every enemy character in base contact with them or their unit. These bonuses are calculated at the start of each round of close combat and last until its end.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="30"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="fba1-e5cc-7307-66db" name="Sword of Strife" hidden="false" collective="false" import="true" type="upgrade" sortIndex="23">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aec0-0239-6401-05e3" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6ab8-a2d0-92fd-3b84" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="32ac-cafc-3e21-01a7" name="Sword of Strife" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this blade gains +2 on their Attacks characteristic.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="30"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="78b7-618e-b959-a341" name="Bone Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b58d-0a65-6d82-0219" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4a79-9a8b-8c0a-2792" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0988-c61d-85df-0246" name="Bone Blade" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Multiple Wounds (D3) special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="6125-e784-5cfb-86e6" name="Ogre Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="21">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2dac-954c-21d8-8a44" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="101a-de5b-6df2-0091" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="39fd-7db9-5a2c-a5dc" name="Ogre Blade" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+2</characteristic>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="30"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="76fa-697f-2504-d66f" name="Sword of Bloodshed" hidden="false" collective="false" import="true" type="upgrade" sortIndex="26">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9e44-e6a5-913a-be12" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="22fe-94be-107a-14ec" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="ffe9-c7d8-595f-1e72" name="Sword of Bloodshed" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this blade gains +3 on their Attacks characteristic.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="45"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="aab5-e4ae-a6bc-ad4e" name="Parrying Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="16">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="44ca-9896-ea54-9017" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2114-37f8-2bf1-6c35" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="4d07-d8e3-411f-b179" name="Parrying Blade" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Parry (5+) special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="438f-4d2e-cd3a-eb4d" name="Relic Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0c10-0f48-b6c1-102e" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7e8e-e283-e017-7c8b" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="b737-c9f0-8cc9-d53b" name="Relic Sword" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Attacks made with the Relic Sword will always wound on a 3+, unless they would normally need a lower result.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f49d-c7e7-cc03-6405" name="Sword of Fortitude" hidden="false" collective="false" import="true" type="upgrade" sortIndex="17">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b6b6-3f43-6cf6-503d" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ba28-d682-f3aa-3ca2" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="ccda-8d97-ba0f-ca6c" name="Sword of Fortitude" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The character, and any unit they are with, gains the Immunity (Psychology) special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="bbc3-4ba6-2188-1131" name="Sword of Might" hidden="false" collective="false" import="true" type="upgrade" sortIndex="14">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b9e4-ff8c-9caf-4461" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7301-093c-61b6-036a" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="7c47-fc43-28bd-02e5" name="Sword of Might" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+1</characteristic>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8"/>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a77f-027d-8eaa-c8ed" name="Sword of Battle" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8561-6089-3abc-3f79" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ed10-bb95-098b-e65d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="7b51-e10f-cac6-e67b" name="Sword of Battle" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character using this blade gains +1 on their Attacks
-characteristic.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e086-0469-282a-38d4" name="Venom Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="35f6-c0a5-d152-ed15" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d121-688a-9670-8775" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="dbdc-3022-1972-c708" name="Venom Sword" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Poisoned Attacks special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9432-443c-e70e-26fe" name="Shrieking Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ef2c-97bc-99cb-e9d0" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3573-92bd-f40a-83bb" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="3a90-cf91-04cc-1484" name="Shrieking Blade" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Fear special rile.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9cca-c7c4-5cfb-39f0" name="Sword of Striking" hidden="false" collective="false" import="true" type="upgrade" sortIndex="15">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="595a-324c-c4d6-5b05" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3be0-39f4-e46e-f38a" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="349a-9bc4-d242-2258" name="Sword of Striking" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Attacks made with the Sword of Striking receive a +1 bonus to hit.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0498-8444-7181-c861" name="Blade of Slicing" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0107-d561-761f-26ee" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d2a0-01ab-8cf2-ad64" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="117e-9060-1f72-0ec1" name="Blade of Slicing" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Armour Piercing (2) special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="c0d8-7820-4d5c-71e9" name="Blade of Sea Gold" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="949f-0454-386d-ae24" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6499-51a0-0eac-3c7b" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="ce06-3eb8-7e35-9d65" name="Blade of Sea Gold" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Armour Piercing (3) special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="4179-dadb-d8ab-8198" name="Warrior Bane" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3d82-e13e-ef2f-2784" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="864a-f967-7fa8-bbd5" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f53d-fab5-5ed9-1606" name="Warrior Bane" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A monster or character that suffers unsaved wounds from Warrior Bane permanently loses 1 A for each unsaved wound (to a minimum of 1 Attack).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b2af-7c52-711a-5b67" name="Tormentor Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9162-e13a-8a7e-ff7b" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ec45-2002-d9cc-0713" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f47f-6758-3d8a-785b" name="Tormentor Sword" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A monster or character that suffers an unsaved wound from the Tormentor sword has Stupidity for the rest of the game.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0d5f-ac3d-bcfc-759b" name="Biting Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d8f1-4d69-0299-dbaf" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="383f-887e-b478-f1e4" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="d7a3-4ba9-47fe-960a" name="Biting Blade" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Armour Piercing (1) special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="535a-42f2-c060-9efd" name="Berserker Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a8ef-49b7-5fcb-2411" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="69b5-7490-ddd7-7712" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="9a33-d93b-f040-e3c9" name="Berserker Sword" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Frenzy special rule and can never lose their Frenzy.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3ed0-0a47-325e-a489" name="Obsidian Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="18">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="db7f-9732-8ac2-b9db" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0efd-950b-b594-8b15" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="e496-1dfb-12e8-ebe8" name="Obsidian Blade" publicationId="9e23-79cb-pubN66727" page="154" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Ignores Armour Saves special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="25"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="429c-27ef-6970-d004" name="Burning Blade" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6229-c49f-9660-596a" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="68e0-76d6-db2b-3c1f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="29f3-bdea-09f7-f3f2" name="Burning Blade" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Flaming Attacks special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="78ba-4175-1a6d-d0ed" name="Headsman&apos;s Axe" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d6d1-bac6-b446-85a2" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fd12-53b6-2867-f32e" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="a387-a61f-8a56-d45b" name="Headsman&apos;s Axe" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Killing Blow special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="847b-54eb-75f6-9e61" name="Dragon Slaying Sword" hidden="false" collective="false" import="true" type="upgrade" sortIndex="24">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ce2c-b628-338d-dc1d" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="79d5-e438-ad8b-ef56" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="25cd-2132-efe7-74dc" name="Dragon Slaying Sword" publicationId="9e23-79cb-pubN66727" page="114" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Heroic Killing Blow special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="40"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="946f-a470-9912-9301" name="Common Talismans" hidden="false" collective="false" import="true">
+        </entryLink>
+      </entryLinks>
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7ab9-cd2a-21c5-12a2" type="max"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3942-e6b5-d38c-9eef"/>
       </constraints>
-      <selectionEntries>
-        <selectionEntry id="0a7e-5a63-d3ce-3253" name="Talisman of Protection" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="994d-d6a8-869a-1cca" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fd21-14a4-0da1-c25d" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="ff22-ae39-28e0-103e" name="Talisman of Protection" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Talisman of Protection grants the bearer a Ward Save (6+).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="afd6-a153-299c-88c4" name="Talisman of Preservation" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5140-0413-2323-4a19" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8930-ddef-c302-de07" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="14ce-8170-050f-a735" name="Talisman of Preservation" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Talisman of Preservation grants the bearer a Ward Save (4+).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="45"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f246-4c21-10b8-b186" name="Talisman of Endurance" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5fbc-0381-f262-6f19" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d20d-3ef9-08ce-73aa" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0e2a-aeca-b4d5-d1ee" name="Talisman of Endurance" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Talisman of Endurance grants the bearer a Ward Save (5+).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="30"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="968a-ebf7-08e9-a735" name="Seed of Rebirth" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="66bb-be35-ab67-fc13" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="73dd-da68-2d82-1817" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="96c5-a02f-37b4-4a32" name="Seed of Rebirth" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The bearer of the Seed of Rebirth has the Regeneration (6+) special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9475-b023-f368-e7e9" name="Opal Amulet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eaf7-8d3f-e26a-6606" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="747a-2c30-c243-27e8" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="07d5-6885-3d15-d1dc" name="Opal Amulet" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">One use only. The Opal Amulet bestows a Ward Save (2+) against the first unsaved wound suffered by the bearer, after which its power fades and it cannot be used again during the game.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="5ef5-bc7d-8e86-93a1" name="Obsidian Trinket" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eeef-e721-f785-a321" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9433-66af-7618-7696" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="7f52-5771-b4d0-f4c2" name="Obsidian Trinket" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Obsidian Trinket grants Magic Resistance (1).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="695d-1483-60be-3710" name="Obsidian Lodestone" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a1c4-f6ae-6f67-fc20" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9ba9-0945-8668-3cb9" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="35a6-2a0b-d269-594c" name="Obsidian Lodestone" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Obsidian Lodestone grants Magic Resistance (3).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="30"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e716-d445-d848-23cb" name="Obsidian Amulet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="beee-f435-1af9-3394" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="13bd-997c-79a2-5671" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="def0-21a1-97ff-909c" name="Obsidian Amulet" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Obsidian Amulet grants the bearer Magic Resistance (2).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0291-b00a-a412-76e3" name="Lucky Trinket" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7bb9-59f1-b2f8-4406" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="148f-27a8-1918-22e8" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="24df-897d-3df3-9768" name="Lucky Trinket" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">One use only. The Lucky Trinket allows the bearer to re-roll a single failed armour or Ward Save.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="089b-f3c4-8b35-2ed8" name="Pigeon Plucker Pendant" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1fa7-4cb2-cc80-3604" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1897-8816-df18-9602" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="8618-74a7-0c3d-7877" name="Pigeon Plucker Pendant" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">This item grants the bearer a Ward Save (4+) against wounds caused in close combat by models that have the Fly special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="44fe-7b40-47df-f1fc" name="Dawnstone" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a495-d1d9-4b92-cf0f" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="00ce-69b4-4e2a-4d2a" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="283b-bcb5-7a79-c1bb" name="Dawnstone" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">Models on foot only. The bearer re-rolls failed armour saves.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="25"/>
-          </costs>
-          <modifiers>
-            <modifier type="add" value="{this} is not allowed if mounted" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="44fe-7b40-47df-f1fc" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry id="886a-2f02-4fa6-a156" name="Dragonbane Gem" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8156-cd49-2e5c-d01b" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9b41-aab5-42fe-02d1" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="13b2-9a9c-e94f-a8e3" name="Dragonbane Gem" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The bearer of the Dragonbane Gem has the Immunity (Flaming Attacks) special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup id="3dfd-c3fd-5a56-45f1" name="Common Arcane Items (One use only)" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="01e6-93d4-45a5-e661" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="e42b-1e73-99be-4cb2" name="Earthing Rod" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="73ac-3b2f-15e7-89d2" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d7d3-8408-c955-9f87" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f721-f7dd-3470-9339" name="Earthing Rod" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. If the wizard suffers a miscast, they do not add the number of power dice used to the result.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="2e4f-5876-7c4f-afa8" name="Feedback Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="15">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="88d4-9e02-a3db-b04e" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6535-0430-75d7-7086" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="6b6d-6c3f-d896-c972" name="Feedback Scroll" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. When an enemy spell has been cast, a Wizard who has a Feedback Scroll can read it instead of attempting to dispel the spell. The spell is cast as normal, but, after the spell has been resolved, roll a dice for every dice used to cast the spell. The casting Wizard takes a wound for every result of 5+ rolled, with no armour saves allowed.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="35"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="64ba-7df7-6370-a03d" name="Destroy Magic Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="14">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f970-e556-915b-db0a" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6eb4-b62c-f7dd-61ae" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f9ff-b85e-b7bb-58f6" name="Destroy Magic Scroll" publicationId="9e23-79cb-pubN66727" page="116" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. When an enemy cast a spell, the bearer may immediately counter its effects by reading the Destroy Magic Scroll to release the spell written upon it instead of attempting to dispel the spell by using dispel dice. This gives them 6 free dispel dice to attempt to dispel the spell, which cannot be combined with any other dispel dice (Ultimate Power applies as normal). In addition, roll a D6. On a 4+, the spell is destroyed and the enemy caster loses access to the spell for the rest of the game (note that this has no effect on Innate Bound spells).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="35"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1eab-a10f-79f9-0f31" name="Power Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3980-e4c3-d9db-402e" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="029c-5f4c-1044-5919" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="7e9a-ed9e-17ae-aae3" name="Power Scroll" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. A Power Scroll can be used when the Wizard makes a casting attempt. During that casting attempt, any roll of a double (except 1&apos;s) counts as a 6 for the purpose of resolving Ultimate Power.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1bca-76e7-989c-1492" name="Power Stone" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ddf6-281f-bf14-1db3" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d4e0-5e64-88d3-13d2" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="071f-734a-988b-ec00" name="Power Stone" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Wizard can declare that they are using the power stone immediately before casting a spell If they do so, D3 dice are added to the power dice that they are going to roll (you still need to roll at least one dice from the power pool).</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="fa6d-0d69-b2f0-fea1" name="Forbidden Rod" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a257-ca79-c728-4902" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b7f3-7d0a-27b0-bbc1" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="f8f8-7267-a4a3-754c" name="Forbidden Rod" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Forbidden Rod adds +D6 dice to the power pool at the start of the caster&apos;s own magic phase, but also inflicts 1 Wound which Ignores Armour Saves on the bearer.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d037-6c00-769f-1ad5" name="Dispel Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e13d-7c39-f2da-7b54" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="30a8-ba65-7bb3-238c" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="7138-9ba7-c563-e803" name="Dispel Scroll" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. When an enemy spell has been cast, a wizard who has a dispel scroll can read it instead of attempting to dispel the spell by using dispel dice. This gives them 6 free dice to attempt to dispel the spell, which cannot be combined with any other dispel dice. This may also be used to dispel spells that Remains in Play.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="25"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="d683-a87d-6274-ce86" name="Luckstone" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a066-9f1b-3fec-549b" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0144-dbe7-bb8b-3f28" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="a416-013d-d7bd-da32" name="Luckstone" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The bearer can re-roll all of the dice rolled to cast or dispel a spell. This can effectively cancel a miscast result, and cause Ultimate Power or a miscast.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b952-58d9-9e85-89c5" name="The Mystic Shield of Brag" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5251-b9b6-7802-7f60" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e523-ef4a-572f-4de3" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="fde5-a92c-81ad-70eb" name="The Mystic Shield of Brag" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Mystic Shield of Brag may be used against any enemy spell that directly targets any friendly unit. The enemy spell has no effect.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="25"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="3959-2708-ac14-d394" name="Scroll of Shielding" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eef5-b5a2-9073-077f" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7b55-2313-3b74-3f51" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="7ed3-78d9-47ec-98ef" name="Scroll of Shielding" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. When an enemy spell has been cast, a Wizard who has a Scroll of Shielding can read it instead of attempting to dispel the spell. The spell is cast as normal, but the target of the spell is granted Magic Resistance (3) against the spell.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="c2e4-9231-019b-032c" name="Trickster&apos;s Shard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7793-ca87-7e37-215b" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="50d4-b387-bab7-9521" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="fcd2-f098-64b6-b785" name="Trickster&apos;s Shard" publicationId="9e23-79cb-pubN66727" page="118" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. Declare you are using this item at the start of one of your magic phases. For the duration of the phase, when one of the bearer&apos;s spells is dispelled by an enemy wizard, roll a D6. On a 4+, that wizard suffers a wound with no armour saves allowed.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="bb99-1ac3-14c2-42bc" name="Scroll of Leeching" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="024a-28e9-b4c2-82a6" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3ba4-967d-2331-8ee9" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="0c06-9d37-7112-96ad" name="Scroll of Leeching" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. When an enemy spell has been cast, a Wizard who has a Scroll of Leeching can read it instead of attempting to dispel the spell. The spell is cast as normal, but, after the spell has been resolved, the bearer of the scroll adds a number of dispel dice to his pool equal to the number of dice used to cast the spell.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="25"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="5bd3-a6b3-4b76-e84a" name="Sivejir&apos;s Hex Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="16">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9f26-5fa5-baa2-a621" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e0b9-f1ce-b606-d256" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="767f-223e-8681-d4f5" name="Sivejir&apos;s Hex Scroll" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. When an enemy spell has been cast, a Wizard who has a Hex Scroll can read it instead of attempting to dispel the spell. The spell is cast as normal, but a portion of the spell&apos;s energy is transformed and redirected at the caster. The enemy wizard can resist the spell&apos;s effects by rolling equal to or under his wizard level on a D6. If he fails, a he becomes a toad! Whilst transformed, the wizard cannot channel or cast spells, all of his magic items and mundane equipment (armour, weapons, etc.) temporarily stop working and all of his characteristics are reduced to 1 (except for his wounds, which are unaffected). His controlling player can roll a D6 at the start of each of his subsequent magic phases; the spell dissipates on a roll of 4+ and the wizard returns to his normal form.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="35"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9f44-d50e-1211-7778" name="Mystic Maze" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="de22-5186-82dc-ee4f" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5a96-0ead-e044-768f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="6857-5447-3d98-7f51" name="Mystic Maze" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Mystic Maze may be used against any enemy spell that directly targets any friendly unit. Roll 3D6 measured from the centre of the unit; this is the distance the spell scatters in a random direction. Should the spell end up on another unit, this unit will become the target of the spell; otherwise the spell has no effect.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="0b2c-e149-2e25-a59f" name="The Gem of Taranto" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7a37-b09b-1872-ffd6" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="365c-c783-3e65-0d4f" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="9c70-a5bf-15fa-3600" name="The Gem of Taranto" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Gem of Taranto can be used whenever you successfully dispel an enemy spell (except Summoning or Innate Bound Spells). The bearer of the Gem will be able to cast the spell themselves (limited by their Wizard level as normal) for the remainder of the game, even if it is from a lore not normally available to them.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="c715-5311-5a0a-f397" name="Hypnotic Eye Scroll" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
-          <constraints>
-            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2fde-c310-ede5-7d9d" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dead-10da-aed7-c044" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="209c-7ef1-14e7-a227" name="Hypnotic Eye Scroll" publicationId="9e23-79cb-pubN66727" page="117" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. The Hypnotic Eye Scroll can be used whenever an enemy wizard successfully casts a spell instead of attempting to dispel. The casting wizard must pass a Leadership test; if failed, you may choose the target of the spell just as if you had cast the spell yourself. If no target can be chosen, the spell has no effect. Note that the spell is still cast from the original Wizard as normal.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-    </selectionEntryGroup>
-    <selectionEntryGroup name="Upgrades" id="3922-9a9c-285a-9357" hidden="false" collective="false" import="true">
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Shredding Talons" hidden="false" id="44a5-2f6e-f9f1-d92c" collective="true">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2dc0-e256-34ae-7677" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-          <rules>
-            <rule name="Shredding Talons" id="9e3d-1310-6e26-37de" hidden="false" publicationId="9e23-79cb-pubN77092" page="21">
-              <description>The model gains Armour Piercing (1).</description>
-            </rule>
-          </rules>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Swiftsense" hidden="false" id="04d5-2f11-c737-152c" collective="true">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1148-8d47-b33a-6181" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-          <rules>
-            <rule name="Swiftsense" id="dd27-cab8-48e1-6354" hidden="false" publicationId="9e23-79cb-pubN77092" page="21">
-              <description>The model gains the Always Strikes First special rule in any turn that they charge.</description>
-            </rule>
-          </rules>
-        </selectionEntry>
-      </selectionEntries>
-      <comment>Great Eagle</comment>
-    </selectionEntryGroup>
-    <selectionEntryGroup name="Spawn of Chaos" id="71e8-374b-3fb2-2eb9" hidden="false" collective="false" import="true">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0131-c786-315c-9dbe" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Spawn of Khorne" hidden="false" id="1a77-d1dc-4b1b-c1be" collective="false" sortIndex="3">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4d51-5a1d-1daa-0039" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Spawn of Khorne" id="6bfe-ac8c-cffc-2488" hidden="false" targetId="9342-d93f-e118-0b55" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Spawn of Nurgle" hidden="false" id="cb46-c117-d1aa-d001" collective="false" sortIndex="1">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f5e6-ea76-8495-eb06" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Spawn of Nurgle" id="65d6-005d-b04a-0e06" hidden="false" targetId="ad42-5a49-bd23-db76" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Spawn of Slaanesh" hidden="false" id="563c-108d-ecbb-f64a" collective="false" sortIndex="2">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e1e0-8a91-0eb4-8210" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Spawn of Slaanesh" id="c993-78f6-8da8-9588" hidden="false" targetId="4cca-bef4-9da0-60ee" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Spawn of Tzeentch" hidden="false" id="62cd-e66c-6de9-33a4" collective="false" sortIndex="4">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="08a5-e047-6ce3-98b9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Spawn of Tzeentch" id="eaf4-27ed-b2bf-5bfb" hidden="false" targetId="cfa3-ff7d-5a8e-de9b" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
@@ -13801,181 +10559,6 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
     </rule>
   </sharedRules>
   <sharedProfiles>
-    <profile id="3ecc-5d9c-7d29-ee2f" name="Javelins" publicationId="9e23-79cb-pubN66727" page="81" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1). Quick to Fire. Volley Fire.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="4a5d-0b6d-f6ac-fd7d" name="Two/Additional Hand Weapons" publicationId="9e23-79cb-pubN66727" page="79" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Parry (6+). Requires Two Hands. +1 A.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="be39-37ac-ac20-5053" name="Spear" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">+1 I, Fight in Extra Ranks (1). In turns in which the model is charged to its front, it receives an additional +1 to its Initiative. Mighty Blow (1) (Only applies in turns the model is charged to its front. Mighty Blow does not apply towards Infantry, Large Infantry, Swarms and Shrines.).</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="193e-bc43-b252-8eff" name="Great Weapon" publicationId="9e23-79cb-pubN66727" page="79" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Requires Two Hands. Mighty Blow (1). -2 I.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="b2d2-2eb6-2bd2-ddbb" name="Light Lance" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Mighty Blow (1), +1 I (Both, only in the turn the unit charges and only against the charged unit).</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="8bf1-244f-c642-d43f" name="Shield" publicationId="9e23-79cb-pubN66727" page="95" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour">
-      <characteristics>
-        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
-        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+*</characteristic>
-        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Parry (6+) (Only applies if used with a hand weapon.). *(Models armed with shields get an additional +1 to their armour save against missile attacks to their front. Shields do not add any armour against missile attacks to the rear.)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="e43e-5153-eeec-36be" name="Polearm/Halberd" publicationId="9e23-79cb-pubN66727" page="79" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">+1 Initiative. Requires Two Hands.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="d083-b2f1-d1c5-e4f7" name="Sling" publicationId="9e23-79cb-pubN66727" page="94" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">18&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">3</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1). Multiple Shots (2) (Only applies in turns the model has not moved. Cannot be used to Stand and Shoot.).</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="9dcd-3be8-08b0-96ab" name="Bow" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">24&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">3</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (2) (Only applies in turns the model has not moved. Cannot be used as a charge reaction.). Volley Fire.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="493b-1f46-43ce-a18f" name="Throwing Axes" publicationId="9e23-79cb-pubN66727" page="81" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">6&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Quick to Fire.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="4129-1acd-3564-d3ea" name="Light Armour" publicationId="9e23-79cb-pubN66727" page="95" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour">
-      <characteristics>
-        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
-        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
-        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
-      </characteristics>
-    </profile>
-    <profile id="f6da-d707-0cd6-b1dd" name="Hand Weapon" publicationId="9e23-79cb-pubN66727" page="79" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac"/>
-      </characteristics>
-    </profile>
-    <profile id="2c1e-e11e-fadf-b4cf" name="Pike" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">+2 I. Fight in Extra Ranks (3). Requires Two Hands. In turns in which the model is charged to its front, it receives an additional +1 to its Initiative. Mighty Blow (1) (Only applies in turns the model is charged to its front. Mighty Blow does not apply towards Infantry, Large Infantry, Swarms and Shrines.)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="e56e-fedf-c550-5d81" name="Heavy Lance" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Mighty Blow (2), +2 I (Both, only in the turn the unit charges and only against the charged unit).</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="487e-16a4-8ab8-2c85" name="Shortbow" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">18&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">3</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (2) (Only applies in turns the model has not moved. Cannot be used as a charge reaction.). Volley Fire.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="cde7-c47d-3818-1e9d" name="Longbow" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">30&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">3</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (2) (Only applies in turns the model has not moved. Cannot be used as a charge reaction.). Volley Fire.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="844f-f2d8-d2d9-61d4" name="Crossbow" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">30&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Ponderous</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="f106-ee33-4ec8-292a" name="Blowpipe" publicationId="9e23-79cb-pubN66727" page="93" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">1</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (2). Quick to Fire. Poisoned Attacks. Rapid Fire.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="bd57-9e45-342f-ee49" name="Handgun" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">24&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Ponderous. Armour Piercing (1).</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="aa4f-83e3-8259-924a" name="Pistol" publicationId="9e23-79cb-pubN66727" page="81" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Quick to Fire. Armour Piercing (1). In close combat, a pistol counts as an additional hand weapon that does not give the model the Parry special rule.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="fdcd-6526-0b8e-b291" name="Throwing Weapons" publicationId="9e23-79cb-pubN66727" page="81" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">8&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (2). Quick to Fire.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="6d9a-c9f8-e013-e77f" name="Medium Armour" publicationId="9e23-79cb-pubN66727" page="95" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour">
-      <characteristics>
-        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">5+</characteristic>
-        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">5+</characteristic>
-        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
-      </characteristics>
-    </profile>
-    <profile id="8e15-bc32-b40c-bad3" name="Heavy Armour" publicationId="9e23-79cb-pubN66727" page="95" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour">
-      <characteristics>
-        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">4+</characteristic>
-        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">4+</characteristic>
-        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
-      </characteristics>
-    </profile>
-    <profile id="1700-a7e5-d272-ef20" name="Buckler" publicationId="9e23-79cb-pubN66727" page="95" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour">
-      <characteristics>
-        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
-        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+*</characteristic>
-        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Parry (6+) (Only applies if used with a hand weapon.). *(Only applies to models on foot against missile attacks to the front.)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="7228-95d3-3384-f234" name="Barding" publicationId="9e23-79cb-pubN66727" page="95" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour">
-      <characteristics>
-        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
-        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
-        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">-1 M (Applies to mount&apos;s M characteristic.)</characteristic>
-      </characteristics>
-    </profile>
     <profile id="7e43-605b-bfde-13c3" name="Great Cannon" publicationId="9e23-79cb-pubN66727" page="111" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Great Cannon</characteristic>
@@ -14022,20 +10605,6 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
         <characteristic name="Range" typeId="1c88-efb0-083f-b945"/>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">5</characteristic>
         <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Flaming Attacks.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="7259-6759-3c5f-ce3c" name="Brace of Pistols" publicationId="9e23-79cb-pubN66727" page="81" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Quick to Fire. Armour Piercing (1). Multiple Shots (2). In close combat, a pistol counts as an additional hand weapon that does not give the model the Parry special rule.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="7f6a-b8b2-8978-4f35" name="Flail" publicationId="9e23-79cb-pubN66727" page="92" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Requires Two Hands. Mighty Blow (2).</characteristic>
       </characteristics>
     </profile>
     <profile id="c198-878a-0683-0889" name="Kindleflame" publicationId="9e23-79cb-pubN66727" page="145" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -14180,20 +10749,6 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy Monstrous Creature, Monster or character (even in a unit). Both caster and target roll a D6 and add their respective Leadership values. If the caster scores higher, the target suffers a -1 penalty to their Strength and Toughness for the remainder of the battle.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="0aa7-6fa8-e84e-677a" name="Monster of Kadon" publicationId="9e23-79cb-pubN66727" page="146" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">6</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">6</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster</characteristic>
       </characteristics>
     </profile>
     <profile id="48ca-ac63-ef2e-74f7" name="Aspect of the Dreadknight" publicationId="9e23-79cb-pubN66727" page="152" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -15137,165 +11692,6 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit counts as moving through dangerous terrain until the start of the caster&apos;s next Magic phase. For every 4&quot; the unit moves while the spell is in effect, the chance of them failing the test increases by +1.</characteristic>
       </characteristics>
     </profile>
-    <profile id="eb45-b280-1043-8a09" name="Blades of the Ancients (Combat)" publicationId="9e23-79cb-pubN116235" page="28" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">+1 A. Magical Attacks. Requires Two Hands. Ward Save (6+).</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="9b3d-3ef4-1c5b-fdef" name="Blades of the Ancients (Shooting)" publicationId="9e23-79cb-pubN116235" page="28" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (2). Magical Attacks. Quick to Fire. Ward Save (6+).</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="3c25-7514-1f04-4c7c" name="Legionnaire" publicationId="9e23-79cb-pubN116235" page="9" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Human)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="8c21-37de-1b89-a1aa" name="01 (Big Things)" publicationId="9e23-79cb-pubN67565" page="84" hidden="false" typeId="b3fd-45e2-9ae1-9532" typeName="Big Things Chart (Giant)">
-      <characteristics>
-        <characteristic name="Result" typeId="a40b-4ad2-71bd-7318">Yell and Bawl: Neither the Giant nor models in contact with it actually fight if they have not already done so this round. The Giant automatically wins the combat by 2 points or more. This result has no effect against Animated Constructs.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="4fc5-e450-33ef-b6d9" name="02-04 (Big Things)" publicationId="9e23-79cb-pubN67565" page="84" hidden="false" typeId="b3fd-45e2-9ae1-9532" typeName="Big Things Chart (Giant)">
-      <characteristics>
-        <characteristic name="Result" typeId="a40b-4ad2-71bd-7318">Thump with Club: The Giant brings down its club on a single model from the target unit that is in base contact. The target may attempt to avoid the blow by passing an I test (use the lowest if the model has several different values). If the test is failed, the model takes 2D3 wounds which Ignores Armour Saves. If a double is rolled the Giant&apos;s club embeds itself in the ground and the Giant cannot attack at all in the following round of the same combat.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="8a42-5b93-bd50-784e" name="05-06 (Big Things)" publicationId="9e23-79cb-pubN67565" page="84" hidden="false" typeId="b3fd-45e2-9ae1-9532" typeName="Big Things Chart (Giant)">
-      <characteristics>
-        <characteristic name="Result" typeId="a40b-4ad2-71bd-7318">&apos;Eadbutt: The Giant head butts a single enemy model from the target unit, automatically inflicting D3 wounds with the Ignores Armour Saves special rule. If the victim is wounded but not slain, then it loses all of its following attacks. If the target has not yet attacked in that combat round, it loses those attacks; if it has already attacked, then it loses the next round&apos;s attacks.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="b8b8-f1ce-c6c8-0b05" name="01 (Man-sized Things)" publicationId="9e23-79cb-pubN67565" page="84" hidden="false" typeId="41e4-fd40-7b32-f71e" typeName="Man-sized Things Chart (Giant)">
-      <characteristics>
-        <characteristic name="Result" typeId="8db9-ceea-0832-d910">Yell and Bawl: Neither the Giant nor models in contact with it actually fight if they have not already done so this round. The Giant automatically wins the combat by 2 points or more. This result has no effect against Animated Constructs.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="b2e1-ecf2-bf44-91d5" name="02 (Man-sized Things)" publicationId="9e23-79cb-pubN67565" page="84" hidden="false" typeId="41e4-fd40-7b32-f71e" typeName="Man-sized Things Chart (Giant)">
-      <characteristics>
-        <characteristic name="Result" typeId="8db9-ceea-0832-d910">Jump Up and Down: The Giant jumps up and down vigorously on top of the enemy. Before it starts, the Giant must test to determine if it falls over. If it falls over, work out where it falls and calculate damage. Any wounds caused by the fall (on either side) count towards the combat result. If the Giant remains on its feet, it will inflict two Stomp attacks. Giants enjoy jumping up and down on their enemies so much that a Giant that does so in one comb at round will automatically do so in the following round if it is able to, assuming that it did not fall over in the previous round. A Giant that starts to Jump Up and Down will therefore continue to do so on the same target until it falls over, the target is destroyed, or the combat ends.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="473d-503e-6b10-8a6a" name="03 (Man-sized Things)" publicationId="9e23-79cb-pubN67565" page="84" hidden="false" typeId="41e4-fd40-7b32-f71e" typeName="Man-sized Things Chart (Giant)">
-      <characteristics>
-        <characteristic name="Result" typeId="8db9-ceea-0832-d910">Pick Up and...: The Giant stoops down and grabs a single Character in base contact from the target unit (Giant player&apos;s choice). The Giant grabs the model and the player rolls a D6 on the &quot;Pick up and...&quot; table to see what happens next.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="de13-cc1b-5d8f-27dd" name="04-06 (Man-sized Things)" publicationId="9e23-79cb-pubN67565" page="84" hidden="false" typeId="41e4-fd40-7b32-f71e" typeName="Man-sized Things Chart (Giant)">
-      <characteristics>
-        <characteristic name="Result" typeId="8db9-ceea-0832-d910">Swing with club: The Giant fights using Random Attacks (2D6) this round.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="b0eb-eada-2e6d-dc42" name="01 (Pick Up and...)" publicationId="9e23-79cb-pubN67565" page="84" hidden="false" typeId="771a-abec-4083-83d2" typeName="Pick up and... Chart">
-      <characteristics>
-        <characteristic name="Result" typeId="6486-077d-3077-6419">Stuff into Bag: The model is effectively removed as a casualty and can do nothing whilst in the bag, but if the Giant should be slain, any enemy trapped in its bag are freed at the end of the battle, and no longer counts as casualties.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="8845-1216-ef80-8109" name="02 (Pick Up and...)" publicationId="9e23-79cb-pubN67565" page="84" hidden="false" typeId="771a-abec-4083-83d2" typeName="Pick up and... Chart">
-      <characteristics>
-        <characteristic name="Result" typeId="6486-077d-3077-6419">Throw Back into Combat: The victim is hurled into its own unit like a living missile. The victim suffers D3 Strength 6 Hits which Ignores Armour saves, and D6 Strength 3 hits are inflicted on the unit (save as normal).</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="f05e-b4ef-d493-96f3" name="03 (Pick Up and...)" publicationId="9e23-79cb-pubN67565" page="84" hidden="false" typeId="771a-abec-4083-83d2" typeName="Pick up and... Chart">
-      <characteristics>
-        <characteristic name="Result" typeId="6486-077d-3077-6419">Hurl: The victim is hurled into an enemy unit within 12&quot; of the Giant randomly determine which. The victim is removed as a casualty, and the unit takes D6 Strength 3 hits. Unsaved Wounds from these hits count towards the Giant&apos;s combat result. If no enemy units are in range, treat this as a Throw Back into Combat result instead.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="af1a-be06-2fc6-a34f" name="04-05 (Pick Up and...)" publicationId="9e23-79cb-pubN67565" page="84" hidden="false" typeId="771a-abec-4083-83d2" typeName="Pick up and... Chart">
-      <characteristics>
-        <characteristic name="Result" typeId="6486-077d-3077-6419">Squash: The model is removed as a casualty.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="985e-ec4a-2847-118b" name="06 (Pick Up and...)" publicationId="9e23-79cb-pubN67565" page="84" hidden="false" typeId="771a-abec-4083-83d2" typeName="Pick up and... Chart">
-      <characteristics>
-        <characteristic name="Result" typeId="6486-077d-3077-6419">Pick Another: Treat the attack as if the Giant had rolled the Stuff into Bag result, above, and then choose another victim. Roll again on this table to see what the Giant does with it.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="c82f-108c-17d8-ecfc" name="Arabyan Steed" publicationId="d221-484d-439d-4310" page="62" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">9</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="785f-7dff-4b4a-f3e4" name="Horned One" publicationId="9e23-79cb-pubN77402" page="149" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">3</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="c9fd-63d4-3152-6f25" name="Giant Wolf" publicationId="9e23-79cb-pubN78975" page="132" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">9</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">3</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="1c38-2830-10db-579c" name="Warhorse" publicationId="315d-135b-135c-07ce" page="216" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="c769-45c9-27cd-e14e" name="01 (Animosity Chart)" publicationId="8ada-88a0-cdcd-9b5e" page="60" hidden="false" typeId="9025-f9c9-08a1-7918" typeName="Animosity Chart">
-      <characteristics>
-        <characteristic name="Result" typeId="fb86-d23a-8886-cc3b">Squabble: The unit can do nothing this turn.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="df9f-2d15-5f0d-624a" name="02-05 (Animosity Chart)" publicationId="8ada-88a0-cdcd-9b5e" page="60" hidden="false" typeId="9025-f9c9-08a1-7918" typeName="Animosity Chart">
-      <characteristics>
-        <characteristic name="Result" typeId="fb86-d23a-8886-cc3b">Plan&apos;s a good &apos;un: The unit may act normally this turn.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="2624-b6e6-e171-5b72" name="06 (Animosity Chart)" publicationId="8ada-88a0-cdcd-9b5e" page="60" hidden="false" typeId="9025-f9c9-08a1-7918" typeName="Animosity Chart">
-      <characteristics>
-        <characteristic name="Result" typeId="fb86-d23a-8886-cc3b">We&apos;ll Show &apos;Em: Pivot the unit on the spot to face the nearest visible enemy unit, and then make a full (non-march) move in a straight line towards it. If there is no visible enemy, the unit must move straight ahead instead. If it is impossible for the unit to pivot to face the closest enemy, it will pivot towards it as far as it can, and will then move as far forward as it can while still keeping the enemy within its forward arc. After the move is complete the unit must immediately declare a charge against the closest visible enemy unit, if it is possible to do so. If the unit cannot declare a charge then it may carry on with the rest of its turn normally, as if it had not yet moved this turn.</characteristic>
-      </characteristics>
-    </profile>
     <profile name="Hand of Dust" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="dec1-ac22-9286-efd9" publicationId="4ff3-b09f-ec27-d6ec" page="4, 44">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
@@ -15356,27 +11752,6 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">24&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">5</characteristic>
         <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Armour Piercing (1), Multiple Shots (Artillery Dice + D6), Rapid Fire, Slow to Fire</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="51ac-33e6-8924-39dc" name="Warbow" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">30&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (2) (Only applies in turns the model has not moved. Cannot be used as a charge reaction.). Volley Fire.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="31b5-2b7d-e620-19f6" name="Greatbow" publicationId="9e23-79cb-pubN66727" page="80" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">36&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">5</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (2) (Only applies in turns the model has not moved. Cannot be used as a charge reaction.). Volley Fire.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="a9ad-a872-79a3-c503" name="Blunderbuss" publicationId="9e23-79cb-pubN66727" page="81" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">3</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1), Multiple Shots (3), Quick to Fire, Rapid Fire. Blunderbusses do not suffer any penalties To Hit for Stand and Shoot.</characteristic>
       </characteristics>
     </profile>
     <profile id="9765-f312-5a8b-5cb8" name="Repeater Bolt Thrower" publicationId="9e23-79cb-pubN66727" page="82" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
@@ -15901,48 +12276,6 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the small round template anywhere within 18&quot; of the Wizard – it then scatters D3&quot;. All models under the template suffer a Strength 3 hit with the Ignores Armour Saves special rule.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Pegasus" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="768c-8291-b483-f024" publicationId="315d-135b-135c-07ce" page="20">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="Griffon" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="65d1-ae0b-c4d5-0146" publicationId="315d-135b-135c-07ce" page="21">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Creature (Animal)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="fe15-07b8-cf24-36ce" name="Ogre Pistol" publicationId="315d-135b-135c-07ce" page="37" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">24&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Quick to Fire. Armour Piercing (1). In close combat, an ogre pistol counts as an additional hand weapon that does not give the model the Parry special rule.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="8252-279b-4741-e9d7" name="Ogre Handgun" publicationId="315d-135b-135c-07ce" page="37" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">36&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">5</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1). Ponderous.</characteristic>
-      </characteristics>
-    </profile>
     <profile name="Warmachine" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="80b1-ed85-bde1-fa07">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215"/>
@@ -15955,144 +12288,6 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Machine</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="Cold One" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="be87-1185-25f0-2de4" publicationId="9e23-79cb-pubN76150" page="131">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">3</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="Manticore" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0c00-4af1-49a1-dbd1" publicationId="1a01-044f-047b-618f" page="26">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Creature (Chaos Beast)</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="Giant" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="fddd-b77e-9876-320d" publicationId="9e23-79cb-pubN78975" page="175">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">6</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">6</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Giant)</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="01 (Big Things)" typeId="c247-d962-75fa-d212" typeName="Big Things Chart (Bonegrinder Giant)" hidden="false" id="ca1e-c15e-e7c3-62cf" publicationId="9e23-79cb-pubN78975" page="65">
-      <characteristics>
-        <characteristic name="Result" typeId="020b-7dac-6a63-4525">Yell and Bawl: Neither the Bonegrinder Giant nor models in contact with it fight if they have not already
-done so this round. The Bonegrinder Giant automatically wins the combat by 3 points.</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="02 (Big Things)" typeId="c247-d962-75fa-d212" typeName="Big Things Chart (Bonegrinder Giant)" hidden="false" id="c22c-a995-598c-fd8a" publicationId="9e23-79cb-pubN78975" page="65">
-      <characteristics>
-        <characteristic name="Result" typeId="020b-7dac-6a63-4525">Jump Up and Down: The Bonegrinder Giant must test to determine if it falls over (see previous page). If it falls over, work out where it falls and calculate damage as already described. Any wounds caused by the fall (on either side) count towards the combat result. Otherwise, it will attack using the Stomp (3D6) special rule. A Bonegrinder Giant that starts to Jump Up and Down will therefore continue to do so on the same target until it falls over, the target is destroyed, or the combat ends.</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="03 (Big Things)" typeId="c247-d962-75fa-d212" typeName="Big Things Chart (Bonegrinder Giant)" hidden="false" id="163a-4591-5d83-7032" publicationId="9e23-79cb-pubN78975" page="65">
-      <characteristics>
-        <characteristic name="Result" typeId="020b-7dac-6a63-4525">Pick Up and...: The Bonegrinder Giant stoops down and grabs a single Character in base contact from the target unit (Bonegrinder Giant player&apos;s choice). The Bonegrinder Giant grabs the model and the player rolls a D6 on the PickUp and... Table to see what happens next</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="04-06 (Big Things)" typeId="c247-d962-75fa-d212" typeName="Big Things Chart (Bonegrinder Giant)" hidden="false" id="dcb6-97b9-0705-9b52" publicationId="9e23-79cb-pubN78975" page="65">
-      <characteristics>
-        <characteristic name="Result" typeId="020b-7dac-6a63-4525">Swing with Club: The Bonegrinder Giant fights using the Random Attacks (3D6) special rule this round.</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="01 (Bigger Things)" typeId="451e-6d91-893e-45c6" typeName="Bigger Things Chart" hidden="false" id="111e-431e-a1a7-3e94" publicationId="9e23-79cb-pubN78975" page="65">
-      <characteristics>
-        <characteristic name="Result" typeId="6713-6d4f-f3d5-ab1c">Yell and Bawl: Neither the Bonegrinder Giant nor models in contact with it fight if they have not already done so this round. The Bonegrinder Giant automatically wins the combat by 3 points.</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="02-03 (Bigger Things)" typeId="451e-6d91-893e-45c6" typeName="Bigger Things Chart" hidden="false" id="0434-8305-c832-f9a3" publicationId="9e23-79cb-pubN78975" page="65">
-      <characteristics>
-        <characteristic name="Result" typeId="6713-6d4f-f3d5-ab1c">Thump with Club: The Bonegrinder Giant chooses a single model from the target unit that is in base contact. The target may attempt to avoid the blow by passing an Initiative test (use the lowest if the model has several different values). If the test is failed, the model takes 2D6 Wounds which Ignores Armour Saves. If a double is rolled the Bonegrinder Giant cannot attack at all in the following round of the same combat.</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="04-05 (Bigger Things)" typeId="451e-6d91-893e-45c6" typeName="Bigger Things Chart" hidden="false" id="6de0-155a-a6a7-18fd" publicationId="9e23-79cb-pubN78975" page="65">
-      <characteristics>
-        <characteristic name="Result" typeId="6713-6d4f-f3d5-ab1c">&apos;Eadbutt: The Bonegrinder Giant automatically inflicts D6 Wounds which Ignores Armour Saves. If the victim is wounded but not slain, then it loses all of its following attacks. If the target has not yet attacked in that combat round, it loses those attacks; if it has already attacked, then it loses the next round&apos;s attacks.</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="06 (Bigger Things)" typeId="451e-6d91-893e-45c6" typeName="Bigger Things Chart" hidden="false" id="a5b5-7a5c-c3ce-4f0f" publicationId="9e23-79cb-pubN78975" page="65">
-      <characteristics>
-        <characteristic name="Result" typeId="6713-6d4f-f3d5-ab1c">Grapple and...: Roll a D6 and consult theGrapple and... table.</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="01-02 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="81d2-e31b-3d99-5cb0" publicationId="9e23-79cb-pubN78975" page="65">
-      <characteristics>
-        <characteristic name="Result" typeId="5530-99d4-2acf-168d">Knobbly Knee: The victim immediately suffers D3 Wounds which Ignores Armour Saves and has their Weapon Skill and Initiative reduced to 1 until the end of the next player turn.</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="03 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="2c68-a409-ee85-8156" publicationId="9e23-79cb-pubN78975" page="65">
-      <characteristics>
-        <characteristic name="Result" typeId="5530-99d4-2acf-168d">Slam: The victim immediately suffers 2D3 Wounds which Ignores Armour Saves. If there is another enemy unit in base contact with the Bonegrinder Giant, that unit also suffers 2D3 Wounds which Ignores Armour Saves. If there are two or more other enemy units in base contact with the Bonegrinder Giant, randomise to see which is slammed.</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="04 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="f428-c5d4-2e27-406e" publicationId="9e23-79cb-pubN78975" page="65">
-      <characteristics>
-        <characteristic name="Result" typeId="5530-99d4-2acf-168d">Bear Hug: Roll 2D6 and add the Bonegrinder Giant&apos;s Strength. Your opponent rolls 2D6 and adds the victim&apos;s Toughness. If the Bonegrinder Giant&apos;s score is higher, the victim is removed as a casualty with no saves of any kind allowed.</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="05 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="ae3a-4798-5072-2cfd" publicationId="9e23-79cb-pubN78975" page="65">
-      <characteristics>
-        <characteristic name="Result" typeId="5530-99d4-2acf-168d">Fall Over: Roll 2D6 and add the Bonegrinder Giant&apos;s Strength. Your opponent rolls 2D6 and adds the victim&apos;s Toughness. If the Bonegrinder Giant&apos;s score is higher, the victim is removed as a casualty with no saves of any kind allowed. Then continue to resolve the Bonegrinder Giant falling over, in the direction of the target.</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="06 (Grapple and...)" typeId="0e2f-426f-5aed-ef49" typeName="Grapple and... Chart" hidden="false" id="ef57-54ee-5128-2759" publicationId="9e23-79cb-pubN78975" page="65">
-      <characteristics>
-        <characteristic name="Result" typeId="5530-99d4-2acf-168d">Punch, and...: The victim suffers D3 Wounds which Ignores Armour Saves, then roll again on this table.</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="01 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="68ca-0a61-0b9d-3135" publicationId="9e23-79cb-pubN78975" page="64">
-      <characteristics>
-        <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3">Yell and Bawl: Neither the Bonegrinder Giant nor models in contact with it fight if they have not already done so this round. The Bonegrinder Giant automatically wins the combat by 3 points.</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="02 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="c460-1506-87db-07a9" publicationId="9e23-79cb-pubN78975" page="65">
-      <characteristics>
-        <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3">Jump Up and Down: The Bonegrinder Giant must test to determine if it falls over (see previous page). If it falls over, work out where it falls and calculate damage as already described. Any wounds caused by the fall (on either side) count towards the combat result. Otherwise, it will attack using the Stomp (3D6) special rule. A Bonegrinder Giant that starts to Jump Up and Down will therefore continue to do so on the same target until it falls over, the target is destroyed, or the combat ends.</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="03 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="9440-7354-fb23-6511" publicationId="9e23-79cb-pubN78975" page="65">
-      <characteristics>
-        <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3">Pick Up and...: The Bonegrinder Giant stoops down and grabs a single Character in base contact from the target unit (Bonegrinder Giant player&apos;s choice). The Bonegrinder Giant grabs the model and the player rolls a D6 on the PickUp and... Table to see what happens next</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="04 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="6e85-ca64-51d0-3b4b" publicationId="9e23-79cb-pubN78975" page="65">
-      <characteristics>
-        <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3">Vomit: Place the flame template so that the narrow end is in base contact with the Bonegrinder Giant and the body of the template is over at least one other unit. All models (friendly and enemy) under the template suffer an automatic Strength 5 hit which Ignores Armour Saves. All unsaved Wounds from these hits count towards the combat result (unsaved Wounds on friendly models count to your opponent&apos;s combat result). Once damage has been resolved, roll a D6. On a roll of 1-3, the Bonegrinder Giant falls over.</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="05 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="c396-684f-e733-4e62" publicationId="9e23-79cb-pubN78975" page="65">
-      <characteristics>
-        <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3">Choose a model in base contact with the Bonegrinder Giant That model immediately receives a brutal toe-punt and is removed as a casualty. However, the victim&apos;s remains hurtle through its unit in the same manner as a shot from a bolt thrower (Look Out Sir! Applies as normal). The model immediately behind the victim suffers a Strength 8 hit with the Multiple Wounds (D3) special rule. If he is slain, the model behind him suffers a Strength 7 hit with the Multiple Wounds (D3) special rule, and so on, until the soggy remains fail to cause a casualty; or the unit runs out of ranks/files.</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="06 (Man-sized Things)" typeId="cc23-fbd5-942e-c3d8" typeName="Man-sized Things Chart (Bonegrinder Giant)" hidden="false" id="043e-ed32-9b7c-006a" publicationId="9e23-79cb-pubN67565" page="86">
-      <characteristics>
-        <characteristic name="Result" typeId="17f4-32f7-ddb9-dbe3">Crush!: Place the small round template so that it is at least partially covering one or more models in base contact with the Giant, but not the Giant himself. The model under the centre of the template suffers an automatic Strength 10 hit with the Multiple Wounds (D6) special rule. Models around him might get lucky – the Giant&apos;s aim may be off; and only strike them a glancing blow (not that a glancing blow from a Giant is anything to be thankful for). Roll an artillery dice and halve the result – all other models (friendly and enemy) under the template suffer an automatic hit of this Strength. If the roll is a: misfire, the Giant manages to miss the rest of the unit.</characteristic>
       </characteristics>
     </profile>
     <profile id="7595-e6e1-4079-a9a0" name="Coruscating Fulcrum" publicationId="9e23-79cb-pubN77092" page="4" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -16141,48 +12336,6 @@ Magic phase.</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 5 Hits which Ignores Armour Saves and Regeneration.</characteristic>
       </characteristics>
     </profile>
-    <profile id="9d3c-c7f3-e374-745d" name="Elven Steed" publicationId="9e23-79cb-pubN77092" page="20" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">9</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="Great Eagle" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f7ff-29f2-e07a-c621" publicationId="9e23-79cb-pubN77092" page="21">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">2</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Animal)</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="Skeletal Steed" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="5e37-4591-f72b-0e5e">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">3</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
-      </characteristics>
-    </profile>
     <profile name="Storm Call" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="db98-698f-5fae-ba03" publicationId="1a01-044f-047b-618f" page="46">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Innate Bound Spell</characteristic>
@@ -16193,4 +12346,44 @@ Magic phase.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
+  <sharedInfoGroups>
+    <infoGroup name="Stone Thrower Misfire Chart" id="f6f0-bb1f-f863-3e81" hidden="false">
+      <profiles>
+        <profile name="1 Destroyed!" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="f14c-d708-7ec1-d950" publicationId="9e23-79cb-pubN66727" page="115">
+          <characteristics>
+            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The war machine is destroyed.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="2-3 Disabled" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="b7a8-f42f-997c-7958" publicationId="9e23-79cb-pubN66727" page="115">
+          <characteristics>
+            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The stone thrower suffers a wound, with no armour saves allowed. The stone thrower cannot fire this turn or in the controlling player&apos;s next turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="4-6 May not Shoot" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="cf7e-50c9-f10c-da28" publicationId="9e23-79cb-pubN66727" page="115">
+          <characteristics>
+            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The stone thrower is unharmed and can shoot as normal again in the controlling player&apos;s next turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+    <infoGroup name="Blackpowder Misfire Chart" id="bb8f-7181-30f9-fc65" hidden="false">
+      <profiles>
+        <profile name="1-2 Destroyed!" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="385d-5c05-b088-169b" publicationId="9e23-79cb-pubN66727" page="113">
+          <characteristics>
+            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The war machine is destroyed.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="3-4 Malfunction" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="1adf-38fa-f9cd-97c8" publicationId="9e23-79cb-pubN66727" page="113">
+          <characteristics>
+            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The war machine cannot fire this turn or in the controlling player&apos;s next turn.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="5-6 May not Shoot" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="c47b-e500-a5b2-5143" publicationId="9e23-79cb-pubN66727" page="113">
+          <characteristics>
+            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The war machine can shoot as normal again in the controlling player&apos;s next turn.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+    </infoGroup>
+  </sharedInfoGroups>
 </gameSystem>
