@@ -491,7 +491,7 @@
                     <entryLink id="b141-4083-71c3-d279" name="Lore of Beasts 4" hidden="false" collective="false" import="true" targetId="7adf-a2bc-d490-bf01" type="selectionEntry"/>
                     <entryLink id="8e2d-1112-6189-7d93" name="Lore of Life 4" hidden="false" collective="false" import="true" targetId="5a81-551d-a526-dea4" type="selectionEntry"/>
                     <entryLink id="40ea-877c-09e0-f254" name="Lore of Light 4" hidden="false" collective="false" import="true" targetId="d695-9fe8-75bd-4314" type="selectionEntry"/>
-                    <entryLink id="b917-7017-f151-d62b" name="Lore of the Lady 4" hidden="false" collective="false" import="true" targetId="3185-2b53-91b7-d148" type="selectionEntry"/>
+                    <entryLink id="b917-7017-f151-d62b" name="Lore of the Lady" hidden="false" collective="false" import="true" targetId="3185-2b53-91b7-d148" type="selectionEntry"/>
                     <entryLink id="39cf-2d85-e5bb-c077" name="Lore of Heavens 4" hidden="false" collective="false" import="true" targetId="5e84-f1f7-3b99-29be" type="selectionEntry"/>
                   </entryLinks>
                 </selectionEntryGroup>
@@ -4894,7 +4894,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
                         <entryLink id="99ac-70b8-f734-f11d" name="Lore of Life 4" hidden="false" collective="false" import="true" targetId="5a81-551d-a526-dea4" type="selectionEntry"/>
                         <entryLink id="a7cc-a8e8-ad35-0fb0" name="Lore of Light 4" hidden="false" collective="false" import="true" targetId="d695-9fe8-75bd-4314" type="selectionEntry"/>
                         <entryLink id="3bef-ff3a-a0ec-d6c7" name="Lore of Heavens 4" hidden="false" collective="false" import="true" targetId="5e84-f1f7-3b99-29be" type="selectionEntry"/>
-                        <entryLink id="b182-2cdc-4b43-6a66" name="Lore of the Lady 4" hidden="false" collective="false" import="true" targetId="3185-2b53-91b7-d148" type="selectionEntry"/>
+                        <entryLink id="b182-2cdc-4b43-6a66" name="Lore of the Lady" hidden="false" collective="false" import="true" targetId="3185-2b53-91b7-d148" type="selectionEntry"/>
                       </entryLinks>
                     </selectionEntryGroup>
                   </selectionEntryGroups>
@@ -5601,6 +5601,22 @@ Louen&apos;s Strength for the duration of that phase.</characteristic>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Braid of Bordeleaux" hidden="false" id="e72e-4db8-d710-056d" collective="false">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8057-ae0a-dfd3-74b1" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e28c-fcfe-cff6-4e5b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Braid of Bordeleaux" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="0b06-4f55-089a-3ae0" publicationId="e3da-3848-ff08-a482" page="11">
+                      <characteristics>
+                        <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The bearer of the Braid of Bordeleaux and any unit they are with gain Aquatic.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                </selectionEntry>
               </selectionEntries>
               <selectionEntryGroups>
                 <selectionEntryGroup id="9008-d9e7-7a2e-99a4" name="Mount" hidden="false" collective="false" import="true">
@@ -5739,18 +5755,6 @@ Louen&apos;s Strength for the duration of that phase.</characteristic>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <entryLinks>
-                <entryLink id="a671-e6ae-695c-9ef2" name="Braid of Bordeleaux" hidden="false" collective="false" import="true" targetId="e72e-4db8-d710-056d" type="selectionEntry">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="eb5e-0336-8083-9619" type="min"/>
-                  </constraints>
-                  <profiles>
-                    <profile id="fdf9-8bab-8f1d-9e39" name="Braid of Bordeleaux" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
-                      <characteristics>
-                        <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The bearer of the Braid of Bordeleaux and any unit they are with gain the Aquatic special rule.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </entryLink>
                 <entryLink id="e49c-f8e6-af35-eda3" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry"/>
               </entryLinks>
               <costs>
@@ -7436,29 +7440,6 @@ Special Rules: Killing Blow</characteristic>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
-    <selectionEntry id="e72e-4db8-d710-056d" name="Braid of Bordeleaux" hidden="false" collective="false" import="true" type="upgrade">
-      <modifiers>
-        <modifier type="set" field="points" value="0">
-          <conditions>
-            <condition field="selections" scope="ancestor" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="437f-b00f-8a74-3e82" type="instanceOf"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8057-ae0a-dfd3-74b1" type="max"/>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e28c-fcfe-cff6-4e5b" type="max"/>
-      </constraints>
-      <profiles>
-        <profile id="0b06-4f55-089a-3ae0" name="Braid of Bordeleaux" publicationId="e3da-3848-ff08-a482" page="11" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
-          <characteristics>
-            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The bearer of the Braid of Bordeleaux and any unit they are with gain Aquatic.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <costs>
-        <cost name="pts" typeId="points" value="5"/>
-      </costs>
-    </selectionEntry>
     <selectionEntry id="3185-2b53-91b7-d148" name="Lore of the Lady" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b97c-7aee-f611-d097" type="max"/>
@@ -7523,7 +7504,7 @@ Special Rules: Killing Blow</characteristic>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f878-713f-0235-2a35" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="072d-59bc-b03d-f39c" name="The Lady&apos;s Gift" hidden="false" targetId="b35e-9543-f92e-e0be" type="profile"/>
+                <infoLink id="072d-59bc-b03d-f39c" name="The Lady´s Gift" hidden="false" targetId="b35e-9543-f92e-e0be" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
@@ -7629,7 +7610,7 @@ Special Rules: Killing Blow</characteristic>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2a82-6098-d264-9267" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="fff6-dd1f-c749-9347" name="The Lady&apos;s Wrath" hidden="false" targetId="b7ae-8955-6cfb-3767" type="profile"/>
+                <infoLink id="fff6-dd1f-c749-9347" name="The Lady´s Wrath" hidden="false" targetId="b7ae-8955-6cfb-3767" type="profile"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
@@ -7962,7 +7943,7 @@ Special Rules: Killing Blow</characteristic>
         <infoLink name="The Grail Vow" id="27b5-a94a-a7c3-4ea0" hidden="false" targetId="cc58-9b35-c062-955a" type="rule"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Horse" hidden="false" id="ff0c-8509-c362-a6a9">
+    <selectionEntry type="model" import="true" name="Horse" hidden="false" id="ff0c-8509-c362-a6a9" subType="mount">
       <infoLinks>
         <infoLink name="Warhorse" id="7f38-5e1a-43b2-b0fc" hidden="false" type="profile" targetId="1c38-2830-10db-579c">
           <modifiers>
@@ -7975,7 +7956,7 @@ Special Rules: Killing Blow</characteristic>
         <categoryLink name="Cavalry" hidden="false" id="dd46-2be0-5b26-e280" targetId="bdee-b168-38ba-7d3c" primary="false"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Purebred Warhorse" hidden="false" id="1497-3d1c-9283-c24d">
+    <selectionEntry type="model" import="true" name="Purebred Warhorse" hidden="false" id="1497-3d1c-9283-c24d" subType="mount">
       <infoLinks>
         <infoLink name="Warhorse" id="e985-06a2-4bcc-2ff9" hidden="false" type="profile" targetId="1c38-2830-10db-579c">
           <modifiers>
@@ -8063,7 +8044,7 @@ Special Rules: Killing Blow</characteristic>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4f86-73df-1cc2-0cd3" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="ce7d-a141-f4f0-52cb" name="Virtue of Heroism (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="42">
+        <selectionEntry id="ce7d-a141-f4f0-52cb" name="Virtue of Heroism (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="20">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8082,7 +8063,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="70"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="06da-7854-578f-ab28" name="Virtue of Stoicism" hidden="false" collective="false" import="true" type="upgrade" sortIndex="22">
+        <selectionEntry id="06da-7854-578f-ab28" name="Virtue of Stoicism" hidden="false" collective="false" import="true" type="upgrade" sortIndex="33">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b3b0-6b08-646e-2ee2" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="00ae-0d13-ee13-76f4" type="max"/>
@@ -8094,7 +8075,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9fe7-7933-320a-1247" name="Virtue of Stoicism (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="43">
+        <selectionEntry id="9fe7-7933-320a-1247" name="Virtue of Stoicism (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="34">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8113,7 +8094,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="70"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1621-4d25-dc04-b0d2" name="Virtue of the Impetuous Knight" hidden="false" collective="false" import="true" type="upgrade" sortIndex="20">
+        <selectionEntry id="1621-4d25-dc04-b0d2" name="Virtue of the Impetuous Knight" hidden="false" collective="false" import="true" type="upgrade" sortIndex="38">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5010-effb-262a-24bb" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ab4f-05cb-0e61-7eae" type="max"/>
@@ -8125,7 +8106,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8dee-ffd8-b723-1b3f" name="Virtue of the Impetuous Knight (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="38">
+        <selectionEntry id="8dee-ffd8-b723-1b3f" name="Virtue of the Impetuous Knight (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="39">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8144,7 +8125,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="60"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="71f0-228f-e143-c21a" name="Virtue of the Impetuous Knight (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="49">
+        <selectionEntry id="71f0-228f-e143-c21a" name="Virtue of the Impetuous Knight (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="40">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8163,7 +8144,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="90"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b3cd-ed9a-3ce7-d711" name="Virtue of the Ideal" hidden="false" collective="false" import="true" type="upgrade" sortIndex="19">
+        <selectionEntry id="b3cd-ed9a-3ce7-d711" name="Virtue of the Ideal" hidden="false" collective="false" import="true" type="upgrade" sortIndex="35">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0f0a-cbb6-ba41-29fb" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4864-21ec-0366-3f4c" type="max"/>
@@ -8175,7 +8156,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9b49-dc17-1838-e392" name="Virtue of the Ideal (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="37">
+        <selectionEntry id="9b49-dc17-1838-e392" name="Virtue of the Ideal (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="36">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8194,7 +8175,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="60"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="aa11-58e7-101e-4569" name="Virtue of the Ideal (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="48">
+        <selectionEntry id="aa11-58e7-101e-4569" name="Virtue of the Ideal (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="37">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8213,7 +8194,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="90"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ad16-1675-0e1a-57e8" name="Virtue of Audacity" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
+        <selectionEntry id="ad16-1675-0e1a-57e8" name="Virtue of Audacity" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1111-1e92-67df-d3f5" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f104-b6a5-8d07-b033" type="max"/>
@@ -8225,7 +8206,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="6c34-c91b-e0fb-77af" name="Virtue of Audacity (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="33">
+        <selectionEntry id="6c34-c91b-e0fb-77af" name="Virtue of Audacity (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="2">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8244,7 +8225,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="60"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="878b-5bab-a6bb-2586" name="Virtue of Audacity (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="46">
+        <selectionEntry id="878b-5bab-a6bb-2586" name="Virtue of Audacity (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="3">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8263,7 +8244,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="90"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="479e-c78a-e751-d837" name="Virtue of Knightly Temper" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
+        <selectionEntry id="479e-c78a-e751-d837" name="Virtue of Knightly Temper" hidden="false" collective="false" import="true" type="upgrade" sortIndex="24">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a914-2a5c-cde8-dea7" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fb28-8949-c14b-f81c" type="max"/>
@@ -8275,7 +8256,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f572-c5eb-16eb-7314" name="Virtue of Knightly Temper (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="32">
+        <selectionEntry id="f572-c5eb-16eb-7314" name="Virtue of Knightly Temper (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="25">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8294,7 +8275,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="50"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8e6e-67ac-eea1-2a75" name="Virtue of Knightly Temper (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="45">
+        <selectionEntry id="8e6e-67ac-eea1-2a75" name="Virtue of Knightly Temper (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="26">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8313,7 +8294,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="75"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2cca-4cd4-7832-58f9" name="Virtue of the Penitent" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
+        <selectionEntry id="2cca-4cd4-7832-58f9" name="Virtue of the Penitent" hidden="false" collective="false" import="true" type="upgrade" sortIndex="44">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2dd6-3eaa-2bbd-faae" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8c01-b12a-cc1a-c4ac" type="max"/>
@@ -8325,7 +8306,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="699d-8e6f-0e63-78d5" name="Virtue of the Penitent (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="26">
+        <selectionEntry id="699d-8e6f-0e63-78d5" name="Virtue of the Penitent (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="45">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8344,7 +8325,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0782-11cd-412a-490f" name="Virtue of the Penitent (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="40">
+        <selectionEntry id="0782-11cd-412a-490f" name="Virtue of the Penitent (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="46">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8363,7 +8344,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="60"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a6f6-6fff-ad04-55cd" name="Virtue of Duty" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
+        <selectionEntry id="a6f6-6fff-ad04-55cd" name="Virtue of Duty" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="db41-6762-e6a4-cb73" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2162-f46c-10c4-b19a" type="max"/>
@@ -8374,13 +8355,25 @@ Special Rules: Killing Blow</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model" childId="d322-3c7a-6d1e-7dc2" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="ffa3-c072-f6d9-3d07" name="Virtue of Duty (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="24">
+        <selectionEntry id="ffa3-c072-f6d9-3d07" name="Virtue of Duty (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="14">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="a6f6-6fff-ad04-55cd" type="atLeast"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="a6f6-6fff-ad04-55cd" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                    <condition type="equalTo" value="0" field="selections" scope="model" childId="d322-3c7a-6d1e-7dc2" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -8394,12 +8387,17 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="fe96-827e-1552-32c4" name="Virtue of Duty (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="35">
+        <selectionEntry id="fe96-827e-1552-32c4" name="Virtue of Duty (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="15">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
-              <conditions>
-                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ffa3-c072-f6d9-3d07" type="atLeast"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="ffa3-c072-f6d9-3d07" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="d322-3c7a-6d1e-7dc2" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
@@ -8413,7 +8411,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="60"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f9c8-f37c-ce5a-3d47" name="Virtue of Confidence (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="31">
+        <selectionEntry id="f9c8-f37c-ce5a-3d47" name="Virtue of Confidence (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="5">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8432,7 +8430,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="50"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c84b-c58f-162d-c837" name="Virtue of Confidence (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="44">
+        <selectionEntry id="c84b-c58f-162d-c837" name="Virtue of Confidence (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="6">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8451,7 +8449,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="75"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="04aa-aec1-a29e-a067" name="Virtue of the Joust" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
+        <selectionEntry id="04aa-aec1-a29e-a067" name="Virtue of the Joust" hidden="false" collective="false" import="true" type="upgrade" sortIndex="41">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3366-ff3d-1c17-4af2" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aefc-b875-2d3e-1b09" type="max"/>
@@ -8463,7 +8461,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f689-1a8a-28dc-9efb" name="Virtue of the Joust (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="25">
+        <selectionEntry id="f689-1a8a-28dc-9efb" name="Virtue of the Joust (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="42">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8482,7 +8480,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8733-9331-9b78-977b" name="Virtue of the Joust (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="39">
+        <selectionEntry id="8733-9331-9b78-977b" name="Virtue of the Joust (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="43">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8501,7 +8499,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="60"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="739d-e6e0-707f-0ab9" name="Virtue of Purity (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="18">
+        <selectionEntry id="739d-e6e0-707f-0ab9" name="Virtue of Purity (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="31">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8520,7 +8518,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="19a1-5b0d-c41d-af04" name="Virtue of Purity (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="30">
+        <selectionEntry id="19a1-5b0d-c41d-af04" name="Virtue of Purity (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="32">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8539,7 +8537,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="45"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e3fb-92aa-66a0-ed29" name="Virtue of Noble Disdain (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="17">
+        <selectionEntry id="e3fb-92aa-66a0-ed29" name="Virtue of Noble Disdain (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="28">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8577,7 +8575,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="45"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2430-1d6b-0ee6-203b" name="Virtue of Discipline" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
+        <selectionEntry id="2430-1d6b-0ee6-203b" name="Virtue of Discipline" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ca42-3d2e-76ac-08f8" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2d23-c9e2-16e4-79ab" type="max"/>
@@ -8589,7 +8587,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="bf89-6f5f-9b23-3aee" name="Virtue of Discipline (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="14">
+        <selectionEntry id="bf89-6f5f-9b23-3aee" name="Virtue of Discipline (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="11">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8608,7 +8606,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="5c8b-4002-9553-531a" name="Virtue of Discipline (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="28">
+        <selectionEntry id="5c8b-4002-9553-531a" name="Virtue of Discipline (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="12">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8627,7 +8625,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="45"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="5824-9eaa-2ece-1832" name="Virtue of Empathy" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
+        <selectionEntry id="5824-9eaa-2ece-1832" name="Virtue of Empathy" hidden="false" collective="false" import="true" type="upgrade" sortIndex="16">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7da8-e24e-ba9f-c64c" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a07d-f59f-24d5-a63e" type="max"/>
@@ -8639,7 +8637,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="6155-cc3b-3439-7ae7" name="Virtue of Empathy (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="7">
+        <selectionEntry id="6155-cc3b-3439-7ae7" name="Virtue of Empathy (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="17">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8658,7 +8656,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="cf4e-4d77-c378-31c1" name="Virtue of Empathy (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="15">
+        <selectionEntry id="cf4e-4d77-c378-31c1" name="Virtue of Empathy (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="18">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8677,7 +8675,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="503e-ad61-9f65-2382" name="Virtue of Purity" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
+        <selectionEntry id="503e-ad61-9f65-2382" name="Virtue of Purity" hidden="false" collective="false" import="true" type="upgrade" sortIndex="30">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5574-89ea-8290-38c1" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1796-f0b7-6b7b-fbec" type="max"/>
@@ -8689,7 +8687,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="20c0-f0ed-835f-8e3c" name="Virtue of Noble Disdain" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
+        <selectionEntry id="20c0-f0ed-835f-8e3c" name="Virtue of Noble Disdain" hidden="false" collective="false" import="true" type="upgrade" sortIndex="27">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="da08-19f8-bf0b-2aff" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ce7a-4cc5-3a01-5cba" type="max"/>
@@ -8701,7 +8699,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="730f-0b9a-e9fe-8c83" name="Virtue of Heroism" hidden="false" collective="false" import="true" type="upgrade" sortIndex="21">
+        <selectionEntry id="730f-0b9a-e9fe-8c83" name="Virtue of Heroism" hidden="false" collective="false" import="true" type="upgrade" sortIndex="19">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1367-2e5d-0785-d575" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6a58-dd76-ea18-eeec" type="max"/>
@@ -8713,7 +8711,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="986e-13da-75d8-5a0b" name="Virtue of Confidence" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
+        <selectionEntry id="986e-13da-75d8-5a0b" name="Virtue of Confidence" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="94d2-c9ca-bec8-10a8" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1255-b400-73a7-1dc2" type="max"/>
@@ -8725,7 +8723,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="57c4-5fce-56d2-2452" name="Virtue of Knightly Ardour" hidden="false" collective="false" import="true" type="upgrade" sortIndex="16">
+        <selectionEntry id="57c4-5fce-56d2-2452" name="Virtue of Knightly Ardour" hidden="false" collective="false" import="true" type="upgrade" sortIndex="21">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="56c3-b5a3-a00c-1a28" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0ec8-d7d6-37f8-314c" type="max"/>
@@ -8737,7 +8735,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2e6e-33b4-b50e-678a" name="Virtue of Knightly Ardour (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="36">
+        <selectionEntry id="2e6e-33b4-b50e-678a" name="Virtue of Knightly Ardour (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="22">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8756,7 +8754,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="60"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ef6f-c187-650e-219b" name="Virtue of Knightly Ardour (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="47">
+        <selectionEntry id="ef6f-c187-650e-219b" name="Virtue of Knightly Ardour (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="23">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8775,7 +8773,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="90"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7922-3662-402c-c6db" name="Virtue of Devotion" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
+        <selectionEntry id="7922-3662-402c-c6db" name="Virtue of Devotion" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="32a6-a5a9-3941-9f1d" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="33d7-63cb-1c1f-7778" type="max"/>
@@ -8787,7 +8785,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="66fa-a3ae-c1c6-126e" name="Virtue of Devotion (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="23">
+        <selectionEntry id="66fa-a3ae-c1c6-126e" name="Virtue of Devotion (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="8">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8806,7 +8804,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1bd5-0f7f-2dd0-2fe5" name="Virtue of Devotion (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="34">
+        <selectionEntry id="1bd5-0f7f-2dd0-2fe5" name="Virtue of Devotion (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="9">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8825,7 +8823,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="60"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8cf7-eeb4-cf62-94f4" name="Virtue of Utter Serenity" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
+        <selectionEntry id="8cf7-eeb4-cf62-94f4" name="Virtue of Utter Serenity" hidden="false" collective="false" import="true" type="upgrade" sortIndex="47">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c9b5-b6ea-a510-f778" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5005-4d1a-1094-91ef" type="max"/>
@@ -8837,7 +8835,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3ef5-762c-2943-eb94" name="Virtue of Utter Serenity (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="27">
+        <selectionEntry id="3ef5-762c-2943-eb94" name="Virtue of Utter Serenity (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="48">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8856,7 +8854,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f6da-3700-8614-0086" name="Virtue of Utter Serenity (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="41">
+        <selectionEntry id="f6da-3700-8614-0086" name="Virtue of Utter Serenity (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="49">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -8875,6 +8873,44 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="60"/>
           </costs>
         </selectionEntry>
+        <selectionEntry id="dc44-d544-369f-4bf2" name="Virtue of Heroism (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="20">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="ce7d-a141-f4f0-52cb" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e27b-cde7-38fc-0e4b" type="max"/>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1d66-2080-f2dc-cdd1" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="bdc7-6664-ac23-a617" name="Virtue of Heroism" hidden="false" targetId="2b8d-375c-36cd-1657" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="105"/>
+          </costs>
+        </selectionEntry>
+        <selectionEntry id="600d-1906-84ef-e5b2" name="Virtue of Stoicism (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="34">
+          <modifiers>
+            <modifier type="set" field="hidden" value="false">
+              <conditions>
+                <condition field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="9fe7-7933-320a-1247" type="atLeast"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e2ef-c746-24cb-4251" type="max"/>
+            <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="782a-d6f9-520f-7bc2" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="fcbb-155f-f5cd-d8a3" name="Virtue of Stoicism" hidden="false" targetId="1c14-c1d8-676d-a698" type="profile"/>
+          </infoLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="105"/>
+          </costs>
+        </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
     <selectionEntryGroup id="4815-9217-ed66-4522" name="Arcane Items" hidden="false" collective="false" import="true">
@@ -8882,7 +8918,7 @@ Special Rules: Killing Blow</characteristic>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4b4c-c5da-0ff8-8141" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="eb57-20ba-1be9-c113" name="Chalice of Malfleur" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="eb57-20ba-1be9-c113" name="Chalice of Malfleur" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d236-87cd-838f-e32e" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="88c9-4f3b-c1f2-09eb" type="max"/>
@@ -8898,7 +8934,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0d04-816d-c52c-52f1" name="Sacrament of the Lady" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0d04-816d-c52c-52f1" name="Sacrament of the Lady" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4d6d-3d23-d62d-9347" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7ef0-916d-4615-9a65" type="max"/>
@@ -8914,7 +8950,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="50"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a781-dfdc-eef7-4c73" name="The Verdant Heart" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="a781-dfdc-eef7-4c73" name="The Verdant Heart" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9e84-91e4-621d-04ba" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4969-e516-1935-2566" type="max"/>
@@ -8930,7 +8966,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="dbcf-64b5-5ece-733c" name="Prayer Icon of Quenelles" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="dbcf-64b5-5ece-733c" name="Prayer Icon of Quenelles" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e9cc-91d7-40f6-0553" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="55d1-7841-b076-7ba3" type="max"/>
@@ -8946,7 +8982,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="45"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f21d-1839-6b56-db07" name="Flamestrike Wand" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f21d-1839-6b56-db07" name="Flamestrike Wand" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="389e-4565-fd34-3fae" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3c38-0f50-4d74-536f" type="max"/>
@@ -8961,8 +8997,16 @@ Special Rules: Killing Blow</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="35"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Fires of U&apos;Zhul" id="bf94-07d4-ddb9-afeb" hidden="false" type="profile" targetId="f5da-92b4-41fb-cad8">
+              <modifiers>
+                <modifier type="set" value="Bound Spell" field="576b-eaa1-0bd1-3f7a"/>
+                <modifier type="set" value="4+" field="d6bf-647e-ba69-e8a0"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
-        <selectionEntry id="2747-28a1-38fe-f3da" name="Heart of the Wilds" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="2747-28a1-38fe-f3da" name="Heart of the Wilds" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="446c-65aa-75de-64bc" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="958d-0ad3-27d9-e21c" type="max"/>
@@ -8978,7 +9022,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b37c-b909-1b9d-d922" name="Diadem of Power" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b37c-b909-1b9d-d922" name="Diadem of Power" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a826-d932-9cec-1fc7" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d4f2-ff28-1e39-0e4e" type="max"/>
@@ -8991,20 +9035,37 @@ Special Rules: Killing Blow</characteristic>
             </profile>
           </profiles>
           <costs>
-            <cost name="pts" typeId="points" value="15"/>
+            <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="661e-b775-1679-459f" name="Common Arcane Items" hidden="false" collective="false" import="true" targetId="6cd2-3f4b-da2d-1ee9" type="selectionEntryGroup"/>
+        <entryLink id="661e-b775-1679-459f" name="Common Arcane Items" hidden="false" collective="false" import="true" targetId="6cd2-3f4b-da2d-1ee9" type="selectionEntryGroup" sortIndex="8"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="0" field="4b4c-c5da-0ff8-8141">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="model" childId="5371-1a99-5c34-804a" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-category" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup id="8b2b-59ba-dd17-cb80" name="Enchanted Items" hidden="false" collective="false" import="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0c96-cd16-673a-2c6b" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="4ff6-c6a7-df24-4fcf" name="The Ruby Goblet" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="4ff6-c6a7-df24-4fcf" name="The Ruby Goblet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7766-0d45-7b78-8a59" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="be3c-b754-e381-3403" type="max"/>
@@ -9020,7 +9081,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b8ca-2d2b-f46a-5716" name="The Mane of the Purebreed" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b8ca-2d2b-f46a-5716" name="The Mane of the Purebreed" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1939-615a-d9dc-5d68" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e28e-a10b-482a-251f" type="max"/>
@@ -9028,15 +9089,27 @@ Special Rules: Killing Blow</characteristic>
           <profiles>
             <profile id="575c-faa7-aaea-fa8f" name="The Mane of the Purebreed" publicationId="e3da-3848-ff08-a482" page="12" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Model on Warhorse only. The Mane of the Purebreed gives +1 Strength to all Warhorses in the unit the model is with.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The Mane of the Purebreed gives +1 Strength to all Warhorses in the unit the model is with.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="model" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="model" childId="1497-3d1c-9283-c24d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="6491-9d0f-d880-469b" name="Tress of Isoulde" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="6491-9d0f-d880-469b" name="Tress of Isoulde" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fa18-0214-d573-22f0" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dc62-d03e-1f8f-b550" type="max"/>
@@ -9052,7 +9125,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="92f8-cecd-46f4-cc14" name="Antlers of the Great Hunt" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="92f8-cecd-46f4-cc14" name="Antlers of the Great Hunt" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b4e9-6782-af9d-73e3" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a389-1f8b-bd51-e9f6" type="max"/>
@@ -9060,15 +9133,27 @@ Special Rules: Killing Blow</characteristic>
           <profiles>
             <profile id="4016-43b2-c918-234a" name="Antlers of the Great Hunt" publicationId="e3da-3848-ff08-a482" page="12" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Lord or Paladin only. The model wearing the Antlers of the Great Hunt and any unit they are with roll an additional dice when pursuing and discard the lowest result.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The model wearing the Antlers of the Great Hunt and any unit they are with roll an additional dice when pursuing and discard the lowest result.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="435e-f593-3b48-af1d" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="2729-f578-03de-c013" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="5706-d8fe-611b-3756" name="Battle Stone of the Marquis" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="5706-d8fe-611b-3756" name="Battle Stone of the Marquis" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c86f-62f1-45e5-2842" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="38ef-7401-f8e0-eddc" type="max"/>
@@ -9084,7 +9169,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b2c5-30e8-5e2c-2b86" name="Falcon-Horn of Fredemund" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b2c5-30e8-5e2c-2b86" name="Falcon-Horn of Fredemund" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="cf27-a512-a5a4-2a35" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="63a0-4690-5176-3890" type="max"/>
@@ -9100,7 +9185,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1a34-7e78-1344-b64c" name="The Seal of Parravon" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1a34-7e78-1344-b64c" name="The Seal of Parravon" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5512-f3dd-156f-5287" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="40f6-700a-b01a-f4d2" type="max"/>
@@ -9116,7 +9201,7 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="98e7-a127-0383-0ba3" name="Wyrmbreath Vial" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="98e7-a127-0383-0ba3" name="Wyrmbreath Vial" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7a1d-dbf9-0b1a-a98d" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7622-1b26-6194-c18b" type="max"/>
@@ -9132,24 +9217,30 @@ Special Rules: Killing Blow</characteristic>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="121b-30e9-85ce-1fdf" name="Crusader´s Clarion" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="121b-30e9-85ce-1fdf" name="Crusader&apos;s Clarion" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="588d-a25e-38ca-15b7" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="30e4-a3ae-2829-6326" type="max"/>
           </constraints>
           <profiles>
-            <profile id="4c1d-1321-5d84-a38a" name="Crusader´s Clarion" publicationId="e3da-3848-ff08-a482" page="12" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+            <profile id="4c1d-1321-5d84-a38a" name="Crusader&apos;s Clarion" publicationId="e3da-3848-ff08-a482" page="12" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Cavalry only. On a turn in which the bearer of
-the Crusader’s Clarion charge, their mount and all mounts in the unit they have joined may re-roll failed rolls To Wound (including Impact Hits).</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">On a turn in which the bearer of the Crusader’s Clarion charge, their mount and all mounts in the unit they have joined may re-roll failed rolls To Wound (including Impact Hits).</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="03d3-988e-2847-7966" name="Claw of Malgrimace" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="03d3-988e-2847-7966" name="Claw of Malgrimace" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bc0e-5c93-85e9-a14c" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="495e-5ce5-762b-449f" type="max"/>
@@ -9165,7 +9256,7 @@ the Crusader’s Clarion charge, their mount and all mounts in the unit they hav
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2715-cc13-bef1-6634" name="Gauntlet of the Duel" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="2715-cc13-bef1-6634" name="Gauntlet of the Duel" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b7d9-4aea-3e00-0486" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1ffb-453a-6b55-6e3c" type="max"/>
@@ -9173,18 +9264,29 @@ the Crusader’s Clarion charge, their mount and all mounts in the unit they hav
           <profiles>
             <profile id="d4e9-166e-9984-a796" name="Gauntlet of the Duel" publicationId="e3da-3848-ff08-a482" page="12" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Lord or Paladin only. Any challenge issued by the bearer of the Gauntlet of the Duel cannot be refused.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Any challenge issued by the bearer of the Gauntlet of the Duel cannot be refused.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="435e-f593-3b48-af1d" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="2729-f578-03de-c013" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="5ab8-efb8-9ad0-10d8" name="Common Enchanted Items" hidden="false" collective="false" import="true" targetId="5857-a7aa-f954-a027" type="selectionEntryGroup"/>
-        <entryLink id="88cc-74e9-6d7e-63ab" name="Braid of Bordeleaux" hidden="false" collective="false" import="true" targetId="e72e-4db8-d710-056d" type="selectionEntry"/>
+        <entryLink id="5ab8-efb8-9ad0-10d8" name="Common Enchanted Items" hidden="false" collective="false" import="true" targetId="5857-a7aa-f954-a027" type="selectionEntryGroup" sortIndex="12"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="31dc-7d00-f7c8-4dc4" name="Magic Armour" hidden="false" collective="false" import="true">
@@ -9192,61 +9294,95 @@ the Crusader’s Clarion charge, their mount and all mounts in the unit they hav
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="96c5-bd84-4c45-491d" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="d4ac-a984-8ca4-cd55" name="Cuirass of Fortune" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d4ac-a984-8ca4-cd55" name="Cuirass of Fortune" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7778-02c5-bc6e-1584" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c2b1-aefc-2f40-9f93" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="2566-b6fc-1ada-b0af" name="Cuirass of Fortune" publicationId="9e23-79cb-pubN75312" page="180" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. The Knight may re-roll 1&apos;s when rolling To Hit, To Wound and when making armour saves.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
+          <categoryLinks>
+            <categoryLink name="Suits of Armour" hidden="false" id="4c53-5603-21f4-1135" targetId="9a61-618b-519a-807c" primary="false"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="Heavy Armour" id="0f8a-765b-bf13-caa4" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
+              <modifiers>
+                <modifier type="set" value="Cuirass of Fortune" field="annotation"/>
+                <modifier type="append" value="The Knight may re-roll 1&apos;s when rolling To Hit, To Wound and when making armour saves.
+" field="ff58-91e4-84d7-e6e4"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="f667-6e97-ec08-38ea" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="0442-fa2d-2ab7-1f76" name="Armour of the Midsummer Sun" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0442-fa2d-2ab7-1f76" name="Armour of the Midsummer Sun" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9157-1b19-7d6e-46b0" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="684a-604a-68e6-4e2b" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="17d5-d1f9-8f84-cbbe" name="Armour of the Midsummer Sun" publicationId="e3da-3848-ff08-a482" page="10" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. Opponents suffer a -1 penalty To Hit the wearer of the Armour of the Midsummer Sun with both missile and close combat attacks.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="35"/>
           </costs>
+          <categoryLinks>
+            <categoryLink name="Suits of Armour" hidden="false" id="42d8-e81d-6da0-3ebb" targetId="9a61-618b-519a-807c" primary="false"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="Heavy Armour" id="32d4-8e09-8a05-1bb3" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
+              <modifiers>
+                <modifier type="set" value="Armour of the Midsummer Sun" field="annotation"/>
+                <modifier type="append" value="Opponents suffer a -1 penalty To Hit the wearer of the Armour of the Midsummer Sun with both missile and close combat attacks.
+" field="ff58-91e4-84d7-e6e4"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="f667-6e97-ec08-38ea" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="b61c-0740-d2dd-fe4b" name="Gilded Cuirass" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b61c-0740-d2dd-fe4b" name="Gilded Cuirass" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f959-cfb2-8e12-b69a" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="22d4-422f-b024-b24b" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="f72f-439b-8375-36bb" name="Gilded Cuirass" publicationId="e3da-3848-ff08-a482" page="11" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Grail Vow only. Heavy armour. The wearer of the Gilded Cuirass gains the Regeneration (6+) special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
+          <categoryLinks>
+            <categoryLink name="Suits of Armour" hidden="false" id="d427-0b1e-fc1a-b753" targetId="9a61-618b-519a-807c" primary="false"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="Heavy Armour" id="0219-30df-499f-912c" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
+              <modifiers>
+                <modifier type="set" value="Gilded Cuirass" field="annotation"/>
+                <modifier type="append" value="Regeneration (6+)" field="ff58-91e4-84d7-e6e4"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="f667-6e97-ec08-38ea" shared="true" includeChildSelections="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="model" childId="b582-d52e-24b6-5430" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="4e1b-dc0b-cfff-ef63" name="Gromril Great Helm" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="4e1b-dc0b-cfff-ef63" name="Gromril Great Helm" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="78e9-fcb4-e5da-7984" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b684-f361-d387-57b6" type="max"/>
@@ -9256,87 +9392,163 @@ the Crusader’s Clarion charge, their mount and all mounts in the unit they hav
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The Gromril Great Helm gives the wearer a 6+ armour save and allows them to re-roll failed armour saves.</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The Gromril Great Helm allows the wearer to re-roll failed armour saves.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="387c-2b7c-0a30-7305" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="06ac-07c6-a0c9-1449" name="Armour of Agilulf" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="06ac-07c6-a0c9-1449" name="Armour of Agilulf" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="edc4-edca-8038-0f4a" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3240-6517-5640-9d1f" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="9ce1-e9bb-4c71-0ed5" name="Armour of Agilulf" publicationId="e3da-3848-ff08-a482" page="11" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour and shield (shield must be used at all times). The wearer of the Armour of Agilulf gains Weapon Skill 10.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
+          <categoryLinks>
+            <categoryLink name="Suits of Armour" hidden="false" id="b3f0-8b11-a5fb-ba7b" targetId="9a61-618b-519a-807c" primary="false"/>
+            <categoryLink name="Handheld Armour" hidden="false" id="f6b0-d16b-4ca3-8389" targetId="ba52-4f0c-71ae-b52d" primary="false"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="Shield" id="6963-6ed8-b07c-a623" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
+              <modifiers>
+                <modifier type="set" value="Armour of Agilulf" field="annotation"/>
+                <modifier type="append" value="Shield must be used at all
+times.
+" field="ff58-91e4-84d7-e6e4"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Heavy Armour" id="5640-8dfc-054e-3abd" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
+              <modifiers>
+                <modifier type="set" value="Armour of Agilulf" field="annotation"/>
+                <modifier type="append" value="The wearer of the Armour of Agilulf gains
+Weapon Skill 10.
+" field="ff58-91e4-84d7-e6e4"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="f667-6e97-ec08-38ea" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="0210-637d-ff12-a760" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="484d-5c2e-adcc-45df" name="Orcbane Shield" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="484d-5c2e-adcc-45df" name="Orcbane Shield" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b22f-d981-ed75-9536" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d222-b4ae-4f44-63f1" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="f65b-a1bc-7765-f310" name="Orcbane Shield" publicationId="e3da-3848-ff08-a482" page="11" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Shield. Any Orc or Goblin unit within 12&quot; of the model with the Orcbane Shield that must take an Animosity test fails it on a 1-2 instead of a 1.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
+          <categoryLinks>
+            <categoryLink name="Handheld Armour" hidden="false" id="4353-4756-e108-2806" targetId="ba52-4f0c-71ae-b52d" primary="false"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="Shield" id="3589-73df-1165-35d4" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
+              <modifiers>
+                <modifier type="set" value="Orcbane Shield" field="annotation"/>
+                <modifier type="append" value="Any Orc or Goblin unit within 12&quot; of the model with the Orcbane Shield that must take an Animosity test fails it on a 1-2 instead of a 1." field="ff58-91e4-84d7-e6e4"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="0210-637d-ff12-a760" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="d288-dab5-64c8-47a0" name="Anointed Armour" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d288-dab5-64c8-47a0" name="Anointed Armour" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4d7e-d7ec-be7a-ae28" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b923-02f9-f89f-5225" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="1fcc-2ce2-ef55-98ab" name="Anointed Armour" publicationId="e3da-3848-ff08-a482" page="11" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Infantry or Cavalry only. Heavy armour. The wearer of this armour may re-roll failed Ward saves as long as they have the Blessing of the Lady.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
+          <categoryLinks>
+            <categoryLink name="Suits of Armour" hidden="false" id="5009-f891-a3a7-473c" targetId="9a61-618b-519a-807c" primary="false"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="Heavy Armour" id="20bf-2cee-e844-6c41" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
+              <modifiers>
+                <modifier type="set" value="Anointed Armour" field="annotation"/>
+                <modifier type="append" value="The wearer may re-roll failed Ward saves as long as they have the Blessing of the Lady." field="ff58-91e4-84d7-e6e4"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="f667-6e97-ec08-38ea" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="22c9-1606-58f8-2e60" shared="true" includeChildSelections="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="29c8-2eab-a2bc-f69c" name="The Grail Shield" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="29c8-2eab-a2bc-f69c" name="The Grail Shield" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="93af-e668-dbc5-8820" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4fab-5ba5-b398-e4f4" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="06d8-e4a0-ecdf-2843" name="The Grail Shield" publicationId="e3da-3848-ff08-a482" page="11" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Grail Vow only. Shield. The wearer gains +1 to the Ward save gained from the Blessing of the Lady.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
+          <categoryLinks>
+            <categoryLink name="Handheld Armour" hidden="false" id="3674-8a37-6b20-eb5f" targetId="ba52-4f0c-71ae-b52d" primary="false"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="Shield" id="13cc-2884-77bd-520d" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
+              <modifiers>
+                <modifier type="set" value="The Grail Shield" field="annotation"/>
+                <modifier type="append" value="The wearer gains +1 to the Ward save gained from the Blessing of the Lady." field="ff58-91e4-84d7-e6e4"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="0210-637d-ff12-a760" shared="true" includeChildSelections="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="model" childId="b582-d52e-24b6-5430" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="3aa6-417a-caf8-b9ff" name="Helm of the Dragon Slayer" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="3aa6-417a-caf8-b9ff" name="Helm of the Dragon Slayer" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ff92-eff1-1828-104d" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4364-5190-ecf5-8bd9" type="max"/>
@@ -9344,37 +9556,53 @@ the Crusader’s Clarion charge, their mount and all mounts in the unit they hav
           <profiles>
             <profile id="aecb-bbf4-0e82-d80d" name="Helm of the Dragon Slayer" publicationId="e3da-3848-ff08-a482" page="11" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
               <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">This armour gives the wearer a 6+ armour save. In addition, the Ward Save from the Blessing of the Lady is increased to 5+ against close combat attacks and the wearer gains the Immunity (Flaming Attacks) special rule.</characteristic>
+                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
+                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The Ward Save from the Blessing of the Lady is increased to 5+ against close combat attacks and the wearer gains the Immunity (Flaming Attacks) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="387c-2b7c-0a30-7305" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="6e0c-cefe-1bec-126f" name="Ironspike Shield" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="6e0c-cefe-1bec-126f" name="Ironspike Shield" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d387-dba7-7203-0913" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ba88-2843-8d28-617c" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="8673-201d-98f8-9549" name="Ironspike Shield" publicationId="e3da-3848-ff08-a482" page="11" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Shield. Whenever an enemy model rolls a natural 1 To Hit against the bearer of this shield, they immediately suffer a Strength 3 Hit with the Armour Piercing (1) special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
+          <categoryLinks>
+            <categoryLink name="Handheld Armour" hidden="false" id="83cf-4e67-0b0e-0e9d" targetId="ba52-4f0c-71ae-b52d" primary="false"/>
+          </categoryLinks>
+          <infoLinks>
+            <infoLink name="Shield" id="2e43-5964-b391-ffe3" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
+              <modifiers>
+                <modifier type="set" value="Ironspike Shield" field="annotation"/>
+                <modifier type="append" value="Whenever an enemy model rolls a natural 1 To Hit against the bearer of this shield, they immediately suffer a Strength 3 Hit with the Armour Piercing (1) special rule." field="ff58-91e4-84d7-e6e4"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="0210-637d-ff12-a760" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="196d-49e7-3df8-da22" name="Common Magic Armour" hidden="false" collective="false" import="true" targetId="557c-c8c5-0c0f-d2b3" type="selectionEntryGroup"/>
+        <entryLink id="196d-49e7-3df8-da22" name="Common Magic Armour" hidden="false" collective="false" import="true" targetId="557c-c8c5-0c0f-d2b3" type="selectionEntryGroup" sortIndex="11"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="e80a-27cb-41ba-a274" name="Magic Standards" hidden="false" collective="false" import="true">
@@ -9382,7 +9610,7 @@ the Crusader’s Clarion charge, their mount and all mounts in the unit they hav
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4cba-e161-8dc5-f690" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="53a0-ba29-f1b3-6fc8" name="Banner of Defence" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="53a0-ba29-f1b3-6fc8" name="Banner of Defence" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4074-adf1-12fb-265b" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d6ee-6408-45f5-2f18" type="max"/>
@@ -9398,7 +9626,7 @@ the Crusader’s Clarion charge, their mount and all mounts in the unit they hav
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1375-85f8-819c-b4e3" name="Valorous Standard" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1375-85f8-819c-b4e3" name="Valorous Standard" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3bb9-d437-bae8-4215" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5bf5-3a80-f913-b84b" type="max"/>
@@ -9414,7 +9642,7 @@ the Crusader’s Clarion charge, their mount and all mounts in the unit they hav
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e15e-1174-67ae-a8c8" name="Twilight Banner" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="e15e-1174-67ae-a8c8" name="Twilight Banner" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="467d-8e2b-4845-6e54" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="87be-cb67-8efe-4da7" type="max"/>
@@ -9430,7 +9658,7 @@ the Crusader’s Clarion charge, their mount and all mounts in the unit they hav
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="18b7-991b-b5ce-925f" name="Conqueror&apos;s Tapestry" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="18b7-991b-b5ce-925f" name="Conqueror&apos;s Tapestry" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0ab2-8ca6-85a3-e9c0" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="facc-5431-a0f5-ab58" type="max"/>
@@ -9445,8 +9673,15 @@ the Crusader’s Clarion charge, their mount and all mounts in the unit they hav
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="b9c7-1e59-a035-7647" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="ce9c-0d32-d42b-8aa2" name="Banner of Chalons" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ce9c-0d32-d42b-8aa2" name="Banner of Chalons" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="c8ab-c4ed-9998-ee01" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e2a7-56b1-c7db-1a62" type="max"/>
@@ -9462,7 +9697,7 @@ the Crusader’s Clarion charge, their mount and all mounts in the unit they hav
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f2a3-6f8f-5d67-b6cd" name="Errantry Banner" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="f2a3-6f8f-5d67-b6cd" name="Errantry Banner" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0c2b-a34a-0fba-a7f9" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="true" id="0cfd-f083-46da-3755" type="max"/>
@@ -9470,21 +9705,28 @@ the Crusader’s Clarion charge, their mount and all mounts in the unit they hav
           <profiles>
             <profile id="7e8f-f4cf-557d-c7ac" name="Errantry Banner" publicationId="9e23-79cb-pubN75312" page="127" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">Knights Errant only. All Knights Errant in the unit get a +1 Strength bonus on any turn they charge. However, a unit with this banner suffers -2 to its Ld for any Impetuous tests.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">All Knights Errant in the unit get a +1 Strength bonus on any turn they charge. However, a unit with this banner suffers -2 to its Ld for any Impetuous tests.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="unit" childId="6da8-1b92-1a33-bb66" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="ee91-c95c-241e-845e" name="Banner of the Lady´s Grace" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="ee91-c95c-241e-845e" name="Banner of the Lady&apos;s Grace" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b329-a6c0-701f-e4bd" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4302-01ab-7f25-736c" type="max"/>
           </constraints>
           <profiles>
-            <profile id="dd2c-33d8-2794-147f" name="Banner of the Lady´s Grace" publicationId="e3da-3848-ff08-a482" page="11" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
+            <profile id="dd2c-33d8-2794-147f" name="Banner of the Lady&apos;s Grace" publicationId="e3da-3848-ff08-a482" page="11" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
                 <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The unit carrying the Banner of the Lady’s Grace ignores all negative modifiers to its Leadership characteristic.</characteristic>
               </characteristics>
@@ -9494,7 +9736,7 @@ the Crusader’s Clarion charge, their mount and all mounts in the unit they hav
             <cost name="pts" typeId="points" value="50"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="72f8-6f08-6dea-03d5" name="Banner of the Lady" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="72f8-6f08-6dea-03d5" name="Banner of the Lady" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="3180-1a9f-fb8c-bf5c" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dab5-59b3-ae7a-81ca" type="max"/>
@@ -9510,7 +9752,7 @@ the Crusader’s Clarion charge, their mount and all mounts in the unit they hav
             <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="47d2-f382-8e91-492c" name="Crusader&apos;s Tapestry" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="47d2-f382-8e91-492c" name="Crusader&apos;s Tapestry" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="552d-8db6-7275-7c07" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a0b8-9535-0596-e09f" type="max"/>
@@ -9526,7 +9768,7 @@ the Crusader’s Clarion charge, their mount and all mounts in the unit they hav
             <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2b7e-85fc-c69d-8e26" name="Banner of Honourable Warfare" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="2b7e-85fc-c69d-8e26" name="Banner of Honourable Warfare" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="347b-c554-dca9-d2c0" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="455d-7ed1-5f29-bb41" type="max"/>
@@ -9542,7 +9784,7 @@ the Crusader’s Clarion charge, their mount and all mounts in the unit they hav
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="892f-dfb1-86c4-7cd6" name="Banner of the Zealous Knight" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="892f-dfb1-86c4-7cd6" name="Banner of the Zealous Knight" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2b93-04cc-fcd6-512a" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f8ba-98d5-7aaf-1965" type="max"/>
@@ -9560,7 +9802,7 @@ the Crusader’s Clarion charge, their mount and all mounts in the unit they hav
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="2640-4fd6-6e24-798b" name="Common Magic Standards" hidden="false" collective="false" import="true" targetId="2613-24d7-a26e-eb37" type="selectionEntryGroup"/>
+        <entryLink id="2640-4fd6-6e24-798b" name="Common Magic Standards" hidden="false" collective="false" import="true" targetId="2613-24d7-a26e-eb37" type="selectionEntryGroup" sortIndex="12"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="671f-f2bd-a42e-d104" name="Magic Weapons" hidden="false" collective="false" import="true">
@@ -9568,7 +9810,7 @@ the Crusader’s Clarion charge, their mount and all mounts in the unit they hav
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8a87-5f7f-a82c-6204" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="455b-b48a-f49b-a4b6" name="Sword of Heroes" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="455b-b48a-f49b-a4b6" name="Sword of Heroes" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="17de-ecb4-e9c8-6b2d" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fc1b-6842-5800-6b72" type="max"/>
@@ -9586,7 +9828,7 @@ the Crusader’s Clarion charge, their mount and all mounts in the unit they hav
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="cc18-e073-96ef-9e25" name="Sword of the Lady&apos;s Champion" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="cc18-e073-96ef-9e25" name="Sword of the Lady&apos;s Champion" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7bb5-6f7e-7148-1543" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0e98-85ff-2476-4fdf" type="max"/>
@@ -9604,26 +9846,40 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="model" childId="b582-d52e-24b6-5430" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="c0a2-f079-ccc3-d3b3" name="Silver Lance of the Blessed" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="c0a2-f079-ccc3-d3b3" name="Silver Lance of the Blessed" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f2b8-fe19-a97d-98dd" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4bd2-1785-b441-0941" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="4431-3d3e-2cdf-a14b" name="Silver Lance of the Blessed" publicationId="9e23-79cb-pubN75312" page="180" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Heavy lance. If the model has the Blessing of the Lady, then all attacks with the Silver Lance of the Blessed automatically hit. In addition, all successful enemy armour saves and Ward saves must be re-rolled. However, if the model wielding the lance flees for any reason, he suffers D6 Flaming Strength 4 hits with the Ignores Armour Saves special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="70"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Heavy Lance" id="8240-d002-1df4-88db" hidden="false" type="profile" targetId="e56e-fedf-c550-5d81">
+              <modifiers>
+                <modifier type="set" value="Silver Lance of the Blessed" field="annotation"/>
+                <modifier type="append" value="If the model has the Blessing of the Lady, then all attacks with the Silver Lance of the Blessed automatically hit. In addition, all successful enemy armour saves and Ward saves must be re-rolled. However, if the model wielding the lance flees for any reason, he suffers D6 Flaming Strength 4 hits with the Ignores Armour Saves special rule.
+" field="de63-d6da-efa8-00ac"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model-or-unit" childId="b906-254a-7949-9e08" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="885c-985a-658a-ecb6" name="Sword of the Quest" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="885c-985a-658a-ecb6" name="Sword of the Quest" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8666-1a7a-d7b5-8d1f" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f7f5-3adc-4f32-5bb8" type="max"/>
@@ -9640,26 +9896,40 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="model" childId="94fa-c4db-0cac-08b9" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="0e80-39bb-45bb-d702" name="Wyrmlance" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0e80-39bb-45bb-d702" name="Wyrmlance" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f56e-980c-f4d8-f169" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8d42-ebe0-a1f8-86a9" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="9c73-12b8-f7c7-3b3d" name="Wyrmlance" publicationId="e3da-3848-ff08-a482" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Heavy lance. The wielder of the Wyrmlance gains a Strength 3 Breath Weapon with the Flaming Attacks special rule. In addition, all attacks made with the Wyrmlance have the Flaming Attacks special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Heavy Lance" id="2a18-61c5-5964-9fab" hidden="false" type="profile" targetId="e56e-fedf-c550-5d81">
+              <modifiers>
+                <modifier type="set" value="Wyrmlance" field="annotation"/>
+                <modifier type="append" value="The wielder of the Wyrmlance gains a Strength 3 Breath Weapon with the Flaming Attacks special rule. In addition, all attacks made with the Wyrmlance have the Flaming Attacks special rule.
+" field="de63-d6da-efa8-00ac"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model-or-unit" childId="b906-254a-7949-9e08" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="53ee-ba01-13c8-1d6e" name="Birth-Sword of Carcassonne" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="53ee-ba01-13c8-1d6e" name="Birth-Sword of Carcassonne" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="e943-0249-8123-4a78" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="aa7e-6b57-38c3-8f3c" type="max"/>
@@ -9668,8 +9938,8 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
             <profile id="8a7e-289b-612a-bcf8" name="Birth-Sword of Carcassonne" publicationId="e3da-3848-ff08-a482" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Birth-sword of Carcassonne gives +1 Strength to the wielder. Enemies wounded by the sword must re- roll any successful Armour saves.</characteristic>
+                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+1</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Enemies wounded by the sword must re- roll any successful Armour saves.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -9677,7 +9947,7 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="559a-dfd1-8084-3ca7" name="Heartwood Lance" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="559a-dfd1-8084-3ca7" name="Heartwood Lance" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b138-ea72-8752-7b28" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5a2f-8381-1f8b-8d52" type="max"/>
@@ -9694,80 +9964,123 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Heavy Lance" id="534e-7b38-d507-08bf" hidden="false" type="profile" targetId="e56e-fedf-c550-5d81">
+              <modifiers>
+                <modifier type="set" value="Heartwood Lance" field="annotation"/>
+                <modifier type="append" value="The Heartwood Lance allows the bearer
+to re-roll all failed rolls to wound.
+" field="de63-d6da-efa8-00ac"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model-or-unit" childId="b906-254a-7949-9e08" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="7936-b652-3009-9459" name="Lance of Artois" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="7936-b652-3009-9459" name="Lance of Artois" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7171-965b-87bd-42ce" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d8d3-fa57-0608-e303" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="b9bf-bc9a-b903-5139" name="Lance of Artois" publicationId="e3da-3848-ff08-a482" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Heavy lance. The Lance of Artois gives the wielder the Killing Blow special rule on turns in which the character charges.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Heavy Lance" id="d2f1-d45e-f75a-f61e" hidden="false" type="profile" targetId="e56e-fedf-c550-5d81">
+              <modifiers>
+                <modifier type="set" value="Lance of Artois" field="annotation"/>
+                <modifier type="append" value="The Lance of Artois gives the wielder the Killing Blow special rule on turns in which the character charges." field="de63-d6da-efa8-00ac"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model-or-unit" childId="b906-254a-7949-9e08" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="4f3b-fa33-5460-55b6" name="Crusader´s Lance" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="4f3b-fa33-5460-55b6" name="Crusader´s Lance" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="bcc1-350e-9c31-e4e2" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2972-aa3a-1616-2bac" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="c544-1607-c6a8-8f85" name="Crusader´s Lance" publicationId="9e23-79cb-pubN75312" page="180" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Heavy lance. This weapon gives the wielder the Devastating Charge and Hatred special rules.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Heavy Lance" id="5b61-f6eb-39a8-1040" hidden="false" type="profile" targetId="e56e-fedf-c550-5d81">
+              <modifiers>
+                <modifier type="set" value="Crusader&apos;s Lance" field="annotation"/>
+                <modifier type="append" value="Devastating Charge, Hatred.
+" field="de63-d6da-efa8-00ac"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model-or-unit" childId="b906-254a-7949-9e08" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="4305-c998-7a8a-5607" name="Frontier Axe" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="4305-c998-7a8a-5607" name="Frontier Axe" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ce37-26a9-1fb8-4e11" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e379-7c52-02c2-e32c" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="2cef-0381-aebc-3863" name="Frontier Axe" publicationId="e3da-3848-ff08-a482" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Great weapon. All attacks made with this weapon have the Multiple Wounds (2) special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Great Weapon" id="1975-ab7f-d6f4-d030" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
+              <modifiers>
+                <modifier type="set" value="Frontier Axe" field="annotation"/>
+                <modifier type="append" value="Multiple Wounds (2)" field="de63-d6da-efa8-00ac"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model-or-unit" childId="abcc-4aa7-4989-7189" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="0709-06cf-fce2-8bbd" name="The Virtuous Lance" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0709-06cf-fce2-8bbd" name="The Virtuous Lance" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="9241-a2dd-9e78-f3b9" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3540-0af2-1bd8-672b" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="0571-2594-ddd6-b3c0" name="The Virtuous Lance" publicationId="e3da-3848-ff08-a482" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Heavy Lance. This lance gives the wielder the Mighty Blow (1) and Multiple Wounds (D3) special rules when charging.. When fighting Monstrous Creatures and Monsters, once you have established how many wounds have been inflicted, roll a D6 and add the number of wounds caused to the score. If the total is equal to 6 or more, remove the model as a casualty. Note that the wielder must cause at least one unsaved Wound for this rule to take effect.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Heavy Lance" id="1d68-c5e8-ce60-9d46" hidden="false" type="profile" targetId="e56e-fedf-c550-5d81">
+              <modifiers>
+                <modifier type="set" value="The Virtuous Lance" field="annotation"/>
+                <modifier type="append" value="This lance gives the wielder the Mighty Blow (1) and Multiple Wounds (D3) special rules when charging. When fighting Monstrous Creatures and Monsters, once you have established how many wounds have been inflicted, roll a D6 and add the number of wounds caused to the score. If the total is equal to 6 or more, remove the model as a casualty. Note that the wielder must cause at least one unsaved Wound for this rule to take effect.
+" field="de63-d6da-efa8-00ac"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model-or-unit" childId="b906-254a-7949-9e08" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="9bda-7607-8625-7a43" name="Foebreaker" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="9bda-7607-8625-7a43" name="Foebreaker" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a604-36e2-3f60-c845" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d877-df17-18e2-66a9" type="max"/>
@@ -9776,8 +10089,8 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
             <profile id="6eae-e207-3d52-4a99" name="Foebreaker" publicationId="e3da-3848-ff08-a482" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">This weapon gives the wielder +1 Strength. Any enemy Character or Lone Model that suffers one or more unsaved wounds from the Foebreaker suffer a -1 penalty Weapon Skill and Attacks (to a minimum of 1) until the end of the next round of Close Combat.</characteristic>
+                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+1</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8"> Any enemy Character or Lone Model that suffers one or more unsaved wounds from the Foebreaker suffer a -1 penalty Weapon Skill and Attacks (to a minimum of 1) until the end of the next round of Close Combat.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -9785,27 +10098,33 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="d503-b578-5777-bc57" name="Sword of the Stout Hearted" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="d503-b578-5777-bc57" name="Sword of the Stout Hearted" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="80dc-28a7-b73a-1be7" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fbee-07a6-63a3-b086" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="358e-5112-d587-8bf6" name="Sword of the Stout Hearted" publicationId="9e23-79cb-pubN75312" page="180" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Great weapon. This weapon gives the wielder the Immunity (Psychology) special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Great Weapon" id="f7e4-21f5-1f6f-ae9c" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
+              <modifiers>
+                <modifier type="set" value="Sword of the Stout Hearted" field="annotation"/>
+                <modifier type="append" value="Immunity (Psychology)" field="de63-d6da-efa8-00ac"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model-or-unit" childId="abcc-4aa7-4989-7189" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="c37f-dfe2-d41a-2106" name="Common Magic Weapons" hidden="false" collective="false" import="true" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup"/>
+        <entryLink id="c37f-dfe2-d41a-2106" name="Common Magic Weapons" hidden="false" collective="false" import="true" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="14"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="f90e-6119-6dae-4b9a" name="Talismans" hidden="false" collective="false" import="true">
@@ -9813,7 +10132,7 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ff80-4759-070d-0a9b" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="153d-c079-a808-8783" name="Sirienne&apos;s Locket" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="153d-c079-a808-8783" name="Sirienne&apos;s Locket" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2669-c226-c599-ab1c" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eadf-e54f-58a5-db31" type="max"/>
@@ -9821,15 +10140,22 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
           <profiles>
             <profile id="2d04-a5dd-7bb6-65f4" name="Sirienne&apos;s Locket" publicationId="9e23-79cb-pubN75312" page="180" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">Bretonnian Lord only. A model with Sirienne&apos;s Locket has Immunity (Killing Blow, Multiple Wounds) and can never suffer more than one wound in any one phase. After the first wound in that phase is suffered, all subsequent wounds suffered during that phase are ignored. The bearer can still be run down by pursuing enemies as normal, and may still be affected as normal by other &quot;instant kill&quot; attacks.</characteristic>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">A model with Sirienne&apos;s Locket has Immunity (Killing Blow, Multiple Wounds) and can never suffer more than one wound in any one phase. After the first wound in that phase is suffered, all subsequent wounds suffered during that phase are ignored. The bearer can still be run down by pursuing enemies as normal, and may still be affected as normal by other &quot;instant kill&quot; attacks.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="55"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="2729-f578-03de-c013" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="dbc7-0fcb-ed6f-98d8" name="Holy Icon" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="dbc7-0fcb-ed6f-98d8" name="Holy Icon" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="abc6-187a-9aa9-9c2d" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1655-b92e-359b-14e0" type="max"/>
@@ -9845,7 +10171,7 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
             <cost name="pts" typeId="points" value="50"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="5df4-475e-49e3-9879" name="Insignia of the Quest" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="5df4-475e-49e3-9879" name="Insignia of the Quest" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="961a-4505-dad9-aa9f" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a746-a68a-449b-9832" type="max"/>
@@ -9853,15 +10179,22 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
           <profiles>
             <profile id="ce1e-9831-041e-5563" name="Insignia of the Quest" publicationId="e3da-3848-ff08-a482" page="11" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">Questing Vow only. If the bearer of the Insignia of the Quest is ever reduced to 1 Wound, then the Knight instantly gains a Ward Save (3+) as long as they remain at 1 Wound. If the character suffers an attack that would kill him before he has gained this Ward save (such as Killing Blow or Multiple Wounds), he will be reduced to 1 Wound, then may attempt his Ward Save (3+) to stay alive and nullify any further wounds caused by the same hit.</characteristic>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">If the bearer of the Insignia of the Quest is ever reduced to 1 Wound, then the Knight instantly gains a Ward Save (3+) as long as they remain at 1 Wound. If the character suffers an attack that would kill him before he has gained this Ward save (such as Killing Blow or Multiple Wounds), he will be reduced to 1 Wound, then may attempt his Ward Save (3+) to stay alive and nullify any further wounds caused by the same hit.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="model" childId="94fa-c4db-0cac-08b9" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="1ccb-2e0b-b0ef-2851" name="Token of the Damsel" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="1ccb-2e0b-b0ef-2851" name="Token of the Damsel" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a5a5-c439-2217-0680" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="95e1-6d72-06d6-72c9" type="max"/>
@@ -9876,8 +10209,20 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="435e-f593-3b48-af1d" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="2729-f578-03de-c013" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="5dcb-d11d-9134-d97c" name="Grail Pendant" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="5dcb-d11d-9134-d97c" name="Grail Pendant" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="30c4-5de8-4930-ed12" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0458-7e33-146c-192a" type="max"/>
@@ -9885,15 +10230,22 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
           <profiles>
             <profile id="3bd8-edad-f5f9-61a5" name="Grail Pendant" publicationId="e3da-3848-ff08-a482" page="11" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">Models with the Grail Vow only. One use only. When the wearer of the Grail Pendant loses their last Wound, roll a D6. On a roll of 2+, the Wound is not lost.</characteristic>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">One use only. When the wearer of the Grail Pendant loses their last Wound, roll a D6. On a roll of 2+, the Wound is not lost.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="model" childId="b582-d52e-24b6-5430" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
-        <selectionEntry id="5ac7-2d2d-d90c-b3a1" name="Lucky Heirloom" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="5ac7-2d2d-d90c-b3a1" name="Lucky Heirloom" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="d19c-0f22-23ad-6ae0" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b88c-f381-fb02-587e" type="max"/>
@@ -9909,7 +10261,7 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0dad-3d2f-9084-71e5" name="Mantle of the Damsel Elena" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="0dad-3d2f-9084-71e5" name="Mantle of the Damsel Elena" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a99b-0ca8-12c2-4aed" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="12d3-fb29-89fc-ce91" type="max"/>
@@ -9927,7 +10279,7 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="6fc8-530a-1dbd-2f30" name="Common Talismans" hidden="false" collective="false" import="true" targetId="946f-a470-9912-9301" type="selectionEntryGroup"/>
+        <entryLink id="6fc8-530a-1dbd-2f30" name="Common Talismans" hidden="false" collective="false" import="true" targetId="946f-a470-9912-9301" type="selectionEntryGroup" sortIndex="8"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="5371-1a99-5c34-804a" name="Arcane Items (One use only)" hidden="false" collective="false" import="true">
@@ -9935,7 +10287,7 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6699-d66c-4b68-a69d" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="946c-6d32-337a-f5af" name="The Silver Mirror" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="946c-6d32-337a-f5af" name="The Silver Mirror" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="7795-b448-a7ce-5547" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b32f-4b8d-4e49-30d7" type="max"/>
@@ -9951,7 +10303,7 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
             <cost name="pts" typeId="points" value="45"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b103-3a38-a8b1-3fef" name="Potion Sacre" hidden="false" collective="false" import="true" type="upgrade">
+        <selectionEntry id="b103-3a38-a8b1-3fef" name="Potion Sacre" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0253-c336-2c0a-19d9" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b2a0-def9-551d-d40f" type="max"/>
@@ -9969,8 +10321,25 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="813e-9371-717e-d9e9" name="Common Arcane Items (One use only)" hidden="false" collective="false" import="true" targetId="3dfd-c3fd-5a56-45f1" type="selectionEntryGroup"/>
+        <entryLink id="813e-9371-717e-d9e9" name="Common Arcane Items (One use only)" hidden="false" collective="false" import="true" targetId="3dfd-c3fd-5a56-45f1" type="selectionEntryGroup" sortIndex="3"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="0" field="6699-d66c-4b68-a69d">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="model" childId="4815-9217-ed66-4522" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="primary-category" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="false"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Vows" id="8d94-23ac-6a23-d05f" hidden="false" collective="false" import="true" defaultSelectionEntryId="bfad-27b6-00e4-fe10">
       <constraints>
