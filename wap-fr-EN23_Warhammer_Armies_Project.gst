@@ -39,6 +39,8 @@
     <publication name="Github" id="8db3-575d-91b-47f8" hidden="false" shortName="sbh427/wap-2.3" publisherUrl="https://github.com/sbh427/wap-2.3"/>
     <publication name="Araby v.1.72" id="fd0a-6995-03c8-1dd6" hidden="false" shortName="Ar" publisher="Warhammer - Araby 9th Ed 1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication name="Kislev 1.2" id="af5e-f821-6fd4-7df3" hidden="false" shortName="Ki" publisher="Warhammer - Kislev 1.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="18.05.2024"/>
+    <publication name="Ogre Kingdoms v.1.6" id="dc4b-67ab-7b8e-baa5" hidden="false" shortName="OK" publisher="Warhammer - Ogre Kingdoms 9th Ed v.1.6" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="14.09.2024"/>
+    <publication name="Daemons of Chaos 1.71" id="314a-aacb-0877-4081" hidden="false" shortName="DoC" publisher="Warhammer - Daemons of Chaos 1.71" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="23.06.2025"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
@@ -10558,6 +10560,18 @@ Unless otherwise specified, Multiple Wounds only apply to close combat attacks.<
 
 Immunity can also include Panic, Fear and Terror. If the majority of the models in a unit have the Immunity (Panic, Fear or Terror) rule, the unit ignores the effects of Panic, Fear or Terror and any such tests it would otherwise had to take.</description>
     </rule>
+    <rule id="b5ab-1a7b-4c54-5733" name="Unit Strength (26)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Unit Strength of 26.</description>
+    </rule>
+    <rule id="211b-ee62-c9cb-e472" name="Unit Strength (14)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Unit Strength of 14.</description>
+    </rule>
+    <rule id="1bb1-d158-8d30-490e" name="Unit Strength (16)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Unit Strength of 16.</description>
+    </rule>
+    <rule id="ff4c-6eb6-dca9-c32e" name="Unit Strength (24)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Unit Strength of 24.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="7e43-605b-bfde-13c3" name="Great Cannon" publicationId="9e23-79cb-pubN66727" page="111" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
@@ -10605,7 +10619,7 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Fire Thrower</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945"/>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">5</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Flaming Attacks.</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Flaming Attacks</characteristic>
       </characteristics>
     </profile>
     <profile id="c198-878a-0683-0889" name="Kindleflame" publicationId="9e23-79cb-pubN66727" page="145" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
