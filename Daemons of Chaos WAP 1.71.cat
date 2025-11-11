@@ -5,7 +5,7 @@
     <catalogueLink type="catalogue" name="Bestiary" id="f60e-240a-8426-d3ed" targetId="1fc9-2903-cb19-5737"/>
   </catalogueLinks>
   <sharedSelectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Lore of Chaos" hidden="false" id="8144-4176-bad4-531d" sortIndex="1" collapsible="true">
+    <selectionEntry type="upgrade" import="true" name="Lore of Chaos" hidden="false" id="8144-4176-bad4-531d" sortIndex="1">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9b00-dbe2-4ee8-21cf"/>
       </constraints>
@@ -540,7 +540,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Lore of Nurgle" hidden="false" id="8b39-ac53-29c2-d695" sortIndex="2" collapsible="true">
+    <selectionEntry type="upgrade" import="true" name="Lore of Nurgle" hidden="false" id="8b39-ac53-29c2-d695" sortIndex="2">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d7fd-5a0a-5ccc-7090" automatic="true"/>
       </constraints>
@@ -1067,7 +1067,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Lore of Slaanesh" hidden="false" id="6635-f101-5f8b-6991" sortIndex="3" collapsible="true">
+    <selectionEntry type="upgrade" import="true" name="Lore of Slaanesh" hidden="false" id="6635-f101-5f8b-6991" sortIndex="3">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dac3-aefc-0625-9421"/>
       </constraints>
@@ -1602,9 +1602,10 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Lore of Tzeentch" hidden="false" id="bdb0-6b92-8131-dc78" sortIndex="4" collapsible="true">
+    <selectionEntry type="upgrade" import="true" name="Lore of Tzeentch" hidden="false" id="bdb0-6b92-8131-dc78" sortIndex="4">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f046-2cc1-bdec-e176"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ce7d-71d1-72cb-c701"/>
       </constraints>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Fires of Change" hidden="false" id="8ccd-bf54-e956-5c55" sortIndex="1">
@@ -2178,6 +2179,13 @@
       <entryLinks>
         <entryLink import="true" name="0. Blue Fire of Tzeentch" hidden="false" id="cd47-5f34-d9b2-9fab" type="selectionEntry" targetId="d760-acbb-99bb-d332"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="0" field="ce7d-71d1-72cb-c701">
+          <conditions>
+            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="4428-57fd-8beb-5733" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Daemon of Khorne" hidden="false" id="e567-8ed8-31d7-1247" sortIndex="10" collective="true">
       <infoLinks>
@@ -2573,7 +2581,7 @@
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Disc of Tzeentch" hidden="false" id="cba6-fb4d-b28b-9e77" sortIndex="28" subType="mount">
+    <selectionEntry type="model" import="true" name="Disc of Tzeentch" hidden="false" id="cba6-fb4d-b28b-9e77" sortIndex="28" subType="mount" collective="true">
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="0c52-6218-b70a-ae7d" targetId="8b8a-34b1-ed30-df11" primary="false"/>
         <categoryLink name="Cavalry" hidden="false" id="2432-b70a-2fb2-c6c7" targetId="bdee-b168-38ba-7d3c" primary="false"/>
@@ -3284,56 +3292,6 @@
       <entryLinks>
         <entryLink import="true" name="Loremaster" hidden="false" id="b3d3-6b91-78fa-a9ac" type="selectionEntry" targetId="a2bf-14a5-6723-7157"/>
       </entryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Rulebook Lores" id="c994-7fff-0996-38f0" hidden="false" collapsible="true">
-          <entryLinks>
-            <entryLink import="true" name="Lore of Beasts" hidden="false" id="45f1-972e-1f8b-0821" type="selectionEntry" targetId="b436-b410-dd41-304f" collapsible="true">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="009a-5837-8bf9-80a5"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Lore of Death" hidden="false" id="43b5-319d-2b93-f6aa" type="selectionEntry" targetId="bc0d-47f8-7220-1e16" collapsible="true">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3f00-20ab-eb6a-e9d2"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Lore of Fire" hidden="false" id="adc1-3756-06e6-e1ab" type="selectionEntry" targetId="4d24-c803-7a05-0894" collapsible="true">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7d47-d64b-58b7-7709"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Lore of Heavens" hidden="false" id="b6b5-6bad-5d42-c255" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee" collapsible="true">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="10a5-1c1f-8df7-95ea"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Lore of Life" hidden="false" id="c81c-afad-f718-89a8" type="selectionEntry" targetId="968d-55ad-604c-f251" collapsible="true">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9638-3a18-8ab6-954c"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Lore of Light" hidden="false" id="5445-5167-3f43-f6f9" type="selectionEntry" targetId="c543-a893-3879-cf32" collapsible="true">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ebab-e9c4-86e0-f306"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Lore of Metal" hidden="false" id="7175-b791-9bc6-b24a" type="selectionEntry" targetId="527f-89f1-1b92-a01d" collapsible="true">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0034-7381-a12a-79cc"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Lore of Shadow" hidden="false" id="226a-5f33-08de-3851" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67" collapsible="true">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0069-2027-7c1c-2c44"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <constraints>
-            <constraint type="min" value="8" field="selections" scope="parent" shared="true" id="9fa4-c7cc-7c51-8617"/>
-            <constraint type="max" value="8" field="selections" scope="parent" shared="true" id="a7a4-4a8d-76d1-1d80"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="All-Seeing Eye" hidden="false" id="3709-20df-82f5-4f24" sortIndex="213">
       <constraints>
@@ -6102,7 +6060,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
     <selectionEntryGroup name="10. Character Options " id="f355-7a26-c779-da20" hidden="false">
       <comment>Alligned General, min 0</comment>
       <entryLinks>
-        <entryLink import="true" name="General" hidden="false" id="1ebb-d3c6-faf8-ae77" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2">
+        <entryLink import="true" name="General" hidden="false" id="1ebb-d3c6-faf8-ae77" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1">
           <infoLinks>
             <infoLink name="Alligned General" id="2a7e-0bc6-daa5-6947" hidden="false" type="infoGroup" targetId="ad3f-f02b-958a-1802"/>
           </infoLinks>
@@ -6186,6 +6144,25 @@ Cursed terrain features placed in this way must be positioned touching an exist
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cade-7486-6efe-926d"/>
       </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Rulebook Lores (Master of Sorcery)" id="be84-edbb-ac89-6f9d" hidden="false">
+      <entryLinks>
+        <entryLink import="true" name="Lore of Heavens" hidden="false" id="69b5-fa64-2cf1-09b1" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee"/>
+        <entryLink import="true" name="Lore of Death" hidden="false" id="3df7-17a2-4b05-000a" type="selectionEntry" targetId="bc0d-47f8-7220-1e16"/>
+        <entryLink import="true" name="Lore of Fire" hidden="false" id="2f8a-2f02-75c4-015f" type="selectionEntry" targetId="4d24-c803-7a05-0894"/>
+        <entryLink import="true" name="Lore of Beasts" hidden="false" id="5a42-236c-1df2-d312" type="selectionEntry" targetId="b436-b410-dd41-304f"/>
+        <entryLink import="true" name="Lore of Life" hidden="false" id="24e2-32fe-623f-0285" type="selectionEntry" targetId="968d-55ad-604c-f251"/>
+        <entryLink import="true" name="Lore of Metal" hidden="false" id="52d7-eaab-6a71-a03f" type="selectionEntry" targetId="527f-89f1-1b92-a01d"/>
+        <entryLink import="true" name="Lore of Light" hidden="false" id="d7db-10c7-de85-2774" type="selectionEntry" targetId="c543-a893-3879-cf32"/>
+        <entryLink import="true" name="Lore of Shadow" hidden="false" id="83c9-82bd-6f23-c3ec" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67"/>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="4428-57fd-8beb-5733" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <profileTypes>
@@ -6523,15 +6500,12 @@ Cursed terrain features placed in this way must be positioned touching an exist
       <selectionEntryGroups>
         <selectionEntryGroup name="61. Lore" id="58a8-69e0-0342-e892" hidden="false">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4e27-b1c1-4bd7-be68-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4e27-b1c1-4bd7-be68-max"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4e27-b1c1-4bd7-be68-min" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4e27-b1c1-4bd7-be68-max" automatic="true"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Lore of Tzeentch" hidden="false" id="65df-a299-2614-04b2" type="selectionEntry" targetId="bdb0-6b92-8131-dc78">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f391-7a0f-34b2-9867"/>
-              </constraints>
-            </entryLink>
+            <entryLink import="true" name="Lore of Tzeentch" hidden="false" id="65df-a299-2614-04b2" type="selectionEntry" targetId="bdb0-6b92-8131-dc78"/>
+            <entryLink import="true" name="61. Lore" hidden="false" id="83d4-7c4b-8378-7cd7" type="selectionEntryGroup" targetId="be84-edbb-ac89-6f9d" flatten="true"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -6702,44 +6676,6 @@ Cursed terrain features placed in this way must be positioned touching an exist
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup name="61. Lore" id="920a-66d3-e520-e641" hidden="false">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="0" field="13ff-8ae2-b38d-6f7a-min">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="0" field="13ff-8ae2-b38d-6f7a-max">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
           <entryLinks>
             <entryLink import="true" name="Lore of Chaos" hidden="false" id="683d-f65b-492d-fbad" type="selectionEntry" targetId="8144-4176-bad4-531d" sortIndex="1">
               <modifiers>
@@ -6852,7 +6788,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" value="0" field="6e9d-e229-8460-8b5b">
+                <modifier type="set" value="0" field="ce7d-71d1-72cb-c701">
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
@@ -6863,15 +6799,25 @@ Cursed terrain features placed in this way must be positioned touching an exist
                   </conditionGroups>
                 </modifier>
               </modifiers>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6e9d-e229-8460-8b5b" automatic="true"/>
-              </constraints>
             </entryLink>
+            <entryLink import="true" name="Rulebook Lores" hidden="false" id="2660-6bda-4198-ff68" type="selectionEntryGroup" targetId="be84-edbb-ac89-6f9d" flatten="true"/>
           </entryLinks>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="13ff-8ae2-b38d-6f7a-min" automatic="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="13ff-8ae2-b38d-6f7a-max" automatic="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="13ff-8ae2-b38d-6f7a-min" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="13ff-8ae2-b38d-6f7a-max" automatic="true"/>
           </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden"/>
+                <modifier type="set" value="0" field="13ff-8ae2-b38d-6f7a-min"/>
+                <modifier type="set" value="0" field="13ff-8ae2-b38d-6f7a-max"/>
+              </modifiers>
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -6922,11 +6868,8 @@ Cursed terrain features placed in this way must be positioned touching an exist
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1508-2634-9787-f6cd-max"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Lore of Tzeentch" hidden="false" id="48f8-563b-0bf7-481a" type="selectionEntry" targetId="bdb0-6b92-8131-dc78">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d9e6-542d-f394-e241"/>
-              </constraints>
-            </entryLink>
+            <entryLink import="true" name="Lore of Tzeentch" hidden="false" id="48f8-563b-0bf7-481a" type="selectionEntry" targetId="bdb0-6b92-8131-dc78"/>
+            <entryLink import="true" name="61. Lore" hidden="false" id="a41d-3bd5-5d59-d757" type="selectionEntryGroup" targetId="be84-edbb-ac89-6f9d" flatten="true"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -7117,44 +7060,6 @@ Cursed terrain features placed in this way must be positioned touching an exist
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup name="61. Lore" id="1af4-a703-21dc-9e12" hidden="false">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="0" field="75d4-0ad7-9769-7403">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="0" field="4fe1-7bd5-b2bb-314b">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
           <entryLinks>
             <entryLink import="true" name="Lore of Chaos" hidden="false" id="9417-7353-eaa0-80d6" type="selectionEntry" targetId="8144-4176-bad4-531d" sortIndex="1">
               <modifiers>
@@ -7273,6 +7178,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
                       <conditions>
                         <condition type="equalTo" value="0" field="selections" scope="parent" childId="23bc-c7eb-cf89-75ce" shared="true" includeChildSelections="true"/>
                         <condition type="equalTo" value="0" field="selections" scope="parent" childId="d0a0-b36d-0420-dd76" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="4428-57fd-8beb-5733" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -7282,11 +7188,24 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="900b-a9b1-e535-d575" automatic="true"/>
               </constraints>
             </entryLink>
+            <entryLink import="true" name="Rulebook Lores (Master of Sorcery)" hidden="false" id="03d1-d4d6-1ed9-7ade" type="selectionEntryGroup" targetId="be84-edbb-ac89-6f9d" flatten="true"/>
           </entryLinks>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="75d4-0ad7-9769-7403" automatic="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4fe1-7bd5-b2bb-314b" automatic="false"/>
           </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden"/>
+                <modifier type="set" value="0" field="75d4-0ad7-9769-7403"/>
+                <modifier type="set" value="0" field="4fe1-7bd5-b2bb-314b"/>
+              </modifiers>
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <infoLinks>
@@ -7977,7 +7896,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
       <entryLinks>
         <entryLink import="true" name="10. Character Options " hidden="false" id="c803-6f84-aaed-af25" type="selectionEntryGroup" targetId="f355-7a26-c779-da20">
           <entryLinks>
-            <entryLink import="true" name="Army Battle Standard" hidden="false" id="93dc-0100-4053-4087" type="selectionEntry" targetId="9519-df8f-0af4-1995">
+            <entryLink import="true" name="Army Battle Standard" hidden="false" id="93dc-0100-4053-4087" type="selectionEntry" targetId="9519-df8f-0af4-1995" sortIndex="2">
               <entryLinks>
                 <entryLink import="true" name="Magic Standards" hidden="false" id="c1e4-a018-fed9-7ec9" type="selectionEntryGroup" targetId="f0ec-52cb-0529-c265"/>
               </entryLinks>
@@ -8060,11 +7979,8 @@ Cursed terrain features placed in this way must be positioned touching an exist
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e662-b29b-1fed-0c64-max"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Lore of Tzeentch" hidden="false" id="73e5-da8c-b278-15be" type="selectionEntry" targetId="bdb0-6b92-8131-dc78">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d705-3103-fc54-2920"/>
-              </constraints>
-            </entryLink>
+            <entryLink import="true" name="Lore of Tzeentch" hidden="false" id="73e5-da8c-b278-15be" type="selectionEntry" targetId="bdb0-6b92-8131-dc78"/>
+            <entryLink import="true" name="Rulebook Lores" hidden="false" id="1ca3-1b17-a724-52ee" type="selectionEntryGroup" targetId="be84-edbb-ac89-6f9d" flatten="true"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
