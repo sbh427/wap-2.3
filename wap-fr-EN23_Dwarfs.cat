@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="d102-4ac0-db8b-5eac" name="Dwarfs WAP 1.6" revision="40" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="d102-4ac0-db8b-5eac" name="Dwarfs WAP 1.6" revision="41" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <profileTypes>
     <profileType id="6aa2-7707-349b-6651" name="Armour Rune">
@@ -2230,21 +2230,6 @@ If the marker is under an enemy unit when the Miners emerge, the Miners are cons
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour save 5+)</characteristic>
           </characteristics>
         </profile>
-        <profile id="54ff-1639-66ce-b75c" name="1" publicationId="aa7b-3583-0834-7bfa" page="171" hidden="false" typeId="be65-e0af-7bd1-11ca" typeName="Boiler Incident Table">
-          <characteristics>
-            <characteristic name="Result" typeId="27a6-de3a-b042-66d2">Remove the Deathroller as a casualty. All units in base contact with the Deathroller suffer D6 Strength 4 Hits with Armour Piercing (1).</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="6d61-92bc-0b5a-2651" name="02-04" publicationId="aa7b-3583-0834-7bfa" page="171" hidden="false" typeId="be65-e0af-7bd1-11ca" typeName="Boiler Incident Table">
-          <characteristics>
-            <characteristic name="Result" typeId="27a6-de3a-b042-66d2">The Deathroller may not move this turn or use its Grinding Attack. If it breaks from combat this round, it is automatically destroyed.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="53e2-42cd-3441-9645" name="05-06" publicationId="aa7b-3583-0834-7bfa" page="171" hidden="false" typeId="be65-e0af-7bd1-11ca" typeName="Boiler Incident Table">
-          <characteristics>
-            <characteristic name="Result" typeId="27a6-de3a-b042-66d2">The Deathroller may only roll one D6 for each of its Movements this turn (including fleeing and pursuit).</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <rules>
         <rule id="c64a-77d4-4904-d259" name="The Best Defence" publicationId="aa7b-3583-0834-7bfa" page="171" hidden="false">
@@ -2307,6 +2292,27 @@ If the marker is under an enemy unit when the Miners emerge, the Miners are cons
       <costs>
         <cost name="pts" typeId="points" value="80"/>
       </costs>
+      <infoGroups>
+        <infoGroup name="Boiler Incident Table" id="a2c0-48c2-a4cc-67c3" hidden="false">
+          <profiles>
+            <profile name="1" typeId="be65-e0af-7bd1-11ca" typeName="Boiler Incident Table" hidden="false" id="54ff-1639-66ce-b75c" publicationId="aa7b-3583-0834-7bfa" page="171">
+              <characteristics>
+                <characteristic name="Result" typeId="27a6-de3a-b042-66d2">Remove the Deathroller as a casualty. All units in base contact with the Deathroller suffer D6 Strength 4 Hits with Armour Piercing (1).</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="02-04" typeId="be65-e0af-7bd1-11ca" typeName="Boiler Incident Table" hidden="false" id="6d61-92bc-0b5a-2651" publicationId="aa7b-3583-0834-7bfa" page="171">
+              <characteristics>
+                <characteristic name="Result" typeId="27a6-de3a-b042-66d2">The Deathroller may not move this turn or use its Grinding Attack. If it breaks from combat this round, it is automatically destroyed.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="05-06" typeId="be65-e0af-7bd1-11ca" typeName="Boiler Incident Table" hidden="false" id="53e2-42cd-3441-9645" publicationId="aa7b-3583-0834-7bfa" page="171">
+              <characteristics>
+                <characteristic name="Result" typeId="27a6-de3a-b042-66d2">The Deathroller may only roll one D6 for each of its Movements this turn (including fleeing and pursuit).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
     </selectionEntry>
     <selectionEntry id="b3af-4ce8-e520-e652" name="Cannon" hidden="false" collective="false" import="true" type="model" sortIndex="20">
       <infoLinks>
@@ -2320,6 +2326,7 @@ If the marker is under an enemy unit when the Miners emerge, the Miners are cons
             <modifier type="append" value="(Cannon)" field="13f9-a26b-05af-3459"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Blackpowder Misfire Chart" id="2046-0029-7fc5-0c2f" hidden="false" type="infoGroup" targetId="bb8f-7181-30f9-fc65"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="119f-b0c7-ee30-2e0f" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -2343,6 +2350,7 @@ If the marker is under an enemy unit when the Miners emerge, the Miners are cons
             <modifier type="append" value="(Stone Thrower)" field="13f9-a26b-05af-3459"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Stone Thrower Misfire Chart" id="2373-fdd7-3fed-d3dd" hidden="false" type="infoGroup" targetId="f6f0-bb1f-f863-3e81"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8042-eae8-d3b1-a471" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -2411,6 +2419,7 @@ If the marker is under an enemy unit when the Miners emerge, the Miners are cons
             <modifier type="set" value="4" field="6ca0-d074-628f-e276"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Blackpowder Misfire Chart" id="5500-56e7-c42b-b7d8" hidden="false" type="infoGroup" targetId="bb8f-7181-30f9-fc65"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="ed4c-e03d-f607-b4f1" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -2726,6 +2735,7 @@ Additional hand weapon that does not give the model the Parry special rule.</cha
             <modifier type="replace" value="+ 2D6" field="d3a4-721b-f750-5564" arg="+ D6"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Blackpowder Misfire Chart" id="573e-c8a5-c801-61a0" hidden="false" type="infoGroup" targetId="bb8f-7181-30f9-fc65"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Dwarf Crew" hidden="false" id="a434-a27c-e5f5-5ba9" type="selectionEntry" targetId="7706-f969-9ff8-3b96"/>
@@ -2755,6 +2765,7 @@ Additional hand weapon that does not give the model the Parry special rule.</cha
             <modifier type="append" value="Multiple Wounds (D3)" field="d3a4-721b-f750-5564"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Blackpowder Misfire Chart" id="4c47-22f4-458f-f6f4" hidden="false" type="infoGroup" targetId="bb8f-7181-30f9-fc65"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Dwarf Crew" hidden="false" id="2cfc-2aba-03a5-9832" type="selectionEntry" targetId="7706-f969-9ff8-3b96"/>
@@ -2916,26 +2927,6 @@ Additional hand weapon that does not give the model the Parry special rule.</cha
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour save 1+)</characteristic>
           </characteristics>
         </profile>
-        <profile id="be16-c3d3-67cb-bba4" name="1" publicationId="aa7b-3583-0834-7bfa" page="173" hidden="false" typeId="179f-a660-aee3-9d7b" typeName="Grudgebreaker Incident Table">
-          <characteristics>
-            <characteristic name="Result" typeId="c322-f782-0f6e-1a5a">Catastrophe!: The Grudgebreaker does not Move or Attack this turn, and suffers D6 Wounds with no saves allowed.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="f109-4507-ae83-5267" name="04-05" publicationId="aa7b-3583-0834-7bfa" page="173" hidden="false" typeId="179f-a660-aee3-9d7b" typeName="Grudgebreaker Incident Table">
-          <characteristics>
-            <characteristic name="Result" typeId="c322-f782-0f6e-1a5a">Clunk: The Grudgebreaker counts as having rolled a 1 for its M or A value this turn.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="a529-3e99-32f4-2200" name="02-03" publicationId="aa7b-3583-0834-7bfa" page="173" hidden="false" typeId="179f-a660-aee3-9d7b" typeName="Grudgebreaker Incident Table">
-          <characteristics>
-            <characteristic name="Result" typeId="c322-f782-0f6e-1a5a">Malfunction: The Grudgebreaker does not Move or Attack this turn.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="c3c1-838d-2505-9307" name="6" publicationId="aa7b-3583-0834-7bfa" page="173" hidden="false" typeId="179f-a660-aee3-9d7b" typeName="Grudgebreaker Incident Table">
-          <characteristics>
-            <characteristic name="Result" typeId="c322-f782-0f6e-1a5a">Overdrive: The Grudgebreaker counts as having rolled a 10 for its M or A value this turn. However, the Grudgebreaker also suffers D3 Wounds with no saves allowed after it has performed its Movement or Attacks.</characteristic>
-          </characteristics>
-        </profile>
       </profiles>
       <rules>
         <rule id="d21d-8362-7f47-49fc" name="Steam-Pressured Engine" publicationId="aa7b-3583-0834-7bfa" page="173" hidden="false">
@@ -2955,6 +2946,32 @@ Additional hand weapon that does not give the model the Parry special rule.</cha
       <costs>
         <cost name="pts" typeId="points" value="140"/>
       </costs>
+      <infoGroups>
+        <infoGroup name="Grudge Breaker Incident Table" id="21f4-c509-8704-939d" hidden="false">
+          <profiles>
+            <profile name="1" typeId="179f-a660-aee3-9d7b" typeName="Grudgebreaker Incident Table" hidden="false" id="be16-c3d3-67cb-bba4" publicationId="aa7b-3583-0834-7bfa" page="173">
+              <characteristics>
+                <characteristic name="Result" typeId="c322-f782-0f6e-1a5a">Catastrophe!: The Grudgebreaker does not Move or Attack this turn, and suffers D6 Wounds with no saves allowed.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="02-03" typeId="179f-a660-aee3-9d7b" typeName="Grudgebreaker Incident Table" hidden="false" id="a529-3e99-32f4-2200" publicationId="aa7b-3583-0834-7bfa" page="173">
+              <characteristics>
+                <characteristic name="Result" typeId="c322-f782-0f6e-1a5a">Malfunction: The Grudgebreaker does not Move or Attack this turn.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="04-05" typeId="179f-a660-aee3-9d7b" typeName="Grudgebreaker Incident Table" hidden="false" id="f109-4507-ae83-5267" publicationId="aa7b-3583-0834-7bfa" page="173">
+              <characteristics>
+                <characteristic name="Result" typeId="c322-f782-0f6e-1a5a">Clunk: The Grudgebreaker counts as having rolled a 1 for its M or A value this turn.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="6" typeId="179f-a660-aee3-9d7b" typeName="Grudgebreaker Incident Table" hidden="false" id="c3c1-838d-2505-9307" publicationId="aa7b-3583-0834-7bfa" page="173">
+              <characteristics>
+                <characteristic name="Result" typeId="c322-f782-0f6e-1a5a">Overdrive: The Grudgebreaker counts as having rolled a 10 for its M or A value this turn. However, the Grudgebreaker also suffers D3 Wounds with no saves allowed after it has performed its Movement or Attacks.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
     </selectionEntry>
     <selectionEntry id="1efb-1bda-2859-a7da" name="Thunderbarge" hidden="false" collective="false" import="true" type="model" sortIndex="31">
       <profiles>
