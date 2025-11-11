@@ -39,6 +39,7 @@
     <publication name="Github" id="8db3-575d-91b-47f8" hidden="false" shortName="sbh427/wap-2.3" publisherUrl="https://github.com/sbh427/wap-2.3"/>
     <publication name="Araby v.1.72" id="fd0a-6995-03c8-1dd6" hidden="false" shortName="Ar" publisher="Warhammer - Araby 9th Ed 1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication name="Ogre Kingdoms v.1.6" id="dc4b-67ab-7b8e-baa5" hidden="false" shortName="OK" publisher="Warhammer - Ogre Kingdoms 9th Ed v.1.6" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="14.09.2024"/>
+    <publication name="Daemons of Chaos 1.71" id="314a-aacb-0877-4081" hidden="false" shortName="DoC" publisher="Warhammer - Daemons of Chaos 1.71" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="23.06.2025"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
@@ -10617,7 +10618,7 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Fire Thrower</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945"/>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">5</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Flaming Attacks.</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Flaming Attacks</characteristic>
       </characteristics>
     </profile>
     <profile id="c198-878a-0683-0889" name="Kindleflame" publicationId="9e23-79cb-pubN66727" page="145" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
