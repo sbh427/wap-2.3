@@ -761,7 +761,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Giant Wolf" hidden="false" id="2acf-8f3a-986b-e5cd" sortIndex="1" subType="mount">
+    <selectionEntry type="model" import="true" name="Giant Wolf" hidden="false" id="2acf-8f3a-986b-e5cd" sortIndex="1" subType="mount" collective="true">
       <profiles>
         <profile name="Giant Wolf" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f578-d371-2ff7-6814" publicationId="53f5-3638-a9ce-8dd3" page="16">
           <characteristics>
@@ -786,7 +786,7 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a27b-95fc-2f70-19ca"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Palanquin" hidden="false" id="49f0-67b2-8e8d-f1af" sortIndex="2" subType="mount">
+    <selectionEntry type="model" import="true" name="Palanquin" hidden="false" id="49f0-67b2-8e8d-f1af" sortIndex="2" subType="mount" collective="true">
       <profiles>
         <profile name="Palanquin" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="fed5-97ec-66f0-f15b" publicationId="53f5-3638-a9ce-8dd3" page="16">
           <characteristics>
@@ -816,7 +816,7 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="60b1-f3e1-a06c-7634"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Great Taurus" hidden="false" id="31cf-80fb-699f-9d4e" sortIndex="3" subType="mount">
+    <selectionEntry type="model" import="true" name="Great Taurus" hidden="false" id="31cf-80fb-699f-9d4e" sortIndex="3" subType="mount" collective="true">
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="6f90-5f73-5a9e-63bf" targetId="8b8a-34b1-ed30-df11" primary="false"/>
         <categoryLink name="Monstrous Cavalry" hidden="false" id="4fc8-36bd-d9a7-28c4" targetId="82d3-4589-72b4-b6ed" primary="false"/>
@@ -868,7 +868,7 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c98d-c74e-202c-af97"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Bale Taurus" hidden="false" id="88f6-0df4-5ef6-abae" sortIndex="4" subType="mount">
+    <selectionEntry type="model" import="true" name="Bale Taurus" hidden="false" id="88f6-0df4-5ef6-abae" sortIndex="4" subType="mount" collective="true">
       <profiles>
         <profile name="Bale Taurus" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="2604-e32c-092c-a6d0" publicationId="53f5-3638-a9ce-8dd3" page="17">
           <characteristics>
@@ -951,7 +951,7 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="20d4-3487-e2ab-efb7"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Altar of Hashut" hidden="false" id="67ab-897f-295a-9fed" sortIndex="5" subType="mount">
+    <selectionEntry type="model" import="true" name="Altar of Hashut" hidden="false" id="67ab-897f-295a-9fed" sortIndex="5" subType="mount" collective="true">
       <categoryLinks>
         <categoryLink name="War Machine" hidden="false" id="cc03-f682-bef1-8bde" targetId="d0ba-7b91-1049-d48b" primary="false"/>
         <categoryLink name="Mount" hidden="false" id="5c7d-4e0d-98dd-2c64" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -1026,7 +1026,7 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="170d-1c66-7e9b-8f4e"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Lammasu" hidden="false" id="4278-bcb3-6704-6095" sortIndex="6" subType="mount">
+    <selectionEntry type="model" import="true" name="Lammasu" hidden="false" id="4278-bcb3-6704-6095" sortIndex="6" subType="mount" collective="true">
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="ca80-c134-9c89-b1af" targetId="8b8a-34b1-ed30-df11" primary="false"/>
         <categoryLink name="Monstrous Creature" hidden="false" id="601c-35d9-8ac9-f126" targetId="b3e5-4b1b-7050-7e02" primary="false"/>
@@ -1341,7 +1341,11 @@
         </selectionEntryGroup>
         <selectionEntryGroup name="60. Wizard Level" id="9ee4-b670-77dd-b87b" hidden="false">
           <entryLinks>
-            <entryLink import="true" name="Wizard Level 1" hidden="false" id="24c8-5096-8baf-b424" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8"/>
+            <entryLink import="true" name="Wizard Level 1" hidden="false" id="24c8-5096-8baf-b424" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
+              <modifiers>
+                <modifier type="set" value="Lammasu" field="annotation" affects="self.entries.profiles.Wizard"/>
+              </modifiers>
+            </entryLink>
           </entryLinks>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fdf1-d96e-b3dc-1dd7"/>
@@ -1365,6 +1369,7 @@
               </profiles>
               <modifiers>
                 <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="parent"/>
+                <modifier type="set" value="Lammasu" field="annotation" affects="self.entries.profiles.Wizard"/>
               </modifiers>
               <comment>Lammasu Wizard level</comment>
             </selectionEntry>
@@ -2785,6 +2790,18 @@
                 </entryLink>
               </entryLinks>
             </entryLink>
+            <entryLink import="true" name="70. Mount" hidden="false" id="a59c-1e98-081a-89b7" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5bde-1172-b3aa-e165"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Giant Wolf" hidden="false" id="dd64-4537-c48b-4309" type="selectionEntry" targetId="2acf-8f3a-986b-e5cd">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5aa7-767f-36ef-fa8e"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
           <constraints>
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="df1b-9593-57b4-5c48"/>
@@ -3816,13 +3833,21 @@ While there are rank and file models left in the unit (except the Command Group)
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="98b3-1852-0e91-2f96" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-          <infoLinks>
-            <infoLink name="Bolt Thrower" id="afd1-7e71-dfa9-ffce" hidden="false" type="profile" targetId="2d26-2a21-00a2-685d">
-              <modifiers>
-                <modifier type="set" value="Spear Chukka" field="name"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Bolt Thrower" hidden="false" id="9283-416f-91a8-efe0">
+              <infoLinks>
+                <infoLink name="Bolt Thrower" id="afd1-7e71-dfa9-ffce" hidden="false" type="profile" targetId="2d26-2a21-00a2-685d">
+                  <modifiers>
+                    <modifier type="set" value="Spear Chukka" field="name"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7a4f-78e1-1d17-f13e-min"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7a4f-78e1-1d17-f13e-max"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
         </entryLink>
       </entryLinks>
       <categoryLinks>
