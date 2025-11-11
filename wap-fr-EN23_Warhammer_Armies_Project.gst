@@ -10557,6 +10557,9 @@ Unless otherwise specified, Multiple Wounds only apply to close combat attacks.<
 
 Immunity can also include Panic, Fear and Terror. If the majority of the models in a unit have the Immunity (Panic, Fear or Terror) rule, the unit ignores the effects of Panic, Fear or Terror and any such tests it would otherwise had to take.</description>
     </rule>
+    <rule id="062c-b646-a4c3-3b7c" name="Dodge (2+)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
+      <description>Models with this rule gain a Ward Save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have Always Strikes First, nor can it be used if the model is subject to Always Strikes Last. Finally, Dodge cannot be used by mounted models, unless specified.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="7e43-605b-bfde-13c3" name="Great Cannon" publicationId="9e23-79cb-pubN66727" page="111" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">

@@ -3499,6 +3499,11 @@ During the game, the Green Knight may disappear at will and reappear in another 
               </costs>
               <categoryLinks>
                 <categoryLink name="Infantry" hidden="false" id="4485-a706-d505-5335" targetId="22c9-1606-58f8-2e60" primary="false"/>
+                <categoryLink name="X Polearm" hidden="false" id="78fc-a2c0-29a1-d38c" targetId="0b0c-acf4-8a6a-dd72" primary="false"/>
+                <categoryLink name="Z Barding" hidden="false" id="d690-de43-cc7a-2cac" targetId="e650-a901-f069-ca88" primary="false"/>
+                <categoryLink name="Z Heavy Armour" hidden="false" id="d3d8-bbea-409f-8e5a" targetId="f667-6e97-ec08-38ea" primary="false"/>
+                <categoryLink name="Z Shield" hidden="false" id="6d85-d1ac-51cc-175b" targetId="0210-637d-ff12-a760" primary="false"/>
+                <categoryLink name="Z Armour" hidden="false" id="98d9-a116-a283-7237" targetId="387c-2b7c-0a30-7305" primary="false"/>
               </categoryLinks>
             </selectionEntry>
             <selectionEntry id="4409-1cf2-d79f-d21a" name="Cecil Gastonne, The Wyrm Slayer" hidden="false" collective="false" import="true" type="model" sortIndex="2">
@@ -3708,12 +3713,12 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f41b-ab8c-7091-9946" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="8d50-5a21-4f95-1868" name="Tristan the Troubadour" hidden="false" collective="false" import="true" type="unit">
+            <selectionEntry id="8d50-5a21-4f95-1868" name="Tristan the Troubadour" hidden="false" collective="false" import="true" type="unit" sortIndex="4">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="85dd-52f3-cea8-5262" type="max"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry id="25e9-4043-2259-3069" name="Tristan the Trobadour" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="25e9-4043-2259-3069" name="Tristan the Trobadour" hidden="false" collective="false" import="true" type="model">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0a97-5132-97be-65a9" type="max"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0404-c75e-4fc6-7cb3" type="min"/>
@@ -3729,23 +3734,8 @@ During the game, the Green Knight may disappear at will and reappear in another 
                         <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
                         <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
                         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                        <characteristic name="LD" typeId="a199-f10b-a038-5730">8</characteristic>
-                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Special Character)</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="20d5-4ded-8fe1-7ac9" name="The Grail Chorale" publicationId="9e23-79cb-pubN75312" page="170" hidden="false" typeId="db89-f4f2-ce9b-6507" typeName="Valourous Ballads">
-                      <characteristics>
-                        <characteristic name="Effect" typeId="38d0-820d-c4e6-de45">The Ward save from the Blessing of the Lady is increased by +1 for Tristan and any unit he has joined this turn.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="e45b-a9cf-550e-0600" name="The Battle-hymn of Quenelles" publicationId="9e23-79cb-pubN75312" page="170" hidden="false" typeId="db89-f4f2-ce9b-6507" typeName="Valourous Ballads">
-                      <characteristics>
-                        <characteristic name="Effect" typeId="38d0-820d-c4e6-de45">Tristan gains +D3 Combat Resolution bonus this turn.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile id="0a26-3380-4c4a-bd64" name="The Anthem of the Uniter" publicationId="9e23-79cb-pubN75312" page="170" hidden="false" typeId="db89-f4f2-ce9b-6507" typeName="Valourous Ballads">
-                      <characteristics>
-                        <characteristic name="Effect" typeId="38d0-820d-c4e6-de45">Tristan and any unit he has joined have the Stubborn special rule this turn.</characteristic>
+                        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Special Character, Human)</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -3754,119 +3744,103 @@ During the game, the Green Knight may disappear at will and reappear in another 
                       <description>Tristan the Trobadour may use a heavy lance despite having the Questing Vow.</description>
                     </rule>
                     <rule id="244e-70f0-44c8-c96c" name="Valourous Ballads" publicationId="9e23-79cb-pubN75312" page="170" hidden="false">
-                      <description>Tristan knows the three songs listed below. He may choose to use one of them at the start of each round of close combat.
-- The Anthem of the Uniter: Tristan and any unit he has joined have the Stubborn special rule this turn.
-- The Battle-hymn of Quenelles: Tristan gains +D3 Combat Resolution bonus this turn.
-- The Grail Chorale: The Ward save from the Blessing of the Lady is increased by +1 for Tristan and any unit he has joined this turn.</description>
+                      <description>Tristan knows the three songs listed below. He may choose to use one of them at the start of each round of close combat.</description>
+                      <modifiers>
+                        <modifier type="set" value="Tristan" field="annotation"/>
+                      </modifiers>
                     </rule>
                   </rules>
                   <infoLinks>
-                    <infoLink id="eee7-fbb7-35f5-23af" name="The Questing Vow" hidden="false" targetId="95bb-836d-2eb7-c79b" type="rule"/>
-                    <infoLink id="29c0-01d0-6198-4043" name="The Blessing of the Lady" hidden="false" targetId="2755-8cce-9b25-0cf5" type="rule"/>
-                    <infoLink id="9746-db40-7c8a-3d6f" name="Lance Formation" hidden="false" targetId="ad7f-7d06-8101-283e" type="rule"/>
+                    <infoLink id="eee7-fbb7-35f5-23af" name="The Questing Vow" hidden="false" targetId="95bb-836d-2eb7-c79b" type="rule">
+                      <modifiers>
+                        <modifier type="set" value="Tristan" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
+                    <infoLink id="29c0-01d0-6198-4043" name="The Blessing of the Lady" hidden="false" targetId="2755-8cce-9b25-0cf5" type="rule">
+                      <modifiers>
+                        <modifier type="set" value="Tristan" field="annotation"/>
+                        <modifier type="set" value="Tristan" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
+                    <infoLink id="9746-db40-7c8a-3d6f" name="Lance Formation" hidden="false" targetId="ad7f-7d06-8101-283e" type="rule">
+                      <modifiers>
+                        <modifier type="set" value="Tristan" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
+                    <infoLink name="Virtue of Noble Disdain" id="068b-955c-5859-15c6" hidden="false" type="profile" targetId="92de-1bc6-9f7e-5293">
+                      <modifiers>
+                        <modifier type="set" value="Tristan" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
-                  <selectionEntries>
-                    <selectionEntry id="1a6b-a58e-7228-e060" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
+                  <entryLinks>
+                    <entryLink id="81b1-d3fc-a9ce-11bc" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
+                    <entryLink import="true" name="Heavy Lance" hidden="false" id="3485-cd3b-b2cf-0aa9" type="selectionEntry" targetId="0548-4aeb-a60c-b378" sortIndex="2">
                       <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6d9f-68f9-bcc4-8e8e" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e56d-1aa1-6e33-7eff" type="max"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1c48-15a9-2590-2591"/>
                       </constraints>
-                      <infoLinks>
-                        <infoLink id="cd68-37ff-1e16-ffbc" name="Heavy Armour" hidden="false" targetId="8e15-bc32-b40c-bad3" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="c483-b845-32f9-b899" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
+                    </entryLink>
+                    <entryLink import="true" name="Heavy Armour" hidden="false" id="73e9-db22-6264-af43" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="3">
                       <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9d5c-4a7a-024e-0724" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4f95-b1db-d337-1a0d" type="max"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4d0f-9e9b-5c05-72a1"/>
                       </constraints>
-                      <infoLinks>
-                        <infoLink id="d282-a063-9c04-b977" name="Shield" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="e27c-b8c6-efbb-26f8" name="Warhorse" hidden="false" collective="false" import="true" type="upgrade">
+                    </entryLink>
+                    <entryLink import="true" name="Shield" hidden="false" id="a075-ac1a-a9fc-c6e2" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="4">
                       <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d9d5-a09c-bb06-00b3" type="max"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d0fc-f093-43d9-f805" type="min"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="32b3-e22e-64e3-a91e"/>
                       </constraints>
-                      <infoLinks>
-                        <infoLink id="0eb2-be19-201d-ab79" name="Warhorse" hidden="false" targetId="734d-6ba5-578f-17cb" type="profile"/>
-                        <infoLink id="9e11-c7b4-2b4c-559b" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                        <infoLink id="5448-85f1-b3ce-e4d7" name="Impact Hits (1)" hidden="false" targetId="bb3b-3ca8-fcbc-a78b" type="rule"/>
-                        <infoLink id="200e-8656-552c-a478" name="Purebred Warhorse" hidden="false" targetId="1c9e-d354-9961-b23b" type="rule"/>
-                      </infoLinks>
-                      <selectionEntries>
-                        <selectionEntry id="a0b4-368b-0df4-e9c8" name="Barding" hidden="false" collective="false" import="true" type="upgrade">
-                          <constraints>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="773d-4c20-ce1a-531a" type="max"/>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c87c-1b4f-d661-7eed" type="min"/>
-                          </constraints>
-                          <infoLinks>
-                            <infoLink id="00ee-c4e1-09ca-b809" name="Barding" hidden="false" targetId="7228-95d3-3384-f234" type="profile"/>
-                          </infoLinks>
-                          <costs>
-                            <cost name="pts" typeId="points" value="0"/>
-                          </costs>
-                        </selectionEntry>
-                      </selectionEntries>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="21a0-2b87-a8da-be25" name="Heavy Lance" hidden="false" collective="false" import="true" type="upgrade">
+                    </entryLink>
+                    <entryLink import="true" name="Purebred Warhorse" hidden="false" id="909e-58f2-1a58-74e0" type="selectionEntry" targetId="1497-3d1c-9283-c24d" sortIndex="5">
                       <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fd2f-1378-9a7a-7a68" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a577-d653-5118-5112" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="7192-5186-d31b-af54" name="Heavy Lance" hidden="false" targetId="e56e-fedf-c550-5d81" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="10ee-78e0-65b7-12b6" name="Virtue of Noble Disdain" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="efc3-89a8-a721-d005" type="max"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="230a-b753-831a-5fae" type="min"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="4ad6-414c-b946-8dad" name="Virtue of Noble Disdain" hidden="false" targetId="92de-1bc6-9f7e-5293" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="8e11-4d64-9463-8fa8" name="Magic Items" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a366-23fd-afc4-1827" type="max"/>
-                        <constraint field="points" scope="parent" value="25" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="2fa7-435c-8b5d-9a06" type="max"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c98c-77d4-8775-7864"/>
                       </constraints>
                       <entryLinks>
-                        <entryLink id="2053-8570-1a04-eb0d" name="Enchanted Items" hidden="false" collective="false" import="true" targetId="8b2b-59ba-dd17-cb80" type="selectionEntryGroup"/>
-                        <entryLink id="81a2-d7df-6dde-80aa" name="Magic Weapons" hidden="false" collective="false" import="true" targetId="671f-f2bd-a42e-d104" type="selectionEntryGroup"/>
-                        <entryLink id="30d5-8d73-9da8-7179" name="Talismans" hidden="false" collective="false" import="true" targetId="f90e-6119-6dae-4b9a" type="selectionEntryGroup"/>
-                        <entryLink id="f745-6208-5424-d2f6" name="Magic Armour" hidden="false" collective="false" import="true" targetId="31dc-7d00-f7c8-4dc4" type="selectionEntryGroup"/>
+                        <entryLink import="true" name="Barding" hidden="false" id="8abc-18bb-3bec-784c" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fea6-e6b1-eeaf-0271"/>
+                          </constraints>
+                        </entryLink>
                       </entryLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                  <entryLinks>
-                    <entryLink id="81b1-d3fc-a9ce-11bc" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry"/>
+                    </entryLink>
+                    <entryLink import="true" name="80. Magic Items" hidden="false" id="1484-55f4-8073-257c" type="selectionEntryGroup" targetId="6fdf-b151-bfc8-df82">
+                      <modifiers>
+                        <modifier type="increment" value="25" field="f6ef-d9ff-1300-664c"/>
+                      </modifiers>
+                    </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="pts" typeId="points" value="145"/>
                   </costs>
+                  <infoGroups>
+                    <infoGroup name="Valorous Ballads" id="4d07-5114-ee42-a945" hidden="false">
+                      <profiles>
+                        <profile name="The Anthem of the Uniter" typeId="db89-f4f2-ce9b-6507" typeName="Valourous Ballads" hidden="false" id="0a26-3380-4c4a-bd64" publicationId="9e23-79cb-pubN75312" page="170">
+                          <characteristics>
+                            <characteristic name="Effect" typeId="38d0-820d-c4e6-de45">Tristan and any unit he has joined have the Stubborn special rule this turn.</characteristic>
+                          </characteristics>
+                        </profile>
+                        <profile name="The Battle-hymn of Quenelles" typeId="db89-f4f2-ce9b-6507" typeName="Valourous Ballads" hidden="false" id="e45b-a9cf-550e-0600" publicationId="9e23-79cb-pubN75312" page="170">
+                          <characteristics>
+                            <characteristic name="Effect" typeId="38d0-820d-c4e6-de45">Tristan gains +D3 Combat Resolution bonus this turn.</characteristic>
+                          </characteristics>
+                        </profile>
+                        <profile name="The Grail Chorale" typeId="db89-f4f2-ce9b-6507" typeName="Valourous Ballads" hidden="false" id="20d5-4ded-8fe1-7ac9" publicationId="9e23-79cb-pubN75312" page="170">
+                          <characteristics>
+                            <characteristic name="Effect" typeId="38d0-820d-c4e6-de45">The Ward save from the Blessing of the Lady is increased by +1 for Tristan and any unit he has joined this turn.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </infoGroup>
+                  </infoGroups>
+                  <categoryLinks>
+                    <categoryLink name="X Heavy Lance" hidden="false" id="6f39-a000-462c-9e26" targetId="b906-254a-7949-9e08" primary="false"/>
+                    <categoryLink name="Z Heavy Armour" hidden="false" id="9faa-141b-73bb-c3fd" targetId="f667-6e97-ec08-38ea" primary="false"/>
+                    <categoryLink name="Z Armour" hidden="false" id="ffba-d9f1-4fa8-5a8f" targetId="387c-2b7c-0a30-7305" primary="false"/>
+                    <categoryLink name="Z Shield" hidden="false" id="1357-5c7c-b816-ff27" targetId="0210-637d-ff12-a760" primary="false"/>
+                    <categoryLink name="Z Barding" hidden="false" id="793a-c7b1-00c4-7765" targetId="e650-a901-f069-ca88" primary="false"/>
+                  </categoryLinks>
                 </selectionEntry>
-                <selectionEntry id="f27f-7e6f-b0c6-5188" name="Jules the Jester" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="f27f-7e6f-b0c6-5188" name="Jules the Jester" hidden="false" collective="false" import="true" type="model">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fd10-2bd3-8dea-409b" type="max"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9fa7-b4bc-9ac2-e8ad" type="min"/>
@@ -3882,44 +3856,42 @@ During the game, the Green Knight may disappear at will and reappear in another 
                         <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
                         <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
                         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                        <characteristic name="LD" typeId="a199-f10b-a038-5730">6</characteristic>
+                        <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
                         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character)</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
                   <rules>
                     <rule id="c3cb-5388-0e4a-64b6" name="Jules the Jester" hidden="false">
-                      <description>Jules is an Infantry model armed with a hand weapon. Jules must deploy within 6&quot; of Tristan at the start of the game but may move freely after this. He has the Dodge (2+) and The Peasant’s Duty special rule. In addition, all enemy units within 6&quot; of Jules suffer a -1 penalty to Hit rolls in close combat.</description>
+                      <description>Jules is an Infantry model armed with a hand weapon. Jules must deploy within 6&quot; of Tristan at the start of the game but may move freely after this. In addition, all enemy units within 6&quot; of Jules suffer a -1 penalty to Hit rolls in close combat.</description>
                     </rule>
                   </rules>
                   <infoLinks>
-                    <infoLink id="f692-1c0d-c92a-d2a4" name="Dodge (4+)" hidden="false" targetId="5e3f-9736-a9c0-4a1c" type="rule"/>
-                    <infoLink id="64be-77a5-665f-adb7" name="The Peasant&apos;s Duty" hidden="false" targetId="22b7-cc0d-1805-d244" type="rule"/>
+                    <infoLink id="f692-1c0d-c92a-d2a4" name="Dodge (2+)" hidden="false" targetId="062c-b646-a4c3-3b7c" type="rule">
+                      <modifiers>
+                        <modifier type="set" value="Jules" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
+                    <infoLink id="64be-77a5-665f-adb7" name="The Peasant&apos;s Duty" hidden="false" targetId="22b7-cc0d-1805-d244" type="rule">
+                      <modifiers>
+                        <modifier type="set" value="Jules" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
-                  <selectionEntries>
-                    <selectionEntry id="dd6f-7a60-7fb2-516e" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3e28-14ca-b6fa-83ec" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1ea9-ef1e-e3f9-91a3" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="6023-cf28-9dde-f23b" name="Hand Weapon" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
                   <costs>
-                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="pts" typeId="points" value="30"/>
                   </costs>
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="5ab6-d4e9-d53d-270a" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8c69-dad2-fdc4-1557"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </selectionEntry>
               </selectionEntries>
-              <costs>
-                <cost name="pts" typeId="points" value="175"/>
-              </costs>
             </selectionEntry>
-            <selectionEntry id="0540-acfb-4982-5137" name="The Hermit Knight of Malmont" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="0540-acfb-4982-5137" name="The Hermit Knight of Malmont" hidden="false" collective="false" import="true" type="model" sortIndex="2">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="0d0e-2a94-223a-84e4" type="max"/>
               </constraints>
@@ -3934,59 +3906,35 @@ During the game, the Green Knight may disappear at will and reappear in another 
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">9</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character)</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Human)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <infoLinks>
                 <infoLink id="30eb-bca8-6a01-e6cb" name="The Blessing of the Lady" hidden="false" targetId="2755-8cce-9b25-0cf5" type="rule"/>
                 <infoLink id="b692-5967-69d4-7910" name="The Grail Vow" hidden="false" targetId="cc58-9b35-c062-955a" type="rule"/>
+                <infoLink name="Virtue of the Penitent" id="68bd-27ed-8c1c-8c9a" hidden="false" type="profile" targetId="04fb-8c2e-54ce-16e5"/>
               </infoLinks>
               <selectionEntries>
-                <selectionEntry id="068c-a97d-e3eb-c05d" name="The Sword of Virtue" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="068c-a97d-e3eb-c05d" name="The Sword of Virtue" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d127-e3b4-ea8f-7e58" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b034-451f-73a2-c6dd" type="max"/>
                   </constraints>
-                  <profiles>
-                    <profile id="18b0-3837-8c4d-7ef0" name="The Sword of Virtue" publicationId="9e23-79cb-pubN75312" page="174" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-                      <characteristics>
-                        <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                        <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Great weapon. The Sword of Virtue allows the Hermit Knight to re-roll failed rolls of 1 To Hit and to Wound. In addition, it has the Multiple Wounds (D3) special rule.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
-                </selectionEntry>
-                <selectionEntry id="dff5-6080-675c-4112" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e9e2-dc25-df58-6d3f" type="min"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d877-3d6f-ed8f-5405" type="max"/>
-                  </constraints>
                   <infoLinks>
-                    <infoLink id="4145-b9c9-4586-59cf" name="Heavy Armour" hidden="false" targetId="8e15-bc32-b40c-bad3" type="profile"/>
+                    <infoLink name="Great Weapon" id="a5f6-52ef-f9fb-253c" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
+                      <modifiers>
+                        <modifier type="set" value="The Sword of Virtue" field="annotation"/>
+                        <modifier type="append" value="The Sword of Virtue allows the Hermit Knight to re-roll failed rolls of 1 To Hit and to Wound. In addition, it has the Multiple Wounds (D3) special rule." field="de63-d6da-efa8-00ac"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
                 </selectionEntry>
-                <selectionEntry id="5dee-93e6-b269-32bc" name="Virtue of the Penitent" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="08c5-129f-e900-81b9" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0e41-3122-46cb-143b" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="2329-deb0-dc64-183f" name="Virtue of the Penitent" hidden="false" targetId="04fb-8c2e-54ce-16e5" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="dea0-0f5b-386d-4949" name="The Flask of Sangdragon" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="dea0-0f5b-386d-4949" name="The Flask of Sangdragon" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eadf-f36d-a751-843e" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b75b-839d-1d4c-267a" type="max"/>
@@ -4004,13 +3952,21 @@ During the game, the Green Knight may disappear at will and reappear in another 
                 </selectionEntry>
               </selectionEntries>
               <entryLinks>
-                <entryLink id="af10-a251-36d7-cc2f" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry"/>
+                <entryLink id="af10-a251-36d7-cc2f" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
+                <entryLink import="true" name="Heavy Armour" hidden="false" id="61d1-9651-fa74-5876" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="3">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8477-af15-5280-4be9"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="160"/>
               </costs>
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="a940-5d41-7e49-f8f5" targetId="22c9-1606-58f8-2e60" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="26b8-f1f6-8a63-eb24" name="Repanse de Lyonesse" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="26b8-f1f6-8a63-eb24" name="Repanse de Lyonesse" hidden="false" collective="false" import="true" type="model" sortIndex="3">
               <constraints>
                 <constraint field="selections" scope="force" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="2e40-f755-29a3-c9c6" type="max"/>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="7948-dde7-6242-6093" type="max"/>
@@ -4026,8 +3982,8 @@ During the game, the Green Knight may disappear at will and reappear in another 
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">8</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character)</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Human)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4035,12 +3991,11 @@ During the game, the Green Knight may disappear at will and reappear in another 
                 <infoLink id="843b-ee19-d651-0878" name="Lance Formation" hidden="false" targetId="ad7f-7d06-8101-283e" type="rule"/>
                 <infoLink id="e49c-7ea0-1e2f-2734" name="The Blessing of the Lady" hidden="false" targetId="2755-8cce-9b25-0cf5" type="rule"/>
                 <infoLink id="3cf0-162c-b1ce-72f8" name="Magic Resistance (3)" hidden="false" targetId="9b99-4e37-be08-231a" type="rule"/>
-                <infoLink id="8e00-4abd-43fd-8097" name="The Battle Standard Bearer" hidden="false" targetId="3f4a-7d94-afef-39ea" type="rule"/>
                 <infoLink id="bfb1-7e36-8a12-15b3" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
                 <infoLink id="c18c-490e-914f-129c" name="The Knight&apos;s Vow" hidden="false" targetId="d242-2846-8f1c-6860" type="rule"/>
               </infoLinks>
               <selectionEntries>
-                <selectionEntry id="50fe-a80e-d4f6-16b1" name="Sword of Lyonesse" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="50fe-a80e-d4f6-16b1" name="Sword of Lyonesse" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c55b-1ff7-05ea-784d" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0182-6168-49bd-b486" type="max"/>
@@ -4058,59 +4013,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="7e68-39cc-b817-d1a0" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1a95-4b51-1da8-8484" type="min"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="29ca-239b-cd0f-1de9" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="dc21-ff13-812d-abc9" name="Heavy Armour" hidden="false" targetId="8e15-bc32-b40c-bad3" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="f888-92b8-275e-9735" name="Warhorse" hidden="false" collective="false" import="true" type="model">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="867a-89e3-507f-5a0d" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="9e7c-272d-41de-ca25" name="Warhorse" hidden="false" targetId="734d-6ba5-578f-17cb" type="profile"/>
-                    <infoLink id="f838-206a-a2af-7436" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                    <infoLink id="d912-5511-93f8-b92f" name="Impact Hits (1)" hidden="false" targetId="bb3b-3ca8-fcbc-a78b" type="rule"/>
-                    <infoLink id="9a2e-3e23-f849-2e7d" name="Purebred Warhorse" hidden="false" targetId="1c9e-d354-9961-b23b" type="rule"/>
-                  </infoLinks>
-                  <selectionEntries>
-                    <selectionEntry id="9e2c-bdc3-8c64-a5ef" name="Barding" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c4b6-c672-9472-9236" type="max"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0195-a5c0-90ad-a214" type="min"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="05b8-3f36-12ea-23ed" name="Barding" hidden="false" targetId="7228-95d3-3384-f234" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="5"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                  <costs>
-                    <cost name="pts" typeId="points" value="12"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="f758-519b-3a49-5e8e" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="22f2-cdfe-fdd3-aff2" type="min"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b5d5-1be3-a038-28c5" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="d463-dc48-e05f-10e9" name="Shield" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="2"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="5e5e-c507-9a79-6703" name="The Fleur de Lys Banner" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="5e5e-c507-9a79-6703" name="The Fleur de Lys Banner" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1ad3-aa72-15c7-f905" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bfa9-d57a-92cd-2e66" type="max"/>
@@ -4126,18 +4029,6 @@ During the game, the Green Knight may disappear at will and reappear in another 
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="6024-fc09-24e6-aa1b" name="Heavy Lance" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="39bb-ec79-8446-72b4" type="max"/>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8eaa-df52-8096-d35b" type="min"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="1f2b-eb4e-b168-7cc1" name="Heavy Lance" hidden="false" targetId="e56e-fedf-c550-5d81" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="4"/>
-                  </costs>
-                </selectionEntry>
               </selectionEntries>
               <costs>
                 <cost name="pts" typeId="points" value="185"/>
@@ -4148,14 +4039,44 @@ During the game, the Green Knight may disappear at will and reappear in another 
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a9cd-0dd6-aef1-5260"/>
                   </constraints>
                 </entryLink>
+                <entryLink import="true" name="Shield" hidden="false" id="2fb6-aeed-1182-1da6" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="5">
+                  <costs>
+                    <cost name="pts" typeId="points" value="2"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Heavy Armour" hidden="false" id="d381-86b8-a632-dec0" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="4">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b577-08ff-cd0c-4834"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Heavy Lance" hidden="false" id="8a2d-1c82-fd64-d4ac" type="selectionEntry" targetId="0548-4aeb-a60c-b378" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="4"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Purebred Warhorse" hidden="false" id="6251-c3de-88f8-5694" type="selectionEntry" targetId="1497-3d1c-9283-c24d" sortIndex="6">
+                  <costs>
+                    <cost name="pts" typeId="points" value="12"/>
+                  </costs>
+                  <entryLinks>
+                    <entryLink import="true" name="Barding" hidden="false" id="1012-1096-2989-e112" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                      <costs>
+                        <cost name="pts" typeId="points" value="5"/>
+                      </costs>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
               </entryLinks>
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="8215-606d-f096-f3fb" targetId="22c9-1606-58f8-2e60" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="797f-e99f-a492-bdf0" name="Odo of Outremer" hidden="false" collective="false" import="true" type="unit">
+            <selectionEntry id="797f-e99f-a492-bdf0" name="Odo of Outremer" hidden="false" collective="false" import="true" type="unit" sortIndex="5">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="3d39-fda1-1558-5cac" type="max"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry id="c455-f76e-c13e-2f9e" name="Odo of Outremer" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="c455-f76e-c13e-2f9e" name="Odo of Outremer" hidden="false" collective="false" import="true" type="model">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2be5-6422-e0fc-5161" type="max"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b1aa-33ae-910e-f703" type="min"/>
@@ -4171,71 +4092,35 @@ During the game, the Green Knight may disappear at will and reappear in another 
                         <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
                         <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
                         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                        <characteristic name="LD" typeId="a199-f10b-a038-5730">8</characteristic>
-                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Special Character)</characteristic>
+                        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Special Character, Human)</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
                   <infoLinks>
-                    <infoLink id="9ac0-a664-4f08-ac34" name="The Crusader&apos;s  Vow" hidden="false" targetId="9a7e-75d6-ffa0-32bc" type="rule"/>
-                    <infoLink id="e8a5-9213-c2a1-1d66" name="The Blessing of the Lady" hidden="false" targetId="2755-8cce-9b25-0cf5" type="rule"/>
-                    <infoLink id="4843-07d2-3a3c-8e5f" name="Lance Formation" hidden="false" targetId="ad7f-7d06-8101-283e" type="rule"/>
+                    <infoLink id="9ac0-a664-4f08-ac34" name="The Crusader&apos;s  Vow" hidden="false" targetId="9a7e-75d6-ffa0-32bc" type="rule">
+                      <modifiers>
+                        <modifier type="set" value="Odo" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
+                    <infoLink id="e8a5-9213-c2a1-1d66" name="The Blessing of the Lady" hidden="false" targetId="2755-8cce-9b25-0cf5" type="rule">
+                      <modifiers>
+                        <modifier type="set" value="Odo" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
+                    <infoLink id="4843-07d2-3a3c-8e5f" name="Lance Formation" hidden="false" targetId="ad7f-7d06-8101-283e" type="rule">
+                      <modifiers>
+                        <modifier type="set" value="Odo" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
+                    <infoLink name="Virtue of Confidence" id="8d7a-313e-671f-6aa8" hidden="false" type="profile" targetId="905d-39dd-e3df-a439">
+                      <modifiers>
+                        <modifier type="set" value="Odo" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
                   <selectionEntries>
-                    <selectionEntry id="9bab-2327-600c-8741" name="Heavy Armour" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="88b7-25f7-373d-bbfa" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="16cf-4601-234e-627d" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="28eb-1724-c92d-51b8" name="Heavy Armour" hidden="false" targetId="8e15-bc32-b40c-bad3" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="c7c8-fce5-ba4d-fe15" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4875-1a6e-4ec3-3f03" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cf7a-6f8a-d3b1-90d4" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="f8cd-e64a-1136-4524" name="Shield" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="451f-aec1-dcd1-e2eb" name="Warhorse" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="95de-40a4-cd1b-439a" type="max"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7edc-040e-7005-c55f" type="min"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="8f13-ff24-7fb1-0969" name="Warhorse" hidden="false" targetId="734d-6ba5-578f-17cb" type="profile"/>
-                        <infoLink id="3601-ec76-41ec-10c1" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                        <infoLink id="6840-f990-6d28-6039" name="Impact Hits (1)" hidden="false" targetId="bb3b-3ca8-fcbc-a78b" type="rule"/>
-                        <infoLink id="315c-bd17-ea54-f5bd" name="Purebred Warhorse" hidden="false" targetId="1c9e-d354-9961-b23b" type="rule"/>
-                      </infoLinks>
-                      <selectionEntries>
-                        <selectionEntry id="91ea-0b69-86d4-eba7" name="Barding" hidden="false" collective="false" import="true" type="upgrade">
-                          <constraints>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3c52-7750-fbda-6357" type="max"/>
-                            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="58d1-fd39-9260-c41d" type="min"/>
-                          </constraints>
-                          <infoLinks>
-                            <infoLink id="95b5-8178-7b6e-27fb" name="Barding" hidden="false" targetId="7228-95d3-3384-f234" type="profile"/>
-                          </infoLinks>
-                          <costs>
-                            <cost name="pts" typeId="points" value="0"/>
-                          </costs>
-                        </selectionEntry>
-                      </selectionEntries>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="94c0-1137-b572-6a0c" name="Morning Star of Fracasse" hidden="false" collective="false" import="true" type="upgrade">
+                    <selectionEntry id="94c0-1137-b572-6a0c" name="Morning Star of Fracasse" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
                       <constraints>
                         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ad84-d086-ef5c-3bb3" type="min"/>
                         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eefa-fa24-5358-cb66" type="max"/>
@@ -4253,42 +4138,49 @@ During the game, the Green Knight may disappear at will and reappear in another 
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
                     </selectionEntry>
-                    <selectionEntry id="d101-b109-e434-2143" name="Virtue of Confidence" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="22a6-64dd-fc7d-3fbd" type="max"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eaaa-05ea-4fb0-cf0b" type="min"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="c05c-3d06-3656-2e4a" name="Virtue of Confidence" hidden="false" targetId="905d-39dd-e3df-a439" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="be8e-a787-e2cf-f55f" name="Magic Items" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d83b-616f-f093-1ab6" type="max"/>
-                        <constraint field="points" scope="parent" value="25" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="7d18-871e-a5f5-d30b" type="max"/>
-                      </constraints>
-                      <entryLinks>
-                        <entryLink id="0682-91bd-aacc-f723" name="Enchanted Items" hidden="false" collective="false" import="true" targetId="8b2b-59ba-dd17-cb80" type="selectionEntryGroup"/>
-                        <entryLink id="446d-4eac-3a27-27bf" name="Magic Weapons" hidden="false" collective="false" import="true" targetId="671f-f2bd-a42e-d104" type="selectionEntryGroup"/>
-                        <entryLink id="b85b-365f-2416-5213" name="Talismans" hidden="false" collective="false" import="true" targetId="f90e-6119-6dae-4b9a" type="selectionEntryGroup"/>
-                        <entryLink id="2711-e0d6-b1c4-5821" name="Magic Armour" hidden="false" collective="false" import="true" targetId="31dc-7d00-f7c8-4dc4" type="selectionEntryGroup"/>
-                      </entryLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
                   </selectionEntries>
                   <entryLinks>
-                    <entryLink id="a9c7-c5c7-af3d-a167" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry"/>
+                    <entryLink id="a9c7-c5c7-af3d-a167" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
+                    <entryLink import="true" name="Heavy Armour" hidden="false" id="3e55-e842-1051-997d" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="3">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d502-9bd7-d90b-0b6c"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Shield" hidden="false" id="ef45-2616-df55-44f7" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="4">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c760-4ea2-ad99-7951"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Purebred Warhorse" hidden="false" id="860b-04c4-2361-472a" type="selectionEntry" targetId="1497-3d1c-9283-c24d" sortIndex="5">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bfa2-7083-e4b2-f6ea"/>
+                      </constraints>
+                      <entryLinks>
+                        <entryLink import="true" name="Barding" hidden="false" id="fb64-53a9-e513-a742" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="eb17-25b8-d888-041c"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </entryLink>
+                    <entryLink import="true" name="80. Magic Items" hidden="false" id="76cf-14f0-7c4a-a6b6" type="selectionEntryGroup" targetId="6fdf-b151-bfc8-df82" sortIndex="6">
+                      <modifiers>
+                        <modifier type="increment" value="25" field="f6ef-d9ff-1300-664c"/>
+                      </modifiers>
+                    </entryLink>
                   </entryLinks>
                   <costs>
-                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="pts" typeId="points" value="130"/>
                   </costs>
+                  <categoryLinks>
+                    <categoryLink name="Cavalry" hidden="false" id="6a91-83e2-cf16-fffc" targetId="bdee-b168-38ba-7d3c" primary="false"/>
+                    <categoryLink name="Z Heavy Armour" hidden="false" id="8cde-ed32-e990-d4a3" targetId="f667-6e97-ec08-38ea" primary="false"/>
+                    <categoryLink name="Z Shield" hidden="false" id="a967-0cff-3dde-b679" targetId="0210-637d-ff12-a760" primary="false"/>
+                    <categoryLink name="Z Barding" hidden="false" id="030f-2b2a-52d4-8ef8" targetId="e650-a901-f069-ca88" primary="false"/>
+                    <categoryLink name="Z Armour" hidden="false" id="1474-48b9-44e0-06e1" targetId="387c-2b7c-0a30-7305" primary="false"/>
+                  </categoryLinks>
                 </selectionEntry>
-                <selectionEntry id="9068-c3d6-63d6-b539" name="Suliman the Saracen" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="9068-c3d6-63d6-b539" name="Suliman the Saracen" hidden="false" collective="false" import="true" type="model">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7928-ef59-7678-8f7f" type="max"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4423-56c2-5a32-a5f8" type="min"/>
@@ -4304,84 +4196,53 @@ During the game, the Green Knight may disappear at will and reappear in another 
                         <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
                         <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
                         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                        <characteristic name="LD" typeId="a199-f10b-a038-5730">8</characteristic>
-                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Special Character)</characteristic>
+                        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Special Character, Human)</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
                   <rules>
                     <rule id="6f40-09f5-4774-fd73" name="Warrior of the Sands" publicationId="9e23-79cb-pubN75312" page="172" hidden="false">
-                      <description>Odo of Outremer is included in your army then Suliman the Saracen may also be included. Suliman is a Cavalry model and is armed with a great weapon, light armour and shield. Suliman causes Fear in any turn in which he charges. Odo and Suliman always move and fight together as a unit and may join a unit if you wish.</description>
+                      <description>Suliman causes Fear in any turn in which he charges. Odo and Suliman always move and fight together as a unit and may join a unit if you wish.</description>
                     </rule>
                   </rules>
-                  <selectionEntries>
-                    <selectionEntry id="f016-0d33-faac-8cdb" name="Light Armour" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1ce3-072f-759b-54c2" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="95c3-03b6-5593-d337" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="fd55-7726-e802-673d" name="Light Armour" hidden="false" targetId="4129-1acd-3564-d3ea" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="75be-e78e-73ba-3d0f" name="Shield" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fa53-117c-bf4f-9211" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="daa2-9bca-992c-d936" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="0c1c-2689-d669-dac0" name="Shield" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="b959-b708-f4c8-deec" name="Great Weapon" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7daf-5594-1941-9b10" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="316c-f37e-f8e5-19dd" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="6afc-2930-ac66-6a4f" name="Great Weapon" hidden="false" targetId="193e-bc43-b252-8eff" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="c3ab-0756-f907-1353" name="Warhorse" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="27ea-82dc-1aa7-3d0a" type="max"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ab3d-1500-1434-2962" type="min"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="6b66-161b-644e-fd88" name="Warhorse" hidden="false" targetId="734d-6ba5-578f-17cb" type="profile"/>
-                        <infoLink id="7570-6e58-3d62-61f8" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                        <infoLink id="8df7-32a4-f9aa-109f" name="Impact Hits (1)" hidden="false" targetId="bb3b-3ca8-fcbc-a78b" type="rule"/>
-                        <infoLink id="6cd6-18e9-05fb-cd1a" name="Purebred Warhorse" hidden="false" targetId="1c9e-d354-9961-b23b" type="rule"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
                   <costs>
-                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="pts" typeId="points" value="85"/>
                   </costs>
+                  <categoryLinks>
+                    <categoryLink name="Cavalry" hidden="false" id="a5e2-f012-72fd-7b3b" targetId="bdee-b168-38ba-7d3c" primary="false"/>
+                  </categoryLinks>
+                  <entryLinks>
+                    <entryLink import="true" name="Great Weapon" hidden="false" id="2caf-841b-1b8e-b52e" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="1">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1639-baa5-144d-ef37"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Light Armour" hidden="false" id="a63f-38e2-86bb-cd7d" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="2">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6076-6c8a-c0cb-b028"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Shield" hidden="false" id="ba97-3177-d447-1c4c" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="3">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7af2-cf62-8582-72fa"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Purebred Warhorse" hidden="false" id="b76a-9d96-fdf1-d912" type="selectionEntry" targetId="1497-3d1c-9283-c24d" sortIndex="4">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="99c6-cd9d-7568-e647"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </selectionEntry>
               </selectionEntries>
-              <costs>
-                <cost name="pts" typeId="points" value="215"/>
-              </costs>
             </selectionEntry>
-            <selectionEntry id="3005-7543-5eb3-727a" name="Bertrand the Brigand" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="3005-7543-5eb3-727a" name="Bertrand the Brigand" hidden="false" collective="false" import="true" type="model" sortIndex="1">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="de5b-2995-1b4e-7115" type="max"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry id="de5e-4154-9c3b-460e" name="Bertrand" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="de5e-4154-9c3b-460e" name="Bertrand" hidden="false" collective="false" import="true" type="model">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e983-fb5b-9de6-d0d9" type="max"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b022-6f2f-8c80-b3cb" type="min"/>
@@ -4397,8 +4258,8 @@ During the game, the Green Knight may disappear at will and reappear in another 
                         <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
                         <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
                         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                        <characteristic name="LD" typeId="a199-f10b-a038-5730">8</characteristic>
-                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character)</characteristic>
+                        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Human)</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4420,39 +4281,14 @@ During the game, the Green Knight may disappear at will and reappear in another 
                         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cd7d-e589-efbc-8ebc" type="max"/>
                       </constraints>
                       <profiles>
-                        <profile id="d25f-39dc-9a76-52f7" name="The Black Arrow" publicationId="9e23-79cb-pubN75312" page="176" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
+                        <profile id="d25f-39dc-9a76-52f7" name="The Black Arrow" publicationId="9e23-79cb-pubN75312" page="176" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
                           <characteristics>
-                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Black Arrow has the following profile:
-Range: 36&quot; 
-Strength: 10
-Special Rules: Killing Blow</characteristic>
+                            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">36&quot;</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">10</characteristic>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">One Use Only. Killing Blow. Enchanted Item.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="8767-a7b7-1a8c-3c8d" name="Longbow" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="98c9-85dc-f6f2-f6b4" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1a3f-1e23-acd6-9452" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="83b2-1a11-a710-8638" name="Longbow" hidden="false" targetId="cde7-c47d-3818-1e9d" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="4912-0c05-32e9-ceda" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3af4-357b-9af8-9d90" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="000b-2ec8-e37b-a399" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="5632-be27-bc11-1cc7" name="Hand Weapon" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-                      </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
@@ -4461,14 +4297,26 @@ Special Rules: Killing Blow</characteristic>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="6566-8ba9-361a-7d78" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ff2c-fb0e-727a-dda9"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Longbow" hidden="false" id="aef8-c66e-f6a1-f35a" type="selectionEntry" targetId="f6cc-1342-64fe-6a3e">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f83c-d319-24de-86e2"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </selectionEntry>
-                <selectionEntry id="a068-225f-4eee-44d5" name="Gui the Great" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="a068-225f-4eee-44d5" name="Gui le Gros" hidden="false" collective="false" import="true" type="model">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5689-b40d-000b-b766" type="max"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b791-d6aa-ada9-83d0" type="min"/>
                   </constraints>
                   <profiles>
-                    <profile id="3066-4332-f8f9-e508" name="Gui the Great" publicationId="9e23-79cb-pubN75312" page="176" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+                    <profile id="3066-4332-f8f9-e508" name="Gui le Gros" publicationId="9e23-79cb-pubN75312" page="176" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
                       <characteristics>
                         <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
                         <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
@@ -4478,13 +4326,13 @@ Special Rules: Killing Blow</characteristic>
                         <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
                         <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
                         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                        <characteristic name="LD" typeId="a199-f10b-a038-5730">6</characteristic>
-                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character)</characteristic>
+                        <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
+                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Human)</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
                   <rules>
-                    <rule id="0b62-393b-cff2-fa5a" name="Gui the Great" publicationId="9e23-79cb-pubN75312" page="176" hidden="false">
+                    <rule id="0b62-393b-cff2-fa5a" name="Gui le Gros" publicationId="9e23-79cb-pubN75312" page="176" hidden="false">
                       <description>As long as Gui the Great is alive, the unit he is with may re-roll failed Leadership tests.</description>
                     </rule>
                   </rules>
@@ -4494,43 +4342,29 @@ Special Rules: Killing Blow</characteristic>
                     <infoLink id="e200-e914-3150-6ac8" name="Loner" hidden="false" targetId="32b6-55f6-6cc6-8fc4" type="rule"/>
                     <infoLink id="58ea-03a7-ff99-1a33" name="Sniper" hidden="false" targetId="8977-b58c-704d-705e" type="rule"/>
                   </infoLinks>
-                  <selectionEntries>
-                    <selectionEntry id="e1be-0442-22b1-23b1" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c958-388e-bde6-ed0a" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f137-8938-80b2-dc0e" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="60cc-8742-58bb-257d" name="Hand Weapon" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="8774-a914-f2e8-879e" name="Longbow" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1fa3-2841-1394-81ee" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="482d-281f-1bf2-2961" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="6852-c023-2d06-d650" name="Longbow" hidden="false" targetId="cde7-c47d-3818-1e9d" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="e1bc-4acf-3e2f-41a0" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c9fc-677b-4943-a761"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Longbow" hidden="false" id="7555-f020-5a65-ce63" type="selectionEntry" targetId="f6cc-1342-64fe-6a3e">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="baf9-f819-d4f7-d956"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </selectionEntry>
-                <selectionEntry id="33b8-83b5-3d58-07c4" name="Little Hugo" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="33b8-83b5-3d58-07c4" name="Hugo le Petit" hidden="false" collective="false" import="true" type="model">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="40b6-80df-db01-4273" type="max"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1cd4-0b21-d25d-95cf" type="min"/>
                   </constraints>
                   <profiles>
-                    <profile id="65ba-0f29-88b2-9003" name="Little Hugo" publicationId="9e23-79cb-pubN75312" page="176" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+                    <profile id="65ba-0f29-88b2-9003" name="Hugo le Petit" publicationId="9e23-79cb-pubN75312" page="176" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
                       <characteristics>
                         <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
                         <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
@@ -4540,8 +4374,8 @@ Special Rules: Killing Blow</characteristic>
                         <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
                         <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
                         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-                        <characteristic name="LD" typeId="a199-f10b-a038-5730">7</characteristic>
-                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character)</characteristic>
+                        <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
+                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Human)</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4551,23 +4385,21 @@ Special Rules: Killing Blow</characteristic>
                     <infoLink id="2846-9719-01ed-ac6c" name="Loner" hidden="false" targetId="32b6-55f6-6cc6-8fc4" type="rule"/>
                     <infoLink id="94a1-6d13-2e47-35f5" name="Sniper" hidden="false" targetId="8977-b58c-704d-705e" type="rule"/>
                   </infoLinks>
-                  <selectionEntries>
-                    <selectionEntry id="71ad-2b0b-0e41-8052" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7438-38c7-12cc-e31f" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b311-d584-56b6-7b31" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="369f-102f-b4b7-88c7" name="Hand Weapon" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="578b-824d-5ce1-3081" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4e62-940d-26af-defc"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Warbow" hidden="false" id="7cf4-2d82-5a93-3166" type="selectionEntry" targetId="0ecb-330c-7c20-40c2">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4785-1e72-6078-35bf"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </selectionEntry>
                 <selectionEntry id="ba7b-5c20-77de-94ea" name="Bowman of Bergerac" hidden="false" collective="false" import="true" type="model">
                   <constraints>
@@ -4584,8 +4416,8 @@ Special Rules: Killing Blow</characteristic>
                         <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
                         <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
                         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                        <characteristic name="LD" typeId="a199-f10b-a038-5730">6</characteristic>
-                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry</characteristic>
+                        <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
+                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Human)</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4594,46 +4426,26 @@ Special Rules: Killing Blow</characteristic>
                     <infoLink id="d034-9769-12f1-29af" name="Skirmishers" hidden="false" targetId="9a30-1c5c-12f4-5798" type="rule"/>
                     <infoLink id="49c5-a864-03ad-256b" name="Loner" hidden="false" targetId="32b6-55f6-6cc6-8fc4" type="rule"/>
                   </infoLinks>
-                  <selectionEntries>
-                    <selectionEntry id="3ba7-3b53-b688-f54e" name="Hand Weapon" hidden="false" collective="true" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f99b-9914-b907-0be8" type="max"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1d92-ac6e-d4f5-6a95" type="min"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="5017-30c9-4d76-e551" name="Hand Weapon" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="21fa-64d5-c6db-583a" name="Longbow" hidden="false" collective="true" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="608b-5e00-3fad-0f09" type="max"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="348b-9498-38d0-a243" type="min"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="f217-6034-b577-a212" name="Longbow" hidden="false" targetId="cde7-c47d-3818-1e9d" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="f521-1012-a6bf-ca8e" name="Light Armour" hidden="false" collective="true" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b1ef-78f4-f28f-3a50" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="d47f-9206-a4bc-ece5" name="Light Armour" hidden="false" targetId="4129-1acd-3564-d3ea" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0.5"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
                   <costs>
                     <cost name="pts" typeId="points" value="9"/>
                   </costs>
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="a654-6291-5126-92c6" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6067-110b-787e-310c"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Light Armour" hidden="false" id="e5eb-c9d8-9489-6c4f" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                      <costs>
+                        <cost name="pts" typeId="points" value="1"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Longbow" hidden="false" id="a7d0-ac9a-a49c-8fa1" type="selectionEntry" targetId="f6cc-1342-64fe-6a3e">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6909-b008-5cd8-0e55"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </selectionEntry>
               </selectionEntries>
               <costs>
