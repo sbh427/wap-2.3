@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="522e-5e2a-d54c-4959" name="Armoury" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="68" revision="1" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="522e-5e2a-d54c-4959" name="Armoury" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="68" revision="2" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="X Additional Hand Weapon" id="c4b0-4ee4-7b99-843e" hidden="true"/>
     <categoryEntry name="X Flail" id="a86f-aab3-889c-0b6d" hidden="true"/>
@@ -514,8 +514,40 @@
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="ba52-4f0c-71ae-b52d" shared="true" includeChildSelections="true"/>
           </conditions>
+		</modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Heavy Lance &amp; Shield" hidden="false" id="9eac-5c3e-3026-4d64" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="43a2-2a9f-85f2-8bc4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Heavy Lance" id="9af6-2448-0cc5-4de4" hidden="false" type="profile" targetId="e56e-fedf-c550-5d81"/>
+        <infoLink name="Shield" id="b008-64e5-c6ee-0cfc" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="add" value="{this} is not allowed if not mounted" field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="9eac-5c3e-3026-4d64" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Warbow" hidden="false" id="0ecb-330c-7c20-40c2" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7e50-5141-29af-0d4a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Warbow" id="f6b4-6696-572c-c09c" hidden="false" targetId="51ac-33e6-8924-39dc" type="profile"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
