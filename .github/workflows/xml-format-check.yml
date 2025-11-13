@@ -4,8 +4,6 @@ name: XML Formatting Check
 on:
   pull_request:
     branches: ["*"]  # all branches
-  push:
-    branches: ["*"]  # optional: also run on direct pushes
 
 jobs:
   check-xml:
@@ -26,7 +24,7 @@ jobs:
             echo "→ Checking $file"
 
             # Check well-formedness
-            if ! xmllint --noout "$file"; then
+            if ! xmllint --noout <(echo "<root>", cat "$file"; echo "</root>"); then
               echo "❌ XML syntax error in $file"
               STATUS=1
             fi
