@@ -1091,14 +1091,8 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
       </constraints>
       <infoLinks>
         <infoLink name="Impact Hits (D3)" id="977c-79d8-6e67-5f51" hidden="false" type="rule" targetId="f30d-0b61-2836-689e"/>
-        <infoLink name="Natural Armour (6+)" id="4e05-1c53-c72a-bf16" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
         <infoLink name="Frenzy" id="4810-ef3a-1b08-403c" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
       </infoLinks>
-      <rules>
-        <rule name="Unit Strength and Line of Sight Value" id="d303-ef09-9a73-2ec3" hidden="false" publicationId="dc4b-67ab-7b8e-baa5" page="20">
-          <description>A model mounted on a Mournfang has a Unit Strength and Line of Sight value of 5.</description>
-        </rule>
-      </rules>
       <profiles>
         <profile name="Grimhorn Rhinox" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6d2b-9f76-e764-ce8b" publicationId="dc4b-67ab-7b8e-baa5" page="20">
           <characteristics>
@@ -1119,6 +1113,25 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
         <categoryLink name="Mount" hidden="false" id="dbb0-d256-baef-0e2f" targetId="8b8a-34b1-ed30-df11" primary="false"/>
         <categoryLink name="Monstrous Creature" hidden="false" id="6c67-7674-a713-99d7" targetId="b3e5-4b1b-7050-7e02" primary="false"/>
       </categoryLinks>
+      <infoGroups>
+        <infoGroup name="New Info Group" id="1a04-615c-c530-0119" hidden="false">
+          <infoLinks>
+            <infoLink name="Natural Armour (6+)" id="4e05-1c53-c72a-bf16" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
+          </infoLinks>
+          <rules>
+            <rule name="Unit Strength and Line of Sight Value" id="d303-ef09-9a73-2ec3" hidden="false" publicationId="dc4b-67ab-7b8e-baa5" page="20">
+              <description>A model mounted on a Mournfang has a Unit Strength and Line of Sight value of 5.</description>
+            </rule>
+          </rules>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="ccbb-2e7d-2253-c03f" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoGroup>
+      </infoGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="1. Name-Gnoblars" hidden="false" id="e86c-aad1-8392-3a90" sortIndex="11">
       <costs>
@@ -2398,35 +2411,7 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Flask of Congealed Maw-Juices" hidden="false" id="25dd-7ac2-c353-2e7a" sortIndex="3">
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e17-1185-8c18-06d4"/>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="149e-1d58-3d6a-08d8" includeChildSelections="true" includeChildForces="true"/>
-          </constraints>
-          <profiles>
-            <profile name="Flask of Congealed Maw-Juices" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="9826-3e73-218c-1fc4" publicationId="dc4b-67ab-7b8e-baa5" page="9">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">Model with Great Mawpot only. One use only. This item can be used at the start of any of your Magic phases. For the duration of this turn, you may add one free power dice to each of the model&apos;s casting attempts.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <modifiers>
-            <modifier type="add" value="One more selection of Great Mawpot needed" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="2988-37cf-96e6-4933" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="25dd-7ac2-c353-2e7a" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Halfling Cookbook" hidden="false" id="b1bf-ba29-7c6c-80d0" sortIndex="4">
+        <selectionEntry type="upgrade" import="true" name="Halfling Cookbook" hidden="false" id="b1bf-ba29-7c6c-80d0" sortIndex="3">
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
@@ -2442,7 +2427,7 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Bangstick" hidden="false" id="ac6c-54b0-fe3b-1059" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Bangstick" hidden="false" id="ac6c-54b0-fe3b-1059" sortIndex="4">
           <costs>
             <cost name="pts" typeId="points" value="35"/>
           </costs>
@@ -2458,7 +2443,7 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Grut&apos;s Sickle" hidden="false" id="eec6-8b20-7087-c1cb" sortIndex="6">
+        <selectionEntry type="upgrade" import="true" name="Grut&apos;s Sickle" hidden="false" id="eec6-8b20-7087-c1cb" sortIndex="5">
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
@@ -2517,7 +2502,7 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="The Hungry Maw" hidden="false" id="e84c-738b-2a6c-77f8" sortIndex="2">
+        <selectionEntry type="upgrade" import="true" name="The Hungry Maw" hidden="false" id="e84c-738b-2a6c-77f8" sortIndex="3">
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
@@ -2533,7 +2518,7 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Hellheart" hidden="false" id="79c9-2a24-8048-03d8" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Hellheart" hidden="false" id="79c9-2a24-8048-03d8" sortIndex="4">
           <costs>
             <cost name="pts" typeId="points" value="50"/>
           </costs>
@@ -2548,6 +2533,34 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
               </characteristics>
             </profile>
           </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Flask of Congealed Maw-Juices" hidden="false" id="059d-b27c-721b-e658" sortIndex="2">
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="741b-f2a8-8661-ef68"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="861b-75d5-14a3-3851" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Flask of Congealed Maw-Juices" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="e377-000d-0a7f-fcb5" publicationId="dc4b-67ab-7b8e-baa5" page="9">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">Model with Great Mawpot only. One use only. This item can be used at the start of any of your Magic phases. For the duration of this turn, you may add one free power dice to each of the model&apos;s casting attempts.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="add" value="One more selection of Great Mawpot needed" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="2988-37cf-96e6-4933" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="059d-b27c-721b-e658" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -5730,6 +5743,14 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                   </constraints>
                 </entryLink>
               </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="70. Mount" hidden="false" id="dba7-522d-4687-464a" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+              <entryLinks>
+                <entryLink import="true" name="Grimhorn Rhinox" hidden="false" id="3dcb-895e-d9cf-ce20" type="selectionEntry" targetId="d798-7b83-3a18-2631"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5112-641a-2990-6e10"/>
+              </constraints>
             </entryLink>
           </entryLinks>
           <costs>
