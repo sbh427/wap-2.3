@@ -1,0 +1,46 @@
+name: XML Formatting Check
+
+on:
+  pull_request:
+    branches: ["*"]
+
+jobs:
+  check-xml:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install XML tools
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
+
+      - name: Validate XML files (strict)
+        run: |
+          set -euo pipefail
+          echo "🔍 Checking XML well-formedness..."
+
+          STATUS=0
+          FAILING_FILES=""
+
+          # Find all files starting with XML declaration
+          while IFS= read -r -d '' file; do
+            echo "→ Validating $file"
+
+            # Capture xmllint output (including line numbers)
+            ERROR_OUTPUT=$(xmllint --noout --nonet --noblanks "$file" 2>&1) || true
+
+            if [ -n "$ERROR_OUTPUT" ]; then
+              STATUS=1
+              FAILING_FILES="$FAILING_FILES$file\n$ERROR_OUTPUT\n"
+              echo "❌ Error in $file:"
+              echo "$ERROR_OUTPUT"
+            fi
+          done < <(find . -type f \( -name "*.xml" -o -name "*.gst" -o -name "*.cat" -o -name "*.ros" \) -print0)
+
+          if [ "$STATUS" -ne 0 ]; then
+            echo -e "\n⚠️ XML validation failed for the following files:\n$FAILING_FILES"
+            exit 1
+          fi
+
+          echo "✅ All XML files are well-formed."
