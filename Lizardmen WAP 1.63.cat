@@ -815,9 +815,30 @@ Arcane Vassal&apos;s is not). If a spell cast through an Arcane Vassal is miscas
         <categoryLink name="Monstrous Cavalry" hidden="false" id="f44c-c3f6-06e2-a040" targetId="82d3-4589-72b4-b6ed" primary="false"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Natural Armour (6+)" id="04be-83d3-e4cb-eb31" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
+        <infoLink name="Natural Armour (6+)" id="04be-83d3-e4cb-eb31" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="any" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="From Mount" field="annotation"/>
+          </modifiers>
+        </infoLink>
         <infoLink name="Cold-Blooded" id="2fb0-c905-44a0-771b" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
-        <infoLink name="Blood Frenzy" id="fdda-04d2-89d5-9dbe" hidden="false" type="rule" targetId="603f-57eb-52af-b7f5"/>
+        <infoLink name="Blood Frenzy" id="fdda-04d2-89d5-9dbe" hidden="false" type="rule" targetId="603f-57eb-52af-b7f5">
+          <modifiers>
+            <modifier type="set" value="Aggradon only" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Horned One" hidden="false" id="ae02-d3a6-9482-2dd5" subType="mount" collective="true">
@@ -846,7 +867,24 @@ Arcane Vassal&apos;s is not). If a spell cast through an Arcane Vassal is miscas
       <infoLinks>
         <infoLink name="Fear" id="a651-4d90-032f-c064" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
         <infoLink name="Cold-Blooded" id="beae-fbc0-7f94-8324" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
-        <infoLink name="Natural Armour (6+)" id="385b-920b-793d-2a5a" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
+        <infoLink name="Natural Armour (6+)" id="385b-920b-793d-2a5a" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9">
+          <modifiers>
+            <modifier type="set" value="From Mount" field="annotation"/>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="any" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </infoLink>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Terradon" hidden="false" id="1a4a-502f-be3f-cd1c" subType="mount" collective="true">
@@ -973,7 +1011,24 @@ Arcane Vassal&apos;s is not). If a spell cast through an Arcane Vassal is miscas
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Natural Armour (5+)" id="98cb-bc37-5574-88da" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
+        <infoLink name="Natural Armour (5+)" id="98cb-bc37-5574-88da" hidden="false" type="rule" targetId="306d-711a-1300-587f">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="any" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="From Mount" field="annotation"/>
+          </modifiers>
+        </infoLink>
         <infoLink name="Blood Frenzy" id="7e46-9400-47d7-7db1" hidden="false" type="rule" targetId="603f-57eb-52af-b7f5"/>
         <infoLink name="Cold-Blooded" id="b9a4-077c-5360-4ff8" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
         <infoLink name="Multiple Wounds (D3)" id="8dfd-d99f-ae5d-0ea2" hidden="false" type="rule" targetId="20d3-7f3f-51f9-e10d"/>
@@ -1018,19 +1073,373 @@ Arcane Vassal&apos;s is not). If a spell cast through an Arcane Vassal is miscas
       <categoryLinks>
         <categoryLink name="Monster" hidden="false" id="3e0c-94a8-03a4-f4b6" targetId="e1a0-da31-05c5-9a15" primary="false"/>
       </categoryLinks>
+      <profiles>
+        <profile name="Stegadon" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="efcf-d49e-1b65-35fd">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Saurian) </characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Skink Crew" hidden="false" id="d7a4-19a4-4663-62ee" subType="crew">
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="29e7-72bd-7213-9193" includeChildSelections="false"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="d668-353d-39f4-1e67" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Skink Crew" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="e886-5061-c383-d905">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Lizardman, Skink</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="fa15-bcad-594e-56ad" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="b1e3-c025-0476-beb4" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="791e-4680-529f-def0" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="47d1-df8e-5a87-691a" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+              <entryLinks>
+                <entryLink import="true" name="Javelins" hidden="false" id="6d75-b726-b1cd-23e3" type="selectionEntry" targetId="a923-e8b1-94c0-3f2c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e222-f3aa-6400-ada6" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <infoLinks>
+        <infoLink name="Stubborn" id="bf88-5bb8-dec3-7cb4" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
+        <infoLink name="Cold-Blooded" id="cc70-611d-8cf9-566a" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
+        <infoLink name="Immunity (Psychology)" id="b582-0a9a-7654-bffa" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
+        <infoLink name="Impact Hits (D6+1)" id="8a5d-d987-f3e8-86ea" hidden="false" type="rule" targetId="a043-3e3c-9f8a-3661"/>
+        <infoLink name="Jungle Poisons" id="16bd-1d13-ad92-d6ff" hidden="false" type="rule" targetId="f932-079c-91ed-43b7"/>
+        <infoLink name="Natural Armour (4+)" id="f230-ce0e-c5f1-dc6b" hidden="false" type="rule" targetId="6b43-9dda-f589-0509"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="55. Equipment" hidden="false" id="b5e4-bc8c-d1fc-539c" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cdb7-f869-a2e3-18cc" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8d3e-20d5-0c6a-464c" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Giant Bow" hidden="false" id="d7d8-3dcd-24b2-b860" collective="true" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b850-fd3b-05d1-24df" includeChildSelections="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Bolt Thrower" id="3799-c4a8-3de4-52ac" hidden="false" type="profile" targetId="2d26-2a21-00a2-685d">
+                  <modifiers>
+                    <modifier type="set" value="Multiple Wounds (D3), Poisoned Attacks " field="d3a4-721b-f750-5564"/>
+                    <modifier type="set" value="Giant Bow" field="annotation"/>
+                    <modifier type="set" value="36&quot;" field="1c88-efb0-083f-b945"/>
+                    <modifier type="set" value="5" field="6ca0-d074-628f-e276"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <rules>
+                <rule name="Giant Bow" id="abe9-a70d-959b-ba0e" hidden="false">
+                  <description>Instead of firing another missile weapon in the Shooting phase, one of the Skink Crew may fire the giant bow.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Giant Blowpipe" hidden="false" id="de70-151f-e53b-01f7" collective="true" sortIndex="2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7102-0a73-7c23-beaf" includeChildSelections="false"/>
+              </constraints>
+              <rules>
+                <rule name="Giant Blowpipe" id="ae2a-542a-45d9-28ad" hidden="false">
+                  <description>Instead of firing another missile weapon in the Shooting phase, up to two of the Skink Crew may each fire a giant blowpipe.</description>
+                </rule>
+              </rules>
+              <profiles>
+                <profile name="Giant Blowpipe" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="cd95-ca76-77cf-fc64">
+                  <characteristics>
+                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">18&quot;</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">2</characteristic>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (2D6), Poisoned Attacks</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Giant Blowpipe" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="5f1f-ea0a-d9db-e07c">
+                  <characteristics>
+                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">18&quot;</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">2</characteristic>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (2D6), Poisoned Attacks</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Engine of the Gods" hidden="false" id="322c-0624-4b89-cce7" sortIndex="3" collective="true">
+              <costs>
+                <cost name="pts" typeId="points" value="50"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="25ba-7885-ca31-35f5" includeChildSelections="false"/>
+              </constraints>
+              <rules>
+                <rule name="Portent of Warding" id="78bc-80bc-daea-ce39" hidden="false">
+                  <description> The model and all friendly units within 6&quot; have a 6+ Ward save.</description>
+                </rule>
+                <rule name="Arcane Configuration" id="77e4-56e2-029d-756f" hidden="false">
+                  <description> If you have one or more Engines of the Gods on the battlefield at the start of your Magic phase, select one of the eight Lores of Battle Magic from the Warhammer rulebook. Until the start of your next Magic phase, the casting values for all spells from the selected lore are reduced by 1 (to a minimum of 3).</description>
+                </rule>
+              </rules>
+              <profiles>
+                <profile name="Engine of the Gods" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3bab-0859-3833-f127">
+                  <characteristics>
+                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Innate bound spell</characteristic>
+                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3</characteristic>
+                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">4D6&quot;</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This spell targets every enemy unit within range of the model&apos;s front arc. Each target suffers D6 Strength 4 hits with the Flaming Attacks special rule. </characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
+        <entryLink import="true" name="56. Upgrades" hidden="false" id="6902-9440-ad94-5a70" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Ancient" hidden="false" id="a1a7-5ef1-1177-89ab" collective="true" sortIndex="3">
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9ba7-c1aa-c2a4-a8b4" includeChildSelections="false"/>
+              </constraints>
+              <rules>
+                <rule name="Ancient" id="5897-4ac0-d392-e1c1" hidden="false">
+                  <description>: The Stegadon gains +1 Strength and the Natural Armour (6+) special rule. However, they suffer -1 Initiative and -1 Attacks. </description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Sharpened Horns" hidden="false" id="74e2-79d8-a437-5e46" collective="true" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f1f0-7e50-2f7c-bce9" includeChildSelections="false"/>
+              </constraints>
+              <rules>
+                <rule name="Sharpened Horns" id="57fd-315b-a590-8d9c" hidden="false">
+                  <description>The Stegadon&apos;s its Impact Hits gains the Multiple Wounds (D3) special rule. </description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Unstoppable Stampede" hidden="false" id="24e7-0946-5b32-fc68" collective="true" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6938-ab86-eb28-d0a1" includeChildSelections="false"/>
+              </constraints>
+              <rules>
+                <rule name="Unstoppable Stampede" id="6a81-e313-67b3-e720" hidden="false">
+                  <description>The Stegadon gains the Devastating Charge special rule. </description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
+      </entryLinks>
+      <modifiers>
+        <modifier type="remove" value="d280-b7df-c185-2ba5" field="category"/>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bbf7-a758-d40c-6792" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Troglodon" hidden="false" id="408a-84ee-da36-e134" subType="mount"/>
+    <selectionEntry type="model" import="true" name="Troglodon" hidden="false" id="408a-84ee-da36-e134" subType="mount">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="23cc-12ab-1430-8c59" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Spit Venom" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="7d3a-693a-a5f0-d501">
+          <characteristics>
+            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">18&quot;</characteristic>
+            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">5</characteristic>
+            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Wounds (D3), Poisoned Attacks, Quick to Fire</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Troglodon" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="26c6-ccf9-d9f1-a725">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Saurian)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Oracle" hidden="false" id="f81c-bf79-0966-e299" subType="crew">
+          <profiles>
+            <profile name="Oracle" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="d7bf-0dd9-5ec0-a273">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Lizardman, Skink</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="58fd-bdcb-fb8b-e03c-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="58fd-bdcb-fb8b-e03c-max" includeChildSelections="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Arcane Vassal" id="bca1-769f-18d7-97ec" hidden="false" type="rule" targetId="9d9e-2034-9863-9694"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <rules>
+        <rule name="Primeval Roar" id="479a-c7b9-d052-f3f2" hidden="false">
+          <description> Once per battle, at the start of any friendly Close Combat phase, a Troglodon can unleash its Primeval Roar. This affects the Troglodon, and all friendly units within 12&quot;. All models in these units that have the Predatory Fighter special rule gain an additional Attack on any successful To Hit roll of a 5+ until the end of the phase. </description>
+        </rule>
+      </rules>
+      <entryLinks>
+        <entryLink import="true" name="56. Upgrades" hidden="false" id="e184-53b2-6e95-3714" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Divining Rod" hidden="false" id="3102-767c-dfa8-f462" collective="true">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f662-93e6-1c08-0424" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+              <rules>
+                <rule name="Divining Rod" id="668f-437b-ff5c-5880" hidden="false">
+                  <description>The model channels Power and Dispel dice as if they were a Level 1 Wizard.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Aquatic" id="7c4d-a388-e6d6-c3bd" hidden="false" type="rule" targetId="3667-691b-abd9-7da6"/>
+        <infoLink name="Cold-Blooded" id="270c-4432-0391-3f85" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
+        <infoLink name="Jungle Poisons" id="5548-281a-5459-e9b5" hidden="false" type="rule" targetId="f932-079c-91ed-43b7"/>
+        <infoLink name="Natural Armour (4+)" id="3da4-90fd-cf1b-2409" hidden="false" type="rule" targetId="6b43-9dda-f589-0509"/>
+        <infoLink name="Poisoned Attacks" id="ef75-48a8-7101-e7de" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef">
+          <modifiers>
+            <modifier type="set" value="Troglodon only" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Predatory Fighter" id="5142-36d3-fc15-4044" hidden="false" type="rule" targetId="2e69-70ed-4337-eaec">
+          <modifiers>
+            <modifier type="set" value="Troglodon only" field="annotation"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </selectionEntry>
     <selectionEntry type="model" import="true" name="Coatl" hidden="false" id="e53c-11d7-ca69-9693" subType="mount">
       <categoryLinks>
         <categoryLink name="Monster" hidden="false" id="7934-6f7f-e3fe-8513" targetId="e1a0-da31-05c5-9a15" primary="false"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="91ac-93c0-d782-8a83" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Guardian of the Sacred Places" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="19ae-e8bd-2030-30b2">
+          <characteristics>
+            <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Innate bound spell</characteristic>
+            <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Monster (Ophidian) </characteristic>
+            <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3</characteristic>
+            <characteristic name="Range" typeId="2954-76ea-decb-30ff">Infinite</characteristic>
+            <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The Lizardmen player may reposition D3 pieces of forest terrain by D6&quot;, rolling the distance for each piece at a time. </characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Coatl" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6daf-31ff-1bb9-cc40">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Ophidian) </characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="65. Lore of Magic" hidden="false" id="27ba-8c71-051d-717f" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
+          <entryLinks>
+            <entryLink import="true" name="Lore of Heavens" hidden="false" id="d334-7711-a20b-5a2c" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee"/>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="60. Wizard Level" hidden="false" id="8751-dc19-a6d3-f8c9" type="selectionEntryGroup" targetId="2f28-d537-4a60-b96b"/>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Natural Armour (4+)" id="4fc9-d022-d034-435a" hidden="false" type="rule" targetId="6b43-9dda-f589-0509"/>
+        <infoLink name="Cold-Blooded" id="2a46-bf98-a750-14b3" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
+        <infoLink name="Fly (8)" id="9156-e4d3-2f91-2f22" hidden="false" type="rule" targetId="0a9a-bfcb-1a9d-5609"/>
+        <infoLink name="Magic Resistance (3)" id="9813-213b-78dd-e34a" hidden="false" type="rule" targetId="9b99-4e37-be08-231a"/>
+      </infoLinks>
+      <rules>
+        <rule name="Magical Storm" id="da5b-f4a5-c4b7-fbd1" hidden="false">
+          <description>All missile fire directed at a Coatl suffers a -1 penalty to hit. </description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Cold One" hidden="false" id="7f0b-fb7d-104e-713e" collective="true" subType="mount">
       <infoLinks>
         <infoLink name="Fear" id="acce-50d5-96e6-4d16" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
         <infoLink name="Natural Armour (6+)" id="4e9b-bf55-4c20-72ad" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule">
           <modifiers>
-            <modifier type="set" value="From mount" field="annotation"/>
+            <modifier type="set" value="From Mount" field="annotation"/>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="any" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
         </infoLink>
         <infoLink name="Stupidity" id="5611-a7cc-671f-9759" hidden="false" targetId="755c-61c2-fa25-f4ce" type="rule"/>
@@ -1066,7 +1475,7 @@ Arcane Vassal&apos;s is not). If a spell cast through an Arcane Vassal is miscas
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Choose a piece of Terrain. You may move the target up to 2D3&quot; in any direction while still retaining its original facing, stopping within 1&quot; of any other terrain. Unless it is in combat, any unit in that terrain piece is moved with it, stopping within 1&quot; of other units. In addition, the unit is subject to Earth Tremors.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Skink" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="4d42-badb-9cb0-ec9d">
+    <profile name="Skink" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="4d42-badb-9cb0-ec9d" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
@@ -4683,7 +5092,7 @@ A Slann who is in base contact with a model with the Guardians special rule is c
             </entryLink>
           </entryLinks>
           <infoLinks>
-            <infoLink name="Natural Armour (5+)" id="3fc5-a1f6-1dae-9a3a" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
+            <infoLink name="Natural Armour (4+)" id="3fc5-a1f6-1dae-9a3a" hidden="false" type="rule" targetId="6b43-9dda-f589-0509"/>
             <infoLink name="Fear" id="7d15-d428-ee4a-1187" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
             <infoLink name="Predatory Fighter" id="a42a-e0a1-8dc3-1e99" hidden="false" type="rule" targetId="2e69-70ed-4337-eaec"/>
             <infoLink name="Cold-Blooded" id="913a-1d4f-e960-6f58" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
@@ -4706,56 +5115,54 @@ A Slann who is in base contact with a model with the Guardians special rule is c
         </entryLink>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Ripperdactyl Riders" hidden="false" id="4ebd-3cea-c958-725c" sortIndex="36">
+    <selectionEntry type="unit" import="true" name="Aggradon Riders" hidden="false" id="4ebd-3cea-c958-725c" sortIndex="40">
       <categoryLinks>
-        <categoryLink name="Special" hidden="false" id="0ba8-fff1-cd6f-b1c9" targetId="fc26-7737-f7cb-8977" primary="true"/>
-        <categoryLink name="Cavalry" hidden="false" id="cc98-3fed-784d-8cd0" targetId="bdee-b168-38ba-7d3c" primary="false"/>
+        <categoryLink name="Monstrous Cavalry" hidden="false" id="f11d-7e06-b407-5f0d" targetId="82d3-4589-72b4-b6ed" primary="false"/>
+        <categoryLink name="Rare" hidden="false" id="7c05-c874-a048-31e5" targetId="0eb4-f376-7725-b05b" primary="true"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Ripperdactyl Rider" hidden="false" id="86f6-76b1-ae7a-2dcb">
+        <selectionEntry type="model" import="true" name="Aggradon Rider" hidden="false" id="86f6-76b1-ae7a-2dcb">
           <constraints>
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="6e70-f52e-4ef8-5bfc" includeChildSelections="false"/>
           </constraints>
           <costs>
-            <cost name="pts" typeId="points" value="30"/>
+            <cost name="pts" typeId="points" value="60"/>
           </costs>
           <profiles>
-            <profile name="Skink Brave" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="a2c4-d550-0c1c-6a14">
+            <profile name="Saurus" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="1464-73c4-1896-3bb2">
               <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">2</characteristic>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
                 <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Lizardman, Skink) </characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Lizardman, Saurus)</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <entryLinks>
             <entryLink import="true" name="57. Blessed Spawnlings" hidden="false" id="0b6d-88fb-379a-4a08" type="selectionEntryGroup" targetId="5f61-08f3-48c6-3f54">
               <modifiers>
-                <modifier type="set" value="2" field="points" affects="self.entries"/>
+                <modifier type="set" value="3" field="points" affects="self.entries"/>
               </modifiers>
             </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="cb5b-a936-c37c-c005" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Light Lance" hidden="false" id="6ffe-4ac2-4b1d-55c6" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3dab-f1c9-e1ca-5677" includeChildSelections="false"/>
-                  </constraints>
                   <costs>
-                    <cost name="pts" typeId="points" value="0"/>
+                    <cost name="pts" typeId="points" value="2"/>
                   </costs>
                 </entryLink>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="6347-6670-9bad-bbcb" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="c828-1f40-0079-20f0" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="c828-1f40-0079-20f0" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
               <entryLinks>
-                <entryLink import="true" name="Shield" hidden="false" id="6d07-a662-ef21-58a1" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                <entryLink import="true" name="Light Armour" hidden="false" id="6d07-a662-ef21-58a1" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ffdb-5099-110b-ee24" includeChildSelections="false"/>
                   </constraints>
@@ -4764,7 +5171,7 @@ A Slann who is in base contact with a model with the Guardians special rule is c
             </entryLink>
             <entryLink import="true" name="70. Mount" hidden="false" id="6790-e80f-6ffb-97c8" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
               <entryLinks>
-                <entryLink import="true" name="Ripperdactyl" hidden="false" id="5ac8-8403-6cd9-5e8a" type="selectionEntry" targetId="7cb5-03ab-e4d0-78fb">
+                <entryLink import="true" name="Aggradon" hidden="false" id="5ac8-8403-6cd9-5e8a" type="selectionEntry" targetId="227a-f6e4-89e2-cb5b">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dc42-c9e7-31b8-ee5f" includeChildSelections="false"/>
                   </constraints>
@@ -4774,16 +5181,36 @@ A Slann who is in base contact with a model with the Guardians special rule is c
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9e09-8b6f-28f2-311a" includeChildSelections="false"/>
               </constraints>
             </entryLink>
+            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="0652-5542-cc01-eb56" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
+              <entryLinks>
+                <entryLink import="true" name="Shield" hidden="false" id="e029-4de9-a68b-6f50" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7421-36e6-fdc8-5774" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
           <infoLinks>
-            <infoLink name="Natural Armour (6+)" id="f0b4-2533-bd39-635c" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
-            <infoLink name="Fast Cavalry" id="0c4f-1161-6769-9081" hidden="false" type="rule" targetId="8877-a5de-cc9c-9142"/>
+            <infoLink name="Natural Armour (4+)" id="f0b4-2533-bd39-635c" hidden="false" type="rule" targetId="6b43-9dda-f589-0509"/>
             <infoLink name="Cold-Blooded" id="dc45-ce66-9a73-90f0" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink import="true" name="99. Command Group" hidden="false" id="911b-47d7-8230-e8e5" type="selectionEntryGroup" targetId="f786-b0b9-e5d8-3395"/>
+        <entryLink import="true" name="99. Command Group" hidden="false" id="6599-01c4-7c6f-2cb5" type="selectionEntryGroup" targetId="6d24-2d46-8718-0b8f">
+          <entryLinks>
+            <entryLink import="true" name="Standard Bearer" hidden="false" id="cbba-f618-6de5-1521" type="selectionEntry" targetId="d3ec-3cba-c1d6-8c0f">
+              <entryLinks>
+                <entryLink import="true" name="91. Magic Standards" hidden="false" id="7860-3bd7-82d7-5239" type="selectionEntryGroup" targetId="9891-18a7-75a7-497c">
+                  <constraints>
+                    <constraint type="max" value="50" field="points" scope="parent" shared="true" id="ebd8-58c6-b029-d17a" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Horned One Riders" hidden="false" id="6043-51cc-8385-128f" sortIndex="34">
@@ -4856,7 +5283,7 @@ A Slann who is in base contact with a model with the Guardians special rule is c
             </entryLink>
           </entryLinks>
           <infoLinks>
-            <infoLink name="Natural Armour (6+)" id="504e-00b6-d4a6-0a73" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
+            <infoLink name="Natural Armour (5+)" id="504e-00b6-d4a6-0a73" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
             <infoLink name="Fast Cavalry" id="62be-e52b-6577-b85a" hidden="false" type="rule" targetId="8877-a5de-cc9c-9142"/>
             <infoLink name="Cold-Blooded" id="0995-6f41-293e-7b0c" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
           </infoLinks>
@@ -4878,9 +5305,9 @@ A Slann who is in base contact with a model with the Guardians special rule is c
         </entryLink>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Salamander" hidden="false" id="544f-0e38-b99e-1e46" sortIndex="37">
+    <selectionEntry type="unit" import="true" name="Anciet Salamander" hidden="false" id="544f-0e38-b99e-1e46" sortIndex="41">
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Skink" hidden="false" id="115c-0572-6e04-e8d6">
+        <selectionEntry type="model" import="true" name="Skink" hidden="false" id="115c-0572-6e04-e8d6" subType="crew">
           <constraints>
             <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="7582-4dd0-38ac-1a6e" includeChildSelections="false"/>
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="9d84-48e0-d2e3-c166" includeChildSelections="false"/>
@@ -4907,11 +5334,11 @@ A Slann who is in base contact with a model with the Guardians special rule is c
         </selectionEntry>
       </selectionEntries>
       <categoryLinks>
-        <categoryLink name="Special" hidden="false" id="4dc8-1ebe-175c-a9eb" targetId="fc26-7737-f7cb-8977" primary="true"/>
-        <categoryLink name="War Beast" hidden="false" id="f04f-7ed7-16dc-bf2e" targetId="5c5d-6944-cd09-0db8" primary="false"/>
+        <categoryLink name="Rare" hidden="false" id="df10-3d17-08a9-a01b" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Monstrous Beasts" hidden="false" id="365a-1bc7-f7ed-4686" targetId="f98e-8d4f-7b1b-59cd" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="70"/>
+        <cost name="pts" typeId="points" value="110"/>
       </costs>
       <infoLinks>
         <infoLink name="Skirmishers" id="b6e9-b653-5391-93be" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
@@ -4919,9 +5346,6 @@ A Slann who is in base contact with a model with the Guardians special rule is c
         <infoLink name="Cold-Blooded" id="da99-41ce-9b82-18ca" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
         <infoLink name="Mixed Unit" id="1d19-1320-503e-1aa4" hidden="false" type="rule" targetId="e00a-3a09-9b67-e994"/>
       </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Expendable" hidden="false" id="d871-f857-9d62-2b45" type="selectionEntry" targetId="b90d-9045-a6d5-9e7d"/>
-      </entryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Animal" id="e833-2286-88cb-183a" hidden="false">
           <constraints>
@@ -4929,33 +5353,34 @@ A Slann who is in base contact with a model with the Guardians special rule is c
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb35-aa3e-c366-e555" includeChildSelections="false"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="Salamander" hidden="false" id="af19-346f-ddc2-e749">
+            <selectionEntry type="model" import="true" name="Ancient Salamander" hidden="false" id="af19-346f-ddc2-e749">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e42d-256c-7ea2-1810" includeChildSelections="false"/>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c37b-f481-ae8a-b90a" includeChildSelections="false"/>
               </constraints>
               <profiles>
-                <profile name="Salamander" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="ddf2-bd27-2081-d390">
+                <profile name="Ancient Salamander" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="dbab-360f-655e-703e">
                   <characteristics>
                     <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
                     <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
                     <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
                     <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
                     <characteristic name="Ld" typeId="a199-f10b-a038-5730">4</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459"> War Beast (Saurian) </characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Saurian) </characteristic>
                   </characteristics>
                 </profile>
               </profiles>
               <infoLinks>
                 <infoLink name="Fire Thrower" id="4964-9d82-cac8-be02" hidden="false" type="profile" targetId="d259-6f2a-d6a9-0eec">
                   <modifiers>
-                    <modifier type="set" value="4" field="6ca0-d074-628f-e276"/>
+                    <modifier type="set" value="6&quot;" field="1c88-efb0-083f-b945"/>
                     <modifier type="append" value="Slow to Fire" field="d3a4-721b-f750-5564"/>
-                    <modifier type="set" value="Spout Flames" field="annotation"/>
+                    <modifier type="set" value="Stream of Fire" field="annotation"/>
+                    <modifier type="set" value="5" field="6ca0-d074-628f-e276"/>
                   </modifiers>
                 </infoLink>
                 <infoLink name="Natural Armour (5+)" id="0edf-5699-3bf3-e65c" hidden="false" type="rule" targetId="306d-711a-1300-587f">
@@ -4963,10 +5388,15 @@ A Slann who is in base contact with a model with the Guardians special rule is c
                     <modifier type="set" value="Slamander only" field="annotation"/>
                   </modifiers>
                 </infoLink>
+                <infoLink name="Armour Piercing" id="3666-e065-e64e-e1ef" hidden="false" type="rule" targetId="bf4e-212e-fe1d-20c6">
+                  <modifiers>
+                    <modifier type="set" value="1) (Slamander only" field="annotation"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <rules>
-                <rule name="Spout Flames" id="fb50-2214-97ef-c0be" hidden="false">
-                  <description>If the artillery dice result is a misfire, no shots are fired and D3 Skink handlers are removed as casualties. If all Skink handlers are removed, the Salamander is subject to Frenzy for the remainder of the game.</description>
+                <rule name="Stream of Fire" id="fb50-2214-97ef-c0be" hidden="false">
+                  <description>If the artillery dice result is a misfire, no shots are fired and D3 Skink handlers are removed as casualties. If all Skink handlers are removed, the Ancient Salamander is subject to Frenzy for the remainder of the game.</description>
                 </rule>
               </rules>
             </selectionEntry>
@@ -4976,7 +5406,7 @@ A Slann who is in base contact with a model with the Guardians special rule is c
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Razordon" hidden="false" id="771d-f1c3-e0e9-9c96" sortIndex="38">
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Skink" hidden="false" id="e0a5-4039-ba42-0a3a">
+        <selectionEntry type="model" import="true" name="Skink" hidden="false" id="e0a5-4039-ba42-0a3a" subType="crew">
           <constraints>
             <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="868e-a489-cd16-2176" includeChildSelections="false"/>
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="91f7-f5c8-fd5b-92ea" includeChildSelections="false"/>
@@ -5072,6 +5502,675 @@ A Slann who is in base contact with a model with the Guardians special rule is c
       </selectionEntryGroups>
       <entryLinks>
         <entryLink import="true" name="Expendable" hidden="false" id="236e-3d39-3a63-811a" type="selectionEntry" targetId="b90d-9045-a6d5-9e7d"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Ripperdactyl Riders" hidden="false" id="8172-5e64-152f-016e" sortIndex="36">
+      <categoryLinks>
+        <categoryLink name="Special" hidden="false" id="c387-d3fa-2d77-81c8" targetId="fc26-7737-f7cb-8977" primary="true"/>
+        <categoryLink name="Cavalry" hidden="false" id="42f0-ae6e-15a6-9190" targetId="bdee-b168-38ba-7d3c" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Ripperdactyl Rider" hidden="false" id="54ce-5ca4-7c43-1b1d">
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="5c1e-650f-a192-2821" includeChildSelections="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="30"/>
+          </costs>
+          <profiles>
+            <profile name="Skink Brave" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="2857-63c3-1659-3d1d">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">2</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Lizardman, Skink) </characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="57. Blessed Spawnlings" hidden="false" id="b2ba-c275-e3dc-e0e1" type="selectionEntryGroup" targetId="5f61-08f3-48c6-3f54">
+              <modifiers>
+                <modifier type="set" value="2" field="points" affects="self.entries"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="7832-1e5e-3ce3-6a97" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Light Lance" hidden="false" id="59ad-e12c-4ac2-0896" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="2">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="69c4-f5a4-935b-bf3b" includeChildSelections="false"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="58ef-66ba-13a9-7f79" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
+              <entryLinks>
+                <entryLink import="true" name="Shield" hidden="false" id="b17d-0c87-7687-1155" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5236-5914-9ec1-abdc" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="70. Mount" hidden="false" id="0811-66ed-1780-6aac" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+              <entryLinks>
+                <entryLink import="true" name="Ripperdactyl" hidden="false" id="e179-962b-6807-8312" type="selectionEntry" targetId="7cb5-03ab-e4d0-78fb">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8ce5-7398-4c26-05bd" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="19a9-08da-abae-7e54" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Natural Armour (6+)" id="6df1-0687-c20d-b594" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
+            <infoLink name="Fast Cavalry" id="6d93-8827-4d7c-fe6e" hidden="false" type="rule" targetId="8877-a5de-cc9c-9142"/>
+            <infoLink name="Cold-Blooded" id="7dbd-8139-0e9e-a832" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="99. Command Group" hidden="false" id="0fbb-0ff4-3b2b-1d09" type="selectionEntryGroup" targetId="f786-b0b9-e5d8-3395"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Salamander" hidden="false" id="86ef-3963-6e5c-312f" sortIndex="37">
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Skink" hidden="false" id="5101-2680-ae9b-dbe5" subType="crew">
+          <constraints>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="2efe-e659-01b8-d0a7" includeChildSelections="false"/>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="148e-0cdc-39d0-ad8b" includeChildSelections="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Skink" id="aedc-8e0d-a08d-7fe0" hidden="false" type="profile" targetId="4d42-badb-9cb0-ec9d"/>
+            <infoLink name="Natural Armour (6+)" id="f4a6-5660-0d4e-b3e0" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9">
+              <modifiers>
+                <modifier type="set" value="Skink Handlers only" field="annotation"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="58ed-362c-2954-e879" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Spear" hidden="false" id="f06d-5230-0361-7c6d" type="selectionEntry" targetId="a901-4548-955d-623c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="12e1-aaaf-9e7f-8f8b" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <categoryLinks>
+        <categoryLink name="Special" hidden="false" id="168d-5479-87ed-f99d" targetId="fc26-7737-f7cb-8977" primary="true"/>
+        <categoryLink name="War Beast" hidden="false" id="8487-a32f-6624-841a" targetId="5c5d-6944-cd09-0db8" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="70"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Skirmishers" id="5680-8029-f0ca-9182" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
+        <infoLink name="Aquatic" id="3a30-cb56-32f5-b98f" hidden="false" type="rule" targetId="3667-691b-abd9-7da6"/>
+        <infoLink name="Cold-Blooded" id="bd13-6f3a-12da-85ad" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
+        <infoLink name="Mixed Unit" id="630e-dbc0-1381-fce8" hidden="false" type="rule" targetId="e00a-3a09-9b67-e994"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Expendable" hidden="false" id="c283-5650-c0bf-35ee" type="selectionEntry" targetId="b90d-9045-a6d5-9e7d"/>
+      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Animal" id="ed86-54bd-b765-74f0" hidden="false">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="260d-f280-da14-655a" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6f7e-bfa1-1cb4-1b1c" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Salamander" hidden="false" id="e946-f523-97fc-1a8e">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="24d2-46cd-3f33-01fb" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5d2f-94d5-b4fe-9585" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Salamander" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="8b38-abcb-9fcf-8b04">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">4</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459"> War Beast (Saurian) </characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Fire Thrower" id="f24f-ab91-640f-6765" hidden="false" type="profile" targetId="d259-6f2a-d6a9-0eec">
+                  <modifiers>
+                    <modifier type="set" value="4" field="6ca0-d074-628f-e276"/>
+                    <modifier type="append" value="Slow to Fire" field="d3a4-721b-f750-5564"/>
+                    <modifier type="set" value="Spout Flames" field="annotation"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Natural Armour (5+)" id="0645-e5a3-4f54-4762" hidden="false" type="rule" targetId="306d-711a-1300-587f">
+                  <modifiers>
+                    <modifier type="set" value="Slamander only" field="annotation"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <rules>
+                <rule name="Spout Flames" id="2490-0aa8-790f-b665" hidden="false">
+                  <description>If the artillery dice result is a misfire, no shots are fired and D3 Skink handlers are removed as casualties. If all Skink handlers are removed, the Salamander is subject to Frenzy for the remainder of the game.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Bastiladon" hidden="false" id="c8c5-a5d3-8672-fd30" sortIndex="42">
+      <costs>
+        <cost name="pts" typeId="points" value="166"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Monster" hidden="false" id="b5ac-c8c2-4176-1ede" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+        <categoryLink name="Rare" hidden="false" id="71ad-d7e0-e933-06bb" targetId="0eb4-f376-7725-b05b" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Bastiladon" hidden="false" id="537b-944c-ed80-f568" subType="mount">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6609-817d-5a41-ff58-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6609-817d-5a41-ff58-max" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="56. Upgrades" hidden="false" id="e133-04cc-8a42-4ba2" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Ark of Sotek" hidden="false" id="0e75-7e81-1a9d-7828" collective="true" sortIndex="1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0494-84fe-08f4-ab86" includeChildSelections="false"/>
+                  </constraints>
+                  <rules>
+                    <rule name="Ark of Sotek" id="f200-664e-a94a-48df" hidden="false">
+                      <description> At the end of each friendly turn, nominate a Jungle Swarm unit within 6&quot; of each Bastiladon with an Ark of Sotek and roll a D6. On a 4+, add one base to the Jungle Swarm unit. This can take the Jungle Swarm unit beyond its starting size. If the base cannot be placed (because there is not enough room, or you don&apos;t have sufficient models), it is lost. In addition, the Ark of Sotek has a special shooting attack. 
+
+
+The Ark of Sotek can be activated in any friendly Shooting phase, even if the Bastiladon has marched, charged or is engaged in close combat. When activated, all enemy units within D6&quot; immediately take 2D6 Strength 2 hits, distributed as for shooting. </description>
+                    </rule>
+                  </rules>
+                  <profiles>
+                    <profile name="Ark of Sotek" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="e8fa-56c8-cd61-6cd6">
+                      <characteristics>
+                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">D6&quot;</characteristic>
+                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">2</characteristic>
+                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Targets all enemy units in Range, Hits automatically.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Revivification Crystal" hidden="false" id="28ff-9a94-2431-0686" collective="true" sortIndex="2">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f4a4-0020-c5b3-ca3b" includeChildSelections="false"/>
+                  </constraints>
+                  <rules>
+                    <rule name="Revivification Crystal" id="660b-c43a-7159-2e7e" hidden="false">
+                      <description>All friendly units with the Cold-blooded special rule within 6&quot; of one or more Bastiladons with a Revivification Crystal gains the Regeneration (6+) special rule. </description>
+                    </rule>
+                  </rules>
+                  <costs>
+                    <cost name="pts" typeId="points" value="10"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Solar Engine" hidden="false" id="d8a6-5158-0129-926c" collective="true" sortIndex="3">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="80d9-3daa-057a-cc0f" includeChildSelections="false"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="40"/>
+                  </costs>
+                  <profiles>
+                    <profile name="Beam of Chotec" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2a4f-a417-5cb3-1aac">
+                      <characteristics>
+                        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
+                        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic missile</characteristic>
+                        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3</characteristic>
+                        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6"> If successfully cast, roll a D6 and consult the table to determine the Strength and number of hits (as well as any other effects) caused by this spell. All hits caused by Beam of Chotec are Flaming Attacks.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Solar Engine" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="6cef-1621-8c68-51a6">
+                      <characteristics>
+                        <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">All friendly units with the Cold-blooded special rule that are within 6&quot; of one or more Bastiladons with a Solar Engine gain +1 Initiative.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoGroups>
+                    <infoGroup name="Beam of Chotec" id="ec71-a233-8223-fc42" hidden="false">
+                      <profiles>
+                        <profile name="1" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="5b7d-e38c-70bc-0724">
+                          <characteristics>
+                            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">D3 Strength 3 hits.</characteristic>
+                          </characteristics>
+                        </profile>
+                        <profile name="2-3" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="b756-ec72-f47b-2f01">
+                          <characteristics>
+                            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">D6 Strength 4 hits.</characteristic>
+                          </characteristics>
+                        </profile>
+                        <profile name="4-5" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="fe75-dc5d-4ffd-47c9">
+                          <characteristics>
+                            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">2D6 Strength 5 hits.</characteristic>
+                          </characteristics>
+                        </profile>
+                        <profile name="6" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="6f02-7460-1d1b-8c9f">
+                          <characteristics>
+                            <characteristic name="Result" typeId="686b-22d8-d67f-02eb">2D6 Strength 6 hits. In addition, the target suffers a -1 penalty to their Weapon Skill and Ballistic Skill (to a minimum of 1) until the start of the Bastiladon&apos;s next Magic phase. </characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </infoGroup>
+                  </infoGroups>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="46da-86fe-079d-55b5" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="281a-2be1-01d0-8ba7" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <profiles>
+            <profile name="Bastiladon" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="7e6c-aed1-4a5a-692a">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">1</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Saurian) </characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Stubborn" id="99e7-3cb6-77ce-54bb" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
+            <infoLink name="Cold-Blooded" id="5802-e0a4-4037-af47" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
+            <infoLink name="Jungle Poisons" id="1d9a-854c-4786-1e49" hidden="false" type="rule" targetId="f932-079c-91ed-43b7"/>
+            <infoLink name="Natural Armour (2+)" id="5ab3-e916-9b6a-296d" hidden="false" type="rule" targetId="b15c-9f50-7081-ba29"/>
+          </infoLinks>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Skink" hidden="false" id="1100-2319-3ff0-4e09" subType="crew">
+              <constraints>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="5ad9-403f-fe67-f98e" includeChildSelections="false"/>
+                <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="b01c-edda-73e8-d274" includeChildSelections="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Skink" id="f273-076f-0d5d-6bf8" hidden="false" type="profile" targetId="4d42-badb-9cb0-ec9d">
+                  <modifiers>
+                    <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
+                    <modifier type="set" value="" field="09ad-18df-607b-1215"/>
+                    <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <entryLinks>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="ead6-042b-cf11-1dbc" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="344b-a984-73f9-6c9c" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dfe3-4c71-7965-5d5f" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="aac0-86c0-663f-87a9" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                  <entryLinks>
+                    <entryLink import="true" name="Javelins" hidden="false" id="dd0a-4f47-da10-5b59" type="selectionEntry" targetId="a923-e8b1-94c0-3f2c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d906-60ef-d958-7859" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="3"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <rules>
+            <rule name="Thunderous Bludgeon" id="8553-74e1-ad8f-f4fd" hidden="false">
+              <description>Before rolling To Hit, nominate one of the Bastiladon&apos;s Attacks as the Thunderous Bludgeon (a different coloured dice works best). This Attack is resolved at Strength 10 and receives a +1 To Hit bonus against models in the creature&apos;s rear arc. </description>
+            </rule>
+            <rule name="Impervious Defence" id="67e0-1a9e-c791-bd86" hidden="false">
+              <description> For the purposes of calculating combat result bonuses, a Bastiladon counts as having no flanks or rear. </description>
+            </rule>
+          </rules>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Stegadon" hidden="false" id="aa21-44d5-1958-de31" sortIndex="43">
+      <entryLinks>
+        <entryLink import="true" name="Stegadon" hidden="false" id="a577-dc96-6ce3-8f21" type="selectionEntry" targetId="871c-e199-3713-d5b7">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f2eb-2149-fbc4-2fb5" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d608-b0a6-ff76-f6a7" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="3704-4fef-a90f-b390" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Monster" hidden="false" id="4e08-440b-3a7d-a6f5" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="215"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Arcanadon" hidden="false" id="bb1a-ea66-db7d-43c9" sortIndex="44">
+      <costs>
+        <cost name="pts" typeId="points" value="210"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="c4d1-87e0-67eb-5ac6" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Monster" hidden="false" id="e4a1-9961-a857-952a" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Skink" hidden="false" id="3ba4-f8ab-7ec5-3e2c" subType="crew">
+          <constraints>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="96bd-16de-4daf-5a99" includeChildSelections="false"/>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="2520-b156-2ed7-fba2" includeChildSelections="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Skink" id="ccaa-d38b-d4fd-891c" hidden="false" type="profile" targetId="4d42-badb-9cb0-ec9d">
+              <modifiers>
+                <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
+                <modifier type="set" value="" field="09ad-18df-607b-1215"/>
+                <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="068e-b7d9-f9c6-2e96" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="6fc7-c955-e8c7-4f39" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="64f7-2442-e1ea-ed75" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="eb3b-8f14-7139-414e" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+              <entryLinks>
+                <entryLink import="true" name="Javelins" hidden="false" id="de8b-f95d-f666-b516" type="selectionEntry" targetId="a923-e8b1-94c0-3f2c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b8b8-cafd-bd8d-7e8a" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <profiles>
+        <profile name="Arcanadon" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="3535-8c63-f9b4-bfb7">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">6</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">1</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459"> Monster (Saurian) </characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="55. Equipment" hidden="false" id="73c9-138a-0668-c0ed" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cb9e-65e2-c87e-d71f-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cb9e-65e2-c87e-d71f-max" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Power of the Ancients" hidden="false" id="14d9-2af5-0dec-4a28">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="51d6-a6c2-54cd-d39b-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="51d6-a6c2-54cd-d39b-max" includeChildSelections="false"/>
+              </constraints>
+              <profiles>
+                <profile name="Power of the Ancients" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="9131-84ce-850e-9750">
+                  <characteristics>
+                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
+                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5</characteristic>
+                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the small round template anywhere within 24&quot; of the Arcanadon – it then scatters D3&quot;. All models under the template suffer a Strength 4 hit with the Flaming Attacks special rule.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Stubborn" id="76b6-ee1f-92cc-9981" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
+        <infoLink name="Cold-Blooded" id="7049-628f-de29-f862" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
+        <infoLink name="Immunity (Psychology)" id="6cbc-442d-12b1-5ac6" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
+        <infoLink name="Impact Hits (D6+1)" id="de5a-9467-13b6-e083" hidden="false" type="rule" targetId="a043-3e3c-9f8a-3661"/>
+        <infoLink name="Jungle Poisons" id="163e-5798-8585-72d0" hidden="false" type="rule" targetId="f932-079c-91ed-43b7"/>
+        <infoLink name="Natural Armour (4+)" id="d21a-70fd-6d5b-c60e" hidden="false" type="rule" targetId="6b43-9dda-f589-0509"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Trogolodon" hidden="false" id="5f53-81c1-2f17-bb05" sortIndex="45">
+      <costs>
+        <cost name="pts" typeId="points" value="155"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="d94e-5789-de44-6a63" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Monster" hidden="false" id="ee2f-273c-fb11-5d29" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Troglodon" hidden="false" id="921b-3956-91a5-3684" type="selectionEntry" targetId="408a-84ee-da36-e134">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="57ad-7488-5de3-5a01" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Coatl" hidden="false" id="7141-5379-787c-dde3" sortIndex="46">
+      <costs>
+        <cost name="pts" typeId="points" value="270"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="2214-8f32-ce1a-6c30" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Monster" hidden="false" id="11d4-c5ca-df1a-77f7" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Coatl" hidden="false" id="f3e4-3943-2392-9aaf" type="selectionEntry" targetId="e53c-11d7-ca69-9693">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6ee4-af3a-0027-a536" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Dread Saurian" hidden="false" id="01f3-f32b-6131-751d" sortIndex="47">
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="c1b5-a7b1-3fe4-9eb2" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Monster" hidden="false" id="d29d-5e7d-8a51-6839" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="365"/>
+      </costs>
+      <profiles>
+        <profile name="Dread Saurian" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="48a3-0994-8b7a-c3c4">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">8</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">7</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">10</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">1</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">6</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Saurian) </characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Natural Armour (3+)" id="ba4a-bae5-5020-af97" hidden="false" type="rule" targetId="32e8-b4ad-3e59-a3c7"/>
+        <infoLink name="Cold-Blooded" id="7675-dbf1-5b46-a7b8" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
+        <infoLink name="Immunity (Psychology)" id="0327-73ed-7b4c-f007" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
+        <infoLink name="Multiple Wounds (D3)" id="ebae-ff68-c593-5548" hidden="false" type="rule" targetId="20d3-7f3f-51f9-e10d"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="55. Equipment" hidden="false" id="354e-d99b-120c-afd3" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Howdah" hidden="false" id="7706-df0c-a299-d222" collective="true">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6183-5f34-efb8-4ed6" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="50"/>
+              </costs>
+              <selectionEntries>
+                <selectionEntry type="model" import="true" name="Skink" hidden="false" id="a877-946b-c148-6d32" subType="crew">
+                  <constraints>
+                    <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="125c-b825-ea5d-9ed7" includeChildSelections="false"/>
+                    <constraint type="min" value="6" field="selections" scope="parent" shared="true" id="575b-7cc3-6a0e-f6d6" includeChildSelections="false"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Skink" id="9ae9-3403-799e-80fc" hidden="false" type="profile" targetId="4d42-badb-9cb0-ec9d">
+                      <modifiers>
+                        <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
+                        <modifier type="set" value="" field="09ad-18df-607b-1215"/>
+                        <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
+                      </modifiers>
+                    </infoLink>
+                    <infoLink name="Natural Armour (6+)" id="8feb-f864-8c64-2172" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9">
+                      <modifiers>
+                        <modifier type="set" value="From Crew" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
+                  <entryLinks>
+                    <entryLink import="true" name="20. Primary Weapon" hidden="false" id="365a-94c1-2d1a-da02" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                      <entryLinks>
+                        <entryLink import="true" name="Hand Weapon" hidden="false" id="6db3-4066-a917-6d69" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="31c7-eddf-956d-4311" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </entryLink>
+                    <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="1c87-aa5c-fbd0-fbe5" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                      <entryLinks>
+                        <entryLink import="true" name="Blowpipe" hidden="false" id="aa8d-da35-9df5-41d9" type="selectionEntry" targetId="8f37-a8ec-e1ba-2551">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bbcc-9d57-51c9-9b16" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </entryLink>
+                  </entryLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
+        <entryLink import="true" name="56. Upgrades" hidden="false" id="907d-3a29-b69e-53d1" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9650-2afb-920f-8873" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Tepok&apos;s Crystalline Eye" hidden="false" id="04f9-29b3-11ea-ccee" collective="true" sortIndex="5">
+              <costs>
+                <cost name="pts" typeId="points" value="50"/>
+              </costs>
+              <rules>
+                <rule name="Tepok&apos;s Crystalline Eye" id="3cf2-9b5e-bf37-1018" hidden="false">
+                  <description> The Dread Saurian gains a 5+ Ward save which is reduced to a 6+ Ward save againstMagical Attacks. </description>
+                </rule>
+              </rules>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2ccd-25b3-1306-da69" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="The Blazing Configuration of Chotec" hidden="false" id="ad07-d44c-010b-79c8" collective="true" sortIndex="3">
+              <costs>
+                <cost name="pts" typeId="points" value="35"/>
+              </costs>
+              <rules>
+                <rule name="The Blazing Configuration of Chotec" id="731c-997d-246d-422d" hidden="false">
+                  <description>The Dread Saurian gains the Flaming Attacks special rule and causes 2D6 Strength 4 Flaming Impact Hits. </description>
+                </rule>
+              </rules>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9800-49b7-f91e-77b4" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="The Golden Shroud of Tlazcotl" hidden="false" id="f5dc-4512-33a3-7dfa" collective="true" sortIndex="4">
+              <costs>
+                <cost name="pts" typeId="points" value="35"/>
+              </costs>
+              <rules>
+                <rule name="The Golden Shroud of Tlazcotl" id="942f-93cf-c3ec-a5de" hidden="false">
+                  <description>All attacks targeting the Dread Saurian suffer a -1 To Hit modifier.  </description>
+                </rule>
+              </rules>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9532-e2c0-6d62-3acd" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Quetzl&apos;s Flawless Heartstone" hidden="false" id="59f1-ead0-3ad8-c675" collective="true" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="35"/>
+              </costs>
+              <rules>
+                <rule name="Quetzl&apos;s Flawless Heartstone" id="2bb5-0129-61a7-b218" hidden="false">
+                  <description>The Dread Saurian gains the Stubborn special rule and reduces its Movement rate to 5, but increases its Toughness to 8.</description>
+                </rule>
+              </rules>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4c6d-2b1d-daac-a13a" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="The Shadow Rebus of Huanchi" hidden="false" id="3d09-3a89-8aea-d1d7" collective="true" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+              <rules>
+                <rule name="The Shadow Rebus of Huanchi" id="cbc7-c53e-c125-eadb" hidden="false">
+                  <description>The Dread Saurian gains the Ambushers deployment special rule.</description>
+                </rule>
+              </rules>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6949-0d6b-8aad-9cd1" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
       </entryLinks>
     </selectionEntry>
   </selectionEntries>
