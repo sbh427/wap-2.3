@@ -1,0 +1,41 @@
+name: XML Formatting Check
+
+# Run on pull requests to any branch, and also optionally on pushes to any branch
+on:
+  pull_request:
+    branches: ["*"]  # all branches
+  push:
+    branches: ["*"]  # optional: also run on direct pushes
+
+jobs:
+  check-xml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install XML tools
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
+
+      - name: Validate XML files
+        run: |
+          echo "🔍 Checking XML formatting..."
+          STATUS=0
+          # Find all XML files
+          while IFS= read -r -d '' file; do
+            echo "→ Checking $file"
+
+            # Check well-formedness
+            if ! xmllint --noout "$file"; then
+              echo "❌ XML syntax error in $file"
+              STATUS=1
+            fi
+
+            # Optional: check if file matches pretty formatting
+            if ! xmllint --format "$file" | diff -q "$file" - >/dev/null; then
+              echo "⚠️ $file is not properly formatted (run xmllint --format to fix locally)"
+              STATUS=1
+            fi
+          done < <(find . -type f -name "*.xml" -print0)
+
+          exit $STATUS
