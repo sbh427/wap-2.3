@@ -1092,8 +1092,8 @@ Arcane Vassal&apos;s is not). If a spell cast through an Arcane Vassal is miscas
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Skink Crew" hidden="false" id="d7a4-19a4-4663-62ee" subType="crew">
           <constraints>
-            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="29e7-72bd-7213-9193" includeChildSelections="false"/>
-            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="d668-353d-39f4-1e67" includeChildSelections="false"/>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="29e7-72bd-7213-9193" includeChildSelections="false" automatic="true"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="d668-353d-39f4-1e67" includeChildSelections="false" automatic="true"/>
           </constraints>
           <profiles>
             <profile name="Skink Crew" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="e886-5061-c383-d905">
@@ -1131,6 +1131,18 @@ Arcane Vassal&apos;s is not). If a spell cast through an Arcane Vassal is miscas
               </entryLinks>
             </entryLink>
           </entryLinks>
+          <modifiers>
+            <modifier type="decrement" value="1" field="29e7-72bd-7213-9193">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="decrement" value="1" field="d668-353d-39f4-1e67">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <infoLinks>
@@ -1200,6 +1212,7 @@ Arcane Vassal&apos;s is not). If a spell cast through an Arcane Vassal is miscas
               </costs>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="25ba-7885-ca31-35f5" includeChildSelections="false"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="747e-9a53-2cfa-b214" automatic="true"/>
               </constraints>
               <rules>
                 <rule name="Portent of Warding" id="78bc-80bc-daea-ce39" hidden="false">
@@ -1220,6 +1233,13 @@ Arcane Vassal&apos;s is not). If a spell cast through an Arcane Vassal is miscas
                   </characteristics>
                 </profile>
               </profiles>
+              <modifiers>
+                <modifier type="set" value="1" field="747e-9a53-2cfa-b214">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="f889-ec0d-6b5e-1c1f" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </entryLink>
@@ -1326,6 +1346,13 @@ Arcane Vassal&apos;s is not). If a spell cast through an Arcane Vassal is miscas
           <infoLinks>
             <infoLink name="Arcane Vassal" id="bca1-769f-18d7-97ec" hidden="false" type="rule" targetId="9d9e-2034-9863-9694"/>
           </infoLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <rules>
@@ -1718,9 +1745,14 @@ Arcane Vassal&apos;s is not). If a spell cast through an Arcane Vassal is miscas
               </profiles>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="6941-439d-550c-6dc7" shared="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="f889-ec0d-6b5e-1c1f" shared="true" includeChildSelections="false"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="de77-ba59-e02a-632b" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <costs>
@@ -1745,9 +1777,14 @@ Arcane Vassal&apos;s is not). If a spell cast through an Arcane Vassal is miscas
               </costs>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="6941-439d-550c-6dc7" shared="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="f889-ec0d-6b5e-1c1f" shared="true" includeChildSelections="false"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="de77-ba59-e02a-632b" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </selectionEntry>
@@ -1809,9 +1846,16 @@ Arcane Vassal&apos;s is not). If a spell cast through an Arcane Vassal is miscas
               </costs>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="6941-439d-550c-6dc7" shared="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="f889-ec0d-6b5e-1c1f" shared="true" includeChildSelections="false"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="de77-ba59-e02a-632b" shared="true" includeChildSelections="false"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="66f7-6479-e96f-4020" shared="true" includeChildSelections="false"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="4a86-828d-81bf-3d58" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </selectionEntry>
@@ -1876,13 +1920,23 @@ Arcane Vassal&apos;s is not). If a spell cast through an Arcane Vassal is miscas
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="6941-439d-550c-6dc7" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="66f7-6479-e96f-4020" shared="true" includeChildSelections="false"/>
                   </conditions>
                 </modifier>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
                     <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="7a83-6b11-9174-d3b2" shared="true"/>
                   </conditions>
+                </modifier>
+                <modifier type="add" value="{this} is not allowed if not mounted on Stegadon" field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="8223-9fce-e4f6-e7c0" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="871c-e199-3713-d5b7" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <infoLinks>
@@ -2084,9 +2138,14 @@ Magical Attacks special rule.
               </profiles>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="6941-439d-550c-6dc7" shared="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="e691-6735-780b-8a90" shared="true" includeChildSelections="false"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="104e-1d31-6a80-0d8a" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </selectionEntry>
@@ -2171,7 +2230,7 @@ Magical Attacks special rule.
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="6941-439d-550c-6dc7" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="1924-997e-685d-d45b" shared="true" includeChildSelections="false"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -2251,7 +2310,7 @@ Magical Attacks special rule.
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="6941-439d-550c-6dc7" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="1924-997e-685d-d45b" shared="true" includeChildSelections="false"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -2483,9 +2542,16 @@ Magical Attacks special rule.
               </costs>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="6941-439d-550c-6dc7" shared="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="f889-ec0d-6b5e-1c1f" shared="true" includeChildSelections="false"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="de77-ba59-e02a-632b" shared="true" includeChildSelections="false"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="66f7-6479-e96f-4020" shared="true" includeChildSelections="false"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="4a86-828d-81bf-3d58" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </selectionEntry>
@@ -2503,7 +2569,7 @@ Magical Attacks special rule.
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="6941-439d-550c-6dc7" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="1924-997e-685d-d45b" shared="true" includeChildSelections="false"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -2539,9 +2605,14 @@ Magical Attacks special rule.
               </profiles>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="6941-439d-550c-6dc7" shared="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="e691-6735-780b-8a90" shared="true" includeChildSelections="false"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="104e-1d31-6a80-0d8a" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <costs>
@@ -2591,9 +2662,24 @@ Magical Attacks special rule.
               </profiles>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="6941-439d-550c-6dc7" shared="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="e691-6735-780b-8a90" shared="true" includeChildSelections="false"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="104e-1d31-6a80-0d8a" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="add" value="{this} is not allowed if mounted" field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="d0d8-096d-d3b4-a58a" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <costs>
@@ -2614,7 +2700,7 @@ Magical Attacks special rule.
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="6941-439d-550c-6dc7" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="1924-997e-685d-d45b" shared="true" includeChildSelections="false"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -2743,9 +2829,26 @@ Magical Attacks special rule.
               </profiles>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="6941-439d-550c-6dc7" shared="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="f889-ec0d-6b5e-1c1f" shared="true" includeChildSelections="false"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="de77-ba59-e02a-632b" shared="true" includeChildSelections="false"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="66f7-6479-e96f-4020" shared="true" includeChildSelections="false"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="4a86-828d-81bf-3d58" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="add" value="{this} is not allowed if mounted" field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="5d0e-87da-4fa9-5fc3" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <costs>
@@ -2771,7 +2874,7 @@ rule. This has a +1 bonus To Wound against Daemons, Undead and Vampires.</chara
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="6941-439d-550c-6dc7" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="1924-997e-685d-d45b" shared="true" includeChildSelections="false"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -2833,9 +2936,15 @@ rule. This has a +1 bonus To Wound against Daemons, Undead and Vampires.</chara
           </profiles>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="6941-439d-550c-6dc7" shared="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="b9ae-b193-f4d1-2a42" shared="true" includeChildSelections="false"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="4a86-828d-81bf-3d58" shared="true" includeChildSelections="false"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="6043-51cc-8385-128f" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <costs>
@@ -3205,12 +3314,6 @@ Contemplations Discipline" field="error">
     </profileType>
   </profileTypes>
   <selectionEntries>
-    <selectionEntry type="model" import="true" name="New Entry" hidden="false" id="6941-439d-550c-6dc7" sortIndex="999">
-      <entryLinks>
-        <entryLink import="true" name="Disciplines of the Old Ones" hidden="false" id="a24a-fd8f-5705-211a" type="selectionEntryGroup" targetId="fa7a-072c-2546-e1e8"/>
-        <entryLink import="true" name="90. Magic Items" hidden="false" id="ecc1-e734-eef8-eba7" type="selectionEntryGroup" targetId="7780-4917-5952-24ce"/>
-      </entryLinks>
-    </selectionEntry>
     <selectionEntry type="model" import="true" name="Slann Mage Priest" hidden="false" id="1924-997e-685d-d45b" sortIndex="1">
       <costs>
         <cost name="pts" typeId="points" value="340"/>
