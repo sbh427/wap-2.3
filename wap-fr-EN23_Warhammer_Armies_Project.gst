@@ -41,6 +41,7 @@
     <publication name="Kislev 1.2" id="af5e-f821-6fd4-7df3" hidden="false" shortName="Ki" publisher="Warhammer - Kislev 1.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="18.05.2024"/>
     <publication name="Ogre Kingdoms v.1.6" id="dc4b-67ab-7b8e-baa5" hidden="false" shortName="OK" publisher="Warhammer - Ogre Kingdoms 9th Ed v.1.6" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="14.09.2024"/>
     <publication name="Daemons of Chaos 1.71" id="314a-aacb-0877-4081" hidden="false" shortName="DoC" publisher="Warhammer - Daemons of Chaos 1.71" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="23.06.2025"/>
+    <publication name="Chaos Dwarfs v.1.71" id="53f5-3638-a9ce-8dd3" hidden="false" shortName="CD" publisher="Warhammer - Chaos Dwarfs 9th Ed 1.71" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="20.04.2025"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
@@ -2427,7 +2428,7 @@
     </selectionEntry>
     <selectionEntry id="4d24-c803-7a05-0894" name="Lore of Fire" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1c55-bc61-cc88-d303" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1c55-bc61-cc88-d303" type="max" automatic="false"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="fff3-d6d4-bcac-0a6a" name="Kindleflame" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
@@ -2895,7 +2896,7 @@
     </selectionEntry>
     <selectionEntry id="527f-89f1-1b92-a01d" name="Lore of Metal" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6cdd-e249-97f2-2c76" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6cdd-e249-97f2-2c76" type="max" automatic="false"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="6387-34cd-3446-5e8d" name="Metallic Attraction" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
@@ -8734,6 +8735,14 @@
       <costs>
         <cost name="pts" typeId="points" value="5"/>
       </costs>
+	</selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Scouts" hidden="false" id="069d-dd8a-dce4-1413" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="33b4-953e-c16c-7ef7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Scouts" id="67e4-25e2-a92b-02ae" hidden="false" targetId="6624-0b7b-c5b8-6397" type="rule"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -10574,6 +10583,9 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
     </rule>
     <rule id="ff4c-6eb6-dca9-c32e" name="Unit Strength (24)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Unit Strength of 24.</description>
+    </rule>
+    <rule id="1642-08f0-d390-16ae" name="Line of Sight (8)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Line of Sight of 8.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
