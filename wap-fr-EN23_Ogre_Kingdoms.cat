@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="1580-32e4-2f36-d2bb" name="Ogre Kingdoms WAP 1.6" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="65" revision="1" battleScribeVersion="2.03" authorContact="Contact me via discord" authorName="Xetolosch" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="1580-32e4-2f36-d2bb" name="Ogre Kingdoms WAP 1.6" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="65" revision="2" battleScribeVersion="2.03" authorContact="Contact me via discord" authorName="Xetolosch" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Beneath Contempt" id="76bd-2842-3052-fa33" hidden="false" publicationId="dc4b-67ab-7b8e-baa5" page="3">
       <description>Gnoblars have the Expendable special rule. In addition, even other Gnoblars treat them as being Expendable.</description>
@@ -1091,14 +1091,8 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
       </constraints>
       <infoLinks>
         <infoLink name="Impact Hits (D3)" id="977c-79d8-6e67-5f51" hidden="false" type="rule" targetId="f30d-0b61-2836-689e"/>
-        <infoLink name="Natural Armour (6+)" id="4e05-1c53-c72a-bf16" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
         <infoLink name="Frenzy" id="4810-ef3a-1b08-403c" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
       </infoLinks>
-      <rules>
-        <rule name="Unit Strength and Line of Sight Value" id="d303-ef09-9a73-2ec3" hidden="false" publicationId="dc4b-67ab-7b8e-baa5" page="20">
-          <description>A model mounted on a Mournfang has a Unit Strength and Line of Sight value of 5.</description>
-        </rule>
-      </rules>
       <profiles>
         <profile name="Grimhorn Rhinox" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6d2b-9f76-e764-ce8b" publicationId="dc4b-67ab-7b8e-baa5" page="20">
           <characteristics>
@@ -1119,6 +1113,25 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
         <categoryLink name="Mount" hidden="false" id="dbb0-d256-baef-0e2f" targetId="8b8a-34b1-ed30-df11" primary="false"/>
         <categoryLink name="Monstrous Creature" hidden="false" id="6c67-7674-a713-99d7" targetId="b3e5-4b1b-7050-7e02" primary="false"/>
       </categoryLinks>
+      <infoGroups>
+        <infoGroup name="New Info Group" id="1a04-615c-c530-0119" hidden="false">
+          <infoLinks>
+            <infoLink name="Natural Armour (6+)" id="4e05-1c53-c72a-bf16" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
+          </infoLinks>
+          <rules>
+            <rule name="Unit Strength and Line of Sight Value" id="d303-ef09-9a73-2ec3" hidden="false" publicationId="dc4b-67ab-7b8e-baa5" page="20">
+              <description>A model mounted on a Mournfang has a Unit Strength and Line of Sight value of 5.</description>
+            </rule>
+          </rules>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="ccbb-2e7d-2253-c03f" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoGroup>
+      </infoGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="1. Name-Gnoblars" hidden="false" id="e86c-aad1-8392-3a90" sortIndex="11">
       <costs>
@@ -2398,35 +2411,7 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Flask of Congealed Maw-Juices" hidden="false" id="25dd-7ac2-c353-2e7a" sortIndex="3">
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e17-1185-8c18-06d4"/>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="149e-1d58-3d6a-08d8" includeChildSelections="true" includeChildForces="true"/>
-          </constraints>
-          <profiles>
-            <profile name="Flask of Congealed Maw-Juices" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="9826-3e73-218c-1fc4" publicationId="dc4b-67ab-7b8e-baa5" page="9">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">Model with Great Mawpot only. One use only. This item can be used at the start of any of your Magic phases. For the duration of this turn, you may add one free power dice to each of the model&apos;s casting attempts.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <modifiers>
-            <modifier type="add" value="One more selection of Great Mawpot needed" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="2988-37cf-96e6-4933" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="25dd-7ac2-c353-2e7a" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Halfling Cookbook" hidden="false" id="b1bf-ba29-7c6c-80d0" sortIndex="4">
+        <selectionEntry type="upgrade" import="true" name="Halfling Cookbook" hidden="false" id="b1bf-ba29-7c6c-80d0" sortIndex="3">
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
@@ -2442,7 +2427,7 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Bangstick" hidden="false" id="ac6c-54b0-fe3b-1059" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Bangstick" hidden="false" id="ac6c-54b0-fe3b-1059" sortIndex="4">
           <costs>
             <cost name="pts" typeId="points" value="35"/>
           </costs>
@@ -2458,7 +2443,7 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Grut&apos;s Sickle" hidden="false" id="eec6-8b20-7087-c1cb" sortIndex="6">
+        <selectionEntry type="upgrade" import="true" name="Grut&apos;s Sickle" hidden="false" id="eec6-8b20-7087-c1cb" sortIndex="5">
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
@@ -2517,7 +2502,7 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="The Hungry Maw" hidden="false" id="e84c-738b-2a6c-77f8" sortIndex="2">
+        <selectionEntry type="upgrade" import="true" name="The Hungry Maw" hidden="false" id="e84c-738b-2a6c-77f8" sortIndex="3">
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
@@ -2533,7 +2518,7 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Hellheart" hidden="false" id="79c9-2a24-8048-03d8" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Hellheart" hidden="false" id="79c9-2a24-8048-03d8" sortIndex="4">
           <costs>
             <cost name="pts" typeId="points" value="50"/>
           </costs>
@@ -2548,6 +2533,34 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
               </characteristics>
             </profile>
           </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Flask of Congealed Maw-Juices" hidden="false" id="059d-b27c-721b-e658" sortIndex="2">
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="741b-f2a8-8661-ef68"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="861b-75d5-14a3-3851" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Flask of Congealed Maw-Juices" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="e377-000d-0a7f-fcb5" publicationId="dc4b-67ab-7b8e-baa5" page="9">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">Model with Great Mawpot only. One use only. This item can be used at the start of any of your Magic phases. For the duration of this turn, you may add one free power dice to each of the model&apos;s casting attempts.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="add" value="One more selection of Great Mawpot needed" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="2988-37cf-96e6-4933" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="059d-b27c-721b-e658" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -3945,7 +3958,7 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Handweapon &amp; Ironfist" hidden="false" id="634d-f040-d1ec-8f1d" type="selectionEntry" targetId="affb-b060-2905-606a" sortIndex="3">
+                <entryLink import="true" name="Hand Weapon &amp; Ironfist" hidden="false" id="634d-f040-d1ec-8f1d" type="selectionEntry" targetId="affb-b060-2905-606a" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
@@ -4390,7 +4403,7 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="bbde-8850-844e-7a00" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Hand Weapon" hidden="false" id="237c-9bb3-7b5a-b6b2" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
-                <entryLink import="true" name="Handweapon &amp; Ironfist" hidden="false" id="fcba-e4bc-4d78-0e2d" type="selectionEntry" targetId="affb-b060-2905-606a" sortIndex="2">
+                <entryLink import="true" name="Hand Weapon &amp; Ironfist" hidden="false" id="fcba-e4bc-4d78-0e2d" type="selectionEntry" targetId="affb-b060-2905-606a" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
@@ -4532,7 +4545,7 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Meaneaters" hidden="false" id="eaf9-3013-23f4-c91a" sortIndex="203">
+    <selectionEntry type="unit" import="true" name="Maneaters" hidden="false" id="eaf9-3013-23f4-c91a" sortIndex="203">
       <selectionEntryGroups>
         <selectionEntryGroup name="Command Group" id="e7d4-8f08-41f3-1a4b" hidden="false" sortIndex="3">
           <selectionEntries>
@@ -4631,7 +4644,7 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                         <cost name="pts" typeId="points" value="3"/>
                       </costs>
                     </entryLink>
-                    <entryLink import="true" name="Handweapon &amp; Ironfist" hidden="false" id="bf7d-82dd-6fa8-0f95" type="selectionEntry" targetId="affb-b060-2905-606a" sortIndex="3">
+                    <entryLink import="true" name="Hand Weapon &amp; Ironfist" hidden="false" id="bf7d-82dd-6fa8-0f95" type="selectionEntry" targetId="affb-b060-2905-606a" sortIndex="3">
                       <costs>
                         <cost name="pts" typeId="points" value="3"/>
                       </costs>
@@ -4788,9 +4801,9 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
         </selectionEntryGroup>
       </selectionEntryGroups>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Meaneater" hidden="false" id="63c2-0d43-b6c3-2bfc" sortIndex="1">
+        <selectionEntry type="upgrade" import="true" name="Maneater" hidden="false" id="63c2-0d43-b6c3-2bfc" sortIndex="1">
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="Meaneater" hidden="false" id="8960-bcdb-6896-db09" sortIndex="1">
+            <selectionEntry type="model" import="true" name="Maneater" hidden="false" id="8960-bcdb-6896-db09" sortIndex="1">
               <costs>
                 <cost name="pts" typeId="points" value="43"/>
               </costs>
@@ -4802,7 +4815,7 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
               </infoLinks>
               <rules>
                 <rule name="Motley Crew" id="b259-d9a3-c2bb-d2e7" hidden="false" publicationId="dc4b-67ab-7b8e-baa5" page="25">
-                  <description>The models in a unit of Maneaters can have a variety of different weapons and special rules. If they do, your opponent must make it clear which model they want to allocate their attacks to. Any excess wounds are carried over to the rest of the unit as normal in an order chosen by your opponent.</description>
+                  <description>The models in a unit of Maneaters can have a variety of different weapons and special rules. If they do, your opponent must make it clear which model they want to allocate their attacks to. Any excess wounds are carried over to the rest of the unit as normal in an order chosen by your opponent. To make use of this rule, models can be separated by selecting the plus sign to the right of point cost of the Meaneater.</description>
                 </rule>
               </rules>
               <constraints>
@@ -4810,7 +4823,7 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4a79-c532-4f3c-ecf4-max"/>
               </constraints>
               <profiles>
-                <profile name="Meaneater" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="5546-13d3-051b-e356" publicationId="dc4b-67ab-7b8e-baa5" page="25">
+                <profile name="Maneater" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="5546-13d3-051b-e356" publicationId="dc4b-67ab-7b8e-baa5" page="25">
                   <characteristics>
                     <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
                     <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
@@ -5013,7 +5026,7 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Handweapon &amp; Ironfist" hidden="false" id="a3de-0990-5731-2f74" type="selectionEntry" targetId="affb-b060-2905-606a" sortIndex="3">
+                <entryLink import="true" name="Hand Weapon &amp; Ironfist" hidden="false" id="a3de-0990-5731-2f74" type="selectionEntry" targetId="affb-b060-2905-606a" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
@@ -5054,14 +5067,14 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Golgfag&apos;s Meaneaters" hidden="true" id="e1d5-d1e2-d474-8057" sortIndex="4">
+        <selectionEntry type="upgrade" import="true" name="Golgfag&apos;s Maneaters" hidden="true" id="e1d5-d1e2-d474-8057" sortIndex="4">
           <modifiers>
             <modifier type="set" value="false" field="hidden">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="roster" childId="d856-674c-5877-a857" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
-            <modifier type="add" value="One more selection of Golgfag&apos;s Meaneaters is needed" field="error">
+            <modifier type="add" value="One more selection of Golgfag&apos;s Maneaters is needed" field="error">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
@@ -5701,7 +5714,7 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Handweapon &amp; Ironfist" hidden="false" id="b825-506b-c62d-024e" type="selectionEntry" targetId="affb-b060-2905-606a" sortIndex="3">
+                <entryLink import="true" name="Hand Weapon &amp; Ironfist" hidden="false" id="b825-506b-c62d-024e" type="selectionEntry" targetId="affb-b060-2905-606a" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
@@ -5730,6 +5743,14 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                   </constraints>
                 </entryLink>
               </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="70. Mount" hidden="false" id="dba7-522d-4687-464a" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+              <entryLinks>
+                <entryLink import="true" name="Grimhorn Rhinox" hidden="false" id="3dcb-895e-d9cf-ce20" type="selectionEntry" targetId="d798-7b83-3a18-2631"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5112-641a-2990-6e10"/>
+              </constraints>
             </entryLink>
           </entryLinks>
           <costs>
@@ -6869,7 +6890,7 @@ If no suitable target is in base contact, roll again on the chart until you get 
       <selectionEntryGroups>
         <selectionEntryGroup name="Character" id="e4a3-649e-7516-de2e" hidden="false" defaultSelectionEntryId="none">
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="Golgfag Meaneater" hidden="false" id="d856-674c-5877-a857" sortIndex="1">
+            <selectionEntry type="model" import="true" name="Golgfag Maneater" hidden="false" id="d856-674c-5877-a857" sortIndex="1">
               <costs>
                 <cost name="pts" typeId="points" value="155"/>
               </costs>
@@ -6918,7 +6939,7 @@ If no suitable target is in base contact, roll again on the chart until you get 
                 </entryLink>
               </entryLinks>
               <profiles>
-                <profile name="Golgfag Meaneater" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="669f-543b-f2b9-b04e" publicationId="dc4b-67ab-7b8e-baa5" page="44">
+                <profile name="Golgfag Maneater" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="669f-543b-f2b9-b04e" publicationId="dc4b-67ab-7b8e-baa5" page="44">
                   <characteristics>
                     <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
                     <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
@@ -6940,12 +6961,12 @@ If no suitable target is in base contact, roll again on the chart until you get 
                 <infoLink name="Ogre Charge" id="f310-0d8b-75a4-ba56" hidden="false" type="rule" targetId="5357-5a65-849a-76c2"/>
               </infoLinks>
               <rules>
-                <rule name="Golgfag&apos;s Meaneaters" id="3b2c-b87c-fea9-1627" hidden="false" publicationId="dc4b-67ab-7b8e-baa5" page="44">
+                <rule name="Golgfag&apos;s Maneaters" id="3b2c-b87c-fea9-1627" hidden="false" publicationId="dc4b-67ab-7b8e-baa5" page="44">
                   <description>Golgfag Maneater must be accompanied by a unit of Maneaters chosen from the army list as normal. The unit must be given a Standard Bearer and Musician. Skaff is the unit&apos;s Standard Bearer. Golgfag is the unit&apos;s Leader and may never choose to leave this unit.</description>
                 </rule>
               </rules>
               <modifiers>
-                <modifier type="add" value="One more selection of Golgfag&apos;s Meaneaters is needed" field="error">
+                <modifier type="add" value="One more selection of Golgfag&apos;s Maneaters is needed" field="error">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
@@ -7202,6 +7223,22 @@ If no suitable target is in base contact, roll again on the chart until you get 
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0ba2-ac0a-007f-d281" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
+              <profiles>
+                <profile name="Jhared the Red" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="cf00-9b1e-99da-05f4" publicationId="dc4b-67ab-7b8e-baa5" page="45">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Special Character, Ogre)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </selectionEntry>
           </selectionEntries>
           <constraints>
