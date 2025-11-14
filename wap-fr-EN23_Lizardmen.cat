@@ -29,6 +29,17 @@
       <description>A Slann Mage-Priest can choose to cast any magical missile or direct damage spell through a model with this special rule within 24&quot;. If they do so, measure the spell&apos;s range from the Arcane Vassal and use that model&apos;s forward arc and line of sight for the purposes of casting the spell. If using an Arcane Vassal, a Slann Mage-Priest can cast magic missiles, even if their own unit is engaged in close combat (provided that the
 Arcane Vassal&apos;s is not). If a spell cast through an Arcane Vassal is miscast, the result of the miscast is applied to the Slann Mage-Priest, but the Arcane Vassal suffers a Strength 3 hit.</description>
     </rule>
+    <rule name="Guardians" id="4227-4813-aab9-2483" hidden="false">
+      <description>When a Slann joins a unit whose front rank contains five or more models with the Guardians special rule, it must be placed in the second rank, rather than the first. If the unit&apos;s front rank is ever reduced to four or fewer models with the Guardians special rule, the Slann must immediately move to the front rank (displacing rank and file models if necessary). 
+
+
+
+
+A Slann who is in base contact with a model with the Guardians special rule is considered to be the same Troop Type as them for the purpose of resolving missile attacks. When casting a direct damage or magical vortex spell that originates from the Slann&apos;s base, draw this spell from the base of the model in front of the Slann instead.</description>
+    </rule>
+    <rule name="Drop Rocks" id="20b8-a9bd-0003-7c25" hidden="false">
+      <description>Once per game, during the Remaining Moves sub-phase, models with this special rule may drop rocks unless they are fleeing or have declared a charge that turn. All models in a unit must drop rocks at the same time. To drop rocks, select one unengaged enemy unit that the Terradons moved over in that turn. That target immediately suffers D3 Strength 4 hits for each Terradon in the unit, distributed as Hits from shooting.</description>
+    </rule>
   </sharedRules>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="War Gauntlets" hidden="false" id="711b-f06e-47f5-3c46" collective="true">
@@ -40,16 +51,12 @@ Arcane Vassal&apos;s is not). If a spell cast through an Arcane Vassal is miscas
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Blessed Mark of the Old Ones" hidden="false" id="31ee-d3a3-7be6-3522" collective="true">
-      <profiles>
-        <profile name="Blessed Mark of the Old Ones" typeId="09ff-9e1e-b097-68c0" typeName="Blessed Spawning" hidden="false" id="5498-d3a6-6b6c-dfa9">
-          <characteristics>
-            <characteristic name="Effect" typeId="783d-025b-cfe0-ffa7">The character may re-roll a total of 3 dice to either To Hit, To Wound, Armour saves or Ward saves during the game. This Blessed Spawning does not prevent the character from joining any other Blessed Spawning.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6181-05e9-30dd-3dfc" includeChildSelections="true"/>
       </constraints>
+      <infoLinks>
+        <infoLink name="Blessed Mark of the Old Ones" id="387c-1f6a-2fc5-85dd" hidden="false" type="profile" targetId="d2cb-c0ae-e8fa-3038"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Blessed Spawning of Chotec" hidden="false" id="63f1-4971-4527-4afc" collective="true">
       <constraints>
@@ -1589,6 +1596,11 @@ Arcane Vassal&apos;s is not). If a spell cast through an Arcane Vassal is miscas
       <characteristics>
         <characteristic name="Effect" typeId="7dad-5be8-fad3-8ecc">Once per Magic phase, the Slann may add an additional &apos;free&apos; Power dice to the casting attempt. This can cause a Miscast or Ultimate Power as normal, nd 
 can cause the Mage-Priest to roll more dice than normally allowed.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Blessed Mark of the Old Ones" typeId="09ff-9e1e-b097-68c0" typeName="Blessed Spawning" hidden="false" id="d2cb-c0ae-e8fa-3038">
+      <characteristics>
+        <characteristic name="Effect" typeId="783d-025b-cfe0-ffa7">The character may re-roll a total of 3 dice to either To Hit, To Wound, Armour saves or Ward saves during the game. This Blessed Spawning does not prevent the character from joining any other Blessed Spawning.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
@@ -4003,8 +4015,9 @@ Contemplations Discipline" field="error">
       </profiles>
       <infoLinks>
         <infoLink name="Natural Armour (3+)" id="61ea-bd0e-f5f8-c639" hidden="false" type="rule" targetId="32e8-b4ad-3e59-a3c7"/>
-        <infoLink name="Cold-Blooded" id="bd05-ea70-b7b4-de05" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
+        <infoLink name="Aquatic" id="bd05-ea70-b7b4-de05" hidden="false" type="rule" targetId="3667-691b-abd9-7da6"/>
         <infoLink name="Predatory Fighter" id="492f-fe46-080a-8f05" hidden="false" type="rule" targetId="2e69-70ed-4337-eaec"/>
+        <infoLink name="Cold-Blooded" id="a543-8c67-5551-f2a3" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="c591-6863-0b7c-6d82" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
@@ -4379,22 +4392,15 @@ Contemplations Discipline" field="error">
             </entryLink>
           </entryLinks>
           <infoLinks>
-            <infoLink name="Natural Armour (5+)" id="fbac-448e-766b-f993" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
+            <infoLink name="Guardians" id="fbac-448e-766b-f993" hidden="false" type="rule" targetId="4227-4813-aab9-2483"/>
             <infoLink name="Cold-Blooded" id="917e-bcf9-f70e-953c" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
             <infoLink name="Stubborn" id="6fab-6504-5112-68c0" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
             <infoLink name="Predatory Fighter" id="461f-3719-d658-728c" hidden="false" type="rule" targetId="2e69-70ed-4337-eaec"/>
+            <infoLink name="Natural Armour (5+)" id="1c83-cfe3-b49d-a32a" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
           </infoLinks>
           <rules>
             <rule name="Sacred Duty" id="7603-2bcb-321c-5ed8" hidden="false">
               <description>Whilst they are part of a combined unit that has been joined by a model with the Mage-Priest Palanquin special rule, all Temple Guard models in the combined unit have the Immunity (Psychology) special rules.</description>
-            </rule>
-            <rule name="Guardians" id="4227-4813-aab9-2483" hidden="false">
-              <description>When a Slann joins a unit whose front rank contains five or more models with the Guardians special rule, it must be placed in the second rank, rather than the first. If the unit&apos;s front rank is ever reduced to four or fewer models with the Guardians special rule, the Slann must immediately move to the front rank (displacing rank and file models if necessary). 
-
-
-
-
-A Slann who is in base contact with a model with the Guardians special rule is considered to be the same Troop Type as them for the purpose of resolving missile attacks. When casting a direct damage or magical vortex spell that originates from the Slann&apos;s base, draw this spell from the base of the model in front of the Slann instead.</description>
             </rule>
           </rules>
         </selectionEntry>
@@ -5024,16 +5030,12 @@ A Slann who is in base contact with a model with the Guardians special rule is c
           </entryLinks>
           <infoLinks>
             <infoLink name="Natural Armour (6+)" id="7557-ba73-4d56-5c47" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
-            <infoLink name="Fast Cavalry" id="910f-50b1-0300-0570" hidden="false" type="rule" targetId="8877-a5de-cc9c-9142"/>
+            <infoLink name="Drop Rocks" id="910f-50b1-0300-0570" hidden="false" type="rule" targetId="20b8-a9bd-0003-7c25"/>
             <infoLink name="Cold-Blooded" id="4feb-8d75-dc09-3921" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
             <infoLink name="Skink" id="3fed-f07b-5541-a96d" hidden="false" type="profile" targetId="4d42-badb-9cb0-ec9d"/>
             <infoLink name="Jungle Poisons" id="39e4-f77c-d5d2-2f4c" hidden="false" type="rule" targetId="f932-079c-91ed-43b7"/>
+            <infoLink name="Fast Cavalry" id="fc11-6dbb-1970-bbd3" hidden="false" type="rule" targetId="8877-a5de-cc9c-9142"/>
           </infoLinks>
-          <rules>
-            <rule name="Drop Rocks" id="20b8-a9bd-0003-7c25" hidden="false">
-              <description>Once per game, during the Remaining Moves sub-phase, models with this special rule may drop rocks unless they are fleeing or have declared a charge that turn. All models in a unit must drop rocks at the same time. To drop rocks, select one unengaged enemy unit that the Terradons moved over in that turn. That target immediately suffers D3 Strength 4 hits for each Terradon in the unit, distributed as Hits from shooting.</description>
-            </rule>
-          </rules>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -6346,7 +6348,7 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
         </entryLink>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Special Characters" hidden="false" id="db10-e7d2-7a3a-31db" sortIndex="89" subType="unit-group">
+    <selectionEntry type="unit" import="true" name="Special Characters" hidden="false" id="db10-e7d2-7a3a-31db" sortIndex="98" subType="unit-group">
       <comment>Lords</comment>
       <categoryLinks>
         <categoryLink name="Lords" hidden="false" id="08f3-be85-5571-0dd5" targetId="d280-b7df-c185-2ba5" primary="true"/>
@@ -6810,15 +6812,15 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
                 <profile name="Tehenhauin" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="2c93-410d-5225-6482">
                   <characteristics>
                     <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">2</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
                     <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Lizardman, Skink)</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Lizardman, Skink)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6904,6 +6906,13 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
                       </profiles>
                     </selectionEntry>
                   </selectionEntries>
+                  <entryLinks>
+                    <entryLink import="true" name="Light Armour" hidden="false" id="8b17-6359-1d9b-7556" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="4558-ecf2-d6b6-b1f7" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
               </entryLinks>
               <constraints>
@@ -6917,10 +6926,116 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
                   <description>Tehenhauin can join Jungle Swarm units, even though characters are not normally permitted to join Swarms. Whilst Tehenhauin leads a Jungle Swarm, he gains the Unbreakable special rule and the unit&apos;s Unstable special rule is ignored.</description>
                 </rule>
                 <rule name="Prophet of Sotek" id="6403-482f-ee99-fda3" hidden="false">
-                  <description>If your army includes Tehenhauin, you may upgrade any units of Skink Cohorts, Skink Skirmishers, Raptadon Riders, Horned One Riders, Terradon Riders or Ripperdactyl Riders in your army to be Red Crested Skinks. Red Crested Skinks have +1 Weapon Skill, as well as the Devastating Charge, Hatred (Skaven) and Immunity (Poisoned Attacks) special rules for +2 points per model. They may not take any Sacred Spawning. In addition, Skink Cohorts with this upgrade may replace their shields with great weapons for +2 points per model. </description>
+                  <description>If your army includes Tehenhauin, you may upgrade any units of Skink Cohorts, Skink Skirmishers, Raptadon Riders, Horned One Riders, Terradon Riders or Ripperdactyl Riders in your army to be Red Crested Skinks. Red Crested Skinks have +1 Weapon Skill, as well as the Devastating Charge, Hatred (Skaven) and Immunity (Poisoned Attacks) special rules for +2 points per model. They may not take any Sacred Spawning. In addition, Skink Cohorts with this upgrade may replace their shields with great weapons for +2 points per model.</description>
                 </rule>
                 <rule name="Shield of Sotek" id="68b2-6d73-a34a-3662" hidden="false">
                   <description>Tehenhauin has a 5+ Ward save.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Tetto&apos;eko" hidden="false" id="ad33-60c8-6ab7-669e" sortIndex="5">
+              <costs>
+                <cost name="pts" typeId="points" value="230"/>
+              </costs>
+              <profiles>
+                <profile name="Tetto&apos;eko" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="7096-c122-e03a-5a9a">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">2</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">2</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Lizardman, Skink)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="06fa-6f55-dafb-956c" targetId="22c9-1606-58f8-2e60" primary="false"/>
+                <categoryLink name="Wizard" hidden="false" id="e376-0dd2-0832-d941" targetId="1aae-2529-c509-7573" primary="false"/>
+              </categoryLinks>
+              <infoLinks>
+                <infoLink name="Arcane Vassal" id="5546-ca20-4db2-335e" hidden="false" type="rule" targetId="9d9e-2034-9863-9694"/>
+                <infoLink name="Loremaster (Lore of Heavens)" id="d3cd-0935-d160-6a52" hidden="false" type="rule" targetId="4003-e9b4-9295-bef4"/>
+                <infoLink name="Cold-Blooded" id="52c6-792d-bc67-55c1" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
+                <infoLink name="Natural Armour (6+)" id="fdff-d94d-23c6-3570" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="871c-e199-3713-d5b7" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Line of Sight (2)" id="1279-e819-82ad-a837" hidden="false" type="rule" targetId="40b4-9828-f47e-28c9"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink import="true" name="65. Lore of Magic" hidden="false" id="f432-067a-b9fa-6562" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
+                  <entryLinks>
+                    <entryLink import="true" name="Lore of Heavens" hidden="false" id="0f9c-6797-0a0a-7076" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee"/>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="8717-10ce-98ad-c1a4" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="3f36-46f0-541c-be07" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="e4c4-29dd-052b-5504" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8161-b7a3-0fdf-4b8d" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="60. Wizard Level" hidden="false" id="3024-7b29-1ce4-30bd" type="selectionEntryGroup" targetId="8e7d-af82-eb9b-19f2"/>
+                <entryLink import="true" name="55. Equipment" hidden="false" id="b984-994b-cb98-0175" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="The Stellar Staff" hidden="false" id="b802-5c12-82ec-3c4b" collective="true">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e31e-728e-3c46-25ae" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4bf9-da47-ac5f-5834" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="The Stellar Staff" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="784c-b833-b185-c869">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">spells. If he successfully casts Comet of Casandora, you may re-roll the dice at the start of each Magic phase
+to see if the comet arrives.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <infoLinks>
+                        <infoLink name="Comet of Casandora" id="4db7-bf47-5f73-e5cf" hidden="false" type="profile" targetId="d667-970a-a36d-c1de"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="The Eye of the Old Ones" hidden="false" id="a491-1292-01ca-14bb" collective="true">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4901-6ff6-4fe4-4511" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6dca-8124-9d1f-137d" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="The Eye of the Old Ones" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="e8eb-493f-753e-b859">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">After deployment, but before Vanguard moves are made, if Tetto&apos;eko is on the battlefield he can consult the Eye of the Old Ones. If he does so, D3 friendly units of your choice gain the Vanguard special rule.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="699c-f30a-25bb-b0b0" includeChildSelections="true"/>
+              </constraints>
+              <rules>
+                <rule name="The Palanquin of Constellations" id="3c51-c4b2-0691-a6fc" hidden="false">
+                  <description>The Palanquin of Constellations gives Tetto&apos;eko the Strider special rule. Additionally, while they have the troop type Infantry, he is never considered to be a ‘model on foot&apos; for the purposes of spells, magic items and special rules. If Tetto&apos;eko joins a unit Skink Cohorts whose front rank contains five or more models, he must be placed in the second rank, displacing other models if necessary. If the unit&apos;s front rank is ever reduced to four or fewer models, Tetto&apos;eko must immediately move into the front rank (displacing models if necessary).</description>
+                </rule>
+                <rule name="Herald of Cosmic Events" id="6b46-a00c-4348-4d5f" hidden="false">
+                  <description>Events: Roll a D6 at the start of each friendly Magic phase. On a roll of 2-6, Tetto&apos;Eko&apos;s calculations are correct and the cosmic event occurs; all friendly Wizards within 12&quot; must re-roll power dice rolls of a 1 this phase. However, on a roll of 1, the Chaos Moon has corrupted Tetto&apos;eko&apos;s calculations and all friendly Wizards within 12&quot; casting a spell must re-roll any of the power dice that roll a 6 this phase.</description>
+                </rule>
+                <rule name="Minor Shield of the Old Ones" id="2a24-f2eb-09b5-db15" hidden="false">
+                  <description>Tetto&apos;eko has a 5+ Ward Save.</description>
                 </rule>
               </rules>
             </selectionEntry>
@@ -7031,6 +7146,549 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0cce-ddc6-fc8d-3ef8" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Special Characters" hidden="false" id="1cf3-d759-d30b-d29d" sortIndex="99" subType="unit-group">
+      <comment>Heroes</comment>
+      <categoryLinks>
+        <categoryLink name="Heroes" hidden="false" id="91b2-dd86-cd0a-b87b" targetId="d38a-73da-883b-bab9" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Character" id="01b7-65f3-11b8-670a" hidden="false" defaultSelectionEntryId="none">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Chakax" hidden="false" id="3450-dfbd-b915-fa1a" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="points" value="220"/>
+              </costs>
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="9234-ff71-8298-3de1" targetId="22c9-1606-58f8-2e60" primary="false"/>
+              </categoryLinks>
+              <profiles>
+                <profile name="Chakax" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="c137-8dba-902f-b099">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Lizardman, Saurus)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="1e86-7395-5128-d5d1" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="0fa0-ec3e-5dfa-d9e0" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <entryLinks>
+                    <entryLink import="true" name="Light Armour" hidden="false" id="a011-8a55-a99d-94ef" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="64c0-f00e-8be6-9559" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="55. Equipment" hidden="false" id="1f7a-6478-3a6b-b9f1" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="The Star-stone Mace" hidden="false" id="8ef7-400b-663d-5d75">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7acc-df8e-107c-d4a8-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7acc-df8e-107c-d4a8-max" includeChildSelections="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Great Weapon" id="b70c-9db4-45a6-fc10" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
+                          <modifiers>
+                            <modifier type="set" value="The Star-stone Mace" field="annotation"/>
+                            <modifier type="append" value="At the start of every Close Combat phase, all enemy models in base contact with Chakax must reveal their magic items, and Magical weapons and armour count as mundane versions of the same type.
+" field="de63-d6da-efa8-00ac"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="The Key to the Eternity Chamber" hidden="false" id="86eb-a2f1-a254-438e">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="84b9-618a-b0e2-5d87-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="84b9-618a-b0e2-5d87-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="The Key to the Eternity Chamber" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="ffdf-7536-bded-d270">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">When fighting in a challenge, Chakax has a 5+ Ward save and his opponent gains the Always Strikes Last special rule.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="The Helm of the Prime Guardian" hidden="false" id="31ce-2475-3f26-3d2f">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f067-17fb-dd35-ab27-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f067-17fb-dd35-ab27-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="The Helm of the Prime Guardian" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="ed6b-3c5f-4695-8ce1">
+                          <characteristics>
+                            <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+                            <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+                            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Enemy units with the Scouts special rule may not use their special deployment to set up within 20&quot; of Chakax. In addition, if an enemy unit within 20&quot; of Chakax contains &apos;hidden&apos; models (such as Assassins, Night Goblin Fanatics etc.), their presence must be announced as soon as they come within 20&quot; of Chakax.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Natural Armour (4+)" id="963e-f7fa-904b-3d2c" hidden="false" type="rule" targetId="6b43-9dda-f589-0509"/>
+                <infoLink name="Stubborn" id="8feb-d6ed-d8c1-aec2" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
+                <infoLink name="Predatory Fighter" id="b14d-d8b5-d15f-c380" hidden="false" type="rule" targetId="2e69-70ed-4337-eaec"/>
+                <infoLink name="Cold-Blooded" id="4a53-6e72-7878-56c3" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
+                <infoLink name="Guardians" id="2074-6596-9a51-a3e1" hidden="false" type="rule" targetId="4227-4813-aab9-2483"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6b3a-0dfa-231b-a964" includeChildSelections="true"/>
+              </constraints>
+              <rules>
+                <rule name="Ultimate Bodyguard" id="77e1-280d-146e-587d" hidden="false">
+                  <description>Whilst Chakax is part of a combined unit that contains both a Slann and Temple Guard, all models in the combined unit gain the Unbreakable special rule.</description>
+                </rule>
+                <rule name="Eternity Warden" id="e668-7f22-00cd-2450" hidden="false">
+                  <description>Chakax must always issue a challenge, and can never refuse one. When fighting in a challenge, Chakax re-rolls all failed rolls To Hit. </description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Gor-Rok" hidden="false" id="d8f9-c645-cd65-2761" sortIndex="2">
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="6924-a0a2-98b0-1880" targetId="22c9-1606-58f8-2e60" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="230"/>
+              </costs>
+              <profiles>
+                <profile name="Gor-Rok" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="175a-436f-86fb-a423">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Lizardman, Saurus)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6d79-e1d7-60b1-16f2" includeChildSelections="true"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="55. Equipment" hidden="false" id="3ef5-9e0b-32ab-dcfd" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="The Mace of Ulumak" hidden="false" id="7e9e-db8f-e3cb-04dc">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7886-133e-1fb0-c5aa-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7886-133e-1fb0-c5aa-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="The Mace of Ulumak" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="a37f-0221-05e4-37a7">
+                          <characteristics>
+                            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Mace allows Gor-Rok to re-roll all failed To Hit rolls. In addition, when striking with the Mace of Ulumak, Gor-Rok gains an additional Attack from his Predatory Fighter special rule on any successful To Hit roll of a 5 or 6.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="The Shield of Aeons" hidden="false" id="b994-a7c3-bec8-63e7">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bcc8-62d8-cc95-41f0-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bcc8-62d8-cc95-41f0-max" includeChildSelections="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Shield" id="5f72-8f9a-eb27-3580" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
+                          <modifiers>
+                            <modifier type="append" value="Any enemy model that makes a successful charge against Gor-Rok and ends the Movement phase in base contact with him must immediately take a Dangerous Terrain test with a -1 penalty.
+" field="ff58-91e4-84d7-e6e4"/>
+                            <modifier type="set" value="The Shield of Aeons" field="annotation"/>
+                            <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
+                            <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="e894-e7b9-fb4d-c5ac" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Stubborn" id="e44e-8525-d344-bf80" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
+                <infoLink name="Cold-Blooded" id="0cfd-c3d2-a584-875f" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
+                <infoLink name="Immunity (Psychology)" id="5c56-eaed-e9e4-7717" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
+                <infoLink name="Predatory Fighter" id="1293-6146-fd35-22dd" hidden="false" type="rule" targetId="2e69-70ed-4337-eaec"/>
+                <infoLink name="Natural Armour (4+)" id="3b0d-9fbc-347f-4712" hidden="false" type="rule" targetId="6b43-9dda-f589-0509"/>
+                <infoLink name="Blessed Mark of the Old Ones" id="0e34-b2fd-afe3-aed1" hidden="false" type="profile" targetId="d2cb-c0ae-e8fa-3038"/>
+              </infoLinks>
+              <rules>
+                <rule name="Resilient" id="c53a-1197-c35e-4246" hidden="false">
+                  <description>Any successful rolls To Wound roll against Gor-Rok must be re-rolled. In addition, Gor-Rok has the Immunity (Killing Blow) special rule.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Nakai the Wanderer" hidden="false" id="0698-b9eb-08ef-e5bf" sortIndex="3">
+              <costs>
+                <cost name="pts" typeId="points" value="310"/>
+              </costs>
+              <categoryLinks>
+                <categoryLink name="Monstrous Infantry" hidden="false" id="5bd2-2cb9-5231-f89b" targetId="5fc5-b80a-115f-bca3" primary="false"/>
+              </categoryLinks>
+              <profiles>
+                <profile name="Nakai" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6a8c-fd92-62c4-93c3">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">6</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Special Character, Lizardman, Kroxigor)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Natural Armour (3+)" id="c45e-d419-a725-95b0" hidden="false" type="rule" targetId="32e8-b4ad-3e59-a3c7"/>
+                <infoLink name="Regeneration (4+)" id="2973-c9bd-130f-6882" hidden="false" type="rule" targetId="c21b-d368-6f1c-bae3"/>
+                <infoLink name="Predatory Fighter" id="03c7-60f9-49a2-ea4a" hidden="false" type="rule" targetId="2e69-70ed-4337-eaec"/>
+                <infoLink name="Cold-Blooded" id="7f37-1f81-b35f-6cd7" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
+                <infoLink name="Aquatic" id="1965-b107-0999-6007" hidden="false" type="rule" targetId="3667-691b-abd9-7da6"/>
+                <infoLink name="Blessed Mark of the Old Ones" id="4173-a9f8-c2b7-889b" hidden="false" type="profile" targetId="d2cb-c0ae-e8fa-3038"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink import="true" name="55. Equipment" hidden="false" id="b6eb-65f0-1c7d-2489" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="The Sacred Blade of Quetzl" hidden="false" id="243d-dabf-32dc-cf6d">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4eb2-f59b-93bd-9ae9-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4eb2-f59b-93bd-9ae9-max" includeChildSelections="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Great Weapon" id="46b9-7885-8045-5c16" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
+                          <modifiers>
+                            <modifier type="append" value="The Sacred Blade of Quetzl grants Nakai +1 to Hit in close combat, and enemy close combat attacks against him suffer -1 To Hit.
+" field="de63-d6da-efa8-00ac"/>
+                            <modifier type="set" value="The Sacred Blade of Quetzl" field="annotation"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="9785-ca73-4f6d-4ce0" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="91ab-d5de-c602-a130" includeChildSelections="true"/>
+              </constraints>
+              <rules>
+                <rule name="Jungle Spirit" id="bbe8-14cc-d397-c031" hidden="false">
+                  <description>Nakai always appears using the Ambushers special rule, with the following exception; he will always appear from a forest, marshland or river terrain feature rather than the table edge if able to. Any unit that kills Nakai in close combat may not overrun. If Nakai flees from combat, then the victorious unit may not pursue.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Tiktaq&apos;to" hidden="false" id="8203-41fe-f745-1166" sortIndex="4">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5250-9ac2-553d-28bc" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Tiktaq&apos;to" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="1971-55a7-e550-e47e">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Special Character, Lizardman, Skink)</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Zwup (Terradon)" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="8cf5-75be-94e1-4130">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">2</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">3</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">(Saurian)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink name="Cavalry" hidden="false" id="52e0-28d9-7b1c-7f66" targetId="bdee-b168-38ba-7d3c" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="145"/>
+              </costs>
+              <entryLinks>
+                <entryLink import="true" name="55. Equipment" hidden="false" id="5b45-512c-bb96-aa4e" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Mask of Heavens" hidden="false" id="b590-c9f0-ddee-6389">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="caea-34ea-7a62-11fb-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="caea-34ea-7a62-11fb-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Mask of Heavens" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="8801-6638-b229-4c7c">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">All Terradons in Tiktaq&apos;to&apos;s unit use his Weapon Skill instead of their own. In addition, enemy units suffer an additional -1 To Hit penalty when shooting Tiktaq&apos;to and his unit.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="The Blade of Ancient Skies" hidden="false" id="1600-d3c3-58a3-b182">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b10c-7db2-7edd-5d02-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b10c-7db2-7edd-5d02-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="The Blade of Ancient Skies" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="0840-fbbd-7ca7-60da">
+                          <characteristics>
+                            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Blade of Ancient Skies has the Ignores Armour saves special rule. In addition, when fighting against a model with the Fly special rule, attacks made with the Blade of Ancient Skies receive a +1 bonus To Hit.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="a2f1-9e85-ec44-26cf" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Natural Armour (6+)" id="6424-08c8-0fca-d460" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
+                <infoLink name="Ambushers" id="17d5-70c5-689d-38d0" hidden="false" type="rule" targetId="f366-0f91-841f-cf80"/>
+                <infoLink name="Cold-Blooded" id="4af0-ba04-b7a3-6aeb" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
+                <infoLink name="Drop Rocks" id="b4ee-951d-5971-1e5e" hidden="false" type="rule" targetId="20b8-a9bd-0003-7c25"/>
+                <infoLink name="Fear" id="e173-b215-fde5-f69f" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
+                <infoLink name="Fly (9)" id="38e3-ed8e-9aca-4078" hidden="false" type="rule" targetId="2ba2-2aaa-3f36-4b24"/>
+                <infoLink name="Strider (Forest)" id="f2f2-6be5-0b3f-11d3" hidden="false" type="rule" targetId="8d09-c701-2658-67e8"/>
+              </infoLinks>
+              <rules>
+                <rule name="Master of Skies" id="910f-ff6a-bd98-0543" hidden="false">
+                  <description>If your army contains Tiktaq&apos;to, one unit of Terradon Riders may deploy using the Ambushers special rule.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Tichi-Huichi" hidden="false" id="0288-6346-869f-8799" sortIndex="5">
+              <profiles>
+                <profile name="Tichi-Huichi" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="e6ed-d001-f6bb-8ecc">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Special Character, Lizardman, Skink)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="145d-6fc3-3545-f301" includeChildSelections="true"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="70"/>
+              </costs>
+              <categoryLinks>
+                <categoryLink name="Cavalry" hidden="false" id="da2d-deaf-adf7-54fa" targetId="bdee-b168-38ba-7d3c" primary="false"/>
+                <categoryLink name="X Light Lance" hidden="false" id="8220-092b-f35f-57bf" targetId="7a83-6b11-9174-d3b2" primary="false"/>
+                <categoryLink name="Z Shield" hidden="false" id="4c40-3a8d-bee3-f439" targetId="0210-637d-ff12-a760" primary="false"/>
+                <categoryLink name="Z Armour" hidden="false" id="9484-020a-7360-4ed6" targetId="387c-2b7c-0a30-7305" primary="false"/>
+              </categoryLinks>
+              <entryLinks>
+                <entryLink import="true" name="70. Mount" hidden="false" id="decb-27ab-2186-d3db" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cf08-5dca-6518-ca01" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Horned One" hidden="false" id="58e2-4bbf-6a82-a87b" type="selectionEntry" targetId="ae02-d3a6-9482-2dd5">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ed12-46bb-b951-24d0" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="50. Handheld Armour" hidden="false" id="78a5-a4e9-8e0c-8839" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
+                  <entryLinks>
+                    <entryLink import="true" name="Shield" hidden="false" id="10ed-3820-2130-f64e" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="146b-7d44-a5c2-0c93" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="97b0-2a73-5c19-d617" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="0a4f-7888-bf5c-be29" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Light Lance" hidden="false" id="4044-cb94-669b-4e41" type="selectionEntry" targetId="d989-1124-0dea-ae27">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d86e-0e54-3a7e-c1de" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="90. Magic Items" hidden="false" id="9ba8-56c8-d306-cfef" type="selectionEntryGroup" targetId="7780-4917-5952-24ce">
+                  <modifiers>
+                    <modifier type="increment" value="50" field="20f0-0b35-48f7-23ba"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Poisoned Attacks" id="2ac3-d910-32a3-4852" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
+                <infoLink name="Cold-Blooded" id="1aaf-9c87-9c5d-96d0" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
+                <infoLink name="Fear" id="3608-878c-bc8a-0c95" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
+                <infoLink name="Natural Armour (5+)" id="2f88-f0d0-f564-e4b2" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
+              </infoLinks>
+              <rules>
+                <rule name="Tichi-Huichi&apos;s Raiders" id="fe9b-13f4-3df3-f28d" hidden="false">
+                  <description>Tichi-Huichi must be accompanied by a unit of Horned One Riders chosen from the army list at a cost of 22 points per model. This unit has the Poisoned Attacks special rule. They may not take any Sacred Spawning. The unit must be given a Standard Bearer and Musician. Tichi-Huichi is the unit&apos;s Leader and may never choose to leave this unit.</description>
+                </rule>
+                <rule name="Blessed by the Old Ones" id="71de-cd3e-1e6e-acfc" hidden="false">
+                  <description>Enemies that Break Tichi-Huichi&apos;s Raiders in close combat will automatically counts as restraining from pursuit, even if they would normally be forced to pursue.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a340-6ea1-f21d-6d85" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Tichi-Huichi&apos;s Raiders" hidden="false" id="594e-4b97-66c1-5875" sortIndex="34.5">
+      <categoryLinks>
+        <categoryLink name="Special" hidden="false" id="51a6-c929-1093-fe9f" targetId="fc26-7737-f7cb-8977" primary="true"/>
+        <categoryLink name="Cavalry" hidden="false" id="0a01-b4ce-6563-e8ff" targetId="bdee-b168-38ba-7d3c" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Tichi-Huichi&apos;s Raider" hidden="false" id="6692-0df1-c1c8-55a1">
+          <constraints>
+            <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="983d-2edc-30df-10c3" includeChildSelections="false"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="22"/>
+          </costs>
+          <profiles>
+            <profile name="Great Crested Skink" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="5aeb-987b-db44-720b">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">2</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Lizardman, Skink)</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier type="increment" value="1" field="f049-8a65-9c04-1559">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="03ea-55a2-f33d-38c3" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="80b7-c30d-7f03-474c" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Light Lance" hidden="false" id="12ab-0a78-88ff-0019" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="2">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7fdc-d809-e930-e409" includeChildSelections="false"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="a15b-14c8-833f-e943" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
+              <entryLinks>
+                <entryLink import="true" name="Shield" hidden="false" id="1ccc-9122-edf6-86e9" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d28e-86d6-3aad-9627" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="70. Mount" hidden="false" id="2fb2-e113-c7a2-68f9" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+              <entryLinks>
+                <entryLink import="true" name="Horned One" hidden="false" id="ab42-34ba-ed01-4480" type="selectionEntry" targetId="ae02-d3a6-9482-2dd5">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2e0d-a3aa-89f4-3879" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="41d5-6a87-ed6e-5ca6" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <infoLinks>
+            <infoLink name="Natural Armour (5+)" id="9381-2f31-570c-2b96" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
+            <infoLink name="Fast Cavalry" id="1612-4274-5245-dea5" hidden="false" type="rule" targetId="8877-a5de-cc9c-9142"/>
+            <infoLink name="Cold-Blooded" id="050d-e51c-48be-e5db" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
+            <infoLink name="Poisoned Attacks" id="62aa-e7f4-4d67-96f1" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="99. Command Group" hidden="false" id="74a8-ae93-6cd1-8ce3" type="selectionEntryGroup" targetId="2e07-3fe6-d529-15fd">
+          <entryLinks>
+            <entryLink import="true" name="Standard Bearer" hidden="false" id="515c-08d2-ae39-53d4" type="selectionEntry" targetId="d3ec-3cba-c1d6-8c0f">
+              <entryLinks>
+                <entryLink import="true" name="91. Magic Standards" hidden="false" id="9ee2-aabf-6bd9-4754" type="selectionEntryGroup" targetId="9891-18a7-75a7-497c">
+                  <constraints>
+                    <constraint type="max" value="25" field="points" scope="parent" shared="true" id="bc27-8982-659a-8d44" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a3c2-a637-293e-9bc5" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="11. Unit Options" hidden="false" id="72e2-a353-96a1-1e5f" type="selectionEntryGroup" targetId="9be7-acc9-664b-36a5"/>
+      </entryLinks>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="ced1-ea44-eeb0-4ef2" includeChildSelections="false"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="0288-6346-869f-8799" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="1" field="ced1-ea44-eeb0-4ef2">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="0288-6346-869f-8799" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </selectionEntries>
 </catalogue>
