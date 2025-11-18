@@ -1178,6 +1178,18 @@ A Slann who is in base contact with a model with the Guardians special rule is c
                   <description>Instead of firing another missile weapon in the Shooting phase, one of the Skink Crew may fire the giant bow.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4ec4-a3ae-1dd7-7f00" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="f889-ec0d-6b5e-1c1f" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Giant Blowpipe" hidden="false" id="de70-151f-e53b-01f7" collective="true" sortIndex="2">
               <constraints>
@@ -1196,14 +1208,19 @@ A Slann who is in base contact with a model with the Guardians special rule is c
                     <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (2D6), Poisoned Attacks</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Giant Blowpipe" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="5f1f-ea0a-d9db-e07c">
-                  <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">18&quot;</characteristic>
-                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">2</characteristic>
-                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (2D6), Poisoned Attacks</characteristic>
-                  </characteristics>
-                </profile>
               </profiles>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="f889-ec0d-6b5e-1c1f" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4ec4-a3ae-1dd7-7f00" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Engine of the Gods" hidden="false" id="322c-0624-4b89-cce7" sortIndex="3" collective="true">
               <costs>
@@ -1234,9 +1251,14 @@ A Slann who is in base contact with a model with the Guardians special rule is c
               </profiles>
               <modifiers>
                 <modifier type="set" value="1" field="747e-9a53-2cfa-b214">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="f889-ec0d-6b5e-1c1f" shared="true" includeChildSelections="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="f889-ec0d-6b5e-1c1f" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4ec4-a3ae-1dd7-7f00" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </selectionEntry>
@@ -1336,19 +1358,24 @@ A Slann who is in base contact with a model with the Guardians special rule is c
             </profile>
           </profiles>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="58fd-bdcb-fb8b-e03c-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="58fd-bdcb-fb8b-e03c-max" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="58fd-bdcb-fb8b-e03c-min" includeChildSelections="false" negative="false" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="58fd-bdcb-fb8b-e03c-max" includeChildSelections="false" automatic="true"/>
           </constraints>
           <infoLinks>
             <infoLink name="Arcane Vassal" id="bca1-769f-18d7-97ec" hidden="false" type="rule" targetId="9d9e-2034-9863-9694"/>
           </infoLinks>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="58fd-bdcb-fb8b-e03c-max"/>
+                <modifier type="set" value="true" field="hidden"/>
+                <modifier type="set" value="0" field="58fd-bdcb-fb8b-e03c-min"/>
+              </modifiers>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true"/>
               </conditions>
-            </modifier>
-          </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
       </selectionEntries>
       <rules>
@@ -1430,7 +1457,6 @@ A Slann who is in base contact with a model with the Guardians special rule is c
             <entryLink import="true" name="Lore of Heavens" hidden="false" id="d334-7711-a20b-5a2c" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee"/>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="60. Wizard Level" hidden="false" id="8751-dc19-a6d3-f8c9" type="selectionEntryGroup" targetId="2f28-d537-4a60-b96b"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Natural Armour (4+)" id="4fc9-d022-d034-435a" hidden="false" type="rule" targetId="6b43-9dda-f589-0509"/>
@@ -1443,6 +1469,34 @@ A Slann who is in base contact with a model with the Guardians special rule is c
           <description>All missile fire directed at a Coatl suffers a -1 penalty to hit.</description>
         </rule>
       </rules>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="60. Wizard Level" id="9ee4-b670-77dd-b87b" hidden="false">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fdf1-d96e-b3dc-1dd7"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7984-3c97-5c96-3610"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Wizard Level 2" hidden="false" id="3d74-71a0-5315-6f61">
+              <profiles>
+                <profile name="Wizard Level 2" typeId="0ce6-a5f9-6184-218d" typeName="Wizard" hidden="false" id="6f22-2fa4-7ac0-bee8">
+                  <characteristics>
+                    <characteristic name="Wizard Level" typeId="7f8d-5707-7251-c1a5">2</characteristic>
+                    <characteristic name="Known Spells" typeId="b859-9e7c-9452-f90e">3</characteristic>
+                    <characteristic name="Spell Level" typeId="c5a7-d8e1-9c88-2f0e">1-2</characteristic>
+                    <characteristic name="Max. Power Dice Per Spell" typeId="d5d5-4c2e-491e-474a">3</characteristic>
+                    <characteristic name="Bonus to Casting/Dispel Value" typeId="7261-e23f-ab6d-b4af">1</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="add" value="1aae-2529-c509-7573" field="category" scope="parent"/>
+                <modifier type="set" value="Coatl" field="annotation" affects="self.entries.profiles.Wizard"/>
+              </modifiers>
+              <comment>Coatl Wizard level</comment>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Cold One" hidden="false" id="7f0b-fb7d-104e-713e" collective="true" subType="mount">
       <infoLinks>
@@ -3869,7 +3923,7 @@ Contemplations Discipline" field="error">
             </entryLink>
             <entryLink import="true" name="Stegadon" hidden="false" id="420c-f321-211c-0ff2" type="selectionEntry" targetId="871c-e199-3713-d5b7" sortIndex="4">
               <costs>
-                <cost name="pts" typeId="points" value="265"/>
+                <cost name="pts" typeId="points" value="215"/>
               </costs>
             </entryLink>
             <entryLink import="true" name="Coatl" hidden="false" id="8a38-f027-4bf6-8b23" type="selectionEntry" targetId="e53c-11d7-ca69-9693" sortIndex="3">
@@ -6931,11 +6985,6 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
                       <costs>
                         <cost name="pts" typeId="points" value="215"/>
                       </costs>
-                      <modifiers>
-                        <modifier type="set" value="true" field="hidden" affects="self.entries.6902-9440-ad94-5a70"/>
-                        <modifier type="set" value="true" field="hidden" affects="self.entries.de70-151f-e53b-01f7"/>
-                        <modifier type="set" value="true" field="hidden" affects="self.entries.d7d8-3dcd-24b2-b860"/>
-                      </modifiers>
                     </entryLink>
                   </entryLinks>
                 </entryLink>
