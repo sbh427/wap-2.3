@@ -831,7 +831,11 @@
             <entryLink import="true" name="15. Tribal Affiliation" hidden="false" id="b20c-3ebc-6029-cef4" type="selectionEntryGroup" targetId="63d0-710b-7cf1-7464"/>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="162f-7fe1-5d34-6985" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="4644-f753-edb6-dafb" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="4644-f753-edb6-dafb" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9912-de9b-14e2-a4c9"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
             </entryLink>
             <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="87d0-560f-9a78-53e2" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
@@ -942,6 +946,11 @@
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="6bf1-55c4-d642-2609" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Hand Weapon &amp; Shield" hidden="false" id="c290-1fb3-e8c2-58f2" type="selectionEntry" targetId="8613-9419-33a1-5aaf" sortIndex="1"/>
+                <entryLink import="true" name="Light Lance &amp; Shield" hidden="false" id="6124-8def-5acc-f0d4" type="selectionEntry" targetId="a50e-145b-8639-0387" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
+                </entryLink>
               </entryLinks>
             </entryLink>
             <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="7f19-fd70-d967-ceb7" type="selectionEntryGroup" targetId="cdd5-56e6-35d1-e299">
@@ -949,11 +958,6 @@
                 <entryLink import="true" name="Javelins" hidden="false" id="2e48-ae34-c9d0-5436" type="selectionEntry" targetId="a923-e8b1-94c0-3f2c">
                   <costs>
                     <cost name="pts" typeId="points" value="2"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Light Lance" hidden="false" id="6124-8def-5acc-f0d4" type="selectionEntry" targetId="d989-1124-0dea-ae27">
-                  <costs>
-                    <cost name="pts" typeId="points" value="1"/>
                   </costs>
                 </entryLink>
               </entryLinks>
@@ -973,6 +977,19 @@
                   <costs>
                     <cost name="pts" typeId="points" value="1.5"/>
                   </costs>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="70. Mount" hidden="false" id="f34a-f7dd-86d5-ed56" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5d2c-69b3-04d3-6356"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Warhorse" hidden="false" id="f848-68b1-3faa-c687" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="88e7-f9c3-e8cd-34f7-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="88e7-f9c3-e8cd-34f7-max"/>
+                  </constraints>
                 </entryLink>
               </entryLinks>
             </entryLink>
@@ -1452,13 +1469,6 @@
                 </entryLink>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="60. Wizard Level" hidden="false" id="2b3a-c019-fe2a-8bdb" type="selectionEntryGroup" targetId="1d19-3d5b-2087-e988"/>
-            <entryLink import="true" name="65. Lore of Magic" hidden="false" id="0ec1-269c-eb9b-4aeb" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
-              <entryLinks>
-                <entryLink import="true" name="Lore of Life" hidden="false" id="caf3-38bc-5878-c60c" type="selectionEntry" targetId="968d-55ad-604c-f251"/>
-                <entryLink import="true" name="Lore of Beasts" hidden="false" id="cdad-8ad9-6d63-ee7a" type="selectionEntry" targetId="b436-b410-dd41-304f"/>
-              </entryLinks>
-            </entryLink>
           </entryLinks>
         </selectionEntry>
       </selectionEntries>
@@ -1482,6 +1492,15 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="60. Wizard Level" hidden="false" id="2b3a-c019-fe2a-8bdb" type="selectionEntryGroup" targetId="1d19-3d5b-2087-e988"/>
+        <entryLink import="true" name="65. Lore of Magic" hidden="false" id="0ec1-269c-eb9b-4aeb" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
+          <entryLinks>
+            <entryLink import="true" name="Lore of Life" hidden="false" id="caf3-38bc-5878-c60c" type="selectionEntry" targetId="968d-55ad-604c-f251"/>
+            <entryLink import="true" name="Lore of Beasts" hidden="false" id="cdad-8ad9-6d63-ee7a" type="selectionEntry" targetId="b436-b410-dd41-304f"/>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry id="4c84-67f3-e521-89e7" name="Hunters" hidden="false" collective="false" import="true" type="unit" sortIndex="16">
       <categoryLinks>
@@ -1537,6 +1556,9 @@
                   </costs>
                 </entryLink>
               </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4434-07af-616b-753d"/>
+              </constraints>
             </entryLink>
             <entryLink import="true" name="56. Upgrades" hidden="false" id="e500-3900-c320-3f95" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
               <entryLinks>
@@ -1740,10 +1762,14 @@
             <cost name="pts" typeId="points" value="40"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="2cc5-88dd-b995-0314" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8d3a-bdf4-4c71-7ff5"/>
-              </constraints>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="7d6f-a1c0-74c4-d14d" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="2cc5-88dd-b995-0314" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8d3a-bdf4-4c71-7ff5"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -1953,6 +1979,9 @@
               </entryLinks>
             </entryLink>
           </entryLinks>
+          <categoryLinks>
+            <categoryLink name="Cavalry" hidden="false" id="199d-f2ce-2334-b98e" targetId="bdee-b168-38ba-7d3c" primary="false"/>
+          </categoryLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -2094,7 +2123,11 @@
             </entryLink>
             <entryLink import="true" name="50. Handheld Armour" hidden="false" id="3c56-9c25-df0e-838a" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
               <entryLinks>
-                <entryLink import="true" name="Shield" hidden="false" id="3889-e92d-dc02-ba64" type="selectionEntry" targetId="c068-0827-9931-d9bf"/>
+                <entryLink import="true" name="Shield" hidden="false" id="3889-e92d-dc02-ba64" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <costs>
+                    <cost name="pts" typeId="points" value="3"/>
+                  </costs>
+                </entryLink>
               </entryLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
@@ -3658,24 +3691,6 @@
                 </entryLink>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="7908-022a-ac7e-9ec2" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
-              <entryLinks>
-                <entryLink import="true" name="Light Armour" hidden="false" id="edb2-40bb-7b30-d8e2" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-                  <costs>
-                    <cost name="pts" typeId="points" value="2.5"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="c9b9-4c34-6792-2381" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
-              <entryLinks>
-                <entryLink import="true" name="Shield" hidden="false" id="726f-cb99-8ea8-751c" type="selectionEntry" targetId="c068-0827-9931-d9bf">
-                  <costs>
-                    <cost name="pts" typeId="points" value="2.5"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
           </entryLinks>
           <modifierGroups>
             <modifierGroup type="and">
@@ -3904,6 +3919,11 @@
                 <condition type="atLeast" value="1" field="selections" scope="force" childId="9df8-b901-eef5-ecba" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="9df8-b901-eef5-ecba" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
         <entryLink import="true" name="Finians" hidden="true" id="0be8-35bc-eec3-56ef" type="selectionEntry" targetId="8364-795f-4aef-cd45">
@@ -3914,6 +3934,11 @@
             <modifier type="set" value="false" field="hidden">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="force" childId="b4d9-ffa7-1a3f-bce0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="b4d9-ffa7-1a3f-bce0" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3928,6 +3953,11 @@
                 <condition type="atLeast" value="1" field="selections" scope="force" childId="6aef-f735-e654-8220" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="6aef-f735-e654-8220" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
         <entryLink import="true" name="Sessair" hidden="true" id="2ebd-e352-800f-96f3" type="selectionEntry" targetId="b1d7-9845-ab09-63bb">
@@ -3938,6 +3968,11 @@
             <modifier type="set" value="false" field="hidden">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="force" childId="51dc-c6d4-2287-4b67" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="51dc-c6d4-2287-4b67" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3960,6 +3995,11 @@
                 <condition type="atLeast" value="1" field="selections" scope="force" childId="9df8-b901-eef5-ecba" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="9df8-b901-eef5-ecba" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
         <entryLink import="true" name="Finians" hidden="true" id="f69e-8d24-e008-8438" type="selectionEntry" targetId="8364-795f-4aef-cd45">
@@ -3970,6 +4010,11 @@
             <modifier type="set" value="false" field="hidden">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="force" childId="b4d9-ffa7-1a3f-bce0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="b4d9-ffa7-1a3f-bce0" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -3984,6 +4029,11 @@
                 <condition type="atLeast" value="1" field="selections" scope="force" childId="6aef-f735-e654-8220" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="6aef-f735-e654-8220" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
         <entryLink import="true" name="Sessair" hidden="true" id="6ef1-2d95-7ac8-6eaa" type="selectionEntry" targetId="b1d7-9845-ab09-63bb">
@@ -3994,6 +4044,11 @@
             <modifier type="set" value="false" field="hidden">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="force" childId="51dc-c6d4-2287-4b67" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="force" childId="51dc-c6d4-2287-4b67" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -4300,7 +4355,7 @@ Strength and the Multiple Wounds (D6) special rule.
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Common Magic Weapons" hidden="false" id="c491-06ee-7649-8dd6" collective="false" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="10"/>
+            <entryLink import="true" name="Common Magic Weapons" hidden="false" id="c491-06ee-7649-8dd6" collective="false" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="10" flatten="true"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup name="Talismans" id="22b2-fd6a-04c6-456f" hidden="false" collective="false" import="true" sortIndex="3">
@@ -4392,7 +4447,7 @@ Strength and the Multiple Wounds (D6) special rule.
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Common Talismans" hidden="false" id="eed8-4b66-8ae2-c452" collective="false" targetId="946f-a470-9912-9301" type="selectionEntryGroup" sortIndex="5"/>
+            <entryLink import="true" name="Common Talismans" hidden="false" id="eed8-4b66-8ae2-c452" collective="false" targetId="946f-a470-9912-9301" type="selectionEntryGroup" sortIndex="5" flatten="true"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup name="Magic Armour" id="0896-8af2-e7dc-2d7c" hidden="false" collective="false" import="true" sortIndex="2">
@@ -4592,7 +4647,7 @@ Strength and the Multiple Wounds (D6) special rule.
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Common Magic Armour" hidden="false" id="c8e3-b78a-7a1f-eaa6" collective="false" targetId="557c-c8c5-0c0f-d2b3" type="selectionEntryGroup" sortIndex="8"/>
+            <entryLink import="true" name="Common Magic Armour" hidden="false" id="c8e3-b78a-7a1f-eaa6" collective="false" targetId="557c-c8c5-0c0f-d2b3" type="selectionEntryGroup" sortIndex="8" flatten="true"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup name="Enchanted Items" id="b598-2a98-d60f-5742" hidden="false" collective="false" import="true" sortIndex="5">
@@ -4762,7 +4817,7 @@ Strength and the Multiple Wounds (D6) special rule.
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Common Enchanted Items" hidden="false" id="291c-6f7b-2a58-a729" collective="false" targetId="5857-a7aa-f954-a027" type="selectionEntryGroup" sortIndex="10"/>
+            <entryLink import="true" name="Common Enchanted Items" hidden="false" id="291c-6f7b-2a58-a729" collective="false" targetId="5857-a7aa-f954-a027" type="selectionEntryGroup" sortIndex="10" flatten="true"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup name="Arcane Items" id="45ca-df54-213e-ff44" hidden="false" collective="false" import="true" sortIndex="4">
@@ -4820,13 +4875,18 @@ Strength and the Multiple Wounds (D6) special rule.
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Common Arcane Items" hidden="false" id="7e2b-a862-acfd-19ec" collective="false" targetId="6cd2-3f4b-da2d-1ee9" type="selectionEntryGroup" sortIndex="4"/>
+            <entryLink import="true" name="Common Arcane Items" hidden="false" id="7e2b-a862-acfd-19ec" collective="false" targetId="6cd2-3f4b-da2d-1ee9" type="selectionEntryGroup" sortIndex="4" flatten="true"/>
           </entryLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="model" childId="be9e-0485-3d4a-5eda" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" value="0" field="8d8c-5a14-e4a1-fe89">
               <conditionGroups>
@@ -4879,7 +4939,7 @@ Strength and the Multiple Wounds (D6) special rule.
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Common Arcane Items (One use only)" hidden="false" id="19be-d010-cdcb-f52d" collective="false" targetId="3dfd-c3fd-5a56-45f1" type="selectionEntryGroup" sortIndex="3"/>
+            <entryLink import="true" name="Common Arcane Items (One use only)" hidden="false" id="19be-d010-cdcb-f52d" collective="false" targetId="3dfd-c3fd-5a56-45f1" type="selectionEntryGroup" sortIndex="3" flatten="true"/>
           </entryLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
