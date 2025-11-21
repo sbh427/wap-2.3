@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1530-30e9-f488-7652" name="Empire WAP 1.71" revision="46" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="1530-30e9-f488-7652" name="Empire WAP 1.71" revision="47" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <profileTypes>
     <profileType name="Steam Boiler Mishap Chart" id="b72c-c262-64a8-a221" hidden="false">
@@ -4060,8 +4060,31 @@
             <condition type="instanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="1" field="1d9b-fdc9-feb3-3164">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="daae-1e4f-3aa1-b030" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="4f5e-7e79-d329-bb9d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="cab5-9dfb-9272-32f2" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="3a60-e57a-9cf2-54b3" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <comment>And Winter Wolf knights</comment>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="force" shared="true" id="1d9b-fdc9-feb3-3164" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry id="7a0b-245c-26ce-14d5" name="Helblaster Volley Gun" hidden="false" collective="false" import="true" type="model" sortIndex="36">
       <rules>
@@ -4191,6 +4214,9 @@ In addition, all shots made with a Helstorm counts as being fired indirectly.</d
               </entryLinks>
             </entryLink>
           </entryLinks>
+          <modifiers>
+            <modifier type="set" value="2" field="7821-ebe3-f713-6916"/>
+          </modifiers>
         </entryLink>
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="e225-04e3-7ac9-70f6" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
           <entryLinks>
@@ -4678,7 +4704,7 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="8b12-ba4b-5f1e-f631" name="Special Characters" hidden="false" collective="false" import="true" type="unit" subType="unit-group" sortIndex="80">
+    <selectionEntry id="8b12-ba4b-5f1e-f631" name="99. Special Characters" hidden="false" collective="false" import="true" type="unit" subType="unit-group" sortIndex="98">
       <categoryLinks>
         <categoryLink id="e6f1-4807-4785-d503" name="Lords" hidden="false" targetId="d280-b7df-c185-2ba5" primary="true"/>
         <categoryLink id="7869-8c49-e1d0-1662" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="false"/>
@@ -6603,7 +6629,7 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
       </costs>
       <comment>Lords</comment>
     </selectionEntry>
-    <selectionEntry id="a3ee-f688-7d78-3494" name="Special Characters" hidden="false" collective="false" import="true" type="unit" subType="unit-group" sortIndex="81">
+    <selectionEntry id="a3ee-f688-7d78-3494" name="Special Characters" hidden="false" collective="false" import="true" type="unit" subType="unit-group" sortIndex="99">
       <categoryLinks>
         <categoryLink id="a2a4-57e4-040c-7ce1" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
       </categoryLinks>
@@ -7151,9 +7177,14 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
               </categoryLinks>
               <modifiers>
                 <modifier type="add" value="{this} must be accompanied by the Nuln ironhides (Handgunners)" field="error">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="2ad6-afb8-1b6a-1e5b" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="2ad6-afb8-1b6a-1e5b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="f0ee-9fb5-c78c-124e" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </selectionEntry>
@@ -8550,11 +8581,6 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
             <repeat value="1" repeats="1" field="selections" scope="force" childId="4f5e-7e79-d329-bb9d" shared="true" roundUp="false" includeChildSelections="true"/>
           </repeats>
         </modifier>
-        <modifier type="decrement" value="1" field="e80c-2115-4447-a0bf">
-          <repeats>
-            <repeat value="1" repeats="1" field="selections" scope="force" childId="4f60-ebee-7548-1ef2" shared="true" roundUp="false" includeChildSelections="true"/>
-          </repeats>
-        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Imperial Foot Knight (Core)" hidden="false" id="4f60-ebee-7548-1ef2" sortIndex="23.5">
@@ -8695,11 +8721,6 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
           <repeats>
             <repeat value="1" repeats="1" field="selections" scope="force" childId="3a60-e57a-9cf2-54b3" shared="true" roundUp="false" includeChildSelections="true"/>
             <repeat value="1" repeats="1" field="selections" scope="force" childId="4f5e-7e79-d329-bb9d" shared="true" roundUp="false" includeChildSelections="true"/>
-          </repeats>
-        </modifier>
-        <modifier type="decrement" value="1" field="8c67-8f71-567c-43e4">
-          <repeats>
-            <repeat value="1" repeats="1" field="selections" scope="force" childId="70df-0947-346c-497c" shared="true" roundUp="false" includeChildSelections="true"/>
           </repeats>
         </modifier>
       </modifiers>
@@ -9012,6 +9033,14 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e574-1a76-367b-9c07" includeChildSelections="false"/>
               </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Warhorse" hidden="false" id="ea32-a996-d948-2c0b" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4586-8a36-4420-b6e5-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4586-8a36-4420-b6e5-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="6e53-1846-1206-6fcd" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
