@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2752-b0ce-df50-3fd9" name="Albion WAP 1.6" revision="26" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/XwjPS8c9TB" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2752-b0ce-df50-3fd9" name="Albion WAP 1.6" revision="27" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/XwjPS8c9TB" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://discordapp.com/invite/UrrPB3T</readme>
   <profileTypes>
     <profileType id="49a3-0479-ec33-486e" name="Big Things Chart (Bonegrinder Giant)">
@@ -1141,6 +1141,24 @@
               </costs>
             </entryLink>
             <entryLink import="true" name="15. Tribal Affiliation" hidden="false" id="5e1e-89af-f0e2-21e3" type="selectionEntryGroup" targetId="3dc5-5772-db04-29ff"/>
+            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="93eb-6b5b-ab5d-b995" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
+              <entryLinks>
+                <entryLink import="true" name="Shield" hidden="false" id="f04b-710b-1c4b-676e" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="ee52-2f1f-740b-fa3e" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
+              <entryLinks>
+                <entryLink import="true" name="Light Armour" hidden="false" id="5a42-2ee7-66d9-e895" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
           <constraints>
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="72fa-1817-e3a5-61b2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -2566,7 +2584,7 @@
         <categoryLink id="1950-370c-e5ac-1deb" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="f3a2-4301-a337-7353" name="Character" hidden="false" collective="false" import="true" defaultSelectionEntryId="4ace-7e9b-86a4-d022">
+        <selectionEntryGroup id="f3a2-4301-a337-7353" name="Character" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c3f1-6812-3f43-e8be" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5191-5fd1-36ef-d5b8" type="min"/>
@@ -2923,7 +2941,7 @@
         <categoryLink id="c199-bd46-7242-0e6d" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="7351-0bac-0b7d-010f" name="Character" hidden="false" collective="false" import="true" defaultSelectionEntryId="332b-b24e-3bc4-d848">
+        <selectionEntryGroup id="7351-0bac-0b7d-010f" name="Character" hidden="false" collective="false" import="true">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c153-a839-6ad6-eafe" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f785-66ab-3813-af8e" type="min"/>
@@ -3347,29 +3365,113 @@
             <entryLink import="true" name="Falians" hidden="false" id="9df8-b901-eef5-ecba" type="selectionEntry" targetId="f75f-ed6e-e353-4010">
               <modifiers>
                 <modifier type="set" value="1" field="c907-454d-3d5e-d3c8">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="force" childId="332b-b24e-3bc4-d848" shared="true" includeChildSelections="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="88c3-2769-2ff3-8855" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="332b-b24e-3bc4-d848" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden"/>
+                  </modifiers>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="force" childId="88c3-2769-2ff3-8855" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="force" childId="559a-6566-3145-8ee1" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="force" childId="5aca-930e-2552-1af5" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="force" childId="7267-d79d-034a-ead9" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
             <entryLink import="true" name="Finians" hidden="false" id="b4d9-ffa7-1a3f-bce0" type="selectionEntry" targetId="8364-795f-4aef-cd45">
               <modifiers>
                 <modifier type="set" value="1" field="4734-a3cd-e252-83d9">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="force" childId="559a-6566-3145-8ee1" shared="true" includeChildSelections="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="88c3-2769-2ff3-8855" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="559a-6566-3145-8ee1" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden"/>
+                  </modifiers>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="force" childId="88c3-2769-2ff3-8855" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="force" childId="5aca-930e-2552-1af5" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="force" childId="7267-d79d-034a-ead9" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="force" childId="332b-b24e-3bc4-d848" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
             <entryLink import="true" name="Fir Domain" hidden="false" id="6aef-f735-e654-8220" type="selectionEntry" targetId="47b6-2799-313e-a15e">
               <modifiers>
                 <modifier type="set" value="1" field="3699-2ef2-3fa7-e4f7">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="force" childId="5aca-930e-2552-1af5" shared="true" includeChildSelections="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="88c3-2769-2ff3-8855" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="force" childId="5aca-930e-2552-1af5" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden"/>
+                  </modifiers>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="force" childId="88c3-2769-2ff3-8855" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="force" childId="559a-6566-3145-8ee1" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="force" childId="7267-d79d-034a-ead9" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="force" childId="332b-b24e-3bc4-d848" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
             <entryLink import="true" name="Sessair" hidden="false" id="51dc-c6d4-2287-4b67" type="selectionEntry" targetId="b1d7-9845-ab09-63bb">
               <modifiers>
@@ -3384,15 +3486,42 @@
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden"/>
+                  </modifiers>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="force" childId="88c3-2769-2ff3-8855" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="force" childId="559a-6566-3145-8ee1" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="force" childId="5aca-930e-2552-1af5" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="force" childId="332b-b24e-3bc4-d848" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
           </entryLinks>
-          <modifiers>
-            <modifier type="set" value="4" field="daa5-3122-8efe-b21a">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="4" field="daa5-3122-8efe-b21a"/>
+                <modifier type="set" value="4" field="7da3-b71f-3b5e-2683"/>
+              </modifiers>
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="force" childId="88c3-2769-2ff3-8855" shared="true" includeChildSelections="true"/>
               </conditions>
-            </modifier>
-          </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
@@ -3493,8 +3622,8 @@
         <infoLink name="Falians" id="3243-4717-0104-45a2" hidden="false" targetId="02af-a79d-0ecd-c30f" type="rule"/>
       </infoLinks>
       <constraints>
-        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="c907-454d-3d5e-d3c8"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e7b9-3b02-ddf1-2937"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="c907-454d-3d5e-d3c8" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e7b9-3b02-ddf1-2937" automatic="true"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Finians" hidden="false" id="8364-795f-4aef-cd45" collective="true">
@@ -3502,8 +3631,8 @@
         <infoLink name="Finians" id="39a4-35dd-89ed-cc2a" hidden="false" targetId="7fe7-4afd-4e3c-26e1" type="rule"/>
       </infoLinks>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ac06-4cd4-feb2-a92a"/>
-        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4734-a3cd-e252-83d9"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ac06-4cd4-feb2-a92a" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4734-a3cd-e252-83d9" automatic="true"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Fir Domain" hidden="false" id="47b6-2799-313e-a15e" collective="true">
@@ -3511,8 +3640,8 @@
         <infoLink name="Fir Domain" id="d80f-69aa-d83a-6cd0" hidden="false" targetId="57e8-1d9c-81b2-b5a0" type="rule"/>
       </infoLinks>
       <constraints>
-        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="3699-2ef2-3fa7-e4f7"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d549-0da9-3681-ab2d"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="3699-2ef2-3fa7-e4f7" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d549-0da9-3681-ab2d" automatic="true"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Sessair" hidden="false" id="b1d7-9845-ab09-63bb" collective="true">
@@ -3520,8 +3649,8 @@
         <infoLink name="Sessair" id="6696-ffe6-5b5c-1752" hidden="false" targetId="2017-dc1a-435b-90ed" type="rule"/>
       </infoLinks>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="79ba-6ecb-d520-bc09"/>
-        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="df77-6332-88d9-907b"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="79ba-6ecb-d520-bc09" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="df77-6332-88d9-907b" automatic="true"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Woad Paint" hidden="false" id="5962-d6c6-86d6-dbb0" collective="true">
@@ -3900,7 +4029,7 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="3f56-0ca5-9769-d000" name="Common Magic Standards" hidden="false" collective="false" import="true" targetId="2613-24d7-a26e-eb37" type="selectionEntryGroup" sortIndex="8"/>
+        <entryLink id="3f56-0ca5-9769-d000" name="Common Magic Standards" hidden="false" collective="false" import="true" targetId="2613-24d7-a26e-eb37" type="selectionEntryGroup" sortIndex="8" flatten="true"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="15. Tribal Affiliation" id="3dc5-5772-db04-29ff" hidden="false" collective="false" import="true">
