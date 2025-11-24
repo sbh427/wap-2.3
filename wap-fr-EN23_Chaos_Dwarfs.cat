@@ -2335,18 +2335,6 @@
                   </costs>
                 </entryLink>
               </entryLinks>
-              <modifiers>
-                <modifier type="add" value="Warriors need at least one selection of Great Weapon and Shield" field="error">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="6de9-402c-3aa0-94f7" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="1e72-47bc-8fd0-95ee" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
             </entryLink>
             <entryLink import="true" name="40. Suits of Armour" hidden="false" id="7a96-a2b5-c42d-1681" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
               <entryLinks>
@@ -2364,20 +2352,23 @@
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
+                  <modifiers>
+                    <modifier type="set" value="0" field="5951-371c-fa0c-2a57">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="model" childId="6de9-402c-3aa0-94f7" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="1" field="5951-371c-fa0c-2a57">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="model" childId="6de9-402c-3aa0-94f7" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5951-371c-fa0c-2a57"/>
+                  </constraints>
                 </entryLink>
               </entryLinks>
-              <modifiers>
-                <modifier type="add" value="Warriors need at least one selection of Great Weapon and Shield" field="error">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="6de9-402c-3aa0-94f7" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="1e72-47bc-8fd0-95ee" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
             </entryLink>
           </entryLinks>
           <profiles>
