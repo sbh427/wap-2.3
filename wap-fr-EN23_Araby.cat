@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="89a4-c9a0-f3a0-6dba" name="Araby WAP 1.72" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="61" revision="5" authorName="Xetolosch" battleScribeVersion="2.03" authorContact="Contact me via discord" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="89a4-c9a0-f3a0-6dba" name="Araby WAP 1.72" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="61" revision="6" authorName="Xetolosch" battleScribeVersion="2.03" authorContact="Contact me via discord" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Tactical Withdrawl" id="cf87-cae6-cc46-9094" hidden="false" publicationId="fd0a-6995-03c8-1dd6" page="3">
       <description>Models with this rule may re-roll the lowest dice roll for their flee distance when choosing Flee as a charge reaction.</description>
@@ -1222,11 +1222,15 @@
         <cost name="pts" typeId="points" value="95"/>
       </costs>
       <infoLinks>
-        <infoLink name="Dodge (5+)" id="6443-03af-f6c4-f423" hidden="false" type="rule" targetId="cfff-6563-d1c6-820c"/>
         <infoLink name="Hidden" id="5426-ea31-cf0e-e897" hidden="false" type="rule" targetId="2796-b399-4f98-a36f"/>
         <infoLink name="Immunity (Psychology)" id="4177-022a-9dd0-e0b0" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
         <infoLink name="Scouts" id="ae5b-53e4-e7a5-1f7a" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
         <infoLink name="Zealotry" id="73b1-06dd-a197-acb5" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
+        <infoLink name="Dodge (*)" id="3ab3-4131-3df0-d7df" hidden="false" type="rule" targetId="d909-ac08-40af-8f44">
+          <modifiers>
+            <modifier type="replace" value="5+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <profiles>
         <profile name="Hashishin" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="85b5-2c9f-2b54-648d" publicationId="fd0a-6995-03c8-1dd6" page="11">
@@ -2321,7 +2325,7 @@
           <entryLinks>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="4512-a639-f4b6-0a6e" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
-                <entryLink import="true" name="Handweapon &amp; Buckler" hidden="false" id="70cf-b8de-aff0-0dbf" type="selectionEntry" targetId="ae2b-eee3-83a8-131d" sortIndex="1">
+                <entryLink import="true" name="Hand Weapon &amp; Buckler" hidden="false" id="70cf-b8de-aff0-0dbf" type="selectionEntry" targetId="ae2b-eee3-83a8-131d" sortIndex="1">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
@@ -3432,7 +3436,11 @@
           <infoLinks>
             <infoLink name="Tactical Withdrawl" id="988d-7066-41c4-1f72" hidden="false" type="rule" targetId="cf87-cae6-cc46-9094"/>
             <infoLink name="Zealotry" id="bb9d-bec8-68ce-216e" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
-            <infoLink name="Dodge (6+)" id="9b24-ddbd-6969-b152" hidden="false" type="rule" targetId="bf3d-abaf-45ca-3477"/>
+            <infoLink name="Dodge (*)" id="2195-9d99-b0b8-20ef" hidden="false" type="rule" targetId="d909-ac08-40af-8f44">
+              <modifiers>
+                <modifier type="replace" value="6+" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <constraints>
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="7c02-9166-a37c-a3cf"/>
@@ -5308,7 +5316,11 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
               </constraints>
               <infoLinks>
                 <infoLink name="Zealotry" id="60df-5ab5-fd18-bc04" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
-                <infoLink name="Dodge (4+)" id="1f19-fecc-50fc-1814" hidden="false" type="rule" targetId="5e3f-9736-a9c0-4a1c"/>
+                <infoLink name="Dodge (*)" id="1f19-fecc-50fc-1814" hidden="false" type="rule" targetId="d909-ac08-40af-8f44">
+                  <modifiers>
+                    <modifier type="replace" value="4+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
                 <infoLink name="Immunity (Psychology)" id="e24d-37ac-6c15-3ffc" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
                 <infoLink name="Hidden" id="545d-b03e-8a5d-494d" hidden="false" type="rule" targetId="2796-b399-4f98-a36f"/>
                 <infoLink name="Killing Blow" id="b215-fc7d-99f2-8104" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29"/>
