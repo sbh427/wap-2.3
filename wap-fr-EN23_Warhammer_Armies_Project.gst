@@ -8385,9 +8385,6 @@ A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Ter
     <rule id="917c-1397-bf0b-5856" name="Ignores Armour Saves" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
       <description>If a model has this rule, no armour saves may be taken at all, unless otherwise noted.</description>
     </rule>
-    <rule id="5dfb-b5c0-520b-ed68" name="Immunity (Ice Attacks)" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
-      <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.</description>
-    </rule>
     <rule id="a711-7cf6-cd2b-1d29" name="Killing Blow" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>If a model with Killing Blow rolls a 6 to wound in close combat, they automatically slay their opponent – regardless of the number of wounds on the victim&apos;s profile. Armour saves and regeneration saves cannot be taken against a Killing Blow. Ward Saves may be taken as normal.
 
@@ -8522,14 +8519,6 @@ If two or more models in a unit have the Random Movement, pivot the unit about i
 
 A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Terrain test, unless the model is making a charge, pursuit or flee move, in which case it counts as a move of the appropriate type.</description>
     </rule>
-    <rule id="49c7-526e-cb3e-d7b7" name="Immunity (Flaming Attacks)" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
-      <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.</description>
-    </rule>
-    <rule id="9fed-6076-6c75-b774" name="Immunity (Fear)" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
-      <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.
-
-Immunity can also include Panic, Fear and Terror. If the majority of the models in a unit have the Immunity (Panic, Fear or Terror) rule, the unit ignores the effects of Panic, Fear or Terror and any such tests it would otherwise had to take.</description>
-    </rule>
     <rule id="e14b-e42f-3ee3-3636" name="Immunity (Terror)" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
       <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.
 
@@ -8653,9 +8642,6 @@ Impact Hits are only made on the turn the model makes a successful charge into c
 Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
 
 Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
-    </rule>
-    <rule id="3c13-1f49-b25b-95f8" name="Immunity (Lightning Attacks)" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
-      <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.</description>
     </rule>
     <rule id="065b-1f43-47e5-70cb" name="Random Attacks (2D6)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
@@ -9344,7 +9330,7 @@ Unless otherwise specified, Multiple Wounds only apply to close combat attacks.<
     <rule id="d80a-79a1-ada7-5451" name="Hatred (Elves)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
     </rule>
-    <rule id="8f93-30da-a9db-adc7" name="Immunity" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
+    <rule id="8f93-30da-a9db-adc7" name="Immunity (*)" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
       <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.
 
 Immunity can also include Panic, Fear and Terror. If the majority of the models in a unit have the Immunity (Panic, Fear or Terror) rule, the unit ignores the effects of Panic, Fear or Terror and any such tests it would otherwise had to take.</description>
