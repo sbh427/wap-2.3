@@ -8293,9 +8293,6 @@ In addition, if the model&apos;s I is higher than their enemy&apos;s when it is 
 
 In addition, if the model&apos;s I is lower than their enemy&apos;s when it is their turn to attack, they must re-roll successful To Hit rolls when striking in close combat.</description>
     </rule>
-    <rule id="bf4e-212e-fe1d-20c6" name="Armour Piercing" publicationId="9e23-79cb-pubN66727" page="58" hidden="false">
-      <description>Wounds caused in close combat by this model inflict a negative armour save modifier as indicated by the number in the brackets, in addition to those for S. If a model has a weapon with the Armour Piercing rule, only attacks made or shots fired with the weapon are Armour Piercing. This rule is cumulative with other sources of Armour Piercing.</description>
-    </rule>
     <rule id="3667-691b-abd9-7da6" name="Aquatic" publicationId="9e23-79cb-pubN66727" page="58" hidden="false">
       <description>Models with the Aquatic special rule can move within any area of water on the battlefield, including rivers and even deep water that players may have deemed impassable to other models, as if it were open ground.
 However, they are still subject to any special effects that specific terrain may have (e.g. we don&apos;t exempt Aquatic models from the dangers of marshes).
@@ -9456,6 +9453,9 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
     </rule>
     <rule id="d909-ac08-40af-8f44" name="Dodge (*)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>Models with this rule gain a Ward Save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have Always Strikes First, nor can it be used if the model is subject to Always Strikes Last. Finally, Dodge cannot be used by mounted models, unless specified.</description>
+    </rule>
+    <rule id="c833-7f06-a9e9-e2ea" name="Armour Piercing (*)" publicationId="9e23-79cb-pubN66727" page="58" hidden="false">
+      <description>Wounds caused in close combat by this model inflict a negative armour save modifier as indicated by the number in the brackets, in addition to those for S. If a model has a weapon with the Armour Piercing rule, only attacks made or shots fired with the weapon are Armour Piercing. This rule is cumulative with other sources of Armour Piercing.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
