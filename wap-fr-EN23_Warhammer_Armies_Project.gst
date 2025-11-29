@@ -8315,9 +8315,6 @@ To perform the attack, place the flame template so that it lies entirely within 
 Breath Weapon Close Combat Attack
 If the model with this special rule is in close combat, it can use the Breath Weapon instead of using its normal attacks. A model that makes a breath weapon attack in this way inflicts 2D6 automatic hits (resolved like shooting) on a single enemy unit in base contact – if there is more than one enemy unit in base contact with the model, the controlling player chooses which enemy unit suffers the hits. Note that no single model in the target unit may be Hit more than once from the same breath weapon attack – any excess hits are ignored. As with breath weapon attacks made in the Shooting phase, the Strength and any special effects of the creature&apos;s Breath Weapon will be covered in its rules. Wounds caused by a Breath Weapon in close combat count towards combat resolution.</description>
     </rule>
-    <rule id="3d84-8ad0-b310-e355" name="Fight in Extra Ranks (1)" publicationId="9e23-79cb-pubN66727" page="60" hidden="false">
-      <description>If a unit has this rule then supporting attacks can be made by one more rank than normal for each number indicated in the bracket. This rule is cumulative with other sources of Fight in Extra Ranks.</description>
-    </rule>
     <rule id="8600-a090-2761-d661" name="Flaming Attacks" publicationId="9e23-79cb-pubN66727" page="60" hidden="false">
       <description>Models with Flaming Attacks cause Fear in War Beasts, Cavalry, Chariots and Flammable creatures. Any Panic test taken by any of these Troop Types from a Flaming Attack suffer -1 to their Leadership when taking the test.
 
@@ -9324,7 +9321,7 @@ If an arrow is rolled on the scatter dice, resolve the scatter as normal. If ho
 
 Other than the aforementioned inaccuracy of the scatter, an indirect shot from a stone thrower is treated exactly according to the rules given for normal shots given above.</description>
     </rule>
-    <rule id="adee-efa4-db8e-2fb1" name="Fight in Extra Ranks" publicationId="9e23-79cb-pubN66727" page="60" hidden="false">
+    <rule id="adee-efa4-db8e-2fb1" name="Fight in Extra Ranks (*)" publicationId="9e23-79cb-pubN66727" page="60" hidden="false">
       <description>If a unit has this rule then supporting attacks can be made by one more rank than normal for each number indicated in the bracket. This rule is cumulative with other sources of Fight in Extra Ranks.</description>
     </rule>
     <rule name="Daemonic Instability" id="c6ed-33cf-2be7-0cec" hidden="false" publicationId="1a01-044f-047b-618f" page="21">
