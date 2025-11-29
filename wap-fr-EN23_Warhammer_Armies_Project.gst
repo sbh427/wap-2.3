@@ -8114,20 +8114,6 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
     <rule id="8977-b58c-704d-705e" name="Sniper" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
       <description>A model with Sniper can make a special Sniper shot instead of shooting normally (though it can be used in combination with the Multiple Shots rule as normal). A Sniper shot suffers an additional -1 To Hit penalty, in addition to any other modifiers, but can be aimed with great precision. Unless making a Stand and Shoot charge reaction, a model making a Sniper shot can shoot at a different target from the one chosen by their unit. A hit from a Sniper shot is not distributed in the same manner as other shooting attacks. The Sniper can shoot at any model they can see, including characters within a unit. &quot;Look Out Sir!&quot; cannot be used. Sniper cannot be used when firing weapons that use a template.</description>
     </rule>
-    <rule id="953a-d5a4-ee81-4093" name="Fly (10)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>Flying models follow the rules for Skirmishers. However, they cannot use Feigned Flight, and if they have a Unit Strength above 2 and/or a close combat armour save better than 4+, they cannot use Vanguard.
-
-Moving Flyers
-Flight is represented by a swoop equal to the number in the brackets instead of using the model&apos;s normal M value. Note that any equipment or rules that affect the model&apos;s regular M will also affect its Fly move, unless specified. The flyer starts off on the ground, takes off, flies to where it wishes to go, and then lands. Flyers, therefore, begin and end their movement on the ground.
-
-Units made up entirely of models that can fly can move or charge normally on the ground, using their M value, or instead choose to fly. A unit that flies can move over other units and terrain as it does so, treating the entire move as taking place over open ground. It may not finish the move on top of another unit or in impassable terrain. Models that Fly can make a flying charge over intervening units and terrain as long as they can draw Line of Sight to their target as normal. A unit that makes a flying charge does so using its Fly move as its M characteristic, using Swiftstride.
-
-Flying March
-A unit that is flying can march as normal, doubling its flying move.
-
-Flee and Pursue
-Flyers always move on the ground when attempting to flee or pursue.</description>
-    </rule>
     <rule id="777a-7a64-44fa-a78e" name="Leader" publicationId="9e23-79cb-pubN66727" page="97" hidden="false">
       <description>&quot;Follow Me!&quot;
 A unit that is accompanied by a Leader may re-roll failed Leadership tests in the following scenarios:
@@ -8815,76 +8801,6 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
     <rule id="d75e-a845-77aa-679b" name="Loremaster (Lore of Slaanesh)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
     </rule>
-    <rule id="2ba2-2aaa-3f36-4b24" name="Fly (9)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>Flying models follow the rules for Skirmishers. However, they cannot use Feigned Flight, and if they have a Unit Strength above 2 and/or a close combat armour save better than 4+, they cannot use Vanguard.
-
-Moving Flyers
-Flight is represented by a swoop equal to the number in the brackets instead of using the model&apos;s normal M value. Note that any equipment or rules that affect the model&apos;s regular M will also affect its Fly move, unless specified. The flyer starts off on the ground, takes off, flies to where it wishes to go, and then lands. Flyers, therefore, begin and end their movement on the ground.
-
-Units made up entirely of models that can fly can move or charge normally on the ground, using their M value, or instead choose to fly. A unit that flies can move over other units and terrain as it does so, treating the entire move as taking place over open ground. It may not finish the move on top of another unit or in impassable terrain. Models that Fly can make a flying charge over intervening units and terrain as long as they can draw Line of Sight to their target as normal. A unit that makes a flying charge does so using its Fly move as its M characteristic, using Swiftstride.
-
-Flying March
-A unit that is flying can march as normal, doubling its flying move.
-
-Flee and Pursue
-Flyers always move on the ground when attempting to flee or pursue.</description>
-    </rule>
-    <rule id="0a9a-bfcb-1a9d-5609" name="Fly (8)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>Flying models follow the rules for Skirmishers. However, they cannot use Feigned Flight, and if they have a Unit Strength above 2 and/or a close combat armour save better than 4+, they cannot use Vanguard.
-
-Moving Flyers
-Flight is represented by a swoop equal to the number in the brackets instead of using the model&apos;s normal M value. Note that any equipment or rules that affect the model&apos;s regular M will also affect its Fly move, unless specified. The flyer starts off on the ground, takes off, flies to where it wishes to go, and then lands. Flyers, therefore, begin and end their movement on the ground.
-
-Units made up entirely of models that can fly can move or charge normally on the ground, using their M value, or instead choose to fly. A unit that flies can move over other units and terrain as it does so, treating the entire move as taking place over open ground. It may not finish the move on top of another unit or in impassable terrain. Models that Fly can make a flying charge over intervening units and terrain as long as they can draw Line of Sight to their target as normal. A unit that makes a flying charge does so using its Fly move as its M characteristic, using Swiftstride.
-
-Flying March
-A unit that is flying can march as normal, doubling its flying move.
-
-Flee and Pursue
-Flyers always move on the ground when attempting to flee or pursue.</description>
-    </rule>
-    <rule id="36ba-3349-99bd-1979" name="Fly (7)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>Flying models follow the rules for Skirmishers. However, they cannot use Feigned Flight, and if they have a Unit Strength above 2 and/or a close combat armour save better than 4+, they cannot use Vanguard.
-
-Moving Flyers
-Flight is represented by a swoop equal to the number in the brackets instead of using the model&apos;s normal M value. Note that any equipment or rules that affect the model&apos;s regular M will also affect its Fly move, unless specified. The flyer starts off on the ground, takes off, flies to where it wishes to go, and then lands. Flyers, therefore, begin and end their movement on the ground.
-
-Units made up entirely of models that can fly can move or charge normally on the ground, using their M value, or instead choose to fly. A unit that flies can move over other units and terrain as it does so, treating the entire move as taking place over open ground. It may not finish the move on top of another unit or in impassable terrain. Models that Fly can make a flying charge over intervening units and terrain as long as they can draw Line of Sight to their target as normal. A unit that makes a flying charge does so using its Fly move as its M characteristic, using Swiftstride.
-
-Flying March
-A unit that is flying can march as normal, doubling its flying move.
-
-Flee and Pursue
-Flyers always move on the ground when attempting to flee or pursue.</description>
-    </rule>
-    <rule id="b830-fe6e-b461-0377" name="Fly (6)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>Flying models follow the rules for Skirmishers. However, they cannot use Feigned Flight, and if they have a Unit Strength above 2 and/or a close combat armour save better than 4+, they cannot use Vanguard.
-
-Moving Flyers
-Flight is represented by a swoop equal to the number in the brackets instead of using the model&apos;s normal M value. Note that any equipment or rules that affect the model&apos;s regular M will also affect its Fly move, unless specified. The flyer starts off on the ground, takes off, flies to where it wishes to go, and then lands. Flyers, therefore, begin and end their movement on the ground.
-
-Units made up entirely of models that can fly can move or charge normally on the ground, using their M value, or instead choose to fly. A unit that flies can move over other units and terrain as it does so, treating the entire move as taking place over open ground. It may not finish the move on top of another unit or in impassable terrain. Models that Fly can make a flying charge over intervening units and terrain as long as they can draw Line of Sight to their target as normal. A unit that makes a flying charge does so using its Fly move as its M characteristic, using Swiftstride.
-
-Flying March
-A unit that is flying can march as normal, doubling its flying move.
-
-Flee and Pursue
-Flyers always move on the ground when attempting to flee or pursue.</description>
-    </rule>
-    <rule id="36d4-923e-e1c7-72bc" name="Fly (5)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>Flying models follow the rules for Skirmishers. However, they cannot use Feigned Flight, and if they have a Unit Strength above 2 and/or a close combat armour save better than 4+, they cannot use Vanguard.
-
-Moving Flyers
-Flight is represented by a swoop equal to the number in the brackets instead of using the model&apos;s normal M value. Note that any equipment or rules that affect the model&apos;s regular M will also affect its Fly move, unless specified. The flyer starts off on the ground, takes off, flies to where it wishes to go, and then lands. Flyers, therefore, begin and end their movement on the ground.
-
-Units made up entirely of models that can fly can move or charge normally on the ground, using their M value, or instead choose to fly. A unit that flies can move over other units and terrain as it does so, treating the entire move as taking place over open ground. It may not finish the move on top of another unit or in impassable terrain. Models that Fly can make a flying charge over intervening units and terrain as long as they can draw Line of Sight to their target as normal. A unit that makes a flying charge does so using its Fly move as its M characteristic, using Swiftstride.
-
-Flying March
-A unit that is flying can march as normal, doubling its flying move.
-
-Flee and Pursue
-Flyers always move on the ground when attempting to flee or pursue.</description>
-    </rule>
     <rule id="4740-7f33-d5b8-5563" name="Slayer" publicationId="aa7b-3583-0834-7bfa" page="160" hidden="false">
       <description>Slayers always Wound on a To Wound roll of 4+, unless they would need a lower result. Use the Slayer&apos;s Strength to determine the armour save modifier for any successful Wounds.</description>
     </rule>
@@ -8897,7 +8813,7 @@ Flyers always move on the ground when attempting to flee or pursue.</description
     <rule id="c6b3-2ae5-df09-b853" name="Hatred (Vampires)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
     </rule>
-    <rule id="7a27-4cc5-bde-2d7f" name="Fly (4)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
+    <rule id="7a27-4cc5-bde-2d7f" name="Fly (*)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>Flying models follow the rules for Skirmishers. However, they cannot use Feigned Flight, and if they have a Unit Strength above 2 and/or a close combat armour save better than 4+, they cannot use Vanguard.
 
 Moving Flyers
