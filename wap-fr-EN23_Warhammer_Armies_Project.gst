@@ -296,7 +296,7 @@
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink name="Impact Hits (1)" id="db0b-afa8-dc86-9375" hidden="false" type="rule" targetId="bb3b-3ca8-fcbc-a78b">
+        <infoLink name="Impact Hits (*)" id="db0b-afa8-dc86-9375" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
           <modifiers>
             <modifier type="set" value="From Mount" field="annotation"/>
             <modifier type="set" value="true" field="hidden">
@@ -311,6 +311,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="replace" value="1" field="name" arg="*"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -331,9 +332,10 @@
     </categoryEntry>
     <categoryEntry name="Monstrous Cavalry" id="82d3-4589-72b4-b6ed" hidden="false">
       <infoLinks>
-        <infoLink name="Impact Hits (1)" id="7683-2a71-59fd-37ab" hidden="false" type="rule" targetId="bb3b-3ca8-fcbc-a78b">
+        <infoLink name="Impact Hits (*)" id="7683-2a71-59fd-37ab" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
           <modifiers>
             <modifier type="set" value="From Mount" field="annotation"/>
+            <modifier type="replace" value="1" field="name" arg="*"/>
           </modifiers>
         </infoLink>
         <infoLink name="Fear" id="c2b9-c3ec-39ff-2d86" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
@@ -437,8 +439,9 @@
     <categoryEntry name="Chariot" id="7224-b7fd-d652-3ff2" hidden="false">
       <infoLinks>
         <infoLink name="Swiftstride" id="ed85-9dfb-a95c-043e" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
-        <infoLink name="Impact Hits (D6)" id="5d7f-cb2c-7108-f4c7" hidden="false" type="rule" targetId="e9e6-66cc-623f-8e94">
+        <infoLink name="Impact Hits (*)" id="f315-f703-6851-525f" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
           <modifiers>
+            <modifier type="replace" value="D6" field="name" arg="*"/>
             <modifier type="set" value="From Chariot" field="annotation"/>
           </modifiers>
         </infoLink>
@@ -8099,15 +8102,6 @@ Arriving Ambushers enter the battlefield from any point on any battlefield edge,
 
 In addition, for every Core unit that deploys as Ambushers in your army, you are required to include at least one other Core Unit that is not Expendable (described later in this chapter) and that does not deploy using the Ambushers rule (for more information, see the Choosing Your Army chapter).</description>
     </rule>
-    <rule id="a043-3e3c-9f8a-3661" name="Impact Hits (D6+1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
-
-Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
-
-Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
-
-Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
-    </rule>
     <rule id="6b43-9dda-f589-0509" name="Natural Armour (4+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
     </rule>
@@ -8170,15 +8164,6 @@ Charging: M + 3D6 (discard the lowest)
 Failed Charge: 3D6 (discard the lowest)
 Fleeing/Pursuing: 3D6 (discard the lowest)</description>
     </rule>
-    <rule id="bb3b-3ca8-fcbc-a78b" name="Impact Hits (1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
-
-Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
-
-Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
-
-Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
-    </rule>
     <rule id="b806-942b-15af-b309" name="Expendable" publicationId="9e23-79cb-pubN66727" page="60" hidden="false" type="upgrade">
       <description>Models with this rule do not cause Panic to friendly units that are not Expendable themselves. Characters may not join a unit with this rule, unless specified. Likewise, an Expendable character may not join a unit that is not Expendable.
 
@@ -8188,15 +8173,6 @@ For every Core unit with Expendable rule in your army, you are required to inclu
       <description>A model with this rule can make a Stomp in addition to its other close combat attacks (including Breath Weapons). A Stomp has Always Strikes Last, and inflicts D6 (or D3 against lone Infantry models and skirmishers) automatic hits, at the model&apos;s Strength, on one enemy Infantry, War Beasts or Swarm unit in base contact with the model and are randomised as Automatic Hits.
 
 Unless specified, any rules that apply to the model’s normal attacks do not apply to its Stomps.</description>
-    </rule>
-    <rule id="e9e6-66cc-623f-8e94" name="Impact Hits (D6)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
-
-Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
-
-Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
-
-Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
     </rule>
     <rule id="df59-4284-cca7-e4ca" name="Terror" publicationId="9e23-79cb-pubN66727" page="83" hidden="false">
       <description>Models that cause Terror also cause Fear. In addition, the following rules apply. Fear-causing models or models with Immunity (Fear) treat Terror-causing monsters as causing Fear, rather than Terror – this is an exception to the rule that makes Fear-causing creatures immune to Fear. Terror-causing models have Immunity (Fear/Terror).
@@ -8427,15 +8403,6 @@ Unless otherwise specified, Multiple Wounds only apply to close combat attacks.<
 
 If a character with Magic Resistance joins a unit, all models in the unit benefit from the Magic Resistance as long as they are part of the unit. If a model or unit has two sets of Magic Resistance, the two combine to a maximum of Magic Resistance (3), unless specified.</description>
     </rule>
-    <rule id="f30d-0b61-2836-689e" name="Impact Hits (D3)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
-
-Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
-
-Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
-
-Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
-    </rule>
     <rule id="306d-711a-1300-587f" name="Natural Armour (5+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
     </rule>
@@ -8444,24 +8411,6 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
     </rule>
     <rule id="33f1-4ddd-d26b-281a" name="Random Attacks (D6+2)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
-    </rule>
-    <rule id="d078-4dd8-8ffb-876a" name="Impact Hits (D6+2)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
-
-Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
-
-Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
-
-Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
-    </rule>
-    <rule id="16ae-a437-29a7-e714" name="Impact Hits (D3+1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
-
-Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
-
-Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
-
-Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
     </rule>
     <rule id="0e09-3526-25d5-2646" name="Magic Resistance (2)" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
       <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward Save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
@@ -8590,15 +8539,6 @@ If a character with Magic Resistance joins a unit, all models in the unit benefi
     <rule id="1308-62b9-5692-6880" name="Hatred (Empire)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
     </rule>
-    <rule id="f78e-8057-0e20-d89f" name="Impact Hits (2D6)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
-
-Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
-
-Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
-
-Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
-    </rule>
     <rule id="ece5-1f38-ee28-593e" name="Random Movement (4D6)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
       <description>Models with Random Movement do not have a M value, but rather a dice roll. This is the distance they move, charge, pursue, overrun and flee – they cannot march. If a model has Random Movement and Swiftstride, then Swiftstride is not used. Note that certain Random Movement rolls can result in the model having a M value higher than 10 – this is an exception to the usual maximum.
 
@@ -8625,15 +8565,6 @@ If the random move brings the unit to within 1&quot; of a friendly unit or impas
 If two or more models in a unit have the Random Movement, pivot the unit about its centre, then roll the dice only once to determine how for the unit moves. If models in the unit have a different Random Movement value, use the slowest for the entire unit.
 
 A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Terrain test, unless the model is making a charge, pursuit or flee move, in which case it counts as a move of the appropriate type.</description>
-    </rule>
-    <rule id="5c52-2ebf-0b14-991c" name="Impact Hits (D6+3)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
-
-Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
-
-Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
-
-Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
     </rule>
     <rule id="065b-1f43-47e5-70cb" name="Random Attacks (2D6)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
@@ -8796,15 +8727,6 @@ A unit that is flying can march as normal, doubling its flying move.
 
 Flee and Pursue
 Flyers always move on the ground when attempting to flee or pursue.</description>
-    </rule>
-    <rule id="ba8d-3b7f-3ea7-977b" name="Impact Hits (3D6)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
-
-Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
-
-Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
-
-Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
     </rule>
     <rule id="18cb-1dc6-4139-8c3" name="Line of Sight (0)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Line of Sight of 0.</description>
@@ -9339,6 +9261,15 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
     </rule>
     <rule id="c833-7f06-a9e9-e2ea" name="Armour Piercing (*)" publicationId="9e23-79cb-pubN66727" page="58" hidden="false">
       <description>Wounds caused in close combat by this model inflict a negative armour save modifier as indicated by the number in the brackets, in addition to those for S. If a model has a weapon with the Armour Piercing rule, only attacks made or shots fired with the weapon are Armour Piercing. This rule is cumulative with other sources of Armour Piercing.</description>
+    </rule>
+    <rule id="b38c-e0a7-d638-6465" name="Impact Hits (*)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
+
+Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
+
+Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
+
+Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
