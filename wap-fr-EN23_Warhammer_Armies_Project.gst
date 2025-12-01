@@ -8079,9 +8079,7 @@ Until they pass the Stupidity test again, models that have failed their Stupidit
       <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
     </rule>
     <rule id="b143-056c-658e-ba26" name="Immunity (Psychology)" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
-      <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.
-
-Immunity can also include Panic, Fear and Terror. If the majority of the models in a unit have the Immunity (Panic, Fear or Terror) rule, the unit ignores the effects of Panic, Fear or Terror and any such tests it would otherwise had to take.
+      <description>Immunity can also include Panic, Fear and Terror. If the majority of the models in a unit have the Immunity (Panic, Fear or Terror) rule, the unit ignores the effects of Panic, Fear or Terror and any such tests it would otherwise had to take.
 
 Models that are Immune to all three above effects have Immunity (Psychology). This also includes automatically passing any Psychology tests they might need to take (such as many spell effects or special rules that would otherwise force a unit to take a Psychology
 test).</description>
@@ -8728,9 +8726,6 @@ A unit that is flying can march as normal, doubling its flying move.
 Flee and Pursue
 Flyers always move on the ground when attempting to flee or pursue.</description>
     </rule>
-    <rule id="18cb-1dc6-4139-8c3" name="Line of Sight (0)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight of 0.</description>
-    </rule>
     <rule name="Swarms" id="f4d1-e978-a3ed-869b" hidden="false">
       <description>Complete Ranks (3). Supporting Attacks (5). Unit Strength (3). Line of Sight (0). Expendable. Skirmishers. Unstable.
 
@@ -8794,18 +8789,6 @@ Any effect that would modify the model&apos;s Characteristics affect both the r
     <rule name="Complete Ranks" id="0a17-1f20-86b0-bded" hidden="false">
       <description>A complete rank is formed by as many models as indicated between brackets.</description>
     </rule>
-    <rule id="564d-ded4-217d-827c" name="Line of Sight (5)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight of 5.</description>
-    </rule>
-    <rule id="8105-29db-5491-77cf" name="Line of Sight (4)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight of 4.</description>
-    </rule>
-    <rule id="22a9-3a2f-b7b7-b00e" name="Line of Sight (3)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight of 3.</description>
-    </rule>
-    <rule id="40b4-9828-f47e-28c9" name="Line of Sight (2)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight of 2.</description>
-    </rule>
     <rule id="52e5-3a13-39b1-aa8c" name="Supporting Attacks (1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule may make up to 1 supporting attack.</description>
     </rule>
@@ -8849,9 +8832,6 @@ current number of crew.</description>
     </rule>
     <rule id="ddb1-e80d-9bb6-bd15" name="Supporting Attacks (5)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule may make up to 5 supporting attacks.</description>
-    </rule>
-    <rule id="8f97-966e-ddb2-f7bb" name="Line of Sight (1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight of 1.</description>
     </rule>
     <rule name="Infantry" id="5669-ecc5-1f66-edd8" hidden="false">
       <description>Complete Ranks (5). Supporting Attacks (1). Unit Strength (1). Line of Sight (1)</description>
@@ -8977,12 +8957,6 @@ All models underneath the template are hit automatically. A unit suffering any 
 
 
 If a misfire is rolled, roll immediately on the Black Powder Misfire chart.</description>
-    </rule>
-    <rule id="224d-6096-4dc6-a3fb" name="Line of Sight (10)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight of 10.</description>
-    </rule>
-    <rule id="eb51-dc6d-1086-01d0" name="Line of Sight (6)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight of 6.</description>
     </rule>
     <rule name="Hold Your Ground" id="11f5-d3db-5513-f168" hidden="false">
       <description>A model with Hold Your Ground allows all friendly units within a distance equal to the number in the brackets to re-roll failed Panic and Break tests. This ability cannot be used if the model with Hold Your Ground is also fleeing.
@@ -9253,9 +9227,6 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
     <rule id="ff4c-6eb6-dca9-c32e" name="Unit Strength (24)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Unit Strength of 24.</description>
     </rule>
-    <rule id="1642-08f0-d390-16ae" name="Line of Sight (8)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight of 8.</description>
-    </rule>
     <rule id="d909-ac08-40af-8f44" name="Dodge (*)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>Models with this rule gain a Ward Save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have Always Strikes First, nor can it be used if the model is subject to Always Strikes Last. Finally, Dodge cannot be used by mounted models, unless specified.</description>
     </rule>
@@ -9270,6 +9241,9 @@ Impact Hits are only made on the turn the model makes a successful charge into c
 Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
 
 Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
+    </rule>
+    <rule id="5111-c7d7-b7cd-273b" name="Line of Sight (*)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Line of Sight value as indicated in the brackets</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
