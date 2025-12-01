@@ -1158,11 +1158,12 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
                 </modifier>
               </modifiers>
             </infoLink>
-            <infoLink name="Hatred (Empire)" id="0575-a720-517b-2eb6" hidden="true" type="rule" targetId="1308-62b9-5692-6880">
+            <infoLink name="Hatred (*)" id="ef50-a99b-729b-0f24" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
               <modifiers>
-                <modifier type="set" value="false" field="hidden">
+                <modifier type="replace" value="Empire" field="name" arg="*"/>
+                <modifier type="set" value="true" field="hidden">
                   <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="unit" childId="ac66-faa8-3108-4a4d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                    <condition type="lessThan" value="1" field="selections" scope="unit" childId="ac66-faa8-3108-4a4d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1822,11 +1823,15 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
           </profiles>
           <infoLinks>
             <infoLink id="befe-ba4c-9d6a-93ad" name="Skirmishers" hidden="false" targetId="9a30-1c5c-12f4-5798" type="rule"/>
-            <infoLink id="6d73-cebe-22a2-d299" name="Hatred (Dwarfs)" hidden="false" targetId="da8d-d10d-b525-a19a" type="rule"/>
             <infoLink id="25fd-1940-2bab-fe29" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
             <infoLink name="Random Movement (3D6)" id="0e7f-7572-1cef-018e" hidden="false" type="rule" targetId="0877-cd17-c381-a045"/>
             <infoLink name="Vanguard" id="7f26-bbd8-c737-b5d4" hidden="false" type="rule" targetId="38ba-d48a-be97-f830"/>
             <infoLink name="Loner" id="b9c8-75d0-df95-0025" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+            <infoLink name="Hatred (*)" id="74bf-c8fe-6df1-fa93" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+              <modifiers>
+                <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="12"/>
@@ -1954,7 +1959,11 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="1494-841e-182b-65e3" name="Hatred (Dwarfs)" hidden="false" targetId="da8d-d10d-b525-a19a" type="rule"/>
+            <infoLink name="Hatred (*)" id="8bab-816e-d5dd-1062" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+              <modifiers>
+                <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="3"/>
@@ -2642,7 +2651,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="8f89-3d1c-db99-cef2" name="Hatred (Dwarfs)" hidden="false" targetId="da8d-d10d-b525-a19a" type="rule"/>
+            <infoLink name="Hatred (*)" id="96e0-5e6c-4013-13c7" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+              <modifiers>
+                <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
@@ -2947,11 +2960,15 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
           </rules>
           <infoLinks>
             <infoLink id="c95f-7f4d-088f-c2c1" name="Animosity" hidden="false" targetId="cd91-cbe9-af5c-3d55" type="rule"/>
-            <infoLink id="6d18-c490-61e6-5d7d" name="Hatred (Dwarfs)" hidden="false" targetId="da8d-d10d-b525-a19a" type="rule"/>
             <infoLink id="d30b-91ff-3987-8663" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
             <infoLink id="e7cc-ed69-d2e3-625c" name="Skirmishers" hidden="false" targetId="9a30-1c5c-12f4-5798" type="rule"/>
             <infoLink id="6b9a-cd1b-708e-f180" name="Scouts" hidden="false" targetId="6624-0b7b-c5b8-6397" type="rule"/>
             <infoLink name="Loner" id="b342-70d0-43ac-35f5" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+            <infoLink name="Hatred (*)" id="4915-ce07-61e3-1126" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+              <modifiers>
+                <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="4"/>
@@ -3075,10 +3092,14 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
           </rules>
           <infoLinks>
             <infoLink id="b016-9dae-b508-ebea" name="Animosity" hidden="false" targetId="cd91-cbe9-af5c-3d55" type="rule"/>
-            <infoLink id="d2ab-8e45-e2d3-7eda" name="Hatred (Dwarfs)" hidden="false" targetId="da8d-d10d-b525-a19a" type="rule"/>
             <infoLink id="46ff-8d2b-38da-6ff0" name="Skirmishers" hidden="false" targetId="9a30-1c5c-12f4-5798" type="rule"/>
             <infoLink id="8e0c-e7d6-588d-c5b8" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
             <infoLink name="Loner" id="137d-a91e-44b3-03dc" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+            <infoLink name="Hatred (*)" id="32ad-4c05-51d1-2969" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+              <modifiers>
+                <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="6"/>
@@ -3588,10 +3609,14 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
                 </rule>
               </rules>
               <infoLinks>
-                <infoLink id="3860-c43f-8399-277c" name="Hatred (Dwarfs)" hidden="false" targetId="da8d-d10d-b525-a19a" type="rule"/>
                 <infoLink id="bc00-6085-a1cb-6ecc" name="Fear Elves" hidden="false" targetId="8568-17b2-9805-2665" type="rule"/>
                 <infoLink id="4569-c5bf-a8bb-340e" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
                 <infoLink name="Unit Strength (4)" id="8fa4-493d-4f95-6493" hidden="false" type="rule" targetId="23fb-913b-b02d-9e0a"/>
+                <infoLink name="Hatred (*)" id="8008-90fd-5e09-8f21" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="90. Magic Items" hidden="false" id="30eb-86d0-37f3-327f" type="selectionEntryGroup" targetId="89d6-6943-c3c9-a681">
@@ -4153,15 +4178,16 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
                 <infoLink id="9f4f-0cdf-b419-86e9" name="Waaagh!" hidden="false" targetId="72cd-f563-0e75-b280" type="rule"/>
                 <infoLink id="5d44-4d7f-aa12-9749" name="Size Matters" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
                 <infoLink id="04e4-a18a-458c-ecda" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
-                <infoLink name="Hatred (Dwarfs)" id="f936-6e98-81e2-7bef" hidden="false" type="rule" targetId="da8d-d10d-b525-a19a">
-                  <modifiers>
-                    <modifier type="set" value="Gazbag only" field="annotation"/>
-                  </modifiers>
-                </infoLink>
                 <infoLink name="Magic Mushrooms" id="ed7c-9506-30d2-69b2" hidden="false" type="rule" targetId="35e6-988f-5bb0-ff28"/>
                 <infoLink name="Mighty Blow (1)" id="5472-c2d1-b9ec-0fee" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe">
                   <modifiers>
                     <modifier type="set" value="Grumlok only" field="annotation"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Hatred (*)" id="882a-3751-cd11-5565" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+                    <modifier type="set" value="Gazbag only" field="annotation"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -4430,8 +4456,12 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
                 <infoLink id="d6e5-0fbf-f938-ff50" name="Waaagh!" hidden="false" targetId="72cd-f563-0e75-b280" type="rule"/>
                 <infoLink id="5c27-d96e-9fdf-dacf" name="Size Matters" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
                 <infoLink id="ed97-322b-417e-fd92" name="Mighty Blow (1)" hidden="false" targetId="01e3-7f81-20e3-45fe" type="rule"/>
-                <infoLink id="7da7-2f0e-93e4-50ff" name="Hatred (Dwarfs)" hidden="false" targetId="da8d-d10d-b525-a19a" type="rule"/>
                 <infoLink id="b0b4-8647-dfe0-d981" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
+                <infoLink name="Hatred (*)" id="6b39-ea0f-e6bb-c8b9" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="55. Equipment" hidden="false" id="3e44-9c72-2bbb-eb5e" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
@@ -5184,8 +5214,12 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               <infoLinks>
                 <infoLink id="1759-1c70-78d9-7888" name="Magic Mushrooms" hidden="false" targetId="35e6-988f-5bb0-ff28" type="rule"/>
                 <infoLink id="e902-0fdd-f90f-ae3f" name="Fear Elves" hidden="false" targetId="8568-17b2-9805-2665" type="rule"/>
-                <infoLink id="3157-06db-bb9a-64e6" name="Hatred (Dwarfs)" hidden="false" targetId="da8d-d10d-b525-a19a" type="rule"/>
                 <infoLink id="8b32-2a97-03ab-a2df" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
+                <infoLink name="Hatred (*)" id="abf2-45a6-d9bd-30d4" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="65. Lore of Magic" hidden="false" id="dbf1-9790-0a4d-7f5c" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
@@ -5607,9 +5641,13 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               </rules>
               <infoLinks>
                 <infoLink id="9b40-dce2-85df-eb30" name="Fear Elves" hidden="false" targetId="8568-17b2-9805-2665" type="rule"/>
-                <infoLink id="6f45-14b5-8787-056c" name="Hatred (Empire)" hidden="false" targetId="1308-62b9-5692-6880" type="rule"/>
                 <infoLink id="7e3c-4f1e-e1af-04f4" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
                 <infoLink name="Poisoned Attacks" id="f1c2-c96f-6c6c-10ec" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule"/>
+                <infoLink name="Hatred (*)" id="97ad-098b-93f8-1ed7" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="Empire" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="0c15-96bd-1743-d0e1" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
@@ -8245,8 +8283,12 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
       <infoLinks>
         <infoLink name="Fear Elves" id="6448-4594-8aac-a279" hidden="false" targetId="8568-17b2-9805-2665" type="rule"/>
         <infoLink name="Greenskin Races" id="8705-c2ae-f538-5a5b" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
-        <infoLink name="Hatred (Dwarfs)" id="9032-ab82-ca10-cac7" hidden="false" type="rule" targetId="da8d-d10d-b525-a19a"/>
         <infoLink name="Loner" id="4ae4-339b-2203-3a8c" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+        <infoLink name="Hatred (*)" id="9022-b307-a781-c840" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+          <modifiers>
+            <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Mount" id="ec19-ca7e-89ef-2053" hidden="false" collective="false" import="true" sortIndex="4">
@@ -11025,7 +11067,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
       </modifiers>
       <infoLinks>
         <infoLink name="Fear Elves" id="2012-3b81-e6d7-4dd5" hidden="false" type="rule" targetId="8568-17b2-9805-2665"/>
-        <infoLink name="Hatred (Dwarfs)" id="aa2c-19ff-7816-1450" hidden="false" type="rule" targetId="da8d-d10d-b525-a19a"/>
+        <infoLink name="Hatred (*)" id="56af-d76f-7a43-4d17" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+          <modifiers>
+            <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1131-9856-46d6-e61c" includeChildSelections="false"/>
