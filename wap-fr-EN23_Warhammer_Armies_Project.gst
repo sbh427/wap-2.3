@@ -9045,7 +9045,7 @@ Other than the aforementioned inaccuracy of the scatter, an indirect shot from 
     <rule id="4cc1-bc54-7778-c333" name="Loremaster" publicationId="9e23-79cb-pubN66727" page="63" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
     </rule>
-    <rule name="Inspiring Presence" id="1c71-6c8f-f47a-0a91" hidden="false">
+    <rule name="Inspiring Presence (*)" id="1c71-6c8f-f47a-0a91" hidden="false">
       <description>A model with Inspiring Presence allows all friendly units within a distance equal to the number in the brackets to use their Leadership instead of their own, unless specified (such as having to use their unmodified Leadership). This rule cannot be used if the model with Inspiring Presence is also fleeing.
 
 
@@ -9068,18 +9068,6 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
     </rule>
     <rule name="Swooping Strike" id="032a-fddc-ad13-76d6" hidden="false">
       <description>The Griffon gains the Devastating Charge special rule.</description>
-    </rule>
-    <rule name="Inspiring Presence (6)" id="7687-32b8-13f1-97b4" hidden="false">
-      <description>A model with Inspiring Presence allows all friendly units within a distance equal to the number in the brackets to use their Leadership instead of their own, unless specified (such as having to use their unmodified Leadership). This rule cannot be used if the model with Inspiring Presence is also fleeing.
-
-
-This rule is cumulative with other sources of Inspiring Presence. If the model has a Line of Sight value of 4 or more, then the range of their Inspiring Presence rule is increased by 6.
-
-
-If a unit taking a Leadership test has a modifier to its Leadership, this modifier still applies if the unit uses the Inspiring Presence.
-
-
-If a unit is Steadfast, it may use the Leadership of the model for Break tests if it is higher than their own Leadership after applying all negative modifiers from combat resolution. Otherwise, they will use their own Leadership.</description>
     </rule>
     <rule id="e69f-18b7-b8ee-1f0c" name="Unit Strength (8)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Unit Strength of 8.</description>
