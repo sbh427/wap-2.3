@@ -1227,10 +1227,14 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <modifier type="set" value="from Mount" field="annotation"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Unit Strength (14)" id="f9be-7a6e-2daf-5c89" hidden="false" type="rule" targetId="211b-ee62-c9cb-e472"/>
         <infoLink name="Line of Sight (*)" id="677c-5a3c-e60c-6a8f" hidden="false" type="rule" targetId="5111-c7d7-b7cd-273b">
           <modifiers>
             <modifier type="replace" value="6" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Unit Strength (*)" id="cebe-b32b-1a29-5bcf" hidden="false" type="rule" targetId="c397-b441-9fd6-89bb">
+          <modifiers>
+            <modifier type="replace" value="14" field="name" arg="*"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -4497,13 +4501,17 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
           </entryLinks>
           <infoLinks>
             <infoLink name="Natural Armour (5+)" id="6934-5fc0-84c4-b014" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
-            <infoLink name="Unit Strength (4)" id="86a7-4836-f262-23b3" hidden="false" type="rule" targetId="23fb-913b-b02d-9e0a"/>
             <infoLink name="Impact Hits (*)" id="ec23-ddff-d391-34ff" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
               <modifiers>
                 <modifier type="replace" value="D3" field="name" arg="*"/>
               </modifiers>
             </infoLink>
             <infoLink name="Line of Sight (*)" id="f574-6fdd-6b7c-dc3b" hidden="false" type="rule" targetId="5111-c7d7-b7cd-273b">
+              <modifiers>
+                <modifier type="replace" value="4" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Unit Strength (*)" id="1d3f-c6e8-8243-cf93" hidden="false" type="rule" targetId="c397-b441-9fd6-89bb">
               <modifiers>
                 <modifier type="replace" value="4" field="name" arg="*"/>
               </modifiers>
@@ -5769,13 +5777,17 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
           <infoLinks>
             <infoLink name="Natural Armour (5+)" id="ea0b-6cda-98ff-2b6a" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
             <infoLink name="Frenzy" id="a00c-e5d0-489e-4b68" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
-            <infoLink name="Unit Strength (5)" id="561f-c8bb-6eff-89b8" hidden="false" type="rule" targetId="cd03-1b6a-2a80-dd1a"/>
             <infoLink name="Impact Hits (*)" id="0336-1640-7590-a913" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
               <modifiers>
                 <modifier type="replace" value="D3" field="name" arg="*"/>
               </modifiers>
             </infoLink>
             <infoLink name="Line of Sight (*)" id="7c5b-8b73-1cf4-193d" hidden="false" type="rule" targetId="5111-c7d7-b7cd-273b">
+              <modifiers>
+                <modifier type="replace" value="5" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Unit Strength (*)" id="385d-881b-1fd7-51fb" hidden="false" type="rule" targetId="c397-b441-9fd6-89bb">
               <modifiers>
                 <modifier type="replace" value="5" field="name" arg="*"/>
               </modifiers>
@@ -6124,7 +6136,6 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Unit Strength (16)" id="74b4-90a6-48d5-c46b" hidden="false" type="rule" targetId="1bb1-d158-8d30-490e"/>
             <infoLink name="Natural Armour (4+)" id="67bc-d80c-0a9c-06df" hidden="false" type="rule" targetId="6b43-9dda-f589-0509"/>
             <infoLink name="Immunity (*)" id="a0d3-9df9-5f7f-6932" hidden="false" targetId="8f93-30da-a9db-adc7" type="rule">
               <modifiers>
@@ -6139,6 +6150,11 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <infoLink name="Line of Sight (*)" id="eee8-8521-bb07-2c52" hidden="false" type="rule" targetId="5111-c7d7-b7cd-273b">
               <modifiers>
                 <modifier type="replace" value="6" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Unit Strength (*)" id="3357-68d2-aabd-b136" hidden="false" type="rule" targetId="c397-b441-9fd6-89bb">
+              <modifiers>
+                <modifier type="replace" value="16" field="name" arg="*"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -6323,65 +6339,21 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                 <modifier type="replace" value="10" field="name" arg="*"/>
               </modifiers>
             </infoLink>
+            <infoLink name="Unit Strength (*)" id="dc03-55a3-efc3-73a0" hidden="false" type="rule" targetId="c397-b441-9fd6-89bb">
+              <modifiers>
+                <modifier type="replace" value="24" field="name" arg="*">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="84e7-b3fe-9285-8264" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="replace" value="26" field="name" arg="*">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="84e7-b3fe-9285-8264" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Hide this Group" id="16c5-e555-8b2d-2f19" hidden="false" sortIndex="4">
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Unit Strength (24)" hidden="false" id="ce4e-9a11-1414-7f58">
-                  <infoLinks>
-                    <infoLink name="Unit Strength (24)" id="a160-b514-c127-d4cb" hidden="false" type="rule" targetId="ff4c-6eb6-dca9-c32e"/>
-                  </infoLinks>
-                  <modifiers>
-                    <modifier type="set" value="true" field="hidden">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="84e7-b3fe-9285-8264" shared="true"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="set" value="1" field="1a9f-f5ea-416f-2302-min">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="84e7-b3fe-9285-8264" shared="true"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="set" value="1" field="1a9f-f5ea-416f-2302-max">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="84e7-b3fe-9285-8264" shared="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <constraints>
-                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="1a9f-f5ea-416f-2302-min"/>
-                    <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="1a9f-f5ea-416f-2302-max"/>
-                  </constraints>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Unit Strength (26)" hidden="false" id="194e-66b3-f93b-5610">
-                  <infoLinks>
-                    <infoLink name="Unit Strength (26)" id="8b4b-93a1-29e7-7677" hidden="false" type="rule" targetId="b5ab-1a7b-4c54-5733"/>
-                  </infoLinks>
-                  <modifiers>
-                    <modifier type="set" value="true" field="hidden">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="84e7-b3fe-9285-8264" shared="true"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="set" value="1" field="e8c0-02ec-acdb-ce2a-min">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="84e7-b3fe-9285-8264" shared="true"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="set" value="1" field="e8c0-02ec-acdb-ce2a-max">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="84e7-b3fe-9285-8264" shared="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <constraints>
-                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="e8c0-02ec-acdb-ce2a-min"/>
-                    <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="e8c0-02ec-acdb-ce2a-max"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
           <rules>
             <rule name="Ice Mammoth Attacks" id="b916-ca47-c13b-a9a0" hidden="false" publicationId="dc4b-67ab-7b8e-baa5" page="36">
               <description>When the Ice Mammoth attacks, roll on the appropriate table to determine its action. 

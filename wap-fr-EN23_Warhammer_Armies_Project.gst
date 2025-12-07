@@ -8719,17 +8719,8 @@ Any effect that would modify the model&apos;s Characteristics affect both the r
     <rule id="52e5-3a13-39b1-aa8c" name="Supporting Attacks (1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule may make up to 1 supporting attack.</description>
     </rule>
-    <rule id="577c-10f5-bad5-5ce5" name="Unit Strength (2)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 2.</description>
-    </rule>
-    <rule id="fe8b-fd33-652e-4e2f" name="Unit Strength (3)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 3.</description>
-    </rule>
-    <rule id="23fb-913b-b02d-9e0a" name="Unit Strength (4)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 4.</description>
-    </rule>
-    <rule id="c397-b441-9fd6-89bb" name="Unit Strength (1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 1.</description>
+    <rule id="c397-b441-9fd6-89bb" name="Unit Strength (*)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Unit Strength as indicared in the brackets.</description>
     </rule>
     <rule id="e258-e9d1-9c61-af0f" name="Supporting Attacks (1+2)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule may make up to 1 supporting attack from the rider and 2 from the mount, or 3 in total if the model does not have a split profile.</description>
@@ -9069,9 +9060,6 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
     <rule name="Swooping Strike" id="032a-fddc-ad13-76d6" hidden="false">
       <description>The Griffon gains the Devastating Charge special rule.</description>
     </rule>
-    <rule id="e69f-18b7-b8ee-1f0c" name="Unit Strength (8)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 8.</description>
-    </rule>
     <rule id="9c98-f97f-344b-9e4b" name="Mighty Blow (2)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
       <description>Models with this rule gain a Strength bonus to all their close combat attacks (including Impact Hits and Stomps) equal to the number in the brackets in the first round of each new close combat they are involved in. Note that any attack made with a weapon that gives Mighty Blow only applies to attacks made with the weapon itself. This rule is cumulative with other sources of Mighty Blow.</description>
     </rule>
@@ -9086,12 +9074,6 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
     </rule>
     <rule name="Rending Fangs" id="38dc-ae6d-82d1-e44b" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
       <description>The Manticore gains Armour Piercing (1).</description>
-    </rule>
-    <rule id="1d10-62be-aac7-35f6" name="Unit Strength (6)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 6.</description>
-    </rule>
-    <rule id="cd03-1b6a-2a80-dd1a" name="Unit Strength (5)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 5.</description>
     </rule>
     <rule name="Weapon team" id="409d-a7ab-f540-c35c" hidden="false" publicationId="9e23-79cb-pubN66727" page="67">
       <description>If a model with this special rule is hit by a missile attack and is within 3&quot; of a friendly unit consisting of five or more rank and file models of the same troop type within 3&quot;, roll a D6. On a roll of 4+, the hit is transferred to a model in the friendly unit (if there is more than one eligible unit within 3&quot;, the controlling player can decide which). Otherwise, the hit is resolved against the Weapon Team as normal.</description>
@@ -9115,18 +9097,6 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
       <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.
 
 Immunity can also include Panic, Fear and Terror. If the majority of the models in a unit have the Immunity (Panic, Fear or Terror) rule, the unit ignores the effects of Panic, Fear or Terror and any such tests it would otherwise had to take.</description>
-    </rule>
-    <rule id="b5ab-1a7b-4c54-5733" name="Unit Strength (26)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 26.</description>
-    </rule>
-    <rule id="211b-ee62-c9cb-e472" name="Unit Strength (14)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 14.</description>
-    </rule>
-    <rule id="1bb1-d158-8d30-490e" name="Unit Strength (16)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 16.</description>
-    </rule>
-    <rule id="ff4c-6eb6-dca9-c32e" name="Unit Strength (24)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 24.</description>
     </rule>
     <rule id="d909-ac08-40af-8f44" name="Dodge (*)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>Models with this rule gain a Ward Save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have Always Strikes First, nor can it be used if the model is subject to Always Strikes Last. Finally, Dodge cannot be used by mounted models, unless specified.</description>

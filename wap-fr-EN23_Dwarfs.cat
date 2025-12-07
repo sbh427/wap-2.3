@@ -6253,20 +6253,16 @@ In addition, his troop type changes to War Machine and he counts as being part o
         <infoLink name="Resolute" id="a02e-2fc9-30c7-b152" hidden="false" targetId="7da8-9e3b-77c9-cc8a" type="rule"/>
         <infoLink name="Relentless" id="b29f-4aa2-548f-13ae" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
         <infoLink name="Ancestral Grudge" id="8889-f256-78b3-059d" hidden="false" targetId="73fd-d115-269d-bd0a" type="rule"/>
-        <infoLink name="Unit Strength (2)" id="f509-acb7-cf57-abcf" hidden="false" type="rule" targetId="577c-10f5-bad5-5ce5">
+        <infoLink name="Unit Strength (*)" id="f509-acb7-cf57-abcf" hidden="false" type="rule" targetId="c397-b441-9fd6-89bb">
           <modifiers>
-            <modifier type="set" value="true" field="hidden">
+            <modifier type="replace" value="2" field="name" arg="*">
               <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="parent" childId="7397-9aeb-fd96-4051" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="7397-9aeb-fd96-4051" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Unit Strength (3)" id="b79e-61d7-2fe9-cebf" hidden="true" type="rule" targetId="fe8b-fd33-652e-4e2f">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
+            <modifier type="replace" value="3" field="name" arg="*">
               <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="parent" childId="7397-9aeb-fd96-4051" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="7397-9aeb-fd96-4051" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
