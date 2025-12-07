@@ -8326,19 +8326,6 @@ Furthermore, Quick to Fire weapons may be used once per turn when declaring a ch
     <rule id="183a-6a6f-951c-1663" name="Random Attacks (D6+1)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
     </rule>
-    <rule id="0877-cd17-c381-a045" name="Random Movement (3D6)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
-      <description>Models with Random Movement do not have a M value, but rather a dice roll. This is the distance they move, charge, pursue, overrun and flee – they cannot march. If a model has Random Movement and Swiftstride, then Swiftstride is not used. Note that certain Random Movement rolls can result in the model having a M value higher than 10 – this is an exception to the usual maximum.
-
-Models with Random Movement cannot declare charges, and are always moved in the Compulsory Moves sub-phase. When the model moves, first pivot it about its centre to face the direction in which you wish it to travel. Then, roll the dice shown in the Random Movement brackets. Finally, move the model directly forwards a number of inches equal to the total rolled by the dice. No other pivots can be made.
-
-There&apos;s a chance that the model&apos;s peculiar movement will cause it to come into contact with an enemy, so measure the distance in a straight line before the model is moved. If the move is found to take the unit’s front arc into contact with an enemy, then it counts as charging, and this is resolved using the normal rules for charges and using the distance rolled as its charge range. Charge reactions cannot be declared against enemies with Random Movement.
-
-If the random move brings the unit to within 1&quot; of a friendly unit or impassable terrain, it stops immediately and cannot move further during that Movement phase.
-
-If two or more models in a unit have the Random Movement, pivot the unit about its centre, then roll the dice only once to determine how for the unit moves. If models in the unit have a different Random Movement value, use the slowest for the entire unit.
-
-A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Terrain test, unless the model is making a charge, pursuit or flee move, in which case it counts as a move of the appropriate type.</description>
-    </rule>
     <rule id="554e-99aa-3930-447f" name="Requires Two Hands" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
       <description>If a weapon requires two hands to use, it is not possible for a model to use a shield or buckler alongside it in close combat (although a shield can still be used against wounds caused by shooting or magic).</description>
     </rule>
@@ -8428,19 +8415,6 @@ If a character with Magic Resistance joins a unit, all models in the unit benefi
     <rule id="f6d7-9fbc-abc1-5cfc" name="Hatred" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
     </rule>
-    <rule id="4918-5aef-8930-27ec" name="Random Movement (2D6)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
-      <description>Models with Random Movement do not have a M value, but rather a dice roll. This is the distance they move, charge, pursue, overrun and flee – they cannot march. If a model has Random Movement and Swiftstride, then Swiftstride is not used. Note that certain Random Movement rolls can result in the model having a M value higher than 10 – this is an exception to the usual maximum.
-
-Models with Random Movement cannot declare charges, and are always moved in the Compulsory Moves sub-phase. When the model moves, first pivot it about its centre to face the direction in which you wish it to travel. Then, roll the dice shown in the Random Movement brackets. Finally, move the model directly forwards a number of inches equal to the total rolled by the dice. No other pivots can be made.
-
-There&apos;s a chance that the model&apos;s peculiar movement will cause it to come into contact with an enemy, so measure the distance in a straight line before the model is moved. If the move is found to take the unit’s front arc into contact with an enemy, then it counts as charging, and this is resolved using the normal rules for charges and using the distance rolled as its charge range. Charge reactions cannot be declared against enemies with Random Movement.
-
-If the random move brings the unit to within 1&quot; of a friendly unit or impassable terrain, it stops immediately and cannot move further during that Movement phase.
-
-If two or more models in a unit have the Random Movement, pivot the unit about its centre, then roll the dice only once to determine how for the unit moves. If models in the unit have a different Random Movement value, use the slowest for the entire unit.
-
-A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Terrain test, unless the model is making a charge, pursuit or flee move, in which case it counts as a move of the appropriate type.</description>
-    </rule>
     <rule id="1529-50c8-5c6e-150f" name="Loremaster (Lore of Fire)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
     </rule>
@@ -8479,32 +8453,28 @@ If a character with Magic Resistance joins a unit, all models in the unit benefi
     <rule id="5ffc-408d-a5fb-19c4" name="Loremaster (Lore of the Little Waagh!)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
     </rule>
-    <rule id="ece5-1f38-ee28-593e" name="Random Movement (4D6)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
-      <description>Models with Random Movement do not have a M value, but rather a dice roll. This is the distance they move, charge, pursue, overrun and flee – they cannot march. If a model has Random Movement and Swiftstride, then Swiftstride is not used. Note that certain Random Movement rolls can result in the model having a M value higher than 10 – this is an exception to the usual maximum.
+    <rule id="4d40-9a96-4af8-e943" name="Random Movement (*)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
+      <description>Models with the Random Movement special rule do not have a normal Movement characteristic, but rather a dice roll, such as D6, 2D6 or 3D6 (as indicated in the brackets). This is the distance they use for all their movement (regardless of other special rules). Note that certain Random Movement rolls can result in the model having a Movement value higher than 10 – this is an exception to the usual maximum.
 
-Models with Random Movement cannot declare charges, and are always moved in the Compulsory Moves sub-phase. When the model moves, first pivot it about its centre to face the direction in which you wish it to travel. Then, roll the dice shown in the Random Movement brackets. Finally, move the model directly forwards a number of inches equal to the total rolled by the dice. No other pivots can be made.
 
-There&apos;s a chance that the model&apos;s peculiar movement will cause it to come into contact with an enemy, so measure the distance in a straight line before the model is moved. If the move is found to take the unit’s front arc into contact with an enemy, then it counts as charging, and this is resolved using the normal rules for charges and using the distance rolled as its charge range. Charge reactions cannot be declared against enemies with Random Movement.
+Models with Random Movement cannot declare charges, and must always move in the Compulsory Moves
 
-If the random move brings the unit to within 1&quot; of a friendly unit or impassable terrain, it stops immediately and cannot move further during that Movement phase.
 
-If two or more models in a unit have the Random Movement, pivot the unit about its centre, then roll the dice only once to determine how for the unit moves. If models in the unit have a different Random Movement value, use the slowest for the entire unit.
+sub-phase. When the model moves, first pivot it about its centre to face the direction in which you wish it to travel. Then, roll the dice shown in the Random Movement brackets. Finally, move the model directly forwards a number of inches equal to the total rolled by the dice. No other pivots can be made.
 
-A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Terrain test, unless the model is making a charge, pursuit or flee move, in which case it counts as a move of the appropriate type.</description>
-    </rule>
-    <rule id="4d40-9a96-4af8-e943" name="Random Movement (Variable)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
-      <description>Models with Random Movement do not have a normal M characteristic, but rather a dice roll, (as indicated in the
-brackets). This is the distance they move, charge, pursue, overrun and flee – they cannot march. If a model has Random Movement and Swiftstride, then Swiftstride is not used. Note that certain Random Movement rolls can result in the model having a M value higher than 10 – this is an exception to the usual maximum.
 
-Models with Random Movement cannot declare charges, and are always moved in the Compulsory Moves sub-phase. When the model moves, first pivot it about its centre to face the direction in which you wish it to travel. Then, roll the dice shown in the Random Movement brackets. Finally, move the model directly forwards a number of inches equal to the total rolled by the dice. No other pivots can be made.
+There&apos;s a chance that the model&apos;s peculiar movement will cause it to come into contact with an enemy, so measure the distance in a straight line before the model is moved. If the move is found to take the unit&apos;s front arc into contact with an enemy, then it counts as charging, and this is resolved using the normal rules for charges and using the distance rolled as its charge range. Charge reactions cannot be declared against enemies with the Random Movement special rule.
 
-There&apos;s a chance that the model&apos;s peculiar movement will cause it to come into contact with an enemy, so measure the distance in a straight line before the model is moved. If the move is found to take the unit’s front arc into contact with an enemy, then it counts as charging, and this is resolved using the normal rules for charges and using the distance rolled as its charge range. Charge reactions cannot be declared against enemies with Random Movement.
 
-If the random move brings the unit to within 1&quot; of a friendly unit or impassable terrain, it stops immediately and cannot move further during that Movement phase.
+If the random move brings the unit to within 1&quot; of a friendly unit or impassable terrain
 
-If two or more models in a unit have the Random Movement, pivot the unit about its centre, then roll the dice only once to determine how for the unit moves. If models in the unit have a different Random Movement value, use the slowest for the entire unit.
 
-A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Terrain test, unless the model is making a charge, pursuit or flee move, in which case it counts as a move of the appropriate type.</description>
+, it stops immediately and cannot move further during that Movement phase.
+
+
+If two or more models in a unit have the Random Movement special rule, pivot the unit about its centre, then roll the dice only once to determine how for the unit moves. If models in the unit have a different Random Movement value, use the slowest for the entire unit.
+A Random Move counts as a &apos;normal&apos; move for triggering a Dangerous Terrain
+test, unless the model is making a charge, pursuit or flee move, in which case it counts as a move of the appropriate type.</description>
     </rule>
     <rule id="065b-1f43-47e5-70cb" name="Random Attacks (2D6)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
