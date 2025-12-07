@@ -2393,41 +2393,33 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
       <infoLinks>
         <infoLink id="cdc8-fea7-46c9-cf29" name="Unstable" hidden="false" targetId="b779-6d7f-8298-7c82" type="rule"/>
         <infoLink id="afd6-63bc-702f-e995" name="Random Movement (2D6)" hidden="false" targetId="4918-5aef-8930-27ec" type="rule"/>
-        <infoLink name="Unit Strength (3)" id="0bee-e83a-0e0f-9807" hidden="false" type="rule" targetId="fe8b-fd33-652e-4e2f">
+        <infoLink name="Impact Hits (*)" id="eb1f-bac2-3869-72cc" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
           <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="7" field="selections" scope="parent" childId="1d8e-036f-4595-594a" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
+            <modifier type="replace" value="2D6" field="name" arg="*"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Unit Strength (4)" id="17ed-b6af-3c33-decc" hidden="false" type="rule" targetId="23fb-913b-b02d-9e0a">
+        <infoLink name="Unit Strength (*)" id="cc98-bfde-fb83-c30b" hidden="false" type="rule" targetId="c397-b441-9fd6-89bb">
           <modifiers>
-            <modifier type="set" value="true" field="hidden">
+            <modifier type="replace" value="3" field="name" arg="*">
+              <conditions>
+                <condition type="lessThan" value="7" field="selections" scope="parent" childId="1d8e-036f-4595-594a" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="replace" value="4" field="name" arg="*">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
-                    <condition type="equalTo" value="10" field="selections" scope="parent" childId="1d8e-036f-4595-594a" shared="true" includeChildSelections="true"/>
-                    <condition type="atMost" value="6" field="selections" scope="parent" childId="1d8e-036f-4595-594a" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="7" field="selections" scope="parent" childId="1d8e-036f-4595-594a" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="selections" scope="parent" childId="1d8e-036f-4595-594a" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Unit Strength (5)" id="1178-971c-1455-466f" hidden="false" type="rule" targetId="cd03-1b6a-2a80-dd1a">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
+            <modifier type="replace" value="5" field="name" arg="*">
               <conditions>
-                <condition type="notEqualTo" value="10" field="selections" scope="parent" childId="1d8e-036f-4595-594a" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="10" field="selections" scope="parent" childId="1d8e-036f-4595-594a" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Impact Hits (*)" id="eb1f-bac2-3869-72cc" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
-          <modifiers>
-            <modifier type="replace" value="2D6" field="name" arg="*"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -2584,7 +2576,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
       <infoLinks>
         <infoLink id="15d2-5bab-315b-d782" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
         <infoLink id="19d1-d7be-29b6-c8f3" name="Random Movement (3D6)" hidden="false" targetId="0877-cd17-c381-a045" type="rule"/>
-        <infoLink name="Unit Strength (6)" id="b789-34ab-09e2-5c5e" hidden="false" type="rule" targetId="1d10-62be-aac7-35f6"/>
+        <infoLink name="Unit Strength (*)" id="b805-3cfd-7b8e-324a" hidden="false" type="rule" targetId="c397-b441-9fd6-89bb">
+          <modifiers>
+            <modifier type="replace" value="6" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a963-203e-d9b4-f19f" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -3611,10 +3607,14 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               <infoLinks>
                 <infoLink id="bc00-6085-a1cb-6ecc" name="Fear Elves" hidden="false" targetId="8568-17b2-9805-2665" type="rule"/>
                 <infoLink id="4569-c5bf-a8bb-340e" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
-                <infoLink name="Unit Strength (4)" id="8fa4-493d-4f95-6493" hidden="false" type="rule" targetId="23fb-913b-b02d-9e0a"/>
                 <infoLink name="Hatred (*)" id="8008-90fd-5e09-8f21" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
                   <modifiers>
                     <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Unit Strength (*)" id="72b8-49c2-2dc3-e738" hidden="false" type="rule" targetId="c397-b441-9fd6-89bb">
+                  <modifiers>
+                    <modifier type="replace" value="4" field="name" arg="*"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
