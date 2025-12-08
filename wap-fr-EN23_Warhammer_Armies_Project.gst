@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="72" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="73" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -42,6 +42,7 @@
     <publication name="Ogre Kingdoms v.1.6" id="dc4b-67ab-7b8e-baa5" hidden="false" shortName="OK" publisher="Warhammer - Ogre Kingdoms 9th Ed v.1.6" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="14.09.2024"/>
     <publication name="Daemons of Chaos 1.71" id="314a-aacb-0877-4081" hidden="false" shortName="DoC" publisher="Warhammer - Daemons of Chaos 1.71" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="23.06.2025"/>
     <publication name="Chaos Dwarfs v.1.71" id="53f5-3638-a9ce-8dd3" hidden="false" shortName="CD" publisher="Warhammer - Chaos Dwarfs 9th Ed 1.71" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="20.04.2025"/>
+    <publication id="4f8f-9147-1eae-6c3d" name="Zombie Pirates of the Vampire Coast v.1.5" shortName="ZP" publisher="Warhammer - Zombie Pirates of the Vampire Coast 9th Ed v.1.5" publicationDate="08.02.2025" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
@@ -9116,6 +9117,26 @@
       </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3942-e6b5-d38c-9eef"/>
+      </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="60. Wizard Level" id="5d1e-041c-afbe-7479" hidden="false">
+      <comment>2 &amp; 3 &amp; 4</comment>
+      <entryLinks>
+        <entryLink import="true" name="Wizard Level 2" hidden="false" id="dc34-6366-8cd2-860f" type="selectionEntry" targetId="801a-bc0a-a767-61db"/>
+        <entryLink import="true" name="Wizard Level 3" hidden="false" id="e38d-e004-3ea4-a5fd" type="selectionEntry" targetId="1670-dca4-294b-7d9b">
+          <costs>
+            <cost name="pts" typeId="points" value="35"/>
+          </costs>
+        </entryLink>
+        <entryLink import="true" name="Wizard Level 4" hidden="false" id="9a2a-6fa2-3e70-ed95" type="selectionEntry" targetId="5460-3929-58ef-71ba">
+          <costs>
+            <cost name="pts" typeId="points" value="70"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="743f-6944-7014-fe1b"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bbf4-e1d7-a373-5080"/>
       </constraints>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
