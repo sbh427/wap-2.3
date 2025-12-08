@@ -8323,9 +8323,6 @@ Unless otherwise stated, a model with this rule has both Poisoned shooting and c
 
 Furthermore, Quick to Fire weapons may be used once per turn when declaring a charge (unless they are also Move or Fire), immediately after the enemy unit has declared their charge reaction (but before moving any units). If the enemy unit chose to Stand &amp; Shoot or Fire &amp; Flee, both units will fire at the same time. Quick to Fire weapons can be used this way even if the unit starts its charge outside their weapons&apos; maximum range – the shooting is resolved normally assuming the enemy is just within maximum range of the shooting unit&apos;s shortest-ranged weapon. If the charge fails, for whatever reason, we assume that the chargers closed to within the weapons&apos; maximum range first. Any shots fired in this manner suffer a -1 To Hit penalty.</description>
     </rule>
-    <rule id="183a-6a6f-951c-1663" name="Random Attacks (D6+1)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
-    </rule>
     <rule id="554e-99aa-3930-447f" name="Requires Two Hands" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
       <description>If a weapon requires two hands to use, it is not possible for a model to use a shield or buckler alongside it in close combat (although a shield can still be used against wounds caused by shooting or magic).</description>
     </rule>
@@ -8369,9 +8366,6 @@ As long as the unit (but not the handlers) have a unit strength of 5 or more, an
     </rule>
     <rule id="32e8-b4ad-3e59-a3c7" name="Natural Armour (3+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
-    </rule>
-    <rule id="33f1-4ddd-d26b-281a" name="Random Attacks (D6+2)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
     </rule>
     <rule id="738b-aca4-740c-e425" name="Animated Construct" publicationId="9e23-79cb-pubN66727" page="58" hidden="false">
       <description>Animated Constructs have the Unbreakable special rule. However, they may not march.</description>
@@ -8453,9 +8447,6 @@ If two or more models in a unit have the Random Movement special rule, pivot the
 A Random Move counts as a &apos;normal&apos; move for triggering a Dangerous Terrain
 test, unless the model is making a charge, pursuit or flee move, in which case it counts as a move of the appropriate type.</description>
     </rule>
-    <rule id="065b-1f43-47e5-70cb" name="Random Attacks (2D6)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
-    </rule>
     <rule id="7323-b2a0-af7b-3ec6" name="Ward Save (3+)" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
       <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
 
@@ -8464,9 +8455,6 @@ Note that does not stop single Ward Saves from being used, such as a model havin
 Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
 
 Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
-    </rule>
-    <rule id="5b16-622a-da0d-d50b" name="Random Attacks (D6)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
     </rule>
     <rule id="67cf-c767-bc85-2897" name="Loremaster (Lore of Nehekhara)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
@@ -8492,20 +8480,11 @@ Some models may be allowed to re-roll a Ward Save from a specific source. In tha
     <rule id="fb5f-f956-90e7-af6f" name="Loremaster (Lore of Tzeentch)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
     </rule>
-    <rule id="18a0-eeb5-f165-5fc9" name="Random Attacks (D3)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
-    </rule>
     <rule id="4384-4bf5-ea6e-c49d" name="Loremaster (Lore of Athel Loren)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
     </rule>
-    <rule id="e20a-3f4d-cc8c-06bc" name="Random Attacks (D3+1)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
-    </rule>
     <rule id="2875-64e6-bb63-ac04" name="Strider (Hill)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
       <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
-    </rule>
-    <rule id="0eca-e6a2-66a1-2b53" name="Random Attacks (3D6)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
     </rule>
     <rule id="4393-049f-b19b-6457" name="Loremaster (Lore of Ice)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
@@ -8663,23 +8642,8 @@ Any effect that would modify the model&apos;s Characteristics affect both the r
     <rule name="Complete Ranks" id="0a17-1f20-86b0-bded" hidden="false">
       <description>A complete rank is formed by as many models as indicated between brackets.</description>
     </rule>
-    <rule id="52e5-3a13-39b1-aa8c" name="Supporting Attacks (1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule may make up to 1 supporting attack.</description>
-    </rule>
     <rule id="c397-b441-9fd6-89bb" name="Unit Strength (*)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Unit Strength as indicared in the brackets.</description>
-    </rule>
-    <rule id="e258-e9d1-9c61-af0f" name="Supporting Attacks (1+2)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule may make up to 1 supporting attack from the rider and 2 from the mount, or 3 in total if the model does not have a split profile.</description>
-    </rule>
-    <rule id="2ef1-02b9-7b03-9204" name="Supporting Attacks (3)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule may make up to 3 supporting attacks.</description>
-    </rule>
-    <rule id="7b58-67f7-4fd1-8a61" name="Supporting Attacks (1+1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule may make up to 1 supporting attack from the rider and 1 from the mount, or 2 in total if the model does not have a split profile.</description>
-    </rule>
-    <rule id="f139-6d06-3167-b314" name="Supporting Attacks (2)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule may make up to 2 supporting attacks.</description>
     </rule>
     <rule name="Monstrous Cavalry" id="2b42-ec95-c1af-bc30" hidden="false">
       <description>Complete Ranks (3). Supporting Attacks (1+2). Unit Strength (3). Line of Sight (3). Fear. Cavalry.</description>
@@ -8694,9 +8658,6 @@ crew.
 
 War Machines have a Unit Strength equal to their
 current number of crew.</description>
-    </rule>
-    <rule id="ddb1-e80d-9bb6-bd15" name="Supporting Attacks (5)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule may make up to 5 supporting attacks.</description>
     </rule>
     <rule name="Infantry" id="5669-ecc5-1f66-edd8" hidden="false">
       <description>Complete Ranks (5). Supporting Attacks (1). Unit Strength (1). Line of Sight (1)</description>
@@ -9078,6 +9039,9 @@ Unless otherwise specified, Multiple Wounds only apply to close combat attacks.<
       <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward Save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
 
 If a character with Magic Resistance joins a unit, all models in the unit benefit from the Magic Resistance as long as they are part of the unit. If a model or unit has two sets of Magic Resistance, the two combine to a maximum of Magic Resistance (3), unless specified.</description>
+    </rule>
+    <rule id="64d8-e607-daa9-bd39" name="Random Attacks (*)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
+      <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
