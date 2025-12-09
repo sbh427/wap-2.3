@@ -8361,9 +8361,6 @@ As long as the unit (but not the handlers) have a unit strength of 5 or more, an
     <rule id="738b-aca4-740c-e425" name="Animated Construct" publicationId="9e23-79cb-pubN66727" page="58" hidden="false">
       <description>Animated Constructs have the Unbreakable special rule. However, they may not march.</description>
     </rule>
-    <rule id="e56f-d7d4-8987-dbdb" name="Parry (6+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with this rule gain a Ward Save in close combat as indicated in the brackets. This is cumulative with other sources of Parry. It cannot be used against attacks made against the model&apos;s flank or rear, nor can it be used against attacks that Hit automatically, attacks that are made at +3 Strength over the model&apos;s own Strength value, nor can it be used by mounted models, unless specified.</description>
-    </rule>
     <rule id="c270-3956-9b64-b587" name="Strider" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
       <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
     </rule>
@@ -8473,9 +8470,6 @@ Some models may be allowed to re-roll a Ward Save from a specific source. In tha
     </rule>
     <rule id="4393-049f-b19b-6457" name="Loremaster (Lore of Ice)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
-    </rule>
-    <rule id="f210-1e7c-a315-2849" name="Parry (5+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with this rule gain a Ward Save in close combat as indicated in the brackets. This is cumulative with other sources of Parry. It cannot be used against attacks made against the model&apos;s flank or rear, nor can it be used against attacks that Hit automatically, attacks that are made at +3 Strength over the model&apos;s own Strength value, nor can it be used by mounted models, unless specified.</description>
     </rule>
     <rule id="3efd-81b2-458e-604e" name="Loremaster (Hedge Magic)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
@@ -9027,6 +9021,9 @@ If a character with Magic Resistance joins a unit, all models in the unit benefi
     </rule>
     <rule id="f37d-a124-ff82-7de3" name="Natural Armour (*)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
+    </rule>
+    <rule id="60d2-15fd-780b-5b86" name="Parry (*)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
+      <description>Models with this rule gain a Ward Save in close combat as indicated in the brackets. This is cumulative with other sources of Parry. It cannot be used against attacks made against the model&apos;s flank or rear, nor can it be used against attacks that Hit automatically, attacks that are made at +3 Strength over the model&apos;s own Strength value, nor can it be used by mounted models, unless specified.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
