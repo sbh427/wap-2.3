@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="1580-32e4-2f36-d2bb" name="Ogre Kingdoms WAP 1.6" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="65" revision="4" battleScribeVersion="2.03" authorContact="Contact me via discord" authorName="Xetolosch" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="1580-32e4-2f36-d2bb" name="Ogre Kingdoms WAP 1.6" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="65" revision="5" battleScribeVersion="2.03" authorContact="Contact me via discord" authorName="Xetolosch" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Beneath Contempt" id="76bd-2842-3052-fa33" hidden="false" publicationId="dc4b-67ab-7b8e-baa5" page="3">
       <description>Gnoblars have the Expendable special rule. In addition, even other Gnoblars treat them as being Expendable.</description>
@@ -1072,14 +1072,15 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Natural Armour (6+)" id="7dd3-f069-c11f-fae9" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9">
-          <modifiers>
-            <modifier type="set" value="from Mount" field="annotation"/>
-          </modifiers>
-        </infoLink>
         <infoLink name="Impact Hits (*)" id="0379-751d-cf03-cd8a" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
           <modifiers>
             <modifier type="replace" value="D3" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="a872-3df2-8550-431a" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
+            <modifier type="set" value="from Mount" field="annotation"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -1099,9 +1100,10 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
       </constraints>
       <infoLinks>
         <infoLink name="Frenzy" id="4810-ef3a-1b08-403c" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
-        <infoLink name="Natural Armour (6+)" id="eee4-1276-9fef-9fe3" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9">
+        <infoLink name="Natural Armour (*)" id="eee4-1276-9fef-9fe3" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
           <modifiers>
             <modifier type="set" value="from Mount" field="annotation"/>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
           </modifiers>
         </infoLink>
         <infoLink name="Impact Hits (*)" id="b371-b7e0-09f2-5f52" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
@@ -1130,25 +1132,6 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
         <categoryLink name="Mount" hidden="false" id="dbb0-d256-baef-0e2f" targetId="8b8a-34b1-ed30-df11" primary="false"/>
         <categoryLink name="Monstrous Creature" hidden="false" id="6c67-7674-a713-99d7" targetId="b3e5-4b1b-7050-7e02" primary="false"/>
       </categoryLinks>
-      <infoGroups>
-        <infoGroup name="New Info Group" id="1a04-615c-c530-0119" hidden="false">
-          <infoLinks>
-            <infoLink name="Natural Armour (6+)" id="4e05-1c53-c72a-bf16" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
-          </infoLinks>
-          <rules>
-            <rule name="Unit Strength and Line of Sight Value" id="d303-ef09-9a73-2ec3" hidden="false" publicationId="dc4b-67ab-7b8e-baa5" page="20">
-              <description>A model mounted on a Mournfang has a Unit Strength and Line of Sight value of 5.</description>
-            </rule>
-          </rules>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="ccbb-2e7d-2253-c03f" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoGroup>
-      </infoGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="1. Name-Gnoblars" hidden="false" id="e86c-aad1-8392-3a90" sortIndex="11">
       <costs>
@@ -1178,15 +1161,16 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
       <infoLinks>
         <infoLink name="Rhinox War Chariot" id="0c92-2ca0-a59a-0ee0" hidden="false" type="profile" targetId="64d0-9f0c-18d9-65c2"/>
         <infoLink name="Fear" id="eb3d-e0b4-103f-b6dc" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
-        <infoLink name="Natural Armour (5+)" id="85d2-4434-76fc-6447" hidden="false" type="rule" targetId="306d-711a-1300-587f">
-          <modifiers>
-            <modifier type="set" value="from Mount" field="annotation"/>
-          </modifiers>
-        </infoLink>
         <infoLink name="Young Rhinox" id="9b52-66b5-da57-de32" hidden="false" type="profile" targetId="4051-311e-1a52-dbdd"/>
         <infoLink name="Line of Sight (*)" id="4d9e-c652-bc05-bfc7" hidden="false" type="rule" targetId="5111-c7d7-b7cd-273b">
           <modifiers>
             <modifier type="replace" value="4" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="f699-d972-d95a-0a33" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+          <modifiers>
+            <modifier type="replace" value="5+" field="name" arg="*"/>
+            <modifier type="set" value="from Mount" field="annotation"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -1222,11 +1206,6 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <modifier type="set" value="Stonehorn only" field="annotation"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Natural Armour (3+)" id="dfb4-d8ee-8b15-6fc3" hidden="false" type="rule" targetId="32e8-b4ad-3e59-a3c7">
-          <modifiers>
-            <modifier type="set" value="from Mount" field="annotation"/>
-          </modifiers>
-        </infoLink>
         <infoLink name="Line of Sight (*)" id="677c-5a3c-e60c-6a8f" hidden="false" type="rule" targetId="5111-c7d7-b7cd-273b">
           <modifiers>
             <modifier type="replace" value="6" field="name" arg="*"/>
@@ -1235,6 +1214,12 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
         <infoLink name="Unit Strength (*)" id="cebe-b32b-1a29-5bcf" hidden="false" type="rule" targetId="c397-b441-9fd6-89bb">
           <modifiers>
             <modifier type="replace" value="14" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="e0ea-e2ad-6736-0d29" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+          <modifiers>
+            <modifier type="replace" value="3+" field="name" arg="*"/>
+            <modifier type="set" value="from Mount" field="annotation"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -3201,8 +3186,12 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
         <cost name="pts" typeId="points" value="215"/>
       </costs>
       <infoLinks>
-        <infoLink name="Natural Armour (6+)" id="6a03-083f-c1ec-f391" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
         <infoLink name="Ogre Charge" id="0e44-9c87-c1d2-7c64" hidden="false" type="rule" targetId="5357-5a65-849a-76c2"/>
+        <infoLink name="Natural Armour (*)" id="d01f-fd83-01e5-52f3" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <profiles>
         <profile name="Tyrant" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="053e-6ef2-4978-c524" publicationId="dc4b-67ab-7b8e-baa5" page="12">
@@ -3318,7 +3307,11 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Natural Armour 6+" hidden="false" id="844c-5ade-ebdd-cc9d" sortIndex="1">
               <infoLinks>
-                <infoLink name="Natural Armour (6+)" id="7bf7-a6b4-4b8e-d847" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
+                <infoLink name="Natural Armour (*)" id="2e0f-2f75-a408-97a1" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+                  <modifiers>
+                    <modifier type="replace" value="6+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3ccb-4edc-1884-6fcb-min"/>
@@ -3449,11 +3442,15 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
         </selectionEntryGroup>
       </selectionEntryGroups>
       <infoLinks>
-        <infoLink name="Natural Armour (6+)" id="3f3e-2400-f5b6-33bb" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
         <infoLink name="Ogre Charge" id="e9bd-419b-ee9c-ed75" hidden="false" type="rule" targetId="5357-5a65-849a-76c2"/>
         <infoLink name="Immunity (*)" id="f78f-532a-22bd-46a9" hidden="false" type="rule" targetId="8f93-30da-a9db-adc7">
           <modifiers>
             <modifier type="replace" value="Poisoned Attacks" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="1a5a-8d43-4cf2-b09b" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -3536,11 +3533,15 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
         <cost name="pts" typeId="points" value="255"/>
       </costs>
       <infoLinks>
-        <infoLink name="Natural Armour (6+)" id="62d6-2061-96f0-71f6" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
         <infoLink name="Ogre Charge" id="cdfa-a041-5928-5994" hidden="false" type="rule" targetId="5357-5a65-849a-76c2"/>
         <infoLink name="Immunity (*)" id="ea44-3766-9ba8-3d92" hidden="false" type="rule" targetId="8f93-30da-a9db-adc7">
           <modifiers>
             <modifier type="replace" value="Poisoned Attacks" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="1a03-25a7-0d81-c5df" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -3752,8 +3753,12 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
         <cost name="pts" typeId="points" value="135"/>
       </costs>
       <infoLinks>
-        <infoLink name="Natural Armour (6+)" id="9c33-29e6-f325-3af2" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
         <infoLink name="Ogre Charge" id="bbf0-3793-139e-7c17" hidden="false" type="rule" targetId="5357-5a65-849a-76c2"/>
+        <infoLink name="Natural Armour (*)" id="daa5-3049-7b41-a476" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <profiles>
         <profile name="Bruiser" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="9278-5576-9d3d-3528" publicationId="dc4b-67ab-7b8e-baa5" page="14">
@@ -3811,12 +3816,16 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
       </entryLinks>
       <infoLinks>
         <infoLink name="Flaming Attacks" id="0b87-efba-505e-343c" hidden="false" type="rule" targetId="8600-a090-2761-d661"/>
-        <infoLink name="Natural Armour (6+)" id="c346-1032-86fe-cbf1" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
         <infoLink name="Ogre Charge" id="2287-f796-e7ad-f8c4" hidden="false" type="rule" targetId="5357-5a65-849a-76c2"/>
         <infoLink name="Fire Breath" id="72f3-91b2-6fac-f759" hidden="false" type="rule" targetId="3876-987e-4ef2-64dc"/>
         <infoLink name="Immunity (*)" id="53e8-39e7-3a0b-eda2" hidden="false" targetId="8f93-30da-a9db-adc7" type="rule">
           <modifiers>
             <modifier type="replace" value="Flaming Attacks" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="c038-0ff7-7526-8c0c" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -4029,8 +4038,12 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             </entryLink>
           </entryLinks>
           <infoLinks>
-            <infoLink name="Natural Armour (6+)" id="0635-fd41-30c5-b052" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
             <infoLink name="Ogre Charge" id="0713-c2ae-5217-1ba6" hidden="false" type="rule" targetId="5357-5a65-849a-76c2"/>
+            <infoLink name="Natural Armour (*)" id="348f-332a-b84a-5e92" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+              <modifiers>
+                <modifier type="replace" value="6+" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <profiles>
             <profile name="Ogre Bull" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="2ecc-f8e1-0eb7-3278" publicationId="dc4b-67ab-7b8e-baa5" page="21">
@@ -4141,8 +4154,12 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             </entryLink>
           </entryLinks>
           <infoLinks>
-            <infoLink name="Natural Armour (6+)" id="16aa-b713-0bab-27b7" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
             <infoLink name="Ogre Charge" id="33ca-41f2-92b3-bf74" hidden="false" type="rule" targetId="5357-5a65-849a-76c2"/>
+            <infoLink name="Natural Armour (*)" id="3b6a-385b-7ef3-b615" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+              <modifiers>
+                <modifier type="replace" value="6+" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <profiles>
             <profile name="Irongut" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="e7c4-235c-a97e-e280" publicationId="dc4b-67ab-7b8e-baa5" page="21">
@@ -4380,9 +4397,13 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <cost name="pts" typeId="points" value="42"/>
           </costs>
           <infoLinks>
-            <infoLink name="Natural Armour (6+)" id="09ed-4d8c-2a78-8d89" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
             <infoLink name="Ogre Charge" id="4ff5-2b85-0a4a-4c46" hidden="false" type="rule" targetId="5357-5a65-849a-76c2"/>
             <infoLink name="Leadbelcher" id="554e-1d3b-88b2-9e5e" hidden="false" type="profile" targetId="f223-deeb-6ce1-ba18"/>
+            <infoLink name="Natural Armour (*)" id="b588-9b47-3778-cb20" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+              <modifiers>
+                <modifier type="replace" value="6+" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <constraints>
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="4d4f-7851-788e-480b"/>
@@ -4500,7 +4521,6 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             </entryLink>
           </entryLinks>
           <infoLinks>
-            <infoLink name="Natural Armour (5+)" id="6934-5fc0-84c4-b014" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
             <infoLink name="Impact Hits (*)" id="ec23-ddff-d391-34ff" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
               <modifiers>
                 <modifier type="replace" value="D3" field="name" arg="*"/>
@@ -4514,6 +4534,11 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <infoLink name="Unit Strength (*)" id="1d3f-c6e8-8243-cf93" hidden="false" type="rule" targetId="c397-b441-9fd6-89bb">
               <modifiers>
                 <modifier type="replace" value="4" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Natural Armour (*)" id="cc63-bd6c-934f-6141" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+              <modifiers>
+                <modifier type="replace" value="5+" field="name" arg="*"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -4881,10 +4906,14 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                 <cost name="pts" typeId="points" value="43"/>
               </costs>
               <infoLinks>
-                <infoLink name="Natural Armour (6+)" id="1ef5-919c-36eb-ee34" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
                 <infoLink name="Ogre Charge" id="a98b-9f65-d05e-bba9" hidden="false" type="rule" targetId="5357-5a65-849a-76c2"/>
                 <infoLink name="Stubborn" id="af67-e42f-a4a4-3eb3" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
                 <infoLink name="Immunity (Psychology)" id="a8b8-11dd-6031-089a" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
+                <infoLink name="Natural Armour (*)" id="1766-b513-26d5-af92" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+                  <modifiers>
+                    <modifier type="replace" value="6+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <rules>
                 <rule name="Motley Crew" id="b259-d9a3-c2bb-d2e7" hidden="false" publicationId="dc4b-67ab-7b8e-baa5" page="25">
@@ -5293,8 +5322,12 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <infoLink name="Ambushers" id="4c93-c297-f167-6cac" hidden="false" type="rule" targetId="f366-0f91-841f-cf80"/>
             <infoLink name="Frenzy" id="d566-0383-586f-d1d4" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
             <infoLink name="Killing Blow" id="ed85-112a-f25e-2fcd" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29"/>
-            <infoLink name="Natural Armour (6+)" id="c15c-2cc9-b9c8-3f06" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
             <infoLink name="Skirmishers" id="f750-af69-439c-9722" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
+            <infoLink name="Natural Armour (*)" id="cff8-c434-d938-93d5" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+              <modifiers>
+                <modifier type="replace" value="6+" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <profiles>
             <profile name="Gorger" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="d90f-5f36-0c18-555c" publicationId="dc4b-67ab-7b8e-baa5" page="26">
@@ -5347,8 +5380,12 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <cost name="pts" typeId="points" value="19"/>
           </costs>
           <infoLinks>
-            <infoLink name="Natural Armour (6+)" id="a8a8-8185-f92d-cd8e" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
             <infoLink name="Fear" id="490f-6c65-cdf3-28ca" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
+            <infoLink name="Natural Armour (*)" id="fa79-cbcf-af1e-bb19" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+              <modifiers>
+                <modifier type="replace" value="6+" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <profiles>
             <profile name="Sabretusk" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="ffd8-ce27-68bf-6b87" publicationId="dc4b-67ab-7b8e-baa5" page="27">
@@ -5422,7 +5459,11 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Cragbeast" hidden="false" id="034b-77f6-b8f2-558a" sortIndex="1">
           <infoLinks>
-            <infoLink name="Natural Armour (5+)" id="649d-090a-9b57-68b9" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
+            <infoLink name="Natural Armour (*)" id="38c7-b3b4-ea58-1e32" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+              <modifiers>
+                <modifier type="replace" value="5+" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="aa79-39d8-0d06-4b90"/>
@@ -5575,12 +5616,16 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
       </categoryLinks>
       <infoLinks>
         <infoLink name="Young Rhinox" id="b24d-2fa0-657d-e597" hidden="false" type="profile" targetId="4051-311e-1a52-dbdd"/>
-        <infoLink name="Natural Armour (6+)" id="850b-c035-25d5-2c18" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
         <infoLink name="Fear" id="f4d2-b389-3a38-9231" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
         <infoLink name="Gnoblar Scraplauncher Misfire Chart" id="8ffc-1ad6-5765-0665" hidden="false" type="infoGroup" targetId="2209-f7cd-99a5-9a02"/>
         <infoLink name="Line of Sight (*)" id="11c1-4ed3-9c97-b710" hidden="false" type="rule" targetId="5111-c7d7-b7cd-273b">
           <modifiers>
             <modifier type="replace" value="4" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="0a77-f5e4-cc20-5468" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -5682,11 +5727,15 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
       <infoLinks>
         <infoLink name="Young Rhinox" id="0e43-c905-28e6-9727" hidden="false" type="profile" targetId="4051-311e-1a52-dbdd"/>
         <infoLink name="Fear" id="76c6-4b4c-9b8e-15ce" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
-        <infoLink name="Natural Armour (6+)" id="fd68-487e-09d1-abab" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
         <infoLink name="Gnoblar Skewslinger Misfire Chart" id="acaf-b216-4c6a-3579" hidden="false" type="infoGroup" targetId="47f7-ce31-aa2f-b146"/>
         <infoLink name="Line of Sight (*)" id="13f6-99fb-3891-594b" hidden="false" type="rule" targetId="5111-c7d7-b7cd-273b">
           <modifiers>
             <modifier type="replace" value="4" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="3b30-4a2e-f567-65c2" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -5783,7 +5832,6 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Natural Armour (5+)" id="ea0b-6cda-98ff-2b6a" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
             <infoLink name="Frenzy" id="a00c-e5d0-489e-4b68" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
             <infoLink name="Impact Hits (*)" id="0336-1640-7590-a913" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
               <modifiers>
@@ -5798,6 +5846,11 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <infoLink name="Unit Strength (*)" id="385d-881b-1fd7-51fb" hidden="false" type="rule" targetId="c397-b441-9fd6-89bb">
               <modifiers>
                 <modifier type="replace" value="5" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Natural Armour (*)" id="0080-3374-ac15-80d4" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+              <modifiers>
+                <modifier type="replace" value="5+" field="name" arg="*"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -5968,11 +6021,15 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
       <infoLinks>
         <infoLink name="Young Rhinox" id="7ec6-c0cd-f83c-883c" hidden="false" type="profile" targetId="4051-311e-1a52-dbdd"/>
         <infoLink name="Fear" id="9a56-84ed-a552-3204" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
-        <infoLink name="Natural Armour (5+)" id="0e38-f2d1-4b45-b552" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
         <infoLink name="Ironblaster Misfire Chart" id="0a14-29e4-4f48-c790" hidden="false" type="infoGroup" targetId="cc28-7846-4f32-05ce"/>
         <infoLink name="Line of Sight (*)" id="3eaa-25c4-6602-9086" hidden="false" type="rule" targetId="5111-c7d7-b7cd-273b">
           <modifiers>
             <modifier type="replace" value="4" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="4aa7-e43f-44d2-52c7" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+          <modifiers>
+            <modifier type="replace" value="5+" field="name" arg="*"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -6144,7 +6201,6 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Natural Armour (4+)" id="67bc-d80c-0a9c-06df" hidden="false" type="rule" targetId="6b43-9dda-f589-0509"/>
             <infoLink name="Immunity (*)" id="a0d3-9df9-5f7f-6932" hidden="false" targetId="8f93-30da-a9db-adc7" type="rule">
               <modifiers>
                 <modifier type="replace" value="Ice Attacks" field="name" arg="*"/>
@@ -6163,6 +6219,11 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <infoLink name="Unit Strength (*)" id="3357-68d2-aabd-b136" hidden="false" type="rule" targetId="c397-b441-9fd6-89bb">
               <modifiers>
                 <modifier type="replace" value="16" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Natural Armour (*)" id="3ea7-8aca-1102-eba6" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+              <modifiers>
+                <modifier type="replace" value="4+" field="name" arg="*"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -6325,7 +6386,6 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
           </profiles>
           <infoLinks>
             <infoLink name="Immunity (Psychology)" id="22ab-0d4d-42c2-7e3e" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
-            <infoLink name="Natural Armour (4+)" id="6ed6-4d92-7021-dcbf" hidden="false" type="rule" targetId="6b43-9dda-f589-0509"/>
             <infoLink name="1-2" id="d76c-4686-2b16-afd6" hidden="false" type="profile" targetId="ada1-9683-6de8-c43b"/>
             <infoLink name="3-4" id="ae28-3074-9f4c-031b" hidden="false" type="profile" targetId="05aa-c32a-5c12-9497"/>
             <infoLink name="5" id="7e15-ef78-5be2-aa7f" hidden="false" type="profile" targetId="570b-b7d7-be25-d856"/>
@@ -6359,6 +6419,11 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="84e7-b3fe-9285-8264" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Natural Armour (*)" id="1301-a661-9417-51a2" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+              <modifiers>
+                <modifier type="replace" value="4+" field="name" arg="*"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -6398,10 +6463,14 @@ If no suitable target is in base contact, roll again on the chart until you get 
             <modifier type="set" value="*" field="bfa2-d38d-7c93-d3f0"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Natural Armour (6+)" id="279f-8d56-089b-218b" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
         <infoLink name="Fall Over" id="7b0b-a4f9-8ce6-3f29" hidden="false" type="rule" targetId="4a8b-1056-0bcd-e293"/>
         <infoLink name="Giant Special Attacks" id="ec89-4852-a5d4-f089" hidden="false" type="rule" targetId="fba8-fc55-f60b-edd8"/>
         <infoLink name="Immunity (Psychology)" id="90c3-319d-37f1-ced1" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
+        <infoLink name="Natural Armour (*)" id="373d-fef0-372a-b366" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="bd82-bba8-d38f-e9d3" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -6448,7 +6517,11 @@ If no suitable target is in base contact, roll again on the chart until you get 
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink name="Natural Armour (6+)" id="7cc3-7b13-edc3-95c0" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
+                <infoLink name="Natural Armour (*)" id="8597-a732-94f2-6a37" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+                  <modifiers>
+                    <modifier type="replace" value="6+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <rules>
                 <rule name="Everyone has their Price" id="7dbc-7578-15f4-c561" hidden="false" publicationId="dc4b-67ab-7b8e-baa5" page="39">
@@ -6608,10 +6681,14 @@ If no suitable target is in base contact, roll again on the chart until you get 
                 <entryLink import="true" name="10. Character Options" hidden="false" id="fb54-6ecf-d459-17a8" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
               </entryLinks>
               <infoLinks>
-                <infoLink name="Natural Armour (3+)" id="1f5b-ae0e-768b-2a00" hidden="false" type="rule" targetId="32e8-b4ad-3e59-a3c7"/>
                 <infoLink name="Impact Hits (*)" id="132d-1c95-67ba-eb6c" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
                   <modifiers>
                     <modifier type="replace" value="D3+1" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Natural Armour (*)" id="8c19-4fd2-d274-9e2f" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="3+" field="name" arg="*"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -6696,11 +6773,15 @@ If no suitable target is in base contact, roll again on the chart until you get 
                 <infoLink name="Terror" id="f509-8e2a-7b83-854b" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
                 <infoLink name="Frenzy" id="b31d-e57d-22d7-4730" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
                 <infoLink name="Killing Blow" id="4a6d-8c33-912a-71cd" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29"/>
-                <infoLink name="Natural Armour (6+)" id="6998-90a8-468d-3048" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
                 <infoLink name="Ogre Charge" id="3834-e53a-b0bd-1714" hidden="false" type="rule" targetId="5357-5a65-849a-76c2"/>
                 <infoLink name="Immunity (*)" id="e031-550f-40ca-9d1c" hidden="false" type="rule" targetId="8f93-30da-a9db-adc7">
                   <modifiers>
                     <modifier type="replace" value="Poisoned Attacks" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Natural Armour (*)" id="a3c9-333f-cc40-3ce6" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+                  <modifiers>
+                    <modifier type="replace" value="6+" field="name" arg="*"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -6794,10 +6875,14 @@ If no suitable target is in base contact, roll again on the chart until you get 
                 <infoLink name="Terror" id="3388-73f0-8c8b-1b83" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
                 <infoLink name="Mawseeker" id="f2d7-bdbc-c9a9-fa14" hidden="false" type="rule" targetId="52f5-b344-360a-32ce"/>
                 <infoLink name="Ogre Charge" id="4fdd-c337-7d18-f5ed" hidden="false" type="rule" targetId="5357-5a65-849a-76c2"/>
-                <infoLink name="Natural Armour (6+)" id="4ebe-c7a6-09ac-4a0a" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
                 <infoLink name="Immunity (*)" id="383e-714d-72ca-ab81" hidden="false" type="rule" targetId="8f93-30da-a9db-adc7">
                   <modifiers>
                     <modifier type="replace" value="Poisoned Attacks" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Natural Armour (*)" id="5f7c-f4f8-d1b5-6ecd" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+                  <modifiers>
+                    <modifier type="replace" value="6+" field="name" arg="*"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -6880,10 +6965,14 @@ If no suitable target is in base contact, roll again on the chart until you get 
                 <infoLink name="Ogre Charge" id="76ca-50f8-8747-5a94" hidden="false" type="rule" targetId="d041-af68-1592-6f88"/>
                 <infoLink name="Fire Breath" id="8641-ea03-a561-e491" hidden="false" type="rule" targetId="3876-987e-4ef2-64dc"/>
                 <infoLink name="Flaming Attacks" id="3f5a-9fc7-6bdd-9310" hidden="false" type="rule" targetId="8600-a090-2761-d661"/>
-                <infoLink name="Natural Armour (6+)" id="1885-a177-2c0d-3563" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
                 <infoLink name="Immunity (*)" id="c254-fa76-1936-b84d" hidden="false" targetId="8f93-30da-a9db-adc7" type="rule">
                   <modifiers>
                     <modifier type="replace" value="Flaming Attacks" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Natural Armour (*)" id="3edb-5bbd-dd67-8057" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+                  <modifiers>
+                    <modifier type="replace" value="6+" field="name" arg="*"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -7041,8 +7130,12 @@ If no suitable target is in base contact, roll again on the chart until you get 
               <infoLinks>
                 <infoLink name="Stubborn" id="4a4c-0c4f-03bc-46bb" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
                 <infoLink name="Immunity (Psychology)" id="1667-a108-fca9-607a" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
-                <infoLink name="Natural Armour (6+)" id="039e-9ff8-601a-45f1" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
                 <infoLink name="Ogre Charge" id="f310-0d8b-75a4-ba56" hidden="false" type="rule" targetId="5357-5a65-849a-76c2"/>
+                <infoLink name="Natural Armour (*)" id="0d9f-509e-0649-21e4" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+                  <modifiers>
+                    <modifier type="replace" value="6+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <rules>
                 <rule name="Golgfag&apos;s Maneaters" id="3b2c-b87c-fea9-1627" hidden="false" publicationId="dc4b-67ab-7b8e-baa5" page="44">
@@ -7113,8 +7206,12 @@ If no suitable target is in base contact, roll again on the chart until you get 
                 </entryLink>
               </entryLinks>
               <infoLinks>
-                <infoLink name="Natural Armour (6+)" id="3e0b-650f-426c-2b1d" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
                 <infoLink name="Ogre Charge" id="5f8d-b3c7-5291-4be9" hidden="false" type="rule" targetId="5357-5a65-849a-76c2"/>
+                <infoLink name="Natural Armour (*)" id="d256-fb13-dd70-8f1b" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+                  <modifiers>
+                    <modifier type="replace" value="6+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <profiles>
                 <profile name="Bragg the Gutsman" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="27fb-8fe9-dd32-c105" publicationId="dc4b-67ab-7b8e-baa5" page="44">
@@ -7147,9 +7244,13 @@ If no suitable target is in base contact, roll again on the chart until you get 
                 <cost name="pts" typeId="points" value="195"/>
               </costs>
               <infoLinks>
-                <infoLink name="Natural Armour (6+)" id="ecba-6eb0-983c-b06c" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
                 <infoLink name="Ogre Charge" id="6ae0-3b27-e42c-1a65" hidden="false" type="rule" targetId="5357-5a65-849a-76c2"/>
                 <infoLink name="Stubborn" id="177b-7c2a-de94-6134" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
+                <infoLink name="Natural Armour (*)" id="3ce8-6a66-2b5b-23c3" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+                  <modifiers>
+                    <modifier type="replace" value="6+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry type="model" import="true" name="Braugh Slavelord" hidden="false" id="14ea-52a8-2112-a8fa" sortIndex="1">
@@ -7287,7 +7388,11 @@ If no suitable target is in base contact, roll again on the chart until you get 
                 <infoLink name="Scouts" id="c4c7-7409-fb11-e1e6" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
                 <infoLink name="Loner" id="2b12-449a-d5ac-ee76" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
                 <infoLink name="Ogre Charge" id="e7a5-10d0-78d0-0058" hidden="false" type="rule" targetId="5357-5a65-849a-76c2"/>
-                <infoLink name="Natural Armour (6+)" id="80a7-8e3c-bd1b-b3d0" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
+                <infoLink name="Natural Armour (*)" id="80a7-8e3c-bd1b-b3d0" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+                  <modifiers>
+                    <modifier type="replace" value="6+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
                 <infoLink name="Their Master&apos;s Voice" id="463e-8b43-f2a1-1909" hidden="false" type="rule" targetId="ce5c-5a70-4dbd-1a28"/>
               </infoLinks>
               <rules>
