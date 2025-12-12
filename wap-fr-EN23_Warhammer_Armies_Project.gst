@@ -43,6 +43,7 @@
     <publication name="Daemons of Chaos 1.71" id="314a-aacb-0877-4081" hidden="false" shortName="DoC" publisher="Warhammer - Daemons of Chaos 1.71" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="23.06.2025"/>
     <publication name="Chaos Dwarfs v.1.71" id="53f5-3638-a9ce-8dd3" hidden="false" shortName="CD" publisher="Warhammer - Chaos Dwarfs 9th Ed 1.71" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="20.04.2025"/>
     <publication id="4f8f-9147-1eae-6c3d" name="Zombie Pirates of the Vampire Coast v.1.5" shortName="ZP" publisher="Warhammer - Zombie Pirates of the Vampire Coast 9th Ed v.1.5" publicationDate="08.02.2025" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="65fb-a9da-0a71-9dc9" name="Grand Cathay 1.71" shortName="GC" publisher="Warhammer - Grand Cathay 1.71" publicationDate="05.12.2025" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
