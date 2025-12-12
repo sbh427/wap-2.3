@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="aea5-0b49-3f3d-0e16" name="Orcs &amp; Goblins WAP 1.60" revision="54" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="aea5-0b49-3f3d-0e16" name="Orcs &amp; Goblins WAP 1.60" revision="55" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <selectionEntries>
     <selectionEntry id="bcd3-0731-37ca-d244" name="Orc Warchanter" hidden="false" collective="false" import="true" type="model" sortIndex="8">
@@ -30,7 +30,11 @@
       <infoLinks>
         <infoLink id="a628-cd71-3f86-3992" name="Size Matters" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
         <infoLink id="3929-0ae9-9e27-481c" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
-        <infoLink name="Mighty Blow (1)" id="4f38-60dc-a12b-acd6" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
+        <infoLink name="Mighty Blow (*)" id="d34a-4c18-6a06-d18d" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+          <modifiers>
+            <modifier type="replace" value="1" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="43ee-af15-3825-2e39" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
@@ -133,7 +137,11 @@
           <infoLinks>
             <infoLink id="e6f2-8c50-bf10-f35a" name="Animosity" hidden="false" targetId="cd91-cbe9-af5c-3d55" type="rule"/>
             <infoLink id="9b53-4a58-e5a1-5ab9" name="Size Matters" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
-            <infoLink name="Mighty Blow (1)" id="cfe8-5df7-783d-eb77" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
+            <infoLink name="Mighty Blow (*)" id="1d6b-b19d-e5d6-ec26" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+              <modifiers>
+                <modifier type="replace" value="1" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="5"/>
@@ -323,7 +331,11 @@
           <infoLinks>
             <infoLink id="0094-188c-b70e-ef2c" name="Animosity" hidden="false" targetId="cd91-cbe9-af5c-3d55" type="rule"/>
             <infoLink id="2066-0cef-ca54-1201" name="Size Matters" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
-            <infoLink name="Mighty Blow (1)" id="a252-c991-e4a5-8303" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
+            <infoLink name="Mighty Blow (*)" id="a1dd-eccc-3aac-a512" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+              <modifiers>
+                <modifier type="replace" value="1" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="7"/>
@@ -1158,11 +1170,12 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
                 </modifier>
               </modifiers>
             </infoLink>
-            <infoLink name="Hatred (Empire)" id="0575-a720-517b-2eb6" hidden="true" type="rule" targetId="1308-62b9-5692-6880">
+            <infoLink name="Hatred (*)" id="ef50-a99b-729b-0f24" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
               <modifiers>
-                <modifier type="set" value="false" field="hidden">
+                <modifier type="replace" value="Empire" field="name" arg="*"/>
+                <modifier type="set" value="true" field="hidden">
                   <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="unit" childId="ac66-faa8-3108-4a4d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                    <condition type="lessThan" value="1" field="selections" scope="unit" childId="ac66-faa8-3108-4a4d" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1405,7 +1418,11 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
           <infoLinks>
             <infoLink id="c2e1-8c9b-362b-2f15" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
             <infoLink id="6c06-acb2-6b8a-7ca8" name="Armed to da Teef" hidden="false" targetId="8ef0-eeec-a076-ad87" type="rule"/>
-            <infoLink name="Mighty Blow (1)" id="569f-814c-35ca-3c90" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
+            <infoLink name="Mighty Blow (*)" id="1014-c186-918a-90f4" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+              <modifiers>
+                <modifier type="replace" value="1" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="14"/>
@@ -1545,9 +1562,13 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="74bb-0936-9467-b379" name="Mighty Blow (1)" hidden="false" targetId="01e3-7f81-20e3-45fe" type="rule"/>
             <infoLink id="e136-f49f-1d41-48b5" name="Animosity" hidden="false" targetId="cd91-cbe9-af5c-3d55" type="rule"/>
             <infoLink id="9abe-3e5c-d5e1-f649" name="Size Matters" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
+            <infoLink name="Mighty Blow (*)" id="b2ba-7e29-6b17-e114" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+              <modifiers>
+                <modifier type="replace" value="1" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="15"/>
@@ -1822,11 +1843,19 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
           </profiles>
           <infoLinks>
             <infoLink id="befe-ba4c-9d6a-93ad" name="Skirmishers" hidden="false" targetId="9a30-1c5c-12f4-5798" type="rule"/>
-            <infoLink id="6d73-cebe-22a2-d299" name="Hatred (Dwarfs)" hidden="false" targetId="da8d-d10d-b525-a19a" type="rule"/>
             <infoLink id="25fd-1940-2bab-fe29" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
-            <infoLink name="Random Movement (3D6)" id="0e7f-7572-1cef-018e" hidden="false" type="rule" targetId="0877-cd17-c381-a045"/>
             <infoLink name="Vanguard" id="7f26-bbd8-c737-b5d4" hidden="false" type="rule" targetId="38ba-d48a-be97-f830"/>
             <infoLink name="Loner" id="b9c8-75d0-df95-0025" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+            <infoLink name="Hatred (*)" id="74bf-c8fe-6df1-fa93" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+              <modifiers>
+                <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Random Movement (*)" id="873c-d30f-6543-7285" hidden="false" targetId="4d40-9a96-4af8-e943" type="rule">
+              <modifiers>
+                <modifier type="replace" value="3D6" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="12"/>
@@ -1895,8 +1924,12 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
       <infoLinks>
         <infoLink id="a166-a487-9fac-ad2c" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
         <infoLink id="d87e-95a6-a8a9-10e9" name="Mixed Unit" hidden="false" targetId="e00a-3a09-9b67-e994" type="rule"/>
-        <infoLink name="Random Movement (3D6)" id="fe9e-7f7f-7491-7497" hidden="false" type="rule" targetId="0877-cd17-c381-a045"/>
         <infoLink name="Loner" id="da99-13ef-ea4c-03ea" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+        <infoLink name="Random Movement (*)" id="27d6-a7ec-a2c5-c221" hidden="false" targetId="4d40-9a96-4af8-e943" type="rule">
+          <modifiers>
+            <modifier type="replace" value="3D6" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4b0a-8e22-13e2-69b6" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -1954,7 +1987,11 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="1494-841e-182b-65e3" name="Hatred (Dwarfs)" hidden="false" targetId="da8d-d10d-b525-a19a" type="rule"/>
+            <infoLink name="Hatred (*)" id="8bab-816e-d5dd-1062" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+              <modifiers>
+                <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="3"/>
@@ -2003,11 +2040,19 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="1ac8-cb6b-a7ba-4d00" name="Mighty Blow (1)" hidden="false" targetId="01e3-7f81-20e3-45fe" type="rule"/>
             <infoLink id="75d8-959d-f8bc-4f8b" name="Animosity" hidden="false" targetId="cd91-cbe9-af5c-3d55" type="rule"/>
             <infoLink id="ef86-696f-2e45-4fdb" name="Size Matters" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
-            <infoLink id="0c04-9b5e-ed87-e98f" name="Immunity (Fear)" hidden="false" targetId="9fed-6076-6c75-b774" type="rule"/>
             <infoLink id="a4a5-3d6c-affd-5099" name="Duff Up da Big Thing" hidden="false" targetId="ea3d-b63d-a2a2-d86b" type="rule"/>
+            <infoLink name="Immunity (*)" id="c32b-e6f8-1cd6-ea08" hidden="false" targetId="8f93-30da-a9db-adc7" type="rule">
+              <modifiers>
+                <modifier type="replace" value="Fear" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Mighty Blow (*)" id="f9e9-6891-15a2-15e1" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+              <modifiers>
+                <modifier type="replace" value="1" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="26"/>
@@ -2076,7 +2121,11 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
           <infoLinks>
             <infoLink id="4cc7-763b-5d0c-3b17" name="Animosity" hidden="false" targetId="cd91-cbe9-af5c-3d55" type="rule"/>
             <infoLink id="3420-f5d1-a12f-8bb2" name="Size Matters" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
-            <infoLink name="Mighty Blow (1)" id="5785-dc1f-290c-cb05" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
+            <infoLink name="Mighty Blow (*)" id="931a-0f4d-b8a4-fc7a" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+              <modifiers>
+                <modifier type="replace" value="1" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="56"/>
@@ -2199,8 +2248,12 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
           </rules>
           <infoLinks>
             <infoLink id="0784-7943-7620-a3c8" name="Stupidity" hidden="false" targetId="755c-61c2-fa25-f4ce" type="rule"/>
-            <infoLink id="11d0-7a1a-2955-0702" name="Regeneration (4+)" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
             <infoLink name="Loner" id="de30-46e3-f7f3-3c8a" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+            <infoLink name="Regeneration (*)" id="c1c7-f6b6-8784-6088" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+              <modifiers>
+                <modifier type="replace" value="4+" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="44"/>
@@ -2221,8 +2274,11 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
                     <cost name="pts" typeId="points" value="8"/>
                   </costs>
                   <infoLinks>
-                    <infoLink name="Strider (Marsh)" id="ea36-8309-b650-fb04" hidden="false" type="rule" targetId="686b-8e1b-4d01-05ba"/>
-                    <infoLink name="Strider (River)" id="9cb5-d197-8247-15fd" hidden="false" type="rule" targetId="48d5-6bee-c3f6-cec8"/>
+                    <infoLink name="Strider (*)" id="756c-ba07-91a3-0dbd" hidden="false" targetId="784a-037e-aca4-245a" type="rule">
+                      <modifiers>
+                        <modifier type="replace" value="River, Marsh" field="name" arg="*"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Stone Troll" hidden="false" id="db8c-176f-6c2f-b4fe" collective="true">
@@ -2233,8 +2289,16 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
                     <cost name="pts" typeId="points" value="8"/>
                   </costs>
                   <infoLinks>
-                    <infoLink name="Magic Resistance (2)" id="f4c6-d754-30df-be30" hidden="false" type="rule" targetId="0e09-3526-25d5-2646"/>
-                    <infoLink name="Natural Armour (5+)" id="7cb9-a554-a697-36d3" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
+                    <infoLink name="Magic Resistance (*)" id="f24b-5e08-1e77-3a80" hidden="false" targetId="b09f-673f-e98d-fe59" type="rule">
+                      <modifiers>
+                        <modifier type="replace" value="2" field="name" arg="*"/>
+                      </modifiers>
+                    </infoLink>
+                    <infoLink name="Natural Armour (*)" id="1d89-d4c6-de00-a33b" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+                      <modifiers>
+                        <modifier type="replace" value="5+" field="name" arg="*"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
                 </selectionEntry>
               </selectionEntries>
@@ -2379,36 +2443,45 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
       </rules>
       <infoLinks>
         <infoLink id="cdc8-fea7-46c9-cf29" name="Unstable" hidden="false" targetId="b779-6d7f-8298-7c82" type="rule"/>
-        <infoLink id="bd00-c8e7-7fa2-5483" name="Impact Hits (2D6)" hidden="false" targetId="f78e-8057-0e20-d89f" type="rule"/>
-        <infoLink id="afd6-63bc-702f-e995" name="Random Movement (2D6)" hidden="false" targetId="4918-5aef-8930-27ec" type="rule"/>
-        <infoLink name="Unit Strength (3)" id="0bee-e83a-0e0f-9807" hidden="false" type="rule" targetId="fe8b-fd33-652e-4e2f">
+        <infoLink name="Impact Hits (*)" id="eb1f-bac2-3869-72cc" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
           <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="7" field="selections" scope="parent" childId="1d8e-036f-4595-594a" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
+            <modifier type="replace" value="2D6" field="name" arg="*"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Unit Strength (4)" id="17ed-b6af-3c33-decc" hidden="false" type="rule" targetId="23fb-913b-b02d-9e0a">
+        <infoLink name="Unit Strength (*)" id="cc98-bfde-fb83-c30b" hidden="false" type="rule" targetId="c397-b441-9fd6-89bb">
           <modifiers>
-            <modifier type="set" value="true" field="hidden">
+            <modifier type="replace" value="3" field="name" arg="*">
+              <conditions>
+                <condition type="lessThan" value="7" field="selections" scope="parent" childId="1d8e-036f-4595-594a" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="replace" value="4" field="name" arg="*">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
-                    <condition type="equalTo" value="10" field="selections" scope="parent" childId="1d8e-036f-4595-594a" shared="true" includeChildSelections="true"/>
-                    <condition type="atMost" value="6" field="selections" scope="parent" childId="1d8e-036f-4595-594a" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="7" field="selections" scope="parent" childId="1d8e-036f-4595-594a" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="10" field="selections" scope="parent" childId="1d8e-036f-4595-594a" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="replace" value="5" field="name" arg="*">
+              <conditions>
+                <condition type="atLeast" value="10" field="selections" scope="parent" childId="1d8e-036f-4595-594a" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </infoLink>
-        <infoLink name="Unit Strength (5)" id="1178-971c-1455-466f" hidden="false" type="rule" targetId="cd03-1b6a-2a80-dd1a">
+        <infoLink name="Random Movement (*)" id="6bb5-eefa-6f77-e733" hidden="false" targetId="4d40-9a96-4af8-e943" type="rule">
           <modifiers>
-            <modifier type="set" value="true" field="hidden">
+            <modifier type="replace" value="2D6" field="name" arg="*">
               <conditions>
-                <condition type="notEqualTo" value="10" field="selections" scope="parent" childId="1d8e-036f-4595-594a" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="32aa-c688-13fd-39d5" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="replace" value="3D6" field="name" arg="*">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="32aa-c688-13fd-39d5" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2481,7 +2554,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
               </constraints>
               <rules>
                 <rule name="Out-rigga" id="879a-7df4-976a-30d8" hidden="false" publicationId="9e23-79cb-pubN78975" page="60">
-                  <description>The Pump Wagon&apos;s Random Movement is increased by D6.</description>
+                  <description>The Pump Wagon&apos;s Random Movement is increased by to 3D6.</description>
                 </rule>
               </rules>
               <costs>
@@ -2566,8 +2639,16 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
       </rules>
       <infoLinks>
         <infoLink id="15d2-5bab-315b-d782" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
-        <infoLink id="19d1-d7be-29b6-c8f3" name="Random Movement (3D6)" hidden="false" targetId="0877-cd17-c381-a045" type="rule"/>
-        <infoLink name="Unit Strength (6)" id="b789-34ab-09e2-5c5e" hidden="false" type="rule" targetId="1d10-62be-aac7-35f6"/>
+        <infoLink name="Unit Strength (*)" id="b805-3cfd-7b8e-324a" hidden="false" type="rule" targetId="c397-b441-9fd6-89bb">
+          <modifiers>
+            <modifier type="replace" value="6" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Random Movement (*)" id="1130-807b-422a-0b22" hidden="false" targetId="4d40-9a96-4af8-e943" type="rule">
+          <modifiers>
+            <modifier type="replace" value="3D6" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a963-203e-d9b4-f19f" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -2634,7 +2715,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="8f89-3d1c-db99-cef2" name="Hatred (Dwarfs)" hidden="false" targetId="da8d-d10d-b525-a19a" type="rule"/>
+            <infoLink name="Hatred (*)" id="96e0-5e6c-4013-13c7" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+              <modifiers>
+                <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
@@ -2709,7 +2794,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
       </rules>
       <infoLinks>
         <infoLink id="99da-e8ee-a316-88f4" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
-        <infoLink id="b8f3-b57b-da96-1c6d" name="Random Movement (4D6)" hidden="false" targetId="ece5-1f38-ee28-593e" type="rule"/>
+        <infoLink name="Random Movement (*)" id="c85e-f721-67f7-7dcb" hidden="false" targetId="4d40-9a96-4af8-e943" type="rule">
+          <modifiers>
+            <modifier type="replace" value="4D6" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="1287-4d00-3881-377f" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -2744,8 +2833,16 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
       <infoLinks>
         <infoLink id="c250-a70d-03cc-9622" name="Animated Construct" hidden="false" targetId="738b-aca4-740c-e425" type="rule"/>
         <infoLink id="769e-2514-c5d8-519f" name="Unstable" hidden="false" targetId="b779-6d7f-8298-7c82" type="rule"/>
-        <infoLink id="4a27-0ef3-5931-ada7" name="Impact Hits (D6)" hidden="false" targetId="e9e6-66cc-623f-8e94" type="rule"/>
-        <infoLink id="d42c-4bbe-b946-6763" name="Ward Save (6+)" hidden="false" targetId="5c26-a043-8535-5f4f" type="rule"/>
+        <infoLink name="Impact Hits (*)" id="0f29-1dc5-76d9-527d" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
+          <modifiers>
+            <modifier type="replace" value="D6" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Ward Save (*)" id="c6a1-5b56-d664-66c8" hidden="false" targetId="3006-8f7c-f916-af14" type="rule">
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="07d7-ca6e-6f48-1ef2" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -2787,9 +2884,16 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="95a6-5709-8b98-0a51" name="Regeneration (4+)" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
-        <infoLink id="3bd6-ed74-68fb-5987" name="Strider (Marsh)" hidden="false" targetId="686b-8e1b-4d01-05ba" type="rule"/>
-        <infoLink id="254c-ff5d-b02a-908f" name="Strider (River)" hidden="false" targetId="48d5-6bee-c3f6-cec8" type="rule"/>
+        <infoLink name="Regeneration (*)" id="0b49-02ae-4d6f-2e96" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+          <modifiers>
+            <modifier type="replace" value="4+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Strider (*)" id="230b-73bb-1e81-2620" hidden="false" targetId="784a-037e-aca4-245a" type="rule">
+          <modifiers>
+            <modifier type="replace" value="River, Marsh" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Lords" hidden="false" id="5a05-3c34-a203-304f" targetId="d280-b7df-c185-2ba5" primary="true"/>
@@ -2935,11 +3039,15 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
           </rules>
           <infoLinks>
             <infoLink id="c95f-7f4d-088f-c2c1" name="Animosity" hidden="false" targetId="cd91-cbe9-af5c-3d55" type="rule"/>
-            <infoLink id="6d18-c490-61e6-5d7d" name="Hatred (Dwarfs)" hidden="false" targetId="da8d-d10d-b525-a19a" type="rule"/>
             <infoLink id="d30b-91ff-3987-8663" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
             <infoLink id="e7cc-ed69-d2e3-625c" name="Skirmishers" hidden="false" targetId="9a30-1c5c-12f4-5798" type="rule"/>
             <infoLink id="6b9a-cd1b-708e-f180" name="Scouts" hidden="false" targetId="6624-0b7b-c5b8-6397" type="rule"/>
             <infoLink name="Loner" id="b342-70d0-43ac-35f5" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+            <infoLink name="Hatred (*)" id="4915-ce07-61e3-1126" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+              <modifiers>
+                <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="4"/>
@@ -3063,10 +3171,14 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
           </rules>
           <infoLinks>
             <infoLink id="b016-9dae-b508-ebea" name="Animosity" hidden="false" targetId="cd91-cbe9-af5c-3d55" type="rule"/>
-            <infoLink id="d2ab-8e45-e2d3-7eda" name="Hatred (Dwarfs)" hidden="false" targetId="da8d-d10d-b525-a19a" type="rule"/>
             <infoLink id="46ff-8d2b-38da-6ff0" name="Skirmishers" hidden="false" targetId="9a30-1c5c-12f4-5798" type="rule"/>
             <infoLink id="8e0c-e7d6-588d-c5b8" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
             <infoLink name="Loner" id="137d-a91e-44b3-03dc" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+            <infoLink name="Hatred (*)" id="32ad-4c05-51d1-2969" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+              <modifiers>
+                <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="6"/>
@@ -3140,10 +3252,18 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="622e-3720-f76b-480e" name="Regeneration (4+)" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
         <infoLink id="af84-4d7e-5e46-c298" name="Stupidity" hidden="false" targetId="755c-61c2-fa25-f4ce" type="rule"/>
-        <infoLink id="2ea1-ed4f-5b0a-9a91" name="Magic Resistance (3)" hidden="false" targetId="9b99-4e37-be08-231a" type="rule"/>
         <infoLink name="Copious Troll Vomit" id="85ca-0a60-a107-6868" hidden="false" type="rule" targetId="7f47-779a-1e05-a7d7"/>
+        <infoLink name="Magic Resistance (*)" id="4b65-55a6-b6e6-be19" hidden="false" targetId="b09f-673f-e98d-fe59" type="rule">
+          <modifiers>
+            <modifier type="replace" value="3" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Regeneration (*)" id="a338-c2bd-513f-ff68" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+          <modifiers>
+            <modifier type="replace" value="4+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="f328-ce05-2195-bd3b" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -3266,8 +3386,12 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               <infoLinks>
                 <infoLink id="980f-0783-01e9-a8ca" name="Waaagh!" hidden="false" targetId="72cd-f563-0e75-b280" type="rule"/>
                 <infoLink id="1486-b3d5-d9d4-55be" name="Size Matters" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
-                <infoLink id="06ef-2a3e-b32e-052f" name="Mighty Blow (1)" hidden="false" targetId="01e3-7f81-20e3-45fe" type="rule"/>
                 <infoLink id="f8b7-8606-1324-9173" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
+                <infoLink name="Mighty Blow (*)" id="90f7-a107-faa5-b1bb" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+                  <modifiers>
+                    <modifier type="replace" value="1" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="10. Character Options" hidden="false" id="560b-c9b3-381b-ba7a" type="selectionEntryGroup" targetId="7853-6aa4-00e8-09e0"/>
@@ -3423,8 +3547,12 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               <infoLinks>
                 <infoLink id="60b9-885c-bfdd-903a" name="Frenzy" hidden="false" targetId="9ff3-dda6-e142-5a77" type="rule"/>
                 <infoLink id="47d2-8f5a-cee5-4c6d" name="Size Matters" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
-                <infoLink id="5a94-2940-2fdc-f8ed" name="Mighty Blow (1)" hidden="false" targetId="01e3-7f81-20e3-45fe" type="rule"/>
                 <infoLink id="6135-8e41-3eee-1b3f" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
+                <infoLink name="Mighty Blow (*)" id="4bb8-db53-c2a0-5b6f" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+                  <modifiers>
+                    <modifier type="replace" value="1" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="15. Race" hidden="false" id="fc21-b73e-a9f0-93be" type="selectionEntryGroup" targetId="b86a-7a2f-e4c6-bbdc">
@@ -3576,10 +3704,18 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
                 </rule>
               </rules>
               <infoLinks>
-                <infoLink id="3860-c43f-8399-277c" name="Hatred (Dwarfs)" hidden="false" targetId="da8d-d10d-b525-a19a" type="rule"/>
                 <infoLink id="bc00-6085-a1cb-6ecc" name="Fear Elves" hidden="false" targetId="8568-17b2-9805-2665" type="rule"/>
                 <infoLink id="4569-c5bf-a8bb-340e" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
-                <infoLink name="Unit Strength (4)" id="8fa4-493d-4f95-6493" hidden="false" type="rule" targetId="23fb-913b-b02d-9e0a"/>
+                <infoLink name="Hatred (*)" id="8008-90fd-5e09-8f21" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Unit Strength (*)" id="72b8-49c2-2dc3-e738" hidden="false" type="rule" targetId="c397-b441-9fd6-89bb">
+                  <modifiers>
+                    <modifier type="replace" value="4" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="90. Magic Items" hidden="false" id="30eb-86d0-37f3-327f" type="selectionEntryGroup" targetId="89d6-6943-c3c9-a681">
@@ -3712,9 +3848,17 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               </rules>
               <infoLinks>
                 <infoLink id="7ae7-0d76-73f9-11e8" name="Loner" hidden="false" targetId="32b6-55f6-6cc6-8fc4" type="rule"/>
-                <infoLink id="e678-3a43-17cf-a754" name="Regeneration (4+)" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
-                <infoLink id="d053-5be9-a1d1-19b2" name="Magic Resistance (3)" hidden="false" targetId="9b99-4e37-be08-231a" type="rule"/>
                 <infoLink id="c0ef-d22d-b585-9751" name="Stupidity" hidden="false" targetId="755c-61c2-fa25-f4ce" type="rule"/>
+                <infoLink name="Magic Resistance (*)" id="15ac-83d6-6c68-0487" hidden="false" targetId="b09f-673f-e98d-fe59" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="3" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Regeneration (*)" id="97d0-b985-823e-495b" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="4+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="55. Equipment" hidden="false" id="ea58-b0b8-91ff-97e7" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
@@ -3829,8 +3973,12 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               <infoLinks>
                 <infoLink id="afae-4ecb-d5a5-bdcf" name="Waaagh!" hidden="false" targetId="72cd-f563-0e75-b280" type="rule"/>
                 <infoLink id="980a-3b4b-cecd-b344" name="Size Matters" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
-                <infoLink id="f996-23ed-aa08-0b55" name="Mighty Blow (1)" hidden="false" targetId="01e3-7f81-20e3-45fe" type="rule"/>
                 <infoLink id="a2fe-ba57-1ead-4588" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
+                <infoLink name="Mighty Blow (*)" id="b592-4315-85f8-7331" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+                  <modifiers>
+                    <modifier type="replace" value="1" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="70. Mount" hidden="false" id="8a36-083f-f5fd-ea70" type="selectionEntryGroup" targetId="11f2-1655-f0c0-1121">
@@ -4066,9 +4214,13 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               <infoLinks>
                 <infoLink id="bcd0-0436-87aa-6d0c" name="Waaagh!" hidden="false" targetId="72cd-f563-0e75-b280" type="rule"/>
                 <infoLink id="dd88-9f33-76df-a223" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
-                <infoLink id="7469-13bd-6394-4da8" name="Mighty Blow (1)" hidden="false" targetId="01e3-7f81-20e3-45fe" type="rule"/>
                 <infoLink id="a4d3-4c84-c424-f05f" name="Quell Animosity" hidden="false" targetId="6eb2-2213-5721-ac9e" type="rule"/>
                 <infoLink id="f0d8-32ee-9502-aae8" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
+                <infoLink name="Mighty Blow (*)" id="bc98-84ca-c36e-b679" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+                  <modifiers>
+                    <modifier type="replace" value="1" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="55. Equipment" hidden="false" id="16e6-67bf-703b-88b6" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
@@ -4141,15 +4293,16 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
                 <infoLink id="9f4f-0cdf-b419-86e9" name="Waaagh!" hidden="false" targetId="72cd-f563-0e75-b280" type="rule"/>
                 <infoLink id="5d44-4d7f-aa12-9749" name="Size Matters" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
                 <infoLink id="04e4-a18a-458c-ecda" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
-                <infoLink name="Hatred (Dwarfs)" id="f936-6e98-81e2-7bef" hidden="false" type="rule" targetId="da8d-d10d-b525-a19a">
+                <infoLink name="Magic Mushrooms" id="ed7c-9506-30d2-69b2" hidden="false" type="rule" targetId="35e6-988f-5bb0-ff28"/>
+                <infoLink name="Hatred (*)" id="882a-3751-cd11-5565" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
                   <modifiers>
+                    <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
                     <modifier type="set" value="Gazbag only" field="annotation"/>
                   </modifiers>
                 </infoLink>
-                <infoLink name="Magic Mushrooms" id="ed7c-9506-30d2-69b2" hidden="false" type="rule" targetId="35e6-988f-5bb0-ff28"/>
-                <infoLink name="Mighty Blow (1)" id="5472-c2d1-b9ec-0fee" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe">
+                <infoLink name="Mighty Blow (*)" id="d7cd-c0c0-8aa3-efb6" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
                   <modifiers>
-                    <modifier type="set" value="Grumlok only" field="annotation"/>
+                    <modifier type="replace" value="1" field="name" arg="*"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -4297,8 +4450,12 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               <infoLinks>
                 <infoLink id="d953-6cbb-3147-b66d" name="Waaagh!" hidden="false" targetId="72cd-f563-0e75-b280" type="rule"/>
                 <infoLink id="8aaa-3d45-ee7d-d86f" name="Size Matters" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
-                <infoLink id="8e57-f642-52f4-d309" name="Mighty Blow (1)" hidden="false" targetId="01e3-7f81-20e3-45fe" type="rule"/>
                 <infoLink id="63bc-dda7-a856-51cd" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
+                <infoLink name="Mighty Blow (*)" id="6a38-3832-7d0d-a0f7" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+                  <modifiers>
+                    <modifier type="replace" value="1" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="15. Race" hidden="false" id="bce5-17ef-1f03-4fe7" type="selectionEntryGroup" targetId="b86a-7a2f-e4c6-bbdc">
@@ -4337,9 +4494,21 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
                         </profile>
                       </profiles>
                       <infoLinks>
-                        <infoLink name="Impact Hits (2D6)" id="3243-d811-ae9b-e92e" hidden="false" targetId="f78e-8057-0e20-d89f" type="rule"/>
-                        <infoLink name="Fly (5)" id="59c1-a9b9-5aa6-665f" hidden="false" targetId="36d4-923e-e1c7-72bc" type="rule"/>
-                        <infoLink name="Natural Armour (3+)" id="1b56-fc5f-5f74-78ce" hidden="false" targetId="32e8-b4ad-3e59-a3c7" type="rule"/>
+                        <infoLink name="Fly (*)" id="714d-8021-f4e6-038f" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+                          <modifiers>
+                            <modifier type="replace" value="5" field="name" arg="*"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Impact Hits (*)" id="95ec-d930-b6ac-52c3" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
+                          <modifiers>
+                            <modifier type="replace" value="2D6" field="name" arg="*"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Natural Armour (*)" id="2442-af71-585f-9a06" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+                          <modifiers>
+                            <modifier type="replace" value="3+" field="name" arg="*"/>
+                          </modifiers>
+                        </infoLink>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
@@ -4409,9 +4578,17 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               <infoLinks>
                 <infoLink id="d6e5-0fbf-f938-ff50" name="Waaagh!" hidden="false" targetId="72cd-f563-0e75-b280" type="rule"/>
                 <infoLink id="5c27-d96e-9fdf-dacf" name="Size Matters" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
-                <infoLink id="ed97-322b-417e-fd92" name="Mighty Blow (1)" hidden="false" targetId="01e3-7f81-20e3-45fe" type="rule"/>
-                <infoLink id="7da7-2f0e-93e4-50ff" name="Hatred (Dwarfs)" hidden="false" targetId="da8d-d10d-b525-a19a" type="rule"/>
                 <infoLink id="b0b4-8647-dfe0-d981" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
+                <infoLink name="Hatred (*)" id="6b39-ea0f-e6bb-c8b9" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Mighty Blow (*)" id="c3ea-ebef-1ff6-e606" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+                  <modifiers>
+                    <modifier type="replace" value="1" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="55. Equipment" hidden="false" id="3e44-9c72-2bbb-eb5e" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
@@ -4515,10 +4692,14 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               <infoLinks>
                 <infoLink id="edd7-a0fe-21f6-d3a4" name="Waaagh!" hidden="false" targetId="72cd-f563-0e75-b280" type="rule"/>
                 <infoLink id="a7be-5f50-bb0e-7184" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
-                <infoLink id="1b49-e7db-2c73-656f" name="Mighty Blow (1)" hidden="false" targetId="01e3-7f81-20e3-45fe" type="rule"/>
                 <infoLink id="0be2-8c22-3f87-0da0" name="Hatred" hidden="false" targetId="f6d7-9fbc-abc1-5cfc" type="rule"/>
                 <infoLink id="075a-a1d8-c6ff-5df9" name="Quell Animosity" hidden="false" targetId="6eb2-2213-5721-ac9e" type="rule"/>
                 <infoLink id="9dfc-3b65-519a-2007" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
+                <infoLink name="Mighty Blow (*)" id="c1f5-3572-0f32-a5a1" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+                  <modifiers>
+                    <modifier type="replace" value="1" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="55. Equipment" hidden="false" id="b9c3-170d-4398-e883" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
@@ -4660,8 +4841,12 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
                 </rule>
               </rules>
               <infoLinks>
-                <infoLink id="16c8-1ae3-b9da-3545" name="Regeneration (4+)" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
                 <infoLink id="8e14-5a44-496d-1961" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
+                <infoLink name="Regeneration (*)" id="58c0-39e8-5872-e007" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="4+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="10. Character Options" hidden="false" id="714a-518a-bfa7-43bb" type="selectionEntryGroup" targetId="7853-6aa4-00e8-09e0"/>
@@ -4808,8 +4993,12 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               <infoLinks>
                 <infoLink id="842a-e3eb-a19d-c70f" name="Waaagh!" hidden="false" targetId="72cd-f563-0e75-b280" type="rule"/>
                 <infoLink id="7736-510a-66ef-4ddb" name="Size Matters" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
-                <infoLink id="7a9f-3533-7575-88af" name="Mighty Blow (1)" hidden="false" targetId="01e3-7f81-20e3-45fe" type="rule"/>
                 <infoLink id="64d0-dd1e-b059-0d6c" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
+                <infoLink name="Mighty Blow (*)" id="d86e-6f65-24eb-de22" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+                  <modifiers>
+                    <modifier type="replace" value="1" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="90. Magic Items" hidden="false" id="d852-3798-6860-7268" type="selectionEntryGroup" targetId="89d6-6943-c3c9-a681">
@@ -4926,8 +5115,12 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               </rules>
               <infoLinks>
                 <infoLink id="8ace-1752-4176-2ef8" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
-                <infoLink id="0478-375a-0aae-7bdd" name="Mighty Blow (1)" hidden="false" targetId="01e3-7f81-20e3-45fe" type="rule"/>
                 <infoLink id="f67a-ef29-2e0f-77a5" name="Size Matters" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
+                <infoLink name="Mighty Blow (*)" id="2079-1133-ced7-4e69" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+                  <modifiers>
+                    <modifier type="replace" value="1" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="65. Lore of Magic" hidden="false" id="afac-831a-18a3-04b8" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
@@ -5164,8 +5357,12 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               <infoLinks>
                 <infoLink id="1759-1c70-78d9-7888" name="Magic Mushrooms" hidden="false" targetId="35e6-988f-5bb0-ff28" type="rule"/>
                 <infoLink id="e902-0fdd-f90f-ae3f" name="Fear Elves" hidden="false" targetId="8568-17b2-9805-2665" type="rule"/>
-                <infoLink id="3157-06db-bb9a-64e6" name="Hatred (Dwarfs)" hidden="false" targetId="da8d-d10d-b525-a19a" type="rule"/>
                 <infoLink id="8b32-2a97-03ab-a2df" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
+                <infoLink name="Hatred (*)" id="abf2-45a6-d9bd-30d4" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="65. Lore of Magic" hidden="false" id="dbf1-9790-0a4d-7f5c" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
@@ -5300,8 +5497,12 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               <infoLinks>
                 <infoLink id="8f35-6325-25e5-06ac" name="Quell Animosity" hidden="false" targetId="6eb2-2213-5721-ac9e" type="rule"/>
                 <infoLink id="5c6e-d79b-5be7-7739" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
-                <infoLink id="8679-e403-517c-612f" name="Mighty Blow (1)" hidden="false" targetId="01e3-7f81-20e3-45fe" type="rule"/>
                 <infoLink id="197f-f80d-bec7-e369" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
+                <infoLink name="Mighty Blow (*)" id="30ef-1abf-94f7-36d7" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+                  <modifiers>
+                    <modifier type="replace" value="1" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="55. Equipment" hidden="false" id="fd7d-51e1-d549-41ac" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
@@ -5384,9 +5585,9 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="e069-ee7f-a019-011c" name="Mighty Blow (1)" hidden="false" targetId="01e3-7f81-20e3-45fe" type="rule">
+                <infoLink name="Mighty Blow (*)" id="0330-fe37-982e-78a4" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
                   <modifiers>
-                    <modifier type="set" value="Ruglud only" field="annotation"/>
+                    <modifier type="replace" value="1" field="name" arg="*"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -5496,7 +5697,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               <infoLinks>
                 <infoLink id="d96c-2e90-36d5-86de" name="Quell Animosity" hidden="false" targetId="6eb2-2213-5721-ac9e" type="rule"/>
                 <infoLink id="025d-d8e5-c9c0-4260" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
-                <infoLink id="4755-561a-42f4-4955" name="Mighty Blow (1)" hidden="false" targetId="01e3-7f81-20e3-45fe" type="rule"/>
+                <infoLink name="Mighty Blow (*)" id="56c6-c998-0707-0d87" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+                  <modifiers>
+                    <modifier type="replace" value="1" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="55. Equipment" hidden="false" id="0bcb-5492-ddc8-c26d" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
@@ -5587,9 +5792,13 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               </rules>
               <infoLinks>
                 <infoLink id="9b40-dce2-85df-eb30" name="Fear Elves" hidden="false" targetId="8568-17b2-9805-2665" type="rule"/>
-                <infoLink id="6f45-14b5-8787-056c" name="Hatred (Empire)" hidden="false" targetId="1308-62b9-5692-6880" type="rule"/>
                 <infoLink id="7e3c-4f1e-e1af-04f4" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
                 <infoLink name="Poisoned Attacks" id="f1c2-c96f-6c6c-10ec" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule"/>
+                <infoLink name="Hatred (*)" id="97ad-098b-93f8-1ed7" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="Empire" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="0c15-96bd-1743-d0e1" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
@@ -5711,7 +5920,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               <infoLinks>
                 <infoLink id="3341-654e-fa72-aa61" name="Fear Elves" hidden="false" targetId="8568-17b2-9805-2665" type="rule"/>
                 <infoLink id="f0c8-c840-3852-fe87" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
-                <infoLink name="Natural Armour (6+)" id="24a5-170b-ba64-e399" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
+                <infoLink name="Natural Armour (*)" id="24a5-170b-ba64-e399" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+                  <modifiers>
+                    <modifier type="replace" value="6+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="90. Magic Items" hidden="false" id="74d9-5d44-fed7-2a42" type="selectionEntryGroup" targetId="89d6-6943-c3c9-a681" sortIndex="0">
@@ -5832,8 +6045,12 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               </profiles>
               <infoLinks>
                 <infoLink id="0118-d6c6-3943-ab40" name="Size Matters" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
-                <infoLink id="8083-7ec8-1b5b-0e73" name="Mighty Blow (1)" hidden="false" targetId="01e3-7f81-20e3-45fe" type="rule"/>
                 <infoLink id="9c4f-2ed4-7191-adff" name="Greenskin Races" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
+                <infoLink name="Mighty Blow (*)" id="0237-9d25-2f99-c2e4" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+                  <modifiers>
+                    <modifier type="replace" value="1" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="20. Primary Weapon" hidden="false" id="6859-bcf9-b290-5da1" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
@@ -5933,7 +6150,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
         <infoLink name="Size Matters" id="4a7d-c927-1572-45e9" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
         <infoLink name="Waaagh!" id="482d-b507-f185-b037" hidden="false" targetId="72cd-f563-0e75-b280" type="rule"/>
         <infoLink name="Greenskin Races" id="0dca-f633-8746-1914" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
-        <infoLink name="Mighty Blow (1)" id="9b89-fd70-52a4-e1f7" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
+        <infoLink name="Mighty Blow (*)" id="9b89-fd70-52a4-e1f7" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+          <modifiers>
+            <modifier type="replace" value="1" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="90. Magic Items" hidden="false" id="fa8f-2590-9ef7-5369" type="selectionEntryGroup" targetId="89d6-6943-c3c9-a681">
@@ -6138,11 +6359,19 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="323e-c234-e5c2-742b" name="Regeneration (4+)" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
         <infoLink id="87dc-685a-d278-f76e" name="Stupidity" hidden="false" targetId="755c-61c2-fa25-f4ce" type="rule"/>
-        <infoLink id="1265-c6f7-56cd-529f" name="Magic Resistance (3)" hidden="false" targetId="9b99-4e37-be08-231a" type="rule"/>
         <infoLink name="Loner" id="5ddc-92c5-3572-f7ed" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
         <infoLink name="Copious Troll Vomit" id="9db3-86f7-4243-9659" hidden="false" type="rule" targetId="7f47-779a-1e05-a7d7"/>
+        <infoLink name="Magic Resistance (*)" id="bc72-2d8d-2d47-df22" hidden="false" targetId="b09f-673f-e98d-fe59" type="rule">
+          <modifiers>
+            <modifier type="replace" value="3" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Regeneration (*)" id="4fa6-8744-11de-f5db" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+          <modifiers>
+            <modifier type="replace" value="4+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Heroes" hidden="false" id="4371-9985-9c9c-2a58" targetId="d38a-73da-883b-bab9" primary="true"/>
@@ -6206,9 +6435,13 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
       <infoLinks>
         <infoLink name="WAAAGH! Miscast" id="469d-98ab-8351-b7ec" hidden="false" targetId="d6bf-fb68-e4bf-8437" type="rule"/>
         <infoLink name="Greenskin Races" id="1cda-36d2-7bca-9b9e" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
-        <infoLink name="Mighty Blow (1)" id="b944-ca51-4876-23ba" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
         <infoLink name="Size Matters" id="48a3-22ac-4033-b55b" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
         <infoLink name="Waaagh!" id="376d-474f-856c-0c35" hidden="false" targetId="72cd-f563-0e75-b280" type="rule"/>
+        <infoLink name="Mighty Blow (*)" id="04bf-ebf9-8cee-2e7a" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+          <modifiers>
+            <modifier type="replace" value="1" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="90. Magic Items" hidden="false" id="a04d-d05f-947e-7151" type="selectionEntryGroup" targetId="89d6-6943-c3c9-a681">
@@ -6748,7 +6981,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
         <infoLink name="Size Matters" id="d795-6456-c2ec-c6b8" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
         <infoLink name="Waaagh!" id="1a2f-996e-7a23-063b" hidden="false" targetId="72cd-f563-0e75-b280" type="rule"/>
         <infoLink name="Greenskin Races" id="e930-413f-b0ea-6dca" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
-        <infoLink name="Mighty Blow (1)" id="e205-848e-4f3c-c255" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
+        <infoLink name="Mighty Blow (*)" id="5e7d-6b89-826d-9185" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+          <modifiers>
+            <modifier type="replace" value="1" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="90. Magic Items" hidden="false" id="97be-dfab-b4fd-3133" type="selectionEntryGroup" targetId="89d6-6943-c3c9-a681">
@@ -6963,9 +7200,13 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
       <infoLinks>
         <infoLink name="WAAAGH! Miscast" id="0048-0279-8150-3e74" hidden="false" targetId="d6bf-fb68-e4bf-8437" type="rule"/>
         <infoLink name="Greenskin Races" id="b244-a59b-02e2-8644" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
-        <infoLink name="Mighty Blow (1)" id="968d-8c0e-8ced-26c9" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
         <infoLink name="Size Matters" id="983c-4571-e6c2-5050" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
         <infoLink name="Waaagh!" id="cafa-3544-9faa-d4ab" hidden="false" targetId="72cd-f563-0e75-b280" type="rule"/>
+        <infoLink name="Mighty Blow (*)" id="c110-5b6b-38f8-9179" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+          <modifiers>
+            <modifier type="replace" value="1" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="90. Magic Items" hidden="false" id="d84b-f73c-dc68-f0ba" type="selectionEntryGroup" targetId="89d6-6943-c3c9-a681">
@@ -7719,7 +7960,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
           </profiles>
           <infoLinks>
             <infoLink name="Loner" id="d580-1ad4-2ecf-f4d0" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
-            <infoLink name="Impact Hits (1)" id="f94a-9a59-061b-233e" hidden="false" type="rule" targetId="bb3b-3ca8-fcbc-a78b"/>
+            <infoLink name="Impact Hits (*)" id="c7fe-9f0a-3371-f0d9" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
+              <modifiers>
+                <modifier type="replace" value="1" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="25"/>
@@ -7872,11 +8117,15 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="ee69-67b0-067c-096b" name="Mighty Blow (1)" hidden="false" targetId="01e3-7f81-20e3-45fe" type="rule"/>
             <infoLink id="fd51-f8eb-db41-7dac" name="Animosity" hidden="false" targetId="cd91-cbe9-af5c-3d55" type="rule"/>
             <infoLink id="91d0-2ad0-5b15-e883" name="Size Matters" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
             <infoLink name="Frenzy" id="4128-aaf0-1e98-50b8" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
             <infoLink name="Skirmishers" id="b39a-a5fa-b1c5-ab77" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
+            <infoLink name="Mighty Blow (*)" id="47f1-7b0b-630f-392b" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+              <modifiers>
+                <modifier type="replace" value="1" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="26"/>
@@ -7912,7 +8161,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
                     <cost name="pts" typeId="points" value="6"/>
                   </costs>
                   <infoLinks>
-                    <infoLink name="Ward Save (5+)" id="9a93-e3b1-bb03-79f2" hidden="false" type="rule" targetId="4b60-6477-75a8-f6dd"/>
+                    <infoLink name="Ward Save (*)" id="d845-9581-662d-a678" hidden="false" targetId="3006-8f7c-f916-af14" type="rule">
+                      <modifiers>
+                        <modifier type="replace" value="5+" field="name" arg="*"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a3c5-9f74-090c-d23f" includeChildSelections="false"/>
@@ -7946,9 +8199,22 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
     <selectionEntry type="model" import="true" name="Maw-Grunta" hidden="false" id="7132-6d74-ff01-4a7f" collective="false" sortIndex="42">
       <infoLinks>
         <infoLink name="Maw-Grunta" id="9c50-466a-edb6-0b67" hidden="false" targetId="be42-8e43-2ca1-3e77" type="profile"/>
-        <infoLink name="Impact Hits (D6)" id="b73d-40d5-6a4e-374a" hidden="false" targetId="e9e6-66cc-623f-8e94" type="rule"/>
-        <infoLink name="Natural Armour (5+)" id="f7e8-22bf-115c-14b3" hidden="false" targetId="306d-711a-1300-587f" type="rule"/>
-        <infoLink name="Mighty Blow (2)" id="7385-6736-346f-2a25" hidden="false" type="rule" targetId="9c98-f97f-344b-9e4b"/>
+        <infoLink name="Mighty Blow (*)" id="7385-6736-346f-2a25" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+          <modifiers>
+            <modifier type="replace" value="2" field="name" arg="*"/>
+            <modifier type="set" value="Maw-Grunta only" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Impact Hits (*)" id="b9db-3d5e-c1c5-6dcb" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
+          <modifiers>
+            <modifier type="replace" value="D6" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="1c67-da20-0775-35db" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+          <modifiers>
+            <modifier type="replace" value="5+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="9b14-74ab-a851-ad47" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -8053,7 +8319,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
           <infoLinks>
             <infoLink id="ad27-90bc-82c5-52f8" name="Animosity" hidden="false" targetId="cd91-cbe9-af5c-3d55" type="rule"/>
             <infoLink id="1f5a-d520-64e2-43a7" name="Size Matters" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
-            <infoLink name="Mighty Blow (1)" id="bd34-599b-b2e5-589d" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
+            <infoLink name="Mighty Blow (*)" id="2608-158f-b56f-f1f6" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+              <modifiers>
+                <modifier type="replace" value="1" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
@@ -8217,8 +8487,12 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
       <infoLinks>
         <infoLink name="Fear Elves" id="6448-4594-8aac-a279" hidden="false" targetId="8568-17b2-9805-2665" type="rule"/>
         <infoLink name="Greenskin Races" id="8705-c2ae-f538-5a5b" hidden="false" targetId="3069-97d0-490a-6a04" type="rule"/>
-        <infoLink name="Hatred (Dwarfs)" id="9032-ab82-ca10-cac7" hidden="false" type="rule" targetId="da8d-d10d-b525-a19a"/>
         <infoLink name="Loner" id="4ae4-339b-2203-3a8c" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+        <infoLink name="Hatred (*)" id="9022-b307-a781-c840" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+          <modifiers>
+            <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Mount" id="ec19-ca7e-89ef-2053" hidden="false" collective="false" import="true" sortIndex="4">
@@ -10639,10 +10913,15 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
             </modifierGroup>
           </modifierGroups>
         </infoLink>
-        <infoLink name="Natural Armour (6+)" id="869d-0422-5345-4d90" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
-        <infoLink name="Mighty Blow (2)" id="7695-1e33-42e2-44a0" hidden="false" type="rule" targetId="9c98-f97f-344b-9e4b">
+        <infoLink name="Mighty Blow (*)" id="7695-1e33-42e2-44a0" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
           <modifiers>
             <modifier type="set" value="War Boar only" field="annotation"/>
+            <modifier type="replace" value="2" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="201a-0d33-31b5-f483" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -10673,10 +10952,15 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1eb4-23f5-ff28-eab2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Natural Armour (6+)" id="3ec2-6be9-cefe-08e3" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
-        <infoLink name="Mighty Blow (2)" id="006f-406e-a8f6-bea4" hidden="false" type="rule" targetId="9c98-f97f-344b-9e4b">
+        <infoLink name="Mighty Blow (*)" id="006f-406e-a8f6-bea4" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
           <modifiers>
             <modifier type="set" value="Grunta only" field="annotation"/>
+            <modifier type="replace" value="2" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="d94b-26fd-b01f-195a" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -10765,8 +11049,16 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
             <modifier type="set" value="Wyvren only" field="annotation"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Natural Armour (4+)" id="3242-a89a-0c9c-b55b" hidden="false" targetId="6b43-9dda-f589-0509" type="rule"/>
-        <infoLink name="Fly (8)" id="7be5-5e9c-cb39-cfbb" hidden="false" targetId="0a9a-bfcb-1a9d-5609" type="rule"/>
+        <infoLink name="Fly (*)" id="17a2-e832-220e-c5b9" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+          <modifiers>
+            <modifier type="replace" value="8" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="7986-c03f-5c23-f89d" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+          <modifiers>
+            <modifier type="replace" value="4+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="bf50-ed20-f492-58b4" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -10794,9 +11086,21 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4c9f-1ceb-1c40-74a4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Impact Hits (D6)" id="be88-ad15-0cb7-b903" hidden="false" targetId="e9e6-66cc-623f-8e94" type="rule"/>
-        <infoLink name="Natural Armour (3+)" id="eb61-6287-ae51-62fb" hidden="false" targetId="32e8-b4ad-3e59-a3c7" type="rule"/>
-        <infoLink name="Fly (5)" id="58d2-0514-0ef1-20e9" hidden="false" targetId="36d4-923e-e1c7-72bc" type="rule"/>
+        <infoLink name="Fly (*)" id="7472-aa02-d4a7-8bfb" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+          <modifiers>
+            <modifier type="replace" value="5" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Impact Hits (*)" id="d9ae-4512-b8fc-f39a" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
+          <modifiers>
+            <modifier type="replace" value="D6" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="bbeb-4dee-0da5-31da" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+          <modifiers>
+            <modifier type="replace" value="3+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="eb47-f31a-3cad-9b93" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -10822,7 +11126,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
     <selectionEntry type="model" import="true" name="Orc Crew" hidden="false" id="fbdf-7a79-b6dd-d8c0" collective="false" subType="crew">
       <infoLinks>
         <infoLink name="Size Matters" id="7404-3df8-55f4-32ed" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
-        <infoLink name="Mighty Blow (1)" id="7762-9fa5-27d8-965e" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
+        <infoLink name="Mighty Blow (*)" id="ea2c-8552-5f8b-0b01" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+          <modifiers>
+            <modifier type="replace" value="1" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="1160-00e0-af4e-02f1" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
@@ -10868,11 +11176,20 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
       </constraints>
       <infoLinks>
         <infoLink name="Maw-Grunta" id="1d71-6428-852e-ccdd" hidden="false" targetId="be42-8e43-2ca1-3e77" type="profile"/>
-        <infoLink name="Impact Hits (D6)" id="615a-2659-f214-4358" hidden="false" targetId="e9e6-66cc-623f-8e94" type="rule"/>
-        <infoLink name="Natural Armour (5+)" id="83ad-53fa-62f5-a892" hidden="false" targetId="306d-711a-1300-587f" type="rule"/>
-        <infoLink name="Mighty Blow (2)" id="ee3d-96ec-71c0-9a43" hidden="false" type="rule" targetId="9c98-f97f-344b-9e4b">
+        <infoLink name="Mighty Blow (*)" id="ee3d-96ec-71c0-9a43" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
           <modifiers>
             <modifier type="set" value="Maw-Grunta only" field="annotation"/>
+            <modifier type="replace" value="2" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Impact Hits (*)" id="084b-d877-f321-5f63" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
+          <modifiers>
+            <modifier type="replace" value="D6" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="eb34-4fe9-5945-690e" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+          <modifiers>
+            <modifier type="replace" value="5+" field="name" arg="*"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -10981,7 +11298,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
       </modifiers>
       <infoLinks>
         <infoLink name="Fear Elves" id="2012-3b81-e6d7-4dd5" hidden="false" type="rule" targetId="8568-17b2-9805-2665"/>
-        <infoLink name="Hatred (Dwarfs)" id="aa2c-19ff-7816-1450" hidden="false" type="rule" targetId="da8d-d10d-b525-a19a"/>
+        <infoLink name="Hatred (*)" id="56af-d76f-7a43-4d17" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+          <modifiers>
+            <modifier type="replace" value="Dwarfs" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1131-9856-46d6-e61c" includeChildSelections="false"/>
@@ -10992,10 +11313,14 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="86e2-9686-2083-e8e6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Random Movement (3D6)" id="3ef3-6428-abc7-5a5b" hidden="false" targetId="0877-cd17-c381-a045" type="rule"/>
         <infoLink name="Immunity (Psychology)" id="fc97-599c-c276-ecbf" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
         <infoLink name="Loner" id="16b1-d6c0-cfb8-76fe" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
         <infoLink name="Vanguard" id="9fa6-5c3f-317c-e76a" hidden="false" type="rule" targetId="38ba-d48a-be97-f830"/>
+        <infoLink name="Random Movement (*)" id="359f-028e-13da-eac6" hidden="false" targetId="4d40-9a96-4af8-e943" type="rule">
+          <modifiers>
+            <modifier type="replace" value="3D6" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="ea54-80eb-0f2d-2b49" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -11060,7 +11385,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
           </modifiers>
         </infoLink>
         <infoLink name="Wall-crawler" id="c184-36f8-c6ad-b73b" hidden="false" targetId="c0bd-0f1c-4859-1313" type="rule"/>
-        <infoLink name="Natural Armour (6+)" id="293e-4af7-5032-506f" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
+        <infoLink name="Natural Armour (*)" id="148e-6fbe-0395-991e" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="b8d2-90f2-8968-8a05" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -11236,10 +11565,14 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
           </modifiers>
         </infoLink>
         <infoLink name="Wall-crawler" id="2c80-0604-0fdb-8c71" hidden="false" targetId="c0bd-0f1c-4859-1313" type="rule"/>
-        <infoLink name="Natural Armour (4+)" id="7d16-1a64-ba38-9462" hidden="false" targetId="6b43-9dda-f589-0509" type="rule"/>
         <infoLink name="Stubborn" id="0126-9182-46b5-ed7b" hidden="false" targetId="d56e-8ec7-dbcd-aeee" type="rule"/>
         <infoLink name="Immunity (Psychology)" id="c99a-d5c2-cf63-0f7d" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
         <infoLink name="Venom Surge" id="1ce3-e470-3015-3aa2" hidden="false" targetId="ef63-ba9b-b9c8-6f4b" type="rule"/>
+        <infoLink name="Natural Armour (*)" id="2f3e-3f0c-2859-b9d0" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+          <modifiers>
+            <modifier type="replace" value="4+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="d415-ad10-0b68-063a" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -11402,7 +11735,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
       </constraints>
       <infoLinks>
         <infoLink name="Orc Bully" id="4bbe-657e-1487-e781" hidden="false" targetId="e5aa-49f0-46cb-6a73" type="rule"/>
-        <infoLink name="Mighty Blow (1)" id="a35c-e236-d638-b7a0" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
+        <infoLink name="Mighty Blow (*)" id="6a33-5203-3dd2-398a" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+          <modifiers>
+            <modifier type="replace" value="1" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="5"/>
@@ -11473,8 +11810,13 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Brute" hidden="false" id="e588-cae3-5e34-71e8" subType="crew">
       <infoLinks>
-        <infoLink name="Mighty Blow (1)" id="ee15-7cee-643f-d391" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
         <infoLink name="Size Matters" id="e045-7970-47e8-7f7b" hidden="false" type="rule" targetId="f6b8-e24e-974c-015a"/>
+        <infoLink name="Mighty Blow (*)" id="2586-8179-42f0-10bd" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+          <modifiers>
+            <modifier type="replace" value="1" field="name" arg="*"/>
+            <modifier type="set" value="Brute only" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="a191-ded9-8d4e-cbff" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
@@ -11516,7 +11858,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
           <infoLinks>
             <infoLink name="Animosity" id="c654-e22f-82a4-6224" hidden="false" targetId="cd91-cbe9-af5c-3d55" type="rule"/>
             <infoLink name="Size Matters" id="7aad-cba1-c52d-9271" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
-            <infoLink name="Mighty Blow (1)" id="a314-9d01-25e4-392e" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
+            <infoLink name="Mighty Blow (*)" id="e063-0164-e11a-8747" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+              <modifiers>
+                <modifier type="replace" value="1" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="8"/>
@@ -11729,7 +12075,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
           <infoLinks>
             <infoLink name="Animosity" id="017a-dd46-0b4b-4085" hidden="false" targetId="cd91-cbe9-af5c-3d55" type="rule"/>
             <infoLink name="Size Matters" id="a2ad-83d2-068e-18ca" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
-            <infoLink name="Mighty Blow (1)" id="bac2-ecda-8308-2b92" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
+            <infoLink name="Mighty Blow (*)" id="1f72-a8f1-584d-c26e" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
+              <modifiers>
+                <modifier type="replace" value="1" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="18"/>
@@ -11926,10 +12276,15 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
             </modifierGroup>
           </modifierGroups>
         </infoLink>
-        <infoLink name="Natural Armour (6+)" id="e099-fe96-17a1-bbd3" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
-        <infoLink name="Mighty Blow (2)" id="aa9c-8b21-e0b0-99ae" hidden="false" type="rule" targetId="9c98-f97f-344b-9e4b">
+        <infoLink name="Mighty Blow (*)" id="aa9c-8b21-e0b0-99ae" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
           <modifiers>
             <modifier type="set" value="War Boar only" field="annotation"/>
+            <modifier type="replace" value="2" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="c1de-8c8b-72dc-40b9" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -13844,7 +14199,11 @@ When the Pet Gribbly is squished, the bearer gains the Hatred and Frenzy specia
                 <modifier type="set" value="Ironback Boar" field="annotation" affects="self.entries.profiles.Model"/>
               </modifiers>
               <infoLinks>
-                <infoLink name="Impact Hits (D3)" id="87e4-4b91-2559-22af" hidden="false" type="rule" targetId="f30d-0b61-2836-689e"/>
+                <infoLink name="Impact Hits (*)" id="f3b0-36c7-58df-7875" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
+                  <modifiers>
+                    <modifier type="replace" value="D3" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="07ce-d925-b2ae-4df9" includeChildSelections="true"/>

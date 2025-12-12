@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="89a4-c9a0-f3a0-6dba" name="Araby WAP 1.72" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="61" revision="5" authorName="Xetolosch" battleScribeVersion="2.03" authorContact="Contact me via discord" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="89a4-c9a0-f3a0-6dba" name="Araby WAP 1.72" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="61" revision="6" authorName="Xetolosch" battleScribeVersion="2.03" authorContact="Contact me via discord" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Tactical Withdrawl" id="cf87-cae6-cc46-9094" hidden="false" publicationId="fd0a-6995-03c8-1dd6" page="3">
       <description>Models with this rule may re-roll the lowest dice roll for their flee distance when choosing Flee as a charge reaction.</description>
@@ -1193,8 +1193,9 @@
             <modifier type="set" value="Genie only" field="annotation"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Ward Save (5+)" id="937a-e8e9-197c-0f79" hidden="false" type="rule" targetId="4b60-6477-75a8-f6dd">
+        <infoLink name="Ward Save (*)" id="ac2b-acf4-0223-274e" hidden="false" targetId="3006-8f7c-f916-af14" type="rule">
           <modifiers>
+            <modifier type="replace" value="5+" field="name" arg="*"/>
             <modifier type="set" value="Genie only" field="annotation"/>
           </modifiers>
         </infoLink>
@@ -1222,11 +1223,15 @@
         <cost name="pts" typeId="points" value="95"/>
       </costs>
       <infoLinks>
-        <infoLink name="Dodge (5+)" id="6443-03af-f6c4-f423" hidden="false" type="rule" targetId="cfff-6563-d1c6-820c"/>
         <infoLink name="Hidden" id="5426-ea31-cf0e-e897" hidden="false" type="rule" targetId="2796-b399-4f98-a36f"/>
         <infoLink name="Immunity (Psychology)" id="4177-022a-9dd0-e0b0" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
         <infoLink name="Scouts" id="ae5b-53e4-e7a5-1f7a" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
         <infoLink name="Zealotry" id="73b1-06dd-a197-acb5" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
+        <infoLink name="Dodge (*)" id="3ab3-4131-3df0-d7df" hidden="false" type="rule" targetId="d909-ac08-40af-8f44">
+          <modifiers>
+            <modifier type="replace" value="5+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <profiles>
         <profile name="Hashishin" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="85b5-2c9f-2b54-648d" publicationId="fd0a-6995-03c8-1dd6" page="11">
@@ -1904,12 +1909,16 @@
       </entryLinks>
       <infoLinks>
         <infoLink name="Zealotry" id="5b5c-d65e-26fc-9d2a" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
-        <infoLink name="Magic Resistance (1)" id="0705-5992-f87b-33cb" hidden="false" type="rule" targetId="7ed4-9d31-09c3-6bf9"/>
         <infoLink name="Frenzy" id="a3c9-f195-909d-a4ba" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
         <infoLink name="Battle Prayers" id="f18f-1ab7-c437-5379" hidden="false" type="rule" targetId="2fc8-8eef-c508-0f80"/>
         <infoLink name="Invocation of the Blade" id="5b65-d004-1cf6-d6f1" hidden="false" type="profile" targetId="e919-1f42-197d-fb19"/>
         <infoLink name="Resolve of the Devout" id="5de0-e39c-393c-fad8" hidden="false" type="profile" targetId="7b84-52a9-0042-cb6b"/>
         <infoLink name="Shield of the Crescent Moon" id="bdf9-b5bc-27c5-1dcb" hidden="false" type="profile" targetId="2b77-45df-7950-847d"/>
+        <infoLink name="Magic Resistance (*)" id="a3db-a0f5-1744-a316" hidden="false" targetId="b09f-673f-e98d-fe59" type="rule">
+          <modifiers>
+            <modifier type="replace" value="1" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <rules>
         <rule name="Holy Fury" id="d232-cbf0-3c2e-9204" hidden="false" publicationId="0896-cf2d-d305-6de3" page="11">
@@ -2321,7 +2330,7 @@
           <entryLinks>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="4512-a639-f4b6-0a6e" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
-                <entryLink import="true" name="Handweapon &amp; Buckler" hidden="false" id="70cf-b8de-aff0-0dbf" type="selectionEntry" targetId="ae2b-eee3-83a8-131d" sortIndex="1">
+                <entryLink import="true" name="Hand Weapon &amp; Buckler" hidden="false" id="70cf-b8de-aff0-0dbf" type="selectionEntry" targetId="ae2b-eee3-83a8-131d" sortIndex="1">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
@@ -3021,7 +3030,11 @@
           <infoLinks>
             <infoLink name="Tactical Withdrawl" id="6492-c3db-b98f-937a" hidden="false" type="rule" targetId="cf87-cae6-cc46-9094"/>
             <infoLink name="Zealotry" id="afab-5dd6-0fc7-726f" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
-            <infoLink name="Immunity (Panic)" id="0714-a70e-a79b-ff66" hidden="false" type="rule" targetId="1fc5-0d4e-f568-b4c3"/>
+            <infoLink name="Immunity (*)" id="0714-a70e-a79b-ff66" hidden="false" type="rule" targetId="8f93-30da-a9db-adc7">
+              <modifiers>
+                <modifier type="replace" value="panic" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
             <infoLink name="Superior Discipline" id="b517-d781-fd78-e3e2" hidden="false" type="rule" targetId="dd52-7fae-cdb0-d6ae"/>
             <infoLink name="Janissary" id="c4fd-f88e-b8ae-65dd" hidden="false" type="profile" targetId="8913-a199-af95-154a"/>
           </infoLinks>
@@ -3432,7 +3445,11 @@
           <infoLinks>
             <infoLink name="Tactical Withdrawl" id="988d-7066-41c4-1f72" hidden="false" type="rule" targetId="cf87-cae6-cc46-9094"/>
             <infoLink name="Zealotry" id="bb9d-bec8-68ce-216e" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
-            <infoLink name="Dodge (6+)" id="9b24-ddbd-6969-b152" hidden="false" type="rule" targetId="bf3d-abaf-45ca-3477"/>
+            <infoLink name="Dodge (*)" id="2195-9d99-b0b8-20ef" hidden="false" type="rule" targetId="d909-ac08-40af-8f44">
+              <modifiers>
+                <modifier type="replace" value="6+" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <constraints>
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="7c02-9166-a37c-a3cf"/>
@@ -3564,7 +3581,11 @@
           </costs>
           <infoLinks>
             <infoLink name="Frenzy" id="fbc0-7cb6-e1b5-d2eb" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
-            <infoLink name="Impact Hits (1)" id="0ce7-7606-996e-25fd" hidden="false" type="rule" targetId="bb3b-3ca8-fcbc-a78b"/>
+            <infoLink name="Impact Hits (*)" id="0ce7-7606-996e-25fd" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
+              <modifiers>
+                <modifier type="replace" value="1" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
             <infoLink name="Loner" id="8d3c-03be-fb02-fd6e" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
             <infoLink name="Skirmishers" id="4342-a136-61ea-ad01" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
             <infoLink name="Swiftstride" id="e9b3-04f4-041c-4822" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
@@ -3813,7 +3834,11 @@
           <infoLinks>
             <infoLink name="Tactical Withdrawl" id="c733-6aac-e647-ae18" hidden="false" type="rule" targetId="cf87-cae6-cc46-9094"/>
             <infoLink name="Zealotry" id="0e1e-7cbe-95a5-747e" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
-            <infoLink name="Fly (10)" id="5313-2b6b-d147-451c" hidden="false" type="rule" targetId="953a-d5a4-ee81-4093"/>
+            <infoLink name="Fly (*)" id="fc05-aaa9-308e-c66a" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+              <modifiers>
+                <modifier type="replace" value="10" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <profiles>
             <profile name="Carpet Rider" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="08fe-f5cb-8c9c-7cde" publicationId="fd0a-6995-03c8-1dd6" page="26">
@@ -3877,7 +3902,6 @@
           <infoLinks>
             <infoLink name="Tactical Withdrawl" id="4229-5bec-6e39-2432" hidden="false" type="rule" targetId="cf87-cae6-cc46-9094"/>
             <infoLink name="Zealotry" id="636e-ba9b-35c5-311a" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
-            <infoLink name="Fly (9)" id="fc9e-23aa-634f-3036" hidden="false" type="rule" targetId="2ba2-2aaa-3f36-4b24"/>
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="70. Mount" hidden="false" id="7ced-e3fa-62d2-62e6" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
@@ -4297,7 +4321,11 @@ If the model is successfully picked up, it is then either dropped to the ground,
         </rule>
       </rules>
       <infoLinks>
-        <infoLink name="Fly (8)" id="1158-2fae-2154-c1c1" hidden="false" type="rule" targetId="0a9a-bfcb-1a9d-5609"/>
+        <infoLink name="Fly (*)" id="33e4-30a6-8976-1cc7" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+          <modifiers>
+            <modifier type="replace" value="8" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="d142-53fe-c707-3004" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
@@ -4874,8 +4902,12 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
               </constraints>
               <infoLinks>
                 <infoLink name="Zealotry" id="16ff-6df3-7ae6-0b71" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
-                <infoLink name="Immunity (Panic)" id="aefc-6384-cd5b-789d" hidden="false" type="rule" targetId="1fc5-0d4e-f568-b4c3"/>
                 <infoLink name="Superior Discipline" id="d097-1a27-4c21-2c80" hidden="false" type="rule" targetId="dd52-7fae-cdb0-d6ae"/>
+                <infoLink name="Immunity (*)" id="43c7-d915-b976-5ed5" hidden="false" type="rule" targetId="8f93-30da-a9db-adc7">
+                  <modifiers>
+                    <modifier type="replace" value="panic" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="10. Character Options" hidden="false" id="28b8-8141-87f8-2b06" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
@@ -5308,7 +5340,11 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
               </constraints>
               <infoLinks>
                 <infoLink name="Zealotry" id="60df-5ab5-fd18-bc04" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
-                <infoLink name="Dodge (4+)" id="1f19-fecc-50fc-1814" hidden="false" type="rule" targetId="5e3f-9736-a9c0-4a1c"/>
+                <infoLink name="Dodge (*)" id="1f19-fecc-50fc-1814" hidden="false" type="rule" targetId="d909-ac08-40af-8f44">
+                  <modifiers>
+                    <modifier type="replace" value="4+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
                 <infoLink name="Immunity (Psychology)" id="e24d-37ac-6c15-3ffc" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
                 <infoLink name="Hidden" id="545d-b03e-8a5d-494d" hidden="false" type="rule" targetId="2796-b399-4f98-a36f"/>
                 <infoLink name="Killing Blow" id="b215-fc7d-99f2-8104" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29"/>
@@ -5602,9 +5638,13 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
           <infoLinks>
             <infoLink name="Tactical Withdrawl" id="402d-a3b5-deec-b1b1" hidden="false" type="rule" targetId="cf87-cae6-cc46-9094"/>
             <infoLink name="Zealotry" id="c0ed-d068-394a-994b" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
-            <infoLink name="Immunity (Panic)" id="b3a7-cc92-2fab-3b7c" hidden="false" type="rule" targetId="1fc5-0d4e-f568-b4c3"/>
             <infoLink name="Superior Discipline" id="6072-97c9-87a5-fc27" hidden="false" type="rule" targetId="dd52-7fae-cdb0-d6ae"/>
             <infoLink name="Janissary" id="bb21-25aa-dd46-25b2" hidden="false" type="profile" targetId="8913-a199-af95-154a"/>
+            <infoLink name="Immunity (*)" id="29c8-2ad2-84e0-d440" hidden="false" type="rule" targetId="8f93-30da-a9db-adc7">
+              <modifiers>
+                <modifier type="replace" value="panic" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <constraints>
             <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="dc16-6fc6-9d13-9acb"/>
@@ -5872,7 +5912,11 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Fly (10)" id="d1f8-91cd-3c67-a989" hidden="false" type="rule" targetId="953a-d5a4-ee81-4093"/>
+        <infoLink name="Fly (*)" id="0f32-ce6c-79c5-6da6" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+          <modifiers>
+            <modifier type="replace" value="10" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fdd8-a253-7277-dc5c"/>
@@ -5900,7 +5944,11 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
       </profiles>
       <infoLinks>
         <infoLink name="Radiant Aura" id="1918-314a-6f78-5664" hidden="false" type="rule" targetId="72c9-8c12-a56a-034c"/>
-        <infoLink name="Fly (9)" id="4c4a-19ae-6d64-52f6" hidden="false" type="rule" targetId="2ba2-2aaa-3f36-4b24"/>
+        <infoLink name="Fly (*)" id="b4dd-9f78-2cc9-5fdc" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+          <modifiers>
+            <modifier type="replace" value="9" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8285-4ecc-2a5b-0502"/>
@@ -5912,11 +5960,19 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
     </selectionEntry>
     <selectionEntry type="model" import="true" name="War Elephant" hidden="false" id="cdcb-a83a-5267-d371" subType="mount" sortIndex="4" collective="true">
       <infoLinks>
-        <infoLink name="Impact Hits (D6+1)" id="e721-7561-514d-e205" hidden="false" type="rule" targetId="a043-3e3c-9f8a-3661"/>
-        <infoLink name="Natural Armour (5+)" id="f7d5-3c29-57ea-1d4c" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
         <infoLink name="Zealotry" id="ce53-ef52-66a7-d157" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
         <infoLink name="Stampede" id="97ec-30a0-02b2-905e" hidden="false" type="rule" targetId="36ad-ca98-f939-3bb0"/>
         <infoLink name="War Elephant" id="df32-33df-c833-d3aa" hidden="false" type="profile" targetId="85b3-745f-31ac-5024"/>
+        <infoLink name="Impact Hits (*)" id="7615-a817-5a12-ccf7" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
+          <modifiers>
+            <modifier type="replace" value="D6+1" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="a43c-3eef-ad5b-b5f5" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+          <modifiers>
+            <modifier type="replace" value="5+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink targetId="8b8a-34b1-ed30-df11" id="a4b3-5b32-5526-3970" primary="false" name="Mount"/>
@@ -5992,14 +6048,14 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Magic Resistance (2)" id="2733-8592-7804-2e15" hidden="false" type="rule" targetId="0e09-3526-25d5-2646">
+        <infoLink name="Immunity (*)" id="02cb-bedc-4dbd-0618" hidden="false" targetId="8f93-30da-a9db-adc7" type="rule">
           <modifiers>
-            <modifier type="set" value="Marid only" field="annotation"/>
+            <modifier type="replace" value="Ice Attacks" field="name" arg="*"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Immunity (Ice Attacks)" id="4280-bf14-72a4-e1ae" hidden="false" type="rule" targetId="5dfb-b5c0-520b-ed68">
+        <infoLink name="Magic Resistance (*)" id="7deb-714c-a045-2668" hidden="false" targetId="b09f-673f-e98d-fe59" type="rule">
           <modifiers>
-            <modifier type="set" value="Marid only" field="annotation"/>
+            <modifier type="replace" value="2" field="name" arg="*"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -6031,9 +6087,9 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Fly (10)" id="2d69-e3a1-9cf2-d2ea" hidden="false" type="rule" targetId="953a-d5a4-ee81-4093">
+        <infoLink name="Fly (*)" id="5bd5-d997-45f4-6109" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
           <modifiers>
-            <modifier type="set" value="Djinn only" field="annotation"/>
+            <modifier type="replace" value="10" field="name" arg="*"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -6075,9 +6131,9 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
             <modifier type="set" value="Efreet only" field="annotation"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Immunity (Flaming Attacks)" id="74af-07d7-3d8e-ac6a" hidden="false" type="rule" targetId="49c7-526e-cb3e-d7b7">
+        <infoLink name="Immunity (*)" id="874a-f828-8df6-2018" hidden="false" targetId="8f93-30da-a9db-adc7" type="rule">
           <modifiers>
-            <modifier type="set" value="Efreet only" field="annotation"/>
+            <modifier type="replace" value="Flaming Attacks" field="name" arg="*"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -6109,8 +6165,9 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Natural Armour (4+)" id="e58e-fd80-0b5e-b25a" hidden="false" type="rule" targetId="6b43-9dda-f589-0509">
+        <infoLink name="Natural Armour (*)" id="16d3-6e86-feeb-8981" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
           <modifiers>
+            <modifier type="replace" value="4+" field="name" arg="*"/>
             <modifier type="set" value="Dao only" field="annotation"/>
           </modifiers>
         </infoLink>
@@ -6149,8 +6206,9 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Fly (10)" id="6df7-ee68-7e4e-e1b3" hidden="false" type="rule" targetId="953a-d5a4-ee81-4093">
+        <infoLink name="Fly (*)" id="37b4-41d0-ef80-61f4" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
           <modifiers>
+            <modifier type="replace" value="10" field="name" arg="*"/>
             <modifier type="set" value="Khar-mel only" field="annotation"/>
           </modifiers>
         </infoLink>

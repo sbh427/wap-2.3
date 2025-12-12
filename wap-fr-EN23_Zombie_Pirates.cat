@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="d63c-bfc7-b3cb-5a6d" name="Zombie Pirates WAP 1.5" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="72" revision="1" authorName="xetolosch" authorContact="contact me on discord" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="d63c-bfc7-b3cb-5a6d" name="Zombie Pirates WAP 1.5" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="72" revision="2" authorName="xetolosch" authorContact="contact me on discord" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="The Red Thirst" id="bbaa-8771-dddb-7fe5" hidden="false" page="3" publicationId="4f8f-9147-1eae-6c3d">
       <description>Roll a D6 at the end of each Close Combat phase for every enemy model slain by a model with this special rule this round. On the roll of a 6+, the model recovers a single Wound lost earlier in the battle. This does not work against models with the Animated Construct, Daemonic, Forest Spirit or Vampiric special rules.</description>
@@ -630,7 +630,11 @@ Characters who are not Undead may join Undead units despite not being Unstable 
       <infoLinks>
         <infoLink name="Undead" id="3f6f-252f-9a92-ea5b" hidden="false" type="rule" targetId="8e82-7b9d-c1f6-d62b"/>
         <infoLink name="Syreen&apos;s Call" id="7aff-a73b-9171-fd1a" hidden="false" type="rule" targetId="9a32-9be2-26e5-e737"/>
-        <infoLink name="Fly (6)" id="12cf-0391-7a3b-a396" hidden="false" type="rule" targetId="b830-fe6e-b461-0377"/>
+        <infoLink name="Fly (*)" id="12cf-0391-7a3b-a396" hidden="false" type="rule" targetId="7a27-4cc5-bde-2d7f">
+          <modifiers>
+            <modifier type="replace" value="6" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
         <infoLink name="Terror" id="049a-58ab-16d3-3952" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
         <infoLink name="Ethereal" id="d37d-3c2a-8960-09f9" hidden="false" type="rule" targetId="9e47-05bc-376a-7463"/>
       </infoLinks>
@@ -1056,9 +1060,13 @@ Characters who are not Undead may join Undead units despite not being Unstable 
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Fly (9)" id="e719-0ebd-fb8d-0b41" hidden="false" type="rule" targetId="2ba2-2aaa-3f36-4b24"/>
             <infoLink name="Undead" id="8b56-83f3-edd8-21b0" hidden="false" type="rule" targetId="8e82-7b9d-c1f6-d62b"/>
             <infoLink name="Waterlogged Weapons" id="351b-92f0-6929-a9ed" hidden="false" type="rule" targetId="e286-937d-15d8-c079"/>
+            <infoLink name="Fly (*)" id="e585-a555-5c7d-f65f" hidden="false" type="rule" targetId="7a27-4cc5-bde-2d7f">
+              <modifiers>
+                <modifier type="replace" value="9" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
@@ -1150,9 +1158,9 @@ Characters who are not Undead may join Undead units despite not being Unstable 
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
                   <infoLinks>
-                    <infoLink name="Armour Piercing" id="b81d-5cdc-46a4-512a" hidden="false" type="rule" targetId="bf4e-212e-fe1d-20c6">
+                    <infoLink name="Armour Piercing (*)" id="b81d-5cdc-46a4-512a" hidden="false" type="rule" targetId="c833-7f06-a9e9-e2ea">
                       <modifiers>
-                        <modifier type="append" value="(1)" field="name" join=" "/>
+                        <modifier type="replace" value="1" field="name" join=" " arg="*"/>
                         <modifier type="set" value="Pincer Claws" field="annotation"/>
                       </modifiers>
                     </infoLink>
@@ -1163,8 +1171,9 @@ Characters who are not Undead may join Undead units despite not being Unstable 
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
                   <infoLinks>
-                    <infoLink name="Natural Armour (5+)" id="1f00-e5aa-e210-9b15" hidden="false" type="rule" targetId="306d-711a-1300-587f">
+                    <infoLink name="Natural Armour (*)" id="6081-08e1-232c-5407" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
                       <modifiers>
+                        <modifier type="replace" value="5+" field="name" arg="*"/>
                         <modifier type="set" value="Salvaged Hull" field="annotation"/>
                       </modifiers>
                     </infoLink>
@@ -1185,9 +1194,10 @@ Characters who are not Undead may join Undead units despite not being Unstable 
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
                   <infoLinks>
-                    <infoLink name="Mighty Blow (1)" id="9d7f-ed1b-3c53-6ba2" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe">
+                    <infoLink name="Mighty Blow (*)" id="9d7f-ed1b-3c53-6ba2" hidden="false" type="rule" targetId="ce12-9396-34d7-b68d">
                       <modifiers>
                         <modifier type="set" value="Wreckers" field="annotation"/>
+                        <modifier type="replace" value="1" field="name" arg="*"/>
                       </modifiers>
                     </infoLink>
                   </infoLinks>
@@ -1218,7 +1228,11 @@ Characters who are not Undead may join Undead units despite not being Unstable 
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="88de-d531-61cc-8965"/>
           </constraints>
           <infoLinks>
-            <infoLink name="Random Attacks (D6)" id="bf44-c32c-7899-c3f8" hidden="false" type="rule" targetId="5b16-622a-da0d-d50b"/>
+            <infoLink name="Random Attacks (*)" id="bf44-c32c-7899-c3f8" hidden="false" type="rule" targetId="64d8-e607-daa9-bd39">
+              <modifiers>
+                <modifier type="replace" value="D6" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
             <infoLink name="Undead" id="78d7-9e08-e4aa-7ecb" hidden="false" type="rule" targetId="8e82-7b9d-c1f6-d62b"/>
           </infoLinks>
         </selectionEntry>
@@ -1239,8 +1253,12 @@ Characters who are not Undead may join Undead units despite not being Unstable 
             <infoLink name="Rotting Promethean" id="eaa7-30d4-5117-3536" hidden="false" type="profile" targetId="9e15-e922-6a1f-070a"/>
             <infoLink name="Killing Blow" id="3c9d-d561-5111-a994" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29"/>
             <infoLink name="Aquatic" id="6787-e422-392e-47c0" hidden="false" type="rule" targetId="3667-691b-abd9-7da6"/>
-            <infoLink name="Natural Armour (4+)" id="801c-1141-63fc-ba33" hidden="false" type="rule" targetId="6b43-9dda-f589-0509"/>
             <infoLink name="Undead" id="a48e-5ad6-ffdf-ff65" hidden="false" type="rule" targetId="8e82-7b9d-c1f6-d62b"/>
+            <infoLink name="Natural Armour (*)" id="50a0-0a79-6ef1-4250" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+              <modifiers>
+                <modifier type="replace" value="4+" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <constraints>
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="9b13-23ea-5c6a-7d5b"/>
@@ -1437,9 +1455,13 @@ Characters who are not Undead may join Undead units despite not being Unstable 
         <infoLink name="Waterlogged Weapons" id="d6e8-567a-595b-51d3" hidden="false" type="rule" targetId="e286-937d-15d8-c079"/>
         <infoLink name="Unbearable Stench" id="eb21-6bc7-270a-2698" hidden="false" type="rule" targetId="da64-131d-28cb-d02f"/>
         <infoLink name="Killing Blow" id="da83-deb4-9fdc-cec4" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29"/>
-        <infoLink name="Natural Armour (2+)" id="c5c7-9961-da76-62d1" hidden="false" type="rule" targetId="b15c-9f50-7081-ba29"/>
         <infoLink name="Undead" id="53e3-9e3d-5298-46f1" hidden="false" type="rule" targetId="8e82-7b9d-c1f6-d62b"/>
         <infoLink name="Aquatic" id="36b2-1d2f-39e4-9fb1" hidden="false" type="rule" targetId="3667-691b-abd9-7da6"/>
+        <infoLink name="Natural Armour (*)" id="abfd-b530-b69b-fb4f" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+          <modifiers>
+            <modifier type="replace" value="2+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Crew" id="88f6-190a-bd08-8a0b" hidden="false">
@@ -1983,8 +2005,12 @@ Characters who are not Undead may join Undead units despite not being Unstable 
               <infoLinks>
                 <infoLink name="Undead" id="e270-55f3-8b11-dd38" hidden="false" type="rule" targetId="8e82-7b9d-c1f6-d62b"/>
                 <infoLink name="Ethereal" id="ec48-30fe-3591-1978" hidden="false" type="rule" targetId="9e47-05bc-376a-7463"/>
-                <infoLink name="Fly (6)" id="7310-5b6c-e7bf-d396" hidden="false" type="rule" targetId="b830-fe6e-b461-0377"/>
                 <infoLink name="Terror" id="8a7f-33d4-a0f7-bbcd" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
+                <infoLink name="Fly (*)" id="be0c-e6be-bcae-3985" hidden="false" type="rule" targetId="7a27-4cc5-bde-2d7f">
+                  <modifiers>
+                    <modifier type="replace" value="6" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <rules>
                 <rule name="Ghosts of the Past" id="5e7d-2b81-0f98-f270" hidden="false" publicationId="4f8f-9147-1eae-6c3d" page="25">
@@ -2551,7 +2577,11 @@ Characters who are not Undead may join Undead units despite not being Unstable 
                   </modifiers>
                 </infoLink>
                 <infoLink name="Terror" id="7a81-3cf4-a025-2e5a" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
-                <infoLink name="Fly (6)" id="80fe-dd36-f5cc-604b" hidden="false" type="rule" targetId="b830-fe6e-b461-0377"/>
+                <infoLink name="Fly (*)" id="e540-6ad5-2b84-7318" hidden="false" type="rule" targetId="7a27-4cc5-bde-2d7f">
+                  <modifiers>
+                    <modifier type="replace" value="6" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <categoryLinks>
                 <categoryLink name="Infantry" hidden="false" id="2901-3456-fa2f-06ba" targetId="22c9-1606-58f8-2e60" primary="false"/>
@@ -3832,9 +3862,9 @@ Characters who are not Undead may join Undead units despite not being Unstable 
             <modifier type="set" value="Rotting Promethean only" field="annotation"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Natural Armour (4+)" id="eba2-4d61-7b95-25c8" hidden="false" type="rule" targetId="6b43-9dda-f589-0509">
+        <infoLink name="Natural Armour (*)" id="142c-678d-e5cc-6f3b" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
           <modifiers>
-            <modifier type="set" value="from Mount" field="annotation"/>
+            <modifier type="replace" value="4+" field="name" arg="*"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -4023,7 +4053,11 @@ Characters who are not Undead may join Undead units despite not being Unstable 
       <infoLinks>
         <infoLink name="Undead" id="f86a-9bbe-97dd-8fec" hidden="false" type="rule" targetId="8e82-7b9d-c1f6-d62b"/>
         <infoLink name="Magical Attacks" id="069e-3674-cede-4f4a" hidden="false" type="rule" targetId="03db-d81f-f264-84b8"/>
-        <infoLink name="Regeneration (4+)" id="430c-db0a-198f-f194" hidden="false" type="rule" targetId="c21b-d368-6f1c-bae3"/>
+        <infoLink name="Regeneration (*)" id="a20e-e4fb-efef-2fe2" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+          <modifiers>
+            <modifier type="replace" value="4+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="270"/>

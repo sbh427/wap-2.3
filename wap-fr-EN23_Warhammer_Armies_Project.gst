@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="73" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="74" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -296,7 +296,7 @@
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink name="Impact Hits (1)" id="db0b-afa8-dc86-9375" hidden="false" type="rule" targetId="bb3b-3ca8-fcbc-a78b">
+        <infoLink name="Impact Hits (*)" id="db0b-afa8-dc86-9375" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
           <modifiers>
             <modifier type="set" value="From Mount" field="annotation"/>
             <modifier type="set" value="true" field="hidden">
@@ -311,6 +311,7 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="replace" value="1" field="name" arg="*"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -331,9 +332,10 @@
     </categoryEntry>
     <categoryEntry name="Monstrous Cavalry" id="82d3-4589-72b4-b6ed" hidden="false">
       <infoLinks>
-        <infoLink name="Impact Hits (1)" id="7683-2a71-59fd-37ab" hidden="false" type="rule" targetId="bb3b-3ca8-fcbc-a78b">
+        <infoLink name="Impact Hits (*)" id="7683-2a71-59fd-37ab" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
           <modifiers>
             <modifier type="set" value="From Mount" field="annotation"/>
+            <modifier type="replace" value="1" field="name" arg="*"/>
           </modifiers>
         </infoLink>
         <infoLink name="Fear" id="c2b9-c3ec-39ff-2d86" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
@@ -436,8 +438,9 @@
     <categoryEntry name="Chariot" id="7224-b7fd-d652-3ff2" hidden="false">
       <infoLinks>
         <infoLink name="Swiftstride" id="ed85-9dfb-a95c-043e" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
-        <infoLink name="Impact Hits (D6)" id="5d7f-cb2c-7108-f4c7" hidden="false" type="rule" targetId="e9e6-66cc-623f-8e94">
+        <infoLink name="Impact Hits (*)" id="f315-f703-6851-525f" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
           <modifiers>
+            <modifier type="replace" value="D6" field="name" arg="*"/>
             <modifier type="set" value="From Chariot" field="annotation"/>
           </modifiers>
         </infoLink>
@@ -815,1173 +818,6 @@
       <infoLinks>
         <infoLink id="e66b-79a1-e39c-e75a" name="General" hidden="false" targetId="fcc3-a722-a9e4-9c94" type="rule"/>
       </infoLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="4c5e-ad54-8a4a-e1eb" name="Battle Magic Belannar/LoH" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7f67-5812-3e32-c684" type="max"/>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7d84-9c34-3fde-7c9a" type="min"/>
-      </constraints>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="721f-cad0-8744-6c43" name="Spells from the Lore of Beasts" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="263f-3bee-25ac-ca02" name="0. Wyssan&apos;s Wildform" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4785-dbba-ff30-52fe" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b58e-9ad1-371e-e7a1" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="b843-b938-4a36-c73d" name="Wyssan&apos;s Wildform" hidden="false" targetId="bc40-b619-0977-f8ad" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="a5d4-bf00-6587-6b1e" name="Wildheart" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5ce1-8110-75c1-22f6" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6757-e028-639d-0494" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="38a7-0a57-8c9e-f747" name="Wildheart" hidden="false" targetId="7c9a-10fe-33ee-5112" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="e6a7-27ce-7e2f-6ce1" name="Spells from the Lore of Death" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="dbf0-31e6-6a67-1868" name="0. Spirit Leech" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3cfe-a1e4-7b74-dab8" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3b0c-03ae-bb7f-783a" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="08f1-d290-8494-1670" name="Spirit Leech" hidden="false" targetId="a540-a939-e10c-27e0" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0b42-5a59-8580-2d04" name="Life Leeching" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a602-594b-2f51-89c9" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7383-7620-8a07-5b3e" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="f9d8-24c2-d7ea-561d" name="Life Leeching" hidden="false" targetId="2c43-e445-f916-eae9" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="22d6-9ac6-542d-fa82" name="Spells from the Lore of Fire" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="d646-fe2a-9dab-90c7" name="0. Fireball" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6aa8-fc19-c729-96f3" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ff66-9de6-7eb1-429e" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="cf6f-1f6f-92dc-41cf" name="Fireball" hidden="false" targetId="6e57-2cc3-96fc-7f01" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="bd4f-0eb3-41e3-acdf" name="Kindleflame" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9e58-5ff7-0953-dcdf" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8154-dfbd-1824-a2e1" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="7aef-72de-6e73-ce07" name="Kindleflame" hidden="false" targetId="c198-878a-0683-0889" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="8ec5-894c-203d-7d64" name="Spells from the Lore of Heavens" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="83f1-9f9e-0157-f132" name="0. Iceshard Blizzard" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c78c-72f0-4307-496d" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a2bc-dff0-ad28-5045" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="b541-3d56-2fc9-59dd" name="Iceshard Blizzard" hidden="false" targetId="8639-61e7-9010-be8a" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="d511-4240-8567-c1e9" name="Fate Manipulation" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a775-4d33-9ae0-505b" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c51b-b898-eff1-114c" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="4857-17e7-4323-0726" name="Fate Manipulation" hidden="false" targetId="8d26-28db-c5b3-370f" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="cfdf-f55e-a540-ba35" name="Spells from the Lore of Life" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="58ff-5dd3-ac8c-82e5" name="0. Earth Blood" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="aea0-165e-7da3-95fa" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5ee7-5174-f125-38a5" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="53d1-a5fb-5879-0f40" name="Earth Blood" hidden="false" targetId="c7c1-2e60-4710-1a6a" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="ec79-a5c3-833f-817e" name="Lifebloom" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3095-e984-48ac-9398" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d6b0-a177-3e71-0a97" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="03fb-8aff-97ee-0349" name="Lifebloom" hidden="false" targetId="655d-ede0-9e85-a1ad" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="1a28-a014-aee4-6d8d" name="Spells from the Lore of Light" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="8969-6bec-2079-d0fc" name="0. Shem&apos;s Burning Gaze" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6a2c-dcfe-08e7-e26a" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d7e2-d5d5-f357-5c05" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="649b-ffe3-e4e0-29b2" name="Shem&apos;s Burning Gaze" hidden="false" targetId="6508-2de1-8be5-0a2f" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0827-4ca9-3f77-d17b" name="Exorcism" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2da8-a53d-75fb-6233" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c3d0-fe36-f400-8968" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="c6d3-08c2-9c41-7ba2" name="Focus Energy" hidden="false" targetId="cd1f-0bc5-ab83-af06" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="b3e9-2946-a6c2-66b5" name="Spells from the Lore of Metal" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="ccaa-0b02-e4f1-5c2f" name="0. Searing Doom" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="61ac-de2d-dda4-39af" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="671f-0687-4644-9c96" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="0059-29ca-f871-862e" name="Searing Doom" hidden="false" targetId="6bd0-6da5-dee9-b098" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="2090-4c2d-25f9-f361" name="Metallic Attraction" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c35c-1350-9e6e-57ce" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="07c4-a99f-044b-0552" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="d82d-d45c-c189-ffc2" name="Metallic Attraction" hidden="false" targetId="0958-a1b9-1238-c0e7" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="f97c-1014-f737-563e" name="Spells from the Lore of Shadow" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="d7a2-5a23-ff1d-b126" name="0. Melkoth&apos;s Mystifying Miasma" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2e67-4cca-fc2f-82b9" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="86a8-6db5-6490-f1e7" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="3281-c7d9-08a4-c06d" name="Melkoth&apos;s Mystifying Miasma" hidden="false" targetId="89e2-f22c-758d-a9d7" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0a85-d8bd-644a-bf97" name="Smoke and Mirrors" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3b40-694e-abfb-dff9" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="492a-7b2b-15ca-18ca" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="6a11-17ba-07e0-b0a3" name="Steed of Shadows" hidden="false" targetId="4fcb-a016-2721-ff01" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="794b-3bcc-cbc9-f597" name="Battle Magic Teclis" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e906-be9e-de09-b34f" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="91b2-3b89-9a18-5537" name="Lore of Beasts" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f7b4-6e55-74db-7f83" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d989-579c-2180-2454" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="eea9-f278-1e82-1a56" name="Wildheart" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4375-2b86-b976-085d" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f7fd-2ed5-406d-c4a5" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="98d2-4c4c-1d8a-67f0" name="Wildheart" hidden="false" targetId="7c9a-10fe-33ee-5112" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="bbce-ae70-d344-72f1" name="0. Wyssan&apos;s Wildform" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="726b-eb01-9625-2161" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="87cb-1326-75c7-36a4" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="ae6f-5141-709d-1dab" name="Wyssan&apos;s Wildform" hidden="false" targetId="bc40-b619-0977-f8ad" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="890a-7ff8-5729-5dc7" name="Spells from the Lore of Beasts" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6eef-17e4-5973-f9c9" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="87c8-ab0a-6fd4-f344" type="max"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="37b7-2dcb-5bc5-9a33" name="1. The Flock of Doom" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="34e7-ffd4-b9b7-9752" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="2651-f3c1-e72b-5db7" name="The Flock of Doom" hidden="false" targetId="82d2-edc6-e10f-ac00" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="812c-1d2d-5b76-5ca9" name="6. Transformation of Kadon" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eb7b-89c2-638b-6dee" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="a6a9-0607-0430-7484" name="Transformation of Kadon" hidden="false" targetId="ce8e-4e6d-e477-f708" type="profile"/>
-                  </infoLinks>
-                  <selectionEntries>
-                    <selectionEntry id="217c-e926-88a2-5cf9" name="Monster of Kadon" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="84c7-8f2b-07a9-f8ab" type="max"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d705-8e92-e53e-d958" type="min"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="afdc-ef32-2507-0ffd" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
-                        <infoLink id="aa98-459b-c075-c1f1" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                        <infoLink id="1d4e-d98a-4487-ff33" name="Fly (7)" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
-                        <infoLink id="9ea0-1f7e-c558-4db2" name="Stomp" hidden="false" targetId="668c-19e8-b764-8549" type="rule"/>
-                        <infoLink id="a59d-3864-e2b9-74d8" name="Breath Weapon (Monster of Kadon)" hidden="false" targetId="9a24-f1a2-aac3-de3b" type="rule"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                      <profiles>
-                        <profile name="Monster of Kadon" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0aa7-6fa8-e84e-677a" publicationId="9e23-79cb-pubN66727" page="146">
-                          <characteristics>
-                            <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-                            <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
-                            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-                            <characteristic name="S" typeId="edd2-7979-54a4-6b35">6</characteristic>
-                            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
-                            <characteristic name="W" typeId="27ee-0675-122f-a1b1">6</characteristic>
-                            <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-                            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
-                            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-                            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                    </selectionEntry>
-                  </selectionEntries>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="ade9-6ca6-523a-84b2" name="5. The Savage Beast of Horros" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2aa0-de0a-c80b-b703" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="2ab2-f668-7707-540c" name="The Savage Beast of Horros" hidden="false" targetId="2886-1c9b-c241-1093" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="d063-8ddd-f6ac-058c" name="4. The Curse of Anraheir" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d60a-8b90-20c3-6dac" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="e9f0-6fab-64f4-8c6f" name="The Curse of Anraheir" hidden="false" targetId="feb7-72b6-1721-2a1c" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="e35d-ed7c-b39e-115e" name="3. The Amber Spear" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b089-53af-56f8-616f" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="b387-41e9-61b5-9855" name="The Amber Spear" hidden="false" targetId="5a5d-30a8-b377-cad8" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="1325-b997-26e8-e3e4" name="2. Pann&apos;s Impenetrable Pelt" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0bf7-4e7f-d116-34e6" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="11f1-e996-6555-e41d" name="Pann&apos;s Impenetrable Pelt" hidden="false" targetId="639d-9501-0008-8def" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1bf2-b9a6-acc4-e941" name="Lore of Death" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8d11-07dd-e8f6-0617" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2b51-5e98-495e-8e33" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="8515-e4ed-9ec9-8e37" name="Life Leeching" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="263e-d5d0-3848-282c" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="67dd-54a0-8178-3fd5" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="59d3-8e4b-5e87-95f3" name="Life Leeching" hidden="false" targetId="2c43-e445-f916-eae9" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="e8d2-84e9-3d54-56af" name="0. Spirit Leech" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9d9f-3735-e696-d9d5" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0fab-2492-ac5d-edae" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="d666-c505-2ef7-db3b" name="Spirit Leech" hidden="false" targetId="a540-a939-e10c-27e0" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="9d2f-298e-8425-567d" name="Spells from the Lore of Death" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="36b7-100e-a945-83e9" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a1af-ad9b-4586-feed" type="min"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="e21c-e61b-77fd-895c" name="1. Aspect of the Dreadknight" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2518-a74d-bc6f-821f" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="a002-6b95-7b57-0804" name="Aspect of the Dreadknight" hidden="false" targetId="48ca-ac63-ef2e-74f7" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="0cdd-3cba-2452-6ce8" name="2. The Caress of Laniph" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1ba1-d43d-67cc-5351" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="002c-0c63-53e4-0df6" name="The Caress of Laniph" hidden="false" targetId="eaec-4553-445b-fdc7" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="c682-ce95-7341-02cd" name="3. Soulblight" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e70f-1015-2948-63a2" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="d36a-7860-1fd5-51c0" name="Soulblight" hidden="false" targetId="a37e-0482-9785-ba81" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="c586-acde-cdd0-da72" name="4. Doom and Darkness" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e7bb-55ee-addc-5c18" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="1fb1-1a42-4ee9-18c1" name="Doom and Darkness" hidden="false" targetId="c44d-cc21-607b-0911" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="11ae-9115-c888-a089" name="6. The Purple Sun of Xereus" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c88d-8a63-77e1-850e" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="49e3-b805-1337-7528" name="The Purple Sun of Xereus" hidden="false" targetId="754f-f31e-7ccf-8253" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="f8f5-63be-cea1-8ddc" name="5. The Fate of Bjuna" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4722-4f5b-577e-c8f2" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="d0c8-6ca2-1386-fb2f" name="The Fate of Bjuna" hidden="false" targetId="9fd3-2187-1379-dcdb" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b366-ce2e-3651-a201" name="Lore of Fire" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f087-ff9e-aae4-bb16" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e174-05e2-68fb-4562" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="adb4-3f79-e4ff-abc1" name="Kindleflame" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="faa2-8b0e-d0ae-dacd" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="80c9-c871-2f65-df13" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="3c90-6fc2-cde2-abb0" name="Kindleflame" hidden="false" targetId="c198-878a-0683-0889" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="afa0-8bd8-d906-b4bd" name="0. Fireball" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="46f0-82e8-9add-d255" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e38e-5a54-3877-f140" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="a9a7-53a5-af02-4b08" name="Fireball" hidden="false" targetId="6e57-2cc3-96fc-7f01" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="4e90-2049-b227-a975" name="Spells from the Lore of Fire" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dbe5-6ae3-82d5-de90" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3f5b-ff3f-5294-736a" type="min"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="84f6-886b-66c9-4a61" name="1. Cascading Fire-Cloak" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="881b-3e3e-6eb0-ceba" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="87e7-3444-8140-6046" name="Cascading Fire-Cloak" hidden="false" targetId="ee0b-0214-556a-a7f0" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="e831-8282-0304-1fb0" name="2. Flaming Sword of Rhuin" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9358-a036-7263-9489" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="bd56-e0fe-5850-e9d6" name="Flaming Sword of Rhuin" hidden="false" targetId="c40b-1df6-0cc6-5d0e" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="0ef9-a89d-8ea7-96c1" name="3. The Burning Head" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9cd2-2079-caa7-2fc5" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="209a-bef9-1b33-1ec8" name="The Burning Head" hidden="false" targetId="3e41-8ba5-25c4-e17c" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="19c0-f35d-6e50-ff55" name="4. Piercing Bolts of Burning" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2ad0-abea-797b-0c9c" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="e98f-076f-b3e5-3a85" name="Piercing Bolts of Burning" hidden="false" targetId="daee-0de8-0bbb-9063" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="978b-616e-b9b5-5710" name="6. Flame Storm" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cc2f-8911-1b7a-9ead" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="f92a-89a9-9e10-0a9f" name="Flame Storm" hidden="false" targetId="77af-a090-ba85-99ce" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="199d-1ebc-7cc6-e4e4" name="5. Fulminating Flame Cage" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8cde-1986-b2c4-c6c7" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="9ac5-70d2-689c-97aa" name="Fulminating Flame Cage" hidden="false" targetId="9526-a4e9-7b88-9276" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f171-f1e5-c16c-bdb1" name="Lore of Heavens" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5fe6-090e-ae27-e329" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="75c4-854e-903f-3720" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="9ae9-b416-1cb5-36bd" name="Fate Manipulation" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ba93-8b31-900a-fcdc" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2067-96f5-3115-0782" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="8350-0546-d61d-e411" name="Fate Manipulation" hidden="false" targetId="8d26-28db-c5b3-370f" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1640-d998-7bbe-6518" name="0. Iceshard Blizzard" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7a2c-3e97-8174-dc69" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8309-1e8d-3350-5aea" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="5b9d-f72d-74d8-8acd" name="Iceshard Blizzard" hidden="false" targetId="8639-61e7-9010-be8a" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="e5ae-ff83-9521-499b" name="Spells from the Lore of Heavens" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="75ee-a284-21c5-7b0e" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b908-6d72-6bed-7d67" type="min"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="a9ba-7a3c-fa45-60e8" name="1. Harmonic Convergence" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cb58-2255-52ce-479f" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="204c-299a-0216-b62d" name="Harmonic Convergence" hidden="false" targetId="91df-517b-9d00-5628" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="9dd2-49da-111f-ca94" name="2. Wind Blast" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bd56-01df-e1cd-40f7" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="94af-257c-b9f2-7889" name="Wind Blast" hidden="false" targetId="686c-0b9d-0bd1-75c3" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="e96b-fa83-d0c3-b22e" name="3. Curse of the Midnight Wind" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9c77-b7e8-1024-ff88" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="b335-3bda-a507-99d8" name="Curse of the Midnight Wind" hidden="false" targetId="be0a-428f-10cd-647c" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="0d78-729f-0e58-fd3a" name="4. Urannon&apos;s Thunderbolt" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6d58-95af-5a9d-63e5" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="0293-7833-5851-5f0b" name="Urannon&apos;s Thunderbolt" hidden="false" targetId="8bc4-459f-268d-0259" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="df67-0ee2-6dc0-ed81" name="6. Chain Lightning" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0cdd-449e-c96d-c44f" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="d87d-ae0b-75fd-8812" name="Chain Lightning" hidden="false" targetId="cf74-1c98-bc63-8ea6" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="29be-747e-4a4c-9120" name="5. Comet of Casandora" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="723f-b6b1-8a56-ec6d" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="2581-f348-95df-a235" name="Comet of Casandora" hidden="false" targetId="d667-970a-a36d-c1de" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9b64-d9a7-18ba-b5f2" name="Lore of Life" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2087-0fab-9c5f-bae6" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9114-4284-058b-7a91" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="c196-d4c4-c0f0-d815" name="Lifebloom" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c6af-ff5a-1a05-79e5" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bbe8-8dd8-44f7-8bc7" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="5bc5-fb19-02ad-2af1" name="Lifebloom" hidden="false" targetId="655d-ede0-9e85-a1ad" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b3fb-89aa-d25c-668b" name="0. Earth Blood" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a865-a64c-6128-a528" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3a48-09b8-3c43-3d05" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="97fd-7512-bf25-fec3" name="Earth Blood" hidden="false" targetId="c7c1-2e60-4710-1a6a" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="875a-c8d8-3bf1-c93f" name="Spells from the Lore of Life" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8374-8c80-8229-3fa1" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e0f7-ac1d-25f7-c090" type="max"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="fb3d-54db-5a72-7524" name="1. Awakening of the Wood" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1449-fff0-51c2-f840" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="7a82-294b-094e-c8c6" name="Awakening of the Wood" hidden="false" targetId="e634-3287-c556-2b80" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="3d3b-1ab8-3437-9c33" name="2. Flesh to Stone" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4caf-08fb-c57d-3867" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="2779-5d97-fc00-cc44" name="Flesh to Stone" hidden="false" targetId="2e0a-69a8-1ef0-5f2d" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="06fb-00c4-f690-b48b" name="3. Throne of Vines" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f1d3-5307-d4a0-2e1e" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="d7b3-ffdb-7a5a-f5f5" name="Throne of Vines" hidden="false" targetId="1635-78a9-dace-f919" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="40da-1a5d-d37e-22b5" name="4. Shield of Thorns" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9566-ed21-29e1-5174" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="3a08-6681-f87b-57b7" name="Shield of Thorns" hidden="false" targetId="73e5-14c3-e54b-2c31" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="e839-1e03-dd64-2dbd" name="5. Regrowth" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b4cc-155f-99ca-5e8c" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="1fff-c311-c163-84ab" name="Regrowth" hidden="false" targetId="5606-7317-734a-4381" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="8b3d-cce9-090d-cbc6" name="6. The Dwellers Below" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="49dc-79c4-68c7-0640" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="b858-199b-3dfc-230c" name="The Dwellers Below" hidden="false" targetId="4ceb-4804-7497-c952" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e092-f602-aa83-093a" name="Lore of Light" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fe07-41e5-d914-7cf4" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="02bd-a164-0367-7229" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="2160-60f7-df19-6546" name="Exorcism" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="729b-215e-e6ec-1f48" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="67c3-62ba-245f-e99f" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="c32a-f0ae-242d-3482" name="Focus Energy" hidden="false" targetId="cd1f-0bc5-ab83-af06" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="e3df-2a01-7d26-3179" name="0. Shem&apos;s Burning Gaze" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="feae-9bc1-466b-d87b" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4db7-8143-6e8f-41ff" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="c300-baff-a2b8-9073" name="Shem&apos;s Burning Gaze" hidden="false" targetId="6508-2de1-8be5-0a2f" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="952a-755a-49d8-c142" name="Spells from the Lore of Light" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="481c-7918-96b4-6e5f" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1aaf-611e-51fe-a5a4" type="max"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="05db-4eca-5674-b19a" name="1. Pha&apos;s Protection" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7e2e-3fde-c9ea-bfa1" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="b5de-a0c0-8a03-4fee" name="Pha&apos;s Protection" hidden="false" targetId="1088-006a-47db-14f3" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="402a-d408-8fc3-f53f" name="6. Birona&apos;s Timewarp" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3efe-1783-e50e-19fb" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="05bc-ce7e-3816-d7d0" name="Birona&apos;s Timewarp" hidden="false" targetId="3667-afc7-2861-4d54" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="afce-dc8f-d5ac-d321" name="5. Banishment" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2bfb-6a71-71e0-f5cb" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="ce0d-630e-6157-a27b" name="Banishment" hidden="false" targetId="2edd-04e5-9a13-d757" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="7bd4-e0c5-dab6-ebf2" name="4. Net of Amyntok" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e911-05d6-4988-b79b" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="3b7d-ad42-5093-c200" name="Net of Amyntok" hidden="false" targetId="2eb0-98f2-3158-46ee" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="8d7d-8f95-9b83-daf9" name="3. Light of Battle" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8ef4-df23-3d04-9093" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="70d7-b55a-e14a-e768" name="Light of Battle" hidden="false" targetId="f6dd-6551-997a-83b4" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="1542-95d4-4bc7-c71e" name="2. The Speed of Light" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6bd1-a6dc-43cb-d6ef" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="f46a-59d5-7d01-a9fe" name="The Speed of Light" hidden="false" targetId="92a3-5235-890d-9fd3" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a253-1b38-10b2-22d0" name="Lore of Metal" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1246-3923-89af-ca0f" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="089a-abff-407b-b3b4" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="0caf-6d99-1efb-4862" name="Metallic Attraction" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4d00-e3c7-cbae-8438" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9fb0-db2f-8b82-b1d7" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="ce39-20ae-d85c-6549" name="Metallic Attraction" hidden="false" targetId="0958-a1b9-1238-c0e7" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="8cbe-e303-17c5-1fd4" name="0. Searing Doom" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ae21-4e67-0b51-0920" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c208-df90-6958-145a" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="4163-86d5-9285-96bc" name="Searing Doom" hidden="false" targetId="6bd0-6da5-dee9-b098" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="7579-1d8e-fe7c-391c" name="Spells from the Lore of Metal" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="148e-db44-d0c0-8d30" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="22fb-4c44-0632-c278" type="min"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="7f6f-e3be-ec92-ab23" name="1. Plague of Rust" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e208-2f64-9709-b85c" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="47bb-3516-e6f1-e459" name="Plague of Rust" hidden="false" targetId="79e8-aec9-6d8b-246c" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="52a3-d3a9-8d20-d07f" name="2. Enchanted Blades of Aiban" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2461-89a2-483a-2c25" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="7643-a6d2-2632-d686" name="Enchanted Blades of Aiban" hidden="false" targetId="bdf2-5d59-034f-39d3" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="0b0f-3bc6-e459-010c" name="3. Glittering Robe" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="254c-9ab4-c88d-d7e8" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="11c2-acb3-b151-3319" name="Glittering Robe" hidden="false" targetId="3c85-1552-3323-c4d3" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="761c-ea78-405e-6aae" name="4. Gehenna&apos;s Golden Hounds" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5673-5516-2d7b-5382" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="56c8-3052-24ae-6f71" name="Gehenna&apos;s Golden Hounds" hidden="false" targetId="48c6-38af-6000-a450" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="cf30-8892-5d23-99be" name="6. Final Transmutation" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cf11-3927-03f4-a023" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="1d2f-6834-f95c-cf1c" name="Final Transmutation" hidden="false" targetId="5fbf-bbf2-03d3-17d3" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="dc38-6b08-6e1a-1688" name="5. Transmutation of Lead" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7dbd-1b47-043d-ff7e" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="9c9d-a275-f062-b66d" name="Transmutation of Lead" hidden="false" targetId="51f1-f0f3-356e-2520" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="bc03-2941-98d8-42d2" name="Lore of Shadow" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8d6a-21bd-9d7e-110a" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="970c-ba9b-7797-f04f" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="f0b0-8d06-cac8-e80f" name="Smoke and Mirrors" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6789-99d2-81e0-f1bc" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0ead-f4bf-417b-f053" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="f134-08f5-121d-ba1e" name="Steed of Shadows" hidden="false" targetId="4fcb-a016-2721-ff01" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="e92c-9f8c-4144-d525" name="0. Melkoth&apos;s Mystifying Miasma" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="33db-e361-df94-98a9" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2431-9bf7-57a4-c6a9" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="c067-0ea5-e7a2-bdd3" name="Melkoth&apos;s Mystifying Miasma" hidden="false" targetId="89e2-f22c-758d-a9d7" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="5b64-216f-3de6-0ed8" name="Spells from the Lore of Shadow" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8e78-f0ae-a84c-4dd0" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d7e8-6f56-a5a7-41f4" type="min"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="8f5b-7ca1-d238-48ee" name="1. Steed of Shadows" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9e9d-2839-1a43-a09e" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="4376-6b1d-7a7c-e78e" name="Steed of Shadows" hidden="false" targetId="e037-ebb5-dade-80d4" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="1aec-1e70-e38f-2acd" name="2. The Enfeebling Foe" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="677a-5db9-bee2-44ad" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="3e9c-26ac-24b5-b458" name="The Enfeebling Foe" hidden="false" targetId="9fd1-5afd-d90c-3fdf" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="66ec-0101-c17e-d73f" name="3. The Withering" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cb65-cc50-4833-04e1" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="a1d4-bb41-dabb-47d0" name="The Withering" hidden="false" targetId="37c7-763b-0d45-9041" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="9f28-b28b-2832-ae3b" name="4. The Penumbral Pendulum" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bbac-19e0-e344-a527" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="47ff-0482-48c7-cdaa" name="The Penumbral Pendulum" hidden="false" targetId="e002-fb6a-9442-ebcf" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="19d6-fa27-816c-d7e8" name="6. Okkam&apos;s Mindrazor" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d9a3-9620-e7d3-5d92" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="7038-5da4-77ea-7a6d" name="Okkam&apos;s Mindrazor" hidden="false" targetId="2e7f-7e2c-e4e0-a10a" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="f9d1-3e45-9c8e-1675" name="5. Pit of Shades" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bac3-f589-0e1b-e745" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="5d99-826b-bef8-1f52" name="Pit of Shades" hidden="false" targetId="ecf9-c3f1-b183-c310" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
@@ -9210,9 +8046,6 @@ Frenzy can be lost. Models retain their Frenzy for the entire game unless beaten
     <rule id="ec58-b231-6a2f-a163" name="Flammable" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>If a Flammable model is attacked with a Flaming Attack, all failed To Wound rolls made by the attackers may be re-rolled.</description>
     </rule>
-    <rule id="c21b-d368-6f1c-bae3" name="Regeneration (4+)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
-      <description>A model with Regeneration gains a Ward Save (indicated by the number in the brackets). This is cumulative with other sources of Regeneration. Regeneration may not be used against Flaming Attacks, successful Killing Blows (including Heroic Killing Blow) or wounds caused due the unit being Unstable.</description>
-    </rule>
     <rule id="1c9d-2d99-6222-2853" name="Unbreakable" publicationId="9e23-79cb-pubN66727" page="83" hidden="false">
       <description>Models with this rule have Immunity (Psychology) and pass Break tests automatically. However, they may never choose Flee! as a charge reaction.
 
@@ -9238,25 +8071,11 @@ If the test is failed, it moves directly forwards using Random Movement (D6) in 
 
 Until they pass the Stupidity test again, models that have failed their Stupidity test have Immunity (Psychology) and Random Movement (D6), except that they can only move directly forwards. They cannot choose to do a combat reform or choose any other charge reaction except Hold. In addition, Wizards cannot attempt to cast/dispel or channel power dice or dispel dice.</description>
     </rule>
-    <rule id="2e96-0439-2413-69d5" name="Strider (Swamp)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
-      <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
-    </rule>
     <rule id="b143-056c-658e-ba26" name="Immunity (Psychology)" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
-      <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.
-
-Immunity can also include Panic, Fear and Terror. If the majority of the models in a unit have the Immunity (Panic, Fear or Terror) rule, the unit ignores the effects of Panic, Fear or Terror and any such tests it would otherwise had to take.
+      <description>Immunity can also include Panic, Fear and Terror. If the majority of the models in a unit have the Immunity (Panic, Fear or Terror) rule, the unit ignores the effects of Panic, Fear or Terror and any such tests it would otherwise had to take.
 
 Models that are Immune to all three above effects have Immunity (Psychology). This also includes automatically passing any Psychology tests they might need to take (such as many spell effects or special rules that would otherwise force a unit to take a Psychology
 test).</description>
-    </rule>
-    <rule id="4b60-6477-75a8-f6dd" name="Ward Save (5+)" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
-      <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
-
-Note that does not stop single Ward Saves from being used, such as a model having a listed 2+ or 3+ Ward Save; the above limitation only applies to combining Ward Saves.
-
-Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
-
-Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
     </rule>
     <rule id="f366-0f91-841f-cf80" name="Ambushers" publicationId="9e23-79cb-pubN66727" page="72" hidden="false">
       <description>A unit with the Ambushers rule can choose to not deploy at the start of the battle. Instead, from Turn 2 onwards, the controlling player rolls a dice at the start of their turn for each unit of their Ambushers that have yet to arrive. On a 1 or 2, the Ambushers have been delayed – roll for them again next turn. On a 3 or more, the unit of Ambushers arrives, and will enter the board during the Remaining Moves sub-phase. If the Ambushers do not turn up for the entire game, they are assumed to have got lost, and are treated as having fled the battle for the purposes of determining the victor. 
@@ -9265,34 +8084,8 @@ Arriving Ambushers enter the battlefield from any point on any battlefield edge,
 
 In addition, for every Core unit that deploys as Ambushers in your army, you are required to include at least one other Core Unit that is not Expendable (described later in this chapter) and that does not deploy using the Ambushers rule (for more information, see the Choosing Your Army chapter).</description>
     </rule>
-    <rule id="a043-3e3c-9f8a-3661" name="Impact Hits (D6+1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
-
-Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
-
-Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
-
-Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
-    </rule>
-    <rule id="6b43-9dda-f589-0509" name="Natural Armour (4+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
-    </rule>
     <rule id="8977-b58c-704d-705e" name="Sniper" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
       <description>A model with Sniper can make a special Sniper shot instead of shooting normally (though it can be used in combination with the Multiple Shots rule as normal). A Sniper shot suffers an additional -1 To Hit penalty, in addition to any other modifiers, but can be aimed with great precision. Unless making a Stand and Shoot charge reaction, a model making a Sniper shot can shoot at a different target from the one chosen by their unit. A hit from a Sniper shot is not distributed in the same manner as other shooting attacks. The Sniper can shoot at any model they can see, including characters within a unit. &quot;Look Out Sir!&quot; cannot be used. Sniper cannot be used when firing weapons that use a template.</description>
-    </rule>
-    <rule id="953a-d5a4-ee81-4093" name="Fly (10)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>Flying models follow the rules for Skirmishers. However, they cannot use Feigned Flight, and if they have a Unit Strength above 2 and/or a close combat armour save better than 4+, they cannot use Vanguard.
-
-Moving Flyers
-Flight is represented by a swoop equal to the number in the brackets instead of using the model&apos;s normal M value. Note that any equipment or rules that affect the model&apos;s regular M will also affect its Fly move, unless specified. The flyer starts off on the ground, takes off, flies to where it wishes to go, and then lands. Flyers, therefore, begin and end their movement on the ground.
-
-Units made up entirely of models that can fly can move or charge normally on the ground, using their M value, or instead choose to fly. A unit that flies can move over other units and terrain as it does so, treating the entire move as taking place over open ground. It may not finish the move on top of another unit or in impassable terrain. Models that Fly can make a flying charge over intervening units and terrain as long as they can draw Line of Sight to their target as normal. A unit that makes a flying charge does so using its Fly move as its M characteristic, using Swiftstride.
-
-Flying March
-A unit that is flying can march as normal, doubling its flying move.
-
-Flee and Pursue
-Flyers always move on the ground when attempting to flee or pursue.</description>
     </rule>
     <rule id="777a-7a64-44fa-a78e" name="Leader" publicationId="9e23-79cb-pubN66727" page="97" hidden="false">
       <description>&quot;Follow Me!&quot;
@@ -9350,15 +8143,6 @@ Charging: M + 3D6 (discard the lowest)
 Failed Charge: 3D6 (discard the lowest)
 Fleeing/Pursuing: 3D6 (discard the lowest)</description>
     </rule>
-    <rule id="bb3b-3ca8-fcbc-a78b" name="Impact Hits (1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
-
-Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
-
-Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
-
-Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
-    </rule>
     <rule id="b806-942b-15af-b309" name="Expendable" publicationId="9e23-79cb-pubN66727" page="60" hidden="false" type="upgrade">
       <description>Models with this rule do not cause Panic to friendly units that are not Expendable themselves. Characters may not join a unit with this rule, unless specified. Likewise, an Expendable character may not join a unit that is not Expendable.
 
@@ -9368,15 +8152,6 @@ For every Core unit with Expendable rule in your army, you are required to inclu
       <description>A model with this rule can make a Stomp in addition to its other close combat attacks (including Breath Weapons). A Stomp has Always Strikes Last, and inflicts D6 (or D3 against lone Infantry models and skirmishers) automatic hits, at the model&apos;s Strength, on one enemy Infantry, War Beasts or Swarm unit in base contact with the model and are randomised as Automatic Hits.
 
 Unless specified, any rules that apply to the model’s normal attacks do not apply to its Stomps.</description>
-    </rule>
-    <rule id="e9e6-66cc-623f-8e94" name="Impact Hits (D6)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
-
-Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
-
-Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
-
-Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
     </rule>
     <rule id="df59-4284-cca7-e4ca" name="Terror" publicationId="9e23-79cb-pubN66727" page="83" hidden="false">
       <description>Models that cause Terror also cause Fear. In addition, the following rules apply. Fear-causing models or models with Immunity (Fear) treat Terror-causing monsters as causing Fear, rather than Terror – this is an exception to the rule that makes Fear-causing creatures immune to Fear. Terror-causing models have Immunity (Fear/Terror).
@@ -9459,9 +8234,6 @@ In addition, if the model&apos;s I is higher than their enemy&apos;s when it is 
 
 In addition, if the model&apos;s I is lower than their enemy&apos;s when it is their turn to attack, they must re-roll successful To Hit rolls when striking in close combat.</description>
     </rule>
-    <rule id="bf4e-212e-fe1d-20c6" name="Armour Piercing" publicationId="9e23-79cb-pubN66727" page="58" hidden="false">
-      <description>Wounds caused in close combat by this model inflict a negative armour save modifier as indicated by the number in the brackets, in addition to those for S. If a model has a weapon with the Armour Piercing rule, only attacks made or shots fired with the weapon are Armour Piercing. This rule is cumulative with other sources of Armour Piercing.</description>
-    </rule>
     <rule id="3667-691b-abd9-7da6" name="Aquatic" publicationId="9e23-79cb-pubN66727" page="58" hidden="false">
       <description>Models with the Aquatic special rule can move within any area of water on the battlefield, including rivers and even deep water that players may have deemed impassable to other models, as if it were open ground.
 However, they are still subject to any special effects that specific terrain may have (e.g. we don&apos;t exempt Aquatic models from the dangers of marshes).
@@ -9483,9 +8255,6 @@ To perform the attack, place the flame template so that it lies entirely within 
 
 Breath Weapon Close Combat Attack
 If the model with this special rule is in close combat, it can use the Breath Weapon instead of using its normal attacks. A model that makes a breath weapon attack in this way inflicts 2D6 automatic hits (resolved like shooting) on a single enemy unit in base contact – if there is more than one enemy unit in base contact with the model, the controlling player chooses which enemy unit suffers the hits. Note that no single model in the target unit may be Hit more than once from the same breath weapon attack – any excess hits are ignored. As with breath weapon attacks made in the Shooting phase, the Strength and any special effects of the creature&apos;s Breath Weapon will be covered in its rules. Wounds caused by a Breath Weapon in close combat count towards combat resolution.</description>
-    </rule>
-    <rule id="3d84-8ad0-b310-e355" name="Fight in Extra Ranks (1)" publicationId="9e23-79cb-pubN66727" page="60" hidden="false">
-      <description>If a unit has this rule then supporting attacks can be made by one more rank than normal for each number indicated in the bracket. This rule is cumulative with other sources of Fight in Extra Ranks.</description>
     </rule>
     <rule id="8600-a090-2761-d661" name="Flaming Attacks" publicationId="9e23-79cb-pubN66727" page="60" hidden="false">
       <description>Models with Flaming Attacks cause Fear in War Beasts, Cavalry, Chariots and Flammable creatures. Any Panic test taken by any of these Troop Types from a Flaming Attack suffer -1 to their Leadership when taking the test.
@@ -9525,14 +8294,6 @@ Unless otherwise stated, a model with this rule has both Lightning shooting and 
 
 All models in the unit (excluding characters) must fire either single or Multiple Shots.</description>
     </rule>
-    <rule id="4327-5cb8-c500-63b1" name="Multiple Wounds (D6)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Each wound inflicted by an attack with Multiple Wounds (after saves) is multiplied into
-more than one wound (remember that a model cannot suffer more wounds than it has on its profile). The exact number of wounds caused will normally be shown in brackets as part of the rule. If a model is granted two sets of Multiple Wounds (like D3 and D6), use only the highest set before rolling.
-
-Where the number of Multiple Wounds is generated by a dice roll, roll a dice separately for each unsaved wound and use the total of all the dice rolled for the final number of wounds inflicted.
-
-Unless otherwise specified, Multiple Wounds only apply to close combat attacks.</description>
-    </rule>
     <rule id="fefd-9cb0-d6fa-e2ef" name="Poisoned Attacks" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>A model with Poisoned Attacks gains a +1 modifier to any To Wound rolls. Armour saves are modified by the Strength of the attack as normal.
 
@@ -9543,36 +8304,14 @@ Unless otherwise stated, a model with this rule has both Poisoned shooting and c
 
 Furthermore, Quick to Fire weapons may be used once per turn when declaring a charge (unless they are also Move or Fire), immediately after the enemy unit has declared their charge reaction (but before moving any units). If the enemy unit chose to Stand &amp; Shoot or Fire &amp; Flee, both units will fire at the same time. Quick to Fire weapons can be used this way even if the unit starts its charge outside their weapons&apos; maximum range – the shooting is resolved normally assuming the enemy is just within maximum range of the shooting unit&apos;s shortest-ranged weapon. If the charge fails, for whatever reason, we assume that the chargers closed to within the weapons&apos; maximum range first. Any shots fired in this manner suffer a -1 To Hit penalty.</description>
     </rule>
-    <rule id="183a-6a6f-951c-1663" name="Random Attacks (D6+1)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
-    </rule>
-    <rule id="0877-cd17-c381-a045" name="Random Movement (3D6)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
-      <description>Models with Random Movement do not have a M value, but rather a dice roll. This is the distance they move, charge, pursue, overrun and flee – they cannot march. If a model has Random Movement and Swiftstride, then Swiftstride is not used. Note that certain Random Movement rolls can result in the model having a M value higher than 10 – this is an exception to the usual maximum.
-
-Models with Random Movement cannot declare charges, and are always moved in the Compulsory Moves sub-phase. When the model moves, first pivot it about its centre to face the direction in which you wish it to travel. Then, roll the dice shown in the Random Movement brackets. Finally, move the model directly forwards a number of inches equal to the total rolled by the dice. No other pivots can be made.
-
-There&apos;s a chance that the model&apos;s peculiar movement will cause it to come into contact with an enemy, so measure the distance in a straight line before the model is moved. If the move is found to take the unit’s front arc into contact with an enemy, then it counts as charging, and this is resolved using the normal rules for charges and using the distance rolled as its charge range. Charge reactions cannot be declared against enemies with Random Movement.
-
-If the random move brings the unit to within 1&quot; of a friendly unit or impassable terrain, it stops immediately and cannot move further during that Movement phase.
-
-If two or more models in a unit have the Random Movement, pivot the unit about its centre, then roll the dice only once to determine how for the unit moves. If models in the unit have a different Random Movement value, use the slowest for the entire unit.
-
-A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Terrain test, unless the model is making a charge, pursuit or flee move, in which case it counts as a move of the appropriate type.</description>
-    </rule>
     <rule id="554e-99aa-3930-447f" name="Requires Two Hands" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
       <description>If a weapon requires two hands to use, it is not possible for a model to use a shield or buckler alongside it in close combat (although a shield can still be used against wounds caused by shooting or magic).</description>
-    </rule>
-    <rule id="01e3-7f81-20e3-45fe" name="Mighty Blow (1)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
-      <description>Models with this rule gain a Strength bonus to all their close combat attacks (including Impact Hits and Stomps) equal to the number in the brackets in the first round of each new close combat they are involved in. Note that any attack made with a weapon that gives Mighty Blow only applies to attacks made with the weapon itself. This rule is cumulative with other sources of Mighty Blow.</description>
     </rule>
     <rule id="43ca-96e5-8a47-2d39" name="Volley Fire" publicationId="9e23-79cb-pubN66727" page="84" hidden="false">
       <description>Weapons with this rule allow the unit to fire with all ranks within range in the Shooting Phase rather than just the first two. However, if they do so, all models in the third and subsequent ranks suffer -1 To Hit. A unit cannot Volley Fire if the target is within half the weapon&apos;s maximum range.</description>
     </rule>
     <rule id="917c-1397-bf0b-5856" name="Ignores Armour Saves" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
       <description>If a model has this rule, no armour saves may be taken at all, unless otherwise noted.</description>
-    </rule>
-    <rule id="5dfb-b5c0-520b-ed68" name="Immunity (Ice Attacks)" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
-      <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.</description>
     </rule>
     <rule id="a711-7cf6-cd2b-1d29" name="Killing Blow" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>If a model with Killing Blow rolls a 6 to wound in close combat, they automatically slay their opponent – regardless of the number of wounds on the victim&apos;s profile. Armour saves and regeneration saves cannot be taken against a Killing Blow. Ward Saves may be taken as normal.
@@ -9603,123 +8342,17 @@ If a Mixed unit is required to take a characteristic test, this is done using th
 
 As long as the unit (but not the handlers) have a unit strength of 5 or more, any missile hits are resolved against the unit itself. At less than unit strength 5, the controlling player decides who is hit, but must allocate one hit on each model before they can add a second hit on a model; they must allocate two hits on each model before they can allocate a third, and so on. Hits from templates are resolved against the handlers as normal. In close combat, the handlers can only be attacked by models who are in base contact with them.</description>
     </rule>
-    <rule id="20d3-7f3f-51f9-e10d" name="Multiple Wounds (D3)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Each wound inflicted by an attack with Multiple Wounds (after saves) is multiplied into
-more than one wound (remember that a model cannot suffer more wounds than it has on its profile). The exact number of wounds caused will normally be shown in brackets as part of the rule. If a model is granted two sets of Multiple Wounds (like D3 and D6), use only the highest set before rolling.
-
-Where the number of Multiple Wounds is generated by a dice roll, roll a dice separately for each unsaved wound and use the total of all the dice rolled for the final number of wounds inflicted.
-
-Unless otherwise specified, Multiple Wounds only apply to close combat attacks.</description>
-    </rule>
-    <rule id="7ed4-9d31-09c3-6bf9" name="Magic Resistance (1)" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
-      <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward Save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
-
-If a character with Magic Resistance joins a unit, all models in the unit benefit from the Magic Resistance as long as they are part of the unit. If a model or unit has two sets of Magic Resistance, the two combine to a maximum of Magic Resistance (3), unless specified.</description>
-    </rule>
-    <rule id="f30d-0b61-2836-689e" name="Impact Hits (D3)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
-
-Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
-
-Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
-
-Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
-    </rule>
-    <rule id="306d-711a-1300-587f" name="Natural Armour (5+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
-    </rule>
-    <rule id="32e8-b4ad-3e59-a3c7" name="Natural Armour (3+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
-    </rule>
-    <rule id="33f1-4ddd-d26b-281a" name="Random Attacks (D6+2)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
-    </rule>
-    <rule id="d078-4dd8-8ffb-876a" name="Impact Hits (D6+2)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
-
-Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
-
-Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
-
-Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
-    </rule>
-    <rule id="16ae-a437-29a7-e714" name="Impact Hits (D3+1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
-
-Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
-
-Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
-
-Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
-    </rule>
-    <rule id="0e09-3526-25d5-2646" name="Magic Resistance (2)" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
-      <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward Save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
-
-If a character with Magic Resistance joins a unit, all models in the unit benefit from the Magic Resistance as long as they are part of the unit. If a model or unit has two sets of Magic Resistance, the two combine to a maximum of Magic Resistance (3), unless specified.</description>
-    </rule>
     <rule id="738b-aca4-740c-e425" name="Animated Construct" publicationId="9e23-79cb-pubN66727" page="58" hidden="false">
       <description>Animated Constructs have the Unbreakable special rule. However, they may not march.</description>
     </rule>
-    <rule id="9b99-4e37-be08-231a" name="Magic Resistance (3)" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
-      <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward Save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
-
-If a character with Magic Resistance joins a unit, all models in the unit benefit from the Magic Resistance as long as they are part of the unit. If a model or unit has two sets of Magic Resistance, the two combine to a maximum of Magic Resistance (3), unless specified.</description>
-    </rule>
-    <rule id="e56f-d7d4-8987-dbdb" name="Parry (6+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with this rule gain a Ward Save in close combat as indicated in the brackets. This is cumulative with other sources of Parry. It cannot be used against attacks made against the model&apos;s flank or rear, nor can it be used against attacks that Hit automatically, attacks that are made at +3 Strength over the model&apos;s own Strength value, nor can it be used by mounted models, unless specified.</description>
-    </rule>
     <rule id="c270-3956-9b64-b587" name="Strider" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
-      <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
-    </rule>
-    <rule id="fa69-07b8-fdc1-3ac9" name="Natural Armour (6+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
-    </rule>
-    <rule id="8d09-c701-2658-67e8" name="Strider (Forest)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
       <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
     </rule>
     <rule id="d896-d52f-cc64-ab43" name="Scythes" publicationId="9e23-79cb-pubN66727" page="88" hidden="false">
       <description>Impact Hits (+1).</description>
     </rule>
-    <rule id="b15c-9f50-7081-ba29" name="Natural Armour (2+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
-    </rule>
     <rule id="f6d7-9fbc-abc1-5cfc" name="Hatred" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="725b-14b3-0f42-bfc2" name="Hatred (Undead)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="b6f8-9d4f-4c93-cb8b" name="Hatred (Slaanesh)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose. (This rule affects Slaanesh deamons or models with the Mark of Slaanesh.)</description>
-    </rule>
-    <rule id="a0a3-ddd4-b1ed-1054" name="Hatred (High Elves)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="4918-5aef-8930-27ec" name="Random Movement (2D6)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
-      <description>Models with Random Movement do not have a M value, but rather a dice roll. This is the distance they move, charge, pursue, overrun and flee – they cannot march. If a model has Random Movement and Swiftstride, then Swiftstride is not used. Note that certain Random Movement rolls can result in the model having a M value higher than 10 – this is an exception to the usual maximum.
-
-Models with Random Movement cannot declare charges, and are always moved in the Compulsory Moves sub-phase. When the model moves, first pivot it about its centre to face the direction in which you wish it to travel. Then, roll the dice shown in the Random Movement brackets. Finally, move the model directly forwards a number of inches equal to the total rolled by the dice. No other pivots can be made.
-
-There&apos;s a chance that the model&apos;s peculiar movement will cause it to come into contact with an enemy, so measure the distance in a straight line before the model is moved. If the move is found to take the unit’s front arc into contact with an enemy, then it counts as charging, and this is resolved using the normal rules for charges and using the distance rolled as its charge range. Charge reactions cannot be declared against enemies with Random Movement.
-
-If the random move brings the unit to within 1&quot; of a friendly unit or impassable terrain, it stops immediately and cannot move further during that Movement phase.
-
-If two or more models in a unit have the Random Movement, pivot the unit about its centre, then roll the dice only once to determine how for the unit moves. If models in the unit have a different Random Movement value, use the slowest for the entire unit.
-
-A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Terrain test, unless the model is making a charge, pursuit or flee move, in which case it counts as a move of the appropriate type.</description>
-    </rule>
-    <rule id="49c7-526e-cb3e-d7b7" name="Immunity (Flaming Attacks)" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
-      <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.</description>
-    </rule>
-    <rule id="9fed-6076-6c75-b774" name="Immunity (Fear)" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
-      <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.
-
-Immunity can also include Panic, Fear and Terror. If the majority of the models in a unit have the Immunity (Panic, Fear or Terror) rule, the unit ignores the effects of Panic, Fear or Terror and any such tests it would otherwise had to take.</description>
-    </rule>
-    <rule id="e14b-e42f-3ee3-3636" name="Immunity (Terror)" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
-      <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.
-
-Immunity can also include Panic, Fear and Terror. If the majority of the models in a unit have the Immunity (Panic, Fear or Terror) rule, the unit ignores the effects of Panic, Fear or Terror and any such tests it would otherwise had to take.</description>
+      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
     </rule>
     <rule id="1529-50c8-5c6e-150f" name="Loremaster (Lore of Fire)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
@@ -9727,139 +8360,38 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
     <rule id="75e4-06e8-d7aa-8514" name="Loremaster (Lore of Death)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
     </rule>
-    <rule id="39c8-00c3-4ec1-bfb8" name="Hatred (Monsters)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="52f5-10f0-a975-cf04" name="Hatred (Vampire Counts)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="cc87-4c6a-b7f7-6566" name="Hatred (Beastmen)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="3b4c-3540-f274-9ab2" name="Hatred (Forces of Destruction)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="5fa6-4904-d582-5e3b" name="Hatred (Daemons of Chaos)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="2d90-9bab-f145-55ce" name="Hatred (Warriors of Chaos)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="0b20-ae38-065f-96ce" name="Hatred (Orcs &amp; Goblins)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="d45b-0036-b5ef-951b" name="Ward Save (4+)" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
-      <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
-
-Note that does not stop single Ward Saves from being used, such as a model having a listed 2+ or 3+ Ward Save; the above limitation only applies to combining Ward Saves.
-
-Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
-
-Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
-    </rule>
-    <rule id="48d5-6bee-c3f6-cec8" name="Strider (River)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
-      <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
-    </rule>
-    <rule id="8d5b-32ea-4349-ff13" name="Hatred (Dark Elves)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="34e1-3b0e-e471-fafa" name="Hatred (Skaven)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="c09e-da06-27f2-fc7e" name="Immunity (Poisoned Attacks)" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
-      <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.</description>
-    </rule>
     <rule id="4003-e9b4-9295-bef4" name="Loremaster (Lore of Heavens)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
-    </rule>
-    <rule id="76e1-4919-c7d3-29df" name="Magic Resistance (4)" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
-      <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward Save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
-
-If a character with Magic Resistance joins a unit, all models in the unit benefit from the Magic Resistance as long as they are part of the unit. If a model or unit has two sets of Magic Resistance, the two combine to a maximum of Magic Resistance (3), unless specified.</description>
     </rule>
     <rule id="be9b-43a8-959d-9cd1" name="Loremaster (Lore of the Great Maw)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
     </rule>
-    <rule id="f099-a712-8bb3-8162" name="Strider (Obstacle)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
-      <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
-    </rule>
-    <rule id="686b-8e1b-4d01-05ba" name="Strider (Marsh)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
-      <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
-    </rule>
     <rule id="5ffc-408d-a5fb-19c4" name="Loremaster (Lore of the Little Waagh!)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
     </rule>
-    <rule id="da8d-d10d-b525-a19a" name="Hatred (Dwarfs)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="1308-62b9-5692-6880" name="Hatred (Empire)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="f78e-8057-0e20-d89f" name="Impact Hits (2D6)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
+    <rule id="4d40-9a96-4af8-e943" name="Random Movement (*)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
+      <description>Models with the Random Movement special rule do not have a normal Movement characteristic, but rather a dice roll, such as D6, 2D6 or 3D6 (as indicated in the brackets). This is the distance they use for all their movement (regardless of other special rules). Note that certain Random Movement rolls can result in the model having a Movement value higher than 10 – this is an exception to the usual maximum.
 
-Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
 
-Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
+Models with Random Movement cannot declare charges, and must always move in the Compulsory Moves
 
-Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
-    </rule>
-    <rule id="ece5-1f38-ee28-593e" name="Random Movement (4D6)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
-      <description>Models with Random Movement do not have a M value, but rather a dice roll. This is the distance they move, charge, pursue, overrun and flee – they cannot march. If a model has Random Movement and Swiftstride, then Swiftstride is not used. Note that certain Random Movement rolls can result in the model having a M value higher than 10 – this is an exception to the usual maximum.
 
-Models with Random Movement cannot declare charges, and are always moved in the Compulsory Moves sub-phase. When the model moves, first pivot it about its centre to face the direction in which you wish it to travel. Then, roll the dice shown in the Random Movement brackets. Finally, move the model directly forwards a number of inches equal to the total rolled by the dice. No other pivots can be made.
+sub-phase. When the model moves, first pivot it about its centre to face the direction in which you wish it to travel. Then, roll the dice shown in the Random Movement brackets. Finally, move the model directly forwards a number of inches equal to the total rolled by the dice. No other pivots can be made.
 
-There&apos;s a chance that the model&apos;s peculiar movement will cause it to come into contact with an enemy, so measure the distance in a straight line before the model is moved. If the move is found to take the unit’s front arc into contact with an enemy, then it counts as charging, and this is resolved using the normal rules for charges and using the distance rolled as its charge range. Charge reactions cannot be declared against enemies with Random Movement.
 
-If the random move brings the unit to within 1&quot; of a friendly unit or impassable terrain, it stops immediately and cannot move further during that Movement phase.
+There&apos;s a chance that the model&apos;s peculiar movement will cause it to come into contact with an enemy, so measure the distance in a straight line before the model is moved. If the move is found to take the unit&apos;s front arc into contact with an enemy, then it counts as charging, and this is resolved using the normal rules for charges and using the distance rolled as its charge range. Charge reactions cannot be declared against enemies with the Random Movement special rule.
 
-If two or more models in a unit have the Random Movement, pivot the unit about its centre, then roll the dice only once to determine how for the unit moves. If models in the unit have a different Random Movement value, use the slowest for the entire unit.
 
-A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Terrain test, unless the model is making a charge, pursuit or flee move, in which case it counts as a move of the appropriate type.</description>
-    </rule>
-    <rule id="5e3f-9736-a9c0-4a1c" name="Dodge (4+)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
-      <description>Models with this rule gain a Ward Save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have Always Strikes First, nor can it be used if the model is subject to Always Strikes Last. Finally, Dodge cannot be used by mounted models, unless specified.</description>
-    </rule>
-    <rule id="4d40-9a96-4af8-e943" name="Random Movement (Variable)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
-      <description>Models with Random Movement do not have a normal M characteristic, but rather a dice roll, (as indicated in the
-brackets). This is the distance they move, charge, pursue, overrun and flee – they cannot march. If a model has Random Movement and Swiftstride, then Swiftstride is not used. Note that certain Random Movement rolls can result in the model having a M value higher than 10 – this is an exception to the usual maximum.
+If the random move brings the unit to within 1&quot; of a friendly unit or impassable terrain
 
-Models with Random Movement cannot declare charges, and are always moved in the Compulsory Moves sub-phase. When the model moves, first pivot it about its centre to face the direction in which you wish it to travel. Then, roll the dice shown in the Random Movement brackets. Finally, move the model directly forwards a number of inches equal to the total rolled by the dice. No other pivots can be made.
 
-There&apos;s a chance that the model&apos;s peculiar movement will cause it to come into contact with an enemy, so measure the distance in a straight line before the model is moved. If the move is found to take the unit’s front arc into contact with an enemy, then it counts as charging, and this is resolved using the normal rules for charges and using the distance rolled as its charge range. Charge reactions cannot be declared against enemies with Random Movement.
+, it stops immediately and cannot move further during that Movement phase.
 
-If the random move brings the unit to within 1&quot; of a friendly unit or impassable terrain, it stops immediately and cannot move further during that Movement phase.
 
-If two or more models in a unit have the Random Movement, pivot the unit about its centre, then roll the dice only once to determine how for the unit moves. If models in the unit have a different Random Movement value, use the slowest for the entire unit.
-
-A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Terrain test, unless the model is making a charge, pursuit or flee move, in which case it counts as a move of the appropriate type.</description>
-    </rule>
-    <rule id="5c52-2ebf-0b14-991c" name="Impact Hits (D6+3)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
-
-Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
-
-Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
-
-Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
-    </rule>
-    <rule id="3c13-1f49-b25b-95f8" name="Immunity (Lightning Attacks)" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
-      <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.</description>
-    </rule>
-    <rule id="065b-1f43-47e5-70cb" name="Random Attacks (2D6)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
-    </rule>
-    <rule id="7323-b2a0-af7b-3ec6" name="Ward Save (3+)" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
-      <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
-
-Note that does not stop single Ward Saves from being used, such as a model having a listed 2+ or 3+ Ward Save; the above limitation only applies to combining Ward Saves.
-
-Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
-
-Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
-    </rule>
-    <rule id="5b16-622a-da0d-d50b" name="Random Attacks (D6)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
+If two or more models in a unit have the Random Movement special rule, pivot the unit about its centre, then roll the dice only once to determine how for the unit moves. If models in the unit have a different Random Movement value, use the slowest for the entire unit.
+A Random Move counts as a &apos;normal&apos; move for triggering a Dangerous Terrain
+test, unless the model is making a charge, pursuit or flee move, in which case it counts as a move of the appropriate type.</description>
+      <alias>Random Movement</alias>
     </rule>
     <rule id="67cf-c767-bc85-2897" name="Loremaster (Lore of Nehekhara)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
@@ -9867,76 +8399,17 @@ Some models may be allowed to re-roll a Ward Save from a specific source. In tha
     <rule id="3b46-c6e4-f0af-cef8" name="Loremaster (Lore of Necromancy)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
     </rule>
-    <rule id="a001-2c00-3971-2a29" name="Hatred (Bretonnia)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="6f3b-cd4f-062d-7f26" name="Regeneration (6+)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
-      <description>A model with Regeneration gains a Ward Save (indicated by the number in the brackets). This is cumulative with other sources of Regeneration. Regeneration may not be used against Flaming Attacks, successful Killing Blows (including Heroic Killing Blow) or wounds caused due the unit being Unstable.</description>
-    </rule>
-    <rule id="5fed-df2e-b6d6-cc93" name="Regeneration (5+)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
-      <description>A model with Regeneration gains a Ward Save (indicated by the number in the brackets). This is cumulative with other sources of Regeneration. Regeneration may not be used against Flaming Attacks, successful Killing Blows (including Heroic Killing Blow) or wounds caused due the unit being Unstable.</description>
-    </rule>
-    <rule id="5c26-a043-8535-5f4f" name="Ward Save (6+)" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
-      <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
-
-Note that does not stop single Ward Saves from being used, such as a model having a listed 2+ or 3+ Ward Save; the above limitation only applies to combining Ward Saves.
-
-Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
-
-Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
-    </rule>
     <rule id="fb5f-f956-90e7-af6f" name="Loremaster (Lore of Tzeentch)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
-    </rule>
-    <rule id="18a0-eeb5-f165-5fc9" name="Random Attacks (D3)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
     </rule>
     <rule id="4384-4bf5-ea6e-c49d" name="Loremaster (Lore of Athel Loren)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
     </rule>
-    <rule id="fea1-6159-56b4-bc97" name="Immunity (Multiple Wounds)" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
-      <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.</description>
-    </rule>
-    <rule id="6112-6e8d-a942-fcba" name="Hatred (Lizardmen)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="cfff-6563-d1c6-820c" name="Dodge (5+)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
-      <description>Models with this rule gain a Ward Save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have Always Strikes First, nor can it be used if the model is subject to Always Strikes Last. Finally, Dodge cannot be used by mounted models, unless specified.</description>
-    </rule>
-    <rule id="bf3d-abaf-45ca-3477" name="Dodge (6+)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
-      <description>Models with this rule gain a Ward Save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have Always Strikes First, nor can it be used if the model is subject to Always Strikes Last. Finally, Dodge cannot be used by mounted models, unless specified.</description>
-    </rule>
-    <rule id="e20a-3f4d-cc8c-06bc" name="Random Attacks (D3+1)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
-    </rule>
-    <rule id="1fc5-0d4e-f568-b4c3" name="Immunity (Panic)" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
-      <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.
-
-Immunity can also include Panic, Fear and Terror. If the majority of the models in a unit have the Immunity (Panic, Fear or Terror) rule, the unit ignores the effects of Panic, Fear or Terror and any such tests it would otherwise had to take.</description>
-    </rule>
-    <rule id="2875-64e6-bb63-ac04" name="Strider (Hill)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
-      <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
-    </rule>
-    <rule id="0eca-e6a2-66a1-2b53" name="Random Attacks (3D6)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
-    </rule>
     <rule id="4393-049f-b19b-6457" name="Loremaster (Lore of Ice)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
     </rule>
-    <rule id="bff4-3615-a342-c3c4" name="Hatred (Norse)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="f210-1e7c-a315-2849" name="Parry (5+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with this rule gain a Ward Save in close combat as indicated in the brackets. This is cumulative with other sources of Parry. It cannot be used against attacks made against the model&apos;s flank or rear, nor can it be used against attacks that Hit automatically, attacks that are made at +3 Strength over the model&apos;s own Strength value, nor can it be used by mounted models, unless specified.</description>
-    </rule>
     <rule id="3efd-81b2-458e-604e" name="Loremaster (Hedge Magic)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
-    </rule>
-    <rule id="9a24-f1a2-aac3-de3b" name="Breath Weapon (Monster of Kadon)" publicationId="9e23-79cb-pubN66727" page="147" hidden="false">
-      <description>Strength 4, Flaming Attacks.</description>
-    </rule>
-    <rule id="1234-eaf6-f3f7-4a67" name="Natural Armour (1+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
     </rule>
     <rule id="73fd-d115-269d-bd0a" name="Ancestral Grudge" publicationId="aa7b-3583-0834-7bfa" page="136" hidden="false">
       <description>Dwarfs have the Hatred (Orcs, Goblins, Trolls, Skaven) special rule.</description>
@@ -9978,9 +8451,6 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
     <rule id="d041-af68-1592-6f88" name="Ogre Charge" publicationId="315d-135b-135c-07ce" page="37" hidden="false">
       <description>Each model with this special rule that successfully charges an enemy has the Impact Hits (1) special rule. Models with this special rule that are part of a unit with ranks add their current Rank Bonus to the Strength of the Impact Hits they inflict. In addition, they count as having one more rank than their actual number for the purpose of determining Steadfast in any turn that they charge.</description>
     </rule>
-    <rule id="fb9d-b6f0-9c84-38e2" name="Dwarf Rum" publicationId="9e23-79cb-pubN116235" page="32" hidden="false">
-      <description>Enemy models in base contact with models with this rule suffer -1 to their WS in Close Combat. This does not affect Undead, Daemonic or Mark of Nurgle models. The Slayer Pirates may not be deployed closer than 6&quot; to any other unit in the army at the start of the battle.</description>
-    </rule>
     <rule id="03d6-87a5-ffd8-93ba" name="Duck &amp; Weave" publicationId="0545-ea23-873c-f668" page="3" hidden="false">
       <description>Enemies attacking Infantry models with this rule suffer 1 To Hit in close combat.</description>
     </rule>
@@ -9999,89 +8469,10 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
     <rule id="d75e-a845-77aa-679b" name="Loremaster (Lore of Slaanesh)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
     </rule>
-    <rule id="2ba2-2aaa-3f36-4b24" name="Fly (9)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>Flying models follow the rules for Skirmishers. However, they cannot use Feigned Flight, and if they have a Unit Strength above 2 and/or a close combat armour save better than 4+, they cannot use Vanguard.
-
-Moving Flyers
-Flight is represented by a swoop equal to the number in the brackets instead of using the model&apos;s normal M value. Note that any equipment or rules that affect the model&apos;s regular M will also affect its Fly move, unless specified. The flyer starts off on the ground, takes off, flies to where it wishes to go, and then lands. Flyers, therefore, begin and end their movement on the ground.
-
-Units made up entirely of models that can fly can move or charge normally on the ground, using their M value, or instead choose to fly. A unit that flies can move over other units and terrain as it does so, treating the entire move as taking place over open ground. It may not finish the move on top of another unit or in impassable terrain. Models that Fly can make a flying charge over intervening units and terrain as long as they can draw Line of Sight to their target as normal. A unit that makes a flying charge does so using its Fly move as its M characteristic, using Swiftstride.
-
-Flying March
-A unit that is flying can march as normal, doubling its flying move.
-
-Flee and Pursue
-Flyers always move on the ground when attempting to flee or pursue.</description>
-    </rule>
-    <rule id="0a9a-bfcb-1a9d-5609" name="Fly (8)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>Flying models follow the rules for Skirmishers. However, they cannot use Feigned Flight, and if they have a Unit Strength above 2 and/or a close combat armour save better than 4+, they cannot use Vanguard.
-
-Moving Flyers
-Flight is represented by a swoop equal to the number in the brackets instead of using the model&apos;s normal M value. Note that any equipment or rules that affect the model&apos;s regular M will also affect its Fly move, unless specified. The flyer starts off on the ground, takes off, flies to where it wishes to go, and then lands. Flyers, therefore, begin and end their movement on the ground.
-
-Units made up entirely of models that can fly can move or charge normally on the ground, using their M value, or instead choose to fly. A unit that flies can move over other units and terrain as it does so, treating the entire move as taking place over open ground. It may not finish the move on top of another unit or in impassable terrain. Models that Fly can make a flying charge over intervening units and terrain as long as they can draw Line of Sight to their target as normal. A unit that makes a flying charge does so using its Fly move as its M characteristic, using Swiftstride.
-
-Flying March
-A unit that is flying can march as normal, doubling its flying move.
-
-Flee and Pursue
-Flyers always move on the ground when attempting to flee or pursue.</description>
-    </rule>
-    <rule id="36ba-3349-99bd-1979" name="Fly (7)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>Flying models follow the rules for Skirmishers. However, they cannot use Feigned Flight, and if they have a Unit Strength above 2 and/or a close combat armour save better than 4+, they cannot use Vanguard.
-
-Moving Flyers
-Flight is represented by a swoop equal to the number in the brackets instead of using the model&apos;s normal M value. Note that any equipment or rules that affect the model&apos;s regular M will also affect its Fly move, unless specified. The flyer starts off on the ground, takes off, flies to where it wishes to go, and then lands. Flyers, therefore, begin and end their movement on the ground.
-
-Units made up entirely of models that can fly can move or charge normally on the ground, using their M value, or instead choose to fly. A unit that flies can move over other units and terrain as it does so, treating the entire move as taking place over open ground. It may not finish the move on top of another unit or in impassable terrain. Models that Fly can make a flying charge over intervening units and terrain as long as they can draw Line of Sight to their target as normal. A unit that makes a flying charge does so using its Fly move as its M characteristic, using Swiftstride.
-
-Flying March
-A unit that is flying can march as normal, doubling its flying move.
-
-Flee and Pursue
-Flyers always move on the ground when attempting to flee or pursue.</description>
-    </rule>
-    <rule id="b830-fe6e-b461-0377" name="Fly (6)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>Flying models follow the rules for Skirmishers. However, they cannot use Feigned Flight, and if they have a Unit Strength above 2 and/or a close combat armour save better than 4+, they cannot use Vanguard.
-
-Moving Flyers
-Flight is represented by a swoop equal to the number in the brackets instead of using the model&apos;s normal M value. Note that any equipment or rules that affect the model&apos;s regular M will also affect its Fly move, unless specified. The flyer starts off on the ground, takes off, flies to where it wishes to go, and then lands. Flyers, therefore, begin and end their movement on the ground.
-
-Units made up entirely of models that can fly can move or charge normally on the ground, using their M value, or instead choose to fly. A unit that flies can move over other units and terrain as it does so, treating the entire move as taking place over open ground. It may not finish the move on top of another unit or in impassable terrain. Models that Fly can make a flying charge over intervening units and terrain as long as they can draw Line of Sight to their target as normal. A unit that makes a flying charge does so using its Fly move as its M characteristic, using Swiftstride.
-
-Flying March
-A unit that is flying can march as normal, doubling its flying move.
-
-Flee and Pursue
-Flyers always move on the ground when attempting to flee or pursue.</description>
-    </rule>
-    <rule id="36d4-923e-e1c7-72bc" name="Fly (5)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>Flying models follow the rules for Skirmishers. However, they cannot use Feigned Flight, and if they have a Unit Strength above 2 and/or a close combat armour save better than 4+, they cannot use Vanguard.
-
-Moving Flyers
-Flight is represented by a swoop equal to the number in the brackets instead of using the model&apos;s normal M value. Note that any equipment or rules that affect the model&apos;s regular M will also affect its Fly move, unless specified. The flyer starts off on the ground, takes off, flies to where it wishes to go, and then lands. Flyers, therefore, begin and end their movement on the ground.
-
-Units made up entirely of models that can fly can move or charge normally on the ground, using their M value, or instead choose to fly. A unit that flies can move over other units and terrain as it does so, treating the entire move as taking place over open ground. It may not finish the move on top of another unit or in impassable terrain. Models that Fly can make a flying charge over intervening units and terrain as long as they can draw Line of Sight to their target as normal. A unit that makes a flying charge does so using its Fly move as its M characteristic, using Swiftstride.
-
-Flying March
-A unit that is flying can march as normal, doubling its flying move.
-
-Flee and Pursue
-Flyers always move on the ground when attempting to flee or pursue.</description>
-    </rule>
     <rule id="4740-7f33-d5b8-5563" name="Slayer" publicationId="aa7b-3583-0834-7bfa" page="160" hidden="false">
       <description>Slayers always Wound on a To Wound roll of 4+, unless they would need a lower result. Use the Slayer&apos;s Strength to determine the armour save modifier for any successful Wounds.</description>
     </rule>
-    <rule id="390b-8c96-7c3a-9598" name="Orc Animosity" publicationId="8ada-88a0-cdcd-9b5e" page="60" hidden="false">
-      <description>Units with this  rule must roll a D6 and consult the orc animosity chart in the Charge subphase after all other charges have been declared, unless they have declared a charge, are already in combat, fleeing, or have less than 5 models.</description>
-    </rule>
-    <rule id="7366-8bcf-f881-7f30" name="Hatred (Chaos)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="c6b3-2ae5-df09-b853" name="Hatred (Vampires)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="7a27-4cc5-bde-2d7f" name="Fly (4)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
+    <rule id="7a27-4cc5-bde-2d7f" name="Fly (*)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>Flying models follow the rules for Skirmishers. However, they cannot use Feigned Flight, and if they have a Unit Strength above 2 and/or a close combat armour save better than 4+, they cannot use Vanguard.
 
 Moving Flyers
@@ -10094,18 +8485,7 @@ A unit that is flying can march as normal, doubling its flying move.
 
 Flee and Pursue
 Flyers always move on the ground when attempting to flee or pursue.</description>
-    </rule>
-    <rule id="ba8d-3b7f-3ea7-977b" name="Impact Hits (3D6)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
-
-Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
-
-Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
-
-Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
-    </rule>
-    <rule id="18cb-1dc6-4139-8c3" name="Line of Sight (0)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight of 0.</description>
+      <alias>Fly</alias>
     </rule>
     <rule name="Swarms" id="f4d1-e978-a3ed-869b" hidden="false">
       <description>Complete Ranks (3). Supporting Attacks (5). Unit Strength (3). Line of Sight (0). Expendable. Skirmishers. Unstable.
@@ -10170,44 +8550,9 @@ Any effect that would modify the model&apos;s Characteristics affect both the r
     <rule name="Complete Ranks" id="0a17-1f20-86b0-bded" hidden="false">
       <description>A complete rank is formed by as many models as indicated between brackets.</description>
     </rule>
-    <rule id="564d-ded4-217d-827c" name="Line of Sight (5)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight of 5.</description>
-    </rule>
-    <rule id="8105-29db-5491-77cf" name="Line of Sight (4)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight of 4.</description>
-    </rule>
-    <rule id="22a9-3a2f-b7b7-b00e" name="Line of Sight (3)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight of 3.</description>
-    </rule>
-    <rule id="40b4-9828-f47e-28c9" name="Line of Sight (2)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight of 2.</description>
-    </rule>
-    <rule id="52e5-3a13-39b1-aa8c" name="Supporting Attacks (1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule may make up to 1 supporting attack.</description>
-    </rule>
-    <rule id="577c-10f5-bad5-5ce5" name="Unit Strength (2)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 2.</description>
-    </rule>
-    <rule id="fe8b-fd33-652e-4e2f" name="Unit Strength (3)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 3.</description>
-    </rule>
-    <rule id="23fb-913b-b02d-9e0a" name="Unit Strength (4)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 4.</description>
-    </rule>
-    <rule id="c397-b441-9fd6-89bb" name="Unit Strength (1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 1.</description>
-    </rule>
-    <rule id="e258-e9d1-9c61-af0f" name="Supporting Attacks (1+2)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule may make up to 1 supporting attack from the rider and 2 from the mount, or 3 in total if the model does not have a split profile.</description>
-    </rule>
-    <rule id="2ef1-02b9-7b03-9204" name="Supporting Attacks (3)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule may make up to 3 supporting attacks.</description>
-    </rule>
-    <rule id="7b58-67f7-4fd1-8a61" name="Supporting Attacks (1+1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule may make up to 1 supporting attack from the rider and 1 from the mount, or 2 in total if the model does not have a split profile.</description>
-    </rule>
-    <rule id="f139-6d06-3167-b314" name="Supporting Attacks (2)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule may make up to 2 supporting attacks.</description>
+    <rule id="c397-b441-9fd6-89bb" name="Unit Strength (*)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Unit Strength as indicared in the brackets.</description>
+      <alias>Unit Strength</alias>
     </rule>
     <rule name="Monstrous Cavalry" id="2b42-ec95-c1af-bc30" hidden="false">
       <description>Complete Ranks (3). Supporting Attacks (1+2). Unit Strength (3). Line of Sight (3). Fear. Cavalry.</description>
@@ -10222,12 +8567,6 @@ crew.
 
 War Machines have a Unit Strength equal to their
 current number of crew.</description>
-    </rule>
-    <rule id="ddb1-e80d-9bb6-bd15" name="Supporting Attacks (5)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule may make up to 5 supporting attacks.</description>
-    </rule>
-    <rule id="8f97-966e-ddb2-f7bb" name="Line of Sight (1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight of 1.</description>
     </rule>
     <rule name="Infantry" id="5669-ecc5-1f66-edd8" hidden="false">
       <description>Complete Ranks (5). Supporting Attacks (1). Unit Strength (1). Line of Sight (1)</description>
@@ -10353,12 +8692,6 @@ All models underneath the template are hit automatically. A unit suffering any 
 
 
 If a misfire is rolled, roll immediately on the Black Powder Misfire chart.</description>
-    </rule>
-    <rule id="224d-6096-4dc6-a3fb" name="Line of Sight (10)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight of 10.</description>
-    </rule>
-    <rule id="eb51-dc6d-1086-01d0" name="Line of Sight (6)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight of 6.</description>
     </rule>
     <rule name="Hold Your Ground" id="11f5-d3db-5513-f168" hidden="false">
       <description>A model with Hold Your Ground allows all friendly units within a distance equal to the number in the brackets to re-roll failed Panic and Break tests. This ability cannot be used if the model with Hold Your Ground is also fleeing.
@@ -10505,7 +8838,7 @@ If an arrow is rolled on the scatter dice, resolve the scatter as normal. If ho
 
 Other than the aforementioned inaccuracy of the scatter, an indirect shot from a stone thrower is treated exactly according to the rules given for normal shots given above.</description>
     </rule>
-    <rule id="adee-efa4-db8e-2fb1" name="Fight in Extra Ranks" publicationId="9e23-79cb-pubN66727" page="60" hidden="false">
+    <rule id="adee-efa4-db8e-2fb1" name="Fight in Extra Ranks (*)" publicationId="9e23-79cb-pubN66727" page="60" hidden="false">
       <description>If a unit has this rule then supporting attacks can be made by one more rank than normal for each number indicated in the bracket. This rule is cumulative with other sources of Fight in Extra Ranks.</description>
     </rule>
     <rule name="Daemonic Instability" id="c6ed-33cf-2be7-0cec" hidden="false" publicationId="1a01-044f-047b-618f" page="21">
@@ -10520,7 +8853,7 @@ Other than the aforementioned inaccuracy of the scatter, an indirect shot from 
     <rule id="4cc1-bc54-7778-c333" name="Loremaster" publicationId="9e23-79cb-pubN66727" page="63" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
     </rule>
-    <rule name="Inspiring Presence" id="1c71-6c8f-f47a-0a91" hidden="false">
+    <rule name="Inspiring Presence (*)" id="1c71-6c8f-f47a-0a91" hidden="false">
       <description>A model with Inspiring Presence allows all friendly units within a distance equal to the number in the brackets to use their Leadership instead of their own, unless specified (such as having to use their unmodified Leadership). This rule cannot be used if the model with Inspiring Presence is also fleeing.
 
 
@@ -10531,65 +8864,13 @@ If a unit taking a Leadership test has a modifier to its Leadership, this modif
 
 
 If a unit is Steadfast, it may use the Leadership of the model for Break tests if it is higher than their own Leadership after applying all negative modifiers from combat resolution. Otherwise, they will use their own Leadership.</description>
-    </rule>
-    <rule name="Iron-hard Hooves" id="d3e1-3d43-c737-8137" hidden="false" publicationId="315d-135b-135c-07ce" page="217">
-      <description>An Imperial Pegasus with this upgrade re-roils failed To Wound rolls.</description>
+      <alias>Inspiring Presence</alias>
     </rule>
     <rule name="Swift as the Wind" id="81f2-e732-f272-822e" hidden="false" publicationId="315d-135b-135c-07ce" page="217">
       <description>An Imperial Pegasus with the Swift as the Wind upgrade re-rolls any dice results of a 1 when determining its charge range.</description>
     </rule>
-    <rule name="Shredding talons" id="00eb-e7d2-3193-6a10" hidden="false">
-      <description>The Griffon gains the Armour Piercing (1) special rule.</description>
-    </rule>
     <rule name="Swooping Strike" id="032a-fddc-ad13-76d6" hidden="false">
       <description>The Griffon gains the Devastating Charge special rule.</description>
-    </rule>
-    <rule name="Inspiring Presence (6)" id="7687-32b8-13f1-97b4" hidden="false">
-      <description>A model with Inspiring Presence allows all friendly units within a distance equal to the number in the brackets to use their Leadership instead of their own, unless specified (such as having to use their unmodified Leadership). This rule cannot be used if the model with Inspiring Presence is also fleeing.
-
-
-This rule is cumulative with other sources of Inspiring Presence. If the model has a Line of Sight value of 4 or more, then the range of their Inspiring Presence rule is increased by 6.
-
-
-If a unit taking a Leadership test has a modifier to its Leadership, this modifier still applies if the unit uses the Inspiring Presence.
-
-
-If a unit is Steadfast, it may use the Leadership of the model for Break tests if it is higher than their own Leadership after applying all negative modifiers from combat resolution. Otherwise, they will use their own Leadership.</description>
-    </rule>
-    <rule id="e69f-18b7-b8ee-1f0c" name="Unit Strength (8)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 8.</description>
-    </rule>
-    <rule id="051c-2a46-ef94-4703" name="Hatred (Monstrous Creatures)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="9c98-f97f-344b-9e4b" name="Mighty Blow (2)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
-      <description>Models with this rule gain a Strength bonus to all their close combat attacks (including Impact Hits and Stomps) equal to the number in the brackets in the first round of each new close combat they are involved in. Note that any attack made with a weapon that gives Mighty Blow only applies to attacks made with the weapon itself. This rule is cumulative with other sources of Mighty Blow.</description>
-    </rule>
-    <rule name="Bloodrage" id="fc43-3fac-4ae1-1606" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
-      <description>The Manticore gains Hatred.</description>
-    </rule>
-    <rule name="Iron-hard Skin" id="1569-a18d-c1a5-c774" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
-      <description>The Manticore gains Natural Armour (5+).</description>
-    </rule>
-    <rule name="Venom Tail" id="9513-e549-4849-a0dd" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
-      <description>The Manticore gains an additional Attack that has Poisoned Attacks.</description>
-    </rule>
-    <rule name="Rending Fangs" id="38dc-ae6d-82d1-e44b" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
-      <description>The Manticore gains Armour Piercing (1).</description>
-    </rule>
-    <rule id="1d10-62be-aac7-35f6" name="Unit Strength (6)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 6.</description>
-    </rule>
-    <rule id="cd03-1b6a-2a80-dd1a" name="Unit Strength (5)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 5.</description>
-    </rule>
-    <rule id="a4e2-d94c-e906-a868" name="Multiple Wounds (2)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Each wound inflicted by an attack with Multiple Wounds (after saves) is multiplied into
-more than one wound (remember that a model cannot suffer more wounds than it has on its profile). The exact number of wounds caused will normally be shown in brackets as part of the rule. If a model is granted two sets of Multiple Wounds (like D3 and D6), use only the highest set before rolling.
-
-Where the number of Multiple Wounds is generated by a dice roll, roll a dice separately for each unsaved wound and use the total of all the dice rolled for the final number of wounds inflicted.
-
-Unless otherwise specified, Multiple Wounds only apply to close combat attacks.</description>
     </rule>
     <rule name="Weapon team" id="409d-a7ab-f540-c35c" hidden="false" publicationId="9e23-79cb-pubN66727" page="67">
       <description>If a model with this special rule is hit by a missile attack and is within 3&quot; of a friendly unit consisting of five or more rank and file models of the same troop type within 3&quot;, roll a D6. On a roll of 4+, the hit is transferred to a model in the friendly unit (if there is more than one eligible unit within 3&quot;, the controlling player can decide which). Otherwise, the hit is resolved against the Weapon Team as normal.</description>
@@ -10609,31 +8890,87 @@ Unless otherwise specified, Multiple Wounds only apply to close combat attacks.<
     <rule name="Storm Rage" id="9cd6-64c7-e7c5-4ef6" hidden="false" page="46" publicationId="1a01-044f-047b-618f">
       <description>Dragon Ogres have the Immunity (Lightning Attacks) special rule. In addition, if they are hit with a Lightning Attack, they immediately gain the Frenzy special rule.</description>
     </rule>
-    <rule id="d80a-79a1-ada7-5451" name="Hatred (Elves)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="8f93-30da-a9db-adc7" name="Immunity" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
+    <rule id="8f93-30da-a9db-adc7" name="Immunity (*)" publicationId="9e23-79cb-pubN66727" page="76" hidden="false">
       <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.
 
 Immunity can also include Panic, Fear and Terror. If the majority of the models in a unit have the Immunity (Panic, Fear or Terror) rule, the unit ignores the effects of Panic, Fear or Terror and any such tests it would otherwise had to take.</description>
+      <alias>Immunity</alias>
     </rule>
-    <rule id="062c-b646-a4c3-3b7c" name="Dodge (2+)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
+    <rule id="d909-ac08-40af-8f44" name="Dodge (*)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>Models with this rule gain a Ward Save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have Always Strikes First, nor can it be used if the model is subject to Always Strikes Last. Finally, Dodge cannot be used by mounted models, unless specified.</description>
+      <alias>Dodge</alias>
     </rule>
-    <rule id="b5ab-1a7b-4c54-5733" name="Unit Strength (26)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 26.</description>
+    <rule id="c833-7f06-a9e9-e2ea" name="Armour Piercing (*)" publicationId="9e23-79cb-pubN66727" page="58" hidden="false">
+      <description>Wounds caused in close combat by this model inflict a negative armour save modifier as indicated by the number in the brackets, in addition to those for S. If a model has a weapon with the Armour Piercing rule, only attacks made or shots fired with the weapon are Armour Piercing. This rule is cumulative with other sources of Armour Piercing.</description>
+      <alias>Armour Piercing</alias>
     </rule>
-    <rule id="211b-ee62-c9cb-e472" name="Unit Strength (14)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 14.</description>
+    <rule id="b38c-e0a7-d638-6465" name="Impact Hits (*)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
+
+Impact Hits are only made on the turn the model makes a successful charge into close combat, and only against the unit the model has charged. Impact Hits are resolved at the very beginning of the close combat, before challenges are issued and attacks of any other kind are made. They hit a unit in base contact and are randomised as Automatic Hits. If the model is in base contact with more than one unit, randomise the Impact Hits between them as evenly as possible. If the model with Impact Hits is not in base contact with the enemy, no Impact Hits are inflicted.
+
+Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
+
+Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
+      <alias>Impact Hits</alias>
     </rule>
-    <rule id="1bb1-d158-8d30-490e" name="Unit Strength (16)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 16.</description>
+    <rule id="5111-c7d7-b7cd-273b" name="Line of Sight (*)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
+      <description>Models with this rule have a Line of Sight value as indicated in the brackets</description>
+      <alias>Line of Sigh</alias>
     </rule>
-    <rule id="ff4c-6eb6-dca9-c32e" name="Unit Strength (24)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Unit Strength of 24.</description>
+    <rule id="1ad8-8843-ff83-9c2e" name="Hatred (*)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
+      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
     </rule>
-    <rule id="1642-08f0-d390-16ae" name="Line of Sight (8)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
-      <description>Models with this rule have a Line of Sight of 8.</description>
+    <rule id="99da-c060-2e1d-57b4" name="Multiple Wounds (*)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
+      <description>Each wound inflicted by an attack with Multiple Wounds (after saves) is multiplied into
+more than one wound (remember that a model cannot suffer more wounds than it has on its profile). The exact number of wounds caused will normally be shown in brackets as part of the rule. If a model is granted two sets of Multiple Wounds (like D3 and D6), use only the highest set before rolling.
+
+Where the number of Multiple Wounds is generated by a dice roll, roll a dice separately for each unsaved wound and use the total of all the dice rolled for the final number of wounds inflicted.
+
+Unless otherwise specified, Multiple Wounds only apply to close combat attacks.</description>
+      <alias>Multiple Wounds</alias>
+    </rule>
+    <rule id="ce12-9396-34d7-b68d" name="Mighty Blow (*)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
+      <description>Models with this rule gain a Strength bonus to all their close combat attacks (including Impact Hits and Stomps) equal to the number in the brackets in the first round of each new close combat they are involved in. Note that any attack made with a weapon that gives Mighty Blow only applies to attacks made with the weapon itself. This rule is cumulative with other sources of Mighty Blow.</description>
+      <alias>Mighty Blow</alias>
+    </rule>
+    <rule id="b09f-673f-e98d-fe59" name="Magic Resistance (*)" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
+      <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward Save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
+
+If a character with Magic Resistance joins a unit, all models in the unit benefit from the Magic Resistance as long as they are part of the unit. If a model or unit has two sets of Magic Resistance, the two combine to a maximum of Magic Resistance (3), unless specified.</description>
+      <alias>Magic Resistance</alias>
+    </rule>
+    <rule id="64d8-e607-daa9-bd39" name="Random Attacks (*)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
+      <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
+      <alias>Random Attacks</alias>
+    </rule>
+    <rule id="f37d-a124-ff82-7de3" name="Natural Armour (*)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
+      <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
+    </rule>
+    <rule id="60d2-15fd-780b-5b86" name="Parry (*)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
+      <description>Models with this rule gain a Ward Save in close combat as indicated in the brackets. This is cumulative with other sources of Parry. It cannot be used against attacks made against the model&apos;s flank or rear, nor can it be used against attacks that Hit automatically, attacks that are made at +3 Strength over the model&apos;s own Strength value, nor can it be used by mounted models, unless specified.</description>
+      <alias>Parry</alias>
+    </rule>
+    <rule id="e0a0-28e4-e185-a2b8" name="Regeneration (*)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
+      <description>A model with Regeneration gains a Ward Save (indicated by the number in the brackets). This is cumulative with other sources of Regeneration. Regeneration may not be used against Flaming Attacks, successful Killing Blows (including Heroic Killing Blow) or wounds caused due the unit being Unstable.</description>
+      <alias>Regeneration</alias>
+    </rule>
+    <rule id="3006-8f7c-f916-af14" name="Ward Save (*)" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
+      <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
+
+Note that does not stop single Ward Saves from being used, such as a model having a listed 2+ or 3+ Ward Save; the above limitation only applies to combining Ward Saves.
+
+Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
+
+Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
+      <alias>Ward Save</alias>
+    </rule>
+    <rule id="784a-037e-aca4-245a" name="Strider (*)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
+      <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
+      <alias>Strider</alias>
+    </rule>
+    <rule name="Iron-hard Hooves" id="d3e1-3d43-c737-8137" hidden="false" publicationId="315d-135b-135c-07ce" page="217">
+      <description>A Pegasus with this upgrade re-roils failed To Wound rolls.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>

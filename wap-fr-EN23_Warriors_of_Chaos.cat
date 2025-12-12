@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ce3b-bf93-496e-a65c" name="Warriors of Chaos WAP 1.6" revision="48" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="ce3b-bf93-496e-a65c" name="Warriors of Chaos WAP 1.6" revision="49" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <profileTypes>
     <profileType id="49dc-2fd8-b942-dbc2" name="Chaos Mutations and Powers">
@@ -122,8 +122,12 @@
       <infoLinks>
         <infoLink id="c266-2ab3-bbab-510b" name="Eye of the Gods" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
         <infoLink id="b0f8-a368-254f-0e47" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
-        <infoLink id="d894-5df2-d2cd-fd87" name="Magic Resistance (1)" hidden="false" targetId="7ed4-9d31-09c3-6bf9" type="rule"/>
         <infoLink id="5c57-51d9-4db2-0b76" name="Chaos Armour" hidden="false" targetId="b66b-400b-7d98-1c53" type="rule"/>
+        <infoLink name="Magic Resistance (*)" id="ca07-76b1-d4f2-0933" hidden="false" type="rule" targetId="b09f-673f-e98d-fe59">
+          <modifiers>
+            <modifier type="replace" value="1" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="db95-fde1-92b3-4226" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
@@ -142,11 +146,19 @@
           <infoLinks>
             <infoLink id="e882-6298-c7f4-363e" name="Fear" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
             <infoLink id="0ff9-0851-7a46-8a6c" name="Giver of Glory" hidden="false" targetId="29d8-56a5-ea8a-80e4" type="rule"/>
-            <infoLink id="82f5-2f4d-cb45-2eb4" name="Ward Save (5+)" hidden="false" targetId="4b60-6477-75a8-f6dd" type="rule"/>
             <infoLink id="4a52-acf4-0641-b282" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
             <infoLink id="1d6a-afd5-9ed5-798c" name="Mark of Khorne" hidden="false" targetId="Mark of Khorne" type="rule"/>
             <infoLink id="a0b1-c24f-89b7-0d24" name="Chaos Warshrine" hidden="false" targetId="cd60-020c-c3f2-a5fa" type="profile"/>
-            <infoLink id="ef9a-8448-91a1-f0fb" name="Line of Sight (5)" hidden="false" targetId="564d-ded4-217d-827c" type="rule"/>
+            <infoLink name="Line of Sight (*)" id="a10a-2c41-1b85-1ae5" hidden="false" type="rule" targetId="5111-c7d7-b7cd-273b">
+              <modifiers>
+                <modifier type="replace" value="5" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Ward Save (*)" id="c137-6faa-6f95-a249" hidden="false" targetId="3006-8f7c-f916-af14" type="rule">
+              <modifiers>
+                <modifier type="replace" value="5+" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <selectionEntries>
             <selectionEntry id="482b-4877-8849-a44c" name="Chaos Shrine Bearers" hidden="false" collective="false" import="true" type="upgrade">
@@ -156,7 +168,11 @@
               </constraints>
               <infoLinks>
                 <infoLink id="b569-8bff-a721-7357" name="Chaos Shrine Bearers" hidden="false" targetId="a631-99f6-e75a-5a8d" type="profile"/>
-                <infoLink id="9c0e-e4fe-dc3b-dab6" name="Random Attacks (D6+2)" hidden="false" targetId="33f1-4ddd-d26b-281a" type="rule"/>
+                <infoLink id="9c0e-e4fe-dc3b-dab6" name="Random Attacks (*)" hidden="false" targetId="64d8-e607-daa9-bd39" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="D6+2" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="fc8a-9c3c-a058-59ff" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
@@ -668,7 +684,11 @@
           </rules>
           <infoLinks>
             <infoLink id="0f27-70e6-0f8f-1e63" name="Frenzy" hidden="false" targetId="9ff3-dda6-e142-5a77" type="rule"/>
-            <infoLink id="958b-fe85-5963-8cec" name="Random Attacks (D3)" hidden="false" targetId="18a0-eeb5-f165-5fc9" type="rule"/>
+            <infoLink id="958b-fe85-5963-8cec" name="Random Attacks (*)" hidden="false" targetId="64d8-e607-daa9-bd39" type="rule">
+              <modifiers>
+                <modifier type="replace" value="D3" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
             <infoLink id="580f-db3e-6391-8446" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
           </infoLinks>
           <selectionEntryGroups>
@@ -2284,8 +2304,12 @@
           </profiles>
           <infoLinks>
             <infoLink id="5aaa-641b-b4f8-09ef" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
-            <infoLink id="d017-27fb-1c0f-3e85" name="Regeneration (5+)" hidden="false" targetId="5fed-df2e-b6d6-cc93" type="rule"/>
             <infoLink id="3383-447c-6b6b-5e9c" name="Frenzy" hidden="false" targetId="9ff3-dda6-e142-5a77" type="rule"/>
+            <infoLink name="Regeneration (*)" id="5e09-cab5-db8a-5c04" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+              <modifiers>
+                <modifier type="replace" value="5+" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Mark of Chaos" id="3f0d-4217-94a9-f966" hidden="false">
@@ -3193,9 +3217,17 @@ Each time the unit casts a spell (or is targeted by a special rule that affects 
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="2695-ba46-6a00-0978" name="Impact Hits (D6)" hidden="false" targetId="e9e6-66cc-623f-8e94" type="rule"/>
-        <infoLink id="43f5-8781-0b66-05de" name="Regeneration (5+)" hidden="false" targetId="5fed-df2e-b6d6-cc93" type="rule"/>
         <infoLink id="6727-27a3-89f0-bbd0" name="Frenzy" hidden="false" targetId="9ff3-dda6-e142-5a77" type="rule"/>
+        <infoLink name="Impact Hits (*)" id="8945-0e83-b157-5589" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
+          <modifiers>
+            <modifier type="replace" value="D6" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Regeneration (*)" id="cdcd-7b91-e861-a9fe" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+          <modifiers>
+            <modifier type="replace" value="5+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="159c-9c6d-45cf-d66b" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -3294,7 +3326,11 @@ Unlike other random movement, an Unbound Slaughterbrute can move into base conta
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="13bc-c59b-7faf-fc39" name="Natural Armour (4+)" hidden="false" targetId="6b43-9dda-f589-0509" type="rule"/>
+        <infoLink name="Natural Armour (*)" id="82d2-74e2-42cb-80d0" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+          <modifiers>
+            <modifier type="replace" value="4+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="c51b-1e39-32bf-7059" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -3387,9 +3423,21 @@ Unlike other random movement, an Unbound Slaughterbrute can move into base conta
         <infoLink id="f8e1-3ca3-eb73-7351" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
         <infoLink id="2ef5-58b4-dcb7-10f4" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
         <infoLink id="a847-b398-1bf2-ae83" name="Stomp" hidden="false" targetId="668c-19e8-b764-8549" type="rule"/>
-        <infoLink id="5ef8-b2c9-70ad-ed43" name="Natural Armour (4+)" hidden="false" targetId="6b43-9dda-f589-0509" type="rule"/>
-        <infoLink id="f9cc-ec56-f4c1-7873" name="Random Attacks (D6+2)" hidden="false" targetId="33f1-4ddd-d26b-281a" type="rule"/>
-        <infoLink id="f953-0df3-159e-8a80" name="Regeneration (5+)" hidden="false" targetId="5fed-df2e-b6d6-cc93" type="rule"/>
+        <infoLink id="f9cc-ec56-f4c1-7873" name="Random Attacks (*)" hidden="false" targetId="64d8-e607-daa9-bd39" type="rule">
+          <modifiers>
+            <modifier type="replace" value="D6+2" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="379b-56de-e94a-6866" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+          <modifiers>
+            <modifier type="replace" value="4+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Regeneration (*)" id="5fc0-d571-e9ce-0e8b" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+          <modifiers>
+            <modifier type="replace" value="5+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8626-1cc8-8727-b0b8" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -3464,8 +3512,12 @@ Unlike other random movement, an Unbound Slaughterbrute can move into base conta
       </rules>
       <infoLinks>
         <infoLink id="cf52-b3ec-0b9d-c6c6" name="Daemonic" hidden="false" targetId="a6d9-b8e9-21b2-96ff" type="rule"/>
-        <infoLink id="5b58-3b48-a3fe-5408" name="Natural Armour (4+)" hidden="false" targetId="6b43-9dda-f589-0509" type="rule"/>
         <infoLink id="b738-a5e2-2241-cb29" name="Mixed Unit" hidden="false" targetId="e00a-3a09-9b67-e994" type="rule"/>
+        <infoLink name="Natural Armour (*)" id="8d02-8b03-cd65-88f0" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+          <modifiers>
+            <modifier type="replace" value="4+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="6a90-df5c-8388-b09e" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -3603,10 +3655,22 @@ Unlike other random movement, an Unbound Slaughterbrute can move into base conta
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="646f-adf6-b41c-2145" name="Natural Armour (5+)" hidden="false" targetId="306d-711a-1300-587f" type="rule"/>
-        <infoLink id="fb5f-5900-52e8-430d" name="Line of Sight (10)" hidden="false" targetId="224d-6096-4dc6-a3fb" type="rule"/>
         <infoLink id="3a40-ba2a-0af8-a963" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
-        <infoLink id="4645-9892-3485-5981" name="Impact Hits (D6+1)" hidden="false" targetId="a043-3e3c-9f8a-3661" type="rule"/>
+        <infoLink name="Impact Hits (*)" id="dbd7-3795-53cf-7bdd" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
+          <modifiers>
+            <modifier type="replace" value="D6+1" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Line of Sight (*)" id="0f07-7c01-2e0d-6efe" hidden="false" type="rule" targetId="5111-c7d7-b7cd-273b">
+          <modifiers>
+            <modifier type="replace" value="10" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="ab09-04b6-09dc-07f6" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+          <modifiers>
+            <modifier type="replace" value="5+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="e59a-79a2-8890-7f15" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -3741,7 +3805,11 @@ If you do not have a spare Daemon Prince model, or if it cannot be placed on the
             <infoLink id="5b54-46c5-a902-62d0" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
             <infoLink name="Chaos Armour" id="4237-432f-f9d1-396c" hidden="false" type="rule" targetId="b66b-400b-7d98-1c53"/>
             <infoLink name="Eye of the Gods" id="9d1c-3219-37b7-375f" hidden="false" type="rule" targetId="b167-39dc-6abe-179d"/>
-            <infoLink name="Regeneration (5+)" id="a118-f9b0-79e1-61bd" hidden="false" type="rule" targetId="5fed-df2e-b6d6-cc93"/>
+            <infoLink name="Regeneration (*)" id="2547-cd72-82db-f799" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+              <modifiers>
+                <modifier type="replace" value="5+" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup id="d6cc-e159-bbfd-65e3" name="Primary Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="67de-ccd0-568c-9b7d" sortIndex="1">
@@ -3959,11 +4027,23 @@ If you do not have a spare Daemon Prince model, or if it cannot be placed on the
                   </rules>
                   <infoLinks>
                     <infoLink id="33af-5394-6620-4861" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                    <infoLink id="df92-1954-ca66-62d3" name="Impact Hits (D6)" hidden="false" targetId="e9e6-66cc-623f-8e94" type="rule"/>
                     <infoLink id="3f0d-6fec-677f-c7c5" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
-                    <infoLink id="32c4-4026-ff80-6731" name="Fly (7)" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
-                    <infoLink id="24cf-5172-71a3-fb66" name="Natural Armour (2+)" hidden="false" targetId="b15c-9f50-7081-ba29" type="rule"/>
                     <infoLink id="7e76-2e82-52f3-0c67" name="Stomp" hidden="false" targetId="668c-19e8-b764-8549" type="rule"/>
+                    <infoLink name="Fly (*)" id="0fcc-2c7e-ce98-9abf" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+                      <modifiers>
+                        <modifier type="replace" value="7" field="name" arg="*"/>
+                      </modifiers>
+                    </infoLink>
+                    <infoLink name="Impact Hits (*)" id="a7df-5350-4281-3fbb" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
+                      <modifiers>
+                        <modifier type="replace" value="D6" field="name" arg="*"/>
+                      </modifiers>
+                    </infoLink>
+                    <infoLink name="Natural Armour (*)" id="e214-bd72-a383-e38d" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+                      <modifiers>
+                        <modifier type="replace" value="2+" field="name" arg="*"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
@@ -4049,8 +4129,12 @@ If you do not have a spare Daemon Prince model, or if it cannot be placed on the
                             <infoLink id="5731-4f57-7e87-18ca" name="Stomp" hidden="false" targetId="668c-19e8-b764-8549" type="rule"/>
                             <infoLink id="892f-c366-081b-9412" name="Tongue Lash" hidden="false" targetId="f602-9877-452b-4e59" type="rule"/>
                             <infoLink id="6109-dc1b-99fc-0efa" name="Bubebolos" hidden="false" targetId="992d-5b24-ef6e-51db" type="profile"/>
-                            <infoLink id="f8ba-45e9-8ec4-d00a" name="Natural Armour (3+)" hidden="false" targetId="32e8-b4ad-3e59-a3c7" type="rule"/>
                             <infoLink id="4d9f-0d96-a272-ff98" name="Colossal Beast" hidden="false" targetId="540f-85a9-576d-354a" type="rule"/>
+                            <infoLink name="Natural Armour (*)" id="2d34-42c7-64d4-6859" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+                              <modifiers>
+                                <modifier type="replace" value="3+" field="name" arg="*"/>
+                              </modifiers>
+                            </infoLink>
                           </infoLinks>
                           <costs>
                             <cost name="pts" typeId="points" value="375"/>
@@ -4130,8 +4214,12 @@ If you do not have a spare Daemon Prince model, or if it cannot be placed on the
                             <infoLink id="61c7-610c-2379-29e3" name="Stomp" hidden="false" targetId="668c-19e8-b764-8549" type="rule"/>
                             <infoLink id="d581-2b8a-ab4e-c8a6" name="Tongue Lash" hidden="false" targetId="f602-9877-452b-4e59" type="rule"/>
                             <infoLink id="252f-92ce-a108-0b7b" name="Bubebolos" hidden="false" targetId="992d-5b24-ef6e-51db" type="profile"/>
-                            <infoLink id="8c0c-796e-521b-9292" name="Natural Armour (3+)" hidden="false" targetId="32e8-b4ad-3e59-a3c7" type="rule"/>
                             <infoLink id="ec5c-eeb8-9713-9c5b" name="Colossal Beast" hidden="false" targetId="540f-85a9-576d-354a" type="rule"/>
+                            <infoLink name="Natural Armour (*)" id="fc77-b8d6-a024-2b02" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+                              <modifiers>
+                                <modifier type="replace" value="3+" field="name" arg="*"/>
+                              </modifiers>
+                            </infoLink>
                           </infoLinks>
                           <costs>
                             <cost name="pts" typeId="points" value="375"/>
@@ -4177,8 +4265,16 @@ If you do not have a spare Daemon Prince model, or if it cannot be placed on the
                 <infoLink id="2b6e-ea23-9fc2-effe" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
                 <infoLink id="d90e-2ada-a00b-6b72" name="Eye of the Gods" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
                 <infoLink name="Poisoned Attacks" id="15dc-a41c-20be-47ab" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule"/>
-                <infoLink name="Impact Hits (D3)" id="835e-5668-b3dd-5c66" hidden="false" targetId="f30d-0b61-2836-689e" type="rule"/>
-                <infoLink name="Regeneration (4+)" id="e466-1c76-b805-d15c" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
+                <infoLink name="Impact Hits (*)" id="7212-ee0a-1444-e93b" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
+                  <modifiers>
+                    <modifier type="replace" value="D3" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Regeneration (*)" id="0f04-a2a4-c51e-8b98" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="4+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="93dd-9f94-bdf7-03b4" name="Otto Glott" hidden="false" collective="false" import="true" type="upgrade">
@@ -4336,12 +4432,20 @@ If you do not have a spare Daemon Prince model, or if it cannot be placed on the
               </rules>
               <infoLinks>
                 <infoLink id="124f-7afd-1835-aaf5" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
-                <infoLink id="7e0d-f387-f5a5-56b4" name="Ward Save (5+)" hidden="false" targetId="4b60-6477-75a8-f6dd" type="rule"/>
                 <infoLink id="b630-4a00-28ea-609b" name="Fear" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
-                <infoLink id="bbf7-2647-b9ac-5f7a" name="Fly (10)" hidden="false" targetId="953a-d5a4-ee81-4093" type="rule"/>
                 <infoLink id="86b6-00f2-ad86-06cb" name="Eye of the Gods" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
                 <infoLink id="71a3-1144-60fc-2b18" name="Mark of Khorne" hidden="false" targetId="Mark of Khorne" type="rule"/>
                 <infoLink id="7e86-46c8-e9d5-8938" name="Chaos Armour" hidden="false" targetId="b66b-400b-7d98-1c53" type="rule"/>
+                <infoLink name="Fly (*)" id="df34-8bb9-5311-54a0" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="10" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Ward Save (*)" id="9be8-b310-c63c-ad78" hidden="false" targetId="3006-8f7c-f916-af14" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="5+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="4597-2521-a25a-9aea" name="The Spear Slaupnir" hidden="false" collective="false" import="true" type="upgrade">
@@ -4528,11 +4632,15 @@ If you do not have a spare Daemon Prince model, or if it cannot be placed on the
                 </rule>
               </rules>
               <infoLinks>
-                <infoLink id="e181-ed2f-d976-a133" name="Regeneration (4+)" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
                 <infoLink id="677b-00aa-b1d5-881c" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
                 <infoLink id="b94f-6e4a-965b-f0f6" name="Mark of Nurgle" hidden="false" targetId="Mark of Nurgle" type="rule"/>
                 <infoLink id="4dce-8a49-1c21-ee12" name="Eye of the Gods" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
                 <infoLink id="dc84-986d-1c26-791d" name="Chaos Armour" hidden="false" targetId="b66b-400b-7d98-1c53" type="rule"/>
+                <infoLink name="Regeneration (*)" id="52cc-ff4f-e0b0-9032" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="4+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="b062-bf83-425f-ddc3" name="Tripletongue" hidden="false" collective="false" import="true" type="upgrade">
@@ -4881,9 +4989,17 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                     </rule>
                   </rules>
                   <infoLinks>
-                    <infoLink id="98b9-9459-f328-6bb8" name="Random Attacks (D6+1)" hidden="false" targetId="183a-6a6f-951c-1663" type="rule"/>
-                    <infoLink id="a37a-89ba-5e3c-0db7" name="Random Movement (3D6)" hidden="false" targetId="0877-cd17-c381-a045" type="rule"/>
+                    <infoLink id="98b9-9459-f328-6bb8" name="Random Attacks (*)" hidden="false" targetId="64d8-e607-daa9-bd39" type="rule">
+                      <modifiers>
+                        <modifier type="replace" value="D6+1" field="name" arg="*"/>
+                      </modifiers>
+                    </infoLink>
                     <infoLink id="a50d-1ebc-81ed-da89" name="Unbreakable" hidden="false" targetId="1c9d-2d99-6222-2853" type="rule"/>
+                    <infoLink name="Random Movement (*)" id="2871-8f7f-d56e-2861" hidden="false" targetId="4d40-9a96-4af8-e943" type="rule">
+                      <modifiers>
+                        <modifier type="replace" value="3D6" field="name" arg="*"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
@@ -4969,11 +5085,19 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                     </profile>
                   </profiles>
                   <infoLinks>
-                    <infoLink id="4aa2-9c3d-ae40-7b0a" name="Natural Armour (6+)" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
                     <infoLink id="193c-d0bf-29e1-d365" name="Daemon of Khorne" hidden="false" targetId="a356-05c9-d963-c1bb" type="rule"/>
                     <infoLink id="ccc7-3a20-4a5c-a764" name="Daemonic" hidden="false" targetId="a6d9-b8e9-21b2-96ff" type="rule"/>
                     <infoLink name="Frenzy" id="7f8f-e5e4-4a47-f55e" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
-                    <infoLink name="Magic Resistance (2)" id="70a8-6d5a-49ee-3f07" hidden="false" type="rule" targetId="0e09-3526-25d5-2646"/>
+                    <infoLink name="Magic Resistance (*)" id="3387-6e8d-0676-2982" hidden="false" targetId="b09f-673f-e98d-fe59" type="rule">
+                      <modifiers>
+                        <modifier type="replace" value="2" field="name" arg="*"/>
+                      </modifiers>
+                    </infoLink>
+                    <infoLink name="Natural Armour (*)" id="dcbf-00b1-c442-dd69" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+                      <modifiers>
+                        <modifier type="replace" value="6+" field="name" arg="*"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
@@ -5024,8 +5148,12 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                 <infoLink id="d1bb-b390-7756-cefe" name="Chaos Armour" hidden="false" targetId="b66b-400b-7d98-1c53" type="rule"/>
                 <infoLink id="93ae-a0fc-9c88-e709" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
                 <infoLink id="64ee-dfe0-c91e-b5c9" name="Mark of Nurgle" hidden="false" targetId="Mark of Nurgle" type="rule"/>
-                <infoLink id="0d6d-3be7-7af4-1c50" name="Ward Save (6+)" hidden="false" targetId="5c26-a043-8535-5f4f" type="rule"/>
                 <infoLink id="f5e7-eb2c-b283-3c63" name="Eye of the Gods" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
+                <infoLink name="Ward Save (*)" id="834b-4e55-a5eb-c4e1" hidden="false" targetId="3006-8f7c-f916-af14" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="6+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="12f3-ab73-4e20-6238" name="The Rotaxes" hidden="false" collective="false" import="true" type="upgrade">
@@ -5120,11 +5248,23 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="406a-a05b-c068-4780" name="Immunity (Lightning Attacks)" hidden="false" targetId="3c13-1f49-b25b-95f8" type="rule"/>
-                <infoLink id="e13c-44f8-dca8-0092" name="Natural Armour (4+)" hidden="false" targetId="6b43-9dda-f589-0509" type="rule"/>
-                <infoLink id="1db7-16e2-d28b-e729" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
-                <infoLink id="1fa5-f149-37a2-a5f4" name="Impact Hits (D6)" hidden="false" targetId="e9e6-66cc-623f-8e94" type="rule"/>
                 <infoLink name="Storm Call" id="ebeb-c776-3f5e-ac9b" hidden="false" type="profile" targetId="db98-698f-5fae-ba03"/>
+                <infoLink name="Immunity (*)" id="b427-6a3f-bb9a-87a5" hidden="false" targetId="8f93-30da-a9db-adc7" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="Lightning Attacks" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Immunity (Psychology)" id="36fe-295f-0b57-7423" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
+                <infoLink name="Impact Hits (*)" id="ece5-6736-677c-3cb2" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
+                  <modifiers>
+                    <modifier type="replace" value="D6" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Natural Armour (*)" id="38e9-1da9-25cb-a620" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="4+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="0214-55bd-5f2d-f049" name="Armour of the Storm" hidden="false" collective="false" import="true" type="upgrade">
@@ -5372,9 +5512,17 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                   <infoLinks>
                     <infoLink id="b94d-61a0-e16b-53a2" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
                     <infoLink id="701b-e12c-a687-6551" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
-                    <infoLink id="1573-7c4b-090e-6af5" name="Fly (7)" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
-                    <infoLink id="88ba-9fbe-ccbb-45c1" name="Natural Armour (3+)" hidden="false" targetId="32e8-b4ad-3e59-a3c7" type="rule"/>
                     <infoLink id="1236-4671-5fff-94a6" name="Stomp" hidden="false" targetId="668c-19e8-b764-8549" type="rule"/>
+                    <infoLink name="Fly (*)" id="3ad5-146a-6aff-d910" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+                      <modifiers>
+                        <modifier type="replace" value="7" field="name" arg="*"/>
+                      </modifiers>
+                    </infoLink>
+                    <infoLink name="Natural Armour (*)" id="a9bf-5180-a4ae-9dc5" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+                      <modifiers>
+                        <modifier type="replace" value="3+" field="name" arg="*"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
@@ -5442,8 +5590,12 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
               <infoLinks>
                 <infoLink id="ce85-cf24-0e7c-2907" name="Eye of the Gods" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
                 <infoLink id="dd0a-309f-3193-3286" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
-                <infoLink id="4884-6580-fbcb-d191" name="Hatred (Undead)" hidden="false" targetId="725b-14b3-0f42-bfc2" type="rule"/>
                 <infoLink id="5b09-c322-6c2a-106e" name="Chaos Armour" hidden="false" targetId="b66b-400b-7d98-1c53" type="rule"/>
+                <infoLink name="Hatred (*)" id="a39e-7fef-2346-497d" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="Undead" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="9689-27b7-4f98-70b5" name="The Hammer of Harry" hidden="false" collective="false" import="true" type="upgrade">
@@ -5639,7 +5791,11 @@ failed charge rolls.</characteristic>
               </rules>
               <infoLinks>
                 <infoLink id="e324-05e7-3a2c-1634" name="Eye of the Gods" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
-                <infoLink id="2c86-1398-ed43-0d8e" name="Ward Save (5+)" hidden="false" targetId="4b60-6477-75a8-f6dd" type="rule"/>
+                <infoLink name="Ward Save (*)" id="ffaf-4436-3313-30c3" hidden="false" targetId="3006-8f7c-f916-af14" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="5+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="1145-9747-7aa9-a041" name="The Leerstave of Loth&apos;shar" hidden="false" collective="false" import="true" type="upgrade">
@@ -5856,10 +6012,22 @@ failed charge rolls.</characteristic>
                 </rule>
               </rules>
               <infoLinks>
-                <infoLink id="2352-e6bf-8423-77ee" name="Fly (7)" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
                 <infoLink id="bef6-818b-4917-0666" name="Dark Fire of Chaos" hidden="false" targetId="af4f-0132-ba66-4e50" type="rule"/>
-                <infoLink id="c7e6-8991-c651-c25a" name="Ward Save (6+)" hidden="false" targetId="5c26-a043-8535-5f4f" type="rule"/>
-                <infoLink id="7419-7a67-4fc0-4e06" name="Natural Armour (3+)" hidden="false" targetId="32e8-b4ad-3e59-a3c7" type="rule"/>
+                <infoLink name="Fly (*)" id="80e7-2338-dd79-65ac" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="7" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Natural Armour (*)" id="7e97-c1c4-e910-6873" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="3+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Ward Save (*)" id="6558-91ff-0c25-c955" hidden="false" targetId="3006-8f7c-f916-af14" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="6+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink id="4d61-897d-6963-d413" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry"/>
@@ -5961,9 +6129,17 @@ failed charge rolls.</characteristic>
                   </profiles>
                   <infoLinks>
                     <infoLink id="89af-b6bf-860a-9e2c" name="Fumes of Contagion" hidden="false" targetId="f003-1c23-84ad-d399" type="rule"/>
-                    <infoLink id="8edb-1ae7-bfc1-e91d" name="Fly (7)" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
-                    <infoLink id="1644-434a-5510-e45f" name="Natural Armour (3+)" hidden="false" targetId="32e8-b4ad-3e59-a3c7" type="rule"/>
                     <infoLink id="0fff-4a67-a895-029c" name="Dark Fire of Chaos" hidden="false" targetId="af4f-0132-ba66-4e50" type="rule"/>
+                    <infoLink name="Fly (*)" id="d9b2-34a3-8b92-e66d" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+                      <modifiers>
+                        <modifier type="replace" value="7" field="name" arg="*"/>
+                      </modifiers>
+                    </infoLink>
+                    <infoLink name="Natural Armour (*)" id="ac2e-bf67-5aa1-3879" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+                      <modifiers>
+                        <modifier type="replace" value="3+" field="name" arg="*"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
@@ -6459,9 +6635,13 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                   </rules>
                   <infoLinks>
                     <infoLink id="8d6a-fc95-1020-f285" name="Daemon of Khorne" hidden="false" targetId="a356-05c9-d963-c1bb" type="rule"/>
-                    <infoLink id="4d09-45d8-46a1-e0ed" name="Impact Hits (1)" hidden="false" targetId="bb3b-3ca8-fcbc-a78b" type="rule"/>
                     <infoLink id="9cef-07cb-a5b1-78de" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
                     <infoLink id="8040-a931-0aef-cd9b" name="Daemonic" hidden="false" targetId="a6d9-b8e9-21b2-96ff" type="rule"/>
+                    <infoLink name="Impact Hits (*)" id="f6ea-3629-4654-a7b4" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
+                      <modifiers>
+                        <modifier type="replace" value="1" field="name" arg="*"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
@@ -6504,11 +6684,19 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                 </entryLink>
               </entryLinks>
               <infoLinks>
-                <infoLink name="Impact Hits (D3)" id="1756-e241-2e38-86ae" hidden="false" type="rule" targetId="f30d-0b61-2836-689e"/>
-                <infoLink name="Natural Armour (5+)" id="45cf-aa10-a2af-6d44" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
                 <infoLink name="Chaos Armour" id="0ee2-34f2-17a8-b9c0" hidden="false" type="rule" targetId="b66b-400b-7d98-1c53"/>
                 <infoLink name="Will of Chaos" id="300e-efc1-cfbd-88f0" hidden="false" type="rule" targetId="d658-f5e9-8cbf-0cbb"/>
                 <infoLink name="Eye of the Gods" id="6e2b-d77d-b5c6-7e62" hidden="false" type="rule" targetId="b167-39dc-6abe-179d"/>
+                <infoLink name="Impact Hits (*)" id="6248-f8e8-31ab-1acf" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
+                  <modifiers>
+                    <modifier type="replace" value="D3" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Natural Armour (*)" id="a33c-7f6e-50c7-38fe" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="5+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Gorbolga the Accursed" hidden="false" id="b0a3-bbba-b228-3e2e">
@@ -6708,7 +6896,11 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                 <infoLink name="Chaos Armour" id="041d-5bad-79a4-b4a3" hidden="false" type="rule" targetId="b66b-400b-7d98-1c53"/>
                 <infoLink name="Immunity (Psychology)" id="75d2-937b-b0dc-cff8" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
                 <infoLink name="Mark of Khorne" id="f04d-91c0-c37b-c3b6" hidden="false" type="rule" targetId="Mark of Khorne"/>
-                <infoLink name="Magic Resistance (1)" id="f48c-ac3b-b045-db88" hidden="false" type="rule" targetId="7ed4-9d31-09c3-6bf9"/>
+                <infoLink name="Magic Resistance (*)" id="01e3-4d1d-53a2-a2fb" hidden="false" type="rule" targetId="b09f-673f-e98d-fe59">
+                  <modifiers>
+                    <modifier type="replace" value="1" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <rules>
                 <rule name="Bloodborn" id="d103-28a2-e50d-0cd0" hidden="false">
@@ -7027,13 +7219,21 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="a896-6cc6-91dc-17ba" name="Random Attacks (D6+2)" hidden="false" targetId="33f1-4ddd-d26b-281a" type="rule"/>
+                <infoLink id="a896-6cc6-91dc-17ba" name="Random Attacks (*)" hidden="false" targetId="64d8-e607-daa9-bd39" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="D6+2" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
                 <infoLink id="6330-0608-a9d6-0fee" name="Mark of Khorne" hidden="false" targetId="Mark of Khorne" type="rule"/>
                 <infoLink id="2d08-ebde-5908-9da7" name="Fear" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
                 <infoLink id="3039-f6aa-ff07-136e" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
                 <infoLink id="c909-7f96-d465-2c3c" name="Unbreakable" hidden="false" targetId="1c9d-2d99-6222-2853" type="rule"/>
                 <infoLink id="ca75-6b1d-c123-f366" name="Hatred" hidden="false" targetId="f6d7-9fbc-abc1-5cfc" type="rule"/>
-                <infoLink id="5dca-dd13-9951-fa7a" name="Natural Armour (5+)" hidden="false" targetId="306d-711a-1300-587f" type="rule"/>
+                <infoLink name="Natural Armour (*)" id="d31b-672c-e000-f1a7" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="5+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="6e34-4e17-1b2b-5e0b" name="Brass Collar of Khorne" hidden="false" collective="false" import="true" type="upgrade">
@@ -7090,7 +7290,11 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               </rules>
               <infoLinks>
                 <infoLink id="8187-c3cc-e7e5-95f5" name="Eye of the Gods" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
-                <infoLink id="6fde-2acb-b3ff-de3e" name="Natural Armour (6+)" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
+                <infoLink name="Natural Armour (*)" id="67e7-fc3a-3950-1a85" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+                  <modifiers>
+                    <modifier type="replace" value="6+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="2e34-7cff-c8e0-3c5e" name="The Wintertooth Crown" hidden="false" collective="false" import="true" type="upgrade">
@@ -7248,9 +7452,17 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                   <infoLinks>
                     <infoLink id="a6c0-bde8-93e0-a89c" name="Rot Beast of Nurgle" hidden="false" targetId="da4b-e766-2b33-9396" type="profile"/>
                     <infoLink id="dcf7-5ccd-8947-1272" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                    <infoLink id="0c78-242c-1f7c-d130" name="Regeneration (5+)" hidden="false" targetId="5fed-df2e-b6d6-cc93" type="rule"/>
-                    <infoLink id="96d9-ea2b-5a6f-538a" name="Impact Hits (1)" hidden="false" targetId="bb3b-3ca8-fcbc-a78b" type="rule"/>
                     <infoLink id="9a85-aaa0-cb33-f313" name="Fear" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
+                    <infoLink name="Impact Hits (*)" id="c9a5-4488-06e7-529d" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
+                      <modifiers>
+                        <modifier type="replace" value="1" field="name" arg="*"/>
+                      </modifiers>
+                    </infoLink>
+                    <infoLink name="Regeneration (*)" id="a442-21c1-dd10-ab8e" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+                      <modifiers>
+                        <modifier type="replace" value="5+" field="name" arg="*"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
@@ -7309,7 +7521,11 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                 <infoLink id="2cef-0c69-5e96-5535" name="Eye of the Gods" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
                 <infoLink id="0cbc-33b1-4276-a72b" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
                 <infoLink id="4463-5287-110d-61b7" name="Poisoned Attacks" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule"/>
-                <infoLink id="3290-5469-f3dd-9d45" name="Regeneration (4+)" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
+                <infoLink name="Regeneration (*)" id="6e39-1f74-3345-8a40" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="4+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="60b3-6482-7938-034a" name="Pestilent Potions" hidden="false" collective="false" import="true" type="upgrade">
@@ -7476,9 +7692,13 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                 <infoLink name="Immunity (Psychology)" id="8007-ed6d-20b2-726b" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
                 <infoLink name="Fear" id="a5a1-b9e4-d93c-1b4f" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
                 <infoLink name="Hatred" id="2d25-abe8-ef6a-7f6e" hidden="false" targetId="f6d7-9fbc-abc1-5cfc" type="rule"/>
-                <infoLink name="Regeneration (4+)" id="b9f5-f9b1-3e85-45f5" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
                 <infoLink name="Eye of the Gods" id="d027-c1f9-8745-f805" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
                 <infoLink name="Chaos Armour" id="0d63-dc76-9967-97a1" hidden="false" targetId="b66b-400b-7d98-1c53" type="rule"/>
+                <infoLink name="Regeneration (*)" id="d184-d257-e179-e9ef" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="4+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Gatherer of Souls" hidden="false" id="e2f8-5698-55cd-e66f" collective="false">
@@ -7872,7 +8092,11 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d709-1b79-b984-bd29" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <infoLinks>
-            <infoLink name="Fly (8)" id="c57b-0a5a-a2ea-9a91" hidden="false" targetId="0a9a-bfcb-1a9d-5609" type="rule"/>
+            <infoLink name="Fly (*)" id="d3c6-a075-82b0-2ff8" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+              <modifiers>
+                <modifier type="replace" value="8" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="25"/>
@@ -8571,9 +8795,17 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <infoLink name="Chaos Warshrine" id="fbaf-c221-a36d-7de2" hidden="false" targetId="cd60-020c-c3f2-a5fa" type="profile"/>
         <infoLink name="Fear" id="890c-1162-c065-5b0f" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
         <infoLink name="Giver of Glory" id="c1bc-c040-e8f4-465c" hidden="false" targetId="29d8-56a5-ea8a-80e4" type="rule"/>
-        <infoLink name="Ward Save (5+)" id="cb44-be36-6fe4-d57b" hidden="false" targetId="4b60-6477-75a8-f6dd" type="rule"/>
         <infoLink name="Will of Chaos" id="a8aa-0a84-ced9-8258" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
-        <infoLink name="Line of Sight (5)" id="c2ab-500c-5839-59fd" hidden="false" targetId="564d-ded4-217d-827c" type="rule"/>
+        <infoLink name="Line of Sight (*)" id="ab1d-0567-489a-e721" hidden="false" type="rule" targetId="5111-c7d7-b7cd-273b">
+          <modifiers>
+            <modifier type="replace" value="5" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Ward Save (*)" id="44c6-2892-5e81-270d" hidden="false" targetId="3006-8f7c-f916-af14" type="rule">
+          <modifiers>
+            <modifier type="replace" value="5+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Chaos Shrinemaster" hidden="false" id="c1f1-ca31-a8a9-d5ac" collective="false">
@@ -8607,7 +8839,11 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
           </constraints>
           <infoLinks>
             <infoLink name="Chaos Shrine Bearers" id="b52a-826c-5481-bfb1" hidden="false" targetId="a631-99f6-e75a-5a8d" type="profile"/>
-            <infoLink name="Random Attacks (D6+2)" id="ddc8-0ab3-f2cf-1ced" hidden="false" targetId="33f1-4ddd-d26b-281a" type="rule"/>
+            <infoLink name="Random Attacks (*)" id="ddc8-0ab3-f2cf-1ced" hidden="false" targetId="64d8-e607-daa9-bd39" type="rule">
+              <modifiers>
+                <modifier type="replace" value="D6+2" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
@@ -8688,10 +8924,22 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="ea29-6014-379a-41ae" name="Fly (7)" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
         <infoLink name="Magical Attacks" id="2d41-1944-15ec-4bc5" hidden="false" type="rule" targetId="03db-d81f-f264-84b8"/>
-        <infoLink name="Natural Armour (3+)" id="5199-ab43-d0ab-ee3f" hidden="false" type="rule" targetId="32e8-b4ad-3e59-a3c7"/>
-        <infoLink name="Regeneration (6+)" id="c2ad-3c03-59f2-6919" hidden="false" type="rule" targetId="6f3b-cd4f-062d-7f26"/>
+        <infoLink name="Fly (*)" id="a3a1-4cbc-978d-06f4" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+          <modifiers>
+            <modifier type="replace" value="7" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="1ce1-2e40-122f-cf80" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+          <modifiers>
+            <modifier type="replace" value="3+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Regeneration (*)" id="e595-6d9e-fc3e-3789" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="f35e-c51b-31e0-d0a4" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -8768,8 +9016,12 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Natural Armour (3+)" id="8bda-9ebc-7a41-6375" hidden="false" type="rule" targetId="32e8-b4ad-3e59-a3c7"/>
         <infoLink name="Immunity (Psychology)" id="0f07-07fc-265f-c54d" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
+        <infoLink name="Natural Armour (*)" id="4621-376c-3d3d-7ead" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+          <modifiers>
+            <modifier type="replace" value="3+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="c11e-ba60-be16-d798" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -9148,8 +9400,12 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <infoLink name="Rot Fly of Nurgle" id="8e37-8687-26eb-e32c" hidden="false" type="profile" targetId="8fd4-5476-8f8b-cf37"/>
         <infoLink name="Daemonic" id="d07f-b1c3-7a71-0713" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
         <infoLink name="Daemon of Nurgle" id="b7d7-b3e5-a33d-cba5" hidden="false" type="rule" targetId="0b9b-1baf-5bcd-1ec3"/>
-        <infoLink name="Fly (6)" id="919e-45ff-0c52-8ac5" hidden="false" type="rule" targetId="b830-fe6e-b461-0377"/>
         <infoLink name="Poisoned Attacks" id="8369-8038-b053-e868" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
+        <infoLink name="Fly (*)" id="6546-4712-90ac-bc03" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+          <modifiers>
+            <modifier type="replace" value="6" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -9168,7 +9424,11 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <infoLink name="Disc of Tzeentch" id="bb1a-c452-d53f-50f1" hidden="false" type="profile" targetId="8778-6f19-10c0-0aeb"/>
         <infoLink name="Daemon of Tzeentch" id="df5c-c981-9fba-f38e" hidden="false" type="rule" targetId="fe9a-f478-5bcc-57a8"/>
         <infoLink name="Daemonic" id="252e-853b-4239-9815" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
-        <infoLink name="Fly (9)" id="e343-cdd6-c823-62c4" hidden="false" type="rule" targetId="2ba2-2aaa-3f36-4b24"/>
+        <infoLink name="Fly (*)" id="c19e-969c-2abc-3b4a" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+          <modifiers>
+            <modifier type="replace" value="9" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -9206,7 +9466,11 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <infoLink name="Juggernaut of Khorne" id="69b2-db56-e80f-d398" hidden="false" type="profile" targetId="19a7-ba6e-28d4-f0e0"/>
         <infoLink name="Daemon of Khorne" id="0527-56a2-bb87-7336" hidden="false" type="rule" targetId="a356-05c9-d963-c1bb"/>
         <infoLink name="Daemonic" id="2639-6cce-15eb-2329" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
-        <infoLink name="Natural Armour (6+)" id="0e90-96f8-8c95-d054" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
+        <infoLink name="Natural Armour (*)" id="c688-b128-2f1a-110c" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -9226,7 +9490,11 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <infoLink name="Daemonic" id="f9ac-264b-a316-229d" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
         <infoLink name="Daemon of Nurgle" id="a57b-e23d-2288-bd36" hidden="false" type="rule" targetId="0b9b-1baf-5bcd-1ec3"/>
         <infoLink name="Poisoned Attacks" id="0238-ac70-4193-e96c" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
-        <infoLink name="Regeneration (5+)" id="1580-b167-d000-bfc7" hidden="false" type="rule" targetId="5fed-df2e-b6d6-cc93"/>
+        <infoLink name="Regeneration (*)" id="6005-be45-0047-3c17" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+          <modifiers>
+            <modifier type="replace" value="5+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -9308,9 +9576,17 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Karkadrak" hidden="false" id="dc59-39e9-9991-577f" collective="false" subType="mount">
       <infoLinks>
-        <infoLink name="Impact Hits (D3)" id="9d04-117a-c008-131b" hidden="false" type="rule" targetId="f30d-0b61-2836-689e"/>
-        <infoLink name="Natural Armour (5+)" id="6fc5-aa49-00d8-608c" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
         <infoLink name="Karkadrak" id="f1de-96b7-e36d-445f" hidden="false" type="profile" targetId="b330-d662-56fd-a316"/>
+        <infoLink name="Impact Hits (*)" id="d616-9a92-5148-18fc" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
+          <modifiers>
+            <modifier type="replace" value="D3" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="9cf1-ee79-c000-3f55" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+          <modifiers>
+            <modifier type="replace" value="5+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="ce9d-99d2-279f-a70c" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -9328,9 +9604,17 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
       <infoLinks>
         <infoLink name="Dark Fire of Chaos" id="880e-2a88-cc61-0bbd" hidden="false" targetId="af4f-0132-ba66-4e50" type="rule"/>
         <infoLink name="Fumes of Contagion" id="4cab-2757-107c-ae23" hidden="false" targetId="f003-1c23-84ad-d399" type="rule"/>
-        <infoLink name="Fly (7)" id="52b6-71b9-be21-4b68" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
         <infoLink name="Chaos Dragon" id="d33a-3536-6f99-44f3" hidden="false" targetId="7338-48d0-f98a-0a06" type="profile"/>
-        <infoLink name="Natural Armour (3+)" id="9d7b-ffb6-fe9d-1905" hidden="false" targetId="32e8-b4ad-3e59-a3c7" type="rule"/>
+        <infoLink name="Fly (*)" id="6190-af83-8be2-985f" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+          <modifiers>
+            <modifier type="replace" value="7" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="7a7c-5fb8-6edb-0332" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+          <modifiers>
+            <modifier type="replace" value="3+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="561c-5fbd-2640-e5b7" targetId="8b8a-34b1-ed30-df11" primary="false"/>

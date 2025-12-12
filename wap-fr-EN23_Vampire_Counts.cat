@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2572-4a7a-3823-e3b2" name="Vampire Counts WAP 1.7" revision="8" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="38" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2572-4a7a-3823-e3b2" name="Vampire Counts WAP 1.7" revision="9" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="38" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <profileTypes>
     <profileType id="21e6-6317-460c-b75f" name="Vampiric Power">
       <characteristicTypes>
@@ -469,9 +469,13 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink name="Impact Hits (D6)" id="ab68-3bb7-8a2c-2ce5" hidden="false" targetId="e9e6-66cc-623f-8e94" type="rule"/>
                 <infoLink name="Undead" id="3c6e-9590-a838-c17d" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
                 <infoLink name="Swiftstride" id="977a-e621-9589-0f9c" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
+                <infoLink name="Impact Hits (*)" id="90bb-1cdf-4ef9-45bf" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
+                  <modifiers>
+                    <modifier type="replace" value="D6" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <categoryLinks>
                 <categoryLink name="Mount" hidden="false" id="620f-2683-dddd-b5be" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -1196,7 +1200,11 @@
             </modifier>
           </modifiers>
           <infoLinks>
-            <infoLink name="Multiple Wounds (2)" id="07f6-c876-0055-5393" hidden="false" type="rule" targetId="a4e2-d94c-e906-a868"/>
+            <infoLink name="Multiple Wounds (*)" id="871f-774e-44fc-777d" hidden="false" type="rule" targetId="99da-c060-2e1d-57b4">
+              <modifiers>
+                <modifier type="replace" value="2" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
@@ -1252,8 +1260,12 @@
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="432d-6a5b-dbca-06ee" name="Fly (9)" hidden="false" targetId="2ba2-2aaa-3f36-4b24" type="rule"/>
             <infoLink id="7059-2435-61ba-6360" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
+            <infoLink name="Fly (*)" id="a917-f076-d7c7-142d" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+              <modifiers>
+                <modifier type="replace" value="9" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="12"/>
@@ -1300,8 +1312,16 @@
             </rule>
           </rules>
           <infoLinks>
-            <infoLink id="17dd-4538-d116-46c8" name="Fly (6)" hidden="false" targetId="b830-fe6e-b461-0377" type="rule"/>
-            <infoLink name="Line of Sight (1)" id="a746-a047-40be-0a44" hidden="false" type="rule" targetId="8f97-966e-ddb2-f7bb"/>
+            <infoLink name="Fly (*)" id="5b5f-67de-73aa-dcad" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+              <modifiers>
+                <modifier type="replace" value="6" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Line of Sight (*)" id="b6ec-880f-92fe-4d35" hidden="false" type="rule" targetId="5111-c7d7-b7cd-273b">
+              <modifiers>
+                <modifier type="replace" value="1" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="30"/>
@@ -1734,7 +1754,11 @@
           </profiles>
           <infoLinks>
             <infoLink id="d07c-0d70-6547-ac6b" name="Poisoned Attacks" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule"/>
-            <infoLink id="a078-b728-1088-5259" name="Regeneration (5+)" hidden="false" targetId="5fed-df2e-b6d6-cc93" type="rule"/>
+            <infoLink name="Regeneration (*)" id="e1e8-d5cb-3ce7-bfbd" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+              <modifiers>
+                <modifier type="replace" value="5+" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="35"/>
@@ -1797,10 +1821,14 @@
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="ad36-73b0-3ee7-eb19" name="Fly (8)" hidden="false" targetId="0a9a-bfcb-1a9d-5609" type="rule"/>
             <infoLink id="34d0-d185-a4cd-7e63" name="Frenzy" hidden="false" targetId="9ff3-dda6-e142-5a77" type="rule"/>
             <infoLink id="9244-3105-f96b-7518" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
             <infoLink id="bf27-5d69-c302-3360" name="The Red Thirst" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
+            <infoLink name="Fly (*)" id="f937-d41d-d311-f8de" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+              <modifiers>
+                <modifier type="replace" value="8" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="50"/>
@@ -1886,9 +1914,13 @@
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="63a7-e650-e1e9-1173" name="Line of Sight (1)" hidden="false" targetId="8f97-966e-ddb2-f7bb" type="rule"/>
             <infoLink id="ba28-6f74-157-6e08" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
             <infoLink id="0a66-542b-de18-7da7" name="Ethereal" hidden="false" targetId="9e47-05bc-376a-7463" type="rule"/>
+            <infoLink name="Line of Sight (*)" id="5d86-e493-b223-93fa" hidden="false" type="rule" targetId="5111-c7d7-b7cd-273b">
+              <modifiers>
+                <modifier type="replace" value="1" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="40"/>
@@ -2029,9 +2061,13 @@
           <infoLinks>
             <infoLink id="d08e-9851-009b-2842" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
             <infoLink id="1788-12df-a0db-0986" name="Skirmishers" hidden="false" targetId="9a30-1c5c-12f4-5798" type="rule"/>
-            <infoLink id="71c3-a991-e64b-45b5" name="Dodge (6+)" hidden="false" targetId="bf3d-abaf-45ca-3477" type="rule"/>
             <infoLink id="34f3-15ec-3a96-d224" name="Scouts" hidden="false" targetId="6624-0b7b-c5b8-6397" type="rule"/>
             <infoLink id="7265-e879-659a-a563" name="Handmaiden" hidden="false" targetId="ba1e-616a-b0ea-ffe1" type="profile"/>
+            <infoLink name="Dodge (*)" id="025c-bc99-240d-7034" hidden="false" type="rule" targetId="d909-ac08-40af-8f44">
+              <modifiers>
+                <modifier type="replace" value="6+" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="21"/>
@@ -2131,7 +2167,11 @@
       <infoLinks>
         <infoLink id="211d-b0c0-0f00-fb92" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
         <infoLink id="6822-a93a-0761-f6cb" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
-        <infoLink id="f1ac-509f-39cb-d04d" name="Ward Save (4+)" hidden="false" targetId="d45b-0036-b5ef-951b" type="rule"/>
+        <infoLink name="Ward Save (*)" id="05af-d2cc-35c0-5d9e" hidden="false" targetId="3006-8f7c-f916-af14" type="rule">
+          <modifiers>
+            <modifier type="replace" value="4+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="6266-0d79-f1cc-0d86" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -2267,7 +2307,11 @@
         <infoLink id="bc23-d762-af8e-2163" name="The Red Thirst" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
         <infoLink id="d0a0-7301-ccae-6d9e" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
         <infoLink id="b613-a1cc-ec01-4fb4" name="Hatred" hidden="false" targetId="f6d7-9fbc-abc1-5cfc" type="rule"/>
-        <infoLink id="b310-245a-bd48-a9b2" name="Regeneration (4+)" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
+        <infoLink name="Regeneration (*)" id="aff8-6c1b-3f6a-2781" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+          <modifiers>
+            <modifier type="replace" value="4+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="6a56-ac03-5351-fb67" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -2280,14 +2324,22 @@
     </selectionEntry>
     <selectionEntry id="9ef8-c9a8-cc1a-c721" name="Mortis Engine" hidden="false" collective="false" import="true" type="model" sortIndex="53">
       <infoLinks>
-        <infoLink id="0f3b-e840-af23-e65f" name="Impact Hits (D6)" hidden="false" targetId="e9e6-66cc-623f-8e94" type="rule"/>
         <infoLink id="e61e-c79d-861b-5aaa" name="Mortis Engine" hidden="false" targetId="516a-b5a8-e393-51b7" type="profile"/>
         <infoLink id="af37-1436-afbb-f23d" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
         <infoLink id="d76d-9cf8-1575-ca8f" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
         <infoLink id="dec3-b3e7-61f6-1c06" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
         <infoLink id="3ad6-8099-03e1-5795" name="The Reliquary" hidden="false" targetId="fe80-29be-6795-934d" type="rule"/>
-        <infoLink id="6403-80f1-631e-3bd9" name="Regeneration (4+)" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
         <infoLink id="2243-896-dafe-2c2c" name="Mortis Engine" hidden="false" targetId="242e-ee46-3afa-7765" type="rule"/>
+        <infoLink name="Impact Hits (*)" id="3bf7-6e9e-4dbf-3c79" hidden="false" type="rule" targetId="b38c-e0a7-d638-6465">
+          <modifiers>
+            <modifier type="replace" value="D6" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Regeneration (*)" id="9e34-cc6b-e774-8afd" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+          <modifiers>
+            <modifier type="replace" value="4+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="f773-cbdf-6173-43e5" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -2301,9 +2353,17 @@
           </constraints>
           <infoLinks>
             <infoLink id="059a-e7c7-9327-cc14" name="Spirit Horde" hidden="false" targetId="1858-2b2a-2c49-dab9" type="profile"/>
-            <infoLink id="afce-8892-b12b-f578" name="Random Attacks (2D6)" hidden="false" targetId="065b-1f43-47e5-70cb" type="rule"/>
-            <infoLink id="6006-bd41-3e99-1922" name="Fly (7)" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
             <infoLink id="55e1-9a32-bafc-f605" name="Spectral Steeds" hidden="false" targetId="1734-ad3c-cee7-c609" type="rule"/>
+            <infoLink name="Fly (*)" id="3bbf-0a97-9443-c94a" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+              <modifiers>
+                <modifier type="replace" value="7" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Random Attacks (*)" id="a601-fe84-cdf3-87f4" hidden="false" targetId="64d8-e607-daa9-bd39" type="rule">
+              <modifiers>
+                <modifier type="replace" value="2D6" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
@@ -2386,7 +2446,11 @@
         <infoLink id="7360-a4dc-94a0-913b" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
         <infoLink id="0895-ec09-cede-41a3" name="Ethereal" hidden="false" targetId="9e47-05bc-376a-7463" type="rule"/>
         <infoLink id="14e9-e714-d192-305f" name="Death Shriek" hidden="false" targetId="515e-c009-6cec-66aa" type="rule"/>
-        <infoLink id="8337-9b1b-f145-e0ad" name="Fly (6)" hidden="false" targetId="b830-fe6e-b461-0377" type="rule"/>
+        <infoLink name="Fly (*)" id="7c24-038d-b82b-9ac9" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+          <modifiers>
+            <modifier type="replace" value="6" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="d423-64ea-590d-1b14" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
@@ -2470,9 +2534,13 @@
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="f2e5-c144-9757-946a" name="Regeneration (4+)" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
         <infoLink id="b5ef-846e-4c57-0be5" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
         <infoLink id="98b3-ac9f-30ca-ddde" name="Magical Attacks" hidden="false" targetId="03db-d81f-f264-84b8" type="rule"/>
+        <infoLink name="Regeneration (*)" id="c58b-83e8-e9e2-c46c" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+          <modifiers>
+            <modifier type="replace" value="4+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="d923-daee-3851-07f7" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -3013,7 +3081,11 @@ A unit cannot be taken beyond its starting size unless specified, and no single 
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="bd96-0531-1c88-0c6b" name="Hatred (Bretonnia)" hidden="false" targetId="a001-2c00-3971-2a29" type="rule"/>
+                <infoLink id="bd96-0531-1c88-0c6b" name="Hatred (*)" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="Bretonnia" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
                 <infoLink id="53ac-92a2-7065-4fe8" name="The Red Thirst" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
                 <infoLink id="c4db-4b40-7ae7-83bb" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
                 <infoLink id="364b-b807-e5ba-fc2d" name="Martial Honour" hidden="false" targetId="05c0-34fc-bc0d-6972" type="rule"/>
@@ -3213,13 +3285,17 @@ A unit cannot be taken beyond its starting size unless specified, and no single 
                 </rule>
               </rules>
               <infoLinks>
-                <infoLink id="3cf0-19c2-7a72-685c" name="Hatred (Empire)" hidden="false" targetId="1308-62b9-5692-6880" type="rule"/>
                 <infoLink id="3843-c8fe-37c3-b9f1" name="The Red Thirst" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
                 <infoLink id="5eba-49d6-3596-ba11" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
                 <infoLink id="983c-5ec6-4cb4-6ffb" name="Martial Honour" hidden="false" targetId="05c0-34fc-bc0d-6972" type="rule"/>
                 <infoLink name="Doomrider" id="06a8-ebe0-6d54-dfb8" hidden="false" type="profile" targetId="26be-b783-daf0-5593"/>
                 <infoLink name="Warrior Pride" id="3614-d1ed-9805-8e44" hidden="false" type="profile" targetId="e321-5685-54ee-4447"/>
                 <infoLink name="Dread Knight" id="57e8-fdad-8808-3aed" hidden="false" type="profile" targetId="6eec-e089-ed07-e9e0"/>
+                <infoLink name="Hatred (*)" id="cc9a-6864-210c-7dc2" hidden="false" targetId="1ad8-8843-ff83-9c2e" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="Empire" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="4e96-e1f2-ba59-3223" name="Blood Chalice" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
@@ -3586,15 +3662,27 @@ Blood Chalice allowing them to do one of the following:
               <infoLinks>
                 <infoLink id="b0d3-90fb-5ea0-074f" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
                 <infoLink id="65d7-b2a6-bddf-96bb" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-                <infoLink id="1c5d-4ca6-b8b0-810e" name="Fly (5)" hidden="false" targetId="36d4-923e-e1c7-72bc" type="rule"/>
                 <infoLink id="19bb-f730-dddc-e422" name="Ethereal" hidden="false" targetId="9e47-05bc-376a-7463" type="rule"/>
                 <infoLink id="0ca5-7fee-6adf-c374" name="Chill Grasp" hidden="false" targetId="1cec-8e53-53b2-2e4c" type="rule">
                   <modifiers>
                     <modifier type="set" value="Kurdoss Valentian" field="annotation"/>
                   </modifiers>
                 </infoLink>
-                <infoLink name="Unit Strength (3)" id="9c0f-e4d2-6cb1-3172" hidden="false" type="rule" targetId="fe8b-fd33-652e-4e2f"/>
-                <infoLink name="Line of Sight (2)" id="17c0-d780-bae9-4de9" hidden="false" type="rule" targetId="40b4-9828-f47e-28c9"/>
+                <infoLink name="Unit Strength (*)" id="9c0f-e4d2-6cb1-3172" hidden="false" type="rule" targetId="c397-b441-9fd6-89bb">
+                  <modifiers>
+                    <modifier type="replace" value="3" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Fly (*)" id="ce57-31a8-3455-9206" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="5" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Line of Sight (*)" id="8b16-f026-2b81-e88e" hidden="false" type="rule" targetId="5111-c7d7-b7cd-273b">
+                  <modifiers>
+                    <modifier type="replace" value="2" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="439a-4f1c-d77b-68d5" name="Sepulchral Sceptre" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
@@ -3713,9 +3801,17 @@ Blood Chalice allowing them to do one of the following:
                   </rules>
                   <infoLinks>
                     <infoLink id="29eb-a22d-af83-9acb" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-                    <infoLink id="5cdc-2979-500f-7996" name="Fly (7)" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
                     <infoLink id="5073-ec80-37b3-91bb" name="Swarm of Flies" hidden="false" targetId="ce29-896f-bc4f-f8ed" type="rule"/>
-                    <infoLink id="1a7b-97ea-d558-f93c" name="Natural Armour (5+)" hidden="false" targetId="306d-711a-1300-587f" type="rule"/>
+                    <infoLink name="Fly (*)" id="759b-9902-1e1c-d120" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+                      <modifiers>
+                        <modifier type="replace" value="7" field="name" arg="*"/>
+                      </modifiers>
+                    </infoLink>
+                    <infoLink name="Natural Armour (*)" id="ccd8-ecb4-cbb6-e654" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+                      <modifiers>
+                        <modifier type="replace" value="5+" field="name" arg="*"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
@@ -3909,12 +4005,16 @@ Blood Chalice allowing them to do one of the following:
                 </rule>
               </rules>
               <infoLinks>
-                <infoLink id="2921-4f94-4b63-5b32" name="Dodge (6+)" hidden="false" targetId="bf3d-abaf-45ca-3477" type="rule"/>
                 <infoLink id="8cc2-96fe-eb0d-4979" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
                 <infoLink id="9cdc-8a78-7f7a-f34e" name="The Red Thirst" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
                 <infoLink name="Quickblood" id="0bf5-43f7-1ecb-75e8" hidden="false" type="profile" targetId="7214-e7a5-d1fd-50f2"/>
                 <infoLink name="Lightning Reflexes" id="3ea8-98b1-d410-4c1d" hidden="false" type="profile" targetId="27f6-29cf-89e9-b5b8"/>
                 <infoLink name="Seduction" id="3afc-c165-108f-ed33" hidden="false" type="profile" targetId="134a-0b9c-3f0c-32ee"/>
+                <infoLink name="Dodge (*)" id="4fe0-4e5a-0649-695a" hidden="false" type="rule" targetId="d909-ac08-40af-8f44">
+                  <modifiers>
+                    <modifier type="replace" value="6+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="490e-97be-acca-358c" name="Bastet" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
@@ -4280,10 +4380,18 @@ Lahmia automatically lets them regain one Wound that they has lost during the ba
               <infoLinks>
                 <infoLink id="e4fc-e39a-2d68-5572" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
                 <infoLink id="1789-5f80-fb6f-b384" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-                <infoLink id="868d-eb6e-90f9-85ec" name="Fly (6)" hidden="false" targetId="b830-fe6e-b461-0377" type="rule"/>
                 <infoLink id="82d8-15c6-d0e7-5298" name="Ethereal" hidden="false" targetId="9e47-05bc-376a-7463" type="rule"/>
                 <infoLink name="Death Shriek" id="6fdc-1450-d60b-060d" hidden="false" targetId="515e-c009-6cec-66aa" type="rule"/>
-                <infoLink name="Unit Strength (3)" id="6a7d-756c-f36e-0a1a" hidden="false" type="rule" targetId="fe8b-fd33-652e-4e2f"/>
+                <infoLink name="Fly (*)" id="52d2-e86b-c888-fb33" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="6" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Unit Strength (*)" id="a0c1-9564-328a-1538" hidden="false" type="rule" targetId="c397-b441-9fd6-89bb">
+                  <modifiers>
+                    <modifier type="replace" value="3" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="fed0-bb71-11fe-65b3" name="Grave-sands of Time" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
@@ -4397,10 +4505,14 @@ Lahmia automatically lets them regain one Wound that they has lost during the ba
               <infoLinks>
                 <infoLink id="8ebe-9448-3a1d-2e" name="Hatred" hidden="false" targetId="f6d7-9fbc-abc1-5cfc" type="rule"/>
                 <infoLink id="be13-72df-6cf-c3fe" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
-                <infoLink id="95d8-6252-f11c-9e7f" name="Natural Armour (6+)" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
                 <infoLink id="d099-e634-d424-8bf6" name="The Red Thirst" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
                 <infoLink name="Monstrous Mass" id="ac21-be26-0445-06f5" hidden="false" type="profile" targetId="f4d3-c5d5-46f0-3116"/>
                 <infoLink name="Summon Ghouls" id="9f71-7f59-9368-7dbd" hidden="false" type="profile" targetId="8775-bc0e-1e51-c139"/>
+                <infoLink name="Natural Armour (*)" id="37d9-dbc7-e82b-37cd" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+                  <modifiers>
+                    <modifier type="replace" value="6+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="4dce-59ba-104a-c264" name="Sceptre of the Carrion King" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
@@ -4557,7 +4669,11 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
                 <infoLink id="7f8c-ec31-c1bf-4049" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
                 <infoLink id="4e36-d3e0-ab06-f7b2" name="Chill Grasp" hidden="false" targetId="1cec-8e53-53b2-2e4c" type="rule"/>
                 <infoLink id="3eae-eaf6-3ed3-bf79" name="Ethereal" hidden="false" targetId="9e47-05bc-376a-7463" type="rule"/>
-                <infoLink id="4241-919c-2859-4116" name="Fly (9)" hidden="false" targetId="2ba2-2aaa-3f36-4b24" type="rule"/>
+                <infoLink name="Fly (*)" id="20b8-98d5-e00b-3751" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="9" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="2de5-dbad-0619-9e5d" name="Corpse Candles" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
@@ -4681,8 +4797,12 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
                 <infoLink id="8e58-51cd-0e5d-eb85" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
                 <infoLink id="7d0a-74d7-867e-5a83" name="Always Strikes First" hidden="false" targetId="00b2-9504-41a2-f664" type="rule"/>
                 <infoLink id="4dd7-470e-3bb3-5713" name="The Red Thirst" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
-                <infoLink id="9d94-99b2-bdcd-b938" name="Dodge (4+)" hidden="false" targetId="5e3f-9736-a9c0-4a1c" type="rule"/>
                 <infoLink id="fe4c-99b4-69f6-e7d7" name="Loner" hidden="false" targetId="32b6-55f6-6cc6-8fc4" type="rule"/>
+                <infoLink name="Dodge (*)" id="1589-ddb3-86e0-291b" hidden="false" type="rule" targetId="d909-ac08-40af-8f44">
+                  <modifiers>
+                    <modifier type="replace" value="4+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="0828-4a8e-1639-7864" name="Blade Proboscian" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
@@ -5193,7 +5313,11 @@ If he does so, pick one of the effects below. That effect lasts until the start 
                 </rule>
               </rules>
               <infoLinks>
-                <infoLink id="a7ef-368d-22cc-dccf" name="Unit Strength (2)" hidden="false" targetId="577c-10f5-bad5-5ce5" type="rule"/>
+                <infoLink id="a7ef-368d-22cc-dccf" name="Unit Strength (*)" hidden="false" targetId="c397-b441-9fd6-89bb" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="2" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
                 <infoLink id="339-a8a0-8ce7-95d9" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
                 <infoLink id="9a40-f0ac-43b3-900d" name="The Red Thirst" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
                 <infoLink id="e0ef-9af4-c303-64c8" name="Poisoned Attacks" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule">
@@ -5201,9 +5325,13 @@ If he does so, pick one of the effects below. That effect lasts until the start 
                     <modifier type="set" value="Ouboroth" field="annotation"/>
                   </modifiers>
                 </infoLink>
-                <infoLink id="01c5-2e44-beb7-f968" name="Dodge (6+)" hidden="false" targetId="bf3d-abaf-45ca-3477" type="rule"/>
                 <infoLink name="Lightning Reflexes" id="620c-a97b-5cf8-4af8" hidden="false" type="profile" targetId="27f6-29cf-89e9-b5b8"/>
                 <infoLink name="Seduction" id="395a-8639-7fad-4bee" hidden="false" type="profile" targetId="134a-0b9c-3f0c-32ee"/>
+                <infoLink name="Dodge (*)" id="c35c-193b-fe02-9a0e" hidden="false" type="rule" targetId="d909-ac08-40af-8f44">
+                  <modifiers>
+                    <modifier type="replace" value="6+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink id="a29f-1fd9-4d1d-6602" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
@@ -5276,11 +5404,15 @@ If he does so, pick one of the effects below. That effect lasts until the start 
                 </rule>
               </rules>
               <infoLinks>
-                <infoLink id="814b-fb21-5c39-99ab" name="Natural Armour (6+)" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
                 <infoLink id="8ae3-43be-e6df-f244" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
                 <infoLink id="d3a7-7fa-47f4-83a" name="Hatred" hidden="false" targetId="f6d7-9fbc-abc1-5cfc" type="rule"/>
                 <infoLink id="9f1c-1512-1f40-d745" name="The Red Thirst" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
                 <infoLink name="Unholy Regeneration" id="cce5-4d08-80d3-69a4" hidden="false" type="profile" targetId="fc2c-76ee-bcb0-1a3d"/>
+                <infoLink name="Natural Armour (*)" id="f5b2-2412-7d3c-d747" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+                  <modifiers>
+                    <modifier type="replace" value="6+" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink id="3978-8946-aff9-874" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
@@ -5326,8 +5458,12 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
                 <infoLink id="2555-2898-a089-839b" name="Ethereal" hidden="false" targetId="9e47-05bc-376a-7463" type="rule"/>
                 <infoLink id="8d0c-30d7-a71f-bc30" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
                 <infoLink id="576c-f07f-bbea-3166" name="Chill Grasp" hidden="false" targetId="1cec-8e53-53b2-2e4c" type="rule"/>
-                <infoLink id="aab6-b25e-9349-d91b" name="Fly (6)" hidden="false" targetId="b830-fe6e-b461-0377" type="rule"/>
                 <infoLink id="36f2-7c7f-7066-a782" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
+                <infoLink name="Fly (*)" id="dc78-82e6-100e-7d75" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="6" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink id="1ed7-2b17-7e51-e6b" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
@@ -6063,9 +6199,17 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="9c34-4f04-7c54-37b" name="Random Movement (2D6)" hidden="false" targetId="4918-5aef-8930-27ec" type="rule"/>
             <infoLink id="dc32-3ae1-6a15-55ce" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-            <infoLink id="4b6a-4e5a-1091-b9dc" name="Random Attacks (D3+1)" hidden="false" targetId="e20a-3f4d-cc8c-06bc" type="rule"/>
+            <infoLink id="4b6a-4e5a-1091-b9dc" name="Random Attacks (*)" hidden="false" targetId="64d8-e607-daa9-bd39" type="rule">
+              <modifiers>
+                <modifier type="replace" value="D3+1" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Random Movement (*)" id="ccf4-a677-3be5-ee5a" hidden="false" targetId="4d40-9a96-4af8-e943" type="rule">
+              <modifiers>
+                <modifier type="replace" value="2D6" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
@@ -6345,7 +6489,11 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink id="eb2b-2952-73ed-7514" name="Fly (5)" hidden="false" targetId="36d4-923e-e1c7-72bc" type="rule"/>
+                <infoLink name="Fly (*)" id="27cb-d819-96da-c8c4" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+                  <modifiers>
+                    <modifier type="replace" value="5" field="name" arg="*"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
@@ -6662,7 +6810,11 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
       <infoLinks>
         <infoLink name="The Red Thirst" id="ec69-5d75-1f28-088d" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
         <infoLink name="Vampiric" id="044c-dd5d-8ef4-f047" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
-        <infoLink name="Dodge (6+)" id="f70c-749d-350f-436b" hidden="false" targetId="bf3d-abaf-45ca-3477" type="rule"/>
+        <infoLink name="Dodge (*)" id="2eae-19a3-a49e-11be" hidden="false" type="rule" targetId="d909-ac08-40af-8f44">
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="65. Lores of Magic" id="4b43-77fd-4ae8-9a72" hidden="false" defaultSelectionEntryId="50ec-6d64-233e-01fd">
@@ -6958,7 +7110,11 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
         <infoLink name="The Red Thirst" id="57c8-beee-4d01-d013" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
         <infoLink name="Vampiric" id="0c07-2fcf-ca48-d307" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
         <infoLink name="Hatred" id="8f38-b39c-485f-7765" hidden="false" targetId="f6d7-9fbc-abc1-5cfc" type="rule"/>
-        <infoLink name="Natural Armour (6+)" id="a7ab-7aef-d1d5-56f9" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
+        <infoLink name="Natural Armour (*)" id="cdf5-0964-cd57-8635" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="65. Lores of Magic" id="b906-7d5d-5fa6-0eb7" hidden="false" defaultSelectionEntryId="50ec-6d64-233e-01fd">
@@ -7377,7 +7533,11 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
       <infoLinks>
         <infoLink name="The Red Thirst" id="1480-2141-b6a5-8cbf" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
         <infoLink name="Vampiric" id="02e2-9762-e61b-3e97" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
-        <infoLink name="Dodge (6+)" id="9867-152f-045b-e3dd" hidden="false" targetId="bf3d-abaf-45ca-3477" type="rule"/>
+        <infoLink name="Dodge (*)" id="30c8-f53b-4cdb-5dc9" hidden="false" type="rule" targetId="d909-ac08-40af-8f44">
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="65. Lores of Magic" id="f5b0-a2a3-104e-f57b" hidden="false" defaultSelectionEntryId="50ec-6d64-233e-01fd">
@@ -7704,7 +7864,11 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
         <infoLink name="Vampiric" id="7e78-a671-af6e-93a9" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
         <infoLink name="Hatred" id="0d85-7564-23d7-00fb" hidden="false" targetId="f6d7-9fbc-abc1-5cfc" type="rule"/>
         <infoLink name="The Generals of Undeath" id="0b1a-f5e1-2e9d-fe99" hidden="false" targetId="f189-b1bd-2258-4c02" type="rule"/>
-        <infoLink name="Natural Armour (6+)" id="d676-aa58-2190-234a" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
+        <infoLink name="Natural Armour (*)" id="2bbe-ff7d-ac3f-5485" hidden="false" type="rule" targetId="f37d-a124-ff82-7de3">
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="65. Lores of Magic" id="1715-226f-88c1-46be" hidden="false" defaultSelectionEntryId="50ec-6d64-233e-01fd">
@@ -12179,12 +12343,12 @@ Characters who are not Undead may join Undead units despite not being Unstable 
             <modifier type="set" value="Hellsteed" field="annotation"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Fly (9)" id="e9e7-ccdb-af6e-9f03" hidden="false" targetId="2ba2-2aaa-3f36-4b24" type="rule">
+        <infoLink name="Hellsteed" id="67b3-efe0-8b14-6a6b" hidden="false" targetId="43c3-7b6b-5d57-c78e" type="profile"/>
+        <infoLink name="Fly (*)" id="cbc1-3b94-9b04-da1a" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
           <modifiers>
-            <modifier type="set" value="Hellsteed" field="annotation"/>
+            <modifier type="replace" value="9" field="name" arg="*"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Hellsteed" id="67b3-efe0-8b14-6a6b" hidden="false" targetId="43c3-7b6b-5d57-c78e" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="d6bb-4087-1bc6-6e96" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -12216,11 +12380,6 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           </modifiers>
         </infoLink>
         <infoLink name="Zombie Dragon" id="ae49-e7f2-492b-162e" hidden="false" targetId="50c3-d69e-27fe-c4f6" type="profile"/>
-        <infoLink name="Fly (7)" id="26d6-51dd-2f28-3dd6" hidden="false" targetId="36ba-3349-99bd-1979" type="rule">
-          <modifiers>
-            <modifier type="set" value="Zombie Dragon" field="annotation"/>
-          </modifiers>
-        </infoLink>
         <infoLink name="Swarm of Flies" id="ce8d-02bc-ba0b-4ff6" hidden="false" targetId="ce29-896f-bc4f-f8ed" type="rule">
           <modifiers>
             <modifier type="set" value="Zombie Dragon" field="annotation"/>
@@ -12231,8 +12390,14 @@ Characters who are not Undead may join Undead units despite not being Unstable 
             <modifier type="set" value="Zombie Dragon" field="annotation"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Natural Armour (5+)" id="05b4-6330-ca40-b33e" hidden="false" targetId="306d-711a-1300-587f" type="rule">
+        <infoLink name="Fly (*)" id="a803-bd2a-c8d0-23a9" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
           <modifiers>
+            <modifier type="replace" value="7" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Natural Armour (*)" id="948a-1f1e-99bf-4896" hidden="false" targetId="f37d-a124-ff82-7de3" type="rule">
+          <modifiers>
+            <modifier type="replace" value="5+" field="name" arg="*"/>
             <modifier type="set" value="Zombie Dragon" field="annotation"/>
           </modifiers>
         </infoLink>
@@ -12255,7 +12420,11 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           </modifiers>
         </infoLink>
         <infoLink name="Abyssal Terror" id="2364-d284-af38-c634" hidden="false" targetId="2771-bcc4-dc70-6d84" type="profile"/>
-        <infoLink name="Fly (8)" id="3b1b-4930-14dd-d092" hidden="false" targetId="0a9a-bfcb-1a9d-5609" type="rule"/>
+        <infoLink name="Fly (*)" id="3bf1-b0b9-8cf4-1b47" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+          <modifiers>
+            <modifier type="replace" value="8" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="fd1b-0efa-d185-c033" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -12299,12 +12468,20 @@ Characters who are not Undead may join Undead units despite not being Unstable 
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Coven Throne" hidden="false" id="5540-f11-f24c-97b9" collective="false" subType="mount">
       <infoLinks>
-        <infoLink name="Ward Save (4+)" id="bc71-2d85-8081-ecc1" hidden="false" targetId="d45b-0036-b5ef-951b" type="rule"/>
         <infoLink name="Coven Throne" id="e1c-461-2c1d-4f70" hidden="false" targetId="2263-013f-d10c-1126" type="profile"/>
         <infoLink name="Scrying Pool" id="855c-5886-381b-9a93" hidden="false" targetId="e679-8675-a6b7-0bf1" type="profile"/>
         <infoLink name="Battle of Wills" id="f2ce-c0b8-d76-cbd3" hidden="false" targetId="65af-deb9-9d8b-bedf" type="rule"/>
         <infoLink name="Terror" id="5c95-34f3-6c19-c7b7" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
-        <infoLink name="Line of Sight (5)" id="0d9a-75a2-1785-eec3" hidden="false" type="rule" targetId="564d-ded4-217d-827c"/>
+        <infoLink name="Line of Sight (*)" id="9b50-4f9b-425c-aaa9" hidden="false" type="rule" targetId="5111-c7d7-b7cd-273b">
+          <modifiers>
+            <modifier type="replace" value="5" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Ward Save (*)" id="f86b-81c8-cd76-1754" hidden="false" targetId="3006-8f7c-f916-af14" type="rule">
+          <modifiers>
+            <modifier type="replace" value="4+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Pallid Handmaiden" hidden="false" id="4a17-2cac-43ae-4b83" collective="false">
@@ -12345,16 +12522,21 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           </constraints>
           <infoLinks>
             <infoLink name="Spirit Horde" id="c8f5-f280-fac9-ba2" hidden="false" targetId="1858-2b2a-2c49-dab9" type="profile"/>
-            <infoLink name="Random Attacks (2D6)" id="304b-1c9f-478b-2695" hidden="false" targetId="065b-1f43-47e5-70cb" type="rule">
+            <infoLink name="Random Attacks (*)" id="304b-1c9f-478b-2695" hidden="false" targetId="64d8-e607-daa9-bd39" type="rule">
+              <modifiers>
+                <modifier type="set" value="Spirit Horde" field="annotation"/>
+                <modifier type="replace" value="2D6" field="name" arg="*"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Spectral Steeds" id="ec29-df6b-e020-b2e3" hidden="false" targetId="1734-ad3c-cee7-c609" type="rule"/>
+            <infoLink name="Magical Attacks" id="8181-1bbf-f586-40fb" hidden="false" targetId="03db-d81f-f264-84b8" type="rule">
               <modifiers>
                 <modifier type="set" value="Spirit Horde" field="annotation"/>
               </modifiers>
             </infoLink>
-            <infoLink name="Spectral Steeds" id="ec29-df6b-e020-b2e3" hidden="false" targetId="1734-ad3c-cee7-c609" type="rule"/>
-            <infoLink name="Fly (7)" id="b747-8483-6d5a-bf60" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
-            <infoLink name="Magical Attacks" id="8181-1bbf-f586-40fb" hidden="false" targetId="03db-d81f-f264-84b8" type="rule">
+            <infoLink name="Fly (*)" id="356c-d97e-8da7-c6d1" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
               <modifiers>
-                <modifier type="set" value="Spirit Horde" field="annotation"/>
+                <modifier type="replace" value="7" field="name" arg="*"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -12388,18 +12570,19 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           </modifiers>
         </infoLink>
         <infoLink name="Terrorgheist" id="1015-f3e9-5035-46ee" hidden="false" targetId="e1b0-3d3c-6199-747d" type="profile"/>
-        <infoLink name="Fly (7)" id="e048-ff38-7121-4d9a" hidden="false" targetId="36ba-3349-99bd-1979" type="rule">
-          <modifiers>
-            <modifier type="set" value="Terrorgheist" field="annotation"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Regeneration (6+)" id="d498-15f7-8294-5633" hidden="false" targetId="6f3b-cd4f-062d-7f26" type="rule">
-          <modifiers>
-            <modifier type="set" value="Terrorgheist" field="annotation"/>
-          </modifiers>
-        </infoLink>
         <infoLink name="Death Shriek" id="cbd0-b114-696c-db34" hidden="false" targetId="515e-c009-6cec-66aa" type="rule">
           <modifiers>
+            <modifier type="set" value="Terrorgheist" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Fly (*)" id="950a-b232-9429-f1ed" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+          <modifiers>
+            <modifier type="replace" value="7" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Regeneration (*)" id="3917-9c44-1884-79a1" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*"/>
             <modifier type="set" value="Terrorgheist" field="annotation"/>
           </modifiers>
         </infoLink>
@@ -12437,7 +12620,6 @@ Characters who are not Undead may join Undead units despite not being Unstable 
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Corpse Cart" hidden="false" id="1021-0146-ef3e-99ab" collective="false" subType="mount">
       <infoLinks>
-        <infoLink name="Regeneration (4+)" id="74bc-5b79-8c62-11ff" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
         <infoLink name="Corpse Cart" id="7f5c-7e0f-664c-0121" hidden="false" targetId="fd92-c4f2-8dbf-7be8" type="profile"/>
         <infoLink name="Undead" id="04aa-459b-b1ba-7e09" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule">
           <modifiers>
@@ -12445,6 +12627,11 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           </modifiers>
         </infoLink>
         <infoLink name="Vigour Mortis" id="cb95-5f5e-b897-edc7" hidden="false" targetId="c41f-c24c-5271-1bb9" type="rule"/>
+        <infoLink name="Regeneration (*)" id="3e8d-b1dd-d9dc-6a1f" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+          <modifiers>
+            <modifier type="replace" value="4+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="The Restless Dead" hidden="false" id="d32e-080b-7106-3390" collective="false">
@@ -12454,9 +12641,10 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           </constraints>
           <infoLinks>
             <infoLink name="The Restless Dead" id="055f-bee3-da26-9ece" hidden="false" targetId="9056-2fc9-3533-852b" type="profile"/>
-            <infoLink name="Random Attacks (2D6)" id="c559-9b03-4be9-e144" hidden="false" targetId="065b-1f43-47e5-70cb" type="rule">
+            <infoLink name="Random Attacks (*)" id="c559-9b03-4be9-e144" hidden="false" targetId="64d8-e607-daa9-bd39" type="rule">
               <modifiers>
                 <modifier type="set" value="The Restless Dead" field="annotation"/>
+                <modifier type="replace" value="2D6" field="name" arg="*"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -12548,9 +12736,17 @@ Characters who are not Undead may join Undead units despite not being Unstable 
         <infoLink name="Mortis Engine" id="e408-87f7-370a-dd09" hidden="false" targetId="516a-b5a8-e393-51b7" type="profile"/>
         <infoLink name="Terror" id="81ad-f2f4-b9b9-0b0d" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
         <infoLink name="The Reliquary" id="40dd-0920-8b43-da88" hidden="false" targetId="fe80-29be-6795-934d" type="rule"/>
-        <infoLink name="Regeneration (4+)" id="2092-3693-e30c-47ff" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
-        <infoLink name="Line of Sight (5)" id="f97-98a1-d92a-5ed2" hidden="false" targetId="564d-ded4-217d-827c" type="rule"/>
         <infoLink name="Undead" id="fbad-46d5-18e9-36a8" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
+        <infoLink name="Line of Sight (*)" id="b34b-a383-0673-9635" hidden="false" type="rule" targetId="5111-c7d7-b7cd-273b">
+          <modifiers>
+            <modifier type="replace" value="5" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Regeneration (*)" id="86a5-e658-2b45-da92" hidden="false" targetId="e0a0-28e4-e185-a2b8" type="rule">
+          <modifiers>
+            <modifier type="replace" value="4+" field="name" arg="*"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Spirit Horde" hidden="false" id="52e5-9df1-cf10-0d84" collective="false">
@@ -12560,16 +12756,21 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           </constraints>
           <infoLinks>
             <infoLink name="Spirit Horde" id="b7d7-111f-6b54-93a1" hidden="false" targetId="1858-2b2a-2c49-dab9" type="profile"/>
-            <infoLink name="Random Attacks (2D6)" id="88df-b9b9-cba7-d8a1" hidden="false" targetId="065b-1f43-47e5-70cb" type="rule">
+            <infoLink name="Random Attacks (*)" id="88df-b9b9-cba7-d8a1" hidden="false" targetId="64d8-e607-daa9-bd39" type="rule">
               <modifiers>
                 <modifier type="set" value="Spirit Horde" field="annotation"/>
+                <modifier type="replace" value="2D6" field="name" arg="*"/>
               </modifiers>
             </infoLink>
-            <infoLink name="Fly (7)" id="c5c3-e389-d717-e807" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
             <infoLink name="Spectral Steeds" id="2aeb-b2da-b26a-d5b4" hidden="false" targetId="1734-ad3c-cee7-c609" type="rule"/>
             <infoLink name="Magical Attacks" id="7010-eafd-0f46-8a45" hidden="false" targetId="03db-d81f-f264-84b8" type="rule">
               <modifiers>
                 <modifier type="set" value="Spirit Horde" field="annotation"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Fly (*)" id="949e-33fa-b7b8-0a17" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule">
+              <modifiers>
+                <modifier type="replace" value="7" field="name" arg="*"/>
               </modifiers>
             </infoLink>
           </infoLinks>
