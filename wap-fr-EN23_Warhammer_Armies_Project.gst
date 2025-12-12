@@ -8392,6 +8392,7 @@ If the random move brings the unit to within 1&quot; of a friendly unit or impas
 If two or more models in a unit have the Random Movement special rule, pivot the unit about its centre, then roll the dice only once to determine how for the unit moves. If models in the unit have a different Random Movement value, use the slowest for the entire unit.
 A Random Move counts as a &apos;normal&apos; move for triggering a Dangerous Terrain
 test, unless the model is making a charge, pursuit or flee move, in which case it counts as a move of the appropriate type.</description>
+      <alias>Random Movement</alias>
     </rule>
     <rule id="67cf-c767-bc85-2897" name="Loremaster (Lore of Nehekhara)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
@@ -8451,9 +8452,6 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
     <rule id="d041-af68-1592-6f88" name="Ogre Charge" publicationId="315d-135b-135c-07ce" page="37" hidden="false">
       <description>Each model with this special rule that successfully charges an enemy has the Impact Hits (1) special rule. Models with this special rule that are part of a unit with ranks add their current Rank Bonus to the Strength of the Impact Hits they inflict. In addition, they count as having one more rank than their actual number for the purpose of determining Steadfast in any turn that they charge.</description>
     </rule>
-    <rule id="fb9d-b6f0-9c84-38e2" name="Dwarf Rum" publicationId="9e23-79cb-pubN116235" page="32" hidden="false">
-      <description>Enemy models in base contact with models with this rule suffer -1 to their WS in Close Combat. This does not affect Undead, Daemonic or Mark of Nurgle models. The Slayer Pirates may not be deployed closer than 6&quot; to any other unit in the army at the start of the battle.</description>
-    </rule>
     <rule id="03d6-87a5-ffd8-93ba" name="Duck &amp; Weave" publicationId="0545-ea23-873c-f668" page="3" hidden="false">
       <description>Enemies attacking Infantry models with this rule suffer 1 To Hit in close combat.</description>
     </rule>
@@ -8475,9 +8473,6 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
     <rule id="4740-7f33-d5b8-5563" name="Slayer" publicationId="aa7b-3583-0834-7bfa" page="160" hidden="false">
       <description>Slayers always Wound on a To Wound roll of 4+, unless they would need a lower result. Use the Slayer&apos;s Strength to determine the armour save modifier for any successful Wounds.</description>
     </rule>
-    <rule id="390b-8c96-7c3a-9598" name="Orc Animosity" publicationId="8ada-88a0-cdcd-9b5e" page="60" hidden="false">
-      <description>Units with this  rule must roll a D6 and consult the orc animosity chart in the Charge subphase after all other charges have been declared, unless they have declared a charge, are already in combat, fleeing, or have less than 5 models.</description>
-    </rule>
     <rule id="7a27-4cc5-bde-2d7f" name="Fly (*)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>Flying models follow the rules for Skirmishers. However, they cannot use Feigned Flight, and if they have a Unit Strength above 2 and/or a close combat armour save better than 4+, they cannot use Vanguard.
 
@@ -8491,6 +8486,7 @@ A unit that is flying can march as normal, doubling its flying move.
 
 Flee and Pursue
 Flyers always move on the ground when attempting to flee or pursue.</description>
+      <alias>Fly</alias>
     </rule>
     <rule name="Swarms" id="f4d1-e978-a3ed-869b" hidden="false">
       <description>Complete Ranks (3). Supporting Attacks (5). Unit Strength (3). Line of Sight (0). Expendable. Skirmishers. Unstable.
@@ -8557,6 +8553,7 @@ Any effect that would modify the model&apos;s Characteristics affect both the r
     </rule>
     <rule id="c397-b441-9fd6-89bb" name="Unit Strength (*)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Unit Strength as indicared in the brackets.</description>
+      <alias>Unit Strength</alias>
     </rule>
     <rule name="Monstrous Cavalry" id="2b42-ec95-c1af-bc30" hidden="false">
       <description>Complete Ranks (3). Supporting Attacks (1+2). Unit Strength (3). Line of Sight (3). Fear. Cavalry.</description>
@@ -8868,30 +8865,13 @@ If a unit taking a Leadership test has a modifier to its Leadership, this modif
 
 
 If a unit is Steadfast, it may use the Leadership of the model for Break tests if it is higher than their own Leadership after applying all negative modifiers from combat resolution. Otherwise, they will use their own Leadership.</description>
-    </rule>
-    <rule name="Iron-hard Hooves" id="d3e1-3d43-c737-8137" hidden="false" publicationId="315d-135b-135c-07ce" page="217">
-      <description>An Imperial Pegasus with this upgrade re-roils failed To Wound rolls.</description>
+      <alias>Inspiring Presence</alias>
     </rule>
     <rule name="Swift as the Wind" id="81f2-e732-f272-822e" hidden="false" publicationId="315d-135b-135c-07ce" page="217">
       <description>An Imperial Pegasus with the Swift as the Wind upgrade re-rolls any dice results of a 1 when determining its charge range.</description>
     </rule>
-    <rule name="Shredding talons" id="00eb-e7d2-3193-6a10" hidden="false">
-      <description>The Griffon gains the Armour Piercing (1) special rule.</description>
-    </rule>
     <rule name="Swooping Strike" id="032a-fddc-ad13-76d6" hidden="false">
       <description>The Griffon gains the Devastating Charge special rule.</description>
-    </rule>
-    <rule name="Bloodrage" id="fc43-3fac-4ae1-1606" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
-      <description>The Manticore gains Hatred.</description>
-    </rule>
-    <rule name="Iron-hard Skin" id="1569-a18d-c1a5-c774" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
-      <description>The Manticore gains Natural Armour (5+).</description>
-    </rule>
-    <rule name="Venom Tail" id="9513-e549-4849-a0dd" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
-      <description>The Manticore gains an additional Attack that has Poisoned Attacks.</description>
-    </rule>
-    <rule name="Rending Fangs" id="38dc-ae6d-82d1-e44b" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
-      <description>The Manticore gains Armour Piercing (1).</description>
     </rule>
     <rule name="Weapon team" id="409d-a7ab-f540-c35c" hidden="false" publicationId="9e23-79cb-pubN66727" page="67">
       <description>If a model with this special rule is hit by a missile attack and is within 3&quot; of a friendly unit consisting of five or more rank and file models of the same troop type within 3&quot;, roll a D6. On a roll of 4+, the hit is transferred to a model in the friendly unit (if there is more than one eligible unit within 3&quot;, the controlling player can decide which). Otherwise, the hit is resolved against the Weapon Team as normal.</description>
@@ -8915,12 +8895,15 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
       <description>Models with Immunity ignore the effects of the rule(s) in the brackets. Note that the model only ignores the effects of the rule itself unless the attack is also listed as being non-physical. The physical attack still causes damage as normal.
 
 Immunity can also include Panic, Fear and Terror. If the majority of the models in a unit have the Immunity (Panic, Fear or Terror) rule, the unit ignores the effects of Panic, Fear or Terror and any such tests it would otherwise had to take.</description>
+      <alias>Immunity</alias>
     </rule>
     <rule id="d909-ac08-40af-8f44" name="Dodge (*)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>Models with this rule gain a Ward Save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have Always Strikes First, nor can it be used if the model is subject to Always Strikes Last. Finally, Dodge cannot be used by mounted models, unless specified.</description>
+      <alias>Dodge</alias>
     </rule>
     <rule id="c833-7f06-a9e9-e2ea" name="Armour Piercing (*)" publicationId="9e23-79cb-pubN66727" page="58" hidden="false">
       <description>Wounds caused in close combat by this model inflict a negative armour save modifier as indicated by the number in the brackets, in addition to those for S. If a model has a weapon with the Armour Piercing rule, only attacks made or shots fired with the weapon are Armour Piercing. This rule is cumulative with other sources of Armour Piercing.</description>
+      <alias>Armour Piercing</alias>
     </rule>
     <rule id="b38c-e0a7-d638-6465" name="Impact Hits (*)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
@@ -8930,9 +8913,11 @@ Impact Hits are only made on the turn the model makes a successful charge into c
 Impact Hits roll to wound using the Strength of the model making the Impact Hits. Any armour saves taken are done using the close combat value of the armour, and Parry saves may not be taken. Any Wounds caused by Impact Hits are counted towards combat resolution. 
 
 Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
+      <alias>Impact Hits</alias>
     </rule>
     <rule id="5111-c7d7-b7cd-273b" name="Line of Sight (*)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Line of Sight value as indicated in the brackets</description>
+      <alias>Line of Sigh</alias>
     </rule>
     <rule id="1ad8-8843-ff83-9c2e" name="Hatred (*)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
@@ -8944,26 +8929,32 @@ more than one wound (remember that a model cannot suffer more wounds than it has
 Where the number of Multiple Wounds is generated by a dice roll, roll a dice separately for each unsaved wound and use the total of all the dice rolled for the final number of wounds inflicted.
 
 Unless otherwise specified, Multiple Wounds only apply to close combat attacks.</description>
+      <alias>Multiple Wounds</alias>
     </rule>
     <rule id="ce12-9396-34d7-b68d" name="Mighty Blow (*)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
       <description>Models with this rule gain a Strength bonus to all their close combat attacks (including Impact Hits and Stomps) equal to the number in the brackets in the first round of each new close combat they are involved in. Note that any attack made with a weapon that gives Mighty Blow only applies to attacks made with the weapon itself. This rule is cumulative with other sources of Mighty Blow.</description>
+      <alias>Mighty Blow</alias>
     </rule>
     <rule id="b09f-673f-e98d-fe59" name="Magic Resistance (*)" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
       <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward Save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
 
 If a character with Magic Resistance joins a unit, all models in the unit benefit from the Magic Resistance as long as they are part of the unit. If a model or unit has two sets of Magic Resistance, the two combine to a maximum of Magic Resistance (3), unless specified.</description>
+      <alias>Magic Resistance</alias>
     </rule>
     <rule id="64d8-e607-daa9-bd39" name="Random Attacks (*)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
+      <alias>Random Attacks</alias>
     </rule>
     <rule id="f37d-a124-ff82-7de3" name="Natural Armour (*)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
     </rule>
     <rule id="60d2-15fd-780b-5b86" name="Parry (*)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>Models with this rule gain a Ward Save in close combat as indicated in the brackets. This is cumulative with other sources of Parry. It cannot be used against attacks made against the model&apos;s flank or rear, nor can it be used against attacks that Hit automatically, attacks that are made at +3 Strength over the model&apos;s own Strength value, nor can it be used by mounted models, unless specified.</description>
+      <alias>Parry</alias>
     </rule>
     <rule id="e0a0-28e4-e185-a2b8" name="Regeneration (*)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
       <description>A model with Regeneration gains a Ward Save (indicated by the number in the brackets). This is cumulative with other sources of Regeneration. Regeneration may not be used against Flaming Attacks, successful Killing Blows (including Heroic Killing Blow) or wounds caused due the unit being Unstable.</description>
+      <alias>Regeneration</alias>
     </rule>
     <rule id="3006-8f7c-f916-af14" name="Ward Save (*)" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
       <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
@@ -8973,9 +8964,14 @@ Note that does not stop single Ward Saves from being used, such as a model havin
 Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
 
 Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
+      <alias>Ward Save</alias>
     </rule>
     <rule id="784a-037e-aca4-245a" name="Strider (*)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
       <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
+      <alias>Strider</alias>
+    </rule>
+    <rule name="Iron-hard Hooves" id="d3e1-3d43-c737-8137" hidden="false" publicationId="315d-135b-135c-07ce" page="217">
+      <description>A Pegasus with this upgrade re-roils failed To Wound rolls.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
