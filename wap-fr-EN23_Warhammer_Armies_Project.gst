@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="73" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="74" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -803,6 +803,85 @@
           </profiles>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Test DUUUUDE" hidden="false" id="4712-c5d5-f005-746d">
+      <entryLinks>
+        <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="9f36-6c7e-917f-906e" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="bow" hidden="false" id="f308-36ac-8237-6e0d"/>
+          </selectionEntries>
+        </entryLink>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="08f3-93c4-570e-1f4e" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="weapon" hidden="false" id="858a-43bf-0962-12f1"/>
+          </selectionEntries>
+        </entryLink>
+        <entryLink import="true" name="56. Upgrades" hidden="false" id="510f-246c-38a8-702e" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Upgrade gives ward save 6+" hidden="false" id="2ced-1943-1575-13d2">
+              <entryLinks>
+                <entryLink import="true" name="Ward Save" hidden="false" id="dc4f-a895-aca2-0093" type="selectionEntry" targetId="a7f2-84ca-ba68-802b">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="38c5-3cab-16b0-0fd3-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="38c5-3cab-16b0-0fd3-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6b51-0777-602d-a4fb" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
+      </entryLinks>
+      <profiles>
+        <profile name="Test DUUUUDE" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="bcdc-5174-2e80-4c7e">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">2</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">41</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">23</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1222</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">3</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">1</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="40. Items" id="8248-365a-17e7-f495" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Item gives ward save 6+" hidden="false" id="7c9a-b962-55dc-27ff">
+              <entryLinks>
+                <entryLink import="true" name="Ward Save" hidden="false" id="876a-0213-4a44-5373" type="selectionEntry" targetId="a7f2-84ca-ba68-802b">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3985-7c51-e450-9108-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3985-7c51-e450-9108-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a427-92ab-acd5-a63f" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Item gives ward save 5+" hidden="false" id="5f17-5974-2e51-8d8d">
+              <entryLinks>
+                <entryLink import="true" name="Ward Save" hidden="false" id="e501-3aae-af7b-b7e1" type="selectionEntry" targetId="a7f2-84ca-ba68-802b">
+                  <constraints>
+                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="cb12-1c6d-33df-130d-min" includeChildSelections="false"/>
+                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="cb12-1c6d-33df-130d-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="57b9-2697-71d2-5e5b" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
@@ -8772,6 +8851,39 @@
         <infoLink name="Scouts" id="67e4-25e2-a92b-02ae" hidden="false" targetId="6624-0b7b-c5b8-6397" type="rule"/>
       </infoLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" name="Ward Save" hidden="false" id="a7f2-84ca-ba68-802b">
+      <rules>
+        <rule name="Ward Save (*)" id="ede9-e4de-0ee2-ad06" hidden="false">
+          <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
+
+
+Note that does not stop single Ward Saves from being used, such as a model having a listed 2+ or 3+ Ward Save; the above limitation only applies to combining Ward Saves.
+
+
+Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
+
+
+Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
+          <modifiers>
+            <modifier type="replace" value="6+" field="name" arg="*">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="model" childId="a7f2-84ca-ba68-802b" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="replace" value="5+" field="name" arg="*">
+              <conditions>
+                <condition type="equalTo" value="2" field="selections" scope="model" childId="a7f2-84ca-ba68-802b" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="replace" value="4+" field="name" arg="*">
+              <conditions>
+                <condition type="atLeast" value="3" field="selections" scope="model" childId="a7f2-84ca-ba68-802b" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </rule>
+      </rules>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="50. Handheld Armour" id="9015-46da-282c-713d" hidden="false">
@@ -9139,6 +9251,7 @@
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bbf4-e1d7-a373-5080"/>
       </constraints>
     </selectionEntryGroup>
+    <selectionEntryGroup name="100. Cumulative Rules" id="6e73-9a0f-7bd5-2222" hidden="false" collapsible="true" collective="true"/>
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="6624-0b7b-c5b8-6397" name="Scouts" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
@@ -9849,9 +9962,12 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
     <rule id="7323-b2a0-af7b-3ec6" name="Ward Save (3+)" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
       <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
 
+
 Note that does not stop single Ward Saves from being used, such as a model having a listed 2+ or 3+ Ward Save; the above limitation only applies to combining Ward Saves.
 
+
 Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
+
 
 Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
     </rule>
