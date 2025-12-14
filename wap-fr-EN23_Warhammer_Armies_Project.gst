@@ -6,7 +6,7 @@
     <publication id="9e23-79cb-pubN67565" name="Albion v.1.5" shortName="Al" publisher="Warhammer - Albion 9th Ed 1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN71963" name="Beastmen v.1.7" shortName="BM" publisher="Warhammer - Beastmen 9th Ed 1.6" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN75312" name="Bretonnia v.1.61" shortName="Br" publisher="Warhammer - Bretonnia 9th Ed v.1.61" publicationDate="06.12.2025" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="9e23-79cb-pubN76150" name="Dark Elves v.1.71" shortName="DE" publisher="Warhammer - Dark Elves 9th Ed 1.6" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="9e23-79cb-pubN76150" name="Dark Elves v.1.73" shortName="DE" publisher="Warhammer - Dark Elves 9th Ed 1.73" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN77092" name="High Elves v.1.6" shortName="HE" publisher="Warhammer - High Elves 9th Ed v.1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN77402" name="Lizardmen v.1.5" shortName="LM" publisher="Warhammer - Lizardmen 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN78137" name="Ogre Kingdoms v.1.5" shortName="OK" publisher="Warhammer - Ogre Kingdoms 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
