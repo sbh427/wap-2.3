@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="1580-32e4-2f36-d2bb" name="Ogre Kingdoms WAP 1.6" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="65" revision="4" battleScribeVersion="2.03" authorContact="Contact me via discord" authorName="Xetolosch" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="1580-32e4-2f36-d2bb" name="Ogre Kingdoms WAP 1.6" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="65" revision="5" battleScribeVersion="2.03" authorContact="Contact me via discord" authorName="Xetolosch" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Beneath Contempt" id="76bd-2842-3052-fa33" hidden="false" publicationId="dc4b-67ab-7b8e-baa5" page="3">
       <description>Gnoblars have the Expendable special rule. In addition, even other Gnoblars treat them as being Expendable.</description>
@@ -1653,15 +1653,21 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="19d6-5205-5ca0-cfbe"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="58d5-3e41-5735-587f" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
-          <profiles>
-            <profile name="Headsmasher" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="5dc0-0df9-2f3c-3793" publicationId="dc4b-67ab-7b8e-baa5" page="7">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+1</characteristic>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Great weapon. Headsmasher gives the wielder the Killing Blow special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="abcc-4aa7-4989-7189" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Great Weapon" id="3754-aeab-a6ff-4392" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
+              <modifiers>
+                <modifier type="set" value="Headsmasher" field="annotation"/>
+                <modifier type="append" value="Headsmasher gives the wielder the Killing Blow special rule." field="de63-d6da-efa8-00ac" join=", "/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Blade of All-Frost" hidden="false" id="7f40-9009-2196-ff5a" sortIndex="3">
           <costs>
