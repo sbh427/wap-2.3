@@ -9531,11 +9531,16 @@ the start of any round of Close Combat. When it is, the bearer suffers 1 Wound 
           </profiles>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="model" childId="9519-df8f-0af4-1995" shared="true" includeChildSelections="true">
-                  <comment>Specific entry of Wight King</comment>
-                </condition>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="model" childId="b1d9-62fb-2ed9-b1a4" shared="true" includeChildSelections="true">
+                      <comment>Specific entry of Wight King</comment>
+                    </condition>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="2419-cf0c-5617-ea9f" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>

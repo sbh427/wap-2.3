@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="d63c-bfc7-b3cb-5a6d" name="Zombie Pirates WAP 1.5" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="72" revision="1" authorName="xetolosch" authorContact="contact me on discord" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="d63c-bfc7-b3cb-5a6d" name="Zombie Pirates WAP 1.5" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="72" revision="2" authorName="xetolosch" authorContact="contact me on discord" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="The Red Thirst" id="bbaa-8771-dddb-7fe5" hidden="false" page="3" publicationId="4f8f-9147-1eae-6c3d">
       <description>Roll a D6 at the end of each Close Combat phase for every enemy model slain by a model with this special rule this round. On the roll of a 6+, the model recovers a single Wound lost earlier in the battle. This does not work against models with the Animated Construct, Daemonic, Forest Spirit or Vampiric special rules.</description>
@@ -5384,19 +5384,36 @@ Characters who are not Undead may join Undead units despite not being Unstable 
     <selectionEntryGroup name="10. Character Options" id="73df-6842-6701-7f28" hidden="false">
       <entryLinks>
         <entryLink import="true" name="General" hidden="false" id="2c52-1e04-8e6f-cd4b" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="1"/>
-        <entryLink import="true" name="Army Battle Standard" hidden="false" id="055c-0a03-a45b-92f9" type="selectionEntry" targetId="9519-df8f-0af4-1995" sortIndex="2">
-          <costs>
-            <cost name="pts" typeId="points" value="25"/>
-          </costs>
-          <entryLinks>
-            <entryLink import="true" name="Magic Standards" hidden="false" id="52e3-bdd8-9cb1-0b09" type="selectionEntryGroup" targetId="1cf9-4658-a937-c737"/>
-          </entryLinks>
-        </entryLink>
       </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b589-8a11-6582-db6c"/>
       </constraints>
       <comment>including Battle Standard Bearer</comment>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Army Battle Standard" hidden="false" id="9573-f84a-f698-8b16" sortIndex="2">
+          <costs>
+            <cost name="pts" typeId="points" value="25"/>
+          </costs>
+          <infoLinks>
+            <infoLink name="The Battle Standard Bearer" id="7158-8c48-50bc-4ed5" hidden="false" type="rule" targetId="3f4a-7d94-afef-39ea">
+              <modifiers>
+                <modifier type="append" value="In addition to the normal rules for the army Battle Standard, units of Undead within 12&quot; of their Battle Standard suffer D3 Wounds less than they normally would due to the Unstable special rule, or following the death of the Army General.
+" field="description" join="
+
+
+"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="46d6-dfee-8317-54ae" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="5cd8-c8d7-d136-b4f0" includeChildSelections="true"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Magic Standards" hidden="false" id="52e3-bdd8-9cb1-0b09" type="selectionEntryGroup" targetId="1cf9-4658-a937-c737"/>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <categoryEntries>
