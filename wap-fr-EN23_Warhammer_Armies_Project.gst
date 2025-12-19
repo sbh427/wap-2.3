@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="74" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="75" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -233,7 +233,10 @@
         <constraint type="max" value="25" field="limit::points" scope="roster" shared="false" id="maxPercentage" percentValue="true" includeChildSelections="true" includeChildForces="false"/>
       </constraints>
     </categoryEntry>
-    <categoryEntry name="Mount" hidden="true" id="8b8a-34b1-ed30-df11">
+    <categoryEntry name="Mount" hidden="true" id="8b8a-34b1-ed30-df11"/>
+    <categoryEntry name="Crew" hidden="true" id="7b27-23f7-972d-c306"/>
+    <categoryEntry name="Wizard" id="1aae-2529-c509-7573" hidden="false"/>
+    <categoryEntry name="Infantry" id="22c9-1606-58f8-2e60" hidden="false">
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -263,9 +266,6 @@
         </modifier>
       </modifiers>
     </categoryEntry>
-    <categoryEntry name="Crew" hidden="true" id="7b27-23f7-972d-c306"/>
-    <categoryEntry name="Wizard" id="1aae-2529-c509-7573" hidden="false"/>
-    <categoryEntry name="Infantry" id="22c9-1606-58f8-2e60" hidden="false"/>
     <categoryEntry name="Monster" id="e1a0-da31-05c5-9a15" hidden="false">
       <infoLinks>
         <infoLink name="Stomp" id="2cc9-54d7-9903-29c9" hidden="false" type="rule" targetId="668c-19e8-b764-8549">

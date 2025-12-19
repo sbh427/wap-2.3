@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="522e-5e2a-d54c-4959" name="Armoury" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="68" revision="4" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="522e-5e2a-d54c-4959" name="Armoury" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="68" revision="5" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="X Additional Hand Weapon" id="c4b0-4ee4-7b99-843e" hidden="true"/>
     <categoryEntry name="X Flail" id="a86f-aab3-889c-0b6d" hidden="true"/>
@@ -565,15 +565,55 @@
       <characteristics>
         <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
         <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
-        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">-1 M (Applies to mount&apos;s M characteristic.)</characteristic>
+        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">-1 M (Applies to mount&apos;s M characteristic.)
+
+
+
+</characteristic>
       </characteristics>
     </profile>
     <profile name="Buckler" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="1700-a7e5-d272-ef20" publicationId="9e23-79cb-pubN66727" page="95">
       <characteristics>
         <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
-        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+*</characteristic>
-        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Parry (6+) (Only applies if used with a hand weapon.). *(Only applies to models on foot against missile attacks to the front.)</characteristic>
+        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca"/>
+        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Parry (6+) (Only applies if used with a hand weapon.)</characteristic>
       </characteristics>
+      <modifiers>
+        <modifier type="set" value="6+*" field="97ea-ecf7-8d24-b2ca">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="f651-5580-8a7b-45eb" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="prepend" value="Only applies to models on foot against missile attacks to the front.
+" field="ff58-91e4-84d7-e6e4" join="
+">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="f651-5580-8a7b-45eb" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </profile>
     <profile name="Heavy Armour" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="8e15-bc32-b40c-bad3" publicationId="9e23-79cb-pubN66727" page="95">
       <characteristics>
@@ -600,8 +640,31 @@
       <characteristics>
         <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
         <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+*</characteristic>
-        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Parry (6+) (Only applies if used with a hand weapon.). *(Models armed with shields get an additional +1 to their armour save against missile attacks to their front. Shields do not add any armour against missile attacks to the rear.)</characteristic>
+        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Parry (6+) (Only applies if used with a hand weapon)
+
+*Shields do not add any armour against missile attacks to the rear.</characteristic>
       </characteristics>
+      <modifiers>
+        <modifier type="prepend" value="Models on foot armed with shields get an additional +1 to their armour save against missile attacks to their front.
+ 
+" field="ff58-91e4-84d7-e6e4" join="
+">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="f651-5580-8a7b-45eb" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </profile>
     <profile name="Blades of the Ancients (Combat)" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="eb45-b280-1043-8a09" publicationId="9e23-79cb-pubN116235" page="28">
       <characteristics>
