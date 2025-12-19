@@ -911,7 +911,7 @@
           </profiles>
           <rules>
             <rule id="9c9e-5164-fd48-5d78" name="The Newly Dead" publicationId="10a5-5781-61f5-86ae" page="25" hidden="false">
-              <description>Zombie units can be increased beyond their starting size by spells and effects that add models to an existing unit. In addition, when Zombie units are successfully targeted by the Invocation of Nehek spell from the Lore of Necromancy, they regain an extra D6 Wounds. However, they also suffer one more casualty than normal due to being Unstable.</description>
+              <description>Zombie units can be increased beyond their starting size by spells and effects that add models to an existing unit. In addition, when Zombie units are successfully targeted by the Invocation of Nehek spell from the Lore of Necromancy, they regain an extra D6 Wounds. However, they also suffer D3 more casualties than normal due to being Unstable.</description>
             </rule>
           </rules>
           <infoLinks>
@@ -8037,7 +8037,7 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
           <profiles>
             <profile id="0c7e-1d5d-633e-058d" name="Sceptre de Noirot" publicationId="10a5-5781-61f5-86ae" page="10" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Sceptre de Noirot makes the bearer roll an additional D6 when determining the number of Zombies or Skeletons raised with the Invocation of Nehek and Raise Dead spells from the Lore of Necromancy.</characteristic>
+                <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer of this item may re-roll one dice of their choice when determining the number of Zombies or Skeletons raised with the Invocation of Nehek and Raise Dead spells from the Lore of Necromancy.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -9793,7 +9793,7 @@ the start of any round of Close Combat. When it is, the bearer suffers 1 Wound 
           <profiles>
             <profile id="5c43-5796-00df-5b64" name="The Gem of Blood" publicationId="10a5-5781-61f5-86ae" page="10" hidden="false" typeId="065f-58ea-de5d-d3c6" typeName="Talisman">
               <characteristics>
-                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">One use only. The Gem of Blood activates when the bearer of the Gem of Blood suffers their first Wound in close combat (before saves). Roll a D6; on a roll of a 1 the wearer suffers the Wound as normal, and an additional Wound with no armour save allowed. On a 2+ the Wound is saved, and is rebounded onto the model that caused it with the Ignores Armour Saves special rule.</characteristic>
+                <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">One use only. The Gem of Blood activates when the bearer suffers their first Wound in close combat (before saves). Roll a D6; on a roll of a 1 the wearer suffers the Wound as normal, and an additional Wound with no saves allowed. On a 2+ the Wound is saved, and is rebounded onto the model that caused it with no saves allowed.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -9823,7 +9823,18 @@ the start of any round of Close Combat. When it is, the bearer suffers 1 Wound 
           <costs>
             <cost name="pts" typeId="points" value="50"/>
           </costs>
-          <comment># TODO infantry or cavalry</comment>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="bdee-b168-38ba-7d3c" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="22c9-1606-58f8-2e60" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry id="74e9-8995-593d-708c" name="Cloak of the Waxing Moon" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
@@ -11082,7 +11093,7 @@ To resolve a Death Shriek, roll 2D6+3. For each point by which the result exceed
     </profile>
     <profile id="ae25-dd70-7c22-56e0" name="Dark Acolyte" publicationId="10a5-5781-61f5-86ae" page="7" hidden="false" typeId="21e6-6317-460c-b75f" typeName="Vampiric Power">
       <characteristics>
-        <characteristic name="Special Rules" typeId="e351-0ddf-3e1a-0f9f">The model adds +D3 to the number of Wounds healed whenever it successfully casts Invocation of Nehek, following its normal restrictions.</characteristic>
+        <characteristic name="Special Rules" typeId="e351-0ddf-3e1a-0f9f">The model adds +1 to the number of Wounds healed (Core Units regain +D3 Wounds) whenever it successfully casts Invocation of Nehek.</characteristic>
       </characteristics>
     </profile>
     <profile id="1028-e8c0-ed9b-343b" name="Nightmare" publicationId="10a5-5781-61f5-86ae" page="22" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
