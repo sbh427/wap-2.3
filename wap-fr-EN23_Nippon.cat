@@ -4,4 +4,379 @@
     <catalogueLink type="catalogue" name="Armoury" id="50cd-73c9-337b-704e" targetId="522e-5e2a-d54c-4959"/>
     <catalogueLink type="catalogue" name="Bestiary" id="db68-e398-738d-deb1" targetId="1fc9-2903-cb19-5737"/>
   </catalogueLinks>
+  <sharedRules>
+    <rule name="Death Before Dishonour" id="eb00-8407-3635-9261" hidden="false">
+      <description>Whenever a unit comprised wholly of models with this special rule is required to take a Break Test, they may choose to do so using 3D6, discarding the highest dice. However, if this test is failed, you must remove the entire unit as a casualty. The enemy then cannot pursue or overrun, but may reform as normal</description>
+    </rule>
+    <rule name="Way of the Warrior" id="28dd-2b0a-b009-9f2a" hidden="false">
+      <description>Models with this rule must always accept challenges and re-roll all failed Psychology tests. In addition, they ignore Panic caused by friendly units with the Loner special rule and with a lower unmodified Leadership value (excluding any characters) than them.</description>
+    </rule>
+    <rule name="Caltrops " id="3bab-bad2-64e1-5631" hidden="false">
+      <description>Caltrops may be used as a Stand and Shoot reaction. All models in the enemy unit charging them has to take a Dangerous Terrain test as soon as it comes within 4&quot; of the Ninja unit.</description>
+    </rule>
+    <rule name="Grappling Hooks" id="4c4f-14bd-ad1c-778c" hidden="false">
+      <description>Models equipped with grappling hooks can move over impassable terrain like walls, rocks and buildings, but not water and the like. Note that they still may not end their move within impassable terrain</description>
+    </rule>
+    <rule name="Mantlets" id="2fa3-0ed3-7f0d-415d" hidden="false">
+      <description>Units with mantlets must place them on separate bases in front of the unit. Every model in the front rank must have a mantlet base in front of it, which must also be set up within the army&apos;s deployment zone. A unit with mantlets gains a 4+ armour save against missile attacks to its front arc (except template attacks). However, if the unit moves or reforms during the game, the mantlets are removed from play.</description>
+    </rule>
+    <rule name="Smoke Bombs" id="79e0-cc48-1ec4-e012" hidden="false">
+      <description>A unit with Smoke Bombs may use them at the end of any Close Combat phase in which they take part. On a 4+, the unit may disengage the combat by making a flee move. If they do so, the enemy cannot pursue them and they will rally automatically in their next turn.</description>
+    </rule>
+  </sharedRules>
+  <sharedSelectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Katana" hidden="false" id="04a7-e5b9-407a-a686" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c81-c071-b6e4-433a" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Katana (One Handed)" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="3ab7-eb7a-cf33-e82e">
+          <characteristics>
+            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
+            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Counts as hand weapon</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Katana (Two Handed)" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="9fae-d402-a9c7-8e27">
+          <characteristics>
+            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
+            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
+            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Requires Two Hand. The extra Strength does not inflict any additional penalties on armour saves.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="mount" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Horo Cloak" hidden="false" id="ea6b-8b2e-5e1c-a37a" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2a6d-ccfc-8230-e73e" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Horo Cloak" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="31f0-ea7a-e036-9718">
+          <characteristics>
+            <characteristic name="Combat" typeId="168d-1cc2-66f3-e766"/>
+            <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
+          </characteristics>
+        </profile>
+      </profiles>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Mon of the Chotosa Clan" hidden="false" id="d3bb-3228-1c5f-1fc4" collective="true">
+      <rules>
+        <rule name="Mon of the Chotosa Clan" id="4854-1113-7764-3adc" hidden="false">
+          <description>Models with this Mon may re-roll 1&apos;s when rolling to Hit with longbows</description>
+        </rule>
+      </rules>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="281a-4588-8cf3-0fb8" includeChildSelections="false"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="5" field="points">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="1"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Mon of the Hattiga Clan" hidden="false" id="e48e-38a1-5b7d-313d" collective="true">
+      <rules>
+        <rule name="Mon of the Hattiga Clan" id="cbb7-deb0-beeb-2a36" hidden="false">
+          <description>Each Shinobi adds +1 to deciding which table side to deploy on and whether or not to deploy Scouts first or second. In addition, Ninja, Kabuki Dolls and Shinobi gain +1 Attack in the first round of combat.</description>
+        </rule>
+      </rules>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="43c5-1bb1-d537-eb51" includeChildSelections="false"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="20" field="points">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="1"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Mon of the Dawate Clan" hidden="false" id="118f-7d91-db4d-d58d" collective="true">
+      <rules>
+        <rule name="Mon of the Dawate Clan" id="19eb-cb2f-856b-ca48" hidden="false">
+          <description> Models with this Mon do not suffer any penalties to their Initiative if armed with great weapons.</description>
+        </rule>
+      </rules>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0d64-9a14-46fa-8ca7" includeChildSelections="false"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="15" field="points">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="1"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Mon of the Shisuma Clan" hidden="false" id="7314-efb2-5a40-052b" collective="true">
+      <rules>
+        <rule name="Mon of the Shisuma Clan" id="287c-07d1-d43f-9492" hidden="false">
+          <description>Models with this Mon using katanas gain the Parry (6+) special rule</description>
+        </rule>
+      </rules>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="27a7-9747-127f-d63e" includeChildSelections="false"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="10" field="points">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="1"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Mon of the Odari Clan" hidden="false" id="1dbf-1ebe-5d1b-c32b" collective="true">
+      <rules>
+        <rule name="Mon of the Odari Clan" id="d8c8-01d1-284c-c491" hidden="false">
+          <description>Models with this Mon gain +1 to their Leadership.</description>
+        </rule>
+      </rules>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="01c5-dc72-4f29-5c41" includeChildSelections="false"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="1"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Mon of the Hojizu Clan" hidden="false" id="4e80-db65-bc71-5ca7" collective="true">
+      <rules>
+        <rule name="Mon of the Hojizu Clan" id="02c7-8445-2e02-d3c2" hidden="false">
+          <description>War Machines with this Clan Mon may re-roll one failed To Hit roll or one Artillery Dice once per battle.</description>
+        </rule>
+      </rules>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6a9e-3260-5a0e-7971" includeChildSelections="false"/>
+      </constraints>
+      <costs>
+        <cost name="pts" typeId="points" value="15"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Mon of the Takai Clan" hidden="false" id="f6d2-44d5-d54d-f728" collective="true">
+      <rules>
+        <rule name="Mon of the Takai Clan" id="9a67-9296-6b02-43c9" hidden="false">
+          <description>Models with this Mon may re-roll one dice when determining their charge distance, and re- roll 1&apos;s when rolling To Wound on the charge</description>
+        </rule>
+      </rules>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="86cc-e11a-1612-8871" includeChildSelections="false"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="10" field="points">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="1"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Mon of the Uesigo Clan" hidden="false" id="2e10-9422-ead4-c046" collective="true">
+      <rules>
+        <rule name="Mon of the Uesigo Clan" id="e1f7-3ef0-5e5f-8b94" hidden="false">
+          <description>Warrior Monks with this Clan Mon gain the Stubborn special rule. If they are already Stubborn, they instead become Unbreakable. Onmyoji add +1 to their casting result.</description>
+        </rule>
+      </rules>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="08c4-85c8-b653-3f58" includeChildSelections="false"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="20" field="points">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="pts" typeId="points" value="1"/>
+      </costs>
+    </selectionEntry>
+  </sharedSelectionEntries>
+  <selectionEntries>
+    <selectionEntry type="upgrade" import="true" name="Clan Mon" hidden="false" id="fa01-9f6f-6663-78b1" exportable="false" sortIndex="0">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="faa9-1c50-0c2a-8d52-min" includeChildSelections="true" automatic="true" includeChildForces="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="faa9-1c50-0c2a-8d52-max" includeChildSelections="true" automatic="true" includeChildForces="true"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Choose a Mon" id="030c-fc4a-9f79-a52a" hidden="false">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9ad7-8d42-cd03-b566" includeChildSelections="true"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Mon of the Uesigo Clan" hidden="false" id="5585-264a-8c7f-fafa" type="selectionEntry" targetId="2e10-9422-ead4-c046" sortIndex="8"/>
+            <entryLink import="true" name="Mon of the Chotosa Clan" hidden="false" id="441e-1397-a268-8f67" type="selectionEntry" targetId="d3bb-3228-1c5f-1fc4" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="Models with longbows only" field="annotation"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Mon of the Dawate Clan" hidden="false" id="7f0f-780c-eb63-8cfc" type="selectionEntry" targetId="118f-7d91-db4d-d58d" sortIndex="2">
+              <modifiers>
+                <modifier type="set" value="Models with great weapons only" field="annotation"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Mon of the Hattiga Clan" hidden="false" id="66e4-440d-f30f-5258" type="selectionEntry" targetId="e48e-38a1-5b7d-313d" sortIndex="3"/>
+            <entryLink import="true" name="Mon of the Hojizu Clan" hidden="false" id="cabe-1106-34fa-2aeb" type="selectionEntry" targetId="4e80-db65-bc71-5ca7" sortIndex="6">
+              <modifiers>
+                <modifier type="set" value="War Machines only" field="annotation"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Mon of the Odari Clan" hidden="false" id="7cb5-2bcc-b304-f320" type="selectionEntry" targetId="1dbf-1ebe-5d1b-c32b" sortIndex="5">
+              <modifiers>
+                <modifier type="set" value="Ashigaru only" field="annotation"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Mon of the Shisuma Clan" hidden="false" id="ba4e-4bbd-213a-8767" type="selectionEntry" targetId="7314-efb2-5a40-052b" sortIndex="4">
+              <modifiers>
+                <modifier type="set" value="Infantry only" field="annotation"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Mon of the Takai Clan" hidden="false" id="1ad3-5e2e-2785-35e9" type="selectionEntry" targetId="f6d2-44d5-d54d-f728" sortIndex="7">
+              <modifiers>
+                <modifier type="set" value="Cavalry only" field="annotation"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <modifiers>
+        <modifier type="set" value="0" field="points" affects="self.entries.recursive"/>
+      </modifiers>
+      <comment>TODO logic to hide mons</comment>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Daimyo" hidden="false" id="cd19-a1e9-c764-25b1" sortIndex="1"/>
+  </selectionEntries>
+  <sharedSelectionEntryGroups>
+    <selectionEntryGroup name="11. Clan Mon" id="3b57-19a7-13fc-9581" hidden="false">
+      <entryLinks>
+        <entryLink import="true" name="Mon of the Uesigo Clan" hidden="false" id="574a-3081-3475-b559" type="selectionEntry" targetId="2e10-9422-ead4-c046">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="5585-264a-8c7f-fafa" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Mon of the Chotosa Clan" hidden="false" id="afae-0328-d4ad-9b6d" type="selectionEntry" targetId="d3bb-3228-1c5f-1fc4" sortIndex="">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="441e-1397-a268-8f67" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Mon of the Dawate Clan" hidden="false" id="19b4-4168-d2ba-5056" type="selectionEntry" targetId="118f-7d91-db4d-d58d">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="7f0f-780c-eb63-8cfc" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Mon of the Hattiga Clan" hidden="false" id="a504-a107-c99f-b12d" type="selectionEntry" targetId="e48e-38a1-5b7d-313d">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="66e4-440d-f30f-5258" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Mon of the Hojizu Clan" hidden="false" id="a05b-1bfb-a3db-830c" type="selectionEntry" targetId="4e80-db65-bc71-5ca7">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="cabe-1106-34fa-2aeb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Mon of the Odari Clan" hidden="false" id="97c7-6dc0-0bb9-2c39" type="selectionEntry" targetId="1dbf-1ebe-5d1b-c32b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="7cb5-2bcc-b304-f320" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Mon of the Shisuma Clan" hidden="false" id="666b-8b9e-9116-013c" type="selectionEntry" targetId="7314-efb2-5a40-052b">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="ba4e-4bbd-213a-8767" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Mon of the Takai Clan" hidden="false" id="f53b-cc8b-6681-8fb0" type="selectionEntry" targetId="f6d2-44d5-d54d-f728">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="1ad3-5e2e-2785-35e9" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="afec-9e80-677e-4144" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntryGroup>
+  </sharedSelectionEntryGroups>
 </catalogue>
