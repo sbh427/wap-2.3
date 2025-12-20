@@ -23,35 +23,19 @@
     <rule name="Smoke Bombs" id="79e0-cc48-1ec4-e012" hidden="false">
       <description>A unit with Smoke Bombs may use them at the end of any Close Combat phase in which they take part. On a 4+, the unit may disengage the combat by making a flee move. If they do so, the enemy cannot pursue them and they will rally automatically in their next turn.</description>
     </rule>
+    <rule name="Impale" id="2186-5979-2934-1bfd" hidden="false">
+      <description>Mounts with this special rule gain the Mighty Blow (1) special rule when they charge.</description>
+    </rule>
   </sharedRules>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Katana" hidden="false" id="04a7-e5b9-407a-a686" collective="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c81-c071-b6e4-433a" includeChildSelections="false"/>
       </constraints>
-      <profiles>
-        <profile name="Katana (One Handed)" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="3ab7-eb7a-cf33-e82e">
-          <characteristics>
-            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Counts as hand weapon</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="Katana (Two Handed)" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="9fae-d402-a9c7-8e27">
-          <characteristics>
-            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
-            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Requires Two Hand. The extra Strength does not inflict any additional penalties on armour saves.</characteristic>
-          </characteristics>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="mount" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
-      </profiles>
+      <infoLinks>
+        <infoLink name="Katana (Two Handed)" id="c181-995b-b8b0-331f" hidden="false" type="profile" targetId="9fae-d402-a9c7-8e27"/>
+        <infoLink name="Katana (One Handed)" id="a577-94d1-92ed-a1ad" hidden="false" type="profile" targetId="3ab7-eb7a-cf33-e82e"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Horo Cloak" hidden="false" id="ea6b-8b2e-5e1c-a37a" collective="true">
       <constraints>
@@ -243,47 +227,116 @@
         <cost name="pts" typeId="points" value="1"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="model" import="true" name="Komainu" hidden="false" id="1130-01f0-bc20-3ac7" subType="mount" collective="true">
+      <categoryLinks>
+        <categoryLink name="Mount" hidden="false" id="b8a7-c5ea-af5b-0681" targetId="8b8a-34b1-ed30-df11" primary="false"/>
+        <categoryLink name="Cavalry" hidden="false" id="458b-a54c-0b3e-1a52" targetId="bdee-b168-38ba-7d3c" primary="false"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="20f0-33bc-4096-e8c1" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Komainu" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6516-07d7-cf53-7275">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Magic Resistance (1)" id="a198-43cf-f69b-bba8" hidden="false" type="rule" targetId="7ed4-9d31-09c3-6bf9">
+          <modifiers>
+            <modifier type="set" value="From Komainu" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Fear" id="c0c9-c411-473c-ce31" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Kirin" hidden="false" id="4115-0961-cdb8-e85f" subType="mount" collective="true">
+      <categoryLinks>
+        <categoryLink name="Mount" hidden="false" id="d5d9-f4b1-5926-df52" targetId="8b8a-34b1-ed30-df11" primary="false"/>
+        <categoryLink name="Cavalry" hidden="false" id="b1bd-abbb-6fcb-15af" targetId="bdee-b168-38ba-7d3c" primary="false"/>
+      </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cfaf-1492-d397-0e07" includeChildSelections="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Kirin" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6059-c2bb-3959-0366">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Natural Armour (6+)" id="5e09-8993-641d-39dd" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9">
+          <modifiers>
+            <modifier type="set" value="From Komainu" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Magical Attacks" id="d3d0-f08c-9f2f-f129" hidden="false" type="rule" targetId="03db-d81f-f264-84b8"/>
+        <infoLink name="Fear" id="ebae-de03-ce34-d878" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
+        <infoLink name="Fly (9)" id="aadf-1914-0d5c-5e2b" hidden="false" type="rule" targetId="2ba2-2aaa-3f36-4b24"/>
+        <infoLink name="Impale" id="beca-74ca-d5b1-6b83" hidden="false" type="rule" targetId="2186-5979-2934-1bfd"/>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <selectionEntries>
     <selectionEntry type="upgrade" import="true" name="Clan Mon" hidden="false" id="fa01-9f6f-6663-78b1" exportable="false" sortIndex="0">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="faa9-1c50-0c2a-8d52-min" includeChildSelections="true" automatic="true" includeChildForces="true"/>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="faa9-1c50-0c2a-8d52-max" includeChildSelections="true" automatic="true" includeChildForces="true"/>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="faa9-1c50-0c2a-8d52-min" includeChildSelections="true" automatic="false" includeChildForces="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="faa9-1c50-0c2a-8d52-max" includeChildSelections="true" automatic="false" includeChildForces="true"/>
       </constraints>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Choose a Mon" id="030c-fc4a-9f79-a52a" hidden="false">
+        <selectionEntryGroup name="Choose a Mon" id="030c-fc4a-9f79-a52a" hidden="false" exportable="false">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9ad7-8d42-cd03-b566" includeChildSelections="true"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Mon of the Uesigo Clan" hidden="false" id="5585-264a-8c7f-fafa" type="selectionEntry" targetId="2e10-9422-ead4-c046" sortIndex="8"/>
-            <entryLink import="true" name="Mon of the Chotosa Clan" hidden="false" id="441e-1397-a268-8f67" type="selectionEntry" targetId="d3bb-3228-1c5f-1fc4" sortIndex="1">
+            <entryLink import="true" name="Mon of the Uesigo Clan" hidden="false" id="5585-264a-8c7f-fafa" type="selectionEntry" targetId="2e10-9422-ead4-c046" sortIndex="8" exportable="false"/>
+            <entryLink import="true" name="Mon of the Chotosa Clan" hidden="false" id="441e-1397-a268-8f67" type="selectionEntry" targetId="d3bb-3228-1c5f-1fc4" sortIndex="1" exportable="false">
               <modifiers>
                 <modifier type="set" value="Models with longbows only" field="annotation"/>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Mon of the Dawate Clan" hidden="false" id="7f0f-780c-eb63-8cfc" type="selectionEntry" targetId="118f-7d91-db4d-d58d" sortIndex="2">
+            <entryLink import="true" name="Mon of the Dawate Clan" hidden="false" id="7f0f-780c-eb63-8cfc" type="selectionEntry" targetId="118f-7d91-db4d-d58d" sortIndex="2" exportable="false">
               <modifiers>
                 <modifier type="set" value="Models with great weapons only" field="annotation"/>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Mon of the Hattiga Clan" hidden="false" id="66e4-440d-f30f-5258" type="selectionEntry" targetId="e48e-38a1-5b7d-313d" sortIndex="3"/>
-            <entryLink import="true" name="Mon of the Hojizu Clan" hidden="false" id="cabe-1106-34fa-2aeb" type="selectionEntry" targetId="4e80-db65-bc71-5ca7" sortIndex="6">
+            <entryLink import="true" name="Mon of the Hattiga Clan" hidden="false" id="66e4-440d-f30f-5258" type="selectionEntry" targetId="e48e-38a1-5b7d-313d" sortIndex="3" exportable="false"/>
+            <entryLink import="true" name="Mon of the Hojizu Clan" hidden="false" id="cabe-1106-34fa-2aeb" type="selectionEntry" targetId="4e80-db65-bc71-5ca7" sortIndex="6" exportable="false">
               <modifiers>
                 <modifier type="set" value="War Machines only" field="annotation"/>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Mon of the Odari Clan" hidden="false" id="7cb5-2bcc-b304-f320" type="selectionEntry" targetId="1dbf-1ebe-5d1b-c32b" sortIndex="5">
+            <entryLink import="true" name="Mon of the Odari Clan" hidden="false" id="7cb5-2bcc-b304-f320" type="selectionEntry" targetId="1dbf-1ebe-5d1b-c32b" sortIndex="5" exportable="false">
               <modifiers>
                 <modifier type="set" value="Ashigaru only" field="annotation"/>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Mon of the Shisuma Clan" hidden="false" id="ba4e-4bbd-213a-8767" type="selectionEntry" targetId="7314-efb2-5a40-052b" sortIndex="4">
+            <entryLink import="true" name="Mon of the Shisuma Clan" hidden="false" id="ba4e-4bbd-213a-8767" type="selectionEntry" targetId="7314-efb2-5a40-052b" sortIndex="4" exportable="false">
               <modifiers>
                 <modifier type="set" value="Infantry only" field="annotation"/>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Mon of the Takai Clan" hidden="false" id="1ad3-5e2e-2785-35e9" type="selectionEntry" targetId="f6d2-44d5-d54d-f728" sortIndex="7">
+            <entryLink import="true" name="Mon of the Takai Clan" hidden="false" id="1ad3-5e2e-2785-35e9" type="selectionEntry" targetId="f6d2-44d5-d54d-f728" sortIndex="7" exportable="false">
               <modifiers>
                 <modifier type="set" value="Cavalry only" field="annotation"/>
               </modifiers>
@@ -296,10 +349,247 @@
       </modifiers>
       <comment>TODO logic to hide mons</comment>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Daimyo" hidden="false" id="cd19-a1e9-c764-25b1" sortIndex="1"/>
+    <selectionEntry type="model" import="true" name="Daimyo" hidden="false" id="cd19-a1e9-c764-25b1" sortIndex="1">
+      <costs>
+        <cost name="pts" typeId="points" value="100"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Lords" hidden="false" id="3935-60a2-12e1-81ec" targetId="d280-b7df-c185-2ba5" primary="true"/>
+        <categoryLink name="Infantry" hidden="false" id="9fbf-3573-1800-87ec" targetId="22c9-1606-58f8-2e60" primary="false"/>
+        <categoryLink name="X Additional Hand Weapon" hidden="false" id="c646-4f80-5dff-68ec" targetId="c4b0-4ee4-7b99-843e" primary="false"/>
+        <categoryLink name="X Great Weapon" hidden="false" id="73ee-a374-1ced-7289" targetId="abcc-4aa7-4989-7189" primary="false"/>
+        <categoryLink name="X Light Lance" hidden="false" id="c1e6-3fc6-933f-1bb6" targetId="7a83-6b11-9174-d3b2" primary="false"/>
+        <categoryLink name="X Spear" hidden="false" id="ee34-4f19-27a6-849d" targetId="c1f2-083a-aee2-6278" primary="false"/>
+        <categoryLink name="X Polearm" hidden="false" id="e25e-93a2-9b4f-e266" targetId="0b0c-acf4-8a6a-dd72" primary="false"/>
+        <categoryLink name="X Katana" hidden="false" id="8896-14d8-b54e-57ca" targetId="0bfc-67f6-5e48-cf01" primary="false"/>
+        <categoryLink name="Y Handgun" hidden="false" id="d709-60fd-ef0e-ea46" targetId="6404-4b9f-1ab4-df17" primary="false"/>
+        <categoryLink name="Y Pistol" hidden="false" id="4e4b-44c3-d875-c63e" targetId="28bf-f07c-9e13-4dd7" primary="false"/>
+        <categoryLink name="Y Longbow" hidden="false" id="55fb-f8c1-7f93-d1a7" targetId="3ee8-1923-4565-e2b6" primary="false"/>
+        <categoryLink name="Z Buckler" hidden="false" id="4dae-d73f-c35b-184d" targetId="4276-1ee4-016d-ac99" primary="false"/>
+        <categoryLink name="Z Medium Armour" hidden="false" id="2d31-b05a-a2a7-b493" targetId="222a-078c-ce85-fb16" primary="false"/>
+        <categoryLink name="Z Heavy Armour" hidden="false" id="f855-b42e-fe40-7d70" targetId="f667-6e97-ec08-38ea" primary="false"/>
+        <categoryLink name="Z Armour" hidden="false" id="dfc0-58f4-6a27-5ba2" targetId="387c-2b7c-0a30-7305" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="70. Mount" hidden="false" id="417a-f5ec-e82f-5d8b" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+          <entryLinks>
+            <entryLink import="true" name="Warhorse" hidden="false" id="2104-f384-2501-3463" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0" sortIndex="1">
+              <entryLinks>
+                <entryLink import="true" name="Barding" hidden="false" id="625e-810f-07a3-81e2" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="18"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Komainu" hidden="false" id="e434-906b-4e54-4b1b" type="selectionEntry" targetId="1130-01f0-bc20-3ac7" sortIndex="2">
+              <entryLinks>
+                <entryLink import="true" name="Barding" hidden="false" id="bc6a-c335-23a0-5e85" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Kirin" hidden="false" id="3a39-79c1-eb07-dbb8" type="selectionEntry" targetId="4115-0961-cdb8-e85f" sortIndex="3">
+              <costs>
+                <cost name="pts" typeId="points" value="48"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="New Entry (link)" hidden="false" id="913f-61d5-aacd-24b8" type="selectionEntry"/>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="10. Character Options" hidden="false" id="d88f-2d8c-8b1b-2a10" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+        <entryLink import="true" name="11. Clan Mon" hidden="false" id="dd60-2253-ed12-30e6" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="68a1-c28e-5641-4956" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Katana" hidden="false" id="f2d7-c58c-1055-50fc" type="selectionEntry" targetId="04a7-e5b9-407a-a686" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="1" field="54ba-0af7-544e-51a8">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="7a88-238f-eedd-4428" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="54ba-0af7-544e-51a8" includeChildSelections="false" automatic="true"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Buckler" hidden="false" id="7a88-238f-eedd-4428" type="selectionEntry" targetId="b785-38e4-3e4a-9385" sortIndex="3"/>
+            <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="d235-c957-3f48-5107" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2"/>
+            <entryLink import="true" name="Spear" hidden="false" id="902b-27ba-4402-3f93" type="selectionEntry" targetId="a901-4548-955d-623c" sortIndex="4"/>
+            <entryLink import="true" name="Light Lance" hidden="false" id="ced4-fd35-e2ef-4bd8" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="5">
+              <costs>
+                <cost name="pts" typeId="points" value="4"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Great Weapon" hidden="false" id="78fa-9588-9861-ace3" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="6">
+              <costs>
+                <cost name="pts" typeId="points" value="4"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Polearm/Halberd" hidden="false" id="7101-aae5-8262-a19b" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="7">
+              <costs>
+                <cost name="pts" typeId="points" value="4"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+          <modifiers>
+            <modifier type="set" value="2" field="fe22-ce5f-b23e-303d">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="7a88-238f-eedd-4428" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="e400-5e14-b04c-6797" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
+          <entryLinks>
+            <entryLink import="true" name="Pistol" hidden="false" id="c6e5-3a62-3c44-262e" type="selectionEntry" targetId="4883-fb9f-3893-0d9c" sortIndex="3">
+              <costs>
+                <cost name="pts" typeId="points" value="6"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Longbow" hidden="false" id="9b26-4254-e94a-5782" type="selectionEntry" targetId="f6cc-1342-64fe-6a3e" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Handgun" hidden="false" id="ef15-ef85-d8e4-6bae" type="selectionEntry" targetId="b177-ecbf-f68f-c9a3" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="22d2-1514-2cb3-3b1e" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+          <entryLinks>
+            <entryLink import="true" name="Heavy Armour" hidden="false" id="7c66-6aa3-82f7-756e" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="9"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Medium Armour" hidden="false" id="76b8-f0a0-6d38-531b" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="1"/>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="55. Equipment" hidden="false" id="dc6b-2f94-7684-d984" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="695c-0de6-eebc-3ebe" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Horo Cloak" hidden="false" id="df01-1c9d-1429-867c" type="selectionEntry" targetId="ea6b-8b2e-5e1c-a37a" defaultAmount="">
+              <costs>
+                <cost name="pts" typeId="points" value="3"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="90. Magic Items" hidden="false" id="da5b-c4dc-4686-d815" type="selectionEntryGroup" targetId="d0e7-e6e8-0e13-2946">
+          <modifiers>
+            <modifier type="increment" value="100" field="8842-f7c6-52b3-7698"/>
+          </modifiers>
+        </entryLink>
+      </entryLinks>
+      <profiles>
+        <profile name="Daimyo" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f9ac-a7a0-6b1d-d578">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Human)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Way of the Warrior" id="5759-e78a-2ac3-4516" hidden="false" type="rule" targetId="28dd-2b0a-b009-9f2a"/>
+        <infoLink name="Death Before Dishonour" id="fc91-e1b9-5797-7364" hidden="false" type="rule" targetId="eb00-8407-3635-9261"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Master Onmyoji " hidden="false" id="a3ae-7a42-1d2a-3f79" sortIndex="2">
+      <costs>
+        <cost name="pts" typeId="points" value="165"/>
+      </costs>
+      <profiles>
+        <profile name="Master Onmyoji " typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="60c5-5e23-6d72-ea6f">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Human)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <categoryLinks>
+        <categoryLink name="Lords" hidden="false" id="73d9-3bdf-ad74-4c5a" targetId="d280-b7df-c185-2ba5" primary="true"/>
+        <categoryLink name="Infantry" hidden="false" id="d767-98cb-46a5-1dca" targetId="22c9-1606-58f8-2e60" primary="false"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="90. Magic Items" hidden="false" id="bfcf-c757-6a2e-6588" type="selectionEntryGroup" targetId="d0e7-e6e8-0e13-2946">
+          <modifiers>
+            <modifier type="set" value="100" field="8842-f7c6-52b3-7698"/>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="10. Character Options" hidden="false" id="9b26-9cd1-0bde-affb" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+        <entryLink import="true" name="11. Clan Mon" hidden="false" id="ccf7-50b2-1857-fca1" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="53d9-02c8-af1f-21cb" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="1d91-779f-5a43-9fbf" type="selectionEntry" targetId="a658-337d-0cbd-a38c"/>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="60. Wizard Level" hidden="false" id="79a0-5a75-9d61-ce12" type="selectionEntryGroup" targetId="d1c2-3512-e5b6-7616"/>
+        <entryLink import="true" name="65. Lore of Magic" hidden="false" id="0987-4b83-724e-14fe" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
+          <entryLinks>
+            <entryLink import="true" name="Lore of Death" hidden="false" id="9ed1-09ff-e798-c3aa" type="selectionEntry" targetId="bc0d-47f8-7220-1e16" sortIndex="1"/>
+            <entryLink import="true" name="Lore of Fire" hidden="false" id="2ebb-bca6-07b0-0e7a" type="selectionEntry" targetId="4d24-c803-7a05-0894" sortIndex="2"/>
+            <entryLink import="true" name="Lore of Life" hidden="false" id="f75c-2e8e-f0ad-1343" type="selectionEntry" targetId="968d-55ad-604c-f251" sortIndex="4"/>
+            <entryLink import="true" name="Lore of Heavens" hidden="false" id="3d62-0d0d-eb34-d93f" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee" sortIndex="3"/>
+            <entryLink import="true" name="Lore of Light" hidden="false" id="14aa-ff1e-1e0c-0b76" type="selectionEntry" targetId="c543-a893-3879-cf32" sortIndex="5"/>
+            <entryLink import="true" name="Lore of Shadow" hidden="false" id="b5a4-ba40-caa2-8efd" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67" sortIndex="6"/>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="70. Mount" hidden="false" id="c498-e62f-372a-723b" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+          <entryLinks>
+            <entryLink import="true" name="Warhorse" hidden="false" id="26ba-8b14-3c44-1d4c" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0" sortIndex="1">
+              <entryLinks>
+                <entryLink import="true" name="Barding" hidden="false" id="7a0c-421a-ad6d-3188" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="18"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Kirin" hidden="false" id="28ff-fc99-e7a3-73ea" type="selectionEntry" targetId="4115-0961-cdb8-e85f" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="48"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup name="11. Clan Mon" id="3b57-19a7-13fc-9581" hidden="false">
+    <selectionEntryGroup name="11. Clan Mon" id="3b57-19a7-13fc-9581" hidden="false" defaultSelectionEntryId="none">
       <entryLinks>
         <entryLink import="true" name="Mon of the Uesigo Clan" hidden="false" id="574a-3081-3475-b559" type="selectionEntry" targetId="2e10-9422-ead4-c046">
           <modifiers>
@@ -378,5 +668,930 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="afec-9e80-677e-4144" includeChildSelections="false"/>
       </constraints>
     </selectionEntryGroup>
+    <selectionEntryGroup name="90. Magic Items" id="d0e7-e6e8-0e13-2946" hidden="false">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Magic Weapons " id="d924-bcb8-2842-d526" hidden="false" sortIndex="1" collapsible="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="15ff-492b-c26c-685b" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Common Magic Weapons" hidden="false" id="4fe1-fd46-8a37-f3a4" type="selectionEntryGroup" targetId="6820-41cc-94f6-87c1" flatten="true" sortIndex="99"/>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Divine Slashing Blade" hidden="false" id="eaaf-d87f-04af-bbe9" sortIndex="8">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1b1b-c02f-5e35-e20d" includeChildSelections="true"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Katana (One Handed)" id="1140-cdc3-5009-388e" hidden="false" type="profile" targetId="3ab7-eb7a-cf33-e82e"/>
+                <infoLink name="Katana (Two Handed)" id="c7ed-454f-43d5-97f2" hidden="false" type="profile" targetId="9fae-d402-a9c7-8e27"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="40"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="0bfc-67f6-5e48-cf01" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="Divine Slashing Blade" field="annotation" affects="self.entries.recursive.profiles.Weapon"/>
+                <modifier type="append" value="All hits with this weapon automatically Wound. Armour saves are taken as normal.
+" field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Weapon"/>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Grass-Cutting Sword" hidden="false" id="1ab9-262d-2ba4-e6f7" sortIndex="10">
+              <costs>
+                <cost name="pts" typeId="points" value="55"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ff83-3c0b-056b-09cd" includeChildSelections="true"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Great Weapon" id="75aa-4115-9088-3987" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
+                  <modifiers>
+                    <modifier type="set" value="Grass-Cutting Sword" field="annotation"/>
+                    <modifier type="append" value="Instead of attacking normally, this weapon may automatically inflict a single Hit on all enemy models in the front rank of any unit the wielder is in base contact with.
+" field="de63-d6da-efa8-00ac"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="abcc-4aa7-4989-7189" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Cresent Moon Blade" hidden="false" id="31ed-0a55-2736-7ec1" sortIndex="5">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8d72-1f68-c451-ab86" includeChildSelections="true"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Katana (One Handed)" id="b859-0925-0316-8dc2" hidden="false" type="profile" targetId="3ab7-eb7a-cf33-e82e"/>
+                <infoLink name="Katana (Two Handed)" id="2c66-87e8-2684-95d2" hidden="false" type="profile" targetId="9fae-d402-a9c7-8e27"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="35"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="0bfc-67f6-5e48-cf01" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="Cresent Moon Blade" field="annotation" affects="self.entries.recursive.profiles.Weapon"/>
+                <modifier type="append" value="The wielder always counts their Strength characteristic at least one higher than that of any enemy models in base contact. In addition, they have the Multiple Wounds (D3) special rule.
+" field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Weapon"/>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Heavenly Naginata" hidden="false" id="654e-8c45-6bf9-e775" sortIndex="6">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e927-464d-6a33-d90e" includeChildSelections="true"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="35"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Polearm/Halberd" id="d5fe-d31a-516a-fa4d" hidden="false" type="profile" targetId="e43e-5153-eeec-36be">
+                  <modifiers>
+                    <modifier type="set" value="Heavenly Naginata" field="annotation"/>
+                    <modifier type="append" value=" This weapon gives the wielder +1 to Hit in close combat and Flaming Attacks. In addition, on a To Hit roll of a 6, that attack is multiplied into D3 hits.
+" field="de63-d6da-efa8-00ac"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="0b0c-acf4-8a6a-dd72" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Deamon Cutter" hidden="false" id="c6e8-7408-ee7b-fbdd" sortIndex="4">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d460-60ad-a91e-e78b" includeChildSelections="true"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Katana (One Handed)" id="9df9-a954-3258-a5c3" hidden="false" type="profile" targetId="3ab7-eb7a-cf33-e82e"/>
+                <infoLink name="Katana (Two Handed)" id="67c7-9435-bce4-c0ed" hidden="false" type="profile" targetId="9fae-d402-a9c7-8e27"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="0bfc-67f6-5e48-cf01" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="Deamon Cutter" field="annotation" affects="self.entries.recursive.profiles.Weapon"/>
+                <modifier type="append" value="No Ward saves can be taken against attacks made by this weapon.
+" field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Weapon"/>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Masamunes Wakizashi" hidden="false" id="3961-4371-3aa1-4c98" sortIndex="7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3c34-7418-a1d3-37e2" includeChildSelections="true"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="35"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Two/Additional Hand Weapons" id="5bd5-69e8-1f20-d226" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
+                  <modifiers>
+                    <modifier type="set" value="Masamunes Wakizashi" field="annotation"/>
+                    <modifier type="append" value="The wielder gains the Always Strike First special rule. In addition, they may re-roll failed Parry saves.
+" field="de63-d6da-efa8-00ac"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="c4b0-4ee4-7b99-843e" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Dragonclaw Katana" hidden="false" id="c3ea-264a-8b25-64a3" sortIndex="9">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="dec0-6772-bdee-d982" includeChildSelections="true"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Katana (One Handed)" id="0623-1f3b-e1c7-6a58" hidden="false" type="profile" targetId="3ab7-eb7a-cf33-e82e"/>
+                <infoLink name="Katana (Two Handed)" id="6cc8-d41b-28e9-dd50" hidden="false" type="profile" targetId="9fae-d402-a9c7-8e27"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="55"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="0bfc-67f6-5e48-cf01" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="Dragonclaw Katana" field="annotation" affects="self.entries.recursive.profiles.Weapon"/>
+                <modifier type="append" value="When fighting in challenges, the wielder gains the Killing Blow special rule and may re-roll all failed rolls To Hit and To Wound. In addition, for every point of unmodified Leadership that the wielder exceeds that of any one enemy model in base contact, they gain one additional Attack.
+" field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Weapon"/>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Autumn Rain" hidden="false" id="83d3-c9ae-bc69-748c" sortIndex="3">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="356d-5ec3-ef68-4d1c" includeChildSelections="true"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Longbow" id="67b0-df9d-e8cd-5129" hidden="false" type="profile" targetId="cde7-c47d-3818-1e9d">
+                  <modifiers>
+                    <modifier type="set" value="Autumn Rain" field="annotation"/>
+                    <modifier type="set" value="The wielder may fire as many shots as they have Attacks on their profile and ignore all shooting modifiers." field="de63-d6da-efa8-00ac"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="3ee8-1923-4565-e2b6" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Yari of Righteousness" hidden="false" id="ac0c-8d85-3d5a-e4fb" collective="false" sortIndex="2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="65bb-97f1-c836-54fb" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="51c6-27f5-f274-3d5e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Spear" id="f8b9-02a9-0aba-85b3" hidden="false" type="profile" targetId="be39-37ac-ac20-5053">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="mount" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Light Lance" id="7487-210e-a773-3d8e" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="mount" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="7a83-6b11-9174-d3b2" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="c1f2-083a-aee2-6278" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="Yari of Righteousness" field="annotation" affects="self.entries.recursive.profiles.Weapon"/>
+                <modifier type="append" value="Only one enemy model in base contact may attack the wielder in Close Combat. The attacking player chooses which model may attack. In addition, no enemy unit can claim the Outnumber bonus against the wearer and any unit they are with.
+" field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Weapon"/>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Magic Armour" id="662f-d010-ad63-aeeb" hidden="false" sortIndex="2" collapsible="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e431-4984-8d65-b117" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Armour of Imperial Rule" hidden="false" id="b06a-551b-e72a-ce12" sortIndex="5">
+              <costs>
+                <cost name="pts" typeId="points" value="40"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Heavy Armour" id="7fe2-a4d2-8203-64ae" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
+                  <modifiers>
+                    <modifier type="set" value="Armour of Imperial Rule" field="annotation"/>
+                    <modifier type="append" value="Enemies must re-roll 6’s when rolling To Wound against the wearer. Enemies who fail their rolls To Wound suffer a Strength 4 hit.
+" field="ff58-91e4-84d7-e6e4"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f667-6e97-ec08-38ea" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink name="Suits of Armour" hidden="false" id="9d75-366c-8fac-93aa" targetId="9a61-618b-519a-807c" primary="false"/>
+              </categoryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="306a-49ea-1f34-9aa8" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Yoritomo&apos;s Armour" hidden="false" id="80cd-5a27-7106-081a" sortIndex="6">
+              <costs>
+                <cost name="pts" typeId="points" value="50"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Heavy Armour" id="b9ef-c098-c7af-9de3" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
+                  <modifiers>
+                    <modifier type="set" value="Yoritomo&apos;s Armour" field="annotation"/>
+                    <modifier type="append" value="If there are any other friendly characters within 12&quot; of the wearer, the wearer also add +1 to their Strength." field="ff58-91e4-84d7-e6e4"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Ward Save (5+)" id="1324-7129-cf3a-5cc3" hidden="false" type="rule" targetId="4b60-6477-75a8-f6dd"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f667-6e97-ec08-38ea" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink name="Suits of Armour" hidden="false" id="4d19-4050-a3a1-e4d2" targetId="9a61-618b-519a-807c" primary="false"/>
+              </categoryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="26d9-8e52-a5a5-a4d0" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Armour of Osano-Wo" hidden="false" id="e3a4-1420-f84f-9349" sortIndex="3">
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Medium Armour" id="86c1-0e32-51e1-5b0d" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
+                  <modifiers>
+                    <modifier type="set" value="Armour of Osano-Wo" field="annotation"/>
+                    <modifier type="append" value="The wearer is completely immune to all effects from spells.
+" field="ff58-91e4-84d7-e6e4"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f667-6e97-ec08-38ea" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="222a-078c-ce85-fb16" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink name="Suits of Armour" hidden="false" id="62c0-d859-935a-772e" targetId="9a61-618b-519a-807c" primary="false"/>
+              </categoryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1be6-4cf0-16b9-12b8" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Ikoma&apos;s Warfan" hidden="false" id="9c05-a0de-6385-f17a" sortIndex="4">
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Buckler" id="af65-7d35-ec0f-9994" hidden="false" type="profile" targetId="1700-a7e5-d272-ef20">
+                  <modifiers>
+                    <modifier type="set" value="Ikoma&apos;s Warfan" field="annotation"/>
+                    <modifier type="append" value="ll enemies attacking the wielder in close combat suffer a -1 To Hit penalty.
+" field="ff58-91e4-84d7-e6e4"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="4276-1ee4-016d-ac99" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink name="Handheld Armour" hidden="false" id="e798-5ba8-11a4-4b14" targetId="ba52-4f0c-71ae-b52d" primary="false"/>
+              </categoryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a678-ba2b-deb0-7774" includeChildSelections="true"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Isawa&apos;s Helm" hidden="false" id="0467-e7e0-4da2-09c3" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+              <profiles>
+                <profile name="Isawa&apos;s Helm" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="712f-4bfb-fec7-bfbb">
+                  <characteristics>
+                    <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+                    <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+                    <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">The wearer may re-roll 1&apos;s when taking armour saves.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c488-c6bd-73db-8672" includeChildSelections="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="387c-2b7c-0a30-7305" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Mempo of Honour" hidden="false" id="afad-84e9-23fe-8e60" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <profiles>
+                <profile name="Mempo of Honour" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="7b0c-b399-4541-157b">
+                  <characteristics>
+                    <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+                    <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+                    <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Enemies attacking the wearer in close combat must re-roll successful rolls To Hit. However, if the wearer flees for any reason, they are immediately removed as a casualty after making their flee move.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5563-e304-a4b3-baed" includeChildSelections="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="387c-2b7c-0a30-7305" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Common Magic Armour" hidden="false" id="e271-26e7-8378-dc8b" type="selectionEntryGroup" targetId="557c-c8c5-0c0f-d2b3" flatten="true" sortIndex="99"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Talismans " id="43c6-d50a-0ee7-fc47" hidden="false" sortIndex="3">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cdd4-ac36-c35f-e309" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Bronze Token " hidden="false" id="d045-adc5-ceb5-e859" sortIndex="4">
+              <costs>
+                <cost name="pts" typeId="points" value="35"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ae88-d885-d5b4-e14b" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Bronze Token " typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="c7c7-e75d-d2f3-b964">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The wearer gains a Ward save (4+) against Magical Attacks. In addition, the wearer may re-roll one failed armour save each turn.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Hakama of the Ide Family" hidden="false" id="902f-3d21-e9a2-5d50" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="afe2-09d9-a3ec-29bc" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Hakama of the Ide Family" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="0240-a6a1-5444-8f5c">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">Enemies attempting to strike the bearer in Close Combat must first pass a Leadership test. If failed, they may not attack this turn.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="The Rainbow Cloak" hidden="false" id="7a7b-fd43-4dbb-56d4" sortIndex="3">
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5616-3ba4-1d87-074b" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="The Rainbow Cloak" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="7983-54b1-7c3e-12af">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">Enemies shooting at the bearer or any unit they are with suffer -1 to hit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Henshin&apos;s Amulet" hidden="false" id="a9bb-b17d-41cb-5990" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5346-b3a1-ac82-136e" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Henshin&apos;s Amulet" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="1b81-5bab-c3f0-e991">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Wearer may re-roll one dice to Hit, to Wound or a failed armour save each turn.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Ward Save (6+)" id="7bee-2b82-7358-4473" hidden="false" type="rule" targetId="5c26-a043-8535-5f4f"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Common Talismans" hidden="false" id="9714-3dc1-b339-e1df" type="selectionEntryGroup" targetId="946f-a470-9912-9301" flatten="true"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Arcane Items" id="3f59-017a-605f-4ff6" hidden="false" sortIndex="4">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="56f7-e167-0082-5bf8" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="0" field="56f7-e167-0082-5bf8">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="model" childId="86d5-4181-68c4-6e7a" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-category" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Candle of the Void" hidden="false" id="0df3-71f7-eef5-9be2" sortIndex="4">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="83a8-6e58-5f76-e5fb" includeChildSelections="true"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
+              <profiles>
+                <profile name="Candle of the Void" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="ffbb-89e5-e13e-bc99">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Candle of the Void may be placed within 12&quot; of the caster at the start of the game (use a small marker on a round 25mm base), but it may not be moved during the game and counts as impassable terrain. 
+
+
+The caster can choose to cast any spell through the candle rather than themselves. If they do so, measure the spell&apos;s range from the candle. The candle can draw Line of Sight in any direction and has a Line of Sight value of 1. The caster can use this to cast any spell type even if they are engaged in close combat. If a spell cast through the candle is miscast, the result of the miscast is applied to the caster as normal.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Incense of Concentration" hidden="false" id="2cf5-ab7b-f7fb-4ef2" sortIndex="3">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8489-5897-09ad-64a0" includeChildSelections="true"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+              <profiles>
+                <profile name="Incense of Concentration" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="1289-fbdf-093a-2752">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The model carrying this item may adjust the dice roll of one power dice by 1 (either up or down) when casting spells once per turn</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Sacred Magatama" hidden="false" id="8259-6027-894f-1332" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c72f-37a4-962c-7447" includeChildSelections="true"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+              <profiles>
+                <profile name="Sacred Magatama" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="d047-147d-5bae-2d46">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">This item allows the bearer to attempt to cast the same spell twice in a single turn if the first attempt fails or is dispelled.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Chime of Harmony" hidden="false" id="fe82-eb61-73c7-d32b" sortIndex="2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="940c-45af-a5ed-bf19" includeChildSelections="true"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+              <profiles>
+                <profile name="Chime of Harmony" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="227d-8856-f0e8-5b83">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer of this item may re-roll failed casting rolls, as long as they are not in Close Combat or have not moved earlier in that turn</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Common Arcane Items" hidden="false" id="e964-fc4b-f28e-a4aa" type="selectionEntryGroup" targetId="6cd2-3f4b-da2d-1ee9" flatten="true" sortIndex="99"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Arcane Items (One use only)" id="86d5-4181-68c4-6e7a" hidden="false" sortIndex="5">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ac88-69f6-4811-c75c" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="ac88-69f6-4811-c75c">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="model" childId="3f59-017a-605f-4ff6" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-category" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Common Arcane Items (One use only)" hidden="false" id="dd3f-c1a9-2044-e9e4" type="selectionEntryGroup" targetId="3dfd-c3fd-5a56-45f1" flatten="true"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Enchanted Items" id="02f2-b337-a8ac-66ed" hidden="false" sortIndex="6">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0390-457a-caa8-3cdb" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Drum of War" hidden="false" id="784c-a41a-3802-eab6" sortIndex="10">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0d3c-483a-1382-d27e" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Drum of War" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="d187-814d-25e7-8e02">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The bearer and any unit they are with gains the Devastating Charge special rule</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="40"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fan of Command" hidden="false" id="f94a-bf9b-4a11-13f6" sortIndex="9">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="65e5-ad56-66a2-c015" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Fan of Command" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="f2e4-6640-2b57-77e0">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Once per game, the bearer and any unit they are with may make a free reform in the beginning of the
+Movement phase. In addition, they automatically pass any test to reform, march and restrain from pursuit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="35"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Curse of the Midnight Flies" hidden="false" id="76af-6d3c-c905-49ec" sortIndex="8">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fc32-898b-3882-b7ae" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Curse of the Midnight Flies" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="fb75-3fda-48a4-3f59">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The character may use the Curse of the Midnight Flies in the Shooting phase. It has a range of 24&quot; and causes 3D6 automatic Strength 3 hits.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="35"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Dragon Pearl" hidden="false" id="a4c2-a68c-aea2-34a7" sortIndex="6">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8cb1-2cf4-cb51-23e1" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Dragon Pearl" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="cd4e-0544-f763-68db">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">At the start of the close combat phase, the bearer may transform the Dragon Pearl into an exact replica of any magic item carried by an enemy character in base contact, retaining all of its abilities for as long as it stays in base contact. </characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Serenity Lanterns" hidden="false" id="5f69-fb5e-c505-9cfc" sortIndex="7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9746-67b8-2596-dd0f" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Serenity Lanterns" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="24c0-c896-74e2-6dd8">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The bearer and any unit in base contact with them gains the Immunity (Psychology) special rule. In addition, they lose any Hatred or Frenzy special rule they might have while they remain in base contact</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Immunity (Psychology)" id="ca01-c92b-004a-39f1" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Jade Mirror" hidden="false" id="e6c0-44fd-2b5e-0fb2" sortIndex="3">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="71bd-9d05-38cb-00d6" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Jade Mirror" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="6446-70eb-c94c-174c">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">If the Bearer flees for any reason, other friendly units may not use their Leadership at all for the remainder of the game.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Inspiring Presence (6)" id="179a-c0dc-d0af-a870" hidden="false" type="rule" targetId="7687-32b8-13f1-97b4"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Mantle of Fire" hidden="false" id="39b5-ed82-a3b6-0360" sortIndex="4">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4a51-1e77-00d1-1bef" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Mantle of Fire" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="de2e-2897-7050-3d31">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The wearer gains +1 To Wound with their Close Combat attacks.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Brass Gong of Otaku Masero " hidden="false" id="dcc2-09c7-46e0-8312" sortIndex="2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e611-ed2b-fb56-b621" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Brass Gong of Otaku Masero " typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="12fa-5252-55c5-592f">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">All friendly units within 12&quot; of the bearer gain +1 to their Leadership when taking Rally tests.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Meishodo Amulet" hidden="false" id="b9ac-76eb-8c0a-7dba" sortIndex="5">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d5f7-d62a-ac37-58e3" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Meishodo Amulet" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="eeac-d55c-3dfe-bf2d">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">At the start of each of your turns, the bearer of this item may increase one characteristic of their choosing by +1 by passing a Leadership test. This bonus lasts until the start of your next turn.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Bonsai Pine of Iuchi Ramatsu" hidden="false" id="cf89-a382-3757-1805" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f0d9-c287-4989-97a7" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Bonsai Pine of Iuchi Ramatsu" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="5bb7-9ef3-5166-7874">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">This item may be used at the start of any of your turns. When activated, the bearer and any unit they are with halve their Line of Sight value (rounded down, to a minimum of 1). They may return to their normal Line of Sight value at the start of any of your turns.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Common Enchanted Items" hidden="false" id="e42e-0916-aec7-7ba6" type="selectionEntryGroup" targetId="5857-a7aa-f954-a027" flatten="true" sortIndex="99"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <constraints>
+        <constraint type="max" value="0" field="points" scope="parent" shared="true" id="8842-f7c6-52b3-7698"/>
+      </constraints>
+      <modifiers>
+        <modifier type="increment" value="5" field="8842-f7c6-52b3-7698">
+          <conditions>
+            <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="90. Magic Standards" id="02df-aef3-1c56-1245" hidden="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4011-f99c-823d-557c" includeChildSelections="false"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Standard of the Iron Crane" hidden="false" id="5bd8-c3af-fb9e-7b0f" sortIndex="2">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d972-8512-06e9-13de" includeChildSelections="true"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="30"/>
+          </costs>
+          <profiles>
+            <profile name="Standard of the Iron Crane" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="d75a-31a0-2df3-b893">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying this standard gains the Dodge (6+) special rule</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Imperial Standard" hidden="false" id="c62f-9866-7376-d5e5" sortIndex="6">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="460a-0b82-7af3-b366" includeChildSelections="true"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="65"/>
+          </costs>
+          <profiles>
+            <profile name="Imperial Standard" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="4cd1-6295-cac8-4eac">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying it gains +D3 to their combat resolution.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <infoLinks>
+            <infoLink name="Hold Your Ground" id="f120-1d59-fed8-79b9" hidden="false" type="rule" targetId="11f5-d3db-5513-f168">
+              <modifiers>
+                <modifier type="append" value=" (6)" field="name"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Mirumoto&apos;s Battle Standard" hidden="false" id="aecc-6039-dfae-0696" sortIndex="7">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bfdd-744c-6f5a-d3cf" includeChildSelections="true"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="75"/>
+          </costs>
+          <profiles>
+            <profile name="Mirumoto&apos;s Battle Standard" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="2d1a-d9bd-ddfd-059e">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying this standard adds +1 To Hit and To Wound in the first round of close combat.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Ancestral War Standard" hidden="false" id="19e2-97fa-bc3e-e223" sortIndex="5">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3fbc-ceff-c8a4-0acf" includeChildSelections="true"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="40"/>
+          </costs>
+          <profiles>
+            <profile name="Ancestral War Standard" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="ddda-8bdc-6acb-4aed">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">All combats with at least one friendly unit involved within 6&quot; of the unit carrying the banner receive +1 to their combat resolution bonus.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Banner of the Roaring Tempest" hidden="false" id="33e0-f9c6-2a0f-e9a8" sortIndex="1">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b57a-8a01-a753-3c42" includeChildSelections="true"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="15"/>
+          </costs>
+          <profiles>
+            <profile name="Banner of the Roaring Tempest" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="a2c4-628e-df8b-3a3c">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying this standard counts as having one more rank than normal for the purposes of rank bonus. Note that the unit must have at least one complete rank.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Standard of the Vermillion Bird" hidden="false" id="5484-65d7-05d6-a009" sortIndex="3">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7f28-fd42-d2f3-8842" includeChildSelections="true"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="30"/>
+          </costs>
+          <profiles>
+            <profile name="Standard of the Vermillion Bird" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="772a-831e-7615-cbcb">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">All friendly Wizards within 12&quot; of this standard gain +1 to cast spells.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Banner of Amaterasu" hidden="false" id="b267-e8f2-2959-ee97" sortIndex="4">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fe5f-cce5-3729-e789" includeChildSelections="true"/>
+          </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="35"/>
+          </costs>
+          <profiles>
+            <profile name="Banner of Amaterasu" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="d44a-96bc-9fb0-b6d4">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying this standard take all Break tests using a single D6. This cannot be combined with Death Before Dishonour.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Common Magic Standards" hidden="false" id="ffe0-c211-7cff-2318" type="selectionEntryGroup" targetId="2613-24d7-a26e-eb37" flatten="true" sortIndex="99"/>
+      </entryLinks>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
+  <categoryEntries>
+    <categoryEntry name="X Katana" id="0bfc-67f6-5e48-cf01" hidden="true"/>
+  </categoryEntries>
+  <sharedProfiles>
+    <profile name="Katana (One Handed)" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="3ab7-eb7a-cf33-e82e">
+      <characteristics>
+        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
+        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Counts as hand weapon</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Katana (Two Handed)" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="9fae-d402-a9c7-8e27">
+      <characteristics>
+        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
+        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Requires Two Hand. The extra Strength does not inflict any additional penalties on armour saves.</characteristic>
+      </characteristics>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="mount" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </profile>
+  </sharedProfiles>
 </catalogue>
