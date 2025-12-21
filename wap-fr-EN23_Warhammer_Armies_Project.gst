@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="75" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="76" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -815,6 +815,12 @@
       </constraints>
       <infoLinks>
         <infoLink id="e66b-79a1-e39c-e75a" name="General" hidden="false" targetId="fcc3-a722-a9e4-9c94" type="rule"/>
+        <infoLink name="Inspiring Presence" id="03ad-ce46-2a3b-8c15" hidden="false" type="rule" targetId="1c71-6c8f-f47a-0a91">
+          <modifiers>
+            <modifier type="append" value="(12)" field="name" join=" "/>
+            <modifier type="set" value="General" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -9424,16 +9430,13 @@ Armour Saves
 Units containing one or more models with an unmodified close combat armour save better than 4+ cannot use Fast Cavalry.</description>
     </rule>
     <rule id="fcc3-a722-a9e4-9c94" name="General" publicationId="9e23-79cb-pubN66727" page="106, 132" hidden="false">
-      <description>Inspiring Presence
-Providing that the General is not fleeing, all friendly units within 12&quot; may use their Leadership instead of their own, unless specified.
+      <description>An army must always include at least one Lord or Hero character to be its Army General.
 
-If your General has a Line of Sight value of 5 or more, then the range of their Inspiring Presence ability is increased by 6&quot;.
 
-If a unit taking a Leadership test has a modifier to its Ld, this modifier still applies if the unit uses the General’s Ld.
+The Army General has the Inspiring Presence (12) special rule.
 
-If a unit is Steadfast, it may use the Leadership of the General for Break tests if it is higher than their own Leadership after applying all negative modifiers from combat resolution. Otherwise, they will use their own Ld.
 
-Every army must have a General. If your army includes both Lords and Heroes, you must choose a Lord to be the army&apos;s General.</description>
+Some books might have several characters that must be the Army General. In this case, only one of them may be included in your army.</description>
     </rule>
     <rule id="3f4a-7d94-afef-39ea" name="The Battle Standard Bearer" publicationId="9e23-79cb-pubN66727" page="106" hidden="false">
       <description>Unless specified otherwise, the model that carries the battle standard cannot be the General.
