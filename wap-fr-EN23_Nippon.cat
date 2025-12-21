@@ -472,14 +472,9 @@
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Mon of the Chotosa Clan" hidden="false" id="441e-1397-a268-8f67" type="selectionEntry" targetId="d3bb-3228-1c5f-1fc4" sortIndex="1" exportable="false">
-              <modifiers>
-                <modifier type="set" value="Models with longbows only" field="annotation"/>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Mon of the Chotosa Clan" hidden="false" id="441e-1397-a268-8f67" type="selectionEntry" targetId="d3bb-3228-1c5f-1fc4" sortIndex="1" exportable="false"/>
             <entryLink import="true" name="Mon of the Dawate Clan" hidden="false" id="7f0f-780c-eb63-8cfc" type="selectionEntry" targetId="118f-7d91-db4d-d58d" sortIndex="2" exportable="false">
               <modifiers>
-                <modifier type="set" value="Models with great weapons only" field="annotation"/>
                 <modifier type="set" value="1" field="cb87-b25f-c1f1-03fd">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="270c-9bf0-fe1a-4c6a" shared="true" includeChildSelections="true" includeChildForces="true"/>
@@ -502,14 +497,9 @@
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Mon of the Hojizu Clan" hidden="false" id="cabe-1106-34fa-2aeb" type="selectionEntry" targetId="4e80-db65-bc71-5ca7" sortIndex="6" exportable="false">
-              <modifiers>
-                <modifier type="set" value="War Machines only" field="annotation"/>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Mon of the Hojizu Clan" hidden="false" id="cabe-1106-34fa-2aeb" type="selectionEntry" targetId="4e80-db65-bc71-5ca7" sortIndex="6" exportable="false"/>
             <entryLink import="true" name="Mon of the Odari Clan" hidden="false" id="7cb5-2bcc-b304-f320" type="selectionEntry" targetId="1dbf-1ebe-5d1b-c32b" sortIndex="5" exportable="false">
               <modifiers>
-                <modifier type="set" value="Ashigaru only" field="annotation"/>
                 <modifier type="set" value="1" field="8c4c-fc40-aa57-76a6">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="dd60-c5be-ef4c-cfab" shared="true" includeChildSelections="true" includeChildForces="true"/>
@@ -520,14 +510,9 @@
                 <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="8c4c-fc40-aa57-76a6" includeChildSelections="false" automatic="true"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Mon of the Shisuma Clan" hidden="false" id="ba4e-4bbd-213a-8767" type="selectionEntry" targetId="7314-efb2-5a40-052b" sortIndex="4" exportable="false">
-              <modifiers>
-                <modifier type="set" value="Infantry only" field="annotation"/>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Mon of the Shisuma Clan" hidden="false" id="ba4e-4bbd-213a-8767" type="selectionEntry" targetId="7314-efb2-5a40-052b" sortIndex="4" exportable="false"/>
             <entryLink import="true" name="Mon of the Takai Clan" hidden="false" id="1ad3-5e2e-2785-35e9" type="selectionEntry" targetId="f6d2-44d5-d54d-f728" sortIndex="7" exportable="false">
               <modifiers>
-                <modifier type="set" value="Cavalry only" field="annotation"/>
                 <modifier type="set" value="1" field="b701-e097-fed6-a900">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="roster" childId="1c19-4e3e-ef1c-cef4" shared="true" includeChildSelections="true" includeChildForces="true"/>
@@ -1256,7 +1241,11 @@
             <modifier type="increment" value="50" field="8842-f7c6-52b3-7698"/>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="11. Clan Mons" hidden="false" id="f8a1-61bd-3c63-bb2e" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+        <entryLink import="true" name="11. Clan Mons" hidden="false" id="f8a1-61bd-3c63-bb2e" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.f6d2-44d5-d54d-f728"/>
+          </modifiers>
+        </entryLink>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="f732-9b3b-56d4-20d6" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Katana" hidden="false" id="bd04-8fff-215e-e52f" type="selectionEntry" targetId="04a7-e5b9-407a-a686">
@@ -1419,6 +1408,7 @@
         <categoryLink name="Z Medium Armour" hidden="false" id="aa04-4266-e684-8457" targetId="222a-078c-ce85-fb16" primary="false"/>
         <categoryLink name="Z Light Armour" hidden="false" id="5cdf-a7e1-40b7-bbb7" targetId="fa51-55d0-00b9-c0e8" primary="false"/>
         <categoryLink name="Z Barding" hidden="false" id="8027-ccd2-8600-09ae" targetId="e650-a901-f069-ca88" primary="false"/>
+        <categoryLink name="Monk" hidden="false" id="dc7f-530a-af16-d0a3" targetId="5c27-d720-5329-09e3" primary="false"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Magic Resistance (1)" id="b8b6-7f95-1d3e-5ce0" hidden="false" type="rule" targetId="7ed4-9d31-09c3-6bf9"/>
@@ -1462,6 +1452,7 @@
     <selectionEntry type="model" import="true" name="Shinobi" hidden="false" id="10f1-fc3e-086c-f263" sortIndex="18">
       <costs>
         <cost name="pts" typeId="points" value="95"/>
+        <cost name="Hatttiga Bonus" typeId="8e33-3e1e-b2ae-dc26" value="0"/>
       </costs>
       <profiles>
         <profile name="Shinobi" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="c59a-3bf5-8f7b-e68f">
@@ -1507,7 +1498,7 @@
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="11. Clan Mons" hidden="false" id="e371-25e1-0a38-02ef" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+        <entryLink import="true" name="12. Clan Mons" hidden="false" id="e371-25e1-0a38-02ef" type="selectionEntryGroup" targetId="d329-0185-b911-6f90"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="474c-f7b1-0691-293b" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="5514-1a6a-3720-1201" type="selectionEntry" targetId="7617-f4b5-02ac-3d15">
@@ -2297,7 +2288,19 @@
         <categoryLink name="Infantry" hidden="false" id="bd4d-4413-2c29-bfa9" targetId="22c9-1606-58f8-2e60" primary="false"/>
         <categoryLink name="Special" hidden="false" id="2196-45ee-4332-18fa" targetId="fc26-7737-f7cb-8977" primary="true"/>
         <categoryLink name="X Katana" hidden="false" id="055d-169a-20f2-cfd6" targetId="0bfc-67f6-5e48-cf01" primary="false"/>
+        <categoryLink name="Monk" hidden="false" id="7263-0391-5f51-bb53" targetId="5c27-d720-5329-09e3" primary="false"/>
       </categoryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="unset-primary" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ad40-c4b6-b0f3-c91c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Warrior Monk Cavalry" hidden="false" id="a4f1-7292-3133-f3c9" sortIndex="32">
       <selectionEntries>
@@ -2372,7 +2375,19 @@
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="bb4e-217c-1f1b-d968" targetId="fc26-7737-f7cb-8977" primary="true"/>
         <categoryLink name="Cavalry" hidden="false" id="8e01-d60f-a44b-b175" targetId="bdee-b168-38ba-7d3c" primary="false"/>
+        <categoryLink name="Monk" hidden="false" id="0699-399c-ec20-a621" targetId="5c27-d720-5329-09e3" primary="false"/>
       </categoryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="unset-primary" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="ad40-c4b6-b0f3-c91c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Sumo Warriors" hidden="false" id="84c0-ce75-f853-6e5d" sortIndex="33">
       <selectionEntries>
@@ -3109,6 +3124,7 @@
                 </entryLink>
               </entryLinks>
             </entryLink>
+            <entryLink import="true" name="12. Clan Mons" hidden="false" id="c12f-a5e6-abff-c843" type="selectionEntryGroup" targetId="d329-0185-b911-6f90"/>
           </entryLinks>
           <infoLinks>
             <infoLink name="Skirmishers" id="1523-5864-7e28-651d" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
@@ -3210,6 +3226,7 @@
                 </selectionEntry>
               </selectionEntries>
             </entryLink>
+            <entryLink import="true" name="12. Clan Mons" hidden="false" id="2835-e236-1727-1f7c" type="selectionEntryGroup" targetId="d329-0185-b911-6f90"/>
           </entryLinks>
         </selectionEntry>
       </selectionEntries>
@@ -4544,6 +4561,10 @@
                   <description>Units of Warrior Monks, Shugenja and Yamabushi in an army led by Uesigo Norimasa must take the Uesigo Clan Mon. Warrior Monks count as a Core choice. However, no Wako Pirates, Ninjas or Shinobis may be taken.</description>
                 </rule>
               </rules>
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="2c3c-656a-5ca2-453b" targetId="22c9-1606-58f8-2e60" primary="false"/>
+                <categoryLink name="Monk" hidden="false" id="2cf9-99f2-d1e6-a275" targetId="5c27-d720-5329-09e3" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5165,13 +5186,35 @@
               </conditions>
             </modifier>
             <modifier type="set" value="1" field="d7bd-d740-4275-1e45">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1c19-4e3e-ef1c-cef4" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ad40-c4b6-b0f3-c91c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="5c27-d720-5329-09e3" shared="true" includeChildSelections="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="1aae-2529-c509-7573" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="5c27-d720-5329-09e3" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="1aae-2529-c509-7573" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d7bd-d740-4275-1e45"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d7bd-d740-4275-1e45" automatic="true"/>
           </constraints>
         </entryLink>
         <entryLink import="true" name="Mon of the Chotosa Clan" hidden="false" id="afae-0328-d4ad-9b6d" type="selectionEntry" targetId="d3bb-3228-1c5f-1fc4">
@@ -5234,16 +5277,6 @@
           <constraints>
             <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="b694-e634-2f0d-8de7" automatic="true"/>
           </constraints>
-        </entryLink>
-        <entryLink import="true" name="Mon of the Hattiga Clan" hidden="false" id="a504-a107-c99f-b12d" type="selectionEntry" targetId="e48e-38a1-5b7d-313d">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="roster" childId="66e4-440d-f30f-5258" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <comment>TODO</comment>
         </entryLink>
         <entryLink import="true" name="Mon of the Hojizu Clan" hidden="false" id="a05b-1bfb-a3db-830c" type="selectionEntry" targetId="4e80-db65-bc71-5ca7">
           <modifiers>
@@ -5335,9 +5368,22 @@
               </conditions>
             </modifier>
             <modifier type="set" value="1" field="eafd-a650-c0bc-67f3">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1c19-4e3e-ef1c-cef4" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1c19-4e3e-ef1c-cef4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1130-01f0-bc20-3ac7" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4115-0961-cdb8-e85f" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
             <modifier type="set" value="true" field="hidden">
               <conditionGroups>
@@ -5361,14 +5407,16 @@
                 <conditionGroup type="and">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="f53b-cc8b-6681-8fb0" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="false"/>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="a7d2-4d12-77bb-99a0" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="1130-01f0-bc20-3ac7" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="4115-0961-cdb8-e85f" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
           <constraints>
-            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="eafd-a650-c0bc-67f3"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="eafd-a650-c0bc-67f3" automatic="true"/>
           </constraints>
         </entryLink>
       </entryLinks>
@@ -6282,10 +6330,31 @@ Movement phase. In addition, they automatically pass any test to reform, march 
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="70d6-f967-c726-bce5-max" includeChildSelections="false"/>
       </constraints>
     </selectionEntryGroup>
+    <selectionEntryGroup name="12. Clan Mons" id="d329-0185-b911-6f90" hidden="false">
+      <comment>Shinobi, Ninja, Kabuki Dolls </comment>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4b51-2507-e2b9-e4f0" includeChildSelections="true"/>
+      </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Mon of the Hattiga Clan" hidden="false" id="a504-a107-c99f-b12d" type="selectionEntry" targetId="e48e-38a1-5b7d-313d">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="66e4-440d-f30f-5258" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <costs>
+            <cost name="Hatttiga Bonus" typeId="8e33-3e1e-b2ae-dc26" value="1"/>
+          </costs>
+        </entryLink>
+      </entryLinks>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <categoryEntries>
     <categoryEntry name="X Katana" id="0bfc-67f6-5e48-cf01" hidden="true"/>
     <categoryEntry name="Asigaru" id="1ee4-f5b2-caf1-32b2" hidden="true"/>
+    <categoryEntry name="Monk" id="5c27-d720-5329-09e3" hidden="true"/>
   </categoryEntries>
   <sharedProfiles>
     <profile name="Katana (One Handed)" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="3ab7-eb7a-cf33-e82e">
@@ -6404,4 +6473,7 @@ Movement phase. In addition, they automatically pass any test to reform, march 
       </categoryLinks>
     </entryLink>
   </entryLinks>
+  <costTypes>
+    <costType name="Hattiga Bonus" id="8e33-3e1e-b2ae-dc26" defaultCostLimit="-1" hidden="false"/>
+  </costTypes>
 </catalogue>
