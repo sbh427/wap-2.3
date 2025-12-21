@@ -17,6 +17,15 @@
     <rule name="Iaijutsu" id="5edd-6405-18dc-bf7c" hidden="false">
       <description>This Character must always issue and accept challenges if possible. At the start of each round of close combat, he may choose to utilize one duelling techniques. He may not use the same technique two rounds in a row.</description>
     </rule>
+    <rule name="Stalwart Defence" id="1b30-ce8e-92a6-a42b" hidden="false">
+      <description>If the majority of models in the unit has this special rule and are garrisoning a building or fighting behind a defended obstacle, they may re-roll failed Break tests.</description>
+    </rule>
+    <rule name="Fauntei Shi" id="5295-6318-fc06-d694" hidden="false">
+      <description>A model wounded (after saves) by Fauntei Shi must pass a Toughness test or lose all remaining wounds.</description>
+    </rule>
+    <rule name="Kabuki Dance" id="b2f7-69bf-3a7f-e110" hidden="false">
+      <description>You must choose one of the two dances (Jidaimono or Sewamono style) for this Unit to perform at the start of each close combat phase. Each effect lasts for the duration of the close combat round.</description>
+    </rule>
   </sharedRules>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Katana" hidden="false" id="04a7-e5b9-407a-a686" collective="true">
@@ -49,7 +58,7 @@
         </rule>
       </rules>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="281a-4588-8cf3-0fb8" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="281a-4588-8cf3-0fb8" includeChildSelections="false" automatic="false" negative="false"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="5" field="points">
@@ -74,7 +83,7 @@
         </rule>
       </rules>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="43c5-1bb1-d537-eb51" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="43c5-1bb1-d537-eb51" includeChildSelections="false" automatic="false"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="20" field="points">
@@ -99,7 +108,7 @@
         </rule>
       </rules>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0d64-9a14-46fa-8ca7" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0d64-9a14-46fa-8ca7" includeChildSelections="false" automatic="false"/>
       </constraints>
       <modifiers>
         <modifier type="set" value="15" field="points">
@@ -162,7 +171,7 @@
         </rule>
       </rules>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6a9e-3260-5a0e-7971" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6a9e-3260-5a0e-7971" includeChildSelections="false" automatic="false"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="15"/>
@@ -412,9 +421,34 @@
         <infoLink name="Fly (7)" id="f87f-41dd-a403-b738" hidden="false" type="rule" targetId="36ba-3349-99bd-1979"/>
       </infoLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="War fan" hidden="false" id="a51f-d46a-0e14-867c" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="579b-f360-0072-a4f3" includeChildSelections="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Buckler" id="5d6b-403a-4fa4-e570" hidden="false" type="profile" targetId="1700-a7e5-d272-ef20">
+          <modifiers>
+            <modifier type="set" value="Sewamono style" field="annotation"/>
+            <modifier type="set" value="War fan" field="name"/>
+            <modifier type="append" value="The Unit has the Dodge (5+) special rule." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Two/Additional Hand Weapons" id="2cd6-61a2-0ada-002e" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
+          <modifiers>
+            <modifier type="set" value="Jidaimono style" field="annotation"/>
+            <modifier type="set" value="War fan" field="name"/>
+            <modifier type="append" value="The Unit has the Always Strikes First special rule." field="de63-d6da-efa8-00ac" join="
+
+"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Clan Mon" hidden="false" id="fa01-9f6f-6663-78b1" exportable="false" sortIndex="0">
+    <selectionEntry type="upgrade" import="true" name="Clan Mons" hidden="false" id="fa01-9f6f-6663-78b1" exportable="false" sortIndex="-1">
       <constraints>
         <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="faa9-1c50-0c2a-8d52-min" includeChildSelections="true" automatic="false" includeChildForces="true"/>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="faa9-1c50-0c2a-8d52-max" includeChildSelections="true" automatic="false" includeChildForces="true"/>
@@ -422,10 +456,22 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Choose a Mon" id="030c-fc4a-9f79-a52a" hidden="false" exportable="false">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9ad7-8d42-cd03-b566" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9ad7-8d42-cd03-b566" includeChildSelections="true" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="078a-d09e-cf5d-5dee" includeChildSelections="true" automatic="true"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Mon of the Uesigo Clan" hidden="false" id="5585-264a-8c7f-fafa" type="selectionEntry" targetId="2e10-9422-ead4-c046" sortIndex="8" exportable="false"/>
+            <entryLink import="true" name="Mon of the Uesigo Clan" hidden="false" id="5585-264a-8c7f-fafa" type="selectionEntry" targetId="2e10-9422-ead4-c046" sortIndex="8" exportable="false">
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d61e-dfca-9892-5cc0" includeChildSelections="false" automatic="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="d61e-dfca-9892-5cc0">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="270c-9bf0-fe1a-4c6a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
             <entryLink import="true" name="Mon of the Chotosa Clan" hidden="false" id="441e-1397-a268-8f67" type="selectionEntry" targetId="d3bb-3228-1c5f-1fc4" sortIndex="1" exportable="false">
               <modifiers>
                 <modifier type="set" value="Models with longbows only" field="annotation"/>
@@ -434,9 +480,28 @@
             <entryLink import="true" name="Mon of the Dawate Clan" hidden="false" id="7f0f-780c-eb63-8cfc" type="selectionEntry" targetId="118f-7d91-db4d-d58d" sortIndex="2" exportable="false">
               <modifiers>
                 <modifier type="set" value="Models with great weapons only" field="annotation"/>
+                <modifier type="set" value="1" field="cb87-b25f-c1f1-03fd">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="270c-9bf0-fe1a-4c6a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="cb87-b25f-c1f1-03fd" includeChildSelections="false" automatic="true"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Mon of the Hattiga Clan" hidden="false" id="66e4-440d-f30f-5258" type="selectionEntry" targetId="e48e-38a1-5b7d-313d" sortIndex="3" exportable="false">
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="586c-f693-733a-2c0a" includeChildSelections="false" automatic="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="586c-f693-733a-2c0a">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="da88-ece3-c034-0c96" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Mon of the Hattiga Clan" hidden="false" id="66e4-440d-f30f-5258" type="selectionEntry" targetId="e48e-38a1-5b7d-313d" sortIndex="3" exportable="false"/>
             <entryLink import="true" name="Mon of the Hojizu Clan" hidden="false" id="cabe-1106-34fa-2aeb" type="selectionEntry" targetId="4e80-db65-bc71-5ca7" sortIndex="6" exportable="false">
               <modifiers>
                 <modifier type="set" value="War Machines only" field="annotation"/>
@@ -445,7 +510,15 @@
             <entryLink import="true" name="Mon of the Odari Clan" hidden="false" id="7cb5-2bcc-b304-f320" type="selectionEntry" targetId="1dbf-1ebe-5d1b-c32b" sortIndex="5" exportable="false">
               <modifiers>
                 <modifier type="set" value="Ashigaru only" field="annotation"/>
+                <modifier type="set" value="1" field="8c4c-fc40-aa57-76a6">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="dd60-c5be-ef4c-cfab" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="8c4c-fc40-aa57-76a6" includeChildSelections="false" automatic="true"/>
+              </constraints>
             </entryLink>
             <entryLink import="true" name="Mon of the Shisuma Clan" hidden="false" id="ba4e-4bbd-213a-8767" type="selectionEntry" targetId="7314-efb2-5a40-052b" sortIndex="4" exportable="false">
               <modifiers>
@@ -455,9 +528,28 @@
             <entryLink import="true" name="Mon of the Takai Clan" hidden="false" id="1ad3-5e2e-2785-35e9" type="selectionEntry" targetId="f6d2-44d5-d54d-f728" sortIndex="7" exportable="false">
               <modifiers>
                 <modifier type="set" value="Cavalry only" field="annotation"/>
+                <modifier type="set" value="1" field="b701-e097-fed6-a900">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1c19-4e3e-ef1c-cef4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="b701-e097-fed6-a900" includeChildSelections="false" automatic="true"/>
+              </constraints>
             </entryLink>
           </entryLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="8" field="078a-d09e-cf5d-5dee"/>
+                <modifier type="set" value="8" field="9ad7-8d42-cd03-b566"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="ca51-01f5-0a4d-3f37" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <modifiers>
@@ -1451,11 +1543,9 @@
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
-              <rules>
-                <rule name="Fauntei Shi" id="5295-6318-fc06-d694" hidden="false">
-                  <description>A model wounded (after saves) by Fauntei Shi must pass a Toughness test or lose all remaining wounds.</description>
-                </rule>
-              </rules>
+              <infoLinks>
+                <infoLink name="Fauntei Shi" id="8fce-8cb0-d80c-f9f7" hidden="false" type="rule" targetId="5295-6318-fc06-d694"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Night Milk" hidden="false" id="9d1a-6b90-56b6-81db" collective="true" sortIndex="1">
               <costs>
@@ -1572,6 +1662,39 @@
           </entryLinks>
         </entryLink>
       </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="10. Unit Options" id="6a9c-7fd9-248f-0fb3" hidden="false" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Great Guard on foot" hidden="false" id="8ce7-280a-8dfb-48fc" collective="true">
+              <modifiers>
+                <modifier type="unset-primary" value="b876-2856-f1c2-c4f0" field="category" scope="root-entry" affects="recursive"/>
+                <modifier type="increment" value="1" field="edd2-7979-54a4-6b35" affects="self.entries.recursive.profiles.Model" scope="parent"/>
+                <modifier type="increment" value="1" field="f049-8a65-9c04-1559" affects="self.entries.recursive.profiles.Model" scope="parent"/>
+                <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category" scope="root-entry" affects="recursive"/>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="ca51-01f5-0a4d-3f37" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="Great Guard on Foot" field="name" affects="self.entries.recursive.profiles.Model" scope="parent"/>
+                <modifier type="set" value="Great Guard on Foot" field="name" affects="recursive" scope="root-entry"/>
+                <modifier type="increment" value="4" field="points">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="3a6b-1461-6525-63f9" shared="true" roundUp="false" includeChildSelections="true"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <infoLinks>
+                <infoLink name="Stubborn" id="5bc0-bfd4-a0f2-6632" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
+                <infoLink name="Devastating Charge" id="2602-23d5-0127-1be2" hidden="false" type="rule" targetId="e025-10f3-f893-4bd7"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a826-87d2-33da-f750" includeChildSelections="true" automatic="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Samurai Archers" hidden="false" id="fe09-3798-8bf4-8530" sortIndex="22">
       <categoryLinks>
@@ -1675,7 +1798,19 @@
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Samurai" hidden="false" id="6876-48e9-1141-080d">
           <infoLinks>
-            <infoLink name="Samurai" id="d069-5b39-097a-4acf" hidden="false" type="profile" targetId="f599-b0a1-5214-8ad9"/>
+            <infoLink name="Samurai" id="d069-5b39-097a-4acf" hidden="false" type="profile" targetId="f599-b0a1-5214-8ad9">
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="increment" value="1" field="edd2-7979-54a4-6b35"/>
+                    <modifier type="set" value="Red Devil" field="name"/>
+                  </modifiers>
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="9239-8557-906f-412b" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifierGroup>
+              </modifierGroups>
+            </infoLink>
             <infoLink name="Way of the Warrior" id="e62a-8775-9ded-1ca4" hidden="false" type="rule" targetId="28dd-2b0a-b009-9f2a"/>
             <infoLink name="Death Before Dishonour" id="adf5-d541-a589-1d68" hidden="false" type="rule" targetId="eb00-8407-3635-9261"/>
             <infoLink name="Fast Cavalry" id="689f-77ee-a583-be2f" hidden="false" type="rule" targetId="8877-a5de-cc9c-9142"/>
@@ -1782,6 +1917,37 @@
           </entryLinks>
         </entryLink>
       </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="10. Unit Options" id="c8db-1044-ee22-f381" hidden="false" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Red Devils" hidden="false" id="9239-8557-906f-412b">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a89a-df05-4226-e2a6" includeChildSelections="true"/>
+                <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="51f0-910b-dde9-c538" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="cc4c-f36b-5da9-899c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="1" field="51f0-910b-dde9-c538">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="cc4c-f36b-5da9-899c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="Red Devils" field="name" affects="recursive" scope="root-entry"/>
+              </modifiers>
+              <infoLinks>
+                <infoLink name="Frenzy" id="4fc5-d2c4-5a07-4b90" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1486-506a-391a-41ee" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Ashigaru Archer" hidden="false" id="19b5-81cd-2e60-d94f" sortIndex="25">
       <selectionEntries>
@@ -2353,14 +2519,10 @@
             <categoryLink name="Y Longbow" hidden="false" id="142b-10ea-7ac1-e15e" targetId="3ee8-1923-4565-e2b6" primary="false"/>
           </categoryLinks>
           <infoLinks>
-            <infoLink name="Death Before Dishonour" id="d1a0-6be6-a980-e2da" hidden="false" type="rule" targetId="eb00-8407-3635-9261"/>
+            <infoLink name="Stalwart Defence" id="d1a0-6be6-a980-e2da" hidden="false" type="rule" targetId="1b30-ce8e-92a6-a42b"/>
             <infoLink name="Way of the Warrior" id="6eb2-41db-9ae2-49cf" hidden="false" type="rule" targetId="28dd-2b0a-b009-9f2a"/>
+            <infoLink name="Death Before Dishonour" id="ff90-29b0-7d9d-ef78" hidden="false" type="rule" targetId="eb00-8407-3635-9261"/>
           </infoLinks>
-          <rules>
-            <rule name="Stalwart Defence" id="1b30-ce8e-92a6-a42b" hidden="false">
-              <description>If the majority of models in the unit has this special rule and are garrisoning a building or fighting behind a defended obstacle, they may re-roll failed Break tests.</description>
-            </rule>
-          </rules>
         </selectionEntry>
       </selectionEntries>
       <categoryLinks>
@@ -2382,6 +2544,29 @@
           </entryLinks>
         </entryLink>
       </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="10. Unit Options" id="5ac5-6ba6-cf60-56a1" hidden="false" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Core" hidden="false" id="91ff-29d9-d1a3-2cef">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="36e7-a2a8-7486-e526" includeChildSelections="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="9865-605b-e5ac-bfd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="unset-primary" value="fc26-7737-f7cb-8977" field="category" scope="root-entry" affects="self.entries.recursive"/>
+                <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category" scope="root-entry" affects="self.entries.recursive"/>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c2ea-3de4-7dbc-58a1" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Ronin" hidden="false" id="e112-398e-e7fc-fd82" sortIndex="35">
       <categoryLinks>
@@ -2892,34 +3077,13 @@
           </constraints>
           <entryLinks>
             <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="c449-2a6e-bf36-ed0a" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="War fan" hidden="false" id="2f55-a3ae-5b23-bd8c" collective="true">
+              <entryLinks>
+                <entryLink import="true" name="War fan" hidden="false" id="6a7c-bd39-9e81-5ce2" type="selectionEntry" targetId="a51f-d46a-0e14-867c">
                   <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8e9b-90cd-da80-6d8b-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8e9b-90cd-da80-6d8b-max" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="20bb-9e8a-b61d-8c30" includeChildSelections="false"/>
                   </constraints>
-                  <infoLinks>
-                    <infoLink name="Buckler" id="9ab9-ac82-1979-9323" hidden="false" type="profile" targetId="1700-a7e5-d272-ef20">
-                      <modifiers>
-                        <modifier type="set" value="Sewamono style" field="annotation"/>
-                        <modifier type="set" value="War fan" field="name"/>
-                        <modifier type="append" value="The Kabuki Dolls have the Dodge (5+) special rule." field="ff58-91e4-84d7-e6e4" join="
-
-"/>
-                      </modifiers>
-                    </infoLink>
-                    <infoLink name="Two/Additional Hand Weapons" id="5e84-1414-3390-c1a1" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
-                      <modifiers>
-                        <modifier type="set" value="Jidaimono style" field="annotation"/>
-                        <modifier type="set" value="War fan" field="name"/>
-                        <modifier type="append" value="The Kabuki Dolls have the Always Strikes First special rule." field="de63-d6da-efa8-00ac" join="
-
-"/>
-                      </modifiers>
-                    </infoLink>
-                  </infoLinks>
-                </selectionEntry>
-              </selectionEntries>
+                </entryLink>
+              </entryLinks>
             </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="d9f9-9eb2-ae3c-ed3d" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
@@ -2933,14 +3097,10 @@
           </entryLinks>
           <infoLinks>
             <infoLink name="Skirmishers" id="1523-5864-7e28-651d" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
-            <infoLink name="Loner" id="0756-1f1e-63fb-14af" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+            <infoLink name="Kabuki Dance" id="0756-1f1e-63fb-14af" hidden="false" type="rule" targetId="b2f7-69bf-3a7f-e110"/>
             <infoLink name="Poisoned Attacks" id="882c-41b3-16c1-f5ab" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
+            <infoLink name="Loner" id="4470-9f98-09b1-7050" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
           </infoLinks>
-          <rules>
-            <rule name="Kabuki Dance" id="5aae-7bf7-ca93-2fb9" hidden="false">
-              <description>You must choose one of the two dances for the kabuki Dolls to perform at the start of each close combat phase. Each effect lasts for the duration of the close combat round.</description>
-            </rule>
-          </rules>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -3327,7 +3487,7 @@
           <description>A Mikoshi Shrine adds +1 Power Dice to your power pool in each of your Magic phases. In addition, a Mikoshi Shrine and any unit of Warrior Monks joined by it, has the Stubborn special rule. Unlike other Shrines, it does not need to be in the front rank of the unit.</description>
         </rule>
         <rule name="Blessings of the Kami" id="053d-2583-9eb5-a2f6" hidden="false">
-          <description>The effects of each Blessing lasts until the start of the next Nippon Magic Phase.if a unit with an active Blessing flees for any reason, they immediately lose the Blessing and suffer D6 Strength 4 hits. </description>
+          <description>The effects of each Blessing lasts until the start of the next Nippon Magic Phase.if a unit with an active Blessing flees for any reason, they immediately lose the Blessing and suffer D6 Strength 4 hits.</description>
         </rule>
       </rules>
       <infoGroups>
@@ -3614,9 +3774,1366 @@
         <entryLink import="true" name="60. Wizard Level" hidden="false" id="bce3-24f4-2ba9-65dd" type="selectionEntryGroup" targetId="1d19-3d5b-2087-e988"/>
       </entryLinks>
     </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Special Characters" hidden="false" id="3c01-621e-95e1-9a88" subType="unit-group" sortIndex="98">
+      <comment>Lords</comment>
+      <categoryLinks>
+        <categoryLink name="Lords" hidden="false" id="877f-463c-3a47-aab2" targetId="d280-b7df-c185-2ba5" primary="true"/>
+        <categoryLink name="Heroes" hidden="false" id="41ef-2c63-2b80-1f7a" targetId="d38a-73da-883b-bab9" primary="false"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Character" id="4321-4b01-7f00-2d50" hidden="false" defaultSelectionEntryId="none">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="028e-5352-ba58-3c18" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Tokudaira Ieyasu" hidden="false" id="ca51-01f5-0a4d-3f37" sortIndex="1">
+              <profiles>
+                <profile name="Tokudaira Ieyasu" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="c51f-020b-ada2-805f">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">7</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Human)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="270"/>
+              </costs>
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="0ff1-1d38-2328-9ed5" targetId="22c9-1606-58f8-2e60" primary="false"/>
+              </categoryLinks>
+              <entryLinks>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="b22a-a712-d90e-fbf2" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Armour of Iron Resolve" hidden="false" id="bc53-6595-079a-b30b">
+                      <infoLinks>
+                        <infoLink name="Heavy Armour" id="3ce0-8f2a-242b-64df" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
+                          <modifiers>
+                            <modifier type="set" value="Armour of Iron Resolve" field="annotation"/>
+                            <modifier type="append" value="The wearer gains a Ward save (3+) against mundane attacks, which becomes a Ward save (5+) against Magical Attacks.
+" field="ff58-91e4-84d7-e6e4"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b1c5-2852-2f5b-80da-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b1c5-2852-2f5b-80da-max" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="11. Clan Mons" hidden="false" id="0c7b-b8b7-4369-f9b6" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="09b3-c439-69a3-51cc" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Blade of the Silver Moon" hidden="false" id="3e21-9cf5-d510-727c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f956-9829-e321-b484-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f956-9829-e321-b484-max" includeChildSelections="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Katana (One Handed)" id="2c14-9b9e-52da-18e9" hidden="false" type="profile" targetId="3ab7-eb7a-cf33-e82e"/>
+                        <infoLink name="Katana (Two Handed)" id="ec41-7f0e-2df6-837c" hidden="false" type="profile" targetId="9fae-d402-a9c7-8e27"/>
+                      </infoLinks>
+                      <modifiers>
+                        <modifier type="set" value="Blade of the Silver Moon" field="annotation" affects="self.entries.recursive.profiles.Weapon"/>
+                        <modifier type="append" value="All attacks that Hit will Wound automatically and have the Multiple Wounds (D3) special rule.
+" field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Weapon"/>
+                      </modifiers>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="70. Mount" hidden="false" id="55d1-a243-dd5d-4069" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+                  <entryLinks>
+                    <entryLink import="true" name="Warhorse" hidden="false" id="b3b6-f2f8-984b-3bd8" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0" sortIndex="1">
+                      <entryLinks>
+                        <entryLink import="true" name="Barding" hidden="false" id="002e-ad5e-6571-1d66" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                          <costs>
+                            <cost name="pts" typeId="points" value="5"/>
+                          </costs>
+                        </entryLink>
+                      </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="18"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Komainu" hidden="false" id="22c6-21b5-a5bf-d916" type="selectionEntry" targetId="1130-01f0-bc20-3ac7" sortIndex="2">
+                      <entryLinks>
+                        <entryLink import="true" name="Barding" hidden="false" id="2541-1c15-e1a5-8b35" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                          <costs>
+                            <cost name="pts" typeId="points" value="5"/>
+                          </costs>
+                        </entryLink>
+                      </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="30"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Kirin" hidden="false" id="a37d-2843-74c0-9859" type="selectionEntry" targetId="4115-0961-cdb8-e85f" sortIndex="3">
+                      <costs>
+                        <cost name="pts" typeId="points" value="48"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Mizuchi" hidden="false" id="9802-bcea-ace0-172c" type="selectionEntry" targetId="a0dc-bafa-cae5-6757" sortIndex="4"/>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="0cb9-bec6-c8f0-1e79" type="selectionEntryGroup" targetId="7853-6aa4-00e8-09e0"/>
+              </entryLinks>
+              <rules>
+                <rule name="Shogun" id="8ad4-1a73-0e61-5772" hidden="false">
+                  <description>Tokudaira Ieyasu must be the Army General. He has the Inspiring Presence (18) special rule rather than Inspiring Presence (12). An army led by the Shogun ignores the restriction on not allowing multiple Clan Mons in the army.</description>
+                </rule>
+                <rule name="Great Guard" id="1bbd-21cd-e522-851c" hidden="false">
+                  <description>One unit of Samurai Warriors in an army led by Tokudaira Ieyasu may be upgraded to Great Guard on foot for a cost of 4 points per model. Great Guard have +1 Weapon Skill and Strength as well as the Devastating Charge and Stubborn special rules. This unit counts as a Special choice.</description>
+                </rule>
+              </rules>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9050-2dbb-f36b-15e9" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Way of the Warrior" id="9fdb-5e96-6bf2-a92b" hidden="false" type="rule" targetId="28dd-2b0a-b009-9f2a"/>
+                <infoLink name="Death Before Dishonour" id="b07b-230f-6235-945f" hidden="false" type="rule" targetId="eb00-8407-3635-9261"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Empress Himiko" hidden="false" id="e2d8-2367-11c7-037e" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="370"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9d26-8f77-fbc5-be2c" includeChildSelections="true"/>
+              </constraints>
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="6b8b-9c43-d2ad-8514" targetId="22c9-1606-58f8-2e60" primary="false"/>
+              </categoryLinks>
+              <entryLinks>
+                <entryLink import="true" name="55. Equipment" hidden="false" id="5a3e-61e9-ad09-b2e7" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Sacred Jewel of Eight" hidden="false" id="fce0-19d8-09fb-47d6">
+                      <profiles>
+                        <profile name="Sacred Jewel of Eight" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="b315-d6fa-d7b5-e133">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">If an enemy spell targets Empress Himiko or the unit she is with and is subsequently dispelled by her, she may immediately cast the spell back at the enemy caster just like a Bound Spell, using the same casting value as the enemy Wizard.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="267c-3613-3189-1831-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="267c-3613-3189-1831-max" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Eight Span Mirror" hidden="false" id="271f-df78-60e8-348d">
+                      <profiles>
+                        <profile name="Sacred Jewel of Eight" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="71ab-65e6-523a-328c">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Sacred Jewel of Eight causes enemy units in base contact with the bearer to suffer -1 To Hit.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="412b-fac5-688b-628c-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="412b-fac5-688b-628c-max" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <constraints>
+                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="1eac-9bf4-5533-6d00" includeChildSelections="false"/>
+                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="07f9-6227-6d14-0315" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="d39e-2c64-3d02-1012" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="eb90-def4-61e4-f459" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="de35-1d57-ef78-8756" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d6cb-cfe6-8525-9c67" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="65. Lore of Magic" hidden="false" id="5c35-713e-7a03-c4ee" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
+                  <entryLinks>
+                    <entryLink import="true" name="Lore of Heavens" hidden="false" id="bea9-c52c-307d-dd7f" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="97fa-00c3-c8f5-9c6f" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="60. Wizard Level" hidden="false" id="8ff5-aa59-12dc-46d9" type="selectionEntryGroup" targetId="e548-6739-0537-5d95"/>
+              </entryLinks>
+              <profiles>
+                <profile name="Empress Himiko" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="b937-8007-871e-3aea">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Human)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Way of the Warrior" id="35de-501c-23af-db95" hidden="false" type="rule" targetId="28dd-2b0a-b009-9f2a"/>
+                <infoLink name="Death Before Dishonour" id="7de7-6dbb-78bb-b58e" hidden="false" type="rule" targetId="eb00-8407-3635-9261"/>
+              </infoLinks>
+              <rules>
+                <rule name="Supreme Onmyoji" id="62bc-899c-dd51-21f9" hidden="false">
+                  <description>Himiko may re-roll failed channelling rolls. In addition, she may re-roll one dice when casting and dispelling each turn.</description>
+                </rule>
+                <rule name="Empress of Nippon" id="b88c-555c-c281-b5e2" hidden="false">
+                  <description>Any unit with the Way of the Warrior special rule joined by Empress Himiko becomes Unbreakable as long as she is in it. In addition, she benefits from a 3+ &quot;Look Out, Sir!&quot; roll in close combat</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Odari Nobuhide " hidden="false" id="dd60-c5be-ef4c-cfab" sortIndex="3">
+              <costs>
+                <cost name="pts" typeId="points" value="200"/>
+              </costs>
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="76d6-d8b9-6226-600e" targetId="22c9-1606-58f8-2e60" primary="false"/>
+              </categoryLinks>
+              <profiles>
+                <profile name="Odari Nobuhide " typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="977f-6beb-69b5-46a2">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Human)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5f84-9875-0e55-3e6b" includeChildSelections="true"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="bf27-2967-7477-551e" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Achala&apos;s Ward" hidden="false" id="1108-5ba1-3f2e-65fa">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b8c4-2128-d406-5cd3-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b8c4-2128-d406-5cd3-max" includeChildSelections="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Heavy Armour" id="ddbb-50c6-d746-4d85" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
+                          <modifiers>
+                            <modifier type="set" value="Achala&apos;s Ward" field="annotation"/>
+                            <modifier type="append" value="Achala’s Ward grants the wearer a Ward save (4+) and the Immunity (Killing Blow) special rule.
+" field="ff58-91e4-84d7-e6e4"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="d854-81fe-3121-36e3" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="807e-898f-6127-7d89" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Guard Breaker" hidden="false" id="e60f-8634-631c-ccff">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a8fc-061d-359b-9596" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3e7f-1cce-5a59-6a76" includeChildSelections="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Katana (One Handed)" id="b36d-44b6-bf17-b524" hidden="false" type="profile" targetId="3ab7-eb7a-cf33-e82e"/>
+                        <infoLink name="Katana (Two Handed)" id="5728-450e-1deb-7a9c" hidden="false" type="profile" targetId="9fae-d402-a9c7-8e27"/>
+                      </infoLinks>
+                      <modifiers>
+                        <modifier type="set" value="Guard Breaker" field="annotation" affects="self.entries.recursive.profiles.Weapon"/>
+                        <modifier type="append" value="Attacks made with Guard Breaker have the Ignores Armour saves special rule, and no Parry saves may be taken against it
+" field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Weapon"/>
+                      </modifiers>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="70. Mount" hidden="false" id="e876-d695-a781-e0de" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+                  <entryLinks>
+                    <entryLink import="true" name="Warhorse" hidden="false" id="4b00-5665-ae3c-b215" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0" sortIndex="1">
+                      <entryLinks>
+                        <entryLink import="true" name="Barding" hidden="false" id="9866-83fa-f1d6-94c5" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                          <costs>
+                            <cost name="pts" typeId="points" value="5"/>
+                          </costs>
+                        </entryLink>
+                      </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="18"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Komainu" hidden="false" id="defd-5134-059c-f7c6" type="selectionEntry" targetId="1130-01f0-bc20-3ac7" sortIndex="2">
+                      <entryLinks>
+                        <entryLink import="true" name="Barding" hidden="false" id="a67f-99c4-5469-0ed8" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                          <costs>
+                            <cost name="pts" typeId="points" value="5"/>
+                          </costs>
+                        </entryLink>
+                      </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="30"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Kirin" hidden="false" id="952b-09f9-286b-0062" type="selectionEntry" targetId="4115-0961-cdb8-e85f" sortIndex="3">
+                      <costs>
+                        <cost name="pts" typeId="points" value="48"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Mizuchi" hidden="false" id="a6a0-8c21-11b8-fe47" type="selectionEntry" targetId="a0dc-bafa-cae5-6757" sortIndex="4"/>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="12. Clan Mons" hidden="false" id="3ff4-c21a-fc37-6900" type="selectionEntryGroup" targetId="acca-e5bb-5f72-31b6">
+                  <entryLinks>
+                    <entryLink import="true" name="Mon of the Odari Clan" hidden="false" id="511d-adb4-57fa-33ea" type="selectionEntry" targetId="1dbf-1ebe-5d1b-c32b">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3847-26ea-f2c8-0b4d" includeChildSelections="false"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="0" field="points"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Way of the Warrior" id="762e-bf8f-3aa9-7817" hidden="false" type="rule" targetId="28dd-2b0a-b009-9f2a"/>
+                <infoLink name="Death Before Dishonour" id="6785-33ac-f5a8-f302" hidden="false" type="rule" targetId="eb00-8407-3635-9261"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Takai Katsuyori " hidden="false" id="1c19-4e3e-ef1c-cef4" sortIndex="4">
+              <costs>
+                <cost name="pts" typeId="points" value="225"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="660f-0007-fbaa-0ddb" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Takai Katsuyori " typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="ae8b-6d9b-95dd-6461">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Human)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="4e48-fad0-7393-d39d" targetId="22c9-1606-58f8-2e60" primary="false"/>
+              </categoryLinks>
+              <entryLinks>
+                <entryLink import="true" name="70. Mount" hidden="false" id="fbe6-7137-e0c5-eb79" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+                  <entryLinks>
+                    <entryLink import="true" name="Warhorse" hidden="false" id="e057-e291-c5e5-c525" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0" sortIndex="1">
+                      <entryLinks>
+                        <entryLink import="true" name="Barding" hidden="false" id="913a-f954-9075-7ece" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                          <costs>
+                            <cost name="pts" typeId="points" value="5"/>
+                          </costs>
+                        </entryLink>
+                      </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="18"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Komainu" hidden="false" id="722f-c9b0-04f9-9fc2" type="selectionEntry" targetId="1130-01f0-bc20-3ac7" sortIndex="2">
+                      <entryLinks>
+                        <entryLink import="true" name="Barding" hidden="false" id="9885-2d6c-25b9-92f4" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                          <costs>
+                            <cost name="pts" typeId="points" value="5"/>
+                          </costs>
+                        </entryLink>
+                      </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="30"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Kirin" hidden="false" id="607b-9302-e751-c4b2" type="selectionEntry" targetId="4115-0961-cdb8-e85f" sortIndex="3">
+                      <costs>
+                        <cost name="pts" typeId="points" value="48"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Mizuchi" hidden="false" id="175b-3c1e-5785-1920" type="selectionEntry" targetId="a0dc-bafa-cae5-6757" sortIndex="4"/>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="501b-e1fe-d3b5-c5f8" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Katana" hidden="false" id="b1b1-78e4-1b36-f37d" type="selectionEntry" targetId="04a7-e5b9-407a-a686">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="843c-305b-c47e-913b" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="7b94-84c6-a64a-1c94" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="19f6-8fbe-6fa5-46c2" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <modifiers>
+                    <modifier type="set" value="2" field="f5b7-0be5-74d6-45b2"/>
+                    <modifier type="set" value="2" field="71c5-9037-5bd4-fae9"/>
+                  </modifiers>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Sunset Defender" hidden="false" id="373c-ce3a-7ea1-f969">
+                      <infoLinks>
+                        <infoLink name="Heavy Armour" id="55b3-4587-94bf-d5b6" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
+                          <modifiers>
+                            <modifier type="set" value="Sunset Defender" field="annotation"/>
+                            <modifier type="append" value="Sunset Defender gives the wearer +1 Toughness. In addition, for every successful Armour save the wearer makes in Close Combat, they gain +1 to their Combat Resolution that round.
+" field="ff58-91e4-84d7-e6e4"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="051a-ace5-8f24-b6ad-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="051a-ace5-8f24-b6ad-max" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Takai War Fan" hidden="false" id="f729-fa7f-c04d-b233">
+                      <infoLinks>
+                        <infoLink name="Buckler" id="62fc-ea84-8f02-834d" hidden="false" type="profile" targetId="1700-a7e5-d272-ef20">
+                          <modifiers>
+                            <modifier type="set" value="Takai War Fan" field="annotation"/>
+                            <modifier type="append" value="The Takai War Fan gives the bearer the Inspiring Presence (6) special rule. In addition, units using their Leadership may re-roll failed Leadership tests.
+" field="ff58-91e4-84d7-e6e4"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="97bb-705b-7f14-a51f-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="97bb-705b-7f14-a51f-max" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="12. Clan Mons" hidden="false" id="355a-6518-2ba3-9dc9" type="selectionEntryGroup" targetId="acca-e5bb-5f72-31b6">
+                  <entryLinks>
+                    <entryLink import="true" name="Mon of the Takai Clan" hidden="false" id="5d59-d70b-9686-6268" type="selectionEntry" targetId="f6d2-44d5-d54d-f728">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4dc1-185b-9d9b-39d6" includeChildSelections="false"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="0" field="points"/>
+                      </modifiers>
+                      <costs>
+                        <cost name="pts" typeId="points" value="1"/>
+                      </costs>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Way of the Warrior" id="f2fc-ed43-59c5-507a" hidden="false" type="rule" targetId="28dd-2b0a-b009-9f2a"/>
+                <infoLink name="Death Before Dishonour" id="0392-68c3-07f7-3e9f" hidden="false" type="rule" targetId="eb00-8407-3635-9261"/>
+              </infoLinks>
+              <rules>
+                <rule name="Brilliant Tactician" id="0aec-32a2-c630-dd16" hidden="false">
+                  <description>Once per turn, Takai Katsuyori may attempt to issue one of the following commands to a friendly unit within 12&quot; that is not fleeing or in combat. This unit must take a Leadership test; if failed, the command has no effect this turn. If passed, the command works as intended.</description>
+                </rule>
+                <rule name="Daimyo of the Takai Clan" id="c572-d537-ef01-34d5" hidden="false">
+                  <description>Cavalry models in an army led by Takai Katsuyori must take the Takai Clan Mon.</description>
+                </rule>
+              </rules>
+              <infoGroups>
+                <infoGroup name="Brilliant Tactician" id="27eb-c046-0290-6d8b" hidden="false">
+                  <profiles>
+                    <profile name="Brace Yourselves!" typeId="9c21-2719-3e2b-64d8" typeName="Command" hidden="false" id="9446-b1be-78fb-fd3f">
+                      <characteristics>
+                        <characteristic name="Effect" typeId="96a9-1a13-ef43-7738">Issue as a Charge Reaction. Enemies charging the unit to its front lose all charging bonuses.</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Fall back!" typeId="9c21-2719-3e2b-64d8" typeName="Command" hidden="false" id="4e3c-5ecf-b40c-717b">
+                      <characteristics>
+                        <characteristic name="Effect" typeId="96a9-1a13-ef43-7738">Issue as a Charge Reaction. The unit may use Feigned Flight like Fast Cavalry/Skirmishers</characteristic>
+                      </characteristics>
+                    </profile>
+                    <profile name="Reform!" typeId="9c21-2719-3e2b-64d8" typeName="Command" hidden="false" id="745c-99e4-569b-4a9c">
+                      <characteristics>
+                        <characteristic name="Effect" typeId="96a9-1a13-ef43-7738">Issue in the Remaining Moves phase. The unit may make a normal Reform and still move this turn.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </infoGroup>
+              </infoGroups>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Dawate Tadamune " hidden="false" id="270c-9bf0-fe1a-4c6a" sortIndex="5">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="986e-1ba2-dad6-c9d9" includeChildSelections="true"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="175"/>
+              </costs>
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="a61f-c161-0834-294e" targetId="22c9-1606-58f8-2e60" primary="false"/>
+                <categoryLink name="X Great Weapon" hidden="false" id="d169-d2f6-82c5-9b40" targetId="abcc-4aa7-4989-7189" primary="false"/>
+              </categoryLinks>
+              <profiles>
+                <profile name="Dawate Tadamune " typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="abe0-ed67-883e-4b93">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Human)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="d76c-3bdc-0f2e-ab45" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="b98c-160d-1c42-da19" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Saddle-Cutter" hidden="false" id="db39-a83c-690f-5c01">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4e08-7c2c-2b94-191e" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c3d2-ba6c-bc62-c9d8" includeChildSelections="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Great Weapon" id="7076-b2a3-7cb6-6269" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
+                          <modifiers>
+                            <modifier type="set" value="Saddle-Cutter" field="annotation"/>
+                            <modifier type="append" value="Saddle-cutter gives the wielder the Killing Blow special rule against Cavalry or Monstrous Cavalry which applies on the roll of a 5+ rather than 6+.
+" field="de63-d6da-efa8-00ac"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="bf7e-6a53-cdcf-ea19" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Armour of the Night Ocean" hidden="false" id="eabe-66c7-56be-86e2">
+                      <infoLinks>
+                        <infoLink name="Medium Armour" id="eeee-0014-19e5-face" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
+                          <modifiers>
+                            <modifier type="set" value="Armour of the Night Ocean" field="annotation"/>
+                            <modifier type="append" value="The Armour of the Night Ocean grants the wearer the Natural armour (4+) special rule. In addition, enemy models suffer -1 to Hit against them in close combat.
+" field="ff58-91e4-84d7-e6e4"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="db9e-2056-17f0-273b-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="db9e-2056-17f0-273b-max" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="70. Mount" hidden="false" id="21e9-e10d-02fe-a844" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+                  <entryLinks>
+                    <entryLink import="true" name="Warhorse" hidden="false" id="e8ac-4d61-031e-c87e" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0" sortIndex="1">
+                      <entryLinks>
+                        <entryLink import="true" name="Barding" hidden="false" id="f56e-2561-27ab-6349" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                          <costs>
+                            <cost name="pts" typeId="points" value="5"/>
+                          </costs>
+                        </entryLink>
+                      </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="18"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Komainu" hidden="false" id="95dd-1998-261a-3d87" type="selectionEntry" targetId="1130-01f0-bc20-3ac7" sortIndex="2">
+                      <entryLinks>
+                        <entryLink import="true" name="Barding" hidden="false" id="5b9b-1c21-d286-03ff" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                          <costs>
+                            <cost name="pts" typeId="points" value="5"/>
+                          </costs>
+                        </entryLink>
+                      </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="30"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Kirin" hidden="false" id="cf49-1231-e7ee-6033" type="selectionEntry" targetId="4115-0961-cdb8-e85f" sortIndex="3">
+                      <costs>
+                        <cost name="pts" typeId="points" value="48"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Mizuchi" hidden="false" id="efd7-5c6a-a809-7bf7" type="selectionEntry" targetId="a0dc-bafa-cae5-6757" sortIndex="4"/>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="12. Clan Mons" hidden="false" id="be9a-a510-e1e9-d434" type="selectionEntryGroup" targetId="acca-e5bb-5f72-31b6">
+                  <entryLinks>
+                    <entryLink import="true" name="Mon of the Dawate Clan" hidden="false" id="cf85-a689-9b4e-6944" type="selectionEntry" targetId="118f-7d91-db4d-d58d">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="500b-bf62-6efc-8b89" includeChildSelections="false"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="0" field="points"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Way of the Warrior" id="aed7-d8b0-bc5d-c3e3" hidden="false" type="rule" targetId="28dd-2b0a-b009-9f2a"/>
+                <infoLink name="Death Before Dishonour" id="66f6-ae89-146d-39bc" hidden="false" type="rule" targetId="eb00-8407-3635-9261"/>
+              </infoLinks>
+              <rules>
+                <rule name="Daimyo of the Dawate Clan" id="3790-0ae9-a79e-bad7" hidden="false">
+                  <description>Models with great weapons in an army led by Dawate Tadamune must take the Dawate Clan Mon.</description>
+                </rule>
+                <rule name="Reckless Abandon" id="3029-e0ab-bfba-57a2" hidden="false">
+                  <description>Dawate Tadamune has the Devastating Charge special rule. In addition, for every successful Wound caused on a turn he charges he gains an additional attack. These additional attacks do not generate any further attacks.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Uesigo Norimasa " hidden="false" id="ad40-c4b6-b0f3-c91c" sortIndex="6">
+              <costs>
+                <cost name="pts" typeId="points" value="170"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4816-4dde-cc91-06f5" includeChildSelections="true"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="70. Mount" hidden="false" id="de10-7956-f80f-1a67" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+                  <entryLinks>
+                    <entryLink import="true" name="Warhorse" hidden="false" id="bcc4-dd58-457d-da0b" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0" sortIndex="1">
+                      <entryLinks>
+                        <entryLink import="true" name="Barding" hidden="false" id="fe7c-5561-8b8c-b1f2" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                          <costs>
+                            <cost name="pts" typeId="points" value="5"/>
+                          </costs>
+                        </entryLink>
+                      </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="18"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Komainu" hidden="false" id="83c8-9793-62c5-eb03" type="selectionEntry" targetId="1130-01f0-bc20-3ac7" sortIndex="2">
+                      <entryLinks>
+                        <entryLink import="true" name="Barding" hidden="false" id="6dc4-3312-b811-bbd7" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                          <costs>
+                            <cost name="pts" typeId="points" value="5"/>
+                          </costs>
+                        </entryLink>
+                      </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="30"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Kirin" hidden="false" id="4196-61b5-36e5-1b02" type="selectionEntry" targetId="4115-0961-cdb8-e85f" sortIndex="3">
+                      <costs>
+                        <cost name="pts" typeId="points" value="48"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Mizuchi" hidden="false" id="fb81-15ed-f0ec-1a3c" type="selectionEntry" targetId="a0dc-bafa-cae5-6757" sortIndex="4"/>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="b4d0-3079-4375-cfdf" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Bishamonten&apos;s Might" hidden="false" id="dd45-258b-26b0-ed36">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4957-16e0-444e-9b16" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a0dc-9e16-0f84-13fb" includeChildSelections="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Polearm/Halberd" id="f9f7-df12-10d3-5a45" hidden="false" type="profile" targetId="e43e-5153-eeec-36be">
+                          <modifiers>
+                            <modifier type="set" value="Bishamonten&apos;s Might" field="annotation"/>
+                            <modifier type="append" value="Attacks made with this weapon gain +1 To Hit. In addition, for every Hit inflicted with it, an enemy model of your choice in base contact loses an Attack
+" field="de63-d6da-efa8-00ac"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="64ad-1590-b5ba-62c3" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <entryLinks>
+                    <entryLink import="true" name="Medium Armour" hidden="false" id="5771-c7f2-8550-e700" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7d3a-53a2-3cdc-47f8" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="85c6-d552-eff3-be2c" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="55. Equipment" hidden="false" id="5306-af24-447c-3c43" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4e1d-3d8c-68f2-dc43-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4e1d-3d8c-68f2-dc43-max" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Chalice of Bishamonten" hidden="false" id="c511-21a5-f8f1-c3fd">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0967-7d70-4fc0-4056-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0967-7d70-4fc0-4056-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Chalice of Bishamonten" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="cdec-b433-70e9-5781">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Chalice of Bishamonten can be used at the start of any round of close combat. When used, Uesigo Norimasa gains +1 to his Weapon Skill, Strength, Toughness, Initiative and Attacks as well as a Ward save (5+) for the remainder of the turn.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="11. Clan Mons" hidden="false" id="aa21-53ca-27c5-e4ac" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+              </entryLinks>
+              <profiles>
+                <profile name="Uesigo Norimasa " typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f78f-a171-1936-f3fc">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459"> Infantry (Special Character, Human)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <infoLinks>
+                <infoLink name="Way of the Warrior" id="5700-df02-6780-7d4c" hidden="false" type="rule" targetId="28dd-2b0a-b009-9f2a"/>
+                <infoLink name="Death Before Dishonour" id="08b1-b462-8fd8-6e27" hidden="false" type="rule" targetId="eb00-8407-3635-9261"/>
+                <infoLink name="Immunity (Psychology)" id="daa9-62a6-389f-8cc0" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
+                <infoLink name="Magic Resistance (2)" id="9e2b-99ac-9c60-3ecc" hidden="false" type="rule" targetId="0e09-3526-25d5-2646"/>
+                <infoLink name="Stubborn" id="1a10-67ea-80ac-bc25" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
+              </infoLinks>
+              <rules>
+                <rule name="Daimyo of the Uesigo Clan" id="10c5-66a0-2859-e977" hidden="false">
+                  <description> Units of Warrior Monks, Shugenja and Yamabushi in an army led by Uesigo Norimasa must take the Uesigo Clan Mon. Warrior Monks count as a Core choice. However, no Wako Pirates, Ninjas or Shinobis may be taken.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Special Characters" hidden="false" id="bd97-ad3f-e004-5fbf" subType="unit-group" sortIndex="99">
+      <comment>Heroes</comment>
+      <categoryLinks>
+        <categoryLink name="Heroes" hidden="false" id="3d99-daea-9b0b-af40" targetId="d38a-73da-883b-bab9" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Character" id="f80f-d054-7426-14b9" hidden="false" defaultSelectionEntryId="none">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9c12-0017-274f-ad2b" includeChildSelections="false"/>
+          </constraints>
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Sanada Naomasa" hidden="false" id="cc4c-f36b-5da9-899c" sortIndex="1">
+              <categoryLinks>
+                <categoryLink name="Cavalry" hidden="false" id="cba0-4d0d-b37b-1bb3" targetId="bdee-b168-38ba-7d3c" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="190"/>
+              </costs>
+              <profiles>
+                <profile name="Sanada Naomasa" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="bb65-c219-eb4c-17fa">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Special Character, Human)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="70. Mount" hidden="false" id="b5b2-14d2-e4a3-6adb" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3884-8736-f590-c11b" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Warhorse" hidden="false" id="94ef-f14d-96b4-bd2c" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e9f5-ed6e-541c-9772" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="25fc-8402-efb5-9735" includeChildSelections="false"/>
+                      </constraints>
+                      <entryLinks>
+                        <entryLink import="true" name="Barding" hidden="false" id="0f18-f9b7-92ba-5250" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                          <costs>
+                            <cost name="pts" typeId="points" value="5"/>
+                          </costs>
+                        </entryLink>
+                      </entryLinks>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="d1b8-17ef-665b-3caf" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="11. Clan Mons" hidden="false" id="0684-dacd-9cea-f9cd" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="6e99-b6f4-51c6-310f" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Divine Wind" hidden="false" id="5224-2750-e3c8-325a">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e2a2-b842-4b2f-0b65-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e2a2-b842-4b2f-0b65-max" includeChildSelections="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Light Lance" id="bf4b-f795-a95d-aa87" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb">
+                          <modifiers>
+                            <modifier type="set" value="Divine Wind" field="annotation"/>
+                            <modifier type="append" value="Divine Wind gives the wielder +1 Strength and the Devastating Charge special rule.
+" field="de63-d6da-efa8-00ac"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="7ac1-7671-d13c-9276" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Red Daemon Armour" hidden="false" id="4651-84bb-5d6b-cee9">
+                      <infoLinks>
+                        <infoLink name="Medium Armour" id="e831-3e98-8e9a-1039" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
+                          <modifiers>
+                            <modifier type="set" value="Red Daemon Armour" field="annotation"/>
+                            <modifier type="append" value="The Red Daemon Armour gives Sanada Naomasa a Ward save (5+) and the Fear special rule. In addition, only one enemy in base contact (chosen by Naomasa) can choose to allocate their attacks against him in close combat.
+" field="ff58-91e4-84d7-e6e4"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="31d5-2bce-5d4b-bc88-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="31d5-2bce-5d4b-bc88-max" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Frenzy" id="9528-2d09-18a2-552f" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
+                <infoLink name="Death Before Dishonour" id="6365-2597-73a5-e825" hidden="false" type="rule" targetId="eb00-8407-3635-9261"/>
+                <infoLink name="Way of the Warrior" id="bbd1-3e17-d4cc-d00b" hidden="false" type="rule" targetId="28dd-2b0a-b009-9f2a"/>
+              </infoLinks>
+              <rules>
+                <rule name="The Red Devils" id="4893-7c4b-c5ea-23c3" hidden="false">
+                  <description>The Red Devils are a unit of Samurai Cavalry with an additional +1 Strength and the Frenzy special rule. Naomasa must deploy in this unit and may not leave it</description>
+                </rule>
+              </rules>
+              <modifiers>
+                <modifier type="add" value="One Unit of Red Devils (Samurai Cavalry) required" field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="cc4c-f36b-5da9-899c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="9239-8557-906f-412b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Hitomi Gozen" hidden="false" id="9865-605b-e5ac-bfd0" sortIndex="2">
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="d566-504e-49a7-9c96" targetId="22c9-1606-58f8-2e60" primary="false"/>
+                <categoryLink name="Y Longbow" hidden="false" id="ec6a-4751-faab-9f59" targetId="3ee8-1923-4565-e2b6" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="90"/>
+              </costs>
+              <profiles>
+                <profile name="Hitomi Gozen" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="a718-2c1e-fca8-9f5c">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Human)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="70. Mount" hidden="false" id="e0e2-29f2-ce15-07bb" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+                  <entryLinks>
+                    <entryLink import="true" name="Warhorse" hidden="false" id="29b4-c083-8c7d-2e3b" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="887a-7024-5e30-f352" includeChildSelections="false"/>
+                      </constraints>
+                      <entryLinks>
+                        <entryLink import="true" name="Barding" hidden="false" id="51f8-69eb-3552-6125" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                          <costs>
+                            <cost name="pts" typeId="points" value="5"/>
+                          </costs>
+                        </entryLink>
+                      </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="12"/>
+                      </costs>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="652e-7fec-e9ab-9199" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="11. Clan Mons" hidden="false" id="f763-5512-70ed-982c" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="dd78-5736-a43c-7cff" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="The Thundering Blade" hidden="false" id="c3f8-2bdc-e3ca-52d6">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="eceb-6b85-4e3e-7498-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eceb-6b85-4e3e-7498-max" includeChildSelections="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Polearm/Halberd" id="28a3-3242-7758-b42d" hidden="false" type="profile" targetId="e43e-5153-eeec-36be">
+                          <modifiers>
+                            <modifier type="set" value="The Thundering Blade" field="annotation"/>
+                            <modifier type="append" value="All attacks with this weapon have the Lightning Attacks special rule.
+" field="de63-d6da-efa8-00ac"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="f67b-3ee6-0a00-483b" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <entryLinks>
+                    <entryLink import="true" name="Medium Armour" hidden="false" id="8e7c-ab18-69e4-24f4" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6ef6-2f6b-aa2b-2f4b" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="04e3-ffcb-35fb-4f48" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                  <entryLinks>
+                    <entryLink import="true" name="Longbow" hidden="false" id="c46c-8717-6edb-c2ca" type="selectionEntry" targetId="f6cc-1342-64fe-6a3e">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6b2d-caef-9e18-bc70" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Stubborn" id="2896-d3a2-a9c8-e042" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
+                <infoLink name="Way of the Warrior" id="5e7b-71a2-0c21-fd45" hidden="false" type="rule" targetId="28dd-2b0a-b009-9f2a"/>
+                <infoLink name="Death Before Dishonour" id="445b-5a6a-d6e8-3b3d" hidden="false" type="rule" targetId="eb00-8407-3635-9261"/>
+                <infoLink name="Stalwart Defence" id="2e40-f59e-8c6a-2604" hidden="false" type="rule" targetId="1b30-ce8e-92a6-a42b"/>
+              </infoLinks>
+              <rules>
+                <rule name="Onna Bushi Commander" id="30eb-1360-f3ec-323a" hidden="false">
+                  <description>If Hitomi Gozen is included in your army, one unit of Onna Bushi may be taken as a Core Unit instead of a Special Unit.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Akashi Sho" hidden="false" id="8f57-3994-d693-fa09" sortIndex="3">
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="58f5-db0e-8b39-21c2" targetId="22c9-1606-58f8-2e60" primary="false"/>
+                <categoryLink name="X Great Weapon" hidden="false" id="3eda-82e3-54fd-a006" targetId="abcc-4aa7-4989-7189" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="205"/>
+              </costs>
+              <profiles>
+                <profile name="Akashi Sho" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="c936-1bbc-d609-7d61">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">6</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Human)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="70. Mount" hidden="false" id="0440-6e76-dcc1-3e2f" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+                  <entryLinks>
+                    <entryLink import="true" name="Warhorse" hidden="false" id="2792-ea3e-2657-de72" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a1ae-829c-a802-bd4e" includeChildSelections="false"/>
+                      </constraints>
+                      <entryLinks>
+                        <entryLink import="true" name="Barding" hidden="false" id="0d08-1d2f-4d39-de13" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                          <costs>
+                            <cost name="pts" typeId="points" value="5"/>
+                          </costs>
+                        </entryLink>
+                      </entryLinks>
+                      <costs>
+                        <cost name="pts" typeId="points" value="12"/>
+                      </costs>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="0d01-35ba-a99a-61f9" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="11. Clan Mons" hidden="false" id="55f7-7f69-05f1-bf9d" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="6d3f-48b2-4663-13d4" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Oni-Kanabo" hidden="false" id="f77c-4c78-8c2b-31d6">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1011-cba0-1ab2-e532-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1011-cba0-1ab2-e532-max" includeChildSelections="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Great Weapon" id="0b6f-c3d2-8d4d-4831" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
+                          <modifiers>
+                            <modifier type="set" value="Oni-Kanabo" field="annotation"/>
+                            <modifier type="append" value="The Oni-Kanabo gives the wielder the Multiple Wounds (D3) special rule.
+" field="de63-d6da-efa8-00ac"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="0a60-8361-47a8-3f4f" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <entryLinks>
+                    <entryLink import="true" name="Medium Armour" hidden="false" id="5038-fcc5-ac4d-b11a" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3375-06e2-1be4-556c" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="55. Equipment" hidden="false" id="2ca7-2def-f083-17e5" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+                  <constraints>
+                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="ca75-3eff-ae73-71af-min" includeChildSelections="false"/>
+                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="ca75-3eff-ae73-71af-max" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Purifying Salt" hidden="false" id="af9d-e211-3cf1-f32b">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6030-eab7-9db4-593b-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6030-eab7-9db4-593b-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Purifying Salt" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="87d4-c579-fda6-9517">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">he Purifying Salt may be used whenever Akashi Sho issues or accepts a challenge. For the duration of the challenge, he may re-roll 1&apos;s To Hit, To Wound and when taking armour and Ward saves.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Tsuna Belt" hidden="false" id="9c87-8bda-20ae-d2e7">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a7c2-907a-b718-1e99-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a7c2-907a-b718-1e99-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Tsuna Belt" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="5ec3-54e5-0184-c5c4">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Tsuna Belt grants Akashi Sho a Ward save (5+) and the Magic Resistance (1) special rule.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Way of the Warrior" id="e8fd-0b17-23a3-b2d7" hidden="false" type="rule" targetId="28dd-2b0a-b009-9f2a"/>
+                <infoLink name="Sworn Bodyguard" id="0fac-1b28-3f5a-0d81" hidden="false" type="rule" targetId="40b9-59de-cb15-5309"/>
+                <infoLink name="Death Before Dishonour" id="ccc0-290a-180a-220d" hidden="false" type="rule" targetId="eb00-8407-3635-9261"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Minamoto Kenshin " hidden="false" id="cee5-7fbf-1ab7-952e" sortIndex="4">
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="6f27-f689-d789-8e71" targetId="22c9-1606-58f8-2e60" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="210"/>
+              </costs>
+              <profiles>
+                <profile name="Minamoto Kenshin " typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6678-7318-d4e3-9d7f">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">8</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">7</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Human)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="11. Clan Mons" hidden="false" id="6ffb-be1e-6b05-3136" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="c3bc-de8f-b9fc-9414" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="The Nameless Blades" hidden="false" id="8890-a4df-015c-19fb">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="da8e-2dc0-40f0-7394-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da8e-2dc0-40f0-7394-max" includeChildSelections="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Two/Additional Hand Weapons" id="6473-d501-3de3-dc12" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
+                          <modifiers>
+                            <modifier type="set" value="The Nameless Blades" field="annotation"/>
+                            <modifier type="append" value="The wielder may re-roll all failed To Hit rolls. In addition, any successful Parry or Dodge saves must be re-rolled.
+" field="de63-d6da-efa8-00ac"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="55. Equipment" hidden="false" id="c4a9-c03c-215a-32b0" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="140e-2182-ea54-7ab4-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="140e-2182-ea54-7ab4-max" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Headband of the Second Sun" hidden="false" id="93fe-e676-832f-8915">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1626-3675-85b3-9426-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1626-3675-85b3-9426-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Headband of the Second Sun" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="7dde-d01e-23e3-7df1">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Headband of the Second Sun allows Minamoto Kenshin to re-roll Parry saves while fighting in challenges.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Parry (5+)" id="c14e-eb1f-bb27-6ebd" hidden="false" type="rule" targetId="f210-1e7c-a315-2849"/>
+                <infoLink name="Way of the Warrior" id="7ddc-c40a-8b14-209d" hidden="false" type="rule" targetId="28dd-2b0a-b009-9f2a"/>
+                <infoLink name="Iaijutsu" id="6151-8ed3-acc4-4b83" hidden="false" type="infoGroup" targetId="7d49-f1e6-1f14-eadc"/>
+                <infoLink name="Iaijutsu" id="251b-6397-38db-05b0" hidden="false" type="rule" targetId="5edd-6405-18dc-bf7c"/>
+                <infoLink name="Killing Blow" id="b061-7d2b-aba0-0a51" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29"/>
+              </infoLinks>
+              <rules>
+                <rule name="Path of the Blade" id="7734-24c5-d0d2-bd73" hidden="false">
+                  <description>For each successful Parry save made, Minamoto Kenshin immediately gets to make an additional attack back against the enemy that struck the blow.</description>
+                </rule>
+                <rule name="Uncouth Challenger" id="031b-6417-a0ee-3f85" hidden="false">
+                  <description>When Minamoto Kenshin issues a challenge, the opponent cannot choose to refuse it. Furthermore, the Nippon player nominates which enemy character will accept the challenge.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Sarutori Hanzo" hidden="false" id="da88-ece3-c034-0c96" sortIndex="5">
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="446b-02ec-0a90-1a2a" targetId="22c9-1606-58f8-2e60" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="200"/>
+              </costs>
+              <profiles>
+                <profile name="Sarutori Hanzo" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="43bf-a5e0-6dd6-4dd6">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">8</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">6</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">8</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Human)</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Shadow Flight" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="42ad-3522-5f75-d48c">
+                  <characteristics>
+                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Innate Bound Spell</characteristic>
+                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3</characteristic>
+                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">Self</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Saruto Hanzo may immediately make a Fly move up 10&quot;, even if engaged in close combat, as if it were the Remaining Moves sub-phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="12. Clan Mons" hidden="false" id="4370-127c-4d54-5f64" type="selectionEntryGroup" targetId="acca-e5bb-5f72-31b6">
+                  <entryLinks>
+                    <entryLink import="true" name="Mon of the Hattiga Clan" hidden="false" id="4289-0879-166c-ea21" type="selectionEntry" targetId="e48e-38a1-5b7d-313d">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="46cc-5e77-0b81-a8ce" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="1a05-7f36-2ea6-2d91" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Biting Wind" hidden="false" id="1962-61e3-760e-2ded">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c559-b76e-fc59-7b50-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c559-b76e-fc59-7b50-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Biting Wind" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="f287-e670-2a5b-a2ed">
+                          <characteristics>
+                            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The wielder causes an automatic Strength 4 hit on all models in base contact in addition to his normal attacks. In addition, any model wounded, but not killed, loses all their attacks for the duration of the turn.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="55. Equipment" hidden="false" id="f685-7721-82e4-ddb1" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d2c8-b918-1a82-cee8-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d2c8-b918-1a82-cee8-max" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Kage Mask" hidden="false" id="d7ec-ecd6-5193-1eec">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ba3e-c341-d270-77f4-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ba3e-c341-d270-77f4-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Kage Mask" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="fba9-1269-30c0-3a29">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The wearer of this mask causes Fear. In addition, they automatically pass any Characteristics tests they might be required to take.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="0f78-21c7-3c26-9c5d" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Scouts" id="6901-c18c-87e5-e881" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
+                <infoLink name="Dodge (4+)" id="6a9d-56f3-12e6-a655" hidden="false" type="rule" targetId="5e3f-9736-a9c0-4a1c"/>
+                <infoLink name="Hidden" id="c740-9a0e-afb6-6185" hidden="false" type="rule" targetId="2796-b399-4f98-a36f"/>
+                <infoLink name="Poisoned Attacks" id="0f7d-5329-7f97-e57b" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
+                <infoLink name="Fauntei Shi" id="f6df-83c5-02fd-c28c" hidden="false" type="rule" targetId="5295-6318-fc06-d694"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="O-Sayumi" hidden="false" id="17d2-7680-b807-d00d" sortIndex="6">
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="ae70-fe8d-a861-9a23" targetId="22c9-1606-58f8-2e60" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="140"/>
+              </costs>
+              <profiles>
+                <profile name="O-Sayumi" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="9e0e-6108-65bd-3060">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">36</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Human)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="11. Clan Mons" hidden="false" id="2bad-d23e-0fbf-5e17" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581">
+                  <entryLinks>
+                    <entryLink import="true" name="Mon of the Hattiga Clan" hidden="false" id="3592-026e-0227-31a9" type="selectionEntry" targetId="e48e-38a1-5b7d-313d">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d67d-6654-3d9d-f730" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="b23b-2697-4f3d-2691" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="d19b-c6b7-7df3-fa82" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7816-343c-db5b-4004" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="55. Equipment" hidden="false" id="7077-1baa-5850-5f90" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+                  <constraints>
+                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="edc4-a62b-90dd-bf70-min" includeChildSelections="false"/>
+                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="edc4-a62b-90dd-bf70-max" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Samisen of Oracular Vision" hidden="false" id="3d1f-3054-f6f1-cf4a">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6992-8abe-61a2-2151-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6992-8abe-61a2-2151-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Samisen of Oracular Vision" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="ebbd-e953-0c2b-5ce6">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">O-Sayumi may use this item at the start of any of your turns. Target one friendly unit within 12&quot;. That unit gains +1 To Hit in close combat until the start of your next turn.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Karyukai Tea Set" hidden="false" id="d5a0-fca2-11d2-3a5f">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1ad0-ab24-0dcd-a026-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1ad0-ab24-0dcd-a026-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Karyukai Tea Set" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="518a-33ec-62ed-b1c6">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. O-Sayumi may use this item at the start of any of your turns. O-Sayumi and any unit she is with becomes Unbreakable until the start of your next turn.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="b9e3-c8ec-7aaa-afbb" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                  <entryLinks>
+                    <entryLink import="true" name="War fan" hidden="false" id="37e3-247d-f8cf-4ee0" type="selectionEntry" targetId="a51f-d46a-0e14-867c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e0f0-8959-456e-27d9" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+              </entryLinks>
+              <infoLinks>
+                <infoLink name="Kabuki Dance" id="c93b-09cd-fc44-7a70" hidden="false" type="rule" targetId="b2f7-69bf-3a7f-e110"/>
+                <infoLink name="Poisoned Attacks" id="a83b-ab32-54f0-9e3e" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
+              </infoLinks>
+              <rules>
+                <rule name="Legendary Geisha" id="b8d8-8784-2826-5847" hidden="false">
+                  <description>Any friendly unit joined by O-Sayumi may re-roll all failed Leadership tests. Against enemy characters, O-Sayumi may re-roll failed rolls To Wound and has the Killing Blow special rule.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup name="11. Clan Mon" id="3b57-19a7-13fc-9581" hidden="false" defaultSelectionEntryId="none">
+    <selectionEntryGroup name="11. Clan Mons" id="3b57-19a7-13fc-9581" hidden="false" defaultSelectionEntryId="none">
       <entryLinks>
         <entryLink import="true" name="Mon of the Uesigo Clan" hidden="false" id="574a-3081-3475-b559" type="selectionEntry" targetId="2e10-9422-ead4-c046">
           <modifiers>
@@ -3625,7 +5142,15 @@
                 <condition type="lessThan" value="1" field="selections" scope="roster" childId="5585-264a-8c7f-fafa" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="1" field="d7bd-d740-4275-1e45">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1c19-4e3e-ef1c-cef4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d7bd-d740-4275-1e45"/>
+          </constraints>
         </entryLink>
         <entryLink import="true" name="Mon of the Chotosa Clan" hidden="false" id="afae-0328-d4ad-9b6d" type="selectionEntry" targetId="d3bb-3228-1c5f-1fc4">
           <modifiers>
@@ -3643,7 +5168,15 @@
                 <condition type="lessThan" value="1" field="selections" scope="roster" childId="7f0f-780c-eb63-8cfc" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="1" field="b694-e634-2f0d-8de7">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="270c-9bf0-fe1a-4c6a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="b694-e634-2f0d-8de7"/>
+          </constraints>
         </entryLink>
         <entryLink import="true" name="Mon of the Hattiga Clan" hidden="false" id="a504-a107-c99f-b12d" type="selectionEntry" targetId="e48e-38a1-5b7d-313d">
           <modifiers>
@@ -3670,7 +5203,15 @@
                 <condition type="lessThan" value="1" field="selections" scope="roster" childId="7cb5-2bcc-b304-f320" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="1" field="a9d4-78fc-d58a-5f61">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="dd60-c5be-ef4c-cfab" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="a9d4-78fc-d58a-5f61"/>
+          </constraints>
         </entryLink>
         <entryLink import="true" name="Mon of the Shisuma Clan" hidden="false" id="666b-8b9e-9116-013c" type="selectionEntry" targetId="7314-efb2-5a40-052b">
           <modifiers>
@@ -3688,11 +5229,19 @@
                 <condition type="lessThan" value="1" field="selections" scope="roster" childId="1ad3-5e2e-2785-35e9" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
+            <modifier type="set" value="1" field="eafd-a650-c0bc-67f3">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="1c19-4e3e-ef1c-cef4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="eafd-a650-c0bc-67f3"/>
+          </constraints>
         </entryLink>
       </entryLinks>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="afec-9e80-677e-4144" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="afec-9e80-677e-4144" includeChildSelections="true" automatic="false" includeChildForces="true"/>
       </constraints>
     </selectionEntryGroup>
     <selectionEntryGroup name="90. Magic Items" id="d0e7-e6e8-0e13-2946" hidden="false">
@@ -4594,6 +6143,13 @@ Movement phase. In addition, they automatically pass any test to reform, march 
         <entryLink import="true" name="Common Magic Standards" hidden="false" id="ffe0-c211-7cff-2318" type="selectionEntryGroup" targetId="2613-24d7-a26e-eb37" flatten="true" sortIndex="99"/>
       </entryLinks>
     </selectionEntryGroup>
+    <selectionEntryGroup name="12. Clan Mons" id="acca-e5bb-5f72-31b6" hidden="false">
+      <comment>Special Characters</comment>
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="70d6-f967-c726-bce5-min" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="70d6-f967-c726-bce5-max" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <categoryEntries>
     <categoryEntry name="X Katana" id="0bfc-67f6-5e48-cf01" hidden="true"/>
@@ -4693,6 +6249,11 @@ Movement phase. In addition, they automatically pass any test to reform, march 
     <profileType name="Rhythms" id="ab1f-8f31-93aa-152f" hidden="false">
       <characteristicTypes>
         <characteristicType name="Effect" id="2a77-89bd-c1d8-bb5a"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Command" id="9c21-2719-3e2b-64d8" hidden="false">
+      <characteristicTypes>
+        <characteristicType name="Effect" id="96a9-1a13-ef43-7738"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
