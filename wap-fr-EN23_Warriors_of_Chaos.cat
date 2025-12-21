@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ce3b-bf93-496e-a65c" name="Warriors of Chaos WAP 1.6" revision="48" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="ce3b-bf93-496e-a65c" name="Warriors of Chaos WAP 1.6" revision="49" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <profileTypes>
     <profileType id="49dc-2fd8-b942-dbc2" name="Chaos Mutations and Powers">
@@ -1797,7 +1797,12 @@
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a7b1-36e1-443d-3986"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Mark of Nurgle" hidden="false" id="51dd-ce36-1e15-ab5c" type="selectionEntry" targetId="fce4-1eaa-170d-634c"/>
+            <entryLink import="true" name="Mark of Nurgle" hidden="false" id="51dd-ce36-1e15-ab5c" type="selectionEntry" targetId="fce4-1eaa-170d-634c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f820-0d5a-5b5a-7096-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f820-0d5a-5b5a-7096-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
         </selectionEntry>
       </selectionEntries>
@@ -9472,7 +9477,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <entryLink import="true" name="90. Chaos Mutations and Powers" hidden="false" id="8ff5-05ef-5dcd-3da9" type="selectionEntryGroup" targetId="5da7-0b88-aeb9-8d0f" sortIndex="0"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Magic Standards" id="c14a-0b87-2ac0-933b" hidden="false" collective="false" import="true">
+    <selectionEntryGroup name="Magic Standards" id="c14a-0b87-2ac0-933b" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="6960-a62d-3626-7550" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
@@ -9568,10 +9573,10 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink import="true" name="Common Magic Standards" hidden="false" id="14de-b1fd-4505-cc63" collective="false" targetId="2613-24d7-a26e-eb37" type="selectionEntryGroup" sortIndex="6"/>
+        <entryLink import="true" name="Common Magic Standards" hidden="false" id="14de-b1fd-4505-cc63" collective="false" targetId="2613-24d7-a26e-eb37" type="selectionEntryGroup" sortIndex="99" flatten="true"/>
       </entryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Magic Standards of Khorne" id="603e-91da-61b7-7896" hidden="true" collective="false" import="true" sortIndex="7">
+        <selectionEntryGroup name="Magic Standards of Khorne" id="603e-91da-61b7-7896" hidden="true" collective="false" import="true" sortIndex="7" flatten="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="930a-9aaa-4333-d3f5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -9622,7 +9627,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Magic Standards of Nurgle" id="e5d1-793e-84ff-b33b" hidden="true" collective="false" import="true" sortIndex="8">
+        <selectionEntryGroup name="Magic Standards of Nurgle" id="e5d1-793e-84ff-b33b" hidden="true" collective="false" import="true" sortIndex="8" flatten="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ba1e-7fff-b230-9de3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -9674,7 +9679,7 @@ with this standard counts the armour save modifier from their Strength or Armou
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Magic Standards of Slaanesh" id="39be-0f16-a998-cdca" hidden="true" collective="false" import="true" sortIndex="9">
+        <selectionEntryGroup name="Magic Standards of Slaanesh" id="39be-0f16-a998-cdca" hidden="true" collective="false" import="true" sortIndex="9" flatten="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9203-0492-9c70-1aef" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -9741,7 +9746,7 @@ with this standard counts the armour save modifier from their Strength or Armou
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Magic Standards of Tzeentch" id="c737-d679-9975-6103" hidden="true" collective="false" import="true" sortIndex="10">
+        <selectionEntryGroup name="Magic Standards of Tzeentch" id="c737-d679-9975-6103" hidden="true" collective="false" import="true" sortIndex="10" flatten="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="70fd-c14c-f0bd-0e21" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -9936,12 +9941,12 @@ with this standard counts the armour save modifier from their Strength or Armou
     </selectionEntryGroup>
     <selectionEntryGroup name="Magic Items" id="e209-d9fa-d21a-8f20" hidden="false">
       <entryLinks>
-        <entryLink import="true" name="Magic Weapons" hidden="false" id="4c39-390c-e5a8-6bc6" type="selectionEntryGroup" targetId="d14e-6757-808a-26a0" sortIndex="1"/>
-        <entryLink import="true" name="Magic Armour" hidden="false" id="a967-c6b4-7c73-e775" type="selectionEntryGroup" targetId="3ad5-5ae2-4d46-6e6b" sortIndex="2"/>
-        <entryLink import="true" name="Arcane Items" hidden="false" id="b6dc-a8c7-f1a6-cfc3" type="selectionEntryGroup" targetId="af10-d8e4-1c6e-c186" sortIndex="3"/>
-        <entryLink import="true" name="Arcane Items (One Use Only)" hidden="false" id="9fb7-5c08-c75f-29b0" type="selectionEntryGroup" targetId="6a79-4414-ba18-171c" sortIndex="4"/>
-        <entryLink import="true" name="Enchanted Items" hidden="false" id="ca5f-60c3-b9e2-71f8" type="selectionEntryGroup" targetId="ebe4-f41c-c534-8066" sortIndex="5"/>
-        <entryLink import="true" name="Talismans" hidden="false" id="38ea-3540-3cc7-200a" type="selectionEntryGroup" targetId="fdb9-019b-8cba-b9d8" sortIndex="6"/>
+        <entryLink import="true" name="Magic Weapons" hidden="false" id="4c39-390c-e5a8-6bc6" type="selectionEntryGroup" targetId="d14e-6757-808a-26a0" sortIndex="1" collapsible="true"/>
+        <entryLink import="true" name="Magic Armour" hidden="false" id="a967-c6b4-7c73-e775" type="selectionEntryGroup" targetId="3ad5-5ae2-4d46-6e6b" sortIndex="2" collapsible="true"/>
+        <entryLink import="true" name="Arcane Items" hidden="false" id="b6dc-a8c7-f1a6-cfc3" type="selectionEntryGroup" targetId="af10-d8e4-1c6e-c186" sortIndex="3" collapsible="true"/>
+        <entryLink import="true" name="Arcane Items (One Use Only)" hidden="false" id="9fb7-5c08-c75f-29b0" type="selectionEntryGroup" targetId="6a79-4414-ba18-171c" sortIndex="4" collapsible="true"/>
+        <entryLink import="true" name="Enchanted Items" hidden="false" id="ca5f-60c3-b9e2-71f8" type="selectionEntryGroup" targetId="ebe4-f41c-c534-8066" sortIndex="5" collapsible="true"/>
+        <entryLink import="true" name="Talismans" hidden="false" id="38ea-3540-3cc7-200a" type="selectionEntryGroup" targetId="fdb9-019b-8cba-b9d8" sortIndex="6" collapsible="true"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="0" field="points" scope="parent" shared="true" id="aa09-2979-2052-ada1"/>
@@ -10258,7 +10263,7 @@ with this standard counts the armour save modifier from their Strength or Armou
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Chaos Mutations and Powers of Khorne" id="7852-2b4b-eaab-af3c" hidden="true" collective="false" import="true">
+        <selectionEntryGroup name="Chaos Mutations and Powers of Khorne" id="7852-2b4b-eaab-af3c" hidden="true" collective="false" import="true" flatten="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Bloodcurdling Roar" hidden="false" id="a9c9-39f0-4430-4d00" collective="false">
               <constraints>
@@ -10334,7 +10339,7 @@ with this standard counts the armour save modifier from their Strength or Armou
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Chaos Mutations and Powers of Nurgle" id="9452-971c-d7c1-9d2b" hidden="true" collective="false" import="true">
+        <selectionEntryGroup name="Chaos Mutations and Powers of Nurgle" id="9452-971c-d7c1-9d2b" hidden="true" collective="false" import="true" flatten="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Nurgle&apos;s Rot" hidden="false" id="dff4-81cb-4e00-f205" collective="false">
               <constraints>
@@ -10427,7 +10432,7 @@ Armour saves.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Chaos Mutations and Powers of Slaanesh" id="a69a-9248-4270-ebf3" hidden="true" collective="false" import="true">
+        <selectionEntryGroup name="Chaos Mutations and Powers of Slaanesh" id="a69a-9248-4270-ebf3" hidden="true" collective="false" import="true" flatten="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Allure of Slaanesh" hidden="false" id="562d-466e-4cec-4aa1" collective="false">
               <constraints>
@@ -10520,7 +10525,7 @@ mutation cannot be combined with Cloven Hooves.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Chaos Mutations and Powers of Tzeentch" id="47f7-837a-67cb-628d" hidden="true" collective="false" import="true">
+        <selectionEntryGroup name="Chaos Mutations and Powers of Tzeentch" id="47f7-837a-67cb-628d" hidden="true" collective="false" import="true" flatten="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Tendrils of Tzeentch" hidden="false" id="bed7-24e7-4fc0-38df" collective="false">
               <constraints>
@@ -10598,7 +10603,7 @@ mutation cannot be combined with Cloven Hooves.</characteristic>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Magic Weapons" id="d14e-6757-808a-26a0" hidden="false" collective="false" import="true">
+    <selectionEntryGroup name="Magic Weapons" id="d14e-6757-808a-26a0" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="cca9-6fc5-82a0-6b36" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
@@ -10755,10 +10760,10 @@ mutation cannot be combined with Cloven Hooves.</characteristic>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink import="true" name="Common Magic Weapons" hidden="false" id="915b-27cb-4bce-86b2" collective="false" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="9"/>
+        <entryLink import="true" name="Common Magic Weapons" hidden="false" id="915b-27cb-4bce-86b2" collective="false" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="99" flatten="true"/>
       </entryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Magic Weapons of Khorne" id="fa56-4f92-8a6a-ac6e" hidden="true" collective="false" import="true" sortIndex="10">
+        <selectionEntryGroup name="Magic Weapons of Khorne" id="fa56-4f92-8a6a-ac6e" hidden="true" collective="false" import="true" sortIndex="10" flatten="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="dc09-cdad-aa56-bf8d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -10919,7 +10924,7 @@ mutation cannot be combined with Cloven Hooves.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Magic Weapons of Nurgle" id="8f44-1bff-d842-0934" hidden="true" collective="false" import="true" sortIndex="11">
+        <selectionEntryGroup name="Magic Weapons of Nurgle" id="8f44-1bff-d842-0934" hidden="true" collective="false" import="true" sortIndex="11" flatten="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="27e9-5a03-d101-23f5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -10992,7 +10997,7 @@ mutation cannot be combined with Cloven Hooves.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Magic Weapons of Slaanesh" id="1118-f997-ffba-1aa3" hidden="true" collective="false" import="true" sortIndex="12">
+        <selectionEntryGroup name="Magic Weapons of Slaanesh" id="1118-f997-ffba-1aa3" hidden="true" collective="false" import="true" sortIndex="12" flatten="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b72f-951a-a496-ee5f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -11119,7 +11124,7 @@ mutation cannot be combined with Cloven Hooves.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Magic Weapons of Tzeentch" id="6988-e670-3aef-67ee" hidden="true" collective="false" import="true" sortIndex="13">
+        <selectionEntryGroup name="Magic Weapons of Tzeentch" id="6988-e670-3aef-67ee" hidden="true" collective="false" import="true" sortIndex="13" flatten="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4bc0-8ac9-fe29-f785" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -11194,7 +11199,7 @@ mutation cannot be combined with Cloven Hooves.</characteristic>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Magic Armour" id="3ad5-5ae2-4d46-6e6b" hidden="false" collective="false" import="true">
+    <selectionEntryGroup name="Magic Armour" id="3ad5-5ae2-4d46-6e6b" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fff8-59e6-8cb3-db0d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
@@ -11602,10 +11607,10 @@ mutation cannot be combined with Cloven Hooves.</characteristic>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink import="true" name="Common Magic Armour" hidden="false" id="ac58-75fc-92cc-9394" collective="false" targetId="557c-c8c5-0c0f-d2b3" type="selectionEntryGroup" sortIndex="17"/>
+        <entryLink import="true" name="Common Magic Armour" hidden="false" id="ac58-75fc-92cc-9394" collective="false" targetId="557c-c8c5-0c0f-d2b3" type="selectionEntryGroup" sortIndex="99" flatten="true"/>
       </entryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Magic Armour of Khorne" id="dd6b-1c64-c628-e207" hidden="true" collective="false" import="true" sortIndex="18">
+        <selectionEntryGroup name="Magic Armour of Khorne" id="dd6b-1c64-c628-e207" hidden="true" collective="false" import="true" sortIndex="18" flatten="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="90de-3fe8-1f45-2a94" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -11696,7 +11701,7 @@ mutation cannot be combined with Cloven Hooves.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Magic Armour of Nurgle" id="cc2c-4db3-9418-7a08" hidden="true" collective="false" import="true" sortIndex="19">
+        <selectionEntryGroup name="Magic Armour of Nurgle" id="cc2c-4db3-9418-7a08" hidden="true" collective="false" import="true" sortIndex="19" flatten="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e858-efbd-b869-6ca5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -11787,7 +11792,7 @@ mutation cannot be combined with Cloven Hooves.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Magic Armour of Tzeentch" id="ba60-2507-46e4-e5dd" hidden="true" collective="false" import="true" sortIndex="20">
+        <selectionEntryGroup name="Magic Armour of Tzeentch" id="ba60-2507-46e4-e5dd" hidden="true" collective="false" import="true" sortIndex="20" flatten="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fcfa-906a-1676-3e44" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -11842,12 +11847,12 @@ mutation cannot be combined with Cloven Hooves.</characteristic>
         </modifier>
       </modifiers>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Enchanted Items" id="ebe4-f41c-c534-8066" hidden="false" collective="false" import="true">
+    <selectionEntryGroup name="Enchanted Items" id="ebe4-f41c-c534-8066" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="33a3-67a0-4b5b-4a87" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Chalice of Chaos" hidden="false" id="84a0-54d0-ab43-beb6" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Chalice of Chaos" hidden="false" id="84a0-54d0-ab43-beb6" collective="false" sortIndex="7">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="442d-bfd5-f32e-cf1d" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e479-742c-2333-9f64" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -11893,7 +11898,7 @@ mutation cannot be combined with Cloven Hooves.</characteristic>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Favour of the Gods" hidden="false" id="d3d1-f663-dbcc-f324" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Favour of the Gods" hidden="false" id="d3d1-f663-dbcc-f324" collective="false" sortIndex="6">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="012b-fbce-d002-9367" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b08f-6c90-13d7-8428" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -11909,7 +11914,7 @@ mutation cannot be combined with Cloven Hooves.</characteristic>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Blasphemous Amulet" hidden="false" id="1db0-0b9f-6249-3886" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Blasphemous Amulet" hidden="false" id="1db0-0b9f-6249-3886" collective="false" sortIndex="13">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4c33-2034-3d61-58a0" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b92f-da93-bbdb-25fb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -11925,7 +11930,7 @@ mutation cannot be combined with Cloven Hooves.</characteristic>
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Rod of Torment" hidden="false" id="e814-f51e-c936-637d" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Rod of Torment" hidden="false" id="e814-f51e-c936-637d" collective="false" sortIndex="14">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1129-6d8b-5829-1be9" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f170-3b63-ec32-b3d1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -11950,7 +11955,7 @@ mutation cannot be combined with Cloven Hooves.</characteristic>
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Faithless Charm" hidden="false" id="cc1f-3d07-0ca7-6ca3" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Faithless Charm" hidden="false" id="cc1f-3d07-0ca7-6ca3" collective="false" sortIndex="12">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d4ed-cd2b-fa9c-f528" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9082-696a-82fd-a1ea" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -11966,7 +11971,7 @@ mutation cannot be combined with Cloven Hooves.</characteristic>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Star of Chaos" hidden="false" id="a33c-78b3-1d84-5b45" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Star of Chaos" hidden="false" id="a33c-78b3-1d84-5b45" collective="false" sortIndex="9">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6a28-24eb-566c-f294" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="14ae-0c0c-8e94-e2fe" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -11983,7 +11988,7 @@ Armour or Ward Save roll in each phase.</characteristic>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Mark of the All-Favoured" hidden="false" id="9806-9864-dad8-2c4a" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Mark of the All-Favoured" hidden="false" id="9806-9864-dad8-2c4a" collective="false" sortIndex="11">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c1b5-c1e0-d0c1-e50e" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e66b-5f6b-d4c1-a4a8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -11999,7 +12004,7 @@ Armour or Ward Save roll in each phase.</characteristic>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Realmwarper&apos;s Twist-Rune" hidden="false" id="88c5-8b44-a5a5-c8e1" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Realmwarper&apos;s Twist-Rune" hidden="false" id="88c5-8b44-a5a5-c8e1" collective="false" sortIndex="10">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3edc-623b-c4b8-641d" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e690-77a5-dc0d-1eb0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -12015,7 +12020,7 @@ Armour or Ward Save roll in each phase.</characteristic>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Pendant of Damnation" hidden="false" id="3b05-412d-fe41-9d1c" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Pendant of Damnation" hidden="false" id="3b05-412d-fe41-9d1c" collective="false" sortIndex="8">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4af1-9658-0f94-3044" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8c32-d168-2390-1ae3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -12033,10 +12038,10 @@ Armour or Ward Save roll in each phase.</characteristic>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink import="true" name="Common Enchanted Items" hidden="false" id="24f8-54db-584c-cd76" collective="false" targetId="5857-a7aa-f954-a027" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Common Enchanted Items" hidden="false" id="24f8-54db-584c-cd76" collective="false" targetId="5857-a7aa-f954-a027" type="selectionEntryGroup" flatten="true" sortIndex="99"/>
       </entryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Enchanted Items of Khorne" id="2b78-64e5-847e-307a" hidden="true" collective="false" import="true">
+        <selectionEntryGroup name="Enchanted Items of Khorne" id="2b78-64e5-847e-307a" hidden="true" collective="false" import="true" flatten="true" sortIndex="20">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b4a8-3dce-ce4f-463c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -12119,7 +12124,7 @@ Armour or Ward Save roll in each phase.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Enchanted Items of Nurgle" id="f50d-ee3e-ecb2-3e58" hidden="true" collective="false" import="true">
+        <selectionEntryGroup name="Enchanted Items of Nurgle" id="f50d-ee3e-ecb2-3e58" hidden="true" collective="false" import="true" flatten="true" sortIndex="21">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="20ac-726e-8dbb-cec8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -12218,7 +12223,7 @@ Armour or Ward Save roll in each phase.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Enchanted Items of Slaanesh" id="1cea-9fe7-a78b-bbda" hidden="true" collective="false" import="true">
+        <selectionEntryGroup name="Enchanted Items of Slaanesh" id="1cea-9fe7-a78b-bbda" hidden="true" collective="false" import="true" flatten="true" sortIndex="24">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="dd57-6351-456a-a722" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -12317,7 +12322,7 @@ Armour or Ward Save roll in each phase.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Enchanted Items of Tzeentch" id="16d3-f08a-d765-4f75" hidden="true" collective="false" import="true">
+        <selectionEntryGroup name="Enchanted Items of Tzeentch" id="16d3-f08a-d765-4f75" hidden="true" collective="false" import="true" flatten="true" sortIndex="23">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7515-9480-d7b1-7498" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -12409,12 +12414,12 @@ Armour or Ward Save roll in each phase.</characteristic>
         </modifier>
       </modifiers>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Talismans" id="fdb9-019b-8cba-b9d8" hidden="false" collective="false" import="true">
+    <selectionEntryGroup name="Talismans" id="fdb9-019b-8cba-b9d8" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3379-148f-9d83-e269" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Crown of Everlasting Conquest" hidden="false" id="ad0d-ab6e-27e8-e877" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Crown of Everlasting Conquest" hidden="false" id="ad0d-ab6e-27e8-e877" collective="false" sortIndex="2">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="121d-fd7d-3cf6-b06f" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4e9f-e023-5965-9b70" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -12430,7 +12435,7 @@ Armour or Ward Save roll in each phase.</characteristic>
             <cost name="pts" typeId="points" value="50"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Gaze of the Gods" hidden="false" id="3309-8ac6-478b-9189" collective="false">
+        <selectionEntry type="upgrade" import="true" name="Gaze of the Gods" hidden="false" id="3309-8ac6-478b-9189" collective="false" sortIndex="1">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="87de-8e1d-c89c-7feb" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="205c-1388-5825-7168" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -12448,10 +12453,10 @@ Armour or Ward Save roll in each phase.</characteristic>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink import="true" name="Common Talismans" hidden="false" id="369f-8388-5e67-116e" collective="false" targetId="946f-a470-9912-9301" type="selectionEntryGroup"/>
+        <entryLink import="true" name="Common Talismans" hidden="false" id="369f-8388-5e67-116e" collective="false" targetId="946f-a470-9912-9301" type="selectionEntryGroup" flatten="true" sortIndex="99"/>
       </entryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Talismans of Khorne" id="43fd-d9a9-3004-b42a" hidden="true" collective="false" import="true">
+        <selectionEntryGroup name="Talismans of Khorne" id="43fd-d9a9-3004-b42a" hidden="true" collective="false" import="true" flatten="true" sortIndex="10">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fb30-db5e-7180-bd82" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -12502,7 +12507,7 @@ Armour or Ward Save roll in each phase.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Talismans of Nurgle" id="b91f-5bb8-e715-5d30" hidden="true" collective="false" import="true">
+        <selectionEntryGroup name="Talismans of Nurgle" id="b91f-5bb8-e715-5d30" hidden="true" collective="false" import="true" flatten="true" sortIndex="11">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d090-930d-4730-33f4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -12553,7 +12558,7 @@ Armour or Ward Save roll in each phase.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Talismans of Slaanesh" id="50ba-e183-eaef-e147" hidden="true" collective="false" import="true">
+        <selectionEntryGroup name="Talismans of Slaanesh" id="50ba-e183-eaef-e147" hidden="true" collective="false" import="true" flatten="true" sortIndex="12">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="883b-0326-c0d1-84b0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -12620,7 +12625,7 @@ Armour or Ward Save roll in each phase.</characteristic>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Talismans of Tzeentch" id="c54e-9322-e2dd-f783" hidden="true" collective="false" import="true">
+        <selectionEntryGroup name="Talismans of Tzeentch" id="c54e-9322-e2dd-f783" hidden="true" collective="false" import="true" flatten="true" sortIndex="13">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9709-bd9b-514e-0f6e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -12673,7 +12678,7 @@ Armour or Ward Save roll in each phase.</characteristic>
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Arcane Items" id="af10-d8e4-1c6e-c186" hidden="true" collective="false" import="true">
+    <selectionEntryGroup name="Arcane Items" id="af10-d8e4-1c6e-c186" hidden="true" collective="false" import="true" collapsible="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a5be-9a0b-99d0-e9c0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
@@ -12712,7 +12717,7 @@ Armour or Ward Save roll in each phase.</characteristic>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink import="true" name="Common Arcane Items" hidden="false" id="d1b7-a14a-d0ad-aeb8" collective="false" targetId="6cd2-3f4b-da2d-1ee9" type="selectionEntryGroup" sortIndex="6"/>
+        <entryLink import="true" name="Common Arcane Items" hidden="false" id="d1b7-a14a-d0ad-aeb8" collective="false" targetId="6cd2-3f4b-da2d-1ee9" type="selectionEntryGroup" sortIndex="6" flatten="true"/>
       </entryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Arcane Items of Nurgle" id="819d-5f71-a995-d6ad" hidden="true" collective="false" import="true" sortIndex="3">
@@ -12904,9 +12909,9 @@ Armour or Ward Save roll in each phase.</characteristic>
         </modifier>
       </modifiers>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Arcane Items (One Use Only)" id="6a79-4414-ba18-171c" hidden="true">
+    <selectionEntryGroup name="Arcane Items (One Use Only)" id="6a79-4414-ba18-171c" hidden="true" collapsible="true">
       <entryLinks>
-        <entryLink import="true" name="Common Arcane Items (One use only)" hidden="false" id="204e-14c9-fda2-60b1" type="selectionEntryGroup" targetId="3dfd-c3fd-5a56-45f1" sortIndex="2"/>
+        <entryLink import="true" name="Common Arcane Items (One use only)" hidden="false" id="204e-14c9-fda2-60b1" type="selectionEntryGroup" targetId="3dfd-c3fd-5a56-45f1" sortIndex="2" flatten="true"/>
       </entryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Arcane Items of Tzeentch (One Use Only)" id="5011-b89d-afdf-680f" hidden="true" collective="false" import="true" sortIndex="1">
