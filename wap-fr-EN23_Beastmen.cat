@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ef93-6084-e655-7408" name="Beastmen WAP 1.7" revision="43" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="39" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="ef93-6084-e655-7408" name="Beastmen WAP 1.7" revision="44" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="39" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://discordapp.com/invite/UrrPB3T</readme>
   <profileTypes>
     <profileType id="3c04-36bf-f9ef-7deb" name="Gift of Chaos">
@@ -1247,9 +1247,6 @@
           <costs>
             <cost name="pts" typeId="points" value="45"/>
           </costs>
-          <modifiers>
-            <modifier type="set" value="-1" field="fda0-590a-e3d3-0d1a"/>
-          </modifiers>
           <infoLinks>
             <infoLink name="Impact Hits (D3)" id="c077-c2c3-aba7-c836" hidden="false" targetId="f30d-0b61-2836-689e" type="rule"/>
           </infoLinks>
@@ -1283,7 +1280,11 @@
       </costs>
       <entryLinks>
         <entryLink import="true" name="Gor" hidden="false" id="ee8f-2598-26f1-a5b6" type="selectionEntry" targetId="15da-3c69-4c66-86a5"/>
-        <entryLink import="true" name="Razorgor" hidden="false" id="012d-57ce-2c9b-a0e5" type="selectionEntry" targetId="03c2-7940-e953-d33f"/>
+        <entryLink import="true" name="Razorgor" hidden="false" id="012d-57ce-2c9b-a0e5" type="selectionEntry" targetId="03c2-7940-e953-d33f">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f210-1be0-8986-9377" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
         <entryLink import="true" name="Bestigor" hidden="false" id="ac9a-f958-2e88-15f5" type="selectionEntry" targetId="3bd8-3c38-c257-2b4b">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="4cae-4279-2152-f230" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
@@ -1642,9 +1643,6 @@
       <costs>
         <cost name="pts" typeId="points" value="250"/>
       </costs>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f63a-d08b-8c58-2b07" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
       <entryLinks>
         <entryLink import="true" name="Bestigor" hidden="false" id="ef75-8557-3064-8274" type="selectionEntry" targetId="3bd8-3c38-c257-2b4b">
           <constraints>
@@ -3112,7 +3110,7 @@
             </entryLink>
             <entryLink import="true" name="56. Upgrades" hidden="false" id="1232-9f14-c131-7eea" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Scout" hidden="false" id="10c3-8ca2-5f1d-6073">
+                <selectionEntry type="upgrade" import="true" name="Scout" hidden="false" id="10c3-8ca2-5f1d-6073" collective="true">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
@@ -3127,14 +3125,11 @@
             </entryLink>
             <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="489a-7f42-2977-47f4" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
               <entryLinks>
-                <entryLink import="true" name="Shortbow" hidden="false" id="1dc7-6c9f-e34e-10f8" type="selectionEntry" targetId="b2c6-18cc-9482-8f48"/>
-                <entryLink import="true" name="Javelins &amp; Shields" hidden="false" id="a310-b8d8-c624-ecbe" type="selectionEntry" targetId="1715-a24f-ede6-9e9f">
+                <entryLink import="true" name="Shortbow" hidden="false" id="1dc7-6c9f-e34e-10f8" type="selectionEntry" targetId="b2c6-18cc-9482-8f48" sortIndex="1"/>
+                <entryLink import="true" name="Javelins &amp; Shields" hidden="false" id="a310-b8d8-c624-ecbe" type="selectionEntry" targetId="1715-a24f-ede6-9e9f" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
-                  <entryLinks>
-                    <entryLink import="true" name="Shield" hidden="false" id="b46b-1102-6da4-065a" type="selectionEntry" targetId="c068-0827-9931-d9bf"/>
-                  </entryLinks>
                 </entryLink>
               </entryLinks>
             </entryLink>
@@ -3829,7 +3824,11 @@
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Gor" hidden="false" id="e6ee-51e5-6289-17d1" type="selectionEntry" targetId="15da-3c69-4c66-86a5"/>
-        <entryLink import="true" name="Razorgor" hidden="false" id="cc91-5712-3cd4-08dd" type="selectionEntry" targetId="03c2-7940-e953-d33f"/>
+        <entryLink import="true" name="Razorgor" hidden="false" id="cc91-5712-3cd4-08dd" type="selectionEntry" targetId="03c2-7940-e953-d33f">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3c6d-b0bf-9ba7-110b" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Tuskgor Chariot" hidden="false" id="74ef-669b-983e-a5e4" collective="false" subType="mount">
@@ -3883,7 +3882,6 @@
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Razorgor" hidden="false" id="03c2-7940-e953-d33f" collective="false" subType="mount">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fda0-590a-e3d3-0d1a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="6553-bdfb-53be-e122" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <infoLinks>
@@ -6041,21 +6039,28 @@ Weapons or attacks that do not use Ballistic Skill may only fire on the roll of
       <modifiers>
         <modifier type="set" value="Chaos Giant" field="name"/>
       </modifiers>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Mutant Monstrosity" hidden="false" id="7120-8bba-e700-d420">
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-          <rules>
-            <rule name="Mutant Monstrosity" id="4d3d-5c96-c9c0-db15" hidden="false" publicationId="9e23-79cb-pubN71963" page="39">
-              <description>The Giant gains the Natural Armour (5+) special rule.</description>
-            </rule>
-          </rules>
-        </selectionEntry>
-      </selectionEntries>
       <categoryLinks>
         <categoryLink name="Monster" hidden="false" id="60ca-f7a1-9fbc-f7f3" targetId="e1a0-da31-05c5-9a15" primary="false"/>
       </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="56. Upgrades" hidden="false" id="362b-8ee6-9c3b-192b" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Mutant Monstrosity" hidden="false" id="7120-8bba-e700-d420">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <rules>
+                <rule name="Mutant Monstrosity" id="4d3d-5c96-c9c0-db15" hidden="false" publicationId="9e23-79cb-pubN71963" page="39">
+                  <description>The Giant gains the Natural Armour (5+) special rule.</description>
+                </rule>
+              </rules>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="af45-e5dd-c15d-ed20" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
+      </entryLinks>
     </entryLink>
     <entryLink import="true" name="Minotaurs" hidden="false" id="79d4-1d42-999b-d2d5" type="selectionEntry" targetId="abac-59ce-02fb-a04f" sortIndex="32.5">
       <constraints>
