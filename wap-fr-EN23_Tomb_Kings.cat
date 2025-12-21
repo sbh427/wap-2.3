@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="489b-7a41-3ad0-e5eb" name="Tomb Kings WAP 1.6" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="60" revision="12" authorName="Leminge" battleScribeVersion="2.03" publicationId="feeb-1927-4a99-f849" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="Contact me via discord">
+<catalogue library="false" id="489b-7a41-3ad0-e5eb" name="Tomb Kings WAP 1.6" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="60" revision="13" authorName="Leminge" battleScribeVersion="2.03" publicationId="feeb-1927-4a99-f849" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="Contact me via discord">
   <sharedSelectionEntries>
     <selectionEntry type="model" import="true" name="Skeletal Steed" hidden="false" id="a440-163d-31eb-cdf7" collective="true" sortIndex="0" subType="mount">
       <constraints>
@@ -54,6 +54,10 @@
         <infoLink name="Undead" id="2d24-6b11-0533-5369" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
         <infoLink name="Skeleton Chariot " id="7a5b-4d58-7de1-bfdb" hidden="false" type="profile" targetId="7fde-c386-9e67-4c2c"/>
       </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Chariot" hidden="false" id="75ec-0ebd-06b5-209a" targetId="7224-b7fd-d652-3ff2" primary="false"/>
+        <categoryLink name="Mount" hidden="false" id="3a49-e18c-9c03-5465" targetId="8b8a-34b1-ed30-df11" primary="false"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Necroserpent" hidden="false" id="467c-c6c3-9482-9d5e" subType="mount" collective="true">
       <infoLinks>
@@ -157,28 +161,6 @@
             <infoLink name="Magical Attacks" id="7067-9d18-5c87-5b0f" hidden="false" type="rule" targetId="03db-d81f-f264-84b8"/>
             <infoLink name="Undead" id="75e0-2fbd-d737-002d" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
           </infoLinks>
-          <modifiers>
-            <modifier type="decrement" value="1" field="8e37-1441-a1de-6bdf-min">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="false"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="false"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="decrement" value="1" field="8e37-1441-a1de-6bdf-max">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="false"/>
-                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="false"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
           <entryLinks>
             <entryLink import="true" name="Medium Armour" hidden="false" id="38ab-d6c8-d89f-5fca" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
               <constraints>
@@ -191,6 +173,23 @@
               </constraints>
             </entryLink>
           </entryLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="8e37-1441-a1de-6bdf-max"/>
+                <modifier type="set" value="0" field="8e37-1441-a1de-6bdf-min"/>
+                <modifier type="set" value="true" field="hidden"/>
+              </modifiers>
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="false"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Khemrian Warsphinx " hidden="false" id="ba0d-6b54-b1cf-2325" sortIndex="1" subType="mount">
           <constraints>
@@ -1611,17 +1610,17 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <cost name="pts" typeId="points" value="50"/>
       </costs>
       <profiles>
-        <profile name="Tomb Prince" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="9ce9-2a3e-0ec5-201f">
+        <profile name="Tomb Herald" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="9ce9-2a3e-0ec5-201f">
           <characteristics>
             <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-            <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
             <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
             <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Undead)</characteristic>
           </characteristics>
         </profile>
@@ -1688,7 +1687,11 @@ If, at the start of any of your turns following the death of the Hierophant, the
           <entryLinks>
             <entryLink import="true" name="Army Battle Standard" hidden="false" id="e9ab-d3ff-7ee3-80b9" type="selectionEntry" targetId="9519-df8f-0af4-1995" sortIndex="2">
               <entryLinks>
-                <entryLink import="true" name="Magical Standards" hidden="false" id="fb65-9fc0-c64a-fbd3" type="selectionEntryGroup" targetId="b709-2493-f914-907f"/>
+                <entryLink import="true" name="Magical Standards" hidden="false" id="fb65-9fc0-c64a-fbd3" type="selectionEntryGroup" targetId="b709-2493-f914-907f">
+                  <modifiers>
+                    <modifier type="set" value="-1" field="ea1c-059c-ede6-ed19"/>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
               <infoLinks>
                 <infoLink name="Banner of the King" id="5de5-d084-9fb4-fec3" hidden="false" type="rule" targetId="bbde-48b6-5ce2-5829"/>
@@ -4347,7 +4350,7 @@ Strength 2 hits which Ignores Armour saves</description>
         <categoryLink name="Heroes" hidden="false" id="55b8-c96f-5a25-dd5e" targetId="d38a-73da-883b-bab9" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Character" id="e110-c807-bb84-f5ca" hidden="false">
+        <selectionEntryGroup name="Character" id="e110-c807-bb84-f5ca" hidden="false" defaultSelectionEntryId="none">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Prince Tutankhamut" hidden="false" id="a420-a497-9edc-a51d">
               <constraints>
@@ -4909,7 +4912,7 @@ Strength 2 hits which Ignores Armour saves</description>
                   </costs>
                   <rules>
                     <rule name="Aspect of Sobk, God of Water and War" id="e207-9983-131f-cdf1" hidden="false">
-                      <description>The unit may re-roll To Hit rolls of 1 with shooting and closecombat attacks.</description>
+                      <description>The unit may re-roll To Hit rolls of 1 with shooting and close combat attacks.</description>
                     </rule>
                   </rules>
                 </selectionEntry>
@@ -5540,7 +5543,7 @@ Strength 2 hits which Ignores Armour saves</description>
               <profiles>
                 <profile name="Relic of the Desert Sun" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="2403-cad9-5aeb-b45d">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Ankhra gives the bearer a 4+ Ward save. In addition, they may re-roll 1&apos;s when taking Ward saves.</characteristic>
+                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The bearer of the Relic of the Desert Sun gains a 6+ Ward save and Immunity (Flaming Attacks).</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6352,7 +6355,7 @@ move as normal (including declaring charges).</characteristic>
         <constraint type="max" value="0" field="points" scope="parent" shared="true" id="ea1c-059c-ede6-ed19"/>
       </constraints>
       <entryLinks>
-        <entryLink import="true" name="Common Magic Standards" hidden="false" id="bcd0-258b-bfa7-f459" type="selectionEntryGroup" targetId="2613-24d7-a26e-eb37" sortIndex="99"/>
+        <entryLink import="true" name="Common Magic Standards" hidden="false" id="bcd0-258b-bfa7-f459" type="selectionEntryGroup" targetId="2613-24d7-a26e-eb37" sortIndex="99" flatten="true"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="61. Lore of Magic" id="624d-4335-2961-db3e" hidden="false">
