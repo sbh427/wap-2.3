@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="75" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="76" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -815,6 +815,12 @@
       </constraints>
       <infoLinks>
         <infoLink id="e66b-79a1-e39c-e75a" name="General" hidden="false" targetId="fcc3-a722-a9e4-9c94" type="rule"/>
+        <infoLink name="Inspiring Presence" id="7174-7cd7-232f-55e5" hidden="false" type="rule" targetId="1c71-6c8f-f47a-0a91">
+          <modifiers>
+            <modifier type="append" value=" (12)" field="name"/>
+            <modifier type="set" value="General" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
@@ -9424,16 +9430,13 @@ Armour Saves
 Units containing one or more models with an unmodified close combat armour save better than 4+ cannot use Fast Cavalry.</description>
     </rule>
     <rule id="fcc3-a722-a9e4-9c94" name="General" publicationId="9e23-79cb-pubN66727" page="106, 132" hidden="false">
-      <description>Inspiring Presence
-Providing that the General is not fleeing, all friendly units within 12&quot; may use their Leadership instead of their own, unless specified.
+      <description>An army must always include at least one Lord or Hero character to be its Army General.
 
-If your General has a Line of Sight value of 5 or more, then the range of their Inspiring Presence ability is increased by 6&quot;.
 
-If a unit taking a Leadership test has a modifier to its Ld, this modifier still applies if the unit uses the General’s Ld.
+The Army General has the Inspiring Presence (12) special rule.
 
-If a unit is Steadfast, it may use the Leadership of the General for Break tests if it is higher than their own Leadership after applying all negative modifiers from combat resolution. Otherwise, they will use their own Ld.
 
-Every army must have a General. If your army includes both Lords and Heroes, you must choose a Lord to be the army&apos;s General.</description>
+Some books might have several characters that must be the Army General. In this case, only one of them may be included in your army.</description>
     </rule>
     <rule id="3f4a-7d94-afef-39ea" name="The Battle Standard Bearer" publicationId="9e23-79cb-pubN66727" page="106" hidden="false">
       <description>Unless specified otherwise, the model that carries the battle standard cannot be the General.
@@ -9727,9 +9730,6 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
     </rule>
     <rule id="75e4-06e8-d7aa-8514" name="Loremaster (Lore of Death)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
-    </rule>
-    <rule id="39c8-00c3-4ec1-bfb8" name="Hatred (Monsters)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
-      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
     </rule>
     <rule id="52f5-10f0-a975-cf04" name="Hatred (Vampire Counts)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
