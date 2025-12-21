@@ -11,9 +11,6 @@
     <rule name="Way of the Warrior" id="28dd-2b0a-b009-9f2a" hidden="false">
       <description>Models with this rule must always accept challenges and re-roll all failed Psychology tests. In addition, they ignore Panic caused by friendly units with the Loner special rule and with a lower unmodified Leadership value (excluding any characters) than them.</description>
     </rule>
-    <rule name="Impale" id="2186-5979-2934-1bfd" hidden="false">
-      <description>Mounts with this special rule gain the Mighty Blow (1) special rule when they charge.</description>
-    </rule>
     <rule name="Sworn Bodyguard" id="40b9-59de-cb15-5309" hidden="false">
       <description>If you have any Characters with the Way of the Warrior special rule (that are not Hatamoto) in your army, you may nominate one of them for the Hatamoto to protect at the start of the game. The same character may not be nominated by several Hatamoto. Whenever the nominated character suffers a Wound (before saves are taken) and the Hatamoto is in the same unit as them, roll a D6. On a 1, the Wound is resolved as normal, but on a 2+ the Wound is intercepted, and re- llocated to the Hatamoto. No more than one Wound can be re-allocated to each Hatamoto in each phase. Wounds in a challenge cannot be re-allocated.</description>
     </rule>
@@ -281,14 +278,22 @@
       <infoLinks>
         <infoLink name="Natural Armour (6+)" id="5e09-8993-641d-39dd" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9">
           <modifiers>
-            <modifier type="set" value="From Komainu" field="annotation"/>
+            <modifier type="set" value="From Kirin" field="annotation"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Magical Attacks" id="d3d0-f08c-9f2f-f129" hidden="false" type="rule" targetId="03db-d81f-f264-84b8"/>
+        <infoLink name="Magical Attacks" id="d3d0-f08c-9f2f-f129" hidden="false" type="rule" targetId="03db-d81f-f264-84b8">
+          <modifiers>
+            <modifier type="set" value="Kirin only" field="annotation"/>
+          </modifiers>
+        </infoLink>
         <infoLink name="Fear" id="ebae-de03-ce34-d878" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
         <infoLink name="Fly (9)" id="aadf-1914-0d5c-5e2b" hidden="false" type="rule" targetId="2ba2-2aaa-3f36-4b24"/>
-        <infoLink name="Impale" id="beca-74ca-d5b1-6b83" hidden="false" type="rule" targetId="2186-5979-2934-1bfd"/>
       </infoLinks>
+      <rules>
+        <rule name="Impale" id="2186-5979-2934-1bfd" hidden="false">
+          <description>Mounts with this special rule gain the Mighty Blow (1) special rule when they charge.</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Grappling hooks" hidden="false" id="66e8-044d-4a7d-48fe" collective="true">
       <rules>
@@ -329,6 +334,83 @@
           <description>Units with mantlets must place them on separate bases in front of the unit. Every model in the front rank must have a mantlet base in front of it, which must also be set up within the army&apos;s deployment zone. A unit with mantlets gains a 4+ armour save against missile attacks to its front arc (except template attacks). However, if the unit moves or reforms during the game, the mantlets are removed from play.</description>
         </rule>
       </rules>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Crew" hidden="false" id="fa63-b4d5-3340-5244" collective="true" subType="crew">
+      <profiles>
+        <profile name="Crew" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0bfe-0668-8813-77dd">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Crew (Human)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="5d55-dc0d-448b-5e42" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="4469-74ed-5641-ff8e" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5c7d-5a97-8ff3-05a2" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="67c0-c6f0-eba7-893c" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+          <entryLinks>
+            <entryLink import="true" name="Light Armour" hidden="false" id="5ef1-b7fd-c61f-1a61" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9813-9783-44e5-36a8" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Mizuchi" hidden="false" id="a0dc-bafa-cae5-6757" subType="mount" collective="true">
+      <categoryLinks>
+        <categoryLink name="Mount" hidden="false" id="bb5d-d342-6186-dbd1" targetId="8b8a-34b1-ed30-df11" primary="false"/>
+        <categoryLink name="Monster" hidden="false" id="59f0-0af7-c406-1a69" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="300"/>
+      </costs>
+      <profiles>
+        <profile name="Mizuchi" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="7d8b-e7c1-1573-efec">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">6</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">6</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Dragon)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule name="Poison Breath" id="b02a-f6e3-7f43-c012" hidden="false">
+          <description>This is a Strength 3 Breath Weapon with the Poisoned Attacks special rule.</description>
+        </rule>
+      </rules>
+      <infoLinks>
+        <infoLink name="Natural Armour (3+)" id="79d1-a7e9-6669-c1f5" hidden="false" type="rule" targetId="32e8-b4ad-3e59-a3c7">
+          <modifiers>
+            <modifier type="set" value="From Mizuchi" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Aquatic" id="b217-6904-e561-0a5c" hidden="false" type="rule" targetId="3667-691b-abd9-7da6"/>
+        <infoLink name="Fly (7)" id="f87f-41dd-a403-b738" hidden="false" type="rule" targetId="36ba-3349-99bd-1979"/>
+      </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <selectionEntries>
@@ -438,7 +520,7 @@
                 <cost name="pts" typeId="points" value="48"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="New Entry (link)" hidden="false" id="913f-61d5-aacd-24b8" type="selectionEntry"/>
+            <entryLink import="true" name="Mizuchi" hidden="false" id="913f-61d5-aacd-24b8" type="selectionEntry" targetId="a0dc-bafa-cae5-6757" sortIndex="4"/>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="10. Character Options" hidden="false" id="d88f-2d8c-8b1b-2a10" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
@@ -2721,7 +2803,7 @@
           <entryLinks>
             <entryLink import="true" name="40. Suits of Armour" hidden="false" id="d55e-929c-71e1-8126" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
               <entryLinks>
-                <entryLink import="true" name="Light Armour" hidden="false" id="6443-ca94-8197-c71f" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" defaultAmount="">
+                <entryLink import="true" name="Light Armour" hidden="false" id="6443-ca94-8197-c71f" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
                   <costs>
                     <cost name="pts" typeId="points" value="0.5"/>
                   </costs>
@@ -3087,6 +3169,450 @@
         <categoryLink name="Monstrous Infantry" hidden="false" id="502d-d901-05b9-48ae" targetId="5fc5-b80a-115f-bca3" primary="false"/>
         <categoryLink name="Special" hidden="false" id="e1b0-f53a-5e7a-58a1" targetId="fc26-7737-f7cb-8977" primary="true"/>
       </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Great Guard" hidden="false" id="0462-992c-cf27-7f4d" sortIndex="51">
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="9743-e779-3d1c-3fbd" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Cavalry" hidden="false" id="908e-0038-df6c-b32e" targetId="bdee-b168-38ba-7d3c" primary="false"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Great Guard" hidden="false" id="44f1-fbb9-60d0-8622">
+          <costs>
+            <cost name="pts" typeId="points" value="40"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="63b0-01ae-4b81-38b6" includeChildSelections="false"/>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="e961-85a9-ec5c-cda6" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Great Guard" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f4a7-91a0-b662-5b7f">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Human)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <entryLinks>
+            <entryLink import="true" name="55. Equipment" hidden="false" id="c179-e4f0-f06d-cc2f" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+              <entryLinks>
+                <entryLink import="true" name="Horo Cloak" hidden="false" id="76cc-f5b0-1e83-a922" type="selectionEntry" targetId="ea6b-8b2e-5e1c-a37a"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2de6-3dc4-fcd7-dc32" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="11. Clan Mon" hidden="false" id="663f-edfc-0e84-d019" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="af15-70d5-fde7-6a3f" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Polearm/Halberd" hidden="false" id="d43c-b49e-efab-f121" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="2"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Katana" hidden="false" id="b8ba-9da8-61c4-036b" type="selectionEntry" targetId="04a7-e5b9-407a-a686" sortIndex="1"/>
+                <entryLink import="true" name="Light Lance" hidden="false" id="cb44-e1bd-3b6d-5659" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="2242-fc97-08d9-2af0" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+              <entryLinks>
+                <entryLink import="true" name="Heavy Armour" hidden="false" id="d58a-9fd5-8bf3-c8d2" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="3"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Medium Armour" hidden="false" id="3911-f6c3-b793-cd52" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="1"/>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="70. Mount" hidden="false" id="1c68-6d0e-3c18-6cf7" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+              <entryLinks>
+                <entryLink import="true" name="Kirin" hidden="false" id="2d32-c0ec-56a0-5419" type="selectionEntry" targetId="4115-0961-cdb8-e85f">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dd36-0354-5855-b9ce" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="01e7-d713-f6e4-43af" includeChildSelections="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Way of the Warrior" id="640c-8f86-b961-3407" hidden="false" type="rule" targetId="28dd-2b0a-b009-9f2a"/>
+                <infoLink name="Death Before Dishonour" id="3d05-ecf6-993f-15b7" hidden="false" type="rule" targetId="eb00-8407-3635-9261"/>
+                <infoLink name="Devastating Charge" id="d8a8-2769-ebc8-00a7" hidden="false" type="rule" targetId="e025-10f3-f893-4bd7"/>
+                <infoLink name="Stubborn" id="ade5-2471-9018-4bbc" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
+              </infoLinks>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="99. Command Group" hidden="false" id="3d87-4f2a-c593-a84d" type="selectionEntryGroup" targetId="6d24-2d46-8718-0b8f">
+          <entryLinks>
+            <entryLink import="true" name="Standard Bearer" hidden="false" id="eba0-26bf-6200-44ce" type="selectionEntry" targetId="d3ec-3cba-c1d6-8c0f">
+              <entryLinks>
+                <entryLink import="true" name="90. Magic Standards" hidden="false" id="a43e-886e-8350-9ed5" type="selectionEntryGroup" targetId="02df-aef3-1c56-1245">
+                  <constraints>
+                    <constraint type="max" value="50" field="points" scope="parent" shared="true" id="ac2b-a7de-92d8-00ef"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Mikoshi Shrine" hidden="false" id="bff9-1525-8924-44d3" sortIndex="52">
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="651b-b248-d4d7-f67a" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="Shrine" hidden="false" id="5dde-6ffb-6f45-c60a" targetId="aff0-db72-0064-43fe" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="120"/>
+      </costs>
+      <profiles>
+        <profile name="Mikoshi Shrine" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="d300-3c11-0ed9-b9a1">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">6</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Shrine (Human)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <entryLinks>
+        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="00eb-6b7d-459f-3a2c" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+          <entryLinks>
+            <entryLink import="true" name="Light Armour" hidden="false" id="f0d9-0f89-b660-d4a2" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1042-feba-2a77-f5a3" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="11. Clan Mon" hidden="false" id="ac5b-5712-16da-4211" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="d650-1430-3806-a242" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Polearm/Halberd" hidden="false" id="2d4c-a82e-3070-8a00" type="selectionEntry" targetId="757a-ff3d-710c-2d8b">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="48d1-000f-7e7b-8fb1" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Ward Save (4+)" id="94b9-67b6-fe0e-ebad" hidden="false" type="rule" targetId="d45b-0036-b5ef-951b"/>
+        <infoLink name="Immunity (Psychology)" id="1308-0ae8-833b-9e3e" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
+        <infoLink name="Magic Resistance (1)" id="44b6-c11c-f45c-d031" hidden="false" type="rule" targetId="7ed4-9d31-09c3-6bf9"/>
+      </infoLinks>
+      <rules>
+        <rule name="Holy Relic" id="2ab6-e7a2-7a36-3af1" hidden="false">
+          <description>A Mikoshi Shrine adds +1 Power Dice to your power pool in each of your Magic phases. In addition, a Mikoshi Shrine and any unit of Warrior Monks joined by it, has the Stubborn special rule. Unlike other Shrines, it does not need to be in the front rank of the unit.</description>
+        </rule>
+        <rule name="Blessings of the Kami" id="053d-2583-9eb5-a2f6" hidden="false">
+          <description>The effects of each Blessing lasts until the start of the next Nippon Magic Phase.if a unit with an active Blessing flees for any reason, they immediately lose the Blessing and suffer D6 Strength 4 hits. </description>
+        </rule>
+      </rules>
+      <infoGroups>
+        <infoGroup name="Blessings of the Kami" id="0469-1e49-dad2-c708" hidden="false">
+          <profiles>
+            <profile name="Blessing of Strength" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ff41-ae8f-615a-5ae1">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Innate Bound Spell</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The unit may re-roll all failed To Wound rolls in close combat.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Blessing of Persistence" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="42da-940a-e38f-8125">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Innate Bound Spell</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Enemies attacking the unit suffer -1 To Wound.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Blessing of Swiftness" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2087-48f8-8530-27b1">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Innate Bound Spell</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The unit may re-roll the distance moved when charging and pursuing.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Taiko Drum " hidden="false" id="1f13-2136-3a69-e404" sortIndex="53">
+      <costs>
+        <cost name="pts" typeId="points" value="43"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="02ca-6f7c-38de-5811" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="War Machine" hidden="false" id="a1a4-b966-8c1f-26b3" targetId="d0ba-7b91-1049-d48b" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Taiko Drum " typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f158-9699-0b78-fd80">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35"/>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntries>
+        <selectionEntry type="model" import="true" name="Drummer" hidden="false" id="17db-046a-7030-668f" subType="crew" sortIndex="2">
+          <entryLinks>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="d518-1511-d3e0-8cca" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+              <entryLinks>
+                <entryLink import="true" name="Light Armour" hidden="false" id="c04a-f4e3-82c0-9690" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="57f1-0ee0-496f-d06e" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="490b-cc42-b290-d4fc" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="cfce-5b61-e971-1250" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f267-f388-7a51-4157" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
+          <costs>
+            <cost name="pts" typeId="points" value="7"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+      <infoGroups>
+        <infoGroup name="Vigour Rythmus" id="3659-7470-6508-d47f" hidden="false">
+          <profiles>
+            <profile name="Bravery and Courage" typeId="ab1f-8f31-93aa-152f" typeName="Rhythms" hidden="false" id="897f-0176-3cf1-e371">
+              <characteristics>
+                <characteristic name="Effect" typeId="2a77-89bd-c1d8-bb5a">The units gain +1 to their Leadership when taking Psychology and Break Tests</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Strategy and Discipline" typeId="ab1f-8f31-93aa-152f" typeName="Rhythms" hidden="false" id="c59d-8e99-0b37-4454">
+              <characteristics>
+                <characteristic name="Effect" typeId="2a77-89bd-c1d8-bb5a">The units may roll 3D6 for Leadership tests to Reform, Restrain from Pursuit and March, discarding the highest result.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Charge!" typeId="ab1f-8f31-93aa-152f" typeName="Rhythms" hidden="false" id="8f0a-1a64-40e9-1f3e">
+              <characteristics>
+                <characteristic name="Effect" typeId="2a77-89bd-c1d8-bb5a">The units may re-roll one of the dice that determines their charge distance.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </infoGroup>
+      </infoGroups>
+      <rules>
+        <rule name="Vigour Rhythms" id="ae15-0df5-bd71-9729" hidden="false">
+          <description>At the start of any of your Movement phases, you may choose to have your Taiko Drum give out one of the Rythms abilities to all friendly units within 18&quot; which lasts until the start of your next Movement phase:</description>
+        </rule>
+      </rules>
+      <entryLinks>
+        <entryLink import="true" name="11. Clan Mon" hidden="false" id="4f34-a70e-5223-53c0" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581" sortIndex="1"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Mangonel" hidden="false" id="cc91-0d44-e4c2-893f" sortIndex="54">
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="582d-9849-a0fd-825c" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="War Machine" hidden="false" id="3714-b5ab-28e4-2b88" targetId="d0ba-7b91-1049-d48b" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="90"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="11. Clan Mon" hidden="false" id="a8a9-ae46-bb6f-defc" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581" sortIndex="1"/>
+        <entryLink import="true" name="Crew" hidden="false" id="399b-637e-1984-370b" type="selectionEntry" targetId="fa63-b4d5-3340-5244" sortIndex="2">
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="1c86-dad6-6d34-f1ec-min" includeChildSelections="false"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="1c86-dad6-6d34-f1ec-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <profiles>
+        <profile name="Mangonel" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="1d72-0baa-05cd-5d94">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35"/>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">7</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Stone Thrower" id="37b4-907c-e090-1826" hidden="false" type="profile" targetId="8651-78f3-14e9-f66b"/>
+        <infoLink name="Stone Thrower Misfire Chart" id="0e34-a0d2-a22e-9164" hidden="false" type="infoGroup" targetId="f6f0-bb1f-f863-3e81"/>
+      </infoLinks>
+      <rules>
+        <rule name="Flaming Ammunition" id="e89b-e072-baa9-21e4" hidden="false">
+          <description>All shots from a Mangonel have the Flaming Attacks special rule.</description>
+        </rule>
+      </rules>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Cannon" hidden="false" id="534c-785a-77ae-fbd8" sortIndex="55">
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="1ba3-214e-86cb-ae5f" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="War Machine" hidden="false" id="ce6b-c708-9335-bc43" targetId="d0ba-7b91-1049-d48b" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="85"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="11. Clan Mon" hidden="false" id="d3ee-abff-0af7-a02e" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581" sortIndex="1"/>
+        <entryLink import="true" name="Crew" hidden="false" id="9144-baf4-2e33-6057" type="selectionEntry" targetId="fa63-b4d5-3340-5244" sortIndex="2">
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="1da5-873d-f650-2c21-min" includeChildSelections="false"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="1da5-873d-f650-2c21-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <profiles>
+        <profile name="Grand Cannon" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="88ef-b0d6-ac12-5021">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35"/>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">7</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Cannon" id="65d5-4117-af32-e06a" hidden="false" type="profile" targetId="4f25-d6c7-f4da-a808"/>
+        <infoLink name="Blackpowder Misfire Chart" id="f652-5e8e-e051-efd6" hidden="false" type="infoGroup" targetId="bb8f-7181-30f9-fc65"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Flaming Arrow" hidden="false" id="4a45-86c7-3fb2-e7b5" sortIndex="56">
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="ec18-6632-4a1a-8b11" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="War Machine" hidden="false" id="35d6-1ef0-27b5-19e7" targetId="d0ba-7b91-1049-d48b" primary="false"/>
+      </categoryLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="65"/>
+      </costs>
+      <entryLinks>
+        <entryLink import="true" name="11. Clan Mon" hidden="false" id="2f27-29d2-a770-e903" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581" sortIndex="1"/>
+        <entryLink import="true" name="Crew" hidden="false" id="7301-0ad6-07a6-6123" type="selectionEntry" targetId="fa63-b4d5-3340-5244" sortIndex="2">
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="059a-d64d-cdfe-73aa-min" includeChildSelections="false"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="059a-d64d-cdfe-73aa-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <profiles>
+        <profile name="Flaming Arrow" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="063f-7535-816f-b89c">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35"/>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">7</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459"/>
+          </characteristics>
+        </profile>
+        <profile name="Flaming Arrow" typeId="781d-35fe-dd22-05d6" typeName="War Machine" hidden="false" id="7181-fc33-d212-ea1c">
+          <characteristics>
+            <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Bolt Thrower</characteristic>
+            <characteristic name="Range" typeId="1c88-efb0-083f-b945">60&quot;</characteristic>
+            <characteristic name="Strength" typeId="6ca0-d074-628f-e276">8</characteristic>
+            <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Flaming Attacks, Multiple Wounds (D3). If you roll a 1 To Hit, roll a D6 and consult the Black Powder Misfire chart.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Blackpowder Misfire Chart" id="f6ec-fba2-a86b-df3e" hidden="false" type="infoGroup" targetId="bb8f-7181-30f9-fc65"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Kitsune" hidden="false" id="cea4-a7e4-1a2d-4726" sortIndex="57">
+      <costs>
+        <cost name="pts" typeId="points" value="80"/>
+      </costs>
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="db6b-3042-fa52-f10f" targetId="0eb4-f376-7725-b05b" primary="true"/>
+        <categoryLink name="War Beast" hidden="false" id="5e0b-0ee1-ff3e-0b1e" targetId="5c5d-6944-cd09-0db8" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Kitsune" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="847a-3505-e8a7-4151">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">9</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Spirit)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Ward Save (5+)" id="6875-2537-92d8-741b" hidden="false" type="rule" targetId="4b60-6477-75a8-f6dd"/>
+        <infoLink name="Strider (Forest)" id="6970-277b-a625-0319" hidden="false" type="rule" targetId="8d09-c701-2658-67e8"/>
+        <infoLink name="Magical Attacks" id="a63f-540b-ec55-3593" hidden="false" type="rule" targetId="03db-d81f-f264-84b8"/>
+        <infoLink name="Scouts" id="52dd-444e-3bc2-6ba5" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="65. Lore of Magic" hidden="false" id="7d8d-9583-02db-c165" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
+          <entryLinks>
+            <entryLink import="true" name="Lore of Shadow" hidden="false" id="bb87-ab0a-1dc7-19c7" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="47c0-a8b0-ff80-22ed" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="60. Wizard Level" hidden="false" id="bce3-24f4-2ba9-65dd" type="selectionEntryGroup" targetId="1d19-3d5b-2087-e988"/>
+      </entryLinks>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntryGroups>
@@ -4147,12 +4673,12 @@ Movement phase. In addition, they automatically pass any test to reform, march 
         </profile>
         <profile name="Drawing the Void" typeId="d2d7-5d6d-38b2-0f42" typeName="Duelling Technique" hidden="false" id="9084-6ed1-c34d-009f">
           <characteristics>
-            <characteristic name="Effect" typeId="f3f0-9266-541e-9a28">The Kensai gains +1 To Hit and To Wound.</characteristic>
+            <characteristic name="Effect" typeId="f3f0-9266-541e-9a28">The Kensai gains +1 To Hit and To Wound</characteristic>
           </characteristics>
         </profile>
         <profile name="Ritual of Steel" typeId="d2d7-5d6d-38b2-0f42" typeName="Duelling Technique" hidden="false" id="8a02-f879-3a4b-6f33">
           <characteristics>
-            <characteristic name="Effect" typeId="f3f0-9266-541e-9a28">The Kensai gains +D3 Attacks.</characteristic>
+            <characteristic name="Effect" typeId="f3f0-9266-541e-9a28">The Kensai gains +D3 Attacks</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -4164,10 +4690,17 @@ Movement phase. In addition, they automatically pass any test to reform, march 
         <characteristicType name="Effect" id="f3f0-9266-541e-9a28"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Dance" id="a6c7-0bb6-76ec-b8ee" hidden="false">
+    <profileType name="Rhythms" id="ab1f-8f31-93aa-152f" hidden="false">
       <characteristicTypes>
-        <characteristicType name="Effect" id="9227-cd0d-1045-49b8"/>
+        <characteristicType name="Effect" id="2a77-89bd-c1d8-bb5a"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
+  <entryLinks>
+    <entryLink import="true" name="Mizuchi" hidden="false" id="0ab1-67bb-0109-fff3" type="selectionEntry" targetId="a0dc-bafa-cae5-6757" sortIndex="58">
+      <categoryLinks>
+        <categoryLink name="Rare" hidden="false" id="0cba-c7a6-2c92-a615" targetId="0eb4-f376-7725-b05b" primary="true"/>
+      </categoryLinks>
+    </entryLink>
+  </entryLinks>
 </catalogue>
