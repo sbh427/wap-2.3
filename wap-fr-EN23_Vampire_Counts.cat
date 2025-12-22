@@ -8501,7 +8501,7 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
           <profiles>
             <profile id="737a-500a-69bb-d8c9" name="Grave-Sand Shard" publicationId="10a5-5781-61f5-86ae" page="11" hidden="false" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. This item can be used in any of your Magic phases. Once used, it automatically restores Wounds to the bearer and any unit they are with following the rules for Invocation of Nehek from the Lore of Necromancy.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. This item can be used in any of your Magic phases. Once used, it automatically restores Wounds to any unit they are with following the rules for Invocation of Nehek from the Lore of Necromancy</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -10212,10 +10212,10 @@ close combat by bearer, they and/or their unit regain 1 Wound, just like a summ
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditionGroups>
-                    <conditionGroup type="and">
+                    <conditionGroup type="or">
                       <conditions>
-                        <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="bdee-b168-38ba-7d3c" shared="true"/>
-                        <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="22c9-1606-58f8-2e60" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="330e-f36d-9f8a-dce6" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="9a59-eb87-1cf2-64b3" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -11324,7 +11324,7 @@ To resolve a Death Shriek, roll 2D6+3. For each point by which the result exceed
     </profile>
     <profile id="de3c-7c24-eb9e-563d" name="Beguile" publicationId="10a5-5781-61f5-86ae" page="8" hidden="false" typeId="21e6-6317-460c-b75f" typeName="Vampiric Power">
       <characteristics>
-        <characteristic name="Special Rules" typeId="e351-0ddf-3e1a-0f9f">At the beginning of the Close Combat round, after challenges have been issued and/or accepted, select a model in base contact with the Vampire. That model must take a Leadership test with a -3 modifier; if the test is failed, the model must re-roll successful To Hit rolls that phase.</characteristic>
+        <characteristic name="Special Rules" typeId="e351-0ddf-3e1a-0f9f">At the beginning of the Close Combat round, after challenges have been issued and/or accepted, select a model in base contact with the Vampire. That model must take a Leadership test with a -3 modifier; if the test is failed, the Vampire may re-roll failed To Wound rolls against that model that phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="6a08-d162-b042-d3e3" name="Skeletal Steed" publicationId="10a5-5781-61f5-86ae" page="22" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
