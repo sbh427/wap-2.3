@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="489b-7a41-3ad0-e5eb" name="Tomb Kings WAP 1.6" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="60" revision="13" authorName="Leminge" battleScribeVersion="2.03" publicationId="feeb-1927-4a99-f849" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="Contact me via discord">
+<catalogue library="false" id="489b-7a41-3ad0-e5eb" name="Tomb Kings WAP 1.6" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="60" revision="14" authorName="Leminge" battleScribeVersion="2.03" publicationId="feeb-1927-4a99-f849" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="Contact me via discord">
   <sharedSelectionEntries>
     <selectionEntry type="model" import="true" name="Skeletal Steed" hidden="false" id="a440-163d-31eb-cdf7" collective="true" sortIndex="0" subType="mount">
       <constraints>
@@ -36,18 +36,47 @@
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Skeleton Chariot" hidden="false" id="3ec1-e263-5371-742a" collective="true" subType="mount">
       <entryLinks>
-        <entryLink import="true" name="Scythes" hidden="false" id="845d-e1b3-2652-c342" type="selectionEntry" targetId="865f-edfe-e4fd-d28e" sortIndex="1">
-          <costs>
-            <cost name="pts" typeId="points" value="5"/>
-          </costs>
-        </entryLink>
-        <entryLink import="true" name="Skeletal Steed" hidden="false" id="a8f4-4808-6241-ce7e" type="selectionEntry" targetId="a440-163d-31eb-cdf7" sortIndex="2">
+        <entryLink import="true" name="70. Mount" hidden="false" id="75c2-3a6b-f313-5f4a" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425" sortIndex="">
+          <entryLinks>
+            <entryLink import="true" name="Skeletal Steed" hidden="false" id="a8f4-4808-6241-ce7e" type="selectionEntry" targetId="a440-163d-31eb-cdf7">
+              <modifiers>
+                <modifier type="set" value="2" field="b5af-59e8-85b8-1e2d"/>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="a0b4-64eb-9f87-4dd1"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
           <modifiers>
-            <modifier type="set" value="2" field="b5af-59e8-85b8-1e2d"/>
+            <modifier type="set" value="2" field="7821-ebe3-f713-6916"/>
           </modifiers>
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="a0b4-64eb-9f87-4dd1"/>
-          </constraints>
+        </entryLink>
+        <entryLink import="true" name="56. Upgrades" hidden="false" id="b60b-c073-a09f-ca66" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d" sortIndex="">
+          <entryLinks>
+            <entryLink import="true" name="Scythes" hidden="false" id="845d-e1b3-2652-c342" type="selectionEntry" targetId="865f-edfe-e4fd-d28e">
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Barding" hidden="false" id="c1c9-d644-b0a8-31d1" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4a35-6e2e-dad9-7a37" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <infoLinks>
@@ -307,20 +336,65 @@
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Skeleton Crew " hidden="false" id="7bbf-cd5d-11fb-b862">
           <entryLinks>
-            <entryLink import="true" name="Bow" hidden="false" id="408e-85cc-377f-d5a9" type="selectionEntry" targetId="94ec-8421-59ea-a9d0">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="17e3-78ec-8cb1-3885" includeChildSelections="false"/>
-              </constraints>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="5790-028c-c5c2-cfb6" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+              <entryLinks>
+                <entryLink import="true" name="Light Armour" hidden="false" id="3980-a81c-25e6-613d" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7e7f-0ba2-3874-ab3f" includeChildSelections="false" automatic="true"/>
+                  </constraints>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="0" field="bd12-6b92-8aca-f4e2"/>
+                        <modifier type="set" value="0" field="7e7f-0ba2-3874-ab3f"/>
+                        <modifier type="set" value="true" field="hidden"/>
+                      </modifiers>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifierGroup>
+                  </modifierGroups>
+                </entryLink>
+              </entryLinks>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="0" field="71c5-9037-5bd4-fae9"/>
+                    <modifier type="set" value="0" field="f5b7-0be5-74d6-45b2"/>
+                  </modifiers>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
-            <entryLink import="true" name="Light Armour" hidden="false" id="3980-a81c-25e6-613d" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7e7f-0ba2-3874-ab3f" includeChildSelections="false"/>
-              </constraints>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="e5cc-016c-930e-691f" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Light Lance" hidden="false" id="3ba9-5485-1c91-ccbb" type="selectionEntry" targetId="d989-1124-0dea-ae27">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f691-0810-6409-acd5" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Light Lance" hidden="false" id="3ba9-5485-1c91-ccbb" type="selectionEntry" targetId="d989-1124-0dea-ae27">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f691-0810-6409-acd5" includeChildSelections="false"/>
-              </constraints>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="6105-d3f1-e08a-bc58" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+              <entryLinks>
+                <entryLink import="true" name="Bow" hidden="false" id="408e-85cc-377f-d5a9" type="selectionEntry" targetId="94ec-8421-59ea-a9d0">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="17e3-78ec-8cb1-3885" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
           <constraints>
@@ -1237,13 +1311,6 @@ If, at the start of any of your turns following the death of the Hierophant, the
               <costs>
                 <cost name="pts" typeId="points" value="48"/>
               </costs>
-              <entryLinks>
-                <entryLink import="true" name="Barding" hidden="false" id="076b-8945-f589-8bab" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
-                  <costs>
-                    <cost name="pts" typeId="points" value="5"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
             </entryLink>
             <entryLink import="true" name="Khemrian Warsphinx " hidden="false" id="69c6-4141-c2bb-e339" type="selectionEntry" targetId="536c-6285-d0a4-6eb3" sortIndex="4">
               <costs>
@@ -1474,13 +1541,6 @@ If, at the start of any of your turns following the death of the Hierophant, the
               <costs>
                 <cost name="pts" typeId="points" value="48"/>
               </costs>
-              <entryLinks>
-                <entryLink import="true" name="Barding" hidden="false" id="be2a-23b3-b694-2d05" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
-                  <costs>
-                    <cost name="pts" typeId="points" value="5"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -1670,13 +1730,6 @@ If, at the start of any of your turns following the death of the Hierophant, the
               <costs>
                 <cost name="pts" typeId="points" value="48"/>
               </costs>
-              <entryLinks>
-                <entryLink import="true" name="Barding" hidden="false" id="2d0e-ddef-eb78-45c0" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
-                  <costs>
-                    <cost name="pts" typeId="points" value="5"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -1833,33 +1886,35 @@ If, at the start of any of your turns following the death of the Hierophant, the
             <infoLink name="Undead" id="e0c1-0baa-9716-fc26" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Light Armour" hidden="false" id="e677-c009-83f2-e7c7" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="0.5"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Shield" hidden="false" id="bbec-d173-b2e7-f374" type="selectionEntry" targetId="c068-0827-9931-d9bf">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="170c-b46e-22e1-7849"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Primary Weapon" id="22e7-20c7-7f1a-4eb3" hidden="false" sortIndex="1">
+            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="2bfc-5c85-c30b-b1b3" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
               <entryLinks>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="a7aa-9d17-cb52-6b7e" type="selectionEntry" targetId="a658-337d-0cbd-a38c"/>
-                <entryLink import="true" name="Spear" hidden="false" id="af05-9014-4e85-5ba6" type="selectionEntry" targetId="a901-4548-955d-623c">
+                <entryLink import="true" name="Shield" hidden="false" id="d1af-c8b1-1e99-057e" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="170c-b46e-22e1-7849"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="b06c-4759-94bf-81e1" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
+              <entryLinks>
+                <entryLink import="true" name="Light Armour" hidden="false" id="e677-c009-83f2-e7c7" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
                   <costs>
                     <cost name="pts" typeId="points" value="0.5"/>
                   </costs>
                 </entryLink>
               </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4b5e-e2e4-13f5-7347" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2740-7cfe-374b-0dc1" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="0aa5-d9fb-9e03-57cd" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="80ff-c1d7-950f-66ae" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+                <entryLink import="true" name="Spear" hidden="false" id="af05-9014-4e85-5ba6" type="selectionEntry" targetId="a901-4548-955d-623c" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0.5"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
           <constraints>
             <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="078e-2e4b-ea8c-22a6" includeChildSelections="false"/>
           </constraints>
@@ -1930,7 +1985,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <categoryLink name="Infantry" hidden="false" id="d54f-04a6-4feb-ac85" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Skeleton Archer" hidden="false" id="8bd4-42a7-74cb-d504">
+        <selectionEntry type="model" import="true" name="Skeleton Archer" hidden="false" id="8bd4-42a7-74cb-d504" sortIndex="2">
           <costs>
             <cost name="pts" typeId="points" value="8"/>
           </costs>
@@ -1955,20 +2010,32 @@ If, at the start of any of your turns following the death of the Hierophant, the
             <infoLink name="Arrows of Asaph" id="e2d8-09ef-ba8d-224d" hidden="false" type="rule" targetId="4503-7ae5-be26-e5b1"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Light Armour" hidden="false" id="668c-ee92-7447-4de1" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="3">
-              <costs>
-                <cost name="pts" typeId="points" value="0.5"/>
-              </costs>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="81d7-4e37-df81-5f50" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
+              <entryLinks>
+                <entryLink import="true" name="Light Armour" hidden="false" id="668c-ee92-7447-4de1" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0.5"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Bow" hidden="false" id="e9a0-15ae-65c8-3c67" type="selectionEntry" targetId="94ec-8421-59ea-a9d0" sortIndex="2">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="66f0-0b7e-5b8b-0c23"/>
-              </constraints>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="568d-a904-c37c-7c2b" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Bow" hidden="false" id="e9a0-15ae-65c8-3c67" type="selectionEntry" targetId="94ec-8421-59ea-a9d0">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="66f0-0b7e-5b8b-0c23"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="7b54-0b5a-c560-dc1d" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bf41-ea98-d643-6c1f" includeChildSelections="false"/>
-              </constraints>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="fad0-f755-b9e8-5929" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="7b54-0b5a-c560-dc1d" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bf41-ea98-d643-6c1f" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
           <constraints>
@@ -1977,7 +2044,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="fbcb-b03a-7919-f2b5" hidden="false" collective="false" import="true">
+        <selectionEntryGroup name="Command Group" id="fbcb-b03a-7919-f2b5" hidden="false" collective="false" import="true" sortIndex="3">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="47dc-ebe8-aa0b-c4c4" collective="false">
               <constraints>
@@ -2023,7 +2090,11 @@ If, at the start of any of your turns following the death of the Hierophant, the
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Blessing of Asaph" hidden="false" id="3568-97b8-c29a-9278" type="selectionEntry" targetId="44a7-5981-d3a2-35f1" sortIndex="-1"/>
+        <entryLink import="true" name="11. Unit Options" hidden="false" id="e5b3-5f5d-bf08-f8f7" type="selectionEntryGroup" targetId="920d-8a41-44b9-c364" sortIndex="1">
+          <entryLinks>
+            <entryLink import="true" name="Blessing of Asaph" hidden="false" id="3568-97b8-c29a-9278" type="selectionEntry" targetId="44a7-5981-d3a2-35f1"/>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
       <modifiers>
         <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category">
@@ -2070,33 +2141,35 @@ If, at the start of any of your turns following the death of the Hierophant, the
             <infoLink name="Skirmishers" id="fc11-c626-b931-7705" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Shield" hidden="false" id="bbec-d173-b2e7-f374" type="selectionEntry" targetId="c068-0827-9931-d9bf">
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="a7aa-9d17-cb52-6b7e" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="21ef-e778-e661-1e3d" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Primary Weapon" id="5dbf-a5a3-56f1-472a" hidden="false" sortIndex="2">
+            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="58de-6e2f-b0d8-62d1" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
               <entryLinks>
-                <entryLink import="true" name="Javelins" hidden="false" id="15f1-2fda-c3f4-2385" type="selectionEntry" targetId="a923-e8b1-94c0-3f2c"/>
-                <entryLink import="true" name="Sling" hidden="false" id="0d0d-6054-3cec-e5fa" type="selectionEntry" targetId="72e8-531c-b5af-3b91">
+                <entryLink import="true" name="Shield" hidden="false" id="bbec-d173-b2e7-f374" type="selectionEntry" targetId="c068-0827-9931-d9bf">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
                 </entryLink>
               </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4b5e-e2e4-13f5-7347" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2740-7cfe-374b-0dc1" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="884c-6d88-e306-b8f5" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="a7aa-9d17-cb52-6b7e" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="21ef-e778-e661-1e3d" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="5b05-618e-091f-8b25" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+              <entryLinks>
+                <entryLink import="true" name="Javelins" hidden="false" id="15f1-2fda-c3f4-2385" type="selectionEntry" targetId="a923-e8b1-94c0-3f2c" sortIndex="1"/>
+                <entryLink import="true" name="Sling" hidden="false" id="0d0d-6054-3cec-e5fa" type="selectionEntry" targetId="72e8-531c-b5af-3b91" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
           <constraints>
             <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="4aa2-746d-f50d-0edb" includeChildSelections="false"/>
           </constraints>
@@ -2174,20 +2247,44 @@ If, at the start of any of your turns following the death of the Hierophant, the
             <infoLink name="Fast Cavalry" id="9eaa-178a-375c-fcfe" hidden="false" type="rule" targetId="8877-a5de-cc9c-9142"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Light Lance &amp; Shield" hidden="false" id="4b2d-efeb-06b8-6dc9" type="selectionEntry" targetId="a50e-145b-8639-0387" sortIndex="1">
+            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="a8d8-73b0-f9e8-b45b" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
+              <entryLinks>
+                <entryLink import="true" name="Shield" hidden="false" id="e040-e9f2-94aa-47c3" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ccb6-0194-9dff-94f7" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="9a9e-09cb-16f4-287a" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Light Lance" hidden="false" id="0f52-4b9e-d407-92df" type="selectionEntry" targetId="d989-1124-0dea-ae27">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f0ec-fe33-9d96-5aff" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="70. Mount" hidden="false" id="8514-61a2-0c0e-19b3" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+              <entryLinks>
+                <entryLink import="true" name="Skeletal Steed" hidden="false" id="e336-7475-0e06-6647" type="selectionEntry" targetId="a440-163d-31eb-cdf7">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4a54-4bd9-d6eb-0a1a" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="aab6-4107-0aac-174d" includeChildSelections="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="23db-f279-476a-0b75" includeChildSelections="false"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Light Armour" hidden="false" id="09dd-81e2-688c-0afb" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Skeletal Steed" hidden="false" id="e336-7475-0e06-6647" type="selectionEntry" targetId="a440-163d-31eb-cdf7">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4a54-4bd9-d6eb-0a1a" includeChildSelections="false"/>
-              </constraints>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="3910-3549-531a-9d31" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
+              <entryLinks>
+                <entryLink import="true" name="Light Armour" hidden="false" id="09dd-81e2-688c-0afb" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
           <constraints>
@@ -2260,7 +2357,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <categoryLink name="Cavalry" hidden="false" id="2935-0933-439e-f5ca" targetId="bdee-b168-38ba-7d3c" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Skeleton Horse Archer" hidden="false" id="80f2-eb0d-2afc-b0ef">
+        <selectionEntry type="model" import="true" name="Skeleton Horse Archer" hidden="false" id="80f2-eb0d-2afc-b0ef" sortIndex="2">
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
@@ -2325,15 +2422,69 @@ If, at the start of any of your turns following the death of the Hierophant, the
             </infoLink>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="a63d-b7d4-c7cb-f4b4" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="addd-df28-2094-7315" includeChildSelections="false"/>
-              </constraints>
+            <entryLink import="true" name="70. Mount" hidden="false" id="451c-a2a0-b5a1-63b1" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+              <selectionEntries>
+                <selectionEntry type="model" import="true" name="Skeletal Steed" hidden="false" id="40c6-ae2a-5797-ef1a" subType="mount" collective="true">
+                  <infoLinks>
+                    <infoLink name="Skeletal Steed" id="c11b-dfe4-c99c-45ae" hidden="false" type="profile" targetId="5e37-4591-f72b-0e5e">
+                      <comment>Scythan Warrior</comment>
+                      <modifierGroups>
+                        <modifierGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="unit" childId="4a21-e321-5a87-4635" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                          <modifiers>
+                            <modifier type="increment" value="1" field="7cca-e51f-edc2-7322"/>
+                            <modifier type="increment" value="1" field="f049-8a65-9c04-1559"/>
+                            <modifier type="increment" value="1" field="09ad-18df-607b-1215"/>
+                          </modifiers>
+                          <comment>Scythan Warrior</comment>
+                        </modifierGroup>
+                      </modifierGroups>
+                    </infoLink>
+                    <infoLink name="Undead" id="37e2-7c48-ed97-0355" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2">
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="unit" childId="4a21-e321-5a87-4635" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="73e0-f353-3f71-b811-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="73e0-f353-3f71-b811-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
             </entryLink>
-            <entryLink import="true" name="Light Armour" hidden="false" id="15e0-6717-1d6b-0d8f" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="5a2b-a3fd-5617-91d6" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Bow" hidden="false" id="0464-dd1a-163f-9f81" type="selectionEntry" targetId="94ec-8421-59ea-a9d0">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="77ff-8c8c-dc51-9d20" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="7758-1fc9-5f43-3ef8" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="a63d-b7d4-c7cb-f4b4" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="addd-df28-2094-7315" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="cdf1-4ad5-b918-1198" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
+              <entryLinks>
+                <entryLink import="true" name="Light Armour" hidden="false" id="15e0-6717-1d6b-0d8f" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
           <constraints>
@@ -2346,65 +2497,10 @@ If, at the start of any of your turns following the death of the Hierophant, the
               </conditions>
             </modifier>
           </modifiers>
-          <selectionEntries>
-            <selectionEntry type="model" import="true" name="Skeletal Steed" hidden="false" id="40c6-ae2a-5797-ef1a" subType="mount" collective="true">
-              <infoLinks>
-                <infoLink name="Skeletal Steed" id="c11b-dfe4-c99c-45ae" hidden="false" type="profile" targetId="5e37-4591-f72b-0e5e">
-                  <comment>Scythan Warrior</comment>
-                  <modifierGroups>
-                    <modifierGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="unit" childId="4a21-e321-5a87-4635" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                      <modifiers>
-                        <modifier type="increment" value="1" field="7cca-e51f-edc2-7322"/>
-                        <modifier type="increment" value="1" field="f049-8a65-9c04-1559"/>
-                        <modifier type="increment" value="1" field="09ad-18df-607b-1215"/>
-                      </modifiers>
-                      <comment>Scythan Warrior</comment>
-                    </modifierGroup>
-                  </modifierGroups>
-                </infoLink>
-                <infoLink name="Undead" id="37e2-7c48-ed97-0355" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2">
-                  <modifiers>
-                    <modifier type="set" value="true" field="hidden">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="unit" childId="4a21-e321-5a87-4635" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="73e0-f353-3f71-b811-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="73e0-f353-3f71-b811-max" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Scythan Warriors" hidden="true" id="4a21-e321-5a87-4635" collective="true" collapsible="false" sortIndex="-2">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d7a2-08e4-d07d-f428" includeChildSelections="true"/>
-          </constraints>
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="a420-a497-9edc-a51d" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-          <rules>
-            <rule name="Scythan Warriors" id="5642-f2e2-c93f-94ba" hidden="false">
-              <description>Scythan Warriors always treat Tutankhanut as the Army General for all purposes.</description>
-            </rule>
-          </rules>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="1069-8f68-d8d0-f016" hidden="false" collective="false" import="true">
+        <selectionEntryGroup name="Command Group" id="1069-8f68-d8d0-f016" hidden="false" collective="false" import="true" sortIndex="3">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="3313-b0cf-2224-d9b4" collective="false">
               <constraints>
@@ -2450,7 +2546,33 @@ If, at the start of any of your turns following the death of the Hierophant, the
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Blessing of Asaph" hidden="false" id="6b43-0de4-b903-0a53" type="selectionEntry" targetId="44a7-5981-d3a2-35f1" sortIndex="-1" collective="false"/>
+        <entryLink import="true" name="11. Unit Options" hidden="false" id="659c-2833-6a84-5fb3" type="selectionEntryGroup" targetId="920d-8a41-44b9-c364" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Scythan Warriors" hidden="true" id="4a21-e321-5a87-4635" collective="true" collapsible="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d7a2-08e4-d07d-f428" includeChildSelections="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="a420-a497-9edc-a51d" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <rules>
+                <rule name="Scythan Warriors" id="5642-f2e2-c93f-94ba" hidden="false">
+                  <description>Scythan Warriors always treat Tutankhanut as the Army General for all purposes.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Blessing of Asaph" hidden="false" id="6b43-0de4-b903-0a53" type="selectionEntry" targetId="44a7-5981-d3a2-35f1" collective="false"/>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
       <modifiers>
         <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category">
@@ -2496,33 +2618,35 @@ If, at the start of any of your turns following the death of the Hierophant, the
             <infoLink name="Undead" id="96a7-ac00-a7b8-1357" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Shield" hidden="false" id="8a34-60fd-1a81-f15f" type="selectionEntry" targetId="c068-0827-9931-d9bf">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="52c5-d6a8-c902-455f" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-            <entryLink import="true" name="Light Armour" hidden="false" id="175b-2a87-7bdb-6372" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f257-1083-b40f-27dd" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Primary Weapon" id="6289-652c-60a7-2e96" hidden="false">
+            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="bf74-de12-e4b5-f860" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
               <entryLinks>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="ad94-de34-ceea-dede" type="selectionEntry" targetId="a658-337d-0cbd-a38c"/>
-                <entryLink import="true" name="Polearm/Halberd" hidden="false" id="3743-e2db-68d2-d961" type="selectionEntry" targetId="757a-ff3d-710c-2d8b">
+                <entryLink import="true" name="Shield" hidden="false" id="8a34-60fd-1a81-f15f" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="52c5-d6a8-c902-455f" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="cf84-bcde-9c1b-9810" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="ad94-de34-ceea-dede" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+                <entryLink import="true" name="Polearm/Halberd" hidden="false" id="3743-e2db-68d2-d961" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
                 </entryLink>
               </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="30ff-89a7-4cc5-f37a" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7dc5-c735-6ca9-8b23" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
+            </entryLink>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="43d1-f15c-6d0f-d515" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+              <entryLinks>
+                <entryLink import="true" name="Light Armour" hidden="false" id="175b-2a87-7bdb-6372" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f257-1083-b40f-27dd" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -2713,15 +2837,38 @@ If, at the start of any of your turns following the death of the Hierophant, the
                 <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="f182-0bb4-e3fd-7bfe" includeChildSelections="false" percentValue="false"/>
               </constraints>
               <entryLinks>
-                <entryLink import="true" name="Light Armour" hidden="false" id="9ccb-93f8-3b58-4592" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b9d0-4b7a-178c-93dc" includeChildSelections="false"/>
-                  </constraints>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="668e-695c-8bb8-d63f" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <entryLinks>
+                    <entryLink import="true" name="Light Armour" hidden="false" id="28c9-b54e-e21b-6241" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="54bc-0542-6e45-c80d" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
-                <entryLink import="true" name="Shield" hidden="false" id="bc7e-d7e1-cf89-125e" type="selectionEntry" targetId="c068-0827-9931-d9bf">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="37f4-8a99-b6ba-2076" includeChildSelections="false"/>
-                  </constraints>
+                <entryLink import="true" name="50. Handheld Armour" hidden="false" id="0f54-2c4d-af86-8380" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
+                  <entryLinks>
+                    <entryLink import="true" name="Shield" hidden="false" id="8d98-3224-8502-bac5" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7f34-e438-c66b-2681" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="bd82-202b-045d-fe62" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Polearm/Halberd" hidden="false" id="60d2-4116-1ddc-d5dd" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="3">
+                      <costs>
+                        <cost name="pts" typeId="points" value="2"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="ad5e-7b76-b364-5f38" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+                    <entryLink import="true" name="Light Lance" hidden="false" id="d835-5b43-53fb-1d05" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="2">
+                      <costs>
+                        <cost name="pts" typeId="points" value="2"/>
+                      </costs>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
               </entryLinks>
               <profiles>
@@ -2740,27 +2887,6 @@ If, at the start of any of your turns following the death of the Hierophant, the
                   </characteristics>
                 </profile>
               </profiles>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Primary Weapon" id="d001-a836-b75c-1100" hidden="false" sortIndex="1">
-                  <entryLinks>
-                    <entryLink import="true" name="Hand Weapon" hidden="false" id="ad5e-7b76-b364-5f38" type="selectionEntry" targetId="a658-337d-0cbd-a38c"/>
-                    <entryLink import="true" name="Light Lance" hidden="false" id="d835-5b43-53fb-1d05" type="selectionEntry" targetId="d989-1124-0dea-ae27">
-                      <costs>
-                        <cost name="pts" typeId="points" value="2"/>
-                      </costs>
-                    </entryLink>
-                    <entryLink import="true" name="Polearm/Halberd" hidden="false" id="60d2-4116-1ddc-d5dd" type="selectionEntry" targetId="757a-ff3d-710c-2d8b">
-                      <costs>
-                        <cost name="pts" typeId="points" value="2"/>
-                      </costs>
-                    </entryLink>
-                  </entryLinks>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="faca-dd8f-ff6a-5ce3-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="faca-dd8f-ff6a-5ce3-max" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
               <modifiers>
                 <modifier type="decrement" value="2" field="points">
                   <conditionGroups>
@@ -2776,13 +2902,6 @@ If, at the start of any of your turns following the death of the Hierophant, the
               </modifiers>
             </selectionEntry>
           </selectionEntries>
-          <entryLinks>
-            <entryLink import="true" name="Barding" hidden="false" id="baa5-7c9b-fe38-4750" type="selectionEntry" targetId="17ec-ae05-605b-27ce" sortIndex="1">
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
           <modifiers>
             <modifier type="increment" value="2" field="points">
               <conditionGroups>
@@ -2794,6 +2913,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="3" field="points" affects="self.entries.recursive.17ec-ae05-605b-27ce"/>
           </modifiers>
         </entryLink>
       </entryLinks>
@@ -2838,10 +2958,14 @@ If, at the start of any of your turns following the death of the Hierophant, the
             </profile>
           </profiles>
           <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="6bf9-fdc4-c061-139b" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3b90-5583-85af-37ed" includeChildSelections="false"/>
-              </constraints>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="9892-f95f-ead8-1720" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="6bf9-fdc4-c061-139b" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3b90-5583-85af-37ed" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
           <constraints>
@@ -2930,15 +3054,23 @@ If, at the start of any of your turns following the death of the Hierophant, the
             <infoLink name="Entombed beneath the sand" id="9e7f-1bb3-2271-0f29" hidden="false" type="rule" targetId="1d24-e394-e63d-b2e2"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="Polearm/Halberd" hidden="false" id="508a-d558-4fe5-3751" type="selectionEntry" targetId="757a-ff3d-710c-2d8b">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b203-5fd0-7485-eb23" includeChildSelections="false"/>
-              </constraints>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="9654-8f62-f498-43e5" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+              <entryLinks>
+                <entryLink import="true" name="Medium Armour" hidden="false" id="8ec4-636a-5f1c-0438" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7977-fbb2-8d27-9a40" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Medium Armour" hidden="false" id="8ec4-636a-5f1c-0438" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7977-fbb2-8d27-9a40" includeChildSelections="false"/>
-              </constraints>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="c410-ed56-3234-0f35" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Polearm/Halberd" hidden="false" id="508a-d558-4fe5-3751" type="selectionEntry" targetId="757a-ff3d-710c-2d8b">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b203-5fd0-7485-eb23" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
           <profiles>
@@ -3138,17 +3270,16 @@ If, at the start of any of your turns following the death of the Hierophant, the
         </modifier>
       </modifiers>
       <entryLinks>
-        <entryLink import="true" name="Wizard Level 1" hidden="false" id="3207-9397-d60c-cac6" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8" sortIndex="2">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="16aa-d1e1-eb77-1b5f-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="16aa-d1e1-eb77-1b5f-max" includeChildSelections="false"/>
-          </constraints>
+        <entryLink import="true" name="65. Lore of Magic" hidden="false" id="ebad-a83c-ee8b-e42b" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
+          <entryLinks>
+            <entryLink import="true" name="Lore of Nehekhara" hidden="false" id="9f93-5c03-7a81-ca64" type="selectionEntry" targetId="0779-440c-f407-02b8">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ded8-c3ae-ff57-cf22" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
-        <entryLink import="true" name="Lore of Nehekhara" hidden="false" id="9f93-5c03-7a81-ca64" type="selectionEntry" targetId="0779-440c-f407-02b8" sortIndex="3">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ded8-c3ae-ff57-cf22" includeChildSelections="false"/>
-          </constraints>
-        </entryLink>
+        <entryLink import="true" name="60. Wizard Level" hidden="false" id="170b-5628-13cf-1394" type="selectionEntryGroup" targetId="1d19-3d5b-2087-e988"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Bone Thrower" hidden="false" id="bad7-64dd-dea6-c3e3" sortIndex="25">
@@ -4725,34 +4856,50 @@ Strength 2 hits which Ignores Armour saves</description>
             <infoLink name="Undead" id="2fd7-9cf8-363a-eeca" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
           </infoLinks>
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="Charioteer" hidden="false" id="79e5-cd80-e3ff-cebc" subType="crew" collective="true">
+            <selectionEntry type="model" import="true" name="Charioteer" hidden="false" id="79e5-cd80-e3ff-cebc" subType="crew" collective="true" sortIndex="">
               <constraints>
                 <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="b38b-686f-ce10-b1ff" includeChildSelections="false" percentValue="false"/>
                 <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="fdc6-0a56-e2dd-6c43" includeChildSelections="false" percentValue="false"/>
               </constraints>
               <entryLinks>
-                <entryLink import="true" name="Light Lance" hidden="false" id="ca4c-b405-1f55-d878" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4f1e-bb97-82d8-2dbe" includeChildSelections="false"/>
-                  </constraints>
+                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="8731-f8e6-f180-f206" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                  <entryLinks>
+                    <entryLink import="true" name="Bow" hidden="false" id="7ba3-f36d-c1e2-1ff1" type="selectionEntry" targetId="94ec-8421-59ea-a9d0">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="887c-f106-6a5d-af67" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Javelins" hidden="false" id="a159-721d-3143-97fc" type="selectionEntry" targetId="a923-e8b1-94c0-3f2c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="72c5-ea0d-13f0-e473" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                  <modifiers>
+                    <modifier type="set" value="2" field="5d91-5217-36bf-adeb"/>
+                    <modifier type="set" value="2" field="d000-627b-af39-4fd6"/>
+                  </modifiers>
                 </entryLink>
-                <entryLink import="true" name="Bow" hidden="false" id="7ba3-f36d-c1e2-1ff1" type="selectionEntry" targetId="94ec-8421-59ea-a9d0" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="887c-f106-6a5d-af67" includeChildSelections="false"/>
-                  </constraints>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="27ce-4ac2-8d78-139f" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Light Lance" hidden="false" id="ca4c-b405-1f55-d878" type="selectionEntry" targetId="d989-1124-0dea-ae27">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4f1e-bb97-82d8-2dbe" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
-                <entryLink import="true" name="Javelins" hidden="false" id="a159-721d-3143-97fc" type="selectionEntry" targetId="a923-e8b1-94c0-3f2c" sortIndex="3">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="72c5-ea0d-13f0-e473" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="Light Armour" hidden="false" id="f479-94be-02f4-2b53" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="4">
-                  <costs>
-                    <cost name="pts" typeId="points" value="4"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b8dc-4a6c-50f1-b4b1" includeChildSelections="false"/>
-                  </constraints>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="9882-39b4-0e8b-94ef" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
+                  <entryLinks>
+                    <entryLink import="true" name="Light Armour" hidden="false" id="f479-94be-02f4-2b53" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                      <costs>
+                        <cost name="pts" typeId="points" value="4"/>
+                      </costs>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b8dc-4a6c-50f1-b4b1" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
               </entryLinks>
               <profiles>
@@ -4788,7 +4935,11 @@ Strength 2 hits which Ignores Armour saves</description>
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="Blessing of Asaph" hidden="false" id="6230-39fc-ad66-792d" type="selectionEntry" targetId="44a7-5981-d3a2-35f1" sortIndex="-1"/>
+        <entryLink import="true" name="11. Unit Options" hidden="false" id="1890-6a00-b852-6448" type="selectionEntryGroup" targetId="920d-8a41-44b9-c364" sortIndex="1">
+          <entryLinks>
+            <entryLink import="true" name="Blessing of Asaph" hidden="false" id="6230-39fc-ad66-792d" type="selectionEntry" targetId="44a7-5981-d3a2-35f1"/>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
       <modifiers>
         <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category">
@@ -4833,20 +4984,14 @@ Strength 2 hits which Ignores Armour saves</description>
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="3e4d-85c1-0d31-7463" includeChildSelections="false"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Light Armour" hidden="false" id="90a1-600d-c166-1de8" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="1">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a88a-70a0-0f7d-1e63" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Primary Weapon" id="af8b-7307-df15-7b09" hidden="false" sortIndex="2" collective="false">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="44c9-040e-9c87-71be" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cf7f-c4f7-4ae1-0e41" includeChildSelections="false"/>
-              </constraints>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="363d-1664-1b59-f8ea" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="09c8-4345-6dee-90ed" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="1"/>
+                <entryLink import="true" name="Greatbow" hidden="false" id="787e-de1a-956b-f237" type="selectionEntry" targetId="1f9e-9932-b92d-9734" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="3"/>
+                  </costs>
+                </entryLink>
                 <entryLink import="true" name="Polearm/Halberd" hidden="false" id="2b29-fb07-0a44-d1c1" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
@@ -4857,16 +5002,11 @@ Strength 2 hits which Ignores Armour saves</description>
                     <cost name="pts" typeId="points" value="6"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Greatbow" hidden="false" id="787e-de1a-956b-f237" type="selectionEntry" targetId="1f9e-9932-b92d-9734" sortIndex="2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="3"/>
-                  </costs>
-                </entryLink>
               </entryLinks>
-            </selectionEntryGroup>
-            <selectionEntryGroup name="Upgrades" id="5e02-f26c-db95-c209" hidden="false" sortIndex="3" collective="true">
+            </entryLink>
+            <entryLink import="true" name="56. Upgrades" hidden="false" id="8d71-c979-1ab3-4948" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Aspect of Asaph" hidden="false" id="8ab1-2cbc-8fc7-e2f3" sortIndex="1" collective="true">
+                <selectionEntry type="upgrade" import="true" name="Aspect of Asaph" hidden="false" id="8ab1-2cbc-8fc7-e2f3" collective="true">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
@@ -4876,7 +5016,7 @@ Strength 2 hits which Ignores Armour saves</description>
                     </rule>
                   </rules>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Aspect of Djaf" hidden="false" id="947b-6376-2821-14b8" sortIndex="2" collective="true">
+                <selectionEntry type="upgrade" import="true" name="Aspect of Djaf" hidden="false" id="947b-6376-2821-14b8" collective="true">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
@@ -4886,7 +5026,7 @@ Strength 2 hits which Ignores Armour saves</description>
                     </rule>
                   </rules>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="spect of Geheb" hidden="false" id="37ea-9546-18b2-0004" sortIndex="3" collective="true">
+                <selectionEntry type="upgrade" import="true" name="spect of Geheb" hidden="false" id="37ea-9546-18b2-0004" collective="true">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
@@ -4896,7 +5036,7 @@ Strength 2 hits which Ignores Armour saves</description>
                     </rule>
                   </rules>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Aspect of Phakth" hidden="false" id="effb-e571-a8e0-f1f5" sortIndex="4" collective="true">
+                <selectionEntry type="upgrade" import="true" name="Aspect of Phakth" hidden="false" id="effb-e571-a8e0-f1f5" collective="true">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
@@ -4906,7 +5046,7 @@ Strength 2 hits which Ignores Armour saves</description>
                     </rule>
                   </rules>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Aspect of Sobk" hidden="false" id="3ec2-3c99-2a6d-4a5e" sortIndex="5" collective="true">
+                <selectionEntry type="upgrade" import="true" name="Aspect of Sobk" hidden="false" id="3ec2-3c99-2a6d-4a5e" collective="true">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
@@ -4918,10 +5058,19 @@ Strength 2 hits which Ignores Armour saves</description>
                 </selectionEntry>
               </selectionEntries>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d5a9-4850-95cd-1152" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d16d-c314-7605-29b7" includeChildSelections="false"/>
               </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
+            </entryLink>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="26fb-a716-5a86-3c3f" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+              <entryLinks>
+                <entryLink import="true" name="Light Armour" hidden="false" id="90a1-600d-c166-1de8" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a88a-70a0-0f7d-1e63" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+          </entryLinks>
         </selectionEntry>
       </selectionEntries>
       <categoryLinks>
