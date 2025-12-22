@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="442a-94b5-5142-d10c" name="Daemons of Chaos WAP 1.71" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="70" revision="1" authorContact="Contact me via Discord" authorName="xetolosch" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="442a-94b5-5142-d10c" name="Daemons of Chaos WAP 1.71" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="70" revision="2" authorContact="Contact me via Discord" authorName="xetolosch" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Armoury" id="61ff-ad9f-83c7-fbff" targetId="522e-5e2a-d54c-4959"/>
     <catalogueLink type="catalogue" name="Bestiary" id="f60e-240a-8426-d3ed" targetId="1fc9-2903-cb19-5737"/>
@@ -5766,6 +5766,9 @@ Cursed terrain features placed in this way must be positioned touching an exist
                   </characteristics>
                 </profile>
               </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Icon of Endless War" hidden="false" id="e9b8-cac6-768e-a52a" sortIndex="2">
               <costs>
@@ -5803,7 +5806,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="unit" childId="e567-8ed8-31d7-1247" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="e567-8ed8-31d7-1247" shared="true" includeChildSelections="true" includeChildForces="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5812,7 +5815,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="unit" childId="50ca-5cc6-77f5-7a6f" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="50ca-5cc6-77f5-7a6f" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5871,7 +5874,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="unit" childId="2703-6202-c21b-c2cb" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="2703-6202-c21b-c2cb" shared="true" includeChildSelections="true" includeChildForces="false"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5942,11 +5945,11 @@ Cursed terrain features placed in this way must be positioned touching an exist
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Magic Standards of Tzeentch" id="946b-9ca8-0bbe-a2fc" hidden="false" sortIndex="40">
+        <selectionEntryGroup name="Magic Standards of Tzeentch" id="946b-9ca8-0bbe-a2fc" hidden="false" sortIndex="40" collapsible="true" flatten="true">
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="unit" childId="d633-4c27-1ab0-31d9" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="d633-4c27-1ab0-31d9" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -6505,7 +6508,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
           </constraints>
           <entryLinks>
             <entryLink import="true" name="Lore of Tzeentch" hidden="false" id="65df-a299-2614-04b2" type="selectionEntry" targetId="bdb0-6b92-8131-dc78"/>
-            <entryLink import="true" name="61. Lore" hidden="false" id="83d4-7c4b-8378-7cd7" type="selectionEntryGroup" targetId="be84-edbb-ac89-6f9d" flatten="true"/>
+            <entryLink import="true" name="Rulebook Lores (Master of Sorcery)" hidden="false" id="83d4-7c4b-8378-7cd7" type="selectionEntryGroup" targetId="be84-edbb-ac89-6f9d" flatten="true"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -6800,7 +6803,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Rulebook Lores" hidden="false" id="2660-6bda-4198-ff68" type="selectionEntryGroup" targetId="be84-edbb-ac89-6f9d" flatten="true"/>
+            <entryLink import="true" name="Rulebook Lores (Master of Sorcery)" hidden="false" id="2660-6bda-4198-ff68" type="selectionEntryGroup" targetId="be84-edbb-ac89-6f9d" flatten="true"/>
           </entryLinks>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="13ff-8ae2-b38d-6f7a-min" automatic="true"/>
@@ -6869,7 +6872,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
           </constraints>
           <entryLinks>
             <entryLink import="true" name="Lore of Tzeentch" hidden="false" id="48f8-563b-0bf7-481a" type="selectionEntry" targetId="bdb0-6b92-8131-dc78"/>
-            <entryLink import="true" name="61. Lore" hidden="false" id="a41d-3bd5-5d59-d757" type="selectionEntryGroup" targetId="be84-edbb-ac89-6f9d" flatten="true"/>
+            <entryLink import="true" name="Rulebook Lores (Master of Sorcery)" hidden="false" id="a41d-3bd5-5d59-d757" type="selectionEntryGroup" targetId="be84-edbb-ac89-6f9d" flatten="true"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -7980,7 +7983,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
           </constraints>
           <entryLinks>
             <entryLink import="true" name="Lore of Tzeentch" hidden="false" id="73e5-da8c-b278-15be" type="selectionEntry" targetId="bdb0-6b92-8131-dc78"/>
-            <entryLink import="true" name="Rulebook Lores" hidden="false" id="1ca3-1b17-a724-52ee" type="selectionEntryGroup" targetId="be84-edbb-ac89-6f9d" flatten="true"/>
+            <entryLink import="true" name="Rulebook Lores (Master of Sorcery)" hidden="false" id="1ca3-1b17-a724-52ee" type="selectionEntryGroup" targetId="be84-edbb-ac89-6f9d" flatten="true"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
