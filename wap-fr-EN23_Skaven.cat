@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="28da-4dfe-fb43-8a0c" name="Skaven WAP 1.9" revision="13" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/XwjPS8c9TB" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="40" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="28da-4dfe-fb43-8a0c" name="Skaven WAP 1.91" revision="14" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/XwjPS8c9TB" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="40" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://discordapp.com/invite/UrrPB3T</readme>
   <selectionEntries>
     <selectionEntry id="e7cc-2891-79c2-d6b3" name="Grey Seer" hidden="false" collective="false" import="true" type="model" sortIndex="1">
@@ -82,7 +82,7 @@
         <cost name="pts" typeId="points" value="200"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="789e-e656-dd69-ffc2" name="Warlord" hidden="false" collective="false" import="true" type="model" sortIndex="2">
+    <selectionEntry id="789e-e656-dd69-ffc2" name="Clawlord" hidden="false" collective="false" import="true" type="model" sortIndex="2">
       <profiles>
         <profile id="89cc-ba3f-6fde-b298" name="Warlord" publicationId="4086-1ccd-f433-39a2" page="15" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
           <characteristics>
@@ -6357,7 +6357,7 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">6&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Whenever a spell from the Lore of Plague is cast, all enemy units within range of the caster suffer -1 to their WS (to a minimum of 1) until the start of the caster&apos;s next magic phase.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If one or more spells from the Lore of Plague affects an enemy unit, the target suffers -1 to their Weapon Skill and Initiative (to a minimum of 1) until the start of the caster&apos;s next magic phase. </characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6453,7 +6453,7 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="10. Wither" hidden="true" id="91ab-2ad8-ca3a-bc1d" collective="false" sortIndex="10">
+            <selectionEntry type="upgrade" import="true" name="8. Wither" hidden="true" id="91ab-2ad8-ca3a-bc1d" collective="false" sortIndex="10">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="bf9d-10d2-24ba-6842" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -6463,9 +6463,9 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
               <profiles>
                 <profile name="Wither" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="cae1-e856-b466-f39f" publicationId="4086-1ccd-f433-39a2" page="5">
                   <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
+                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
                     <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target suffers -1 to their T for the remainder of the game. This can be cast multiple times on the same target and the effects are cumulative.</characteristic>
                   </characteristics>
@@ -6475,6 +6475,7 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
                 <modifier type="set" value="false" field="hidden">
                   <conditions>
                     <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -6537,38 +6538,6 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
                 </infoGroup>
               </infoGroups>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="6. Cloud of Corruption" hidden="true" id="5c8a-ef82-995e-569f" collective="false" sortIndex="6">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="bb87-2dac-5943-61df" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Cloud of Corruption" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="c683-d563-ffc7-37b0" publicationId="4086-1ccd-f433-39a2" page="5">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large template anywhere within range – it scatters D6&quot;. All models touched by the template suffer a Strength 2 Hit with the Ignores Armour Saves special rule.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="2. Mantle of Contagion" hidden="false" id="f37d-a05a-3572-4a44" sortIndex="2">
               <profiles>
                 <profile name="Mantle of Contagion" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="8b3f-9163-6f7a-6a21" publicationId="4086-1ccd-f433-39a2" page="5">
@@ -6601,11 +6570,11 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3cdf-d964-4668-ef0d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="7. Purulent World Sores" hidden="true" id="8c79-09fb-398e-5968" sortIndex="7">
+            <selectionEntry type="upgrade" import="true" name="6. Purulent World Sores" hidden="true" id="8c79-09fb-398e-5968" sortIndex="7">
               <profiles>
                 <profile name="Purulent World Sores" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="4176-f61e-9c70-d1c7" publicationId="4086-1ccd-f433-39a2" page="5">
                   <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Summoning</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
@@ -6623,41 +6592,14 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
                       <conditions>
                         <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
                         <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="8. Air of Pestilence" hidden="true" id="21e8-9048-9420-3f47" sortIndex="8">
-              <profiles>
-                <profile name="Air of Pestilence" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="6f07-a52c-73fc-656e" publicationId="4086-1ccd-f433-39a2" page="5">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Special</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets all units within range, even if they are engaged in close combat. Roll a D6 for each unit; enemy units are affected on a 2+, friendly units are affected on a 4+, and models from Clan Pestilens (friend or foe) are affected on a roll of 5+. Each unit that is affected suffers 2D6 Strength 3 hits with the Ignores Armour save special rule. Roll separately for each unit.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c162-e861-77cf-48cc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="9. Putrefy" hidden="true" id="80d8-c7da-5e98-4576" sortIndex="9">
+            <selectionEntry type="upgrade" import="true" name="7. Putrefy" hidden="true" id="80d8-c7da-5e98-4576" sortIndex="9">
               <profiles>
                 <profile name="Putrefy" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="4457-6db4-b64a-bdd0" publicationId="4086-1ccd-f433-39a2" page="5">
                   <characteristics>
@@ -6678,6 +6620,65 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
                     <conditionGroup type="or">
                       <conditions>
                         <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="9. Air of Pestilence" hidden="true" id="d447-ab11-137f-e307" collective="false" sortIndex="10">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d55f-ea2e-b482-58dc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <profiles>
+                <profile name="Air of Pestilence" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="076d-81db-a4a8-76b2" publicationId="4086-1ccd-f433-39a2" page="5">
+                  <characteristics>
+                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
+                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This spell affects all units within range. Roll a D6 for each unit; enemy units are affected on a 2+, friendly units are affected on a 4+, and models from Clan Pestilens (friend or foe) are affected on a roll of 5+. Each unit that is affected suffers 2D6 Strength 3 hits with the Ignores Armour save special rule. Roll separately for each unit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="10. Cloud of Corruption" hidden="true" id="8586-5588-bdc4-24cd" collective="false" sortIndex="11">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ca1b-c798-22f2-0ca5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="48d3-8e72-b495-8a77" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
+              <profiles>
+                <profile name="Cloud of Corruption" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5ed6-96c5-c7f2-ac12" publicationId="4086-1ccd-f433-39a2" page="5">
+                  <characteristics>
+                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct damage</characteristic>
+                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
+                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large template anywhere within this range – it scatters D6&quot;. All models touched by the template suffer a Strength 2 Hit with the Ignores Armour Saves special rule. </characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="model-or-unit" childId="be60-a43d-5ebe-a707" shared="true" includeChildSelections="true"/>
                         <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
@@ -6910,7 +6911,7 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">6&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Whenever a spell from the Lore of Ruin is successfully cast, all enemy units within range of the caster suffer -1 to their Leadership (to a minimum of 1) until the start of the caster&apos;s next magic phase.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If one or more spells from the Lore of Ruin affects an  enemy unit, the target suffers -1 to their Leadership (to a minimum of 1) until the start of the caster&apos;s next magic phase. </characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6998,10 +6999,10 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
                 <profile name="Warpstorm" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="c567-b5fa-de67-de74" publicationId="4086-1ccd-f433-39a2" page="4">
                   <characteristics>
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets all units within range, even if they are engaged in close combat. Roll a D6 for each unit within range. On a 4+, enemy units suffer D6 Strength 5 hits with the Lightning Attacks special rule. Friendly units are only affected on a 6.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets all units within range, even if they are engaged in close combat. Roll a D6 for each unit within range. On a 3+, enemy units suffer D6 Strength 5 hits with the Lightning Attacks special rule. Friendly units are only affected on a 6.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -7441,7 +7442,7 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
                 <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
                 <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
                 <characteristic name="Range" typeId="2954-76ea-decb-30ff">6&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Whenever a spell from the Lore of Stealth is cast, all enemy units within range of the caster suffer a -1 penalty to their armour saves until the start of the caster&apos;s next magic phase.</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If one or more spells from the Lore of Stealth affects an enemy unit, the target suffers a -1 penalty to their armour saves until the start of the caster&apos;s next magic phase. </characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7937,9 +7938,6 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
       </rules>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Ratling Pistol" hidden="false" id="1272-6375-7976-4dd9" collective="true">
-      <infoLinks>
-        <infoLink name="Unstable Ammunition" id="75dc-af8a-fbe4-4291" hidden="false" targetId="1c5e-300c-39c9-1c62" type="rule"/>
-      </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="84a4-fdd3-a891-d2d6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
@@ -7948,7 +7946,7 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
           <characteristics>
             <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
             <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1), Magical Attacks, Multiple Shots (3), Quick to Fire, Unstable Ammunition</characteristic>
+            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1), Magical Attacks, Multiple Shots (3), Quick to Fire, Rapid Fire, Unstable Ammunition</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -8105,7 +8103,7 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
       </constraints>
       <rules>
         <rule name="Warp-Blades" id="560a-6050-2d69-a49d" hidden="false" publicationId="4086-1ccd-f433-39a2" page="8">
-          <description>Warp-Blades give the bearer +1 casting bonus when using the Warp Lightning spell from the Lore of Ruin.</description>
+          <description>Warp-Blades give the bearer a +1 casting bonus when using the Warp Lightning spell from the Lore of Ruin.</description>
         </rule>
       </rules>
     </selectionEntry>
@@ -8768,16 +8766,16 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Staff of Rightful Spremacy" hidden="false" id="7d68-ca19-6adf-5783" sortIndex="3">
               <costs>
-                <cost name="pts" typeId="points" value="25"/>
+                <cost name="pts" typeId="points" value="20"/>
               </costs>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="577f-7bf7-f337-b2b7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="62be-9c2d-6d0b-2ca9" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Staff of Rightful Spremacy" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="fca1-9eef-6f29-beb9" publicationId="4086-1ccd-f433-39a2" page="10">
+                <profile name="Staff of Rightful Spremacy" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="fca1-9eef-6f29-beb9" publicationId="4086-1ccd-f433-39a2" page="10">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">All enemy Wizards within 12&quot; of the bearer of this item suffer a -1 casting penalty. In addition, if the bearer&apos;s dispel roll result is 13, the spell is automatically
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">All enemy Wizards within 12&quot; of the bearer of this item suffer a -1 casting penalty. In addition, if the bearer&apos;s dispel roll result is 13, the spell is automatically
 dispelled.</characteristic>
                   </characteristics>
                 </profile>
@@ -8792,9 +8790,9 @@ dispelled.</characteristic>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
               <profiles>
-                <profile name="Esoteric Resonnator" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="447d-a444-8780-7022" publicationId="4086-1ccd-f433-39a2" page="10">
+                <profile name="Esoteric Resonnator" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="447d-a444-8780-7022" publicationId="4086-1ccd-f433-39a2" page="10">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The bearer of this item adds a free Power dice to their casting attempt whenever they attempt to cast the Warp Lightning spell from the Lore
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer of this item adds a free Power dice to their casting attempt whenever they attempt to cast the Warp Lightning spell from the Lore
 of Ruin.</characteristic>
                   </characteristics>
                 </profile>
@@ -8917,7 +8915,7 @@ of Ruin.</characteristic>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5c32-3060-7d8c-dffc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Skavenbrew" hidden="false" id="bfe3-75a1-0993-b22f" collective="false" sortIndex="21">
+            <selectionEntry type="upgrade" import="true" name="Skavenbrew" hidden="false" id="bfe3-75a1-0993-b22f" collective="false" sortIndex="23">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="74d7-f908-c354-230a" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4856-5d0f-a06d-dd12" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -8959,7 +8957,7 @@ of Ruin.</characteristic>
                 </infoGroup>
               </infoGroups>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Pipes of Piebald" hidden="false" id="8b4e-2598-6a44-f75d" collective="false" sortIndex="13">
+            <selectionEntry type="upgrade" import="true" name="Pipes of Piebald" hidden="false" id="8b4e-2598-6a44-f75d" collective="false" sortIndex="15">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="278b-2f58-b11c-b83f" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="97fe-fbcb-759d-7f3f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -8975,7 +8973,7 @@ of Ruin.</characteristic>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Skalm" hidden="false" id="9ae9-1589-24de-ab9c" collective="false" sortIndex="20">
+            <selectionEntry type="upgrade" import="true" name="Skalm" hidden="false" id="9ae9-1589-24de-ab9c" collective="false" sortIndex="22">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cb40-da48-3738-222a" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="61a4-3efb-5678-e63f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -8991,7 +8989,7 @@ of Ruin.</characteristic>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Portents of Verminous Doom" hidden="false" id="8de2-8a17-f19c-4064" collective="false" sortIndex="9">
+            <selectionEntry type="upgrade" import="true" name="Portents of Verminous Doom" hidden="false" id="8de2-8a17-f19c-4064" collective="false" sortIndex="11">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d27d-6c21-c4d3-9801" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d592-a4be-18e2-863f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9007,7 +9005,7 @@ of Ruin.</characteristic>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Warpstone Charm" hidden="false" id="0a7d-51ef-cd27-be90" collective="false" sortIndex="4">
+            <selectionEntry type="upgrade" import="true" name="Warpstone Charm" hidden="false" id="0a7d-51ef-cd27-be90" collective="false" sortIndex="5">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1472-2297-1cda-a53a" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5fec-1195-bb91-509b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9023,7 +9021,7 @@ of Ruin.</characteristic>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Brass Orb" hidden="false" id="a184-ae7b-3ed4-e868" collective="false" sortIndex="23">
+            <selectionEntry type="upgrade" import="true" name="Brass Orb" hidden="false" id="a184-ae7b-3ed4-e868" collective="false" sortIndex="25">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7ed7-9873-2d4c-634e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="67b9-330d-5d23-ce30" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
@@ -9031,7 +9029,7 @@ of Ruin.</characteristic>
               <profiles>
                 <profile name="Brass Orb" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="865c-9992-5011-37f2" publicationId="4086-1ccd-f433-39a2" page="11">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The bearer can throw the Brass Orb in the Shooting phase. Place the small round template with its centre anywhere within 6&quot; of the character and in his line of sight. The template then scatters D3&quot;. Models touched by the template must roll a D6 per Wound on their profile – for each roll of a 4+ they suffer a Wound which Ignores Armour Saves and Regeneration. This has the Magical Attacks special rule. If a 1 is rolled, centre the template on the model throwing the globe.</characteristic>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The bearer can throw the Brass Orb in the Shooting phase. Place the small round template with its centre anywhere within 6&quot; of the character and in his line of sight. The template then scatters D3&quot;. Models touched by the template must roll a D6 per Wound on their profile – for each roll of a 4+ they suffer a Wound with the Ignores Armour Saves and Magical Attacks special rules.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -9046,7 +9044,7 @@ of Ruin.</characteristic>
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Death Globe" hidden="false" id="e246-34a5-e96f-dd4e" collective="false" sortIndex="12">
+            <selectionEntry type="upgrade" import="true" name="Death Globe" hidden="false" id="e246-34a5-e96f-dd4e" collective="false" sortIndex="14">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fdff-55fe-16cb-98f5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="459a-c429-d7b5-754f" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
@@ -9069,7 +9067,7 @@ of Ruin.</characteristic>
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Doomrocket" hidden="false" id="adb2-c374-f8ec-937b" collective="false" sortIndex="16">
+            <selectionEntry type="upgrade" import="true" name="Doomrocket" hidden="false" id="adb2-c374-f8ec-937b" collective="false" sortIndex="18">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="aba6-b8f4-511d-e964" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8de7-36e8-d13c-5441" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
@@ -9115,7 +9113,7 @@ of Ruin.</characteristic>
                 </infoGroup>
               </infoGroups>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Infernal Bomb" hidden="false" id="5101-0c21-ced5-3567" collective="false" sortIndex="18">
+            <selectionEntry type="upgrade" import="true" name="Infernal Bomb" hidden="false" id="5101-0c21-ced5-3567" collective="false" sortIndex="20">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="54cf-2a08-41ba-d5d9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d15d-4fe9-4af2-4998" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
@@ -9138,7 +9136,7 @@ of Ruin.</characteristic>
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Bilious Bell" hidden="false" id="e99c-85f8-a6a8-7104" sortIndex="15">
+            <selectionEntry type="upgrade" import="true" name="Bilious Bell" hidden="false" id="e99c-85f8-a6a8-7104" sortIndex="17">
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
@@ -9161,14 +9159,14 @@ of Ruin.</characteristic>
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Cube of Mist" hidden="false" id="98c3-5de5-af60-ae4f" sortIndex="22">
+            <selectionEntry type="upgrade" import="true" name="The Cube of Mist" hidden="false" id="98c3-5de5-af60-ae4f" sortIndex="24">
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
               <profiles>
                 <profile name="The Cube of Mist" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="5af2-0e36-710a-d7a6" publicationId="4086-1ccd-f433-39a2" page="11">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. This item can be used at the start of any round of close combat. Once used, no enemy models can make Supporting Attack this round. In addition, all enemy models in the unit suffer -1 To Hit.</characteristic>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. This item can be used at the start of any round of close combat. Once used, no enemy units in base contact with the baerer can make Supporting Attacks this round. In addition, all enemy models in the unit suffer -1 To Hit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -9184,7 +9182,7 @@ of Ruin.</characteristic>
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fleshgift Vial" hidden="false" id="0da4-93cb-fdad-e6a0" sortIndex="17">
+            <selectionEntry type="upgrade" import="true" name="Fleshgift Vial" hidden="false" id="0da4-93cb-fdad-e6a0" sortIndex="19">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f710-cac9-364b-91eb" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="651f-2b24-730c-4b52" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -9229,7 +9227,7 @@ allowed.</characteristic>
                 </infoGroup>
               </infoGroups>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Screechskull Trophies" hidden="false" id="c789-34f4-427b-e6f6" sortIndex="19">
+            <selectionEntry type="upgrade" import="true" name="Screechskull Trophies" hidden="false" id="c789-34f4-427b-e6f6" sortIndex="21">
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
@@ -9245,7 +9243,7 @@ allowed.</characteristic>
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Skyre&apos;s breath-Bellow" hidden="false" id="55ef-b2b1-fe33-060d" sortIndex="14">
+            <selectionEntry type="upgrade" import="true" name="Skyre&apos;s breath-Bellow" hidden="false" id="55ef-b2b1-fe33-060d" sortIndex="16">
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
@@ -9268,7 +9266,7 @@ allowed.</characteristic>
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Blystrevous the Living Cyst" hidden="false" id="e430-d441-1dbb-f262" sortIndex="6">
+            <selectionEntry type="upgrade" import="true" name="Blystrevous the Living Cyst" hidden="false" id="e430-d441-1dbb-f262" sortIndex="8">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
@@ -9291,7 +9289,7 @@ allowed.</characteristic>
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Flaypelt Cloak" hidden="false" id="a31b-9366-957f-4942" sortIndex="7">
+            <selectionEntry type="upgrade" import="true" name="Flaypelt Cloak" hidden="false" id="a31b-9366-957f-4942" sortIndex="9">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
@@ -9307,7 +9305,7 @@ allowed.</characteristic>
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Gnawbomb" hidden="false" id="13ac-cffb-6a1c-528c" sortIndex="8">
+            <selectionEntry type="upgrade" import="true" name="Gnawbomb" hidden="false" id="13ac-cffb-6a1c-528c" sortIndex="10">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
@@ -9330,7 +9328,7 @@ allowed.</characteristic>
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Rabid Crown" hidden="false" id="280d-1067-847c-fe63" sortIndex="10">
+            <selectionEntry type="upgrade" import="true" name="Rabid Crown" hidden="false" id="280d-1067-847c-fe63" sortIndex="12">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
@@ -9353,7 +9351,7 @@ allowed.</characteristic>
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Snoutgrovel Robes" hidden="false" id="a3a5-bb47-da94-5c57" sortIndex="11">
+            <selectionEntry type="upgrade" import="true" name="Snoutgrovel Robes" hidden="false" id="a3a5-bb47-da94-5c57" sortIndex="13">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
@@ -9369,7 +9367,7 @@ allowed.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e7ef-b64a-fdeb-f5e3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Farskitter Cloak" hidden="false" id="2857-dd93-1a05-8861" sortIndex="5">
+            <selectionEntry type="upgrade" import="true" name="Farskitter Cloak" hidden="false" id="2857-dd93-1a05-8861" sortIndex="6">
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
@@ -9400,7 +9398,7 @@ allowed.</characteristic>
                 </infoLink>
               </infoLinks>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Assassins-Bane Rigging" hidden="false" id="053e-559d-0972-878e" sortIndex="2">
+            <selectionEntry type="upgrade" import="true" name="Assassins-Bane Rigging" hidden="false" id="053e-559d-0972-878e" sortIndex="3">
               <profiles>
                 <profile name="Assassins-Bane Rigging" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="fa79-9916-9085-2e2a" publicationId="4086-1ccd-f433-39a2" page="12">
                   <characteristics>
@@ -9423,7 +9421,7 @@ allowed.</characteristic>
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Rat-Tail Snake" hidden="false" id="8997-51ef-cb40-1d04" sortIndex="3">
+            <selectionEntry type="upgrade" import="true" name="Rat-Tail Snake" hidden="false" id="8997-51ef-cb40-1d04" sortIndex="4">
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
@@ -9446,7 +9444,7 @@ allowed.</characteristic>
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Vial of the Fulminator" hidden="false" id="71a3-7854-47fb-1726" sortIndex="1">
+            <selectionEntry type="upgrade" import="true" name="Vial of the Fulminator" hidden="false" id="71a3-7854-47fb-1726" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
@@ -9469,9 +9467,37 @@ allowed.</characteristic>
                 </modifier>
               </modifiers>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Warpstone Innards" hidden="false" id="6b65-9172-949d-5b87" sortIndex="7">
+              <profiles>
+                <profile name="Warpstone Innards" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="0867-85f7-cc89-f841" publicationId="4086-1ccd-f433-39a2" page="12">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Mounted Clan Moulder model only. The bearer&apos;s mount gains +1 Strength and the Frenzy special rule. However, it must take a Toughness test at the start of each of your turns or suffer a Wound with no saves allowed. </characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fd88-d165-74a2-1de6" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="eba6-94b8-0a33-dbaa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="bbc7-b72c-9cc5-965f" shared="true" includeChildForces="false" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Common Enchanted Items" hidden="false" id="6c2a-e64b-7f92-9024" collective="false" targetId="5857-a7aa-f954-a027" type="selectionEntryGroup" sortIndex="24" flatten="true"/>
+            <entryLink import="true" name="Common Enchanted Items" hidden="false" id="6c2a-e64b-7f92-9024" collective="false" targetId="5857-a7aa-f954-a027" type="selectionEntryGroup" sortIndex="99" flatten="true"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup name="Magic Armour" id="75a7-06a3-6a2d-496c" hidden="false" collective="false" import="true" sortIndex="2" collapsible="true">
@@ -9776,7 +9802,7 @@ allowed.</characteristic>
               <infoLinks>
                 <infoLink name="Plague Censer" id="ac4c-7aac-a1e9-8e53" hidden="false" type="profile" targetId="1878-fabb-bbf5-e9d7">
                   <modifiers>
-                    <modifier type="append" value="All Toughness tests taken from this weapon suffer a -1 modifier." field="de63-d6da-efa8-00ac"/>
+                    <modifier type="append" value="All Toughness tests taken from this weapon suffer a +1 modifier." field="de63-d6da-efa8-00ac"/>
                     <modifier type="set" value="The Fumigatous" field="annotation"/>
                   </modifiers>
                 </infoLink>
@@ -10128,7 +10154,7 @@ allowed.</characteristic>
           <profiles>
             <profile name="Storm Banner" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="32b7-ba87-3db6-a339" publicationId="4086-1ccd-f433-39a2" page="13">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">One use only.This standard can be activated at the beginning of any player&apos;s turn. Within 24&quot; of this standard, no model may use the Fly special rule and units are at -2 to be Hit with non-magical missile attacks. All non-magical missile attacks that do not use Ballistics Skill to hit need to roll a 4+ on a D6 before they can attempt to fire if they are within 24&quot; of the banner. Roll a D6 at the beginning of each following player turn – the effects of the banner will end on a D6 roll of 4+.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">One use only. This standard can be activated at the beginning of any player&apos;s turn. Within 24&quot; of this standard, no model may use the Fly special rule and units are at -2 to be Hit with non-magical missile attacks. All non-magical missile attacks that do not use Ballistics Skill to hit need to roll a 4+ on a D6 before they can attempt to fire if they are within 24&quot; of the banner. Roll a D6 at the beginning of each following player turn – the effects of the banner will end on a D6 roll of 4+.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -10231,7 +10257,7 @@ allowed.</characteristic>
           <profiles>
             <profile name="Dwarf-Hide Banner" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="ba46-e985-e316-a37b" publicationId="4086-1ccd-f433-39a2" page="13">
               <characteristics>
-                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying the Dwarf-Hide Banner gains Hatred against all units from Warhammer: Dwarfs.</characteristic>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying this standard gains the Hatred special rule against all Dwarfs. </characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -10309,6 +10335,22 @@ allowed.</characteristic>
               </conditions>
             </modifier>
           </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Icon of Great-Total Supremacy" hidden="false" id="e60a-c5c9-3538-0a04" collective="false" sortIndex="11">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8f3e-a9a0-082d-f8b4" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ab91-cbc1-1e50-bc44" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Icon of Great-Total Supremacy" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="91d0-51ad-92f8-1437" publicationId="4086-1ccd-f433-39a2" page="13">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">At the start of each of your turns, the unit carrying this standard regains D3 Infantry models slain previously during the game, just like a summoning spell. </characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <costs>
+            <cost name="pts" typeId="points" value="35"/>
+          </costs>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -10421,13 +10463,13 @@ Roll an Artillery Dice to determine number of shots fired. After the first Artil
       <description>You may not have more of any other type of Core Unit than you have units of Clanrats.</description>
     </rule>
     <rule id="19a5-0fee-5f4b-f3ac" name="Clan Enmity" publicationId="4086-1ccd-f433-39a2" page="3" hidden="false">
-      <description>Units belonging to each of the Greater Clans (Pestilens, Eshin, Moulder, Skryre) may only be joined by characters from the same Clan.</description>
+      <description>Units belonging to each of the Greater Clans (Pestilens, Eshin, Moulder, Skryre) may only be joined by characters from the same Clan. Characters from one of these Clans may not join a unit containing models from another Clan. </description>
     </rule>
     <rule id="a124-af13-de9e-d5cd" name="Altar of the Horned Rat" publicationId="4086-1ccd-f433-39a2" page="29" hidden="false">
       <description>This model and any unit it joins has the Stubborn special rule.</description>
     </rule>
     <rule name="Life is Cheap" id="db00-7a39-55fb-f430" hidden="false" publicationId="4086-1ccd-f433-39a2" page="3">
-      <description>All Skaven models can voluntarily target ranged attacks at enemy units engaged in close combat with other friendly units even if they are further than 4&quot; away. However, if they do so, they will hit their own troops on To Hit rolls of both 1&apos;s and 2&apos;s rather than just 1&apos;s. In addition, the normal limitation of templates not being allowed to be placed over friendly troops does not apply</description>
+      <description>All Skaven models can voluntarily target missile attacks at enemy units engaged in close combat with other friendly units even if they are further than 4&quot; away. However, if they do so, they will hit their own troops on To Hit rolls of both 1&apos;s and 2&apos;s rather than just 1&apos;s. In addition, the normal limitation of templates not being allowed to be placed over friendly troops does not apply</description>
     </rule>
     <rule name="Supercharged Warp-Power Accumulator" id="4d92-328c-1793-e20e" hidden="false">
       <description>A Supercharged Warp-Power Accumulator allows the bearer to cast spells with one more Power dice than they are normally allowed.</description>
