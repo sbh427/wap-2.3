@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="a833-bc85-ca8c-442d" name="Chaos Dwarfs WAP 1.71" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="70" revision="3" authorContact="xetolosch" authorName="contact via discord" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="a833-bc85-ca8c-442d" name="Chaos Dwarfs WAP 1.71" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="70" revision="4" authorContact="xetolosch" authorName="contact via discord" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Cowarldy Despoilers" id="8536-b279-7c0d-a0cb" hidden="false" publicationId="53f5-3638-a9ce-8dd3" page="3">
       <description>Models with this special rule gain +1 To Hit in the first round of combat if they successfully charge an enemy in the rear or flank.</description>
@@ -3127,10 +3127,29 @@
               <entryLinks>
                 <entryLink import="true" name="Shield" hidden="false" id="c9bf-9363-b482-b5f5" type="selectionEntry" targetId="c068-0827-9931-d9bf">
                   <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2f48-616f-2ed8-cc6f"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2f48-616f-2ed8-cc6f" includeChildSelections="false" automatic="true"/>
                   </constraints>
+                  <modifiers>
+                    <modifier type="set" value="0" field="2f48-616f-2ed8-cc6f">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="1af5-d12f-219b-bda9" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="0" field="af56-60a7-18d1-6f4f">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="1af5-d12f-219b-bda9" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </entryLink>
               </entryLinks>
+              <modifiers>
+                <modifier type="set" value="0" field="3ea6-01bb-0b28-b780">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="1af5-d12f-219b-bda9" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
             <entryLink import="true" name="40. Suits of Armour" hidden="false" id="673f-a190-39db-ca92" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
               <entryLinks>
