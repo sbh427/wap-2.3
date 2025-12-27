@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="76" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="77" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -9940,7 +9940,7 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
       <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
     </rule>
     <rule id="73fd-d115-269d-bd0a" name="Ancestral Grudge" publicationId="aa7b-3583-0834-7bfa" page="136" hidden="false">
-      <description>Dwarfs have the Hatred (Orcs, Goblins, Trolls, Skaven) special rule.</description>
+      <description>Dwarfs have the Hatred (Orcs, Goblins, Skaven) special rule.</description>
     </rule>
     <rule id="db34-00cf-d5b6-9a4d" name="Relentless" publicationId="aa7b-3583-0834-7bfa" page="136" hidden="false">
       <description>Units entirely composed of models with this special rule do not need to pass a Leadership test in order to march, regardless of the proximity of enemy units.</description>
@@ -10071,7 +10071,7 @@ Flee and Pursue
 Flyers always move on the ground when attempting to flee or pursue.</description>
     </rule>
     <rule id="4740-7f33-d5b8-5563" name="Slayer" publicationId="aa7b-3583-0834-7bfa" page="160" hidden="false">
-      <description>Slayers always Wound on a To Wound roll of 4+, unless they would need a lower result. Use the Slayer&apos;s Strength to determine the armour save modifier for any successful Wounds.</description>
+      <description>Slayers always Wound on a To Wound roll of 4+ in close combat, unless they would need a lower result. Use the Slayer&apos;s Strength to determine the armour save modifier for any successful Wounds.</description>
     </rule>
     <rule id="390b-8c96-7c3a-9598" name="Orc Animosity" publicationId="8ada-88a0-cdcd-9b5e" page="60" hidden="false">
       <description>Units with this  rule must roll a D6 and consult the orc animosity chart in the Charge subphase after all other charges have been declared, unless they have declared a charge, are already in combat, fleeing, or have less than 5 models.</description>
