@@ -6486,7 +6486,7 @@
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">Flame-Template</characteristic>
                     <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the teardrop-shaped template with its narrow end touching the front of the Wizard’s base and the large end aimed at the target. Roll 2D6 and move the template directly forwards the number of inches indicated. All models underneath the template suffer a Strength D6+1 hit (roll once and apply the result to all models) with the Flaming Attacks special rule.</characteristic>
                   </characteristics>
                 </profile>
@@ -6582,7 +6582,7 @@
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit instantly recovers D6+1 Wounds&apos; worth of models slain earlier in the battle, just like a summoning spell. However, if a 1 is rolled, the target suffers D6+1 Wounds with no saves allowed instead.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit instantly recovers D3+1 Wounds&apos; worth of models slain earlier in the battle, just like a summoning spell. However, if a 1 is rolled, the target suffers D6+1 Wounds with no saves allowed instead.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6613,7 +6613,7 @@
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy Wizard within 18&quot;. The caster and the target both roll a D6 and add their Wizard level to the score. If the caster rolls higher, the target suffers a Strength 4 hit with the Flaming Attacks special rule and loses one Wizard level. The caster gains access to this spell (unless it is a summoning spell) it and can cast it themselves for the remainder of the game (using Boon of Magic as the Lore Attribute).</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This spell targets a single enemy Wizard. The caster and the target both roll a D6 and add their Wizard level to the score. If the caster rolls higher, the target suffers a Strength 4 hit with the Flaming Attacks special rule and loses one Wizard level (along with one spell). The caster gains access to this spell (unless it is a summoning spell) and can cast it themselves for the remainder of the game (using Boon of Magic as the Lore Attribute)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6644,7 +6644,7 @@
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">30&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the small round template anywhere within 30&quot; – it then scatters D3&quot;. All models hit by the template suffer a Strength D6+1 hit (roll once and apply the result to all models) with the Flaming Attacks special rule.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the small round template anywhere within Range – it then scatters D3&quot;. All models hit by the template suffer a Strength D6+1 hit (roll once and apply the result to all models) with the Flaming Attacks special rule.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -7250,7 +7250,9 @@
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 hits that wound on a 4+ with the Ignores Armour Saves special rule. For each unsaved Wound caused, the caster&apos;s unit instantly recovers 1 Wounds&apos; worth of models slain earlier in the battle, just like a summoning spell.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 hits that wound on a 4+ with the Ignores Armour Saves special rule. For each unsaved Wound caused,one friendly unit
+
+within 6&quot; of the caster instantly recovers 1 Wounds&apos; worth of models slain earlier in the battle, just like a summoning spell.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10383,13 +10385,13 @@ This rule is cumulative with other sources of Hold Your Ground. If the model ha
       <description>A Daemon of Khorne has Hatred (Daemons of Slaanesh), Magic Resistance (1) and Mighty Blow (1).</description>
     </rule>
     <rule name="Daemon of Nurgle" id="0b9b-1baf-5bcd-1ec3" hidden="false" publicationId="1a01-044f-047b-618f" page="171">
-      <description>A Daemon of Nurgle has Hatred (Daemons of Tzeentch), and enemy models in base contact suffer -1 to their WS.</description>
+      <description>A Daemon of Nurgle has the Hatred (Daemons of Tzeentch) and Poisoned Attacks special rules. Enemy models in base contact suffer -1 to their Weapon Skill.</description>
     </rule>
     <rule name="Daemon of Slaanesh" id="2ad0-3e18-aba8-5e68" hidden="false" publicationId="1a01-044f-047b-618f" page="171">
-      <description>A Daemon of Slaanesh has the Hatred (Daemons of Khorne) and Armour Piercing (1) special rules. Each To Hit roll of 6 generates an additional Attack. These additional Attacks cannot generate further attacks.</description>
+      <description>A Daemon of Slaanesh has the Hatred (Daemons of Khorne) and Armour Piercing (1) special rules. For every regular Attack that causes an unsaved Wound, the model may may an additional Attack. These additional Attacks cannot generate further attacks.</description>
     </rule>
     <rule name="Daemon of Tzeentch" id="fe9a-f478-5bcc-57a8" hidden="false" publicationId="1a01-044f-047b-618f" page="171">
-      <description>A Daemon of Tzeentch has Hatred (Daemons of Nurgle) and Ward Save (6+). Wizards with the Daemon of Tzeentch upgrade can also re-roll channelling results of 1.</description>
+      <description>A Daemon of Tzeentch has the Hatred (Daemons of Nurgle) special rule and may re-roll failed Ward saves.</description>
     </rule>
     <rule name="Mark of Khorne" id="Mark of Khorne" hidden="false" publicationId="1a01-044f-047b-618f" page="163">
       <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
@@ -10404,7 +10406,7 @@ Models with the Mark of Nurgle add +1 to their T.</description>
     <rule name="Mark of Slaanesh" id="Mark of Slaanesh" hidden="false" publicationId="1a01-044f-047b-618f" page="163">
       <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
 
-Models with the Mark of Slaanesh have Immunity (Psychology) and Stubborn.</description>
+Models with the Mark of Slaanesh have the Immunity (Psychology) special rule and may re-roll 1&apos;s on their charge and pursuit distances. </description>
     </rule>
     <rule name="Mark of Tzeentch" id="Mark of Tzeentch" hidden="false" publicationId="1a01-044f-047b-618f" page="163">
       <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
