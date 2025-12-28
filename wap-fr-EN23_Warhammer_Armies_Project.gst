@@ -5778,17 +5778,9 @@
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
-          <profiles>
-            <profile name="The Summoning" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="e1d0-95b6-2dd9-4e7c" page="8" publicationId="1a01-044f-047b-618f">
-              <characteristics>
-                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
-                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
-                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strength 3 hits with the Armour Piercing (1) special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink name="The Summoning" id="9c56-f841-4628-94c7" hidden="false" type="profile" targetId="e1d0-95b6-2dd9-4e7c"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -6582,7 +6574,7 @@
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit instantly recovers D3+1 Wounds&apos; worth of models slain earlier in the battle, just like a summoning spell. However, if a 1 is rolled, the target suffers D6+1 Wounds with no saves allowed instead.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit instantly recovers D3+1 Wounds&apos; worth of models slain earlier in the battle, just like a summoning spell. However, if a 1 is rolled, the target suffers D3+1 Wounds with no saves allowed instead.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -12433,6 +12425,15 @@ Magic phase.</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">6&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets all units within a 6&quot; radius (friend or foe). The target units suffer D3 Strength 4 Hits with the Lightning Attacks special rule.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="The Summoning" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="e1d0-95b6-2dd9-4e7c" page="8" publicationId="1a01-044f-047b-618f">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strength 3 hits with the Armour Piercing (1) special rule.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
