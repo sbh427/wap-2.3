@@ -10569,18 +10569,6 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
     <rule id="9c98-f97f-344b-9e4b" name="Mighty Blow (2)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
       <description>Models with this rule gain a Strength bonus to all their close combat attacks (including Impact Hits and Stomps) equal to the number in the brackets in the first round of each new close combat they are involved in. Note that any attack made with a weapon that gives Mighty Blow only applies to attacks made with the weapon itself. This rule is cumulative with other sources of Mighty Blow.</description>
     </rule>
-    <rule name="Bloodrage" id="fc43-3fac-4ae1-1606" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
-      <description>The Manticore gains Hatred.</description>
-    </rule>
-    <rule name="Iron-hard Skin" id="1569-a18d-c1a5-c774" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
-      <description>The Manticore gains Natural Armour (5+).</description>
-    </rule>
-    <rule name="Venom Tail" id="9513-e549-4849-a0dd" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
-      <description>The Manticore gains an additional Attack that has Poisoned Attacks.</description>
-    </rule>
-    <rule name="Rending Fangs" id="38dc-ae6d-82d1-e44b" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
-      <description>The Manticore gains Armour Piercing (1).</description>
-    </rule>
     <rule id="1d10-62be-aac7-35f6" name="Unit Strength (6)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Unit Strength of 6.</description>
     </rule>
