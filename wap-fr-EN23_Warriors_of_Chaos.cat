@@ -1963,6 +1963,16 @@
                   <costs>
                     <cost name="pts" typeId="points" value="1.5"/>
                   </costs>
+                  <modifiers>
+                    <modifier type="set" value="1" field="e8f0-8158-6c86-7ac9">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="0c7c-159c-f843-23ae" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="e8f0-8158-6c86-7ac9" includeChildSelections="false" automatic="true"/>
+                  </constraints>
                 </entryLink>
                 <entryLink import="true" name="Mark of Nurgle" hidden="false" id="d3b4-6c8b-ac4f-e905" type="selectionEntry" targetId="fce4-1eaa-170d-634c" collective="true" sortIndex="4">
                   <costs>
@@ -1970,6 +1980,30 @@
                   </costs>
                 </entryLink>
               </entryLinks>
+            </selectionEntryGroup>
+            <selectionEntryGroup name="9. Unit Options" id="6c90-9e72-a2c4-7287" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="The Mirror Guard" hidden="false" id="0c7c-159c-f843-23ae" collective="true">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="edc7-50c0-6d47-7d89" includeChildSelections="false"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="95f7-7423-8d11-3c7a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </selectionEntry>
+              </selectionEntries>
+              <rules>
+                <rule name="The Mirror Guard" id="cfd2-051b-616b-9d30" hidden="false">
+                  <description>The Unit may re-roll failed Parry saves</description>
+                </rule>
+              </rules>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
@@ -1987,7 +2021,18 @@
             </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="ca5d-6dba-1cbd-b659" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="1276-41ac-37d9-19da" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="1276-41ac-37d9-19da" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
+                  <constraints>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="0e11-0d7a-c44a-0324" includeChildSelections="false" automatic="true"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="1" field="0e11-0d7a-c44a-0324">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="0c7c-159c-f843-23ae" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
                 <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="2a32-d9ef-2d1a-49ed" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="1.5"/>
@@ -2032,11 +2077,26 @@
                         </conditionGroup>
                       </conditionGroups>
                     </modifier>
+                    <modifier type="set" value="1" field="4935-480c-229a-5fa3">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="0c7c-159c-f843-23ae" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
                   </modifiers>
+                  <constraints>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4935-480c-229a-5fa3" includeChildSelections="false" automatic="true"/>
+                  </constraints>
                 </entryLink>
               </entryLinks>
             </entryLink>
           </entryLinks>
+          <modifiers>
+            <modifier type="increment" value="1" field="points">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="0c7c-159c-f843-23ae" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -3814,7 +3874,7 @@ If you do not have a spare Daemon Prince model, or if it cannot be placed on the
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bc6d-65a4-e818-6236" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="6b68-21bb-0f92-f889" name="Vorgaroth the Scarred" hidden="false" collective="false" import="true" type="model" sortIndex="24">
+            <selectionEntry id="6b68-21bb-0f92-f889" name="Vorgaroth the Scarred" hidden="false" collective="false" import="true" type="model" sortIndex="25">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="8c14-fbed-9550-17e5" type="max"/>
               </constraints>
@@ -3929,7 +3989,7 @@ If you do not have a spare Daemon Prince model, or if it cannot be placed on the
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="47dd-e778-03ce-756d" type="max"/>
                   </constraints>
                   <selectionEntries>
-                    <selectionEntry id="d540-f107-ad61-45fd" name="Body of Sargath the Vain" hidden="false" collective="false" import="true" type="model">
+                    <selectionEntry id="d540-f107-ad61-45fd" name="Body of Sargath the Vain" hidden="false" collective="false" import="true" type="model" sortIndex="1">
                       <profiles>
                         <profile id="ab8b-90e0-ebf3-23f3" name="Sargath" publicationId="f46b-8c4e-ed82-05f7" page="21" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
                           <characteristics>
@@ -4011,7 +4071,7 @@ If you do not have a spare Daemon Prince model, or if it cannot be placed on the
                         <cost name="pts" typeId="points" value="280"/>
                       </costs>
                     </selectionEntry>
-                    <selectionEntry id="2e4f-e20e-509e-3a95" name="Body of Karaka Breakmountain" hidden="false" collective="false" import="true" type="model">
+                    <selectionEntry id="2e4f-e20e-509e-3a95" name="Body of Karaka Breakmountain" hidden="false" collective="false" import="true" type="model" sortIndex="2">
                       <profiles>
                         <profile id="9f21-c506-07fb-7d49" name="Tyrant" publicationId="f46b-8c4e-ed82-05f7" page="21" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
                           <characteristics>
@@ -4102,7 +4162,7 @@ If you do not have a spare Daemon Prince model, or if it cannot be placed on the
                 <categoryLink name="Monster" hidden="false" id="c631-400d-e7fc-162a" targetId="e1a0-da31-05c5-9a15" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="885c-c484-b035-44ee" name="The Glottkin" hidden="false" collective="false" import="true" type="model" sortIndex="25">
+            <selectionEntry id="885c-c484-b035-44ee" name="The Glottkin" hidden="false" collective="false" import="true" type="model" sortIndex="26">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="da28-fe64-a5b7-e1b4" type="max"/>
               </constraints>
@@ -4244,7 +4304,7 @@ If you do not have a spare Daemon Prince model, or if it cannot be placed on the
                 <categoryLink name="Monster" hidden="false" id="0cc6-1288-ce14-8f66" targetId="e1a0-da31-05c5-9a15" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="1c10-5713-c703-0e39" name="Valkia the Bloody" hidden="false" collective="false" import="true" type="model" sortIndex="11">
+            <selectionEntry id="1c10-5713-c703-0e39" name="Valkia the Bloody" hidden="false" collective="false" import="true" type="model" sortIndex="12">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="b089-3122-a2cf-db40" type="max"/>
               </constraints>
@@ -4347,7 +4407,7 @@ If you do not have a spare Daemon Prince model, or if it cannot be placed on the
                 <categoryLink name="Infantry" hidden="false" id="ae6a-0057-578c-4983" targetId="22c9-1606-58f8-2e60" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="4682-f278-cdb7-39c2" name="Vilitch the Curseling" hidden="false" collective="false" import="true" type="model" sortIndex="12">
+            <selectionEntry id="4682-f278-cdb7-39c2" name="Vilitch the Curseling" hidden="false" collective="false" import="true" type="model" sortIndex="13">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c704-cebf-9061-6085" type="max"/>
               </constraints>
@@ -4381,7 +4441,7 @@ If you do not have a spare Daemon Prince model, or if it cannot be placed on the
                   <profiles>
                     <profile id="cbc8-06a0-7b4f-e9de" name="Vessel of Chaos" publicationId="1a01-044f-047b-618f" page="91" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
                       <characteristics>
-                        <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">When an enemy Wizard fails to meet the casting value of a spell, the power dice used for that attempt are converted to bonus dispel dice that Vilitch the Curseling may utilise later that phase. Conversely, should the enemy make a failed dispel attempt to counter one of Vilitch the Curseling&apos;s spells, the dispel dice used for that attempt are immediately converted to bonus power dice that Vilitch may utilise later that phase. Note that these bonus dice cannot take your pool above the maximum limit and no other Wizard can use these bonus dice – if Vilitch is unable to use them, they are lost.</characteristic>
+                        <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">Arcane Item. When an enemy Wizard fails to meet the casting value of a spell, the power dice used for that attempt are converted to bonus dispel dice that Vilitch the Curseling may utilise later that phase. Conversely, should the enemy make a failed dispel attempt to counter one of Vilitch the Curseling&apos;s spells, the dispel dice used for that attempt are immediately converted to bonus power dice that Vilitch may utilise later that phase. No other Wizard can use these bonus dice.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4440,7 +4500,7 @@ If you do not have a spare Daemon Prince model, or if it cannot be placed on the
                 <categoryLink name="Infantry" hidden="false" id="8859-bfbb-a02b-60ee" targetId="22c9-1606-58f8-2e60" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="667c-7eb8-8d34-0e74" name="Morbidex Twiceborn" hidden="false" collective="false" import="true" type="model" sortIndex="15">
+            <selectionEntry id="667c-7eb8-8d34-0e74" name="Morbidex Twiceborn" hidden="false" collective="false" import="true" type="model" sortIndex="16">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="3fdd-6d01-bae5-9d59" type="max"/>
               </constraints>
@@ -4543,7 +4603,7 @@ If you do not have a spare Daemon Prince model, or if it cannot be placed on the
                 <categoryLink name="Monster" hidden="false" id="b420-72d9-ae1e-781d" targetId="e1a0-da31-05c5-9a15" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="95f7-7423-8d11-3c7a" name="Sigvald the Magnificent" hidden="false" collective="false" import="true" type="model" sortIndex="8">
+            <selectionEntry id="95f7-7423-8d11-3c7a" name="Sigvald the Magnificent" hidden="false" collective="false" import="true" type="model" sortIndex="9">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="995c-3c41-0fe0-5ca8" type="max"/>
               </constraints>
@@ -4668,7 +4728,7 @@ If you do not have a spare Daemon Prince model, or if it cannot be placed on the
                 <categoryLink name="Infantry" hidden="false" id="30f4-802d-4b89-e3da" targetId="22c9-1606-58f8-2e60" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="3398-bb8d-2584-1f64" name="Sayl the Faithless" hidden="false" collective="false" import="true" type="model" sortIndex="13">
+            <selectionEntry id="3398-bb8d-2584-1f64" name="Sayl the Faithless" hidden="false" collective="false" import="true" type="model" sortIndex="14">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="12f1-8da3-e768-cf45" type="max"/>
               </constraints>
@@ -4835,7 +4895,7 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                 <categoryLink name="Infantry" hidden="false" id="c08a-7741-17cd-7d78" targetId="22c9-1606-58f8-2e60" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="1b83-99b3-0dd8-cd65" name="Arbaal the Destroyer" hidden="false" collective="false" import="true" type="model" sortIndex="7">
+            <selectionEntry id="1b83-99b3-0dd8-cd65" name="Arbaal the Destroyer" hidden="false" collective="false" import="true" type="model" sortIndex="8">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="a731-c22d-acb8-9a28" type="max"/>
               </constraints>
@@ -4933,7 +4993,7 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                 <categoryLink name="Monstrous Cavalry" hidden="false" id="61ff-c36b-96e4-1aab" targetId="82d3-4589-72b4-b6ed" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="cbcf-3357-c3cf-1fcf" name="Orghotts Daemonspew" hidden="false" collective="false" import="true" type="model" sortIndex="16">
+            <selectionEntry id="cbcf-3357-c3cf-1fcf" name="Orghotts Daemonspew" hidden="false" collective="false" import="true" type="model" sortIndex="17">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="36f4-8ca6-fa63-0911" type="max"/>
               </constraints>
@@ -5037,7 +5097,7 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                 <categoryLink name="Monster" hidden="false" id="b829-b76f-88e0-63e2" targetId="e1a0-da31-05c5-9a15" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="67de-5882-a257-da2e" name="Kholek Suneater" hidden="false" collective="false" import="true" type="model" sortIndex="18">
+            <selectionEntry id="67de-5882-a257-da2e" name="Kholek Suneater" hidden="false" collective="false" import="true" type="model" sortIndex="19">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="d811-092b-b557-05a3" type="max"/>
               </constraints>
@@ -5059,10 +5119,11 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
               </profiles>
               <infoLinks>
                 <infoLink id="406a-a05b-c068-4780" name="Immunity (Lightning Attacks)" hidden="false" targetId="3c13-1f49-b25b-95f8" type="rule"/>
-                <infoLink id="e13c-44f8-dca8-0092" name="Natural Armour (4+)" hidden="false" targetId="6b43-9dda-f589-0509" type="rule"/>
+                <infoLink id="e13c-44f8-dca8-0092" name="Storm Rage" hidden="false" targetId="9cd6-64c7-e7c5-4ef6" type="rule"/>
                 <infoLink id="1db7-16e2-d28b-e729" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
                 <infoLink id="1fa5-f149-37a2-a5f4" name="Impact Hits (D6)" hidden="false" targetId="e9e6-66cc-623f-8e94" type="rule"/>
                 <infoLink name="Storm Call" id="ebeb-c776-3f5e-ac9b" hidden="false" type="profile" targetId="db98-698f-5fae-ba03"/>
+                <infoLink id="6d99-950c-d2e9-a9e3" name="Natural Armour (4+)" hidden="false" targetId="6b43-9dda-f589-0509" type="rule"/>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry id="0214-55bd-5f2d-f049" name="Armour of the Storm" hidden="false" collective="false" import="true" type="upgrade">
@@ -5130,7 +5191,7 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                 <categoryLink name="Monster" hidden="false" id="22c4-2e05-e7cc-3906" targetId="e1a0-da31-05c5-9a15" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="548b-ad93-25a7-d02e" name="Count Mordrek" hidden="false" collective="false" import="true" type="model" sortIndex="5">
+            <selectionEntry id="548b-ad93-25a7-d02e" name="Count Mordrek" hidden="false" collective="false" import="true" type="model" sortIndex="6">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="2083-f97a-a42a-3602" type="max"/>
               </constraints>
@@ -5222,7 +5283,7 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                 <categoryLink name="Cavalry" hidden="false" id="64c1-c5f6-bb61-9ed0" targetId="bdee-b168-38ba-7d3c" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="4f2d-7d16-979e-4b87" name="Khazek" hidden="false" collective="false" import="true" type="model" sortIndex="21">
+            <selectionEntry id="4f2d-7d16-979e-4b87" name="Khazek" hidden="false" collective="false" import="true" type="model" sortIndex="22">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="0f45-dec8-647c-9dad" type="max"/>
               </constraints>
@@ -5352,7 +5413,7 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                 <categoryLink name="Monster" hidden="false" id="1f19-a463-0096-aa18" targetId="e1a0-da31-05c5-9a15" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="3788-58b9-13bb-9bbb" name="Harald Hammerstorm" hidden="false" collective="false" import="true" type="model" sortIndex="3">
+            <selectionEntry id="3788-58b9-13bb-9bbb" name="Harald Hammerstorm" hidden="false" collective="false" import="true" type="model" sortIndex="4">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="fe08-c153-bfef-bf1f" type="max"/>
               </constraints>
@@ -5449,7 +5510,7 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                 <categoryLink name="Infantry" hidden="false" id="406b-ae9b-f38c-968e" targetId="22c9-1606-58f8-2e60" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="618e-267b-cbee-d317" name="Gutrot Spume" hidden="false" collective="false" import="true" type="model" sortIndex="6">
+            <selectionEntry id="618e-267b-cbee-d317" name="Gutrot Spume" hidden="false" collective="false" import="true" type="model" sortIndex="7">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="6a0f-01b2-5cd8-4b3e" type="max"/>
               </constraints>
@@ -5509,15 +5570,23 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6bd1-07dc-32ca-37ce"/>
                   </constraints>
                 </entryLink>
+                <entryLink import="true" name="Magic Items" hidden="false" id="5adc-3095-0ed6-3748" type="selectionEntryGroup" targetId="e209-d9fa-d21a-8f20">
+                  <modifiers>
+                    <modifier type="increment" value="50" field="aa09-2979-2052-ada1"/>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="275"/>
               </costs>
               <categoryLinks>
                 <categoryLink name="Infantry" hidden="false" id="bbe7-51e6-553b-ec7c" targetId="22c9-1606-58f8-2e60" primary="false"/>
+                <categoryLink name="Z Armour" hidden="false" id="d35b-e057-ff22-3b5d" targetId="387c-2b7c-0a30-7305" primary="false"/>
+                <categoryLink name="Z Medium Armour" hidden="false" id="2c01-47bf-a774-3efc" targetId="222a-078c-ce85-fb16" primary="false"/>
+                <categoryLink name="X Great Weapon" hidden="false" id="eb83-e14b-4482-90ae" targetId="abcc-4aa7-4989-7189" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="eafa-a0c2-5fe5-ad5d" name="Glutos Orscollion" hidden="false" collective="false" import="true" type="model" sortIndex="22">
+            <selectionEntry id="eafa-a0c2-5fe5-ad5d" name="Glutos Orscollion" hidden="false" collective="false" import="true" type="model" sortIndex="23">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="da11-de94-54aa-c105" type="max"/>
               </constraints>
@@ -5765,7 +5834,7 @@ failed charge rolls.</characteristic>
                 <categoryLink name="Shrine" hidden="false" id="c247-ade3-5ec3-8aa4" targetId="aff0-db72-0064-43fe" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="be6a-9735-7633-3843" name="Galrauch" hidden="false" collective="false" import="true" type="model" sortIndex="19">
+            <selectionEntry id="be6a-9735-7633-3843" name="Galrauch" hidden="false" collective="false" import="true" type="model" sortIndex="20">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="ffd0-580f-48c0-f871" type="max"/>
               </constraints>
@@ -5826,7 +5895,7 @@ failed charge rolls.</characteristic>
                 <categoryLink name="Monster" hidden="false" id="afb1-d27f-94e6-c0ac" targetId="e1a0-da31-05c5-9a15" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="931d-0ae8-7c70-917d" name="Ergrimm van Horstmann" hidden="false" collective="false" import="true" type="model" sortIndex="23">
+            <selectionEntry id="931d-0ae8-7c70-917d" name="Ergrimm van Horstmann" hidden="false" collective="false" import="true" type="model" sortIndex="24">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="0044-7cef-a86c-b572" type="max"/>
               </constraints>
@@ -5958,7 +6027,7 @@ failed charge rolls.</characteristic>
                 <categoryLink name="Monster" hidden="false" id="7c3a-b231-c18f-314f" targetId="e1a0-da31-05c5-9a15" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="1c0f-09d9-6fb5-a4f5" name="Bloab Rotspawned" hidden="false" collective="false" import="true" type="model" sortIndex="17">
+            <selectionEntry id="1c0f-09d9-6fb5-a4f5" name="Bloab Rotspawned" hidden="false" collective="false" import="true" type="model" sortIndex="18">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="ba4a-ebe5-ef4c-219e" type="max"/>
               </constraints>
@@ -6067,7 +6136,7 @@ failed charge rolls.</characteristic>
                 <categoryLink name="Monster" hidden="false" id="5dc2-dc97-d4ac-c8dc" targetId="e1a0-da31-05c5-9a15" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="bc24-6680-b227-36f7" name="Archaon The Everchosen" hidden="false" collective="false" import="true" type="model" sortIndex="20">
+            <selectionEntry id="bc24-6680-b227-36f7" name="Archaon The Everchosen" hidden="false" collective="false" import="true" type="model" sortIndex="21">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="5488-4a58-7bc8-4bd7" type="max"/>
               </constraints>
@@ -6187,7 +6256,7 @@ failed charge rolls.</characteristic>
                         <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
                         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
                         <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
-                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Daemon)</characteristic>
+                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Daemonic Steed)</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -6243,7 +6312,7 @@ failed charge rolls.</characteristic>
                 <categoryLink name="Infantry" hidden="false" id="e5ac-8f27-cebb-0180" targetId="22c9-1606-58f8-2e60" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="8ceb-a110-4174-2796" name="Vardek Crom" hidden="false" collective="false" import="true" type="model" sortIndex="4">
+            <selectionEntry id="8ceb-a110-4174-2796" name="Vardek Crom" hidden="false" collective="false" import="true" type="model" sortIndex="5">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="f1cd-395a-7694-b7f6" type="max"/>
               </constraints>
@@ -6311,9 +6380,13 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               </costs>
               <categoryLinks>
                 <categoryLink name="Infantry" hidden="false" id="5e46-aa3b-a0a6-fc59" targetId="22c9-1606-58f8-2e60" primary="false"/>
+                <categoryLink name="X Additional Hand Weapon" hidden="false" id="72cb-c6c6-e927-6896" targetId="c4b0-4ee4-7b99-843e" primary="false"/>
+                <categoryLink name="Z Heavy Armour" hidden="false" id="3365-d7c3-82fe-aa5d" targetId="f667-6e97-ec08-38ea" primary="false"/>
+                <categoryLink name="Z Shield" hidden="false" id="2f30-5664-2f78-9fbc" targetId="0210-637d-ff12-a760" primary="false"/>
+                <categoryLink name="Z Armour" hidden="false" id="13d6-f1cf-4049-626e" targetId="387c-2b7c-0a30-7305" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="b097-0c96-ccbc-9ba5" name="Khorgos Khul" hidden="false" collective="false" import="true" type="model" sortIndex="9">
+            <selectionEntry id="b097-0c96-ccbc-9ba5" name="Khorgos Khul" hidden="false" collective="false" import="true" type="model" sortIndex="10">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="3260-41d4-a891-7e27" type="max"/>
               </constraints>
@@ -6421,7 +6494,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                 <categoryLink name="Infantry" hidden="false" id="5b5c-4171-0e6a-ebcb" targetId="22c9-1606-58f8-2e60" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry type="model" import="true" name="Abraxia" hidden="false" id="a00d-07f6-70be-66e1" sortIndex="14">
+            <selectionEntry type="model" import="true" name="Abraxia" hidden="false" id="a00d-07f6-70be-66e1" sortIndex="15">
               <costs>
                 <cost name="pts" typeId="points" value="415"/>
               </costs>
@@ -6483,7 +6556,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                         </profile>
                         <profile name="6" typeId="935e-58b5-1a0e-8559" typeName="Gorbolga the Accursed" hidden="false" id="3d13-bee7-a69d-5896">
                           <characteristics>
-                            <characteristic name="Result" typeId="fa91-50fd-254d-551d">Rampant Mutation: Abraxia gains +1 Strength. In addition, for each natural To Hit roll of 6 made with this weapon, the enemy unit suffers D3 Wounds with no saves allowed.</characteristic>
+                            <characteristic name="Result" typeId="fa91-50fd-254d-551d">Rampant Mutation: Abraxia gains +1 Strength. In addition, for each natural To Hit roll of 6 made with this weapon, the enemy unit suffers D3 Wounds with no saves allowed, distributed as Hits from shooting.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -6503,6 +6576,28 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                       </modifiers>
                     </infoLink>
                   </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="model" import="true" name="Thanatorg" hidden="false" id="7fc1-2986-b400-06b2" subType="mount" collective="true">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="55fb-5154-257c-c4e8-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="55fb-5154-257c-c4e8-max" includeChildSelections="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Thanatorg (Karkadrak)" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="fb47-69e6-d7c0-cfb7">
+                      <characteristics>
+                        <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
+                        <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+                        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+                        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+                        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+                        <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
+                        <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+                        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+                        <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Thanatorg (Draconid)</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
                 </selectionEntry>
               </selectionEntries>
               <rules>
@@ -6526,20 +6621,6 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
                     <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
                     <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Creature (Character, Human)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Thanatorg (Karkadrak)" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="fb47-69e6-d7c0-cfb7">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6594,6 +6675,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                         <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
+                    <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.3ad5-5ae2-4d46-6e6b"/>
                   </modifiers>
                 </entryLink>
               </entryLinks>
@@ -6619,9 +6701,11 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               </costs>
               <categoryLinks>
                 <categoryLink name="Infantry" hidden="false" id="7cec-0cc1-b856-a473" targetId="22c9-1606-58f8-2e60" primary="false"/>
+                <categoryLink name="Z Armour" hidden="false" id="c9d4-db2f-0571-efd8" targetId="387c-2b7c-0a30-7305" primary="false"/>
+                <categoryLink name="Z Light Armour" hidden="false" id="a309-355b-6ab0-6905" targetId="fa51-55d0-00b9-c0e8" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry type="model" import="true" name="Skarr Bloodwrath" hidden="false" id="de2f-129b-76ae-4b95" sortIndex="10">
+            <selectionEntry type="model" import="true" name="Skarr Bloodwrath" hidden="false" id="de2f-129b-76ae-4b95" sortIndex="11">
               <profiles>
                 <profile name="Skarr Bloodwrath" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6d41-8a0d-be9b-5eed">
                   <characteristics>
@@ -6680,12 +6764,76 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                 </entryLink>
               </entryLinks>
             </selectionEntry>
+            <selectionEntry type="model" import="true" name="Frydaal the Chainmaker" hidden="false" id="ea93-c8f3-7aab-d9cd" sortIndex="3">
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="fb06-560e-0729-c5e1" targetId="22c9-1606-58f8-2e60" primary="false"/>
+              </categoryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="195"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4fd5-0d20-5a5c-0398" includeChildSelections="true"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Heavy Armour" hidden="false" id="2124-e34c-16b9-a09b" type="selectionEntry" targetId="30e0-7325-ea6b-af97"/>
+              </entryLinks>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Storm&apos;s Wrath" hidden="false" id="d37c-14c9-10f3-140f">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c0ab-f0e5-77ad-fc71-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c0ab-f0e5-77ad-fc71-max" includeChildSelections="false"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Flail" id="5818-927d-49e2-bf75" hidden="false" type="profile" targetId="7f6a-b8b2-8978-4f35">
+                      <modifiers>
+                        <modifier type="set" value="Storm&apos;s Wrath" field="annotation"/>
+                        <modifier type="append" value="This weapon gives Frydaal +D3 Attacks in each round of close combat." field="de63-d6da-efa8-00ac"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <infoLinks>
+                <infoLink name="Will of Chaos" id="6916-e625-dd1d-33e7" hidden="false" type="rule" targetId="d658-f5e9-8cbf-0cbb"/>
+                <infoLink name="Chaos Armour" id="96fd-0120-448a-94fb" hidden="false" type="rule" targetId="b66b-400b-7d98-1c53"/>
+                <infoLink name="Eye of the Gods" id="93be-375d-dedf-5885" hidden="false" type="rule" targetId="b167-39dc-6abe-179d"/>
+                <infoLink name="Impact Hits (1)" id="eb30-24d9-b7cb-6b0c" hidden="false" type="rule" targetId="bb3b-3ca8-fcbc-a78b"/>
+              </infoLinks>
+              <profiles>
+                <profile name="Frydaal the Chainmaker" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="b934-5298-f905-9a6d">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">7</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Human)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <rules>
+                <rule name="Peerless Raider" id="b6ef-cccf-a108-a256" hidden="false">
+                  <description>If Frydaal is included in your army, one unit of Marauders, Marauder Hunters or Marauder Horsemen may deploy using the Ambushers special rule. In addition, this unit gains a +1 modifier to the result when determining if they arrive.</description>
+                </rule>
+                <rule name="Chainmaker" id="85a2-404e-363f-fcf0" hidden="false">
+                  <description>Any enemy unit destroyed by Frydaal in combat or through pursuit is worth +100 Victory Points.</description>
+                </rule>
+                <rule name="Renowned Sea Captain" id="dbca-74d5-8241-e26c" hidden="false">
+                  <description>Frydaal has the Inspiring Presence (6) special rule affecting friendly units of Marauders.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <comment>lords</comment>
     </selectionEntry>
     <selectionEntry id="85e2-288b-b502-cfa9" name="Special Characters" hidden="false" collective="false" import="true" type="unit" sortIndex="7.5">
       <categoryLinks>
@@ -6698,7 +6846,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="747d-c6d0-c4e3-7f17" type="min"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry id="908f-14bc-06c9-37aa" name="Wulfrik the Wanderer" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="908f-14bc-06c9-37aa" name="Wulfrik the Wanderer" hidden="false" collective="false" import="true" type="model" sortIndex="3">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="4547-d82e-a13b-d2e3" type="max"/>
               </constraints>
@@ -6727,6 +6875,9 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                 </rule>
                 <rule id="7bb1-4506-6b83-cefe" name="Gift of Tongues" publicationId="1a01-044f-047b-618f" page="75" hidden="false">
                   <description>When Wulfrik the Wanderer issues a challenge, your opponent cannot choose to refuse it. Furthermore, Wulfrik nominates which enemy character will accept the challenge.</description>
+                </rule>
+                <rule name="Wulfrik" id="6ddd-9372-ed39-73f9" hidden="false">
+                  <description>Wulfrik the Wanderer counts as a Marauder Chieftain for the purpose of taking Marauder Champions.</description>
                 </rule>
               </rules>
               <infoLinks>
@@ -6770,8 +6921,11 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               <costs>
                 <cost name="pts" typeId="points" value="185"/>
               </costs>
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="5d55-d5cb-2141-f409" targetId="22c9-1606-58f8-2e60" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="5414-8fd7-d9cd-a800" name="Aekold Helbrass" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="5414-8fd7-d9cd-a800" name="Aekold Helbrass" hidden="false" collective="false" import="true" type="model" sortIndex="5">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="ad8d-ee9a-e2ba-78e8" type="max"/>
               </constraints>
@@ -6848,8 +7002,11 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               <costs>
                 <cost name="pts" typeId="points" value="205"/>
               </costs>
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="1431-238c-228c-4fe5" targetId="22c9-1606-58f8-2e60" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="c05e-c670-3faf-ae6a" name="Lokjar Bjoergir" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="c05e-c670-3faf-ae6a" name="Lokjar Bjoergir" hidden="false" collective="false" import="true" type="model" sortIndex="2">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="7eb6-5282-9823-3c15" type="max"/>
               </constraints>
@@ -6943,8 +7100,11 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               <costs>
                 <cost name="pts" typeId="points" value="135"/>
               </costs>
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="7415-68f8-1454-d633" targetId="22c9-1606-58f8-2e60" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="b354-6ace-4e80-9844" name="Scyla Anfingrimm" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="b354-6ace-4e80-9844" name="Scyla Anfingrimm" hidden="false" collective="false" import="true" type="model" sortIndex="1">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="8a95-baf5-ac48-fd18" type="max"/>
               </constraints>
@@ -6994,8 +7154,11 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               <costs>
                 <cost name="pts" typeId="points" value="105"/>
               </costs>
+              <categoryLinks>
+                <categoryLink name="Monstrous Creature" hidden="false" id="4ab0-1950-79e9-f7da" targetId="b3e5-4b1b-7050-7e02" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="a696-9ce8-c2ba-5461" name="Throgg Wintertooth" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="a696-9ce8-c2ba-5461" name="Throgg Wintertooth" hidden="false" collective="false" import="true" type="model" sortIndex="9">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="9bac-d78a-13f2-90d1" type="max"/>
               </constraints>
@@ -7059,8 +7222,11 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               <costs>
                 <cost name="pts" typeId="points" value="265"/>
               </costs>
+              <categoryLinks>
+                <categoryLink name="Monstrous Infantry" hidden="false" id="4cc6-58f4-85b8-bcf0" targetId="5fc5-b80a-115f-bca3" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="074c-13c8-0b77-22a1" name="Dechala" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="074c-13c8-0b77-22a1" name="Dechala" hidden="false" collective="false" import="true" type="model" sortIndex="8">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="c1cd-2b6c-b130-0f95" type="max"/>
               </constraints>
@@ -7141,8 +7307,11 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               <costs>
                 <cost name="pts" typeId="points" value="255"/>
               </costs>
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="bc7c-bf68-296b-4b61" targetId="22c9-1606-58f8-2e60" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="2cf4-2010-f791-4f6d" name="Kayzk the Befouled" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="2cf4-2010-f791-4f6d" name="Kayzk the Befouled" hidden="false" collective="false" import="true" type="model" sortIndex="10">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="974f-518d-a0ee-2ab5" type="max"/>
               </constraints>
@@ -7211,8 +7380,11 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               <costs>
                 <cost name="pts" typeId="points" value="280"/>
               </costs>
+              <categoryLinks>
+                <categoryLink name="Monstrous Cavalry" hidden="false" id="aa1b-be1f-c6bd-cd36" targetId="82d3-4589-72b4-b6ed" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="0935-c10b-7951-7c8b" name="Festus the Leechlord" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="0935-c10b-7951-7c8b" name="Festus the Leechlord" hidden="false" collective="false" import="true" type="model" sortIndex="6">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="389d-99ea-c350-9856" type="max"/>
               </constraints>
@@ -7295,8 +7467,11 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               <costs>
                 <cost name="pts" typeId="points" value="215"/>
               </costs>
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="bd0c-8d7e-258f-85a2" targetId="22c9-1606-58f8-2e60" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
-            <selectionEntry id="d9e2-7cde-846d-eebc" name="Atarus" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="d9e2-7cde-846d-eebc" name="Atarus" hidden="false" collective="false" import="true" type="model" sortIndex="4">
               <constraints>
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="2b49-5368-dab2-8715" type="max"/>
               </constraints>
@@ -7365,10 +7540,13 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                 </entryLink>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="points" value="190"/>
+                <cost name="pts" typeId="points" value="195"/>
               </costs>
+              <categoryLinks>
+                <categoryLink name="Monstrous Cavalry" hidden="false" id="da49-7908-978d-6fe7" targetId="82d3-4589-72b4-b6ed" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
-            <selectionEntry type="model" import="true" name="Valnir the Reaper" hidden="false" id="bbfb-376c-b382-003a" collective="false">
+            <selectionEntry type="model" import="true" name="Valnir the Reaper" hidden="false" id="bbfb-376c-b382-003a" collective="false" sortIndex="11">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="false" id="6900-68ab-bc1d-d4f3" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </constraints>
@@ -7453,12 +7631,119 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                 <categoryLink name="Infantry" hidden="false" id="a066-eb0a-ed67-1213" targetId="22c9-1606-58f8-2e60" primary="false"/>
               </categoryLinks>
             </selectionEntry>
+            <selectionEntry type="model" import="true" name="Styrkaar of the Sortsvinaer" hidden="false" id="97c1-1189-c4e9-dfa5" sortIndex="7">
+              <costs>
+                <cost name="pts" typeId="points" value="225"/>
+              </costs>
+              <profiles>
+                <profile name="Styrkaar of the Sortsvinaer" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="7a87-9da3-747e-f58a">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">7</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Human)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="f214-d239-ef9a-3e80" targetId="22c9-1606-58f8-2e60" primary="false"/>
+              </categoryLinks>
+              <entryLinks>
+                <entryLink import="true" name="Shield" hidden="false" id="18e0-4f39-fb89-098f" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8899-21d4-f204-cc7c" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="70. Mount" hidden="false" id="23b0-4461-7753-f501" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+                  <entryLinks>
+                    <entryLink import="true" name="Serpent of Slaanesh" hidden="false" id="b981-52f2-5d35-4e47" type="selectionEntry" targetId="34b1-59d3-f1a9-3c19" sortIndex="2">
+                      <costs>
+                        <cost name="pts" typeId="points" value="32"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Steed of Slaanesh" hidden="false" id="fc05-03f1-c074-5ed3" type="selectionEntry" targetId="57f0-0301-2544-4b78" sortIndex="1">
+                      <costs>
+                        <cost name="pts" typeId="points" value="16"/>
+                      </costs>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+              </entryLinks>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Blade of Endless Boasts" hidden="false" id="5e9a-19da-686f-2dce">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="41d6-9ef1-48b0-906e-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="41d6-9ef1-48b0-906e-max" includeChildSelections="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Blade of Endless Boasts" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="e02b-c0df-8c0d-8164">
+                      <characteristics>
+                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
+                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">This weapon gives Styrkaar the Armour Piercing (1) special rule. In addition, he gains +1 Attack for each enemy model in base contact.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Armour of Disdain" hidden="false" id="d063-3c81-4b6b-0551">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3af3-b018-517a-a787-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3af3-b018-517a-a787-max" includeChildSelections="false"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Medium Armour" id="495d-cefb-6d0e-1916" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
+                      <modifiers>
+                        <modifier type="set" value="Armour of Disdain" field="annotation"/>
+                        <modifier type="append" value="This armour gives Styrkaar a 6+ Ward save. For each Hit that Styrkaar suffers in close combat, he immediately gets to make an additional Attack.
+" field="ff58-91e4-84d7-e6e4"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Sign of Depravity" hidden="false" id="d5c5-d6a4-7d64-a0d1">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="399f-9f17-43c4-a712-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="399f-9f17-43c4-a712-max" includeChildSelections="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Sign of Depravity" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="658e-7581-15ad-d0a3">
+                      <characteristics>
+                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
+                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">This item gives Styrkaar the Inspiring Presence (6) special rule. In addition, enemy units within 6&quot; of him cannot use Inspiring Presence.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+              <infoLinks>
+                <infoLink name="Mark of Slaanesh" id="ce0c-b877-503e-9b80" hidden="false" type="rule" targetId="Mark of Slaanesh"/>
+                <infoLink name="Chaos Armour" id="ec10-2671-ceb2-75e0" hidden="false" type="rule" targetId="b66b-400b-7d98-1c53"/>
+                <infoLink name="Eye of the Gods" id="96b6-643d-8ab0-db5d" hidden="false" type="rule" targetId="b167-39dc-6abe-179d"/>
+                <infoLink name="Fear" id="c42d-b1a9-eb09-bd80" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
+              </infoLinks>
+              <rules>
+                <rule name="Unseen Companion" id="1850-0da3-d868-69a5" hidden="false">
+                  <description>Enemy units do not gain any bonus for attacking Styrkaar and any unit he joins in the flank or rear.</description>
+                </rule>
+                <rule name="Glorious Slaughter" id="0b15-e37c-cd9f-befa" hidden="false">
+                  <description>Styrkaar and any unit he joins may re-roll their pursuit distance.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <comment>hero</comment>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Warlord" hidden="false" id="9efb-d88f-90d0-9e32" collective="false" sortIndex="1">
       <infoLinks>
@@ -9056,6 +9341,35 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Dragon Ogres (From Shaggoth)" hidden="false" id="d502-5df7-1312-1887" sortIndex="34">
+      <entryLinks>
+        <entryLink import="true" name="Dragon Ogre" hidden="false" id="63f5-7009-d8c2-2b64" type="selectionEntry" targetId="7d5f-f65e-9739-0714"/>
+      </entryLinks>
+      <categoryLinks>
+        <categoryLink name="Special" hidden="false" id="6277-9ea2-cd7c-51a1" targetId="fc26-7737-f7cb-8977" primary="true"/>
+        <categoryLink name="Monstrous Cavalry" hidden="false" id="aedb-c53a-9891-df0e" targetId="82d3-4589-72b4-b6ed" primary="false"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="increment" value="1" field="c0a9-f7f5-0b51-b5bc">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="roster" childId="d2d0-22c3-bd9f-fde0" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="d2d0-22c3-bd9f-fde0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="67de-5882-a257-da2e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="c0a9-f7f5-0b51-b5bc" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
@@ -14170,7 +14484,7 @@ A Giant of Nurgle has +1 T.</description>
             <condition type="equalTo" value="1" field="selections" scope="force" childId="67de-5882-a257-da2e" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
-        <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category">
+        <modifier type="unset-primary" value="0eb4-f376-7725-b05b" field="category">
           <conditions>
             <condition type="equalTo" value="1" field="selections" scope="force" childId="67de-5882-a257-da2e" shared="true" includeChildSelections="true"/>
           </conditions>
