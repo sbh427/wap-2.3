@@ -1001,7 +1001,7 @@
             <modifier type="increment" value="50" field="8842-f7c6-52b3-7698"/>
             <modifier type="decrement" value="25" field="8842-f7c6-52b3-7698">
               <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="a68d-02fd-0422-dba8" shared="true" includeChildSelections="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="544c-3294-a259-081f" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -2500,11 +2500,6 @@
           <entryLinks>
             <entryLink import="true" name="40. Suits of Armour" hidden="false" id="e263-4f14-ab05-4095" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
               <entryLinks>
-                <entryLink import="true" name="Mantlets" hidden="false" id="9eec-a633-2f8a-7ced" type="selectionEntry" targetId="d7c0-35e3-a945-de03" sortIndex="3">
-                  <costs>
-                    <cost name="pts" typeId="points" value="1.5"/>
-                  </costs>
-                </entryLink>
                 <entryLink import="true" name="Light Armour" hidden="false" id="faed-a37a-196d-9079" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="1">
                   <costs>
                     <cost name="pts" typeId="points" value="0.5"/>
@@ -2516,13 +2511,6 @@
                   </costs>
                 </entryLink>
               </entryLinks>
-              <modifiers>
-                <modifier type="set" value="2" field="b3e8-624f-92d7-7b5b">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="d7c0-35e3-a945-de03" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
             </entryLink>
             <entryLink import="true" name="11. Clan Mons" hidden="false" id="eb16-4724-f041-40ea" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="03ab-5a4e-edfe-f674" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
@@ -2542,6 +2530,15 @@
                   </costs>
                 </entryLink>
                 <entryLink import="true" name="Polearm/Halberd" hidden="false" id="3915-a23c-5575-e8b9" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="1"/>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="55. Equipment" hidden="false" id="8184-d59c-cb40-fe14" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+              <entryLinks>
+                <entryLink import="true" name="Mantlets" hidden="false" id="9eec-a633-2f8a-7ced" type="selectionEntry" targetId="d7c0-35e3-a945-de03">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1.5"/>
+                  </costs>
+                </entryLink>
               </entryLinks>
             </entryLink>
           </entryLinks>
@@ -2644,10 +2641,22 @@
               <entryLinks>
                 <entryLink import="true" name="Katana" hidden="false" id="2f37-8543-2d85-9ae4" type="selectionEntry" targetId="04a7-e5b9-407a-a686">
                   <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0c3f-3f09-d8ea-f240" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="253d-f05f-ef07-f163" includeChildSelections="false"/>
                   </constraints>
                 </entryLink>
+                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="393a-4c0a-bf93-207f" type="selectionEntry" targetId="7617-f4b5-02ac-3d15">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
+                </entryLink>
               </entryLinks>
+              <modifiers>
+                <modifier type="set" value="2" field="fe22-ce5f-b23e-303d">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="393a-4c0a-bf93-207f" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
             <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="589d-4141-de61-3cdf" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
               <entryLinks>
@@ -2949,7 +2958,7 @@
             <infoLink name="Ashigaru" id="f806-edf6-1f39-1b4b" hidden="false" type="profile" targetId="cacb-8777-d493-6e8d"/>
           </infoLinks>
           <entryLinks>
-            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="b86b-7a7d-ba72-7a84" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
+            <entryLink import="true" name="55. Equipment" hidden="false" id="b86b-7a7d-ba72-7a84" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
               <entryLinks>
                 <entryLink import="true" name="Mantlets" hidden="false" id="8200-e397-d677-63c8" type="selectionEntry" targetId="d7c0-35e3-a945-de03">
                   <costs>
@@ -2994,6 +3003,7 @@
         <categoryLink name="Special" hidden="false" id="f787-33b1-328f-f5f4" targetId="fc26-7737-f7cb-8977" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="599a-f5f2-4253-eec3" targetId="22c9-1606-58f8-2e60" primary="false"/>
         <categoryLink name="X Katana" hidden="false" id="b484-36cc-439e-b3f7" targetId="0bfc-67f6-5e48-cf01" primary="false"/>
+        <categoryLink name="Asigaru" hidden="false" id="607c-7428-8af1-0f89" targetId="1ee4-f5b2-caf1-32b2" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Wako Pirates" hidden="false" id="fc5d-ffda-783f-c9af" sortIndex="40">
@@ -3360,7 +3370,7 @@
                     <cost name="pts" typeId="points" value="6"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Katana" hidden="false" id="de62-78ef-751e-b609" type="selectionEntry" targetId="04a7-e5b9-407a-a686" sortIndex="1"/>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="de62-78ef-751e-b609" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
                 <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="0290-f7ec-8df8-97ba" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
@@ -3629,6 +3639,10 @@
           <costs>
             <cost name="pts" typeId="points" value="7"/>
           </costs>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e9ab-558b-9421-66e1" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="4852-2f08-1b61-09df" includeChildSelections="false"/>
+          </constraints>
         </selectionEntry>
       </selectionEntries>
       <infoGroups>
@@ -4015,9 +4029,14 @@
                 </entryLink>
                 <entryLink import="true" name="65. Lore of Magic" hidden="false" id="5c35-713e-7a03-c4ee" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
                   <entryLinks>
-                    <entryLink import="true" name="Lore of Heavens" hidden="false" id="bea9-c52c-307d-dd7f" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee">
+                    <entryLink import="true" name="Lore of Light" hidden="false" id="bea9-c52c-307d-dd7f" type="selectionEntry" targetId="c543-a893-3879-cf32">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="97fa-00c3-c8f5-9c6f" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Lore of Heavens" hidden="false" id="1c5b-cbf5-91d8-c6a4" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bb59-3de3-7979-6a79" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
@@ -4830,25 +4849,6 @@
                 </profile>
               </profiles>
               <entryLinks>
-                <entryLink import="true" name="70. Mount" hidden="false" id="0440-6e76-dcc1-3e2f" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
-                  <entryLinks>
-                    <entryLink import="true" name="Warhorse" hidden="false" id="2792-ea3e-2657-de72" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a1ae-829c-a802-bd4e" includeChildSelections="false"/>
-                      </constraints>
-                      <entryLinks>
-                        <entryLink import="true" name="Barding" hidden="false" id="0d08-1d2f-4d39-de13" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
-                          <costs>
-                            <cost name="pts" typeId="points" value="5"/>
-                          </costs>
-                        </entryLink>
-                      </entryLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="12"/>
-                      </costs>
-                    </entryLink>
-                  </entryLinks>
-                </entryLink>
                 <entryLink import="true" name="10. Character Options" hidden="false" id="0d01-35ba-a99a-61f9" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
                 <entryLink import="true" name="11. Clan Mons" hidden="false" id="55f7-7f69-05f1-bf9d" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581"/>
                 <entryLink import="true" name="20. Primary Weapon" hidden="false" id="6d3f-48b2-4663-13d4" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
@@ -5041,6 +5041,9 @@
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="46cc-5e77-0b81-a8ce" includeChildSelections="false"/>
                       </constraints>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0"/>
+                      </costs>
                     </entryLink>
                   </entryLinks>
                 </entryLink>
@@ -5118,14 +5121,13 @@
                 </profile>
               </profiles>
               <entryLinks>
-                <entryLink import="true" name="11. Clan Mons" hidden="false" id="2bad-d23e-0fbf-5e17" type="selectionEntryGroup" targetId="3b57-19a7-13fc-9581">
+                <entryLink import="true" name="12. Clan Mons" hidden="false" id="2bad-d23e-0fbf-5e17" type="selectionEntryGroup" targetId="acca-e5bb-5f72-31b6">
                   <entryLinks>
-                    <entryLink import="true" name="Mon of the Hattiga Clan" hidden="false" id="3592-026e-0227-31a9" type="selectionEntry" targetId="e48e-38a1-5b7d-313d">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d67d-6654-3d9d-f730" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
+                    <entryLink import="true" name="Mon of the Hattiga Clan" hidden="false" id="3592-026e-0227-31a9" type="selectionEntry" targetId="e48e-38a1-5b7d-313d"/>
                   </entryLinks>
+                  <modifiers>
+                    <modifier type="set" value="0" field="70d6-f967-c726-bce5-min"/>
+                  </modifiers>
                 </entryLink>
                 <entryLink import="true" name="20. Primary Weapon" hidden="false" id="b23b-2697-4f3d-2691" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
                   <entryLinks>
@@ -5209,12 +5211,14 @@
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="ad40-c4b6-b0f3-c91c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b476-13c2-7d75-fd02" shared="true" includeChildSelections="true" includeChildForces="true">
+                      <comment>Uesigo Norimasa </comment>
+                    </condition>
                   </conditions>
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="5c27-d720-5329-09e3" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="5c27-d720-5329-09e3" shared="true" includeChildSelections="false"/>
                         <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1aae-2529-c509-7573" shared="true"/>
                       </conditions>
                     </conditionGroup>
@@ -5272,7 +5276,9 @@
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="270c-9bf0-fe1a-4c6a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b476-13c2-7d75-fd02" shared="true" includeChildSelections="true" includeChildForces="true">
+                      <comment>Dawate Tadamune </comment>
+                    </condition>
                     <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="0473-857e-78d9-cb7c" shared="true" includeChildForces="false" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
@@ -5323,7 +5329,9 @@
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="dd60-c5be-ef4c-cfab" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b476-13c2-7d75-fd02" shared="true" includeChildSelections="true" includeChildForces="true">
+                      <comment>Odari Nobuhide</comment>
+                    </condition>
                     <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1ee4-f5b2-caf1-32b2" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
@@ -5391,7 +5399,9 @@
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="1c19-4e3e-ef1c-cef4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="b476-13c2-7d75-fd02" shared="true" includeChildSelections="true" includeChildForces="true">
+                      <comment>Takai Katsuyori</comment>
+                    </condition>
                   </conditions>
                   <conditionGroups>
                     <conditionGroup type="or">
@@ -6365,7 +6375,7 @@ Movement phase. In addition, they automatically pass any test to reform, march 
             </modifier>
           </modifiers>
           <costs>
-            <cost name="Hatttiga Bonus" typeId="8e33-3e1e-b2ae-dc26" value="1"/>
+            <cost name="Hatttiga Bonus" typeId="8e33-3e1e-b2ae-dc26" value="0"/>
           </costs>
         </entryLink>
       </entryLinks>
@@ -6493,7 +6503,4 @@ Movement phase. In addition, they automatically pass any test to reform, march 
       </categoryLinks>
     </entryLink>
   </entryLinks>
-  <costTypes>
-    <costType name="Hattiga Bonus" id="8e33-3e1e-b2ae-dc26" defaultCostLimit="-1" hidden="false"/>
-  </costTypes>
 </catalogue>
