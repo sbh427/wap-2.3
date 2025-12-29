@@ -1388,7 +1388,11 @@ If, at the start of any of your turns following the death of the Hierophant, the
         </entryLink>
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="f64f-de70-f360-7e0c" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
-            <entryLink import="true" name="Light Armour" hidden="false" id="e740-2cd2-2920-d842" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72"/>
+            <entryLink import="true" name="Light Armour" hidden="false" id="e740-2cd2-2920-d842" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4198-3f59-6c1c-bdef" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="10. Character Options" hidden="false" id="f702-a504-2a11-19ff" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
@@ -1437,7 +1441,11 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <entryLink import="true" name="61. Lore of Magic" hidden="false" id="33aa-76fc-2df1-43b3" type="selectionEntryGroup" targetId="624d-4335-2961-db3e"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="8547-4ae4-9077-a378" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="fda9-5327-75dd-59d0" type="selectionEntry" targetId="a658-337d-0cbd-a38c"/>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="fda9-5327-75dd-59d0" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="46d8-ebfa-672a-f63e" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="60. Wizard Level" hidden="false" id="4c72-e41b-a2f5-28d5" type="selectionEntryGroup" targetId="d1c2-3512-e5b6-7616"/>
@@ -1447,6 +1455,13 @@ If, at the start of any of your turns following the death of the Hierophant, the
               <costs>
                 <cost name="pts" typeId="points" value="18"/>
               </costs>
+              <entryLinks>
+                <entryLink import="true" name="Barding" hidden="false" id="b8e3-a276-f9a4-11e7" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
             </entryLink>
             <entryLink import="true" name="Tomb Barque of Usirian" hidden="false" id="b813-8148-204f-65b1" type="selectionEntry" targetId="9b70-c0b0-e261-8a04" sortIndex="2">
               <costs>
@@ -1600,7 +1615,11 @@ If, at the start of any of your turns following the death of the Hierophant, the
         </entryLink>
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="6c30-e48e-8b6a-3b01" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
-            <entryLink import="true" name="Light Armour" hidden="false" id="21ef-eaf7-be68-ea24" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72"/>
+            <entryLink import="true" name="Light Armour" hidden="false" id="21ef-eaf7-be68-ea24" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="008c-3495-9c32-7fbf" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="50. Handheld Armour" hidden="false" id="fdc0-6c09-1a19-d4ee" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
@@ -1626,7 +1645,11 @@ If, at the start of any of your turns following the death of the Hierophant, the
         </entryLink>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="5fbf-a777-5eed-ace7" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="abb2-2a79-a164-7610" type="selectionEntry" targetId="a658-337d-0cbd-a38c"/>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="abb2-2a79-a164-7610" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8c66-70d7-7ab3-89a4" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="70. Mount" hidden="false" id="6460-0373-8e1b-4c0e" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
@@ -1713,11 +1736,7 @@ If, at the start of any of your turns following the death of the Hierophant, the
       <entryLinks>
         <entryLink import="true" name="90. Magic Items" hidden="false" id="f07c-c175-9b6a-5ca1" type="selectionEntryGroup" targetId="4a6c-a780-b910-e3b8">
           <modifiers>
-            <modifier type="increment" value="50" field="6ee7-c31b-82f8-adfd">
-              <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="model" childId="b709-2493-f914-907f" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
+            <modifier type="increment" value="50" field="6ee7-c31b-82f8-adfd"/>
             <modifier type="decrement" value="25" field="6ee7-c31b-82f8-adfd">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="model" childId="b709-2493-f914-907f" shared="true" includeChildSelections="true"/>
@@ -1807,7 +1826,11 @@ If, at the start of any of your turns following the death of the Hierophant, the
         </entryLink>
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="c69b-d652-146c-d5e2" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
-            <entryLink import="true" name="Light Armour" hidden="false" id="17c9-1ca6-fd5b-1bfd" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72"/>
+            <entryLink import="true" name="Light Armour" hidden="false" id="17c9-1ca6-fd5b-1bfd" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="baf2-4384-fa93-af57" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="50. Handheld Armour" hidden="false" id="f457-fc49-f8e7-02c8" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
@@ -1863,13 +1886,21 @@ If, at the start of any of your turns following the death of the Hierophant, the
         </entryLink>
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="97ab-3cb9-8c5c-40a9" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
-            <entryLink import="true" name="Light Armour" hidden="false" id="fb75-79b8-ef69-68fe" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72"/>
+            <entryLink import="true" name="Light Armour" hidden="false" id="fb75-79b8-ef69-68fe" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4770-3901-ee97-af40" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="10. Character Options" hidden="false" id="c597-4b13-eb88-8cf9" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="670e-5c88-44f3-f23f" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
-            <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="e173-d8be-a1bf-5cf5" type="selectionEntry" targetId="7617-f4b5-02ac-3d15"/>
+            <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="e173-d8be-a1bf-5cf5" type="selectionEntry" targetId="7617-f4b5-02ac-3d15">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="aedd-5ccf-f55f-bd23" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
         </entryLink>
       </entryLinks>
@@ -4329,6 +4360,13 @@ Strength 2 hits which Ignores Armour saves</description>
                       <costs>
                         <cost name="pts" typeId="points" value="18"/>
                       </costs>
+                      <entryLinks>
+                        <entryLink import="true" name="Barding" hidden="false" id="26a0-7e5f-f48f-50e3" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                          <costs>
+                            <cost name="pts" typeId="points" value="5"/>
+                          </costs>
+                        </entryLink>
+                      </entryLinks>
                     </entryLink>
                     <entryLink import="true" name="Tomb Barque of Usirian" hidden="false" id="d2f0-598e-0c1d-6f30" type="selectionEntry" targetId="9b70-c0b0-e261-8a04" sortIndex="2">
                       <costs>
@@ -4538,19 +4576,244 @@ Strength 2 hits which Ignores Armour saves</description>
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Lore of Death &amp; Nehekhara" hidden="false" id="c18a-c9d6-c106-6aca">
                       <entryLinks>
-                        <entryLink import="true" name="Lore of Death" hidden="false" id="d4b4-ec58-f9d6-77de" type="selectionEntry" targetId="bc0d-47f8-7220-1e16">
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6d23-d036-b192-7780-min" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6d23-d036-b192-7780-max" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                        <entryLink import="true" name="Lore of Nehekhara" hidden="false" id="40d7-2c08-fcd3-3b1f" type="selectionEntry" targetId="0779-440c-f407-02b8">
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2a0b-9a2b-2669-e42f-min" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2a0b-9a2b-2669-e42f-max" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
+                        <entryLink import="true" name="Life Leeching" hidden="false" id="ee4c-7db6-d563-8775" type="selectionEntry" targetId="fcda-0bcd-07ba-1f18"/>
+                        <entryLink import="true" name="0. Dark Hand of Death" hidden="false" id="5fff-58b1-14e7-d307" type="selectionEntry" targetId="3b38-7f74-f979-94f4"/>
+                        <entryLink import="true" name="The Restless Dead" hidden="false" id="359d-02be-d98f-8738" type="selectionEntry" targetId="cc6e-575c-17c8-c10a"/>
+                        <entryLink import="true" name="Khsar&apos;s Incantation of the Desert Wind" hidden="false" id="f146-5839-21a0-b4db" type="selectionEntry" targetId="76f0-dd87-b5e0-8697"/>
                       </entryLinks>
+                      <selectionEntryGroups>
+                        <selectionEntryGroup name="Spells from the lore of Nehekhara &amp; Death" id="ce91-0139-0244-41a0" hidden="false">
+                          <entryLinks>
+                            <entryLink import="true" name="1. Death Dealer" hidden="false" id="06a7-a469-c20c-5c6a" type="selectionEntry" targetId="462b-0dd2-392c-2439"/>
+                            <entryLink import="true" name="2. The Caress of Laniph" hidden="false" id="8275-94f7-f12f-4f39" type="selectionEntry" targetId="a5c5-fce0-7c91-d277"/>
+                            <entryLink import="true" name="3. Spirit Leech" hidden="false" id="1d6e-509a-672a-ce20" type="selectionEntry" targetId="7a63-500c-5cfb-4a00"/>
+                            <entryLink import="true" name="4. The Chocking Foe" hidden="false" id="fc0f-cc88-d804-f9aa" type="selectionEntry" targetId="5431-c193-b838-59c6"/>
+                            <entryLink import="true" name="5. Wind of Death" hidden="false" id="537a-bfa9-c47d-9cb1" type="selectionEntry" targetId="4bb9-9a38-d14b-704b"/>
+                            <entryLink import="true" name="6. Drain Life" hidden="false" id="27ad-f8f6-056f-9a0d" type="selectionEntry" targetId="9d97-9779-f34b-d55f"/>
+                            <entryLink import="true" name="7. Scythe of Shyish" hidden="false" id="f0db-8376-d2d4-3754" type="selectionEntry" targetId="9661-bf81-68fa-c59b"/>
+                            <entryLink import="true" name="8. Doom and Darkness" hidden="false" id="abad-79b6-43c2-3ecf" type="selectionEntry" targetId="e92b-a44d-158c-35df"/>
+                            <entryLink import="true" name="9. Ashes and Dust" hidden="false" id="7852-6fee-0015-fccb" type="selectionEntry" targetId="d988-9e19-8f71-7bd5"/>
+                            <entryLink import="true" name="10. The Fate of Bjuna" hidden="false" id="1721-2356-d454-13e2" type="selectionEntry" targetId="dba5-c13c-0904-18bf"/>
+                            <entryLink import="true" name="11. Soulblight" hidden="false" id="a3fd-578e-d6c8-e10d" type="selectionEntry" targetId="c35c-68ba-9c98-0f8b"/>
+                            <entryLink import="true" name="12. The Purple Sun of Xereus" hidden="false" id="d118-a9fc-70e6-67e1" type="selectionEntry" targetId="64f8-69f4-ffb0-f045"/>
+                            <entryLink import="true" name="Djedra&apos;s Incantation of the Eternal Dead" hidden="false" id="1558-6645-eba3-19aa" type="selectionEntry" targetId="1ff2-db1e-625f-c597"/>
+                            <entryLink import="true" name="Sekhubi&apos;s Incantation of Retribution" hidden="false" id="e3d4-991b-3945-20d3" type="selectionEntry" targetId="605d-69e6-8a9f-b268" sortIndex="0"/>
+                            <entryLink import="true" name="Djaf&apos;s Incantation of Cursed Blades" hidden="false" id="ff07-7579-5d22-992a" type="selectionEntry" targetId="56b0-6abd-3917-72ce"/>
+                            <entryLink import="true" name="Merneptah&apos;s Scroll of the Scarab Song" hidden="false" id="23e7-a83a-3124-5c9b" type="selectionEntry" targetId="6b08-8c42-2c6a-5dba"/>
+                            <entryLink import="true" name="Ptra&apos;s Incantation of Righteous Smiting" hidden="false" id="c5fc-c9ff-b8cc-9a82" type="selectionEntry" targetId="5245-2cfc-00e7-7507"/>
+                            <entryLink import="true" name="Neru&apos;s Incantation of Protection" hidden="false" id="065f-5d62-da63-12d7" type="selectionEntry" targetId="7bfa-627c-79bc-54e5"/>
+                            <entryLink import="true" name="Return of the Golden Age" hidden="false" id="8158-e23e-795f-1c3b" type="selectionEntry" targetId="cd55-9e6a-801b-196e"/>
+                            <entryLink import="true" name="Usirian&apos;s Incantation of Vengeance" hidden="false" id="395a-e32a-59d7-db77" type="selectionEntry" targetId="5af1-482e-1911-fb25"/>
+                            <entryLink import="true" name="Usekhp&apos;s Incantation of Desiccation" hidden="false" id="b107-644b-69d3-1a66" type="selectionEntry" targetId="4dc6-99c0-8720-e590"/>
+                            <entryLink import="true" name="Neferre&apos;s Incantation of Quaking Horror" hidden="false" id="7cef-9d88-2f8a-221d" type="selectionEntry" targetId="e0de-54aa-35a4-4735"/>
+                            <entryLink import="true" name="Mankara&apos;s Incantation of Urgency" hidden="false" id="d8eb-c5b2-d937-0e2f" type="selectionEntry" targetId="3d96-89c5-ce24-216c"/>
+                            <entryLink import="true" name="Sakhmet&apos;s Incantation of the Skullstorm" hidden="false" id="ee2e-bba1-30d7-cfc7" type="selectionEntry" targetId="fc6d-3d8f-d079-a2e7"/>
+                          </entryLinks>
+                          <constraints>
+                            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="13ad-1e37-7996-7c76"/>
+                            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="140a-45a4-1109-ce73"/>
+                          </constraints>
+                          <modifiers>
+                            <modifier type="set" value="3" field="13ad-1e37-7996-7c76">
+                              <conditionGroups>
+                                <conditionGroup type="or">
+                                  <conditions>
+                                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                                  </conditions>
+                                  <conditionGroups>
+                                    <conditionGroup type="and">
+                                      <conditions>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                                      </conditions>
+                                    </conditionGroup>
+                                    <conditionGroup type="and">
+                                      <conditions>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                                      </conditions>
+                                    </conditionGroup>
+                                  </conditionGroups>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </modifier>
+                            <modifier type="set" value="3" field="140a-45a4-1109-ce73">
+                              <conditionGroups>
+                                <conditionGroup type="or">
+                                  <conditions>
+                                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                                  </conditions>
+                                  <conditionGroups>
+                                    <conditionGroup type="and">
+                                      <conditions>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                                      </conditions>
+                                    </conditionGroup>
+                                    <conditionGroup type="and">
+                                      <conditions>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                                      </conditions>
+                                    </conditionGroup>
+                                  </conditionGroups>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </modifier>
+                            <modifier type="set" value="4" field="13ad-1e37-7996-7c76">
+                              <conditionGroups>
+                                <conditionGroup type="or">
+                                  <conditions>
+                                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                                  </conditions>
+                                  <conditionGroups>
+                                    <conditionGroup type="and">
+                                      <conditions>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                                      </conditions>
+                                    </conditionGroup>
+                                  </conditionGroups>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </modifier>
+                            <modifier type="set" value="4" field="140a-45a4-1109-ce73">
+                              <conditionGroups>
+                                <conditionGroup type="or">
+                                  <conditions>
+                                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                                  </conditions>
+                                  <conditionGroups>
+                                    <conditionGroup type="and">
+                                      <conditions>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                                      </conditions>
+                                    </conditionGroup>
+                                  </conditionGroups>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </modifier>
+                            <modifier type="set" value="5" field="13ad-1e37-7996-7c76">
+                              <conditionGroups>
+                                <conditionGroup type="or">
+                                  <conditions>
+                                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                                  </conditions>
+                                  <conditionGroups>
+                                    <conditionGroup type="and">
+                                      <conditions>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                                      </conditions>
+                                    </conditionGroup>
+                                  </conditionGroups>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </modifier>
+                            <modifier type="set" value="5" field="140a-45a4-1109-ce73">
+                              <conditionGroups>
+                                <conditionGroup type="or">
+                                  <conditions>
+                                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                                  </conditions>
+                                  <conditionGroups>
+                                    <conditionGroup type="and">
+                                      <conditions>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                                      </conditions>
+                                    </conditionGroup>
+                                  </conditionGroups>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </modifier>
+                            <modifier type="set" value="6" field="13ad-1e37-7996-7c76">
+                              <conditionGroups>
+                                <conditionGroup type="or">
+                                  <conditionGroups>
+                                    <conditionGroup type="and">
+                                      <conditions>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                                      </conditions>
+                                    </conditionGroup>
+                                    <conditionGroup type="and">
+                                      <conditions>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                                      </conditions>
+                                    </conditionGroup>
+                                  </conditionGroups>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </modifier>
+                            <modifier type="set" value="6" field="140a-45a4-1109-ce73">
+                              <conditionGroups>
+                                <conditionGroup type="or">
+                                  <conditionGroups>
+                                    <conditionGroup type="and">
+                                      <conditions>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                                      </conditions>
+                                    </conditionGroup>
+                                    <conditionGroup type="and">
+                                      <conditions>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                                      </conditions>
+                                    </conditionGroup>
+                                  </conditionGroups>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </modifier>
+                            <modifier type="set" value="9" field="13ad-1e37-7996-7c76">
+                              <conditionGroups>
+                                <conditionGroup type="and">
+                                  <conditions>
+                                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                                  </conditions>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </modifier>
+                            <modifier type="set" value="9" field="140a-45a4-1109-ce73">
+                              <conditionGroups>
+                                <conditionGroup type="and">
+                                  <conditions>
+                                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                                  </conditions>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </modifier>
+                            <modifier type="set" value="12" field="13ad-1e37-7996-7c76">
+                              <conditionGroups>
+                                <conditionGroup type="and">
+                                  <conditions>
+                                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                                  </conditions>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </modifier>
+                            <modifier type="set" value="12" field="140a-45a4-1109-ce73">
+                              <conditionGroups>
+                                <conditionGroup type="and">
+                                  <conditions>
+                                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                                  </conditions>
+                                </conditionGroup>
+                              </conditionGroups>
+                            </modifier>
+                          </modifiers>
+                        </selectionEntryGroup>
+                      </selectionEntryGroups>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3206-f8e2-55e2-747d" includeChildSelections="false"/>
+                      </constraints>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -4716,7 +4979,11 @@ Strength 2 hits which Ignores Armour saves</description>
                 </entryLink>
                 <entryLink import="true" name="40. Suits of Armour" hidden="false" id="8747-ac9c-85e2-3ba5" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
                   <entryLinks>
-                    <entryLink import="true" name="Heavy Armour" hidden="false" id="6ba8-8603-398d-935b" type="selectionEntry" targetId="30e0-7325-ea6b-af97"/>
+                    <entryLink import="true" name="Heavy Armour" hidden="false" id="6ba8-8603-398d-935b" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="46f3-b8f4-6b1f-7032" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
                   </entryLinks>
                 </entryLink>
               </entryLinks>
@@ -4819,7 +5086,7 @@ Strength 2 hits which Ignores Armour saves</description>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6aba-829b-4e31-ab86" includeChildSelections="true"/>
               </constraints>
               <entryLinks>
-                <entryLink import="true" name="90. Magic Items" hidden="false" id="1a2a-ea96-a9de-3e98" type="selectionEntryGroup" targetId="4a6c-a780-b910-e3b8" sortIndex="">
+                <entryLink import="true" name="90. Magic Items" hidden="false" id="1a2a-ea96-a9de-3e98" type="selectionEntryGroup" targetId="4a6c-a780-b910-e3b8">
                   <modifiers>
                     <modifier type="set" value="25" field="6ee7-c31b-82f8-adfd"/>
                     <modifier type="set" value="true" field="hidden" affects="b08f-ec9b-c750-180a"/>
@@ -4851,6 +5118,13 @@ Strength 2 hits which Ignores Armour saves</description>
                       <costs>
                         <cost name="pts" typeId="points" value="12"/>
                       </costs>
+                      <entryLinks>
+                        <entryLink import="true" name="Barding" hidden="false" id="1a4b-5a1d-2605-752b" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+                          <costs>
+                            <cost name="pts" typeId="points" value="5"/>
+                          </costs>
+                        </entryLink>
+                      </entryLinks>
                     </entryLink>
                     <entryLink import="true" name="Skeleton Chariot" hidden="false" id="1724-afdc-7a5f-cf0b" type="selectionEntry" targetId="3ec1-e263-5371-742a" sortIndex="2">
                       <costs>
@@ -4866,7 +5140,11 @@ Strength 2 hits which Ignores Armour saves</description>
                 </entryLink>
                 <entryLink import="true" name="40. Suits of Armour" hidden="false" id="9f8d-4cfb-89ec-542e" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
                   <entryLinks>
-                    <entryLink import="true" name="Light Armour" hidden="false" id="34dd-ad1d-d184-e116" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72"/>
+                    <entryLink import="true" name="Light Armour" hidden="false" id="34dd-ad1d-d184-e116" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="90e1-2a47-4bc5-4a8a" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
                   </entryLinks>
                 </entryLink>
               </entryLinks>
@@ -4945,13 +5223,21 @@ Strength 2 hits which Ignores Armour saves</description>
                 </entryLink>
                 <entryLink import="true" name="20. Primary Weapon" hidden="false" id="ee2d-0667-be57-c5ed" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
                   <entryLinks>
-                    <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="26d5-d54d-54d8-c7f0" type="selectionEntry" targetId="7617-f4b5-02ac-3d15"/>
+                    <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="26d5-d54d-54d8-c7f0" type="selectionEntry" targetId="7617-f4b5-02ac-3d15">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ccfd-8aa1-1de5-ba6f" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
                   </entryLinks>
                 </entryLink>
                 <entryLink import="true" name="10. Character Options" hidden="false" id="b9ad-dad5-e725-06fb" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
                 <entryLink import="true" name="40. Suits of Armour" hidden="false" id="3b26-5d1e-918e-3bae" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
                   <entryLinks>
-                    <entryLink import="true" name="Light Armour" hidden="false" id="a7cb-fa10-0aec-5f76" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72"/>
+                    <entryLink import="true" name="Light Armour" hidden="false" id="a7cb-fa10-0aec-5f76" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2c66-c5fa-ec58-6ebb" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
                   </entryLinks>
                 </entryLink>
               </entryLinks>
