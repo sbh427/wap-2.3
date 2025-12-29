@@ -9147,6 +9147,7 @@
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bbf4-e1d7-a373-5080"/>
       </constraints>
     </selectionEntryGroup>
+    <selectionEntryGroup name="11. Unit Options" id="920d-8a41-44b9-c364" hidden="false"/>
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="6624-0b7b-c5b8-6397" name="Scouts" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
