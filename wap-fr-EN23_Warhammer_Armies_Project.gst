@@ -507,6 +507,12 @@
         </modifier>
       </modifiers>
     </categoryEntry>
+    <categoryEntry name="Chariot" id="1e5b-5ca1-fe5b-d82f" hidden="false">
+      <comment>No Impact Hits</comment>
+      <infoLinks>
+        <infoLink name="Swiftstride" id="9275-171e-cda6-36a1" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
+      </infoLinks>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry id="6ee4-77bf-4402-f8ab" name="Standard" hidden="false">
