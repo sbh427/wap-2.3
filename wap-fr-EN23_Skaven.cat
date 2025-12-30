@@ -2604,7 +2604,7 @@
                   </constraints>
                   <rules>
                     <rule id="3f02-6f2b-27f0-c3cd" name="Brain Transplant" publicationId="4086-1ccd-f433-39a2" page="35" hidden="false">
-                      <description>All Rat Ogres in the unit are no longer subject to Stupidity or Frenzy.</description>
+                      <description>All Rat Ogres in the unit are no longer subject to Stupidity and Frenzy.</description>
                     </rule>
                   </rules>
                   <costs>
@@ -3713,7 +3713,6 @@ If you roll a misfire result something has gone awry. No more shots are fired th
         <selectionEntryGroup id="e0d5-84e7-b55c-1716" name="Character" hidden="false" collective="false" import="true" defaultSelectionEntryId="none">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b920-907e-3b98-08a3" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2a11-bdc8-7a3d-cadb" type="min"/>
           </constraints>
           <selectionEntries>
             <selectionEntry id="9cc1-6661-5000-c2dc" name="Spinetail" hidden="false" collective="false" import="true" type="model" sortIndex="3">
@@ -4907,7 +4906,7 @@ cables out.</characteristic>
               </infoLinks>
               <rules>
                 <rule name="A Reputation for Cunning" id="ff6d-0b71-15a5-f1dc" hidden="false">
-                  <description>All friendly Skaven units within 12&quot; of Krittok at the start of the game gains the Vanguard special rule.</description>
+                  <description>All friendly Skaven units within 12&quot; of Krittok at the start of the game gain the Vanguard special rule.</description>
                 </rule>
                 <rule name="Foster Competition" id="12f1-5fd3-86e4-09fb" hidden="false">
                   <description>All friendly Stormvermin units within 12&quot; of Krittok may re-roll 1&apos;s To Hit in close combat.</description>
@@ -5359,7 +5358,7 @@ cables out.</characteristic>
                 <infoLink name="Verminous Valour" id="a48e-cb21-493f-8e96" hidden="false" targetId="5c1c-bc13-7613-8134" type="rule"/>
               </infoLinks>
               <entryLinks>
-                <entryLink import="true" name="55. Equipment" hidden="false" id="697b-bece-31ce-caa1" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575" sortIndex="3">
+                <entryLink import="true" name="55. Equipment" hidden="false" id="697b-bece-31ce-caa1" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575" sortIndex="2">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="391a-d5ba-b912-9af9-min"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="391a-d5ba-b912-9af9-max"/>
@@ -5390,10 +5389,21 @@ cables out.</characteristic>
                       </costs>
                     </selectionEntry>
                   </selectionEntries>
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="c75c-4510-ae11-40db" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="911e-4e99-8807-aaef" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                    <entryLink import="true" name="Light Armour" hidden="false" id="4993-a969-ca53-8817" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ce4b-ce32-a07d-498b" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
-                <entryLink import="true" name="10. Character Options" hidden="false" id="6974-289b-a53f-ffa2" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
                 <entryLink import="true" name="60. Wizard Level" hidden="false" id="b58d-cd9a-4b7c-3277" type="selectionEntryGroup" targetId="2f28-d537-4a60-b96b" sortIndex="3"/>
-                <entryLink import="true" name="65. Lore of Magic" hidden="false" id="cc04-7687-ea53-8436" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32" sortIndex="3">
+                <entryLink import="true" name="65. Lore of Magic" hidden="false" id="cc04-7687-ea53-8436" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32" sortIndex="4">
                   <entryLinks>
                     <entryLink import="true" name="Lore of Ruin" hidden="false" id="ea32-e20d-378f-7acb" type="selectionEntry" targetId="c62f-49fd-e206-9566">
                       <constraints>
@@ -5402,6 +5412,7 @@ cables out.</characteristic>
                     </entryLink>
                   </entryLinks>
                 </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="55f8-003f-3c87-100a" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171" sortIndex="1"/>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="165"/>
@@ -5648,7 +5659,7 @@ cables out.</characteristic>
           <description>The Doom-flayer gains +2 to its armour save against all models attacking it from the front.</description>
         </rule>
         <rule name="Whirling Death" id="b7c9-4c8d-b685-1952" hidden="false" publicationId="4086-1ccd-f433-39a2" page="43">
-          <description> Doom-flayers only inflict Impact Hits (D3) on the charge. In addition, instead of attacking  normally, the Doom-flayer causes one artillery dice worth of Impact Hits at the start of each close combat  phase. In case a Misfire is rolled, roll a D6 and consult the Doom-flayer Mishap chart. </description>
+          <description>Doom-flayers only inflict Impact Hits (D3) on the charge. In addition, instead of attacking  normally, the Doom-flayer causes one artillery dice worth of Impact Hits at the start of each close combat  phase. In case a Misfire is rolled, roll a D6 and consult the Doom-flayer Mishap chart.</description>
         </rule>
       </rules>
       <infoGroups>
