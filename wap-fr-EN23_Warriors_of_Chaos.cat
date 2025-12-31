@@ -4,7 +4,8 @@
   <profileTypes>
     <profileType id="49dc-2fd8-b942-dbc2" name="Gift of the Gods">
       <characteristicTypes>
-        <characteristicType id="7ab4-c2c7-7e2c-9cb0" name="Special Rules"/>
+        <characteristicType id="7ab4-c2c7-7e2c-9cb0" name="Effect"/>
+        <characteristicType name="Cost" id="03e6-07f4-1e11-f05f" kind="annotation"/>
       </characteristicTypes>
     </profileType>
     <profileType id="67ca-9b2f-fa47-6ee0" name="Soul Hunters Table">
@@ -40,11 +41,6 @@
     <profileType id="7fae-24d5-092e-d265" name="Hellcannon Misfire Table">
       <characteristicTypes>
         <characteristicType id="6f89-567c-b27e-c1a4" name="1"/>
-      </characteristicTypes>
-    </profileType>
-    <profileType id="ebea-77d6-2f40-ae09" name="Chalice of Chaos Table">
-      <characteristicTypes>
-        <characteristicType id="4c93-7886-bb6f-887f" name="Result"/>
       </characteristicTypes>
     </profileType>
     <profileType id="0f80-8f03-b474-844d" name="Wind of Pestilence Table">
@@ -135,7 +131,7 @@
         <categoryLink name="Z Armour" hidden="false" id="9319-3e5f-3ffb-0df5" targetId="387c-2b7c-0a30-7305" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="90. Chaos Mutations, Powers and Magic Items" hidden="false" id="3c68-087e-8e12-412b" type="selectionEntryGroup" targetId="0841-5f3d-f89f-4459" sortIndex="0">
+        <entryLink import="true" name="90. Gifts of the Gods and Magic Items" hidden="false" id="3c68-087e-8e12-412b" type="selectionEntryGroup" targetId="0841-5f3d-f89f-4459" sortIndex="0">
           <modifiers>
             <modifier type="increment" value="50" field="bd30-6d12-0571-3a18"/>
           </modifiers>
@@ -3688,21 +3684,16 @@ Unlike other random movement, an Unbound Slaughterbrute can move into base conta
           <entryLinks>
             <entryLink import="true" name="90. Gifts of the Gods" hidden="false" id="ae1a-f87a-0044-ac85" type="selectionEntryGroup" targetId="5da7-0b88-aeb9-8d0f">
               <modifiers>
-                <modifier type="set" value="false" field="hidden" affects="self.entries.recursive"/>
+                <modifier type="set" value="false" field="hidden" affects="self.entries"/>
                 <modifier type="set" value="-1" field="bf7e-9f12-32f7-e451"/>
-                <modifier type="set" value="Khorne" field="annotation" affects="self.entries.7852-2b4b-eaab-af3c"/>
-                <modifier type="set" value="Nurgle" field="annotation" affects="self.entries.9452-971c-d7c1-9d2b"/>
-                <modifier type="set" value="Slanesh" field="annotation" affects="self.entries.a69a-9248-4270-ebf3"/>
-                <modifier type="set" value="Tzeentch" field="annotation" affects="self.entries.47f7-837a-67cb-628d"/>
-                <modifier type="set" value="0" field="annotation" affects="self.entries.recursive"/>
-                <modifier type="increment" value="1" field="bf7e-9f12-32f7-e451">
-                  <repeats>
-                    <repeat value="1" repeats="1" field="points" scope="self" childId="any" shared="true" roundUp="false"/>
-                  </repeats>
-                </modifier>
+                <modifier type="set" value="Khorne" field="annotation" affects="self.entries.recursive.7852-2b4b-eaab-af3c.profiles.Gift of the Gods"/>
+                <modifier type="set" value="Nurgle" field="annotation" affects="self.entries.recursive.9452-971c-d7c1-9d2b.profiles.Gift of the Gods"/>
+                <modifier type="set" value="Slanesh" field="annotation" affects="self.entries.recursive.a69a-9248-4270-ebf3.profiles.Gift of the Gods"/>
+                <modifier type="set" value="Tzeentch" field="annotation" affects="self.entries.recursive.47f7-837a-67cb-628d.profiles.Gift of the Gods"/>
+                <modifier type="set" value="0" field="points" affects="self.entries.recursive"/>
               </modifiers>
               <constraints>
-                <constraint type="min" value="48" field="selections" scope="self" shared="true" id="7f49-5018-0b83-95b7" includeChildSelections="true" automatic="true" includeChildForces="false"/>
+                <constraint type="min" value="47" field="selections" scope="self" shared="true" id="7f49-5018-0b83-95b7" includeChildSelections="true" automatic="true" includeChildForces="false"/>
               </constraints>
             </entryLink>
           </entryLinks>
@@ -7748,7 +7739,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <infoLink name="Chaos Armour" id="4eb2-a820-18ad-7ea9" hidden="false" targetId="b66b-400b-7d98-1c53" type="rule"/>
       </infoLinks>
       <entryLinks>
-        <entryLink import="true" name="90. Chaos Mutations, Powers and Magic Items" hidden="false" id="26b4-8924-0c0e-13ab" type="selectionEntryGroup" targetId="0841-5f3d-f89f-4459">
+        <entryLink import="true" name="90. Gifts of the Gods and Magic Items" hidden="false" id="26b4-8924-0c0e-13ab" type="selectionEntryGroup" targetId="0841-5f3d-f89f-4459">
           <modifiers>
             <modifier type="increment" value="100" field="bd30-6d12-0571-3a18"/>
           </modifiers>
@@ -7940,7 +7931,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <infoLink name="Chaos Armour" id="4a63-3221-ba3d-6547" hidden="false" targetId="b66b-400b-7d98-1c53" type="rule"/>
       </infoLinks>
       <entryLinks>
-        <entryLink import="true" name="90. Chaos Mutations, Powers and Magic Items" hidden="false" id="864a-6e87-bd19-c14e" type="selectionEntryGroup" targetId="0841-5f3d-f89f-4459">
+        <entryLink import="true" name="90. Gifts of the Gods and Magic Items" hidden="false" id="864a-6e87-bd19-c14e" type="selectionEntryGroup" targetId="0841-5f3d-f89f-4459">
           <modifiers>
             <modifier type="increment" value="100" field="bd30-6d12-0571-3a18"/>
           </modifiers>
@@ -8102,7 +8093,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="90. Chaos Mutations, Powers and Magic Items" hidden="false" id="d188-bcac-2fa0-87e5" type="selectionEntryGroup" targetId="0841-5f3d-f89f-4459">
+        <entryLink import="true" name="90. Gifts of the Gods and Magic Items" hidden="false" id="d188-bcac-2fa0-87e5" type="selectionEntryGroup" targetId="0841-5f3d-f89f-4459">
           <modifiers>
             <modifier type="increment" value="100" field="bd30-6d12-0571-3a18"/>
           </modifiers>
@@ -8180,7 +8171,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <infoLink name="Will of Chaos" id="14b1-4f3d-a3b9-1df8" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
       </infoLinks>
       <entryLinks>
-        <entryLink import="true" name="90. Chaos Mutations, Powers and Magic Items" hidden="false" id="43b0-1ab2-f734-c0ee" type="selectionEntryGroup" targetId="0841-5f3d-f89f-4459">
+        <entryLink import="true" name="90. Gifts of the Gods and Magic Items" hidden="false" id="43b0-1ab2-f734-c0ee" type="selectionEntryGroup" targetId="0841-5f3d-f89f-4459">
           <modifiers>
             <modifier type="set" value="25" field="bd30-6d12-0571-3a18">
               <conditions>
@@ -8376,7 +8367,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <infoLink name="Will of Chaos" id="7b78-d211-099b-25fa" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
       </infoLinks>
       <entryLinks>
-        <entryLink import="true" name="90. Chaos Mutations, Powers and Magic Items" hidden="false" id="a779-985b-b5dd-a7fa" type="selectionEntryGroup" targetId="0841-5f3d-f89f-4459">
+        <entryLink import="true" name="90. Gifts of the Gods and Magic Items" hidden="false" id="a779-985b-b5dd-a7fa" type="selectionEntryGroup" targetId="0841-5f3d-f89f-4459">
           <modifiers>
             <modifier type="increment" value="50" field="bd30-6d12-0571-3a18"/>
           </modifiers>
@@ -8473,7 +8464,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <infoLink name="Will of Chaos" id="f4fd-5a1b-d756-344c" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
       </infoLinks>
       <entryLinks>
-        <entryLink import="true" name="90. Chaos Mutations, Powers and Magic Items" hidden="false" id="3550-8704-c7b1-310c" type="selectionEntryGroup" targetId="0841-5f3d-f89f-4459">
+        <entryLink import="true" name="90. Gifts of the Gods and Magic Items" hidden="false" id="3550-8704-c7b1-310c" type="selectionEntryGroup" targetId="0841-5f3d-f89f-4459">
           <modifiers>
             <modifier type="set" value="25" field="bd30-6d12-0571-3a18">
               <conditions>
@@ -9969,7 +9960,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <entryLink import="true" name="Arcane Items (One Use Only)" hidden="false" id="17ce-2629-9d88-0532" type="selectionEntryGroup" targetId="6a79-4414-ba18-171c" sortIndex="4"/>
         <entryLink import="true" name="Enchanted Items" hidden="false" id="a04e-5279-d6f5-4007" type="selectionEntryGroup" targetId="ebe4-f41c-c534-8066" sortIndex="5"/>
         <entryLink import="true" name="Talismans" hidden="false" id="1c13-07c3-dab7-49b6" type="selectionEntryGroup" targetId="fdb9-019b-8cba-b9d8" sortIndex="6"/>
-        <entryLink import="true" name="90. Chaos Mutations and Powers" hidden="false" id="8ff5-05ef-5dcd-3da9" type="selectionEntryGroup" targetId="5da7-0b88-aeb9-8d0f" sortIndex="-1"/>
+        <entryLink import="true" name="90. Gifts of the Gods" hidden="false" id="8ff5-05ef-5dcd-3da9" type="selectionEntryGroup" targetId="5da7-0b88-aeb9-8d0f" sortIndex="-1"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup name="Magic Standards" id="c14a-0b87-2ac0-933b" hidden="false" collective="false" import="true" collapsible="true">
@@ -10800,9 +10791,9 @@ with this standard counts the armour save modifier from their Strength or Armou
                   <entryLinks>
                     <entryLink import="true" name="1. Daemonic Familiars" hidden="false" id="15e1-280b-fda6-01e8" type="selectionEntry" targetId="55fd-085f-8282-34ad"/>
                     <entryLink import="true" name="2. Gift of Chaos" hidden="false" id="d465-e2d7-5cac-7b2c" type="selectionEntry" targetId="d304-ad1a-14a5-14f6"/>
-                    <entryLink import="true" name="3. Winds of Chaos" hidden="false" id="835f-feb0-e8dd-da78" type="selectionEntry" targetId="bccf-908d-d55a-5aa0"/>
-                    <entryLink import="true" name="4. Call to Glory" hidden="false" id="1c1b-6e77-6ce2-6aa1" type="selectionEntry" targetId="0148-a357-c74c-afc3"/>
-                    <entryLink import="true" name="5. Vision of Torment" hidden="false" id="6b93-2224-7d0c-05dd" type="selectionEntry" targetId="ecd8-43ad-f80a-dabd"/>
+                    <entryLink import="true" name="5. Winds of Chaos" hidden="false" id="835f-feb0-e8dd-da78" type="selectionEntry" targetId="bccf-908d-d55a-5aa0"/>
+                    <entryLink import="true" name="3. Veil of Gloom" hidden="false" id="1c1b-6e77-6ce2-6aa1" type="selectionEntry" targetId="0148-a357-c74c-afc3"/>
+                    <entryLink import="true" name="4. Vision of Torment" hidden="false" id="6b93-2224-7d0c-05dd" type="selectionEntry" targetId="ecd8-43ad-f80a-dabd"/>
                     <entryLink import="true" name="6. Binding Damnation" hidden="false" id="2ad6-3e81-ecf0-e314" type="selectionEntry" targetId="353c-a842-62c3-b15d"/>
                     <entryLink import="true" name="7. Mask of Darkness" hidden="false" id="d689-9273-f393-0349" type="selectionEntry" targetId="4cac-9347-9732-e3ab"/>
                     <entryLink import="true" name="8. Veil of Corruption" hidden="false" id="3014-42b1-3ab8-fde4" type="selectionEntry" targetId="7861-035e-1be2-b735"/>
@@ -10901,9 +10892,10 @@ with this standard counts the armour save modifier from their Strength or Armou
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="ef09-5a0b-4425-1149" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Wings" typeId="49dc-2fd8-b942-dbc2" typeName="Chaos Mutations and Powers" hidden="false" id="2705-b17c-b50d-d4da" publicationId="1a01-044f-047b-618f" page="242">
+            <profile name="Wings" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="2705-b17c-b50d-d4da" publicationId="1a01-044f-047b-618f" page="242">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">Infantry only. The character gains the Fly (10) special rule.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">Infantry only. The character gains the Fly (10) special rule.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">25</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -10917,9 +10909,10 @@ with this standard counts the armour save modifier from their Strength or Armou
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="4f52-ada3-fba5-9cc1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Mantle of Chaos" typeId="49dc-2fd8-b942-dbc2" typeName="Chaos Mutations and Powers" hidden="false" id="d15c-07a3-9935-be51" publicationId="1a01-044f-047b-618f" page="242">
+            <profile name="Mantle of Chaos" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="d15c-07a3-9935-be51" publicationId="1a01-044f-047b-618f" page="242">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">Any missile attacks targeting the character or the unit they are with have their Strength value halved, rounding up. This has no effect against Magical Attacks.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">Any missile attacks targeting the character or the unit they are with have their Strength value halved, rounding up. This has no effect against Magical Attacks.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">55</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -10933,9 +10926,10 @@ with this standard counts the armour save modifier from their Strength or Armou
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="c606-cab2-97e5-dfb8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Flaming Breath" typeId="49dc-2fd8-b942-dbc2" typeName="Chaos Mutations and Powers" hidden="false" id="0bd4-b275-0202-f23f" publicationId="1a01-044f-047b-618f" page="242">
+            <profile name="Flaming Breath" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="0bd4-b275-0202-f23f" publicationId="1a01-044f-047b-618f" page="242">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The character gains a Strength 3 Breath Weapon that has the Flaming Attacks special rule.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The character gains a Strength 3 Breath Weapon that has the Flaming Attacks special rule.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">25</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -10949,9 +10943,10 @@ with this standard counts the armour save modifier from their Strength or Armou
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="0d48-7558-e371-d633" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Distendable Maw" typeId="49dc-2fd8-b942-dbc2" typeName="Chaos Mutations and Powers" hidden="false" id="c656-26ed-df11-11aa" publicationId="1a01-044f-047b-618f" page="242">
+            <profile name="Distendable Maw" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="c656-26ed-df11-11aa" publicationId="1a01-044f-047b-618f" page="242">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">Instead of making his usual attacks, the character can choose to make a special attack against a single Infantry model. If the attack hits, the enemy model must pass an Initiative test. If this test is failed, the victim suffers D3 Wounds with no saves allowed.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">Instead of making his usual attacks, the character can choose to make a special attack against a single Infantry model. If the attack hits, the enemy model must pass an Initiative test. If this test is failed, the victim suffers D3 Wounds with no saves allowed.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">10</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -10967,7 +10962,8 @@ with this standard counts the armour save modifier from their Strength or Armou
           <profiles>
             <profile name="Scaled Skin" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="6fd7-c867-7b71-b9e9" publicationId="1a01-044f-047b-618f" page="242">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The character gains the Natural Armour (6+) special rule.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The character gains the Natural Armour (6+) special rule.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">10</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -10981,9 +10977,10 @@ with this standard counts the armour save modifier from their Strength or Armou
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="ef42-a350-5734-f04a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Terrifying Appearance" typeId="49dc-2fd8-b942-dbc2" typeName="Chaos Mutations and Powers" hidden="false" id="1142-9b4e-5c7a-5edd" publicationId="1a01-044f-047b-618f" page="242">
+            <profile name="Terrifying Appearance" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="1142-9b4e-5c7a-5edd" publicationId="1a01-044f-047b-618f" page="242">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The character gains the Terror special rule.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The character gains the Terror special rule.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">25</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -10999,7 +10996,8 @@ with this standard counts the armour save modifier from their Strength or Armou
           <profiles>
             <profile name="Burning Body" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="62e7-c871-cb4d-57c6" publicationId="1a01-044f-047b-618f" page="243">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The character gains the Flaming Attacks and Immunity (Flaming Attacks) special rules.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The character gains the Flaming Attacks and Immunity (Flaming Attacks) special rules.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">5</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11025,9 +11023,10 @@ with this standard counts the armour save modifier from their Strength or Armou
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="be6a-88eb-345c-fa33" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Extra Arm" typeId="49dc-2fd8-b942-dbc2" typeName="Chaos Mutations and Powers" hidden="false" id="e6ec-b166-28a5-57d4" publicationId="1a01-044f-047b-618f" page="243">
+            <profile name="Extra Arm" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="e6ec-b166-28a5-57d4" publicationId="1a01-044f-047b-618f" page="243">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The character may wield both a weapon that Requires Two Hands and a shield at the same time, benefitting from both pieces of equipment. This mutation cannot be combined with Tentacle.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The character may wield both a weapon that Requires Two Hands and a shield at the same time, benefitting from both pieces of equipment. This mutation cannot be combined with Tentacle.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">15</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11041,9 +11040,10 @@ with this standard counts the armour save modifier from their Strength or Armou
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="1d15-8918-0c1a-7729" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Unholy Strike" typeId="49dc-2fd8-b942-dbc2" typeName="Chaos Mutations and Powers" hidden="false" id="df7f-12bd-592a-0706" publicationId="1a01-044f-047b-618f" page="243">
+            <profile name="Unholy Strike" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="df7f-12bd-592a-0706" publicationId="1a01-044f-047b-618f" page="243">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">Instead of attacking normally, the character can choose to make a single special Attack. If they do so, and the Attack hits, the hit is resolved at double the character’s Strength and has the Multiple Wounds (D3) special rule.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">Instead of attacking normally, the character can choose to make a single special Attack. If they do so, and the Attack hits, the hit is resolved at double the character’s Strength and has the Multiple Wounds (D3) special rule.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">5</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11057,9 +11057,10 @@ with this standard counts the armour save modifier from their Strength or Armou
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="88f3-904a-a246-6baa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Soul Feeder" typeId="49dc-2fd8-b942-dbc2" typeName="Chaos Mutations and Powers" hidden="false" id="4b90-c95e-012a-7c4f" publicationId="1a01-044f-047b-618f" page="243">
+            <profile name="Soul Feeder" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="4b90-c95e-012a-7c4f" publicationId="1a01-044f-047b-618f" page="243">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">Roll a D6 for every unsaved Wound the character inflicts on an enemy unit in close combat. For each result of a 6 rolled, they immediately regain a single lost Wound.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">Roll a D6 for every unsaved Wound the character inflicts on an enemy unit in close combat. For each result of a 6 rolled, they immediately regain a single lost Wound.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">15</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11075,7 +11076,8 @@ with this standard counts the armour save modifier from their Strength or Armou
           <profiles>
             <profile name="Horns" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="d3e3-cb1b-1349-c2fd" publicationId="1a01-044f-047b-618f" page="243">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">Model on Foot only. The character gains the Impact Hits (1) special rule.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">Model on Foot only. The character gains the Impact Hits (1) special rule.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">5</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11096,9 +11098,10 @@ with this standard counts the armour save modifier from their Strength or Armou
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="a1f4-9155-b1a2-dc0c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Fearsome Aura" typeId="49dc-2fd8-b942-dbc2" typeName="Chaos Mutations and Powers" hidden="false" id="3747-f208-e6a2-4d7b" publicationId="1a01-044f-047b-618f" page="243">
+            <profile name="Fearsome Aura" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="3747-f208-e6a2-4d7b" publicationId="1a01-044f-047b-618f" page="243">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">All enemy units within 6&quot; of the character suffer -1 to their Leadership.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">All enemy units within 6&quot; of the character suffer -1 to their Leadership.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">30</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11114,7 +11117,8 @@ with this standard counts the armour save modifier from their Strength or Armou
           <profiles>
             <profile name="Cloven Hooves" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="9198-9e8a-bd84-7e9f" publicationId="1a01-044f-047b-618f" page="244">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">Model on Foot only. The Character gains +1 Movement. This Gift cannot be combined with Serpent Body.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">Model on Foot only. The Character gains +1 Movement. This Gift cannot be combined with Serpent Body.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">5</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11137,7 +11141,8 @@ with this standard counts the armour save modifier from their Strength or Armou
           <profiles>
             <profile name="Poisonous Slime" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="989b-31f4-f532-7b60" publicationId="1a01-044f-047b-618f" page="244">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The character gains the Poisoned Attacks and Immunity (Poisoned Attacks) special rules.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The character gains the Poisoned Attacks and Immunity (Poisoned Attacks) special rules.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">10</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11153,7 +11158,8 @@ with this standard counts the armour save modifier from their Strength or Armou
           <profiles>
             <profile name="Bestial Visage" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="c3c8-8eb5-e057-c570" publicationId="1a01-044f-047b-618f" page="244">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The character gaind the Fear special rule.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The character gaind the Fear special rule.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">15</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11169,7 +11175,8 @@ with this standard counts the armour save modifier from their Strength or Armou
           <profiles>
             <profile name="Tentacle" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="ea55-02e1-12c1-de49" publicationId="1a01-044f-047b-618f" page="244">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">Choose one enemy model in base contact with the character at the start of each round of close combat –that model suffers -1 Attacks. However, the character is not allowed to use a shield or any weapon that Requires Two Hands.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">Choose one enemy model in base contact with the character at the start of each round of close combat –that model suffers -1 Attacks. However, the character is not allowed to use a shield or any weapon that Requires Two Hands.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">5</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11185,7 +11192,8 @@ with this standard counts the armour save modifier from their Strength or Armou
           <profiles>
             <profile name="Chaos Familiar" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="0624-b5c9-2391-4cfc" publicationId="1a01-044f-047b-618f" page="242">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">Wizard only. The character knows one extra spell than normal for their level.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">Wizard only. The character knows one extra spell than normal for their level.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">10</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11223,7 +11231,8 @@ with this standard counts the armour save modifier from their Strength or Armou
           <profiles>
             <profile name="Acid Ichor" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="87b7-3007-c109-55b2" publicationId="1a01-044f-047b-618f" page="243">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">Whenever this character suffers an unsaved Wound in close combat, the model that inflicted that Hit suffers a Strength 4 hit.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">Whenever this character suffers an unsaved Wound in close combat, the model that inflicted that Hit suffers a Strength 4 hit.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">5</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11237,9 +11246,10 @@ with this standard counts the armour save modifier from their Strength or Armou
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="9038-fcd9-a515-da15" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Master of Mortals" typeId="49dc-2fd8-b942-dbc2" typeName="Chaos Mutations and Powers" hidden="false" id="84cf-4f7c-0674-8132" publicationId="1a01-044f-047b-618f" page="243">
+            <profile name="Master of Mortals" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="84cf-4f7c-0674-8132" publicationId="1a01-044f-047b-618f" page="243">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The character gains the Inspiring Presence (6) special rule that affects Humans.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The character gains the Inspiring Presence (6) special rule that affects Humans.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">20</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11253,30 +11263,15 @@ with this standard counts the armour save modifier from their Strength or Armou
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="7d84-87dd-3e57-a78a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Deamon-Flesh" typeId="49dc-2fd8-b942-dbc2" typeName="Chaos Mutations and Powers" hidden="false" id="a60b-481a-e03e-455b" publicationId="1a01-044f-047b-618f" page="243">
+            <profile name="Deamon-Flesh" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="a60b-481a-e03e-455b" publicationId="1a01-044f-047b-618f" page="243">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The character cannot be wounded on better than a 3+</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The character cannot be wounded on better than a 3+</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">20</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Enchanting Aura" hidden="false" id="d5a0-1d95-1b15-51e4" collective="false" sortIndex="34">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fd1b-fb17-f0c3-6213" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-            <constraint type="max" value="1" field="selections" scope="force" shared="false" id="704a-cf52-72a5-b0c1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-          </constraints>
-          <profiles>
-            <profile name="Enchanting Aura" typeId="49dc-2fd8-b942-dbc2" typeName="Chaos Mutations and Powers" hidden="false" id="6f9a-b1b1-f907-c3a0" publicationId="1a01-044f-047b-618f" page="243">
-              <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">Enemy units in base contact with the character are subject to the Always Strikes Last special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <costs>
-            <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Massive Bulk " hidden="false" id="f271-7ee7-5899-c341" collective="false" sortIndex="26">
@@ -11287,7 +11282,8 @@ with this standard counts the armour save modifier from their Strength or Armou
           <profiles>
             <profile name="Massive Bulk " typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="db6c-40fe-93ce-a091" publicationId="1a01-044f-047b-618f" page="243">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The Character gains +1 Wound.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The Character gains +1 Wound.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">20</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11303,7 +11299,8 @@ with this standard counts the armour save modifier from their Strength or Armou
           <profiles>
             <profile name="Command of the Gods" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="3f3f-48fb-5f41-13cc" publicationId="1a01-044f-047b-618f" page="243">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The Character gains +1 Leadership.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The Character gains +1 Leadership.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">20</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11319,7 +11316,8 @@ with this standard counts the armour save modifier from their Strength or Armou
           <profiles>
             <profile name="Enchanting Aura" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="cacd-ef41-1c60-12a6" publicationId="1a01-044f-047b-618f" page="243">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">Enemy models in base contact with the character are subject to the Always Strikes Last special rule.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">Enemy models in base contact with the character are subject to the Always Strikes Last special rule.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">20</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11335,7 +11333,8 @@ with this standard counts the armour save modifier from their Strength or Armou
           <profiles>
             <profile name="Unholy Resilience" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="4680-b7f7-b111-e277" publicationId="1a01-044f-047b-618f" page="243">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The Character gains +1 Toughness.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The Character gains +1 Toughness.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">20</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11351,7 +11350,8 @@ with this standard counts the armour save modifier from their Strength or Armou
           <profiles>
             <profile name="Aura of Chaos" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="bbe4-ec0d-16be-1111" publicationId="1a01-044f-047b-618f" page="243">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The character gains a 6+ Ward save.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The character gains a 6+ Ward save.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">15</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11367,7 +11367,8 @@ with this standard counts the armour save modifier from their Strength or Armou
           <profiles>
             <profile name="Dark Fury" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="a178-093f-0945-68c5" publicationId="1a01-044f-047b-618f" page="243">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The character gains a +1 Attack.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The character gains a +1 Attack.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">15</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11383,8 +11384,9 @@ with this standard counts the armour save modifier from their Strength or Armou
           <profiles>
             <profile name="Flames of Chaos" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="4191-f9ea-3046-bc8a" publicationId="1a01-044f-047b-618f" page="243">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The character gains the Magic Resistance (1) special
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The character gains the Magic Resistance (1) special
 rule.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">10</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11400,7 +11402,8 @@ rule.</characteristic>
           <profiles>
             <profile name="Slaughterer&apos;s Strength" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="17c1-4408-6b0b-b3ab" publicationId="1a01-044f-047b-618f" page="243">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The character gains a +1 Strength.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The character gains a +1 Strength.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">15</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11416,7 +11419,8 @@ rule.</characteristic>
           <profiles>
             <profile name="Murderous Mutatation" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="73c9-4340-bb4e-78a6" publicationId="1a01-044f-047b-618f" page="243">
               <characteristics>
-                <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The Character gains +1 Weapon Skill.</characteristic>
+                <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The Character gains +1 Weapon Skill.</characteristic>
+                <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">5</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11436,7 +11440,8 @@ rule.</characteristic>
               <profiles>
                 <profile name="Bloodcurdling Roar" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="7d05-7256-6021-ec35" publicationId="1a01-044f-047b-618f" page="244">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">At the start of the first round of close combat, all enemy units in base contact with the character suffer D6 Strength 2 hits which Ignores Armour saves.</characteristic>
+                    <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">At the start of the first round of close combat, all enemy units in base contact with the character suffer D6 Strength 2 hits which Ignores Armour saves.</characteristic>
+                    <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">25</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -11452,7 +11457,8 @@ rule.</characteristic>
               <profiles>
                 <profile name="Fury of the Blood God" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="02d0-f8ee-4c43-6703" publicationId="1a01-044f-047b-618f" page="244">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The Character gains Hatred. Any Wizard within 12&quot; of the character suffer -D3 to each of their casting rolls.</characteristic>
+                    <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The Character gains Hatred. Any Wizard within 12&quot; of the character suffer -D3 to each of their casting rolls.</characteristic>
+                    <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">25</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -11466,9 +11472,10 @@ rule.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="force" shared="false" id="168d-3333-e1ac-861c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Deafening Bellow" typeId="49dc-2fd8-b942-dbc2" typeName="Chaos Mutations and Powers" hidden="false" id="6047-429f-9bf1-5d0e" publicationId="1a01-044f-047b-618f" page="244">
+                <profile name="Deafening Bellow" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="6047-429f-9bf1-5d0e" publicationId="1a01-044f-047b-618f" page="244">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">On the turn that the character charges, all enemy units in base contact suffer -1 To Hit in close combat.</characteristic>
+                    <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">On the turn that the character charges, all enemy units in base contact suffer -1 To Hit in close combat.</characteristic>
+                    <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">20</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -11522,9 +11529,10 @@ rule.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="force" shared="false" id="7d0d-8163-5a55-3739" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Secondary Jaws" typeId="49dc-2fd8-b942-dbc2" typeName="Chaos Mutations and Powers" hidden="false" id="f15f-72d5-1a88-76d4" publicationId="1a01-044f-047b-618f" page="245">
+                <profile name="Secondary Jaws" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="f15f-72d5-1a88-76d4" publicationId="1a01-044f-047b-618f" page="245">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The character gains a special attack at Strength 2 which Always Strikes First and Ignores Armour saves.</characteristic>
+                    <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The character gains a special attack at Strength 2 which Always Strikes First and Ignores Armour saves.</characteristic>
+                    <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">15</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -11538,9 +11546,10 @@ rule.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="force" shared="false" id="3946-46a0-2e71-54b5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Nurgling Infestation" typeId="49dc-2fd8-b942-dbc2" typeName="Chaos Mutations and Powers" hidden="false" id="8711-db5e-5461-9300" publicationId="1a01-044f-047b-618f" page="245">
+                <profile name="Nurgling Infestation" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="8711-db5e-5461-9300" publicationId="1a01-044f-047b-618f" page="245">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">Each model that attacks the character in close combat suffer an automatic Strength 3 hit after the attacker’s hits have been worked out. This hit occurs even if the character with the Nurgling Infestation is slain and any wounds caused count towards combat resolution.</characteristic>
+                    <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">Each model that attacks the character in close combat suffer an automatic Strength 3 hit after the attacker’s hits have been worked out. This hit occurs even if the character with the Nurgling Infestation is slain and any wounds caused count towards combat resolution.</characteristic>
+                    <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">15</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -11554,10 +11563,11 @@ rule.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="force" shared="false" id="469b-83c4-e268-aed4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Stream of Corruption" typeId="49dc-2fd8-b942-dbc2" typeName="Chaos Mutations and Powers" hidden="false" id="1645-0d29-ef3c-a1b0" publicationId="1a01-044f-047b-618f" page="245">
+                <profile name="Stream of Corruption" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="1645-0d29-ef3c-a1b0" publicationId="1a01-044f-047b-618f" page="245">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The character gains a Breath Weapon. All models Hit must pass a Toughness test or suffer a Wound with Ignores
+                    <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The character gains a Breath Weapon. All models Hit must pass a Toughness test or suffer a Wound with Ignores
 Armour saves.</characteristic>
+                    <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">40</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -11599,9 +11609,10 @@ Armour saves.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="force" shared="false" id="5b04-dde1-b405-70b9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Hellshriek" typeId="49dc-2fd8-b942-dbc2" typeName="Chaos Mutations and Powers" hidden="false" id="a869-364b-b31c-a712" publicationId="1a01-044f-047b-618f" page="245">
+                <profile name="Hellshriek" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="a869-364b-b31c-a712" publicationId="1a01-044f-047b-618f" page="245">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">One use only. The character can use this ability at the start of any Magic phase, immediately after rolling for the Winds of Magic. All enemy Wizards within 18&quot; must immediately roll 2D6 on the Miscast table.</characteristic>
+                    <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">One use only. The character can use this ability at the start of any Magic phase, immediately after rolling for the Winds of Magic. All enemy Wizards within 18&quot; must immediately roll 2D6 on the Miscast table.</characteristic>
+                    <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">50</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -11617,7 +11628,8 @@ Armour saves.</characteristic>
               <profiles>
                 <profile name="Soporific Musk" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="073a-360b-f8d7-97e2" publicationId="1a01-044f-047b-618f" page="245">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">When a unit flees from the character or the unit they are with, the fleeing unit rolls an extra D6 and discards the highest dice roll.</characteristic>
+                    <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">When a unit flees from the character or the unit they are with, the fleeing unit rolls an extra D6 and discards the highest dice roll.</characteristic>
+                    <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">15</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -11633,7 +11645,8 @@ Armour saves.</characteristic>
               <profiles>
                 <profile name="Serpent Body" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="1f59-3bc9-1661-a803" publicationId="1a01-044f-047b-618f" page="245">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">Model on foot only. The character gains +2 Movement, +1 Initiative and the Swiftstride special rule. This mutation cannot be combined with Cloven Hooves.</characteristic>
+                    <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">Model on foot only. The character gains +2 Movement, +1 Initiative and the Swiftstride special rule. This mutation cannot be combined with Cloven Hooves.</characteristic>
+                    <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">15</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -11656,7 +11669,8 @@ Armour saves.</characteristic>
               <profiles>
                 <profile name="Word of Agony" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="ce6f-6818-0fcc-e302" publicationId="1a01-044f-047b-618f" page="245">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">Once per game, at the beginning of the Close Combat phase (before challenges are issued), the character can choose a model in base contact. That model takes D6 Strength 4 hits which Ignores Armour saves</characteristic>
+                    <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">Once per game, at the beginning of the Close Combat phase (before challenges are issued), the character can choose a model in base contact. That model takes D6 Strength 4 hits which Ignores Armour saves</characteristic>
+                    <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">30</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -11686,9 +11700,10 @@ Armour saves.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="force" shared="false" id="ee68-1cfb-3fca-b8f8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Tendrils of Tzeentch" typeId="49dc-2fd8-b942-dbc2" typeName="Chaos Mutations and Powers" hidden="false" id="42b8-768c-8c3b-3e96" publicationId="1a01-044f-047b-618f" page="244">
+                <profile name="Tendrils of Tzeentch" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="42b8-768c-8c3b-3e96" publicationId="1a01-044f-047b-618f" page="244">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">Wizards only. The character may re-roll a single power or dispel dice per player turn. This may potentially prevent a Miscast.</characteristic>
+                    <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">Wizards only. The character may re-roll a single power or dispel dice per player turn. This may potentially prevent a Miscast.</characteristic>
+                    <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">30</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -11721,9 +11736,10 @@ Armour saves.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="force" shared="false" id="9707-20fc-916a-b26d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Protean Form" typeId="49dc-2fd8-b942-dbc2" typeName="Chaos Mutations and Powers" hidden="false" id="4437-1a84-b487-adc7" publicationId="1a01-044f-047b-618f" page="244">
+                <profile name="Protean Form" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="4437-1a84-b487-adc7" publicationId="1a01-044f-047b-618f" page="244">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The Champion has Regeneration (5+).</characteristic>
+                    <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The Champion has Regeneration (5+).</characteristic>
+                    <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">25</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -11737,9 +11753,10 @@ Armour saves.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="force" shared="false" id="bfbe-6d67-5fcf-9eb7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Third Eye of Tzeentch" typeId="49dc-2fd8-b942-dbc2" typeName="Chaos Mutations and Powers" hidden="false" id="c7c8-1eea-08be-a833" publicationId="1a01-044f-047b-618f" page="244">
+                <profile name="Third Eye of Tzeentch" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods" hidden="false" id="c7c8-1eea-08be-a833" publicationId="1a01-044f-047b-618f" page="244">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The character re-rolls Ward Save results of 1.</characteristic>
+                    <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The character re-rolls Ward Save results of 1.</characteristic>
+                    <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">10</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -11765,6 +11782,7 @@ Armour saves.</characteristic>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bf7e-9f12-32f7-e451" includeChildSelections="false"/>
       </constraints>
+      <comment>Enter pts in profiles &quot;cost&quot;</comment>
     </selectionEntryGroup>
     <selectionEntryGroup name="Magic Weapons" id="d14e-6757-808a-26a0" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
@@ -11781,7 +11799,7 @@ Armour saves.</characteristic>
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">All attacks with the Rending Sword may re-roll failed To Wound rolls and cause Multiple Wounds (D3).</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder of this weapon may re-roll failed To Wound rolls and cause Multiple Wounds (D3).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11799,7 +11817,8 @@ Armour saves.</characteristic>
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">A character with the Daemonsword adds D3 to his Strength and has an extra D3 A, to a maximum of 10 (roll separately for these values at the start of each round). However, every To Hit roll of a 1 made by this character in close combat is resolved against himself; the character can never re-roll a To Hit roll of a 1.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder of this weapon adds D3 to their Strength and has an extra D3 Attacks, to a maximum of 10 (roll
+separately for these values at the start of each round). However, every To Wound roll of a 1 made by this character in close combat is resolved against themselves.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11817,7 +11836,7 @@ Armour saves.</characteristic>
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Close combat attacks made with the Hellfire Sword have the Flaming Attacks and Ignore Armour Saves. After all close combat blows have been struck, roll a D6 for every foe slain by the Hellfire Sword – on the roll of a 6, the slain foe’s body explodes, inflicting an additional D6 Strength 4 hits on the enemy unit with Flaming Attacks. Unsaved Wounds inflicted in this way count towards the combat result. At the end of each of the wielder’s turns, roll a D6; on the roll of a 1, they suffer one Wound with the Ignores Armour Saves special rule.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder of this weapon have the Flaming Attacks and Ignore Armour Saves. After all close combat blows have been struck, roll a D6 for every foe slain by the Hellfire Sword – on the roll of a 6, the slain foe’s body explodes, inflicting an additional D6 Strength 4 hits on the enemy unit with Flaming Attacks. Unsaved Wounds inflicted in this way count towards the combat result. At the end of each of the wielder’s turns, roll a D6; on the roll of a 1, they suffer one Wound with the Ignores Armour Saves special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11859,7 +11878,7 @@ Armour saves.</characteristic>
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">All To Hit rolls of 1 directed against the wielder of the Father of Blades in close combat instead hit the attacking model.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">All To Hit rolls of 1 directed against the wielder of  this weapon in close combat instead hit the attacking model.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11877,7 +11896,7 @@ Armour saves.</characteristic>
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Any model that suffers an unsaved Wound from the Soul Cleaver must pass a Toughness test or suffer an additional wound with no saves allowed. This additional wound does not cause an additional Toughness test.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Any model that suffers an unsaved Wound rom this weapon must pass a Toughness test or suffer an additional wound with no saves allowed. This additional wound does not cause an additional Toughness test.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -11995,7 +12014,7 @@ Armour saves.</characteristic>
             <infoLink name="Polearm/Halberd" id="344f-611c-1fb6-148e" hidden="false" type="profile" targetId="e43e-5153-eeec-36be">
               <modifiers>
                 <modifier type="set" value="Obsidian Dread-Glave" field="annotation"/>
-                <modifier type="append" value="The wielder of this item gains the Killing Blow special rule.
+                <modifier type="append" value="The wielder of this weapon gains the Killing Blow special rule.
 " field="de63-d6da-efa8-00ac"/>
               </modifiers>
             </infoLink>
@@ -12615,7 +12634,7 @@ Armour saves.</characteristic>
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">This item gives the wearer a 6+ armour save. All enemy units within 6&quot; of the wearer of this helmet suffer -1 to their Leadership.</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">This item gives the wearer a 6+ armour save. All enemy units in base contact the wearer of this helmet must roll an additional D6 when taking Leadership tests and discard the lowest result.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -13133,43 +13152,49 @@ Armour saves.</characteristic>
           <profiles>
             <profile name="Chalice of Chaos" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="9892-d3c0-d23d-96ad" publicationId="1a01-044f-047b-618f" page="14">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The bearer of the Chalice of Chaos may drink from it at the start of any phase. If he chooses to do so, roll a D6 and consult the Chalice of Chaos table</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="1" typeId="ebea-77d6-2f40-ae09" typeName="Chalice of Chaos Table" hidden="false" id="Result Chalice of Chaos Table" publicationId="1a01-044f-047b-618f" page="14">
-              <characteristics>
-                <characteristic name="Result" typeId="4c93-7886-bb6f-887f">Unworthy Fool: The imbiber immediately suffers a Wound, with no saves of any kind allowed.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="2" typeId="ebea-77d6-2f40-ae09" typeName="Chalice of Chaos Table" hidden="false" id="a562-129d-9f12-e910" publicationId="1a01-044f-047b-618f" page="14">
-              <characteristics>
-                <characteristic name="Result" typeId="4c93-7886-bb6f-887f">Inhuman Speed: The imbiber gains Always Strikes First until the end of the turn.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="3" typeId="ebea-77d6-2f40-ae09" typeName="Chalice of Chaos Table" hidden="false" id="a4aa-608d-b5dd-4d7e" publicationId="1a01-044f-047b-618f" page="14">
-              <characteristics>
-                <characteristic name="Result" typeId="4c93-7886-bb6f-887f">Regenerating Flesh: The imbiber gains Regeneration (4+) until the end of the turn.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="5" typeId="ebea-77d6-2f40-ae09" typeName="Chalice of Chaos Table" hidden="false" id="1f21-7f5d-5708-1fe1" publicationId="1a01-044f-047b-618f" page="14">
-              <characteristics>
-                <characteristic name="Result" typeId="4c93-7886-bb6f-887f">Daemonic Strength: The imbiber gains Killing Blow until the end of the turn.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="4" typeId="ebea-77d6-2f40-ae09" typeName="Chalice of Chaos Table" hidden="false" id="91d8-e667-2779-0aa3" publicationId="1a01-044f-047b-618f" page="14">
-              <characteristics>
-                <characteristic name="Result" typeId="4c93-7886-bb6f-887f">Dark Fortune: The imbiber gains Ward Save (5+) until the end of the turn.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="6" typeId="ebea-77d6-2f40-ae09" typeName="Chalice of Chaos Table" hidden="false" id="6af9-c406-5d0c-ff21" publicationId="1a01-044f-047b-618f" page="14">
-              <characteristics>
-                <characteristic name="Result" typeId="4c93-7886-bb6f-887f">Final Transformation: If the imbiber is already a Daemon Prince, he instead treats this result as Unworthy Fool. Otherwise, he must immediately take a Leadership test. If passed, he is gifted with Daemonhood, as described on the Eye of the Gods table. If failed, he is gifted with Spawndom, as described on the same table.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The bearer of the Chalice of Chaos may drink from it at the start of any phase. If they choose to do so, roll a D6 and consult the table below.</characteristic>
               </characteristics>
             </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
+          <infoGroups>
+            <infoGroup name="Chalice of Chaos Chart" id="3a6c-a7aa-a4f8-549e" hidden="false">
+              <profiles>
+                <profile name="1 Unworthy Fool" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="Result Chalice of Chaos Table" publicationId="1a01-044f-047b-618f" page="14">
+                  <characteristics>
+                    <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The character immediately suffers a Wound, with no saves of any kind allowed.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="2 Daemonic Strength" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="a562-129d-9f12-e910" publicationId="1a01-044f-047b-618f" page="14">
+                  <characteristics>
+                    <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The character gains the Killing Blow special rule until the end of the turn.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="3 Regenerating Flesh" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="a4aa-608d-b5dd-4d7e" publicationId="1a01-044f-047b-618f" page="14">
+                  <characteristics>
+                    <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The character gains the Regeneration (5+) special rule until the end of the turn.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="4 Inhuman Speed" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="91d8-e667-2779-0aa3" publicationId="1a01-044f-047b-618f" page="14">
+                  <characteristics>
+                    <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The character gains the Always Strikes First special rule until the end of the turn.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="5 Dark Fortune" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="1f21-7f5d-5708-1fe1" publicationId="1a01-044f-047b-618f" page="14">
+                  <characteristics>
+                    <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The character may re-roll failed armour and Ward saves until the end of the turn.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="6 Divine Greatness" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="6af9-c406-5d0c-ff21" publicationId="1a01-044f-047b-618f" page="14">
+                  <characteristics>
+                    <characteristic name="Result" typeId="686b-22d8-d67f-02eb">The character gains a 4+ Ward save and the Stubborn special rule until the end of the turn.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </infoGroup>
+          </infoGroups>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Favour of the Gods" hidden="false" id="d3d1-f663-dbcc-f324" collective="false" sortIndex="6">
           <constraints>
@@ -13293,7 +13318,7 @@ Armour saves.</characteristic>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b4a8-3dce-ce4f-463c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="The Black Tongue" hidden="false" id="3208-d924-45ce-63a0" collective="false">
+            <selectionEntry type="upgrade" import="true" name="The Black Tongue" hidden="false" id="3208-d924-45ce-63a0" collective="false" sortIndex="1">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f1ea-69f2-9818-5831" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1053-9ceb-e7f0-a0e4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -13309,7 +13334,7 @@ Armour saves.</characteristic>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Mark of the Destroyer" hidden="false" id="0b15-477b-e1d8-a130" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Mark of the Destroyer" hidden="false" id="0b15-477b-e1d8-a130" collective="false" sortIndex="4">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="023c-eaa4-20b5-9b55" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="147c-a6f1-6e7d-437f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -13325,7 +13350,7 @@ Armour saves.</characteristic>
                 <cost name="pts" typeId="points" value="50"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Blood Rune" hidden="false" id="73f1-fd27-8db6-d43e" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Blood Rune" hidden="false" id="73f1-fd27-8db6-d43e" collective="false" sortIndex="3">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="af9a-4638-f631-c2b8" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="70a9-ff00-305f-1bdb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -13341,7 +13366,7 @@ Armour saves.</characteristic>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Talisman of Burning Blood" hidden="false" id="6af8-24ba-d360-bc41" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Talisman of Burning Blood" hidden="false" id="6af8-24ba-d360-bc41" collective="false" sortIndex="2">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2ba2-bf81-6200-720b" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="65b7-2212-0873-22c6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -13376,7 +13401,7 @@ Armour saves.</characteristic>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="20ac-726e-8dbb-cec8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Flesh Pealer" hidden="false" id="7984-6c7d-9262-a491" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Flesh Pealer" hidden="false" id="7984-6c7d-9262-a491" collective="false" sortIndex="5">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c990-99ec-e294-b75f" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="61d8-6410-f805-ea31" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -13392,7 +13417,7 @@ Armour saves.</characteristic>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Bileheart" hidden="false" id="9b6d-184c-bf17-2804" collective="false">
+            <selectionEntry type="upgrade" import="true" name="The Bileheart" hidden="false" id="9b6d-184c-bf17-2804" collective="false" sortIndex="2">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a3e8-a30e-a331-06a1" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3af8-39a3-a6f1-5359" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -13408,7 +13433,7 @@ Armour saves.</characteristic>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Eye of Nurgle" hidden="false" id="6a81-285b-a2ab-a52e" collective="false">
+            <selectionEntry type="upgrade" import="true" name="The Eye of Nurgle" hidden="false" id="6a81-285b-a2ab-a52e" collective="false" sortIndex="4">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f4b9-bf62-cc1b-5f4c" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0b2c-d1e7-c3b0-beae" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -13424,7 +13449,7 @@ Armour saves.</characteristic>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Carrion Dirge" hidden="false" id="a537-23d2-8b45-483e" collective="false">
+            <selectionEntry type="upgrade" import="true" name="The Carrion Dirge" hidden="false" id="a537-23d2-8b45-483e" collective="false" sortIndex="3">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="561e-7752-6120-69a3" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5391-2b56-0acf-ca56" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -13440,7 +13465,7 @@ Armour saves.</characteristic>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Fecund Flask" hidden="false" id="a66a-7716-b4b7-4ccc" collective="false">
+            <selectionEntry type="upgrade" import="true" name="The Fecund Flask" hidden="false" id="a66a-7716-b4b7-4ccc" collective="false" sortIndex="1">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ceb5-023b-a394-b893" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5c07-2b99-0e78-6893" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -13475,7 +13500,7 @@ Armour saves.</characteristic>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="dd57-6351-456a-a722" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Bindings of Slaanesh" hidden="false" id="eb9c-a90e-b29d-8166" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Bindings of Slaanesh" hidden="false" id="eb9c-a90e-b29d-8166" collective="false" sortIndex="5">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="275d-bbdd-b447-9cf4" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="47d5-c8ed-1dcd-c022" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -13491,7 +13516,7 @@ Armour saves.</characteristic>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Ring of Sensation" hidden="false" id="ab8a-baca-55cd-9133" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Ring of Sensation" hidden="false" id="ab8a-baca-55cd-9133" collective="false" sortIndex="4">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3492-9ed1-65d3-4acc" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5f31-e470-dd4d-3068" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -13507,7 +13532,7 @@ Armour saves.</characteristic>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Rod of Misrule" hidden="false" id="651d-bf71-95e2-b31f" collective="false">
+            <selectionEntry type="upgrade" import="true" name="The Rod of Misrule" hidden="false" id="651d-bf71-95e2-b31f" collective="false" sortIndex="3">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7ec8-5546-07a4-da1e" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7625-4976-c545-6e63" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -13523,7 +13548,7 @@ Armour saves.</characteristic>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Crown of Dark Secrets" hidden="false" id="26e6-2fd7-01a7-4aeb" collective="false">
+            <selectionEntry type="upgrade" import="true" name="The Crown of Dark Secrets" hidden="false" id="26e6-2fd7-01a7-4aeb" collective="false" sortIndex="2">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4ed3-4986-6aca-048b" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="bb14-d6b3-cda6-0f65" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -13539,7 +13564,7 @@ Armour saves.</characteristic>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Pendant of Slaanesh" hidden="false" id="1f40-04ba-0d6e-f64a" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Pendant of Slaanesh" hidden="false" id="1f40-04ba-0d6e-f64a" collective="false" sortIndex="1">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d000-359d-4d08-9f03" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="225c-5b78-cd4d-b620" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -13574,7 +13599,7 @@ Armour saves.</characteristic>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7515-9480-d7b1-7498" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Warp Mirror" hidden="false" id="c2fe-6603-0902-0f6e" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Warp Mirror" hidden="false" id="c2fe-6603-0902-0f6e" collective="false" sortIndex="4">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ce9e-e4ac-75c4-6ef6" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2dca-08a1-72ea-4fa2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -13590,7 +13615,7 @@ Armour saves.</characteristic>
                 <cost name="pts" typeId="points" value="50"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Fractured Clasp" hidden="false" id="2ec8-ac62-50df-14d9" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Fractured Clasp" hidden="false" id="2ec8-ac62-50df-14d9" collective="false" sortIndex="3">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1f54-6810-af23-bc39" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4694-c17c-e40a-8d10" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -13606,7 +13631,7 @@ Armour saves.</characteristic>
                 <cost name="pts" typeId="points" value="35"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Timeslip Pendant" hidden="false" id="5352-0bb2-eeb1-f501" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Timeslip Pendant" hidden="false" id="5352-0bb2-eeb1-f501" collective="false" sortIndex="1">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0096-3b5c-ace5-353d" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1037-1478-057f-7f5f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -13622,7 +13647,7 @@ Armour saves.</characteristic>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Daemonheart" hidden="false" id="70c7-7561-4c92-173f" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Daemonheart" hidden="false" id="70c7-7561-4c92-173f" collective="false" sortIndex="2">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c1d2-0d45-f648-5a26" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="55cb-694a-e25b-3f63" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -14178,7 +14203,7 @@ Armour saves.</characteristic>
               <profiles>
                 <profile name="Mirror of Knowledge" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="d5ee-4326-008e-5f44" publicationId="1a01-044f-047b-618f" page="18">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer can pick any enemy unit within 24&quot; at the beginning of each of his Magic phases. The opponent must reveal everything that is not apparent about the unit, such as Magic Items and Hidden units.</characteristic>
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer can pick any enemy unit within 24&quot; at the beginning of each of his Magic phases. The opponent must reveal all Magic Items and Hidden models in it.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -14393,18 +14418,21 @@ Tamurkhan&apos;s power cannot save him if he is destroyed by an attack which cau
   <sharedProfiles>
     <profile id="e0ba-3ab5-60ed-b508" name="Conjoined Homunculus" publicationId="1a01-044f-047b-618f" page="244" hidden="false" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods">
       <characteristics>
-        <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">Wizard only. Once per turn, the character may choose to add +D3 to his casting result after attempting to cast a spell. This extra dice cannot cause a Miscast or counts towards Ultimate Power.</characteristic>
+        <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">Wizard only. Once per turn, the character may choose to add +D3 to his casting result after attempting to cast a spell. This extra dice cannot cause a Miscast or counts towards Ultimate Power.</characteristic>
+        <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">25</characteristic>
       </characteristics>
     </profile>
     <profile id="8311-e83e-8cb8-10dc" name="Diabolic Splendour" publicationId="1a01-044f-047b-618f" page="243" hidden="false" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods">
       <characteristics>
-        <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">Any successful Leadership tests taken by an enemy unit in base contact with the character must be re-rolled. This mutation cannot be combined with Fearsome Aura.</characteristic>
+        <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">Any successful Leadership tests taken by an enemy unit in base contact with the character must be re-rolled. This mutation cannot be combined with Fearsome Aura.</characteristic>
+        <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">30</characteristic>
       </characteristics>
     </profile>
     <profile id="da22-8b80-a2a2-2479" name="Allure of Slaanesh" publicationId="1a01-044f-047b-618f" page="245" hidden="false" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods">
       <characteristics>
-        <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">Any opponent wishing to strike the character in close combat must first pass a psychology test before rolling To Hit. If the test is failed, that model cannot make any close combat attacks that phase. This does not affect Attacks
+        <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">Any opponent wishing to strike the character in close combat must first pass a psychology test before rolling To Hit. If the test is failed, that model cannot make any close combat attacks that phase. This does not affect Attacks
 that do not roll To Hit.</characteristic>
+        <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">10</characteristic>
       </characteristics>
     </profile>
     <profile id="3d10-3e8e-2041-eeb0" name="Warsteed" publicationId="1a01-044f-047b-618f" page="25" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
@@ -14726,7 +14754,8 @@ that do not roll To Hit.</characteristic>
     </profile>
     <profile id="8b6b-4bae-205f-2730" name="Blood Fever" publicationId="1a01-044f-047b-618f" page="244" hidden="false" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods">
       <characteristics>
-        <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">The character will never lose his Frenzy for any reason. In addition, any unit, friend or foe, that is in base contact them at the start of their Movement phase becomes subject to Frenzy for the rest of that turn. If they already have Frenzy, they instead gain +1 A, but will have to re-roll any successful Berserk Rage roll.</characteristic>
+        <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The character will never lose his Frenzy for any reason. In addition, any unit, friend or foe, that is in base contact them at the start of their Movement phase becomes subject to Frenzy for the rest of that turn. If they already have Frenzy, they instead gain +1 A, but will have to re-roll any successful Berserk Rage roll.</characteristic>
+        <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">25</characteristic>
       </characteristics>
     </profile>
     <profile id="992d-5b24-ef6e-51db" name="Bubebolos" publicationId="f46b-8c4e-ed82-05f7" page="21" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
@@ -14759,7 +14788,8 @@ that do not roll To Hit.</characteristic>
     </profile>
     <profile id="be7d-184a-0c57-42b2" name="Nurgle&apos;s Rot" publicationId="1a01-044f-047b-618f" page="245" hidden="false" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods">
       <characteristics>
-        <characteristic name="Special Rules" typeId="7ab4-c2c7-7e2c-9cb0">At the start of every close combat phase, every enemy model in base contact with the character suffers a single Strength 1 hit with the Ignores Armour Saves special rule.</characteristic>
+        <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">At the start of every close combat phase, every enemy model in base contact with the character suffers a single Strength 1 hit with the Ignores Armour Saves special rule.</characteristic>
+        <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">10</characteristic>
       </characteristics>
     </profile>
     <profile id="da4b-e766-2b33-9396" name="Rot Beast of Nurgle" publicationId="f46b-8c4e-ed82-05f7" page="35" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
