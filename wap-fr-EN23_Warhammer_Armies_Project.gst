@@ -5853,7 +5853,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="3. Winds of Chaos" hidden="false" id="bccf-908d-d55a-5aa0" collective="false">
+            <selectionEntry type="upgrade" import="true" name="5. Winds of Chaos" hidden="true" id="bccf-908d-d55a-5aa0" collective="false">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f21d-67ca-eaaf-35e1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5863,7 +5863,7 @@
               <profiles>
                 <profile name="Winds of Chaos" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="f9a4-6e0a-f330-078e" publicationId="1a01-044f-047b-618f" page="8">
                   <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
@@ -5871,14 +5871,6 @@
                   </characteristics>
                 </profile>
               </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="4. Call to Glory" hidden="true" id="0148-a357-c74c-afc3" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8201-7440-06a2-7baa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
                   <conditionGroups>
@@ -5892,19 +5884,27 @@
                   </conditionGroups>
                 </modifier>
               </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="3. Veil of Gloom" hidden="false" id="0148-a357-c74c-afc3" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8201-7440-06a2-7baa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
               <profiles>
-                <profile name="Call to Glory" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="f027-e68a-9eee-cf7f" publicationId="1a01-044f-047b-618f" page="8">
+                <profile name="Veil of Gloom" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="f027-e68a-9eee-cf7f" publicationId="1a01-044f-047b-618f" page="8">
                   <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Choose one Leader model; while the spell is in effect, that model gains +1 Weapon Skill, Strength, Toughness, Wounds, Initiative, Attacks and Leadership and is treated as a Character in all aspects, though they may not leave their unit.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains a 5+ Ward save against missile attacks until the start of your next Magic phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="5. Vision of Torment" hidden="true" id="ecd8-43ad-f80a-dabd" collective="false">
+            <selectionEntry type="upgrade" import="true" name="4. Vision of Torment" hidden="true" id="ecd8-43ad-f80a-dabd" collective="false">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8dbb-4e77-92fe-7579" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -10383,7 +10383,7 @@ This rule is cumulative with other sources of Hold Your Ground. If the model ha
       <description>A Daemon of Slaanesh has the Hatred (Daemons of Khorne) and Armour Piercing (1) special rules. For every regular Attack that causes an unsaved Wound, the model may may an additional Attack. These additional Attacks cannot generate further attacks.</description>
     </rule>
     <rule name="Daemon of Tzeentch" id="fe9a-f478-5bcc-57a8" hidden="false" publicationId="1a01-044f-047b-618f" page="171">
-      <description>A Daemon of Tzeentch has the Hatred (Daemons of Nurgle) special rule and may re-roll failed Ward saves.</description>
+      <description>A Daemon of Tzeentch has the Hatred (Daemons of Nurgle) special rule and a 6+ Ward save. Wizards with the Daemon of Tzeentch upgrade can also re-roll channelling results of 1.</description>
     </rule>
     <rule name="Mark of Khorne" id="Mark of Khorne" hidden="false" publicationId="1a01-044f-047b-618f" page="163">
       <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
@@ -10398,7 +10398,7 @@ Models with the Mark of Nurgle add +1 to their T.</description>
     <rule name="Mark of Slaanesh" id="Mark of Slaanesh" hidden="false" publicationId="1a01-044f-047b-618f" page="163">
       <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
 
-Models with the Mark of Slaanesh have the Immunity (Psychology) special rule and may re-roll 1&apos;s on their charge and pursuit distances. </description>
+Models with the Mark of Slaanesh have the Immunity (Psychology) special rule and may re-roll the lowest dice on their charge and pursuit distances.</description>
     </rule>
     <rule name="Mark of Tzeentch" id="Mark of Tzeentch" hidden="false" publicationId="1a01-044f-047b-618f" page="163">
       <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
