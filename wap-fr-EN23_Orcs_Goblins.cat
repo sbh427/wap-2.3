@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="aea5-0b49-3f3d-0e16" name="Orcs &amp; Goblins WAP 1.60" revision="57" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="aea5-0b49-3f3d-0e16" name="Orcs &amp; Goblins WAP 1.62" revision="57" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <selectionEntries>
     <selectionEntry id="bcd3-0731-37ca-d244" name="Orc Warchanter" hidden="false" collective="false" import="true" type="model" sortIndex="8">
@@ -24,7 +24,7 @@
           <description>Any Orc unit joined by a Warchanter may re-roll 1&apos;s To Hit and To Wound in close combat.</description>
         </rule>
         <rule name="Warbeats" id="9999-46bc-bdf4-3271" hidden="false" publicationId="9e23-79cb-pubN78975" page="26">
-          <description>At the start of each of your turns, the Warchanter can use one of the following Warbeats which affect themself and the unit they are with. Each Warbeat lasts until the start of your next turn. A unit can only be under the effect of one Warbeat at a time.</description>
+          <description>A Warchanter knows three Warbeats. They may attempt to use one at the start of each of your turns by taking a Leadership test on their own unmodified Leadership. If passed, the Warbeat is answered and take immediate effect. Each Warbeat lasts until the start of your next turn. A friendly unit can only be under the effect of one Warbeat at a time.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -35,9 +35,6 @@
       <categoryLinks>
         <categoryLink id="43ee-af15-3825-2e39" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="2620-ea99-cf5d-b52a" targetId="22c9-1606-58f8-2e60" primary="false"/>
-        <categoryLink name="Z Light Armour" hidden="false" id="42d8-11a9-85df-90b9" targetId="fa51-55d0-00b9-c0e8" primary="false"/>
-        <categoryLink name="Z Medium Armour" hidden="false" id="159c-ec66-849c-9f9a" targetId="222a-078c-ce85-fb16" primary="false"/>
-        <categoryLink name="Z Armour" hidden="false" id="ab09-6aab-08d5-7d9b" targetId="387c-2b7c-0a30-7305" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="90. Magic Items" hidden="false" id="f9fa-a84a-0fa7-74f1" type="selectionEntryGroup" targetId="89d6-6943-c3c9-a681">
@@ -49,23 +46,32 @@
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="2e30-5b76-db8f-3cf0" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="2e30-5b76-db8f-3cf0" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
           <entryLinks>
-            <entryLink import="true" name="Light Armour" hidden="false" id="334b-2f07-d8fe-f1e5" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="1"/>
+            <entryLink import="true" name="Light Armour" hidden="false" id="334b-2f07-d8fe-f1e5" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="points" value="2"/>
+              </costs>
+            </entryLink>
             <entryLink import="true" name="Medium Armour" hidden="false" id="1cba-6c45-930c-ae8f" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="2">
               <costs>
-                <cost name="pts" typeId="points" value="4"/>
+                <cost name="pts" typeId="points" value="6"/>
               </costs>
             </entryLink>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="15. Race" hidden="false" id="b640-d662-3661-bcc9" type="selectionEntryGroup" targetId="b86a-7a2f-e4c6-bbdc">
           <entryLinks>
-            <entryLink import="true" name="Common Orc" hidden="false" id="55dd-f650-ebf9-4a29" type="selectionEntry" targetId="38eb-4cc1-1d80-2116">
+            <entryLink import="true" name="Common Orc" hidden="false" id="55dd-f650-ebf9-4a29" type="selectionEntry" targetId="38eb-4cc1-1d80-2116" sortIndex="1">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3044-af78-0470-1a3d-min" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3044-af78-0470-1a3d-max" includeChildSelections="false"/>
               </constraints>
+            </entryLink>
+            <entryLink import="true" name="Savage Orc" hidden="false" id="7b44-7851-655a-8525" type="selectionEntry" targetId="a3a2-449e-045e-ff73" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -80,7 +86,7 @@
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="65"/>
+        <cost name="pts" typeId="points" value="75"/>
       </costs>
       <infoGroups>
         <infoGroup name="Warbeats" id="e2c5-e1e6-1872-a030" hidden="false">
@@ -103,6 +109,23 @@
           </profiles>
         </infoGroup>
       </infoGroups>
+      <modifiers>
+        <modifier type="add" value="222a-078c-ce85-fb16" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="38eb-4cc1-1d80-2116" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="fa51-55d0-00b9-c0e8" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="38eb-4cc1-1d80-2116" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="387c-2b7c-0a30-7305" field="category">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="38eb-4cc1-1d80-2116" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="07cd-c03a-191f-cef9" name="Orc Boyz" hidden="false" collective="false" import="true" type="unit" sortIndex="13">
       <categoryLinks>
@@ -112,7 +135,7 @@
       <selectionEntries>
         <selectionEntry id="c860-6b8d-6663-ccd6" name="Orc Boy" hidden="false" collective="false" import="true" type="model" sortIndex="1">
           <constraints>
-            <constraint field="selections" scope="parent" value="10" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f27c-2c34-c432-dbd1" type="min"/>
+            <constraint field="selections" scope="parent" value="15" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f27c-2c34-c432-dbd1" type="min"/>
           </constraints>
           <profiles>
             <profile id="d525-3db3-7071-3c29" name="Orc Boy" publicationId="9e23-79cb-pubN78975" page="112" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
@@ -321,7 +344,6 @@
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink id="0094-188c-b70e-ef2c" name="Animosity" hidden="false" targetId="332b-abb1-2832-085a" type="infoGroup"/>
             <infoLink id="2066-0cef-ca54-1201" name="Size Matters" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
             <infoLink name="Mighty Blow (1)" id="a252-c991-e4a5-8303" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
           </infoLinks>
@@ -370,18 +392,6 @@
                 <entryLink import="true" name="Longbow" hidden="false" id="a789-6054-eb8b-9175" type="selectionEntry" targetId="f6cc-1342-64fe-6a3e" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
-                  </costs>
-                  <modifiers>
-                    <modifier type="set" value="true" field="hidden">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="unit" childId="38eb-4cc1-1d80-2116" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </entryLink>
-                <entryLink import="true" name="Crossbow" hidden="false" id="381e-1cc2-4fe0-240b" type="selectionEntry" targetId="9936-c747-429f-6327" sortIndex="3">
-                  <costs>
-                    <cost name="pts" typeId="points" value="2"/>
                   </costs>
                   <modifiers>
                     <modifier type="set" value="true" field="hidden">
@@ -445,58 +455,6 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
-      <constraints>
-        <constraint type="max" value="-1" field="selections" scope="force" shared="true" id="7281-ca34-e4be-b37e" includeChildSelections="true"/>
-      </constraints>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="set" value="0" field="7281-ca34-e4be-b37e">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="9936-c747-429f-6327" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="0" field="selections" scope="force" childId="07cd-c03a-191f-cef9" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="1" field="7281-ca34-e4be-b37e">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="9936-c747-429f-6327" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="force" childId="07cd-c03a-191f-cef9" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="10" field="selections" scope="force" childId="a38a-fa50-c991-4e97" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="2" field="7281-ca34-e4be-b37e">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="9936-c747-429f-6327" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="2" field="selections" scope="force" childId="07cd-c03a-191f-cef9" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="20" field="selections" scope="force" childId="a38a-fa50-c991-4e97" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="set" value="3" field="7281-ca34-e4be-b37e">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="9936-c747-429f-6327" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="3" field="selections" scope="force" childId="07cd-c03a-191f-cef9" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="30" field="selections" scope="force" childId="a38a-fa50-c991-4e97" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </modifierGroup>
-      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="b499-20aa-c9eb-6411" name="Goblin Gitz" hidden="false" collective="false" import="true" type="unit" sortIndex="16">
       <modifiers>
@@ -543,7 +501,6 @@
           </profiles>
           <infoLinks>
             <infoLink id="b8ae-741b-c665-0005" name="Fear Elves" hidden="false" targetId="8568-17b2-9805-2665" type="rule"/>
-            <infoLink id="683c-0f76-603e-4585" name="Animosity" hidden="false" targetId="332b-abb1-2832-085a" type="infoGroup"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="2"/>
@@ -553,14 +510,13 @@
               <entryLinks>
                 <entryLink import="true" name="Shield" hidden="false" id="73e9-ce73-e454-dcc7" type="selectionEntry" targetId="c068-0827-9931-d9bf">
                   <modifiers>
-                    <modifier type="add" value="{this} is not allowed when armed with great weapons, bows or shortbows." field="error">
+                    <modifier type="add" value="{this} is not allowed when armed with great weapons or shortbows." field="error">
                       <conditionGroups>
                         <conditionGroup type="and">
                           <conditionGroups>
                             <conditionGroup type="or">
                               <conditions>
                                 <condition type="atLeast" value="1" field="selections" scope="unit" childId="0473-857e-78d9-cb7c" shared="true" includeChildSelections="true"/>
-                                <condition type="atLeast" value="1" field="selections" scope="unit" childId="94ec-8421-59ea-a9d0" shared="true" includeChildSelections="true"/>
                                 <condition type="atLeast" value="1" field="selections" scope="unit" childId="b2c6-18cc-9482-8f48" shared="true" includeChildSelections="true"/>
                               </conditions>
                             </conditionGroup>
@@ -581,18 +537,11 @@
             <entryLink import="true" name="15. Race" hidden="false" id="4210-808f-bd61-4aee" type="selectionEntryGroup" targetId="b86a-7a2f-e4c6-bbdc">
               <entryLinks>
                 <entryLink import="true" name="Common Goblin" hidden="false" id="6765-b162-cd55-d216" type="selectionEntry" targetId="deca-22a4-bf9c-0c27" sortIndex="1"/>
-                <entryLink import="true" name="Night Goblin" hidden="false" id="4494-3b80-0d99-4279" type="selectionEntry" targetId="cd2b-976c-8770-3030" sortIndex="2">
-                  <infoLinks>
-                    <infoLink name="Magic Mushrooms" id="daf0-050f-28c5-f4cd" hidden="false" type="rule" targetId="35e6-988f-5bb0-ff28"/>
-                  </infoLinks>
-                </entryLink>
+                <entryLink import="true" name="Night Goblin" hidden="false" id="4494-3b80-0d99-4279" type="selectionEntry" targetId="cd2b-976c-8770-3030" sortIndex="2"/>
                 <entryLink import="true" name="Forest Goblin" hidden="false" id="9e67-b9ee-ec51-70ab" type="selectionEntry" targetId="1452-72a8-f5d5-225f" sortIndex="3">
                   <costs>
-                    <cost name="pts" typeId="points" value="1"/>
+                    <cost name="pts" typeId="points" value="0"/>
                   </costs>
-                  <infoLinks>
-                    <infoLink name="Spider Venom" id="a943-563a-5828-5bc0" hidden="false" type="rule" targetId="1f41-5c93-ec94-d3c3"/>
-                  </infoLinks>
                 </entryLink>
               </entryLinks>
             </entryLink>
@@ -605,73 +554,51 @@
                   <modifiers>
                     <modifier type="set" value="1" field="65b7-0a3b-59b5-6d36">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="d534-5abd-61fd-687e" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="b2c6-18cc-9482-8f48" shared="true"/>
                       </conditions>
                     </modifier>
                   </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Spear" hidden="false" id="80aa-11a8-1249-55f8" type="selectionEntry" targetId="a901-4548-955d-623c" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0.5"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Polearm/Halberd" hidden="false" id="889c-73e9-d32a-bbf4" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="2"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="unit" childId="1452-72a8-f5d5-225f" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Great Weapon" hidden="false" id="05a4-4acc-58c6-df39" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="5">
+                  <costs>
+                    <cost name="pts" typeId="points" value="3"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Shortbow" hidden="false" id="e1fa-f00d-9044-f32f" type="selectionEntry" targetId="b2c6-18cc-9482-8f48" sortIndex="4">
+                  <costs>
+                    <cost name="pts" typeId="points" value="2"/>
+                  </costs>
                 </entryLink>
               </entryLinks>
               <modifiers>
                 <modifier type="set" value="2" field="fe22-ce5f-b23e-303d">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="d534-5abd-61fd-687e" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b2c6-18cc-9482-8f48" shared="true"/>
                   </conditions>
                 </modifier>
                 <modifier type="set" value="2" field="e941-9082-0af2-8b43">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="d534-5abd-61fd-687e" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="b2c6-18cc-9482-8f48" shared="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="CC" id="1f4a-76a6-cbc5-8d37" hidden="false" flatten="true" sortIndex="2">
-                  <entryLinks>
-                    <entryLink import="true" name="Spear" hidden="false" id="80aa-11a8-1249-55f8" type="selectionEntry" targetId="a901-4548-955d-623c" sortIndex="2">
-                      <costs>
-                        <cost name="pts" typeId="points" value="0.5"/>
-                      </costs>
-                    </entryLink>
-                    <entryLink import="true" name="Polearm/Halberd" hidden="false" id="889c-73e9-d32a-bbf4" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="3">
-                      <costs>
-                        <cost name="pts" typeId="points" value="1.5"/>
-                      </costs>
-                      <modifiers>
-                        <modifier type="set" value="true" field="hidden">
-                          <conditions>
-                            <condition type="atLeast" value="1" field="selections" scope="unit" childId="1452-72a8-f5d5-225f" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </modifier>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Great Weapon" hidden="false" id="05a4-4acc-58c6-df39" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="4">
-                      <costs>
-                        <cost name="pts" typeId="points" value="2"/>
-                      </costs>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntryGroup>
-                <selectionEntryGroup name="Range" id="d534-5abd-61fd-687e" hidden="false" flatten="true" sortIndex="3">
-                  <entryLinks>
-                    <entryLink import="true" name="Shortbow" hidden="false" id="e1fa-f00d-9044-f32f" type="selectionEntry" targetId="b2c6-18cc-9482-8f48">
-                      <costs>
-                        <cost name="pts" typeId="points" value="2"/>
-                      </costs>
-                    </entryLink>
-                    <entryLink import="true" name="Bow" hidden="false" id="0325-476e-7f46-8620" type="selectionEntry" targetId="94ec-8421-59ea-a9d0">
-                      <costs>
-                        <cost name="pts" typeId="points" value="3"/>
-                      </costs>
-                      <modifiers>
-                        <modifier type="set" value="true" field="hidden">
-                          <conditions>
-                            <condition type="equalTo" value="0" field="selections" scope="unit" childId="deca-22a4-bf9c-0c27" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </modifier>
-                      </modifiers>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
             </entryLink>
             <entryLink import="true" name="40. Suits of Armour" hidden="false" id="3d9a-5083-fae0-8252" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
               <entryLinks>
@@ -679,6 +606,13 @@
                   <costs>
                     <cost name="pts" typeId="points" value="0.5"/>
                   </costs>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="unit" childId="1452-72a8-f5d5-225f" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </entryLink>
               </entryLinks>
             </entryLink>
@@ -732,87 +666,7 @@
         </selectionEntryGroup>
         <selectionEntryGroup name="Additional Models" id="e25c-eafa-119c-6d1d" hidden="false">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Fanatic" hidden="false" id="464b-f135-9049-e76f">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="cd2b-976c-8770-3030" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="increment" value="1" field="60d4-eba7-aab5-1811">
-                  <repeats>
-                    <repeat value="10" repeats="1" field="selections" scope="unit" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <constraints>
-                <constraint type="max" value="0" field="selections" scope="unit" shared="true" id="60d4-eba7-aab5-1811"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="25"/>
-              </costs>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Equipment" id="736a-a1ca-0662-4b59" hidden="false">
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Giant Ball and Chain" hidden="false" id="b40d-e921-a536-50b2"/>
-                    <selectionEntry type="upgrade" import="true" name="Twackwheezer Puffshrooms" hidden="false" id="a89b-808a-b98c-727d">
-                      <rules>
-                        <rule name="Twackwheezer Puffshrooms" id="db02-6c6d-c042-7efa" hidden="false">
-                          <description>Twackwheezer Puffshrooms replace the Fanatic&apos;s normal Strength 5 Hits. All models Hit must pass a Toughness test or suffer a Wound which Ignores Armour Saves. In addition, all units where the majority of the models are within 6&quot; of a Fanatic with this upgrade count as being in soft cover.</description>
-                        </rule>
-                      </rules>
-                    </selectionEntry>
-                  </selectionEntries>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2748-8abe-f2ec-d6bd-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2748-8abe-f2ec-d6bd-max"/>
-                  </constraints>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <rules>
-                <rule name="Fanatic" id="6f75-f29c-ab01-d73c" hidden="false">
-                  <description>Fanatics deploy following the rules for Hidden models. However, they are not revealed like other Hidden models, but instead follow the rules below:
-
-
-- Release the Fanatics: Fanatics are automatically released when an enemy unit comes to within 8&quot; of the concealing unit&apos;s Line of Sight. The moving unit stops immediately (fliers land). Once the Fanatic&apos;s movement has been resolved, the unit can continue their move (unless panicked). When a Fanatic is released, you may choose the direction in which it travels, and the point on the concealing unit from which it starts. Fanatics move 2D6&quot; using the rules for Random Movement, measured from the base of its unit.
-After release, Fanatics are treated as individual units. In your subsequent turns they must move in the Compulsory Moves subphase using the Random Movement special rule, but they always move in a random direction.
-
-
--Splat!: If a Fanatic&apos;s move would bring it into contact with another unit, then he moves through rather than stopping. If the Fanatic&apos;s move would end within one or more units, then he automatically bounces through them – place the Fanatic model 1&quot; beyond the unit(s), in the direction he was moving. When a Fanatic moves through any unit it inflicts D6 Strength 5 Armour Piercing (1) hits.
-
-
--Force of Destruction: Fanatics cannot be charged, but models can move into contact with them. Any unit that does so takes 2D6 Strength 5 Armour Piercing (1) hits. The Fanatic model is then removed, and the unit may carry on with its move.
-
-
--Out of Control: A Fanatic is removed immediately as a casualty when:
-• It contacts a piece of terrain of any kind that&apos;s not open ground.
-• It contacts another Fanatic (both Fanatics are removed).
-• It moves off a table edge.
-• It rolls a double for movement. This does not apply the first time the Fanatic moves.
-• Any unit moves into contact with the Fanatic.
-
-
-Victory Points are rewarded for each slain Fanatic individually.</description>
-                </rule>
-              </rules>
-              <profiles>
-                <profile name="Fanatic" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="461b-82b8-5e2e-7b71" publicationId="9e23-79cb-pubN78975" page="38">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">*</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">*</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Night Goblin)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Jester" hidden="false" id="d45b-8b42-97d2-dd3a" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Jester" hidden="false" id="d45b-8b42-97d2-dd3a" collective="false" sortIndex="4">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7944-8271-1309-1f67" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -853,27 +707,32 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
                 </infoGroup>
               </infoGroups>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Netters" hidden="false" id="5765-e586-64cf-1a72">
+            <selectionEntry type="upgrade" import="true" name="Netters" hidden="false" id="5765-e586-64cf-1a72" sortIndex="1">
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="unit" childId="cd2b-976c-8770-3030" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="1" field="f954-e592-fd72-8f55">
+                  <repeats>
+                    <repeat value="5" repeats="1" field="selections" scope="unit" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+                  </repeats>
+                </modifier>
               </modifiers>
               <infoLinks>
                 <infoLink name="Netters" id="bb67-19d2-cbcf-d970" hidden="false" type="rule" targetId="db29-ce61-4b5d-a271"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="25"/>
+                <cost name="pts" typeId="points" value="2"/>
               </costs>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c9f3-f673-b2cc-c756"/>
+                <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="f954-e592-fd72-8f55" includeChildSelections="false"/>
               </constraints>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Nasty Skulkers" hidden="false" id="df8e-3c0c-4d20-1978" type="selectionEntry" targetId="bc2a-a902-4ef4-2407">
+            <entryLink import="true" name="Nasty Skulkers" hidden="false" id="df8e-3c0c-4d20-1978" type="selectionEntry" targetId="bc2a-a902-4ef4-2407" sortIndex="3">
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
@@ -896,6 +755,100 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
               </rules>
             </entryLink>
           </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Fanatics" id="94e8-5800-71d1-35c6" hidden="false">
+              <selectionEntries>
+                <selectionEntry type="model" import="true" name="Fanatic (Giant Ball and Chain^)" hidden="false" id="464b-f135-9049-e76f" collective="true">
+                  <costs>
+                    <cost name="pts" typeId="points" value="25"/>
+                  </costs>
+                  <profiles>
+                    <profile name="Fanatic" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="461b-82b8-5e2e-7b71" publicationId="9e23-79cb-pubN78975" page="38">
+                      <characteristics>
+                        <characteristic name="M" typeId="09ad-18df-607b-1215">*</characteristic>
+                        <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
+                        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+                        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+                        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                        <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">*</characteristic>
+                        <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
+                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Night Goblin)</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+                <selectionEntry type="model" import="true" name="Fanatic (Twackwheezer Puffshrooms)" hidden="false" id="26e0-8dc1-00a2-4499" collective="true">
+                  <costs>
+                    <cost name="pts" typeId="points" value="25"/>
+                  </costs>
+                  <rules>
+                    <rule name="Twackwheezer Puffshrooms" id="abb8-0020-b7a6-82e3" hidden="false">
+                      <description>Twackwheezer Puffshrooms replace the Fanatic&apos;s normal Strength 5 Hits. All models Hit must pass a Toughness test or suffer a Wound which Ignores Armour Saves. In addition, all units where the majority of the models are within 6&quot; of a Fanatic with this upgrade count as being in soft cover.</description>
+                    </rule>
+                  </rules>
+                  <profiles>
+                    <profile name="Fanatic" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="b8c5-e087-7332-3479" publicationId="9e23-79cb-pubN78975" page="38">
+                      <characteristics>
+                        <characteristic name="M" typeId="09ad-18df-607b-1215">*</characteristic>
+                        <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
+                        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+                        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+                        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                        <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">*</characteristic>
+                        <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
+                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Night Goblin)</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="0" field="selections" scope="unit" shared="true" id="60d4-eba7-aab5-1811" automatic="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="1" field="60d4-eba7-aab5-1811">
+                  <repeats>
+                    <repeat value="10" repeats="1" field="selections" scope="unit" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+                  </repeats>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="unit" childId="cd2b-976c-8770-3030" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <rules>
+                <rule name="Fanatic" id="6f75-f29c-ab01-d73c" hidden="false">
+                  <description>Fanatics deploy following the rules for Hidden models. However, they are not revealed like other Hidden models, but instead follow the rules below:
+
+
+- Release the Fanatics: Fanatics are automatically released when an enemy unit comes to within 8&quot; of the concealing unit&apos;s Line of Sight. The moving unit stops immediately (fliers land). Once the Fanatic&apos;s movement has been resolved, the unit can continue their move (unless panicked). When a Fanatic is released, you may choose the direction in which it travels, and the point on the concealing unit from which it starts. Fanatics move 2D6&quot; using the rules for Random Movement, measured from the base of its unit.
+After release, Fanatics are treated as individual units. In your subsequent turns they must move in the Compulsory Moves subphase using the Random Movement special rule, but they always move in a random direction.
+
+
+-Splat!: If a Fanatic&apos;s move would bring it into contact with another unit, then he moves through rather than stopping. If the Fanatic ever ends its move over a unit, place it 1&quot; beyond the unit in the direction it was moving. If this is also over a unit it should be placed 1&quot; beyond that unit, repeating the process until it is no longer touching any models. When this happens, units between where the Fanatic ended its move do not take any damage. When a Fanatic moves through any unit it inflicts D6 Strength 5 Armour Piercing (1) hits.
+
+
+-Force of Destruction: Fanatics cannot be charged, but models can move into contact with them. Any unit that does so takes 2D6 Strength 5 hits with the Armour Piercing (1) special rule. The Fanatic model is then removed, and the unit may carry on with its move.
+
+
+-Out of Control: A Fanatic is removed immediately as a casualty when:
+• It contacts a piece of terrain of any kind that&apos;s not open ground.
+• It contacts another Fanatic (both Fanatics are removed).
+• It moves off a table edge.
+• It rolls a double for movement. This does not apply the first time the Fanatic moves.
+• Any unit moves into contact with the Fanatic.
+
+
+Victory Points are rewarded for each slain Fanatic individually.</description>
+                </rule>
+              </rules>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
@@ -1550,12 +1503,12 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
             <infoLink id="9abe-3e5c-d5e1-f649" name="Size Matters" hidden="false" targetId="f6b8-e24e-974c-015a" type="rule"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="15"/>
+            <cost name="pts" typeId="points" value="14"/>
           </costs>
           <entryLinks>
             <entryLink import="true" name="70. Mount" hidden="false" id="efbe-cd19-aff9-b90a" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
               <entryLinks>
-                <entryLink import="true" name="War Boar" hidden="false" id="07e4-6bc4-f7ca-b5e8" type="selectionEntry" targetId="d14f-ad4f-60de-fd28">
+                <entryLink import="true" name="War Boar" hidden="false" id="07e4-6bc4-f7ca-b5e8" type="selectionEntry" targetId="7284-49ca-e7b8-b362">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6b7f-ff63-fa17-d6d0"/>
                   </constraints>
@@ -2806,7 +2759,6 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
           </modifiers>
         </entryLink>
         <entryLink import="true" name="60. Wizard Level" hidden="false" id="a852-27f1-3696-ae75" type="selectionEntryGroup" targetId="f5c2-4dd8-a449-65ce"/>
-        <entryLink import="true" name="10. Character Options" hidden="false" id="206c-bacc-9163-5b31" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
         <entryLink import="true" name="65. Lore of Magic" hidden="false" id="a44a-49aa-9002-d4b8" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
           <entryLinks>
             <entryLink import="true" name="Lore of Troll Magic" hidden="false" id="a22f-8337-c899-e1ef" type="selectionEntry" targetId="8b46-aebb-97be-ab84"/>
@@ -3778,7 +3730,7 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               <entryLinks>
                 <entryLink import="true" name="70. Mount" hidden="false" id="8a36-083f-f5fd-ea70" type="selectionEntryGroup" targetId="11f2-1655-f0c0-1121">
                   <entryLinks>
-                    <entryLink import="true" name="War Boar" hidden="false" id="adae-0b95-3b03-2ef7" type="selectionEntry" targetId="d14f-ad4f-60de-fd28">
+                    <entryLink import="true" name="War Boar" hidden="false" id="adae-0b95-3b03-2ef7" type="selectionEntry" targetId="7284-49ca-e7b8-b362">
                       <modifiers>
                         <modifier type="set" value="Gnarla" field="name" affects="self.entries.profiles.Model"/>
                         <modifier type="increment" value="1" field="edd2-7979-54a4-6b35" affects="self.entries.profiles.Model"/>
@@ -6526,7 +6478,7 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
                 </entryLink>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Arachnarok Spider" hidden="false" id="d222-b12d-c59b-e839" type="selectionEntry" targetId="7c19-6488-9604-e1d2" sortIndex="6">
+            <entryLink import="true" name="Arachnarok Spider" hidden="false" id="d222-b12d-c59b-e839" type="selectionEntry" targetId="7c19-6488-9604-e1d2" sortIndex="7">
               <costs>
                 <cost name="pts" typeId="points" value="255"/>
               </costs>
@@ -6545,6 +6497,18 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
                   </constraints>
                 </entryLink>
               </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="Dire Wolf" hidden="false" id="90e4-1e91-6b4f-e7ff" type="selectionEntry" targetId="b89d-d9a4-7496-8611" sortIndex="6">
+              <costs>
+                <cost name="pts" typeId="points" value="45"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="model" childId="deca-22a4-bf9c-0c27" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -6578,20 +6542,8 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
           <entryLinks>
             <entryLink import="true" name="Shortbow" hidden="false" id="b85e-0254-f6fe-ae8a" type="selectionEntry" targetId="b2c6-18cc-9482-8f48" sortIndex="1">
               <costs>
-                <cost name="pts" typeId="points" value="3"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Bow" hidden="false" id="e1e2-5839-3f86-7d97" type="selectionEntry" targetId="94ec-8421-59ea-a9d0" sortIndex="2">
-              <costs>
                 <cost name="pts" typeId="points" value="4"/>
               </costs>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="model" childId="1452-72a8-f5d5-225f" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -6649,15 +6601,6 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="parent" childId="deca-22a4-bf9c-0c27" shared="true" includeChildSelections="true"/>
                 <condition type="atLeast" value="1" field="selections" scope="parent" childId="cd2b-976c-8770-3030" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="add" value="506f-f1ca-805e-a269" field="category">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="deca-22a4-bf9c-0c27" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -7022,7 +6965,7 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eaa6-f542-1ba5-1400"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Gigantic Spider" hidden="false" id="5883-6d3f-c31a-25b1" type="selectionEntry" targetId="b5f7-2228-f863-aed5" sortIndex="3">
+            <entryLink import="true" name="Gigantic Spider" hidden="false" id="5883-6d3f-c31a-25b1" type="selectionEntry" targetId="b5f7-2228-f863-aed5" sortIndex="4">
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
@@ -7034,7 +6977,7 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
                 <cost name="pts" typeId="points" value="32"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Great Cave Squig" hidden="false" id="aec8-09ee-d100-2840" type="selectionEntry" targetId="26dd-4fb6-8807-c29e" sortIndex="4">
+            <entryLink import="true" name="Great Cave Squig" hidden="false" id="aec8-09ee-d100-2840" type="selectionEntry" targetId="26dd-4fb6-8807-c29e" sortIndex="5">
               <costs>
                 <cost name="pts" typeId="points" value="32"/>
               </costs>
@@ -7046,7 +6989,7 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Goblin Wolf Chariot" hidden="false" id="e341-d535-0326-9c07" type="selectionEntry" targetId="7133-7f02-0d9f-4108" sortIndex="5">
+            <entryLink import="true" name="Goblin Wolf Chariot" hidden="false" id="e341-d535-0326-9c07" type="selectionEntry" targetId="7133-7f02-0d9f-4108" sortIndex="6">
               <costs>
                 <cost name="pts" typeId="points" value="36"/>
               </costs>
@@ -7065,6 +7008,18 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
                   </constraints>
                 </entryLink>
               </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="Dire Wolf" hidden="false" id="9367-dc02-a75a-8dc3" type="selectionEntry" targetId="b89d-d9a4-7496-8611" sortIndex="3">
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="model" childId="deca-22a4-bf9c-0c27" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -7087,11 +7042,7 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
           <entryLinks>
             <entryLink import="true" name="Common Goblin" hidden="false" id="bc0c-282e-206a-9cd4" type="selectionEntry" targetId="deca-22a4-bf9c-0c27" sortIndex="1"/>
             <entryLink import="true" name="Night Goblin" hidden="false" id="d5ef-2562-193c-2d80" type="selectionEntry" targetId="cd2b-976c-8770-3030" sortIndex="2"/>
-            <entryLink import="true" name="Forest Goblin" hidden="false" id="7e40-d1bd-a0f6-9ce7" type="selectionEntry" targetId="1452-72a8-f5d5-225f" sortIndex="3">
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-            </entryLink>
+            <entryLink import="true" name="Forest Goblin" hidden="false" id="7e40-d1bd-a0f6-9ce7" type="selectionEntry" targetId="1452-72a8-f5d5-225f" sortIndex="3"/>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="f024-134b-881a-1cb8" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
@@ -7128,20 +7079,8 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
           <entryLinks>
             <entryLink import="true" name="Shortbow" hidden="false" id="3940-2e42-3684-aaac" type="selectionEntry" targetId="b2c6-18cc-9482-8f48">
               <costs>
-                <cost name="pts" typeId="points" value="3"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Bow" hidden="false" id="d25e-ef4d-1dc4-5406" type="selectionEntry" targetId="94ec-8421-59ea-a9d0">
-              <costs>
                 <cost name="pts" typeId="points" value="4"/>
               </costs>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="model" childId="1452-72a8-f5d5-225f" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -7204,15 +7143,6 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="parent" childId="deca-22a4-bf9c-0c27" shared="true" includeChildSelections="true"/>
                 <condition type="atLeast" value="1" field="selections" scope="parent" childId="cd2b-976c-8770-3030" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-        <modifier type="add" value="506f-f1ca-805e-a269" field="category">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="deca-22a4-bf9c-0c27" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -7431,7 +7361,7 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
         </entryLink>
         <entryLink import="true" name="70. Mount" hidden="false" id="d8b7-95be-2fa4-3e01" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
           <entryLinks>
-            <entryLink import="true" name="War Boar" hidden="false" id="f6a4-9783-382c-e845" type="selectionEntry" targetId="d14f-ad4f-60de-fd28">
+            <entryLink import="true" name="War Boar" hidden="false" id="f6a4-9783-382c-e845" type="selectionEntry" targetId="7284-49ca-e7b8-b362">
               <modifiers>
                 <modifier type="set" value="2" field="1bd8-2ae7-60ad-42de"/>
               </modifiers>
@@ -8167,7 +8097,6 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="10. Character Options" hidden="false" id="97fb-d710-ebda-c91e" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="b7be-f81e-1262-b295" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Great Weapon" hidden="false" id="23ad-b097-4eba-614e" type="selectionEntry" targetId="0473-857e-78d9-cb7c">
@@ -10555,7 +10484,6 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
               <modifiers>
                 <modifier type="set" field="df90-5cbd-8cf9-95b2"/>
                 <modifier type="set" field="27ee-0675-122f-a1b1"/>
-                <modifier type="set" field="a199-f10b-a038-5730"/>
                 <modifier type="set" field="09ad-18df-607b-1215"/>
               </modifiers>
               <conditions>
@@ -10564,18 +10492,17 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
             </modifierGroup>
           </modifierGroups>
         </infoLink>
-        <infoLink name="Natural Armour (6+)" id="869d-0422-5345-4d90" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
-        <infoLink name="Mighty Blow (2)" id="7695-1e33-42e2-44a0" hidden="false" type="rule" targetId="9c98-f97f-344b-9e4b">
+        <infoLink name="Natural Armour (6+)" id="869d-0422-5345-4d90" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule">
           <modifiers>
-            <modifier type="set" value="War Boar only" field="annotation"/>
+            <modifier type="set" value="From War Boar" field="annotation"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Tusker Charge" id="7695-1e33-42e2-44a0" hidden="false" type="rule" targetId="76c4-8e4c-7258-76ca"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="f295-58ee-1ae9-6c7b" targetId="8b8a-34b1-ed30-df11" primary="false"/>
         <categoryLink name="Cavalry" hidden="false" id="44a8-d9b5-6ab4-8324" targetId="bdee-b168-38ba-7d3c" primary="false"/>
       </categoryLinks>
-      <comment>Character mount</comment>
       <entryLinks>
         <entryLink import="true" name="Barding" hidden="false" id="8544-74a8-373b-ca20" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
           <modifiers>
@@ -10589,6 +10516,16 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
         </entryLink>
       </entryLinks>
@@ -10598,12 +10535,12 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1eb4-23f5-ff28-eab2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Natural Armour (6+)" id="3ec2-6be9-cefe-08e3" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
-        <infoLink name="Mighty Blow (2)" id="006f-406e-a8f6-bea4" hidden="false" type="rule" targetId="9c98-f97f-344b-9e4b">
+        <infoLink name="Natural Armour (6+)" id="91c6-e53c-0098-0bf4" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule">
           <modifiers>
-            <modifier type="set" value="Grunta only" field="annotation"/>
+            <modifier type="set" value="From War Boar" field="annotation"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Tusker Charge" id="41eb-31ef-6a17-559b" hidden="false" type="rule" targetId="76c4-8e4c-7258-76ca"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="bebe-d612-7080-8b66" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -10624,7 +10561,21 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">4</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Animal)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Porcine)</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Grunta" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="8acd-4d64-c024-fcac" publicationId="9e23-79cb-pubN78975" page="30">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">4</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Porcine)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -10637,7 +10588,7 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
         <infoLink name="Orc Boar Chariot" id="31dc-d728-2a0c-9aac" hidden="false" targetId="70e5-fd20-6b1d-1889" type="profile"/>
       </infoLinks>
       <costs>
-        <cost name="pts" typeId="points" value="75"/>
+        <cost name="pts" typeId="points" value="65"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="War Boar" hidden="false" id="773e-e270-bfd0-334b" type="selectionEntry" targetId="7284-49ca-e7b8-b362">
@@ -10690,7 +10641,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
             <modifier type="set" value="Wyvren only" field="annotation"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Natural Armour (4+)" id="3242-a89a-0c9c-b55b" hidden="false" targetId="6b43-9dda-f589-0509" type="rule"/>
+        <infoLink name="Natural Armour (4+)" id="3242-a89a-0c9c-b55b" hidden="false" targetId="6b43-9dda-f589-0509" type="rule">
+          <modifiers>
+            <modifier type="set" value="from Wyvern" field="annotation"/>
+          </modifiers>
+        </infoLink>
         <infoLink name="Fly (8)" id="7be5-5e9c-cb39-cfbb" hidden="false" targetId="0a9a-bfcb-1a9d-5609" type="rule"/>
       </infoLinks>
       <categoryLinks>
@@ -10709,7 +10664,7 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Wyvern)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Draconic)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -10720,7 +10675,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
       </constraints>
       <infoLinks>
         <infoLink name="Impact Hits (D6)" id="be88-ad15-0cb7-b903" hidden="false" targetId="e9e6-66cc-623f-8e94" type="rule"/>
-        <infoLink name="Natural Armour (3+)" id="eb61-6287-ae51-62fb" hidden="false" targetId="32e8-b4ad-3e59-a3c7" type="rule"/>
+        <infoLink name="Natural Armour (3+)" id="eb61-6287-ae51-62fb" hidden="false" targetId="32e8-b4ad-3e59-a3c7" type="rule">
+          <modifiers>
+            <modifier type="set" value="from Maw Krusha" field="annotation"/>
+          </modifiers>
+        </infoLink>
         <infoLink name="Fly (5)" id="58d2-0514-0ef1-20e9" hidden="false" targetId="36d4-923e-e1c7-72bc" type="rule"/>
       </infoLinks>
       <categoryLinks>
@@ -10739,7 +10698,7 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Wyvern)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Draconic)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -10880,17 +10839,13 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
       <modifiers>
         <modifier type="replace" value="Common Goblin" field="13f9-a26b-05af-3459" scope="model" affects="self.entries.model.profiles.Model" arg="Goblin"/>
       </modifiers>
-      <infoLinks>
-        <infoLink name="Fear Elves" id="8a80-55e5-3fc5-c601" hidden="false" type="rule" targetId="8568-17b2-9805-2665"/>
-      </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7275-52ff-2f8d-c80a" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Forest Goblin" hidden="false" id="1452-72a8-f5d5-225f" collective="true">
       <infoLinks>
-        <infoLink name="Fear Elves" id="ee12-7dc3-06f2-adae" hidden="false" type="rule" targetId="8568-17b2-9805-2665"/>
-        <infoLink name="Poisoned Attacks" id="7cf2-880a-548a-2e13" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
+        <infoLink name="Strider (Forest)" id="7cf2-880a-548a-2e13" hidden="false" type="rule" targetId="8d09-c701-2658-67e8"/>
       </infoLinks>
       <modifiers>
         <modifier type="replace" value="Forest Goblin" field="13f9-a26b-05af-3459" scope="model" affects="self.entries.model.profiles.Model" arg="Goblin"/>
@@ -10905,7 +10860,6 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
         <modifier type="add" value="222a-078c-ce85-fb16" field="category" scope="root-entry" affects="self.entries.model"/>
       </modifiers>
       <infoLinks>
-        <infoLink name="Fear Elves" id="2012-3b81-e6d7-4dd5" hidden="false" type="rule" targetId="8568-17b2-9805-2665"/>
         <infoLink name="Hatred (Dwarfs)" id="aa2c-19ff-7816-1450" hidden="false" type="rule" targetId="da8d-d10d-b525-a19a"/>
       </infoLinks>
       <constraints>
@@ -10938,20 +10892,25 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">3</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Squig)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Fungoid)</characteristic>
           </characteristics>
         </profile>
       </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Giant Spider" hidden="false" id="1bca-95b4-30e5-1d1c" collective="true" subType="mount">
       <infoLinks>
-        <infoLink name="Creeping Assault" id="9c35-7895-fd2c-070d" hidden="false" targetId="9000-3970-376c-c167" type="rule"/>
         <infoLink name="Poisoned Attacks" id="0536-e09c-5acf-2a11" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule">
           <modifiers>
             <modifier type="set" value="Giant Spider only" field="annotation"/>
           </modifiers>
         </infoLink>
         <infoLink name="Wall-crawler" id="c0eb-4174-ef95-09c5" hidden="false" targetId="c0bd-0f1c-4859-1313" type="rule"/>
+        <infoLink name="Natural Armour (6+)" id="05a8-aab3-8306-a191" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule">
+          <modifiers>
+            <modifier type="set" value="From Giant Spider" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Creeping Assault" id="32e3-071c-107a-a280" hidden="false" type="rule" targetId="9000-3970-376c-c167"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="74b2-409f-f6ac-08a7" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -10969,7 +10928,7 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">2</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Arachnid)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -10985,7 +10944,11 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
           </modifiers>
         </infoLink>
         <infoLink name="Wall-crawler" id="c184-36f8-c6ad-b73b" hidden="false" targetId="c0bd-0f1c-4859-1313" type="rule"/>
-        <infoLink name="Natural Armour (6+)" id="293e-4af7-5032-506f" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
+        <infoLink name="Natural Armour (5+)" id="293e-4af7-5032-506f" hidden="false" targetId="306d-711a-1300-587f" type="rule">
+          <modifiers>
+            <modifier type="set" value="From Gigantic Spider" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="b8d2-90f2-8968-8a05" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -11003,7 +10966,7 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">3</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Animal)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Arachnid)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -11662,7 +11625,7 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
           <entryLinks>
             <entryLink import="true" name="70. Mount" hidden="false" id="0cd6-c72c-b84e-e33d" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
               <entryLinks>
-                <entryLink import="true" name="War Boar" hidden="false" id="9a74-ae11-e995-5c09" type="selectionEntry" targetId="d14f-ad4f-60de-fd28">
+                <entryLink import="true" name="War Boar" hidden="false" id="9a74-ae11-e995-5c09" type="selectionEntry" targetId="7284-49ca-e7b8-b362">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e3a1-5e47-a129-6925"/>
                   </constraints>
@@ -11831,38 +11794,49 @@ When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 S 6 hit
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="War Boar" hidden="false" id="d14f-ad4f-60de-fd28" collective="true" subType="mount">
+    <selectionEntry type="model" import="true" name="Dire Wolf" hidden="false" id="b89d-d9a4-7496-8611" subType="mount">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1bd8-2ae7-60ad-42de" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d300-a788-ddbc-64f0" includeChildSelections="false"/>
       </constraints>
-      <infoLinks>
-        <infoLink name="War Boar" id="70ca-0bfc-fcad-346d" hidden="false" targetId="e5ff-5bf1-2cf1-e269" type="profile">
-          <modifierGroups>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="set" field="df90-5cbd-8cf9-95b2"/>
-                <modifier type="set" field="27ee-0675-122f-a1b1"/>
-                <modifier type="set" field="a199-f10b-a038-5730"/>
-                <modifier type="set" field="09ad-18df-607b-1215"/>
-              </modifiers>
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="crew" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifierGroup>
-          </modifierGroups>
-        </infoLink>
-        <infoLink name="Natural Armour (6+)" id="e099-fe96-17a1-bbd3" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
-        <infoLink name="Mighty Blow (2)" id="aa9c-8b21-e0b0-99ae" hidden="false" type="rule" targetId="9c98-f97f-344b-9e4b">
+      <entryLinks>
+        <entryLink import="true" name="Barding" hidden="false" id="161c-13f8-9bd1-7cba" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
+          <costs>
+            <cost name="pts" typeId="points" value="5"/>
+          </costs>
           <modifiers>
-            <modifier type="set" value="War Boar only" field="annotation"/>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
-        </infoLink>
-      </infoLinks>
+        </entryLink>
+      </entryLinks>
+      <profiles>
+        <profile name="Dire Wolf" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6af6-844d-51fc-bade">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">9</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">4</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Canine)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
       <categoryLinks>
-        <categoryLink name="Mount" hidden="false" id="bd60-4494-2f42-8226" targetId="8b8a-34b1-ed30-df11" primary="false"/>
-        <categoryLink name="Cavalry" hidden="false" id="f52f-3bdf-6eeb-86ff" targetId="bdee-b168-38ba-7d3c" primary="false"/>
+        <categoryLink name="Mount" hidden="false" id="b213-8b08-d571-0797" targetId="8b8a-34b1-ed30-df11" primary="false"/>
+        <categoryLink name="Monstrous Cavalry" hidden="false" id="18e2-e3f9-8349-454f" targetId="82d3-4589-72b4-b6ed" primary="false"/>
       </categoryLinks>
-      <comment>Unit mount</comment>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -15136,8 +15110,8 @@ Attacks. Models that already have Poisoned Attacks will automatically wound on T
     </selectionEntryGroup>
     <selectionEntryGroup name="15. Race" id="b86a-7a2f-e4c6-bbdc" hidden="false">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="25eb-1d79-83c4-0236"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1725-05ab-3930-ec2d"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="25eb-1d79-83c4-0236" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1725-05ab-3930-ec2d" automatic="true"/>
       </constraints>
     </selectionEntryGroup>
     <selectionEntryGroup name="70. Mount" id="11f2-1655-f0c0-1121" hidden="false">
@@ -15244,7 +15218,7 @@ of the Army General adds +1 to its combat resolution for the rest of the player
         <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730">3</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Porcine)</characteristic>
       </characteristics>
     </profile>
     <profile id="13dd-ee68-6b4f-ef1b" name="Goblin Wolf Chariot" publicationId="9e23-79cb-pubN78975" page="134" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
