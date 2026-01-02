@@ -361,7 +361,7 @@
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Farm Aniaml" hidden="false" id="607b-351f-0cc8-b671" type="selectionEntry" targetId="32ab-0cdb-4763-e725" sortIndex="1">
+            <entryLink import="true" name="Farm Animal" hidden="false" id="607b-351f-0cc8-b671" type="selectionEntry" targetId="32ab-0cdb-4763-e725" sortIndex="1">
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
@@ -502,7 +502,7 @@
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Farm Aniaml" hidden="false" id="5d87-a5c1-3055-6475" type="selectionEntry" targetId="32ab-0cdb-4763-e725" sortIndex="1">
+            <entryLink import="true" name="Farm Animal" hidden="false" id="5d87-a5c1-3055-6475" type="selectionEntry" targetId="32ab-0cdb-4763-e725" sortIndex="1">
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
@@ -517,6 +517,11 @@
         <entryLink import="true" name="90. Magic Items" hidden="false" id="cc87-8dbc-9661-f147" type="selectionEntryGroup" targetId="cbd3-eb7f-ab45-a8c8">
           <modifiers>
             <modifier type="increment" value="50" field="2d6e-218e-2fad-478b"/>
+            <modifier type="decrement" value="25" field="2d6e-218e-2fad-478b">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="f494-a029-de12-7db0" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </entryLink>
         <entryLink import="true" name="10. Character Options" hidden="false" id="8220-6d0d-8656-a096" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
@@ -564,7 +569,7 @@
         </selectionEntryGroup>
         <selectionEntryGroup name="Mount" id="aeb2-4571-e80f-55ac" hidden="false">
           <entryLinks>
-            <entryLink import="true" name="Farm Aniaml" hidden="false" id="907b-2c42-a413-b741" type="selectionEntry" targetId="32ab-0cdb-4763-e725">
+            <entryLink import="true" name="Farm Animal" hidden="false" id="907b-2c42-a413-b741" type="selectionEntry" targetId="32ab-0cdb-4763-e725">
               <constraints>
                 <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="52f6-a25d-724f-2453"/>
               </constraints>
@@ -1275,7 +1280,7 @@
           <entryLinks>
             <entryLink import="true" name="70. Mount" hidden="false" id="517f-3b9f-2c45-aa08" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
               <entryLinks>
-                <entryLink import="true" name="Farm Aniaml" hidden="false" id="78d9-f5de-5d16-aeaf" type="selectionEntry" targetId="32ab-0cdb-4763-e725">
+                <entryLink import="true" name="Farm Animal" hidden="false" id="78d9-f5de-5d16-aeaf" type="selectionEntry" targetId="32ab-0cdb-4763-e725">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9c97-8ba7-8c10-ed3c"/>
                   </constraints>
@@ -1591,7 +1596,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Command Group" id="cfca-326a-1710-3fc9" hidden="false" sortIndex="2">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="e0aa-e6cd-eeec-8cfd" sortIndex="">
+            <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="e0aa-e6cd-eeec-8cfd">
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
@@ -2049,7 +2054,7 @@
         </selectionEntryGroup>
         <selectionEntryGroup name="Mount" id="a396-48f3-7ddd-6266" hidden="false">
           <entryLinks>
-            <entryLink import="true" name="Farm Aniaml" hidden="false" id="ab9e-5318-a56d-5985" type="selectionEntry" targetId="32ab-0cdb-4763-e725">
+            <entryLink import="true" name="Farm Animal" hidden="false" id="ab9e-5318-a56d-5985" type="selectionEntry" targetId="32ab-0cdb-4763-e725">
               <constraints>
                 <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="b50a-14c2-e13b-0c27"/>
               </constraints>
@@ -2235,6 +2240,7 @@
           </modifiers>
         </infoLink>
         <infoLink name="Firing a Stone Thrower" id="892c-95e4-1447-5882" hidden="false" type="rule" targetId="0638-a1ac-c907-7ee2"/>
+        <infoLink name="Stone Thrower Misfire Chart" id="e90e-23a7-9c1e-cde8" hidden="false" type="infoGroup" targetId="f6f0-bb1f-f863-3e81"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Fireworks Cart" hidden="false" id="e8a8-f9b5-603b-1115" sortIndex="302">
@@ -2269,6 +2275,7 @@
             <modifier type="set" value="Flaming Attacks, Uses the large Template" field="d3a4-721b-f750-5564"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Stone Thrower Misfire Chart" id="a5b4-53ed-2b27-b199" hidden="false" type="infoGroup" targetId="f6f0-bb1f-f863-3e81"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="f617-7068-c8af-d4ca" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -2431,6 +2438,7 @@
         <infoLink name="Animated Construct" id="db60-6dab-670a-57ab" hidden="false" type="rule" targetId="738b-aca4-740c-e425"/>
         <infoLink name="Fear" id="632a-870b-8ff2-d7bc" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
         <infoLink name="Random Movement (3D6)" id="ba63-c255-ce38-8e60" hidden="false" type="rule" targetId="0877-cd17-c381-a045"/>
+        <infoLink name="Blackpowder Misfire Chart" id="c1b7-6d6c-aedb-92e5" hidden="false" type="infoGroup" targetId="bb8f-7181-30f9-fc65"/>
       </infoLinks>
       <rules>
         <rule name="Nearly Irresistible Force" id="9e7d-41da-6b48-4330" hidden="false" publicationId="ebd7-07af-35b9-4e00" page="27">
@@ -2543,7 +2551,7 @@
                       <profiles>
                         <profile name="Brooch of Stoutheart" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="a64a-f6ff-aa89-302c" publicationId="ebd7-07af-35b9-4e00" page="28">
                           <characteristics>
-                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The wearer of this talisman gains a Ward save (5+). In addition, they may re-roll failed Ward saves from this item. </characteristic>
+                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The wearer of this talisman gains a Ward save (5+). In addition, they may re-roll failed Ward saves from this item.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -2636,7 +2644,7 @@
                       <profiles>
                         <profile name="Aladora&apos;s Necklace" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="6fae-0784-f9be-18fd" publicationId="ebd7-07af-35b9-4e00" page="29">
                           <characteristics>
-                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">Aladora’s Necklace gives the wearer a Ward save (5+). Once per battle, at the start of any close combat phase, the amulet can emit a blinding flash of light which prevents all attacks from targeting the wearer for the duration of the turn. </characteristic>
+                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">Aladora’s Necklace gives the wearer a Ward save (5+). Once per battle, at the start of any close combat phase, the amulet can emit a blinding flash of light which prevents all attacks from targeting the wearer for the duration of the turn.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -2764,7 +2772,7 @@
                       <profiles>
                         <profile name="Magic &apos;Swag&apos; Bag" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="9124-95d0-91e8-9255" publicationId="ebd7-07af-35b9-4e00" page="30">
                           <characteristics>
-                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The Magic &apos;Swag&apos; Bag allows Clegg to take away any of the enemy&apos;s magical items from them for one turn so he can possibly use them himself. At the start of any Halfling turn, nominate one enemy character and take a random magic item from them. If that model does not have a magic item, pick a new character until you find one with a magic item. Clegg may use whichever magic item is picked until the start of his next turn. After this the magic item magically appears back to the original character. Any magic item can be drawn out of the &apos;Swag&apos; Bag, but special items that only work for specific characters cannot be used even though they may be picked. Note that each magic item may only be picked once per game. </characteristic>
+                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The Magic &apos;Swag&apos; Bag allows Clegg to take away any of the enemy&apos;s magical items from them for one turn so he can possibly use them himself. At the start of any Halfling turn, nominate one enemy character and take a random magic item from them. If that model does not have a magic item, pick a new character until you find one with a magic item. Clegg may use whichever magic item is picked until the start of his next turn. After this the magic item magically appears back to the original character. Any magic item can be drawn out of the &apos;Swag&apos; Bag, but special items that only work for specific characters cannot be used even though they may be picked. Note that each magic item may only be picked once per game.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -2859,10 +2867,10 @@
               </constraints>
               <rules>
                 <rule name="Mesh Net" id="a9c8-d9fe-5efe-0526" hidden="false" publicationId="ebd7-07af-35b9-4e00" page="30">
-                  <description>At the beginning of the combat phase, Gabbo may attempt to net one enemy model. The targeted model must pass an Initiative test or counts as having Weapon Skill 1 for the rest of the turn. </description>
+                  <description>At the beginning of the combat phase, Gabbo may attempt to net one enemy model. The targeted model must pass an Initiative test or counts as having Weapon Skill 1 for the rest of the turn.</description>
                 </rule>
                 <rule name="Animal Traps" id="9653-4ffe-c748-d978" hidden="false" publicationId="ebd7-07af-35b9-4e00" page="30">
-                  <description>Gabbo and Greywing have the Always Strikes First special rule when fighting War Beasts, Monstrous Infantry, Monstrous Cavalry and Monstrous Beasts. </description>
+                  <description>Gabbo and Greywing have the Always Strikes First special rule when fighting War Beasts, Monstrous Infantry, Monstrous Cavalry and Monstrous Beasts.</description>
                 </rule>
               </rules>
               <categoryLinks>
@@ -2939,7 +2947,7 @@
               </infoLinks>
               <rules>
                 <rule name="The Fighting Cocks" id="0f0f-c0ac-5e4c-259a" hidden="false" publicationId="ebd7-07af-35b9-4e00" page="31">
-                  <description>Lumpin Croop must be accompanied by a unit of Gamekeepers chosen from the army list as normal. The unit must be given a Standard Bearer and Musician. Ned Hamfist is the unit&apos;s standard bearer and Lumpin Croop is the unit&apos;s Leader. Lumpin Croop may never choose to leave this unit. </description>
+                  <description>Lumpin Croop must be accompanied by a unit of Gamekeepers chosen from the army list as normal. The unit must be given a Standard Bearer and Musician. Ned Hamfist is the unit&apos;s standard bearer and Lumpin Croop is the unit&apos;s Leader. Lumpin Croop may never choose to leave this unit.</description>
                 </rule>
               </rules>
             </selectionEntry>
@@ -2992,7 +3000,7 @@
                       <profiles>
                         <profile name="Magic Drumstick" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="23e4-1b91-8f08-8c98" publicationId="ebd7-07af-35b9-4e00" page="31">
                           <characteristics>
-                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Drumstick may be eaten at the beginning of any turn; it gives the eater +1 to his Weapon Skill, +1 to his Strength and +1 to his Attacks for the rest of the turn. </characteristic>
+                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The Drumstick may be eaten at the beginning of any turn; it gives the eater +1 to his Weapon Skill, +1 to his Strength and +1 to his Attacks for the rest of the turn.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -3007,7 +3015,7 @@
               </infoLinks>
               <rules>
                 <rule name="Fireroot Pepper" id="8d92-1fba-4f61-de30" hidden="false" publicationId="ebd7-07af-35b9-4e00" page="31">
-                  <description>Instead of fighting normally, Ogglethorpe may make a special attack. If this Hits, the target suffer Multiple Wounds (D3) with no saves allowed. This has no effect on Animated Constructs, Daemons, Forest Spirits or Vampires. </description>
+                  <description>Instead of fighting normally, Ogglethorpe may make a special attack. If this Hits, the target suffer Multiple Wounds (D3) with no saves allowed. This has no effect on Animated Constructs, Daemons, Forest Spirits or Vampires.</description>
                 </rule>
               </rules>
               <entryLinks>
@@ -4386,7 +4394,7 @@
       </constraints>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="2e8d-13d0-6283-c161" targetId="8b8a-34b1-ed30-df11" primary="false"/>
-        <categoryLink name="War Beast" hidden="false" id="0e25-84f0-3850-c898" targetId="5c5d-6944-cd09-0db8" primary="false"/>
+        <categoryLink name="Cavalry" hidden="false" id="a0ca-ae58-b9ff-255e" targetId="bdee-b168-38ba-7d3c" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Giant Swan" hidden="false" id="f12c-835b-1c94-a926" sortIndex="2" collective="true" subType="mount">
@@ -4413,8 +4421,8 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9399-e144-7fce-8159"/>
       </constraints>
       <categoryLinks>
-        <categoryLink name="War Beast" hidden="false" id="294b-95ed-67d6-123a" targetId="5c5d-6944-cd09-0db8" primary="false"/>
         <categoryLink name="Mount" hidden="false" id="30da-ef30-0e56-cb0c" targetId="8b8a-34b1-ed30-df11" primary="false"/>
+        <categoryLink name="Cavalry" hidden="false" id="cb1d-dbec-5b58-38f2" targetId="bdee-b168-38ba-7d3c" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Ogre Bodyguard" hidden="false" id="3c76-693f-a81d-ae0d" sortIndex="3" subType="mount" collective="true">
@@ -4547,7 +4555,7 @@
         </selectionEntryGroup>
         <selectionEntryGroup name="Mount" id="4d0b-8b77-8867-9511" hidden="false">
           <entryLinks>
-            <entryLink import="true" name="Farm Aniaml" hidden="false" id="20ce-c780-2285-e196" type="selectionEntry" targetId="32ab-0cdb-4763-e725">
+            <entryLink import="true" name="Farm Animal" hidden="false" id="20ce-c780-2285-e196" type="selectionEntry" targetId="32ab-0cdb-4763-e725">
               <constraints>
                 <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="b5c4-c0d3-896c-fa2c"/>
               </constraints>
