@@ -7242,9 +7242,7 @@
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 hits that wound on a 4+ with the Ignores Armour Saves special rule. For each unsaved Wound caused,one friendly unit
-
-within 6&quot; of the caster instantly recovers 1 Wounds&apos; worth of models slain earlier in the battle, just like a summoning spell.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This spell causes D6 hits that wound on a 4+ with the Ignores Armour Saves special rule. For each unsaved Wound caused, one friendly unit within 6&quot; of the caster instantly recovers 1 Wounds&apos; worth of models slain earlier in the battle, just like a summoning spell.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>

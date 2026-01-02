@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ce3b-bf93-496e-a65c" name="Warriors of Chaos WAP 1.6" revision="50" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="ce3b-bf93-496e-a65c" name="Warriors of Chaos WAP 1.62" revision="50" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <profileTypes>
     <profileType id="49dc-2fd8-b942-dbc2" name="Gift of the Gods">
@@ -174,7 +174,7 @@
                 <infoLink name="Ward Save (5+)" id="82f5-2f4d-cb45-2eb4" hidden="false" targetId="4b60-6477-75a8-f6dd" type="rule"/>
                 <infoLink name="Will of Chaos" id="4a52-acf4-0641-b282" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
                 <infoLink name="Mark of Khorne" id="1d6a-afd5-9ed5-798c" hidden="false" targetId="Mark of Khorne" type="rule"/>
-                <infoLink name="Chaos Warshrine" id="a0b1-c24f-89b7-0d24" hidden="false" targetId="cd60-020c-c3f2-a5fa" type="profile"/>
+                <infoLink name="Warshrine" id="a0b1-c24f-89b7-0d24" hidden="false" targetId="cd60-020c-c3f2-a5fa" type="profile"/>
                 <infoLink name="Line of Sight (5)" id="ef9a-8448-91a1-f0fb" hidden="false" targetId="564d-ded4-217d-827c" type="rule"/>
               </infoLinks>
               <selectionEntries>
@@ -184,7 +184,7 @@
                     <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7b11-f061-8919-d82a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <infoLinks>
-                    <infoLink name="Chaos Shrine Bearers" id="b569-8bff-a721-7357" hidden="false" targetId="a631-99f6-e75a-5a8d" type="profile"/>
+                    <infoLink name="Shrine Bearers" id="b569-8bff-a721-7357" hidden="false" targetId="a631-99f6-e75a-5a8d" type="profile"/>
                     <infoLink name="Random Attacks (D6+2)" id="9c0e-e4fe-dc3b-dab6" hidden="false" targetId="33f1-4ddd-d26b-281a" type="rule"/>
                   </infoLinks>
                   <selectionEntries>
@@ -719,7 +719,7 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="pts" typeId="points" value="15"/>
+            <cost name="pts" typeId="points" value="14"/>
           </costs>
           <entryLinks>
             <entryLink import="true" name="40. Suits of Armour" hidden="false" id="e5a8-0bc4-7ac0-8020" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
@@ -904,7 +904,7 @@
                 <entryLink import="true" name="Hand Weapon" hidden="false" id="247e-568b-e569-294f" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
                 <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="9d52-7505-4f6d-be8f" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
                   <costs>
-                    <cost name="pts" typeId="points" value="2"/>
+                    <cost name="pts" typeId="points" value="1.5"/>
                   </costs>
                 </entryLink>
                 <entryLink import="true" name="Polearm/Halberd" hidden="false" id="9cdc-aa4d-06fe-a16f" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="4">
@@ -1222,25 +1222,51 @@
           <entryLinks>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="4aca-d66d-a8a3-6afe" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="c6e3-bfdf-3895-01a6" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="c6e3-bfdf-3895-01a6" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
+                  <constraints>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="e139-1372-c54a-9a1e" includeChildSelections="false"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="1" field="e139-1372-c54a-9a1e">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="c068-0827-9931-d9bf" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
                 <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="4e14-a247-825e-d536" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Hand Weapon &amp; Shield" hidden="false" id="d009-2934-719d-55b5" type="selectionEntry" targetId="8613-9419-33a1-5aaf" sortIndex="2">
-                  <modifiers>
-                    <modifier type="set" value="true" field="hidden">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="unit" childId="a658-337d-0cbd-a38c" shared="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
+                <entryLink import="true" name="Shield" hidden="false" id="d009-2934-719d-55b5" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
                 </entryLink>
               </entryLinks>
+              <modifiers>
+                <modifier type="set" value="2" field="e941-9082-0af2-8b43">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="7617-f4b5-02ac-3d15" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="c068-0827-9931-d9bf" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="2" field="fe22-ce5f-b23e-303d">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="7617-f4b5-02ac-3d15" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="c068-0827-9931-d9bf" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -1303,7 +1329,6 @@
           </constraints>
           <infoLinks>
             <infoLink id="0abe-2e9f-a41d-15c1" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
-            <infoLink id="8b79-95fe-9400-3c84" name="Doom Knight" hidden="false" targetId="4e6f-4381-d5e0-255f" type="profile"/>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="10. Mark of Chaos" id="e457-91b1-9aba-7625" hidden="false" collective="false" import="true" sortIndex="0">
@@ -1413,6 +1438,22 @@
               </constraints>
             </entryLink>
           </entryLinks>
+          <profiles>
+            <profile name="Doom Knight" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="4e6f-4381-d5e0-255f" publicationId="1a01-044f-047b-618f" page="177">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Human)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -4931,7 +4972,7 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="4249-8a74-abf9-b710" name="Hound of Khorne" hidden="false" collective="false" import="true" type="upgrade">
+                <selectionEntry id="4249-8a74-abf9-b710" name="Hound of Khorne" hidden="false" collective="false" import="true" type="model" subType="mount">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6cde-a8a5-48ee-8423" type="max"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d6fb-b3ad-5466-4765" type="min"/>
@@ -7734,7 +7775,6 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
       <infoLinks>
         <infoLink name="Eye of the Gods" id="9f33-5633-a3bd-127c" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
         <infoLink name="Will of Chaos" id="a357-7751-5840-e9e3" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
-        <infoLink name="Chaos Lord" id="dbbb-cbd3-575a-3c37" hidden="false" targetId="1e26-16e3-01da-e228" type="profile"/>
         <infoLink name="Chaos Armour" id="4eb2-a820-18ad-7ea9" hidden="false" targetId="b66b-400b-7d98-1c53" type="rule"/>
       </infoLinks>
       <entryLinks>
@@ -7761,13 +7801,6 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
             </entryLink>
             <entryLink import="true" name="Flail" hidden="false" id="673e-84bb-fd2d-e1ef" type="selectionEntry" targetId="d509-46a8-2dc7-0eb9" sortIndex="5">
               <costs>
@@ -7921,12 +7954,27 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <categoryLink name="Z Shield" hidden="false" id="faf2-eb67-38a8-4b62" targetId="0210-637d-ff12-a760" primary="false"/>
         <categoryLink name="Z Armour" hidden="false" id="3ac9-a3f3-ef76-c82b" targetId="387c-2b7c-0a30-7305" primary="false"/>
       </categoryLinks>
+      <profiles>
+        <profile name="Warlord" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="1e26-16e3-01da-e228" publicationId="1a01-044f-047b-618f" page="19">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">8</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">7</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Human)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Soulflayer" hidden="false" id="b6ea-ee0b-3252-7bcb" collective="false" sortIndex="2">
       <infoLinks>
         <infoLink name="Eye of the Gods" id="00db-1168-1933-34ea" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
         <infoLink name="Will of Chaos" id="700f-adb3-5799-c7b2" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
-        <infoLink name="Chaos Sorcerer Lord" id="8328-ea48-5fa5-6350" hidden="false" targetId="029d-a7dc-fcbb-ac6b" type="profile"/>
         <infoLink name="Chaos Armour" id="4a63-3221-ba3d-6547" hidden="false" targetId="b66b-400b-7d98-1c53" type="rule"/>
       </infoLinks>
       <entryLinks>
@@ -7939,7 +7987,11 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <entryLink import="true" name="10. Character Options" hidden="false" id="b021-3ac9-a5a1-7cf2" collective="false" targetId="35f1-2fc8-9817-3171" type="selectionEntryGroup"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="6d9d-97ba-f412-2b49" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="37d6-5b9f-bcd4-e810" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="37d6-5b9f-bcd4-e810" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bb36-2fdd-ec71-c439" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="70. Mount" hidden="false" id="5e22-24ed-8afd-4301" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
@@ -8055,10 +8107,25 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <categoryLink name="Wizard" hidden="false" id="db09-377c-776f-2272" targetId="1aae-2529-c509-7573" primary="false"/>
         <categoryLink name="Z Armour" hidden="false" id="effd-d3be-fe6e-66de" targetId="387c-2b7c-0a30-7305" primary="false"/>
       </categoryLinks>
+      <profiles>
+        <profile name="Soulflayer" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="029d-a7dc-fcbb-ac6b" publicationId="1a01-044f-047b-618f" page="20">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Human)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Daemon Prince" hidden="false" id="f825-1903-cfc8-f00a" collective="false" sortIndex="3">
       <infoLinks>
-        <infoLink name="Daemon Prince" id="c05c-2648-852f-ffae" hidden="false" targetId="b6a9-0fe9-848a-2d66" type="profile"/>
         <infoLink name="Chaos Armour" id="eff1-f356-67cc-22c5" hidden="false" targetId="b66b-400b-7d98-1c53" type="rule"/>
         <infoLink name="Daemonic Instability" id="f24f-579a-5ee3-b32d" hidden="false" type="rule" targetId="c6ed-33cf-2be7-0cec"/>
       </infoLinks>
@@ -8097,11 +8164,21 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
             <modifier type="increment" value="100" field="bd30-6d12-0571-3a18"/>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="65. Lore of Magic" hidden="true" id="e020-7a40-5cfd-eda4" type="selectionEntryGroup" targetId="3048-d9e5-c82c-c6d1">
+        <entryLink import="true" name="65. Lore of Magic" hidden="false" id="e020-7a40-5cfd-eda4" type="selectionEntryGroup" targetId="3048-d9e5-c82c-c6d1">
           <modifiers>
-            <modifier type="set" value="false" field="hidden">
+            <modifier type="set" value="true" field="hidden">
               <conditions>
-                <condition type="instanceOf" value="1" field="selections" scope="model-or-unit" childId="1aae-2529-c509-7573" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="0f98-f12e-5073-6a28" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="0" field="001f-0a3e-736d-2c4e-max">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="0f98-f12e-5073-6a28" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="0" field="001f-0a3e-736d-2c4e-min">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="0f98-f12e-5073-6a28" shared="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -8161,10 +8238,25 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
           </conditions>
         </modifier>
       </modifiers>
+      <profiles>
+        <profile name="Daemon Prince" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="b6a9-0fe9-848a-2d66" publicationId="1a01-044f-047b-618f" page="21">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">8</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">6</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">8</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Creature (Character, Daemon)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Exalted Champion" hidden="false" id="fcad-2e94-e264-72f0" collective="false" sortIndex="4">
       <infoLinks>
-        <infoLink name="Exalted Champion" id="2731-7883-b1d2-01a4" hidden="false" targetId="c8f6-2a85-a4c3-042e" type="profile"/>
         <infoLink name="Chaos Armour" id="2531-cf8e-37fa-eb6f" hidden="false" targetId="b66b-400b-7d98-1c53" type="rule"/>
         <infoLink name="Eye of the Gods" id="e477-7598-f2c4-8acd" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
         <infoLink name="Will of Chaos" id="14b1-4f3d-a3b9-1df8" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
@@ -8195,6 +8287,9 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               </entryLinks>
             </entryLink>
           </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fd9c-d686-1a3e-882f" includeChildSelections="false"/>
+          </constraints>
         </entryLink>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="26d3-8f53-2c27-e217" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
@@ -8213,13 +8308,6 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               <costs>
                 <cost name="pts" typeId="points" value="4"/>
               </costs>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
             </entryLink>
             <entryLink import="true" name="Flail" hidden="false" id="fa87-131d-21af-7df8" type="selectionEntry" targetId="d509-46a8-2dc7-0eb9" sortIndex="5">
               <costs>
@@ -8357,10 +8445,25 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <categoryLink name="Z Shield" hidden="false" id="35ad-340c-5a0b-5c6f" targetId="0210-637d-ff12-a760" primary="false"/>
         <categoryLink name="Z Armour" hidden="false" id="f84e-6757-51c1-5868" targetId="387c-2b7c-0a30-7305" primary="false"/>
       </categoryLinks>
+      <profiles>
+        <profile name="Exalted Champion" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="c8f6-2a85-a4c3-042e" publicationId="1a01-044f-047b-618f" page="22">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">7</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Human)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Maledictor" hidden="false" id="4f7a-c482-ad89-ef73" collective="false" sortIndex="5">
       <infoLinks>
-        <infoLink name="Maledictor" id="1838-a8d1-9f3a-73fb" hidden="false" targetId="50d0-ca71-152f-8cba" type="profile"/>
         <infoLink name="Chaos Armour" id="5ced-39dc-2ea1-c789" hidden="false" targetId="b66b-400b-7d98-1c53" type="rule"/>
         <infoLink name="Eye of the Gods" id="edbb-7263-98b9-d96f" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
         <infoLink name="Will of Chaos" id="7b78-d211-099b-25fa" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
@@ -8399,7 +8502,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         </entryLink>
         <entryLink import="true" name="70. Mount" hidden="false" id="9583-785e-8360-fd25" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
           <entryLinks>
-            <entryLink import="true" name="Warsteed" hidden="false" id="de14-db56-51d6-f73d" type="selectionEntry" targetId="b00b-4a51-ae10-9998">
+            <entryLink import="true" name="Warsteed" hidden="false" id="de14-db56-51d6-f73d" type="selectionEntry" targetId="b00b-4a51-ae10-9998" sortIndex="3">
               <costs>
                 <cost name="pts" typeId="points" value="16"/>
               </costs>
@@ -8411,17 +8514,17 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                 </entryLink>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Palanquin of Nurgle" hidden="false" id="ddb9-2306-0b6d-da03" type="selectionEntry" targetId="8fe2-5f5f-dea0-6be0">
+            <entryLink import="true" name="Palanquin of Nurgle" hidden="false" id="ddb9-2306-0b6d-da03" type="selectionEntry" targetId="8fe2-5f5f-dea0-6be0" sortIndex="1">
               <costs>
                 <cost name="pts" typeId="points" value="16"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Steed of Slaanesh" hidden="false" id="4c20-422d-1846-237e" type="selectionEntry" targetId="57f0-0301-2544-4b78">
+            <entryLink import="true" name="Steed of Slaanesh" hidden="false" id="4c20-422d-1846-237e" type="selectionEntry" targetId="57f0-0301-2544-4b78" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="16"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Daemonic Steed" hidden="false" id="e7f9-3a84-c9e4-0f01" type="selectionEntry" targetId="53de-7f63-b47a-4c2d">
+            <entryLink import="true" name="Daemonic Steed" hidden="false" id="e7f9-3a84-c9e4-0f01" type="selectionEntry" targetId="53de-7f63-b47a-4c2d" sortIndex="4">
               <costs>
                 <cost name="pts" typeId="points" value="24"/>
               </costs>
@@ -8433,7 +8536,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                 </entryLink>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Disc of Tzeentch" hidden="false" id="1b7b-3296-ce51-d037" type="selectionEntry" targetId="628a-55ba-92d7-a406">
+            <entryLink import="true" name="Disc of Tzeentch" hidden="false" id="1b7b-3296-ce51-d037" type="selectionEntry" targetId="628a-55ba-92d7-a406" sortIndex="5">
               <costs>
                 <cost name="pts" typeId="points" value="28"/>
               </costs>
@@ -8455,10 +8558,25 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <categoryLink name="Wizard" hidden="false" id="be57-d763-0c76-d9e9" targetId="1aae-2529-c509-7573" primary="false"/>
         <categoryLink name="Z Armour" hidden="false" id="acd8-e302-cad9-8e3e" targetId="387c-2b7c-0a30-7305" primary="false"/>
       </categoryLinks>
+      <profiles>
+        <profile name="Maledictor" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="50d0-ca71-152f-8cba" publicationId="1a01-044f-047b-618f" page="23">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Human)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Marauder Chieftain" hidden="false" id="2ff2-4b7c-b337-1fa7" collective="false" sortIndex="6">
       <infoLinks>
-        <infoLink name="Marauder Chieftain" id="69e4-fc6f-4b31-0095" hidden="false" targetId="28c8-e668-1013-99cf" type="profile"/>
         <infoLink name="Eye of the Gods" id="a4e2-0aab-343c-54ad" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
         <infoLink name="Will of Chaos" id="f4fd-5a1b-d756-344c" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
       </infoLinks>
@@ -8488,6 +8606,9 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               </entryLinks>
             </entryLink>
           </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="70fb-5ff4-5a44-7b64" includeChildSelections="false"/>
+          </constraints>
         </entryLink>
         <entryLink import="true" name="11. Mark of Chaos" hidden="false" id="a410-3b78-473c-f599" type="selectionEntryGroup" targetId="8c79-49e5-07fa-a8c0"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="2f84-87dd-9dce-8fe7" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
@@ -8507,13 +8628,6 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               <costs>
                 <cost name="pts" typeId="points" value="3"/>
               </costs>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
             </entryLink>
             <entryLink import="true" name="Flail" hidden="false" id="575f-ff17-0675-aeaf" type="selectionEntry" targetId="d509-46a8-2dc7-0eb9" sortIndex="5">
               <costs>
@@ -8609,6 +8723,22 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <categoryLink name="Z Shield" hidden="false" id="ecbb-dff0-60dd-2986" targetId="0210-637d-ff12-a760" primary="false"/>
         <categoryLink name="Z Armour" hidden="false" id="7574-5d54-3673-1084" targetId="387c-2b7c-0a30-7305" primary="false"/>
       </categoryLinks>
+      <profiles>
+        <profile name="Marauder Chieftain" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="28c8-e668-1013-99cf" publicationId="1a01-044f-047b-618f" page="24">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Human)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Fomoroid Crusher" hidden="false" id="7300-e15c-16f5-39f6" publicationId="1a01-044f-047b-618f" page="43" sortIndex="24">
       <costs>
@@ -8788,7 +8918,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Chaos Warshrine" id="fbaf-c221-a36d-7de2" hidden="false" targetId="cd60-020c-c3f2-a5fa" type="profile"/>
+        <infoLink name="Warshrine" id="fbaf-c221-a36d-7de2" hidden="false" targetId="cd60-020c-c3f2-a5fa" type="profile"/>
         <infoLink name="Fear" id="890c-1162-c065-5b0f" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
         <infoLink name="Giver of Glory" id="c1bc-c040-e8f4-465c" hidden="false" targetId="29d8-56a5-ea8a-80e4" type="rule"/>
         <infoLink name="Ward Save (5+)" id="cb44-be36-6fe4-d57b" hidden="false" targetId="4b60-6477-75a8-f6dd" type="rule"/>
@@ -8801,9 +8931,6 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
             <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="47ad-a1d5-0f1e-5b84" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fa37-5839-4b22-bfbe" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
-          <infoLinks>
-            <infoLink name="Chaos Shrinemaster" id="0a1c-997e-7a03-8527" hidden="false" targetId="88ba-1889-b5ac-1008" type="profile"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -8827,6 +8954,22 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               </entryLinks>
             </entryLink>
           </entryLinks>
+          <profiles>
+            <profile name="Shrinemaster" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="88ba-1889-b5ac-1008" publicationId="1a01-044f-047b-618f" page="193">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459"/>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
         <selectionEntry type="model" import="true" name="Shrine Bearers" hidden="false" id="bbb0-df4b-8ff1-49a4" collective="false" subType="mount">
           <constraints>
@@ -8834,7 +8977,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
             <constraint type="max" value="2" field="selections" scope="parent" shared="false" id="6267-93b7-ea83-3184" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <infoLinks>
-            <infoLink name="Chaos Shrine Bearers" id="b52a-826c-5481-bfb1" hidden="false" targetId="a631-99f6-e75a-5a8d" type="profile"/>
+            <infoLink name="Shrine Bearers" id="b52a-826c-5481-bfb1" hidden="false" targetId="a631-99f6-e75a-5a8d" type="profile"/>
             <infoLink name="Random Attacks (D3+1)" id="ddc8-0ab3-f2cf-1ced" hidden="false" targetId="e20a-3f4d-cc8c-06bc" type="rule">
               <modifiers>
                 <modifier type="set" value="Shrine Baerers only" field="annotation"/>
@@ -9197,7 +9340,6 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
           </constraints>
           <infoLinks>
             <infoLink id="19cf-b9e0-1e65-c7b7" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
-            <infoLink id="529b-b393-4dd6-fc6c" name="Varanguard" hidden="false" targetId="0d17-5448-0a71-66db" type="profile"/>
             <infoLink id="89fa-72fe-e2f4-d394" name="Chaos Armour" hidden="false" targetId="b66b-400b-7d98-1c53" type="rule"/>
           </infoLinks>
           <selectionEntryGroups>
@@ -9284,6 +9426,22 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               </entryLinks>
             </entryLink>
           </entryLinks>
+          <profiles>
+            <profile name="Varanguard" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0d17-5448-0a71-66db" publicationId="1a01-044f-047b-618f" page="181">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Cavalry (Human)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -9394,7 +9552,6 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Palanquin of Nurgle" hidden="false" id="8fe2-5f5f-dea0-6be0" collective="false" subType="mount">
       <infoLinks>
-        <infoLink name="Palanquin of Nurgle" id="5884-3ca3-dca0-7b20" hidden="false" type="profile" targetId="def5-c1aa-84b4-5305"/>
         <infoLink name="Daemon of Nurgle" id="93f0-3b5d-fff8-392c" hidden="false" type="rule" targetId="0b9b-1baf-5bcd-1ec3"/>
         <infoLink name="Daemonic" id="bc28-9d60-3d27-9d80" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
       </infoLinks>
@@ -9409,11 +9566,26 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
           </conditions>
         </modifier>
       </modifiers>
+      <profiles>
+        <profile name="Palanquin of Nurgle" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="def5-c1aa-84b4-5305" publicationId="1a01-044f-047b-618f" page="216">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">2</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">8</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Daemon)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Steed of Slaanesh" hidden="false" id="57f0-0301-2544-4b78" collective="true" subType="mount">
       <infoLinks>
         <infoLink name="Daemonic" id="8ce2-3ab7-e44b-19a0" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
-        <infoLink name="Steed of Slaanesh" id="e0a6-1ae5-c5e5-836c" hidden="false" type="profile" targetId="5ac8-1eff-d8ae-4dc5"/>
         <infoLink name="Daemon of Slaanesh" id="3510-91b9-e6e6-97a1" hidden="false" type="rule" targetId="2ad0-3e18-aba8-5e68"/>
         <infoLink name="Poisoned Attacks" id="f22e-5307-5f9a-72e1" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
       </infoLinks>
@@ -9428,10 +9600,25 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
           </conditions>
         </modifier>
       </modifiers>
+      <profiles>
+        <profile name="Steed of Slaanesh" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="5ac8-1eff-d8ae-4dc5" publicationId="1a01-044f-047b-618f" page="216">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">10</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Daemon)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Daemonic Steed" hidden="false" id="53de-7f63-b47a-4c2d" collective="true" subType="mount">
       <infoLinks>
-        <infoLink name="Daemonic Steed" id="9427-4700-eb01-c017" hidden="false" targetId="ff78-321b-8901-bc07" type="profile"/>
         <infoLink name="Daemonic" id="fd8b-3e4f-6bfd-ba72" hidden="false" targetId="a6d9-b8e9-21b2-96ff" type="rule"/>
       </infoLinks>
       <categoryLinks>
@@ -9441,10 +9628,25 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
       <modifiers>
         <modifier type="add" value="e650-a901-f069-ca88" field="category" scope="root-entry"/>
       </modifiers>
+      <profiles>
+        <profile name="Daemonic Steed" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="ff78-321b-8901-bc07" publicationId="1a01-044f-047b-618f" page="25">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Daemon)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Rot Fly of Nurgle" hidden="false" id="3b62-252e-721b-1425" subType="mount" collective="true">
       <infoLinks>
-        <infoLink name="Rot Fly of Nurgle" id="8e37-8687-26eb-e32c" hidden="false" type="profile" targetId="8fd4-5476-8f8b-cf37"/>
         <infoLink name="Daemonic" id="d07f-b1c3-7a71-0713" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff">
           <modifiers>
             <modifier type="set" value="Rot Fly only" field="annotation"/>
@@ -9469,10 +9671,25 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <categoryLink targetId="8b8a-34b1-ed30-df11" id="e7ad-3d77-c59d-f206" primary="false" name="Mount"/>
         <categoryLink name="Monstrous Cavalry" hidden="false" id="63ff-8f39-1e2a-e082" targetId="82d3-4589-72b4-b6ed" primary="false"/>
       </categoryLinks>
+      <profiles>
+        <profile name="Rot Fly of Nurgle" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="8fd4-5476-8f8b-cf37" publicationId="f46b-8c4e-ed82-05f7" page="35">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Daemon)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Disc of Tzeentch" hidden="false" id="628a-55ba-92d7-a406" subType="mount">
       <infoLinks>
-        <infoLink name="Disc of Tzeentch" id="bb1a-c452-d53f-50f1" hidden="false" type="profile" targetId="8778-6f19-10c0-0aeb"/>
         <infoLink name="Daemon of Tzeentch" id="df5c-c981-9fba-f38e" hidden="false" type="rule" targetId="fe9a-f478-5bcc-57a8">
           <modifiers>
             <modifier type="set" value="Disc only" field="annotation"/>
@@ -9492,10 +9709,25 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <categoryLink targetId="8b8a-34b1-ed30-df11" id="f6dc-1dcd-32f7-765d" primary="false" name="Mount"/>
         <categoryLink name="Cavalry" hidden="false" id="2081-613c-7a00-3307" targetId="bdee-b168-38ba-7d3c" primary="false"/>
       </categoryLinks>
+      <profiles>
+        <profile name="Disc of Tzeentch" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="8778-6f19-10c0-0aeb" publicationId="1a01-044f-047b-618f" page="216">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Daemon)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Serpent of Slaanesh" hidden="false" id="34b1-59d3-f1a9-3c19" subType="mount" collective="true">
       <infoLinks>
-        <infoLink name="Serpent of Slaanesh" id="d5b6-bed6-6fa6-ec25" hidden="false" type="profile" targetId="65fc-4fa4-2b32-8c34"/>
         <infoLink name="Daemonic" id="fbfe-dc5a-17ec-3e78" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
         <infoLink name="Daemon of Slaanesh" id="221a-6481-bc7c-c912" hidden="false" type="rule" targetId="2ad0-3e18-aba8-5e68"/>
         <infoLink name="Poisoned Attacks" id="a223-65d4-b2a9-e0a8" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
@@ -9511,10 +9743,25 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <categoryLink targetId="8b8a-34b1-ed30-df11" id="25b5-96e4-8334-8522" primary="false" name="Mount"/>
         <categoryLink name="Cavalry" hidden="false" id="3db5-74fd-1189-21b8" targetId="bdee-b168-38ba-7d3c" primary="false"/>
       </categoryLinks>
+      <profiles>
+        <profile name="Serpent of Slaanesh" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="65fc-4fa4-2b32-8c34" publicationId="1a01-044f-047b-618f" page="216">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">10</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Daemon)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Juggernaut of Khorne" hidden="false" id="4c0a-27d1-5a06-bbe8" subType="mount" collective="true">
       <infoLinks>
-        <infoLink name="Juggernaut of Khorne" id="69b2-db56-e80f-d398" hidden="false" type="profile" targetId="19a7-ba6e-28d4-f0e0"/>
         <infoLink name="Daemon of Khorne" id="0527-56a2-bb87-7336" hidden="false" type="rule" targetId="a356-05c9-d963-c1bb">
           <modifiers>
             <modifier type="set" value="Juggernaut only" field="annotation"/>
@@ -9534,6 +9781,22 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <categoryLink targetId="8b8a-34b1-ed30-df11" id="3de5-c3c2-c801-a74a" primary="false" name="Mount"/>
         <categoryLink name="Monstrous Cavalry" hidden="false" id="759a-a5e0-d9ca-4d08" targetId="82d3-4589-72b4-b6ed" primary="false"/>
       </categoryLinks>
+      <profiles>
+        <profile name="Juggernaut of Khorne" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="19a7-ba6e-28d4-f0e0" publicationId="1a01-044f-047b-618f" page="215">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Daemon)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Rot Beast of Nurgle" hidden="false" id="114c-1ea0-c4d4-b734" subType="mount" collective="true">
       <infoLinks>
@@ -9559,15 +9822,6 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="War Chariot" hidden="false" id="8ab9-75cd-5f33-e891" collective="false" subType="mount">
       <infoLinks>
-        <infoLink name="War Chariot" id="eb46-829f-9f1e-50ed" hidden="false" targetId="68b3-4935-edd7-2381" type="profile">
-          <modifiers>
-            <modifier type="decrement" value="2" field="09ad-18df-607b-1215">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="3578-ff56-d2f6-2a8f" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink name="Will of Chaos" id="6a8e-464e-3736-da8e" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
       </infoLinks>
       <categoryLinks>
@@ -9668,9 +9922,6 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="373d-6604-de2f-f693-min" includeChildSelections="false" automatic="true"/>
             <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="373d-6604-de2f-f693-max" includeChildSelections="false" automatic="true"/>
           </constraints>
-          <infoLinks>
-            <infoLink name="Chaos Charioteer" id="48b7-7091-869d-839c" hidden="false" targetId="d656-79ae-8bb9-e5b6" type="profile"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
@@ -9789,14 +10040,52 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               </conditions>
             </modifier>
           </modifiers>
+          <profiles>
+            <profile name="Charioteer" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="d656-79ae-8bb9-e5b6" publicationId="1a01-044f-047b-618f" page="178">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459"/>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
       </selectionEntries>
+      <profiles>
+        <profile name="War Chariot" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="68b3-4935-edd7-2381" publicationId="1a01-044f-047b-618f" page="178">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour save 6+)</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="decrement" value="2" field="09ad-18df-607b-1215">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="3578-ff56-d2f6-2a8f" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Karkadrak" hidden="false" id="dc59-39e9-9991-577f" collective="false" subType="mount">
       <infoLinks>
         <infoLink name="Impact Hits (D3)" id="9d04-117a-c008-131b" hidden="false" type="rule" targetId="f30d-0b61-2836-689e"/>
         <infoLink name="Natural Armour (5+)" id="6fc5-aa49-00d8-608c" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
-        <infoLink name="Karkadrak" id="f1de-96b7-e36d-445f" hidden="false" type="profile" targetId="b330-d662-56fd-a316"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="ce9d-99d2-279f-a70c" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -9812,19 +10101,50 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
       <modifiers>
         <modifier type="add" value="e650-a901-f069-ca88" field="category" scope="root-entry"/>
       </modifiers>
+      <profiles>
+        <profile name="Karkadrak" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="b330-d662-56fd-a316" publicationId="1a01-044f-047b-618f" page="26">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Creature (Reptile)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Chaos Dragon" hidden="false" id="675b-433a-de68-0584" collective="false" subType="mount">
       <infoLinks>
         <infoLink name="Dark Fire of Chaos" id="880e-2a88-cc61-0bbd" hidden="false" targetId="af4f-0132-ba66-4e50" type="rule"/>
         <infoLink name="Fumes of Contagion" id="4cab-2757-107c-ae23" hidden="false" targetId="f003-1c23-84ad-d399" type="rule"/>
         <infoLink name="Fly (7)" id="52b6-71b9-be21-4b68" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
-        <infoLink name="Chaos Dragon" id="d33a-3536-6f99-44f3" hidden="false" targetId="7338-48d0-f98a-0a06" type="profile"/>
         <infoLink name="Natural Armour (3+)" id="9d7b-ffb6-fe9d-1905" hidden="false" targetId="32e8-b4ad-3e59-a3c7" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="561c-5fbd-2640-e5b7" targetId="8b8a-34b1-ed30-df11" primary="false"/>
         <categoryLink name="Monster" hidden="false" id="f34d-9288-3653-7ca7" targetId="e1a0-da31-05c5-9a15" primary="false"/>
       </categoryLinks>
+      <profiles>
+        <profile name="Chaos Dragon" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="7338-48d0-f98a-0a06" publicationId="1a01-044f-047b-618f" page="27">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">6</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">6</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Draconid)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Marauder Chariot" hidden="false" id="b11e-4376-956f-32c8" collective="false" subType="mount">
       <infoLinks>
@@ -9869,9 +10189,6 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
       </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Marauder Charioteer" hidden="false" id="6a86-feac-7536-e46d" collective="false" subType="crew">
-      <infoLinks>
-        <infoLink name="Marauder Charioteer" id="9e02-29c8-da8f-4334" hidden="false" targetId="1847-c0e4-4eac-56a7" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
@@ -9923,6 +10240,22 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
           </conditions>
         </modifier>
       </modifiers>
+      <profiles>
+        <profile name="Marauder Charioteer" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="1847-c0e4-4eac-56a7" publicationId="1a01-044f-047b-618f" page="174">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Human</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Marauder Champions" hidden="false" id="3f58-8a52-3de3-175f">
       <modifiers>
@@ -9979,15 +10312,6 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
             <profile name="Icon of Darkness" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="69dd-677b-3edd-4bd1" publicationId="1a01-044f-047b-618f" page="14">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">All enemy missile fire targeting the unit carrying this standard suffer -1 To Hit.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Wrath" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5e11-751d-368a-fc75" publicationId="1a01-044f-047b-618f" page="14">
-              <characteristics>
-                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
-                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
-                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If cast, it causes D6 Strength 4 hits with the Lightning attack special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -10400,10 +10724,17 @@ with this standard counts the armour save modifier from their Strength or Armou
             </modifier>
             <modifier type="set" value="1" field="33b5-9408-10fd-9b7d">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                   <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1aae-2529-c509-7573" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -10427,10 +10758,17 @@ with this standard counts the armour save modifier from their Strength or Armou
             </modifier>
             <modifier type="set" value="1" field="dc40-c45e-8b40-8338">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                   <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1aae-2529-c509-7573" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -10454,10 +10792,17 @@ with this standard counts the armour save modifier from their Strength or Armou
             </modifier>
             <modifier type="set" value="1" field="d05e-1b15-a4f3-5cc5">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                   <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="1aae-2529-c509-7573" shared="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -10589,11 +10934,11 @@ with this standard counts the armour save modifier from their Strength or Armou
             </selectionEntryGroup>
             <selectionEntryGroup name="Spells from the Lore of Chaos, Nurgle, Slaanesh &amp; Tzeentch." id="ba03-1a7d-9b59-6172" hidden="false">
               <constraints>
-                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="2fc0-811c-9c5e-e736"/>
-                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="d26d-bdf8-a447-9be3"/>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="8fc4-1510-3959-a8b2"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="c151-f3aa-2858-5751"/>
               </constraints>
               <modifiers>
-                <modifier type="set" value="3" field="2fc0-811c-9c5e-e736">
+                <modifier type="set" value="3" field="8fc4-1510-3959-a8b2">
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
@@ -10616,7 +10961,7 @@ with this standard counts the armour save modifier from their Strength or Armou
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" value="3" field="d26d-bdf8-a447-9be3">
+                <modifier type="set" value="3" field="c151-f3aa-2858-5751">
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
@@ -10639,7 +10984,7 @@ with this standard counts the armour save modifier from their Strength or Armou
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" value="4" field="2fc0-811c-9c5e-e736">
+                <modifier type="set" value="4" field="8fc4-1510-3959-a8b2">
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
@@ -10656,7 +11001,7 @@ with this standard counts the armour save modifier from their Strength or Armou
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" value="4" field="d26d-bdf8-a447-9be3">
+                <modifier type="set" value="4" field="c151-f3aa-2858-5751">
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
@@ -10673,7 +11018,7 @@ with this standard counts the armour save modifier from their Strength or Armou
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" value="5" field="2fc0-811c-9c5e-e736">
+                <modifier type="set" value="5" field="8fc4-1510-3959-a8b2">
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
@@ -10690,7 +11035,7 @@ with this standard counts the armour save modifier from their Strength or Armou
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" value="5" field="d26d-bdf8-a447-9be3">
+                <modifier type="set" value="5" field="c151-f3aa-2858-5751">
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
@@ -10707,7 +11052,7 @@ with this standard counts the armour save modifier from their Strength or Armou
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" value="6" field="2fc0-811c-9c5e-e736">
+                <modifier type="set" value="6" field="8fc4-1510-3959-a8b2">
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditionGroups>
@@ -10727,7 +11072,7 @@ with this standard counts the armour save modifier from their Strength or Armou
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" value="6" field="d26d-bdf8-a447-9be3">
+                <modifier type="set" value="6" field="c151-f3aa-2858-5751">
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditionGroups>
@@ -10747,7 +11092,7 @@ with this standard counts the armour save modifier from their Strength or Armou
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" value="9" field="2fc0-811c-9c5e-e736">
+                <modifier type="set" value="9" field="8fc4-1510-3959-a8b2">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
@@ -10757,7 +11102,7 @@ with this standard counts the armour save modifier from their Strength or Armou
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" value="9" field="d26d-bdf8-a447-9be3">
+                <modifier type="set" value="9" field="c151-f3aa-2858-5751">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
@@ -10767,7 +11112,7 @@ with this standard counts the armour save modifier from their Strength or Armou
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" value="12" field="2fc0-811c-9c5e-e736">
+                <modifier type="set" value="12" field="8fc4-1510-3959-a8b2">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
@@ -10777,7 +11122,7 @@ with this standard counts the armour save modifier from their Strength or Armou
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" value="12" field="d26d-bdf8-a447-9be3">
+                <modifier type="set" value="12" field="c151-f3aa-2858-5751">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
@@ -10904,6 +11249,20 @@ with this standard counts the armour save modifier from their Strength or Armou
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="5fc5-b80a-115f-bca3" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="b3e5-4b1b-7050-7e02" shared="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="e1a0-da31-05c5-9a15" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Mantle of Chaos" hidden="false" id="4b3a-bc96-3615-ac1f" collective="false" sortIndex="35">
           <constraints>
@@ -11018,6 +11377,18 @@ with this standard counts the armour save modifier from their Strength or Armou
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
+          <modifiers>
+            <modifier type="add" value="{this} is not allowed in combination with Fearsome Aura" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="0f9d-6e1f-cd2a-89c1" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="6f32-c881-1e2a-0f9f" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Extra Arm" hidden="false" id="9cc0-0fbe-9545-9308" collective="false" sortIndex="20">
           <constraints>
@@ -11035,6 +11406,18 @@ with this standard counts the armour save modifier from their Strength or Armou
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
+          <modifiers>
+            <modifier type="add" value="{this} is not allowed in combination with Tentacle" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="9cc0-0fbe-9545-9308" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1109-20c1-2441-24bf" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Unholy Strike" hidden="false" id="572e-54f3-0bed-b8e5" collective="false" sortIndex="11">
           <constraints>
@@ -11110,6 +11493,18 @@ with this standard counts the armour save modifier from their Strength or Armou
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
+          <modifiers>
+            <modifier type="add" value="{this} is not allowed in combination with Diabolic Splendour" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="0f9d-6e1f-cd2a-89c1" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="6f32-c881-1e2a-0f9f" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Cloven Hooves" hidden="false" id="1ecc-b3fc-7966-3a1b" collective="false" sortIndex="7">
           <constraints>
@@ -11132,6 +11527,16 @@ with this standard counts the armour save modifier from their Strength or Armou
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
               </conditions>
+            </modifier>
+            <modifier type="add" value="{this} is not allowed in combination with Serpent Body" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1ecc-b3fc-7966-3a1b" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4129-02f9-2c87-5f79" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -11185,6 +11590,51 @@ with this standard counts the armour save modifier from their Strength or Armou
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
+          <modifiers>
+            <modifier type="add" value="{this} is not allowed in combination with Extra Arm" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="9cc0-0fbe-9545-9308" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1109-20c1-2441-24bf" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="add" value="Shield are not allowed with {this}" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1109-20c1-2441-24bf" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c068-0827-9931-d9bf" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="add" value="Weapons requiring two hands are not allowed with {this}" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1109-20c1-2441-24bf" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="d509-46a8-2dc7-0eb9" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7617-f4b5-02ac-3d15" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="757a-ff3d-710c-2d8b" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="0473-857e-78d9-cb7c" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f27d-7be5-b402-da6c" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="bd74-4e9d-0a63-f2ae" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="3e46-4741-fe4d-e452" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f11c-e029-bc6c-58b6" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Chaos Familiar" hidden="false" id="035c-2cdd-a3cb-8b89" collective="false" sortIndex="12">
           <constraints>
@@ -11661,6 +12111,16 @@ Armour saves.</characteristic>
                     <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="add" value="{this} is not allowed in combination with Cloven Hooves" field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1ecc-b3fc-7966-3a1b" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4129-02f9-2c87-5f79" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
               </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Word of Agony" hidden="false" id="2180-dde0-5e62-1ab1" collective="false" sortIndex="4">
@@ -11731,6 +12191,13 @@ Armour saves.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="1aae-2529-c509-7573" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Protean Form" hidden="false" id="0a6d-a449-8d11-3f44" collective="false" sortIndex="3">
               <constraints>
@@ -11782,7 +12249,7 @@ Armour saves.</characteristic>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bf7e-9f12-32f7-e451" includeChildSelections="false"/>
+        <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="bf7e-9f12-32f7-e451" includeChildSelections="false"/>
       </constraints>
       <comment>Enter pts in profiles &quot;cost&quot;</comment>
     </selectionEntryGroup>
@@ -11819,8 +12286,7 @@ Armour saves.</characteristic>
               <characteristics>
                 <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
                 <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder of this weapon adds D3 to their Strength and has an extra D3 Attacks, to a maximum of 10 (roll
-separately for these values at the start of each round). However, every To Wound roll of a 1 made by this character in close combat is resolved against themselves.</characteristic>
+                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder of this weapon adds D3 to their Strength and has an extra D3 Attacks, to a maximum of 10 (roll separately for these values at the start of each round). However, every To Wound roll of a 1 made by this character in close combat is resolved against themselves.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -12636,7 +13102,7 @@ separately for these values at the start of each round). However, every To Woun
               <characteristics>
                 <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
                 <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">This item gives the wearer a 6+ armour save. All enemy units in base contact the wearer of this helmet must roll an additional D6 when taking Leadership tests and discard the lowest result.</characteristic>
+                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">All enemy units in base contact the wearer of this helmet must roll an additional D6 when taking Leadership tests and discard the lowest result.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -12787,6 +13253,13 @@ separately for these values at the start of each round). However, every To Woun
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="1aae-2529-c509-7573" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Shield of Teeth" hidden="false" id="a984-6aba-e195-4db1" collective="false" sortIndex="6">
           <constraints>
@@ -13154,7 +13627,7 @@ separately for these values at the start of each round). However, every To Woun
           <profiles>
             <profile name="Chalice of Chaos" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="9892-d3c0-d23d-96ad" publicationId="1a01-044f-047b-618f" page="14">
               <characteristics>
-                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The bearer of the Chalice of Chaos may drink from it at the start of any phase. If they choose to do so, roll a D6 and consult the table below.</characteristic>
+                <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The bearer of the Chalice of Chaos may drink from it at the start of any phase. If they choose to do so, roll a D6 and consult the Chalice of Chaos Chart.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -14004,6 +14477,9 @@ separately for these values at the start of each round). However, every To Woun
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
+          <entryLinks>
+            <entryLink import="true" name="Loremaster" hidden="false" id="6b94-d1ce-0513-7b63" type="selectionEntry" targetId="a2bf-14a5-6723-7157"/>
+          </entryLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Tome of the Darkness" hidden="false" id="f9d7-146a-f07f-a7f9" collective="false" sortIndex="6">
           <constraints>
@@ -14073,7 +14549,7 @@ separately for these values at the start of each round). However, every To Woun
         <entryLink import="true" name="Common Arcane Items" hidden="false" id="d1b7-a14a-d0ad-aeb8" collective="false" targetId="6cd2-3f4b-da2d-1ee9" type="selectionEntryGroup" sortIndex="99" flatten="true"/>
       </entryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Arcane Items of Nurgle" id="819d-5f71-a995-d6ad" hidden="true" collective="false" import="true" sortIndex="81">
+        <selectionEntryGroup name="Arcane Items of Nurgle" id="819d-5f71-a995-d6ad" hidden="true" collective="false" import="true" sortIndex="81" flatten="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5a75-6f23-8672-ae64" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -14117,7 +14593,7 @@ separately for these values at the start of each round). However, every To Woun
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Arcane Items of Slaanesh" id="71a6-00ac-f7ed-c1be" hidden="true" collective="false" import="true" sortIndex="82">
+        <selectionEntryGroup name="Arcane Items of Slaanesh" id="71a6-00ac-f7ed-c1be" hidden="true" collective="false" import="true" sortIndex="82" flatten="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5b6f-2e7e-4ae4-f967" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -14160,7 +14636,7 @@ separately for these values at the start of each round). However, every To Woun
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Arcane Items of Tzeentch" id="6423-c8fb-650a-8fb4" hidden="true" collective="false" import="true" sortIndex="83">
+        <selectionEntryGroup name="Arcane Items of Tzeentch" id="6423-c8fb-650a-8fb4" hidden="true" collective="false" import="true" sortIndex="83" flatten="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3229-b096-dd1b-1469" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -14267,7 +14743,7 @@ separately for these values at the start of each round). However, every To Woun
         <entryLink import="true" name="Common Arcane Items (One use only)" hidden="false" id="204e-14c9-fda2-60b1" type="selectionEntryGroup" targetId="3dfd-c3fd-5a56-45f1" sortIndex="2" flatten="true"/>
       </entryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Arcane Items of Tzeentch (One Use Only)" id="5011-b89d-afdf-680f" hidden="true" collective="false" import="true" sortIndex="1">
+        <selectionEntryGroup name="Arcane Items of Tzeentch (One Use Only)" id="5011-b89d-afdf-680f" hidden="true" collective="false" import="true" sortIndex="1" flatten="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e8d4-6b4d-3c96-ec65" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -14432,8 +14908,7 @@ Tamurkhan&apos;s power cannot save him if he is destroyed by an attack which cau
     </profile>
     <profile id="da22-8b80-a2a2-2479" name="Allure of Slaanesh" publicationId="1a01-044f-047b-618f" page="245" hidden="false" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods">
       <characteristics>
-        <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">Any opponent wishing to strike the character in close combat must first pass a psychology test before rolling To Hit. If the test is failed, that model cannot make any close combat attacks that phase. This does not affect Attacks
-that do not roll To Hit.</characteristic>
+        <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">Any opponent wishing to strike the character in close combat must first pass a psychology test before rolling To Hit. If the test is failed, that model cannot make any close combat attacks that phase. This does not affect Attacks that do not roll To Hit.</characteristic>
         <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">10</characteristic>
       </characteristics>
     </profile>
@@ -14451,216 +14926,6 @@ that do not roll To Hit.</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Equine)</characteristic>
       </characteristics>
     </profile>
-    <profile id="ff78-321b-8901-bc07" name="Daemonic Steed" publicationId="1a01-044f-047b-618f" page="25" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Daemon)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="68b3-4935-edd7-2381" name="War Chariot" publicationId="1a01-044f-047b-618f" page="178" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour save 6+)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="adbb-e4d7-2c43-9832" name="Gorebeast Chariot" publicationId="1a01-044f-047b-618f" page="178" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour save 6+)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="0b1e-3b66-a4c5-f3cf" name="Gorebeast" publicationId="1a01-044f-047b-618f" page="178" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215"/>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459"/>
-      </characteristics>
-    </profile>
-    <profile id="d656-79ae-8bb9-e5b6" name="Chaos Charioteer" publicationId="1a01-044f-047b-618f" page="178" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215"/>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459"/>
-      </characteristics>
-    </profile>
-    <profile id="7338-48d0-f98a-0a06" name="Chaos Dragon" publicationId="1a01-044f-047b-618f" page="27" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">6</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">6</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Draconid)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="def5-c1aa-84b4-5305" name="Palanquin of Nurgle" publicationId="1a01-044f-047b-618f" page="216" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">2</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">8</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Daemon)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="8778-6f19-10c0-0aeb" name="Disc of Tzeentch" publicationId="1a01-044f-047b-618f" page="216" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215"/>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Daemon)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="19a7-ba6e-28d4-f0e0" name="Juggernaut of Khorne" publicationId="1a01-044f-047b-618f" page="215" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Daemon)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="5ac8-1eff-d8ae-4dc5" name="Steed of Slaanesh" publicationId="1a01-044f-047b-618f" page="216" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">10</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Daemon)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="b6a9-0fe9-848a-2d66" name="Daemon Prince" publicationId="1a01-044f-047b-618f" page="21" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">8</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">6</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">8</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Creature (Character, Daemon)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="1e26-16e3-01da-e228" name="Chaos Lord" publicationId="1a01-044f-047b-618f" page="19" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">8</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">7</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Human)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="029d-a7dc-fcbb-ac6b" name="Chaos Sorcerer Lord" publicationId="1a01-044f-047b-618f" page="20" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Human)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="50d0-ca71-152f-8cba" name="Maledictor" publicationId="1a01-044f-047b-618f" page="23" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Human)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="c8f6-2a85-a4c3-042e" name="Exalted Champion" publicationId="1a01-044f-047b-618f" page="22" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">7</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">6</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Human)</characteristic>
-      </characteristics>
-    </profile>
     <profile id="f54b-d34d-bb44-2e9c" name="Marauder Chariot" publicationId="1a01-044f-047b-618f" page="174" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
@@ -14675,35 +14940,7 @@ that do not roll To Hit.</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour save 6+)</characteristic>
       </characteristics>
     </profile>
-    <profile id="1847-c0e4-4eac-56a7" name="Marauder Charioteer" publicationId="1a01-044f-047b-618f" page="174" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215"/>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Human</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="28c8-e668-1013-99cf" name="Marauder Chieftain" publicationId="1a01-044f-047b-618f" page="24" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">5</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Human)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="cd60-020c-c3f2-a5fa" name="Chaos Warshrine" publicationId="1a01-044f-047b-618f" page="193" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="cd60-020c-c3f2-a5fa" name="Warshrine" publicationId="1a01-044f-047b-618f" page="193" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
@@ -14717,21 +14954,7 @@ that do not roll To Hit.</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Shrine (Armour save 6+)</characteristic>
       </characteristics>
     </profile>
-    <profile id="88ba-1889-b5ac-1008" name="Chaos Shrinemaster" publicationId="1a01-044f-047b-618f" page="193" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215"/>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459"/>
-      </characteristics>
-    </profile>
-    <profile id="a631-99f6-e75a-5a8d" name="Chaos Shrine Bearers" publicationId="1a01-044f-047b-618f" page="193" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="a631-99f6-e75a-5a8d" name="Shrine Bearers" publicationId="1a01-044f-047b-618f" page="193" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215"/>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -14756,7 +14979,7 @@ that do not roll To Hit.</characteristic>
     </profile>
     <profile id="8b6b-4bae-205f-2730" name="Blood Fever" publicationId="1a01-044f-047b-618f" page="244" hidden="false" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods">
       <characteristics>
-        <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The character will never lose his Frenzy for any reason. In addition, any unit, friend or foe, that is in base contact them at the start of their Movement phase becomes subject to Frenzy for the rest of that turn. If they already have Frenzy, they instead gain +1 A, but will have to re-roll any successful Berserk Rage roll.</characteristic>
+        <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">The character will never lose their Frenzy for any reason. In addition, any unit, friend or foe, that is in base contact with them at the start of their Movement phase becomes subject to Frenzy for the rest of that turn. If they already have the Frenzy special rule, they instead gain +1 Attack, but will have to re-roll any successful Berserk Rage roll.</characteristic>
         <characteristic name="Cost" typeId="03e6-07f4-1e11-f05f">25</characteristic>
       </characteristics>
     </profile>
@@ -14806,76 +15029,6 @@ that do not roll To Hit.</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Canine)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="0d17-5448-0a71-66db" name="Varanguard" publicationId="1a01-044f-047b-618f" page="181" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Cavalry (Human)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="4e6f-4381-d5e0-255f" name="Doom Knight" publicationId="1a01-044f-047b-618f" page="177" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Human)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="b330-d662-56fd-a316" name="Karkadrak" publicationId="1a01-044f-047b-618f" page="26" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Creature (Reptile)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="8fd4-5476-8f8b-cf37" name="Rot Fly of Nurgle" publicationId="f46b-8c4e-ed82-05f7" page="35" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Daemon)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="65fc-4fa4-2b32-8c34" name="Serpent of Slaanesh" publicationId="1a01-044f-047b-618f" page="216" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">10</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Daemon)</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
