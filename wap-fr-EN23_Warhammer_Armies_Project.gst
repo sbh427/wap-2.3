@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="77" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="78" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -44,6 +44,7 @@
     <publication name="Chaos Dwarfs v.1.71" id="53f5-3638-a9ce-8dd3" hidden="false" shortName="CD" publisher="Warhammer - Chaos Dwarfs 9th Ed 1.71" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="20.04.2025"/>
     <publication id="4f8f-9147-1eae-6c3d" name="Zombie Pirates of the Vampire Coast v.1.5" shortName="ZP" publisher="Warhammer - Zombie Pirates of the Vampire Coast 9th Ed v.1.5" publicationDate="08.02.2025" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="65fb-a9da-0a71-9dc9" name="Grand Cathay 1.71" shortName="GC" publisher="Warhammer - Grand Cathay 1.71" publicationDate="05.12.2025" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="ebd7-07af-35b9-4e00" name="Halflings 1.2" shortName="Ha" publisher="Warhammer - Halflings 1.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="30.06.2025"/>
   </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
