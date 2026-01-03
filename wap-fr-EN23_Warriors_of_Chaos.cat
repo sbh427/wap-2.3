@@ -112,7 +112,7 @@
           <description>A Slaughterpriest channels Dispel dice and gets +1 Dispelling bonus in the same manner as a Level 2 Wizard.</description>
         </rule>
         <rule id="2a10-a540-289e-8173" name="Bloodfuelled Prayers" publicationId="1a01-044f-047b-618f" page="169" hidden="false">
-          <description>A model with this special rule knows the three Bloodfuelled Prayers listed below. They may attempt to use one at the start of each of your turns by taking a Leadership test on their own unmodified Leadership. If passed, the prayer is answered and takes immediate effect.</description>
+          <description>A model with this special rule knows the three Bloodfuelled Prayers. They may attempt to use one at the start of each of your turns by taking a Leadership test on their own unmodified Leadership. If passed, the prayer is answered and takes immediate effect.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -319,12 +319,18 @@
               <entryLinks>
                 <entryLink import="true" name="Shield" hidden="false" id="42ad-65f5-2f61-65ce" type="selectionEntry" targetId="c068-0827-9931-d9bf">
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
+                    <modifier type="set" value="0" field="af56-60a7-18d1-6f4f">
                       <conditions>
                         <condition type="equalTo" value="0" field="selections" scope="parent" childId="a923-e8b1-94c0-3f2c" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
                   </modifiers>
+                  <constraints>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="e711-2d7b-a425-df81" includeChildSelections="false"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
                 </entryLink>
               </entryLinks>
             </entryLink>
@@ -923,12 +929,12 @@
               <entryLinks>
                 <entryLink import="true" name="Shield" hidden="false" id="c8b0-9498-85ee-15c3" type="selectionEntry" targetId="c068-0827-9931-d9bf">
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
+                    <modifier type="set" value="0" field="af56-60a7-18d1-6f4f">
                       <conditionGroups>
                         <conditionGroup type="or">
                           <conditions>
-                            <condition type="equalTo" value="1" field="selections" scope="parent" childId="0473-857e-78d9-cb7c" shared="true" includeChildSelections="true"/>
-                            <condition type="equalTo" value="1" field="selections" scope="parent" childId="bb32-f093-5fdc-d505" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="0473-857e-78d9-cb7c" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="d509-46a8-2dc7-0eb9" shared="true" includeChildSelections="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
@@ -937,6 +943,9 @@
                   <costs>
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
+                  <constraints>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="da2d-3940-de24-ac0e" includeChildSelections="false"/>
+                  </constraints>
                 </entryLink>
               </entryLinks>
             </entryLink>
@@ -1394,14 +1403,14 @@
             </entryLink>
             <entryLink import="true" name="40. Suits of Armour" hidden="false" id="2e78-d480-2779-7a71" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
               <entryLinks>
-                <entryLink import="true" name="Heavy Armour" hidden="false" id="b895-3d18-e6e3-8009" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
+                <entryLink import="true" name="Heavy Armour" hidden="false" id="b895-3d18-e6e3-8009" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="1">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ecde-70c8-604a-6e9f"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Chaos Armour" hidden="false" id="bd0b-9cce-ce87-4c73" collective="true">
+                <selectionEntry type="upgrade" import="true" name="Chaos Armour" hidden="false" id="bd0b-9cce-ce87-4c73" collective="true" sortIndex="2">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="147a-de96-5ba6-6305" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
@@ -2099,20 +2108,20 @@
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="equalTo" value="1" field="selections" scope="unit" childId="d509-46a8-2dc7-0eb9" shared="true" includeChildSelections="true"/>
-                            <condition type="equalTo" value="1" field="selections" scope="unit" childId="0473-857e-78d9-cb7c" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
                     <modifier type="set" value="1" field="4935-480c-229a-5fa3">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="0c7c-159c-f843-23ae" shared="true" includeChildSelections="true"/>
                       </conditions>
+                    </modifier>
+                    <modifier type="set" value="0" field="af56-60a7-18d1-6f4f">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="0473-857e-78d9-cb7c" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="d509-46a8-2dc7-0eb9" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </modifier>
                   </modifiers>
                   <constraints>
@@ -2120,6 +2129,9 @@
                   </constraints>
                 </entryLink>
               </entryLinks>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="ac3d-c2b2-7b25-ee26" includeChildSelections="false"/>
+              </constraints>
             </entryLink>
           </entryLinks>
           <modifiers>
@@ -2784,7 +2796,7 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
-            <cost name="pts" typeId="points" value="75"/>
+            <cost name="pts" typeId="points" value="80"/>
           </costs>
           <entryLinks>
             <entryLink import="true" name="40. Suits of Armour" hidden="false" id="964c-f54c-60cb-3e29" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
@@ -2798,13 +2810,13 @@
             </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="d7b8-ce62-ffc6-df35" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
-                <entryLink import="true" name="Light Lance" hidden="false" id="3dcc-dd3f-9147-6b80" type="selectionEntry" targetId="d989-1124-0dea-ae27"/>
-                <entryLink import="true" name="Ensorcelled Weapon" hidden="false" id="78c3-d3b6-58ad-1635" type="selectionEntry" targetId="96cc-b725-c2b2-692c">
+                <entryLink import="true" name="Light Lance" hidden="false" id="3dcc-dd3f-9147-6b80" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="1"/>
+                <entryLink import="true" name="Ensorcelled Weapon" hidden="false" id="78c3-d3b6-58ad-1635" type="selectionEntry" targetId="96cc-b725-c2b2-692c" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Heavy Lance" hidden="false" id="52a9-41e3-418c-2896" type="selectionEntry" targetId="0548-4aeb-a60c-b378">
+                <entryLink import="true" name="Heavy Lance" hidden="false" id="52a9-41e3-418c-2896" type="selectionEntry" targetId="0548-4aeb-a60c-b378" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
@@ -3079,7 +3091,7 @@ Each time the unit casts a spell (or is targeted by a special rule that affects 
                   <profiles>
                     <profile name="Death Heads of Nurgle" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="43ce-d5b2-292f-0a2b" publicationId="1a01-044f-047b-618f" page="187">
                       <characteristics>
-                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
+                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">6&quot;</characteristic>
                         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
                         <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Wounds (D3). Poisoned Attacks. Quick to Fire.</characteristic>
                       </characteristics>
@@ -3137,9 +3149,9 @@ Each time the unit casts a spell (or is targeted by a special rule that affects 
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="3df3-45ab-1df8-2a3e" name="Giant Spined Chaos Beast" hidden="false" collective="false" import="true" type="model" sortIndex="36">
+    <selectionEntry id="3df3-45ab-1df8-2a3e" name="Giant Spinehound" hidden="false" collective="false" import="true" type="model" sortIndex="36">
       <profiles>
-        <profile id="7036-5698-5431-e142" name="Giant Spined Chaos Beast" publicationId="1a01-044f-047b-618f" page="47" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+        <profile id="7036-5698-5431-e142" name="Giant Spinehound" publicationId="1a01-044f-047b-618f" page="47" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
           <characteristics>
             <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
             <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -3148,7 +3160,7 @@ Each time the unit casts a spell (or is targeted by a special rule that affects 
             <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
             <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">6</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Canine)</characteristic>
           </characteristics>
@@ -3376,7 +3388,10 @@ Unlike other random movement, an Unbound Slaughterbrute can move into base conta
             <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Stone Thrower</characteristic>
             <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-60&quot;</characteristic>
             <characteristic name="Strength" typeId="6ca0-d074-628f-e276">5(10)</characteristic>
-            <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Move or Fire. Multiple Wounds (D6). Slow to Fire. Any unit that suffers one or more casualties from Doomfire must take a Panic test with a -1 penalty to their Ld. Should the artillery dice roll a misfire, roll a D6 on the Hellcannon Misfire Table.</characteristic>
+            <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Flaming Attacks, Move or Fire, Multiple Wounds (D6) and Slow to Fire.
+
+
+Any unit that suffers one or more casualties from Doomfire must take a Panic test with a -1 penalty to their Leadership. Should the artillery dice roll a misfire, roll a D6 on th Hellcannon Misfire Table.</characteristic>
           </characteristics>
         </profile>
         <profile id="1a0f-3446-a972-1141" name="Hellcannon" publicationId="1a01-044f-047b-618f" page="211" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
@@ -3525,7 +3540,11 @@ Unlike other random movement, an Unbound Slaughterbrute can move into base conta
       </profiles>
       <rules>
         <rule id="896b-0fc0-e8d3-b492" name="Mammoth Attacks" publicationId="1a01-044f-047b-618f" page="208" hidden="false">
-          <description>When the Ice Mammoth attacks, roll on the appropriate table to determine its action. If no suitable target is in base contact, roll again on the chart until you get another result. Use the Man-sized Things Chart when fighting Infantry, Cavalry, War Beasts or Swarms. Use the Big Things Chart when fighting Monsters, Monstrous Creatures, Monstrous Beasts, Monstrous Infantry, Monstrous Cavalry, Chariots, War Machines, and Shrines</description>
+          <description>When the War Mammoth attacks, roll on the appropriate following table to determine its action. If no suitable target is in base contact, roll again on the chart until you get another result.
+
+
+Use the Man-sized Things Chart when fighting Infantry, Cavalry, War Beasts or Swarms. 
+Use the Big Things Chart when fighting Monsters, Monstrous Creatures, Monstrous Beasts, Monstrous Infantry, Monstrous Cavalry, Chariots, War Machines, and Shrines</description>
         </rule>
       </rules>
       <infoLinks>
@@ -3586,7 +3605,7 @@ Unlike other random movement, an Unbound Slaughterbrute can move into base conta
               <entryLinks>
                 <entryLink import="true" name="Light Armour" hidden="false" id="6f53-aee2-5454-f84d" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
                   <costs>
-                    <cost name="pts" typeId="points" value="25"/>
+                    <cost name="pts" typeId="points" value="15"/>
                   </costs>
                 </entryLink>
               </entryLinks>
@@ -9047,11 +9066,12 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Draconid)</characteristic>
           </characteristics>
         </profile>
-        <profile name="Warpfire Blast" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="6099-4125-9d91-22b0" publicationId="1a01-044f-047b-618f" page="48">
+        <profile name="Warpfire Blast" typeId="781d-35fe-dd22-05d6" typeName="War Machine" hidden="false" id="6099-4125-9d91-22b0" publicationId="1a01-044f-047b-618f" page="48">
           <characteristics>
-            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">6-24&quot;</characteristic>
-            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4(6)</characteristic>
-            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Flaming Attacks, Magical Attacks, Multiple Wounds (D3)</characteristic>
+            <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Stone Thrower</characteristic>
+            <characteristic name="Range" typeId="1c88-efb0-083f-b945">6-24&quot;</characteristic>
+            <characteristic name="Strength" typeId="6ca0-d074-628f-e276">4(6)</characteristic>
+            <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Flaming Attacks, Magical Attacks, Multiple Wounds (D3)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -9228,7 +9248,11 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                         <modifier type="set" value="Steed of Slaanesh only" field="annotation"/>
                       </modifiers>
                     </infoLink>
-                    <infoLink name="Daemon of Slaanesh" id="7cb1-2a1e-f241-f6c8" hidden="false" type="rule" targetId="2ad0-3e18-aba8-5e68"/>
+                    <infoLink name="Daemon of Slaanesh" id="7cb1-2a1e-f241-f6c8" hidden="false" type="rule" targetId="2ad0-3e18-aba8-5e68">
+                      <modifiers>
+                        <modifier type="set" value="Steed of Slaanesh only" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
                     <infoLink name="Poisoned Attacks" id="23d8-4437-808d-4a61" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef">
                       <modifiers>
                         <modifier type="set" value="Steed of Slaanesh only" field="annotation"/>
@@ -9402,7 +9426,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                 </entryLink>
                 <entryLink import="true" name="Ensorcelled Weapon" hidden="false" id="4da8-ef22-e47a-7f0a" type="selectionEntry" targetId="96cc-b725-c2b2-692c" sortIndex="3">
                   <costs>
-                    <cost name="pts" typeId="points" value="4"/>
+                    <cost name="pts" typeId="points" value="2"/>
                   </costs>
                 </entryLink>
               </entryLinks>
@@ -9652,7 +9676,11 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
             <modifier type="set" value="Rot Fly only" field="annotation"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Daemon of Nurgle" id="b7d7-b3e5-a33d-cba5" hidden="false" type="rule" targetId="0b9b-1baf-5bcd-1ec3"/>
+        <infoLink name="Daemon of Nurgle" id="b7d7-b3e5-a33d-cba5" hidden="false" type="rule" targetId="0b9b-1baf-5bcd-1ec3">
+          <modifiers>
+            <modifier type="set" value="Rot Fly only" field="annotation"/>
+          </modifiers>
+        </infoLink>
         <infoLink name="Fly (6)" id="919e-45ff-0c52-8ac5" hidden="false" type="rule" targetId="b830-fe6e-b461-0377"/>
         <infoLink name="Poisoned Attacks" id="8369-8038-b053-e868" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef">
           <modifiers>
@@ -9767,7 +9795,11 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
             <modifier type="set" value="Juggernaut only" field="annotation"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Daemonic" id="2639-6cce-15eb-2329" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
+        <infoLink name="Daemonic" id="2639-6cce-15eb-2329" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff">
+          <modifiers>
+            <modifier type="set" value="Juggernaut only" field="annotation"/>
+          </modifiers>
+        </infoLink>
         <infoLink name="Natural Armour (6+)" id="0e90-96f8-8c95-d054" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
       </infoLinks>
       <modifiers>
@@ -9832,7 +9864,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
       <entryLinks>
         <entryLink import="true" name="70. Mount" hidden="false" id="e5ad-245d-6aba-0582" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
           <entryLinks>
-            <entryLink import="true" name="Warsteed" hidden="false" id="c2c6-6f90-75dc-18f7" type="selectionEntry" targetId="b00b-4a51-ae10-9998" sortIndex="1">
+            <entryLink import="true" name="Warsteeds" hidden="false" id="c2c6-6f90-75dc-18f7" type="selectionEntry" targetId="b00b-4a51-ae10-9998" sortIndex="1">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="625d-6e14-712e-654d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -9863,20 +9895,6 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ffbb-4b8b-43b3-ce7e" includeChildSelections="false"/>
               </constraints>
               <profiles>
-                <profile name="Gorebeast" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="060c-34dc-c16c-fb82">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215"/>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Primate)</characteristic>
-                  </characteristics>
-                </profile>
                 <profile name="Gorebeast" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f6df-354e-75f5-8335">
                   <characteristics>
                     <characteristic name="M" typeId="09ad-18df-607b-1215"/>
@@ -15046,9 +15064,7 @@ Tamurkhan&apos;s power cannot save him if he is destroyed by an attack which cau
               </constraints>
               <rules>
                 <rule name="Giant of Khorne" id="ecf1-f7cf-65f4-1366" hidden="false" publicationId="1a01-044f-047b-618f" page="206">
-                  <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
-
-A Giant of Khorne has +1 S.</description>
+                  <description>A Giant of Khorne has +1 Strength.</description>
                 </rule>
               </rules>
               <costs>
@@ -15061,9 +15077,7 @@ A Giant of Khorne has +1 S.</description>
               </constraints>
               <rules>
                 <rule name="Giant of Tzeentch" id="52f9-584f-0bcc-5ca5" hidden="false" publicationId="1a01-044f-047b-618f" page="206">
-                  <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
-
-A Giant of Tzeentch has a Ward Save (6+).</description>
+                  <description>A Giant of Tzeentch has a Ward save (6+)</description>
                 </rule>
               </rules>
               <costs>
@@ -15076,9 +15090,7 @@ A Giant of Tzeentch has a Ward Save (6+).</description>
               </constraints>
               <rules>
                 <rule name="Giant of Slaanesh" id="c610-5302-3b1d-a4c7" hidden="false" publicationId="1a01-044f-047b-618f" page="206">
-                  <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
-
-A Giant of Slaanesh has +1 I and Unbreakable.</description>
+                  <description>A Giant of Slaanesh has +1 Initiative and the Unbreakable special rule</description>
                 </rule>
               </rules>
               <costs>
@@ -15091,9 +15103,7 @@ A Giant of Slaanesh has +1 I and Unbreakable.</description>
               </constraints>
               <rules>
                 <rule name="Giant of Nurgle" id="2aba-e270-d533-8741" hidden="false" publicationId="1a01-044f-047b-618f" page="206">
-                  <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
-
-A Giant of Nurgle has +1 T.</description>
+                  <description>A Giant of Nurgle has +1 Toughness.</description>
                 </rule>
               </rules>
               <costs>
@@ -15147,6 +15157,35 @@ A Giant of Nurgle has +1 T.</description>
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="3438-ae63-2e12-90c9" targetId="fc26-7737-f7cb-8977" primary="true"/>
       </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="10. Mark of Chaos" id="65f2-1953-8871-b51c" hidden="false" collective="false" import="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="89d4-cb96-ac85-eb96" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Mark of Khorne" hidden="false" id="198d-cf5c-1be0-8038" type="selectionEntry" targetId="2211-a88b-c358-2e91" collective="true" sortIndex="1">
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Mark of Tzeentch" hidden="false" id="b5a0-9435-3faf-4dd3" type="selectionEntry" targetId="a5c6-cd36-6ce9-c322" collective="true" sortIndex="3">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Mark of Slaanesh" hidden="false" id="77c2-71f3-d9a7-6cab" type="selectionEntry" targetId="b570-8e89-e752-8902" collective="true" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Mark of Nurgle" hidden="false" id="74fb-eb83-9cb7-9ec3" type="selectionEntry" targetId="fce4-1eaa-170d-634c" collective="true" sortIndex="4">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </entryLink>
   </entryLinks>
   <catalogueLinks>
