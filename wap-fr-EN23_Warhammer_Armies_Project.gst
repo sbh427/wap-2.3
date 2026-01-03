@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="77" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="79" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -11,7 +11,7 @@
     <publication id="9e23-79cb-pubN77402" name="Lizardmen v.1.5" shortName="LM" publisher="Warhammer - Lizardmen 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN78137" name="Ogre Kingdoms v.1.5" shortName="OK" publisher="Warhammer - Ogre Kingdoms 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN78975" name="Orcs &amp; Goblins v.1.6" shortName="O&amp;G" publisher="Warhammer - Orcs &amp; Goblins 9th Ed v.1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="aa7b-3583-0834-7bfa" name="Dwarfs v.1.6" shortName="Dw" publisher="Warhammer - Dwarfs 9th Ed 1.6" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="aa7b-3583-0834-7bfa" name="Dwarfs v.1.62" shortName="Dw" publisher="Warhammer - Dwarfs 9th Ed 1.62" publisherUrl=""/>
     <publication id="315d-135b-135c-07ce" name="Empire v.1.7" shortName="Em" publisher="Warhammer - Empire 9th Ed v.1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="4086-1ccd-f433-39a2" name="Skaven v.1.9" shortName="Sk" publisher="Warhammer - Skaven 9th Ed v.1.8" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="ee54-3543-b9db-fe40" name="Daemons of Chaos 1.62" shortName="DoC" publisher="Warhammer - Daemons of Chaos 1.62" publicationDate="26.10.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -21,7 +21,7 @@
     <publication id="10a5-5781-61f5-86ae" name="Vampire Counts 1.63" shortName="VC" publisher="Warhammer - Vampire Counts 1.63" publicationDate="18.05.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="1a01-044f-047b-618f" name="Warriors of Chaos v.1.6" shortName="WoC" publisher="Warhammer - Warriors of Chaos 9th Ed v.1.6" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="e967-620f-06be-096a" name="Wood Elves v.1.5" shortName="WE" publisher="Warhammer - Wood Elves 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="315c-6fd1-56a3-8b04" name="Amazons v.1.44" shortName="Am" publisher="Warhammer - Amazons 1.44" publicationDate="08.01.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="315c-6fd1-56a3-8b04" name="Amazons v.1.5" shortName="Am" publisher="Warhammer - Amazons 1.5" publicationDate="" publisherUrl=""/>
     <publication id="d221-484d-439d-4310" name="Araby v.1.5" shortName="Ar" publisher="Warhammer - Araby 9th Ed 1.5" publicationDate="26.06.2025" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="8abe-59b3-1084-5e51" name="Grand Cathay 1.52" shortName="GC" publisher="Warhammer - Grand Cathay 1.52" publicationDate="11.09.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="faf5-2026-3cea-6e96" name="Chaos Dwarfs 1.5" shortName="CD" publisher="Warhammer - Chaos Dwarfs 9th Ed 1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
