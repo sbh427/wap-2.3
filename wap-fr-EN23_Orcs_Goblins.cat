@@ -62,12 +62,7 @@
         </entryLink>
         <entryLink import="true" name="15. Race" hidden="false" id="b640-d662-3661-bcc9" type="selectionEntryGroup" targetId="b86a-7a2f-e4c6-bbdc">
           <entryLinks>
-            <entryLink import="true" name="Common Orc" hidden="false" id="55dd-f650-ebf9-4a29" type="selectionEntry" targetId="38eb-4cc1-1d80-2116" sortIndex="1">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3044-af78-0470-1a3d-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3044-af78-0470-1a3d-max" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
+            <entryLink import="true" name="Common Orc" hidden="false" id="55dd-f650-ebf9-4a29" type="selectionEntry" targetId="38eb-4cc1-1d80-2116" sortIndex="1"/>
             <entryLink import="true" name="Savage Orc" hidden="false" id="7b44-7851-655a-8525" type="selectionEntry" targetId="a3a2-449e-045e-ff73" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
@@ -246,29 +241,6 @@
             </entryLink>
           </entryLinks>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Big Stabba" hidden="false" id="9bf4-a4cf-1bb2-c7ca" sortIndex="2">
-          <infoLinks>
-            <infoLink name="Big Stabba" id="f8f8-22ad-273f-3b95" hidden="false" type="rule" targetId="f44c-19e9-1d24-b925"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="10"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="418c-fdf5-704e-3c5f"/>
-          </constraints>
-          <modifiers>
-            <modifier type="increment" value="2" field="418c-fdf5-704e-3c5f">
-              <repeats>
-                <repeat value="10" repeats="1" field="selections" scope="unit" childId="c860-6b8d-6663-ccd6" shared="true" roundUp="false" includeChildSelections="true"/>
-              </repeats>
-            </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="unit" childId="a3a2-449e-045e-ff73" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="e308-0583-d85d-e174" name="Command Group" hidden="false" collective="false" import="true" sortIndex="3">
@@ -319,6 +291,9 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <entryLinks>
+        <entryLink import="true" name="Big Stabba" hidden="false" id="3e5e-0989-9678-72b7" type="selectionEntry" targetId="9bf4-a4cf-1bb2-c7ca" sortIndex="2"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry id="6e6e-cbc8-06e5-1f3d" name="Arrer Boyz" hidden="false" collective="false" import="true" type="unit" sortIndex="14">
       <categoryLinks>
@@ -821,7 +796,7 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Additional Models" id="e25c-eafa-119c-6d1d" hidden="false">
+        <selectionEntryGroup name="Additional Models / Upgrades" id="e25c-eafa-119c-6d1d" hidden="false">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Jester" hidden="false" id="d45b-8b42-97d2-dd3a" collective="false" sortIndex="4">
               <constraints>
@@ -871,7 +846,7 @@
                     <condition type="equalTo" value="0" field="selections" scope="unit" childId="cd2b-976c-8770-3030" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
-                <modifier type="set" value="1" field="f954-e592-fd72-8f55">
+                <modifier type="increment" value="1" field="f954-e592-fd72-8f55">
                   <repeats>
                     <repeat value="5" repeats="1" field="selections" scope="unit" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
                   </repeats>
@@ -915,7 +890,7 @@
           <selectionEntryGroups>
             <selectionEntryGroup name="Fanatics" id="94e8-5800-71d1-35c6" hidden="false">
               <selectionEntries>
-                <selectionEntry type="model" import="true" name="Fanatic (Giant Ball and Chain^)" hidden="false" id="464b-f135-9049-e76f" collective="true">
+                <selectionEntry type="model" import="true" name="Fanatic (Giant Ball and Chain)" hidden="false" id="464b-f135-9049-e76f" collective="true">
                   <costs>
                     <cost name="pts" typeId="points" value="25"/>
                   </costs>
@@ -1039,12 +1014,12 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
         <categoryLink name="Infantry" hidden="false" id="1499-b4dc-5be6-e480" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="9e93-cbcd-9787-baaa" name="Goblin Wolf Rider" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="9e93-cbcd-9787-baaa" name="Wolf Rider" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bf19-dcae-d92f-07ff" type="min"/>
           </constraints>
           <profiles>
-            <profile id="e3f3-d39b-3920-13dc" name="Wolf Rider" publicationId="9e23-79cb-pubN78975" page="39" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+            <profile id="e3f3-d39b-3920-13dc" name="Goblin" publicationId="9e23-79cb-pubN78975" page="39" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
               <characteristics>
                 <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
                 <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
@@ -1258,7 +1233,7 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="db66-6d4c-0441-8888" type="min"/>
           </constraints>
           <profiles>
-            <profile id="5969-b618-5b7e-1400" name="Spider Rider" publicationId="9e23-79cb-pubN78975" page="40" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+            <profile id="5969-b618-5b7e-1400" name="Goblin" publicationId="9e23-79cb-pubN78975" page="40" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
               <characteristics>
                 <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
                 <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
@@ -1278,7 +1253,7 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
             <infoLink name="Animosity" id="dfb0-930b-5c8a-1e47" hidden="false" type="rule" targetId="230d-025f-a39a-c499"/>
           </infoLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup name="25. Equipment" id="d904-d29e-71b2-68d7" hidden="false" sortIndex="">
+            <selectionEntryGroup name="25. Equipment" id="d904-d29e-71b2-68d7" hidden="false">
               <entryLinks>
                 <entryLink import="true" name="Light Lance" hidden="false" id="0a7d-b1bf-1c5e-ca67" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="2">
                   <costs>
@@ -1305,7 +1280,7 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
             <cost name="pts" typeId="points" value="11"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="15. Race" hidden="false" id="75ca-f3f7-3080-d4ce" type="selectionEntryGroup" targetId="b86a-7a2f-e4c6-bbdc" sortIndex="">
+            <entryLink import="true" name="15. Race" hidden="false" id="75ca-f3f7-3080-d4ce" type="selectionEntryGroup" targetId="b86a-7a2f-e4c6-bbdc">
               <entryLinks>
                 <entryLink import="true" name="Forest Goblin" hidden="false" id="e770-0d05-9142-7a43" type="selectionEntry" targetId="1452-72a8-f5d5-225f">
                   <constraints>
@@ -1325,7 +1300,7 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
                 </entryLink>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="4f15-631d-df9f-d93a" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47" sortIndex="">
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="4f15-631d-df9f-d93a" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Hand Weapon" hidden="false" id="0ba8-13a4-128f-26f3" type="selectionEntry" targetId="a658-337d-0cbd-a38c" defaultAmount="1">
                   <constraints>
@@ -1742,12 +1717,12 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
         <categoryLink name="Cavalry" hidden="false" id="26ae-959d-4994-501e" targetId="bdee-b168-38ba-7d3c" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry id="5f52-d36f-668f-f770" name="Orc Boar Boy" hidden="false" collective="false" import="true" type="model">
+        <selectionEntry id="5f52-d36f-668f-f770" name="Boar Boy" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6be5-e422-dad8-baf9" type="min"/>
           </constraints>
           <profiles>
-            <profile id="7a4c-81b8-3d66-9d72" name="Boar Boy" publicationId="9e23-79cb-pubN78975" page="35" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+            <profile id="7a4c-81b8-3d66-9d72" name="Orc" publicationId="9e23-79cb-pubN78975" page="35" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
               <characteristics>
                 <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
                 <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -1927,7 +1902,7 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
           <description>You may take 1-2 Spear Chukka&apos;s as a single special choice.</description>
         </rule>
         <rule id="0793-42c1-c4db-bbc0" name="Slipshot" publicationId="9e23-79cb-pubN78975" page="47" hidden="false">
-          <description> If the To Hit roll for a shooting attack made by a Spear Chukka is a 1 (before any modifiers are applied), then it misfires. Roll on the Stone Thrower Misfire table in the Warhammer rulebook and apply the result to the Spear Chukka.</description>
+          <description>If the To Hit roll for a shooting attack made by a Spear Chukka is a 1 (before any modifiers are applied), then it misfires. Roll on the Stone Thrower Misfire table in the Warhammer rulebook and apply the result to the Spear Chukka.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -2224,7 +2199,7 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
             <infoLink id="0c04-9b5e-ed87-e98f" name="Immunity (Fear)" hidden="false" targetId="9fed-6076-6c75-b774" type="rule"/>
             <infoLink id="a4a5-3d6c-affd-5099" name="Duff Up da Big Thing" hidden="false" targetId="ea3d-b63d-a2a2-d86b" type="rule"/>
             <infoLink name="Animosity" id="a906-56f7-81dc-e832" hidden="false" type="rule" targetId="230d-025f-a39a-c499"/>
-            <infoLink name="Orc Brute" id="cd1a-f0cc-6e93-6ceb" hidden="false" type="profile" targetId="aedc-8ef5-4c10-72fa"/>
+            <infoLink name="Brute" id="cd1a-f0cc-6e93-6ceb" hidden="false" type="profile" targetId="aedc-8ef5-4c10-72fa"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="26"/>
@@ -2749,7 +2724,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
           <description>Mangler Squigs must take a Dangerous Terrain test if they move over any of the following types of terrain: Forests, Marshland, Obstacles or Mystical Monuments. If their move would take them into contact with a Building, Impassable Terrain or off a table edge then they must take a Dangerous Terrain test and will stop 1&quot; short of the obstruction.</description>
         </rule>
         <rule id="fe15-f21d-51d4-9b9a" name="Ker-splat!" publicationId="9e23-79cb-pubN78975" page="57" hidden="false">
-          <description>If the Mangler Squigs&apos; move would bring them into contact with another unit, then they move through rather than stopping. If the Mangler Squigs ever end their move over a unit, place them 1&quot; beyond the unit in the direction it was moving. If this is also over a unit it should be placed 1&quot; beyond that unit, repeating the process until it is no longer touching any models. When this happens, units between where the Mangler Squigs ended their move do not take any damage. When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 Strength 6 hits. </description>
+          <description>If the Mangler Squigs&apos; move would bring them into contact with another unit, then they move through rather than stopping. If the Mangler Squigs ever end their move over a unit, place them 1&quot; beyond the unit in the direction it was moving. If this is also over a unit it should be placed 1&quot; beyond that unit, repeating the process until it is no longer touching any models. When this happens, units between where the Mangler Squigs ended their move do not take any damage. When Mangler Squigs move through a unit (friend or foe) they inflict 2D6 Strength 6 hits.</description>
         </rule>
         <rule id="2b0c-d905-931c-b90b" name="Gone Crazy!" publicationId="9e23-79cb-pubN78975" page="57" hidden="false">
           <description>Mangler Squigs that make a Ker-Splat! attack Go Crazy. Once Mangler Squigs have Gone Crazy they will move in a random direction when they move in the Compulsory Moves sub-phase.</description>
@@ -3008,7 +2983,11 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
             <modifier type="increment" value="100" field="f386-b03f-db90-5864"/>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="60. Wizard Level" hidden="false" id="a852-27f1-3696-ae75" type="selectionEntryGroup" targetId="f5c2-4dd8-a449-65ce"/>
+        <entryLink import="true" name="60. Wizard Level" hidden="false" id="a852-27f1-3696-ae75" type="selectionEntryGroup" targetId="f5c2-4dd8-a449-65ce">
+          <modifiers>
+            <modifier type="set" value="50" field="points" affects="self.entries.recursive.1670-dca4-294b-7d9b"/>
+          </modifiers>
+        </entryLink>
         <entryLink import="true" name="65. Lore of Magic" hidden="false" id="a44a-49aa-9002-d4b8" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
           <entryLinks>
             <entryLink import="true" name="Lore of Troll Magic" hidden="false" id="a22f-8337-c899-e1ef" type="selectionEntry" targetId="8b46-aebb-97be-ab84"/>
@@ -5736,7 +5715,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
             </modifier>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="a108-7f41-f1a0-4d58" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="a108-7f41-f1a0-4d58" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="7f1f-7f52-ef35-cb52" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="1">
               <costs>
@@ -5949,7 +5928,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
         </entryLink>
         <entryLink import="true" name="70. Mount" hidden="false" id="f97e-f158-820c-8abf" type="selectionEntryGroup" targetId="11f2-1655-f0c0-1121">
           <entryLinks>
-            <entryLink import="true" name="War Boar" hidden="false" id="f056-98d0-817a-3d20" type="selectionEntry" targetId="7284-49ca-e7b8-b362">
+            <entryLink import="true" name="War Boar" hidden="false" id="f056-98d0-817a-3d20" type="selectionEntry" targetId="7284-49ca-e7b8-b362" sortIndex="1">
               <entryLinks>
                 <entryLink import="true" name="Barding" hidden="false" id="4f3b-c8ec-e7fc-c197" type="selectionEntry" targetId="17ec-ae05-605b-27ce"/>
               </entryLinks>
@@ -5957,7 +5936,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="24"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Orc Boar Chariot" hidden="false" id="5065-7647-daa0-2d30" type="selectionEntry" targetId="6672-9da0-c31f-d0e8">
+            <entryLink import="true" name="Orc Boar Chariot" hidden="false" id="5065-7647-daa0-2d30" type="selectionEntry" targetId="6672-9da0-c31f-d0e8" sortIndex="2">
               <categoryLinks>
                 <categoryLink name="Mount" hidden="false" id="fbd4-a2e1-1093-169c" targetId="8b8a-34b1-ed30-df11" primary="true"/>
               </categoryLinks>
@@ -5974,7 +5953,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Wyvern" hidden="false" id="0cb3-1a97-a91d-1acf" type="selectionEntry" targetId="b76c-2504-f081-9706">
+            <entryLink import="true" name="Wyvern" hidden="false" id="0cb3-1a97-a91d-1acf" type="selectionEntry" targetId="b76c-2504-f081-9706" sortIndex="3">
               <costs>
                 <cost name="pts" typeId="points" value="160"/>
               </costs>
@@ -6124,7 +6103,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="11e0-04f4-daa9-156f"/>
               </constraints>
             </entryLink>
-            <entryLink import="true" name="Goblin Wolf Chariot" hidden="false" id="a3b7-748e-56ad-7c39" type="selectionEntry" targetId="7133-7f02-0d9f-4108">
+            <entryLink import="true" name="Wolf Chariot" hidden="false" id="a3b7-748e-56ad-7c39" type="selectionEntry" targetId="7133-7f02-0d9f-4108">
               <costs>
                 <cost name="pts" typeId="points" value="36"/>
               </costs>
@@ -6229,11 +6208,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
           <entryLinks>
             <entryLink import="true" name="Common Goblin" hidden="false" id="3fee-e0e6-be7a-5c42" type="selectionEntry" targetId="deca-22a4-bf9c-0c27" sortIndex="1"/>
             <entryLink import="true" name="Night Goblin" hidden="false" id="f959-d46f-7230-c5c7" type="selectionEntry" targetId="cd2b-976c-8770-3030" sortIndex="2"/>
-            <entryLink import="true" name="Forest Goblin" hidden="false" id="feff-0350-1db3-cc86" type="selectionEntry" targetId="1452-72a8-f5d5-225f" sortIndex="3">
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-            </entryLink>
+            <entryLink import="true" name="Forest Goblin" hidden="false" id="feff-0350-1db3-cc86" type="selectionEntry" targetId="1452-72a8-f5d5-225f" sortIndex="3"/>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="70. Mount" hidden="false" id="2580-5623-3fed-de8b" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
@@ -6299,7 +6274,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Goblin Wolf Chariot" hidden="false" id="a449-1b64-a772-167d" type="selectionEntry" targetId="7133-7f02-0d9f-4108" sortIndex="5">
+            <entryLink import="true" name="Wolf Chariot" hidden="false" id="a449-1b64-a772-167d" type="selectionEntry" targetId="7133-7f02-0d9f-4108" sortIndex="5">
               <costs>
                 <cost name="pts" typeId="points" value="36"/>
               </costs>
@@ -6434,6 +6409,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
         <categoryLink name="Y Shortbow" hidden="false" id="922f-6161-dd00-8611" targetId="0369-7a21-9325-be6b" primary="false"/>
         <categoryLink name="Z Light Armour" hidden="false" id="ac84-6c2e-4ca4-31da" targetId="fa51-55d0-00b9-c0e8" primary="false"/>
         <categoryLink name="Z Armour" hidden="false" id="a227-a0a7-d8c1-43d8" targetId="387c-2b7c-0a30-7305" primary="false"/>
+        <categoryLink name="Z Shield" hidden="false" id="72e1-b9e6-d17d-065a" targetId="0210-637d-ff12-a760" primary="false"/>
       </categoryLinks>
       <modifiers>
         <modifier type="add" value="222a-078c-ce85-fb16" field="category">
@@ -6829,7 +6805,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Goblin Wolf Chariot" hidden="false" id="e341-d535-0326-9c07" type="selectionEntry" targetId="7133-7f02-0d9f-4108" sortIndex="6">
+            <entryLink import="true" name="Wolf Chariot" hidden="false" id="e341-d535-0326-9c07" type="selectionEntry" targetId="7133-7f02-0d9f-4108" sortIndex="6">
               <costs>
                 <cost name="pts" typeId="points" value="36"/>
               </costs>
@@ -7060,8 +7036,8 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
         <entryLink import="true" name="10. Character Options" hidden="false" id="229c-f77f-b51f-630b" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
         <entryLink import="true" name="15. Race" hidden="false" id="763d-1a3b-501e-1888" type="selectionEntryGroup" targetId="b86a-7a2f-e4c6-bbdc">
           <entryLinks>
-            <entryLink import="true" name="Common Goblin" hidden="false" id="8b27-7a1a-a5dd-eb3a" type="selectionEntry" targetId="deca-22a4-bf9c-0c27"/>
-            <entryLink import="true" name="Night Goblin" hidden="false" id="f6e9-d3a8-0e63-b29a" type="selectionEntry" targetId="cd2b-976c-8770-3030">
+            <entryLink import="true" name="Common Goblin" hidden="false" id="8b27-7a1a-a5dd-eb3a" type="selectionEntry" targetId="deca-22a4-bf9c-0c27" sortIndex="1"/>
+            <entryLink import="true" name="Night Goblin" hidden="false" id="f6e9-d3a8-0e63-b29a" type="selectionEntry" targetId="cd2b-976c-8770-3030" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
@@ -7069,7 +7045,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <infoLink name="Magic Mushrooms" id="a572-ffd5-fbae-2f7b" hidden="false" type="rule" targetId="35e6-988f-5bb0-ff28"/>
               </infoLinks>
             </entryLink>
-            <entryLink import="true" name="Forest Goblin" hidden="false" id="9a11-3d06-c8eb-b4cd" type="selectionEntry" targetId="1452-72a8-f5d5-225f">
+            <entryLink import="true" name="Forest Goblin" hidden="false" id="9a11-3d06-c8eb-b4cd" type="selectionEntry" targetId="1452-72a8-f5d5-225f" sortIndex="3">
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
@@ -7719,7 +7695,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="99. Command Group" hidden="false" id="0da9-868f-de49-736a" type="selectionEntryGroup" targetId="2019-74db-324c-3229"/>
-        <entryLink import="true" name="Goblin Wolf Chariot" hidden="false" id="92c2-fbbc-e33d-4248" type="selectionEntry" targetId="7133-7f02-0d9f-4108">
+        <entryLink import="true" name="Wolf Chariot" hidden="false" id="92c2-fbbc-e33d-4248" type="selectionEntry" targetId="7133-7f02-0d9f-4108">
           <modifiers>
             <modifier type="set" value="3" field="837f-8536-0957-1ab0"/>
           </modifiers>
@@ -7838,25 +7814,25 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
           <description>Squigbosses and Gnasha-Squigs follow the split profile rules for Cavalry.</description>
         </rule>
         <rule name="Mycophile&apos;s Pouch" id="bbb6-dfcb-3878-3a30" hidden="false" publicationId="9e23-79cb-pubN78975" page="29">
-          <description>At the start of each of your turns, the Squigboss can bestow one of the following shrooms to any unit of Squigs they are with. Each shrooms effect lasts until the start of your next turn. A unit can only be under the effect of one shroom type at a time.</description>
+          <description>At the start of each of your turns, the Squigboss can bestow one of the shrooms to any unit of Squigs they are with. Each shrooms effect lasts until the start of your next turn. A unit can only be under the effect of one shroom type at a time.</description>
         </rule>
       </rules>
       <infoGroups>
-        <infoGroup name="Shrooms" id="06a2-74cd-b377-5f9b" hidden="false">
+        <infoGroup name="Mycophile&apos;s Pouch" id="06a2-74cd-b377-5f9b" hidden="false">
           <profiles>
-            <profile name="Crimson Deffcap" typeId="4608-9b35-b7dc-202d" typeName="Prayer" hidden="false" id="aa30-bed7-d207-49f5" publicationId="9e23-79cb-pubN78975" page="29">
+            <profile name="Crimson Deffcap" typeId="5ef4-e835-4a5d-0201" typeName="Shrooms" hidden="false" id="aa30-bed7-d207-49f5" publicationId="9e23-79cb-pubN78975" page="29">
               <characteristics>
-                <characteristic name="Effect" typeId="1f79-8144-edd6-8b51">All Squigs in the unit may roll an extra D6 for their Random Movement and discard the lowest result.</characteristic>
+                <characteristic name="Effect" typeId="1257-673a-728c-2a3b">All Squigs in the unit may roll an extra D6 for their Random Movement and discard the lowest result.</characteristic>
               </characteristics>
             </profile>
-            <profile name="Sproutin&apos; Moon" typeId="4608-9b35-b7dc-202d" typeName="Prayer" hidden="false" id="8fcf-c99b-3a39-fffe" publicationId="9e23-79cb-pubN78975" page="29">
+            <profile name="Sproutin&apos; Moon" typeId="5ef4-e835-4a5d-0201" typeName="Shrooms" hidden="false" id="8fcf-c99b-3a39-fffe" publicationId="9e23-79cb-pubN78975" page="29">
               <characteristics>
-                <characteristic name="Effect" typeId="1f79-8144-edd6-8b51">All Squigs in the unit gain +1 Attack.</characteristic>
+                <characteristic name="Effect" typeId="1257-673a-728c-2a3b">All Squigs in the unit gain +1 Attack.</characteristic>
               </characteristics>
             </profile>
-            <profile name="Yellow Lurka" typeId="4608-9b35-b7dc-202d" typeName="Prayer" hidden="false" id="be7a-295d-fd6b-d1e3" publicationId="9e23-79cb-pubN78975" page="29">
+            <profile name="Yellow Lurka" typeId="5ef4-e835-4a5d-0201" typeName="Shrooms" hidden="false" id="be7a-295d-fd6b-d1e3" publicationId="9e23-79cb-pubN78975" page="29">
               <characteristics>
-                <characteristic name="Effect" typeId="1f79-8144-edd6-8b51">All Squigs in the unit gain the Multiple Wounds (2) special rule.</characteristic>
+                <characteristic name="Effect" typeId="1257-673a-728c-2a3b">All Squigs in the unit gain the Multiple Wounds (2) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -10733,6 +10709,9 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden" scope="root-entry" affects="self.entries.recursive.d322-3c7a-6d1e-7dc2"/>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Giant Spider" hidden="false" id="1bca-95b4-30e5-1d1c" collective="true" subType="mount">
       <infoLinks>
@@ -10836,7 +10815,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="837f-8536-0957-1ab0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Wolf Chariot" id="b7ef-dd27-6ab4-4e85" hidden="false" targetId="13dd-ee68-6b4f-ef1b" type="profile"/>
+        <infoLink name="Goblin Wolf Chariot" id="b7ef-dd27-6ab4-4e85" hidden="false" targetId="13dd-ee68-6b4f-ef1b" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="fe0e-3cfa-84a7-69dd" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -11685,6 +11664,40 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
         <categoryLink name="Monstrous Cavalry" hidden="false" id="18e2-e3f9-8349-454f" targetId="82d3-4589-72b4-b6ed" primary="false"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Big Stabba" hidden="false" id="9bf4-a4cf-1bb2-c7ca">
+      <costs>
+        <cost name="pts" typeId="points" value="10"/>
+      </costs>
+      <constraints>
+        <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="418c-fdf5-704e-3c5f"/>
+      </constraints>
+      <modifiers>
+        <modifier type="increment" value="1" field="418c-fdf5-704e-3c5f">
+          <repeats>
+            <repeat value="10" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+          </repeats>
+        </modifier>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="equalTo" value="0" field="selections" scope="unit" childId="a3a2-449e-045e-ff73" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <profiles>
+        <profile name="Big Stabba" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="0655-ff5f-3013-2211">
+          <characteristics>
+            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
+            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac"> Impact Hits (D3), Multiple Wounds (D3)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule name="Big Stabba" id="f44c-19e9-1d24-b925" hidden="false" publicationId="9e23-79cb-pubN78975" page="122">
+          <description>A unit of Savage Orc Boyz may be upgraded to include Big Stabbas. This is represented by including one or more Big Stabba models in the unit. A Big Stabba is mounted on two Infantry bases and must be placed to cover both the first and second rank of the unit, but is otherwise equipped like the rest of the unit. Each Big Stabba model causes D3 Impact Hits with the Multiple Wounds (D3) special rule. Big Stabbas are always the last models to be removed as casualties (excluding any Command Group models); the weapons are picked up by other Savage Orcs in the unit should they be slain. </description>
+        </rule>
+      </rules>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="90. Magic Items" id="89d6-6943-c3c9-a681" hidden="false">
@@ -12498,7 +12511,7 @@ However, the bearer&apos;s Weapon Skill is lowered by an amount equal to half t
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Smasha and Kunnin&apos;" hidden="false" id="b9b0-c8a7-5ac2-0f4a" sortIndex="22">
               <costs>
-                <cost name="pts" typeId="points" value="25"/>
+                <cost name="pts" typeId="points" value="20"/>
               </costs>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b31a-6fc8-9863-5ca2" includeChildSelections="true" includeChildForces="true"/>
@@ -12922,7 +12935,7 @@ special rule. When targeting a Character that is not a Wizard in close combat, 
                     <conditionGroup type="or">
                       <conditions>
                         <condition type="equalTo" value="0" field="selections" scope="model" childId="1452-72a8-f5d5-225f" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="model" childId="mount" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="model" childId="mount" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -13733,7 +13746,7 @@ When the Pet Gribbly is squished, the bearer gains the Hatred and Frenzy specia
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="model" childId="38eb-4cc1-1d80-2116" shared="true" includeChildSelections="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="model" childId="deca-22a4-bf9c-0c27" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -14487,7 +14500,7 @@ However, in case a Miscast is rolled when casting that spell, add 1 to the resu
                   <characteristics>
                     <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
                     <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                    <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Nobbla&apos;s Helmet gives the wearer a 6+ armour save and a 6+ Ward save.</characteristic>
+                    <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Nobbla&apos;s Helmet gives the wearer a 6+ Ward save.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -14499,7 +14512,7 @@ However, in case a Miscast is rolled when casting that spell, add 1 to the resu
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="model" childId="38eb-4cc1-1d80-2116" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="model" childId="deca-22a4-bf9c-0c27" shared="true" includeChildSelections="true"/>
                         <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="387c-2b7c-0a30-7305" shared="true"/>
                       </conditions>
                     </conditionGroup>
@@ -14622,7 +14635,7 @@ However, in case a Miscast is rolled when casting that spell, add 1 to the resu
               <infoLinks>
                 <infoLink name="Heavy Armour" id="3ba0-f2c5-2c2e-a464" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
                   <modifiers>
-                    <modifier type="set" value="4096-05f8-fbcc-d286" field="annotation"/>
+                    <modifier type="set" value="Bulak&apos;s Bloody Armour" field="annotation"/>
                     <modifier type="append" value="This armour gives the wearer a 4+ Ward save. However, if they roll a 1 for their Ward save, the number of Wounds suffered is doubled. 
 " field="ff58-91e4-84d7-e6e4"/>
                   </modifiers>
@@ -15004,7 +15017,7 @@ Attacks. Models that already have Poisoned Attacks will automatically wound on T
       <description>Models wearing Warpaint gain Ward save (6+).</description>
     </rule>
     <rule id="8ef0-eeec-a076-ad87" name="Armed to da Teef" publicationId="9e23-79cb-pubN78975" page="3" hidden="false">
-      <description>If a model with this special rule has more than one weapon and/or a shield, they may choose which weapon combination they want to use at the start of each round of close combat. </description>
+      <description>If a model with this special rule has more than one weapon and/or a shield, they may choose which weapon combination they want to use at the start of each round of close combat.</description>
     </rule>
     <rule id="6eb2-2213-5721-ac9e" name="Quell Animosity" publicationId="9e23-79cb-pubN78975" page="3" hidden="false">
       <description>If a model with this special rule is in a unit that fails an Animosity test, they immediately inflicts D6 hits at their base Strength on their unit, distributed as shooting attacks. After removing casualties, the unit is treated as if the Animosity test was passed. These hits cannot be allocated to characters with this special rule, and do not cause a Panic test.</description>
@@ -15027,9 +15040,6 @@ Attacks. Models that already have Poisoned Attacks will automatically wound on T
     <rule id="1f41-5c93-ec94-d3c3" name="Spider Venom" publicationId="9e23-79cb-pubN78975" page="3" hidden="false">
       <description>A Wizard with this special rule may re-roll one dice per Magic phase when casting spells. However, any time they Miscast, they will also count as having failed a Stupidity test (if they survive).</description>
     </rule>
-    <rule id="f44c-19e9-1d24-b925" name="Big Stabba" publicationId="9e23-79cb-pubN78975" page="122" hidden="false">
-      <description>A unit of Savage Orcs may be upgraded to include Big Stabbas. A unit of Savage Orcs may be upgraded to include Big Stabbas. This is represented by upgrading two models and by including one or more Big Stabba models in the unit. A Big Stabba is mounted on two Infantry bases and must be placed to cover both the first and second rank of the unit, but is otherwise equipped like the rest of the unit. Each Big Stabba model causes D3 Impact Hits with Multple Wounds (D3). Big Stabbas are always the last models to be removed as casualties; the weapons are picked up by other Savage Orcs in the unit (excluding any Command Group models) should they be slain.</description>
-    </rule>
     <rule id="db29-ce61-4b5d-a271" name="Netters" publicationId="9e23-79cb-pubN78975" page="142" hidden="false">
       <description>At the start of each round of close combat, a unit including Netters must attempt to entangle one of the units they are fighting in their front arc. Roll a D3 for each of the first three ranks of 5 or more models in your unit; the result is the number of enemy models has become entangled (distributed as hits from shooting, but only affecting models that are allowed to strike). However, for each natural 1 rolled on these dice, the Netters have managed to cast the nets amongst their own ranks and entangle a member of their own unit instead. A model that has been entangled suffers a -1 penalty to their Attacks (this applies to both the rider and the mount) until the end of the close combat round.</description>
     </rule>
@@ -15049,8 +15059,7 @@ Attacks. Models that already have Poisoned Attacks will automatically wound on T
       <description>Mounts with this special rule have the Mighty Blow (1) special rule in any turn that they charge.</description>
     </rule>
     <rule name="Waaagh!" id="72cd-f563-0e75-b280" hidden="false" publicationId="9e23-79cb-pubN78975" page="3">
-      <description>If a model with this special rule is your Army General, then once per game he may call a Waaagh! The Waaagh! may only be called if the model first declares a charge, and must be announced immediately after making the charge declaration, before any charge reaction takes place. In the turn a Waaagh! is called, every combat involving friendly Orc units within 12&quot;
-of the Army General adds +1 to its combat resolution for the rest of the player turn. The Army General himself, and any unit he joins, adds +D3 to their combat resolution instead. In addition, every friendly unit within 12&quot; of the Army General add their rank bonus to the result rolled on the Animosity table (to a maximum of 6).</description>
+      <description>If a model with this special rule is your Army General, then once per game he may call a Waaagh! The Waaagh! may only be called if the model first declares a charge, and must be announced immediately after making the charge declaration, before any charge reaction takes place. In the turn a Waaagh! is called, every combat involving friendly Orc units within 12&quot; of the Army General adds +1 to its combat resolution for the rest of the player turn. The Army General himself, and any unit he joins, adds +D3 to their combat resolution instead. In addition, every friendly unit within 12&quot; of the Army General add their rank bonus to the result rolled on the Animosity table (to a maximum of 6).</description>
     </rule>
     <rule name="Animosity" id="230d-025f-a39a-c499" hidden="false" publicationId="9e23-79cb-pubN78975" page="3">
       <description>Units with this special rule must test for Animosity in
@@ -15792,7 +15801,7 @@ the caster&apos;s next Magic phase.</characteristic>
         </entryLink>
       </entryLinks>
     </entryLink>
-    <entryLink import="true" name="Orc Big &apos;Uns" hidden="false" id="e969-d953-c74d-7d4d" type="selectionEntry" targetId="762a-50ef-b381-05c4" sortIndex="23">
+    <entryLink import="true" name="Big &apos;Uns" hidden="false" id="e969-d953-c74d-7d4d" type="selectionEntry" targetId="762a-50ef-b381-05c4" sortIndex="23">
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -15821,7 +15830,7 @@ the caster&apos;s next Magic phase.</characteristic>
       </categoryLinks>
       <comment>Gorbad</comment>
     </entryLink>
-    <entryLink import="true" name="Orc Boar Boy Big &apos;Uns" hidden="false" id="25c4-91ad-b642-194e" type="selectionEntry" targetId="4926-8609-1c57-c09a" sortIndex="25">
+    <entryLink import="true" name="Big &apos;Un Boar Boyz" hidden="false" id="25c4-91ad-b642-194e" type="selectionEntry" targetId="4926-8609-1c57-c09a" sortIndex="25">
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditions>
@@ -15860,7 +15869,7 @@ the caster&apos;s next Magic phase.</characteristic>
         <categoryLink name="Infantry" hidden="false" id="7f0f-b585-24e0-1fb1" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
     </entryLink>
-    <entryLink import="true" name="Orc Boar Boy Big &apos;Uns" hidden="false" id="c6dc-93b6-0412-7a1f" type="selectionEntry" targetId="4926-8609-1c57-c09a" sortIndex="24">
+    <entryLink import="true" name="Big &apos;Un Boar Boyz" hidden="false" id="c6dc-93b6-0412-7a1f" type="selectionEntry" targetId="4926-8609-1c57-c09a" sortIndex="24">
       <modifiers>
         <modifier type="decrement" value="1" field="44ba-aa50-2409-869c">
           <repeats>
@@ -15959,4 +15968,11 @@ the caster&apos;s next Magic phase.</characteristic>
   <categoryEntries>
     <categoryEntry name="M Warboar" id="7148-113a-4c1d-66df" hidden="true"/>
   </categoryEntries>
+  <profileTypes>
+    <profileType name="Shrooms" id="5ef4-e835-4a5d-0201" hidden="false">
+      <characteristicTypes>
+        <characteristicType name="Effect" id="1257-673a-728c-2a3b"/>
+      </characteristicTypes>
+    </profileType>
+  </profileTypes>
 </catalogue>
