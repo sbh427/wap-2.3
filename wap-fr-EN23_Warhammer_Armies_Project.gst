@@ -9269,15 +9269,11 @@ Some models may be allowed to re-roll a Ward Save from a specific source. In tha
     <rule id="f366-0f91-841f-cf80" name="Ambushers" publicationId="9e23-79cb-pubN66727" page="72" hidden="false">
       <description>Before starting deployment, a unit with the Ambushers special rule can choose to not deploy at the start of the battle. Instead, at the start of the Remaining Moves
 
-
 sub-phase of Turn 2 the controlling player rolls a D6 for each of their units of Ambushers. On a 3+, the unit arrives. If the unit does not arrive on Turn 2, roll another D6 at the start of the Remaining Moves sub- phase of Turn 3. On a 2+, the unit arrives. If the unit does not arrive on Turn 3, it will automatically arrive at the start of the Remaining Moves sub-phase of turn 4.
-
 
 Arriving Ambushers enter the battlefield from any point on any battlefield edge, and move on using the rules for reinforcements.
 
-
 Note that a character may only join a unit deploying with the Ambushers special rule if they also have this special rule.
-
 
 In addition, for every Core unit that deploys as Ambushers in your army, you are required to include at least one other Core Unit that is not Expendable and that does not deploy using the Ambushers rule (for more information, see the Choosing Your Army
 chapter).</description>
