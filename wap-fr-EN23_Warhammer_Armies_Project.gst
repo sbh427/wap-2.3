@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="78" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="79" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -273,7 +273,11 @@
         <infoLink name="Stomp" id="2cc9-54d7-9903-29c9" hidden="false" type="rule" targetId="668c-19e8-b764-8549">
           <modifiers>
             <modifier type="append" value="(D6)" field="name" join=" "/>
-            <modifier type="set" value="From Mount" field="annotation"/>
+            <modifier type="set" value="From Mount" field="annotation">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </infoLink>
         <infoLink name="Terror" id="02ea-57d5-4bb7-bc2d" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
@@ -394,7 +398,11 @@
         <infoLink name="Stomp" id="a3f5-8708-f4cc-306e" hidden="false" type="rule" targetId="668c-19e8-b764-8549">
           <modifiers>
             <modifier type="append" value="(D3)" field="name" join=" "/>
-            <modifier type="set" value="From Mount" field="annotation"/>
+            <modifier type="set" value="From Mount" field="annotation">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </infoLink>
         <infoLink name="Swiftstride" id="9454-a2e6-d8f9-f5fa" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
@@ -9267,11 +9275,13 @@ Sometimes a model has both an armour save and a Ward Save. Where this is the cas
 Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
     </rule>
     <rule id="f366-0f91-841f-cf80" name="Ambushers" publicationId="9e23-79cb-pubN66727" page="72" hidden="false">
-      <description>A unit with the Ambushers rule can choose to not deploy at the start of the battle. Instead, from Turn 2 onwards, the controlling player rolls a dice at the start of their turn for each unit of their Ambushers that have yet to arrive. On a 1 or 2, the Ambushers have been delayed – roll for them again next turn. On a 3 or more, the unit of Ambushers arrives, and will enter the board during the Remaining Moves sub-phase. If the Ambushers do not turn up for the entire game, they are assumed to have got lost, and are treated as having fled the battle for the purposes of determining the victor. 
+      <description>Before starting deployment, a unit with the Ambushers special rule can choose to not deploy at the start of the battle. Instead, at the start of the Remaining Moves sub-phase of Turn 2 the controlling player rolls a D6 for each of their units of Ambushers. On a 3+, the unit arrives. If the unit does not arrive on Turn 2, roll another D6 at the start of the Remaining Moves sub- phase of Turn 3. On a 2+, the unit arrives. If the unit does not arrive on Turn 3, it will automatically arrive at the start of the Remaining Moves sub-phase of turn 4.
 
-Arriving Ambushers enter the battlefield from any point on any battlefield edge, and move on using the rules for reinforcements. Note that a character may only join a unit deploying with Ambushers if they also have the same rule.
+Arriving Ambushers enter the battlefield from any point on any battlefield edge, and move on using the rules for reinforcements.
 
-In addition, for every Core unit that deploys as Ambushers in your army, you are required to include at least one other Core Unit that is not Expendable (described later in this chapter) and that does not deploy using the Ambushers rule (for more information, see the Choosing Your Army chapter).</description>
+Note that a character may only join a unit deploying with the Ambushers special rule if they also have this special rule.
+
+In addition, for every Core unit that deploys as Ambushers in your army, you are required to include at least one other Core Unit that is not Expendable and that does not deploy using the Ambushers rule (for more information, see the Choosing Your Army chapter).</description>
     </rule>
     <rule id="a043-3e3c-9f8a-3661" name="Impact Hits (D6+1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
