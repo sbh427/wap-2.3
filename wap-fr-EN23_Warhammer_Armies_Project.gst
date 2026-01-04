@@ -398,7 +398,11 @@
         <infoLink name="Stomp" id="a3f5-8708-f4cc-306e" hidden="false" type="rule" targetId="668c-19e8-b764-8549">
           <modifiers>
             <modifier type="append" value="(D3)" field="name" join=" "/>
-            <modifier type="set" value="From Mount" field="annotation"/>
+            <modifier type="set" value="From Mount" field="annotation">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </infoLink>
         <infoLink name="Swiftstride" id="9454-a2e6-d8f9-f5fa" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
