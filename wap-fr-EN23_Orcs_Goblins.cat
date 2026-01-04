@@ -436,7 +436,7 @@
             <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="dfe8-c83f-7f17-631c" collective="false">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e5f1-7dd2-6b2c-cc05" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
-                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="2f49-cf21-7bdb-e4a2" includeChildSelections="false"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="2f49-cf21-7bdb-e4a2" includeChildSelections="false" automatic="true"/>
               </constraints>
               <infoLinks>
                 <infoLink name="Leader" id="4f9f-a8c7-3414-3c70" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
@@ -454,8 +454,8 @@
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="2c62-69d2-4a19-c715" collective="false">
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9542-8e47-fe81-733b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="1acc-3159-909e-f6ed" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9542-8e47-fe81-733b" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="1acc-3159-909e-f6ed" includeChildSelections="false" automatic="true"/>
               </constraints>
               <infoLinks>
                 <infoLink name="Musician" id="4047-ea19-4b59-5500" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
@@ -473,8 +473,8 @@
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="fe73-01c8-2484-b7ed" collective="false">
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3646-6ced-52e5-71a8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="70bf-c43f-a91a-9abe" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3646-6ced-52e5-71a8" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="70bf-c43f-a91a-9abe" includeChildSelections="false" automatic="true"/>
               </constraints>
               <infoLinks>
                 <infoLink name="Standard Bearer" id="2eb0-3a47-5a12-9798" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
@@ -487,6 +487,13 @@
                   <constraints>
                     <constraint type="max" value="25" field="points" scope="parent" shared="false" id="9f0a-ba43-7b87-a8e1" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                   </constraints>
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="24d3-7825-6be5-c4f1" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </entryLink>
               </entryLinks>
               <modifiers>
@@ -527,6 +534,7 @@
                     <condition type="lessThan" value="1" field="selections" scope="roster" childId="a95a-d28b-705f-fb46" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="The Armoured Orcs" field="name" scope="root-entry"/>
               </modifiers>
             </selectionEntry>
           </selectionEntries>
@@ -536,11 +544,7 @@
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <modifiers>
-        <modifier type="set" value="The Armoured Orcs" field="name">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="24d3-7825-6be5-c4f1" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
+        <modifier type="add" value="{this} is not allowed" field="info" scope="primary-catalogue"/>
       </modifiers>
     </selectionEntry>
     <selectionEntry id="b499-20aa-c9eb-6411" name="Goblin Gitz" hidden="false" collective="false" import="true" type="unit" sortIndex="16">
@@ -1044,15 +1048,6 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
           <infoLinks>
             <infoLink id="e9a8-fe3c-9d32-9138" name="Fear Elves" hidden="false" targetId="8568-17b2-9805-2665" type="rule"/>
             <infoLink id="792e-da94-842b-ac95" name="Fast Cavalry" hidden="false" targetId="8877-a5de-cc9c-9142" type="rule"/>
-            <infoLink name="Quick to Fire" id="0855-b7f7-c5de-dc16" hidden="true" type="rule" targetId="2c6d-374e-56ca-ce87">
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="unit" childId="3c23-636a-1a26-5cf7" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </infoLink>
             <infoLink name="Animosity" id="6010-173e-7af4-f46c" hidden="false" type="rule" targetId="230d-025f-a39a-c499"/>
           </infoLinks>
           <selectionEntryGroups>
@@ -1202,11 +1197,31 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
                     <repeat value="1" repeats="1" field="selections" scope="unit" childId="9e93-cbcd-9787-baaa" shared="true" roundUp="false" includeChildSelections="true"/>
                   </repeats>
                 </modifier>
+                <modifier type="set" value="Da Howlerz" field="name" scope="root-entry"/>
               </modifiers>
               <constraints>
                 <constraint type="min" value="0" field="selections" scope="force" shared="true" id="a519-1a76-83c2-aa05" includeChildSelections="true"/>
                 <constraint type="max" value="1" field="selections" scope="force" shared="true" id="8f8e-47bb-02af-0db9" includeChildSelections="true"/>
               </constraints>
+              <infoLinks>
+                <infoLink name="Quick to Fire" id="0855-b7f7-c5de-dc16" hidden="false" type="rule" targetId="2c6d-374e-56ca-ce87"/>
+              </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="All Sneaky Like" hidden="false" id="1052-6441-ce10-f2e9">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6eca-9df9-8a97-b04b" includeChildSelections="true"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="All Sneaky Like" id="ec14-b02b-0b98-cd30" hidden="false" type="rule" targetId="a605-073e-f085-1dd8"/>
+                <infoLink name="Ambushers" id="db2c-d71e-bbb5-cfe6" hidden="false" type="rule" targetId="f366-0f91-841f-cf80"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="0fce-7b30-b08a-aeb6" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -1214,13 +1229,6 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
-      <modifiers>
-        <modifier type="set" value="Da Howlerz" field="name">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="3c23-636a-1a26-5cf7" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
     </selectionEntry>
     <selectionEntry id="c1aa-1021-8d89-3a5e" name="Spider Riders" hidden="false" collective="false" import="true" type="unit" sortIndex="18">
       <categoryLinks>
@@ -1404,11 +1412,13 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
                     <repeat value="1" repeats="1" field="selections" scope="unit" childId="2000-c699-b40f-bb61" shared="true" roundUp="false"/>
                   </repeats>
                 </modifier>
+                <modifier type="set" value="Deff Creepers" field="name" scope="root-entry"/>
               </modifiers>
               <infoLinks>
                 <infoLink name="Ambushers" id="2693-53f5-dd39-36bf" hidden="false" type="rule" targetId="f366-0f91-841f-cf80"/>
                 <infoLink name="Devastating Charge" id="17dc-916e-9024-8bc4" hidden="false" type="rule" targetId="e025-10f3-f893-4bd7"/>
                 <infoLink name="Hatred (Empire)" id="0575-a720-517b-2eb6" hidden="false" type="rule" targetId="1308-62b9-5692-6880"/>
+                <infoLink name="Deff Creepers" id="0540-2600-cea2-8409" hidden="false" type="rule" targetId="650a-2604-f87b-cb4e"/>
               </infoLinks>
             </selectionEntry>
           </selectionEntries>
@@ -1417,13 +1427,6 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
-      <modifiers>
-        <modifier type="set" value="Deff Creepers" field="name">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="ac66-faa8-3108-4a4d" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
     </selectionEntry>
     <selectionEntry id="ef85-1b89-730b-ab85" name="Spider Swarms" hidden="false" collective="false" import="true" type="unit" sortIndex="19">
       <categoryLinks>
@@ -1479,7 +1482,7 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2d13-14b4-3d75-26e4" type="min"/>
           </constraints>
           <profiles>
-            <profile id="2b6c-f5b3-f29d-526f" name="Black Orc" publicationId="9e23-79cb-pubN78975" page="45" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+            <profile id="2b6c-f5b3-f29d-526f" name="Black Orc" publicationId="9e23-79cb-pubN78975" page="45" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
               <characteristics>
                 <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
                 <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
@@ -1722,7 +1725,7 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
             <constraint field="selections" scope="parent" value="5" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6be5-e422-dad8-baf9" type="min"/>
           </constraints>
           <profiles>
-            <profile id="7a4c-81b8-3d66-9d72" name="Orc" publicationId="9e23-79cb-pubN78975" page="35" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+            <profile id="7a4c-81b8-3d66-9d72" name="Orc" publicationId="9e23-79cb-pubN78975" page="35" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
               <characteristics>
                 <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
                 <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -1915,7 +1918,7 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
         <categoryLink name="War Machine" hidden="false" id="f511-f2ae-b500-1aa8" targetId="d0ba-7b91-1049-d48b" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="35"/>
+        <cost name="pts" typeId="points" value="30"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Goblin Crew" hidden="false" id="6647-a8ee-73e9-5a50" type="selectionEntry" targetId="d53b-615d-97dd-5f0a"/>
@@ -1953,7 +1956,7 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
         <categoryLink name="War Machine" hidden="false" id="df3b-076b-822c-a392" targetId="d0ba-7b91-1049-d48b" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="85"/>
+        <cost name="pts" typeId="points" value="80"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Goblin Crew" hidden="false" id="04c4-793f-b3f8-ddbf" type="selectionEntry" targetId="d53b-615d-97dd-5f0a"/>
@@ -2526,7 +2529,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
         </infoGroup>
       </infoGroups>
     </selectionEntry>
-    <selectionEntry id="9766-b2d5-5707-452d" name="Snotling Pump Wagon" hidden="false" collective="false" import="true" type="model" sortIndex="47">
+    <selectionEntry id="9766-b2d5-5707-452d" name="Pump Wagon" hidden="false" collective="false" import="true" type="model" sortIndex="47">
       <profiles>
         <profile id="38d6-d4ce-78ec-864b" name="Pump Wagon" publicationId="9e23-79cb-pubN78975" page="166" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
           <characteristics>
@@ -3397,43 +3400,6 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <entryLink import="true" name="10. Character Options" hidden="false" id="560b-c9b3-381b-ba7a" type="selectionEntryGroup" targetId="7853-6aa4-00e8-09e0"/>
                 <entryLink import="true" name="55. Equipment" hidden="false" id="4069-c2b0-82e4-8424" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
                   <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Slagga&apos;s Slashas" hidden="false" id="f6b3-fb7c-b03e-ea70" collective="false">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5717-daa1-6551-08a7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="5b69-8563-e2f9-8a0b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                      <infoLinks>
-                        <infoLink name="Two/Additional Hand Weapons" id="3430-5994-e354-a1b7" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
-                          <modifiers>
-                            <modifier type="set" value="Slagga&apos;s Slashas" field="annotation"/>
-                            <modifier type="append" value="The Slashas allow Azhag to re-roll failed To Hit rolls in the first round of combat." field="de63-d6da-efa8-00ac"/>
-                          </modifiers>
-                        </infoLink>
-                      </infoLinks>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Azhag&apos;s &apos;Ard Armour" hidden="false" id="f247-f653-f536-57f1" collective="false">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1c11-3547-b1fe-28ad" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="b9ed-ee45-c92b-e8c4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                      <infoLinks>
-                        <infoLink name="Medium Armour" id="92ac-da2a-4143-532b" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
-                          <modifiers>
-                            <modifier type="append" value="The &apos;Ard Armour gives Azhag a 5+ Ward save" field="ff58-91e4-84d7-e6e4"/>
-                            <modifier type="set" value="Azhag&apos;s &apos;Ard Armour" field="annotation"/>
-                          </modifiers>
-                        </infoLink>
-                      </infoLinks>
-                      <categoryLinks>
-                        <categoryLink name="Suits of Armour" hidden="false" id="526d-14fa-13f6-3419" targetId="9a61-618b-519a-807c" primary="false"/>
-                      </categoryLinks>
-                    </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Daemon Staff" hidden="false" id="f580-3d90-b692-f606" collective="false">
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fedb-a81a-ea25-4639" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -3467,10 +3433,6 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                       </costs>
                     </selectionEntry>
                   </selectionEntries>
-                  <constraints>
-                    <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="a9da-8a80-a12e-9a0d-min" includeChildSelections="false"/>
-                    <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="a9da-8a80-a12e-9a0d-max" includeChildSelections="false"/>
-                  </constraints>
                 </entryLink>
                 <entryLink import="true" name="70. Mount" hidden="false" id="3d86-c1ce-1583-870b" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
                   <constraints>
@@ -3507,6 +3469,48 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                       </constraints>
                     </entryLink>
                   </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="926f-4db6-e51b-c995" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Slagga&apos;s Slashas" hidden="false" id="f6b3-fb7c-b03e-ea70" collective="false">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5717-daa1-6551-08a7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="5b69-8563-e2f9-8a0b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Two/Additional Hand Weapons" id="3430-5994-e354-a1b7" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
+                          <modifiers>
+                            <modifier type="set" value="Slagga&apos;s Slashas" field="annotation"/>
+                            <modifier type="append" value="The Slashas allow Azhag to re-roll failed To Hit rolls in the first round of combat." field="de63-d6da-efa8-00ac"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="3fe7-3f47-eea8-8e92" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Azhag&apos;s &apos;Ard Armour" hidden="false" id="f247-f653-f536-57f1" collective="false">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1c11-3547-b1fe-28ad" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="b9ed-ee45-c92b-e8c4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Medium Armour" id="92ac-da2a-4143-532b" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
+                          <modifiers>
+                            <modifier type="append" value="The &apos;Ard Armour gives Azhag a 5+ Ward save" field="ff58-91e4-84d7-e6e4"/>
+                            <modifier type="set" value="Azhag&apos;s &apos;Ard Armour" field="annotation"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
                 </entryLink>
               </entryLinks>
               <costs>
@@ -3651,6 +3655,8 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                       </costs>
                     </selectionEntry>
                   </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="865f-04f5-7181-a728" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
                   <entryLinks>
                     <entryLink import="true" name="Hand Weapon" hidden="false" id="2b5d-4e7d-d571-7f03" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
                       <constraints>
@@ -3658,10 +3664,6 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                       </constraints>
                     </entryLink>
                   </entryLinks>
-                  <constraints>
-                    <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="02e0-8977-a8b5-d9d0-min" includeChildSelections="false"/>
-                    <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="02e0-8977-a8b5-d9d0-max" includeChildSelections="false"/>
-                  </constraints>
                 </entryLink>
               </entryLinks>
               <costs>
@@ -3712,7 +3714,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                     <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.8b68-238b-efa3-9dab"/>
                   </modifiers>
                 </entryLink>
-                <entryLink import="true" name="55. Equipment" hidden="false" id="d11e-1cbd-fbcd-1403" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+                <entryLink import="true" name="70. Mount" hidden="false" id="d11e-1cbd-fbcd-1403" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Gobbla" hidden="false" id="1020-db68-1c13-5424" collective="false">
                       <constraints>
@@ -3747,6 +3749,20 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
                     </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="42b6-b129-bed5-0268" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="1df0-8728-bcbb-8420" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <entryLinks>
+                    <entryLink import="true" name="Light Armour" hidden="false" id="2ddb-7686-b24e-1947" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7be9-c7d7-81c8-8626" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="a809-7de5-7dc0-26ea" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Skarsnik&apos;s Prodder" hidden="false" id="b6f4-27d4-34ff-9919" collective="false">
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a29c-1c1c-3949-2a13" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -3775,20 +3791,6 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                       </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
-                  <constraints>
-                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="cf29-2c00-9d38-076c-min" includeChildSelections="false"/>
-                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="cf29-2c00-9d38-076c-max" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="10. Character Options" hidden="false" id="42b6-b129-bed5-0268" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
-                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="1df0-8728-bcbb-8420" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
-                  <entryLinks>
-                    <entryLink import="true" name="Light Armour" hidden="false" id="2ddb-7686-b24e-1947" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7be9-c7d7-81c8-8626" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
                 </entryLink>
               </entryLinks>
               <costs>
@@ -3842,17 +3844,6 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="55. Equipment" hidden="false" id="ea58-b0b8-91ff-97e7" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
-                  <constraints>
-                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="dec5-b720-0012-30be-min" includeChildSelections="false"/>
-                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="dec5-b720-0012-30be-max" includeChildSelections="false"/>
-                  </constraints>
-                  <entryLinks>
-                    <entryLink import="true" name="Hand Weapon" hidden="false" id="aa83-ec5e-51bc-c895" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1747-25e9-4d90-f12d"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
                   <selectionEntries>
                     <selectionEntry type="upgrade" import="true" name="Malfunctioning Leystone" hidden="false" id="f5fb-98ac-7f2f-7bd0" collective="false">
                       <constraints>
@@ -3872,7 +3863,15 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
-                <entryLink import="true" name="10. Character Options" hidden="false" id="adc1-7344-ecf6-0a70" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="3505-b5fe-4db2-6fff" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="aa83-ec5e-51bc-c895" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1747-25e9-4d90-f12d"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="375"/>
@@ -4031,6 +4030,19 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
               <categoryLinks>
                 <categoryLink name="Cavalry" hidden="false" id="27a2-b126-1b60-06a1" targetId="bdee-b168-38ba-7d3c" primary="false"/>
               </categoryLinks>
+              <modifiers>
+                <modifier type="add" value="One unit of Big &apos;Uns or Big &apos;Un Boar Boyz can set to core, after they are selected." field="info" scope="root-entry">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="c0d3-ae44-8952-0dd3" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="c8e0-ad29-9afd-2d7e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="b5e4-3630-e49f-9ff7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry id="2ed8-b90b-3122-e955" name="Skitgit" hidden="false" collective="false" import="true" type="model" sortIndex="14">
               <constraints>
@@ -4065,36 +4077,6 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
               <entryLinks>
                 <entryLink import="true" name="55. Equipment" hidden="false" id="b342-d35f-ffbf-c21f" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
                   <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Thagi Az" hidden="false" id="b666-b179-7adf-2b56">
-                      <profiles>
-                        <profile name="Thagi Az" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="78e6-2147-c71a-c931" publicationId="9e23-79cb-pubN78975" page="77">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">If Skitgit scores a hit against an enemy who has a magic weapon, the enemy&apos;s magic weapon is destroyed on the roll of a 4+. In addition, the axe confers +1 Strength and +1 Attack to the wielder.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c1e9-d5eb-85bd-c81a-min"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c1e9-d5eb-85bd-c81a-max"/>
-                      </constraints>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Belt Buckle of Durzik Al Drazh" hidden="false" id="dfce-94cd-e6af-3eb6">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="aeca-63d1-932e-6b1e-min"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aeca-63d1-932e-6b1e-max"/>
-                      </constraints>
-                      <profiles>
-                        <profile name="Belt Buckle of Durzik Al Drazh" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="6442-a9be-f971-9043" publicationId="9e23-79cb-pubN78975" page="77">
-                          <characteristics>
-                            <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                            <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                            <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Skitgit may reroll any single D6 roll once per game that affects him directly.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                    </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Gotkid&apos;s Beard" hidden="false" id="d1ec-228c-c7c0-1a64">
                       <profiles>
                         <profile name="Gotkid&apos;s Beard" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="7c41-ca3a-9643-a731" publicationId="9e23-79cb-pubN78975" page="77">
@@ -4122,6 +4104,26 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                       </constraints>
                     </selectionEntry>
                   </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="bfe8-3f09-9bf6-df33" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="84f6-1309-c93a-36c2" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Belt Buckle of Durzik Al Drazh" hidden="false" id="dfce-94cd-e6af-3eb6">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="aeca-63d1-932e-6b1e-min"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aeca-63d1-932e-6b1e-max"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Belt Buckle of Durzik Al Drazh" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="6442-a9be-f971-9043" publicationId="9e23-79cb-pubN78975" page="77">
+                          <characteristics>
+                            <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
+                            <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
+                            <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Skitgit may reroll any single D6 roll once per game that affects him directly.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
                   <entryLinks>
                     <entryLink import="true" name="Light Armour" hidden="false" id="fec9-c1c3-501f-dc60" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
                       <constraints>
@@ -4129,12 +4131,30 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                       </constraints>
                     </entryLink>
                   </entryLinks>
-                  <constraints>
-                    <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="a6fe-b336-38b6-9cb7-min" includeChildSelections="false"/>
-                    <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="a6fe-b336-38b6-9cb7-max" includeChildSelections="false"/>
-                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="2" field="71c5-9037-5bd4-fae9"/>
+                    <modifier type="set" value="2" field="f5b7-0be5-74d6-45b2"/>
+                  </modifiers>
                 </entryLink>
-                <entryLink import="true" name="10. Character Options" hidden="false" id="bfe8-3f09-9bf6-df33" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="296a-b307-89da-64dd" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Thagi Az" hidden="false" id="b666-b179-7adf-2b56">
+                      <profiles>
+                        <profile name="Thagi Az" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="78e6-2147-c71a-c931" publicationId="9e23-79cb-pubN78975" page="77">
+                          <characteristics>
+                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
+                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
+                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">If Skitgit scores a hit against an enemy who has a magic weapon, the enemy&apos;s magic weapon is destroyed on the roll of a 4+. In addition, the axe confers +1 Strength and +1 Attack to the wielder.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c1e9-d5eb-85bd-c81a-min"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c1e9-d5eb-85bd-c81a-max"/>
+                      </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="150"/>
@@ -4339,47 +4359,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="55. Equipment" hidden="false" id="b9c3-170d-4398-e883" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
-                  <constraints>
-                    <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="2554-5525-0e5b-f854-min" includeChildSelections="false"/>
-                    <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="2554-5525-0e5b-f854-max" includeChildSelections="false"/>
-                  </constraints>
                   <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Gitsnik" hidden="false" id="e279-d3d6-b4ce-bbe6" collective="false">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="afee-505b-8fa8-c619" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="9eb7-4575-3aeb-3b06" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                      <profiles>
-                        <profile name="Gitsnik" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="152f-ee95-9dae-8008" publicationId="9e23-79cb-pubN78975" page="73">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+2</characteristic>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Always Strikes First</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Blood-Forged Armour" hidden="false" id="6664-0252-79e4-d80a" collective="false">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="af08-f1b7-419b-7cab" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="f678-b215-a27f-eaae" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                      <profiles>
-                        <profile name="Blood-Forged Armour" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="4424-c070-a7b1-f5cd" publicationId="9e23-79cb-pubN78975" page="73">
-                          <characteristics>
-                            <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">1+</characteristic>
-                            <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">1+</characteristic>
-                            <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The Blood-forged Armour gives a 5+ ward save.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Mork&apos;s All-Seeing Eye" hidden="false" id="a5ba-704e-9569-2e69" collective="false">
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0431-a40f-47cf-a48c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -4399,6 +4379,60 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                   </selectionEntries>
                 </entryLink>
                 <entryLink import="true" name="10. Character Options" hidden="false" id="3d47-1d60-1441-e4c3" type="selectionEntryGroup" targetId="7853-6aa4-00e8-09e0"/>
+                <entryLink import="true" name="15. Race" hidden="false" id="4e8d-e53b-612c-7681" type="selectionEntryGroup" targetId="b86a-7a2f-e4c6-bbdc">
+                  <entryLinks>
+                    <entryLink import="true" name="Black Orc" hidden="false" id="569b-9265-18f9-4b54" type="selectionEntry" targetId="a6fb-1179-b987-4a46">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="472f-5d6d-6a8e-b9f5" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da7b-25aa-1f8c-5354" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="8cfe-102a-4771-2efc" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Gitsnik" hidden="false" id="e279-d3d6-b4ce-bbe6" collective="false">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="afee-505b-8fa8-c619" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="9eb7-4575-3aeb-3b06" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Gitsnik" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="152f-ee95-9dae-8008" publicationId="9e23-79cb-pubN78975" page="73">
+                          <characteristics>
+                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
+                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+2</characteristic>
+                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Always Strikes First</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="6cf2-9d46-a75b-35d0" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Blood-Forged Armour" hidden="false" id="6664-0252-79e4-d80a" collective="false">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="af08-f1b7-419b-7cab" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="f678-b215-a27f-eaae" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Blood-Forged Armour" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="4424-c070-a7b1-f5cd" publicationId="9e23-79cb-pubN78975" page="73">
+                          <characteristics>
+                            <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">1+</characteristic>
+                            <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">1+</characteristic>
+                            <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The Blood-forged Armour gives a 5+ ward save.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="320"/>
@@ -4488,39 +4522,6 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="10. Character Options" hidden="false" id="714a-518a-bfa7-43bb" type="selectionEntryGroup" targetId="7853-6aa4-00e8-09e0"/>
-                <entryLink import="true" name="55. Equipment" hidden="false" id="e12a-c56b-3616-9755" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
-                  <entryLinks>
-                    <entryLink import="true" name="Light Armour" hidden="false" id="80d3-96f6-5257-7d81" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="38e7-2bfa-ad5e-529d"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Axe of Grom" hidden="false" id="b863-0605-66a2-e76a" collective="false">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7b91-db1f-e297-256e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="4fe4-3cae-10bf-e4e3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                      <profiles>
-                        <profile name="Axe of Grom" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="27db-f25b-7d26-c551" publicationId="9e23-79cb-pubN78975" page="74">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Great Weapon. Attacks made with this axe have Killing Blow. In addition, against Elves (of any kind), Grom&apos;s Axe will cause a Killing Blow on the To Wound roll of 5+.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                  <constraints>
-                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="8d7b-2ca0-fb85-9926-min" includeChildSelections="false"/>
-                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="8d7b-2ca0-fb85-9926-max" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
                 <entryLink import="true" name="70. Mount" hidden="false" id="5b92-c952-d0fd-84dc" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
                   <selectionEntries>
                     <selectionEntry type="model" import="true" name="Goblin Wolf Chariot" hidden="false" id="9dae-ae66-4489-4d7c" collective="false" subType="mount">
@@ -4528,7 +4529,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7337-e4b3-adbc-c6f0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink name="Goblin Wolf Chariot" id="9e38-1ce5-ea4d-7b82" hidden="false" targetId="13dd-ee68-6b4f-ef1b" type="profile"/>
+                        <infoLink name="Wolf Chariot" id="9e38-1ce5-ea4d-7b82" hidden="false" targetId="13dd-ee68-6b4f-ef1b" type="profile"/>
                       </infoLinks>
                       <categoryLinks>
                         <categoryLink name="Mount" hidden="false" id="6772-b7aa-4f59-6a53" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -4545,22 +4546,6 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                           </entryLinks>
                         </entryLink>
                         <entryLink import="true" name="55. Equipment" hidden="false" id="92fa-db99-a118-405c" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
-                          <selectionEntries>
-                            <selectionEntry type="upgrade" import="true" name="Lucky Banner" hidden="false" id="80ed-d6e9-8810-9887">
-                              <rules>
-                                <rule name="Lucky Banner" id="17df-c4c4-c737-2344" hidden="false" publicationId="9e23-79cb-pubN78975" page="74">
-                                  <description>The Lucky Banner allows Grom to re-roll failed armour and Ward saves.</description>
-                                </rule>
-                              </rules>
-                              <constraints>
-                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="129b-728a-2204-09ce-min" includeChildSelections="false"/>
-                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="129b-728a-2204-09ce-max" includeChildSelections="false"/>
-                              </constraints>
-                              <infoLinks>
-                                <infoLink name="The Battle Standard Bearer" id="3da9-6222-155e-f0e2" hidden="false" type="rule" targetId="3f4a-7d94-afef-39ea"/>
-                              </infoLinks>
-                            </selectionEntry>
-                          </selectionEntries>
                           <constraints>
                             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="b10a-2ad1-4d64-09cf-min" includeChildSelections="false"/>
                             <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="b10a-2ad1-4d64-09cf-max" includeChildSelections="false"/>
@@ -4588,12 +4573,62 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                                 <cost name="pts" typeId="points" value="0"/>
                               </costs>
                             </entryLink>
+                            <entryLink import="true" name="Army Battle Standard" hidden="false" id="372d-a531-fadf-06d3" type="selectionEntry" targetId="9519-df8f-0af4-1995">
+                              <constraints>
+                                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="50af-2121-014e-c8b1" includeChildSelections="false"/>
+                              </constraints>
+                              <selectionEntries>
+                                <selectionEntry type="upgrade" import="true" name="Lucky Banner" hidden="false" id="80ed-d6e9-8810-9887">
+                                  <constraints>
+                                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="129b-728a-2204-09ce-min" includeChildSelections="false"/>
+                                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="129b-728a-2204-09ce-max" includeChildSelections="false"/>
+                                  </constraints>
+                                  <profiles>
+                                    <profile name="Lucky Banner" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="867e-087c-b816-94e4">
+                                      <characteristics>
+                                        <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The Lucky Banner allows Grom to re-roll failed armour and Ward saves.</characteristic>
+                                      </characteristics>
+                                    </profile>
+                                  </profiles>
+                                </selectionEntry>
+                              </selectionEntries>
+                            </entryLink>
                           </entryLinks>
                         </entryLink>
                       </entryLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="100"/>
                       </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="0ed5-ee40-2390-b20d" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <entryLinks>
+                    <entryLink import="true" name="Light Armour" hidden="false" id="80d3-96f6-5257-7d81" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="38e7-2bfa-ad5e-529d"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="30f0-a757-b9be-59d1" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Axe of Grom" hidden="false" id="b863-0605-66a2-e76a" collective="false">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7b91-db1f-e297-256e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="4fe4-3cae-10bf-e4e3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Great Weapon" id="ff18-4e89-dc60-a483" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
+                          <modifiers>
+                            <modifier type="set" value="Axe of Grom" field="annotation"/>
+                            <modifier type="append" value="Attacks made with this axe have Killing Blow. In addition, against Elves (of any kind), Grom&apos;s Axe will cause a Killing Blow on the To Wound roll of 5+." field="de63-d6da-efa8-00ac"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -4654,33 +4689,16 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <entryLink import="true" name="10. Character Options" hidden="false" id="113e-35f2-3448-5020" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
                 <entryLink import="true" name="15. Race" hidden="false" id="bcc8-3d28-817e-e997" type="selectionEntryGroup" targetId="b86a-7a2f-e4c6-bbdc">
                   <entryLinks>
-                    <entryLink import="true" name="Common Orc" hidden="false" id="fa1a-d954-2e70-2f86" type="selectionEntry" targetId="38eb-4cc1-1d80-2116"/>
-                  </entryLinks>
-                </entryLink>
-                <entryLink import="true" name="55. Equipment" hidden="false" id="4938-e533-e391-893f" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
-                  <entryLinks>
-                    <entryLink import="true" name="Hand Weapon" hidden="false" id="272a-15b6-6bfb-365e" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                    <entryLink import="true" name="Common Orc" hidden="false" id="fa1a-d954-2e70-2f86" type="selectionEntry" targetId="38eb-4cc1-1d80-2116">
                       <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="54b1-64eb-60b0-31a5"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="50e9-e1ae-c3a1-89d9" includeChildSelections="false"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="60. Wizard Level" hidden="false" id="3b11-01d2-35de-e689" type="selectionEntryGroup" targetId="8e7d-af82-eb9b-19f2"/>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="846c-068d-20d7-0587" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
                   <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Bog-wood Staff" hidden="false" id="80f7-bbd5-fbfe-bcbc">
-                      <profiles>
-                        <profile name="Bog-wood Staff" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="9922-317f-deb1-2a64" publicationId="9e23-79cb-pubN78975" page="71">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Great weapon. For each unsaved Wound inflicted with this weapon, Ogdruz recovers a lost Wound.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8c91-4e28-c6e4-856f-min"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c91-4e28-c6e4-856f-max"/>
-                      </constraints>
-                    </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Trollhide Shawl" hidden="false" id="2a95-866e-1ad9-3c5e" publicationId="9e23-79cb-pubN78975" page="71">
                       <profiles>
                         <profile name="Trollhide Shawl" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="7dbf-0331-fae4-0a91" publicationId="9e23-79cb-pubN78975" page="71">
@@ -4697,12 +4715,25 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                       </constraints>
                     </selectionEntry>
                   </selectionEntries>
-                  <constraints>
-                    <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="4557-7b42-62e2-4a97-min" includeChildSelections="false"/>
-                    <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="4557-7b42-62e2-4a97-max" includeChildSelections="false"/>
-                  </constraints>
                 </entryLink>
-                <entryLink import="true" name="60. Wizard Level" hidden="false" id="3b11-01d2-35de-e689" type="selectionEntryGroup" targetId="8e7d-af82-eb9b-19f2"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="c07a-cb8c-5e00-af9d" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Bog-wood Staff" hidden="false" id="80f7-bbd5-fbfe-bcbc">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8c91-4e28-c6e4-856f-min"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c91-4e28-c6e4-856f-max"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Great Weapon" id="a046-89df-665e-89c3" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
+                          <modifiers>
+                            <modifier type="append" value="For each unsaved Wound inflicted with this weapon, Ogdruz recovers a lost Wound." field="de63-d6da-efa8-00ac"/>
+                            <modifier type="set" value="Bog-wood Staff" field="annotation"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="245"/>
@@ -4822,10 +4853,6 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                       </costs>
                     </selectionEntry>
                   </selectionEntries>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a925-a52b-0d11-b934-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a925-a52b-0d11-b934-max" includeChildSelections="false"/>
-                  </constraints>
                 </entryLink>
                 <entryLink import="true" name="40. Suits of Armour" hidden="false" id="e5e7-1a85-0cbe-65a4" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
                   <entryLinks>
@@ -4901,24 +4928,6 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 </entryLink>
                 <entryLink import="true" name="55. Equipment" hidden="false" id="56c5-c098-60e1-8749" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
                   <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Da Moon Onna Stikk" hidden="false" id="b513-2ffe-2aca-800b" collective="false">
-                      <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3b2d-3003-7e6a-1190" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="3dc2-964a-b696-af91" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-                      </constraints>
-                      <profiles>
-                        <profile name="Da Moon Onna Stikk" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="1d08-44f8-adba-c1ba" publicationId="9e23-79cb-pubN78975" page="78">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">If an enemy model suffers one or more unsaved Wounds from Da Moon Onna Stikk, they must pass a T test at the start of each Movement phase or suffer 1 additional Wound with no saves allowed.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Babbling Wand" hidden="false" id="2e3a-5f6c-ad21-f2d0" collective="false">
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5229-0b06-61e8-5997" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -4952,12 +4961,30 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                       </costs>
                     </selectionEntry>
                   </selectionEntries>
-                  <constraints>
-                    <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="99f0-49f2-772b-f512-min" includeChildSelections="false"/>
-                    <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="99f0-49f2-772b-f512-max" includeChildSelections="false"/>
-                  </constraints>
                 </entryLink>
                 <entryLink import="true" name="60. Wizard Level" hidden="false" id="8618-a6c8-422b-21cd" type="selectionEntryGroup" targetId="e548-6739-0537-5d95"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="4336-86bb-7527-932a" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Da Moon Onna Stikk" hidden="false" id="b513-2ffe-2aca-800b" collective="false">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3b2d-3003-7e6a-1190" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="3dc2-964a-b696-af91" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Da Moon Onna Stikk" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="1d08-44f8-adba-c1ba" publicationId="9e23-79cb-pubN78975" page="78">
+                          <characteristics>
+                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
+                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
+                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">If an enemy model suffers one or more unsaved Wounds from Da Moon Onna Stikk, they must pass a T test at the start of each Movement phase or suffer 1 additional Wound with no saves allowed.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <costs>
+                        <cost name="pts" typeId="points" value="0"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="330"/>
@@ -5035,24 +5062,26 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                       </costs>
                     </selectionEntry>
                   </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="7178-c5c7-28ea-f775" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="e60b-efbc-8464-32c2" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
                   <entryLinks>
-                    <entryLink import="true" name="Great Weapon" hidden="false" id="0101-9270-4209-bffe" collective="false" targetId="0473-857e-78d9-cb7c" type="selectionEntry">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a350-19d6-e384-50c3"/>
-                      </constraints>
-                    </entryLink>
                     <entryLink import="true" name="Heavy Armour" hidden="false" id="d90c-65eb-0ab0-6072" collective="false" targetId="30e0-7325-ea6b-af97" type="selectionEntry">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="072a-47db-3177-d649"/>
                       </constraints>
                     </entryLink>
                   </entryLinks>
-                  <constraints>
-                    <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="0e9a-eab0-e1b3-1dce-min" includeChildSelections="false"/>
-                    <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="0e9a-eab0-e1b3-1dce-max" includeChildSelections="false"/>
-                  </constraints>
                 </entryLink>
-                <entryLink import="true" name="10. Character Options" hidden="false" id="7178-c5c7-28ea-f775" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="a2e8-b261-ce53-c835" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Great Weapon" hidden="false" id="0101-9270-4209-bffe" collective="false" targetId="0473-857e-78d9-cb7c" type="selectionEntry">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a350-19d6-e384-50c3"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="150"/>
@@ -5111,6 +5140,9 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                       </conditions>
                     </modifier>
                   </modifiers>
+                  <entryLinks>
+                    <entryLink import="true" name="91. Magic Standards" hidden="false" id="27a5-5c4b-fcbc-be7e" type="selectionEntryGroup" targetId="0b11-5c25-beb7-1810"/>
+                  </entryLinks>
                 </entryLink>
                 <entryLink import="true" name="10. Character Options" hidden="false" id="36fe-3f89-c197-ec8c" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
                 <entryLink import="true" name="40. Suits of Armour" hidden="false" id="1d15-d7a2-0b8b-044b" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
@@ -5156,7 +5188,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 </rule>
               </rules>
               <modifiers>
-                <modifier type="add" value="Ruglud Bonechewer must be accompanied by a unit the Armoured Orcs." field="error">
+                <modifier type="add" value="Ruglud Bonechewer must always be accompanied by a unit of Arrer Boyz (The Armoured Orcs)." field="error">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
@@ -5271,6 +5303,18 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
               <categoryLinks>
                 <categoryLink name="Infantry" hidden="false" id="19ae-f003-1ccd-9da0" targetId="22c9-1606-58f8-2e60" primary="false"/>
               </categoryLinks>
+              <modifiers>
+                <modifier type="add" value="One unit of Big &apos;Uns can set to core, after they are selected." field="info" scope="root-entry">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="f160-3ae6-8438-f576" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="a571-d5c3-ebda-db8c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry id="ff16-2656-feeb-ef41" name="Snagla Grobspit" hidden="false" collective="false" import="true" type="model" sortIndex="6">
               <constraints>
@@ -5294,7 +5338,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
               </profiles>
               <rules>
                 <rule id="650a-2604-f87b-cb4e" name="Deff Creepers" publicationId="9e23-79cb-pubN78975" page="83" hidden="false">
-                  <description>Snagla Grobspit must be accompanied by a unit of Forest Goblin Spider Riders chosen from the army list at a cost of 12 points per model. This unit has the Ambushers, Devastating Charge and Hatred (Empire) special rules. Snagla Grobspit may never choose to leave this unit.</description>
+                  <description>Snagla Grobspit must be accompanied by a unit of Forest Goblin Spider Riders chosen from the army list at a cost of +2 points per model. This unit has the Ambushers, Devastating Charge and Hatred (Empire) special rules. In addition, they cause Fear on any turn that they charge. Snagla Grobspit may never choose to leave this unit.</description>
                 </rule>
               </rules>
               <infoLinks>
@@ -5365,17 +5409,13 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 </entryLink>
                 <entryLink import="true" name="90. Magic Items" hidden="false" id="6994-0727-6573-ef43" type="selectionEntryGroup" targetId="89d6-6943-c3c9-a681">
                   <modifiers>
-                    <modifier type="increment" value="25" field="f386-b03f-db90-5864">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="9519-df8f-0af4-1995" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
+                    <modifier type="increment" value="25" field="f386-b03f-db90-5864"/>
                     <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.8b68-238b-efa3-9dab"/>
                   </modifiers>
                 </entryLink>
               </entryLinks>
               <costs>
-                <cost name="pts" typeId="points" value="90"/>
+                <cost name="pts" typeId="points" value="80"/>
               </costs>
               <modifiers>
                 <modifier type="add" value="Snagla Grobspit must be accompanied by a unit of Forest Goblin Spider Riders (Deff Creepers)." field="error">
@@ -5427,16 +5467,6 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <infoLink name="Natural Armour (6+)" id="24a5-170b-ba64-e399" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
               </infoLinks>
               <entryLinks>
-                <entryLink import="true" name="90. Magic Items" hidden="false" id="74d9-5d44-fed7-2a42" type="selectionEntryGroup" targetId="89d6-6943-c3c9-a681" sortIndex="0">
-                  <modifiers>
-                    <modifier type="increment" value="25" field="f386-b03f-db90-5864">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="parent" childId="9519-df8f-0af4-1995" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.8b68-238b-efa3-9dab"/>
-                  </modifiers>
-                </entryLink>
                 <entryLink import="true" name="10. Character Options" hidden="false" id="bffa-39ae-b380-a0bb" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
                 <entryLink import="true" name="20. Primary Weapon" hidden="false" id="2418-d244-3427-54d7" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
                   <entryLinks>
@@ -5486,6 +5516,12 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b1e9-66cd-df46-d839" includeChildSelections="false"/>
                   </constraints>
+                </entryLink>
+                <entryLink import="true" name="90. Magic Items" hidden="false" id="ef68-1553-de11-4354" type="selectionEntryGroup" targetId="89d6-6943-c3c9-a681">
+                  <modifiers>
+                    <modifier type="increment" value="25" field="f386-b03f-db90-5864"/>
+                    <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.8b68-238b-efa3-9dab"/>
+                  </modifiers>
                 </entryLink>
               </entryLinks>
               <costs>
@@ -5772,7 +5808,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Orc Boar Chariot" hidden="false" id="b92e-8ec0-1677-ad29" type="selectionEntry" targetId="6672-9da0-c31f-d0e8" sortIndex="3">
+            <entryLink import="true" name="Boar Chariot" hidden="false" id="b92e-8ec0-1677-ad29" type="selectionEntry" targetId="6672-9da0-c31f-d0e8" sortIndex="3">
               <categoryLinks>
                 <categoryLink name="Mount" hidden="false" id="1128-a623-174b-be90" targetId="8b8a-34b1-ed30-df11" primary="true"/>
               </categoryLinks>
@@ -5936,7 +5972,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="24"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Orc Boar Chariot" hidden="false" id="5065-7647-daa0-2d30" type="selectionEntry" targetId="6672-9da0-c31f-d0e8" sortIndex="2">
+            <entryLink import="true" name="Boar Chariot" hidden="false" id="5065-7647-daa0-2d30" type="selectionEntry" targetId="6672-9da0-c31f-d0e8" sortIndex="2">
               <categoryLinks>
                 <categoryLink name="Mount" hidden="false" id="fbd4-a2e1-1093-169c" targetId="8b8a-34b1-ed30-df11" primary="true"/>
               </categoryLinks>
@@ -6583,7 +6619,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 </modifier>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="Orc Boar Chariot" hidden="false" id="df26-d670-e9b3-96ed" type="selectionEntry" targetId="6672-9da0-c31f-d0e8" sortIndex="3">
+            <entryLink import="true" name="Boar Chariot" hidden="false" id="df26-d670-e9b3-96ed" type="selectionEntry" targetId="6672-9da0-c31f-d0e8" sortIndex="3">
               <categoryLinks>
                 <categoryLink name="Mount" hidden="false" id="7c9b-6e1f-277a-c051" targetId="8b8a-34b1-ed30-df11" primary="true"/>
               </categoryLinks>
@@ -7157,9 +7193,9 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Orc Boar Chariot" hidden="false" id="7b2c-d7e5-2911-f0e9" collective="false" sortIndex="26">
+    <selectionEntry type="unit" import="true" name="Boar Chariot" hidden="false" id="7b2c-d7e5-2911-f0e9" collective="false" sortIndex="26">
       <infoLinks>
-        <infoLink name="Orc Boar Chariot" id="4251-ddab-184d-1c42" hidden="false" targetId="70e5-fd20-6b1d-1889" type="profile"/>
+        <infoLink name="Boar Chariot" id="4251-ddab-184d-1c42" hidden="false" targetId="70e5-fd20-6b1d-1889" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="65"/>
@@ -7173,6 +7209,13 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
+          <modifiers>
+            <modifier type="decrement" value="2" field="points">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="d989-1124-0dea-ae27" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </entryLink>
         <entryLink import="true" name="70. Mount" hidden="false" id="d8b7-95be-2fa4-3e01" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
           <entryLinks>
@@ -7205,14 +7248,9 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
         <categoryLink name="Chariot" hidden="false" id="115b-1d3c-8abe-1f27" targetId="7224-b7fd-d652-3ff2" primary="false"/>
       </categoryLinks>
       <modifiers>
-        <modifier type="decrement" value="2" field="points">
+        <modifier type="increment" value="2" field="points">
           <conditions>
-            <condition type="atLeast" value="2" field="selections" scope="parent" childId="e694-c711-9631-fd64" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="decrement" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="3" field="selections" scope="parent" childId="e694-c711-9631-fd64" shared="true" includeChildSelections="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="d989-1124-0dea-ae27" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -7249,7 +7287,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
             <infoLink name="Animosity" id="f60c-3268-a232-ee5c" hidden="false" type="rule" targetId="230d-025f-a39a-c499"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="33"/>
+            <cost name="pts" typeId="points" value="35"/>
           </costs>
           <entryLinks>
             <entryLink import="true" name="70. Mount" hidden="false" id="39c9-5ba2-7c74-8f8a" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
@@ -7629,7 +7667,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
         </entryLink>
       </entryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="235"/>
+        <cost name="pts" typeId="points" value="225"/>
       </costs>
       <selectionEntryGroups>
         <selectionEntryGroup name="Rider" id="4c52-636c-4a39-d7fc" hidden="false" sortIndex="1">
@@ -10913,12 +10951,12 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Orc Boar Chariot" hidden="false" id="6672-9da0-c31f-d0e8" collective="false" subType="mount">
+    <selectionEntry type="model" import="true" name="Boar Chariot" hidden="false" id="6672-9da0-c31f-d0e8" collective="false" subType="mount">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0792-b587-36b9-534c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Orc Boar Chariot" id="31dc-d728-2a0c-9aac" hidden="false" targetId="70e5-fd20-6b1d-1889" type="profile"/>
+        <infoLink name="Boar Chariot" id="31dc-d728-2a0c-9aac" hidden="false" targetId="70e5-fd20-6b1d-1889" type="profile"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="65"/>
@@ -11126,30 +11164,51 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Common Orc" hidden="false" id="38eb-4cc1-1d80-2116" collective="true">
-      <modifiers>
-        <modifier type="set" value="Infantry (Character, Common Orc)" field="13f9-a26b-05af-3459" scope="model" affects="self.entries.model.profiles.Model"/>
-      </modifiers>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="66f9-96d0-1ec1-df8d" includeChildSelections="false"/>
       </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="5939-6806-1363-28fc" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="8d16-c36d-9502-a08f" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+          <modifiers>
+            <modifier type="set" value="Infantry (Character, Common Orc)" field="13f9-a26b-05af-3459" scope="model" affects="self.entries.model.profiles.Model"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Savage Orc" hidden="false" id="a3a2-449e-045e-ff73" collective="true">
       <infoLinks>
         <infoLink name="Frenzy" id="1e80-a1c6-5721-7fcb" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
         <infoLink name="Warpaint" id="bf0e-26de-e2b3-3dd5" hidden="false" type="rule" targetId="f5c0-ec07-b2ba-7707"/>
       </infoLinks>
-      <modifiers>
-        <modifier type="replace" value="Savage Orc" field="13f9-a26b-05af-3459" scope="model" affects="self.entries.model.profiles.Model" arg="Orc"/>
-      </modifiers>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bce5-adaf-fec9-692b" includeChildSelections="false"/>
       </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="replace" value="Savage Orc" field="13f9-a26b-05af-3459" scope="model" affects="self.entries.model.profiles.Model" arg="Orc"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="5939-6806-1363-28fc" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="8d16-c36d-9502-a08f" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Black Orc" hidden="false" id="a6fb-1179-b987-4a46" collective="true">
       <modifiers>
-        <modifier type="set" value="Infantry (Character, Black Orc)" field="13f9-a26b-05af-3459" scope="model" affects="self.entries.model.profiles.Model"/>
-        <modifier type="increment" value="1" field="f049-8a65-9c04-1559" scope="model" affects="self.entries.model.profiles.Model"/>
-        <modifier type="increment" value="1" field="bfa2-d38d-7c93-d3f0" scope="model" affects="self.entries.model.profiles.Model"/>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
             <conditionGroup type="or">
@@ -11171,6 +11230,23 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fff0-0db4-3ed9-5449" includeChildSelections="false"/>
       </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="Infantry (Character, Black Orc)" field="13f9-a26b-05af-3459" scope="model" affects="self.entries.model.profiles.Model"/>
+            <modifier type="increment" value="1" field="f049-8a65-9c04-1559" scope="model" affects="self.entries.model.profiles.Model"/>
+            <modifier type="increment" value="1" field="bfa2-d38d-7c93-d3f0" scope="model" affects="self.entries.model.profiles.Model"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="5939-6806-1363-28fc" shared="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="8d16-c36d-9502-a08f" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Common Goblin" hidden="false" id="deca-22a4-bf9c-0c27" collective="true">
       <modifiers>
@@ -11339,7 +11415,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="837f-8536-0957-1ab0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Goblin Wolf Chariot" id="b7ef-dd27-6ab4-4e85" hidden="false" targetId="13dd-ee68-6b4f-ef1b" type="profile"/>
+        <infoLink name="Wolf Chariot" id="b7ef-dd27-6ab4-4e85" hidden="false" targetId="13dd-ee68-6b4f-ef1b" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="fe0e-3cfa-84a7-69dd" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -11383,22 +11459,6 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
             <condition type="atLeast" value="1" field="selections" scope="7133-7f02-0d9f-4108" childId="64d8-9c55-add5-6222" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
-        <modifier type="decrement" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="7133-7f02-0d9f-4108" childId="d22f-8e36-d347-f861" shared="true" includeChildSelections="true"/>
-          </conditions>
-          <repeats>
-            <repeat value="1" repeats="1" field="selections" scope="7133-7f02-0d9f-4108" childId="4fcb-cdc0-35b1-d835" shared="true" roundUp="false" includeChildSelections="true"/>
-          </repeats>
-        </modifier>
-        <modifier type="decrement" value="2" field="points">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="7133-7f02-0d9f-4108" childId="64d8-9c55-add5-6222" shared="true" includeChildSelections="true"/>
-          </conditions>
-          <repeats>
-            <repeat value="1" repeats="1" field="selections" scope="7133-7f02-0d9f-4108" childId="4fcb-cdc0-35b1-d835" shared="true" roundUp="false" includeChildSelections="true"/>
-          </repeats>
-        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Goblin Crew" hidden="false" id="4fcb-cdc0-35b1-d835" subType="crew">
@@ -11416,11 +11476,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="2"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="34f3-d530-12f2-b690" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6349-07a7-6891-48f8" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="34f3-d530-12f2-b690" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="b1c1-ed83-5704-fa18" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
@@ -11459,6 +11515,18 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="decrement" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="d989-1124-0dea-ae27" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="decrement" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="b2c6-18cc-9482-8f48" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Arachnarok Spider" hidden="false" id="7c19-6488-9604-e1d2" collective="false" subType="mount">
       <infoLinks>
@@ -15208,7 +15276,7 @@ must roll on the Animosity table.</description>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Porcine)</characteristic>
       </characteristics>
     </profile>
-    <profile id="13dd-ee68-6b4f-ef1b" name="Goblin Wolf Chariot" publicationId="9e23-79cb-pubN78975" page="134" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="13dd-ee68-6b4f-ef1b" name="Wolf Chariot" publicationId="9e23-79cb-pubN78975" page="134" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
@@ -15222,7 +15290,7 @@ must roll on the Animosity table.</description>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour save 6+)</characteristic>
       </characteristics>
     </profile>
-    <profile id="70e5-fd20-6b1d-1889" name="Orc Boar Chariot" publicationId="9e23-79cb-pubN78975" page="116" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="70e5-fd20-6b1d-1889" name="Boar Chariot" publicationId="9e23-79cb-pubN78975" page="116" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
@@ -15850,38 +15918,19 @@ the caster&apos;s next Magic phase.</characteristic>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="56. Upgrades" hidden="false" id="df10-b8f6-5714-be8b" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Warpaint" hidden="false" id="76e5-47ce-c8f9-1de8" collective="true">
+          <entryLinks>
+            <entryLink import="true" name="Warpaint" hidden="false" id="ab44-630f-be24-5aa1" type="selectionEntry" targetId="f163-b15f-4f27-293a">
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5621-68f2-b7cf-b852" includeChildSelections="false"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="5aab-853c-43c5-046b" shared="true" includeChildSelections="true" includeChildForces="true">
-                          <comment>lord wizard</comment>
-                        </condition>
-                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="07df-d8b2-3658-3bdf" shared="true" includeChildSelections="true" includeChildForces="true">
-                          <comment>Hero wizard</comment>
-                        </condition>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
     </entryLink>
     <entryLink import="true" name="Giant" hidden="false" id="11e3-b8fa-c57b-bf87" type="selectionEntry" targetId="ff3c-af52-ca36-3847" sortIndex="50">
       <costs>
-        <cost name="pts" typeId="points" value="175"/>
+        <cost name="pts" typeId="points" value="180"/>
       </costs>
       <categoryLinks>
         <categoryLink name="Monster" hidden="false" id="5ce4-39fe-813f-db99" targetId="e1a0-da31-05c5-9a15" primary="false"/>
@@ -15907,11 +15956,15 @@ the caster&apos;s next Magic phase.</characteristic>
                         <condition type="lessThan" value="1" field="selections" scope="roster" childId="07df-d8b2-3658-3bdf" shared="true" includeChildSelections="true" includeChildForces="true">
                           <comment>Hero wizard</comment>
                         </condition>
+                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="9e4a-96ad-de12-2fd2" shared="true" includeChildSelections="true" includeChildForces="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Warpaint" id="f27a-3691-d76d-b2b2" hidden="false" type="rule" targetId="f5c0-ec07-b2ba-7707"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </entryLink>
