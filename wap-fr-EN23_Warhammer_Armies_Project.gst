@@ -5778,17 +5778,9 @@
           <costs>
             <cost name="pts" typeId="points" value="0"/>
           </costs>
-          <profiles>
-            <profile name="The Summoning" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="e1d0-95b6-2dd9-4e7c" page="8" publicationId="1a01-044f-047b-618f">
-              <characteristics>
-                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
-                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
-                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strength 3 hits with the Armour Piercing (1) special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
+          <infoLinks>
+            <infoLink name="The Summoning" id="9c56-f841-4628-94c7" hidden="false" type="profile" targetId="e1d0-95b6-2dd9-4e7c"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -5861,7 +5853,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="3. Winds of Chaos" hidden="false" id="bccf-908d-d55a-5aa0" collective="false">
+            <selectionEntry type="upgrade" import="true" name="5. Winds of Chaos" hidden="true" id="bccf-908d-d55a-5aa0" collective="false">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f21d-67ca-eaaf-35e1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5871,7 +5863,7 @@
               <profiles>
                 <profile name="Winds of Chaos" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="f9a4-6e0a-f330-078e" publicationId="1a01-044f-047b-618f" page="8">
                   <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
@@ -5879,14 +5871,6 @@
                   </characteristics>
                 </profile>
               </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="4. Call to Glory" hidden="true" id="0148-a357-c74c-afc3" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8201-7440-06a2-7baa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
               <modifiers>
                 <modifier type="set" value="false" field="hidden">
                   <conditionGroups>
@@ -5900,19 +5884,27 @@
                   </conditionGroups>
                 </modifier>
               </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="3. Veil of Gloom" hidden="false" id="0148-a357-c74c-afc3" collective="false">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8201-7440-06a2-7baa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="0"/>
+              </costs>
               <profiles>
-                <profile name="Call to Glory" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="f027-e68a-9eee-cf7f" publicationId="1a01-044f-047b-618f" page="8">
+                <profile name="Veil of Gloom" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="f027-e68a-9eee-cf7f" publicationId="1a01-044f-047b-618f" page="8">
                   <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Choose one Leader model; while the spell is in effect, that model gains +1 Weapon Skill, Strength, Toughness, Wounds, Initiative, Attacks and Leadership and is treated as a Character in all aspects, though they may not leave their unit.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit gains a 5+ Ward save against missile attacks until the start of your next Magic phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="5. Vision of Torment" hidden="true" id="ecd8-43ad-f80a-dabd" collective="false">
+            <selectionEntry type="upgrade" import="true" name="4. Vision of Torment" hidden="true" id="ecd8-43ad-f80a-dabd" collective="false">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8dbb-4e77-92fe-7579" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -6486,7 +6478,7 @@
                     <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">Flame-Template</characteristic>
                     <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the teardrop-shaped template with its narrow end touching the front of the Wizard’s base and the large end aimed at the target. Roll 2D6 and move the template directly forwards the number of inches indicated. All models underneath the template suffer a Strength D6+1 hit (roll once and apply the result to all models) with the Flaming Attacks special rule.</characteristic>
                   </characteristics>
                 </profile>
@@ -6582,7 +6574,7 @@
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit instantly recovers D6+1 Wounds&apos; worth of models slain earlier in the battle, just like a summoning spell. However, if a 1 is rolled, the target suffers D6+1 Wounds with no saves allowed instead.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target unit instantly recovers D3+1 Wounds&apos; worth of models slain earlier in the battle, just like a summoning spell. However, if a 1 is rolled, the target suffers D3+1 Wounds with no saves allowed instead.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6613,7 +6605,7 @@
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy Wizard within 18&quot;. The caster and the target both roll a D6 and add their Wizard level to the score. If the caster rolls higher, the target suffers a Strength 4 hit with the Flaming Attacks special rule and loses one Wizard level. The caster gains access to this spell (unless it is a summoning spell) it and can cast it themselves for the remainder of the game (using Boon of Magic as the Lore Attribute).</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This spell targets a single enemy Wizard. The caster and the target both roll a D6 and add their Wizard level to the score. If the caster rolls higher, the target suffers a Strength 4 hit with the Flaming Attacks special rule and loses one Wizard level (along with one spell). The caster gains access to this spell (unless it is a summoning spell) and can cast it themselves for the remainder of the game (using Boon of Magic as the Lore Attribute)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6644,7 +6636,7 @@
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">30&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the small round template anywhere within 30&quot; – it then scatters D3&quot;. All models hit by the template suffer a Strength D6+1 hit (roll once and apply the result to all models) with the Flaming Attacks special rule.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the small round template anywhere within Range – it then scatters D3&quot;. All models hit by the template suffer a Strength D6+1 hit (roll once and apply the result to all models) with the Flaming Attacks special rule.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -7250,7 +7242,7 @@
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 hits that wound on a 4+ with the Ignores Armour Saves special rule. For each unsaved Wound caused, the caster&apos;s unit instantly recovers 1 Wounds&apos; worth of models slain earlier in the battle, just like a summoning spell.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This spell causes D6 hits that wound on a 4+ with the Ignores Armour Saves special rule. For each unsaved Wound caused, one friendly unit within 6&quot; of the caster instantly recovers 1 Wounds&apos; worth of models slain earlier in the battle, just like a summoning spell.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10383,13 +10375,13 @@ This rule is cumulative with other sources of Hold Your Ground. If the model ha
       <description>A Daemon of Khorne has Hatred (Daemons of Slaanesh), Magic Resistance (1) and Mighty Blow (1).</description>
     </rule>
     <rule name="Daemon of Nurgle" id="0b9b-1baf-5bcd-1ec3" hidden="false" publicationId="1a01-044f-047b-618f" page="171">
-      <description>A Daemon of Nurgle has Hatred (Daemons of Tzeentch), and enemy models in base contact suffer -1 to their WS.</description>
+      <description>A Daemon of Nurgle has the Hatred (Daemons of Tzeentch) and Poisoned Attacks special rules. Enemy models in base contact suffer -1 to their Weapon Skill.</description>
     </rule>
     <rule name="Daemon of Slaanesh" id="2ad0-3e18-aba8-5e68" hidden="false" publicationId="1a01-044f-047b-618f" page="171">
-      <description>A Daemon of Slaanesh has the Hatred (Daemons of Khorne) and Armour Piercing (1) special rules. Each To Hit roll of 6 generates an additional Attack. These additional Attacks cannot generate further attacks.</description>
+      <description>A Daemon of Slaanesh has the Hatred (Daemons of Khorne) and Armour Piercing (1) special rules. For every regular Attack that causes an unsaved Wound, the model may may an additional Attack. These additional Attacks cannot generate further attacks.</description>
     </rule>
     <rule name="Daemon of Tzeentch" id="fe9a-f478-5bcc-57a8" hidden="false" publicationId="1a01-044f-047b-618f" page="171">
-      <description>A Daemon of Tzeentch has Hatred (Daemons of Nurgle) and Ward Save (6+). Wizards with the Daemon of Tzeentch upgrade can also re-roll channelling results of 1.</description>
+      <description>A Daemon of Tzeentch has the Hatred (Daemons of Nurgle) special rule and a 6+ Ward save. Wizards with the Daemon of Tzeentch upgrade can also re-roll channelling results of 1.</description>
     </rule>
     <rule name="Mark of Khorne" id="Mark of Khorne" hidden="false" publicationId="1a01-044f-047b-618f" page="163">
       <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
@@ -10404,7 +10396,7 @@ Models with the Mark of Nurgle add +1 to their T.</description>
     <rule name="Mark of Slaanesh" id="Mark of Slaanesh" hidden="false" publicationId="1a01-044f-047b-618f" page="163">
       <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
 
-Models with the Mark of Slaanesh have Immunity (Psychology) and Stubborn.</description>
+Models with the Mark of Slaanesh have the Immunity (Psychology) special rule and may re-roll the lowest dice on their charge and pursuit distances.</description>
     </rule>
     <rule name="Mark of Tzeentch" id="Mark of Tzeentch" hidden="false" publicationId="1a01-044f-047b-618f" page="163">
       <description>A character with a Mark of Chaos cannot join a unit that has a different Mark of Chaos. A character with a Mark of Chaos cannot join a unit that has already been joined by a character that has a different Mark of Chaos.
@@ -10574,18 +10566,6 @@ If a unit is Steadfast, it may use the Leadership of the model for Break tests 
     </rule>
     <rule id="9c98-f97f-344b-9e4b" name="Mighty Blow (2)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
       <description>Models with this rule gain a Strength bonus to all their close combat attacks (including Impact Hits and Stomps) equal to the number in the brackets in the first round of each new close combat they are involved in. Note that any attack made with a weapon that gives Mighty Blow only applies to attacks made with the weapon itself. This rule is cumulative with other sources of Mighty Blow.</description>
-    </rule>
-    <rule name="Bloodrage" id="fc43-3fac-4ae1-1606" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
-      <description>The Manticore gains Hatred.</description>
-    </rule>
-    <rule name="Iron-hard Skin" id="1569-a18d-c1a5-c774" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
-      <description>The Manticore gains Natural Armour (5+).</description>
-    </rule>
-    <rule name="Venom Tail" id="9513-e549-4849-a0dd" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
-      <description>The Manticore gains an additional Attack that has Poisoned Attacks.</description>
-    </rule>
-    <rule name="Rending Fangs" id="38dc-ae6d-82d1-e44b" hidden="false" publicationId="1a01-044f-047b-618f" page="213">
-      <description>The Manticore gains Armour Piercing (1).</description>
     </rule>
     <rule id="1d10-62be-aac7-35f6" name="Unit Strength (6)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Unit Strength of 6.</description>
@@ -12431,6 +12411,15 @@ Magic phase.</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">4+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">6&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets all units within a 6&quot; radius (friend or foe). The target units suffer D3 Strength 4 Hits with the Lightning Attacks special rule.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="The Summoning" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="e1d0-95b6-2dd9-4e7c" page="8" publicationId="1a01-044f-047b-618f">
+      <characteristics>
+        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
+        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strength 3 hits with the Armour Piercing (1) special rule.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
