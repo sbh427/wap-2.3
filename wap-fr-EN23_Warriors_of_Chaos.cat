@@ -15379,9 +15379,15 @@ Tamurkhan&apos;s power cannot save him if he is destroyed by an attack which cau
     <entryLink import="true" name="Dragon Ogre Shaggoth" hidden="false" id="d2d0-22c3-bd9f-fde0" type="selectionEntry" targetId="9ac9-5d75-316b-cb1d" sortIndex="35">
       <modifiers>
         <modifier type="add" value="One unit of Dragon Ogres can set to special, after they are selected." field="info" scope="root-entry">
-          <conditions>
-            <condition type="lessThan" value="1" field="selections" scope="roster" childId="476b-56ed-5973-3b8c" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="476b-56ed-5973-3b8c" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="d2d0-22c3-bd9f-fde0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="roster" childId="67de-5882-a257-da2e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </entryLink>
@@ -15410,8 +15416,8 @@ Tamurkhan&apos;s power cannot save him if he is destroyed by an attack which cau
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="remove" value="0eb4-f376-7725-b05b" field="category" affects="recursive" scope="root-entry"/>
-                <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category" affects="recursive" scope="root-entry"/>
+                <modifier type="remove" value="0eb4-f376-7725-b05b" field="category" scope="root-entry"/>
+                <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category" scope="root-entry"/>
               </modifiers>
             </selectionEntry>
           </selectionEntries>
