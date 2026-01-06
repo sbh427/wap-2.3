@@ -1818,7 +1818,7 @@
                 <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="048e-8b53-f82b-45ca" type="max"/>
               </constraints>
               <profiles>
-                <profile id="5278-6102-e23f-0695" name="Gorthor" publicationId="9e23-79cb-pubN71963" page="100" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+                <profile id="5278-6102-e23f-0695" name="Gorthor" publicationId="9e23-79cb-pubN71963" page="100" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
                   <characteristics>
                     <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
                     <characteristic name="WS" typeId="f049-8a65-9c04-1559">7</characteristic>
@@ -1854,18 +1854,37 @@
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="5018-269b-9a19-e3a6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e71d-8a19-4742-b054" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="The Impaler" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="ce46-8e7f-181d-ce84" publicationId="9e23-79cb-pubN71963" page="40">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Light Lance/Spear. The Impaler gives Gorthor Multiple Wounds (D3). If Gorthor rolls any doubles or triples of successful rolls To Hit, these attacks automatically Wound.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Light Lance" id="861e-d3a1-1051-cad2" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb">
+                          <modifiers>
+                            <modifier type="set" value="The Impaler" field="annotation"/>
+                            <modifier type="append" value="The Impaler gives Gorthor Multiple Wounds (D3). If Gorthor rolls any doubles or triples of successful rolls To Hit, these attacks automatically Wound." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="set" value="true" field="hidden">
+                              <conditions>
+                                <condition type="equalTo" value="0" field="selections" scope="parent" childId="8b8a-34b1-ed30-df11" shared="true"/>
+                              </conditions>
+                            </modifier>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Spear" id="f2c6-cb4e-3865-3a04" hidden="false" type="profile" targetId="be39-37ac-ac20-5053">
+                          <modifiers>
+                            <modifier type="set" value="The Impaler" field="annotation"/>
+                            <modifier type="append" value="The Impaler gives Gorthor Multiple Wounds (D3). If Gorthor rolls any doubles or triples of successful rolls To Hit, these attacks automatically Wound." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="set" value="true" field="hidden">
+                              <conditions>
+                                <condition type="atLeast" value="1" field="selections" scope="parent" childId="8b8a-34b1-ed30-df11" shared="true"/>
+                              </conditions>
+                            </modifier>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Skull of Murgrar" hidden="false" id="6ebe-efae-609e-e897">
                       <constraints>
@@ -1995,18 +2014,21 @@
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="fe76-9072-c289-b471" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5aca-a849-c6bb-fc18" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Scourge" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="2e4c-89ef-6db1-e6ef" publicationId="9e23-79cb-pubN71963" page="41">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Two/Additional Hand Weapons. Each enemy model in base contact with Khazrak gives him an additional A. This has no effect in a challenge.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Two/Additional Hand Weapons" id="e815-bf3f-7542-3c26" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
+                          <modifiers>
+                            <modifier type="set" value="Scourge" field="annotation"/>
+                            <modifier type="append" value="*Each enemy model in base contact with Khazrak gives him an additional Attack. This has no effect in a challenge." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="append" value="+X*" field="ffc4-c065-ab29-fb8c"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="The Dark Mail" hidden="false" id="c369-6d7d-2af9-e655" collective="false">
                       <constraints>
@@ -2124,18 +2146,20 @@
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="49a9-806a-64c5-3694" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="19b0-413c-266a-acc1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Rune-tortured Axes" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="bb18-9f92-4e7c-3f70" publicationId="9e23-79cb-pubN71963" page="43">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Two/Additional Hand Weapons. Attacks with these weapons have Ignore Armour saves and Flaming Attacks.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Two/Additional Hand Weapons" id="ed30-6639-1b61-dc40" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
+                          <modifiers>
+                            <modifier type="set" value="Rune-tortured Axes" field="annotation"/>
+                            <modifier type="append" value="Attacks with these weapons have Ignore Armour saves and Flaming Attacks." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -2627,11 +2651,12 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="34e1-9493-a72b-923b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Mansmasher" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="0ee9-9574-f879-835d" publicationId="9e23-79cb-pubN71963" page="44">
+                        <profile name="Mansmasher" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="0ee9-9574-f879-835d" publicationId="9e23-79cb-pubN71963" page="44">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Mansmasher gives Ghorros Multiple Wounds (D3).</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. The Mansmasher gives Ghorros Multiple Wounds (D3).</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -2645,11 +2670,12 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d001-bf4b-6da3-c9e4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Skull of the Unicorn Lord" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="ef0a-53dc-70c5-35ac" publicationId="9e23-79cb-pubN71963" page="44">
+                        <profile name="Skull of the Unicorn Lord" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="ef0a-53dc-70c5-35ac" publicationId="9e23-79cb-pubN71963" page="44">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Melee</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Skull gives Ghorros Magic Resistance (2). However, all Wood Elves and Forest Spirits have the Hatred special rule against Ghorros and his unit.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. The Skull gives Ghorros Magic Resistance (2). However, all Wood Elves and Forest Spirits have the Hatred special rule against Ghorros and his unit.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -5017,7 +5043,9 @@ Impact Hits (D3) special rule.</characteristic>
             <infoLink name="Two/Additional Hand Weapons" id="52c1-032e-e22b-6bd0" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
               <modifiers>
                 <modifier type="set" value="Axes of Khorgor" field="annotation"/>
-                <modifier type="append" value="The bearer may re-roll all failed rolls To Hit and To Wound in close combat. In addition, he gains Armour Piercing (1)." field="de63-d6da-efa8-00ac" join=", "/>
+                <modifier type="append" value="The bearer may re-roll all failed rolls To Hit and To Wound in close combat. In addition, he gains Armour Piercing (1)." field="de63-d6da-efa8-00ac" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -5035,11 +5063,12 @@ Impact Hits (D3) special rule.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cd22-d3b8-b60c-42db" type="max"/>
           </constraints>
           <profiles>
-            <profile id="101b-efa4-40e2-7b48" name="Great Fang" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="101b-efa4-40e2-7b48" name="Great Fang" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder of Great Fang gain +1 To Wound, and enemies must re-roll successful Armour saves.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The wielder of Great Fang gain +1 To Wound, and enemies must re-roll successful Armour saves.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5059,7 +5088,9 @@ Impact Hits (D3) special rule.</characteristic>
             <infoLink name="Great Weapon" id="c9d4-241e-113c-1523" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
               <modifiers>
                 <modifier type="set" value="Stonecrusher Mace" field="annotation"/>
-                <modifier type="append" value="The Mace always wounds on a 2+. Armour saves are taken using the wielder&apos;s normal S. Against Buildings, Chariots, Shrines and War Machines, the wielder has Multiple Wounds (D6)." field="de63-d6da-efa8-00ac" join=", "/>
+                <modifier type="append" value="The Mace always wounds on a 2+. Armour saves are taken using the wielder&apos;s normal Strength. Against Buildings, Chariots, Shrines and War Machines, the wielder has Multiple Wounds (D6)." field="de63-d6da-efa8-00ac" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -5077,11 +5108,12 @@ Impact Hits (D3) special rule.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="07dd-fd37-997b-3a22" type="max"/>
           </constraints>
           <profiles>
-            <profile id="18df-edfc-9f20-93c8" name="The Black Maul" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="18df-edfc-9f20-93c8" name="The Black Maul" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+2</characteristic>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Black Maul gives the bearer Frenzy. In addition, the weapon ignores any rules that would otherwise destroy the weapon.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+2</characteristic>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Black Maul gives the bearer Frenzy. In addition, the weapon ignores any rules that would otherwise destroy the weapon.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5095,11 +5127,12 @@ Impact Hits (D3) special rule.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ffe8-5d0c-ea38-58f1" type="max"/>
           </constraints>
           <profiles>
-            <profile id="debc-df35-30c2-119d" name="Primeval Club" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="debc-df35-30c2-119d" name="Primeval Club" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">When rolling To Wound, the owner&apos;s S is treated as equal to the unmodified Ld value of the target model. This affects any armour saves the model might be required to take as well.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">When rolling To Wound, the owner&apos;s S is treated as equal to the unmodified Ld value of the target model. This affects any armour saves the model might be required to take as well.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5113,11 +5146,12 @@ Impact Hits (D3) special rule.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e56a-18d4-7425-78f5" type="max"/>
           </constraints>
           <profiles>
-            <profile id="ef4b-0ae0-8c7d-09ca" name="Axe of Men" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="ef4b-0ae0-8c7d-09ca" name="Axe of Men" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Axe of Men gives the wielder Killing Blow. In addition, if the bearer kills an enemy character in a challenge, he and any unit he is with gains Stubborn and Terror for as long as he remains with the unit.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Axe of Men gives the wielder Killing Blow. In addition, if the bearer kills an enemy character in a challenge, he and any unit he is with gains Stubborn and Terror for as long as he remains with the unit.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5130,30 +5164,31 @@ Impact Hits (D3) special rule.</characteristic>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fe56-de8d-120a-899b" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b6af-73a2-a366-5d61" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="72cb-9b9b-6f5e-fbdf" name="Slaughterer&apos;s Blade" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Model on foot only. Great weapon. For each wound inflicted with the Slaughterer&apos;s Blade, roll a D6 immediately. Each roll of a 4+ heals one lost Wound to the bearer (up to their starting Wounds total). Wounds regained in this way do not count towards combat resolution.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="40"/>
           </costs>
           <modifiers>
-            <modifier type="add" value="{this} is for models on foot only." field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="3084-f9ad-2918-517c" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="abcc-4aa7-4989-7189" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
+              </conditions>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Great Weapon" id="d93a-5d73-a4c4-b651" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
+              <modifiers>
+                <modifier type="append" value="For each wound inflicted with the Slaughterer&apos;s Blade, roll a D6 immediately. Each roll of a 4+ heals one lost Wound to the bearer (up to their starting Wounds total). Wounds regained in this way do not count towards combat resolution." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                <modifier type="set" value="Slaughterer&apos;s Blade" field="annotation"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry id="db4b-3a2b-ead7-5b2b" name="Hunting Spear" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
           <constraints>
@@ -5167,7 +5202,15 @@ Impact Hits (D3) special rule.</characteristic>
             <infoLink name="Spear" id="2e6e-4e3e-6a11-a953" hidden="false" type="profile" targetId="be39-37ac-ac20-5053">
               <modifiers>
                 <modifier type="set" value="Hunting Spear" field="annotation"/>
-                <modifier type="append" value="The Hunting Spear can also be thrown following the rules for javelins with a range of 24&quot;. Resolve each hit like a Hit from a bolt thrower." field="de63-d6da-efa8-00ac" join=", "/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Javelins" id="8d02-2722-98b9-d792" hidden="false" type="profile" targetId="3ecc-5d9c-7d29-ee2f">
+              <modifiers>
+                <modifier type="set" value="Hunting Spear" field="annotation"/>
+                <modifier type="append" value=" Resolve each hit like a Hit from a bolt thrower." field="96b8-546e-ac33-6054" join="
+
+"/>
+                <modifier type="set" value="24&quot;" field="af3c-d805-702c-9af9"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -5175,6 +5218,11 @@ Impact Hits (D3) special rule.</characteristic>
             <modifier type="set" value="true" field="hidden">
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="c1f2-083a-aee2-6278" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -5191,7 +5239,10 @@ Impact Hits (D3) special rule.</characteristic>
             <infoLink name="Two/Additional Hand Weapons" id="3030-e9a2-63f6-566e" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
               <modifiers>
                 <modifier type="set" value="The Steel-Claws" field="annotation"/>
-                <modifier type="append" value="The Steel-Claws confer an extra D3 Attacks to the wielder rather than 1 (roll at the beginning of each round of close combat). If a natural 6 is rolled when determining the number of attacks, all the bearer&apos;s attacks that round gain Ignores Armour Saves." field="de63-d6da-efa8-00ac" join=", "/>
+                <modifier type="append" value="*roll at the beginning of each round of close combat. If a natural 6 is rolled when determining the number of attacks, all the bearer&apos;s attacks that round gain Ignores Armour Saves." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                <modifier type="set" value="+D3*" field="ffc4-c065-ab29-fb8c"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -5209,11 +5260,12 @@ Impact Hits (D3) special rule.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="84b7-6943-7349-f515" type="max"/>
           </constraints>
           <profiles>
-            <profile id="2075-87d1-a629-70c2" name="Mangelder" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="2075-87d1-a629-70c2" name="Mangelder" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The bearer gains Terror. In addition, any model wounded by this weapon loses 1 point of Ld for each Wound it suffers.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The bearer gains Terror. In addition, any model wounded by this weapon loses 1 point of Ld for each Wound it suffers.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5227,11 +5279,12 @@ Impact Hits (D3) special rule.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fb57-bebc-e444-4046" type="max"/>
           </constraints>
           <profiles>
-            <profile id="44d8-6f71-ff63-fa63" name="The Brass Cleaver" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="44d8-6f71-ff63-fa63" name="The Brass Cleaver" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Brass Cleaver gives the wielder +1 A for each enemy model in base contact. In a challenge, it only confers +1 A.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c">+X*</characteristic>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">*The Brass Cleaver gives the wielder +1 Attack for each enemy model in base contact. In a challenge, it only confers +1 Attack.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5245,11 +5298,12 @@ Impact Hits (D3) special rule.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1eb4-16f0-36a7-4b6c" type="max"/>
           </constraints>
           <profiles>
-            <profile id="9e1c-0fb7-acb5-90fa" name="Everbleed" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="9e1c-0fb7-acb5-90fa" name="Everbleed" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Every time an enemy model suffers an unsaved wound from this weapon, roll a D6. On the result of a 4+, the enemy loses an additional wound, with no saves of any kind allowed, and you must roll again. Keep on rolling as long as the result is a 4+.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Every time an enemy model suffers an unsaved wound from this weapon, roll a D6. On the result of a 4+, the enemy loses an additional wound, with no saves of any kind allowed, and you must roll again. Keep on rolling as long as the result is a 4+.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5263,11 +5317,12 @@ Impact Hits (D3) special rule.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ded3-fd91-4eb8-60d0" type="max"/>
           </constraints>
           <profiles>
-            <profile id="2be5-b87b-d3be-a668" name="Scimitar of Skultar" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="2be5-b87b-d3be-a668" name="Scimitar of Skultar" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">All To Wound rolls of 6 with the Scimitar of Skultar have Ignores Armour Saves.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">All To Wound rolls of 6 with the Scimitar of Skultar have Ignores Armour Saves.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5281,11 +5336,12 @@ Impact Hits (D3) special rule.</characteristic>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="975c-b7af-6259-8d2b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Jagged Dagger" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="2d38-b7d6-02b3-6d68" publicationId="9e23-79cb-pubN71963" page="10">
+            <profile name="Jagged Dagger" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="2d38-b7d6-02b3-6d68" publicationId="9e23-79cb-pubN71963" page="10">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Wizard only. Every enemy model killed in close combat by the bearer of the Jagged Dagger generates an additional Power or Dispel dice that can be used in the next Magic phase.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Every enemy model killed in close combat by the bearer of the Jagged Dagger generates an additional Power or Dispel dice that can be used in the next Magic phase.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5313,11 +5369,12 @@ Impact Hits (D3) special rule.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2439-414f-b6ac-d490" type="max"/>
           </constraints>
           <profiles>
-            <profile id="35ce-a815-ae47-9e6f" name="Axe of Morghur" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="35ce-a815-ae47-9e6f" name="Axe of Morghur" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">No Ward saves (except Parry and Dodge) can be taken against Wounds caused by this weapon.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">No Ward saves (except Parry and Dodge) can be taken against Wounds caused by this weapon.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5331,11 +5388,12 @@ Impact Hits (D3) special rule.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="56a3-88b8-fd3c-8c4a" type="max"/>
           </constraints>
           <profiles>
-            <profile id="9c97-638d-8e1c-2758" name="Volcanic Axe" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="9c97-638d-8e1c-2758" name="Volcanic Axe" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder of this weapon gains the Flaming Attacks special rule. In addition, each time you roll a natural 6 To Hit with this weapon, that attack automatically Wounds with the Multiple Wounds (D3) special rule.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The wielder of this weapon gains the Flaming Attacks special rule. In addition, each time you roll a natural 6 To Hit with this weapon, that attack automatically Wounds with the Multiple Wounds (D3) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5349,12 +5407,12 @@ Impact Hits (D3) special rule.</characteristic>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="48a9-4bf4-1513-e191" type="max"/>
           </constraints>
           <profiles>
-            <profile id="460c-9ff0-4e55-9b4f" name="Herdstone Axe" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="460c-9ff0-4e55-9b4f" name="Herdstone Axe" publicationId="9e23-79cb-pubN71963" page="10" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">If the wielder of this weapon successfully Wounds an enemy model, roll a D6 after resolving all their attacks.
-On a 5+, that model is automatically slain with no saves allowed.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">If the wielder of this weapon successfully Wounds an enemy model, roll a D6 after resolving all their attacks. On a 5+, that model is automatically slain with no saves allowed.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5366,6 +5424,10 @@ On a 5+, that model is automatically slain with no saves allowed.</characterist
       <entryLinks>
         <entryLink id="c465-292f-d885-8737" name="Common Magic Weapons" hidden="false" collective="false" import="true" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="18" flatten="true"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup id="dafa-8f87-25fb-0fcb" name="Talismans" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
