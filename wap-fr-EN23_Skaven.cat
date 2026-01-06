@@ -3769,15 +3769,17 @@ If you roll a misfire result something has gone awry. No more shots are fired th
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fc22-505e-d743-f257-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fc22-505e-d743-f257-max" includeChildSelections="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Blade of Corruption" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="fcd5-9f72-43ea-f079" publicationId="4086-1ccd-f433-39a2" page="56">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Two hand weapons. The wielder of this sword always wounds on at least a 3+, regardless of the enemy&apos;s Toughness. For each wound suffered (after saves), the enemy model must pass a Toughness test or suffer an additional Wound, with no saves allowed.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
+                      <infoLinks>
+                        <infoLink name="Two/Additional Hand Weapons" id="3cf3-c765-136f-1038" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
+                          <modifiers>
+                            <modifier type="set" value="Blade of Corruption" field="annotation"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                            <modifier type="append" value="The wielder of this sword always wounds on at least a 3+, regardless of the enemy&apos;s Toughness. For each wound suffered (after saves), the enemy model must pass a Toughness test or suffer an additional Wound, with no saves allowed." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -4126,18 +4128,22 @@ there are no eligible friendly units, the Warpfire Projector simply does not fir
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9285-d011-5d0e-7e41" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="efbb-eb8f-72a2-b52c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Creature-killer" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="9520-40fa-fe9c-d29b" publicationId="4086-1ccd-f433-39a2" page="58">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Things-catcher. The Creature-killer gives Throt Heroic Killing Blow.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Polearm/Halberd" id="018a-b574-d86e-cacf" hidden="false" type="profile" targetId="e43e-5153-eeec-36be">
+                          <modifiers>
+                            <modifier type="set" value="Things-catcher, Creature-killer" field="annotation"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="append" value="The Creature-killer gives Throt Heroic Killing Blow." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -4255,11 +4261,12 @@ there are no eligible friendly units, the Warpfire Projector simply does not fir
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="8516-2817-130b-aba6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Blade of Nurglitch" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="637f-75b9-0eb9-b381" publicationId="4086-1ccd-f433-39a2" page="59">
+                        <profile name="Blade of Nurglitch" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="637f-75b9-0eb9-b381" publicationId="4086-1ccd-f433-39a2" page="59">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Enemy models lose 1 point of T for each wound they suffer from this blade.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Enemy models lose 1 point of T for each wound they suffer from this blade.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -4466,13 +4473,6 @@ there are no eligible friendly units, the Warpfire Projector simply does not fir
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="0b22-b30f-477e-0a4e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Storm Daemon" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="3c3f-9335-cfe1-2918" publicationId="4086-1ccd-f433-39a2" page="61">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Polearm/Halberd. Attacks with this weapon have Lightning Attacks. In addition, Storm Daemon contains a Bound Spell (power level 6).</characteristic>
-                          </characteristics>
-                        </profile>
                         <profile name="Dark Lightning Bolts" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="4faa-85bb-09a1-9066" publicationId="4086-1ccd-f433-39a2" page="61">
                           <characteristics>
                             <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
@@ -4508,6 +4508,17 @@ cables out.</characteristic>
                           </profiles>
                         </infoGroup>
                       </infoGroups>
+                      <infoLinks>
+                        <infoLink name="Polearm/Halberd" id="fca6-a80e-3f1d-640a" hidden="false" type="profile" targetId="e43e-5153-eeec-36be">
+                          <modifiers>
+                            <modifier type="append" value="Attacks with this weapon have Lightning Attacks. In addition, Storm Daemon contains a Bound Spell (power level 6)." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                            <modifier type="set" value="Storm Daemon" field="annotation"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Iron Frame" hidden="false" id="09d9-e718-b2f7-3d4d" collective="false">
                       <constraints>
@@ -4598,18 +4609,20 @@ cables out.</characteristic>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="957a-1891-e9a7-5afc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="83fb-88de-9e55-8fc4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Dwarf-Gouger" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="24cc-b6f5-f8aa-bd20" publicationId="4086-1ccd-f433-39a2" page="55">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Two/Additional Hand Weapons. Attacks with this weapon have Ignores Armour saves. In addition, against Dwarfs, it always wounds on a 2+.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Two/Additional Hand Weapons" id="509a-4868-45cc-b3e5" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
+                          <modifiers>
+                            <modifier type="set" value="Dwarf-Gouger" field="annotation"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                            <modifier type="append" value="Attacks with this weapon have Ignores Armour saves. In addition, against Dwarfs, it always wounds on a 2+." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Warpstone Armour" hidden="false" id="20e5-aad9-bce8-bece" collective="false">
                       <constraints>
@@ -4720,11 +4733,12 @@ cables out.</characteristic>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="f571-0f1b-59a9-6335" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Plaguereaper" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="5657-f939-636f-edb1" publicationId="4086-1ccd-f433-39a2" page="57">
+                        <profile name="Plaguereaper" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="5657-f939-636f-edb1" publicationId="4086-1ccd-f433-39a2" page="57">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Melee</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Attacks made with this weapon have Always Strikes First.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Attacks made with this weapon have Always Strikes First.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -4820,18 +4834,21 @@ cables out.</characteristic>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e8bb-0f33-f4d2-db2f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="584b-91da-162e-2b7f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Rod of Corruption" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="6c8d-0c18-4e01-f641" publicationId="4086-1ccd-f433-39a2" page="60">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Plague Censer. Models hit by the rod must pass a single T test (regardless of the number of hits) or instantly decay and die. No saves of any kind are allowed. If the victim lives, roll To Wound as normal.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Flail" id="c574-64ae-6de5-32aa" hidden="false" type="profile" targetId="7f6a-b8b2-8978-4f35">
+                          <modifiers>
+                            <modifier type="set" value="Plague Censer, Rod of Corruption" field="annotation"/>
+                            <modifier type="append" value="At the start of each round of close combat, all enemy models in base contact with one or more models bearing a plague censer, as well the Censer Bearers themselves that are allowed to fight this round, must pass a T test or suffer a single wound with Ignores Armour Saves and Magical Attacks. All Clan Pestilens models gain a +1 bonus for these tests.
+
+Models hit by the rod must pass a single T test (regardless of the number of hits) or instantly decay and die. No saves of any kind are allowed. If the victim lives, roll To Wound as normal.
+" field="de63-d6da-efa8-00ac"/>
+                            <modifier type="prepend" value="Magic Weapon" field="de63-d6da-efa8-00ac"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -5060,7 +5077,9 @@ cables out.</characteristic>
                       <infoLinks>
                         <infoLink name="Two/Additional Hand Weapons" id="f81e-bded-c956-a74c" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
                           <modifiers>
-                            <modifier type="append" value="Armour Piercing (1), Magical Attacks." field="de63-d6da-efa8-00ac"/>
+                            <modifier type="append" value="Armour Piercing (1), Magical Attacks." field="de63-d6da-efa8-00ac" join="
+
+"/>
                             <modifier type="set" value="Eshin Fighting Claws" field="annotation"/>
                           </modifiers>
                         </infoLink>
@@ -5270,18 +5289,20 @@ cables out.</characteristic>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7896-e27a-cbbe-0124" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="a1c8-39e0-cbe9-04da" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Warp-lash" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="9c10-0ce7-5ce0-1a2d" publicationId="4086-1ccd-f433-39a2" page="63">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Whip. Warp-lash gives Skweel Armour Piercing (1) and Multiple Wounds (2).</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Whip" id="ccc4-fa1c-34dd-cca6" hidden="false" type="profile" targetId="2218-f882-4600-cf0c">
+                          <modifiers>
+                            <modifier type="set" value="Warp-lash" field="annotation"/>
+                            <modifier type="append" value="Warp-lash gives Skweel Armour Piercing (1) and Multiple Wounds (2)." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                   <entryLinks>
@@ -5484,18 +5505,20 @@ cables out.</characteristic>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0fe0-9f73-4332-3170" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="d622-f01b-558b-05cc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Censer Mace" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="4697-ab11-4743-c6de" publicationId="4086-1ccd-f433-39a2" page="64">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Great weapon. At the start of each round of close combat, all enemy models in base contact with Morbus Sanguis must pass a Toughness test or suffer a single wound with the Ignores Armour Saves and Magical Attacks special rules. All Clan Pestilens models gain a +1 bonus for these tests.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Great Weapon" id="4637-2dd2-87f9-8ea5" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
+                          <modifiers>
+                            <modifier type="set" value="Censer Mace" field="annotation"/>
+                            <modifier type="append" value="At the start of each round of close combat, all enemy models in base contact with Morbus Sanguis must pass a Toughness test or suffer a single wound with the Ignores Armour Saves and Magical Attacks special rules. All Clan Pestilens models gain a +1 bonus for these tests." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -8302,7 +8325,12 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="47d4-b0d3-42a9-a364" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Plague Censer" id="7e62-2389-a21c-064f" hidden="false" type="profile" targetId="1878-fabb-bbf5-e9d7"/>
+        <infoLink name="Flail" id="2ea2-10f9-2031-f58b" hidden="false" type="profile" targetId="7f6a-b8b2-8978-4f35">
+          <modifiers>
+            <modifier type="set" value="Plague Censer" field="annotation"/>
+            <modifier type="append" value="At the start of each round of close combat, all enemy models in base contact with one or more models bearing a plague censer, as well the Censer Bearers themselves that are allowed to fight this round, must pass a T test or suffer a single wound with Ignores Armour Saves and Magical Attacks. All Clan Pestilens models gain a +1 bonus for these tests." field="de63-d6da-efa8-00ac"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Warpmusket" hidden="false" id="ee2e-4af4-6c99-fce9" collective="true">
@@ -8742,11 +8770,12 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <profiles>
-        <profile name="Doom Glaive" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="6112-bf91-2793-5c51" publicationId="4086-1ccd-f433-39a2" page="16">
+        <profile name="Doom Glaive" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="6112-bf91-2793-5c51" publicationId="4086-1ccd-f433-39a2" page="16">
           <characteristics>
-            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Attacks made with this weapon have Multiple Wounds (D3).</characteristic>
+            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Attacks made with this weapon have Multiple Wounds (D3).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -9955,11 +9984,12 @@ allowed.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="64fe-ab7d-9383-dbab" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Fellblade" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="9dc3-b864-7eaa-751e" publicationId="4086-1ccd-f433-39a2" page="9">
+                <profile name="Fellblade" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="9dc3-b864-7eaa-751e" publicationId="4086-1ccd-f433-39a2" page="9">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">This foul sword gives the bearer S 10 and Multiple Wounds (D6), and successful ward saves taken against wounds inflicted by the bearer in close combat must be re-rolled. Roll a D6 at the end of each of the wielder&apos;s turns; on a 3+ there is no effect. On a roll of 1-2 the wielder suffers 1 wound with no armour save allowed.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">10</characteristic>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">This foul sword gives the bearer Multiple Wounds (D6) and successful ward saves taken against wounds inflicted by the bearer in close combat must be re-rolled. Roll a D6 at the end of each of the wielder&apos;s turns; on a 3+ there is no effect. On a roll of 1-2 the wielder suffers 1 wound with no armour save allowed.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -9980,11 +10010,12 @@ allowed.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="cd21-b9a8-ee32-ed88" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Dwarf Slayer" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="c589-731a-fec5-c013" publicationId="4086-1ccd-f433-39a2" page="9">
+                <profile name="Dwarf Slayer" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="c589-731a-fec5-c013" publicationId="4086-1ccd-f433-39a2" page="9">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+1</characteristic>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">All attacks made with this weapon are resolved with Multiple Wounds (2). Against all models from Warhammer: Dwarfs, all hits have the Armour Piercing (1) special rule and the wielder may re-roll all failed rolls To Wound.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">All attacks made with this weapon are resolved with Multiple Wounds (2). Against all models from Warhammer: Dwarfs, all hits have the Armour Piercing (1) special rule and the wielder may re-roll all failed rolls To Wound.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -9998,11 +10029,12 @@ allowed.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7288-f986-fe38-c699" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Blade of Black Fury" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="f6a5-bc3e-ac2d-50e8" publicationId="4086-1ccd-f433-39a2" page="9">
+                <profile name="Blade of Black Fury" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="f6a5-bc3e-ac2d-50e8" publicationId="4086-1ccd-f433-39a2" page="9">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Blade of Black Fury gives wielder +2 I and +1 A.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff">+2</characteristic>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c">+1</characteristic>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10016,11 +10048,12 @@ allowed.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="00ee-a669-37cd-669c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Desolate Blade" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="28ab-990f-93fb-3f85" publicationId="4086-1ccd-f433-39a2" page="9">
+                <profile name="Desolate Blade" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="28ab-990f-93fb-3f85" publicationId="4086-1ccd-f433-39a2" page="9">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+1</characteristic>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Desolate Blade allows the wielder to re-roll all failed rolls To Wound.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Desolate Blade allows the wielder to re-roll all failed rolls To Wound.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10034,11 +10067,12 @@ allowed.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d83d-2012-7541-2eea" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Languisher Sword" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="6805-9974-95bd-2b53" publicationId="4086-1ccd-f433-39a2" page="9">
+                <profile name="Languisher Sword" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="6805-9974-95bd-2b53" publicationId="4086-1ccd-f433-39a2" page="9">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Languisher Sword causes all enemy models in base contact with the wielder to be subject to Always Strikes Last.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Languisher Sword causes all enemy models in base contact with the wielder to be subject to Always Strikes Last.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10052,11 +10086,12 @@ allowed.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a1bf-31b2-fe8b-bfe2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Cursed Blade of Delirium" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="faf7-5d4d-4534-a996" publicationId="4086-1ccd-f433-39a2" page="9">
+                <profile name="Cursed Blade of Delirium" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="faf7-5d4d-4534-a996" publicationId="4086-1ccd-f433-39a2" page="9">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Cursed Blade of Delirium causes all enemy models attempting to strike the wielder in close combat to suffer -1 To Hit.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Cursed Blade of Delirium causes all enemy models attempting to strike the wielder in close combat to suffer -1 To Hit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10087,7 +10122,9 @@ allowed.</characteristic>
               <infoLinks>
                 <infoLink name="Sling" id="0c65-af6f-eeb1-6ce4" hidden="false" type="profile" targetId="d083-b2f1-d1c5-e4f7">
                   <modifiers>
-                    <modifier type="append" value="Against models with T 5 or more, Headsplitter automatically Wounds on the roll of 2+ with Ignores Armour Saves." field="de63-d6da-efa8-00ac"/>
+                    <modifier type="append" value="Against models with T 5 or more, Headsplitter automatically Wounds on the roll of 2+ with Ignores Armour Saves." field="96b8-546e-ac33-6054" join="
+
+"/>
                     <modifier type="set" value="Headsplitter" field="annotation"/>
                   </modifiers>
                 </infoLink>
@@ -10117,7 +10154,10 @@ allowed.</characteristic>
                 <infoLink name="Whip" id="e028-6152-05e4-a4ac" hidden="false" type="profile" targetId="2218-f882-4600-cf0c">
                   <modifiers>
                     <modifier type="set" value="Electro-Whip" field="annotation"/>
-                    <modifier type="append" value="An Electro-whip gives the wielder +D3 Attacks rather than 1 as well as the Lightning Attacks special rule." field="de63-d6da-efa8-00ac" join=""/>
+                    <modifier type="append" value="An Electro-whip gives the wielder the Lightning Attacks special rule." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                    <modifier type="set" value="+D3" field="ffc4-c065-ab29-fb8c"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -10143,10 +10183,13 @@ allowed.</characteristic>
                 </modifier>
               </modifiers>
               <infoLinks>
-                <infoLink name="Plague Censer" id="ac4c-7aac-a1e9-8e53" hidden="false" type="profile" targetId="1878-fabb-bbf5-e9d7">
+                <infoLink name="Flail" id="faf4-3f92-fa4b-0ee8" hidden="false" type="profile" targetId="7f6a-b8b2-8978-4f35">
                   <modifiers>
-                    <modifier type="append" value="All Toughness tests taken from this weapon suffer a +1 modifier." field="de63-d6da-efa8-00ac"/>
-                    <modifier type="set" value="The Fumigatous" field="annotation"/>
+                    <modifier type="set" value="Plague Censer, The Fumigatous" field="annotation"/>
+                    <modifier type="append" value="At the start of each round of close combat, all enemy models in base contact with one or more models bearing a plague censer, as well the Censer Bearers themselves that are allowed to fight this round, must pass a T test or suffer a single wound with Ignores Armour Saves and Magical Attacks. All Clan Pestilens models gain a +1 bonus for these tests.
+
+All Toughness tests taken from this weapon suffer a +1 modifier.
+" field="de63-d6da-efa8-00ac"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -10189,7 +10232,7 @@ allowed.</characteristic>
                   <modifiers>
                     <modifier type="set" value="The Three Fangs" field="annotation"/>
                     <modifier type="append" value="If the wielder of these weapons scores 3 or more Hits against a single model, all those hits automatically Wound with the Ignores Armour Saves special rule. Replaces Tail Weapons." field="de63-d6da-efa8-00ac"/>
-                    <modifier type="replace" value="+2 A" field="de63-d6da-efa8-00ac" arg="+1 A"/>
+                    <modifier type="set" value="+2" field="ffc4-c065-ab29-fb8c"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -10208,11 +10251,12 @@ allowed.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="132c-766a-9586-1a2c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Gnaswhard" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="6e21-1b08-8115-c538" publicationId="4086-1ccd-f433-39a2" page="9">
+                <profile name="Gnaswhard" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="6e21-1b08-8115-c538" publicationId="4086-1ccd-f433-39a2" page="9">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Any character, Monstrous Creature or Monster that suffers one or more unsaved Wounds from this weapon must pass a Toughness test at the start of each subsequent close combat phase for the rest of the game, or suffer one Wound with no saves allowed.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Any character, Monstrous Creature or Monster that suffers one or more unsaved Wounds from this weapon must pass a Toughness test at the start of each subsequent close combat phase for the rest of the game, or suffer one Wound with no saves allowed.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10226,11 +10270,12 @@ allowed.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9b21-815f-62ce-45de" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Things bane" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="ab4d-96bd-b966-10b6" publicationId="4086-1ccd-f433-39a2" page="9">
+                <profile name="Things bane" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="ab4d-96bd-b966-10b6" publicationId="4086-1ccd-f433-39a2" page="9">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Multiple wounds (2)</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple wounds (2)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10240,11 +10285,12 @@ allowed.</characteristic>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Brooding Blade" hidden="false" id="7c0b-fa2f-ff7c-18d5" sortIndex="1">
               <profiles>
-                <profile name="Brooding Blade" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="c10a-7147-0b6b-bff3" publicationId="4086-1ccd-f433-39a2" page="9">
+                <profile name="Brooding Blade" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="c10a-7147-0b6b-bff3" publicationId="4086-1ccd-f433-39a2" page="9">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Any model that suffers one or more unsaved Wounds from this weapon suffers 2D6 Strength 1 Hits with no saves allowed at the end of that round of close combat.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Any model that suffers one or more unsaved Wounds from this weapon suffers 2D6 Strength 1 Hits with no saves allowed at the end of that round of close combat.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10280,20 +10326,31 @@ allowed.</characteristic>
                 <infoLink name="Whip" id="37eb-2b58-5f9e-121b" hidden="false" type="profile" targetId="2218-f882-4600-cf0c">
                   <modifiers>
                     <modifier type="set" value="Lash of fangs" field="annotation"/>
-                    <modifier type="append" value="Any character, Monstrous Creature or Monster that suffers one or more unsaved Wounds from this weapon are subject to the Stupidity special rule for the remainder of the game." field="de63-d6da-efa8-00ac" join=""/>
+                    <modifier type="append" value="Any character, Monstrous Creature or Monster that suffers one or more unsaved Wounds from this weapon are subject to the Stupidity special rule for the remainder of the game." field="de63-d6da-efa8-00ac" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
             </selectionEntry>
-          </selectionEntries>
-          <entryLinks>
-            <entryLink import="true" name="Common Magic Weapons" hidden="false" id="7347-6f03-0a44-3b82" collective="false" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="17" flatten="true"/>
-            <entryLink import="true" name="Things-catcher" hidden="false" id="03f7-4265-0325-e3d4" type="selectionEntry" targetId="3e96-5fc9-6cec-d772" sortIndex="9">
+            <selectionEntry type="upgrade" import="true" name="Snap-Snap Snarepole" hidden="false" id="f063-553d-dcaf-2a66" sortIndex="9">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ecf0-79b1-9eed-d551" includeChildSelections="true"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Polearm/Halberd" id="54b4-c611-985d-cd14" hidden="false" type="profile" targetId="e43e-5153-eeec-36be">
+                  <modifiers>
+                    <modifier type="set" value="Things-catcher, Snap-Snap Snarepole" field="annotation"/>
+                    <modifier type="append" value="Killing Blow. One enemy model in base contact of your choice suffer a -1 penalty to their Attacks." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
               <modifiers>
-                <modifier type="set" value="Snap-Snap Snarepole" field="name"/>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
                     <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="bbc7-b72c-9cc5-965f" shared="true" includeChildForces="false" includeChildSelections="true"/>
@@ -10304,13 +10361,16 @@ allowed.</characteristic>
                     <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="edab-9646-f035-31e7" shared="true" includeChildForces="false" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
-                <modifier type="append" value="Snap-Snap Snarepole" field="annotation" affects="profiles.Melee weapon" join=", "/>
-                <modifier type="append" value="One enemy model in base contact of your choice suffer a -1 penalty to their Attacks.
-" field="de63-d6da-efa8-00ac" affects="profiles.Melee weapon"/>
               </modifiers>
-              <comment>Snap-Snap Snarepole</comment>
-            </entryLink>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Common Magic Weapons" hidden="false" id="7347-6f03-0a44-3b82" collective="false" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="17" flatten="true"/>
           </entryLinks>
+          <modifiers>
+            <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
+            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
+          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Talismans" id="0098-9d97-94f7-91bc" hidden="false" collective="false" import="true" sortIndex="3" collapsible="true">
           <constraints>
