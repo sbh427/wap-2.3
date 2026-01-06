@@ -4779,11 +4779,12 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="78e0-de00-b389-67dd" type="max"/>
                   </constraints>
                   <profiles>
-                    <profile id="06c8-3488-3e9d-6e8f" name="The Dragon Bow" publicationId="315d-135b-135c-07ce" page="55" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+                    <profile id="06c8-3488-3e9d-6e8f" name="The Dragon Bow" publicationId="315d-135b-135c-07ce" page="55" hidden="false" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon">
                       <characteristics>
-                        <characteristic name="Range" typeId="4285-3917-6bf9-348b">36&quot;</characteristic>
-                        <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">5</characteristic>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Multiple Shots (3). Volley Fire.</characteristic>
+                        <characteristic name="Range" typeId="af3c-d805-702c-9af9">36&quot;</characteristic>
+                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
+                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3</characteristic>
+                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon. Volley Fire.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -4797,11 +4798,9 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d84b-e92b-3a0c-0988-max" includeChildSelections="false"/>
                   </constraints>
                   <infoLinks>
-                    <infoLink name="Two/Additional Hand Weapons" id="5526-7683-9523-e410" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
+                    <infoLink name="Runefang" id="547f-0092-e9b8-3a35" hidden="false" type="profile" targetId="244a-7466-2a15-b495">
                       <modifiers>
                         <modifier type="set" value="Brain Wounder, the Ostland Runefang" field="name"/>
-                        <modifier type="append" value=" All hits from this weapon Wound automatically with the Ignores Armour Saves special rule.
-" field="de63-d6da-efa8-00ac"/>
                       </modifiers>
                     </infoLink>
                   </infoLinks>
@@ -4898,11 +4897,12 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5e10-16a4-4445-5610" type="max"/>
                   </constraints>
                   <profiles>
-                    <profile id="c4b0-5ac7-40fd-7cab" name="The Bright Sword" publicationId="315d-135b-135c-07ce" page="51" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+                    <profile id="c4b0-5ac7-40fd-7cab" name="The Bright Sword" publicationId="315d-135b-135c-07ce" page="51" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
                       <characteristics>
-                        <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                        <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">This magic sword gives Thyrus +1 when rolling To Wound as well as Flaming Attacks.</characteristic>
+                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                        <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                        <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. This magic sword gives Thyrus +1 when rolling To Wound as well as Flaming Attacks.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -5043,12 +5043,37 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="51a8-f42d-6596-2e3c" type="max"/>
                   </constraints>
                   <profiles>
-                    <profile id="7b47-85fc-78e2-a43e" name="Staff of Command" publicationId="315d-135b-135c-07ce" page="49" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+                    <profile id="7b47-85fc-78e2-a43e" name="Staff of Command" publicationId="315d-135b-135c-07ce" page="49" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
                       <characteristics>
-                        <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                        <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">As long as Volkmar the Grim is mounted upon the War Altar of Sigmar, all close combat attacks made with the Staff of Command are resolved at +2 S, at other times it gives +1 S.</characteristic>
+                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+2</characteristic>
+                        <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                        <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon.</characteristic>
                       </characteristics>
+                      <comment>on chariot</comment>
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="parent" childId="8522-a781-ab57-8112" shared="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
+                    </profile>
+                    <profile id="ac16-ba35-d06b-7a1d" name="Staff of Command" publicationId="315d-135b-135c-07ce" page="49" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
+                      <characteristics>
+                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
+                        <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                        <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon.</characteristic>
+                      </characteristics>
+                      <comment>off chariot</comment>
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="8522-a781-ab57-8112" shared="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                     </profile>
                   </profiles>
                   <costs>
@@ -5175,18 +5200,16 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3dbb-1425-39ce-233e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Dragon Tooth, the Reikland Runefang" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="5771-a80b-1c9b-7c25" publicationId="315d-135b-135c-07ce" page="47">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">All hits from the Reikland Runefang wound automatically and Ignore Armour saves.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Runefang" id="7842-2d4b-296a-6cf7" hidden="false" type="profile" targetId="244a-7466-2a15-b495">
+                          <modifiers>
+                            <modifier type="set" value="Dragon Tooth, the Reikland Runefang" field="name"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                   <entryLinks>
@@ -5361,9 +5384,10 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                   <infoLinks>
                     <infoLink name="Two/Additional Hand Weapons" id="e504-886a-35f1-284b" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
                       <modifiers>
-                        <modifier type="set" value="Mothers Ruin, the Averland Runefang" field="name"/>
-                        <modifier type="append" value=" All hits from this weapon Wound automatically with the Ignores Armour Saves special rule.
+                        <modifier type="set" value="Mothers Ruin, the Averland Runefang" field="annotation"/>
+                        <modifier type="append" value="All hits from this weapon Wound automatically with the Ignores Armour Saves special rule.
 " field="de63-d6da-efa8-00ac"/>
+                        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                       </modifiers>
                     </infoLink>
                   </infoLinks>
@@ -5495,11 +5519,9 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5796-4d16-d00e-b4b7-max" includeChildSelections="false"/>
                   </constraints>
                   <infoLinks>
-                    <infoLink name="Two/Additional Hand Weapons" id="e4b8-ce5e-1569-0490" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
+                    <infoLink name="Runefang" id="8fe9-477b-7e25-d439" hidden="false" type="profile" targetId="244a-7466-2a15-b495">
                       <modifiers>
                         <modifier type="set" value="Goblin Bane, the Hochland Runefang" field="name"/>
-                        <modifier type="append" value=" All hits from this weapon Wound automatically with the Ignores Armour Saves special rule.
-" field="de63-d6da-efa8-00ac"/>
                       </modifiers>
                     </infoLink>
                   </infoLinks>
@@ -5605,7 +5627,7 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
                         <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
                         <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">This weapon has the Killing Blow special rule and gives Elspeth von Draken a +1 dispel bonus.</characteristic>
+                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. This weapon has the Killing Blow special rule and gives Elspeth von Draken a +1 dispel bonus.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -5791,18 +5813,16 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="608c-d98d-c6ed-33ef" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9f93-935a-b740-ec52" type="max"/>
                   </constraints>
-                  <profiles>
-                    <profile id="03ec-63f1-9273-4452" name="Grudge Settler, the Solland Runefang" publicationId="315d-135b-135c-07ce" page="48" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-                      <characteristics>
-                        <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                        <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">All hits from the Solland Runefang wound automatically and Ignore Armour saves.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
+                  <infoLinks>
+                    <infoLink name="Runefang" id="5ba0-bd14-a378-85cd" hidden="false" type="profile" targetId="244a-7466-2a15-b495">
+                      <modifiers>
+                        <modifier type="set" value="Grudge Settler, the Solland Runefang" field="name"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
                 </selectionEntry>
               </selectionEntries>
               <entryLinks>
@@ -5948,7 +5968,7 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                         <characteristic name="Range" typeId="af3c-d805-702c-9af9">6&quot;</characteristic>
                         <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90"/>
                         <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
-                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Quick to Fire. Ignores Armour saves. Magical Attacks. Flaming Attacks. If the vial hits, it Wounds any target on a 4+.</characteristic>
+                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon. Quick to Fire. Ignores Armour saves. Magical Attacks. Flaming Attacks. If the vial hits, it Wounds any target on a 4+.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -6045,9 +6065,12 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                   <infoLinks>
                     <infoLink name="Two/Additional Hand Weapons" id="914a-78bf-f683-f16b" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
                       <modifiers>
-                        <modifier type="set" value="Legbiter, the Middenland Runefang" field="name"/>
+                        <modifier type="set" value="Legbiter, the Middenland Runefang" field="annotation"/>
                         <modifier type="append" value=" All hits from this weapon Wound automatically with the Ignores Armour Saves special rule.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
+                        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                       </modifiers>
                     </infoLink>
                   </infoLinks>
@@ -6150,7 +6173,9 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                       <modifiers>
                         <modifier type="set" value="Judgement" field="name"/>
                         <modifier type="append" value="All hits from this weapon have the Multiple Wounds (2) specia rule.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
                       </modifiers>
                     </infoLink>
                   </infoLinks>
@@ -6260,7 +6285,7 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
                         <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
                         <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">This weapon gives Killing Blow special rule. In addition, they may re-roll all failed To Wound rolls against Beastmen.</characteristic>
+                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. This weapon gives Killing Blow special rule. In addition, they may re-roll all failed To Wound rolls against Beastmen.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -6327,7 +6352,7 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
                         <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
                         <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Ice Attacks, Ignores Armour saves.</characteristic>
+                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Ice Attacks, Ignores Armour saves.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -6484,10 +6509,12 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                       <infoLinks>
                         <infoLink name="Great Weapon" id="c2ac-f216-345a-f8c7" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
                           <modifiers>
-                            <modifier type="set" value="Holy Staff" field="name"/>
-                            <modifier type="set" value="Wilhelm Hasburg only" field="annotation"/>
+                            <modifier type="set" value="Holy Staff, Wilhelm Hasburg only" field="annotation"/>
                             <modifier type="append" value="The staff will automatically Wound any Daemons, Skaven, Undead or Vampires.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -6581,7 +6608,7 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                             <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
                             <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
                             <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">For each of Gotrek&apos;s initial Attacks that Hit, he gains one extra Attack. In addition, Gotrek&apos;s axe also has the Ignore Armour saves special rule, and against enemies with Toughness 5 or more he may re-roll failed rolls To Wound.</characteristic>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. For each of Gotrek&apos;s initial Attacks that Hit, he gains one extra Attack. In addition, Gotrek&apos;s axe also has the Ignore Armour saves special rule, and against enemies with Toughness 5 or more he may re-roll failed rolls To Wound.</characteristic>
                           </characteristics>
                           <modifiers>
                             <modifier type="set" value="Gotrek only" field="annotation"/>
@@ -6627,7 +6654,7 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                             <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
                             <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
                             <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c">+2</characteristic>
-                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Felix must always declare a charge against a Dragon or Drake if it is possible to do so. Against Dragons and Drakes, the Wyrmslayer blade allows Felix to re-roll failed rolls To Hit and To Wound.</characteristic>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Felix must always declare a charge against a Dragon or Drake if it is possible to do so. Against Dragons and Drakes, the Wyrmslayer blade allows Felix to re-roll failed rolls To Hit and To Wound.</characteristic>
                           </characteristics>
                           <modifiers>
                             <modifier type="set" value="Felix only" field="annotation"/>
@@ -6883,18 +6910,20 @@ If the Steam Tank is in close combat with an enemy unit to its front, it can exp
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2f32-7c1e-615c-09a0" type="max"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="864b-2175-6c97-bf9e" type="min"/>
                   </constraints>
-                  <profiles>
-                    <profile id="ac25-05ab-6371-e9c1" name="The Amber Bow" publicationId="315d-135b-135c-07ce" page="60" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-                      <characteristics>
-                        <characteristic name="Range" typeId="4285-3917-6bf9-348b">30&quot;</characteristic>
-                        <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">4</characteristic>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Longbow. Against Monsters, the Amber Bow always wounds on 4+ (unless it would normally need a lower result) and causes Multiple Wounds (D3).</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
+                  <infoLinks>
+                    <infoLink name="Longbow" id="4984-be9f-ee95-cc02" hidden="false" type="profile" targetId="cde7-c47d-3818-1e9d">
+                      <modifiers>
+                        <modifier type="set" value="The Amber Bow" field="annotation"/>
+                        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054"/>
+                        <modifier type="append" value="Against Monsters, the Amber Bow always wounds on 4+ (unless it would normally need a lower result) and causes Multiple Wounds (D3)." field="96b8-546e-ac33-6054" join="
+
+"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
                 </selectionEntry>
               </selectionEntries>
               <entryLinks>
@@ -6960,11 +6989,12 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="00d5-f055-ba5e-0c2d" type="max"/>
                   </constraints>
                   <profiles>
-                    <profile id="086e-ae0a-5a5a-0d92" name="Sword of Justice" publicationId="315d-135b-135c-07ce" page="59" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+                    <profile id="086e-ae0a-5a5a-0d92" name="Sword of Justice" publicationId="315d-135b-135c-07ce" page="59" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
                       <characteristics>
-                        <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                        <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Attacks made with the Sword of Justice have Killing Blow. In addition, all failed To Wound rolls made with the Sword of Justice are re-rolled.</characteristic>
+                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                        <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                        <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Attacks made with the Sword of Justice have Killing Blow. In addition, all failed To Wound rolls made with the Sword of Justice are re-rolled.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -7110,7 +7140,10 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                       <modifiers>
                         <modifier type="set" value="Hammer of Ensorcelled Iron" field="name"/>
                         <modifier type="append" value="This weapon allows the wielder to re-roll failed rolls To Wound
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
+                        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                       </modifiers>
                     </infoLink>
                   </infoLinks>
@@ -7272,18 +7305,21 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ad8c-8784-a633-3530" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cee2-0d37-ff8d-01b3" type="max"/>
                   </constraints>
-                  <profiles>
-                    <profile id="b9fa-9ea1-1489-26dc" name="Sigmarite Hammers" publicationId="315d-135b-135c-07ce" page="64" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-                      <characteristics>
-                        <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                        <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Two/Additional Hand Weapons. The Sigmarite Warhammers give Bertha Armour Piercing (1). In addition, she gains +1 To Wound models with Daemonic, Undead or Vampiric.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
+                  <infoLinks>
+                    <infoLink name="Two/Additional Hand Weapons" id="cdf9-c295-0a12-b830" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
+                      <modifiers>
+                        <modifier type="set" value="Sigmarite Hammers" field="annotation"/>
+                        <modifier type="append" value="The Sigmarite Warhammers give Bertha Armour Piercing (1). In addition, she gains +1 To Wound models with Daemonic, Undead or Vampiric.
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
+                        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
                 </selectionEntry>
                 <selectionEntry id="90f5-da4d-e4c1-69af" name="Holy Relic" hidden="false" collective="false" import="true" type="upgrade">
                   <constraints>
@@ -7306,18 +7342,20 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="71e1-bf1f-75c4-e85d" type="min"/>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7838-d331-e261-f87d" type="max"/>
                   </constraints>
-                  <profiles>
-                    <profile id="0c93-d885-36cf-7e85" name="Blessed Water" publicationId="dcfc-4992-9141-dee0" page="8" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-                      <characteristics>
-                        <characteristic name="Range" typeId="4285-3917-6bf9-348b">8&quot;</characteristic>
-                        <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">As user</characteristic>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">One use only. Throwing Weapon. If it hits, it inflicts one automatic Wound which Ignores Armour Saves against models with Daemonic, Undead or Vampiric.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
+                  <infoLinks>
+                    <infoLink name="Throwing Weapons" id="7c33-0cfb-9977-3df8" hidden="false" type="profile" targetId="fdcd-6526-0b8e-b291">
+                      <modifiers>
+                        <modifier type="append" value="One use only. If it hits, it inflicts one automatic Wound which Ignores Armour Saves against models with Daemonic, Undead or Vampiric." field="96b8-546e-ac33-6054" join="
+
+"/>
+                        <modifier type="prepend" value="Magic Weapon. " field="96b8-546e-ac33-6054"/>
+                        <modifier type="set" value="Blessed Water" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
                 </selectionEntry>
               </selectionEntries>
               <costs>
@@ -7404,7 +7442,10 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                     <infoLink name="Heavy Lance" id="c93c-0f78-a915-b99a" hidden="false" type="profile" targetId="e56e-fedf-c550-5d81">
                       <modifiers>
                         <modifier type="set" value="Stormlance" field="annotation"/>
-                        <modifier type="append" value="When charging, Bruckner has Killing Blow. At all other times, he will use Liarsbane instead." field="de63-d6da-efa8-00ac"/>
+                        <modifier type="append" value="When charging, Bruckner has Killing Blow. At all other times, he will use Liarsbane instead." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                       </modifiers>
                     </infoLink>
                   </infoLinks>
@@ -7431,11 +7472,12 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
                     <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0bc7-8044-486c-62d8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Liarsbane" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="d955-0ea1-2de6-66cb" publicationId="dcfc-4992-9141-dee0" page="4">
+                    <profile name="Liarsbane" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="d955-0ea1-2de6-66cb" publicationId="dcfc-4992-9141-dee0" page="4">
                       <characteristics>
-                        <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                        <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Liarsbane give Bruckner +1 To Hit and To Wound in close combat.</characteristic>
+                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                        <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                        <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Liarsbane give Bruckner +1 To Hit and To Wound in close combat.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -10089,12 +10131,19 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a845-cf27-38d9-a5d0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6744-7319-30ce-c0cb" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
       </constraints>
-      <infoLinks>
-        <infoLink name="Ghal Maraz" id="181c-f010-8029-c022" hidden="false" targetId="3306-ba34-d3d0-91a8" type="profile"/>
-      </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <profiles>
+        <profile name="Ghal Maraz" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="3306-ba34-d3d0-91a8" publicationId="315d-135b-135c-07ce" page="47">
+          <characteristics>
+            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Hits from Ghal Maraz wound automatically, Ignores Armour saves and cause Multiple Wounds (D3).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Mechanical Steed" hidden="false" id="a8a6-892c-9685-c001" collective="false" subType="mount">
       <constraints>
@@ -12987,15 +13036,6 @@ by Wizards even though they are not normally allowed to wear armour.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c8a2-3331-b5d3-032d" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f6fa-e1fa-bff6-9f90" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
-              <profiles>
-                <profile name="Runefang" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="b1a2-9c73-9491-23fe" publicationId="315d-135b-135c-07ce" page="6">
-                  <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">All hits from a Runefang wound automatically and Ignore Armour saves.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <costs>
                 <cost name="pts" typeId="points" value="60"/>
               </costs>
@@ -13006,31 +13046,44 @@ by Wizards even though they are not normally allowed to wear armour.
                   </conditions>
                 </modifier>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Runefang" id="c218-262e-e097-7b17" hidden="false" type="profile" targetId="244a-7466-2a15-b495">
+                  <modifiers>
+                    <modifier type="replace" field="de63-d6da-efa8-00ac" arg="Magic Weapon. " position="1"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Mace of Helsturm" hidden="true" id="4865-ba5d-969d-7c40" collective="false" sortIndex="11">
+            <selectionEntry type="upgrade" import="true" name="The Mace of Helsturm" hidden="false" id="4865-ba5d-969d-7c40" collective="false" sortIndex="11">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c6d9-ef84-2440-11e6" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="af3a-2a44-05cc-2958" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
-              <profiles>
-                <profile name="The Mace of Helsturm" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="b1ae-d7a7-6f6c-3ba9" publicationId="315d-135b-135c-07ce" page="6">
-                  <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Great weapon. The wielder of this weapon gains the Flaming Attacks special rule. In addition, each natural roll of 6 to hit causes that attack to be resolved at Strength 10 and with the Multiple Wounds (D3) special rule.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="false" field="hidden">
+                <modifier type="set" value="true" field="hidden">
                   <conditions>
-                    <condition type="instanceOf" value="1" field="selections" scope="parent" childId="de21-f497-89d6-7e91" shared="true"/>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="de21-f497-89d6-7e91" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="abcc-4aa7-4989-7189" shared="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Great Weapon" id="247f-09cb-84d7-fe8a" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
+                  <modifiers>
+                    <modifier type="set" value="The Mace of Helsturm" field="annotation"/>
+                    <modifier type="append" value="he wielder of this weapon gains the Flaming Attacks special rule. In addition, each natural roll of 6 to hit causes that attack to be resolved at Strength 10 and with the Multiple Wounds (D3) special rule." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Sword of Sigismund" hidden="false" id="e29d-81f8-fe82-0d9c" collective="false" sortIndex="10">
               <constraints>
@@ -13038,11 +13091,12 @@ by Wizards even though they are not normally allowed to wear armour.
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9b54-1048-1c18-ccaa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Sword of Sigismund" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="a0c1-cd5e-b6e8-5b52" publicationId="315d-135b-135c-07ce" page="6">
+                <profile name="Sword of Sigismund" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="a0c1-cd5e-b6e8-5b52" publicationId="315d-135b-135c-07ce" page="6">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+1</characteristic>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Sword of Sigismund gives the wielder the Always Strikes First special rule.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Sword of Sigismund gives the wielder the Always Strikes First special rule.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -13064,11 +13118,12 @@ by Wizards even though they are not normally allowed to wear armour.
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="df9f-47bc-b8f2-ab84" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Hammer of Judgement" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="1490-a5e0-de83-139c" publicationId="315d-135b-135c-07ce" page="6">
+                <profile name="Hammer of Judgement" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="1490-a5e0-de83-139c" publicationId="315d-135b-135c-07ce" page="6">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Models hit by the Hammer of Judgement must take a Toughness test for every hit suffered. If the test is failed, the hit wounds automatically with the Ignores Armour Saves special rule. If the test is passed, roll to wound and take armour saves as normal.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Models hit by the Hammer of Judgement must take a Toughness test for every hit suffered. If the test is failed, the hit wounds automatically with the Ignores Armour Saves special rule. If the test is passed, roll to wound and take armour saves as normal.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -13090,11 +13145,12 @@ by Wizards even though they are not normally allowed to wear armour.
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0c71-b268-d44c-908c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Sword of Righteous Steel" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="f0d0-a132-9729-bda6" publicationId="315d-135b-135c-07ce" page="6">
+                <profile name="Sword of Righteous Steel" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="f0d0-a132-9729-bda6" publicationId="315d-135b-135c-07ce" page="6">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">On a to hit roll of 6, this weapon automatically Wounds with the Ignores Armour saves special rule.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">On a to hit roll of 6, this weapon automatically Wounds with the Ignores Armour saves special rule.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -13124,7 +13180,9 @@ by Wizards even though they are not normally allowed to wear armour.
                     <modifier type="set" value="Pearl Daggers" field="name"/>
                     <modifier type="append" value="This weapon gives the wielder the Random Attacks (D3) special rule in addition to their
 normal attacks.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -13142,11 +13200,12 @@ normal attacks.
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="23ad-ad29-12a4-3c78" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Bronze Sigil Sword" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="8bd7-2937-569f-a9e3" publicationId="315d-135b-135c-07ce" page="6">
+                <profile name="Bronze Sigil Sword" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="8bd7-2937-569f-a9e3" publicationId="315d-135b-135c-07ce" page="6">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">This weapon gives the wielder +1 Strength and Toughness. In addition, the wielder gains the Terror special rule against Goblins.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">This weapon gives the wielder +1 Toughness. In addition, the wielder gains the Terror special rule against Goblins.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -13180,7 +13239,9 @@ normal attacks.
                 <infoLink name="Spear" id="b9a8-b160-785e-4d27" hidden="false" type="profile" targetId="be39-37ac-ac20-5053">
                   <modifiers>
                     <modifier type="set" value="Spear of the Hierophant" field="annotation"/>
-                    <modifier type="append" value="Against Daemons, Undead and Vampires, all attacks made with the Spear of the Hierophant gain +1 Strength and any successful Ward Saves must be re-rolled." field="de63-d6da-efa8-00ac"/>
+                    <modifier type="append" value="Against Daemons, Undead and Vampires, all attacks made with the Spear of the Hierophant gain +1 Strength and any successful Ward Saves must be re-rolled." field="de63-d6da-efa8-00ac" join="
+
+"/>
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="parent" childId="mount" shared="true" includeChildSelections="true"/>
@@ -13191,7 +13252,9 @@ normal attacks.
                 <infoLink name="Light Lance" id="aba9-1402-3616-6fae" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb">
                   <modifiers>
                     <modifier type="set" value="Spear of the Hierophant" field="annotation"/>
-                    <modifier type="append" value="Against Daemons, Undead and Vampires, all attacks made with the Spear of the Hierophant gain +1 Strength and any successful Ward Saves must be re-rolled." field="de63-d6da-efa8-00ac"/>
+                    <modifier type="append" value="Against Daemons, Undead and Vampires, all attacks made with the Spear of the Hierophant gain +1 Strength and any successful Ward Saves must be re-rolled." field="de63-d6da-efa8-00ac" join="
+
+"/>
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
                         <condition type="lessThan" value="1" field="selections" scope="parent" childId="mount" shared="true" includeChildSelections="true"/>
@@ -13219,11 +13282,12 @@ normal attacks.
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="11e8-e66c-de1b-f930" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Wyrmslayer Sword" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="e0a8-1cb1-fca8-4aa3" publicationId="315d-135b-135c-07ce" page="6">
+                <profile name="Wyrmslayer Sword" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="e0a8-1cb1-fca8-4aa3" publicationId="315d-135b-135c-07ce" page="6">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Wyrmslayer Sword makes the wielder Wound on a 4+ or better, and ignores Natural Armour.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Wyrmslayer Sword makes the wielder Wound on a 4+ or better, and ignores Natural Armour.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -13246,16 +13310,16 @@ normal attacks.
                   </conditions>
                 </modifier>
               </modifiers>
-              <infoLinks>
-                <infoLink name="Handgun" id="4f34-d471-d1c9-c07f" hidden="false" type="profile" targetId="bd57-9e45-342f-ee49">
-                  <modifiers>
-                    <modifier type="set" value="Von Trickschotte&apos;s Wonderous Arquebus" field="name"/>
-                    <modifier type="set" value="36&quot;" field="59f2-3142-82d5-4f43"/>
-                    <modifier type="set" value="5" field="b80e-7dac-0dea-9add"/>
-                    <modifier type="set" value="Armour Piercing (1), Multiple Wounds (D3), Ponderous" field="de63-d6da-efa8-00ac"/>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
+              <profiles>
+                <profile name="Von Trickschotte&apos;s Wonderous Arquebus" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="b2f0-00f1-08c0-7ef3">
+                  <characteristics>
+                    <characteristic name="Range" typeId="af3c-d805-702c-9af9">36&quot;</characteristic>
+                    <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
+                    <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (1), Multiple Wounds (D3), Ponderous.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Blade of Silvered Steel" hidden="false" id="7624-64de-9679-e3ce" collective="false" sortIndex="12">
               <constraints>
@@ -13263,11 +13327,12 @@ normal attacks.
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="58ca-5a65-a318-432c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Blade of Silvered Steel" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="b0a2-ec48-4fc6-9908" publicationId="315d-135b-135c-07ce" page="6">
+                <profile name="Blade of Silvered Steel" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="b0a2-ec48-4fc6-9908" publicationId="315d-135b-135c-07ce" page="6">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">This weapon gives the wielder the Hatred (Undead, Vampires) special rule. In addition, no Undead or Vampires may take armour or Regeneration saves against it.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">This weapon gives the wielder the Hatred (Undead, Vampires) special rule. In addition, no Undead or Vampires may take armour or Regeneration saves against it.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -13281,11 +13346,12 @@ normal attacks.
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e0d0-f4f7-c414-f03e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Daemonslayer Blade" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="300f-42d7-7252-baf3" publicationId="315d-135b-135c-07ce" page="6">
+                <profile name="Daemonslayer Blade" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="300f-42d7-7252-baf3" publicationId="315d-135b-135c-07ce" page="6">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Against Daemons, all attacks made with the Daemonslayer Blade gain +1 To Wound with the Multiple Wounds (D3) special rule.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Against Daemons, all attacks made with the Daemonslayer Blade gain +1 To Wound with the Multiple Wounds (D3) special rule.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -13299,11 +13365,12 @@ normal attacks.
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4c25-c969-8c8f-f938" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Sword of Power" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="56fd-d166-cee0-14a9" publicationId="315d-135b-135c-07ce" page="6">
+                <profile name="Sword of Power" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="56fd-d166-cee0-14a9" publicationId="315d-135b-135c-07ce" page="6">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+2</characteristic>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Sword of Power gives the wielder the Armour Piercing (1) special rule</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+2</characteristic>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Sword of Power gives the wielder the Armour Piercing (1) special rule</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -13317,11 +13384,12 @@ normal attacks.
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5db5-d838-467f-74e9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Sword of Fate" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="e006-1b20-864c-f55e" publicationId="315d-135b-135c-07ce" page="6">
+                <profile name="Sword of Fate" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="e006-1b20-864c-f55e" publicationId="315d-135b-135c-07ce" page="6">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">At the beginning of the battle, nominate one enemy Character; Monstrous Creature or Monster. The Sword of Fate will Wound that model on a 2+ with the Ignores Armour Saves and Multiple Wounds (D3) special rules.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">At the beginning of the battle, nominate one enemy Character; Monstrous Creature or Monster. The Sword of Fate will Wound that model on a 2+ with the Ignores Armour Saves and Multiple Wounds (D3) special rules.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -13354,7 +13422,9 @@ normal attacks.
                 <infoLink name="Cavalry Hammer" id="8061-c74e-c12b-7ba9" hidden="false" type="profile" targetId="64bd-6fe2-b07b-5e04">
                   <modifiers>
                     <modifier type="set" value="Storm Hammer" field="name"/>
-                    <modifier type="append" value="Models Hit in the turn the wielder charges may not attack that turn" field="de63-d6da-efa8-00ac"/>
+                    <modifier type="append" value="Models Hit in the turn the wielder charges may not attack that turn" field="de63-d6da-efa8-00ac" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -13365,11 +13435,12 @@ normal attacks.
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e7a1-5020-e8f5-1d03" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Sword of Righteous Steel" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="c39c-9b3d-0731-de98" publicationId="315d-135b-135c-07ce" page="6">
+                <profile name="Sword of Righteous Steel" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="c39c-9b3d-0731-de98" publicationId="315d-135b-135c-07ce" page="6">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Sword of Righteous Steel makes the wielder always Hit any opponent on roll of a 2+. In addition, any successful Parry saves must be rerolled.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Sword of Righteous Steel makes the wielder always Hit any opponent on roll of a 2+. In addition, any successful Parry saves must be rerolled.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -13389,6 +13460,10 @@ normal attacks.
           <entryLinks>
             <entryLink import="true" name="Common Magic Weapons" hidden="false" id="3833-5498-60ad-29ec" collective="false" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="99" flatten="true"/>
           </entryLinks>
+          <modifiers>
+            <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
+            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
+          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Talismans" id="cec9-9857-b836-23e0" hidden="false" collective="false" import="true" sortIndex="4" collapsible="true">
           <constraints>
@@ -14016,13 +14091,6 @@ A repeater pistol can be used in combination with a regular pistol as a brace o
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">(Human)</characteristic>
       </characteristics>
     </profile>
-    <profile id="3306-ba34-d3d0-91a8" name="Ghal Maraz" publicationId="315d-135b-135c-07ce" page="47" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-      <characteristics>
-        <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-        <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-        <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Hits from Ghal Maraz wound automatically, Ignores Armour saves and cause Multiple Wounds (D3).</characteristic>
-      </characteristics>
-    </profile>
     <profile id="ed32-6dd0-2f05-6a02" name="Flagellant" publicationId="315d-135b-135c-07ce" page="34" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
@@ -14122,6 +14190,14 @@ A repeater pistol can be used in combination with a regular pistol as a brace o
         <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">3+</characteristic>
         <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">3+</characteristic>
         <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
+      </characteristics>
+    </profile>
+    <profile name="Runefang" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="244a-7466-2a15-b495" publicationId="315d-135b-135c-07ce" page="6">
+      <characteristics>
+        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+        <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+        <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. All hits from a Runefang wound automatically and Ignore Armour saves.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
