@@ -1475,7 +1475,12 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
         </modifier>
       </modifiers>
       <entryLinks>
-        <entryLink import="true" name="Magic Weapons" hidden="false" id="9d24-a7c4-35bb-6362" type="selectionEntryGroup" targetId="7d70-0b99-d2e1-c23f" sortIndex="1"/>
+        <entryLink import="true" name="Magic Weapons" hidden="false" id="9d24-a7c4-35bb-6362" type="selectionEntryGroup" targetId="7d70-0b99-d2e1-c23f" sortIndex="1">
+          <modifiers>
+            <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
+            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
+          </modifiers>
+        </entryLink>
         <entryLink import="true" name="Magic Armour" hidden="false" id="1fcb-a9a9-9368-afd2" type="selectionEntryGroup" targetId="21bd-401b-2b19-65e2" sortIndex="2"/>
         <entryLink import="true" name="Talismans" hidden="false" id="d27a-7e0c-75be-c0f2" type="selectionEntryGroup" targetId="3b82-3c61-4f07-7044" sortIndex="3"/>
         <entryLink import="true" name="Arcane Items" hidden="false" id="be44-045e-1120-88c4" type="selectionEntryGroup" targetId="0559-eca8-cb2e-0a7a" sortIndex="4"/>
@@ -1608,6 +1613,8 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
       </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Magic Weapons" id="7d70-0b99-d2e1-c23f" hidden="false" sortIndex="11" collapsible="true">
@@ -1900,10 +1907,6 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
       <entryLinks>
         <entryLink import="true" name="Common Magic Weapons" hidden="false" id="4e65-8005-fd98-467c" type="selectionEntryGroup" targetId="6820-41cc-94f6-87c1" sortIndex="99" flatten="true"/>
       </entryLinks>
-      <modifiers>
-        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
-        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
-      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Magic Armour" id="21bd-401b-2b19-65e2" hidden="false" sortIndex="12" collapsible="true" flatten="true">
       <entryLinks>
