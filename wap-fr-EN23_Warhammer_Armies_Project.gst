@@ -159,6 +159,13 @@
         <characteristicType name="Result" id="686b-22d8-d67f-02eb"/>
       </characteristicTypes>
     </profileType>
+    <profileType name="Ward Saves" id="54b0-94fc-eb1e-8e37" hidden="false">
+      <characteristicTypes>
+        <characteristicType name="Type" id="31b2-f73f-865d-f538" kind="annotation"/>
+        <characteristicType name="Value" id="bdf9-d73e-e13b-b0ce" kind="annotation"/>
+        <characteristicType name="Special Rule" id="84ea-8900-474d-6201" kind="longText"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="d280-b7df-c185-2ba5" name="Lords" hidden="false">
@@ -9175,9 +9182,6 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
     <rule id="306d-711a-1300-587f" name="Natural Armour (5+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
     </rule>
-    <rule id="32e8-b4ad-3e59-a3c7" name="Natural Armour (3+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
-    </rule>
     <rule id="33f1-4ddd-d26b-281a" name="Random Attacks (D6+2)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
     </rule>
@@ -9226,9 +9230,6 @@ If a character with Magic Resistance joins a unit, all models in the unit benefi
     </rule>
     <rule id="d896-d52f-cc64-ab43" name="Scythes" publicationId="9e23-79cb-pubN66727" page="88" hidden="false">
       <description>Impact Hits (+1).</description>
-    </rule>
-    <rule id="b15c-9f50-7081-ba29" name="Natural Armour (2+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
     </rule>
     <rule id="f6d7-9fbc-abc1-5cfc" name="Hatred" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
@@ -9478,9 +9479,6 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
     </rule>
     <rule id="9a24-f1a2-aac3-de3b" name="Breath Weapon (Monster of Kadon)" publicationId="9e23-79cb-pubN66727" page="147" hidden="false">
       <description>Strength 4, Flaming Attacks.</description>
-    </rule>
-    <rule id="1234-eaf6-f3f7-4a67" name="Natural Armour (1+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
     </rule>
     <rule id="73fd-d115-269d-bd0a" name="Ancestral Grudge" publicationId="aa7b-3583-0834-7bfa" page="136" hidden="false">
       <description>Dwarfs have the Hatred (Orcs, Goblins, Skaven) special rule.</description>
