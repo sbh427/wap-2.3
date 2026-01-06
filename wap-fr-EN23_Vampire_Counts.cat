@@ -9536,11 +9536,21 @@ close combat by bearer, they and/or their unit regain 1 Wound, just like a summ
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="b906-254a-7949-9e08" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="add" value="{this} is not allowed if not mounted" field="error">
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="mount" shared="true" includeChildSelections="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="b906-254a-7949-9e08" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0548-4aeb-a60c-b378" shared="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -9585,8 +9595,22 @@ close combat by bearer, they and/or their unit regain 1 Wound, just like a summ
               <conditionGroups>
                 <conditionGroup type="and">
                   <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="model" childId="mount" shared="true" includeChildSelections="true"/>
                     <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="b906-254a-7949-9e08" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="add" value="{this} is not allowed if not mounted" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0548-4aeb-a60c-b378" shared="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
