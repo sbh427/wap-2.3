@@ -2060,7 +2060,7 @@ can cause the Mage-Priest to roll more dice than normally allowed.</characteris
               <infoLinks>
                 <infoLink name="Sling" id="93da-836f-79bb-188c" hidden="false" type="profile" targetId="d083-b2f1-d1c5-e4f7">
                   <modifiers>
-                    <modifier type="replace" value="4" field="b80e-7dac-0dea-9add" arg="3"/>
+                    <modifier type="set" value="4" field="29fe-29a3-f94f-2e90" arg="3"/>
                     <modifier type="set" value="Sacrificial Heart Cloth of Chotec" field="annotation"/>
                   </modifiers>
                 </infoLink>
@@ -2209,9 +2209,10 @@ can cause the Mage-Priest to roll more dice than normally allowed.</characteris
               <infoLinks>
                 <infoLink name="Light Lance" id="dcb4-de27-f39d-22a9" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb">
                   <modifiers>
-                    <modifier type="append" value="This weapon gives the bearer&apos;s mount the Impact Hits 
-(2D6+1) special rule.
-" field="de63-d6da-efa8-00ac"/>
+                    <modifier type="append" value="This weapon gives the bearer&apos;s mount the Impact Hits (2D6+1) special rule.
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
                     <modifier type="set" value="Stegadon War-Spear" field="annotation"/>
                   </modifiers>
                 </infoLink>
@@ -2278,6 +2279,10 @@ can cause the Mage-Priest to roll more dice than normally allowed.</characteris
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4eef-7c9b-00c2-323f" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
+            <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
+          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Magic Armour" id="9b01-47bf-3a2b-d930" hidden="false" sortIndex="2" collapsible="true">
           <selectionEntries>
@@ -6719,7 +6724,7 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
                             <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
                             <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
                             <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Attacks made with the Cobra Mace have the Always Strikes First and Poisoned Attacks special rules. At the start of every Close Combat phase, all enemy models in base contact with Lord Mazdamundi must reveal their magic items. If the wielder scores one or more hits against a model that has any magic items, roll a D6; on a 6, all of that model&apos;s magic items are immediately destroyed and cannot be used further in this game.</characteristic>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Attacks made with the Cobra Mace have the Always Strikes First and Poisoned Attacks special rules. At the start of every Close Combat phase, all enemy models in base contact with Lord Mazdamundi must reveal their magic items. If the wielder scores one or more hits against a model that has any magic items, roll a D6; on a 6, all of that model&apos;s magic items are immediately destroyed and cannot be used further in this game.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -6890,7 +6895,7 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
                             <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
                             <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
                             <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magical Weapons count only as mundane weapons of their type when targeting Lord Kroak in close combat.</characteristic>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Magical Weapons count only as mundane weapons of their type when targeting Lord Kroak in close combat.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -6950,7 +6955,7 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
                   </selectionEntries>
                 </entryLink>
                 <entryLink import="true" name="60. Wizard Level" hidden="false" id="327a-50a2-a940-a701" type="selectionEntryGroup" targetId="e548-6739-0537-5d95"/>
-                <entryLink import="true" name="55. Equipment" hidden="false" id="2943-7876-0212-60d7" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+                <entryLink import="true" name="70. Mount" hidden="false" id="2943-7876-0212-60d7" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
                   <entryLinks>
                     <entryLink import="true" name="Mage-Priest Palanquin" hidden="false" id="819c-e884-d193-062f" type="selectionEntry" targetId="20a4-f96d-e9a6-bf35">
                       <constraints>
@@ -7074,7 +7079,10 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
                           <modifiers>
                             <modifier type="set" value="Revered Spear of Tlanxla" field="annotation"/>
                             <modifier type="append" value="Each unsaved Wound caused by the Revered Spear of Tlanxla counts as 2 unsaved Wounds when calculating combat results. 
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -7197,7 +7205,7 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
                             <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
                             <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
                             <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Blade of the Serpent&apos;s Tongue grants Tehenhauin the Mighty Blow (1) special rule on any turn he charges. In addition, all attacks made by the Blade of the Serpent&apos;s Tongue have the Poisoned Attacks special rule.</characteristic>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. The Blade of the Serpent&apos;s Tongue grants Tehenhauin the Mighty Blow (1) special rule on any turn he charges. In addition, all attacks made by the Blade of the Serpent&apos;s Tongue have the Poisoned Attacks special rule.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -7511,7 +7519,10 @@ to see if the comet arrives.</characteristic>
                           <modifiers>
                             <modifier type="set" value="The Star-stone Mace" field="annotation"/>
                             <modifier type="append" value="At the start of every Close Combat phase, all enemy models in base contact with Chakax must reveal their magic items, and Magical weapons and armour count as mundane versions of the same type.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -7606,7 +7617,7 @@ to see if the comet arrives.</characteristic>
                             <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
                             <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
                             <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Mace allows Gor-Rok to re-roll all failed To Hit rolls. In addition, when striking with the Mace of Ulumak, Gor-Rok gains an additional Attack from his Predatory Fighter special rule on any successful To Hit roll of a 5 or 6.</characteristic>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. The Mace allows Gor-Rok to re-roll all failed To Hit rolls. In addition, when striking with the Mace of Ulumak, Gor-Rok gains an additional Attack from his Predatory Fighter special rule on any successful To Hit roll of a 5 or 6.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -7689,8 +7700,11 @@ to see if the comet arrives.</characteristic>
                         <infoLink name="Great Weapon" id="46b9-7885-8045-5c16" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
                           <modifiers>
                             <modifier type="append" value="The Sacred Blade of Quetzl grants Nakai +1 to Hit in close combat, and enemy close combat attacks against him suffer -1 To Hit.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
                             <modifier type="set" value="The Sacred Blade of Quetzl" field="annotation"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -7775,7 +7789,7 @@ to see if the comet arrives.</characteristic>
                             <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
                             <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
                             <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Blade of Ancient Skies has the Ignores Armour saves special rule. In addition, when fighting against a model with the Fly special rule, attacks made with the Blade of Ancient Skies receive a +1 bonus To Hit.</characteristic>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. The Blade of Ancient Skies has the Ignores Armour saves special rule. In addition, when fighting against a model with the Fly special rule, attacks made with the Blade of Ancient Skies receive a +1 bonus To Hit.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -7908,42 +7922,41 @@ to see if the comet arrives.</characteristic>
                 </profile>
               </profiles>
               <entryLinks>
-                <entryLink import="true" name="10. Character Options" hidden="false" id="a015-a975-4550-32a7" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
-                  <entryLinks>
-                    <entryLink import="true" name="55. Equipment" hidden="false" id="9080-4b4e-f0b7-cf88" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
-                      <entryLinks>
-                        <entryLink import="true" name="Hand Weapon" hidden="false" id="9b29-a9d2-dbb8-9892" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1294-a2d8-6b82-7108" includeChildSelections="false"/>
-                          </constraints>
-                        </entryLink>
-                      </entryLinks>
-                      <selectionEntries>
-                        <selectionEntry type="upgrade" import="true" name="The Golden Blowpipe of P&apos;Toohee" hidden="false" id="d888-a43f-d6d4-1604">
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cf93-fbff-2709-d47a-min" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cf93-fbff-2709-d47a-max" includeChildSelections="false"/>
-                          </constraints>
-                          <profiles>
-                            <profile name="The Golden Blowpipe of P&apos;Toohee" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="4236-9269-af3c-f04d">
-                              <characteristics>
-                                <characteristic name="Range" typeId="af3c-d805-702c-9af9">18&quot;</characteristic>
-                                <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">2</characteristic>
-                                <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3</characteristic>
-                                <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Multiple Wounds (D3), Poisoned Attacks, Quick to Fire, Rapid Fire</characteristic>
-                              </characteristics>
-                            </profile>
-                          </profiles>
-                        </selectionEntry>
-                      </selectionEntries>
-                    </entryLink>
-                  </entryLinks>
-                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="a015-a975-4550-32a7" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
                 <entryLink import="true" name="90. Magic Items" hidden="false" id="9234-49dc-e2da-81ab" type="selectionEntryGroup" targetId="7780-4917-5952-24ce">
                   <modifiers>
                     <modifier type="increment" value="50" field="20f0-0b35-48f7-23ba"/>
                     <modifier type="set" value="true" field="hidden" affects="e013-2b30-2717-c98e"/>
                   </modifiers>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="338d-0279-9d5b-1f59" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="1b83-14f5-431f-7d77" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9b10-8056-9961-20c8" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="074d-6e6e-6c8e-529d" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="The Golden Blowpipe of P&apos;Toohee" hidden="false" id="68c1-3f96-be80-7baf" collective="true">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3541-1736-5bfd-636a-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3541-1736-5bfd-636a-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="The Golden Blowpipe of P&apos;Toohee" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="87df-3bd9-3ed4-fadd">
+                          <characteristics>
+                            <characteristic name="Range" typeId="af3c-d805-702c-9af9">18&quot;</characteristic>
+                            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">2</characteristic>
+                            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3</characteristic>
+                            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon. Multiple Wounds (D3), Poisoned Attacks, Quick to Fire, Rapid Fire</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
                 </entryLink>
               </entryLinks>
               <infoLinks>
