@@ -85,15 +85,6 @@
       </characteristics>
       <comment>ranged</comment>
     </profile>
-    <profile name="Fireglaive" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="9c5a-ea4f-c729-1da0" publicationId="53f5-3638-a9ce-8dd3" page="3">
-      <characteristics>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
-        <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
-        <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">+1 Initiative. Requires Two Hands.</characteristic>
-      </characteristics>
-      <comment>melee</comment>
-    </profile>
     <profile name="10. Hell Hammer" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2f81-efce-b584-d348" publicationId="53f5-3638-a9ce-8dd3" page="5">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
@@ -240,7 +231,11 @@
     <selectionEntry type="upgrade" import="true" name="Fireglaive" hidden="false" id="7770-9e14-52c4-9bfe" collective="true">
       <infoLinks>
         <infoLink name="Fireglaive" id="2cb3-9cbf-8602-999f" hidden="false" type="profile" targetId="51e6-82ae-0535-c4a1"/>
-        <infoLink name="Fireglaive" id="8951-e375-cbc9-8c8a" hidden="false" type="profile" targetId="9c5a-ea4f-c729-1da0"/>
+        <infoLink name="Polearm/Halberd" id="8951-e375-cbc9-8c8a" hidden="false" type="profile" targetId="e43e-5153-eeec-36be">
+          <modifiers>
+            <modifier type="set" value="Fireglaive" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0031-178e-fd47-7f5b" automatic="true"/>
@@ -1513,34 +1508,39 @@
         <entryLink import="true" name="10. Character Options" hidden="false" id="8ec1-626f-8aea-ab43" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
         <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="14a7-184d-33ff-bf48" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
           <entryLinks>
-            <entryLink import="true" name="Pistol" hidden="false" id="3675-85df-03fd-41fe" type="selectionEntry" targetId="4883-fb9f-3893-0d9c" sortIndex="1">
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Fireglaive" hidden="false" id="d94c-221c-7849-1fb6" type="selectionEntry" targetId="7770-9e14-52c4-9bfe" sortIndex="2">
+            <entryLink import="true" name="Fireglaive" hidden="false" id="bb56-3edc-a14b-7d39" type="selectionEntry" targetId="7770-9e14-52c4-9bfe" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="9"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Brace of Pistols" hidden="false" id="7c93-804a-753e-0399" type="selectionEntry" targetId="a574-f633-253c-b619" sortIndex="3">
-              <costs>
-                <cost name="pts" typeId="points" value="11"/>
-              </costs>
-            </entryLink>
           </entryLinks>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Fireglaive &amp; Pistol" hidden="false" id="b3ee-aa6e-6d1c-42b3" sortIndex="4">
+            <selectionEntry type="upgrade" import="true" name="Pistol" hidden="false" id="fef5-2421-bb9b-97a5" collective="true">
               <costs>
-                <cost name="pts" typeId="points" value="14"/>
+                <cost name="pts" typeId="points" value="6"/>
               </costs>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2fd5-ad07-372c-f4c1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e90c-3b0a-94b6-3b33" includeChildSelections="false"/>
               </constraints>
               <infoLinks>
-                <infoLink name="Pistol" id="b6f4-0586-82f0-5fbd" hidden="false" type="profile" targetId="aa4f-83e3-8259-924a"/>
-                <infoLink name="Fireglaive" id="4d91-32b2-9dd6-22b6" hidden="false" type="profile" targetId="9c5a-ea4f-c729-1da0"/>
-                <infoLink name="Fireglaive" id="00e6-5bbc-a6e7-4e2f" hidden="false" type="profile" targetId="51e6-82ae-0535-c4a1"/>
+                <infoLink name="Pistol" id="c174-96b2-f43f-db0d" hidden="false" type="profile" targetId="aa4f-83e3-8259-924a">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="516c-a0b7-d103-e7e5" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Brace of Pistols" id="5875-9fd4-d91d-38f7" hidden="false" type="profile" targetId="7259-6759-3c5f-ce3c">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="516c-a0b7-d103-e7e5" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
             </selectionEntry>
           </selectionEntries>
@@ -1569,10 +1569,34 @@
           <entryLinks>
             <entryLink import="true" name="Hand Weapon" hidden="false" id="4888-4d6a-5b1c-5e31" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9564-9953-64de-ea2d"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9564-9953-64de-ea2d" automatic="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="0e5a-c680-7fa4-685d">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="bb56-3edc-a14b-7d39" shared="true" includeChildForces="false" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="0" field="9564-9953-64de-ea2d">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="bb56-3edc-a14b-7d39" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
+          <modifiers>
+            <modifier type="set" value="0" field="fe22-ce5f-b23e-303d">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="bb56-3edc-a14b-7d39" shared="true" includeChildForces="false" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="0" field="e941-9082-0af2-8b43">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="bb56-3edc-a14b-7d39" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </entryLink>
       </entryLinks>
       <selectionEntryGroups>
@@ -1606,6 +1630,34 @@
               </modifiers>
             </modifierGroup>
           </modifierGroups>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="31. Tertiary Weapon" id="6fa5-2e67-c0c7-faa9" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Pistol" hidden="false" id="516c-a0b7-d103-e7e5" collective="true">
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="05dd-5a90-9c68-704b" includeChildSelections="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Pistol" id="332d-c8ee-32f1-cfa8" hidden="false" type="profile" targetId="aa4f-83e3-8259-924a">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="516c-a0b7-d103-e7e5" shared="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="fef5-2421-bb9b-97a5" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <rules>
@@ -5341,11 +5393,12 @@ While there are rank and file models left in the unit (except the Command Group)
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="040f-2545-797a-22aa-max"/>
                       </constraints>
                       <profiles>
-                        <profile name="The Black Hammer of Hashut" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="977f-c55b-e449-9925" publicationId="53f5-3638-a9ce-8dd3" page="43">
+                        <profile name="The Black Hammer of Hashut" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="977f-c55b-e449-9925" publicationId="53f5-3638-a9ce-8dd3" page="43">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Close combat attacks made with this weapon are at +2 Strength. Any Flammable model successfully wounded is killed outright.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+2</characteristic>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Any Flammable model successfully wounded is killed outright.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -5421,11 +5474,12 @@ While there are rank and file models left in the unit (except the Command Group)
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4199-4fc2-1216-e6de-max"/>
                       </constraints>
                       <profiles>
-                        <profile name="The Obsidian Axe" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="aee3-e10f-963a-70bf" publicationId="53f5-3638-a9ce-8dd3" page="44">
+                        <profile name="The Obsidian Axe" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="aee3-e10f-963a-70bf" publicationId="53f5-3638-a9ce-8dd3" page="44">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">This weapon gives the wielder +1 Strength and the Armour Piercing (3) special rule.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. This weapon gives the Armour Piercing (3) special rule.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -5543,11 +5597,12 @@ While there are rank and file models left in the unit (except the Command Group)
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fa45-808c-609a-600f-max"/>
                       </constraints>
                       <profiles>
-                        <profile name="The Graven Scepter" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="aa7d-d1e4-5c54-db6e" publicationId="53f5-3638-a9ce-8dd3" page="45">
+                        <profile name="The Graven Scepter" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="aa7d-d1e4-5c54-db6e" publicationId="53f5-3638-a9ce-8dd3" page="45">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Attacks made with this weapon always Wound on a 4+ or better.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Attacks made with this weapon always Wound on a 4+ or better.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -5923,11 +5978,12 @@ While there are rank and file models left in the unit (except the Command Group)
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="29b7-22cc-6a2c-943d-max"/>
                       </constraints>
                       <profiles>
-                        <profile name="Blade of Malice" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="4fb2-8d7b-93f1-5465" publicationId="53f5-3638-a9ce-8dd3" page="47">
+                        <profile name="Blade of Malice" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="4fb2-8d7b-93f1-5465" publicationId="53f5-3638-a9ce-8dd3" page="47">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The bearer of this weapon gains the Hatred and the Armour Piercing (2) special rule.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. The bearer of this weapon gains the Hatred and the Armour Piercing (2) special rule.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -6568,16 +6624,18 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
                 </modifier>
               </modifiers>
               <infoLinks>
-                <infoLink name="Fireglaive" id="1c93-3378-bf36-b7ba" hidden="false" type="profile" targetId="9c5a-ea4f-c729-1da0">
-                  <modifiers>
-                    <modifier type="set" value="Inferno Glaive of Hashut" field="annotation"/>
-                    <modifier type="append" value="Armour Piercing (1)" field="de63-d6da-efa8-00ac" join=", "/>
-                  </modifiers>
-                </infoLink>
                 <infoLink name="Fireglaive" id="f4a6-157f-3013-0a8c" hidden="false" type="profile" targetId="51e6-82ae-0535-c4a1">
                   <modifiers>
                     <modifier type="set" value="Inferno Glaive of Hashut" field="annotation"/>
                     <modifier type="set" value="5" field="b80e-7dac-0dea-9add"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Polearm/Halberd" id="df7d-cf8a-8874-b52a" hidden="false" type="profile" targetId="e43e-5153-eeec-36be">
+                  <modifiers>
+                    <modifier type="set" value="Fireglave, Inferno Glaive of Hashut" field="annotation"/>
+                    <modifier type="append" value="Armour Piercing (1)" field="de63-d6da-efa8-00ac" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -6591,11 +6649,12 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d018-e557-f6a0-f29e" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
               <profiles>
-                <profile name="Lash of Shurzzhak" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="bb3b-8f77-a0bc-0160" publicationId="53f5-3638-a9ce-8dd3" page="6">
+                <profile name="Lash of Shurzzhak" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="bb3b-8f77-a0bc-0160" publicationId="53f5-3638-a9ce-8dd3" page="6">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Instead of fighting normally, the wielder may may make a special attack. If this attack hits, all models in one column in base contact with the wielder are automatically Hit.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Instead of fighting normally, the wielder may may make a special attack. If this attack hits, all models in one column in base contact with the wielder are automatically Hit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6609,11 +6668,12 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="23a5-73f8-4c53-770c" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
               <profiles>
-                <profile name="Hashut&apos;s Blade of Greed" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="3887-9fe6-05cf-1e9f">
+                <profile name="Hashut&apos;s Blade of Greed" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="3887-9fe6-05cf-1e9f">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder of this weapon gains a bonus for each different type of magic item in any enemy unit they are in base contact with, according to the Hashut&apos;s Blade of Greed table. Additional magic items of the same type have no effect.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The wielder of this weapon gains a bonus for each different type of magic item in any enemy unit they are in base contact with, according to the Hashut&apos;s Blade of Greed table. Additional magic items of the same type have no effect.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6678,12 +6738,19 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
                 <infoLink name="Blunderbuss" id="f624-da98-751f-b345" hidden="false" type="profile" targetId="a9ad-a872-79a3-c503">
                   <modifiers>
                     <modifier type="set" value="Zzharg Madeye&apos;s Blunderbuss" field="annotation"/>
-                    <modifier type="set" value="Breath Weapon" field="59f2-3142-82d5-4f43"/>
-                    <modifier type="set" value="4" field="b80e-7dac-0dea-9add"/>
-                    <modifier type="set" value="Armouor Piercing (1), Slow to Fire" field="de63-d6da-efa8-00ac"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
+              <profiles>
+                <profile name="Zzharg Madeye&apos;s Blunderbuss" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="bdac-8101-c5de-6f1e">
+                  <characteristics>
+                    <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+                    <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
+                    <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (1), Slow to Fire.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Molten Blade" hidden="false" id="3b8a-2fef-7977-f098" sortIndex="5">
               <costs>
@@ -6694,11 +6761,12 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cc62-27ef-7a77-ceb4" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
               <profiles>
-                <profile name="Molten Blade" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="8f78-b749-e57e-ce9a" publicationId="53f5-3638-a9ce-8dd3" page="6">
+                <profile name="Molten Blade" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="8f78-b749-e57e-ce9a" publicationId="53f5-3638-a9ce-8dd3" page="6">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Attacks made with this weapon have the Flaming Attacks and Ignores Armour Saves special rules.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Attacks made with this weapon have the Flaming Attacks and Ignores Armour Saves special rules.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6712,11 +6780,12 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e334-96f5-92d4-186d" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
               <profiles>
-                <profile name="Life Bane Blade" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="ebd0-258f-2aa2-e63a" publicationId="53f5-3638-a9ce-8dd3" page="6">
+                <profile name="Life Bane Blade" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="ebd0-258f-2aa2-e63a" publicationId="53f5-3638-a9ce-8dd3" page="6">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains the Multiple Wounds (D3) special rule. Whenever the wielder of this item causes one or more unsaved Wounds during a round of close combat, they regain 1 Wound lost earlier during the game.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The wielder gains the Multiple Wounds (D3) special rule. Whenever the wielder of this item causes one or more unsaved Wounds during a round of close combat, they regain 1 Wound lost earlier during the game.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6730,11 +6799,12 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bfe5-9c1c-2b53-5d1e"/>
               </constraints>
               <profiles>
-                <profile name="Dark Mace of Death" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="4f38-3d4c-cf31-02c9" publicationId="53f5-3638-a9ce-8dd3" page="6">
+                <profile name="Dark Mace of Death" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="4f38-3d4c-cf31-02c9" publicationId="53f5-3638-a9ce-8dd3" page="6">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Close combat attacks made with this weapon have the Killing Blow special rule. In addition, once per game, at the start of the close combat round, the wielder can inflict an automatic Wound on every model in base contact with the Ignores Armour saves special rule.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Close combat attacks made with this weapon have the Killing Blow special rule. In addition, once per game, at the start of the close combat round, the wielder can inflict an automatic Wound on every model in base contact with the Ignores Armour saves special rule.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6759,12 +6829,18 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
                   <modifiers>
                     <modifier type="set" value="Volcanic Hammer" field="annotation"/>
                     <modifier type="append" value="All attacks made with this weapon have the Flaming Attacks special rule. In addition, the wielder may may exchange all of their Attacks to make a special attack. Roll To Hit against the highest enemy Weapon Skill in base contact. If this Attack hits, place the small template anywhere so that it is touching the wielder&apos;s base. Any models that lie underneath the template (friend or foe) suffer a single Strength 3 hit. The model under the template&apos;s central hole instead suffers a single Strength 9 hit with the Multiple Wounds (D3) special rule.
-" field="de63-d6da-efa8-00ac" join=", "/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
             </selectionEntry>
           </selectionEntries>
+          <modifiers>
+            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
+            <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
+          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Talismans" id="0f95-9e9a-afbd-8ce6" hidden="false" sortIndex="3" collapsible="true">
           <constraints>
