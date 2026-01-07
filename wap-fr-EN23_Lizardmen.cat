@@ -1170,9 +1170,18 @@ A Slann who is in base contact with a model with the Guardians special rule is c
               </constraints>
               <rules>
                 <rule name="Ancient" id="5897-4ac0-d392-e1c1" hidden="false">
-                  <description>: The Stegadon gains +1 Strength and the Natural Armour (6+) special rule. However, they suffer -1 Initiative and -1 Attacks.</description>
+                  <description>The Stegadon gains +1 Strength and the Natural Armour (6+) special rule. However, they suffer -1 Initiative and -1 Attacks.</description>
                 </rule>
               </rules>
+              <infoLinks>
+                <infoLink name="Natural Armour" id="cb8f-d09f-8743-c12b" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                  <modifiers>
+                    <modifier type="set" value="Ancient" field="annotation"/>
+                    <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                    <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Sharpened Horns" hidden="false" id="74e2-79d8-a437-5e46" collective="true" sortIndex="2">
               <costs>
@@ -2333,15 +2342,6 @@ Magical Attacks special rule.
               <costs>
                 <cost name="pts" typeId="points" value="40"/>
               </costs>
-              <profiles>
-                <profile name="Hide of the Cold Ones" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="9452-a4b8-5683-a4ea">
-                  <characteristics>
-                    <characteristic name="Combat" typeId="168d-1cc2-66f3-e766"/>
-                    <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca"/>
-                    <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">+1T, Fear, Natural Armour (5+), Stupidity.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditionGroups>
@@ -2354,6 +2354,16 @@ Magical Attacks special rule.
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Natural Armour" id="e1ba-08d7-e54f-355b" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                  <modifiers>
+                    <modifier type="set" value="Hide of the Cold Ones" field="annotation"/>
+                    <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
+                    <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
+                    <modifier type="set" value="+1 Toughness, Fear, Stupidity." field="ff58-91e4-84d7-e6e4"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Sacred Stegadon Helm of Itza" hidden="false" id="1dde-7c3b-6b05-421b" sortIndex="6">
               <costs>
@@ -7184,6 +7194,11 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
                     <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
                     <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
                     <modifier type="set" value="Tehenhauin" field="annotation"/>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="871c-e199-3713-d5b7" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
                   </modifiers>
                 </infoLink>
               </infoLinks>
