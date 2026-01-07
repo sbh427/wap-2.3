@@ -8831,9 +8831,6 @@ Impact Hits roll to wound using the Strength of the model making the Impact Hits
 
 Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
     </rule>
-    <rule id="6b43-9dda-f589-0509" name="Natural Armour (4+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
-    </rule>
     <rule id="8977-b58c-704d-705e" name="Sniper" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
       <description>A model with Sniper can make a special Sniper shot instead of shooting normally (though it can be used in combination with the Multiple Shots rule as normal). A Sniper shot suffers an additional -1 To Hit penalty, in addition to any other modifiers, but can be aimed with great precision. Unless making a Stand and Shoot charge reaction, a model making a Sniper shot can shoot at a different target from the one chosen by their unit. A hit from a Sniper shot is not distributed in the same manner as other shooting attacks. The Sniper can shoot at any model they can see, including characters within a unit. &quot;Look Out Sir!&quot; cannot be used. Sniper cannot be used when firing weapons that use a template.</description>
     </rule>
@@ -9179,9 +9176,6 @@ Impact Hits roll to wound using the Strength of the model making the Impact Hits
 
 Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
     </rule>
-    <rule id="306d-711a-1300-587f" name="Natural Armour (5+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
-    </rule>
     <rule id="33f1-4ddd-d26b-281a" name="Random Attacks (D6+2)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
     </rule>
@@ -9221,9 +9215,6 @@ If a character with Magic Resistance joins a unit, all models in the unit benefi
     </rule>
     <rule id="c270-3956-9b64-b587" name="Strider" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
       <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
-    </rule>
-    <rule id="fa69-07b8-fdc1-3ac9" name="Natural Armour (6+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>The hide of some creatures forms a kind of natural armour that grants the model an armour save. The resulting armour save will be stated in brackets. Natural Armour can be combined with other armour as normal.</description>
     </rule>
     <rule id="8d09-c701-2658-67e8" name="Strider (Forest)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
       <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
@@ -11913,4 +11904,9 @@ Magic phase.</characteristic>
       </profiles>
     </infoGroup>
   </sharedInfoGroups>
+  <rules>
+    <rule name="Natural Armour" id="9c79-58c1-b63c-684b" hidden="false">
+      <description>Models with this rule have an armour save value equal to the number in the brackets. Natural Armour can be combined with other armour as normal, including other sources of Natural Armour.</description>
+    </rule>
+  </rules>
 </gameSystem>

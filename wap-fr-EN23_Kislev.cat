@@ -1696,7 +1696,6 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Natural Armour (5+)" id="d18d-0da0-98ca-f21c" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
         <infoLink name="By Our Blood" id="2f59-2319-4df3-b4d3" hidden="false" type="rule" targetId="5765-1b97-adb2-96ec"/>
         <infoLink name="Fear" id="4198-7e52-c881-9b29" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
         <infoLink name="Fury of Ursun" id="8a5f-e259-aefc-696b" hidden="false" type="rule" targetId="a542-14a4-74b7-e182"/>
@@ -1730,6 +1729,15 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="e56f-e70e-a8e5-9427-min"/>
             <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="e56f-e70e-a8e5-9427-max"/>
           </constraints>
+          <infoLinks>
+            <infoLink name="Natural Armour" id="eceb-7a37-bfa0-8c22" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+              <modifiers>
+                <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
+                <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
+                <modifier type="set" value="War Bear" field="annotation"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
@@ -3612,13 +3620,15 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
           <infoLinks>
             <infoLink name="War Bear" id="dfb2-c458-c270-8a07" hidden="false" type="profile" targetId="b0b8-caf7-bf1c-c9b2"/>
             <infoLink name="Mixed Unit" id="5e31-0482-fdd4-d9b1" hidden="false" type="rule" targetId="e00a-3a09-9b67-e994"/>
-            <infoLink name="Natural Armour (5+)" id="b179-d6b5-756e-ee64" hidden="false" type="rule" targetId="306d-711a-1300-587f">
-              <modifiers>
-                <modifier type="set" value="War Bears only" field="annotation"/>
-              </modifiers>
-            </infoLink>
             <infoLink name="By Our Blood" id="ea3a-6f71-566c-5e70" hidden="false" type="rule" targetId="5765-1b97-adb2-96ec"/>
             <infoLink name="Fury of Ursun" id="3f59-6369-988e-ccab" hidden="false" type="rule" targetId="a542-14a4-74b7-e182"/>
+            <infoLink name="Natural Armour" id="c0d5-23d2-f8d5-d061" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+              <modifiers>
+                <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
+                <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
+                <modifier type="set" value="War Bear" field="annotation"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <constraints>
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="cb54-e243-2509-1755"/>
@@ -5222,6 +5232,13 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
                 <selectionEntry type="model" import="true" name="War Bear" hidden="false" id="3bcd-8ba6-121e-607b" subType="mount" collective="true">
                   <infoLinks>
                     <infoLink name="War Bear" id="ee30-7e55-3137-e85a" hidden="false" type="profile" targetId="b0b8-caf7-bf1c-c9b2"/>
+                    <infoLink name="Natural Armour" id="89d8-a1d0-0643-9726" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                      <modifiers>
+                        <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
+                        <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
+                        <modifier type="set" value="War Bear" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6765-fe82-ab26-6ed8-min"/>
@@ -5255,7 +5272,6 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Natural Armour (5+)" id="2481-2397-80d2-d0e3" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
             <infoLink name="By Our Blood" id="8932-0274-54be-293e" hidden="false" type="rule" targetId="5765-1b97-adb2-96ec"/>
             <infoLink name="Fury of Ursun" id="5453-564a-2df8-be55" hidden="false" type="rule" targetId="a542-14a4-74b7-e182"/>
             <infoLink name="Hatred (Chaos)" id="6d9d-7539-6189-bec9" hidden="false" type="rule" targetId="7366-8bcf-f881-7f30"/>
@@ -5456,29 +5472,24 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
           <categoryLinks>
             <categoryLink name="Mount" hidden="false" id="091d-5eb0-bf86-b8a5" targetId="8b8a-34b1-ed30-df11" primary="false"/>
           </categoryLinks>
-          <profiles>
-            <profile name="War Bear" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="2927-0d99-888c-c5aa">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Animal)</characteristic>
-              </characteristics>
-              <modifiers>
-                <modifier type="set" value="-" field="09ad-18df-607b-1215"/>
-              </modifiers>
-            </profile>
-          </profiles>
           <constraints>
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="e5d4-182d-7251-ef33"/>
             <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="d986-787c-4702-1465"/>
           </constraints>
+          <infoLinks>
+            <infoLink name="War Bear" id="0897-3c34-4850-97ac" hidden="false" type="profile" targetId="b0b8-caf7-bf1c-c9b2">
+              <modifiers>
+                <modifier type="set" value="-" field="09ad-18df-607b-1215"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Natural Armour" id="a341-c1d2-8f07-7b53" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+              <modifiers>
+                <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
+                <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
+                <modifier type="set" value="War Bear" field="annotation"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <profiles>
@@ -5498,7 +5509,6 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Natural Armour (5+)" id="7a65-cb24-6da9-44db" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
         <infoLink name="By Our Blood" id="6f25-5aaf-f385-da4a" hidden="false" type="rule" targetId="5765-1b97-adb2-96ec"/>
         <infoLink name="Fear" id="d3dc-7ab6-21de-e0e7" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
         <infoLink name="Fury of Ursun" id="5f62-284f-08e4-68b1" hidden="false" type="rule" targetId="a542-14a4-74b7-e182"/>
@@ -5535,12 +5545,18 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Natural Armour (4+)" id="8aec-3fa5-1d4c-202c" hidden="false" type="rule" targetId="6b43-9dda-f589-0509"/>
         <infoLink name="Animated Construct" id="9399-5a94-74e0-fe89" hidden="false" type="rule" targetId="738b-aca4-740c-e425"/>
         <infoLink name="Fury of Ursun" id="e782-09b3-97ad-c9fb" hidden="false" type="rule" targetId="a542-14a4-74b7-e182"/>
         <infoLink name="Ice Attacks" id="4a64-530f-d492-c909" hidden="false" type="rule" targetId="fa30-0410-43da-e1d7"/>
         <infoLink name="Magical Attacks" id="6434-f71a-c3ab-4963" hidden="false" type="rule" targetId="03db-d81f-f264-84b8"/>
         <infoLink name="Elemental Breath" id="ccc9-c578-a328-f8e1" hidden="false" type="profile" targetId="46cd-5175-7e43-8218"/>
+        <infoLink name="Natural Armour" id="09d9-c5b0-6ac7-e6db" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Elemental Bear" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="9083-5ff8-3872-aeb8" targetId="0eb4-f376-7725-b05b" primary="true"/>
