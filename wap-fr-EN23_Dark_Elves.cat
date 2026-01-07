@@ -728,6 +728,7 @@
               </constraints>
               <infoLinks>
                 <infoLink name="Scourgerunner Chariot" id="d16d-33ae-9323-48b3" hidden="false" targetId="01be-c14f-c557-80a6" type="profile"/>
+                <infoLink name="Scourgerunner Chariot" id="b5b3-7613-3825-7ed6" hidden="false" targetId="826b-a598-0537-72c6" type="profile"/>
               </infoLinks>
               <categoryLinks>
                 <categoryLink name="Mount" hidden="false" id="351f-da6a-aa87-9749" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -2204,8 +2205,9 @@
     </selectionEntry>
     <selectionEntry id="a2aa-004a-2195-0252" name="Cold One Chariot" hidden="false" collective="false" import="true" type="model" sortIndex="36">
       <infoLinks>
-        <infoLink name="Cold One Chariot" id="5820-2308-edb1-3590" hidden="false" targetId="5786-6e38-740c-54a8" type="profile"/>
+        <infoLink name="Cold One Chariot" id="5820-2308-edb1-3590" hidden="false" targetId="f785-81b0-fc74-576a" type="profile"/>
         <infoLink name="Scythes" id="c72a-0d23-f0b5-e1fa" hidden="false" targetId="d896-d52f-cc64-ab43" type="rule"/>
+        <infoLink name="Cold One Chariot" id="9698-c21f-79e8-3190" hidden="false" targetId="5786-6e38-740c-54a8" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8fae-1e30-a717-bbfe" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -2249,6 +2251,7 @@
     <selectionEntry id="2c5a-fd8d-76f0-d0f2" name="Scourgerunner Chariot" hidden="false" collective="false" import="true" type="model" sortIndex="37">
       <infoLinks>
         <infoLink name="Scourgerunner Chariot" id="9d98-e052-12f3-b6d0" hidden="false" targetId="01be-c14f-c557-80a6" type="profile"/>
+        <infoLink name="Scourgerunner Chariot" id="cd0c-e472-332b-6f19" hidden="false" targetId="826b-a598-0537-72c6" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="fe54-b535-518e-2dee" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -5113,13 +5116,18 @@
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Sea Dragon Cloak" hidden="false" id="60a6-0928-4fde-509c" collective="true">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c7cf-5d05-b6bb-5700" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c7cf-5d05-b6bb-5700" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <infoLinks>
-        <infoLink name="Sea Dragon Cloak" id="b840-66f9-177d-da5a" hidden="false" type="profile" targetId="8e5f-dcc4-54de-81e6"/>
+        <infoLink name="Natural Armour" id="0537-df61-3c67-d874" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="Sea Dragon Cloak" field="annotation"/>
+            <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Deathrain Crossbow" hidden="false" id="f145-882a-3705-d674" collective="true">
@@ -5647,6 +5655,7 @@
       <infoLinks>
         <infoLink name="Cold One Chariot" id="6bf4-98ac-e299-1fdf" hidden="false" targetId="5786-6e38-740c-54a8" type="profile"/>
         <infoLink name="Scythes" id="f65c-3e43-f286-3b47" hidden="false" targetId="d896-d52f-cc64-ab43" type="rule"/>
+        <infoLink name="Cold One Chariot" id="c6fe-4e82-a50a-cdb3" hidden="false" targetId="f785-81b0-fc74-576a" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="1444-90ec-6209-67c5" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -5739,6 +5748,23 @@
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f116-6736-7629-f23a"/>
               </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" value="0" field="409c-38d4-353b-134c"/>
+                    <modifier type="set" value="0" field="f116-6736-7629-f23a"/>
+                    <modifier type="set" value="true" field="hidden"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -5833,14 +5859,27 @@
           <entryLinks>
             <entryLink import="true" name="Sea Dragon Cloak" hidden="false" id="4773-cb8f-ce4c-62e8" type="selectionEntry" targetId="60a6-0928-4fde-509c">
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bb10-2740-9fc4-888c"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bb10-2740-9fc4-888c" automatic="true"/>
               </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" value="0" field="c7cf-5d05-b6bb-5700"/>
+                    <modifier type="set" value="0" field="bb10-2740-9fc4-888c"/>
+                    <modifier type="set" value="true" field="hidden"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
           </entryLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e397-84f4-cc8d-c958-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e397-84f4-cc8d-c958-max"/>
-          </constraints>
         </entryLink>
       </entryLinks>
       <categoryLinks>
@@ -8190,18 +8229,11 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Dragon)</characteristic>
       </characteristics>
     </profile>
-    <profile id="5786-6e38-740c-54a8" name="Cold One Chariot" publicationId="9e23-79cb-pubN76150" page="132" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="5786-6e38-740c-54a8" name="Cold One Chariot" publicationId="9e23-79cb-pubN76150" page="132" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save">
       <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour save 6+)</characteristic>
+        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
       </characteristics>
     </profile>
     <profile id="d385-c1d8-b4ef-4cea" name="Knight Charioteer" publicationId="9e23-79cb-pubN76150" page="132" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
@@ -8271,7 +8303,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour save 6+)</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot</characteristic>
       </characteristics>
     </profile>
     <profile id="1300-6687-1dac-a66b" name="Beastmaster Apprentice" publicationId="9e23-79cb-pubN76150" page="148" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
@@ -8538,6 +8570,27 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Combat" typeId="168d-1cc2-66f3-e766"/>
         <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca"/>
         <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">The Wearer has the Natural Armour (5+) special rule against missile attacks.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Cold One Chariot" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f785-81b0-fc74-576a" publicationId="9e23-79cb-pubN76150" page="132">
+      <characteristics>
+        <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+        <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
+        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+        <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
+        <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
+        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="826b-a598-0537-72c6" name="Scourgerunner Chariot" publicationId="9e23-79cb-pubN76150" page="118" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save">
+      <characteristics>
+        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
       </characteristics>
     </profile>
   </sharedProfiles>

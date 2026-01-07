@@ -762,6 +762,7 @@
       <infoLinks>
         <infoLink id="4623-d3e9-e7ef-9239" name="Marauder Chariot" hidden="false" targetId="f54b-d34d-bb44-2e9c" type="profile"/>
         <infoLink id="c351-0012-a36d-fae1" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
+        <infoLink id="1433-912f-cc81-6797" name="Marauder Chariot" hidden="false" targetId="d2bb-b35b-cea8-1242" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="2a73-5e0c-1fe0-0d8f" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="true"/>
@@ -10280,51 +10281,26 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="edcc-1ab2-17ee-bae7" automatic="true"/>
                   </constraints>
-                  <modifiers>
-                    <modifier type="set" value="0" field="edcc-1ab2-17ee-bae7">
+                  <modifierGroups>
+                    <modifierGroup type="and">
                       <conditionGroups>
                         <conditionGroup type="or">
                           <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
-                    </modifier>
-                    <modifier type="set" value="0" field="409c-38d4-353b-134c">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                    <modifier type="set" value="true" field="hidden">
-                      <conditionGroups>
-                        <conditionGroup type="or">
-                          <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </modifier>
-                  </modifiers>
+                      <modifiers>
+                        <modifier type="set" value="0" field="409c-38d4-353b-134c"/>
+                        <modifier type="set" value="0" field="edcc-1ab2-17ee-bae7"/>
+                        <modifier type="set" value="true" field="hidden"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
                 </entryLink>
               </entryLinks>
               <modifiers>
-                <modifier type="set" value="0" field="71c5-9037-5bd4-fae9">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
                 <modifier type="set" value="2" field="f5b7-0be5-74d6-45b2"/>
               </modifiers>
               <selectionEntries>
@@ -10338,18 +10314,22 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                   <costs>
                     <cost name="pts" typeId="points" value="8"/>
                   </costs>
-                  <modifiers>
-                    <modifier type="set" value="true" field="hidden">
+                  <modifierGroups>
+                    <modifierGroup type="and">
                       <conditionGroups>
                         <conditionGroup type="or">
                           <conditions>
-                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d38a-73da-883b-bab9" shared="true"/>
-                            <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="d280-b7df-c185-2ba5" shared="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="true"/>
+                            <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
                           </conditions>
                         </conditionGroup>
                       </conditionGroups>
-                    </modifier>
-                  </modifiers>
+                      <modifiers>
+                        <modifier type="set" value="0" field="88f5-87af-8c00-6b7c"/>
+                        <modifier type="set" value="true" field="hidden"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
                 </selectionEntry>
               </selectionEntries>
             </entryLink>
@@ -10411,7 +10391,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
             <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour save 6+)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="decrement" value="2" field="09ad-18df-607b-1215">
@@ -10420,6 +10400,13 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               </conditions>
             </modifier>
           </modifiers>
+        </profile>
+        <profile name="War Chariot" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="3496-849a-b486-be77" publicationId="1a01-044f-047b-618f" page="178">
+          <characteristics>
+            <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+            <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
+          </characteristics>
         </profile>
       </profiles>
     </selectionEntry>
@@ -10503,6 +10490,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
       <infoLinks>
         <infoLink name="Marauder Chariot" id="701b-ee16-bb24-e484" hidden="false" targetId="f54b-d34d-bb44-2e9c" type="profile"/>
         <infoLink name="Will of Chaos" id="c7a6-9b9b-b098-9fd4" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
+        <infoLink name="Marauder Chariot" id="c7c5-2def-4496-43f5" hidden="false" targetId="d2bb-b35b-cea8-1242" type="profile"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Scythes" hidden="false" id="e6bd-6dbd-4fc9-9f23" type="selectionEntry" targetId="865f-edfe-e4fd-d28e">
@@ -15395,7 +15383,7 @@ Tamurkhan&apos;s power cannot save him if he is destroyed by an attack which cau
         <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour save 6+)</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot</characteristic>
       </characteristics>
     </profile>
     <profile id="cd60-020c-c3f2-a5fa" name="Warshrine" publicationId="1a01-044f-047b-618f" page="193" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
@@ -15443,6 +15431,13 @@ Tamurkhan&apos;s power cannot save him if he is destroyed by an attack which cau
     <profile id="be7d-184a-0c57-42b2" name="Nurgle&apos;s Rot" publicationId="1a01-044f-047b-618f" page="245" hidden="false" typeId="49dc-2fd8-b942-dbc2" typeName="Gift of the Gods">
       <characteristics>
         <characteristic name="Effect" typeId="7ab4-c2c7-7e2c-9cb0">At the start of every close combat phase, every enemy model in base contact with the character suffers a single Strength 1 hit with the Ignores Armour Saves special rule.</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="d2bb-b35b-cea8-1242" name="Marauder Chariot" publicationId="1a01-044f-047b-618f" page="174" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save">
+      <characteristics>
+        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
       </characteristics>
     </profile>
   </sharedProfiles>
