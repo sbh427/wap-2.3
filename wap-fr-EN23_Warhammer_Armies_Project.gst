@@ -50,7 +50,7 @@
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
   </costTypes>
   <profileTypes>
-    <profileType id="d9ed-a507-0102-d498" name="Model">
+    <profileType id="d9ed-a507-0102-d498" name="Model" sortIndex="1">
       <characteristicTypes>
         <characteristicType id="09ad-18df-607b-1215" name="M"/>
         <characteristicType id="f049-8a65-9c04-1559" name="WS"/>
@@ -159,7 +159,7 @@
         <characteristicType name="Result" id="686b-22d8-d67f-02eb"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Ward Saves" id="54b0-94fc-eb1e-8e37" hidden="false">
+    <profileType name="Ward Saves" id="54b0-94fc-eb1e-8e37" hidden="false" sortIndex="6">
       <characteristicTypes>
         <characteristicType name="Type" id="31b2-f73f-865d-f538" kind="annotation"/>
         <characteristicType name="Value" id="bdf9-d73e-e13b-b0ce" kind="annotation"/>

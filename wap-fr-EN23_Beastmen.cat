@@ -877,6 +877,7 @@
     <selectionEntry id="c024-b7ac-3f8e-accc" name="Tuskgor Chariot" hidden="false" collective="false" import="true" type="model" sortIndex="27">
       <infoLinks>
         <infoLink id="7ea4-97ab-5f90-c55a" name="Tuskgor Chariot" hidden="false" targetId="0dff-73c8-3bc1-ada1" type="profile"/>
+        <infoLink id="0f7f-4037-7723-5f50" name="Tuskgor Chariot" hidden="false" targetId="babb-59ad-29a4-532a" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="229d-35eb-fb12-2a75" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="true"/>
@@ -1255,8 +1256,9 @@
     </selectionEntry>
     <selectionEntry id="694b-1001-72eb-aa07" name="Razorgor Chariot" hidden="false" collective="false" import="true" type="model" sortIndex="34">
       <infoLinks>
-        <infoLink id="250d-02f0-9ef3-1d7b" name="Razorgor Chariot" hidden="false" targetId="060d-87a3-6e9d-70f0" type="profile"/>
+        <infoLink id="250d-02f0-9ef3-1d7b" name="Razorgor Chariot" hidden="false" targetId="0846-0af4-8f97-2a15" type="profile"/>
         <infoLink id="7fc7-db36-a738-e64d" name="Fear" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
+        <infoLink id="1896-6b0f-b2ff-3835" name="Razorgor Chariot" hidden="false" targetId="060d-87a3-6e9d-70f0" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a6b0-d103-3a0d-0196" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -3879,8 +3881,9 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8e3a-12cf-045e-fa61" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Razorgor Chariot" id="a41a-0094-2a97-4d2a" hidden="false" targetId="060d-87a3-6e9d-70f0" type="profile"/>
+        <infoLink name="Razorgor Chariot" id="a41a-0094-2a97-4d2a" hidden="false" targetId="0846-0af4-8f97-2a15" type="profile"/>
         <infoLink name="Fear" id="8aba-d6d3-05af-5ea9" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
+        <infoLink name="Razorgor Chariot" id="cb81-eb6c-3023-3a25" hidden="false" targetId="060d-87a3-6e9d-70f0" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="b1XZ-EqkF-2ID6-XtWs" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -3901,6 +3904,7 @@
       </constraints>
       <infoLinks>
         <infoLink name="Tuskgor Chariot" id="0c25-23ea-6812-dc62" hidden="false" targetId="0dff-73c8-3bc1-ada1" type="profile"/>
+        <infoLink name="Tuskgor Chariot" id="e162-e672-ef76-04cb" hidden="false" targetId="babb-59ad-29a4-532a" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="NWJS-k9fC-DF53-xjPp" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -3928,8 +3932,25 @@
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="ff3d-2ed7-dc32-8a65" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d5fd-c81d-da8b-8cea"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d5fd-c81d-da8b-8cea" automatic="true"/>
               </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" value="0" field="d5fd-c81d-da8b-8cea"/>
+                    <modifier type="set" value="0" field="bd12-6b92-8aca-f4e2"/>
+                    <modifier type="set" value="true" field="hidden"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -5894,7 +5915,7 @@ Weapons or attacks that do not use Ballistic Skill may only fire on the roll of
         <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour Save 6+)</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot</characteristic>
       </characteristics>
     </profile>
     <profile id="00d0-3973-6454-616a" name="Tuskgor" publicationId="9e23-79cb-pubN71963" page="25" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
@@ -5922,7 +5943,7 @@ Weapons or attacks that do not use Ballistic Skill may only fire on the roll of
         <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour Save 6+)</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot</characteristic>
       </characteristics>
     </profile>
     <profile id="5273-0880-563d-0efe" name="Ramhorn" publicationId="9e23-79cb-pubN71963" page="97" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
@@ -6084,6 +6105,20 @@ Weapons or attacks that do not use Ballistic Skill may only fire on the roll of
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Beastmen, Minotaur)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Tuskgor Chariot" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="babb-59ad-29a4-532a">
+      <characteristics>
+        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
+      </characteristics>
+    </profile>
+    <profile name="Razorgor Chariot" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="0846-0af4-8f97-2a15">
+      <characteristics>
+        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
       </characteristics>
     </profile>
   </sharedProfiles>
