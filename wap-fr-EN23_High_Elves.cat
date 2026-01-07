@@ -39,6 +39,13 @@
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, High Elf)</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="increment" value="1" field="bfa2-d38d-7c93-d3f0">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f8c5-73a3-ee30-b5e8" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
@@ -75,18 +82,80 @@
           <entryLinks>
             <entryLink import="true" name="Hand Weapon" hidden="false" id="ed2b-d000-6f38-7d32" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
               <constraints>
-                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="39f1-67b9-f143-9d86"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="39f1-67b9-f143-9d86"/>
               </constraints>
               <modifiers>
                 <modifier type="set" value="0" field="0e5a-c680-7fa4-685d">
                   <conditionGroups>
                     <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c1b2-9348-f734-a3ba" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="cf83-d864-2305-a7a8" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e033-45ca-515c-8f74" shared="true" includeChildSelections="true"/>
-                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="f271-7843-c775-1191" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="f133-21f2-c10f-755e" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c1b2-9348-f734-a3ba" shared="true" includeChildSelections="true"/>
+                                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="cf83-d864-2305-a7a8" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e033-45ca-515c-8f74" shared="true" includeChildSelections="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="c9a7-c0b1-458d-f08c" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="0" field="39f1-67b9-f143-9d86">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="f271-7843-c775-1191" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="f133-21f2-c10f-755e" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c1b2-9348-f734-a3ba" shared="true" includeChildSelections="true"/>
+                                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="cf83-d864-2305-a7a8" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e033-45ca-515c-8f74" shared="true" includeChildSelections="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="c9a7-c0b1-458d-f08c" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="cf83-d864-2305-a7a8" shared="true" includeChildSelections="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="c1b2-9348-f734-a3ba" shared="true" includeChildSelections="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="e033-45ca-515c-8f74" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -108,6 +177,14 @@
                         <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="cf83-d864-2305-a7a8" shared="true" includeChildSelections="true"/>
                         <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e033-45ca-515c-8f74" shared="true" includeChildSelections="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f271-7843-c775-1191" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -151,6 +228,14 @@
                         <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="cf83-d864-2305-a7a8" shared="true" includeChildSelections="true"/>
                         <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e033-45ca-515c-8f74" shared="true" includeChildSelections="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f271-7843-c775-1191" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -183,7 +268,7 @@
                 <cost name="pts" typeId="points" value="8"/>
               </costs>
               <constraints>
-                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="1a5d-5180-0ded-fecb"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1a5d-5180-0ded-fecb" automatic="false"/>
               </constraints>
               <modifiers>
                 <modifier type="set" value="0" field="86ad-a362-8a86-339c">
@@ -194,13 +279,33 @@
                         <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c1b2-9348-f734-a3ba" shared="true" includeChildSelections="true"/>
                         <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="cf83-d864-2305-a7a8" shared="true" includeChildSelections="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e033-45ca-515c-8f74" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c9a7-c0b1-458d-f08c" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" value="1" field="1a5d-5180-0ded-fecb">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e033-45ca-515c-8f74" shared="true" includeChildSelections="true"/>
-                  </conditions>
+                <modifier type="set" value="0" field="1a5d-5180-0ded-fecb">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="e033-45ca-515c-8f74" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e033-45ca-515c-8f74" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c9a7-c0b1-458d-f08c" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </entryLink>
@@ -209,7 +314,7 @@
                 <cost name="pts" typeId="points" value="12"/>
               </costs>
               <constraints>
-                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4e16-cbdd-648a-2c67"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4e16-cbdd-648a-2c67" automatic="false"/>
               </constraints>
               <modifiers>
                 <modifier type="set" value="0" field="4fc2-f1e9-73bb-48d6">
@@ -219,16 +324,48 @@
                         <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
                         <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e033-45ca-515c-8f74" shared="true" includeChildSelections="true"/>
                       </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c1b2-9348-f734-a3ba" shared="true" includeChildSelections="true"/>
+                                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="cf83-d864-2305-a7a8" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f133-21f2-c10f-755e" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" value="1" field="4e16-cbdd-648a-2c67">
+                <modifier type="set" value="0" field="4e16-cbdd-648a-2c67">
                   <conditionGroups>
                     <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c1b2-9348-f734-a3ba" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="cf83-d864-2305-a7a8" shared="true" includeChildSelections="true"/>
-                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c1b2-9348-f734-a3ba" shared="true" includeChildSelections="true"/>
+                                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="cf83-d864-2305-a7a8" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f133-21f2-c10f-755e" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="c1b2-9348-f734-a3ba" shared="true" includeChildSelections="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="cf83-d864-2305-a7a8" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
@@ -268,9 +405,16 @@
           </constraints>
           <modifiers>
             <modifier type="set" value="1" field="d789-e6e9-e4ac-a181">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="9715-efdc-d04e-a790" shared="true" includeChildSelections="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="9715-efdc-d04e-a790" shared="true" includeChildSelections="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="df2f-d0cf-fd58-0f42" shared="true" includeChildSelections="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="c721-d406-7681-26a4" shared="true" includeChildSelections="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="932d-869e-b838-4bf2" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </entryLink>
@@ -363,9 +507,22 @@
               </constraints>
               <modifiers>
                 <modifier type="set" value="1" field="6e78-8512-8158-2d33">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="3450-8c92-7654-21df" shared="true" includeChildSelections="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="3450-8c92-7654-21df" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="5793-caf8-2fab-c8b3" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="f3f6-28e3-aad1-5736" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="582f-5b79-4041-d94c" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="98a3-a48b-81b8-2aee" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="8ceb-acc7-6436-3aef" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="eea1-981c-1270-d7ba" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="dc0f-7c28-57c7-7a29" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="d125-45e5-61e6-0926" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="9a5c-0e4d-2974-23d9" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </entryLink>
@@ -1054,6 +1211,9 @@
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="89b3-0010-9359-8003"/>
+              </constraints>
             </entryLink>
             <entryLink import="true" name="Tiranoc Chariot" hidden="false" id="8a38-e3f2-7b94-097f" type="selectionEntry" targetId="6f07-71ce-ab5c-9ec9" sortIndex="3">
               <costs>
@@ -2329,7 +2489,7 @@
                 <conditionGroup type="or">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="force" childId="7e55-0010-5f23-b5e9" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="force" childId="829d-509a-2140-c9d7" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="force" childId="0787-4586-e857-9188" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -5274,6 +5434,15 @@
                     </entryLink>
                   </entryLinks>
                 </entryLink>
+                <entryLink import="true" name="70. Mount" hidden="false" id="7189-1a32-4a13-beaa" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+                  <entryLinks>
+                    <entryLink import="true" name="Lion Chariot of Chrace" hidden="false" id="0787-4586-e857-9188" type="selectionEntry" targetId="ecb7-3add-14ec-d6f7">
+                      <costs>
+                        <cost name="pts" typeId="points" value="95"/>
+                      </costs>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
               </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="180"/>
@@ -5352,7 +5521,7 @@
                     <conditionGroup type="and">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="roster" childId="7e55-0010-5f23-b5e9" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="829d-509a-2140-c9d7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="0787-4586-e857-9188" shared="true" includeChildSelections="true" includeChildForces="true"/>
                         <condition type="equalTo" value="0" field="selections" scope="roster" childId="f972-4309-8531-6623" shared="true" includeChildSelections="true" includeChildForces="true"/>
                       </conditions>
                     </conditionGroup>
@@ -7264,13 +7433,6 @@
           <costs>
             <cost name="pts" typeId="points" value="60"/>
           </costs>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </selectionEntry>
         <selectionEntry id="932d-869e-b838-4bf2" name="The Reaver Bow" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
@@ -7295,11 +7457,6 @@
                 <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="5c61-d724-f85e-10dd" shared="true"/>
               </conditions>
             </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry id="acd2-ca1a-99f8-b896" name="The Blade of Leaping Gold" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
@@ -7319,13 +7476,6 @@
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </selectionEntry>
         <selectionEntry id="d251-348f-5ad5-c356" name="Blade of the Phoenix" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
           <constraints>
@@ -7344,13 +7494,6 @@
           <costs>
             <cost name="pts" typeId="points" value="50"/>
           </costs>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </selectionEntry>
         <selectionEntry id="e070-7690-e649-925c" name="Blade of Darting Steel" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
@@ -7369,13 +7512,6 @@
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </selectionEntry>
         <selectionEntry id="f133-21f2-c10f-755e" name="Sword of Hoeth" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
@@ -7397,11 +7533,6 @@
             <modifier type="set" value="true" field="hidden">
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="abcc-4aa7-4989-7189" shared="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -7429,11 +7560,6 @@
                 <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="5c61-d724-f85e-10dd" shared="true"/>
               </conditions>
             </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry id="df2f-d0cf-fd58-0f42" name="Bow of Tor Alessi" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
@@ -7458,11 +7584,6 @@
                 <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="5c61-d724-f85e-10dd" shared="true"/>
               </conditions>
             </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry id="d104-a64d-4e91-825f" name="Deathsinger" hidden="false" collective="false" import="true" type="upgrade" sortIndex="15">
@@ -7482,13 +7603,6 @@
           <costs>
             <cost name="pts" typeId="points" value="65"/>
           </costs>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </selectionEntry>
         <selectionEntry id="9338-479d-30f6-21aa" name="Bow of the Seafarer" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
           <constraints>
@@ -7499,15 +7613,10 @@
             <cost name="pts" typeId="points" value="45"/>
           </costs>
           <modifiers>
-            <modifier type="add" value="{this} can only be chosen with Elven Honour &quot;Lothern Sea Helm&quot;" field="error">
-              <conditionGroups>
-                <conditionGroup type="and">
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="9338-479d-30f6-21aa" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
+              </conditions>
             </modifier>
           </modifiers>
           <infoLinks>
@@ -7582,13 +7691,6 @@
           <costs>
             <cost name="pts" typeId="points" value="35"/>
           </costs>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </selectionEntry>
         <selectionEntry id="c9a7-c0b1-458d-f08c" name="Cloudcleaver" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
           <constraints>
@@ -7602,11 +7704,6 @@
             <modifier type="set" value="true" field="hidden">
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="0b0c-acf4-8a6a-dd72" shared="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -7624,15 +7721,6 @@
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a9a9-8238-5027-2f9d" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ce12-0e1b-52dd-0be0" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="c719-c8dd-a02a-0c31" name="Dragonblade Lance" publicationId="9e23-79cb-pubN77092" page="6" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Heavy lance. During turns in which the wielder of the Dragonblade Lance charges, it automatically Hits all models in one file that is in base contact rather than fighting normally. Hits are resolved as that from a Bolt Thrower, except the Strength does not decrease for each rank.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
@@ -7650,11 +7738,6 @@
             <modifier type="set" value="true" field="hidden">
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="b906-254a-7949-9e08" shared="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
           </modifiers>
@@ -7684,25 +7767,10 @@
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink id="71f0-a6fb-ce17-672a" name="Common Magic Weapons" hidden="false" collective="false" import="true" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="16" flatten="true">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </entryLink>
+        <entryLink id="71f0-a6fb-ce17-672a" name="Common Magic Weapons" hidden="false" collective="false" import="true" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="16" flatten="true"/>
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="e3e7-a3bf-6af1-8cf1" name="Talismans" hidden="false" collective="false" import="true" collapsible="true" sortIndex="4">
@@ -8054,7 +8122,18 @@ Strength penalty.</characteristic>
         <selectionEntry type="upgrade" import="true" name="Bladelord" hidden="false" id="c1b2-9348-f734-a3ba" sortIndex="4">
           <rules>
             <rule name="Bladelord" id="707a-1268-5754-a859" hidden="false" publicationId="9e23-79cb-pubN77092" page="5">
-              <description>Model on foot only. The model must take a great weapon. The model gains the Killing Blow and Swordmaster special rules. </description>
+              <description>The model gains the Killing Blow and Swordmaster special rules. </description>
+              <modifiers>
+                <modifier type="prepend" value="Model on foot only. The model must take a great weapon." field="description" join=" ">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="4fe9-253b-e8ac-0d2a" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </rule>
           </rules>
           <costs>
@@ -8067,11 +8146,42 @@ Strength penalty.</characteristic>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4c81-0024-ad81-dbe9"/>
           </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.9091-1b90-959d-6e7a" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.7f96-7550-b37f-06a1" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.e070-7690-e649-925c" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.acd2-ca1a-99f8-b896" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.6bb2-2d6b-c609-63e8" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.f271-7843-c775-1191" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.c9a7-c0b1-458d-f08c" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.d251-348f-5ad5-c356" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.191c-b00d-7833-42fa" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.d104-a64d-4e91-825f" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.6820-41cc-94f6-87c1" scope="root-entry"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="c1b2-9348-f734-a3ba" shared="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Chracian Hunter" hidden="false" id="cf83-d864-2305-a7a8" sortIndex="7">
           <rules>
             <rule name="Chracian Hunter" id="cab5-7aec-fc35-fb61" hidden="false" publicationId="9e23-79cb-pubN77092" page="4">
-              <description>Model on foot only. The model gains a lion cloak, the Forest Strider, Multiple Wounds (2) and Stubborn special rules. The model must take a great weapon and may be mounted on a White Lion Chariot (see Special Units), replacing one of the crew, for +95 points. </description>
+              <description>The model gains the Forest Strider, Multiple Wounds (2) and Stubborn special rules. </description>
+              <modifiers>
+                <modifier type="prepend" value="Model on foot only. The model gains a lion cloak. The model must take a great weapon and may be mounted on a White Lion Chariot (see Special Units), replacing one of the crew, for +95 points. " field="description" join=" ">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="7e55-0010-5f23-b5e9" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </rule>
           </rules>
           <costs>
@@ -8085,6 +8195,26 @@ Strength penalty.</characteristic>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ef24-da95-c9c9-8c79"/>
           </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.9091-1b90-959d-6e7a" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.7f96-7550-b37f-06a1" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.e070-7690-e649-925c" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.acd2-ca1a-99f8-b896" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.6bb2-2d6b-c609-63e8" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.f271-7843-c775-1191" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.c9a7-c0b1-458d-f08c" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.d251-348f-5ad5-c356" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.191c-b00d-7833-42fa" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.d104-a64d-4e91-825f" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.6820-41cc-94f6-87c1" scope="root-entry"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="cf83-d864-2305-a7a8" shared="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Cothique Mariner" hidden="false" id="0cb0-8b9c-bffa-082b" sortIndex="8">
           <rules>
@@ -8095,6 +8225,13 @@ Strength penalty.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
+          <modifiers>
+            <modifier type="remove" value="f667-6e97-ec08-38ea" field="category" affects="self.entries.recursive" scope="root-entry">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="0cb0-8b9c-bffa-082b" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d610-3182-4c99-2d96"/>
           </constraints>
@@ -8102,7 +8239,18 @@ Strength penalty.</characteristic>
         <selectionEntry type="upgrade" import="true" name="Shadow Stalker" hidden="false" id="9715-efdc-d04e-a790" sortIndex="9">
           <rules>
             <rule name="Shadow Stalker" id="91ba-3fc6-5d9c-e68f" hidden="false" publicationId="9e23-79cb-pubN77092" page="4">
-              <description>Model on foot only. The model must take an Elven bow or Elven longbow. They cannot take medium or heavy armour. They gain the Loner, Scouts and Sniper special rules. </description>
+              <description>The Model gains the Loner, Scouts and Sniper special rules. </description>
+              <modifiers>
+                <modifier type="prepend" value="Model on foot only. The model must take an Elven bow or Elven longbow. They cannot take medium or heavy armour." field="description" join=" ">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="5644-e37b-fd56-bda8" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </rule>
           </rules>
           <costs>
@@ -8116,11 +8264,33 @@ Strength penalty.</characteristic>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3323-d241-7558-411d"/>
           </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="remove" value="f667-6e97-ec08-38ea" field="category" affects="self.entries.recursive" scope="root-entry"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="9715-efdc-d04e-a790" shared="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Guardian of Yvresse" hidden="false" id="3450-8c92-7654-21df" sortIndex="2">
           <rules>
             <rule name="Guardian of Yvresse" id="5337-bf06-5e5f-99e7" hidden="false" publicationId="9e23-79cb-pubN77092" page="4">
-              <description>Model on foot only. The model must take a shield. If this model is in a unit of Sentinels or Wardens, that unit gains the Fight in Extra Ranks (1) special rule. </description>
+              <description>If this model is in a unit of Sentinels or Wardens, that unit gains the Fight in Extra Ranks (1) special rule. </description>
+              <modifiers>
+                <modifier type="prepend" value="Model on foot only. The model must take a shield." field="description" join=" ">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="7719-6b52-7cbc-7717" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="f9ef-2be0-7721-cfdf" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </rule>
           </rules>
           <costs>
@@ -8134,6 +8304,13 @@ Strength penalty.</characteristic>
           <rules>
             <rule name="Blood of Caledor" id="f138-8feb-1153-4554" hidden="false" publicationId="9e23-79cb-pubN77092" page="5">
               <description>The model gains +1 Attack and dragon armour. The model must be mounted on an Elven Steed with ithilmar barding or a Moon Dragon. Alternatively, if the model is a Lord, they may be mounted on a Star Dragon. If the model is a Hero, they may be mounted on a Sun Dragon. </description>
+              <modifiers>
+                <modifier type="set" value="The model gains +1 Attack (already in profile) and dragon armour. The model must be mounted on an Elven Steed with ithilmar barding or a Moon Dragon. Alternatively, if the model is a Lord, they may be mounted on a Star Dragon. If the model is a Hero, they may be mounted on a Sun Dragon. " field="description">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f8c5-73a3-ee30-b5e8" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </rule>
           </rules>
           <costs>
@@ -8162,6 +8339,13 @@ Strength penalty.</characteristic>
               <description>Model on Elven Steed only. The model may not take heavy armour. The model and any unit of Ellyrian Reavers they join may failed flee, pursuit and charge distances.</description>
             </rule>
           </rules>
+          <modifiers>
+            <modifier type="remove" value="f667-6e97-ec08-38ea" field="category" affects="self.entries.recursive" scope="root-entry">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="f719-2063-240e-d151" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
@@ -8191,12 +8375,43 @@ Strength penalty.</characteristic>
           </constraints>
           <rules>
             <rule name="Anointed of Asuryan" id="bdf4-4cdf-2043-2e65" hidden="false" publicationId="9e23-79cb-pubN77092" page="5">
-              <description>Model on foot only. The model gains a 4+ Ward save and the Immunity (Psychology) special rule. The model must take a polearm and may be mounted on a Flamespyre Phoenix (see Rare Units) for +200 points. In addition, all models in a unit that contains an Anointed of Asuryan may re-roll Ward save results of 1.  </description>
+              <description>The model gains a 4+ Ward save and the Immunity (Psychology) special rule. In addition, all models in a unit that contains an Anointed of Asuryan may re-roll Ward save results of 1.  </description>
+              <modifiers>
+                <modifier type="prepend" value="Model on foot only. The model must take a polearm and may be mounted on a Flamespyre Phoenix (see Rare Units) for +200 points." field="description" join=" ">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="9877-8c82-08cd-cf8b" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </rule>
           </rules>
           <infoLinks>
             <infoLink name="Immunity (Psychology)" id="fa56-c596-d356-43e6" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
           </infoLinks>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.9091-1b90-959d-6e7a" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.7f96-7550-b37f-06a1" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.e070-7690-e649-925c" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.acd2-ca1a-99f8-b896" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.6bb2-2d6b-c609-63e8" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.f271-7843-c775-1191" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.f133-21f2-c10f-755e" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.d251-348f-5ad5-c356" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.191c-b00d-7833-42fa" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.d104-a64d-4e91-825f" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.6820-41cc-94f6-87c1" scope="root-entry"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="e033-45ca-515c-8f74" shared="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Lothern Sea Helm" hidden="false" id="4b4f-e22f-4c7d-dedc" sortIndex="3">
           <costs>
@@ -8207,9 +8422,43 @@ Strength penalty.</characteristic>
           </constraints>
           <rules>
             <rule name="Lothern Sea Helm" id="a9a0-f802-55d9-00c1" hidden="false" publicationId="9e23-79cb-pubN77092" page="5">
-              <description>Model on foot only. The model may take no other weapons besides spear, light lance and Elven bow, and may be mounted on a Lothern Skycutter (see Rare Units), replacing one of the crew, for +65 points. If a unit of Lothern Sea Guard contains one or more Sea Helms, they gain the Quick to Fire special rule when making a Stand &amp; Shoot charge reaction. In addition, the unit may then choose to do a Reform before moving the enemy unit.</description>
+              <description>If a unit of Lothern Sea Guard contains one or more Sea Helms, they gain the Quick to Fire special rule when making a Stand &amp; Shoot charge reaction. In addition, the unit may then choose to do a Reform before moving the enemy unit.</description>
+              <modifiers>
+                <modifier type="prepend" value="Model on foot only. The model may take no other weapons besides spear, light lance and Elven bow, and may be mounted on a Lothern Skycutter (see Rare Units), replacing one of the crew, for +65 points." field="description" join=" ">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="23a8-0085-4d10-0d72" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </rule>
           </rules>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.9091-1b90-959d-6e7a" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.7f96-7550-b37f-06a1" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.e070-7690-e649-925c" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.acd2-ca1a-99f8-b896" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.6bb2-2d6b-c609-63e8" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.c9a7-c0b1-458d-f08c" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.d251-348f-5ad5-c356" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.191c-b00d-7833-42fa" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.d104-a64d-4e91-825f" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.6820-41cc-94f6-87c1" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.df2f-d0cf-fd58-0f42" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.c721-d406-7681-26a4" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.f133-21f2-c10f-755e" scope="root-entry"/>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.932d-869e-b838-4bf2" scope="root-entry"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="4b4f-e22f-4c7d-dedc" shared="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
       </selectionEntries>
       <constraints>
@@ -8388,6 +8637,13 @@ Strength penalty.</characteristic>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="be17-eaf8-cc1f-f16c"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="0" field="points">
+              <conditions>
+                <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9877-8c82-08cd-cf8b" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Flamespyre Phoenix" hidden="false" id="ef24-287d-8092-1464">
           <infoLinks>
@@ -8903,8 +9159,10 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
         <entryLink import="true" name="Elven Steed" hidden="false" id="8c59-c272-5de6-d9d8" type="selectionEntry" targetId="279f-4d0e-d543-064f">
           <constraints>
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="c6d8-0dbe-ca50-5d90-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="c6d8-0dbe-ca50-5d90-max"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="2" field="9559-88dd-7e44-87f4"/>
+          </modifiers>
         </entryLink>
         <entryLink import="true" name="Charioteer" hidden="false" id="6d0d-a85c-f15b-aa6c" type="selectionEntry" targetId="c799-279c-a7f7-0860">
           <constraints>
@@ -9917,10 +10175,17 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
           <modifiers>
             <modifier type="set" value="true" field="hidden">
               <conditionGroups>
-                <conditionGroup type="and">
+                <conditionGroup type="or">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="primary-category" childId="d280-b7df-c185-2ba5" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="primary-category" childId="d38a-73da-883b-bab9" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                   <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="primary-category" childId="d280-b7df-c185-2ba5" shared="true"/>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="primary-category" childId="d38a-73da-883b-bab9" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="6f07-71ce-ab5c-9ec9" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
