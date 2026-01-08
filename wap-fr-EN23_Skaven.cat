@@ -73,7 +73,12 @@
         </entryLink>
         <entryLink import="true" name="65. Lore of Magic" hidden="false" id="51a8-8161-0bc1-2df0" type="selectionEntryGroup" targetId="758f-4e20-95b6-ffa5">
           <entryLinks>
-            <entryLink import="true" name="Lore of Plague &amp; Ruin" hidden="false" id="1339-ffcd-2434-09be" type="selectionEntry" targetId="b697-2a33-b4eb-bfcf"/>
+            <entryLink import="true" name="Lore of Plague &amp; Ruin" hidden="false" id="1339-ffcd-2434-09be" type="selectionEntry" targetId="b697-2a33-b4eb-bfcf">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b8a5-7b40-d318-8299" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c4b8-ddc9-07ad-069d" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="10. Character Options" hidden="false" id="131b-2da5-0b1c-6302" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
@@ -437,6 +442,8 @@
         <categoryLink name="X Whip" hidden="false" id="0512-7f2e-1a3e-2f13" targetId="a2da-ddf0-8a29-a7d1" primary="false"/>
         <categoryLink name="X Things-catcher" hidden="false" id="c201-a943-3d1b-5857" targetId="edab-9646-f035-31e7" primary="false"/>
         <categoryLink name="X Shock-prod" hidden="false" id="653d-6e49-511e-e058" targetId="5fcc-c2a0-3a50-d7d1" primary="false"/>
+        <categoryLink name="Z Armour" hidden="false" id="28e2-281f-44dd-bfdd" targetId="387c-2b7c-0a30-7305" primary="false"/>
+        <categoryLink name="Z Light Armour" hidden="false" id="e496-9e5a-4a9b-760d" targetId="fa51-55d0-00b9-c0e8" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="90. Magic items" hidden="false" id="f2f1-cd91-5996-63d1" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67">
@@ -516,9 +523,13 @@
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="06f3-bcdf-0591-7486" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="132d-d587-96f4-6651" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0026-46a9-6e14-1264"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -642,9 +653,13 @@
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="0e47-f2be-debb-79b1" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="7da4-0c14-1022-271d" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8797-c375-2333-790a"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -950,9 +965,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="98b3-bed8-49c7-7e97" name="Assassin" hidden="false" collective="false" import="true" type="model" sortIndex="10">
-      <constraints>
-        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="2d8f-159b-fe6b-e52a" type="max"/>
-      </constraints>
       <profiles>
         <profile id="f808-2652-91a4-0834" name="Assassin" publicationId="4086-1ccd-f433-39a2" page="23" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
           <characteristics>
@@ -1135,9 +1147,13 @@
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="d040-c98f-e24a-1646" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="d653-3c3e-d50f-7f18" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="09bc-2132-eb25-463d"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -1259,9 +1275,13 @@
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="acf9-6e83-353c-5a50" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="72ec-ea12-a794-f6d3" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cbd2-b5e8-893b-94fd"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -9999,9 +10019,6 @@ allowed.</characteristic>
           <entryLinks>
             <entryLink import="true" name="Common Magic Armour" hidden="false" id="ad15-bc13-dc26-9d14" collective="false" targetId="557c-c8c5-0c0f-d2b3" type="selectionEntryGroup" sortIndex="4" flatten="true"/>
           </entryLinks>
-          <modifiers>
-            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.profiles.Armour Save"/>
-          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Magic Weapons" id="e00e-6c4b-3cf0-6ce9" hidden="false" collective="false" import="true" sortIndex="1" collapsible="true">
           <constraints>
@@ -10397,10 +10414,6 @@ All Toughness tests taken from this weapon suffer a +1 modifier.
           <entryLinks>
             <entryLink import="true" name="Common Magic Weapons" hidden="false" id="7347-6f03-0a44-3b82" collective="false" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="17" flatten="true"/>
           </entryLinks>
-          <modifiers>
-            <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
-            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
-          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Talismans" id="0098-9d97-94f7-91bc" hidden="false" collective="false" import="true" sortIndex="3" collapsible="true">
           <constraints>
@@ -10550,6 +10563,9 @@ All Toughness tests taken from this weapon suffer a +1 modifier.
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.e00e-6c4b-3cf0-6ce9.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.e00e-6c4b-3cf0-6ce9.profiles.Ranged Weapon"/>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.75a7-06a3-6a2d-496c.profiles.Armour Save"/>
       </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="91. Magic Standards" id="cb40-c54f-5ef7-aa93" hidden="false" collective="false" import="true" collapsible="true">

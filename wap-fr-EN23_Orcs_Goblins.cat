@@ -52,11 +52,25 @@
               <costs>
                 <cost name="pts" typeId="points" value="2"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="0" field="bd12-6b92-8aca-f4e2">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="model" childId="a3a2-449e-045e-ff73" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
             <entryLink import="true" name="Medium Armour" hidden="false" id="1cba-6c45-930c-ae8f" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="6"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="0" field="aaab-a191-d887-0e14">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="model" childId="a3a2-449e-045e-ff73" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -164,7 +178,7 @@
                     <cost name="pts" typeId="points" value="0.5"/>
                   </costs>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
+                    <modifier type="set" value="0" field="bd12-6b92-8aca-f4e2">
                       <conditions>
                         <condition type="equalTo" value="0" field="selections" scope="unit" childId="38eb-4cc1-1d80-2116" shared="true" includeChildSelections="true"/>
                       </conditions>
@@ -201,7 +215,7 @@
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
+                    <modifier type="set" value="0" field="86ad-a362-8a86-339c">
                       <conditions>
                         <condition type="equalTo" value="0" field="selections" scope="unit" childId="38eb-4cc1-1d80-2116" shared="true" includeChildSelections="true"/>
                       </conditions>
@@ -227,11 +241,6 @@
                         <condition type="atLeast" value="1" field="selections" scope="parent" childId="0473-857e-78d9-cb7c" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
-                    <modifier type="set" value="0" field="94ec-156d-3d17-794b">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="0473-857e-78d9-cb7c" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
                   </modifiers>
                   <constraints>
                     <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="94ec-156d-3d17-794b" includeChildSelections="false"/>
@@ -240,6 +249,42 @@
               </entryLinks>
             </entryLink>
           </entryLinks>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Big Stabba" hidden="false" id="9bf4-a4cf-1bb2-c7ca" sortIndex="2">
+          <costs>
+            <cost name="pts" typeId="points" value="10"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="418c-fdf5-704e-3c5f" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="729b-b506-c845-cc21" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="418c-fdf5-704e-3c5f">
+              <repeats>
+                <repeat value="10" repeats="1" field="selections" scope="root-entry" childId="0f7d-fb90-b9cd-be42" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="unit" childId="a38a-fa50-c991-4e97" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <profiles>
+            <profile name="Big Stabba" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="0655-ff5f-3013-2211">
+              <characteristics>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Impact Hits (D3), Multiple Wounds (D3)</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <rules>
+            <rule name="Big Stabba" id="f44c-19e9-1d24-b925" hidden="false" publicationId="9e23-79cb-pubN78975" page="122">
+              <description>A unit of Savage Orc Boyz may be upgraded to include Big Stabbas. This is represented by including one or more Big Stabba models in the unit. A Big Stabba is mounted on two Infantry bases and must be placed to cover both the first and second rank of the unit, but is otherwise equipped like the rest of the unit. Each Big Stabba model causes D3 Impact Hits with the Multiple Wounds (D3) special rule. Big Stabbas are always the last models to be removed as casualties (excluding any Command Group models); the weapons are picked up by other Savage Orcs in the unit should they be slain.</description>
+            </rule>
+          </rules>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -291,9 +336,6 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
-      <entryLinks>
-        <entryLink import="true" name="Big Stabba" hidden="false" id="3e5e-0989-9678-72b7" type="selectionEntry" targetId="9bf4-a4cf-1bb2-c7ca" sortIndex="2"/>
-      </entryLinks>
     </selectionEntry>
     <selectionEntry id="6e6e-cbc8-06e5-1f3d" name="Arrer Boyz" hidden="false" collective="false" import="true" type="unit" sortIndex="14">
       <categoryLinks>
@@ -337,7 +379,7 @@
                     <cost name="pts" typeId="points" value="0.5"/>
                   </costs>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
+                    <modifier type="set" value="0" field="bd12-6b92-8aca-f4e2">
                       <conditions>
                         <condition type="equalTo" value="0" field="selections" scope="unit" childId="38eb-4cc1-1d80-2116" shared="true" includeChildSelections="true"/>
                       </conditions>
@@ -401,7 +443,7 @@
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
+                    <modifier type="set" value="0" field="61f3-1504-6951-ab9e">
                       <conditions>
                         <condition type="equalTo" value="0" field="selections" scope="unit" childId="38eb-4cc1-1d80-2116" shared="true" includeChildSelections="true"/>
                       </conditions>
@@ -688,7 +730,7 @@
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
+                    <modifier type="set" value="0" field="86ad-a362-8a86-339c">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="unit" childId="1452-72a8-f5d5-225f" shared="true" includeChildSelections="true"/>
                       </conditions>
@@ -726,7 +768,7 @@
                     <cost name="pts" typeId="points" value="0.5"/>
                   </costs>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
+                    <modifier type="set" value="0" field="bd12-6b92-8aca-f4e2">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="unit" childId="1452-72a8-f5d5-225f" shared="true" includeChildSelections="true"/>
                       </conditions>
@@ -735,20 +777,17 @@
                 </entryLink>
                 <entryLink import="true" name="Medium Armour" hidden="false" id="7f4e-cec6-1a85-f973" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
-                      <conditions>
-                        <condition type="lessThan" value="1" field="selections" scope="roster" childId="fb04-6f25-7c3c-d039" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="set" value="1" field="eafe-9b35-4bb6-cd5b">
+                    <modifier type="set" value="1" field="80f0-b5fd-ae36-4ab6">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="fb04-6f25-7c3c-d039" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="fb04-6f25-7c3c-d039" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
                   </modifiers>
-                  <constraints>
-                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="eafe-9b35-4bb6-cd5b" includeChildSelections="false" automatic="true"/>
-                  </constraints>
                 </entryLink>
               </entryLinks>
             </entryLink>
@@ -1776,7 +1815,7 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
+                    <modifier type="set" value="0" field="f956-f565-3d36-b632">
                       <conditions>
                         <condition type="equalTo" value="0" field="selections" scope="unit" childId="a3a2-449e-045e-ff73" shared="true" includeChildSelections="true"/>
                       </conditions>
@@ -1797,7 +1836,7 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
                     <cost name="pts" typeId="points" value="0.5"/>
                   </costs>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
+                    <modifier type="set" value="0" field="bd12-6b92-8aca-f4e2">
                       <conditions>
                         <condition type="equalTo" value="0" field="selections" scope="unit" childId="38eb-4cc1-1d80-2116" shared="true" includeChildSelections="true"/>
                       </conditions>
@@ -1814,11 +1853,6 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
                   </costs>
                   <modifiers>
                     <modifier type="set" value="0" field="af56-60a7-18d1-6f4f">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="7617-f4b5-02ac-3d15" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="set" value="0" field="0a37-d627-67ef-ae3d">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="parent" childId="7617-f4b5-02ac-3d15" shared="true" includeChildSelections="true"/>
                       </conditions>
@@ -5773,11 +5807,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
             </entryLink>
           </entryLinks>
           <modifiers>
-            <modifier type="set" value="-1" field="fe22-ce5f-b23e-303d">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="model" childId="a6fb-1179-b987-4a46" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
+            <modifier type="set" value="-1" field="fe22-ce5f-b23e-303d"/>
           </modifiers>
         </entryLink>
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="a108-7f41-f1a0-4d58" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
@@ -5792,7 +5822,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="9"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="aaab-a191-d887-0e14">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
@@ -5809,7 +5839,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="18"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="409c-38d4-353b-134c">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="a6fb-1179-b987-4a46" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -5830,7 +5860,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="48"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="1eb4-23f5-ff28-eab2">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="38eb-4cc1-1d80-2116" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -5842,7 +5872,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <categoryLink name="Mount" hidden="false" id="1128-a623-174b-be90" targetId="8b8a-34b1-ed30-df11" primary="true"/>
               </categoryLinks>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="0792-b587-36b9-534c">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
@@ -5864,7 +5894,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="235"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="cb89-e0f6-2571-dff1">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="38eb-4cc1-1d80-2116" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -6006,7 +6036,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <categoryLink name="Mount" hidden="false" id="fbd4-a2e1-1093-169c" targetId="8b8a-34b1-ed30-df11" primary="true"/>
               </categoryLinks>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="0792-b587-36b9-534c">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
@@ -6092,9 +6122,9 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
         </entryLink>
         <entryLink import="true" name="65. Lore of Magic" hidden="false" id="0588-d81a-fefc-1595" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
           <entryLinks>
-            <entryLink import="true" name="Lore of da Spider God" hidden="false" id="b2aa-0448-2626-4d8b" type="selectionEntry" targetId="a03a-1619-cb53-4547"/>
+            <entryLink import="true" name="Lore of da Spider God" hidden="false" id="b2aa-0448-2626-4d8b" type="selectionEntry" targetId="a03a-1619-cb53-4547" sortIndex="2"/>
             <entryLink import="true" name="Lore of da Bad Moon" hidden="false" id="0a57-2345-40ca-f773" type="selectionEntry" targetId="1447-f3da-8c84-6b13"/>
-            <entryLink import="true" name="Lore of da Little Waaagh!" hidden="false" id="0808-8c5d-b302-7168" type="selectionEntry" targetId="165f-dae3-800c-5d28"/>
+            <entryLink import="true" name="Lore of da Little Waaagh!" hidden="false" id="0808-8c5d-b302-7168" type="selectionEntry" targetId="165f-dae3-800c-5d28" sortIndex="1"/>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="10. Character Options" hidden="false" id="9316-6aa4-4fcb-ee41" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
@@ -6136,14 +6166,14 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="18"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="476b-e1fd-f9eb-b909">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="deca-22a4-bf9c-0c27" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="476b-e1fd-f9eb-b909"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="476b-e1fd-f9eb-b909" automatic="true"/>
               </constraints>
               <entryLinks>
                 <entryLink import="true" name="Barding" hidden="false" id="5993-62ae-34f3-7ec3" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
@@ -6155,7 +6185,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
             </entryLink>
             <entryLink import="true" name="Giant Spider" hidden="false" id="d28b-2c1b-c768-a4ba" type="selectionEntry" targetId="1bca-95b4-30e5-1d1c">
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="11e0-04f4-daa9-156f">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="1452-72a8-f5d5-225f" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -6165,7 +6195,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="21"/>
               </costs>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="11e0-04f4-daa9-156f"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="11e0-04f4-daa9-156f" automatic="true"/>
               </constraints>
             </entryLink>
             <entryLink import="true" name="Wolf Chariot" hidden="false" id="a3b7-748e-56ad-7c39" type="selectionEntry" targetId="7133-7f02-0d9f-4108">
@@ -6173,7 +6203,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="36"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="837f-8536-0957-1ab0">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="deca-22a4-bf9c-0c27" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -6190,7 +6220,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
             </entryLink>
             <entryLink import="true" name="Gigantic Spider" hidden="false" id="491e-9db2-1f80-2683" type="selectionEntry" targetId="b5f7-2228-f863-aed5">
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="4bd5-444e-ae1a-3674">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="1452-72a8-f5d5-225f" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -6205,7 +6235,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="255"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="e097-e765-2573-a6e6">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="1452-72a8-f5d5-225f" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -6283,7 +6313,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="12"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="12fd-83f4-0a08-f978">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="deca-22a4-bf9c-0c27" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -6297,12 +6327,12 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 </entryLink>
               </entryLinks>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="12fd-83f4-0a08-f978"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="12fd-83f4-0a08-f978" automatic="true"/>
               </constraints>
             </entryLink>
             <entryLink import="true" name="Giant Spider" hidden="false" id="dbde-0f39-b38e-00e8" type="selectionEntry" targetId="1bca-95b4-30e5-1d1c" sortIndex="2">
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="87cd-562a-6292-b77a">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="1452-72a8-f5d5-225f" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -6312,12 +6342,12 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="14"/>
               </costs>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="87cd-562a-6292-b77a"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="87cd-562a-6292-b77a" automatic="true"/>
               </constraints>
             </entryLink>
             <entryLink import="true" name="Gigantic Spider" hidden="false" id="a7bc-4002-d22e-6c91" type="selectionEntry" targetId="b5f7-2228-f863-aed5" sortIndex="3">
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="4bd5-444e-ae1a-3674">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="1452-72a8-f5d5-225f" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -6332,7 +6362,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="32"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="86e2-9686-2083-e8e6">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="cd2b-976c-8770-3030" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -6344,7 +6374,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="36"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="837f-8536-0957-1ab0">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="deca-22a4-bf9c-0c27" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -6364,7 +6394,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="255"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="e097-e765-2573-a6e6">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="1452-72a8-f5d5-225f" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -6384,7 +6414,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="45"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="d300-a788-ddbc-64f0">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="deca-22a4-bf9c-0c27" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -6405,7 +6435,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="9"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="aaab-a191-d887-0e14">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
@@ -6581,6 +6611,9 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
               </costs>
             </entryLink>
           </entryLinks>
+          <modifiers>
+            <modifier type="set" value="-1" field="fe22-ce5f-b23e-303d"/>
+          </modifiers>
         </entryLink>
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="f5f3-d4e5-7ebd-d0c2" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
           <entryLinks>
@@ -6594,7 +6627,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="6"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="aaab-a191-d887-0e14">
                   <conditions>
                     <condition type="equalTo" value="1" field="selections" scope="model" childId="a3a2-449e-045e-ff73" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -6606,7 +6639,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="12"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="409c-38d4-353b-134c">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="a6fb-1179-b987-4a46" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -6636,7 +6669,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="32"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="1eb4-23f5-ff28-eab2">
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
@@ -6653,7 +6686,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <categoryLink name="Mount" hidden="false" id="7c9b-6e1f-277a-c051" targetId="8b8a-34b1-ed30-df11" primary="true"/>
               </categoryLinks>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="0792-b587-36b9-534c">
                   <conditions>
                     <condition type="equalTo" value="1" field="selections" scope="model" childId="a3a2-449e-045e-ff73" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -6814,7 +6847,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="12"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="83c6-f7b1-c618-8b23">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="deca-22a4-bf9c-0c27" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -6828,12 +6861,12 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 </entryLink>
               </entryLinks>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="83c6-f7b1-c618-8b23"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="83c6-f7b1-c618-8b23" automatic="true"/>
               </constraints>
             </entryLink>
             <entryLink import="true" name="Giant Spider" hidden="false" id="6ad0-7df5-9208-034f" type="selectionEntry" targetId="1bca-95b4-30e5-1d1c" sortIndex="2">
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="eaa6-f542-1ba5-1400">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="1452-72a8-f5d5-225f" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -6843,12 +6876,12 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="14"/>
               </costs>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eaa6-f542-1ba5-1400"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eaa6-f542-1ba5-1400" automatic="true"/>
               </constraints>
             </entryLink>
             <entryLink import="true" name="Gigantic Spider" hidden="false" id="5883-6d3f-c31a-25b1" type="selectionEntry" targetId="b5f7-2228-f863-aed5" sortIndex="4">
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="4bd5-444e-ae1a-3674">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="1452-72a8-f5d5-225f" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -6863,7 +6896,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="32"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="86e2-9686-2083-e8e6">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="cd2b-976c-8770-3030" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -6875,7 +6908,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="36"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="837f-8536-0957-1ab0">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="deca-22a4-bf9c-0c27" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -6895,7 +6928,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="d300-a788-ddbc-64f0">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="deca-22a4-bf9c-0c27" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -6977,7 +7010,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="6"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="aaab-a191-d887-0e14">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
@@ -7064,14 +7097,14 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="12"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="23ae-8207-a123-3d75">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="deca-22a4-bf9c-0c27" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="23ae-8207-a123-3d75"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="23ae-8207-a123-3d75" automatic="true"/>
               </constraints>
               <entryLinks>
                 <entryLink import="true" name="Barding" hidden="false" id="1aa7-b4f5-4e95-8960" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
@@ -7083,7 +7116,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
             </entryLink>
             <entryLink import="true" name="Giant Spider" hidden="false" id="9a45-85c4-0a81-5290" type="selectionEntry" targetId="1bca-95b4-30e5-1d1c">
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
+                <modifier type="set" value="0" field="9645-61d0-56d1-77ef">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="model" childId="1452-72a8-f5d5-225f" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -7093,7 +7126,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                 <cost name="pts" typeId="points" value="14"/>
               </costs>
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9645-61d0-56d1-77ef"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9645-61d0-56d1-77ef" automatic="true"/>
               </constraints>
             </entryLink>
           </entryLinks>
@@ -8208,7 +8241,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
+                    <modifier type="set" value="0" field="86ad-a362-8a86-339c">
                       <conditions>
                         <condition type="equalTo" value="0" field="selections" scope="unit" childId="38eb-4cc1-1d80-2116" shared="true" includeChildSelections="true"/>
                       </conditions>
@@ -8234,7 +8267,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                     <cost name="pts" typeId="points" value="0.5"/>
                   </costs>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
+                    <modifier type="set" value="0" field="bd12-6b92-8aca-f4e2">
                       <conditions>
                         <condition type="equalTo" value="0" field="selections" scope="unit" childId="38eb-4cc1-1d80-2116" shared="true" includeChildSelections="true"/>
                       </conditions>
@@ -8246,7 +8279,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                     <cost name="pts" typeId="points" value="1.5"/>
                   </costs>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
+                    <modifier type="set" value="0" field="aaab-a191-d887-0e14">
                       <conditions>
                         <condition type="equalTo" value="0" field="selections" scope="unit" childId="38eb-4cc1-1d80-2116" shared="true" includeChildSelections="true"/>
                       </conditions>
@@ -8473,7 +8506,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
+                    <modifier type="set" value="0" field="f956-f565-3d36-b632">
                       <conditions>
                         <condition type="equalTo" value="0" field="selections" scope="unit" childId="a3a2-449e-045e-ff73" shared="true" includeChildSelections="true"/>
                       </conditions>
@@ -8518,7 +8551,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                     <cost name="pts" typeId="points" value="1.5"/>
                   </costs>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
+                    <modifier type="set" value="0" field="bd12-6b92-8aca-f4e2">
                       <conditions>
                         <condition type="equalTo" value="0" field="selections" scope="unit" childId="38eb-4cc1-1d80-2116" shared="true" includeChildSelections="true"/>
                       </conditions>
@@ -8530,7 +8563,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
+                    <modifier type="set" value="0" field="aaab-a191-d887-0e14">
                       <conditions>
                         <condition type="equalTo" value="0" field="selections" scope="unit" childId="38eb-4cc1-1d80-2116" shared="true" includeChildSelections="true"/>
                       </conditions>
@@ -9134,7 +9167,8 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
     </selectionEntry>
     <selectionEntry id="0b51-23dc-1f3e-e71b" name="Lore of da Savage Waaagh!" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a746-b0b9-cc90-8db2" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a746-b0b9-cc90-8db2" type="max" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d744-1c7a-052b-c9a0" includeChildSelections="false"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="7cb1-5748-6ad9-6629" name="0. Brutal Beast Spirits" hidden="false" collective="false" import="true" type="upgrade">
@@ -9471,7 +9505,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
         <entryLink import="true" name="Power of da Waaagh!" hidden="false" id="ed66-c74c-300f-b5bd" type="selectionEntry" targetId="ee7d-cab3-a76b-cfc2"/>
       </entryLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier type="set" value="0" field="a746-b0b9-cc90-8db2">
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="model" childId="a3a2-449e-045e-ff73" shared="true" includeChildSelections="true"/>
           </conditions>
@@ -9963,7 +9997,8 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
     </selectionEntry>
     <selectionEntry id="1447-f3da-8c84-6b13" name="Lore of da Bad Moon" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4e37-38dd-a181-f8be" type="max"/>
+        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4e37-38dd-a181-f8be" type="max" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="0e1c-4432-1aa7-263a" includeChildSelections="false"/>
       </constraints>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="0. Spore Maws" hidden="false" id="1dd5-9889-1f0c-6913" collective="false">
@@ -10322,7 +10357,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
         <entryLink import="true" name="Sneaky Stealin&apos;" hidden="false" id="9d1a-311d-bd4e-a050" type="selectionEntry" targetId="72e9-f6f6-a100-49d4"/>
       </entryLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier type="set" value="0" field="4e37-38dd-a181-f8be">
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="model" childId="cd2b-976c-8770-3030" shared="true" includeChildSelections="true"/>
           </conditions>
@@ -10331,7 +10366,8 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
     </selectionEntry>
     <selectionEntry id="a03a-1619-cb53-4547" name="Lore of da Spider God" hidden="false" collective="false" import="true" type="upgrade">
       <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3066-f66a-64fc-80fe" type="max"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fe6f-bb2b-9968-e5b2" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="228f-7f00-4b52-d021" includeChildSelections="false"/>
       </constraints>
       <selectionEntries>
         <selectionEntry id="ff34-7856-8dba-1ef8" name="0. Venomous Spiderlings" hidden="false" collective="false" import="true" type="upgrade">
@@ -10631,7 +10667,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
         <entryLink import="true" name="Sneaky Stealin&apos;" hidden="false" id="8083-7c19-9543-5063" type="selectionEntry" targetId="72e9-f6f6-a100-49d4"/>
       </entryLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier type="set" value="0" field="fe6f-bb2b-9968-e5b2">
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="model" childId="1452-72a8-f5d5-225f" shared="true" includeChildSelections="true"/>
           </conditions>
@@ -10989,7 +11025,8 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Grunta" hidden="false" id="57b8-4e5a-8cfe-d523" collective="true" subType="mount">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1eb4-23f5-ff28-eab2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1eb4-23f5-ff28-eab2" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4426-4f02-9131-1006" includeChildSelections="false"/>
       </constraints>
       <infoLinks>
         <infoLink name="Tusker Charge" id="41eb-31ef-6a17-559b" hidden="false" type="rule" targetId="76c4-8e4c-7258-76ca"/>
@@ -11031,7 +11068,8 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Boar Chariot" hidden="false" id="6672-9da0-c31f-d0e8" collective="false" subType="mount">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0792-b587-36b9-534c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0792-b587-36b9-534c" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="6b09-3b9c-6bf8-a1cd" includeChildSelections="false"/>
       </constraints>
       <infoLinks>
         <infoLink name="Boar Chariot" id="31dc-d728-2a0c-9aac" hidden="false" targetId="70e5-fd20-6b1d-1889" type="profile"/>
@@ -11221,7 +11259,8 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Maw-Grunta" hidden="false" id="6d27-51d8-8816-e91d" collective="false" subType="mount">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="cb89-e0f6-2571-dff1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="cb89-e0f6-2571-dff1" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="519a-615f-e068-1fc7" includeChildSelections="false"/>
       </constraints>
       <infoLinks>
         <infoLink name="Maw-Grunta" id="1d71-6428-852e-ccdd" hidden="false" targetId="be42-8e43-2ca1-3e77" type="profile"/>
@@ -11385,7 +11424,8 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Great Cave Squig" hidden="false" id="26dd-4fb6-8807-c29e" collective="false" subType="mount">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="86e2-9686-2083-e8e6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="86e2-9686-2083-e8e6" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="0c51-8d52-7100-02c5" includeChildSelections="false"/>
       </constraints>
       <infoLinks>
         <infoLink name="Random Movement (3D6)" id="3ef3-6428-abc7-5a5b" hidden="false" targetId="0877-cd17-c381-a045" type="rule"/>
@@ -11454,10 +11494,14 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
           </characteristics>
         </profile>
       </profiles>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="3530-3256-2f40-ffa6" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Gigantic Spider" hidden="false" id="b5f7-2228-f863-aed5" collective="true" subType="mount">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4bd5-444e-ae1a-3674" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4bd5-444e-ae1a-3674" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="1f21-8f85-3d0a-97af" includeChildSelections="false"/>
       </constraints>
       <infoLinks>
         <infoLink name="Poisoned Attacks" id="83ea-c813-eaba-57d2" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule">
@@ -11517,10 +11561,14 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
         <categoryLink name="Mount" hidden="false" id="5b53-52da-ed2b-e6d2" targetId="8b8a-34b1-ed30-df11" primary="false"/>
         <categoryLink name="Cavalry" hidden="false" id="3d12-e554-af12-10f1" targetId="bdee-b168-38ba-7d3c" primary="false"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="c479-6882-41d1-a71c" includeChildSelections="false"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Wolf Chariot" hidden="false" id="7133-7f02-0d9f-4108" collective="false" subType="mount">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="837f-8536-0957-1ab0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="837f-8536-0957-1ab0" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="40ae-041b-31df-9d00" includeChildSelections="false"/>
       </constraints>
       <infoLinks>
         <infoLink name="Wolf Chariot" id="b7ef-dd27-6ab4-4e85" hidden="false" targetId="13dd-ee68-6b4f-ef1b" type="profile"/>
@@ -11729,6 +11777,10 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
           </characteristics>
         </profile>
       </profiles>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="77b6-e1a7-aa8b-22ca" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e097-e765-2573-a6e6" includeChildSelections="false" automatic="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Forest Goblin Crew" hidden="false" id="a559-51d4-f736-23a7" collective="false" subType="crew">
       <infoLinks>
@@ -11942,7 +11994,8 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Dire Wolf" hidden="false" id="b89d-d9a4-7496-8611" subType="mount" collective="true">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d300-a788-ddbc-64f0" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d300-a788-ddbc-64f0" includeChildSelections="false" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="90cd-c3cb-e0bf-b8d2" includeChildSelections="false"/>
       </constraints>
       <entryLinks>
         <entryLink import="true" name="Barding" hidden="false" id="161c-13f8-9bd1-7cba" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
@@ -11983,41 +12036,6 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
         <categoryLink name="Mount" hidden="false" id="b213-8b08-d571-0797" targetId="8b8a-34b1-ed30-df11" primary="false"/>
         <categoryLink name="Monstrous Cavalry" hidden="false" id="18e2-e3f9-8349-454f" targetId="82d3-4589-72b4-b6ed" primary="false"/>
       </categoryLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Big Stabba" hidden="false" id="9bf4-a4cf-1bb2-c7ca">
-      <costs>
-        <cost name="pts" typeId="points" value="10"/>
-      </costs>
-      <constraints>
-        <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="418c-fdf5-704e-3c5f"/>
-      </constraints>
-      <modifiers>
-        <modifier type="increment" value="1" field="418c-fdf5-704e-3c5f">
-          <repeats>
-            <repeat value="10" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
-          </repeats>
-        </modifier>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="equalTo" value="0" field="selections" scope="unit" childId="a3a2-449e-045e-ff73" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <profiles>
-        <profile name="Big Stabba" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="0655-ff5f-3013-2211">
-          <characteristics>
-            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
-            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Impact Hits (D3), Multiple Wounds (D3)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <rules>
-        <rule name="Big Stabba" id="f44c-19e9-1d24-b925" hidden="false" publicationId="9e23-79cb-pubN78975" page="122">
-          <description>A unit of Savage Orc Boyz may be upgraded to include Big Stabbas. This is represented by including one or more Big Stabba models in the unit. A Big Stabba is mounted on two Infantry bases and must be placed to cover both the first and second rank of the unit, but is otherwise equipped like the rest of the unit. Each Big Stabba model causes D3 Impact Hits with the Multiple Wounds (D3) special rule. Big Stabbas are always the last models to be removed as casualties (excluding any Command Group models); the weapons are picked up by other Savage Orcs in the unit should they be slain.</description>
-        </rule>
-      </rules>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -12935,10 +12953,6 @@ special rule. When targeting a Character that is not a Wizard in close combat, 
           <entryLinks>
             <entryLink import="true" name="Common Magic Weapons" hidden="false" id="1c38-f0f1-0b7c-70f5" collective="false" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="91" collapsible="true" flatten="true"/>
           </entryLinks>
-          <modifiers>
-            <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
-            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
-          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Talismans" id="cc6a-6732-2caf-d786" hidden="false" collective="false" import="true" sortIndex="3" collapsible="true">
           <constraints>
@@ -15067,9 +15081,6 @@ However, in case a Miscast is rolled when casting that spell, add 1 to the resu
           <entryLinks>
             <entryLink import="true" name="Common Magic Armour" hidden="false" id="47de-e27b-f99c-c8e8" collective="false" targetId="557c-c8c5-0c0f-d2b3" type="selectionEntryGroup" sortIndex="91" flatten="true" collapsible="true"/>
           </entryLinks>
-          <modifiers>
-            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.profiles.Armour Save"/>
-          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <constraints>
@@ -15081,6 +15092,9 @@ However, in case a Miscast is rolled when casting that spell, add 1 to the resu
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.8b68-238b-efa3-9dab.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.8b68-238b-efa3-9dab.profiles.Ranged Weapon"/>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.d2a1-5ed2-a35c-e8db.profiles.Armour Save"/>
       </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="91. Magic Standards" id="0b11-5c25-beb7-1810" hidden="false" collective="false" import="true" collapsible="true">

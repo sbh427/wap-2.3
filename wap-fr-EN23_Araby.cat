@@ -532,10 +532,6 @@
           <entryLinks>
             <entryLink import="true" name="Common Magic Weapons" hidden="false" id="a32f-bc7b-2ea9-2c8d" type="selectionEntryGroup" targetId="6820-41cc-94f6-87c1" sortIndex="99" flatten="true"/>
           </entryLinks>
-          <modifiers>
-            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
-            <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
-          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Talismans" id="2aa1-45ae-a43c-01ef" hidden="false" sortIndex="3" collapsible="true">
           <selectionEntries>
@@ -1051,9 +1047,6 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1799-8d8d-e776-bf05" includeChildSelections="false"/>
           </constraints>
-          <modifiers>
-            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.profiles.Armour Save"/>
-          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <constraints>
@@ -1065,6 +1058,9 @@
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.c1a9-9c3e-433e-89a1.profiles.Armour Save"/>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.22cb-7492-eb53-25c1.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.22cb-7492-eb53-25c1.profiles.Ranged Weapon"/>
       </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Magic Standards" id="3335-4603-acc0-28b4" hidden="false">
@@ -1912,7 +1908,11 @@
         <entryLink import="true" name="10. Character Options" hidden="false" id="d63e-c8bd-66b0-fdaf" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="62f8-ec2c-5d54-39f5" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
           <entryLinks>
-            <entryLink import="true" name="Light Armour" hidden="false" id="331b-c24c-4c80-4760" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72"/>
+            <entryLink import="true" name="Light Armour" hidden="false" id="331b-c24c-4c80-4760" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+              <costs>
+                <cost name="pts" typeId="points" value="6"/>
+              </costs>
+            </entryLink>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="70. Mount" hidden="false" id="7300-cf0f-94f6-c134" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">

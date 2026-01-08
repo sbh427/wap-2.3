@@ -345,6 +345,15 @@
           <description>Units with mantlets must place them on separate bases in front of the unit. Every model in the front rank must have a mantlet base in front of it, which must also be set up within the army&apos;s deployment zone. A unit with mantlets gains a 4+ armour save against missile attacks to its front arc (except template attacks). However, if the unit moves or reforms during the game, the mantlets are removed from play.</description>
         </rule>
       </rules>
+      <profiles>
+        <profile name="Mantlets" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="8bdd-6335-dbb5-f2a4">
+          <characteristics>
+            <characteristic name="Combat" typeId="168d-1cc2-66f3-e766"/>
+            <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">4+*</characteristic>
+            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">*only against the their front arc.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Crew" hidden="false" id="fa63-b4d5-3340-5244" collective="true" subType="crew">
       <profiles>
@@ -5822,10 +5831,6 @@
               </modifiers>
             </selectionEntry>
           </selectionEntries>
-          <modifiers>
-            <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
-            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
-          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Magic Armour" id="662f-d010-ad63-aeeb" hidden="false" sortIndex="2" collapsible="true">
           <constraints>
@@ -5997,9 +6002,6 @@
           <entryLinks>
             <entryLink import="true" name="Common Magic Armour" hidden="false" id="e271-26e7-8378-dc8b" type="selectionEntryGroup" targetId="557c-c8c5-0c0f-d2b3" flatten="true" sortIndex="99"/>
           </entryLinks>
-          <modifiers>
-            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.profiles.Armour Save"/>
-          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Talismans " id="43c6-d50a-0ee7-fc47" hidden="false" sortIndex="3">
           <constraints>
@@ -6366,6 +6368,9 @@ Movement phase. In addition, they automatically pass any test to reform, march 
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.d924-bcb8-2842-d526.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.662f-d010-ad63-aeeb.profiles.Armour Save"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.d924-bcb8-2842-d526.profiles.Ranged Weapon"/>
       </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="90. Magic Standards" id="02df-aef3-1c56-1245" hidden="false">

@@ -6568,9 +6568,13 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="f7cd-ef13-2bd2-0490" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Heavy Armour" hidden="false" id="04d7-2795-6fed-f677" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="945b-055b-f63b-d226"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2a65-3a21-af86-6ae3">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -7307,9 +7311,13 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="1962-1d6d-8bb5-6c24" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Heavy Armour" hidden="false" id="26ed-5297-fff2-6d47" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0d43-6523-d9d5-00c6"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2a65-3a21-af86-6ae3">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -9167,7 +9175,6 @@ close combat by bearer, they and/or their unit regain 1 Wound, just like a summ
             <condition type="notInstanceOf" value="1" field="selections" scope="model-or-unit" childId="387c-2b7c-0a30-7305" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
-        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.profiles.Armour Save"/>
       </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup id="a3ca-ccf2-444b-f177" name="Magic Standards" hidden="false" collective="false" import="true" collapsible="true" flatten="true">
@@ -9877,10 +9884,6 @@ close combat by bearer, they and/or their unit regain 1 Wound, just like a summ
       <entryLinks>
         <entryLink id="cc5b-db55-d62f-98d7" name="Common Magic Weapons" hidden="false" collective="false" import="true" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="12" flatten="true" collapsible="true"/>
       </entryLinks>
-      <modifiers>
-        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
-        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
-      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup id="4215-2a8d-e599-7c88" name="Talismans" hidden="false" collective="false" import="true" collapsible="true" flatten="true">
       <constraints>
@@ -11022,6 +11025,9 @@ close combat by bearer, they and/or their unit regain 1 Wound, just like a summ
             <condition type="equalTo" value="1" field="selections" scope="model" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.8d7f-61fb-44ba-0b6c.profiles.Armour Save"/>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.65a4-2cd8-a0c9-8a92.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.65a4-2cd8-a0c9-8a92.profiles.Ranged Weapon"/>
       </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="80. Vampiric Powers &amp; Magic Items" id="0175-7a22-f4a1-c988" hidden="false">
@@ -11043,8 +11049,9 @@ close combat by bearer, they and/or their unit regain 1 Wound, just like a summ
             <condition type="equalTo" value="1" field="selections" scope="model" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
-        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
-        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.8d7f-61fb-44ba-0b6c.profiles.Armour Save"/>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.65a4-2cd8-a0c9-8a92.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.65a4-2cd8-a0c9-8a92.profiles.Ranged Weapon"/>
       </modifiers>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
