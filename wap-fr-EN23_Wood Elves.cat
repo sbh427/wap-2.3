@@ -408,10 +408,13 @@
         <entryLink import="true" name="50. Handheld Armour" hidden="false" id="83ab-3e18-9d85-7eb1" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
           <entryLinks>
             <entryLink import="true" name="Shield" hidden="false" id="b4fd-5156-7f55-bd30" type="selectionEntry" targetId="c068-0827-9931-d9bf">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="980e-75eb-6cf6-3d33-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="980e-75eb-6cf6-3d33-max" includeChildSelections="false"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="3d59-dcea-ec30-dc28">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="ba52-4f0c-71ae-b52d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -6313,10 +6316,6 @@ The Hunter&apos;s Talon gives the wielder the Sniper special rule.
           <entryLinks>
             <entryLink import="true" name="Common Magic Weapons" hidden="false" id="f582-7cd6-7a66-98ed" type="selectionEntryGroup" targetId="6820-41cc-94f6-87c1" sortIndex="99" collapsible="true" flatten="true"/>
           </entryLinks>
-          <modifiers>
-            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
-            <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
-          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Magic Armour" id="16a0-7be6-7f1e-f0fa" hidden="false" collapsible="true" defaultSelectionEntryId="none" sortIndex="3" flatten="false">
           <entryLinks>
@@ -6526,9 +6525,6 @@ The Hunter&apos;s Talon gives the wielder the Sniper special rule.
               </categoryLinks>
             </selectionEntry>
           </selectionEntries>
-          <modifiers>
-            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.profiles.Armour Save"/>
-          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Enchanted Items" id="0693-3a02-835b-6a03" hidden="false" sortIndex="7" collapsible="true">
           <constraints>
@@ -7193,6 +7189,9 @@ The Hunter&apos;s Talon gives the wielder the Sniper special rule.
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.16a0-7be6-7f1e-f0fa.profiles.Armour Save"/>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.db4d-49ed-07ad-29ca.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.db4d-49ed-07ad-29ca.profiles.Ranged Weapon"/>
       </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Magic Standards" id="d171-04b0-1d99-36fb" hidden="false">

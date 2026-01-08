@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="489b-7a41-3ad0-e5eb" name="Tomb Kings WAP 1.6" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="60" revision="17" authorName="Leminge" battleScribeVersion="2.03" publicationId="feeb-1927-4a99-f849" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="Contact me via discord">
+<catalogue library="false" id="489b-7a41-3ad0-e5eb" name="Tomb Kings WAP 1.6" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="60" revision="18" authorName="Leminge" battleScribeVersion="2.03" publicationId="feeb-1927-4a99-f849" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="Contact me via discord">
   <sharedSelectionEntries>
     <selectionEntry type="model" import="true" name="Skeletal Steed" hidden="false" id="a440-163d-31eb-cdf7" collective="true" sortIndex="0" subType="mount">
       <constraints>
@@ -1394,9 +1394,13 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="f64f-de70-f360-7e0c" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="e740-2cd2-2920-d842" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4198-3f59-6c1c-bdef" includeChildSelections="false"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -1842,9 +1846,13 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="c69b-d652-146c-d5e2" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="17c9-1ca6-fd5b-1bfd" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="baf2-4384-fa93-af57" includeChildSelections="false"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -1902,9 +1910,13 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="97ab-3cb9-8c5c-40a9" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="fb75-79b8-ef69-68fe" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4770-3901-ee97-af40" includeChildSelections="false"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -5956,10 +5968,6 @@ Strength 2 hits which Ignores Armour saves</description>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f95e-c9d8-f9be-6460" includeChildSelections="false"/>
           </constraints>
-          <modifiers>
-            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
-            <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
-          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Magic Armour" id="00e7-e0e6-c5f5-1a36" hidden="false" sortIndex="2" collapsible="true">
           <selectionEntries>
@@ -6225,9 +6233,6 @@ Strength 2 hits which Ignores Armour saves</description>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8188-7f3f-877b-69cf" includeChildSelections="false"/>
           </constraints>
-          <modifiers>
-            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.profiles.Armour Save"/>
-          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Talismans" id="f1b2-fd9e-80af-b871" hidden="false" sortIndex="3" collapsible="true">
           <selectionEntries>
@@ -6826,6 +6831,9 @@ Strength 2 hits which Ignores Armour saves</description>
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.00e7-e0e6-c5f5-1a36.profiles.Armour Save"/>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.b08f-ec9b-c750-180a.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.b08f-ec9b-c750-180a.profiles.Ranged Weapon"/>
       </modifiers>
       <constraints>
         <constraint type="max" value="0" field="points" scope="parent" shared="true" id="6ee7-c31b-82f8-adfd"/>

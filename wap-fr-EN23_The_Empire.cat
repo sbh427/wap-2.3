@@ -41,7 +41,15 @@
         </entryLink>
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="7151-b383-1b12-07af" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
-            <entryLink import="true" name="Full Plate Armour" hidden="false" id="f789-57f3-600d-ba45" type="selectionEntry" targetId="3b2e-1b89-355b-8cbd" sortIndex="3"/>
+            <entryLink import="true" name="Full Plate Armour" hidden="false" id="f789-57f3-600d-ba45" type="selectionEntry" targetId="3b2e-1b89-355b-8cbd" sortIndex="3">
+              <modifiers>
+                <modifier type="set" value="1" field="d9b6-5a4b-060f-c3a7">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="50. Handheld Armour" hidden="false" id="becd-f90d-fd21-d549" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
@@ -476,7 +484,11 @@
         </entryLink>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="c4a5-f84d-e8ef-f5d3" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="799d-7d25-6add-e110" type="selectionEntry" targetId="a658-337d-0cbd-a38c"/>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="799d-7d25-6add-e110" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="66ad-f82c-502f-4c5c" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="90. Magic Items" hidden="false" id="1a4e-2629-c664-3dc1" type="selectionEntryGroup" targetId="b73b-2eee-3197-cb01">
@@ -8081,6 +8093,13 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="1" field="d9b6-5a4b-060f-c3a7">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -9786,13 +9805,14 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Full Plate Armour" hidden="false" id="3b2e-1b89-355b-8cbd" publicationId="315d-135b-135c-07ce" page="4" collective="true">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="02c9-7bef-7d65-80f8"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="02c9-7bef-7d65-80f8" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d9b6-5a4b-060f-c3a7" includeChildSelections="false"/>
       </constraints>
       <infoLinks>
         <infoLink name="Full Plate Armour" id="d497-1139-ac4b-c007" hidden="false" type="profile" targetId="feeb-6ee4-90f1-0da8"/>
       </infoLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier type="set" value="0" field="02c9-7bef-7d65-80f8">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
           </conditions>
@@ -13120,9 +13140,6 @@ by Wizards even though they are not normally allowed to wear armour.
           <entryLinks>
             <entryLink import="true" name="Common Magic Armour" hidden="false" id="17a6-e3a9-081c-817d" collective="false" targetId="557c-c8c5-0c0f-d2b3" type="selectionEntryGroup" sortIndex="11" flatten="true"/>
           </entryLinks>
-          <modifiers>
-            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.profiles.Armour Save"/>
-          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Magic Weapons" id="284e-4851-02e6-1d3f" hidden="false" collective="false" import="true" sortIndex="1" collapsible="true">
           <constraints>
@@ -13558,10 +13575,6 @@ normal attacks.
           <entryLinks>
             <entryLink import="true" name="Common Magic Weapons" hidden="false" id="3833-5498-60ad-29ec" collective="false" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="99" flatten="true"/>
           </entryLinks>
-          <modifiers>
-            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
-            <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
-          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Talismans" id="cec9-9857-b836-23e0" hidden="false" collective="false" import="true" sortIndex="4" collapsible="true">
           <constraints>
@@ -13927,6 +13940,9 @@ Attacks and Immunity (Flaming Attacks) special rules.</characteristic>
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.284e-4851-02e6-1d3f.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.284e-4851-02e6-1d3f.profiles.Ranged Weapon"/>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.6418-0e46-5741-a7a8.profiles.Armour Save"/>
       </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="61. Lore of Magic" id="5793-04bd-b974-0846" hidden="false">

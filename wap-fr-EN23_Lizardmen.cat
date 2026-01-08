@@ -2269,10 +2269,6 @@ can cause the Mage-Priest to roll more dice than normally allowed.</characteris
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4eef-7c9b-00c2-323f" includeChildSelections="false"/>
           </constraints>
-          <modifiers>
-            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
-            <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
-          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Magic Armour" id="9b01-47bf-3a2b-d930" hidden="false" sortIndex="2" collapsible="true">
           <selectionEntries>
@@ -2446,7 +2442,6 @@ can cause the Mage-Priest to roll more dice than normally allowed.</characteris
                 <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="387c-2b7c-0a30-7305" shared="true"/>
               </conditions>
             </modifier>
-            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.profiles.Armour Save"/>
           </modifiers>
           <entryLinks>
             <entryLink import="true" name="Common Magic Armour" hidden="false" id="7937-7d61-f0e3-3cad" type="selectionEntryGroup" targetId="557c-c8c5-0c0f-d2b3" sortIndex="99" flatten="true"/>
@@ -3244,6 +3239,9 @@ rule. This has a +1 bonus To Wound against Daemons, Undead and Vampires.</chara
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.e013-2b30-2717-c98e.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.9b01-47bf-3a2b-d930.profiles.Armour Save"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.e013-2b30-2717-c98e.profiles.Ranged Weapon"/>
       </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="91. Magic Standards" id="9891-18a7-75a7-497c" hidden="false" collapsible="true">

@@ -98,9 +98,13 @@
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="45d2-912d-49a2-93d0" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Heavy Armour" hidden="false" id="f209-7ab3-de12-fafd" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3ea0-4077-45d6-1d4a"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2a65-3a21-af86-6ae3">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -346,9 +350,13 @@
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="a26c-d095-df3d-bd69" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Heavy Armour" hidden="false" id="e9fc-4d00-70f5-679f" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d4bc-3be9-3697-3de5"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2a65-3a21-af86-6ae3">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -7550,9 +7558,6 @@ During the game, the Green Knight may disappear at will and reappear in another 
       <entryLinks>
         <entryLink id="196d-49e7-3df8-da22" name="Common Magic Armour" hidden="false" collective="false" import="true" targetId="557c-c8c5-0c0f-d2b3" type="selectionEntryGroup" sortIndex="11" flatten="true"/>
       </entryLinks>
-      <modifiers>
-        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.profiles.Armour Save"/>
-      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup id="e80a-27cb-41ba-a274" name="Magic Standards" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
@@ -8211,10 +8216,6 @@ During the game, the Green Knight may disappear at will and reappear in another 
       <entryLinks>
         <entryLink id="c37f-dfe2-d41a-2106" name="Common Magic Weapons" hidden="false" collective="false" import="true" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="14" flatten="true"/>
       </entryLinks>
-      <modifiers>
-        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
-        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
-      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup id="f90e-6119-6dae-4b9a" name="Talismans" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
@@ -8455,6 +8456,9 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <condition type="atLeast" value="1" field="selections" scope="model" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.31dc-7d00-f7c8-4dc4.profiles.Armour Save"/>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.31dc-7d00-f7c8-4dc4.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.31dc-7d00-f7c8-4dc4.profiles.Ranged Weapon"/>
       </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="80. Magic Items" id="6fdf-b151-bfc8-df82" hidden="false" collapsible="true">
@@ -8480,6 +8484,9 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <condition type="atLeast" value="1" field="selections" scope="model" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.31dc-7d00-f7c8-4dc4.profiles.Armour Save"/>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.31dc-7d00-f7c8-4dc4.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.31dc-7d00-f7c8-4dc4.profiles.Ranged Weapon"/>
       </modifiers>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
