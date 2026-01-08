@@ -2493,11 +2493,11 @@ Characters who are not Undead may join Undead units despite not being Unstable 
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="571b-bf4d-4c95-4374-max"/>
                           </constraints>
                           <profiles>
-                            <profile name="Cursed Morion Helm" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="81f2-4857-f7aa-d107" publicationId="4f8f-9147-1eae-6c3d" page="28">
+                            <profile name="Cursed Morion Helm" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="81f2-4857-f7aa-d107" publicationId="4f8f-9147-1eae-6c3d" page="28">
                               <characteristics>
-                                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
-                                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d"/>
+                                <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+                                <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+                                <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Magic Armour.</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -4612,6 +4612,10 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           </modifiers>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Magic Armour" id="f483-3197-52b5-1c6f" hidden="false" collapsible="true">
       <constraints>
@@ -4669,7 +4673,9 @@ Characters who are not Undead may join Undead units despite not being Unstable 
               <modifiers>
                 <modifier type="set" value="Sea Dragon Buckler" field="annotation"/>
                 <modifier type="append" value="The Sea Dragon Buckler gives the wearer the Ward Save (6+) special rule.
-" field="ff58-91e4-84d7-e6e4" join=", "/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                 <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
               </modifiers>
             </infoLink>
@@ -4691,7 +4697,9 @@ Characters who are not Undead may join Undead units despite not being Unstable 
               <modifiers>
                 <modifier type="set" value="Bloody Bill&apos;s Buckler" field="annotation"/>
                 <modifier type="append" value="The wielder gains the Parry (6+) special rule, and any enemy attempting to strike him in Close Combat suffers -1 To Hit.
-" field="ff58-91e4-84d7-e6e4" join=", "/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -4729,7 +4737,9 @@ Characters who are not Undead may join Undead units despite not being Unstable 
                 <modifier type="set" value="3+" field="168d-1cc2-66f3-e766"/>
                 <modifier type="set" value="3+" field="97ea-ecf7-8d24-b2ca"/>
                 <modifier type="append" value="This armour save cannot be improved by any means, and failed armour saves may be rerolled. However, the wearer also has the Flammable special rule. 
-" field="ff58-91e4-84d7-e6e4"/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -4841,6 +4851,9 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           </categoryLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.profiles.Armour Save"/>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Talismans" id="0aeb-c885-1411-27b5" hidden="false" collapsible="true">
       <constraints>
@@ -5388,8 +5401,6 @@ Characters who are not Undead may join Undead units despite not being Unstable 
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
-        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
-        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
       </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="90. Vampiric Powers &amp; Magic Items" id="d673-44bc-8f02-faae" hidden="false" collapsible="true">
@@ -5411,8 +5422,6 @@ Characters who are not Undead may join Undead units despite not being Unstable 
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
-        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
-        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
       </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="61. Lore" id="85d1-db5b-52b2-b590" hidden="false">
