@@ -5923,9 +5923,13 @@ While there are rank and file models left in the unit (except the Command Group)
                 <entryLink import="true" name="40. Suits of Armour" hidden="false" id="2d51-b0d2-fc1b-0ff7" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
                   <entryLinks>
                     <entryLink import="true" name="Heavy Armour" hidden="false" id="bdb5-c25b-7dc4-b6be" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f794-9ba9-4b8f-c764"/>
-                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="1" field="2a65-3a21-af86-6ae3">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                     </entryLink>
                   </entryLinks>
                 </entryLink>

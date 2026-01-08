@@ -2963,9 +2963,13 @@
                 <entryLink import="true" name="50. Handheld Armour" hidden="false" id="e91a-9413-4ef4-f83a" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
                   <entryLinks>
                     <entryLink import="true" name="Shield" hidden="false" id="87c0-45a3-443a-b153" type="selectionEntry" targetId="c068-0827-9931-d9bf">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3ee6-4b42-35db-9ef0"/>
-                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="1" field="3d59-dcea-ec30-dc28">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="ba52-4f0c-71ae-b52d" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                     </entryLink>
                   </entryLinks>
                 </entryLink>
