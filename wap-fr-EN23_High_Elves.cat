@@ -6138,7 +6138,7 @@
                 </entryLink>
                 <entryLink import="true" name="70. Mount" hidden="false" id="91d0-c31e-bdd0-e36e" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
                   <entryLinks>
-                    <entryLink import="true" name="Flamespyre Phoenix" hidden="false" id="1321-9484-c6ae-c1ad" type="selectionEntry" targetId="0a87-1475-7989-9388">
+                    <entryLink import="true" name="Flamespyre Phoenix" hidden="false" id="1321-9484-c6ae-c1ad" type="selectionEntry" targetId="4627-aae7-0794-7924">
                       <costs>
                         <cost name="pts" typeId="points" value="260"/>
                       </costs>
@@ -9213,15 +9213,20 @@ Strength penalty.</characteristic>
             </rule>
           </rules>
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="be17-eaf8-cc1f-f16c"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="be17-eaf8-cc1f-f16c" automatic="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="9bdb-26ff-47b1-fbe9" negative="false" automatic="true"/>
           </constraints>
-          <modifiers>
-            <modifier type="set" value="0" field="points">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="0" field="points"/>
+                <modifier type="set" value="1" field="9bdb-26ff-47b1-fbe9"/>
+              </modifiers>
               <conditions>
                 <condition type="instanceOf" value="1" field="selections" scope="ancestor" childId="9877-8c82-08cd-cf8b" shared="true"/>
               </conditions>
-            </modifier>
-          </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Flamespyre Phoenix" hidden="false" id="ef24-287d-8092-1464">
           <infoLinks>
