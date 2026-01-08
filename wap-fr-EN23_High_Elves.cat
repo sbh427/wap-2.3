@@ -77,7 +77,15 @@
             <modifier type="set" value="100" field="e0e8-ca1a-ca32-fbc7"/>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="10. Character Options" hidden="false" id="6c66-2fbd-f68c-0d6b" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+        <entryLink import="true" name="10. Character Options" hidden="false" id="6c66-2fbd-f68c-0d6b" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.d322-3c7a-6d1e-7dc2">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="9715-efdc-d04e-a790" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="f980-4171-fc15-87e9" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Hand Weapon" hidden="false" id="ed2b-d000-6f38-7d32" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
@@ -1133,6 +1141,13 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e32c-00e2-d3f8-4058" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden" affects="self.entries.recursive.d322-3c7a-6d1e-7dc2">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="9715-efdc-d04e-a790" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </entryLink>
         <entryLink import="true" name="89. Elven Honours" hidden="false" id="366c-5303-5603-5636" type="selectionEntryGroup" targetId="aa34-0f06-6452-9a7a">
           <modifiers>
@@ -2274,6 +2289,13 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="Silverin Guard" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="2ec1-0094-a193-dec1" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="6534-af9f-5e6f-3118" name="Wardens" hidden="false" collective="false" import="true" type="unit" sortIndex="103">
       <categoryLinks>
@@ -2546,6 +2568,13 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="The Storm Riders" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="1a51-a12b-2482-1dec" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="9133-c2e2-bd92-01fd" name="Silver Helms" hidden="false" collective="false" import="true" type="unit" sortIndex="106">
       <categoryLinks>
@@ -3043,6 +3072,13 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="The Puremane Company" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="f972-4309-8531-6623" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="51dc-ae5a-1b89-49c2" name="Lion Chariot of Chrace" hidden="false" collective="false" import="true" type="model" sortIndex="206">
       <infoLinks>
@@ -3301,6 +3337,13 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="The Fireborn" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="594e-d859-d366-25af" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="d457-5d2a-b941-3822" name="Shadow Warriors" hidden="false" collective="false" import="true" type="unit" sortIndex="203">
       <categoryLinks>
@@ -3415,6 +3458,13 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="set" value="The Grey" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="35a8-c655-92ff-1f43" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="70e0-9530-c88e-d2f4" name="Sisters of Avelorn" hidden="false" collective="false" import="true" type="unit" sortIndex="302">
       <categoryLinks>
@@ -3683,6 +3733,7 @@
         <selectionEntry type="upgrade" import="true" name="Keepers of the Flame" hidden="false" id="2171-f52c-cb03-d5d2" sortIndex="1">
           <constraints>
             <constraint type="min" value="0" field="selections" scope="force" shared="true" id="70fc-1b92-43c5-8e61" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c625-5b96-fdd6-f7fe" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
           <modifiers>
             <modifier type="set" value="1" field="70fc-1b92-43c5-8e61">
@@ -3767,6 +3818,26 @@
           </conditions>
         </modifierGroup>
       </modifierGroups>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d707-ec6a-f4cf-a912"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="d707-ec6a-f4cf-a912">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="9877-8c82-08cd-cf8b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="1321-9484-c6ae-c1ad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="set" value="Keepers of the Flame" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="2171-f52c-cb03-d5d2" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="5672-83d6-3247-1216" name="Handmaidens of the Everqueen" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
@@ -4000,29 +4071,9 @@
           </selectionEntries>
         </entryLink>
         <entryLink import="true" name="55. Equipment" hidden="false" id="f657-d5a2-fe1a-a167" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Eagle Claw Bolt Thrower" hidden="false" id="bd40-0b0c-3deb-2637" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d822-7f33-0d86-c5ec" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Eagle Eye Bolt Thrower" typeId="781d-35fe-dd22-05d6" typeName="War Machine" hidden="false" id="d0bc-4276-4392-5136" publicationId="9e23-79cb-pubN77092" page="32">
-                  <characteristics>
-                    <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Bolt Thrower</characteristic>
-                    <characteristic name="Range" typeId="1c88-efb0-083f-b945">36&quot;</characteristic>
-                    <characteristic name="Strength" typeId="6ca0-d074-628f-e276">5</characteristic>
-                    <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Armour Piercing (1). Slow to Fire. The Eagle Eye Bolt Thrower can be fired by one of the Skycutter&apos;s crew in place of his bow.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Firing a Blot Thrower" id="ad70-39d4-75df-fea3" hidden="false" type="rule" targetId="f55b-b981-fae7-afa2"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="25"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Eagle Claw Bolt Thrower" hidden="false" id="6193-fd0c-80fc-760d" type="selectionEntry" targetId="7815-4994-c782-2972"/>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <comment>exists also as Mount</comment>
@@ -4911,6 +4962,20 @@
                 <categoryLink name="Z Shield" hidden="false" id="e325-fbeb-376b-e9b1" targetId="0210-637d-ff12-a760" primary="false"/>
                 <categoryLink name="Z Armour" hidden="false" id="525a-f4e9-6a38-4396" targetId="387c-2b7c-0a30-7305" primary="false"/>
               </categoryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="89. Elven Honours" id="f1cf-4f0d-47b7-49bc" hidden="false">
+                  <entryLinks>
+                    <entryLink import="true" name="Lothern Sea Helm" hidden="false" id="c767-473e-c6fa-279c" type="selectionEntry" targetId="4b4f-e22f-4c7d-dedc">
+                      <modifiers>
+                        <modifier type="set" value="0" field="points"/>
+                      </modifiers>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c9e4-5e79-351c-c420"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
             <selectionEntry id="29d0-3d00-ec13-52db" name="Alarielle the Radiant" hidden="false" collective="false" import="true" type="model" sortIndex="4">
               <constraints>
@@ -5405,7 +5470,6 @@
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Eltharion the Blind" hidden="false" id="4fe9-253b-e8ac-0d2a" collective="false" sortIndex="6">
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="6220-a99b-9b02-07b2" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="false" id="e0b9-da27-8df9-1fe4" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </constraints>
               <profiles>
@@ -5532,7 +5596,6 @@
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Eltharion the Grim" hidden="false" id="7719-6b52-7cbc-7717" collective="false" sortIndex="5">
               <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="83c0-a5e2-fa7e-30c7" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="false" id="4c20-3a36-774f-b193" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </constraints>
               <profiles>
@@ -6131,6 +6194,19 @@
                   </selectionEntries>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <modifiers>
+                <modifier type="add" value="{this} needs at least one selection of Keepers of the Flame (Phoenix Guard) if not mounted on Ashtari" field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="9877-8c82-08cd-cf8b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="1321-9484-c6ae-c1ad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="2171-f52c-cb03-d5d2" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Gilead &amp; Fithvael" hidden="false" id="5e84-6e9d-b719-20df" collective="false" sortIndex="5">
               <constraints>
@@ -8111,9 +8187,13 @@
           </costs>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
-              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="4b4f-e22f-4c7d-dedc" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
           <infoLinks>
@@ -8619,7 +8699,7 @@ Strength penalty.</characteristic>
         <selectionEntry type="upgrade" import="true" name="Bladelord" hidden="false" id="c1b2-9348-f734-a3ba" sortIndex="4">
           <rules>
             <rule name="Bladelord" id="707a-1268-5754-a859" hidden="false" publicationId="9e23-79cb-pubN77092" page="5">
-              <description>The model gains the Killing Blow and Swordmaster special rules. </description>
+              <description>The model gains the Killing Blow and Swordmaster special rules.</description>
               <modifiers>
                 <modifier type="prepend" value="Model on foot only. The model must take a great weapon." field="description" join=" ">
                   <conditionGroups>
@@ -8667,7 +8747,7 @@ Strength penalty.</characteristic>
         <selectionEntry type="upgrade" import="true" name="Chracian Hunter" hidden="false" id="cf83-d864-2305-a7a8" sortIndex="7">
           <rules>
             <rule name="Chracian Hunter" id="cab5-7aec-fc35-fb61" hidden="false" publicationId="9e23-79cb-pubN77092" page="4">
-              <description>The model gains the Forest Strider, Multiple Wounds (2) and Stubborn special rules. </description>
+              <description>The model gains the Forest Strider, Multiple Wounds (2) and Stubborn special rules.</description>
               <modifiers>
                 <modifier type="prepend" value="Model on foot only. The model gains a lion cloak. The model must take a great weapon and may be mounted on a White Lion Chariot (see Special Units), replacing one of the crew, for +95 points. " field="description" join=" ">
                   <conditionGroups>
@@ -8716,7 +8796,7 @@ Strength penalty.</characteristic>
         <selectionEntry type="upgrade" import="true" name="Cothique Mariner" hidden="false" id="0cb0-8b9c-bffa-082b" sortIndex="8">
           <rules>
             <rule name="Cothique Mariner" id="735a-5e44-215a-7f43" hidden="false" publicationId="9e23-79cb-pubN77092" page="4">
-              <description>Model on foot only. The model may not take heavy armour. The model and one unit of Rangers that they must deploy with gains the Ambushers special rule. </description>
+              <description>Model on foot only. The model may not take heavy armour. The model and one unit of Rangers that they must deploy with gains the Ambushers special rule.</description>
             </rule>
           </rules>
           <costs>
@@ -8736,7 +8816,7 @@ Strength penalty.</characteristic>
         <selectionEntry type="upgrade" import="true" name="Shadow Stalker" hidden="false" id="9715-efdc-d04e-a790" sortIndex="9">
           <rules>
             <rule name="Shadow Stalker" id="91ba-3fc6-5d9c-e68f" hidden="false" publicationId="9e23-79cb-pubN77092" page="4">
-              <description>The Model gains the Loner, Scouts and Sniper special rules. </description>
+              <description>The Model gains the Loner, Scouts and Sniper special rules.</description>
               <modifiers>
                 <modifier type="prepend" value="Model on foot only. The model must take an Elven bow or Elven longbow. They cannot take medium or heavy armour." field="description" join=" ">
                   <conditionGroups>
@@ -8775,7 +8855,7 @@ Strength penalty.</characteristic>
         <selectionEntry type="upgrade" import="true" name="Guardian of Yvresse" hidden="false" id="3450-8c92-7654-21df" sortIndex="2">
           <rules>
             <rule name="Guardian of Yvresse" id="5337-bf06-5e5f-99e7" hidden="false" publicationId="9e23-79cb-pubN77092" page="4">
-              <description>If this model is in a unit of Sentinels or Wardens, that unit gains the Fight in Extra Ranks (1) special rule. </description>
+              <description>If this model is in a unit of Sentinels or Wardens, that unit gains the Fight in Extra Ranks (1) special rule.</description>
               <modifiers>
                 <modifier type="prepend" value="Model on foot only. The model must take a shield." field="description" join=" ">
                   <conditionGroups>
@@ -8800,7 +8880,7 @@ Strength penalty.</characteristic>
         <selectionEntry type="upgrade" import="true" name="Blood of Caledor" hidden="false" id="f8c5-73a3-ee30-b5e8" sortIndex="10">
           <rules>
             <rule name="Blood of Caledor" id="f138-8feb-1153-4554" hidden="false" publicationId="9e23-79cb-pubN77092" page="5">
-              <description>The model gains +1 Attack and dragon armour. The model must be mounted on an Elven Steed with ithilmar barding or a Moon Dragon. Alternatively, if the model is a Lord, they may be mounted on a Star Dragon. If the model is a Hero, they may be mounted on a Sun Dragon. </description>
+              <description>The model gains +1 Attack and dragon armour. The model must be mounted on an Elven Steed with ithilmar barding or a Moon Dragon. Alternatively, if the model is a Lord, they may be mounted on a Star Dragon. If the model is a Hero, they may be mounted on a Sun Dragon.</description>
               <modifiers>
                 <modifier type="set" value="The model gains +1 Attack (already in profile) and dragon armour. The model must be mounted on an Elven Steed with ithilmar barding or a Moon Dragon. Alternatively, if the model is a Lord, they may be mounted on a Star Dragon. If the model is a Hero, they may be mounted on a Sun Dragon. " field="description">
                   <conditions>
@@ -8820,7 +8900,7 @@ Strength penalty.</characteristic>
         <selectionEntry type="upgrade" import="true" name="Tiranoc Chariot Master" hidden="false" id="a8e7-ed55-7f6c-d55c" sortIndex="1">
           <rules>
             <rule name="Tiranoc Chariot Master" id="127d-dd8d-88f6-b718" hidden="false" publicationId="9e23-79cb-pubN77092" page="5">
-              <description>Model on Tiranoc Chariot only. The model may roll an additional D6 for their Impact Hits and pick the highest result. In addition, they may re-roll failed Dangerous Terrain tests. </description>
+              <description>Model on Tiranoc Chariot only. The model may roll an additional D6 for their Impact Hits and pick the highest result. In addition, they may re-roll failed Dangerous Terrain tests.</description>
             </rule>
           </rules>
           <costs>
@@ -8853,7 +8933,7 @@ Strength penalty.</characteristic>
         <selectionEntry type="upgrade" import="true" name="Pure of Heart" hidden="false" id="4f4e-faf2-1388-18cb" sortIndex="6">
           <rules>
             <rule name="Pure of Heart" id="d0c8-ac8d-f650-a56b" hidden="false" publicationId="9e23-79cb-pubN77092" page="5">
-              <description>The model and any unit they join gain the Immunity (Panic) special rule. When fighting against Dark Elves in close combat, they gain Immunity (Psychology). </description>
+              <description>The model and any unit they join gain the Immunity (Panic) special rule. When fighting against Dark Elves in close combat, they gain Immunity (Psychology).</description>
             </rule>
           </rules>
           <costs>
@@ -8872,7 +8952,7 @@ Strength penalty.</characteristic>
           </constraints>
           <rules>
             <rule name="Anointed of Asuryan" id="bdf4-4cdf-2043-2e65" hidden="false" publicationId="9e23-79cb-pubN77092" page="5">
-              <description>The model gains a 4+ Ward save and the Immunity (Psychology) special rule. In addition, all models in a unit that contains an Anointed of Asuryan may re-roll Ward save results of 1.  </description>
+              <description>The model gains a 4+ Ward save and the Immunity (Psychology) special rule. In addition, all models in a unit that contains an Anointed of Asuryan may re-roll Ward save results of 1.</description>
               <modifiers>
                 <modifier type="prepend" value="Model on foot only. The model must take a polearm and may be mounted on a Flamespyre Phoenix (see Rare Units) for +200 points." field="description" join=" ">
                   <conditionGroups>
@@ -8926,6 +9006,7 @@ Strength penalty.</characteristic>
                     <conditionGroup type="and">
                       <conditions>
                         <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="23a8-0085-4d10-0d72" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="ab98-9576-ec83-f68e" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -9885,18 +9966,17 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
           </entryLinks>
         </entryLink>
       </entryLinks>
-      <modifiers>
-        <modifier type="decrement" value="1" field="6ffa-611b-5293-7b31-min">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="decrement" value="1" field="6ffa-611b-5293-7b31-min"/>
+            <modifier type="decrement" value="1" field="6ffa-611b-5293-7b31-max"/>
+          </modifiers>
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="model" childId="bd40-0b0c-3deb-2637" shared="true" includeChildSelections="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="7815-4994-c782-2972" shared="true" includeChildSelections="true"/>
           </conditions>
-        </modifier>
-        <modifier type="decrement" value="1" field="6ffa-611b-5293-7b31-max">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="model" childId="bd40-0b0c-3deb-2637" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Lothern Skycutter" hidden="false" id="fb86-7912-ff17-a9bc" collective="true" subType="mount" sortIndex="32">
       <constraints>
@@ -9933,6 +10013,11 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
             <modifier type="decrement" value="1" field="6ffa-611b-5293-7b31-min"/>
             <modifier type="decrement" value="1" field="6ffa-611b-5293-7b31-max"/>
           </modifiers>
+        </entryLink>
+        <entryLink import="true" name="55. Equipment" hidden="false" id="7f61-f12a-df07-3f5b" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+          <entryLinks>
+            <entryLink import="true" name="Eagle Claw Bolt Thrower" hidden="false" id="3662-0013-d813-dbf1" type="selectionEntry" targetId="7815-4994-c782-2972"/>
+          </entryLinks>
         </entryLink>
       </entryLinks>
     </selectionEntry>
@@ -10810,6 +10895,28 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="682f-cd2b-3b35-3983"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Eagle Claw Bolt Thrower" hidden="false" id="7815-4994-c782-2972" collective="false" sortIndex="61">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8829-59d7-2add-81a6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+      </constraints>
+      <profiles>
+        <profile name="Eagle Eye Bolt Thrower" typeId="781d-35fe-dd22-05d6" typeName="War Machine" hidden="false" id="311a-d675-f985-d173" publicationId="9e23-79cb-pubN77092" page="32">
+          <characteristics>
+            <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Bolt Thrower</characteristic>
+            <characteristic name="Range" typeId="1c88-efb0-083f-b945">36&quot;</characteristic>
+            <characteristic name="Strength" typeId="6ca0-d074-628f-e276">5</characteristic>
+            <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Armour Piercing (1). Slow to Fire. The Eagle Eye Bolt Thrower can be fired by one of the Skycutter&apos;s crew in place of his bow.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Firing a Blot Thrower" id="843f-2859-f613-b2af" hidden="false" type="rule" targetId="f55b-b981-fae7-afa2"/>
+      </infoLinks>
+      <costs>
+        <cost name="pts" typeId="points" value="25"/>
+      </costs>
+      <comment>Lothern Skycutter upgrade</comment>
     </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>
