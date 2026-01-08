@@ -55,13 +55,6 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
         <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">*(Only applies to attacks to the front)</characteristic>
       </characteristics>
     </profile>
-    <profile name="Ironfist" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="0dfd-1ecf-97a2-5671" publicationId="dc4b-67ab-7b8e-baa5" page="3">
-      <characteristics>
-        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
-        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+*</characteristic>
-        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Buckler. If a model with an Ironfist rolls a natural 6 when making a Parry save, it automatically inflicts an extra Hit back onto the model or unit that struck the blow. In addition, a model using an ironfist benefits from the Parry special rule even while mounted. *(Only applies to models on foot against missile attacks to the front)</characteristic>
-      </characteristics>
-    </profile>
     <profile name="Bloodgruel" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b12c-22e4-2a46-6bb2" publicationId="dc4b-67ab-7b8e-baa5" page="5">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
@@ -566,7 +559,15 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="463f-8caa-60f4-0dbf"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Ironfist" id="fbf4-b1f6-6929-a1dd" hidden="false" type="profile" targetId="0dfd-1ecf-97a2-5671"/>
+        <infoLink name="Buckler" id="3546-cf26-a9fa-a397" hidden="false" type="profile" targetId="1700-a7e5-d272-ef20">
+          <modifiers>
+            <modifier type="set" value="Ironfist" field="annotation"/>
+            <modifier type="append" value="If a model with an ironfist rolls a natural 6 when making a Parry save, it automatically inflicts an extra Hit back onto the model or unit that struck the blow. In addition, a model using an ironfist benefits from the Parry special rule even while mounted.
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -1257,8 +1258,16 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7872-5a88-342f-560f"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Ironfist" id="210e-8cb4-409a-101f" hidden="false" type="profile" targetId="0dfd-1ecf-97a2-5671"/>
         <infoLink name="Hand Weapon" id="0110-04ad-7750-5abe" hidden="false" type="profile" targetId="f6da-d707-0cd6-b1dd"/>
+        <infoLink name="Buckler" id="a86e-985f-80ad-43f6" hidden="false" type="profile" targetId="1700-a7e5-d272-ef20">
+          <modifiers>
+            <modifier type="set" value="Ironfist" field="annotation"/>
+            <modifier type="append" value="If a model with an ironfist rolls a natural 6 when making a Parry save, it automatically inflicts an extra Hit back onto the model or unit that struck the blow. In addition, a model using an ironfist benefits from the Parry special rule even while mounted.
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -1610,8 +1619,6 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
-        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
-        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
       </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Magic Weapons" id="7d70-0b99-d2e1-c23f" hidden="false" sortIndex="11" collapsible="true">
@@ -1904,6 +1911,10 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
       <entryLinks>
         <entryLink import="true" name="Common Magic Weapons" hidden="false" id="4e65-8005-fd98-467c" type="selectionEntryGroup" targetId="6820-41cc-94f6-87c1" sortIndex="99" flatten="true"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Magic Armour" id="21bd-401b-2b19-65e2" hidden="false" sortIndex="12" collapsible="true" flatten="true">
       <entryLinks>
@@ -1922,10 +1933,15 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="28f4-9a28-a4c3-e349" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
           <infoLinks>
-            <infoLink name="Ironfist" id="198a-419a-4863-7271" hidden="false" type="profile" targetId="0dfd-1ecf-97a2-5671">
+            <infoLink name="Buckler" id="d14e-e59f-34e2-be2d" hidden="false" type="profile" targetId="1700-a7e5-d272-ef20">
               <modifiers>
-                <modifier type="set" value="Skullplucker" field="annotation"/>
-                <modifier type="append" value="Any hits made with the Skullplucker have the Killing Blow special rule." field="ff58-91e4-84d7-e6e4" join=", "/>
+                <modifier type="set" value="Ironfist, Skullplucker" field="annotation"/>
+                <modifier type="append" value="If a model with an ironfist rolls a natural 6 when making a Parry save, it automatically inflicts an extra Hit back onto the model or unit that struck the blow. In addition, a model using an ironfist benefits from the Parry special rule even while mounted.
+
+Any hits made with the Skullplucker have the Killing Blow special rule.
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -1953,7 +1969,9 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <infoLink name="Gut Plate" id="1b91-e07a-9a72-fef2" hidden="false" type="profile" targetId="bc67-a19e-91da-e74d">
               <modifiers>
                 <modifier type="set" value="Ice Mammoth Skull Plate" field="annotation"/>
-                <modifier type="append" value="The wearer may re-roll failed armour saves." field="ff58-91e4-84d7-e6e4" join=", "/>
+                <modifier type="append" value="The wearer may re-roll failed armour saves." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -1981,7 +1999,9 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <infoLink name="Gut Plate" id="6de7-074d-e34b-8d33" hidden="false" type="profile" targetId="bc67-a19e-91da-e74d">
               <modifiers>
                 <modifier type="set" value="Grawl&apos;s Gut Plate" field="annotation"/>
-                <modifier type="append" value="The bearer of this item and any unit they are with adds +D3&quot; to their charge distance while within 18&quot; of any enemy unit." field="ff58-91e4-84d7-e6e4" join=", "/>
+                <modifier type="append" value="The bearer of this item and any unit they are with adds +D3&quot; to their charge distance while within 18&quot; of any enemy unit." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -2009,7 +2029,9 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <infoLink name="Gut Plate" id="83c2-6187-164b-d91f" hidden="false" type="profile" targetId="bc67-a19e-91da-e74d">
               <modifiers>
                 <modifier type="set" value="Greatskull" field="annotation"/>
-                <modifier type="append" value="Any Wizard that targets the bearer with a spell will miscast on any roll of any double." field="ff58-91e4-84d7-e6e4" join=", "/>
+                <modifier type="append" value="Any Wizard that targets the bearer with a spell will miscast on any roll of any double." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -2037,7 +2059,9 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <infoLink name="Gut Plate" id="aacd-bffc-ffdc-e093" hidden="false" type="profile" targetId="bc67-a19e-91da-e74d">
               <modifiers>
                 <modifier type="set" value="Kattanak Browplate" field="annotation"/>
-                <modifier type="append" value="The wearer gains +1 Leadership. In addition, all War Beasts and Monstrous Beasts suffer -1 To Hit against him." field="ff58-91e4-84d7-e6e4" join=", "/>
+                <modifier type="append" value="The wearer gains +1 Leadership. In addition, all War Beasts and Monstrous Beasts suffer -1 To Hit against him." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -2062,11 +2086,11 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c984-a0ad-3f21-dba7" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
           <profiles>
-            <profile name="Bullgut" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="edf3-c5d4-8da7-c090" publicationId="dc4b-67ab-7b8e-baa5" page="8">
+            <profile name="Bullgut" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="edf3-c5d4-8da7-c090" publicationId="dc4b-67ab-7b8e-baa5" page="8">
               <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Model on foot only. Gut-plate. The Bullgut gives the wearer the Impact Hits (D3) special rule, and all Impact Hits have the Armour Piercing (1) special rule.</characteristic>
+                <characteristic name="Combat" typeId="168d-1cc2-66f3-e766"/>
+                <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca"/>
+                <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Model on foot only. Gut-plate. The Bullgut gives the wearer the Impact Hits (D3) special rule, and all Impact Hits have the Armour Piercing (1) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -2100,7 +2124,9 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <infoLink name="Gut Plate" id="5953-b0a3-e10d-a3c1" hidden="false" type="profile" targetId="bc67-a19e-91da-e74d">
               <modifiers>
                 <modifier type="set" value="Gut Maw" field="annotation"/>
-                <modifier type="append" value="An Ogre wearing the Gut Maw has the Terror special rule. In addition, he recovers one lost Wound (up to his starting number) for each unsaved Wound he causes in a challenge." field="ff58-91e4-84d7-e6e4" join=", "/>
+                <modifier type="append" value="An Ogre wearing the Gut Maw has the Terror special rule. In addition, he recovers one lost Wound (up to his starting number) for each unsaved Wound he causes in a challenge." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -2128,7 +2154,9 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <infoLink name="Light Armour" id="91a4-960a-4e6c-e571" hidden="false" type="profile" targetId="4129-1acd-3564-d3ea">
               <modifiers>
                 <modifier type="set" value="Mastodon Armour" field="annotation"/>
-                <modifier type="append" value="If the wearer is killed by an attack that is not made in close combat, roll a D6; on a 2+, they will remain in play with one Wound remaining." field="ff58-91e4-84d7-e6e4" join=", "/>
+                <modifier type="append" value="If the wearer is killed by an attack that is not made in close combat, roll a D6; on a 2+, they will remain in play with one Wound remaining." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -2158,10 +2186,15 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4bb4-ed20-4e47-895a" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
           <infoLinks>
-            <infoLink name="Ironfist" id="4fe7-802d-1fa5-b602" hidden="false" type="profile" targetId="0dfd-1ecf-97a2-5671">
+            <infoLink name="Buckler" id="e0a5-c175-b26b-80f6" hidden="false" type="profile" targetId="1700-a7e5-d272-ef20">
               <modifiers>
-                <modifier type="set" value="Greedy Fist" field="annotation"/>
-                <modifier type="append" value="The wearer gains +1 Strength and a Ward save (6+). If a Magic Weapon inflicts a Wound that is saved by this Ward save, its magical properties are consumed by the Greedy Fist; from the end of this close combat it is treated as a normal, non-magical weapon of the same type for the remainder of the game. In addition, an enemy Wizard loses a Wizard level and a randomly selected spell each time they are hit by an Ogre wearing the Greedy Fist." field="ff58-91e4-84d7-e6e4" join=", "/>
+                <modifier type="set" value="Ironfist, Greedy Fist" field="annotation"/>
+                <modifier type="append" value="If a model with an ironfist rolls a natural 6 when making a Parry save, it automatically inflicts an extra Hit back onto the model or unit that struck the blow. In addition, a model using an ironfist benefits from the Parry special rule even while mounted.
+
+The wearer gains +1 Strength and a Ward save (6+). If a Magic Weapon inflicts a Wound that is saved by this Ward save, its magical properties are consumed by the Greedy Fist; from the end of this close combat it is treated as a normal, non-magical weapon of the same type for the remainder of the game. In addition, an enemy Wizard loses a Wizard level and a randomly selected spell each time they are hit by an Ogre wearing the Greedy Fist.
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -2178,6 +2211,9 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
           </categoryLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.profiles.Armour Save"/>
+      </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Talismans" id="3b82-3c61-4f07-7044" hidden="false" sortIndex="13" collapsible="true">
       <constraints>
@@ -6717,7 +6753,10 @@ If no suitable target is in base contact, roll again on the chart until you get 
                         <infoLink name="Medium Armour" id="0d71-e986-39d8-ee4e" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
                           <modifiers>
                             <modifier type="set" value="Ironskin Armour" field="annotation"/>
-                            <modifier type="append" value="The Ironskin Armor gives Ghark a 6+ Ward save." field="ff58-91e4-84d7-e6e4" join=", "/>
+                            <modifier type="append" value="The Ironskin Armor gives Ghark a 6+ Ward save." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -7397,15 +7436,17 @@ If no suitable target is in base contact, roll again on the chart until you get 
                             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6dae-f229-a8a3-3dd7-min"/>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6dae-f229-a8a3-3dd7-max"/>
                           </constraints>
-                          <profiles>
-                            <profile name="The Great Bullplate" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="fe9c-042f-48fd-c0c1" publicationId="fe27-09e1-b66a-ba42" page="45">
-                              <characteristics>
-                                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+*</characteristic>
-                                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+*</characteristic>
-                                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Gut-plate. The Bullplate gives Braugh and his unit the Swiftstride special rule when charging. *(Only applies to attacks to the front)</characteristic>
-                              </characteristics>
-                            </profile>
-                          </profiles>
+                          <infoLinks>
+                            <infoLink name="Gut Plate" id="883a-cb4d-566e-ae44" hidden="false" type="profile" targetId="bc67-a19e-91da-e74d">
+                              <modifiers>
+                                <modifier type="set" value="The Great Bullplate" field="annotation"/>
+                                <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
+                                <modifier type="append" value="The Bullplate gives Braugh and his unit the Swiftstride special rule when charging." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                              </modifiers>
+                            </infoLink>
+                          </infoLinks>
                         </selectionEntry>
                       </selectionEntries>
                     </selectionEntryGroup>

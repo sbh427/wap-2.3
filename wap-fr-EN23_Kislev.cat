@@ -2049,6 +2049,10 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
           <entryLinks>
             <entryLink import="true" name="Common Magic Weapons" hidden="false" id="93cb-3e3f-b937-d961" type="selectionEntryGroup" targetId="6820-41cc-94f6-87c1" flatten="true" collapsible="true" sortIndex="99"/>
           </entryLinks>
+          <modifiers>
+            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
+            <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
+          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Magic Armour" id="3d80-fecb-98b4-57c9" hidden="false" sortIndex="2" collapsible="true">
           <constraints>
@@ -2089,7 +2093,9 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
                   <modifiers>
                     <modifier type="set" value="Wyrm Harness" field="annotation"/>
                     <modifier type="append" value="The wearer of the Wyrm Harness gains a Ward save (6+).
-" field="ff58-91e4-84d7-e6e4" join=", "/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -2138,7 +2144,9 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
                   <modifiers>
                     <modifier type="set" value="Frost Shard Armour" field="annotation"/>
                     <modifier type="append" value="The bearer gains the Immunity (Ice Attacks) and Magic Resistance (2) special rules.
-" field="ff58-91e4-84d7-e6e4" join=", "/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -2159,7 +2167,9 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
                   <modifiers>
                     <modifier type="set" value="Shield of Sacrifice" field="annotation"/>
                     <modifier type="append" value="Every time the bearer suffers an unsaved Wound, roll a D6. On a 4+, the Wound is taken by a friendly model in base contact instead.
-" field="ff58-91e4-84d7-e6e4" join=", "/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -2187,7 +2197,9 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
                   <modifiers>
                     <modifier type="set" value="Iron Ice Armour" field="annotation"/>
                     <modifier type="append" value="Enemies in base contact with the wielder are subject to the Always Strikes Last special rule. This has no effect on models with Immunity (Ice Attacks).
-" field="ff58-91e4-84d7-e6e4" join=", "/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -2216,11 +2228,11 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ba0b-ff4d-bc6b-58d8"/>
               </constraints>
               <profiles>
-                <profile name="Ice-Armour of Jekaterina" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="0c21-6f04-8dbb-8774" publicationId="af5e-f821-6fd4-7df3" page="7">
+                <profile name="Ice-Armour of Jekaterina" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="0c21-6f04-8dbb-8774" publicationId="af5e-f821-6fd4-7df3" page="7">
                   <characteristics>
-                    <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">1+</characteristic>
-                    <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">1+</characteristic>
-                    <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The armour save cannot be improved by any means. The armour save never falls below 4+, even if the opponents Strength or magical weapon would reduce it to less. If the save ever fails the armour is destroyed. This armour may be taken by Wizards despite them not normally being able to take armour.</characteristic>
+                    <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">1+</characteristic>
+                    <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">1+</characteristic>
+                    <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">The armour save cannot be improved by any means. The armour save never falls below 4+, even if the opponents Strength or magical weapon would reduce it to less. If the save ever fails the armour is destroyed. This armour may be taken by Wizards despite them not normally being able to take armour.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -2250,7 +2262,9 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
                   <modifiers>
                     <modifier type="set" value="Armour of Alexandr" field="annotation"/>
                     <modifier type="append" value="The Armour of Alexandr gives the wearer a Ward save (5+). In addition, if an enemy with a Magic Weapon causes a Wound that is saved by either the wearer armour save or Ward save, roll a D6. On a 5+, the opponent&apos;s weapon is frozen and destroyed.
-" field="ff58-91e4-84d7-e6e4" join=", "/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -2274,6 +2288,9 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
           <entryLinks>
             <entryLink import="true" name="Common Magic Armour" hidden="false" id="45ce-7c90-f9c0-1075" type="selectionEntryGroup" targetId="557c-c8c5-0c0f-d2b3" flatten="true" collapsible="true" sortIndex="99"/>
           </entryLinks>
+          <modifiers>
+            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.profiles.Armour Save"/>
+          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Talismans" id="23fb-ce51-8b1b-1665" hidden="false" sortIndex="3" collapsible="true">
           <constraints>
@@ -2664,8 +2681,6 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
-        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
-        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
       </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="90. Magic Standards" id="718f-fef3-6191-7f6c" hidden="false" collapsible="true">
@@ -5717,7 +5732,10 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
                           <modifiers>
                             <modifier type="set" value="Armour of Ursun" field="annotation"/>
                             <modifier type="append" value="For each Hit caused by enemies in close combat, the wearer may make an additional attack back after his enemies&apos; attacks have been resolved (as long as the wearer is still alive). The wearer may make these bonus attacks even if they have already attacked that phase.
-" field="ff58-91e4-84d7-e6e4"/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -6175,7 +6193,10 @@ The enemy may not pursue a unit disengaging from combat in this manner. After m
                           <modifiers>
                             <modifier type="set" value="Armour of Praag" field="annotation"/>
                             <modifier type="append" value="The Armour of Praag gives the wearer +1 to their Toughness. 
-" field="ff58-91e4-84d7-e6e4" join=", "/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>

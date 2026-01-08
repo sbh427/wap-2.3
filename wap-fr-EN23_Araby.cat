@@ -532,6 +532,10 @@
           <entryLinks>
             <entryLink import="true" name="Common Magic Weapons" hidden="false" id="a32f-bc7b-2ea9-2c8d" type="selectionEntryGroup" targetId="6820-41cc-94f6-87c1" sortIndex="99" flatten="true"/>
           </entryLinks>
+          <modifiers>
+            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
+            <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
+          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Talismans" id="2aa1-45ae-a43c-01ef" hidden="false" sortIndex="3" collapsible="true">
           <selectionEntries>
@@ -893,11 +897,11 @@
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
               <profiles>
-                <profile name="Bracers of the Snake" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="c836-da17-4776-eec0" publicationId="fd0a-6995-03c8-1dd6" page="4">
+                <profile name="Bracers of the Snake" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="c836-da17-4776-eec0" publicationId="fd0a-6995-03c8-1dd6" page="4">
                   <characteristics>
-                    <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
-                    <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                    <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">One enemy model in base contact, chosen by the bearer, suffer -1 penalty to their Attack characteristic.</characteristic>
+                    <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+                    <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+                    <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">One enemy model in base contact, chosen by the bearer, suffer -1 penalty to their Attack characteristic.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -918,11 +922,11 @@
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
               <profiles>
-                <profile name="Helm of the Sun&apos;s Wrath" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="b14c-127b-a62b-a844" publicationId="fd0a-6995-03c8-1dd6" page="4">
+                <profile name="Helm of the Sun&apos;s Wrath" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="b14c-127b-a62b-a844" publicationId="fd0a-6995-03c8-1dd6" page="4">
                   <characteristics>
-                    <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
-                    <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                    <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">This item gives the wearer the Immunity (Flaming Attacks) and Hatred special rules.</characteristic>
+                    <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+                    <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+                    <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">This item gives the wearer the Immunity (Flaming Attacks) and Hatred special rules.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -950,7 +954,9 @@
                 <infoLink name="Medium Armour" id="c2ff-cb50-44e7-e6ca" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
                   <modifiers>
                     <modifier type="set" value="Armour of Deflection" field="annotation"/>
-                    <modifier type="append" value="For every successful armour save the wearer of this item makes in close combat, the attacking model suffers back a Hit using the same Strength and special rules as they used to attack." field="ff58-91e4-84d7-e6e4" join=", "/>
+                    <modifier type="append" value="For every successful armour save the wearer of this item makes in close combat, the attacking model suffers back a Hit using the same Strength and special rules as they used to attack." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -1021,7 +1027,9 @@
                 <infoLink name="Shield" id="1e4e-25fd-00b3-9ec1" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
                   <modifiers>
                     <modifier type="set" value="Shield of Faith" field="annotation"/>
-                    <modifier type="append" value="The bearer gains a Ward save (5+). If the bearer is wounded by an enemy with a magical weapon but passes their Ward save, the enemies weapon is destroyed." field="ff58-91e4-84d7-e6e4" join=", "/>
+                    <modifier type="append" value="The bearer gains a Ward save (5+). If the bearer is wounded by an enemy with a magical weapon but passes their Ward save, the enemies weapon is destroyed." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -1043,6 +1051,9 @@
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1799-8d8d-e776-bf05" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.profiles.Armour Save"/>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <constraints>
@@ -1054,8 +1065,6 @@
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
-        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
-        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
       </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Magic Standards" id="3335-4603-acc0-28b4" hidden="false">
@@ -4663,15 +4672,17 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bed1-725b-64cc-995d"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4883-adcf-5ed0-acb0"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Armour of the Sun" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="9713-98d6-e400-961c">
-                          <characteristics>
-                            <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">5+</characteristic>
-                            <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">5+</characteristic>
-                            <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Medium armour. Enemies attempting to strike the wearer must re-roll all successful rolls to hit in close combat.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
+                      <infoLinks>
+                        <infoLink name="Medium Armour" id="b64f-ba67-e5ee-4900" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
+                          <modifiers>
+                            <modifier type="set" value="Armour of the Sun" field="annotation"/>
+                            <modifier type="append" value="Enemies attempting to strike the wearer must re-roll all successful rolls to hit in close combat." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>

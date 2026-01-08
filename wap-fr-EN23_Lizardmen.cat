@@ -1620,6 +1620,52 @@ A Slann who is in base contact with a model with the Guardians special rule is c
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
+    <selectionEntry type="model" import="true" name="Cold One" hidden="false" id="2e2e-ab1c-2700-efa1" collective="true" subType="mount">
+      <infoLinks>
+        <infoLink name="Fear" id="952f-ab5f-1cd6-887b" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
+        <infoLink name="Stupidity" id="7bd2-30f8-63e3-65b7" hidden="false" targetId="755c-61c2-fa25-f4ce" type="rule"/>
+        <infoLink name="Natural Armour" id="971c-3d30-df57-758c" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Cold One" field="annotation"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <categoryLinks>
+        <categoryLink name="Mount" hidden="false" id="433c-93ea-427f-6a82" targetId="8b8a-34b1-ed30-df11" primary="false"/>
+        <categoryLink name="Cavalry" hidden="false" id="9066-3b0a-578d-bb24" targetId="bdee-b168-38ba-7d3c" primary="false"/>
+      </categoryLinks>
+      <profiles>
+        <profile name="Cold One" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="af7a-0b6e-ca83-85f5" publicationId="9e23-79cb-pubN76150" page="131">
+          <characteristics>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+            <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+            <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">3</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Saurian)</characteristic>
+          </characteristics>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="true" field="df90-5cbd-8cf9-95b2"/>
+                <modifier type="set" value="true" field="27ee-0675-122f-a1b1"/>
+                <modifier type="set" value="true" field="a199-f10b-a038-5730"/>
+                <modifier type="set" value="true" field="09ad-18df-607b-1215"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="crew" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
+        </profile>
+      </profiles>
+    </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Bestiary" id="4bd7-0c5d-d0ab-6ff4" targetId="1fc9-2903-cb19-5737"/>
@@ -2255,6 +2301,10 @@ can cause the Mage-Priest to roll more dice than normally allowed.</characteris
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4eef-7c9b-00c2-323f" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
+            <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
+          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Magic Armour" id="9b01-47bf-3a2b-d930" hidden="false" sortIndex="2" collapsible="true">
           <selectionEntries>
@@ -2269,7 +2319,9 @@ can cause the Mage-Priest to roll more dice than normally allowed.</characteris
                 <infoLink name="Shield" id="ee32-c694-2efd-b120" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
                   <modifiers>
                     <modifier type="append" value="Any magic missile that strikes the bearer this of armour or any unit they are with is reflected on the roll of 2+ on a D6. If the spell is reflected, the results of the magic missile are resolved against the caster of the spell and any unit they are with. 
-" field="ff58-91e4-84d7-e6e4"/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                     <modifier type="set" value="Shield of the Mirrored Pool" field="annotation"/>
                   </modifiers>
                 </infoLink>
@@ -2296,7 +2348,9 @@ can cause the Mage-Priest to roll more dice than normally allowed.</characteris
                 <infoLink name="Shield" id="5ce1-b719-ec40-c56d" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
                   <modifiers>
                     <modifier type="append" value="All close combat attacks directed against the bearer of this shield must re-roll successful rolls To Hit. 
-" field="ff58-91e4-84d7-e6e4"/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                     <modifier type="set" value="Coronal Shield" field="annotation"/>
                   </modifiers>
                 </infoLink>
@@ -2322,9 +2376,10 @@ can cause the Mage-Priest to roll more dice than normally allowed.</characteris
               <infoLinks>
                 <infoLink name="Shield" id="a8a0-625f-4a53-cf62" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
                   <modifiers>
-                    <modifier type="append" value="This armour gives the bearer +1 Attack and the
-Magical Attacks special rule.
-" field="ff58-91e4-84d7-e6e4"/>
+                    <modifier type="append" value="This armour gives the bearer +1 Attack and the Magical Attacks special rule.
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                     <modifier type="set" value="The Maiming Shield" field="annotation"/>
                   </modifiers>
                 </infoLink>
@@ -2351,7 +2406,9 @@ Magical Attacks special rule.
                 <infoLink name="Shield" id="50c0-be9e-1d43-19ad" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
                   <modifiers>
                     <modifier type="append" value="All missile attacks targeting the bearer of this shield or any unit they are with suffer -1 To Wound. 
-" field="ff58-91e4-84d7-e6e4"/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                     <modifier type="set" value="Shield of Chaqua" field="annotation"/>
                   </modifiers>
                 </infoLink>
@@ -2421,6 +2478,7 @@ Magical Attacks special rule.
                 <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="387c-2b7c-0a30-7305" shared="true"/>
               </conditions>
             </modifier>
+            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.profiles.Armour Save"/>
           </modifiers>
           <entryLinks>
             <entryLink import="true" name="Common Magic Armour" hidden="false" id="7937-7d61-f0e3-3cad" type="selectionEntryGroup" targetId="557c-c8c5-0c0f-d2b3" sortIndex="99" flatten="true"/>
@@ -3223,8 +3281,6 @@ rule. This has a +1 bonus To Wound against Daemons, Undead and Vampires.</chara
             <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="d989-1124-0dea-ae27" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
-        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
-        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
       </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="91. Magic Standards" id="9891-18a7-75a7-497c" hidden="false" collapsible="true">
@@ -3981,7 +4037,7 @@ Contemplations Discipline" field="error">
                 <cost name="pts" typeId="points" value="175"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Cold One" hidden="false" id="ff65-7d52-a373-0f5e" type="selectionEntry" targetId="8b53-7da4-587d-872a" sortIndex="1">
+            <entryLink import="true" name="Cold One" hidden="false" id="ff65-7d52-a373-0f5e" type="selectionEntry" targetId="2e2e-ab1c-2700-efa1" sortIndex="1">
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
@@ -4229,7 +4285,7 @@ Contemplations Discipline" field="error">
                 <cost name="pts" typeId="points" value="50"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Cold One" hidden="false" id="6418-3d6a-cdf4-d999" type="selectionEntry" targetId="8b53-7da4-587d-872a" sortIndex="1">
+            <entryLink import="true" name="Cold One" hidden="false" id="6418-3d6a-cdf4-d999" type="selectionEntry" targetId="2e2e-ab1c-2700-efa1" sortIndex="1">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
@@ -5623,7 +5679,7 @@ Contemplations Discipline" field="error">
             </entryLink>
             <entryLink import="true" name="70. Mount" hidden="false" id="4e06-2d6b-7d6c-aadb" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
               <entryLinks>
-                <entryLink import="true" name="Cold One" hidden="false" id="f991-187b-ccff-5b3b" type="selectionEntry" targetId="8b53-7da4-587d-872a">
+                <entryLink import="true" name="Cold One" hidden="false" id="f991-187b-ccff-5b3b" type="selectionEntry" targetId="2e2e-ab1c-2700-efa1">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="41e7-09aa-da5c-5410" includeChildSelections="false"/>
                   </constraints>
@@ -7486,7 +7542,7 @@ to see if the comet arrives.</characteristic>
             </entryLink>
             <entryLink import="true" name="70. Mount" hidden="false" id="5f34-cd8d-822a-3760" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
               <entryLinks>
-                <entryLink import="true" name="Cold One" hidden="false" id="9d9c-2996-d46f-d7f8" type="selectionEntry" targetId="8b53-7da4-587d-872a">
+                <entryLink import="true" name="Cold One" hidden="false" id="9d9c-2996-d46f-d7f8" type="selectionEntry" targetId="2e2e-ab1c-2700-efa1">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6c38-a287-0749-4821" includeChildSelections="false"/>
                   </constraints>
@@ -7622,7 +7678,7 @@ to see if the comet arrives.</characteristic>
                           <characteristics>
                             <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
                             <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
-                            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Enemy units with the Scouts special rule may not use their special deployment to set up within 20&quot; of Chakax. In addition, if an enemy unit within 20&quot; of Chakax contains &apos;hidden&apos; models (such as Assassins, Night Goblin Fanatics etc.), their presence must be announced as soon as they come within 20&quot; of Chakax.</characteristic>
+                            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Magic Armour. Enemy units with the Scouts special rule may not use their special deployment to set up within 20&quot; of Chakax. In addition, if an enemy unit within 20&quot; of Chakax contains &apos;hidden&apos; models (such as Assassins, Night Goblin Fanatics etc.), their presence must be announced as soon as they come within 20&quot; of Chakax.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -7713,6 +7769,7 @@ to see if the comet arrives.</characteristic>
                             <modifier type="set" value="The Shield of Aeons" field="annotation"/>
                             <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
                             <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
+                            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>

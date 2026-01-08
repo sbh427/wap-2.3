@@ -4160,7 +4160,10 @@ Strength 2 hits which Ignores Armour saves</description>
                         <infoLink name="Heavy Armour" id="31de-4580-ec1a-ef12" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
                           <modifiers>
                             <modifier type="set" value="Armour of Golden Magnificence" field="annotation"/>
-                            <modifier type="append" value="This armour save cannot be modified in any way, and may even be taken against mundane attacks that normally do not allow armour saves" field="ff58-91e4-84d7-e6e4"/>
+                            <modifier type="append" value="This armour save cannot be modified in any way, and may even be taken against mundane attacks that normally do not allow armour saves" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -4284,6 +4287,7 @@ Strength 2 hits which Ignores Armour saves</description>
                 <entryLink import="true" name="90. Magic Items" hidden="false" id="22c1-7839-fc67-38f7" type="selectionEntryGroup" targetId="4a6c-a780-b910-e3b8">
                   <modifiers>
                     <modifier type="set" value="50" field="6ee7-c31b-82f8-adfd"/>
+                    <modifier type="set" value="true" field="hidden" affects="838f-7b85-acae-a577"/>
                   </modifiers>
                 </entryLink>
                 <entryLink import="true" name="10. Character Options" hidden="false" id="763e-6211-5642-79b2" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
@@ -5952,6 +5956,10 @@ Strength 2 hits which Ignores Armour saves</description>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f95e-c9d8-f9be-6460" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
+            <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
+          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Magic Armour" id="00e7-e0e6-c5f5-1a36" hidden="false" sortIndex="2" collapsible="true">
           <selectionEntries>
@@ -5966,7 +5974,9 @@ Strength 2 hits which Ignores Armour saves</description>
               <infoLinks>
                 <infoLink name="Light Armour" id="fb7e-236a-7132-c728" hidden="false" type="profile" targetId="4129-1acd-3564-d3ea">
                   <modifiers>
-                    <modifier type="append" value="The character can never suffer more than one wound due to combat resolution. If the wearer is with a unit, up to half the wounds suffered due to combat resolution can be allocated against the character, which are then ignored save for the first one." field="ff58-91e4-84d7-e6e4"/>
+                    <modifier type="append" value="The character can never suffer more than one wound due to combat resolution. If the wearer is with a unit, up to half the wounds suffered due to combat resolution can be allocated against the character, which are then ignored save for the first one." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                     <modifier type="set" value="Scorpion Armour" field="name"/>
                   </modifiers>
                 </infoLink>
@@ -6032,7 +6042,9 @@ Strength 2 hits which Ignores Armour saves</description>
               <infoLinks>
                 <infoLink name="Light Armour" id="3576-1b60-525c-dc67" hidden="false" type="profile" targetId="4129-1acd-3564-d3ea">
                   <modifiers>
-                    <modifier type="append" value="Enemy models must re-roll successful rolls To Wound against the wearer of this armour." field="ff58-91e4-84d7-e6e4"/>
+                    <modifier type="append" value="Enemy models must re-roll successful rolls To Wound against the wearer of this armour." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                     <modifier type="set" value="Armour of Eternity" field="name"/>
                   </modifiers>
                 </infoLink>
@@ -6052,7 +6064,9 @@ Strength 2 hits which Ignores Armour saves</description>
               <infoLinks>
                 <infoLink name="Light Armour" id="b1cb-89b5-c9a1-28ed" hidden="false" type="profile" targetId="4129-1acd-3564-d3ea">
                   <modifiers>
-                    <modifier type="append" value="When the wearer of this armour is reduced to their last Wound, they gain a 3+ Ward save. This has no effect if they suffer their last Wound as a result of an attack that causes Multiple Wounds." field="ff58-91e4-84d7-e6e4"/>
+                    <modifier type="append" value="When the wearer of this armour is reduced to their last Wound, they gain a 3+ Ward save. This has no effect if they suffer their last Wound as a result of an attack that causes Multiple Wounds." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                     <modifier type="set" value="Armour of the Ages" field="name"/>
                   </modifiers>
                 </infoLink>
@@ -6135,7 +6149,9 @@ Strength 2 hits which Ignores Armour saves</description>
               <infoLinks>
                 <infoLink name="Shield" id="eccf-c032-6c89-8336" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
                   <modifiers>
-                    <modifier type="append" value="The bearer of this shield gains the Parry (6+) special rule even while mounted. If they make a successful Parry save, all models in base contact with them suffer -1 To Hit for the remainder of the turn, or the next turn if they have already attacked this turn." field="ff58-91e4-84d7-e6e4"/>
+                    <modifier type="append" value="The bearer of this shield gains the Parry (6+) special rule even while mounted. If they make a successful Parry save, all models in base contact with them suffer -1 To Hit for the remainder of the turn, or the next turn if they have already attacked this turn." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                     <modifier type="set" value="Shield of Pta" field="annotation"/>
                   </modifiers>
                 </infoLink>
@@ -6181,15 +6197,6 @@ Strength 2 hits which Ignores Armour saves</description>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cae5-ee3e-6d84-6d3f" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6745-b902-1630-3829" includeChildSelections="true"/>
               </constraints>
-              <profiles>
-                <profile name="Warding Splint" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="5e1b-1bd0-fbfa-eae9">
-                  <characteristics>
-                    <characteristic name="Combat" typeId="168d-1cc2-66f3-e766"/>
-                    <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca"/>
-                    <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Light armour. This armour gives the wearer a 5+ Ward save in close combat. This armour may be taken even though Wizards may not normally wear armour.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
@@ -6200,6 +6207,16 @@ Strength 2 hits which Ignores Armour saves</description>
                   </conditions>
                 </modifier>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Light Armour" id="62d2-d289-8f97-3a80" hidden="false" type="profile" targetId="4129-1acd-3564-d3ea">
+                  <modifiers>
+                    <modifier type="append" value="This armour gives the wearer a 5+ Ward save in close combat. This armour may be taken even though Wizards may not normally wear armour." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                    <modifier type="set" value="Warding Splint" field="annotation"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
@@ -6208,6 +6225,9 @@ Strength 2 hits which Ignores Armour saves</description>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8188-7f3f-877b-69cf" includeChildSelections="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.profiles.Armour Save"/>
+          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Talismans" id="f1b2-fd9e-80af-b871" hidden="false" sortIndex="3" collapsible="true">
           <selectionEntries>
@@ -6806,8 +6826,6 @@ Strength 2 hits which Ignores Armour saves</description>
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
-        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
-        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
       </modifiers>
       <constraints>
         <constraint type="max" value="0" field="points" scope="parent" shared="true" id="6ee7-c31b-82f8-adfd"/>
