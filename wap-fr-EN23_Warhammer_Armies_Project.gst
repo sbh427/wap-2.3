@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="80" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="81" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -166,6 +166,13 @@
         <characteristicType name="Special Rule" id="84ea-8900-474d-6201" kind="longText"/>
       </characteristicTypes>
     </profileType>
+    <profileType name="Armour Save" id="884c-d50e-eeb6-eda0" hidden="false" kind="weapon" sortIndex="5">
+      <characteristicTypes>
+        <characteristicType name="Combat" id="168d-1cc2-66f3-e766" kind="annotation"/>
+        <characteristicType name="Missile" id="97ea-ecf7-8d24-b2ca" kind="annotation"/>
+        <characteristicType name="Special Rules" id="ff58-91e4-84d7-e6e4" kind="longText"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="d280-b7df-c185-2ba5" name="Lords" hidden="false">
@@ -290,6 +297,22 @@
         <infoLink name="Terror" id="02ea-57d5-4bb7-bc2d" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
         <infoLink name="Swiftstride" id="9700-feb5-c942-f86e" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
       </infoLinks>
+      <profiles>
+        <profile name="Ridden Monster" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="9450-3d04-ce97-32bd">
+          <characteristics>
+            <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">Limit 2+</characteristic>
+            <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">Limit 2+</characteristic>
+            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+      </profiles>
     </categoryEntry>
     <categoryEntry name="Cavalry" id="bdee-b168-38ba-7d3c" hidden="false">
       <infoLinks>
