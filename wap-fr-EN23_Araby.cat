@@ -3712,16 +3712,6 @@
             <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="0947-7397-54e8-62d4" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Naphtha Bombs" hidden="false" id="b92b-96c0-cbc3-995a" collective="true">
-                  <profiles>
-                    <profile name="Naphtha Bombs" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="8752-ac6d-aad9-7f57" publicationId="fd0a-6995-03c8-1dd6">
-                      <characteristics>
-                        <characteristic name="Range" typeId="af3c-d805-702c-9af9">6&quot;</characteristic>
-                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
-                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
-                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Flaming Attacks, Ignores Armour Saves, Quick to Fire, An enemy unit taking a casualty from naphtha bombs must take a Panic test.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b8b4-ceee-6d4a-8b55" automatic="true"/>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fe11-b829-e7d4-fc53" automatic="true"/>
@@ -3729,38 +3719,78 @@
                 </selectionEntry>
               </selectionEntries>
             </entryLink>
+            <entryLink import="true" name="56. Upgrades" hidden="false" id="8727-2c90-5e0f-f05a" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Naphtha Siphon" hidden="false" id="76b9-7e44-1a58-c2c8" collective="true">
+                  <costs>
+                    <cost name="pts" typeId="points" value="20"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4c8f-5142-c604-1eb9" automatic="true"/>
+                    <constraint type="max" value="1" field="selections" scope="model-or-unit" shared="true" id="a9ec-bc35-35cd-42d2" includeChildSelections="true"/>
+                  </constraints>
+                </selectionEntry>
+              </selectionEntries>
+            </entryLink>
           </entryLinks>
+          <modifiers>
+            <modifier type="decrement" value="20" field="points">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="76b9-7e44-1a58-c2c8" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <categoryLinks>
         <categoryLink targetId="fc26-7737-f7cb-8977" id="9c84-d0aa-f45d-9929" primary="true" name="Special"/>
         <categoryLink name="Infantry" hidden="false" id="57f4-6566-783d-46bb" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="56. Upgrades" hidden="false" id="8727-2c90-5e0f-f05a" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Naphtha Siphon" hidden="false" id="76b9-7e44-1a58-c2c8">
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4c8f-5142-c604-1eb9" automatic="true"/>
-                <constraint type="max" value="1" field="selections" scope="model-or-unit" shared="true" id="a9ec-bc35-35cd-42d2" includeChildSelections="true"/>
-              </constraints>
-              <profiles>
-                <profile name="Naphtha Siphon" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="f805-6cb9-8fa8-2dd3" publicationId="fd0a-6995-03c8-1dd6">
-                  <characteristics>
-                    <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
-                    <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">3</characteristic>
-                    <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
-                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Flaming Attacks, Ignores Armour Saves, An enemy unit taking a casualty from naphtha siphons must take a Panic test. Naptha siphons cannot be used in close combat, but may fire every round in the shooting phase without needing to roll a 4+ like with other Breath Weapons.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
-        </entryLink>
-      </entryLinks>
+      <profiles>
+        <profile name="Naphtha Bombs" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="8752-ac6d-aad9-7f57" publicationId="fd0a-6995-03c8-1dd6">
+          <characteristics>
+            <characteristic name="Range" typeId="af3c-d805-702c-9af9">6&quot;</characteristic>
+            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
+            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Flaming Attacks, Ignores Armour Saves, Quick to Fire, An enemy unit taking a casualty from naphtha bombs must take a Panic test.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="x0" field="annotation"/>
+            <modifier type="increment" value="1" field="annotation">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="b92b-96c0-cbc3-995a" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="annotation">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="76b9-7e44-1a58-c2c8" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+        <profile name="Naphtha Siphon" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="f805-6cb9-8fa8-2dd3" publicationId="fd0a-6995-03c8-1dd6">
+          <characteristics>
+            <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">3</characteristic>
+            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Flaming Attacks, Ignores Armour Saves, An enemy unit taking a casualty from naphtha siphons must take a Panic test. Naptha siphons cannot be used in close combat, but may fire every round in the shooting phase without needing to roll a 4+ like with other Breath Weapons.</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="76b9-7e44-1a58-c2c8" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+      </profiles>
+      <modifiers>
+        <modifier type="increment" value="20" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="76b9-7e44-1a58-c2c8" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Nomad Scouts" hidden="false" id="b114-63c2-1d6b-cf66" sortIndex="208">
       <categoryLinks>
