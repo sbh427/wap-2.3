@@ -1683,13 +1683,14 @@
               </entryLinks>
             </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="7fdf-7b20-9a0a-a8de" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-              <entryLinks>
-                <entryLink import="true" name="Handgun" hidden="false" id="ebba-3f22-7239-7024" type="selectionEntry" targetId="b177-ecbf-f68f-c9a3">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Handgun" hidden="false" id="5c1b-005e-9b46-ab3e" collective="true">
                   <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1de3-7454-b6e0-17a6"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="af1d-54c1-2311-9278-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="af1d-54c1-2311-9278-max" includeChildSelections="false"/>
                   </constraints>
-                </entryLink>
-              </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
             </entryLink>
             <entryLink import="true" name="40. Suits of Armour" hidden="false" id="fc66-5663-5167-30d6" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
               <entryLinks>
@@ -1701,13 +1702,6 @@
               </entryLinks>
             </entryLink>
           </entryLinks>
-          <modifiers>
-            <modifier type="decrement" value="1" field="000d-758b-d557-1e88">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="2c4e-02d2-69bc-1d21" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -1742,33 +1736,19 @@
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="model" import="true" name="Leader" hidden="false" id="2c4e-02d2-69bc-1d21" exportable="false">
+            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="2c4e-02d2-69bc-1d21">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c935-7edc-c821-fe31" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <infoLinks>
                 <infoLink name="Leader" id="2352-eaea-a43d-14a9" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
-                <infoLink name="Handgunner" id="2bd6-a061-c1f0-2e1f" hidden="false" targetId="92a4-0648-2c2a-617f" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="points" value="13"/>
+                <cost name="pts" typeId="points" value="5"/>
               </costs>
-              <modifiers>
-                <modifier type="set" value="Additional Model" field="annotation">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="2c4e-02d2-69bc-1d21" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="Minimum Models are reduced to 9" field="annotation">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="2c4e-02d2-69bc-1d21" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <entryLinks>
                 <entryLink import="true" name="20. Primary Weapon" hidden="false" id="0fca-9f83-b262-0bf4" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
                   <entryLinks>
-                    <entryLink import="true" name="Handgun" hidden="false" id="d75b-b386-8989-2d2c" type="selectionEntry" targetId="b177-ecbf-f68f-c9a3" sortIndex="1"/>
                     <entryLink import="true" name="Brace of Pistols" hidden="false" id="957a-8cd3-ca36-b8f8" type="selectionEntry" targetId="a574-f633-253c-b619" sortIndex="2"/>
                     <entryLink import="true" name="Repeater Handgun" hidden="false" id="b41b-2ba6-0b57-d464" type="selectionEntry" targetId="213d-5b6d-2b0a-19ce" sortIndex="3">
                       <costs>
@@ -1781,54 +1761,13 @@
                       </costs>
                     </entryLink>
                   </entryLinks>
-                </entryLink>
-                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="3fb8-97bf-4e6d-a19e" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
-                  <entryLinks>
-                    <entryLink import="true" name="Hand Weapon" hidden="false" id="ee4e-8060-d628-1254" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Handgun" hidden="false" id="fe1e-c5c0-8a80-1630" sortIndex="1" collective="true">
                       <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bc03-5ee5-ff0d-3216" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f240-e924-5762-6e92" includeChildSelections="false"/>
                       </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </entryLink>
-                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="65e3-7464-2ca7-673e" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
-                  <entryLinks>
-                    <entryLink import="true" name="Light Armour" hidden="false" id="5ebf-a4c9-cb19-4f4e" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-                      <costs>
-                        <cost name="pts" typeId="points" value="0.5"/>
-                      </costs>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="05fe-c103-3928-ea83" includeChildSelections="false" automatic="true"/>
-                      </constraints>
-                      <modifiers>
-                        <modifier type="set" value="0" field="05fe-c103-3928-ea83">
-                          <conditions>
-                            <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="fc66-5663-5167-30d6" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </modifier>
-                        <modifier type="set" value="0" field="bd12-6b92-8aca-f4e2">
-                          <conditions>
-                            <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="fc66-5663-5167-30d6" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </modifier>
-                      </modifiers>
-                    </entryLink>
-                  </entryLinks>
-                  <modifiers>
-                    <modifier type="set" value="0" field="c5ab-2514-d782-9c97">
-                      <conditions>
-                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="fc66-5663-5167-30d6" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="set" value="0" field="b3e8-624f-92d7-7b5b">
-                      <conditions>
-                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="fc66-5663-5167-30d6" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                  <constraints>
-                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="c5ab-2514-d782-9c97" includeChildSelections="false" automatic="true"/>
-                  </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
                 </entryLink>
               </entryLinks>
             </selectionEntry>
@@ -1869,6 +1808,28 @@
           </selectionEntries>
         </entryLink>
       </entryLinks>
+      <infoLinks>
+        <infoLink name="Handgun" id="044f-d0c2-90ad-6022" hidden="false" type="profile" targetId="bd57-9e45-342f-ee49">
+          <modifiers>
+            <modifier type="set" value="x0" field="annotation"/>
+            <modifier type="increment" value="1" field="annotation">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="309d-fc33-94ec-5ec2" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="annotation">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="fe1e-c5c0-8a80-1630" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="2c4e-02d2-69bc-1d21" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry id="bcff-c212-91d2-9bfb" name="Crossbowmen" hidden="false" collective="false" import="true" type="unit" sortIndex="16">
       <categoryLinks>
@@ -2401,13 +2362,14 @@
               </entryLinks>
             </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="807b-f5d7-81aa-9173" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-              <entryLinks>
-                <entryLink import="true" name="Brace of Pistols" hidden="false" id="66e3-a519-4dc0-15f8" type="selectionEntry" targetId="a574-f633-253c-b619">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Brace of Pistols" hidden="false" id="54d2-5086-3063-b871" collective="true">
                   <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="05b0-9211-b5b4-39b5"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5fe8-f939-11b3-f808" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="090f-1af0-0093-7486" includeChildSelections="false"/>
                   </constraints>
-                </entryLink>
-              </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
             </entryLink>
             <entryLink import="true" name="40. Suits of Armour" hidden="false" id="17c4-12ac-65c5-de14" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
               <entryLinks>
@@ -2428,13 +2390,6 @@
               </entryLinks>
             </entryLink>
           </entryLinks>
-          <modifiers>
-            <modifier type="decrement" value="1" field="3a08-00dc-6c64-31e6">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="70c8-9644-747a-b583" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -2451,7 +2406,7 @@
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="70c8-9644-747a-b583" name="Leader" hidden="false" collective="false" import="true" type="model">
+            <selectionEntry id="70c8-9644-747a-b583" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d88c-dd0b-5af1-d5e3" type="max"/>
               </constraints>
@@ -2464,7 +2419,7 @@
               <entryLinks>
                 <entryLink import="true" name="20. Primary Weapon" hidden="false" id="7f06-0123-52c9-573e" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
                   <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Pistol &amp; Repeater Pistol" hidden="false" id="4e2e-9780-291c-735f" collective="false">
+                    <selectionEntry type="upgrade" import="true" name="Pistol &amp; Repeater Pistol" hidden="false" id="4e2e-9780-291c-735f" collective="false" sortIndex="2">
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e723-f12c-1171-a2aa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
@@ -2476,68 +2431,14 @@
                         <cost name="pts" typeId="points" value="5"/>
                       </costs>
                     </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Brace of Pistols" hidden="false" id="4daa-ad79-1d07-99fe" collective="true" sortIndex="1">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8cf6-fe8b-33e6-34dd" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntry>
                   </selectionEntries>
-                  <entryLinks>
-                    <entryLink import="true" name="Brace of Pistols" hidden="false" id="c88e-d45e-8838-aaca" type="selectionEntry" targetId="a574-f633-253c-b619"/>
-                  </entryLinks>
-                </entryLink>
-                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="977e-0b51-fa62-1870" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
-                  <entryLinks>
-                    <entryLink import="true" name="Medium Armour" hidden="false" id="b91a-b0fc-e80d-5f20" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b358-35ed-655d-11ec"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </entryLink>
-                <entryLink import="true" name="70. Mount" hidden="false" id="c94c-145a-4220-928c" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
-                  <entryLinks>
-                    <entryLink import="true" name="Warhorse" hidden="false" id="2ab4-d868-3907-6650" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fb24-c62c-dd33-e874"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4d27-15c6-0b7c-4b22"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </entryLink>
-                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="aa45-1b33-5073-71bc" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
-                  <entryLinks>
-                    <entryLink import="true" name="Hand Weapon" hidden="false" id="640c-df09-302e-b7b8" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="84e4-6fe5-ad84-6408" includeChildSelections="false"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
                 </entryLink>
               </entryLinks>
-              <modifiers>
-                <modifier type="set" value="Additional Model" field="annotation">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="70c8-9644-747a-b583" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="Minimum Models are reduced to 4" field="annotation">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="70c8-9644-747a-b583" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <profiles>
-                <profile name="Pistolier" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="d043-0861-ad8d-4154" publicationId="315d-135b-135c-07ce" page="28">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Human)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2545,6 +2446,32 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <infoLinks>
+        <infoLink name="Brace of Pistols" id="4dd6-2df1-f14d-1104" hidden="false" type="profile" targetId="7259-6759-3c5f-ce3c">
+          <modifiers>
+            <modifier type="set" value="x0" field="annotation">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="1" field="annotation">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="14df-ccc7-6b0f-bd65" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="annotation">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="4daa-ad79-1d07-99fe" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="70c8-9644-747a-b583" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry id="7c4c-be2b-d1f0-3791" name="Greatswords" hidden="false" collective="false" import="true" type="unit" sortIndex="22">
       <categoryLinks>
@@ -3706,13 +3633,14 @@
               </entryLinks>
             </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="d483-212e-2aea-2565" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-              <entryLinks>
-                <entryLink import="true" name="Repeater Handgun" hidden="false" id="2fcd-c0d2-6363-3495" type="selectionEntry" targetId="213d-5b6d-2b0a-19ce">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Repeater Handgun" hidden="false" id="e90d-cc07-d281-91ed" collective="true">
                   <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="58de-d2dd-eeab-94f9"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="95b9-ff0b-1319-bea7" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6c96-0a9b-a566-fc77" includeChildSelections="false"/>
                   </constraints>
-                </entryLink>
-              </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
             </entryLink>
             <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="c232-af3d-28ea-3f43" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
               <entryLinks>
@@ -3766,13 +3694,6 @@
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
-          <modifiers>
-            <modifier type="decrement" value="1" field="042e-9440-d6f9-7a84">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="1381-559c-9b44-b113" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -3789,7 +3710,7 @@
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="model" import="true" name="Leader" hidden="false" id="1381-559c-9b44-b113" collective="false">
+            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="1381-559c-9b44-b113" collective="false">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d81c-0750-2605-8314" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -3799,22 +3720,9 @@
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
-              <modifiers>
-                <modifier type="set" value="Additional Model" field="annotation">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="1381-559c-9b44-b113" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="Minimum Models are reduced to 4" field="annotation">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="1381-559c-9b44-b113" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
               <entryLinks>
                 <entryLink import="true" name="20. Primary Weapon" hidden="false" id="47e4-d79b-dea9-e19b" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
                   <entryLinks>
-                    <entryLink import="true" name="Repeater Handgun" hidden="false" id="98e0-e393-81f8-c9ba" type="selectionEntry" targetId="213d-5b6d-2b0a-19ce" sortIndex="1"/>
                     <entryLink import="true" name="Hochland Long Rifle" hidden="false" id="fc4e-8c67-b431-6fd4" type="selectionEntry" targetId="7cfd-bf2c-f7f2-6c34" sortIndex="4">
                       <costs>
                         <cost name="pts" typeId="points" value="5"/>
@@ -3832,75 +3740,14 @@
                         <infoLink name="Repeater Pistol" id="f3b7-cd7a-cd0d-475c" hidden="false" targetId="a7ff-a800-3ccc-4381" type="profile"/>
                       </infoLinks>
                     </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Repeater Handgun" hidden="false" id="c122-8f8a-b11a-e4c4" collective="true" sortIndex="1">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9a2a-ce64-f1e3-a3e0" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntry>
                   </selectionEntries>
                 </entryLink>
-                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="cf8c-c0b7-bf2c-f027" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
-                  <entryLinks>
-                    <entryLink import="true" name="Hand Weapon" hidden="false" id="52cb-6bf8-7955-529e" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0689-ada7-4bd3-dee3"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </entryLink>
-                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="7ac1-a4c7-110a-9286" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
-                  <entryLinks>
-                    <entryLink import="true" name="Medium Armour" hidden="false" id="c737-37dc-4966-5004" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4728-8825-ae8e-8f85"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </entryLink>
-                <entryLink import="true" name="70. Mount" hidden="false" id="77b8-1e11-0bc5-2401" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
-                  <entryLinks>
-                    <entryLink import="true" name="Warhorse" hidden="false" id="3443-fa98-35cb-3841" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="065f-5fe0-973e-5deb"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ad7f-2dc2-8ee0-be4b"/>
-                      </constraints>
-                      <entryLinks>
-                        <entryLink import="true" name="Barding" hidden="false" id="a67f-b07e-8ed9-6ce5" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
-                          <costs>
-                            <cost name="pts" typeId="points" value="1"/>
-                          </costs>
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3d58-5719-f805-103f" automatic="true"/>
-                          </constraints>
-                          <modifiers>
-                            <modifier type="set" value="0" field="e4bc-a24f-6b99-c09b">
-                              <conditions>
-                                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="f3fa-476a-1f59-1074" shared="true" includeChildSelections="true"/>
-                              </conditions>
-                            </modifier>
-                            <modifier type="set" value="0" field="3d58-5719-f805-103f">
-                              <conditions>
-                                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="f3fa-476a-1f59-1074" shared="true" includeChildSelections="true"/>
-                              </conditions>
-                            </modifier>
-                          </modifiers>
-                        </entryLink>
-                      </entryLinks>
-                    </entryLink>
-                  </entryLinks>
-                </entryLink>
               </entryLinks>
-              <profiles>
-                <profile name="Outrider" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0c82-6c76-e00c-24bd" publicationId="315d-135b-135c-07ce" page="32">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Human)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -3908,6 +3755,28 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <infoLinks>
+        <infoLink name="Repeater Handgun" id="bd83-c92b-5a7e-d3ce" hidden="false" type="profile" targetId="e75c-712e-ec8b-35e9">
+          <modifiers>
+            <modifier type="set" value="x0" field="annotation"/>
+            <modifier type="increment" value="1" field="annotation">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="8e8b-18d6-7983-c292" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="1" field="annotation">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="c122-8f8a-b11a-e4c4" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1381-559c-9b44-b113" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry id="1d79-e2e9-6fa4-adc4" name="Great Cannon" hidden="false" collective="false" import="true" type="model" sortIndex="33">
       <infoLinks>
@@ -10078,16 +9947,9 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2e15-57e6-2aad-6e31"/>
       </constraints>
-      <profiles>
-        <profile name="Repeater Handgun" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="e75c-712e-ec8b-35e9" publicationId="315d-135b-135c-07ce" page="4">
-          <characteristics>
-            <characteristic name="Range" typeId="af3c-d805-702c-9af9">24&quot;</characteristic>
-            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
-            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3</characteristic>
-            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (1), Ponderous, Rapid Fire.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
+      <infoLinks>
+        <infoLink name="Repeater Handgun" id="c85a-e720-2fa5-3e95" hidden="false" type="profile" targetId="e75c-712e-ec8b-35e9"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Hochland Long Rifle" hidden="false" id="7cfd-bf2c-f7f2-6c34" collective="true">
       <constraints>
@@ -10099,7 +9961,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
             <characteristic name="Range" typeId="af3c-d805-702c-9af9">36&quot;</characteristic>
             <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
             <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
-            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (1). Ponderous. Sniper.</characteristic>
+            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Ponderous, Armour Piercing (1), Sniper.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -10122,7 +9984,7 @@ No more than one Wound can be re-allocated to Ludwig Schwarzhelm in this way in 
             <characteristic name="Range" typeId="af3c-d805-702c-9af9">18&quot;</characteristic>
             <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">6</characteristic>
             <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
-            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (1). Move or Fire. Ponderous.</characteristic>
+            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Ponderous, Armour Piercing (1), Move or Fire. </characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -14349,6 +14211,14 @@ A repeater pistol can be used in combination with a regular pistol as a brace o
         <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">4+</characteristic>
         <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">4+</characteristic>
         <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
+      </characteristics>
+    </profile>
+    <profile name="Repeater Handgun" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="e75c-712e-ec8b-35e9" publicationId="315d-135b-135c-07ce" page="4">
+      <characteristics>
+        <characteristic name="Range" typeId="af3c-d805-702c-9af9">24&quot;</characteristic>
+        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
+        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3</characteristic>
+        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Ponderous, Armour Piercing (1), Rapid Fire.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
