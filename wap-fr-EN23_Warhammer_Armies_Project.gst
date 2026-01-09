@@ -64,7 +64,7 @@
         <characteristicType id="13f9-a26b-05af-3459" name="Type"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="cb92-d882-5ba8-11ab" name="Spell">
+    <profileType id="cb92-d882-5ba8-11ab" name="Spell" sortIndex="19">
       <characteristicTypes>
         <characteristicType id="576b-eaa1-0bd1-3f7a" name="Spell Level"/>
         <characteristicType id="21e9-4aa2-f538-c93b" name="Type"/>
@@ -73,7 +73,7 @@
         <characteristicType id="f5f2-ac1b-25cd-89c6" name="Details"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="0ce6-a5f9-6184-218d" name="Wizard">
+    <profileType id="0ce6-a5f9-6184-218d" name="Wizard" sortIndex="18">
       <characteristicTypes>
         <characteristicType id="7f8d-5707-7251-c1a5" name="Wizard Level"/>
         <characteristicType id="b859-9e7c-9452-f90e" name="Known Spells"/>
@@ -82,7 +82,7 @@
         <characteristicType id="7261-e23f-ab6d-b4af" name="Bonus to Casting/Dispel Value"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="781d-35fe-dd22-05d6" name="War Machine">
+    <profileType id="781d-35fe-dd22-05d6" name="War Machine" sortIndex="5">
       <characteristicTypes>
         <characteristicType id="6081-ebe8-e15b-4e82" name="Type"/>
         <characteristicType id="1c88-efb0-083f-b945" name="Range"/>
@@ -130,7 +130,7 @@
         <characteristicType id="c8b7-e979-95fd-ac37" name="Result"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Prayer" id="4608-9b35-b7dc-202d" hidden="false">
+    <profileType name="Prayer" id="4608-9b35-b7dc-202d" hidden="false" sortIndex="17">
       <characteristicTypes>
         <characteristicType name="Effect" id="1f79-8144-edd6-8b51"/>
       </characteristicTypes>
@@ -159,14 +159,14 @@
         <characteristicType name="Result" id="686b-22d8-d67f-02eb"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Ward Saves" id="54b0-94fc-eb1e-8e37" hidden="false" sortIndex="6">
+    <profileType name="Ward Saves" id="54b0-94fc-eb1e-8e37" hidden="false" sortIndex="8">
       <characteristicTypes>
         <characteristicType name="Type" id="31b2-f73f-865d-f538" kind="annotation"/>
         <characteristicType name="Value" id="bdf9-d73e-e13b-b0ce" kind="annotation"/>
         <characteristicType name="Special Rule" id="84ea-8900-474d-6201" kind="longText"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Armour Save" id="884c-d50e-eeb6-eda0" hidden="false" kind="weapon" sortIndex="5">
+    <profileType name="Armour Save" id="884c-d50e-eeb6-eda0" hidden="false" kind="weapon" sortIndex="6">
       <characteristicTypes>
         <characteristicType name="Combat" id="168d-1cc2-66f3-e766" kind="annotation"/>
         <characteristicType name="Missile" id="97ea-ecf7-8d24-b2ca" kind="annotation"/>
@@ -868,1173 +868,6 @@
           </modifiers>
         </infoLink>
       </infoLinks>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="4c5e-ad54-8a4a-e1eb" name="Battle Magic Belannar/LoH" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7f67-5812-3e32-c684" type="max"/>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7d84-9c34-3fde-7c9a" type="min"/>
-      </constraints>
-      <selectionEntryGroups>
-        <selectionEntryGroup id="721f-cad0-8744-6c43" name="Spells from the Lore of Beasts" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="263f-3bee-25ac-ca02" name="0. Wyssan&apos;s Wildform" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4785-dbba-ff30-52fe" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b58e-9ad1-371e-e7a1" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="b843-b938-4a36-c73d" name="Wyssan&apos;s Wildform" hidden="false" targetId="bc40-b619-0977-f8ad" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="a5d4-bf00-6587-6b1e" name="Wildheart" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5ce1-8110-75c1-22f6" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6757-e028-639d-0494" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="38a7-0a57-8c9e-f747" name="Wildheart" hidden="false" targetId="7c9a-10fe-33ee-5112" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="e6a7-27ce-7e2f-6ce1" name="Spells from the Lore of Death" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="dbf0-31e6-6a67-1868" name="0. Spirit Leech" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3cfe-a1e4-7b74-dab8" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3b0c-03ae-bb7f-783a" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="08f1-d290-8494-1670" name="Spirit Leech" hidden="false" targetId="a540-a939-e10c-27e0" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0b42-5a59-8580-2d04" name="Life Leeching" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a602-594b-2f51-89c9" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7383-7620-8a07-5b3e" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="f9d8-24c2-d7ea-561d" name="Life Leeching" hidden="false" targetId="2c43-e445-f916-eae9" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="22d6-9ac6-542d-fa82" name="Spells from the Lore of Fire" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="d646-fe2a-9dab-90c7" name="0. Fireball" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6aa8-fc19-c729-96f3" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ff66-9de6-7eb1-429e" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="cf6f-1f6f-92dc-41cf" name="Fireball" hidden="false" targetId="6e57-2cc3-96fc-7f01" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="bd4f-0eb3-41e3-acdf" name="Kindleflame" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9e58-5ff7-0953-dcdf" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8154-dfbd-1824-a2e1" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="7aef-72de-6e73-ce07" name="Kindleflame" hidden="false" targetId="c198-878a-0683-0889" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="8ec5-894c-203d-7d64" name="Spells from the Lore of Heavens" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="83f1-9f9e-0157-f132" name="0. Iceshard Blizzard" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c78c-72f0-4307-496d" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a2bc-dff0-ad28-5045" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="b541-3d56-2fc9-59dd" name="Iceshard Blizzard" hidden="false" targetId="8639-61e7-9010-be8a" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="d511-4240-8567-c1e9" name="Fate Manipulation" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a775-4d33-9ae0-505b" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c51b-b898-eff1-114c" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="4857-17e7-4323-0726" name="Fate Manipulation" hidden="false" targetId="8d26-28db-c5b3-370f" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="cfdf-f55e-a540-ba35" name="Spells from the Lore of Life" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="58ff-5dd3-ac8c-82e5" name="0. Earth Blood" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="aea0-165e-7da3-95fa" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5ee7-5174-f125-38a5" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="53d1-a5fb-5879-0f40" name="Earth Blood" hidden="false" targetId="c7c1-2e60-4710-1a6a" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="ec79-a5c3-833f-817e" name="Lifebloom" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3095-e984-48ac-9398" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d6b0-a177-3e71-0a97" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="03fb-8aff-97ee-0349" name="Lifebloom" hidden="false" targetId="655d-ede0-9e85-a1ad" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="1a28-a014-aee4-6d8d" name="Spells from the Lore of Light" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="8969-6bec-2079-d0fc" name="0. Shem&apos;s Burning Gaze" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6a2c-dcfe-08e7-e26a" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d7e2-d5d5-f357-5c05" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="649b-ffe3-e4e0-29b2" name="Shem&apos;s Burning Gaze" hidden="false" targetId="6508-2de1-8be5-0a2f" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0827-4ca9-3f77-d17b" name="Exorcism" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2da8-a53d-75fb-6233" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c3d0-fe36-f400-8968" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="c6d3-08c2-9c41-7ba2" name="Focus Energy" hidden="false" targetId="cd1f-0bc5-ab83-af06" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="b3e9-2946-a6c2-66b5" name="Spells from the Lore of Metal" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="ccaa-0b02-e4f1-5c2f" name="0. Searing Doom" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="61ac-de2d-dda4-39af" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="671f-0687-4644-9c96" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="0059-29ca-f871-862e" name="Searing Doom" hidden="false" targetId="6bd0-6da5-dee9-b098" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="2090-4c2d-25f9-f361" name="Metallic Attraction" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c35c-1350-9e6e-57ce" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="07c4-a99f-044b-0552" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="d82d-d45c-c189-ffc2" name="Metallic Attraction" hidden="false" targetId="0958-a1b9-1238-c0e7" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-        <selectionEntryGroup id="f97c-1014-f737-563e" name="Spells from the Lore of Shadow" hidden="false" collective="false" import="true">
-          <selectionEntries>
-            <selectionEntry id="d7a2-5a23-ff1d-b126" name="0. Melkoth&apos;s Mystifying Miasma" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2e67-4cca-fc2f-82b9" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="86a8-6db5-6490-f1e7" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="3281-c7d9-08a4-c06d" name="Melkoth&apos;s Mystifying Miasma" hidden="false" targetId="89e2-f22c-758d-a9d7" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="0a85-d8bd-644a-bf97" name="Smoke and Mirrors" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3b40-694e-abfb-dff9" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="492a-7b2b-15ca-18ca" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="6a11-17ba-07e0-b0a3" name="Steed of Shadows" hidden="false" targetId="4fcb-a016-2721-ff01" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-    </selectionEntry>
-    <selectionEntry id="794b-3bcc-cbc9-f597" name="Battle Magic Teclis" hidden="false" collective="false" import="true" type="upgrade">
-      <constraints>
-        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e906-be9e-de09-b34f" type="max"/>
-      </constraints>
-      <selectionEntries>
-        <selectionEntry id="91b2-3b89-9a18-5537" name="Lore of Beasts" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f7b4-6e55-74db-7f83" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d989-579c-2180-2454" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="eea9-f278-1e82-1a56" name="Wildheart" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4375-2b86-b976-085d" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f7fd-2ed5-406d-c4a5" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="98d2-4c4c-1d8a-67f0" name="Wildheart" hidden="false" targetId="7c9a-10fe-33ee-5112" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="bbce-ae70-d344-72f1" name="0. Wyssan&apos;s Wildform" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="726b-eb01-9625-2161" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="87cb-1326-75c7-36a4" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="ae6f-5141-709d-1dab" name="Wyssan&apos;s Wildform" hidden="false" targetId="bc40-b619-0977-f8ad" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="890a-7ff8-5729-5dc7" name="Spells from the Lore of Beasts" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6eef-17e4-5973-f9c9" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="87c8-ab0a-6fd4-f344" type="max"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="37b7-2dcb-5bc5-9a33" name="1. The Flock of Doom" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="34e7-ffd4-b9b7-9752" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="2651-f3c1-e72b-5db7" name="The Flock of Doom" hidden="false" targetId="82d2-edc6-e10f-ac00" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="812c-1d2d-5b76-5ca9" name="6. Transformation of Kadon" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eb7b-89c2-638b-6dee" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="a6a9-0607-0430-7484" name="Transformation of Kadon" hidden="false" targetId="ce8e-4e6d-e477-f708" type="profile"/>
-                  </infoLinks>
-                  <selectionEntries>
-                    <selectionEntry id="217c-e926-88a2-5cf9" name="Monster of Kadon" hidden="false" collective="false" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="84c7-8f2b-07a9-f8ab" type="max"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d705-8e92-e53e-d958" type="min"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="afdc-ef32-2507-0ffd" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
-                        <infoLink id="aa98-459b-c075-c1f1" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                        <infoLink id="1d4e-d98a-4487-ff33" name="Fly (7)" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
-                        <infoLink id="9ea0-1f7e-c558-4db2" name="Stomp" hidden="false" targetId="668c-19e8-b764-8549" type="rule"/>
-                        <infoLink id="a59d-3864-e2b9-74d8" name="Breath Weapon (Monster of Kadon)" hidden="false" targetId="9a24-f1a2-aac3-de3b" type="rule"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                      <profiles>
-                        <profile name="Monster of Kadon" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0aa7-6fa8-e84e-677a" publicationId="9e23-79cb-pubN66727" page="146">
-                          <characteristics>
-                            <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-                            <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
-                            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-                            <characteristic name="S" typeId="edd2-7979-54a4-6b35">6</characteristic>
-                            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
-                            <characteristic name="W" typeId="27ee-0675-122f-a1b1">6</characteristic>
-                            <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-                            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
-                            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-                            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                    </selectionEntry>
-                  </selectionEntries>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="ade9-6ca6-523a-84b2" name="5. The Savage Beast of Horros" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2aa0-de0a-c80b-b703" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="2ab2-f668-7707-540c" name="The Savage Beast of Horros" hidden="false" targetId="2886-1c9b-c241-1093" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="d063-8ddd-f6ac-058c" name="4. The Curse of Anraheir" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d60a-8b90-20c3-6dac" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="e9f0-6fab-64f4-8c6f" name="The Curse of Anraheir" hidden="false" targetId="feb7-72b6-1721-2a1c" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="e35d-ed7c-b39e-115e" name="3. The Amber Spear" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b089-53af-56f8-616f" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="b387-41e9-61b5-9855" name="The Amber Spear" hidden="false" targetId="5a5d-30a8-b377-cad8" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="1325-b997-26e8-e3e4" name="2. Pann&apos;s Impenetrable Pelt" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0bf7-4e7f-d116-34e6" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="11f1-e996-6555-e41d" name="Pann&apos;s Impenetrable Pelt" hidden="false" targetId="639d-9501-0008-8def" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="1bf2-b9a6-acc4-e941" name="Lore of Death" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8d11-07dd-e8f6-0617" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2b51-5e98-495e-8e33" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="8515-e4ed-9ec9-8e37" name="Life Leeching" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="263e-d5d0-3848-282c" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="67dd-54a0-8178-3fd5" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="59d3-8e4b-5e87-95f3" name="Life Leeching" hidden="false" targetId="2c43-e445-f916-eae9" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="e8d2-84e9-3d54-56af" name="0. Spirit Leech" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9d9f-3735-e696-d9d5" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0fab-2492-ac5d-edae" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="d666-c505-2ef7-db3b" name="Spirit Leech" hidden="false" targetId="a540-a939-e10c-27e0" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="9d2f-298e-8425-567d" name="Spells from the Lore of Death" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="36b7-100e-a945-83e9" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a1af-ad9b-4586-feed" type="min"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="e21c-e61b-77fd-895c" name="1. Aspect of the Dreadknight" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2518-a74d-bc6f-821f" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="a002-6b95-7b57-0804" name="Aspect of the Dreadknight" hidden="false" targetId="48ca-ac63-ef2e-74f7" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="0cdd-3cba-2452-6ce8" name="2. The Caress of Laniph" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1ba1-d43d-67cc-5351" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="002c-0c63-53e4-0df6" name="The Caress of Laniph" hidden="false" targetId="eaec-4553-445b-fdc7" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="c682-ce95-7341-02cd" name="3. Soulblight" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e70f-1015-2948-63a2" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="d36a-7860-1fd5-51c0" name="Soulblight" hidden="false" targetId="a37e-0482-9785-ba81" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="c586-acde-cdd0-da72" name="4. Doom and Darkness" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e7bb-55ee-addc-5c18" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="1fb1-1a42-4ee9-18c1" name="Doom and Darkness" hidden="false" targetId="c44d-cc21-607b-0911" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="11ae-9115-c888-a089" name="6. The Purple Sun of Xereus" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c88d-8a63-77e1-850e" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="49e3-b805-1337-7528" name="The Purple Sun of Xereus" hidden="false" targetId="754f-f31e-7ccf-8253" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="f8f5-63be-cea1-8ddc" name="5. The Fate of Bjuna" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4722-4f5b-577e-c8f2" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="d0c8-6ca2-1386-fb2f" name="The Fate of Bjuna" hidden="false" targetId="9fd3-2187-1379-dcdb" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="b366-ce2e-3651-a201" name="Lore of Fire" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f087-ff9e-aae4-bb16" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e174-05e2-68fb-4562" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="adb4-3f79-e4ff-abc1" name="Kindleflame" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="faa2-8b0e-d0ae-dacd" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="80c9-c871-2f65-df13" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="3c90-6fc2-cde2-abb0" name="Kindleflame" hidden="false" targetId="c198-878a-0683-0889" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="afa0-8bd8-d906-b4bd" name="0. Fireball" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="46f0-82e8-9add-d255" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e38e-5a54-3877-f140" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="a9a7-53a5-af02-4b08" name="Fireball" hidden="false" targetId="6e57-2cc3-96fc-7f01" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="4e90-2049-b227-a975" name="Spells from the Lore of Fire" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="dbe5-6ae3-82d5-de90" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3f5b-ff3f-5294-736a" type="min"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="84f6-886b-66c9-4a61" name="1. Cascading Fire-Cloak" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="881b-3e3e-6eb0-ceba" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="87e7-3444-8140-6046" name="Cascading Fire-Cloak" hidden="false" targetId="ee0b-0214-556a-a7f0" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="e831-8282-0304-1fb0" name="2. Flaming Sword of Rhuin" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9358-a036-7263-9489" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="bd56-e0fe-5850-e9d6" name="Flaming Sword of Rhuin" hidden="false" targetId="c40b-1df6-0cc6-5d0e" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="0ef9-a89d-8ea7-96c1" name="3. The Burning Head" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9cd2-2079-caa7-2fc5" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="209a-bef9-1b33-1ec8" name="The Burning Head" hidden="false" targetId="3e41-8ba5-25c4-e17c" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="19c0-f35d-6e50-ff55" name="4. Piercing Bolts of Burning" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2ad0-abea-797b-0c9c" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="e98f-076f-b3e5-3a85" name="Piercing Bolts of Burning" hidden="false" targetId="daee-0de8-0bbb-9063" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="978b-616e-b9b5-5710" name="6. Flame Storm" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cc2f-8911-1b7a-9ead" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="f92a-89a9-9e10-0a9f" name="Flame Storm" hidden="false" targetId="77af-a090-ba85-99ce" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="199d-1ebc-7cc6-e4e4" name="5. Fulminating Flame Cage" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8cde-1986-b2c4-c6c7" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="9ac5-70d2-689c-97aa" name="Fulminating Flame Cage" hidden="false" targetId="9526-a4e9-7b88-9276" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="f171-f1e5-c16c-bdb1" name="Lore of Heavens" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5fe6-090e-ae27-e329" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="75c4-854e-903f-3720" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="9ae9-b416-1cb5-36bd" name="Fate Manipulation" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ba93-8b31-900a-fcdc" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2067-96f5-3115-0782" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="8350-0546-d61d-e411" name="Fate Manipulation" hidden="false" targetId="8d26-28db-c5b3-370f" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="1640-d998-7bbe-6518" name="0. Iceshard Blizzard" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7a2c-3e97-8174-dc69" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8309-1e8d-3350-5aea" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="5b9d-f72d-74d8-8acd" name="Iceshard Blizzard" hidden="false" targetId="8639-61e7-9010-be8a" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="e5ae-ff83-9521-499b" name="Spells from the Lore of Heavens" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="75ee-a284-21c5-7b0e" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b908-6d72-6bed-7d67" type="min"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="a9ba-7a3c-fa45-60e8" name="1. Harmonic Convergence" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cb58-2255-52ce-479f" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="204c-299a-0216-b62d" name="Harmonic Convergence" hidden="false" targetId="91df-517b-9d00-5628" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="9dd2-49da-111f-ca94" name="2. Wind Blast" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bd56-01df-e1cd-40f7" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="94af-257c-b9f2-7889" name="Wind Blast" hidden="false" targetId="686c-0b9d-0bd1-75c3" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="e96b-fa83-d0c3-b22e" name="3. Curse of the Midnight Wind" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9c77-b7e8-1024-ff88" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="b335-3bda-a507-99d8" name="Curse of the Midnight Wind" hidden="false" targetId="be0a-428f-10cd-647c" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="0d78-729f-0e58-fd3a" name="4. Urannon&apos;s Thunderbolt" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6d58-95af-5a9d-63e5" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="0293-7833-5851-5f0b" name="Urannon&apos;s Thunderbolt" hidden="false" targetId="8bc4-459f-268d-0259" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="df67-0ee2-6dc0-ed81" name="6. Chain Lightning" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0cdd-449e-c96d-c44f" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="d87d-ae0b-75fd-8812" name="Chain Lightning" hidden="false" targetId="cf74-1c98-bc63-8ea6" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="29be-747e-4a4c-9120" name="5. Comet of Casandora" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="723f-b6b1-8a56-ec6d" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="2581-f348-95df-a235" name="Comet of Casandora" hidden="false" targetId="d667-970a-a36d-c1de" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="9b64-d9a7-18ba-b5f2" name="Lore of Life" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2087-0fab-9c5f-bae6" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9114-4284-058b-7a91" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="c196-d4c4-c0f0-d815" name="Lifebloom" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c6af-ff5a-1a05-79e5" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bbe8-8dd8-44f7-8bc7" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="5bc5-fb19-02ad-2af1" name="Lifebloom" hidden="false" targetId="655d-ede0-9e85-a1ad" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="b3fb-89aa-d25c-668b" name="0. Earth Blood" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a865-a64c-6128-a528" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3a48-09b8-3c43-3d05" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="97fd-7512-bf25-fec3" name="Earth Blood" hidden="false" targetId="c7c1-2e60-4710-1a6a" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="875a-c8d8-3bf1-c93f" name="Spells from the Lore of Life" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8374-8c80-8229-3fa1" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e0f7-ac1d-25f7-c090" type="max"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="fb3d-54db-5a72-7524" name="1. Awakening of the Wood" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1449-fff0-51c2-f840" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="7a82-294b-094e-c8c6" name="Awakening of the Wood" hidden="false" targetId="e634-3287-c556-2b80" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="3d3b-1ab8-3437-9c33" name="2. Flesh to Stone" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4caf-08fb-c57d-3867" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="2779-5d97-fc00-cc44" name="Flesh to Stone" hidden="false" targetId="2e0a-69a8-1ef0-5f2d" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="06fb-00c4-f690-b48b" name="3. Throne of Vines" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f1d3-5307-d4a0-2e1e" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="d7b3-ffdb-7a5a-f5f5" name="Throne of Vines" hidden="false" targetId="1635-78a9-dace-f919" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="40da-1a5d-d37e-22b5" name="4. Shield of Thorns" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9566-ed21-29e1-5174" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="3a08-6681-f87b-57b7" name="Shield of Thorns" hidden="false" targetId="73e5-14c3-e54b-2c31" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="e839-1e03-dd64-2dbd" name="5. Regrowth" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b4cc-155f-99ca-5e8c" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="1fff-c311-c163-84ab" name="Regrowth" hidden="false" targetId="5606-7317-734a-4381" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="8b3d-cce9-090d-cbc6" name="6. The Dwellers Below" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="49dc-79c4-68c7-0640" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="b858-199b-3dfc-230c" name="The Dwellers Below" hidden="false" targetId="4ceb-4804-7497-c952" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="e092-f602-aa83-093a" name="Lore of Light" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fe07-41e5-d914-7cf4" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="02bd-a164-0367-7229" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="2160-60f7-df19-6546" name="Exorcism" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="729b-215e-e6ec-1f48" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="67c3-62ba-245f-e99f" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="c32a-f0ae-242d-3482" name="Focus Energy" hidden="false" targetId="cd1f-0bc5-ab83-af06" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="e3df-2a01-7d26-3179" name="0. Shem&apos;s Burning Gaze" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="feae-9bc1-466b-d87b" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4db7-8143-6e8f-41ff" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="c300-baff-a2b8-9073" name="Shem&apos;s Burning Gaze" hidden="false" targetId="6508-2de1-8be5-0a2f" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="952a-755a-49d8-c142" name="Spells from the Lore of Light" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="481c-7918-96b4-6e5f" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1aaf-611e-51fe-a5a4" type="max"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="05db-4eca-5674-b19a" name="1. Pha&apos;s Protection" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7e2e-3fde-c9ea-bfa1" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="b5de-a0c0-8a03-4fee" name="Pha&apos;s Protection" hidden="false" targetId="1088-006a-47db-14f3" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="402a-d408-8fc3-f53f" name="6. Birona&apos;s Timewarp" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3efe-1783-e50e-19fb" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="05bc-ce7e-3816-d7d0" name="Birona&apos;s Timewarp" hidden="false" targetId="3667-afc7-2861-4d54" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="afce-dc8f-d5ac-d321" name="5. Banishment" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2bfb-6a71-71e0-f5cb" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="ce0d-630e-6157-a27b" name="Banishment" hidden="false" targetId="2edd-04e5-9a13-d757" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="7bd4-e0c5-dab6-ebf2" name="4. Net of Amyntok" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e911-05d6-4988-b79b" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="3b7d-ad42-5093-c200" name="Net of Amyntok" hidden="false" targetId="2eb0-98f2-3158-46ee" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="8d7d-8f95-9b83-daf9" name="3. Light of Battle" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8ef4-df23-3d04-9093" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="70d7-b55a-e14a-e768" name="Light of Battle" hidden="false" targetId="f6dd-6551-997a-83b4" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="1542-95d4-4bc7-c71e" name="2. The Speed of Light" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6bd1-a6dc-43cb-d6ef" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="f46a-59d5-7d01-a9fe" name="The Speed of Light" hidden="false" targetId="92a3-5235-890d-9fd3" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="a253-1b38-10b2-22d0" name="Lore of Metal" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1246-3923-89af-ca0f" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="089a-abff-407b-b3b4" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="0caf-6d99-1efb-4862" name="Metallic Attraction" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4d00-e3c7-cbae-8438" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9fb0-db2f-8b82-b1d7" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="ce39-20ae-d85c-6549" name="Metallic Attraction" hidden="false" targetId="0958-a1b9-1238-c0e7" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="8cbe-e303-17c5-1fd4" name="0. Searing Doom" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ae21-4e67-0b51-0920" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c208-df90-6958-145a" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="4163-86d5-9285-96bc" name="Searing Doom" hidden="false" targetId="6bd0-6da5-dee9-b098" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="7579-1d8e-fe7c-391c" name="Spells from the Lore of Metal" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="148e-db44-d0c0-8d30" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="22fb-4c44-0632-c278" type="min"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="7f6f-e3be-ec92-ab23" name="1. Plague of Rust" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e208-2f64-9709-b85c" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="47bb-3516-e6f1-e459" name="Plague of Rust" hidden="false" targetId="79e8-aec9-6d8b-246c" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="52a3-d3a9-8d20-d07f" name="2. Enchanted Blades of Aiban" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2461-89a2-483a-2c25" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="7643-a6d2-2632-d686" name="Enchanted Blades of Aiban" hidden="false" targetId="bdf2-5d59-034f-39d3" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="0b0f-3bc6-e459-010c" name="3. Glittering Robe" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="254c-9ab4-c88d-d7e8" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="11c2-acb3-b151-3319" name="Glittering Robe" hidden="false" targetId="3c85-1552-3323-c4d3" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="761c-ea78-405e-6aae" name="4. Gehenna&apos;s Golden Hounds" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5673-5516-2d7b-5382" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="56c8-3052-24ae-6f71" name="Gehenna&apos;s Golden Hounds" hidden="false" targetId="48c6-38af-6000-a450" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="cf30-8892-5d23-99be" name="6. Final Transmutation" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cf11-3927-03f4-a023" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="1d2f-6834-f95c-cf1c" name="Final Transmutation" hidden="false" targetId="5fbf-bbf2-03d3-17d3" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="dc38-6b08-6e1a-1688" name="5. Transmutation of Lead" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7dbd-1b47-043d-ff7e" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="9c9d-a275-f062-b66d" name="Transmutation of Lead" hidden="false" targetId="51f1-f0f3-356e-2520" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-        <selectionEntry id="bc03-2941-98d8-42d2" name="Lore of Shadow" hidden="false" collective="false" import="true" type="upgrade">
-          <constraints>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8d6a-21bd-9d7e-110a" type="max"/>
-            <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="970c-ba9b-7797-f04f" type="min"/>
-          </constraints>
-          <selectionEntries>
-            <selectionEntry id="f0b0-8d06-cac8-e80f" name="Smoke and Mirrors" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6789-99d2-81e0-f1bc" type="min"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0ead-f4bf-417b-f053" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="f134-08f5-121d-ba1e" name="Steed of Shadows" hidden="false" targetId="4fcb-a016-2721-ff01" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="e92c-9f8c-4144-d525" name="0. Melkoth&apos;s Mystifying Miasma" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="33db-e361-df94-98a9" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2431-9bf7-57a4-c6a9" type="min"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="c067-0ea5-e7a2-bdd3" name="Melkoth&apos;s Mystifying Miasma" hidden="false" targetId="89e2-f22c-758d-a9d7" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="5b64-216f-3de6-0ed8" name="Spells from the Lore of Shadow" hidden="false" collective="false" import="true">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8e78-f0ae-a84c-4dd0" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d7e8-6f56-a5a7-41f4" type="min"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="8f5b-7ca1-d238-48ee" name="1. Steed of Shadows" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9e9d-2839-1a43-a09e" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="4376-6b1d-7a7c-e78e" name="Steed of Shadows" hidden="false" targetId="e037-ebb5-dade-80d4" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="1aec-1e70-e38f-2acd" name="2. The Enfeebling Foe" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="677a-5db9-bee2-44ad" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="3e9c-26ac-24b5-b458" name="The Enfeebling Foe" hidden="false" targetId="9fd1-5afd-d90c-3fdf" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="66ec-0101-c17e-d73f" name="3. The Withering" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cb65-cc50-4833-04e1" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="a1d4-bb41-dabb-47d0" name="The Withering" hidden="false" targetId="37c7-763b-0d45-9041" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="9f28-b28b-2832-ae3b" name="4. The Penumbral Pendulum" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bbac-19e0-e344-a527" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="47ff-0482-48c7-cdaa" name="The Penumbral Pendulum" hidden="false" targetId="e002-fb6a-9442-ebcf" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="19d6-fa27-816c-d7e8" name="6. Okkam&apos;s Mindrazor" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d9a3-9620-e7d3-5d92" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="7038-5da4-77ea-7a6d" name="Okkam&apos;s Mindrazor" hidden="false" targetId="2e7f-7e2c-e4e0-a10a" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="f9d1-3e45-9c8e-1675" name="5. Pit of Shades" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bac3-f589-0e1b-e745" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="5d99-826b-bef8-1f52" name="Pit of Shades" hidden="false" targetId="ecf9-c3f1-b183-c310" type="profile"/>
-                  </infoLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="0"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
@@ -9041,21 +7874,6 @@ However, they are still subject to any special effects that specific terrain ma
 
 In addition, models with this special rule can march, claim rank bonus and be steadfast even when in water. Furthermore, if every model in a unit has the Aquatic special rule, and the majority of the unit is within water terrain, enemies shooting at that unit suffer an additional -1 To Hit penalty.</description>
     </rule>
-    <rule id="51e2-219e-29cc-8aaf" name="Breath Weapons" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
-      <description>A model with a Breath Weapon can use it to make a special attack once per shooting or close combat phase. A model with two or more different Breath Weapons must choose which one they want to use. The form that this special attack takes depends on whether or not the creature is in close combat. In the event that a model has more than one Breath Weapon attack, it is permitted to attempt to use only one in a single turn.
-
-However, after each Breath Weapon has been used the first time, roll a D6 before attempting to use it again in later rounds. On 4+, it may be used as normal. On a 1- 3, the model is literally out of breath, and cannot use its Breath Weapon this round. It may choose to attack normally in close combat instead.
-
-Note that Breath Weapons are not physical attacks, and certain models may be Immune to the effects of some Breath Weapons.
-
-Breath Weapon Shooting Attack
-Provided the model is not in close combat, it can use its Breath Weapon during its Shooting phase. A Breath Weapon shooting attack can be made even if the model marched or reformed during the same turn, but it cannot be used as a Stand and Shoot charge reaction.
-
-To perform the attack, place the flame template so that it lies entirely within the model&apos;s forward arc, with the narrow end touching the model&apos;s base, and so that it is not touching any friendly units or enemy units that are in close combat. All models that are even partially under the template are automatically hit, following the normal rules for the flame template. The Strength and any special effects of the creature&apos;s Breath Weapon will be covered in its rules.
-
-Breath Weapon Close Combat Attack
-If the model with this special rule is in close combat, it can use the Breath Weapon instead of using its normal attacks. A model that makes a breath weapon attack in this way inflicts 2D6 automatic hits (resolved like shooting) on a single enemy unit in base contact – if there is more than one enemy unit in base contact with the model, the controlling player chooses which enemy unit suffers the hits. Note that no single model in the target unit may be Hit more than once from the same breath weapon attack – any excess hits are ignored. As with breath weapon attacks made in the Shooting phase, the Strength and any special effects of the creature&apos;s Breath Weapon will be covered in its rules. Wounds caused by a Breath Weapon in close combat count towards combat resolution.</description>
-    </rule>
     <rule id="3d84-8ad0-b310-e355" name="Fight in Extra Ranks (1)" publicationId="9e23-79cb-pubN66727" page="60" hidden="false">
       <description>If a unit has this rule then supporting attacks can be made by one more rank than normal for each number indicated in the bracket. This rule is cumulative with other sources of Fight in Extra Ranks.</description>
     </rule>
@@ -9489,9 +8307,6 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
     <rule id="3efd-81b2-458e-604e" name="Loremaster (Hedge Magic)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
     </rule>
-    <rule id="9a24-f1a2-aac3-de3b" name="Breath Weapon (Monster of Kadon)" publicationId="9e23-79cb-pubN66727" page="147" hidden="false">
-      <description>Strength 4, Flaming Attacks.</description>
-    </rule>
     <rule id="73fd-d115-269d-bd0a" name="Ancestral Grudge" publicationId="aa7b-3583-0834-7bfa" page="136" hidden="false">
       <description>Dwarfs have the Hatred (Orcs, Goblins, Skaven) special rule.</description>
     </rule>
@@ -9531,9 +8346,6 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
     </rule>
     <rule id="d041-af68-1592-6f88" name="Ogre Charge" publicationId="315d-135b-135c-07ce" page="37" hidden="false">
       <description>Each model with this special rule that successfully charges an enemy has the Impact Hits (1) special rule. Models with this special rule that are part of a unit with ranks add their current Rank Bonus to the Strength of the Impact Hits they inflict. In addition, they count as having one more rank than their actual number for the purpose of determining Steadfast in any turn that they charge.</description>
-    </rule>
-    <rule id="fb9d-b6f0-9c84-38e2" name="Dwarf Rum" publicationId="9e23-79cb-pubN116235" page="32" hidden="false">
-      <description>Enemy models in base contact with models with this rule suffer -1 to their WS in Close Combat. This does not affect Undead, Daemonic or Mark of Nurgle models. The Slayer Pirates may not be deployed closer than 6&quot; to any other unit in the army at the start of the battle.</description>
     </rule>
     <rule id="03d6-87a5-ffd8-93ba" name="Duck &amp; Weave" publicationId="0545-ea23-873c-f668" page="3" hidden="false">
       <description>Enemies attacking Infantry models with this rule suffer 1 To Hit in close combat.</description>
@@ -9769,13 +8581,9 @@ Any effect that would modify the model&apos;s Characteristics affect both the r
     <rule name="War Machine" id="9960-d3ce-efdf-06ae" hidden="false">
       <description>Line of Sight (1). Move or Fire.
 
-Unless specified, any special rules a War Machine
-might have apply to both the War Machine and the
-crew.
+Unless specified, any special rules a War Machine might have apply to both the War Machine and the crew.
 
-
-War Machines have a Unit Strength equal to their
-current number of crew.</description>
+War Machines have a Unit Strength equal to their current number of crew.</description>
     </rule>
     <rule id="ddb1-e80d-9bb6-bd15" name="Supporting Attacks (5)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule may make up to 5 supporting attacks.</description>
@@ -9863,8 +8671,8 @@ Any missile weapons use the Ballistic Skill of the crew when making Shooting at
     <rule name="Firing an Organ Gun" id="516f-a12a-2ccc-9ac7" hidden="false" publicationId="9e23-79cb-pubN66727" page="85">
       <description>To fire an organ gun, select a target according to the normal rules for shooting. Determine the number of shots following the rule for Multiple Shots. Roll to hit using the crew&apos;s Ballistic Skill, just as you would for a normal missile weapon.
 
-
 If a misfire is rolled, roll immediately on the Black Powder Misfire chart.</description>
+      <alias>Organ Gun</alias>
     </rule>
     <rule name="War Beast" id="42ce-1113-52c7-5ef8" hidden="false">
       <description>Complete Ranks (5). Supporting Attacks (1). Unit Strength (1). Line of Sight (1). Expendable. Swiftstride. Vanguard.
@@ -9907,6 +8715,7 @@ All models underneath the template are hit automatically. A unit suffering any 
 
 
 If a misfire is rolled, roll immediately on the Black Powder Misfire chart.</description>
+      <alias>Fire Thrower</alias>
     </rule>
     <rule id="224d-6096-4dc6-a3fb" name="Line of Sight (10)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Line of Sight of 10.</description>
@@ -9962,7 +8771,7 @@ Models with the Mark of Tzeentch have Magic Resistance (1) and Ward Save (6+).</
       <description>Models or weapons with this special rule do not suffer
 the usual -1 To Hit penalty for firing Multiple Shots.</description>
     </rule>
-    <rule name="Firing a Blot Thrower" id="f55b-b981-fae7-afa2" hidden="false" publicationId="9e23-79cb-pubN66727" page="82">
+    <rule name="Firing a Bolt Thrower" id="f55b-b981-fae7-afa2" hidden="false" publicationId="9e23-79cb-pubN66727" page="82">
       <description>To fire a bolt thrower, select a target according to the normal rules for shooting. Roll to hit using the crew&apos;s Ballistic Skill, just as you would for a normal missile weapon.
 
 
@@ -9977,12 +8786,14 @@ If the rank hit by the bolt is made entirely of characters, or if the total num
 
 
 Note that repeating bolts do not pierce ranks.</description>
+      <alias>Bolt Thrower</alias>
     </rule>
     <rule name="Firing Grapeshot" id="493e-43ce-ef2f-2beb" hidden="false" publicationId="9e23-79cb-pubN66727" page="84">
       <description>To fire grapeshot, select a target according to the normal rules for shooting. With the target chosen, roll an artillery dice and a D6 to find out how many shots are fired. If the artillery dice result is a misfire, roll a D6 on the Black Powder War Machine Misfire chart to find out what has gone wrong.
 
 
 Assuming that a misfire did not occur, roll to hit the target with a number of shots equal to the number rolled on the artillery dice plus the D6, resolving any successful hits using the grapeshot profile.</description>
+      <alias>Grapeshot</alias>
     </rule>
     <rule name="Firing a Cannon" id="1b5a-8c3a-7e3d-0e2e" hidden="false" publicationId="9e23-79cb-pubN66727" page="83">
       <description>To fire a cannon, first pivot to face the target following the normal rules for war machines. Then, nominate a model or building within the cannon&apos;s line of sight, outside of its minimum range and within its maximum range.
@@ -10016,6 +8827,8 @@ The bounce of the cannonball is determined using the line template. On most occ
 Direct Hit
 Damage is resolved differently depending on whether or not the cannon ball hits a model directly or not.
 Normal Cannons have both the Multiple Wounds (D6) and (D3) special rules. It inflicts D6 Wounds only if the cannon ball lands directly on a model (that is, where the marker is placed after the first artillery and scatter dice are rolled), models hit by the bounce only suffer D3 Wounds. Great Cannons on the other hand, inflict D6 Wounds on both direct hits and the bounce.</description>
+      <alias>Cannon</alias>
+      <alias>Great Cannon</alias>
     </rule>
     <rule name="Firing a Stone Thrower" id="0638-a1ac-c907-7ee2" hidden="false" publicationId="9e23-79cb-pubN66727" page="84">
       <description>Nominate a model or building within the stone thrower&apos;s line of sight (ignoring other models within the same unit), outside of its minimum range and within its maximum range. Then, take the small round template and place it with the centre directly over the target. Mortars use the large round template by default.
@@ -10058,6 +8871,8 @@ If an arrow is rolled on the scatter dice, resolve the scatter as normal. If ho
 
 
 Other than the aforementioned inaccuracy of the scatter, an indirect shot from a stone thrower is treated exactly according to the rules given for normal shots given above.</description>
+      <alias>Stone Thrower</alias>
+      <alias>Mortar</alias>
     </rule>
     <rule id="adee-efa4-db8e-2fb1" name="Fight in Extra Ranks" publicationId="9e23-79cb-pubN66727" page="60" hidden="false">
       <description>If a unit has this rule then supporting attacks can be made by one more rank than normal for each number indicated in the bracket. This rule is cumulative with other sources of Fight in Extra Ranks.</description>
@@ -10177,9 +8992,35 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
     <rule id="1642-08f0-d390-16ae" name="Line of Sight (8)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Line of Sight of 8.</description>
     </rule>
+    <rule name="Breath Weapons" id="51e2-219e-29cc-8aaf" hidden="false" publicationId="9e23-79cb-pubN66727" page="59">
+      <description>A model with a Breath Weapon can use it to make a special attack once per shooting or close combat phase. A model with two or more different Breath Weapons must choose which one they want to use. The form that this special attack takes depends on whether or not the creature is in close combat. In the event that a model has more than one Breath Weapon attack, it is permitted to attempt to use only one in a single turn.
+
+However, after each Breath Weapon has been used the first time, roll a D6 before attempting to use it again in later rounds. On 4+, it may be used as normal. On a 1- 3, the model is literally out of breath, and cannot use its Breath Weapon this round. It may choose to attack normally in close combat instead.
+
+Note that Breath Weapons are not physical attacks, and certain models may be Immune to the effects of some Breath Weapons.
+
+Breath Weapon Shooting Attack
+Provided the model is not in close combat, it can use its Breath Weapon during its Shooting phase. A Breath Weapon shooting attack can be made even if the model marched or reformed during the same turn, but it cannot be used as a Stand and Shoot charge reaction.
+
+To perform the attack, place the flame template so that it lies entirely within the model&apos;s forward arc, with the narrow end touching the model&apos;s base, and so that it is not touching any friendly units or enemy units that are in close combat. All models that are even partially under the template are automatically hit, following the normal rules for the flame template. The Strength and any special effects of the creature&apos;s Breath Weapon will be covered in its rules.
+
+Breath Weapon Close Combat Attack
+If the model with this special rule is in close combat, it can use the Breath Weapon instead of using its normal attacks. A model that makes a breath weapon attack in this way inflicts 2D6 automatic hits (resolved like shooting) on a single enemy unit in base contact – if there is more than one enemy unit in base contact with the model, the controlling player chooses which enemy unit suffers the hits. Note that no single model in the target unit may be Hit more than once from the same breath weapon attack – any excess hits are ignored. As with breath weapon attacks made in the Shooting phase, the Strength and any special effects of the creature&apos;s Breath Weapon will be covered in its rules. Wounds caused by a Breath Weapon in close combat count towards combat resolution.</description>
+    </rule>
+    <rule name="Magic Armour" id="645b-8b26-afbc-a90d" hidden="false">
+      <description>Except where otherwise stated, magical suits of armour (light, medium or heavy) and shields follow the same rules as mundane ones, but keep in mind that a model can only have one suit of armour and one shield, so if you give a model a magical suit of armour or a magical shield, it replaces any mundane equivalent already worn by the model.</description>
+    </rule>
+    <rule name="Magic Weapon" id="4b8a-7f59-e0be-ea21" hidden="false">
+      <description>Unless otherwise stated, a magic weapon is treated as a hand weapon (replacing the model&apos;s regular hand weapon), and follows the rules for such. This means that a magic weapon can be used with both an additional hand weapon or shield/buckler following their normal rules. In the case of non-magical additional hand weapons, the +1 Attack does not benefit from any special rules from the magic weapon.
+
+A character that has a magic close combat weapon cannot use any other close combat weapons. If a character has more than one magic weapon, they must choose which one to use at the start of the combat (unless a rule specifies that both can be used at the same time) – the chosen weapon must be used for the duration of the combat.</description>
+    </rule>
+    <rule name="Natural Armour" id="9c79-58c1-b63c-684b" hidden="false">
+      <description>Models with this rule have an armour save value equal to the number in the brackets. Natural Armour can be combined with other armour as normal, including other sources of Natural Armour.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
-    <profile id="7e43-605b-bfde-13c3" name="Great Cannon" publicationId="9e23-79cb-pubN66727" page="111" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
+    <profile id="7e43-605b-bfde-13c3" name="Great Cannon" publicationId="9e23-79cb-pubN66727" page="111" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Great Cannon</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-60&quot;</characteristic>
@@ -10187,7 +9028,7 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
         <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D6). Slow to Fire.</characteristic>
       </characteristics>
     </profile>
-    <profile id="2d26-2a21-00a2-685d" name="Bolt Thrower" publicationId="9e23-79cb-pubN66727" page="82" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
+    <profile id="2d26-2a21-00a2-685d" name="Bolt Thrower" publicationId="9e23-79cb-pubN66727" page="82" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Bolt Thrower</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">48&quot;</characteristic>
@@ -10195,7 +9036,7 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
         <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Armour Piercing (1). Slow to Fire.</characteristic>
       </characteristics>
     </profile>
-    <profile id="4f25-d6c7-f4da-a808" name="Cannon" publicationId="9e23-79cb-pubN66727" page="83" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
+    <profile id="4f25-d6c7-f4da-a808" name="Cannon" publicationId="9e23-79cb-pubN66727" page="83" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Cannon</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-48&quot;</characteristic>
@@ -10203,7 +9044,7 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
         <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D6/D3). Slow to Fire.</characteristic>
       </characteristics>
     </profile>
-    <profile id="78db-91d9-aaca-d5ba" name="Grapeshot" publicationId="9e23-79cb-pubN66727" page="84" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
+    <profile id="78db-91d9-aaca-d5ba" name="Grapeshot" publicationId="9e23-79cb-pubN66727" page="84" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Grapeshot</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12&quot;</characteristic>
@@ -10211,7 +9052,7 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
         <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Armour Piercing (1). Slow to Fire.</characteristic>
       </characteristics>
     </profile>
-    <profile id="8651-78f3-14e9-f66b" name="Stone Thrower" publicationId="9e23-79cb-pubN66727" page="85" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
+    <profile id="8651-78f3-14e9-f66b" name="Stone Thrower" publicationId="9e23-79cb-pubN66727" page="85" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Stone Thrower</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-48&quot;</characteristic>
@@ -10219,7 +9060,7 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
         <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Slow to Fire.</characteristic>
       </characteristics>
     </profile>
-    <profile id="d259-6f2a-d6a9-0eec" name="Fire Thrower" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
+    <profile id="d259-6f2a-d6a9-0eec" name="Fire Thrower" publicationId="9e23-79cb-pubN66727" page="115" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Fire Thrower</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945"/>
@@ -11294,7 +10135,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Summons the 5&quot; template. While the spell is in effect, the template counts as Dangerous Terrain, and enemy units within 6&quot; of it suffer -1 to their Ld.</characteristic>
       </characteristics>
     </profile>
-    <profile id="a0a6-193b-9eb5-ffe9" name="Organ Gun" publicationId="9e23-79cb-pubN66727" page="111" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
+    <profile id="a0a6-193b-9eb5-ffe9" name="Organ Gun" publicationId="9e23-79cb-pubN66727" page="111" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Organ Gun</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">24&quot;</characteristic>
@@ -11302,7 +10143,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Armour Piercing (1), Multiple Shots (Artillery Dice + D6), Rapid Fire, Slow to Fire</characteristic>
       </characteristics>
     </profile>
-    <profile id="9765-f312-5a8b-5cb8" name="Repeater Bolt Thrower" publicationId="9e23-79cb-pubN66727" page="82" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
+    <profile id="9765-f312-5a8b-5cb8" name="Repeater Bolt Thrower" publicationId="9e23-79cb-pubN66727" page="82" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Bolt Thrower</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">48&quot;</characteristic>
@@ -11310,7 +10151,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Shots (6). Armour Piercing (1). Slow to Fire. Rapid Fire.</characteristic>
       </characteristics>
     </profile>
-    <profile id="c5ac-9a35-f3cf-7c0a" name="Mortar" publicationId="9e23-79cb-pubN66727" page="85" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
+    <profile id="c5ac-9a35-f3cf-7c0a" name="Mortar" publicationId="9e23-79cb-pubN66727" page="85" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Mortar</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-48&quot;</characteristic>
@@ -11318,7 +10159,7 @@ In subsequent turns, the Plague Wind travels in a random direction and moves a n
         <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3). Slow to Fire. Armour Piercing (1).</characteristic>
       </characteristics>
     </profile>
-    <profile id="7c7a-74eb-5d2b-bc04" name="Rocket Launcher" publicationId="9e23-79cb-pubN66727" page="85" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
+    <profile id="7c7a-74eb-5d2b-bc04" name="Rocket Launcher" publicationId="9e23-79cb-pubN66727" page="85" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine" noindex="true">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Rocket Launcher</characteristic>
         <characteristic name="Range" typeId="1c88-efb0-083f-b945">12-48&quot;</characteristic>
@@ -11925,9 +10766,4 @@ Magic phase.</characteristic>
       </profiles>
     </infoGroup>
   </sharedInfoGroups>
-  <rules>
-    <rule name="Natural Armour" id="9c79-58c1-b63c-684b" hidden="false">
-      <description>Models with this rule have an armour save value equal to the number in the brackets. Natural Armour can be combined with other armour as normal, including other sources of Natural Armour.</description>
-    </rule>
-  </rules>
 </gameSystem>
