@@ -14177,13 +14177,19 @@ When the Pet Gribbly is squished, the bearer gains the Hatred and Frenzy specia
                 </modifier>
               </modifiers>
             </selectionEntry>
-          </selectionEntries>
-          <entryLinks>
-            <entryLink import="true" name="Common Enchanted Items" hidden="false" id="9911-b6c3-419e-b4ba" collective="false" targetId="5857-a7aa-f954-a027" type="selectionEntryGroup" sortIndex="91" flatten="true" collapsible="true"/>
-            <entryLink import="true" name="War Boar" hidden="false" id="2b35-93ab-42a7-a723" type="selectionEntry" targetId="7284-49ca-e7b8-b362" sortIndex="30">
+            <selectionEntry type="upgrade" import="true" name="Ironback Boar" hidden="false" id="6ded-b11a-8d05-6d53" sortIndex="30">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4613-64c5-9626-cf28" includeChildSelections="true"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="30"/>
+              </costs>
               <modifiers>
-                <modifier type="set" value="4" field="edd2-7979-54a4-6b35" affects="self.entries.profiles.Model"/>
-                <modifier type="set" value="Ironback Boar" field="name"/>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="7148-113a-4c1d-66df" shared="true"/>
+                  </conditions>
+                </modifier>
                 <modifier type="set" value="true" field="hidden">
                   <conditionGroups>
                     <conditionGroup type="and">
@@ -14194,23 +14200,31 @@ When the Pet Gribbly is squished, the bearer gains the Hatred and Frenzy specia
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="7148-113a-4c1d-66df" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="Ironback Boar" field="annotation" affects="self.entries.profiles.Model"/>
               </modifiers>
               <infoLinks>
-                <infoLink name="Impact Hits (D3)" id="87e4-4b91-2559-22af" hidden="false" type="rule" targetId="f30d-0b61-2836-689e"/>
+                <infoLink name="War Boar" id="8c7f-8871-1bf6-e710" hidden="false" targetId="e5ff-5bf1-2cf1-e269" type="profile">
+                  <modifiers>
+                    <modifier type="set" value="Ironback Boar" field="annotation"/>
+                    <modifier type="set" value="4" field="edd2-7979-54a4-6b35"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Natural Armour" id="10f0-cad4-e254-86e6" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                  <modifiers>
+                    <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                    <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+                    <modifier type="set" value="War Boar" field="annotation"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Tusker Charge" id="0f6e-2730-790e-4807" hidden="false" type="rule" targetId="76c4-8e4c-7258-76ca"/>
+                <infoLink name="Impact Hits (D3)" id="0949-acf4-f409-600b" hidden="false" type="rule" targetId="f30d-0b61-2836-689e"/>
               </infoLinks>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="07ce-d925-b2ae-4df9" includeChildSelections="true"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="30"/>
-              </costs>
-            </entryLink>
+              <categoryLinks>
+                <categoryLink name="Cavalry" hidden="false" id="242a-db28-4e14-3cd7" targetId="bdee-b168-38ba-7d3c" primary="false"/>
+              </categoryLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Common Enchanted Items" hidden="false" id="9911-b6c3-419e-b4ba" collective="false" targetId="5857-a7aa-f954-a027" type="selectionEntryGroup" sortIndex="91" flatten="true" collapsible="true"/>
           </entryLinks>
           <modifiers>
             <modifier type="set" value="2" field="ab21-51f4-62b7-0e24">
@@ -15379,17 +15393,12 @@ Attacks. Models that already have Poisoned Attacks will automatically wound on T
     <selectionEntryGroup name="70. Mount" id="11f2-1655-f0c0-1121" hidden="false">
       <comment>Orc characters</comment>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9c0e-21c0-e10b-2fb0" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9c0e-21c0-e10b-2fb0" includeChildSelections="false" automatic="true"/>
       </constraints>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="equalTo" value="1" field="selections" scope="model" childId="2b35-93ab-42a7-a723" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
         <modifier type="set" value="0" field="9c0e-21c0-e10b-2fb0">
           <conditions>
-            <condition type="equalTo" value="1" field="selections" scope="model" childId="2b35-93ab-42a7-a723" shared="true" includeChildSelections="true"/>
+            <condition type="equalTo" value="1" field="selections" scope="model" childId="6ded-b11a-8d05-6d53" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -16297,7 +16306,7 @@ the caster&apos;s next Magic phase.</characteristic>
 &lt;b&gt;6-7 - &quot;I&apos;ve Forgot!&quot;&lt;/b&gt; The Wizard permanently reduces his Wizard Level by 1 and may not cast any further spells this phase.
 &lt;b&gt;8-9 - &quot;Me &apos;Ead &apos;Urts!&quot;&lt;/b&gt; All Orcs and Goblins (friend or foe) within 12&quot; that are capable of channelling power or dispel dice suffer a Strength 4 hit which Ignores Armour saves. In addition, D3 dice are lost from the pool.
 &lt;b&gt;10-11 - &quot;I Fink I&apos;m Gonna…&quot;&lt;/b&gt; The Wizard suffers a Strength 10 hit and all Orc and Goblin units (friend or foe) within 12&quot; suffer D6 Strength 5 hits which Ignores Armour saves. In addition, D3 dice are lost from the pool.
-&lt;b&gt;12+ - &apos;EADBANG!&lt;/b&gt; Place the large round template over the Wizard. Any model under the template must pass a Toughness test or also be killed outright with no armour saves allowed. After resolving hits from this template, removing the Wizard as casualty with no saves allowed. In addition, D3 dice are lost from the power pool. </description>
+&lt;b&gt;12+ - &apos;EADBANG!&lt;/b&gt; Place the large round template over the Wizard. Any model under the template must pass a Toughness test or also be killed outright with no armour saves allowed. After resolving hits from this template, removing the Wizard as casualty with no saves allowed. In addition, D3 dice are lost from the power pool.</description>
     </rule>
   </rules>
 </catalogue>
