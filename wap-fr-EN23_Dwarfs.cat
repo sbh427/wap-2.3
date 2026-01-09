@@ -929,30 +929,32 @@
             <infoLink id="d718-d5cf-0ccc-049f" name="Magic Resistance (1)" hidden="false" targetId="7ed4-9d31-09c3-6bf9" type="rule"/>
           </infoLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup id="cba5-ca2d-4b9c-4c1c" name="Equipment" hidden="false" collective="false" import="true" defaultSelectionEntryId="76a9-7185-dc35-806d" sortIndex="2">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="01b2-14b9-7ae1-d357" type="min"/>
-              </constraints>
+            <selectionEntryGroup name="25. Equipment" id="a96f-411f-26d6-d7bd" hidden="false">
               <entryLinks>
-                <entryLink import="true" name="Great Weapon" hidden="false" id="941b-c504-08a0-8acb" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="3"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Shield" hidden="false" id="70b5-1929-e4b3-a8db" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="1">
+                <entryLink import="true" name="Shield" hidden="false" id="70b5-1929-e4b3-a8db" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
                 </entryLink>
+                <entryLink import="true" name="Great Weapon" hidden="false" id="941b-c504-08a0-8acb" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="3"/>
+                  </costs>
+                </entryLink>
               </entryLinks>
-            </selectionEntryGroup>
-            <selectionEntryGroup id="1235-bd17-6144-193c" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="8d69-09b7-1cb9-ec9f" sortIndex="3">
               <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fe24-0fd2-a51d-afb6" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f41c-c619-298a-5b32" type="min"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9e13-440e-28fc-7774" includeChildSelections="false" automatic="true"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="cd6d-7bd6-c1a5-a45b" includeChildSelections="false" automatic="true"/>
               </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <costs>
+            <cost name="pts" typeId="points" value="7"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="d640-d542-ad6d-b3db" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
               <entryLinks>
-                <entryLink import="true" name="Medium Armour" hidden="false" id="1cdb-71e4-0dc5-87e7" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="1">
+                <entryLink import="true" name="Medium Armour" hidden="false" id="1cdb-71e4-0dc5-87e7" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="2">
                   <modifiers>
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
@@ -974,7 +976,7 @@
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d2ab-c403-b849-9d24"/>
                   </constraints>
                 </entryLink>
-                <entryLink import="true" name="Heavy Armour" hidden="false" id="bfcb-7fe4-dd9f-20e3" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
+                <entryLink import="true" name="Heavy Armour" hidden="false" id="bfcb-7fe4-dd9f-20e3" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
@@ -1000,16 +1002,31 @@
                   </constraints>
                 </entryLink>
               </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="7"/>
-          </costs>
-          <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="8034-6607-92d6-d496" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="74a3-8f73-a36a-11e9"/>
-              </constraints>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="a06e-4478-6847-fa4c" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="8034-6607-92d6-d496" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <modifiers>
+                    <modifier type="set" value="0" field="0e5a-c680-7fa4-685d">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="0473-857e-78d9-cb7c" shared="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="1" field="443c-baf5-540a-c81e">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="0473-857e-78d9-cb7c" shared="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <modifiers>
+                <modifier type="set" value="0" field="e941-9082-0af2-8b43">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0473-857e-78d9-cb7c" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -1142,37 +1159,62 @@
             <infoLink id="7462-9e38-f56a-08a4" name="Magic Resistance (1)" hidden="false" targetId="7ed4-9d31-09c3-6bf9" type="rule"/>
           </infoLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup id="6e69-8852-a1e8-9d23" name="Equipment" hidden="false" collective="false" import="true" defaultSelectionEntryId="eb09-2cc1-d9f4-5af6">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0068-d83f-94ed-1089" type="min"/>
-              </constraints>
+            <selectionEntryGroup name="25. Equipment" id="df09-a304-5717-36fd" hidden="false">
               <entryLinks>
-                <entryLink import="true" name="Great Weapon" hidden="false" id="7c51-31e0-4aca-0e90" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="3"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Shield" hidden="false" id="cb9a-d08d-a468-9b0d" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="1">
+                <entryLink import="true" name="Shield" hidden="false" id="754d-7c65-ceb3-82d8" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
                 </entryLink>
+                <entryLink import="true" name="Great Weapon" hidden="false" id="dfc4-20db-0e0f-b99f" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="3"/>
+                  </costs>
+                </entryLink>
               </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="48cc-fb3f-e6c4-9b12" includeChildSelections="false" automatic="true"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="1a7a-36a2-eb8f-9ccf" includeChildSelections="false" automatic="true"/>
+              </constraints>
             </selectionEntryGroup>
           </selectionEntryGroups>
           <costs>
             <cost name="pts" typeId="points" value="14"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="1d4a-373f-a78d-e0e3" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8938-5c43-b4c5-bfac"/>
-              </constraints>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="3e54-b6b1-9c5a-7429" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="5a97-b05b-7efc-c926" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <modifiers>
+                    <modifier type="set" value="0" field="0e5a-c680-7fa4-685d">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="0473-857e-78d9-cb7c" shared="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="1" field="443c-baf5-540a-c81e">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="0473-857e-78d9-cb7c" shared="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <modifiers>
+                <modifier type="set" value="0" field="e941-9082-0af2-8b43">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0473-857e-78d9-cb7c" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
-            <entryLink import="true" name="Heavy Armour" hidden="false" id="2a90-e0f6-269d-b55d" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ca6c-d995-1e9f-7496"/>
-              </constraints>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="d062-757f-9ee4-e2da" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+              <entryLinks>
+                <entryLink import="true" name="Heavy Armour" hidden="false" id="2a90-e0f6-269d-b55d" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ca6c-d995-1e9f-7496"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -1279,64 +1321,55 @@
             <infoLink id="8097-65ee-bd80-3161" name="Resolute" hidden="false" targetId="7da8-9e3b-77c9-cc8a" type="rule"/>
             <infoLink id="e2fb-4ba2-f2d3-ab48" name="Relentless" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
           </infoLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="214e-540a-dfd1-29e9" name="Primary Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="2d15-5291-b949-57ee" sortIndex="1">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b687-bbff-60b6-b9ef" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="389e-6516-3c36-3dbd" type="min"/>
-              </constraints>
+          <costs>
+            <cost name="pts" typeId="points" value="12"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="06bc-18dd-8d0e-6155" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
               <entryLinks>
+                <entryLink import="true" name="Crossbow" hidden="false" id="7291-44a2-d9eb-fbaa" type="selectionEntry" targetId="9936-c747-429f-6327">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1164-02fa-3490-ffd2"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Dwarf-crafted" id="19e9-84f7-0a6a-8144" hidden="false" type="rule" targetId="e3a8-c128-05b0-742e"/>
+                  </infoLinks>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="a55f-6993-d8e1-40d1" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
+              <entryLinks>
+                <entryLink import="true" name="Buckler" hidden="false" id="0b36-9855-73c5-9b1c" type="selectionEntry" targetId="b785-38e4-3e4a-9385">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0.5"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Shield" hidden="false" id="33da-80b5-c3cf-476f" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="ca41-1529-ba20-4188" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+              <entryLinks>
+                <entryLink import="true" name="Light Armour" hidden="false" id="e91c-03c5-9213-1e7f" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72"/>
+                <entryLink import="true" name="Medium Armour" hidden="false" id="00bb-fd88-9922-9f32" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="b871-3f22-60d2-a3a6" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="c121-6648-a262-0d12" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
                 <entryLink import="true" name="Great Weapon" hidden="false" id="26ac-fd24-74ed-6cad" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="c121-6648-a262-0d12" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
               </entryLinks>
-            </selectionEntryGroup>
-            <selectionEntryGroup id="cc84-aaa2-ac35-ebb9" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="ce5f-88c2-8dd2-7d47" sortIndex="3">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c5a9-7e47-60aa-c25f" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="83f6-5bf5-ffbd-0dcd" type="min"/>
-              </constraints>
-              <entryLinks>
-                <entryLink import="true" name="Medium Armour" hidden="false" id="00bb-fd88-9922-9f32" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="1"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Light Armour" hidden="false" id="e91c-03c5-9213-1e7f" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="1"/>
-              </entryLinks>
-            </selectionEntryGroup>
-            <selectionEntryGroup id="9b51-e0dd-0522-748c" name="Equipment" hidden="false" collective="false" import="true" sortIndex="4">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="15d7-b1cf-7298-9de1" type="max"/>
-              </constraints>
-              <entryLinks>
-                <entryLink import="true" name="Shield" hidden="false" id="33da-80b5-c3cf-476f" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="1"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Buckler" hidden="false" id="0b36-9855-73c5-9b1c" type="selectionEntry" targetId="b785-38e4-3e4a-9385" sortIndex="1">
-                  <costs>
-                    <cost name="pts" typeId="points" value="0.5"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="12"/>
-          </costs>
-          <entryLinks>
-            <entryLink import="true" name="Crossbow" hidden="false" id="7291-44a2-d9eb-fbaa" type="selectionEntry" targetId="9936-c747-429f-6327" sortIndex="2">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1164-02fa-3490-ffd2"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Dwarf-crafted" id="19e9-84f7-0a6a-8144" hidden="false" type="rule" targetId="e3a8-c128-05b0-742e"/>
-              </infoLinks>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -1614,20 +1647,32 @@
             <cost name="pts" typeId="points" value="18"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Great Weapon" hidden="false" id="3315-e4ca-c228-2801" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="1">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d70d-4ab6-6cf3-4b5c"/>
-              </constraints>
+            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="fbd6-7292-f61d-0af4" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
+              <entryLinks>
+                <entryLink import="true" name="Shield" hidden="false" id="a7b6-9db9-e556-63d6" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1.5"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Heavy Armour" hidden="false" id="ee4a-a2a9-e929-b04a" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="2">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b81d-6eb7-d3bf-bf0b"/>
-              </constraints>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="b688-eefd-4b56-571a" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Great Weapon" hidden="false" id="3315-e4ca-c228-2801" type="selectionEntry" targetId="0473-857e-78d9-cb7c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d70d-4ab6-6cf3-4b5c"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Shield" hidden="false" id="a7b6-9db9-e556-63d6" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="3">
-              <costs>
-                <cost name="pts" typeId="points" value="1.5"/>
-              </costs>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="8861-47c8-4fe3-2354" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+              <entryLinks>
+                <entryLink import="true" name="Heavy Armour" hidden="false" id="ee4a-a2a9-e929-b04a" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b81d-6eb7-d3bf-bf0b"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -1728,20 +1773,28 @@
             <cost name="pts" typeId="points" value="14"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="2f38-d60c-a91a-c26f" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6f55-8d87-0231-8bac"/>
-              </constraints>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="2f52-ab4f-9e49-8d44" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+              <entryLinks>
+                <entryLink import="true" name="Heavy Armour" hidden="false" id="e4c7-f9a9-f9f5-14e3" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b265-e01a-ddda-c668"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Heavy Armour" hidden="false" id="e4c7-f9a9-f9f5-14e3" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b265-e01a-ddda-c668"/>
-              </constraints>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="12cd-86ee-1b5d-b549" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="2f38-d60c-a91a-c26f" type="selectionEntry" targetId="a658-337d-0cbd-a38c"/>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Shield" hidden="false" id="3c5d-a999-65ca-4c0c" type="selectionEntry" targetId="c068-0827-9931-d9bf">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8468-a52f-472c-aeb9"/>
-              </constraints>
+            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="666d-c28b-3056-43ca" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
+              <entryLinks>
+                <entryLink import="true" name="Shield" hidden="false" id="3c5d-a999-65ca-4c0c" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8468-a52f-472c-aeb9"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -2117,11 +2170,6 @@ If you have several units of Miners, then repeat this process, one unit at a tim
             <cost name="pts" typeId="points" value="8"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Skirmishers" hidden="false" id="b3ce-1905-76c7-7945" type="selectionEntry" targetId="468e-0a4a-682a-7de2">
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="5443-b588-f1ed-b624" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="a054-f5f8-390d-d79e" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
@@ -2143,6 +2191,15 @@ If you have several units of Miners, then repeat this process, one unit at a tim
               <modifiers>
                 <modifier type="set" value="-1" field="fe22-ce5f-b23e-303d"/>
               </modifiers>
+            </entryLink>
+            <entryLink import="true" name="56. Upgrades" hidden="false" id="ce20-55ab-d082-5c0f" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
+              <entryLinks>
+                <entryLink import="true" name="Skirmishers" hidden="false" id="b3ce-1905-76c7-7945" type="selectionEntry" targetId="468e-0a4a-682a-7de2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
           <modifiers>
@@ -2246,21 +2303,7 @@ If you have several units of Miners, then repeat this process, one unit at a tim
             <infoLink id="0a28-c1c0-01c7-1b4c" name="Relentless" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
           </infoLinks>
           <selectionEntryGroups>
-            <selectionEntryGroup id="71c8-e6dd-a6fe-ad68" name="Armour" hidden="false" collective="false" import="true" defaultSelectionEntryId="c64b-4f65-cbf7-a49e" sortIndex="3">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ce3a-51cf-dcc0-7546" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="43d3-0193-8ba7-3645" type="min"/>
-              </constraints>
-              <entryLinks>
-                <entryLink import="true" name="Medium Armour" hidden="false" id="a616-c119-549a-88fe" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="1"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Light Armour" hidden="false" id="87de-6934-8271-a2cd" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="1"/>
-              </entryLinks>
-            </selectionEntryGroup>
-            <selectionEntryGroup name="Equipment" id="f4f9-65be-5ac5-3cb7" hidden="false" sortIndex="4">
+            <selectionEntryGroup name="25. Equipment" id="f4f9-65be-5ac5-3cb7" hidden="false" sortIndex="">
               <entryLinks>
                 <entryLink import="true" name="Crossbow" hidden="false" id="7199-cb0b-44f2-3cc9" type="selectionEntry" targetId="9936-c747-429f-6327" sortIndex="3">
                   <infoLinks>
@@ -2287,15 +2330,41 @@ If you have several units of Miners, then repeat this process, one unit at a tim
             <cost name="pts" typeId="points" value="7"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="3507-91a8-08f2-300a" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="224c-1ea6-55d0-c0b9"/>
-              </constraints>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="7f7e-d9e9-c19c-aaf3" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+              <entryLinks>
+                <entryLink import="true" name="Light Armour" hidden="false" id="87de-6934-8271-a2cd" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72"/>
+                <entryLink import="true" name="Medium Armour" hidden="false" id="a616-c119-549a-88fe" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Skirmishers" hidden="false" id="73c9-4486-8898-e07c" type="selectionEntry" targetId="468e-0a4a-682a-7de2" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
+            <entryLink import="true" name="56. Upgrades" hidden="false" id="376a-2961-d63b-8a78" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d"/>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="d95f-9a33-7ed1-f5a4" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="ca5d-4d6a-95c0-4205" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <modifiers>
+                    <modifier type="set" value="0" field="0e5a-c680-7fa4-685d">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="0473-857e-78d9-cb7c" shared="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="1" field="443c-baf5-540a-c81e">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="0473-857e-78d9-cb7c" shared="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <modifiers>
+                <modifier type="set" value="0" field="e941-9082-0af2-8b43">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0473-857e-78d9-cb7c" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -2697,13 +2766,23 @@ If you have several units of Miners, then repeat this process, one unit at a tim
       </costs>
       <entryLinks>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="c953-fde1-b7a5-1046" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-          <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="63bc-182a-1d4d-ad99" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Firethrower" hidden="false" id="6061-6c3c-7b9b-b2a6" collective="true">
+              <infoLinks>
+                <infoLink name="Fire Thrower" id="7ef0-ae2e-bc1c-8762" hidden="false" type="profile" targetId="d259-6f2a-d6a9-0eec">
+                  <modifiers>
+                    <modifier type="set" value="4" field="6ca0-d074-628f-e276"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Firing a Fire Thrower" id="d8b4-88b3-a64b-f8da" hidden="false" type="rule" targetId="5184-235f-3d04-5636"/>
+                <infoLink name="Blackpowder Misfire Chart" id="5500-56e7-c42b-b7d8" hidden="false" type="infoGroup" targetId="bb8f-7181-30f9-fc65"/>
+              </infoLinks>
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3371-97a3-cb4b-ea79"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ec1e-7706-59bd-d52b" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cf41-cc41-efe9-58fc" includeChildSelections="false"/>
               </constraints>
-            </entryLink>
-          </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
         </entryLink>
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="c664-72a2-4bcf-0abf" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
@@ -2716,19 +2795,13 @@ If you have several units of Miners, then repeat this process, one unit at a tim
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="167d-4cbe-eb85-5e52" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Firethrower" hidden="false" id="6061-6c3c-7b9b-b2a6">
-              <infoLinks>
-                <infoLink name="Fire Thrower" id="7ef0-ae2e-bc1c-8762" hidden="false" type="profile" targetId="d259-6f2a-d6a9-0eec">
-                  <modifiers>
-                    <modifier type="set" value="4" field="6ca0-d074-628f-e276"/>
-                  </modifiers>
-                </infoLink>
-                <infoLink name="Firing a Fire Thrower" id="d8b4-88b3-a64b-f8da" hidden="false" type="rule" targetId="5184-235f-3d04-5636"/>
-                <infoLink name="Blackpowder Misfire Chart" id="5500-56e7-c42b-b7d8" hidden="false" type="infoGroup" targetId="bb8f-7181-30f9-fc65"/>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="63bc-182a-1d4d-ad99" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3371-97a3-cb4b-ea79"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
     </selectionEntry>
@@ -2986,27 +3059,6 @@ In close combat, a pistol counts as an additional hand weapon that does not give
             <infoLink name="Deathblow" id="3174-4a0f-efe3-2ebb" hidden="false" targetId="1707-3abf-d5c8-97c0" type="rule"/>
             <infoLink id="dbbd-ff1c-39c9-2016" name="Skirmishers" hidden="false" targetId="9a30-1c5c-12f4-5798" type="rule"/>
           </infoLinks>
-          <selectionEntries>
-            <selectionEntry id="71fb-6013-b4d6-de5c" name="Doomseeker Axes" hidden="false" collective="true" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bb46-4ac8-d7a6-705b" type="max"/>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3766-e851-afa3-7a15" type="min"/>
-              </constraints>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-              <profiles>
-                <profile name="Doomseeker Axes" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="cfab-3a22-2b53-9a44">
-                  <characteristics>
-                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">As user</characteristic>
-                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
-                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Impact Hits (D6). Doomseeker axes inflicts Impact Hits (D6) at the start of each round of close combat, not just when charging. In addition, any close combat attacks directed against a Doomseeker suffer -1 To Hit.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
           <costs>
             <cost name="pts" typeId="points" value="35"/>
           </costs>
@@ -3015,6 +3067,29 @@ In close combat, a pistol counts as an additional hand weapon that does not give
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="810b-63c0-3073-c879"/>
               </constraints>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="3c14-2f83-3ce6-7755" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Doomseeker Axes" hidden="false" id="71fb-6013-b4d6-de5c" collective="true">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="bb46-4ac8-d7a6-705b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="3766-e851-afa3-7a15" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0"/>
+                  </costs>
+                  <profiles>
+                    <profile name="Doomseeker Axes" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="cfab-3a22-2b53-9a44">
+                      <characteristics>
+                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">As user</characteristic>
+                        <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                        <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Impact Hits (D6). Doomseeker axes inflicts Impact Hits (D6) at the start of each round of close combat, not just when charging. In addition, any close combat attacks directed against a Doomseeker suffer -1 To Hit.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -3122,18 +3197,27 @@ In close combat, a pistol counts as an additional hand weapon that does not give
             <infoLink id="d98c-387b-1be4-7bee" name="Animated Construct" hidden="false" targetId="738b-aca4-740c-e425" type="rule"/>
             <infoLink name="Immunity (Poisoned Attacks)" id="cc2e-8d06-d0ee-d523" hidden="false" type="rule" targetId="c09e-da06-27f2-fc7e"/>
           </infoLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup id="a2de-2f6d-5de4-b187" name="Upgrades" hidden="false" collective="false" import="true" sortIndex="3">
-              <constraints>
-                <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="21d5-cbe9-ee49-214f" type="max"/>
-              </constraints>
-              <selectionEntries>
-                <selectionEntry id="97fc-46c1-35d3-c07a" name="Rune of Cleaving" hidden="false" collective="true" import="true" type="upgrade" sortIndex="1">
+          <costs>
+            <cost name="pts" typeId="points" value="50"/>
+          </costs>
+          <entryLinks>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="54d2-410f-ab1c-7201" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+              <entryLinks>
+                <entryLink import="true" name="Heavy Armour" hidden="false" id="70c3-17f1-5dce-e8d7" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
                   <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="47ad-b4f6-85e7-fbaf" type="max"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a099-1fb7-f533-3cbd"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="56. Upgrades" hidden="false" id="9055-dc6d-06ad-36b2" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Rune of Cleaving" hidden="false" id="97fc-46c1-35d3-c07a" collective="true">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="47ad-b4f6-85e7-fbaf" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <rules>
-                    <rule id="9b3d-d0d9-6e4a-49c0" name="Rune of Cleaving" publicationId="aa7b-3583-0834-7bfa" page="172" hidden="false">
+                    <rule name="Rune of Cleaving" id="9b3d-d0d9-6e4a-49c0" hidden="false" publicationId="aa7b-3583-0834-7bfa" page="172">
                       <description>The Rune Guardian gains Armour Piercing (1) and Magical Attacks.</description>
                     </rule>
                   </rules>
@@ -3141,51 +3225,12 @@ In close combat, a pistol counts as an additional hand weapon that does not give
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="4eed-03bd-14b6-2780" name="Rune of Fury" hidden="false" collective="true" import="true" type="upgrade" sortIndex="3">
+                <selectionEntry type="upgrade" import="true" name="Rune of Warding" hidden="false" id="0558-5d41-3334-cb98" collective="true">
                   <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f1c4-34bd-e0a9-c514" type="max"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="cbaf-5616-17d0-a868" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <rules>
-                    <rule id="6033-0042-9ba5-2174" name="Rune of Fury" publicationId="aa7b-3583-0834-7bfa" page="172" hidden="false">
-                      <description>The Rune Guardian gains +1 A and Magical Attacks.</description>
-                    </rule>
-                  </rules>
-                  <costs>
-                    <cost name="pts" typeId="points" value="5"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="d206-c0cc-fa56-206d" name="Rune of Striking" hidden="false" collective="true" import="true" type="upgrade" sortIndex="4">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1cc4-92c1-b2e4-f5fb" type="max"/>
-                  </constraints>
-                  <rules>
-                    <rule id="977a-b363-413d-32d5" name="Rune of Striking" publicationId="aa7b-3583-0834-7bfa" page="172" hidden="false">
-                      <description>The Rune Guardian gains +1 WS and Magical Attacks.</description>
-                    </rule>
-                  </rules>
-                  <costs>
-                    <cost name="pts" typeId="points" value="5"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="ab71-d404-7555-d1b6" name="Rune of Stone" hidden="false" collective="true" import="true" type="upgrade" sortIndex="5">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="25dc-a765-b6e6-7502" type="max"/>
-                  </constraints>
-                  <rules>
-                    <rule id="8d3a-c128-dbc4-123e" name="Rune of Stone" publicationId="aa7b-3583-0834-7bfa" page="172" hidden="false">
-                      <description>The Rune Guardian gains +1 to its armour save.</description>
-                    </rule>
-                  </rules>
-                  <costs>
-                    <cost name="pts" typeId="points" value="6"/>
-                  </costs>
-                </selectionEntry>
-                <selectionEntry id="0558-5d41-3334-cb98" name="Rune of Warding" hidden="false" collective="true" import="true" type="upgrade" sortIndex="2">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cbaf-5616-17d0-a868" type="max"/>
-                  </constraints>
-                  <rules>
-                    <rule id="aafa-2f1a-2cc6-89d8" name="Rune of Warding" publicationId="aa7b-3583-0834-7bfa" page="172" hidden="false">
+                    <rule name="Rune of Warding" id="aafa-2f1a-2cc6-89d8" hidden="false" publicationId="aa7b-3583-0834-7bfa" page="172">
                       <description>The Rune Guardian gains a Ward Save (6+).</description>
                     </rule>
                   </rules>
@@ -3193,36 +3238,60 @@ In close combat, a pistol counts as an additional hand weapon that does not give
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
                 </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Rune of Fury" hidden="false" id="4eed-03bd-14b6-2780" collective="true">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f1c4-34bd-e0a9-c514" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <rules>
+                    <rule name="Rune of Fury" id="6033-0042-9ba5-2174" hidden="false" publicationId="aa7b-3583-0834-7bfa" page="172">
+                      <description>The Rune Guardian gains +1 A and Magical Attacks.</description>
+                    </rule>
+                  </rules>
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Rune of Striking" hidden="false" id="d206-c0cc-fa56-206d" collective="true">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1cc4-92c1-b2e4-f5fb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <rules>
+                    <rule name="Rune of Striking" id="977a-b363-413d-32d5" hidden="false" publicationId="aa7b-3583-0834-7bfa" page="172">
+                      <description>The Rune Guardian gains +1 WS and Magical Attacks.</description>
+                    </rule>
+                  </rules>
+                  <costs>
+                    <cost name="pts" typeId="points" value="5"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Rune of Stone" hidden="false" id="ab71-d404-7555-d1b6" collective="true">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="25dc-a765-b6e6-7502" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                  </constraints>
+                  <rules>
+                    <rule name="Rune of Stone" id="8d3a-c128-dbc4-123e" hidden="false" publicationId="aa7b-3583-0834-7bfa" page="172">
+                      <description>The Rune Guardian gains +1 to its armour save.</description>
+                    </rule>
+                  </rules>
+                  <costs>
+                    <cost name="pts" typeId="points" value="6"/>
+                  </costs>
+                </selectionEntry>
               </selectionEntries>
-            </selectionEntryGroup>
-            <selectionEntryGroup name="Primary Weapon" id="757b-a1a9-5f1a-84ca" hidden="false" sortIndex="1">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6cb2-2392-5f9e-b6a5-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6cb2-2392-5f9e-b6a5-max"/>
-              </constraints>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="8505-6b82-27eb-62ee" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
-                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="c418-e874-f6b5-db3d" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
+                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="c418-e874-f6b5-db3d" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="1">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Great Weapon" hidden="false" id="ffa5-5766-2f4b-3bc0" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="3">
+                <entryLink import="true" name="Great Weapon" hidden="false" id="ffa5-5766-2f4b-3bc0" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="9"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="8773-4ab4-1c4a-e318" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
               </entryLinks>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <costs>
-            <cost name="pts" typeId="points" value="50"/>
-          </costs>
-          <entryLinks>
-            <entryLink import="true" name="Heavy Armour" hidden="false" id="70c3-17f1-5dce-e8d7" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="2">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a099-1fb7-f533-3cbd"/>
-              </constraints>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -5256,11 +5325,6 @@ Thorek can re-roll a single dice on a failed attempt to cast one of the innate b
             <cost name="pts" typeId="points" value="8"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Skirmishers" hidden="false" id="7a2d-5af0-e537-def8" type="selectionEntry" targetId="468e-0a4a-682a-7de2">
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="9234-e4c1-2541-94ec" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="7786-a1f7-c22a-3262" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
@@ -5282,6 +5346,15 @@ Thorek can re-roll a single dice on a failed attempt to cast one of the innate b
               <modifiers>
                 <modifier type="set" value="-1" field="fe22-ce5f-b23e-303d"/>
               </modifiers>
+            </entryLink>
+            <entryLink import="true" name="56. Upgrades" hidden="false" id="a209-c3b7-e404-91f7" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
+              <entryLinks>
+                <entryLink import="true" name="Skirmishers" hidden="false" id="2d51-e627-380f-a0c5" type="selectionEntry" targetId="468e-0a4a-682a-7de2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
           <modifiers>
@@ -5369,11 +5442,6 @@ Thorek can re-roll a single dice on a failed attempt to cast one of the innate b
             <cost name="pts" typeId="points" value="13"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Skirmishers" hidden="false" id="0f7e-0dd6-b9c7-84f4" type="selectionEntry" targetId="468e-0a4a-682a-7de2" sortIndex="3">
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
-            </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="ff77-f5a3-1da2-1df6" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="5c59-eafe-11b6-f23c" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
@@ -5395,6 +5463,15 @@ Thorek can re-roll a single dice on a failed attempt to cast one of the innate b
               <modifiers>
                 <modifier type="set" value="-1" field="fe22-ce5f-b23e-303d"/>
               </modifiers>
+            </entryLink>
+            <entryLink import="true" name="56. Upgrades" hidden="false" id="3c65-0b45-cd54-5e05" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
+              <entryLinks>
+                <entryLink import="true" name="Skirmishers" hidden="false" id="0f7e-0dd6-b9c7-84f4" type="selectionEntry" targetId="468e-0a4a-682a-7de2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
           <modifiers>
@@ -5517,23 +5594,32 @@ Thorek can re-roll a single dice on a failed attempt to cast one of the innate b
             <infoLink name="Vanguard" id="515a-91de-6001-fddf" hidden="false" targetId="38ba-d48a-be97-f830" type="rule"/>
             <infoLink name="Deathblow" id="d416-5288-a2ab-06ab" hidden="false" targetId="1707-3abf-d5c8-97c0" type="rule"/>
             <infoLink name="Relentless" id="9829-1487-d8a0-9d5b" hidden="false" targetId="db34-00cf-d5b6-9a4d" type="rule"/>
+            <infoLink name="Dwarf Rum" id="a3d9-bc3d-3843-efa4" hidden="false" type="rule" targetId="d093-aaaa-a3c4-47c3"/>
           </infoLinks>
           <costs>
-            <cost name="pts" typeId="points" value="12"/>
+            <cost name="pts" typeId="points" value="14"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="Brace of Pistols" hidden="false" id="ba52-471c-8782-85e6" type="selectionEntry" targetId="a574-f633-253c-b619">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3c99-688d-b5ce-0959"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Dwarf-crafted" id="6cc4-d153-d002-3a84" hidden="false" type="rule" targetId="e3a8-c128-05b0-742e"/>
-              </infoLinks>
+            <entryLink import="true" name="56. Upgrades" hidden="false" id="3e29-f78a-203b-af3f" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
+              <entryLinks>
+                <entryLink import="true" name="Skirmishers" hidden="false" id="2119-375c-8da4-d183" type="selectionEntry" targetId="468e-0a4a-682a-7de2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Skirmishers" hidden="false" id="5e38-5482-a7f3-d2cb" type="selectionEntry" targetId="468e-0a4a-682a-7de2">
-              <costs>
-                <cost name="pts" typeId="points" value="1"/>
-              </costs>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="fe7a-4c32-57b7-d716" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Brace of Pistols" hidden="false" id="ba52-471c-8782-85e6" type="selectionEntry" targetId="a574-f633-253c-b619">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3c99-688d-b5ce-0959"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Dwarf-crafted" id="6cc4-d153-d002-3a84" hidden="false" type="rule" targetId="e3a8-c128-05b0-742e"/>
+                  </infoLinks>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -5544,6 +5630,7 @@ Thorek can re-roll a single dice on a failed attempt to cast one of the innate b
             <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="2814-0177-62bc-142d" collective="false">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="cf48-bd57-afa6-c09c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a8ca-bc26-4806-1527" includeChildSelections="false"/>
               </constraints>
               <infoLinks>
                 <infoLink name="Standard Bearer" id="70f8-a2f0-8ad8-f299" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
@@ -5566,20 +5653,10 @@ Thorek can re-roll a single dice on a failed attempt to cast one of the innate b
             <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="8cc0-ecde-e5b1-1e3f" collective="false">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="27ed-17fd-8f34-72e9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3b58-32d9-63da-46c9" includeChildSelections="false"/>
               </constraints>
               <infoLinks>
                 <infoLink name="Musician" id="7516-7552-9c62-d4e2" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="0f1f-4cca-5fb1-6bfb" collective="false">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="de11-05ba-008d-960c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Leader" id="0711-94a2-464c-f7f9" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
@@ -5743,15 +5820,23 @@ In addition, his troop type changes to War Machine and he counts as being part o
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <entryLinks>
-        <entryLink import="true" name="Hand Weapon" hidden="false" id="614b-9941-a743-bddf" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="86f0-80e2-3820-1db7"/>
-          </constraints>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="586a-af36-2e76-bf15" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="614b-9941-a743-bddf" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="86f0-80e2-3820-1db7"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
-        <entryLink import="true" name="Light Armour" hidden="false" id="9195-29c5-00f9-ce4b" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-          <costs>
-            <cost name="pts" typeId="points" value="1"/>
-          </costs>
+        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="c52f-2381-8e48-a45f" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
+          <entryLinks>
+            <entryLink import="true" name="Light Armour" hidden="false" id="9195-29c5-00f9-ce4b" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+              <costs>
+                <cost name="pts" typeId="points" value="1"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
     </selectionEntry>
