@@ -64,24 +64,12 @@
           </constraints>
           <entryLinks>
             <entryLink import="true" name="Lore of Necromancy" hidden="false" id="84d3-b886-f5d1-f4b8" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="1"/>
-            <entryLink import="true" name="Lore of Death" hidden="false" id="6621-e50c-7780-3be7" type="selectionEntry" targetId="bc0d-47f8-7220-1e16">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Lore of Death" hidden="false" id="6621-e50c-7780-3be7" type="selectionEntry" targetId="bc0d-47f8-7220-1e16"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="10. Character Options" hidden="false" id="494d-bf79-c9c0-1d2c" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
-          <entryLinks>
-            <entryLink import="true" name="The Generals of Undeath" hidden="false" id="cdc2-8a38-1639-34c8" type="selectionEntry" targetId="02a1-7292-f96f-b6bf"/>
-          </entryLinks>
-        </entryLink>
+        <entryLink import="true" name="10. Character Options" hidden="false" id="494d-bf79-c9c0-1d2c" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="ba1a-5917-e896-a653" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Hand Weapon" hidden="false" id="9207-4c13-796e-2ae7" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
@@ -163,6 +151,7 @@
         <categoryLink name="Infantry" hidden="false" id="f3c4-5b3a-38b1-cb8c" targetId="22c9-1606-58f8-2e60" primary="false"/>
         <categoryLink name="Z Armour" hidden="false" id="3849-e3d5-937a-ed1e" targetId="387c-2b7c-0a30-7305" primary="false"/>
         <categoryLink name="Wizard" hidden="false" id="b0f8-3305-a128-b632" targetId="1aae-2529-c509-7573" primary="false"/>
+        <categoryLink targetId="10fa-658f-38fd-4cad" id="cd5a-e29c-72ad-cb7c" primary="false" name="Undead"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="65. Lores of Magic" id="5848-2867-6cf7-ab65" hidden="false" defaultSelectionEntryId="50ec-6d64-233e-01fd">
@@ -172,24 +161,12 @@
           </constraints>
           <entryLinks>
             <entryLink import="true" name="Lore of Necromancy" hidden="false" id="9370-83c3-5e4e-e589" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="1"/>
-            <entryLink import="true" name="Lore of Death" hidden="false" id="6f6a-c5d5-2137-93ac" type="selectionEntry" targetId="bc0d-47f8-7220-1e16">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Lore of Death" hidden="false" id="6f6a-c5d5-2137-93ac" type="selectionEntry" targetId="bc0d-47f8-7220-1e16"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="10. Character Options" hidden="false" id="2bfe-d3d0-3e43-cbac" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
-          <entryLinks>
-            <entryLink import="true" name="The Generals of Undeath" hidden="false" id="a69c-6256-1a77-3152" type="selectionEntry" targetId="02a1-7292-f96f-b6bf"/>
-          </entryLinks>
-        </entryLink>
+        <entryLink import="true" name="10. Character Options" hidden="false" id="2bfe-d3d0-3e43-cbac" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
         <entryLink import="true" name="80. Magic Items" hidden="false" id="9c4e-e490-e518-a083" type="selectionEntryGroup" targetId="aacd-d6ac-7b61-9f10">
           <modifiers>
             <modifier type="increment" value="100" field="e3fa-3c90-43c2-d207"/>
@@ -232,6 +209,18 @@
       <costs>
         <cost name="pts" typeId="points" value="275"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="8780-ceea-f873-9175" name="Necromancer" hidden="false" collective="false" import="true" type="model" sortIndex="13">
       <profiles>
@@ -263,24 +252,12 @@
           </constraints>
           <entryLinks>
             <entryLink import="true" name="Lore of Necromancy" hidden="false" id="a804-cd8a-01af-6f72" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="1"/>
-            <entryLink import="true" name="Lore of Death" hidden="false" id="8112-491f-dccc-ff99" type="selectionEntry" targetId="bc0d-47f8-7220-1e16">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Lore of Death" hidden="false" id="8112-491f-dccc-ff99" type="selectionEntry" targetId="bc0d-47f8-7220-1e16"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="10. Character Options" hidden="false" id="f621-9255-8e48-888f" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
-          <entryLinks>
-            <entryLink import="true" name="The Generals of Undeath" hidden="false" id="6af7-5016-5a28-7620" type="selectionEntry" targetId="02a1-7292-f96f-b6bf"/>
-          </entryLinks>
-        </entryLink>
+        <entryLink import="true" name="10. Character Options" hidden="false" id="f621-9255-8e48-888f" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="3748-f694-1868-1071" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Hand Weapon" hidden="false" id="1107-aa87-b6aa-ed5c" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
@@ -375,7 +352,6 @@
         </entryLink>
         <entryLink import="true" name="10. Character Options" hidden="false" id="b337-bc20-c72e-4be9" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
           <entryLinks>
-            <entryLink import="true" name="The Generals of Undeath" hidden="false" id="0011-8d19-8d55-a382" type="selectionEntry" targetId="02a1-7292-f96f-b6bf"/>
             <entryLink import="true" name="Army Battle Standard" hidden="false" id="8a80-5d69-e8ad-0203" type="selectionEntry" targetId="b1d9-62fb-2ed9-b1a4">
               <entryLinks>
                 <entryLink import="true" name="Magic Standards" hidden="false" id="3d18-dc6e-d2c2-daee" type="selectionEntryGroup" targetId="a3ca-ccf2-444b-f177"/>
@@ -392,6 +368,9 @@
               </costs>
             </entryLink>
           </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="52dd-3f62-e500-8e0f"/>
+          </constraints>
         </entryLink>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="9eac-0eff-894f-4af7" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
@@ -523,6 +502,18 @@
       <costs>
         <cost name="pts" typeId="points" value="85"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="c4dc-2e69-1942-660a" name="Cairn Wraith" hidden="false" collective="false" import="true" type="model" sortIndex="15">
       <infoLinks>
@@ -583,6 +574,18 @@
           </entryLinks>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="e2a9-72a5-e804-fc05" name="Skeleton Warriors" hidden="false" collective="false" import="true" type="unit" sortIndex="20">
       <categoryLinks>
@@ -747,6 +750,18 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="d3ae-fba9-4299-624c" name="Skeleton Archers" hidden="false" collective="false" import="true" type="unit" sortIndex="21">
       <modifiers>
@@ -755,6 +770,16 @@
             <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e2a9-72a5-e804-fc05" repeats="1" roundUp="false"/>
           </repeats>
         </modifier>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
       <constraints>
         <constraint field="selections" scope="force" value="0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="9f8b-a9db-fbd1-ee36" type="max"/>
@@ -762,6 +787,7 @@
       <categoryLinks>
         <categoryLink id="9964-42b3-661c-a090" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="b003-b5d5-99e4-67cb" targetId="22c9-1606-58f8-2e60" primary="false"/>
+        <categoryLink targetId="10fa-658f-38fd-4cad" id="8b85-6638-094b-e586" primary="false" name="Undead"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="4d5d-31cc-bdfb-ea47" name="Skeleton Archer" hidden="false" collective="false" import="true" type="model">
@@ -960,6 +986,18 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="c556-08a8-416e-7ed1" name="Crypt Ghouls" hidden="false" collective="false" import="true" type="unit" sortIndex="24">
       <categoryLinks>
@@ -1226,6 +1264,18 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="a1ba-1b78-ae4f-8246" name="Fell Bats" hidden="false" collective="false" import="true" type="unit" sortIndex="29">
       <categoryLinks>
@@ -1269,6 +1319,18 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="8747-3db0-4dd8-1c92" name="Bat Swarms" hidden="false" collective="false" import="true" type="unit" sortIndex="30">
       <categoryLinks>
@@ -1477,6 +1539,18 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="dafc-11db-c577-f007" name="Black Knights" hidden="false" collective="false" import="true" type="unit" sortIndex="32">
       <categoryLinks>
@@ -1607,6 +1681,18 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="5f46-defa-b502-c2b2" name="Hexwraiths" hidden="false" collective="false" import="true" type="unit" sortIndex="40">
       <categoryLinks>
@@ -1707,6 +1793,18 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="80cb-e1c6-2dbd-00f3" name="Crypt Horrors" hidden="false" collective="false" import="true" type="unit" sortIndex="34">
       <categoryLinks>
@@ -1904,6 +2002,18 @@
       <entryLinks>
         <entryLink import="true" name="Expendable" hidden="false" id="23a1-a57c-67d6-2896" type="selectionEntry" targetId="b90d-9045-a6d5-9e7d"/>
       </entryLinks>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="690c-c730-6330-9416" name="Blood Knights" hidden="false" collective="false" import="true" type="unit" sortIndex="44">
       <modifiers>
@@ -2259,6 +2369,18 @@
           </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="fda8-71a5-deca-9600" name="Varghulf" hidden="false" collective="false" import="true" type="model" sortIndex="42">
       <profiles>
@@ -2336,6 +2458,18 @@
           </constraints>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="88f6-c25d-e825-2bdb" name="Mourngul" hidden="false" collective="false" import="true" type="model" sortIndex="43">
       <profiles>
@@ -2376,6 +2510,18 @@
       <costs>
         <cost name="pts" typeId="points" value="130"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="520d-f4a1-7380-5d9b" name="Necrofex Colossus" hidden="false" collective="false" import="true" type="model" sortIndex="49">
       <profiles>
@@ -2409,6 +2555,7 @@
       <categoryLinks>
         <categoryLink id="d923-daee-3851-07f7" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
         <categoryLink name="Monster" hidden="false" id="a417-2c65-606d-94bf" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+        <categoryLink targetId="10fa-658f-38fd-4cad" id="4ec2-338a-f94d-fd1e" primary="false" name="Undead"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="e95c-cacc-9b30-3d7f" name="Corpse Killers" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
@@ -2452,15 +2599,7 @@
               </constraints>
               <entryLinks>
                 <entryLink import="true" name="Lore of Necromancy" hidden="false" id="9716-1b59-db14-782a" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="1"/>
-                <entryLink import="true" name="Lore of Death" hidden="false" id="ef59-16c8-f704-9c9b" type="selectionEntry" targetId="bc0d-47f8-7220-1e16">
-                  <modifiers>
-                    <modifier type="set" value="true" field="hidden">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </entryLink>
+                <entryLink import="true" name="Lore of Death" hidden="false" id="ef59-16c8-f704-9c9b" type="selectionEntry" targetId="bc0d-47f8-7220-1e16"/>
               </entryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -2516,6 +2655,18 @@
           </profiles>
         </infoGroup>
       </infoGroups>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="e7db-7914-de6c-2076" name="Special Characters" hidden="false" collective="false" import="true" type="unit" sortIndex="7.5">
       <categoryLinks>
@@ -2632,7 +2783,6 @@
               </selectionEntries>
               <entryLinks>
                 <entryLink id="0386-8bb4-167f-7b4d" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
-                <entryLink import="true" name="The Generals of Undeath" hidden="false" id="a86a-7e17-5b9f-4225" type="selectionEntry" targetId="02a1-7292-f96f-b6bf" sortIndex="2"/>
                 <entryLink import="true" name="Hand Weapon" hidden="false" id="2849-f8e4-5b4f-3810" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="2.5">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="821b-6a46-b832-2575"/>
@@ -2874,7 +3024,6 @@
               </selectionEntries>
               <entryLinks>
                 <entryLink id="d366-89f6-306e-ad4e" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
-                <entryLink import="true" name="The Generals of Undeath" hidden="false" id="cd81-2aa1-d725-33b0" type="selectionEntry" targetId="02a1-7292-f96f-b6bf" sortIndex="2"/>
                 <entryLink import="true" name="Abyssal Terror" hidden="false" id="ccae-6c60-da31-30f3" type="selectionEntry" targetId="9a59-eb87-1cf2-64b3" sortIndex="6">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
@@ -2980,7 +3129,6 @@
               </selectionEntries>
               <entryLinks>
                 <entryLink id="d1f8-6f12-d1b7-f417" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
-                <entryLink import="true" name="The Generals of Undeath" hidden="false" id="5870-46da-1b20-4d6c" type="selectionEntry" targetId="02a1-7292-f96f-b6bf" sortIndex="2"/>
                 <entryLink import="true" name="Nightmare" hidden="false" id="47ad-042e-b365-2661" type="selectionEntry" targetId="288d-c0a8-77de-61e7" sortIndex="5">
                   <entryLinks>
                     <entryLink import="true" name="Barding" hidden="false" id="ec12-caca-f4cc-0ef1" type="selectionEntry" targetId="17ec-ae05-605b-27ce">
@@ -3086,7 +3234,6 @@
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="49d4-fee1-7f8b-ad56"/>
                   </constraints>
                 </entryLink>
-                <entryLink import="true" name="The Generals of Undeath" hidden="false" id="4fab-389e-8632-79f9" type="selectionEntry" targetId="02a1-7292-f96f-b6bf" sortIndex="1.5"/>
                 <entryLink import="true" name="Wizard Level 3" hidden="false" id="89d1-d34a-ec14-1588" type="selectionEntry" targetId="1670-dca4-294b-7d9b" sortIndex="5">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cd84-5199-751f-96d5-min"/>
@@ -3263,7 +3410,6 @@ Blood Chalice allowing them to do one of the following:
               </selectionEntryGroups>
               <entryLinks>
                 <entryLink id="17ea-b55d-ead2-6cb5" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
-                <entryLink import="true" name="The Generals of Undeath" hidden="false" id="62b2-ee05-62d5-c747" type="selectionEntry" targetId="02a1-7292-f96f-b6bf" sortIndex="2"/>
                 <entryLink import="true" name="Wizard Level 2" hidden="false" id="aa9f-4fad-6ad8-292a" type="selectionEntry" targetId="801a-bc0a-a767-61db" sortIndex="8">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6f47-b90e-d232-f3fd-min"/>
@@ -3290,6 +3436,7 @@ Blood Chalice allowing them to do one of the following:
               <categoryLinks>
                 <categoryLink name="Vampire" hidden="false" id="91a2-615f-542c-c46d" targetId="27c2-45b8-9859-dda4" primary="false"/>
                 <categoryLink name="Blood Dragon" hidden="false" id="2aad-75ad-2275-90fd" targetId="4b62-4ab2-2bd8-72e7" primary="false"/>
+                <categoryLink targetId="bdee-b168-38ba-7d3c" id="a5e3-3089-5d56-c59f" primary="false" name="Cavalry"/>
               </categoryLinks>
             </selectionEntry>
             <selectionEntry id="8eae-1ecf-530a-dbb5" name="Radukar the Wolf" hidden="false" collective="false" import="true" type="model" sortIndex="5">
@@ -3457,7 +3604,6 @@ Blood Chalice allowing them to do one of the following:
               </selectionEntries>
               <entryLinks>
                 <entryLink id="8341-4314-41ab-f80d" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
-                <entryLink import="true" name="The Generals of Undeath" hidden="false" id="03c3-35a1-5526-fa9b" type="selectionEntry" targetId="02a1-7292-f96f-b6bf" sortIndex="2"/>
                 <entryLink import="true" name="Abyssal Terror" hidden="false" id="d9bf-99df-71c1-97b1" type="selectionEntry" targetId="9a59-eb87-1cf2-64b3" sortIndex="6">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
@@ -3482,6 +3628,7 @@ Blood Chalice allowing them to do one of the following:
               <categoryLinks>
                 <categoryLink name="Vampire" hidden="false" id="9ae3-9065-153b-58d7" targetId="27c2-45b8-9859-dda4" primary="false"/>
                 <categoryLink name="Necrarch" hidden="false" id="d8bb-a2ea-4161-94ef" targetId="9311-1c3e-4507-2477" primary="false"/>
+                <categoryLink targetId="b3e5-4b1b-7050-7e02" id="a253-6605-b41d-dcce" primary="false" name="Monstrous Creature"/>
               </categoryLinks>
             </selectionEntry>
             <selectionEntry id="651d-1c8a-3316-1c57" name="Kurdoss Valentian" hidden="false" collective="false" import="true" type="model" sortIndex="1">
@@ -3582,6 +3729,18 @@ Blood Chalice allowing them to do one of the following:
                 <categoryLink name="Undead" hidden="false" id="cf67-b72f-2838-c4a5" targetId="10fa-658f-38fd-4cad" primary="false"/>
                 <categoryLink name="Infantry" hidden="false" id="5f5c-63f8-163f-0a4e" targetId="22c9-1606-58f8-2e60" primary="false"/>
               </categoryLinks>
+              <modifiers>
+                <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry id="f3c2-2a23-d614-1bdf" name="Prince Vhordrai" hidden="false" collective="false" import="true" type="model" sortIndex="14">
               <constraints>
@@ -3682,7 +3841,6 @@ Blood Chalice allowing them to do one of the following:
               </selectionEntries>
               <entryLinks>
                 <entryLink id="1c9e-75b8-a95b-ae79" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
-                <entryLink import="true" name="The Generals of Undeath" hidden="false" id="6224-0b34-a874-04b0" type="selectionEntry" targetId="02a1-7292-f96f-b6bf" sortIndex="2"/>
                 <entryLink import="true" name="Heavy Armour" hidden="false" id="423a-1751-5a8d-0376" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="4">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7259-1747-4f0c-fa07"/>
@@ -3792,7 +3950,6 @@ Blood Chalice allowing them to do one of the following:
               </selectionEntries>
               <entryLinks>
                 <entryLink id="244b-9512-5c94-388a" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
-                <entryLink import="true" name="The Generals of Undeath" hidden="false" id="1edd-ceec-e192-3c6d" type="selectionEntry" targetId="02a1-7292-f96f-b6bf" sortIndex="2"/>
                 <entryLink import="true" name="Loremaster" hidden="false" id="ccf1-5cac-b852-4c4b" type="selectionEntry" targetId="a2bf-14a5-6723-7157" sortIndex="6"/>
                 <entryLink import="true" name="Wizard Level 4" hidden="false" id="a64b-0b92-e35d-50f1" type="selectionEntry" targetId="5460-3929-58ef-71ba" sortIndex="7">
                   <constraints>
@@ -3977,7 +4134,6 @@ Lahmia automatically lets them regain one Wound that they has lost during the ba
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5117-ea87-4c37-f687"/>
                   </constraints>
                 </entryLink>
-                <entryLink import="true" name="The Generals of Undeath" hidden="false" id="e360-12eb-9cb6-4de1" type="selectionEntry" targetId="02a1-7292-f96f-b6bf" sortIndex="2"/>
                 <entryLink import="true" name="Wizard Level 3" hidden="false" id="ecd3-baf5-f2af-24a3" type="selectionEntry" targetId="1670-dca4-294b-7d9b" sortIndex="8">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="08f5-6be8-c602-dc47-min"/>
@@ -4137,7 +4293,6 @@ Lahmia automatically lets them regain one Wound that they has lost during the ba
               </selectionEntryGroups>
               <entryLinks>
                 <entryLink id="60ad-6638-d2b1-4023" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
-                <entryLink import="true" name="The Generals of Undeath" hidden="false" id="b1e8-53a2-2276-7465" type="selectionEntry" targetId="02a1-7292-f96f-b6bf" sortIndex="2"/>
                 <entryLink import="true" name="Wizard Level 4" hidden="false" id="8c85-7829-0c27-edc7" type="selectionEntry" targetId="5460-3929-58ef-71ba" sortIndex="8">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1418-aeaf-aaff-3371-min"/>
@@ -4287,7 +4442,6 @@ Lahmia automatically lets them regain one Wound that they has lost during the ba
               </selectionEntries>
               <entryLinks>
                 <entryLink id="93ed-28b1-a1a8-94db" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
-                <entryLink import="true" name="The Generals of Undeath" hidden="false" id="0ab5-dc2f-d047-7815" type="selectionEntry" targetId="02a1-7292-f96f-b6bf" sortIndex="2"/>
                 <entryLink import="true" name="Wizard Level 3" hidden="false" id="d1cf-913e-af8c-dce0" type="selectionEntry" targetId="1670-dca4-294b-7d9b" sortIndex="6">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b26f-8934-ad36-cb64-min"/>
@@ -4314,6 +4468,18 @@ Lahmia automatically lets them regain one Wound that they has lost during the ba
                 <categoryLink name="Undead" hidden="false" id="d1e6-3267-bb21-3139" targetId="10fa-658f-38fd-4cad" primary="false"/>
                 <categoryLink name="Infantry" hidden="false" id="3367-64eb-16e8-2372" targetId="22c9-1606-58f8-2e60" primary="false"/>
               </categoryLinks>
+              <modifiers>
+                <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry id="1452-e3cb-9828-18c9" name="Ushoran" hidden="false" collective="false" import="true" type="model" sortIndex="12">
               <constraints>
@@ -4414,7 +4580,6 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fe9b-7a1c-de8c-4604"/>
                   </constraints>
                 </entryLink>
-                <entryLink import="true" name="The Generals of Undeath" hidden="false" id="e9f1-0b52-7cd2-a40c" type="selectionEntry" targetId="02a1-7292-f96f-b6bf" sortIndex="2"/>
                 <entryLink import="true" name="Wizard Level 2" hidden="false" id="656e-9212-c8dc-09c2" type="selectionEntry" targetId="801a-bc0a-a767-61db" sortIndex="6">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4868-72bc-1961-5e9d-min"/>
@@ -4565,6 +4730,22 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="245"/>
               </costs>
+              <modifiers>
+                <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink targetId="10fa-658f-38fd-4cad" id="6220-3cf3-06dc-c53d" primary="false" name="Undead"/>
+                <categoryLink targetId="bdee-b168-38ba-7d3c" id="4051-d508-b4ad-7b2d" primary="false" name="Cavalry"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry id="1046-99e5-c3de-a7bc" name="Kritza" hidden="false" collective="false" import="true" type="model" sortIndex="3">
               <constraints>
@@ -4609,6 +4790,9 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="135"/>
               </costs>
+              <categoryLinks>
+                <categoryLink targetId="22c9-1606-58f8-2e60" id="1916-07ce-88e2-fd96" primary="false" name="Infantry"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry id="c5ff-fea4-b59b-e9fb" name="Lady Annika" hidden="false" collective="false" import="true" type="model" sortIndex="7">
               <constraints>
@@ -4665,6 +4849,9 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="185"/>
               </costs>
+              <categoryLinks>
+                <categoryLink targetId="22c9-1606-58f8-2e60" id="fc7d-b841-c115-b84c" primary="false" name="Infantry"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry id="a00d-e2df-8270-8030" name="Helman Ghorst" hidden="false" collective="false" import="true" type="model" sortIndex="5">
               <constraints>
@@ -4734,7 +4921,6 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="95ba-4cb7-f14b-5111"/>
                   </constraints>
                 </entryLink>
-                <entryLink id="162a-aa14-9ad1-ef68" name="The Generals of Undeath" hidden="false" collective="false" import="true" targetId="02a1-7292-f96f-b6bf" type="selectionEntry" sortIndex="1.5"/>
                 <entryLink import="true" name="Corpse Cart" hidden="false" id="c853-084b-8daa-b790" type="selectionEntry" targetId="1021-0146-ef3e-99ab" sortIndex="3.5">
                   <categoryLinks>
                     <categoryLink name="Mount" hidden="false" id="ebd0-0d88-b269-9961" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -4744,6 +4930,9 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="165"/>
               </costs>
+              <categoryLinks>
+                <categoryLink targetId="22c9-1606-58f8-2e60" id="6fc3-10ca-c375-d8ae" primary="false" name="Infantry"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry id="8821-253d-78a2-7ccc" name="Krell" hidden="false" collective="false" import="true" type="model" sortIndex="9">
               <constraints>
@@ -4840,7 +5029,20 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
               <categoryLinks>
                 <categoryLink name="Undead" hidden="false" id="a002-e841-33e8-48c2" targetId="10fa-658f-38fd-4cad" primary="false"/>
                 <categoryLink name="Wight" hidden="false" id="4b32-a3d6-4987-3a68" targetId="ae7f-4c69-100d-dd3c" primary="false"/>
+                <categoryLink targetId="22c9-1606-58f8-2e60" id="2742-5a95-926f-93ba" primary="false" name="Infantry"/>
               </categoryLinks>
+              <modifiers>
+                <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry id="1c97-73b7-e488-9057" name="Isabella von Carstein" hidden="false" collective="false" import="true" type="model" sortIndex="1">
               <constraints>
@@ -4905,6 +5107,7 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
               <categoryLinks>
                 <categoryLink name="Vampire" hidden="false" id="5ff0-3601-eb14-16dd" targetId="27c2-45b8-9859-dda4" primary="false"/>
                 <categoryLink name="Von Carstein" hidden="false" id="bdd9-3f84-1709-b17b" targetId="5491-dc3f-881f-5897" primary="false"/>
+                <categoryLink targetId="22c9-1606-58f8-2e60" id="d9e9-2f68-d5d0-36f7" primary="false" name="Infantry"/>
               </categoryLinks>
             </selectionEntry>
             <selectionEntry id="50c9-4382-0663-93f3" name="Konrad von Carstein" hidden="false" collective="false" import="true" type="model" sortIndex="11">
@@ -4989,6 +5192,7 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
               <categoryLinks>
                 <categoryLink name="Vampire" hidden="false" id="f628-80a7-0dbb-2e41" targetId="27c2-45b8-9859-dda4" primary="false"/>
                 <categoryLink name="Von Carstein" hidden="false" id="4a4f-3e7c-b67b-fdd7" targetId="5491-dc3f-881f-5897" primary="false"/>
+                <categoryLink targetId="22c9-1606-58f8-2e60" id="7a59-5d1e-9558-88c5" primary="false" name="Infantry"/>
               </categoryLinks>
             </selectionEntry>
             <selectionEntry id="6361-d417-ad4f-f291" name="Cado Ezechiar" hidden="false" collective="false" import="true" type="model" sortIndex="4">
@@ -5066,6 +5270,7 @@ If he does so, pick one of the effects below. That effect lasts until the start 
               <categoryLinks>
                 <categoryLink name="Vampire" hidden="false" id="34ca-c0fb-a4d9-af07" targetId="27c2-45b8-9859-dda4" primary="false"/>
                 <categoryLink name="Lahmia" hidden="false" id="86df-1d5a-a28a-23f7" targetId="fd59-057a-5103-3761" primary="false"/>
+                <categoryLink targetId="22c9-1606-58f8-2e60" id="4d95-4e4b-1b68-607f" primary="false" name="Infantry"/>
               </categoryLinks>
             </selectionEntry>
             <selectionEntry id="9c15-2e04-23be-16de" name="Ivya Volga" hidden="false" collective="false" import="true" type="model" sortIndex="2">
@@ -5113,6 +5318,7 @@ If he does so, pick one of the effects below. That effect lasts until the start 
               </costs>
               <categoryLinks>
                 <categoryLink name="Vampire" hidden="false" id="43a3-730f-c6c9-3310" targetId="27c2-45b8-9859-dda4" primary="false"/>
+                <categoryLink targetId="22c9-1606-58f8-2e60" id="379a-53b3-ffd0-54cd" primary="false" name="Infantry"/>
               </categoryLinks>
             </selectionEntry>
             <selectionEntry id="b659-aa7b-1d03-d1fd" name="Sekhar" hidden="false" collective="false" import="true" type="model" sortIndex="8">
@@ -5169,7 +5375,6 @@ If he does so, pick one of the effects below. That effect lasts until the start 
               </infoLinks>
               <entryLinks>
                 <entryLink id="a29f-1fd9-4d1d-6602" name="General" hidden="false" collective="false" import="true" targetId="d322-3c7a-6d1e-7dc2" type="selectionEntry" sortIndex="1"/>
-                <entryLink id="a2a6-cbfa-29c9-ee66" name="The Generals of Undeath" hidden="false" collective="false" import="true" targetId="02a1-7292-f96f-b6bf" type="selectionEntry" sortIndex="2"/>
                 <entryLink import="true" name="Polearm/Halberd" hidden="false" id="0df5-ecaf-0ec6-ce40" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="3">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="610c-fa61-699c-2a65"/>
@@ -5193,6 +5398,7 @@ If he does so, pick one of the effects below. That effect lasts until the start 
               <categoryLinks>
                 <categoryLink name="Vampire" hidden="false" id="7f8b-3474-4a35-4a21" targetId="27c2-45b8-9859-dda4" primary="false"/>
                 <categoryLink name="Lahmia" hidden="false" id="a83d-df7d-d21c-f4d5" targetId="fd59-057a-5103-3761" primary="false"/>
+                <categoryLink targetId="22c9-1606-58f8-2e60" id="54e0-0d8a-abd5-e7f5" primary="false" name="Infantry"/>
               </categoryLinks>
               <selectionEntryGroups>
                 <selectionEntryGroup name="Lores of Magic" id="a85c-31d7-c0fb-a97d" hidden="false" sortIndex="6">
@@ -5259,6 +5465,7 @@ If he does so, pick one of the effects below. That effect lasts until the start 
               <categoryLinks>
                 <categoryLink name="Vampire" hidden="false" id="bb78-c35c-98db-a38d" targetId="27c2-45b8-9859-dda4" primary="false"/>
                 <categoryLink name="Strigoi" hidden="false" id="d697-7a25-74ae-5069" targetId="aa90-576d-afb2-dd44" primary="false"/>
+                <categoryLink targetId="22c9-1606-58f8-2e60" id="e801-8f1e-24cd-9025" primary="false" name="Infantry"/>
               </categoryLinks>
             </selectionEntry>
             <selectionEntry id="96c7-4207-e10b-d3ed" name="Awlrach the Drowner" hidden="false" collective="false" import="true" type="model" sortIndex="10">
@@ -5308,6 +5515,22 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
               <costs>
                 <cost name="pts" typeId="points" value="210"/>
               </costs>
+              <modifiers>
+                <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink targetId="10fa-658f-38fd-4cad" id="9f63-feec-bb7a-fe26" primary="false" name="Undead"/>
+                <categoryLink targetId="7224-b7fd-d652-3ff2" id="dc2e-a6bf-3553-d5c2" primary="false" name="Chariot"/>
+              </categoryLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -5565,24 +5788,12 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
           </constraints>
           <entryLinks>
             <entryLink import="true" name="Lore of Necromancy" hidden="false" id="b0b4-684d-b920-07e8" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="1"/>
-            <entryLink import="true" name="Lore of Heavens" hidden="false" id="8eb5-992e-ef7b-42dd" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Lore of Heavens" hidden="false" id="8eb5-992e-ef7b-42dd" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="10. Character Options" hidden="false" id="9dfd-6aed-73a6-d20a" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
-          <entryLinks>
-            <entryLink import="true" name="The Generals of Undeath" hidden="false" id="e1dc-9ffe-dd6f-0efe" type="selectionEntry" targetId="02a1-7292-f96f-b6bf"/>
-          </entryLinks>
-        </entryLink>
+        <entryLink import="true" name="10. Character Options" hidden="false" id="9dfd-6aed-73a6-d20a" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="187c-8121-7c7c-23ef" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Hand Weapon" hidden="false" id="042e-8864-4293-a2db" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
@@ -5609,6 +5820,16 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
           <repeats>
             <repeat field="selections" scope="force" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e2a9-72a5-e804-fc05" repeats="1" roundUp="false"/>
           </repeats>
+        </modifier>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -5739,6 +5960,7 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
       <categoryLinks>
         <categoryLink id="c077-9dc6-9a6d-a718" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="7915-aabb-4eaa-f1a4" targetId="22c9-1606-58f8-2e60" primary="false"/>
+        <categoryLink targetId="10fa-658f-38fd-4cad" id="bb20-c563-df78-c7b6" primary="false" name="Undead"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="dcfc-644c-681f-3bcd" name="Gloom" hidden="false" collective="false" import="true" type="model">
@@ -5794,6 +6016,18 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="c415-5c3-3a21-ca4e" name="Strigany" hidden="false" collective="false" import="true" type="unit" sortIndex="27">
       <modifiers>
@@ -6050,6 +6284,18 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="cc73-6a5f-211c-160c" name="Skeleton Chariot" hidden="false" collective="false" import="true" type="model" sortIndex="37">
       <profiles>
@@ -6142,6 +6388,18 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
           </costs>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="7764-30d5-1a8c-6eb0" name="Wraithwisps" hidden="false" collective="false" import="true" type="unit" sortIndex="39">
       <categoryLinks>
@@ -6261,6 +6519,18 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="eadd-5d7d-33e-921e" name="Morbheg Knights" hidden="false" collective="false" import="true" type="unit" sortIndex="46">
       <categoryLinks>
@@ -6457,6 +6727,18 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
       <costs>
         <cost name="pts" typeId="points" value="80"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Blood Dragon Vampire Lord" hidden="false" id="b98a-47ff-5aa9-8225" collective="false" sortIndex="4">
       <profiles>
@@ -6487,34 +6769,14 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="63ca-031b-0437-f024"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Lore of Death" hidden="false" id="e100-9665-6524-47d7" type="selectionEntry" targetId="bc0d-47f8-7220-1e16">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Lore of Shadow" hidden="false" id="95ea-f3fd-0d19-b35f" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Lore of Death" hidden="false" id="e100-9665-6524-47d7" type="selectionEntry" targetId="bc0d-47f8-7220-1e16"/>
+            <entryLink import="true" name="Lore of Shadow" hidden="false" id="95ea-f3fd-0d19-b35f" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67"/>
             <entryLink import="true" name="Lore of Necromancy" hidden="false" id="bfa0-f84a-6cd6-93ae" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="1"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="10. Character Options" hidden="false" id="ddc6-bbef-ac76-fc68" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
-          <entryLinks>
-            <entryLink import="true" name="The Generals of Undeath" hidden="false" id="db51-f2eb-3597-2024" type="selectionEntry" targetId="02a1-7292-f96f-b6bf"/>
-          </entryLinks>
-        </entryLink>
+        <entryLink import="true" name="10. Character Options" hidden="false" id="ddc6-bbef-ac76-fc68" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="dfe3-1ac9-4974-7c32" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Hand Weapon" hidden="false" id="630c-f731-a9bf-89ac" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
@@ -6639,34 +6901,14 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7e37-5082-ddbd-4041"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Lore of Death" hidden="false" id="305a-1ca4-64cb-a798" type="selectionEntry" targetId="bc0d-47f8-7220-1e16">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Lore of Shadow" hidden="false" id="129b-1caa-ffc9-1b81" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Lore of Death" hidden="false" id="305a-1ca4-64cb-a798" type="selectionEntry" targetId="bc0d-47f8-7220-1e16"/>
+            <entryLink import="true" name="Lore of Shadow" hidden="false" id="129b-1caa-ffc9-1b81" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67"/>
             <entryLink import="true" name="Lore of Necromancy" hidden="false" id="f853-5102-c8c7-1538" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="1"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="10. Character Options" hidden="false" id="22c7-986b-bded-88c9" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
-          <entryLinks>
-            <entryLink import="true" name="The Generals of Undeath" hidden="false" id="c42e-ea2f-d876-e457" type="selectionEntry" targetId="02a1-7292-f96f-b6bf"/>
-          </entryLinks>
-        </entryLink>
+        <entryLink import="true" name="10. Character Options" hidden="false" id="22c7-986b-bded-88c9" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="cbd3-5e94-5756-2ff0" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="2663-a56a-cc20-6cfb" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
@@ -6794,43 +7036,11 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9fc2-8fa1-d55d-6766"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Lore of Heavens" hidden="false" id="99e6-b17e-d0ab-0563" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Lore of Shadow" hidden="false" id="f81a-f150-f40d-f543" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Lore of Heavens" hidden="false" id="99e6-b17e-d0ab-0563" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee"/>
+            <entryLink import="true" name="Lore of Shadow" hidden="false" id="f81a-f150-f40d-f543" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67"/>
             <entryLink import="true" name="Lore of Necromancy" hidden="false" id="d935-d471-4ce0-e1e0" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="1"/>
-            <entryLink import="true" name="Lore of Death" hidden="false" id="de67-fd81-d49c-c542" type="selectionEntry" targetId="bc0d-47f8-7220-1e16">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Lore of Metal" hidden="false" id="b0b6-5e91-d8d4-b374" type="selectionEntry" targetId="527f-89f1-1b92-a01d">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Lore of Death" hidden="false" id="de67-fd81-d49c-c542" type="selectionEntry" targetId="bc0d-47f8-7220-1e16"/>
+            <entryLink import="true" name="Lore of Metal" hidden="false" id="b0b6-5e91-d8d4-b374" type="selectionEntry" targetId="527f-89f1-1b92-a01d"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -6844,11 +7054,7 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="10. Character Options" hidden="false" id="7463-7c34-8be3-5fc2" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
-          <entryLinks>
-            <entryLink import="true" name="The Generals of Undeath" hidden="false" id="b372-34fd-5ad8-843c" type="selectionEntry" targetId="02a1-7292-f96f-b6bf"/>
-          </entryLinks>
-        </entryLink>
+        <entryLink import="true" name="10. Character Options" hidden="false" id="7463-7c34-8be3-5fc2" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
         <entryLink import="true" name="70. Mount" hidden="false" id="8be3-1d3a-9bb8-c203" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
           <entryLinks>
             <entryLink import="true" name="Nightmare" hidden="false" id="61fc-5ff4-0a1a-f06e" type="selectionEntry" targetId="288d-c0a8-77de-61e7" sortIndex="1">
@@ -6941,25 +7147,13 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9c94-e82d-53b8-4cb8"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Lore of Beasts" hidden="false" id="09b8-1fe9-271f-c8e1" type="selectionEntry" targetId="b436-b410-dd41-304f">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Lore of Beasts" hidden="false" id="09b8-1fe9-271f-c8e1" type="selectionEntry" targetId="b436-b410-dd41-304f"/>
             <entryLink import="true" name="Lore of Necromancy" hidden="false" id="6901-c0b6-bee6-f2dd" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="1"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="10. Character Options" hidden="false" id="7f21-2cd2-015b-fc9d" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
-          <entryLinks>
-            <entryLink import="true" name="The Generals of Undeath" hidden="false" id="97a1-fa69-894d-aaaf" type="selectionEntry" targetId="02a1-7292-f96f-b6bf"/>
-          </entryLinks>
-        </entryLink>
+        <entryLink import="true" name="10. Character Options" hidden="false" id="7f21-2cd2-015b-fc9d" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="54b1-3d50-dbc7-9800" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Hand Weapon" hidden="false" id="1361-8557-e091-d892" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
@@ -7028,24 +7222,8 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ec27-5b75-5750-d130-max"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Lore of Death" hidden="false" id="dd5d-9605-dc4b-9dca" type="selectionEntry" targetId="bc0d-47f8-7220-1e16">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Lore of Shadow" hidden="false" id="959b-939d-3301-e67e" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Lore of Death" hidden="false" id="dd5d-9605-dc4b-9dca" type="selectionEntry" targetId="bc0d-47f8-7220-1e16"/>
+            <entryLink import="true" name="Lore of Shadow" hidden="false" id="959b-939d-3301-e67e" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67"/>
             <entryLink import="true" name="Lore of Necromancy" hidden="false" id="50ec-6d64-233e-01fd" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="1"/>
           </entryLinks>
         </selectionEntryGroup>
@@ -7076,11 +7254,7 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="10. Character Options" hidden="false" id="2674-7cd1-426d-2379" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
-          <entryLinks>
-            <entryLink import="true" name="The Generals of Undeath" hidden="false" id="d990-3ca1-62ab-a630" type="selectionEntry" targetId="02a1-7292-f96f-b6bf"/>
-          </entryLinks>
-        </entryLink>
+        <entryLink import="true" name="10. Character Options" hidden="false" id="2674-7cd1-426d-2379" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="14db-90ca-8183-0650" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="2ade-3993-5aca-d6a8" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="1">
@@ -7184,24 +7358,8 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="496a-2f67-fbdc-40fb"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Lore of Death" hidden="false" id="0ba9-cd77-b19f-cac6" type="selectionEntry" targetId="bc0d-47f8-7220-1e16">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Lore of Shadow" hidden="false" id="0c83-7e85-a759-f5fc" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Lore of Death" hidden="false" id="0ba9-cd77-b19f-cac6" type="selectionEntry" targetId="bc0d-47f8-7220-1e16"/>
+            <entryLink import="true" name="Lore of Shadow" hidden="false" id="0c83-7e85-a759-f5fc" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67"/>
             <entryLink import="true" name="Lore of Necromancy" hidden="false" id="70b8-e225-e021-0827" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="1"/>
           </entryLinks>
           <modifierGroups>
@@ -7230,7 +7388,6 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
       <entryLinks>
         <entryLink import="true" name="10. Character Options" hidden="false" id="a04e-c893-9688-5c53" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
           <entryLinks>
-            <entryLink import="true" name="The Generals of Undeath" hidden="false" id="74ce-0625-092d-3702" type="selectionEntry" targetId="02a1-7292-f96f-b6bf"/>
             <entryLink import="true" name="Army Battle Standard" hidden="false" id="b609-8ca9-e0ff-0bab" type="selectionEntry" targetId="b1d9-62fb-2ed9-b1a4">
               <entryLinks>
                 <entryLink import="true" name="Magic Standards" hidden="false" id="6aca-79a2-051a-5ea1" type="selectionEntryGroup" targetId="a3ca-ccf2-444b-f177"/>
@@ -7247,6 +7404,9 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
               </costs>
             </entryLink>
           </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7275-6b0d-30e9-12d6"/>
+          </constraints>
         </entryLink>
         <entryLink import="true" name="80. Vampiric Powers &amp; Magic Items" hidden="false" id="4000-f0d2-d8f5-0455" type="selectionEntryGroup" targetId="0175-7a22-f4a1-c988">
           <modifiers>
@@ -7367,24 +7527,8 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d4a7-4838-9f60-ae2a"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Lore of Death" hidden="false" id="2ab7-2092-aada-21e2" type="selectionEntry" targetId="bc0d-47f8-7220-1e16">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Lore of Shadow" hidden="false" id="3944-3fe1-5e6b-c5ee" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Lore of Death" hidden="false" id="2ab7-2092-aada-21e2" type="selectionEntry" targetId="bc0d-47f8-7220-1e16"/>
+            <entryLink import="true" name="Lore of Shadow" hidden="false" id="3944-3fe1-5e6b-c5ee" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67"/>
             <entryLink import="true" name="Lore of Necromancy" hidden="false" id="08fd-6b8a-ade6-72aa" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="1"/>
           </entryLinks>
           <modifierGroups>
@@ -7413,7 +7557,6 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
       <entryLinks>
         <entryLink import="true" name="10. Character Options" hidden="false" id="6793-b417-eb05-64d3" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
           <entryLinks>
-            <entryLink import="true" name="The Generals of Undeath" hidden="false" id="fcef-2a5d-1b7b-4788" type="selectionEntry" targetId="02a1-7292-f96f-b6bf"/>
             <entryLink import="true" name="Army Battle Standard" hidden="false" id="1414-2158-3d96-70dc" type="selectionEntry" targetId="b1d9-62fb-2ed9-b1a4">
               <entryLinks>
                 <entryLink import="true" name="Magic Standards" hidden="false" id="fc4f-8950-3a7a-55f6" type="selectionEntryGroup" targetId="a3ca-ccf2-444b-f177"/>
@@ -7430,6 +7573,9 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
               </costs>
             </entryLink>
           </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ddcc-f16f-8f30-2ea7"/>
+          </constraints>
         </entryLink>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="f8de-3c87-ffd3-92f5" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
@@ -7553,43 +7699,11 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e691-4fe3-6cfc-2984"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Lore of Heavens" hidden="false" id="0856-3f21-e556-dff4" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Lore of Shadow" hidden="false" id="cea3-acdf-990d-35fb" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Lore of Heavens" hidden="false" id="0856-3f21-e556-dff4" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee"/>
+            <entryLink import="true" name="Lore of Shadow" hidden="false" id="cea3-acdf-990d-35fb" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67"/>
             <entryLink import="true" name="Lore of Necromancy" hidden="false" id="4556-1d44-c95b-18bb" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="1"/>
-            <entryLink import="true" name="Lore of Death" hidden="false" id="546c-0af2-688e-86fd" type="selectionEntry" targetId="bc0d-47f8-7220-1e16">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Lore of Metal" hidden="false" id="b871-031f-7283-2ef6" type="selectionEntry" targetId="527f-89f1-1b92-a01d">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Lore of Death" hidden="false" id="546c-0af2-688e-86fd" type="selectionEntry" targetId="bc0d-47f8-7220-1e16"/>
+            <entryLink import="true" name="Lore of Metal" hidden="false" id="b871-031f-7283-2ef6" type="selectionEntry" targetId="527f-89f1-1b92-a01d"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -7599,7 +7713,6 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
       <entryLinks>
         <entryLink import="true" name="10. Character Options" hidden="false" id="86e0-b70c-87f9-fb19" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
           <entryLinks>
-            <entryLink import="true" name="The Generals of Undeath" hidden="false" id="57d7-89fb-1e83-38ee" type="selectionEntry" targetId="02a1-7292-f96f-b6bf"/>
             <entryLink import="true" name="Army Battle Standard" hidden="false" id="89b1-3d0d-eb8b-6451" type="selectionEntry" targetId="b1d9-62fb-2ed9-b1a4">
               <entryLinks>
                 <entryLink import="true" name="Magic Standards" hidden="false" id="2f8e-86b0-c4a3-29a7" type="selectionEntryGroup" targetId="a3ca-ccf2-444b-f177"/>
@@ -7616,6 +7729,9 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
               </costs>
             </entryLink>
           </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c005-1d87-4ac0-f2a4"/>
+          </constraints>
         </entryLink>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="9a8f-45b8-0ef0-f69b" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
@@ -7706,15 +7822,7 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1391-df06-d630-face"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Lore of Beasts" hidden="false" id="0c49-078e-9a23-5792" type="selectionEntry" targetId="b436-b410-dd41-304f">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Lore of Beasts" hidden="false" id="0c49-078e-9a23-5792" type="selectionEntry" targetId="b436-b410-dd41-304f"/>
             <entryLink import="true" name="Lore of Necromancy" hidden="false" id="ede6-e8c2-91c8-6c93" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="1"/>
           </entryLinks>
           <modifierGroups>
@@ -7736,7 +7844,6 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
       <entryLinks>
         <entryLink import="true" name="10. Character Options" hidden="false" id="6fc5-4f89-2508-6fe6" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
           <entryLinks>
-            <entryLink import="true" name="The Generals of Undeath" hidden="false" id="b461-54e8-7bd0-c684" type="selectionEntry" targetId="02a1-7292-f96f-b6bf"/>
             <entryLink import="true" name="Army Battle Standard" hidden="false" id="33f5-3a16-340d-5017" type="selectionEntry" targetId="b1d9-62fb-2ed9-b1a4">
               <entryLinks>
                 <entryLink import="true" name="Magic Standards" hidden="false" id="7cf7-922b-699e-85e3" type="selectionEntryGroup" targetId="a3ca-ccf2-444b-f177"/>
@@ -7753,6 +7860,9 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
               </costs>
             </entryLink>
           </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e162-2261-e682-0d61"/>
+          </constraints>
         </entryLink>
         <entryLink import="true" name="80. Vampiric Powers &amp; Magic Items" hidden="false" id="ffd9-6f59-6666-0e40" type="selectionEntryGroup" targetId="0175-7a22-f4a1-c988">
           <modifiers>
@@ -7815,24 +7925,8 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9c70-c03c-0e35-54a1"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Lore of Death" hidden="false" id="e822-7e8b-a4cf-5f4d" type="selectionEntry" targetId="bc0d-47f8-7220-1e16">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
-            <entryLink import="true" name="Lore of Shadow" hidden="false" id="3fca-afad-d428-c390" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="model" childId="02a1-7292-f96f-b6bf" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </entryLink>
+            <entryLink import="true" name="Lore of Death" hidden="false" id="e822-7e8b-a4cf-5f4d" type="selectionEntry" targetId="bc0d-47f8-7220-1e16"/>
+            <entryLink import="true" name="Lore of Shadow" hidden="false" id="3fca-afad-d428-c390" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67"/>
             <entryLink import="true" name="Lore of Necromancy" hidden="false" id="2c8a-2245-cde9-d555" type="selectionEntry" targetId="f945-02e4-f4ac-718e" sortIndex="1"/>
           </entryLinks>
           <modifierGroups>
@@ -7861,7 +7955,6 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
       <entryLinks>
         <entryLink import="true" name="10. Character Options" hidden="false" id="6fe3-08a3-f07d-3b14" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171">
           <entryLinks>
-            <entryLink import="true" name="The Generals of Undeath" hidden="false" id="1702-f2ee-64b3-c379" type="selectionEntry" targetId="02a1-7292-f96f-b6bf"/>
             <entryLink import="true" name="Army Battle Standard" hidden="false" id="ce78-de2f-2ee1-2063" type="selectionEntry" targetId="b1d9-62fb-2ed9-b1a4">
               <entryLinks>
                 <entryLink import="true" name="Magic Standards" hidden="false" id="b9ee-f863-b67b-13f4" type="selectionEntryGroup" targetId="a3ca-ccf2-444b-f177"/>
@@ -7878,6 +7971,9 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
               </costs>
             </entryLink>
           </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="20fd-ca14-152d-2aa6"/>
+          </constraints>
         </entryLink>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="4707-8d03-38c6-3459" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
@@ -12157,45 +12253,6 @@ To resolve a Death Shriek, roll 2D6+3. For each point by which the result exceed
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="The Generals of Undeath" hidden="false" id="02a1-7292-f96f-b6bf">
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="a1bd-346d-0211-7682-min" includeChildSelections="true"/>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="a1bd-346d-0211-7682-max" includeChildSelections="true"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2599-c033-0915-c00d" includeChildSelections="true"/>
-      </constraints>
-      <rules>
-        <rule name="The Generals of Undeath" id="f315-8f2c-8469-7556" hidden="false">
-          <description>If your army contains any Undead units, you must include at least one character that is a Wizard that uses the Lore of Necromancy.
-
-
-Slain General
-At the end of the phase in which the General is removed as a casualty, and at the start of every friendly turn thereafter, all friendly Undead units on the battlefield must take a Leadership test. If the test is failed, the unit immediately suffers a number of Wounds equal to the amount by which it failed the Leadership test, with no saves of any kind allowed.
-These Wounds are distributed as if from a shooting attack. If, at the start of any of your turns following the death of the General, there is one or more friendly Wizard Characters on the table who know spells from the Lore of Necromancy, no unit in the army needs to take this Leadership test while at least one of them remain.
-
-
-Battle Standards
-In addition to the normal rules for the army battle standard, units of Undead within 12&quot; of their battle standard suffer D3 Wounds less than they normally would due to the Unstable special rule, or following the death of the army&apos;s General.
-
-
-Characters and Units
-Characters who are not Undead may join Undead units despite not being Unstable themselves. Mounted Characters ignore the Undead special rule of the mount. If an Undead unit would get destroyed as a result of Unstable, any remaining character(s) will need to take a Break test as normal the same phase, using the Leadership modifier that they lost the combat by.</description>
-        </rule>
-      </rules>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="model" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                <condition type="equalTo" value="0" field="selections" scope="model" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                <condition type="equalTo" value="0" field="selections" scope="model" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                <condition type="equalTo" value="0" field="selections" scope="model" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-    </selectionEntry>
     <selectionEntry type="model" import="true" name="Hellsteed" hidden="false" id="5ecd-9b99-4f8f-e3ab" collective="false" subType="mount">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3e93-d3f9-9945-e721" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -12216,7 +12273,21 @@ Characters who are not Undead may join Undead units despite not being Unstable 
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="d6bb-4087-1bc6-6e96" targetId="8b8a-34b1-ed30-df11" primary="false"/>
         <categoryLink name="Cavalry" hidden="false" id="9ce9-ae9f-a6b7-9a78" targetId="bdee-b168-38ba-7d3c" primary="false"/>
+        <categoryLink targetId="10fa-658f-38fd-4cad" id="5a6b-9a3e-d145-0128" primary="false" name="Undead"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5ecd-9b99-4f8f-e3ab" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Nightmare" hidden="false" id="288d-c0a8-77de-61e7" collective="false" subType="mount">
       <constraints>
@@ -12233,7 +12304,21 @@ Characters who are not Undead may join Undead units despite not being Unstable 
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="d907-8eb9-77d2-6292" targetId="8b8a-34b1-ed30-df11" primary="false"/>
         <categoryLink name="Cavalry" hidden="false" id="c995-01b4-8ac3-e6ff" targetId="bdee-b168-38ba-7d3c" primary="false"/>
+        <categoryLink targetId="10fa-658f-38fd-4cad" id="abfd-121b-2c98-cdb2" primary="false" name="Undead"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="288d-c0a8-77de-61e7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Zombie Dragon" hidden="false" id="330e-f36d-9f8a-dce6" collective="false" subType="mount">
       <infoLinks>
@@ -12271,7 +12356,22 @@ Characters who are not Undead may join Undead units despite not being Unstable 
       </costs>
       <categoryLinks>
         <categoryLink name="Monster" hidden="false" id="7371-4dfa-95aa-b56c" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+        <categoryLink targetId="8b8a-34b1-ed30-df11" id="03db-ce81-3e4d-20c5" primary="false" name="Mount"/>
+        <categoryLink targetId="10fa-658f-38fd-4cad" id="6a12-4009-ff42-dd74" primary="false" name="Undead"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="330e-f36d-9f8a-dce6" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Abyssal Terror" hidden="false" id="9a59-eb87-1cf2-64b3" collective="false" subType="mount">
       <constraints>
@@ -12289,6 +12389,7 @@ Characters who are not Undead may join Undead units despite not being Unstable 
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="fd1b-0efa-d185-c033" targetId="8b8a-34b1-ed30-df11" primary="false"/>
         <categoryLink name="Monstrous Creature" hidden="false" id="3560-1262-c05b-e2af" targetId="b3e5-4b1b-7050-7e02" primary="false"/>
+        <categoryLink targetId="10fa-658f-38fd-4cad" id="cb91-098d-ddfd-aafa" primary="false" name="Undead"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Poisonous Tail" hidden="false" id="3cf5-d89c-6d43-9620" collective="false">
@@ -12317,6 +12418,19 @@ Characters who are not Undead may join Undead units despite not being Unstable 
       <costs>
         <cost name="pts" typeId="points" value="125"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="9a59-eb87-1cf2-64b3" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Master of the Dead" hidden="false" id="e9ce-b62f-4ecc-9ba2" collective="false">
       <constraints>
@@ -12406,6 +12520,8 @@ Characters who are not Undead may join Undead units despite not being Unstable 
       </infoGroups>
       <categoryLinks>
         <categoryLink name="Chariot" hidden="false" id="8cb2-8d19-1b59-8d43" targetId="7224-b7fd-d652-3ff2" primary="false"/>
+        <categoryLink targetId="8b8a-34b1-ed30-df11" id="6973-77b0-b2a0-2166" primary="false" name="Mount"/>
+        <categoryLink targetId="10fa-658f-38fd-4cad" id="9ef4-40d6-e7d0-be68" primary="false" name="Undead"/>
       </categoryLinks>
       <profiles>
         <profile name="Coven Throne" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="2263-013f-d10c-1126" publicationId="10a5-5781-61f5-86ae" page="41">
@@ -12430,6 +12546,19 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5540-f11-f24c-97b9" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Terrorgheist" hidden="false" id="6268-8790-61c9-41d0" collective="false" subType="mount">
       <infoLinks>
@@ -12484,7 +12613,22 @@ Characters who are not Undead may join Undead units despite not being Unstable 
       </costs>
       <categoryLinks>
         <categoryLink name="Monster" hidden="false" id="3799-43d8-d957-ec04" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+        <categoryLink targetId="8b8a-34b1-ed30-df11" id="938d-0fab-67dd-ce89" primary="false" name="Mount"/>
+        <categoryLink targetId="10fa-658f-38fd-4cad" id="3947-f0e4-4864-a012" primary="false" name="Undead"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="6268-8790-61c9-41d0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Corpse Cart" hidden="false" id="1021-0146-ef3e-99ab" collective="false" subType="mount">
       <infoLinks>
@@ -12589,9 +12733,24 @@ Characters who are not Undead may join Undead units despite not being Unstable 
       </costs>
       <categoryLinks>
         <categoryLink name="Shrine" hidden="false" id="d406-2dbc-c170-bb1a" targetId="aff0-db72-0064-43fe" primary="false"/>
+        <categoryLink targetId="10fa-658f-38fd-4cad" id="81a6-1bb5-a3b8-1674" primary="false" name="Undead"/>
+        <categoryLink targetId="8b8a-34b1-ed30-df11" id="8303-1b33-207b-1298" primary="false" name="Mount"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1021-0146-ef3e-99ab" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Mortis Engine" hidden="false" id="3090-cf0c-d45b-5615" collective="false">
+    <selectionEntry type="model" import="true" name="Mortis Engine" hidden="false" id="3090-cf0c-d45b-5615" collective="false" subType="mount">
       <infoLinks>
         <infoLink name="Terror" id="81ad-f2f4-b9b9-0b0d" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
         <infoLink name="The Reliquary" id="40dd-0920-8b43-da88" hidden="false" targetId="fe80-29be-6795-934d" type="rule"/>
@@ -12706,6 +12865,11 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           </characteristics>
         </profile>
       </profiles>
+      <categoryLinks>
+        <categoryLink targetId="10fa-658f-38fd-4cad" id="1a75-05d6-e4f4-d7e6" primary="false" name="Undead"/>
+        <categoryLink targetId="8b8a-34b1-ed30-df11" id="d7b3-eec9-bb0f-f4ac" primary="false" name="Mount"/>
+        <categoryLink targetId="7224-b7fd-d652-3ff2" id="162b-b0a6-54cb-134e" primary="false" name="Chariot"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Skeletal Steed" hidden="false" id="1b62-67c3-03f2-235b" collective="true" subType="mount">
       <infoLinks>
@@ -12718,7 +12882,21 @@ Characters who are not Undead may join Undead units despite not being Unstable 
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="bc22-9971-19ca-e111" targetId="8b8a-34b1-ed30-df11" primary="false"/>
         <categoryLink name="Cavalry" hidden="false" id="212a-a0c1-f2b5-82ce" targetId="bdee-b168-38ba-7d3c" primary="false"/>
+        <categoryLink targetId="10fa-658f-38fd-4cad" id="b32c-fb12-e6a8-0808" primary="false" name="Undead"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1b62-67c3-03f2-235b" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Army Battle Standard" hidden="false" id="b1d9-62fb-2ed9-b1a4">
       <comment>VC</comment>
@@ -12757,30 +12935,83 @@ Characters who are not Undead may join Undead units despite not being Unstable 
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="e81e-3f2d-8679-18ca" targetId="0eb4-f376-7725-b05b" primary="true"/>
         <categoryLink name="Monster" hidden="false" id="4cec-206b-f8a9-41f0" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+        <categoryLink targetId="10fa-658f-38fd-4cad" id="2abc-5530-4a58-4c6a" primary="false" name="Undead"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Coven Throne" hidden="false" id="863e-ad0a-aefd-8db7" type="selectionEntry" targetId="5540-f11-f24c-97b9" sortIndex="52">
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="f2ee-5669-91df-abc7" targetId="0eb4-f376-7725-b05b" primary="true"/>
         <categoryLink name="Chariot" hidden="false" id="a048-ad64-132d-55c6" targetId="7224-b7fd-d652-3ff2" primary="false"/>
+        <categoryLink targetId="10fa-658f-38fd-4cad" id="1299-fda6-6b7e-97b2" primary="false" name="Undead"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Corpse Cart" hidden="false" id="0fe5-ada6-2ee6-7814" type="selectionEntry" targetId="1021-0146-ef3e-99ab" sortIndex="38">
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="6152-1424-56ca-a622" targetId="fc26-7737-f7cb-8977" primary="true"/>
         <categoryLink name="Shrine" hidden="false" id="c92e-aa15-0406-bc9e" targetId="aff0-db72-0064-43fe" primary="false"/>
+        <categoryLink targetId="10fa-658f-38fd-4cad" id="00dc-ae43-a0b8-d8bc" primary="false" name="Undead"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Terrorgheist" hidden="false" id="d51b-0ca9-2b33-2719" type="selectionEntry" targetId="6268-8790-61c9-41d0" sortIndex="47">
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="b8aa-63cc-1ac9-67f4" targetId="0eb4-f376-7725-b05b" primary="true"/>
         <categoryLink name="Monster" hidden="false" id="17e4-dbc6-3793-5f8b" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+        <categoryLink targetId="10fa-658f-38fd-4cad" id="1ff0-997f-27fd-46a1" primary="false" name="Undead"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Mortis Engine" hidden="false" id="127a-07ef-7884-3f90" type="selectionEntry" targetId="3090-cf0c-d45b-5615" sortIndex="53">
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="1257-7447-3924-a568" targetId="0eb4-f376-7725-b05b" primary="true"/>
         <categoryLink name="Chariot" hidden="false" id="1b65-00db-58f7-14b8" targetId="7224-b7fd-d652-3ff2" primary="false"/>
+        <categoryLink targetId="10fa-658f-38fd-4cad" id="5ceb-9fb2-cb3d-1210" primary="false" name="Undead"/>
       </categoryLinks>
     </entryLink>
   </entryLinks>
@@ -12800,6 +13031,22 @@ First, the musician is resurrected, and then the standard bearer, displacing ran
 Resurrected models are added to the front rank until it reaches at least a full rank – additional models can then be added to the front or rear rank. Raised models may never displace enemy units; if there is not enough room, any excess models are wasted. Similarly, if you do not have enough models of the appropriate type, place as many as you can – the rest are wasted.
 
 A unit cannot be taken beyond its starting size unless specified, and no single model can ever exceed its starting Wounds value. Any characters in the unit can only be healed if targeted separately from the rest of the unit, in which case only they are healed.</description>
+    </rule>
+    <rule name="The Generals of Undeath" id="2f40-4c54-49ab-9900" hidden="false">
+      <description>If your army contains any Undead units, you must include at least one character that is a Wizard that uses the Lore of Necromancy.
+
+
+Slain General
+At the end of the phase in which the General is removed as a casualty, and at the start of every friendly turn thereafter, all friendly Undead units on the battlefield must take a Leadership test. If the test is failed, the unit immediately suffers a number of Wounds equal to the amount by which it failed the Leadership test, with no saves of any kind allowed.
+These Wounds are distributed as if from a shooting attack. If, at the start of any of your turns following the death of the General, there is one or more friendly Wizard Characters on the table who know spells from the Lore of Necromancy, no unit in the army needs to take this Leadership test while at least one of them remain.
+
+
+Battle Standards
+In addition to the normal rules for the army battle standard, units of Undead within 12&quot; of their battle standard suffer D3 Wounds less than they normally would due to the Unstable special rule, or following the death of the army&apos;s General.
+
+
+Characters and Units
+Characters who are not Undead may join Undead units despite not being Unstable themselves. Mounted Characters ignore the Undead special rule of the mount. If an Undead unit would get destroyed as a result of Unstable, any remaining character(s) will need to take a Break test as normal the same phase, using the Leadership modifier that they lost the combat by.</description>
     </rule>
   </rules>
 </catalogue>
