@@ -158,7 +158,6 @@
         <categoryLink name="Infantry" hidden="false" id="11a8-3896-c2c7-a686" targetId="22c9-1606-58f8-2e60" primary="false"/>
         <categoryLink name="Lords" hidden="false" id="aee8-93b2-f75a-0c06" targetId="d280-b7df-c185-2ba5" primary="true"/>
         <categoryLink name="Heroes" hidden="false" id="dd93-b782-a818-0aec" targetId="d38a-73da-883b-bab9" primary="false"/>
-        <categoryLink name="Undead" hidden="false" id="7b7a-4b79-b57e-439a" targetId="362a-5594-2492-9bd0" primary="false"/>
         <categoryLink name="Z Armour" hidden="false" id="d94a-5958-65ec-4dae" targetId="387c-2b7c-0a30-7305" primary="false"/>
       </categoryLinks>
       <entryLinks>
@@ -248,40 +247,6 @@
         <infoLink name="Vampiric" id="903a-3536-866f-b2ef" hidden="false" type="rule" targetId="7741-75bc-6ec8-3388"/>
         <infoLink name="The Red Thirst" id="1b3f-ab18-c277-8528" hidden="false" type="rule" targetId="bbaa-8771-dddb-7fe5"/>
       </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="The Generals of the Undeath" hidden="false" id="4800-b524-512c-e1db" sortIndex="0">
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9e72-0cb9-0263-6e0b-min" automatic="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9e72-0cb9-0263-6e0b-max" automatic="false"/>
-      </constraints>
-      <rules>
-        <rule name="The Generals of Undeath" id="f5f1-49c3-72a3-71fe" hidden="false" publicationId="4f8f-9147-1eae-6c3d" page="3">
-          <description>If your army contains any Undead units, you must include at least one character that is a Wizard that uses the Lore of Necromancy.   
-
-**Slain General**
-At the end of the phase in which the General is removed as a casualty, and at the start of every friendly turn thereafter, all friendly Undead units on the battlefield must take a Leadership test. If the test is failed, the unit immediately suffers a number of Wounds equal to the amount by which it failed the Leadership test, with no saves of any kind allowed. These Wounds are distributed as if from a shooting attack.  
-
-If, at the start of any of your turns following the death of the General, there is one or more friendly Wizard Characters on the table who know spells from the Lore of Necromancy, no unit in the army needs to take this Leadership test while at least one of them remain.  
-
-**Battle Standards**
-In addition to the normal rules for the army Battle Standard, units of Undead within 12&quot; of their Battle Standard suffer D3 Wounds less than they normally would due to the Unstable special rule, or following the death of the Army General.  
-
-**Characters and Units**
-Characters who are not Undead may join Undead units despite not being Unstable themselves. Mounted Characters ignore the Undead special rule of the mount. If an Undead unit would get destroyed as a result of Unstable, any remaining character(s) will need to take a Break test as normal the same phase, using the Leadership modifier that they lost the combat by.</description>
-        </rule>
-      </rules>
-      <modifiers>
-        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Vampire Fleet Captain" hidden="false" id="038a-c831-8d37-09cf" sortIndex="11">
       <costs>
@@ -392,7 +357,6 @@ Characters who are not Undead may join Undead units despite not being Unstable 
         <categoryLink name="Z Medium Armour" hidden="false" id="5d09-49d7-4d7a-01e8" targetId="222a-078c-ce85-fb16" primary="false"/>
         <categoryLink name="Z Heavy Armour" hidden="false" id="e5ce-1b7b-6cf6-c6a1" targetId="f667-6e97-ec08-38ea" primary="false"/>
         <categoryLink name="Vampire" hidden="false" id="8edb-f525-4917-5916" targetId="91ba-0413-85f2-b893" primary="false"/>
-        <categoryLink name="Undead" hidden="false" id="543a-8328-72e9-b370" targetId="362a-5594-2492-9bd0" primary="false"/>
         <categoryLink name="Infantry" hidden="false" id="c6b4-a07d-3290-28be" targetId="22c9-1606-58f8-2e60" primary="false"/>
         <categoryLink name="Z Armour" hidden="false" id="245d-dbb6-29e7-020b" targetId="387c-2b7c-0a30-7305" primary="false"/>
       </categoryLinks>
@@ -539,6 +503,18 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           <description>A model with this upgrade allows any friendly Undead unit they join to re-roll 1&apos;s To Hit with missile weapons. Alternatively, one war machine that is within 3&quot; of a Master Gunner can use their Ballistic Skill or re-roll one artillery dice or scatter dice during each Shooting phase. This cannot be the artillery dice that determines the distance a cannonball bounces. You must nominate which weapon, if any, will be using this special rule at the start of each Shooting phase, before any such weapons within 3&quot; of the Gunnery Wight are fired.</description>
         </rule>
       </rules>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Pirate Warlock" hidden="false" id="23ec-1b7c-3fef-0b36" sortIndex="13">
       <costs>
@@ -634,6 +610,18 @@ Characters who are not Undead may join Undead units despite not being Unstable 
         <infoLink name="Terror" id="049a-58ab-16d3-3952" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
         <infoLink name="Ethereal" id="d37d-3c2a-8960-09f9" hidden="false" type="rule" targetId="9e47-05bc-376a-7463"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Zombie Deckhands" hidden="false" id="99c8-dad3-ee6f-a191" sortIndex="101">
       <selectionEntries>
@@ -722,6 +710,18 @@ Characters who are not Undead may join Undead units despite not being Unstable 
         <categoryLink name="Infantry" hidden="false" id="c807-45b0-4043-dcec" targetId="22c9-1606-58f8-2e60" primary="false"/>
         <categoryLink name="Undead" hidden="false" id="22cc-0e77-d7b0-39b3" targetId="362a-5594-2492-9bd0" primary="false"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Zombie Gunners" hidden="false" id="2028-5491-b763-a521" sortIndex="102">
       <selectionEntryGroups>
@@ -826,6 +826,18 @@ Characters who are not Undead may join Undead units despite not being Unstable 
         <categoryLink name="Infantry" hidden="false" id="2806-6f21-69d0-7aa9" targetId="22c9-1606-58f8-2e60" primary="false"/>
         <categoryLink name="Undead" hidden="false" id="f7c4-189c-35a1-9eff" targetId="362a-5594-2492-9bd0" primary="false"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Bloated Corpse" hidden="false" id="ef15-2a82-cc72-0a99" sortIndex="103">
       <costs>
@@ -873,6 +885,18 @@ Characters who are not Undead may join Undead units despite not being Unstable 
         <categoryLink name="Infantry" hidden="false" id="66a7-c3b5-06d9-6072" targetId="22c9-1606-58f8-2e60" primary="false"/>
         <categoryLink name="Undead" hidden="false" id="fb92-9907-44c7-9127" targetId="362a-5594-2492-9bd0" primary="false"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Scurvy Dogs" hidden="false" id="08e3-de6d-7da6-f10d" sortIndex="104">
       <categoryLinks>
@@ -920,6 +944,18 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           </constraints>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Razertooth Rats" hidden="false" id="436f-d45a-d383-7537" sortIndex="105">
       <categoryLinks>
@@ -968,6 +1004,18 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Deck Droppers" hidden="false" id="3fdb-84d8-2f86-f3d7" sortIndex="201">
       <categoryLinks>
@@ -1062,6 +1110,18 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Deck Gunners" hidden="false" id="fe8a-93f3-08d5-1d70" sortIndex="202">
       <selectionEntries>
@@ -1121,6 +1181,18 @@ Characters who are not Undead may join Undead units despite not being Unstable 
         <categoryLink name="Infantry" hidden="false" id="c98e-4ebc-ae67-44b4" targetId="22c9-1606-58f8-2e60" primary="false"/>
         <categoryLink name="Undead" hidden="false" id="1a3b-0c2c-f7ed-2ba6" targetId="362a-5594-2492-9bd0" primary="false"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Animated Hulks" hidden="false" id="7335-39fd-9789-eb49" sortIndex="203">
       <categoryLinks>
@@ -1225,6 +1297,18 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Rotting Prometheans" hidden="false" id="9639-59cf-ef3e-b6bb" sortIndex="204">
       <categoryLinks>
@@ -1328,6 +1412,18 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           </conditions>
         </modifierGroup>
       </modifierGroups>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Carronade" hidden="false" id="343f-f2f3-6cf5-3b8a" sortIndex="205">
       <costs>
@@ -1367,6 +1463,16 @@ Characters who are not Undead may join Undead units despite not being Unstable 
       </selectionEntryGroups>
       <modifiers>
         <modifier type="decrement" value="15" field="points"/>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Mortar" hidden="false" id="6265-9338-219d-fb7a" sortIndex="206">
@@ -1406,6 +1512,16 @@ Characters who are not Undead may join Undead units despite not being Unstable 
       </selectionEntryGroups>
       <modifiers>
         <modifier type="decrement" value="15" field="points"/>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
       </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Rotting Leviathan" hidden="false" id="3631-3317-7737-177d" sortIndex="302">
@@ -1493,6 +1609,18 @@ Characters who are not Undead may join Undead units despite not being Unstable 
       <costs>
         <cost name="pts" typeId="points" value="250"/>
       </costs>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Bone Hydra" hidden="false" id="937e-a780-0bca-7a76" sortIndex="303">
       <costs>
@@ -1542,6 +1670,18 @@ Characters who are not Undead may join Undead units despite not being Unstable 
         <categoryLink name="Monster" hidden="false" id="3e72-0ea2-e429-4cb7" targetId="e1a0-da31-05c5-9a15" primary="false"/>
         <categoryLink name="Undead" hidden="false" id="84fc-4fbf-8dd1-b557" targetId="362a-5594-2492-9bd0" primary="false"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Queen Bess" hidden="false" id="ec5f-4f15-7138-d590" sortIndex="305">
       <costs>
@@ -1588,6 +1728,18 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Special Characters" hidden="false" id="54c7-575b-b0f0-78fa" sortIndex="401">
       <categoryLinks>
@@ -2020,6 +2172,18 @@ Characters who are not Undead may join Undead units despite not being Unstable 
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1538-086d-08cd-2e97" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
+              <modifiers>
+                <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2036,6 +2200,18 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           </modifiers>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Damned Knights (Cylostra Direfin)" hidden="false" id="daaa-73d9-44ca-2b06" sortIndex="207">
       <categoryLinks>
@@ -2110,6 +2286,16 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="roster" childId="3c34-6702-186d-6c9d" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -2370,6 +2556,18 @@ Characters who are not Undead may join Undead units despite not being Unstable 
                   <description>Vangheist must be accompanied by an Infantry (Undead, Ghost) unit of 10-30 Damned Crew as a Special Unit. This unit has the Ethereal and Undead special rules, and are armed with two hand weapons. Vangheist is the unit&apos;s Leader and may never choose to leave this unit.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Skretch Half-Dead" hidden="false" id="db8e-907c-34c8-4854" sortIndex="4">
               <costs>
@@ -2443,6 +2641,18 @@ Characters who are not Undead may join Undead units despite not being Unstable 
                   <description>Skretch Half-Dead must be accompanied by an Infantry (Undead, Skaven) unit of 20+ Verminous Crew as a Core Unit. This unit has the Undead special rule, and are armed with two hand weapons. Skretch Half-Dead is the unit&apos;s Leader and may never choose to leave this unit.</description>
                 </rule>
               </rules>
+              <modifiers>
+                <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Red Henri" hidden="false" id="44cf-be7b-d2c2-8380" sortIndex="5">
               <costs>
@@ -2527,6 +2737,18 @@ Characters who are not Undead may join Undead units despite not being Unstable 
                 <infoLink name="Gaseous Demise" id="9d3f-5636-f671-4aba" hidden="false" type="rule" targetId="0c7d-7ecd-ff10-fc09"/>
                 <infoLink name="Undead" id="f6f6-22db-8b3a-ffe6" hidden="false" type="rule" targetId="8e82-7b9d-c1f6-d62b"/>
               </infoLinks>
+              <modifiers>
+                <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Keterlyn, the Brine Wife" hidden="false" id="3a14-5c05-00b0-3b69" sortIndex="6">
               <costs>
@@ -2590,6 +2812,18 @@ Characters who are not Undead may join Undead units despite not being Unstable 
                 <categoryLink name="Infantry" hidden="false" id="2901-3456-fa2f-06ba" targetId="22c9-1606-58f8-2e60" primary="false"/>
                 <categoryLink name="Undead" hidden="false" id="6ccd-978f-60c4-57e4" targetId="362a-5594-2492-9bd0" primary="false"/>
               </categoryLinks>
+              <modifiers>
+                <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2601,6 +2835,16 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="roster" childId="d426-bfc2-5a39-13fc" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
       <constraints>
@@ -2710,6 +2954,16 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="roster" childId="db8e-907c-34c8-4854" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifier>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifier>
       </modifiers>
     </selectionEntry>
@@ -3879,10 +4133,23 @@ Characters who are not Undead may join Undead units despite not being Unstable 
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="4392-a8f4-4fbc-b4b8" targetId="8b8a-34b1-ed30-df11" primary="false"/>
         <categoryLink name="Monstrous Cavalry" hidden="false" id="dcc4-f9de-9550-fd89" targetId="82d3-4589-72b4-b6ed" primary="false"/>
+        <categoryLink targetId="362a-5594-2492-9bd0" id="edcc-5a5f-f642-6be2" primary="false" name="Undead"/>
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2a30-203f-f365-0683"/>
       </constraints>
+      <modifiers>
+        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="a2c0-e6c2-dbaf-5c06" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="362a-5594-2492-9bd0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Swivel Gun" hidden="false" id="2e3a-3399-5a4c-b10d" collective="true">
       <infoLinks>
@@ -5507,4 +5774,20 @@ Characters who are not Undead may join Undead units despite not being Unstable 
       </characteristicTypes>
     </profileType>
   </profileTypes>
+  <rules>
+    <rule name="The Generals of Undeath" id="f96b-2b8b-7699-6b31" hidden="false" publicationId="4f8f-9147-1eae-6c3d" page="3">
+      <description>If your army contains any Undead units, you must include at least one character that is a Wizard that uses the Lore of Necromancy.   
+
+**Slain General**
+At the end of the phase in which the General is removed as a casualty, and at the start of every friendly turn thereafter, all friendly Undead units on the battlefield must take a Leadership test. If the test is failed, the unit immediately suffers a number of Wounds equal to the amount by which it failed the Leadership test, with no saves of any kind allowed. These Wounds are distributed as if from a shooting attack.  
+
+If, at the start of any of your turns following the death of the General, there is one or more friendly Wizard Characters on the table who know spells from the Lore of Necromancy, no unit in the army needs to take this Leadership test while at least one of them remain.  
+
+**Battle Standards**
+In addition to the normal rules for the army Battle Standard, units of Undead within 12&quot; of their Battle Standard suffer D3 Wounds less than they normally would due to the Unstable special rule, or following the death of the Army General.  
+
+**Characters and Units**
+Characters who are not Undead may join Undead units despite not being Unstable themselves. Mounted Characters ignore the Undead special rule of the mount. If an Undead unit would get destroyed as a result of Unstable, any remaining character(s) will need to take a Break test as normal the same phase, using the Leadership modifier that they lost the combat by.</description>
+    </rule>
+  </rules>
 </catalogue>
