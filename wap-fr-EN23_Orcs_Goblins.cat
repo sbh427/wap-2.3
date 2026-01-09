@@ -1944,7 +1944,7 @@ Victory Points are rewarded for each slain Fanatic individually.</description>
       </rules>
       <infoLinks>
         <infoLink id="527a-6287-1dd8-c0d5" name="Bolt Thrower" hidden="false" targetId="2d26-2a21-00a2-685d" type="profile"/>
-        <infoLink name="Firing a Blot Thrower" id="a48a-29d7-65d2-8819" hidden="false" type="rule" targetId="f55b-b981-fae7-afa2"/>
+        <infoLink name="Firing a Bolt Thrower" id="a48a-29d7-65d2-8819" hidden="false" type="rule" targetId="f55b-b981-fae7-afa2"/>
         <infoLink name="Stone Thrower Misfire Chart" id="7723-1990-72f5-f633" hidden="false" type="infoGroup" targetId="f6f0-bb1f-f863-3e81"/>
       </infoLinks>
       <categoryLinks>
@@ -7215,7 +7215,7 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="67d1-1453-6806-1898" type="max"/>
           </constraints>
           <profiles>
-            <profile id="4921-0f91-a38e-d7ee" name="Snotlings" publicationId="9e23-79cb-pubN78975" page="41" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+            <profile id="4921-0f91-a38e-d7ee" name="Snotlings" publicationId="9e23-79cb-pubN78975" page="41" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
               <characteristics>
                 <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
                 <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
@@ -8014,29 +8014,6 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
       <costs>
         <cost name="pts" typeId="points" value="260"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Tables &amp; Charts (Orcs &amp;G  oblins)" hidden="false" id="9955-77e1-777b-b641" sortIndex="-1">
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="WAAAGH! Miscast" hidden="false" id="b7e8-608e-5b1a-5d9c">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ac74-cd95-cadf-9747" includeChildSelections="false"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="WAAAGH! Miscast" id="5873-3fbc-bf43-91d3" hidden="false" type="infoGroup" targetId="8004-2466-ccb2-d194"/>
-          </infoLinks>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Animosity" hidden="false" id="fe7e-f018-cbd6-e3f7">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb70-016e-4a5b-9c26" includeChildSelections="false"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Animosity" id="80b1-da5d-da7e-9f4d" hidden="false" type="infoGroup" targetId="1ddc-dea7-0c7d-e3f1"/>
-          </infoLinks>
-        </selectionEntry>
-      </selectionEntries>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4b90-8fbc-08cf-7f50" includeChildSelections="true" includeChildForces="true"/>
-      </constraints>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Dire Wolf Riders" hidden="false" id="a5f7-5248-028c-173f" sortIndex="29.5">
       <selectionEntries>
@@ -15487,19 +15464,13 @@ Attacks. Models that already have Poisoned Attacks will automatically wound on T
       <description>If a model with this special rule is your Army General, then once per game he may call a Waaagh! The Waaagh! may only be called if the model first declares a charge, and must be announced immediately after making the charge declaration, before any charge reaction takes place. In the turn a Waaagh! is called, every combat involving friendly Orc units within 12&quot; of the Army General adds +1 to its combat resolution for the rest of the player turn. The Army General himself, and any unit he joins, adds +D3 to their combat resolution instead. In addition, every friendly unit within 12&quot; of the Army General add their rank bonus to the result rolled on the Animosity table (to a maximum of 6).</description>
     </rule>
     <rule name="Animosity" id="230d-025f-a39a-c499" hidden="false" publicationId="9e23-79cb-pubN78975" page="3">
-      <description>Units with this special rule must test for Animosity in
-the Charge sub-phase after all normal charges have
-been declared during each of your turns, unless any of
-the following applies:
+      <description>Units with this special rule must test for Animosity in the Charge sub-phase after all normal charges have been declared during each of your turns, unless any of the following applies:
 • The unit has fewer than 5 models.
 • The unit has declared a charge this turn.
 • The unit is engaged in close combat.
 • The unit is garrisoning a building.
 • The unit is fleeing or currently off the battlefield.
-Roll a D6 for each eligible unit. If the dice roll is a 2 or
-more, the unit behaves normally this turn. If the roll is
-a 1, however, the unit has failed its Animosity test and
-must roll on the Animosity table.</description>
+Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit behaves normally this turn. If the roll is a 1, however, the unit has failed its Animosity test and must roll on the Animosity table.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -16311,4 +16282,22 @@ the caster&apos;s next Magic phase.</characteristic>
       </characteristicTypes>
     </profileType>
   </profileTypes>
+  <rules>
+    <rule name="Aminosity Table" id="c571-2a3f-09f5-2576" hidden="false">
+      <description>&lt;b&gt;D6 - Result&lt;/b&gt;
+&lt;b&gt;1 - Get &apos;Em: &lt;/b&gt;For every complete rank the unit has, it suffers D3 hits at the Strength characteristic of the majority of the models in the unit. The unit may not voluntarily move or shoot this turn. Wounds caused by the Get &apos;Em result never cause Panic tests.
+&lt;b&gt;2-4 - Squabble: &lt;/b&gt; If it is possible to do so, the unit must declare a charge against the closest viable enemy unit. If the unit is unable to declare a charge, the unit may not move in the Movement phase or shoot this turn.
+&lt;b&gt;5-6 - We&apos;ll Show &apos;Em: &lt;/b&gt; Pivot the unit on the spot to face the nearest visible enemy unit, and then make a full normal move in a straight line towards it. If there is no visible enemy, the unit must move straight ahead instead. If it is impossible for the unit to pivot to face the closest enemy, it will pivot towards it as far as it can, and will then move as far forward as it can while still keeping the enemy within its forward arc. After the move is complete the unit must declare a charge against the closest visible enemy unit, if it is possible to do so. If the unit cannot declare a charge then it may carry on with the rest of its turn normally, as if it had not yet moved this turn.</description>
+    </rule>
+    <rule name="WAAAGH! Miscast Table" id="5f77-e438-ef3b-f965" hidden="false">
+      <description>If an Orc or Goblin Wizard rolls a Miscast, they roll on the following table instead of the normal Miscast Table used by other wizards.
+&lt;b&gt;D6 - Result&lt;/b&gt;
+&lt;b&gt;1-3 - FZZZZZZAP!&lt;/b&gt; Resolve the effects as if the Wizard had cast the Gaze of Mork spell and then deduct D3 dice from the power pool.
+&lt;b&gt;4-5 - &quot;Yuuurgh!&quot;&lt;/b&gt; The Wizard is subject to the Frenzy and Stupidity special rules for the rest of the game, although he may never lose his Frenzy. He may cast no further spells this turn.
+&lt;b&gt;6-7 - &quot;I&apos;ve Forgot!&quot;&lt;/b&gt; The Wizard permanently reduces his Wizard Level by 1 and may not cast any further spells this phase.
+&lt;b&gt;8-9 - &quot;Me &apos;Ead &apos;Urts!&quot;&lt;/b&gt; All Orcs and Goblins (friend or foe) within 12&quot; that are capable of channelling power or dispel dice suffer a Strength 4 hit which Ignores Armour saves. In addition, D3 dice are lost from the pool.
+&lt;b&gt;10-11 - &quot;I Fink I&apos;m Gonna…&quot;&lt;/b&gt; The Wizard suffers a Strength 10 hit and all Orc and Goblin units (friend or foe) within 12&quot; suffer D6 Strength 5 hits which Ignores Armour saves. In addition, D3 dice are lost from the pool.
+&lt;b&gt;12+ - &apos;EADBANG!&lt;/b&gt; Place the large round template over the Wizard. Any model under the template must pass a Toughness test or also be killed outright with no armour saves allowed. After resolving hits from this template, removing the Wizard as casualty with no saves allowed. In addition, D3 dice are lost from the power pool. </description>
+    </rule>
+  </rules>
 </catalogue>
