@@ -4622,17 +4622,6 @@ Contemplations Discipline" field="error">
               <modifiers>
                 <modifier type="append" value="&amp; Shield" field="name"/>
               </modifiers>
-              <infoLinks>
-                <infoLink name="Shield" id="83d8-a665-aa5a-ae52" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
-                  <modifiers>
-                    <modifier type="set" value="true" field="hidden">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="ba52-4f0c-71ae-b52d" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
             </entryLink>
             <entryLink import="true" name="Blowpipe" hidden="false" id="100c-ad75-4d6b-cb50" type="selectionEntry" targetId="8f37-a8ec-e1ba-2551" sortIndex="1"/>
             <entryLink import="true" name="Sling" hidden="false" id="81ff-2390-5d37-c702" type="selectionEntry" targetId="72e8-531c-b5af-3b91" sortIndex="2">
@@ -4642,17 +4631,6 @@ Contemplations Discipline" field="error">
               <modifiers>
                 <modifier type="append" value="&amp; Shield" field="name"/>
               </modifiers>
-              <infoLinks>
-                <infoLink name="Shield" id="3f3d-3365-872b-7ace" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
-                  <modifiers>
-                    <modifier type="set" value="true" field="hidden">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="ba52-4f0c-71ae-b52d" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -4673,6 +4651,39 @@ Contemplations Discipline" field="error">
           <modifiers>
             <modifier type="increment" value="50" field="20f0-0b35-48f7-23ba"/>
           </modifiers>
+        </entryLink>
+        <entryLink import="true" name="50. Handheld Armour" hidden="false" id="1fa6-ed2a-34f2-d545" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
+          <entryLinks>
+            <entryLink import="true" name="Shield" hidden="false" id="11e7-d35d-c882-b3e8" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="982d-2318-1f22-c7c6" includeChildSelections="false" automatic="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="982d-2318-1f22-c7c6">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="ba52-4f0c-71ae-b52d" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="81ff-2390-5d37-c702" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="b152-eb86-6d41-e16b" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="0" field="af56-60a7-18d1-6f4f">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="100c-ad75-4d6b-cb50" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
     </selectionEntry>
@@ -4781,7 +4792,7 @@ Contemplations Discipline" field="error">
         <categoryLink name="Infantry" hidden="false" id="176b-e7d6-3284-8308" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
       <entryLinks>
-        <entryLink import="true" name="11. Unit Options" hidden="false" id="3c29-f530-6502-c529" type="selectionEntryGroup" targetId="9be7-acc9-664b-36a5"/>
+        <entryLink import="true" name="11. Unit Options" hidden="false" id="3c29-f530-6502-c529" type="selectionEntryGroup" targetId="9be7-acc9-664b-36a5" sortIndex="-1"/>
         <entryLink import="true" name="99. Command Group" hidden="false" id="b202-5fef-ca9c-a440" type="selectionEntryGroup" targetId="6d24-2d46-8718-0b8f">
           <entryLinks>
             <entryLink import="true" name="Standard Bearer" hidden="false" id="5699-bc21-360d-0631" type="selectionEntry" targetId="d3ec-3cba-c1d6-8c0f">
@@ -4823,91 +4834,66 @@ Contemplations Discipline" field="error">
                 <modifier type="set" value="1" field="points" affects="self.entries"/>
               </modifiers>
             </entryLink>
-            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="bb49-2522-c963-f17c" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="bb49-2522-c963-f17c" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
               <entryLinks>
                 <entryLink import="true" name="Hand Weapon" hidden="false" id="ac6f-7058-1e75-ce10" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="5a1e-ceba-44d7-cb22" automatic="true"/>
-                  </constraints>
                   <modifiers>
-                    <modifier type="set" value="1" field="5a1e-ceba-44d7-cb22">
+                    <modifier type="set" value="1" field="443c-baf5-540a-c81e">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="df8c-8106-028f-2e20" shared="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="1e3d-3b10-4262-a7db" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="0" field="0e5a-c680-7fa4-685d">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="1e3d-3b10-4262-a7db" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
                   </modifiers>
-                  <infoLinks>
-                    <infoLink name="Shield" id="cd32-7880-aa19-1f36" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile">
-                      <modifiers>
-                        <modifier type="set" value="true" field="hidden">
-                          <conditions>
-                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="45c9-309a-6f4c-9237" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </modifier>
-                      </modifiers>
-                    </infoLink>
-                  </infoLinks>
                 </entryLink>
               </entryLinks>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="With HW" id="df8c-8106-028f-2e20" hidden="false" flatten="true">
-                  <entryLinks>
-                    <entryLink import="true" name="Shortbow" hidden="false" id="45c9-309a-6f4c-9237" type="selectionEntry" targetId="b2c6-18cc-9482-8f48" sortIndex="1">
-                      <costs>
-                        <cost name="pts" typeId="points" value="2"/>
-                      </costs>
-                      <modifiers>
-                        <modifier type="set" value="Replace Shields" field="annotation"/>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Javelins" hidden="false" id="cf83-b866-0484-60c1" type="selectionEntry" targetId="a923-e8b1-94c0-3f2c" sortIndex="2">
-                      <costs>
-                        <cost name="pts" typeId="points" value="3"/>
-                      </costs>
-                      <infoLinks>
-                        <infoLink name="Shield" id="d188-8abc-9229-7383" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
-                      </infoLinks>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntryGroup>
-                <selectionEntryGroup name="No HW" id="7c22-6c23-5722-bccc" hidden="false" flatten="true">
-                  <entryLinks>
-                    <entryLink import="true" name="Spear" hidden="false" id="92e9-30b7-8c28-6a51" type="selectionEntry" targetId="a901-4548-955d-623c" sortIndex="1">
-                      <costs>
-                        <cost name="pts" typeId="points" value="0.5"/>
-                      </costs>
-                      <infoLinks>
-                        <infoLink name="Shield" id="f4d2-7c23-587c-9446" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
-                      </infoLinks>
-                    </entryLink>
-                    <entryLink import="true" name="Great Weapon" hidden="false" id="8f4b-be00-59a5-c72b" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="2">
-                      <costs>
-                        <cost name="pts" typeId="points" value="2"/>
-                      </costs>
-                      <modifiers>
-                        <modifier type="set" value="true" field="hidden">
-                          <conditions>
-                            <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="03ea-55a2-f33d-38c3" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </modifier>
-                        <modifier type="set" value="Replace Shields" field="annotation"/>
-                      </modifiers>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <modifiers>
-                <modifier type="set" value="2" field="e941-9082-0af2-8b43">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="df8c-8106-028f-2e20" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="2" field="fe22-ce5f-b23e-303d">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="df8c-8106-028f-2e20" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="bf4c-73ad-06b0-a40c" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
+              <entryLinks>
+                <entryLink import="true" name="Shield" hidden="false" id="2b8d-d340-6ca6-f6bd" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <constraints>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="0608-9b6a-7085-07b6" includeChildSelections="false" automatic="true"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="1" field="0608-9b6a-7085-07b6">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="b2c6-18cc-9482-8f48" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="0" field="af56-60a7-18d1-6f4f">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="b2c6-18cc-9482-8f48" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="20c7-d073-22ee-2e01" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Javelins" hidden="false" id="e4d5-0485-0581-542a" type="selectionEntry" targetId="a923-e8b1-94c0-3f2c" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="3"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Spear" hidden="false" id="1e3d-3b10-4262-a7db" type="selectionEntry" targetId="a901-4548-955d-623c" sortIndex="1">
+                  <costs>
+                    <cost name="pts" typeId="points" value="0.5"/>
+                  </costs>
+                </entryLink>
+                <entryLink import="true" name="Shortbow" hidden="false" id="ad14-baf9-d118-e666" type="selectionEntry" targetId="b2c6-18cc-9482-8f48" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="2"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="Replace Shield" field="annotation"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -4920,7 +4906,7 @@ Contemplations Discipline" field="error">
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="99. Command Group" hidden="false" id="d67d-314d-98d6-ef41" type="selectionEntryGroup" targetId="6d24-2d46-8718-0b8f"/>
-        <entryLink import="true" name="11. Unit Options" hidden="false" id="eef3-ecc9-5c58-dad6" type="selectionEntryGroup" targetId="9be7-acc9-664b-36a5"/>
+        <entryLink import="true" name="11. Unit Options" hidden="false" id="eef3-ecc9-5c58-dad6" type="selectionEntryGroup" targetId="9be7-acc9-664b-36a5" sortIndex="-1"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Skink" hidden="false" id="e5c8-8d21-f948-e77a">
@@ -4959,9 +4945,42 @@ Contemplations Discipline" field="error">
                 </entryLink>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="9f54-9e67-a3ef-0927" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="e533-bd1a-34c1-78e7" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
               <entryLinks>
-                <entryLink import="true" name="Javelins" hidden="false" id="4ec7-ac21-5ddd-c426" type="selectionEntry" targetId="a923-e8b1-94c0-3f2c" sortIndex="3">
+                <entryLink import="true" name="Shield" hidden="false" id="2125-dfdd-7657-46be" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <constraints>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="05f6-26f9-57c6-57e6" includeChildSelections="false" automatic="true"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="1" field="05f6-26f9-57c6-57e6">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="ba52-4f0c-71ae-b52d" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="or">
+                              <conditions>
+                                <condition type="atLeast" value="1" field="selections" scope="parent" childId="d723-9774-daa6-7866" shared="true" includeChildSelections="true"/>
+                                <condition type="atLeast" value="1" field="selections" scope="parent" childId="932a-5b31-70cc-105c" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="set" value="0" field="af56-60a7-18d1-6f4f">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="13c6-0403-8f6b-4d74" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="5f87-c5b8-2c65-732b" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+              <entryLinks>
+                <entryLink import="true" name="Javelins" hidden="false" id="932a-5b31-70cc-105c" type="selectionEntry" targetId="a923-e8b1-94c0-3f2c" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
@@ -4969,7 +4988,7 @@ Contemplations Discipline" field="error">
                     <modifier type="append" value="&amp; Shield" field="name"/>
                   </modifiers>
                   <infoLinks>
-                    <infoLink name="Shield" id="a7bf-6c68-fdb2-ff58" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
+                    <infoLink name="Shield" id="4864-c5c0-4eb0-9f9f" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
                       <modifiers>
                         <modifier type="set" value="true" field="hidden">
                           <conditions>
@@ -4979,28 +4998,15 @@ Contemplations Discipline" field="error">
                       </modifiers>
                     </infoLink>
                   </infoLinks>
-                  <comment>and shield</comment>
                 </entryLink>
-                <entryLink import="true" name="Blowpipe" hidden="false" id="ca79-0d19-0112-cd7c" type="selectionEntry" targetId="8f37-a8ec-e1ba-2551" sortIndex="1"/>
-                <entryLink import="true" name="Sling" hidden="false" id="c849-96ff-6777-36b0" type="selectionEntry" targetId="72e8-531c-b5af-3b91" sortIndex="2">
+                <entryLink import="true" name="Blowpipe" hidden="false" id="13c6-0403-8f6b-4d74" type="selectionEntry" targetId="8f37-a8ec-e1ba-2551" sortIndex="1"/>
+                <entryLink import="true" name="Sling" hidden="false" id="d723-9774-daa6-7866" type="selectionEntry" targetId="72e8-531c-b5af-3b91" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                   <modifiers>
                     <modifier type="append" value="&amp; Shield" field="name"/>
                   </modifiers>
-                  <infoLinks>
-                    <infoLink name="Shield" id="11a1-4a2d-d4a8-7d01" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
-                      <modifiers>
-                        <modifier type="set" value="true" field="hidden">
-                          <conditions>
-                            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="ba52-4f0c-71ae-b52d" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </modifier>
-                      </modifiers>
-                    </infoLink>
-                  </infoLinks>
-                  <comment>and shield</comment>
                 </entryLink>
               </entryLinks>
             </entryLink>
@@ -5032,7 +5038,7 @@ Contemplations Discipline" field="error">
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="11. Unit Options" hidden="false" id="c64f-1bbc-1102-7039" type="selectionEntryGroup" targetId="9be7-acc9-664b-36a5"/>
+        <entryLink import="true" name="11. Unit Options" hidden="false" id="c64f-1bbc-1102-7039" type="selectionEntryGroup" targetId="9be7-acc9-664b-36a5" sortIndex="-1"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Raptadon Rider" hidden="false" id="8ce7-2217-2009-4339">
@@ -5094,6 +5100,24 @@ Contemplations Discipline" field="error">
                   </infoLinks>
                 </entryLink>
                 <entryLink import="true" name="Light Lance" hidden="false" id="c560-fed9-a230-6f71" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="1"/>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="c132-0a5e-4b73-ceb8" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="6404-c39c-c3d9-727e" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <modifiers>
+                    <modifier type="set" value="1" field="443c-baf5-540a-c81e">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="c560-fed9-a230-6f71" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="0" field="0e5a-c680-7fa4-685d">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="c560-fed9-a230-6f71" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
             </entryLink>
           </entryLinks>
@@ -5316,19 +5340,11 @@ Contemplations Discipline" field="error">
                   <costs>
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
-                  <infoLinks>
-                    <infoLink name="Hand Weapon" id="7416-dd04-532f-1d1f" hidden="false" type="profile" targetId="f6da-d707-0cd6-b1dd"/>
-                  </infoLinks>
-                  <comment>and HW</comment>
                 </entryLink>
                 <entryLink import="true" name="Shortbow" hidden="false" id="ffbb-3c15-5965-5514" type="selectionEntry" targetId="b2c6-18cc-9482-8f48" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
-                  <infoLinks>
-                    <infoLink name="Hand Weapon" id="84a4-8031-bbd0-fd4b" hidden="false" type="profile" targetId="f6da-d707-0cd6-b1dd"/>
-                  </infoLinks>
-                  <comment>and HW</comment>
                 </entryLink>
               </entryLinks>
               <selectionEntries>
@@ -5341,9 +5357,7 @@ Contemplations Discipline" field="error">
                   </costs>
                   <infoLinks>
                     <infoLink name="Fireleech Bolas" id="5450-0ef0-eaa0-0b24" hidden="false" type="profile" targetId="de1e-e404-c62f-7003"/>
-                    <infoLink name="Hand Weapon" id="718b-f21b-5228-d1bf" hidden="false" type="profile" targetId="f6da-d707-0cd6-b1dd"/>
                   </infoLinks>
-                  <comment>and HW</comment>
                 </selectionEntry>
               </selectionEntries>
             </entryLink>
@@ -5410,6 +5424,24 @@ Contemplations Discipline" field="error">
               </selectionEntries>
             </entryLink>
             <entryLink import="true" name="11. Unit Options" hidden="false" id="99f5-08bf-9ebb-3e8b" type="selectionEntryGroup" targetId="9be7-acc9-664b-36a5"/>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="7757-7243-250f-d08c" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="ffa4-cab1-f0e0-6994" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <modifiers>
+                    <modifier type="set" value="1" field="443c-baf5-540a-c81e">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="d989-1124-0dea-ae27" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="0" field="0e5a-c680-7fa4-685d">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="d989-1124-0dea-ae27" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
           <infoLinks>
             <infoLink name="Drop Rocks" id="910f-50b1-0300-0570" hidden="false" type="rule" targetId="20b8-a9bd-0003-7c25"/>
@@ -5429,7 +5461,7 @@ Contemplations Discipline" field="error">
       </selectionEntries>
       <entryLinks>
         <entryLink import="true" name="99. Command Group" hidden="false" id="d7e1-7cb8-4fff-d10e" type="selectionEntryGroup" targetId="f786-b0b9-e5d8-3395"/>
-        <entryLink import="true" name="11. Unit Options" hidden="false" id="b8cb-0b0d-5b48-8868" type="selectionEntryGroup" targetId="9be7-acc9-664b-36a5"/>
+        <entryLink import="true" name="11. Unit Options" hidden="false" id="b8cb-0b0d-5b48-8868" type="selectionEntryGroup" targetId="9be7-acc9-664b-36a5" sortIndex="-1"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Kroxigors" hidden="false" id="ae2a-6c61-6489-59e6" sortIndex="32">
@@ -5539,29 +5571,38 @@ Contemplations Discipline" field="error">
                 </entryLink>
               </entryLinks>
             </entryLink>
-            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="50b9-59c2-9f5f-600f" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="4328-7c32-f2e4-5454" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
               <entryLinks>
-                <entryLink import="true" name="Sling" hidden="false" id="21f5-a421-cb3f-d64e" type="selectionEntry" targetId="72e8-531c-b5af-3b91" sortIndex="2">
+                <entryLink import="true" name="Shield" hidden="false" id="4ef3-3db7-ad3b-7eaa" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <constraints>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="a296-b49b-41ac-5ba9" includeChildSelections="false" automatic="true"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="1" field="a296-b49b-41ac-5ba9">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="396c-d0a2-8f45-5b24" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="0" field="af56-60a7-18d1-6f4f">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="396c-d0a2-8f45-5b24" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="079a-8f82-791d-3534" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+              <entryLinks>
+                <entryLink import="true" name="Blowpipe" hidden="false" id="396c-d0a2-8f45-5b24" type="selectionEntry" targetId="8f37-a8ec-e1ba-2551" sortIndex="1"/>
+                <entryLink import="true" name="Sling" hidden="false" id="0c30-cdf7-7869-4533" type="selectionEntry" targetId="72e8-531c-b5af-3b91" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                   <modifiers>
                     <modifier type="append" value="&amp; Shield" field="name"/>
                   </modifiers>
-                  <infoLinks>
-                    <infoLink name="Shield" id="a477-3a60-95c1-994a" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
-                      <modifiers>
-                        <modifier type="set" value="true" field="hidden">
-                          <conditions>
-                            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="ba52-4f0c-71ae-b52d" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </modifier>
-                      </modifiers>
-                    </infoLink>
-                  </infoLinks>
-                  <comment>and shield</comment>
                 </entryLink>
-                <entryLink import="true" name="Blowpipe" hidden="false" id="6b09-346b-7eba-8e01" type="selectionEntry" targetId="8f37-a8ec-e1ba-2551" sortIndex="1"/>
               </entryLinks>
             </entryLink>
           </entryLinks>
@@ -5643,6 +5684,7 @@ Contemplations Discipline" field="error">
                 <entryLink import="true" name="Cold One" hidden="false" id="f991-187b-ccff-5b3b" type="selectionEntry" targetId="2e2e-ab1c-2700-efa1">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="41e7-09aa-da5c-5410" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4fbf-9fd1-3420-f590" includeChildSelections="false"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
@@ -7506,6 +7548,7 @@ to see if the comet arrives.</characteristic>
                 <entryLink import="true" name="Cold One" hidden="false" id="9d9c-2996-d46f-d7f8" type="selectionEntry" targetId="2e2e-ab1c-2700-efa1">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6c38-a287-0749-4821" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="63be-f495-9adb-454d" includeChildSelections="false"/>
                   </constraints>
                 </entryLink>
               </entryLinks>
