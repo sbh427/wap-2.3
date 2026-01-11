@@ -4561,7 +4561,7 @@ cables out.</characteristic>
                       <infoLinks>
                         <infoLink name="Medium Armour" id="cfdc-6f2b-4238-5006" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
                           <modifiers>
-                            <modifier type="append" value="The suit gives Ikit +2 Strength (included in his profile) and a 5+ Ward Save. Once per game, Ikit can fire the warpfire projector housed in the device. This is Strength 5 Breath Weapon attack with the Flaming Attacks, Magical Attacks and Multiple Wounds (D3) special rules." field="ff58-91e4-84d7-e6e4" join="
+                            <modifier type="append" value="The suit gives Ikit +2 Strength (included in his profile) and a 5+ Ward Save." field="ff58-91e4-84d7-e6e4" join="
 
 "/>
                             <modifier type="set" value="Iron Frame" field="annotation"/>
@@ -4569,6 +4569,16 @@ cables out.</characteristic>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
+                      <profiles>
+                        <profile name="Iron Frame" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="b64b-ea1d-4fe1-22a5">
+                          <characteristics>
+                            <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+                            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
+                            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">One use only. Flaming Attacks, Magical Attacks, Multiple Wounds (D3).</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
                     </selectionEntry>
                   </selectionEntries>
                   <entryLinks>
@@ -8691,12 +8701,19 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1ec8-40f7-1503-6a90" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
-              <infoLinks>
-                <infoLink name="Pestilent Breath" id="5878-3065-ac96-a406" hidden="false" targetId="fbbd-0bcc-1bb0-a559" type="rule"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
+              <profiles>
+                <profile name="Pestilent Breath" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="7162-fe2c-4961-bea4">
+                  <characteristics>
+                    <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+                    <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">2</characteristic>
+                    <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Ignores Armour saves.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Lash Tail" hidden="false" id="4423-ebdc-b18e-6945" collective="false" sortIndex="3">
               <constraints>
@@ -8954,7 +8971,6 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
         <infoLink name="Fear" id="7dcd-1c91-d5b3-0911" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
         <infoLink name="Magic Resistance (2)" id="9ac4-6de6-a50c-0286" hidden="false" targetId="0e09-3526-25d5-2646" type="rule"/>
         <infoLink name="Wrecker Attack" id="c1a7-f5f1-4a9b-d482" hidden="false" targetId="d3ca-4052-20b9-4293" type="rule"/>
-        <infoLink name="Billowing Death" id="c7ec-96b5-3fd9-adcf" hidden="false" targetId="6dea-37fb-3d6e-416d" type="rule"/>
         <infoLink name="Altar of the Horned Rat" id="d51c-d891-9b62-c639" hidden="false" targetId="a124-af13-de9e-d5cd" type="rule"/>
         <infoLink name="Line of Sight (5)" id="5e14-6a90-3b48-8f50" hidden="false" targetId="564d-ded4-217d-827c" type="rule"/>
         <infoLink name="Frenzy" id="c1e0-f241-3917-1d19" hidden="false" targetId="9ff3-dda6-e142-5a77" type="rule"/>
@@ -8976,6 +8992,14 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Shrine</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Billowing Death" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="a9fc-a6cd-2ec7-1316">
+          <characteristics>
+            <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90"/>
+            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Can be used in every turn. All models Hit must pass a Toughness test or suffer a Wound with the Ignores Armour Saves and Magical Attacks special rules. All Clan Pestilens models gain a +1 bonus for this test</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -9669,6 +9693,15 @@ allowed.</characteristic>
                 <profile name="Skyre&apos;s breath-Bellow" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="4a3e-cabd-72dd-1eb7" publicationId="4086-1ccd-f433-39a2" page="12">
                   <characteristics>
                     <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. This is a Breath Weapon Attack. Any model Hit must take a Toughness test or suffer a Wound which Ignores Armour saves.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Skyre&apos;s breath-Bellow" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="2b03-75aa-f253-da2a">
+                  <characteristics>
+                    <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+                    <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">
+</characteristic>
+                    <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">One use only. Any model Hit must take a Toughness test or suffer a Wound which Ignores Armour saves.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10844,9 +10877,6 @@ Note that a Skaven General confers his basic Ld and then units modify it with th
     <rule id="d3ca-4052-20b9-4293" name="Wrecker Attack" publicationId="4086-1ccd-f433-39a2" page="167" hidden="false">
       <description>The Plague Furnace may inflict special attack after all other attacks have been resolved, inflicting an Artillery dice&apos;s worth of Strength 5 Hits against a single enemy unit to their front. A roll of Misfire means something has gone wrong; roll a D6 on the Plague Furnace Mishap chart.</description>
     </rule>
-    <rule id="6dea-37fb-3d6e-416d" name="Billowing Death" publicationId="4086-1ccd-f433-39a2" page="167" hidden="false">
-      <description>Billowing Death follows the rules for Breath Weapons, but can be used in every turn. All models Hit must pass a T test or suffer a Wound with Ignores Armour Saves and Magical Attacks. All Clan Pestilens models gain a +1 modifer for this tests.</description>
-    </rule>
     <rule id="77ea-023f-0095-0507" name="Sensei" publicationId="4086-1ccd-f433-39a2" page="18" hidden="false">
       <description>A Master Assassin may be the Army General despite being Hidden. However, he can only pass on his Leadership value to other units if he is not Hidden.</description>
     </rule>
@@ -10867,9 +10897,6 @@ If the marker is under an enemy unit when the Stormfiends emerge, they count as 
     </rule>
     <rule id="c82f-6673-d7bb-7b55" name="Foul Ichor" publicationId="4086-1ccd-f433-39a2" page="187" hidden="false">
       <description>If a Brood Horror is slain, all units in base contact with the Brood Horror suffer 2D6 S 2 hits, distributed as shooting attacks.</description>
-    </rule>
-    <rule id="fbbd-0bcc-1bb0-a559" name="Pestilent Breath" publicationId="4086-1ccd-f433-39a2" page="187" hidden="false">
-      <description>The Brood Horror gains a S 2 Breath Weapon which Ignores Armour saves.</description>
     </rule>
     <rule id="863e-2af3-719c-4567" name="Skryre Claws" publicationId="4086-1ccd-f433-39a2" page="187" hidden="false">
       <description>The Brood Horror gains Armour Piercing (1) and Magical Attacks.</description>
