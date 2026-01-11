@@ -138,9 +138,6 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe28-f95e-76bb-34df" includeChildSelections="false"/>
       </constraints>
       <rules>
-        <rule name="Breath of Desiccation" id="f905-e238-d6dc-575f" hidden="false">
-          <description>This is a Breath Weapon attack with Strength 3, Magical Attacks and the Multiple Wounds (2) special rule.</description>
-        </rule>
         <rule name="Cloud of Dust" id="b0d7-0760-ce31-d2d6" hidden="false">
           <description>All enemy missile attacks suffer -1 To Hit against a Necrolith Bone Dragon.</description>
         </rule>
@@ -158,6 +155,14 @@
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Undead, Dragon)</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Breath of Desiccation" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="09c0-b9f5-74a7-8cea">
+          <characteristics>
+            <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">3</characteristic>
+            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magical Attacks, Multiple Wounds (2).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -265,17 +270,22 @@
             <entryLink import="true" name="56. Upgrades" hidden="false" id="1b17-4347-b667-e7ce" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Fiery Roar" hidden="false" id="fc2d-7352-bcd5-9d21">
-                  <rules>
-                    <rule name="Fiery Roar" id="f7e2-5435-530c-1a8c" hidden="false">
-                      <description>A Khemrian Warsphinx with this upgrade has a Strength 4 Breath Weapon with the Flaming Attacks special rule.</description>
-                    </rule>
-                  </rules>
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7e49-f15f-6ea4-d084" includeChildSelections="false"/>
                   </constraints>
                   <costs>
                     <cost name="pts" typeId="points" value="30"/>
                   </costs>
+                  <profiles>
+                    <profile name="Fiery Roar" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="1b3f-1bfe-d174-714f">
+                      <characteristics>
+                        <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
+                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Flaming Attacks.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Envenomed Sting" hidden="false" id="2d14-1acd-0cd8-5845">
                   <rules>
@@ -5077,6 +5087,14 @@ Strength 2 hits which Ignores Armour saves</description>
                     <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Undead)</characteristic>
                   </characteristics>
                 </profile>
+                <profile name="Swarming Mass" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="2a64-6427-c01f-2520">
+                  <characteristics>
+                    <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+                    <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">1</characteristic>
+                    <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Poisoned Attacks.</characteristic>
+                  </characteristics>
+                </profile>
               </profiles>
               <costs>
                 <cost name="pts" typeId="points" value="130"/>
@@ -5116,9 +5134,6 @@ Strength 2 hits which Ignores Armour saves</description>
                 <infoLink name="Entombed Beneath the Sands Mishap Table" id="52dc-ab19-70ae-d195" hidden="false" type="infoGroup" targetId="f22f-d3e2-f29d-5ce1"/>
               </infoLinks>
               <rules>
-                <rule name="Swarming Mass" id="47bb-65de-771f-85ff" hidden="false">
-                  <description>Apophas has a Strength 1 Breath Weapon with the Poisoned Attacks special rule.</description>
-                </rule>
                 <rule name="Desert Revenant" id="e494-2288-2430-5b80" hidden="false">
                   <description>When rolling to enter the table using the Entombed Beneath the Sands special, you may re-roll the Artillery dice.</description>
                 </rule>
