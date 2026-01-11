@@ -8954,14 +8954,8 @@ Unless otherwise specified, Multiple Wounds only apply to close combat attacks.<
     <rule name="Spawn of Khorne" id="9342-d93f-e118-0b55" hidden="false" publicationId="1a01-044f-047b-618f" page="197">
       <description>A Spawn of Khorne has +1 S.</description>
     </rule>
-    <rule name="Spawn of Nurgle" id="ad42-5a49-bd23-db76" hidden="false" publicationId="1a01-044f-047b-618f" page="197">
-      <description>A Spawn of Nurgle has Poisoned Attacks.</description>
-    </rule>
     <rule name="Spawn of Slaanesh" id="4cca-bef4-9da0-60ee" hidden="false" publicationId="1a01-044f-047b-618f" page="197">
       <description>A Spawn of Slaanesh rolls an additional D6 for their Random Movement result.</description>
-    </rule>
-    <rule name="Spawn of Tzeentch" id="cfa3-ff7d-5a8e-de9b" hidden="false" publicationId="1a01-044f-047b-618f" page="197">
-      <description>A Spawn of Tzeentch has a Strength 3 Breath Weapon that has Flaming Attacks.</description>
     </rule>
     <rule name="Storm Rage" id="9cd6-64c7-e7c5-4ef6" hidden="false" page="46" publicationId="1a01-044f-047b-618f">
       <description>Dragon Ogres have the Immunity (Lightning Attacks) special rule. In addition, if they are hit with a Lightning Attack, they immediately gain the Frenzy special rule.</description>

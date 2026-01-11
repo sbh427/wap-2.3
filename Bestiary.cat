@@ -409,14 +409,19 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2332-eaa8-0a53-dff7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
-              <rules>
-                <rule name="Flaming Breath" id="d678-2b91-0955-c676" hidden="false" publicationId="1a01-044f-047b-618f" page="212">
-                  <description>The Chimera gains a Strength 4 Breath Weapon which has Flaming Attacks.</description>
-                </rule>
-              </rules>
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
+              <profiles>
+                <profile name="Flaming Breath" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="084c-3bbc-14ad-666a">
+                  <characteristics>
+                    <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+                    <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
+                    <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Flaming Attacks</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Regenerating Flesh" hidden="false" id="d3b7-643d-be94-0921" collective="false" sortIndex="5">
               <constraints>
@@ -1610,7 +1615,7 @@ done so this round. The Bonegrinder Giant automatically wins the combat by 3 poi
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f5e6-ea76-8495-eb06" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <infoLinks>
-            <infoLink name="Spawn of Nurgle" id="65d6-005d-b04a-0e06" hidden="false" targetId="ad42-5a49-bd23-db76" type="rule"/>
+            <infoLink name="Poisoned Attacks" id="523c-c812-bfb6-6b90" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
@@ -1631,12 +1636,19 @@ done so this round. The Bonegrinder Giant automatically wins the combat by 3 poi
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="08a5-e047-6ce3-98b9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
-          <infoLinks>
-            <infoLink name="Spawn of Tzeentch" id="eaf4-27ed-b2bf-5bfb" hidden="false" targetId="cfa3-ff7d-5a8e-de9b" type="rule"/>
-          </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
+          <profiles>
+            <profile name="Spawn of Tzeentch" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="869a-358b-046c-d9b0">
+              <characteristics>
+                <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+                <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">3</characteristic>
+                <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Flaming Attacks</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
