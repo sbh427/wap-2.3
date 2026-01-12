@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="99dc-a7e0-8404-4dd1" name="Wood Elves WAP 1.62" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="61" revision="5" authorName="Leminge" battleScribeVersion="2.03" authorContact="Contact me via discord" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="99dc-a7e0-8404-4dd1" name="Wood Elves WAP 1.62" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="61" revision="6" authorName="Leminge" battleScribeVersion="2.03" authorContact="Contact me via discord" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Ambush from the Worldroots" hidden="false" id="cede-f284-0927-9947" sortIndex="-1">
-      <rules>
-        <rule name="Ambush from the Worldroots" id="b0df-5ac8-041a-a623" hidden="false">
-          <description>A Wood Elf army can always place an additional forest no more than 12&quot; in diameter on the battlefield. This is done during deployment, before any units are deployed, and must be placed wholly in your half of the battlefield. Declare which type of forest it is then you place it. If you cannot fit the forest on your half of the table, move other terrain features by the shortest distance necessary so that the forest can be placed. If you still cannot place the forest, or if the scenario means that the Wood Elf army does not have a table half in which to deploy, this additional forest is not used in this battle.</description>
-        </rule>
-      </rules>
-    </selectionEntry>
     <selectionEntry type="model" import="true" name="Glade Lord" hidden="false" id="5a1c-e4ae-ae3a-3161" sortIndex="1">
       <entryLinks>
         <entryLink import="true" name="65. Enchanted Arrows" hidden="false" id="09e5-68df-2001-00fc" type="selectionEntryGroup" targetId="bbf0-e3f8-85a7-513c" collective="true"/>
@@ -408,10 +401,13 @@
         <entryLink import="true" name="50. Handheld Armour" hidden="false" id="83ab-3e18-9d85-7eb1" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
           <entryLinks>
             <entryLink import="true" name="Shield" hidden="false" id="b4fd-5156-7f55-bd30" type="selectionEntry" targetId="c068-0827-9931-d9bf">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="980e-75eb-6cf6-3d33-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="980e-75eb-6cf6-3d33-max" includeChildSelections="false"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="3d59-dcea-ec30-dc28">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="ba52-4f0c-71ae-b52d" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -428,9 +424,15 @@
         </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Natural Armour (6+)" id="feb1-bbef-bfbd-2604" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
         <infoLink name="Fly (10)" id="480e-2338-d2f8-a3b0" hidden="false" type="rule" targetId="953a-d5a4-ee81-4093"/>
         <infoLink name="Forest Spirit" id="7962-49ce-f32d-a894" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
+        <infoLink name="Natural Armour" id="fe73-b2b2-6911-deda" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Arch-Revenant" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <rules>
         <rule name="Call to Battle" id="6c08-c0a5-4857-123c" hidden="false">
@@ -479,11 +481,17 @@
         <entryLink import="true" name="61. Lore of Magic" hidden="false" id="13d9-da59-64a0-025d" type="selectionEntryGroup" targetId="69ef-02ab-e95b-625b"/>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Natural Armour (6+)" id="5300-90fd-0506-2289" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
         <infoLink name="Blessing of the Ancients" id="c891-8525-e8d4-8aca" hidden="false" type="rule" targetId="24fc-80ea-e9a4-b309"/>
         <infoLink name="Fly (5)" id="f60d-4d4b-85d3-b5ed" hidden="false" type="rule" targetId="36d4-923e-e1c7-72bc"/>
         <infoLink name="Forest Spirit" id="941a-889f-5ced-1fa5" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
         <infoLink name="Regeneration (5+)" id="61aa-410a-fd65-6cfc" hidden="false" type="rule" targetId="5fed-df2e-b6d6-cc93"/>
+        <infoLink name="Natural Armour" id="6e4e-4bba-1bcf-8f40" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Warsong Revenant" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <rules>
         <rule name="Song of Athel Loren" id="abb4-b934-d5e9-1208" hidden="false">
@@ -532,8 +540,14 @@
         <infoLink name="Blessing of the Ancients" id="b3b1-e1ce-864d-e518" hidden="false" type="rule" targetId="24fc-80ea-e9a4-b309"/>
         <infoLink name="Flammable" id="4ad6-e679-a811-a93f" hidden="false" type="rule" targetId="ec58-b231-6a2f-a163"/>
         <infoLink name="Forest Spirit" id="ad78-6d88-c5c5-ae39" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
-        <infoLink name="Natural Armour (3+)" id="7125-af77-5d45-300b" hidden="false" type="rule" targetId="32e8-b4ad-3e59-a3c7"/>
         <infoLink name="Stubborn" id="7467-b440-ea31-c35d" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
+        <infoLink name="Natural Armour" id="4d6a-59c8-da89-5216" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="3+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="3+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Treeman Ancient" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="235"/>
@@ -913,10 +927,16 @@
         <infoLink name="Flammable" id="6aa5-d0be-cd91-3f81" hidden="false" type="rule" targetId="ec58-b231-6a2f-a163"/>
         <infoLink name="Forest Spirit" id="f8fb-8c91-e99d-c4a1" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
         <infoLink name="Hatred" id="c5a5-1373-4810-397c" hidden="false" type="rule" targetId="f6d7-9fbc-abc1-5cfc"/>
-        <infoLink name="Natural Armour (6+)" id="8b6e-5af9-d027-f598" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
         <infoLink name="Birch Aspect" id="07e6-67c8-5297-c196" hidden="false" type="profile" targetId="5f54-3293-b417-59fc"/>
         <infoLink name="Oak Aspect" id="5867-b8c0-1e56-3e8f" hidden="false" type="profile" targetId="4e17-ebe3-3a2e-2970"/>
         <infoLink name="Willow Aspect" id="1279-8da6-3102-0976" hidden="false" type="profile" targetId="566d-933c-79f0-e119"/>
+        <infoLink name="Natural Armour" id="e147-5754-2143-a2f9" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Branchwraith" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="85"/>
@@ -970,11 +990,17 @@
         <infoLink name="Blessing of the Ancients" id="7524-a6fb-16fb-7e0e" hidden="false" type="rule" targetId="24fc-80ea-e9a4-b309"/>
         <infoLink name="Forest Spirit" id="2bd4-1d82-17f0-f53d" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
         <infoLink name="Hatred" id="ae2e-7935-80fe-eea6" hidden="false" type="rule" targetId="f6d7-9fbc-abc1-5cfc"/>
-        <infoLink name="Natural Armour (6+)" id="ca34-e382-4604-7252" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
         <infoLink name="Birch Aspect" id="8e6f-6bd5-0c4b-2080" hidden="false" type="profile" targetId="5f54-3293-b417-59fc"/>
         <infoLink name="Oak Aspect" id="81b3-7960-05e6-5cd0" hidden="false" type="profile" targetId="4e17-ebe3-3a2e-2970"/>
         <infoLink name="Willow Aspect" id="792b-3fee-3b20-2b83" hidden="false" type="profile" targetId="566d-933c-79f0-e119"/>
         <infoLink name="Flammable" id="5d4e-a5f2-98e5-9f54" hidden="false" type="rule" targetId="ec58-b231-6a2f-a163"/>
+        <infoLink name="Natural Armour" id="95b8-0822-5f64-ab3e" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Branchwych" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="100"/>
@@ -1442,6 +1468,15 @@
               </constraints>
             </entryLink>
           </entryLinks>
+          <infoLinks>
+            <infoLink name="Natural Armour" id="f158-f9ca-959f-7ce6" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+              <modifiers>
+                <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+                <modifier type="set" value="Dryad" field="annotation"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <categoryLinks>
@@ -1471,7 +1506,6 @@
         <infoLink name="Flammable" id="b8fd-5ef0-799b-0c69" hidden="false" type="rule" targetId="ec58-b231-6a2f-a163"/>
         <infoLink name="Forest Spirit" id="157c-79ea-403d-1160" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
         <infoLink name="Hatred" id="2198-f198-1328-09a8" hidden="false" type="rule" targetId="f6d7-9fbc-abc1-5cfc"/>
-        <infoLink name="Natural Armour (6+)" id="0698-392c-451e-4ae5" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
         <infoLink name="Birch Aspect" id="9ef2-f57a-83e1-30b7" hidden="false" type="profile" targetId="5f54-3293-b417-59fc"/>
         <infoLink name="Oak Aspect" id="1a94-3f86-7cd0-fee0" hidden="false" type="profile" targetId="4e17-ebe3-3a2e-2970"/>
         <infoLink name="Willow Aspect" id="39e5-3245-264d-8e29" hidden="false" type="profile" targetId="566d-933c-79f0-e119"/>
@@ -2107,8 +2141,14 @@
           <infoLinks>
             <infoLink name="Forest Spirit" id="a542-230d-18ff-12e9" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
             <infoLink name="Martial Memories" id="ba99-9524-c00e-9641" hidden="false" type="rule" targetId="4260-7027-c2f1-9a1d"/>
-            <infoLink name="Natural Armour (6+)" id="c281-cb33-c0e0-3a55" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
             <infoLink name="Spirit-walk" id="f80f-cc64-3e65-44e2" hidden="false" type="rule" targetId="f8ff-48a0-94f2-0f3f"/>
+            <infoLink name="Natural Armour" id="3d2d-abf3-4eac-e88d" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+              <modifiers>
+                <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+                <modifier type="set" value="Tree Revenant" field="annotation"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
@@ -2205,8 +2245,14 @@
             <infoLink name="Forest Spirit" id="0c6e-405a-beb7-8323" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
             <infoLink name="Hatred" id="97d3-9bf3-3360-a6f4" hidden="false" type="rule" targetId="f6d7-9fbc-abc1-5cfc"/>
             <infoLink name="Skirmishers" id="874e-3d4a-1c26-6496" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
-            <infoLink name="Natural Armour (6+)" id="7fc5-c857-5437-6d84" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
             <infoLink name="Scouts" id="e6ce-3416-9b78-a34d" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
+            <infoLink name="Natural Armour" id="3dff-0f49-253a-3c53" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+              <modifiers>
+                <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+                <modifier type="set" value="Spite Revenant" field="annotation"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
@@ -2286,7 +2332,13 @@
             <infoLink name="Stubborn" id="f55c-8b7e-6be0-98a5" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
             <infoLink name="Flammable" id="e5d2-d4f9-39d4-b9dd" hidden="false" type="rule" targetId="ec58-b231-6a2f-a163"/>
             <infoLink name="Forest Spirit" id="d30e-fd4a-bf0c-1b38" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
-            <infoLink name="Natural Armour (4+)" id="a4d5-d078-71e8-c1ee" hidden="false" type="rule" targetId="6b43-9dda-f589-0509"/>
+            <infoLink name="Natural Armour" id="996d-7f10-8a69-9730" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+              <modifiers>
+                <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
+                <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
+                <modifier type="set" value="Tree Kin" field="annotation"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="Hand Weapon" hidden="false" id="8852-4964-1a0a-ec73" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
@@ -2757,10 +2809,16 @@
             </rule>
           </rules>
           <infoLinks>
-            <infoLink name="Natural Armour (6+)" id="7347-28a4-4e0c-d0a3" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
             <infoLink name="Fly (10)" id="25e2-f96e-4d55-b369" hidden="false" type="rule" targetId="953a-d5a4-ee81-4093"/>
             <infoLink name="Forest Spirit" id="e525-d6b9-c665-e441" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
             <infoLink name="Martial Memories" id="d31d-acbe-26c6-cbc8" hidden="false" type="rule" targetId="4260-7027-c2f1-9a1d"/>
+            <infoLink name="Natural Armour" id="9e58-cb80-8d9f-665a" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+              <modifiers>
+                <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+                <modifier type="set" value="Gossamid Archer" field="annotation"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
@@ -2826,7 +2884,13 @@
             <infoLink name="Devastating Charge" id="6e01-320d-79e0-f6df" hidden="false" type="rule" targetId="e025-10f3-f893-4bd7"/>
             <infoLink name="Fast Cavalry" id="ecd9-4a96-d7ac-d70e" hidden="false" type="rule" targetId="8877-a5de-cc9c-9142"/>
             <infoLink name="Martial Memories" id="0cc3-0362-3772-a747" hidden="false" type="rule" targetId="4260-7027-c2f1-9a1d"/>
-            <infoLink name="Natural Armour (5+)" id="6f53-d23b-0a49-9aec" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
+            <infoLink name="Natural Armour" id="7cbc-b7d1-4bc9-35cb" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+              <modifiers>
+                <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+                <modifier type="set" value="Spiterider Revenant" field="annotation"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Primary Weapon" id="b408-b752-1e1d-7b10" hidden="false" sortIndex="1">
@@ -2866,6 +2930,15 @@
                   </characteristics>
                 </profile>
               </profiles>
+              <infoLinks>
+                <infoLink name="Natural Armour" id="aef2-a62e-0f18-0090" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                  <modifiers>
+                    <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                    <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+                    <modifier type="set" value="Dragonspite" field="annotation"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntry>
@@ -2983,7 +3056,13 @@
             <infoLink name="Stubborn" id="55db-f8f9-4951-b5b8" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
             <infoLink name="Flammable" id="5dcb-f0d6-3958-5bf0" hidden="false" type="rule" targetId="ec58-b231-6a2f-a163"/>
             <infoLink name="Forest Spirit" id="ea1b-140d-1b87-c49a" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
-            <infoLink name="Natural Armour (4+)" id="488c-a29a-7770-7292" hidden="false" type="rule" targetId="6b43-9dda-f589-0509"/>
+            <infoLink name="Natural Armour" id="a36b-83fb-2481-aef3" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+              <modifiers>
+                <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
+                <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
+                <modifier type="set" value="Sylvan Hunter" field="annotation"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
@@ -3041,8 +3120,14 @@
         <infoLink name="Tree Whack" id="8cf4-611e-f386-3e02" hidden="false" type="rule" targetId="a2d1-cbfa-e1ce-6c8f"/>
         <infoLink name="Flammable" id="b7d0-1057-0f76-4754" hidden="false" type="rule" targetId="ec58-b231-6a2f-a163"/>
         <infoLink name="Forest Spirit" id="46b4-d352-3d7a-ba1a" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
-        <infoLink name="Natural Armour (3+)" id="6ca7-fe38-ebb2-4eec" hidden="false" type="rule" targetId="32e8-b4ad-3e59-a3c7"/>
         <infoLink name="Stubborn" id="57ea-04fa-7b0a-1457" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
+        <infoLink name="Natural Armour" id="b708-be12-a793-2518" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="3+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="3+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Treeman" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="2c33-1ccf-dd58-23d8" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -3096,10 +3181,16 @@
         </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Natural Armour (4+)" id="4567-8c9d-11ac-a74a" hidden="false" type="rule" targetId="6b43-9dda-f589-0509"/>
         <infoLink name="Cold-Blooded" id="9a0b-a5c6-0104-113a" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
         <infoLink name="Strider (Forest)" id="ccd9-d755-5e69-5ff3" hidden="false" type="rule" targetId="8d09-c701-2658-67e8"/>
         <infoLink name="Magic Resistance (1)" id="9f1b-257a-747f-d842" hidden="false" type="rule" targetId="7ed4-9d31-09c3-6bf9"/>
+        <infoLink name="Natural Armour" id="4fe0-3afa-bdd6-5f6d" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Zoat" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <rules>
         <rule name="Master of the Vengeful Forest" id="2947-7cc8-1cee-2ee2" hidden="false">
@@ -3186,13 +3277,6 @@
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e554-5948-5cca-886f-max" includeChildSelections="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Spear of Kurnous" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="20b5-eaff-f6c1-83e6">
-                      <characteristics>
-                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
-                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Spear. The Spear of Kurnous gives Orion the Armour Piercing (1) and Multiple Wounds (D3) special rules. In addition, it can be used to make shooting attacks using the same rules as a bolt thrower with the following profile:</characteristic>
-                      </characteristics>
-                    </profile>
                     <profile name="Spear of Kurnous" typeId="781d-35fe-dd22-05d6" typeName="War Machine" hidden="false" id="0ae4-653d-aabc-e63c">
                       <characteristics>
                         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Bolt Thrower</characteristic>
@@ -3202,6 +3286,15 @@
                       </characteristics>
                     </profile>
                   </profiles>
+                  <infoLinks>
+                    <infoLink name="Spear" id="9223-3349-bbfe-06ce" hidden="false" type="profile" targetId="be39-37ac-ac20-5053">
+                      <modifiers>
+                        <modifier type="append" value="The Spear of Kurnous gives Orion the Armour Piercing (1) and Multiple Wounds (D3) special rules." field="de63-d6da-efa8-00ac"/>
+                        <modifier type="set" value="Spear of Kurnous" field="annotation"/>
+                        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Hawk&apos;s Talon" hidden="false" id="f3b9-1768-28e4-9338" sortIndex="3">
                   <constraints>
@@ -3209,11 +3302,12 @@
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3273-6a75-17af-5bbe-max" includeChildSelections="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Hawk&apos;s Talon" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="f847-bb16-79b3-0c6b">
+                    <profile name="Hawk&apos;s Talon" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="f847-bb16-79b3-0c6b">
                       <characteristics>
-                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">36&quot;</characteristic>
-                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">6</characteristic>
-                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Multiple Shots (6)</characteristic>
+                        <characteristic name="Range" typeId="af3c-d805-702c-9af9">36&quot;</characteristic>
+                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">6</characteristic>
+                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">6</characteristic>
+                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -3331,11 +3425,12 @@
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c4f6-6c43-4aa0-520d-max" includeChildSelections="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="The Dart of Doom" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="c487-1e68-d993-1e8f">
+                    <profile name="The Dart of Doom" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="c487-1e68-d993-1e8f">
                       <characteristics>
-                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
-                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. One use only. If the dart hits a model it causes 1 automatic Wound which Ignores Armour saves. If the wound is not saved the dart sucks energy out of the victim, draining their Strength characteristic by D3 to a minimum of 1.</characteristic>
+                        <characteristic name="Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
+                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90"/>
+                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon. One use only. If the dart hits a model it causes 1 automatic Wound which Ignores Armour saves. If the wound is not saved the dart sucks energy out of the victim, draining their Strength characteristic by D3 to a minimum of 1.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -3491,11 +3586,12 @@
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6c2c-db2a-89ce-12ac-max" includeChildSelections="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Talon of Dusk" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="7121-e1fa-cdce-93f2">
+                    <profile name="Talon of Dusk" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="7121-e1fa-cdce-93f2">
                       <characteristics>
-                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">30&quot;</characteristic>
-                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">2</characteristic>
-                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Armour Piercing (1), Multiple Shots (2D6), Poisoned Attacks, Rapid Fire</characteristic>
+                        <characteristic name="Range" typeId="af3c-d805-702c-9af9">30&quot;</characteristic>
+                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">2</characteristic>
+                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3D6</characteristic>
+                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon. Armour Piercing (1), Poisoned Attacks, Rapid Fire</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -3506,11 +3602,12 @@
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d736-9461-07ee-f59c-max" includeChildSelections="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Talon of Dawn" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="e534-f1c6-54ee-fe47">
+                    <profile name="Talon of Dawn" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="e534-f1c6-54ee-fe47">
                       <characteristics>
-                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">30&quot;</characteristic>
-                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">5</characteristic>
-                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Armour Piercing (1), Flaming Attacks, Multiple Wounds (D6)</characteristic>
+                        <characteristic name="Range" typeId="af3c-d805-702c-9af9">30&quot;</characteristic>
+                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
+                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon. Armour Piercing (1), Flaming Attacks, Multiple Wounds (D6)</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -3562,18 +3659,31 @@
               <entryLinks>
                 <entryLink import="true" name="General" hidden="false" id="9cc2-92c0-f291-3213" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="-1"/>
                 <entryLink import="true" name="Light Armour" hidden="false" id="f755-f0c0-6990-2012" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bd54-b906-71e1-0cb2" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="Spear &amp; Shield" hidden="false" id="6c49-98ca-0336-4d87" type="selectionEntry" targetId="aaa7-e3bd-6fea-79c2" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bf1b-e1e5-ce70-4e94" includeChildSelections="false"/>
-                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </entryLink>
                 <entryLink import="true" name="90. Magic Items" hidden="false" id="4f4c-34f2-7861-b1a2" type="selectionEntryGroup" targetId="e1f0-e61a-8c81-4eb0" sortIndex="3">
                   <modifiers>
                     <modifier type="set" value="100" field="d364-5a06-f141-2697"/>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Spear" hidden="false" id="f79f-c746-9647-268c" type="selectionEntry" targetId="a901-4548-955d-623c" sortIndex="1">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f249-8ad8-0bdd-6a4d" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Shield" hidden="false" id="8f6c-dd46-f8a1-ee06" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="2">
+                  <modifiers>
+                    <modifier type="set" value="1" field="3d59-dcea-ec30-dc28">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
                   </modifiers>
                 </entryLink>
               </entryLinks>
@@ -3631,9 +3741,13 @@
                   </modifiers>
                 </entryLink>
                 <entryLink import="true" name="Shield" hidden="false" id="ca5d-522d-281a-7b16" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="12d6-c334-6b16-d3d9" includeChildSelections="false"/>
-                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="1" field="3d59-dcea-ec30-dc28">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </entryLink>
                 <entryLink import="true" name="General" hidden="false" id="0ad0-3b23-8cc6-b601" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="-1"/>
                 <entryLink import="true" name="90. Magic Items" hidden="false" id="dc4a-7a15-db15-24da" type="selectionEntryGroup" targetId="e1f0-e61a-8c81-4eb0" sortIndex="5">
@@ -3653,15 +3767,18 @@
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c6ad-102e-9e78-90b8-min" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c6ad-102e-9e78-90b8-max" includeChildSelections="false"/>
                   </constraints>
-                  <profiles>
-                    <profile name="Spear of Daith" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="fcb9-8520-4b5c-27a6">
-                      <characteristics>
-                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Light lance. The Spear of Daith gives Thalandor a Parry save (5+), even while mounted.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Light Lance" id="bd9a-37b5-0fd0-68de" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb">
+                      <modifiers>
+                        <modifier type="append" value="The Spear of Daith gives Thalandor a Parry save (5+), even while mounted
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
+                        <modifier type="set" value="Spear of Daith" field="annotation"/>
+                        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Talisman of Qwar" hidden="false" id="bc07-e0ac-dc45-6a8c" sortIndex="4">
                   <constraints>
@@ -3702,10 +3819,11 @@
                     <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Special Character, Forest Spirit)</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Unburden of Thieflings" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="b6da-37d2-3e7e-f2fc">
+                <profile name="Unburden of Thieflings" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="b6da-37d2-3e7e-f2fc">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
                     <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">2</characteristic>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
                     <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magical Attacks, Poisoned Attacks, Random Attacks (D6)
 Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit and To Wound as well as -1 to their armour saves until the start of your next turn.</characteristic>
                   </characteristics>
@@ -3747,10 +3865,11 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="34e4-3658-99cf-ada7-max" includeChildSelections="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Sword of Daith" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="867e-084a-37de-a9e9">
+                    <profile name="Sword of Daith" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="867e-084a-37de-a9e9">
                       <characteristics>
-                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
                         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                        <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                        <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
                         <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. This sword allows Durthu to re-roll failed To Hit rolls every turn, not just the first. In addition, he can never lose his Frenzy special rule.</characteristic>
                       </characteristics>
                     </profile>
@@ -3764,8 +3883,14 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
                 <infoLink name="Forest Spirit" id="1e3a-3ab4-c3af-ffba" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
                 <infoLink name="Frenzy" id="897f-ee0b-03ae-29d4" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
                 <infoLink name="Hatred" id="7032-e884-f95d-3de8" hidden="false" type="rule" targetId="f6d7-9fbc-abc1-5cfc"/>
-                <infoLink name="Natural Armour (3+)" id="81aa-2870-9627-7847" hidden="false" type="rule" targetId="32e8-b4ad-3e59-a3c7"/>
                 <infoLink name="Stubborn" id="f15d-4e78-c5f6-2916" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
+                <infoLink name="Natural Armour" id="7046-2462-d308-03dc" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                  <modifiers>
+                    <modifier type="set" value="3+" field="168d-1cc2-66f3-e766"/>
+                    <modifier type="set" value="3+" field="97ea-ecf7-8d24-b2ca"/>
+                    <modifier type="set" value="Durthu Oakhead" field="annotation"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <rules>
                 <rule name="Unburden of Thieflings" id="5c51-8dbb-122b-ad19" hidden="false">
@@ -3851,10 +3976,16 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
                 </selectionEntry>
               </selectionEntries>
               <infoLinks>
-                <infoLink name="Natural Armour (3+)" id="6ae6-da61-c9a5-ef15" hidden="false" type="rule" targetId="32e8-b4ad-3e59-a3c7"/>
                 <infoLink name="Flammable" id="3d2f-8247-74fc-8aa6" hidden="false" type="rule" targetId="ec58-b231-6a2f-a163"/>
                 <infoLink name="Fly (7)" id="fa9c-a596-6beb-4c2a" hidden="false" type="rule" targetId="36ba-3349-99bd-1979"/>
                 <infoLink name="Forest Spirit" id="5812-fd28-182f-69e3" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
+                <infoLink name="Natural Armour" id="a6ba-8d75-a0a4-7b40" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                  <modifiers>
+                    <modifier type="set" value="3+" field="168d-1cc2-66f3-e766"/>
+                    <modifier type="set" value="3+" field="97ea-ecf7-8d24-b2ca"/>
+                    <modifier type="set" value="Belthanos" field="annotation"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <categoryLinks>
                 <categoryLink name="Monster" hidden="false" id="8076-d7f1-62dc-e2d8" targetId="e1a0-da31-05c5-9a15" primary="false"/>
@@ -3922,15 +4053,22 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fe11-af0b-23f0-9bf4-min" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe11-af0b-23f0-9bf4-max" includeChildSelections="false"/>
                   </constraints>
-                  <profiles>
-                    <profile name="Kurnotheal&apos;s Wrath" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="cb77-e828-9a6b-9a36">
-                      <characteristics>
-                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat / 12&quot;</characteristic>
-                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Spear / Javelins. All attacks (both shooting and close combat) made with this weapon may re-roll failed rolls To Hit and have the Multiple Wounds (D3) special rule.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Spear" id="24ff-e1b3-dfe4-ab48" hidden="false" type="profile" targetId="be39-37ac-ac20-5053">
+                      <modifiers>
+                        <modifier type="set" value="Kurnotheal&apos;s Wrath" field="annotation"/>
+                        <modifier type="append" value="All attacks made with this weapon may re-roll failed rolls To Hit and have the Multiple Wounds (D3) special rule.
+" field="de63-d6da-efa8-00ac"/>
+                      </modifiers>
+                    </infoLink>
+                    <infoLink name="Javelins" id="b72a-0ead-bc49-eaf1" hidden="false" type="profile" targetId="3ecc-5d9c-7d29-ee2f">
+                      <modifiers>
+                        <modifier type="set" value="Kurnotheal&apos;s Wrath" field="annotation"/>
+                        <modifier type="append" value="All attacks made with this weapon may re-roll failed rolls To Hit and have the Multiple Wounds (D3) special rule.
+" field="de63-d6da-efa8-00ac"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Verdian Crown" hidden="false" id="8d4b-a120-39ec-3527" sortIndex="5">
                   <constraints>
@@ -3947,10 +4085,16 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
                 </selectionEntry>
               </selectionEntries>
               <infoLinks>
-                <infoLink name="Natural Armour (5+)" id="f729-8651-21e6-8e0a" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
                 <infoLink name="Blessing of the Ancients" id="11d0-8631-e5e8-871e" hidden="false" type="rule" targetId="24fc-80ea-e9a4-b309"/>
                 <infoLink name="Flammable" id="41dc-9b1a-613e-efb1" hidden="false" type="rule" targetId="ec58-b231-6a2f-a163"/>
                 <infoLink name="Forest Spirit" id="1efc-6401-19fc-f89b" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
+                <infoLink name="Natural Armour" id="4110-737d-232f-cdce" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                  <modifiers>
+                    <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
+                    <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
+                    <modifier type="set" value="The Lady of Vines" field="annotation"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <rules>
                 <rule name="Writhing Vines" id="b8b8-83f2-bd84-ca3b" hidden="false">
@@ -4201,10 +4345,11 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7eae-15d8-9d46-0592-max" includeChildSelections="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Runesword of Darkwood" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="f07e-31df-1a20-d7cf">
+                    <profile name="Runesword of Darkwood" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="f07e-31df-1a20-d7cf">
                       <characteristics>
-                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
                         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                        <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                        <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
                         <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. This weapon gives Skarloc the Always Strikes First and Armour Piercing (1) special rules.</characteristic>
                       </characteristics>
                     </profile>
@@ -4259,15 +4404,15 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8a7c-3599-54cb-440c-min" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8a7c-3599-54cb-440c-max" includeChildSelections="false"/>
                   </constraints>
-                  <profiles>
-                    <profile name="The Cape of Feathers" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="005f-bf71-e258-eb2e">
-                      <characteristics>
-                        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766"/>
-                        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">Natural Armour (4+)</characteristic>
-                        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">This armour gives Skaw a 6+ Ward save. In addition, he gains the Natural Armour (4+) special rule against missile attacks.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Natural Armour" id="bd6e-58ad-5f97-b3ba" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                      <modifiers>
+                        <modifier type="set" value="The Cape of Feathers" field="annotation"/>
+                        <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
+                        <modifier type="set" value="Ward save 6+" field="ff58-91e4-84d7-e6e4"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="The Lash of Claws" hidden="false" id="b365-f932-3165-83b4" sortIndex="2">
                   <constraints>
@@ -4288,11 +4433,12 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
                     <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="e2e5-aa2b-d143-6f50-max" includeChildSelections="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Falcons" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="e7ac-7c96-5ba3-c811">
+                    <profile name="Falcons" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="e7ac-7c96-5ba3-c811">
                       <characteristics>
-                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">∞</characteristic>
-                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">3</characteristic>
-                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The enemy unit must take a Weapon Skill test for each falcon targeting them. If faild, it gets hit.</characteristic>
+                        <characteristic name="Range" typeId="af3c-d805-702c-9af9">∞</characteristic>
+                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">3</characteristic>
+                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">The enemy unit must take a Weapon Skill test for each falcon targeting them. If faild, it gets hit.</characteristic>
                       </characteristics>
                     </profile>
                     <profile name="Falcons" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="fa42-dec0-b8c7-64c8">
@@ -4387,11 +4533,12 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="The Binding Bolas" hidden="false" id="4bcb-2530-e88d-8568" sortIndex="2">
                   <profiles>
-                    <profile name="The Binding Bolas" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="b38e-972b-56af-ba4d">
+                    <profile name="The Binding Bolas" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="b38e-972b-56af-ba4d">
                       <characteristics>
-                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">18&quot;</characteristic>
-                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">1</characteristic>
-                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon, Armour Piercing (1), Multiple Shots (2), Sniper
+                        <characteristic name="Range" typeId="af3c-d805-702c-9af9">18&quot;</characteristic>
+                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">1</characteristic>
+                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">2</characteristic>
+                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon, Armour Piercing (1), Sniper
 If a target has Unit Strength 3 or less and is Hit, but not slain, then it is temporarily entangled and cannot move in their next Movement phase. Entangled enemies may be left behind, counting as casualties, or in the case of a Character, as if they had left the unit.</characteristic>
                       </characteristics>
                     </profile>
@@ -4409,11 +4556,17 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
                 <infoLink name="Fear" id="1c09-c4ba-7353-1c62" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
                 <infoLink name="Strider (Forest)" id="58f1-309d-aaed-96fd" hidden="false" type="rule" targetId="8d09-c701-2658-67e8"/>
                 <infoLink name="Mixed Unit" id="3c98-1d94-655d-0d71" hidden="false" type="rule" targetId="e00a-3a09-9b67-e994"/>
-                <infoLink name="Natural Armour (6+)" id="ff2f-b439-785e-f043" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
                 <infoLink name="Wolf" id="ef72-cf90-08b3-6616" hidden="false" type="profile" targetId="271e-4a82-64f5-2cb6"/>
                 <infoLink name="Boar" id="e33e-60bf-f776-5e0c" hidden="false" type="profile" targetId="fcd2-b658-d51d-66b6"/>
                 <infoLink name="Stag" id="3323-6e6b-4977-8580" hidden="false" type="profile" targetId="231b-0f07-72d8-3bc7"/>
                 <infoLink name="Bear" id="0510-34f6-cfcb-75c9" hidden="false" type="profile" targetId="7d0b-b6a8-fc03-48f4"/>
+                <infoLink name="Natural Armour" id="0f8a-f14c-88dd-4c76" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                  <modifiers>
+                    <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                    <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+                    <modifier type="set" value="Gruarth" field="annotation"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <rules>
                 <rule name="Beastmaster" id="6dc4-2cd8-78be-88fd" hidden="false">
@@ -4479,7 +4632,13 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
                 <infoLink name="Flammable" id="b12d-a1e3-4cd9-253c" hidden="false" type="rule" targetId="ec58-b231-6a2f-a163"/>
                 <infoLink name="Forest Spirit" id="82c0-b08f-8f4f-8041" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
                 <infoLink name="Spirit-walk" id="87bb-72d6-c7f5-11f3" hidden="false" type="rule" targetId="f8ff-48a0-94f2-0f3f"/>
-                <infoLink name="Natural Armour (6+)" id="7cdd-0dc8-ac9d-3d6c" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
+                <infoLink name="Natural Armour" id="7202-9db7-7232-b1d9" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                  <modifiers>
+                    <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                    <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+                    <modifier type="set" value="Drycha" field="annotation"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <rules>
                 <rule name="Roused to Wrath" id="d894-dc16-5f3a-694a" hidden="false">
@@ -4546,26 +4705,41 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Asrai Longbow" hidden="false" id="4c0a-8554-3275-b8f2" collective="true">
       <infoLinks>
-        <infoLink name="Asrai Longbow" id="544f-a27b-26de-e2cf" hidden="false" type="profile" targetId="4160-de14-8bb9-e552"/>
+        <infoLink name="Longbow" id="ba32-bab8-de1b-01d5" hidden="false" type="profile" targetId="cde7-c47d-3818-1e9d">
+          <modifiers>
+            <modifier type="set" value="Asrai Longbow" field="annotation"/>
+            <modifier type="append" value="Armour Piercing (1)" field="96b8-546e-ac33-6054" join=", "/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f5d6-041d-79cc-6064" includeChildSelections="false"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Saearath " hidden="false" id="c911-dbfa-5447-fe24" collective="true">
-      <profiles>
-        <profile name="Saearath " typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="8be5-32ea-cdc5-e08b">
-          <characteristics>
-            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">A Saearath can either be used as a normal spear or a spear-stave. A spear-stave follows the normal rules for
-spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting style you want to use at the start of each round of close combat.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="97c2-0d5d-92cf-cd7b" includeChildSelections="false"/>
       </constraints>
+      <infoLinks>
+        <infoLink name="Spear" id="773e-9210-d6be-8015" hidden="false" type="profile" targetId="be39-37ac-ac20-5053">
+          <modifiers>
+            <modifier type="set" value="Saearath" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Spear" id="30aa-ce25-3010-24e5" hidden="false" type="profile" targetId="be39-37ac-ac20-5053">
+          <modifiers>
+            <modifier type="set" value="Saearath" field="annotation"/>
+            <modifier type="set" value="Spear-Stave" field="name"/>
+            <modifier type="set" value="+1" field="ffc4-c065-ab29-fb8c"/>
+            <modifier type="append" value="Requires Two Hands" field="de63-d6da-efa8-00ac"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <rules>
+        <rule name="Saearath" id="180b-9556-1557-0792" hidden="false">
+          <description>You may choose which fighting style you want to use at the start of each round of close comba</description>
+        </rule>
+      </rules>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Warhawk" hidden="false" id="78b4-8144-cce3-2d90" collective="true" subType="mount">
       <profiles>
@@ -4640,17 +4814,26 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Dragon, Forest Spirit)</characteristic>
           </characteristics>
         </profile>
+        <profile name="Soporific Breath" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="e008-08cc-4ef5-0469">
+          <characteristics>
+            <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">2</characteristic>
+            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour saves taken against Wounds caused by Soporific Breath suffer a -3 penalty. All models in a unit that suffers one or more hits from Soporific Breath gain the Stupidity special rule for the remainder of the game.</characteristic>
+          </characteristics>
+        </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Natural Armour (5+)" id="1efc-86b6-3426-72d7" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
         <infoLink name="Fly (7)" id="803f-b1b5-50ed-18e0" hidden="false" type="rule" targetId="36ba-3349-99bd-1979"/>
         <infoLink name="Forest Spirit" id="1753-1512-caec-9931" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
+        <infoLink name="Natural Armour" id="47ca-f36e-839a-fa54" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Forest Dragon" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
-      <rules>
-        <rule name="Soporific Breath" id="21c7-2832-8406-f8bd" hidden="false">
-          <description>A Forest Dragon has a Strength 2 Breath Weapon. Armour saves taken against Wounds caused by Soporific Breath suffer a -3 penalty. All models in a unit that suffers one or more hits from Soporific Breath gain the Stupidity special rule for the remainder of the game.</description>
-        </rule>
-      </rules>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="9c34-4ff1-1459-4c8d" targetId="8b8a-34b1-ed30-df11" primary="false"/>
         <categoryLink name="Monster" hidden="false" id="9b6f-2f43-bb8b-be77" targetId="e1a0-da31-05c5-9a15" primary="false"/>
@@ -4720,7 +4903,14 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
             <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour Save 6+)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Madow Chariot" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="1478-a429-3b6d-85c4">
+          <characteristics>
+            <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+            <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
           </characteristics>
         </profile>
       </profiles>
@@ -5249,11 +5439,12 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Strangleroots" hidden="false" id="36bb-ac79-f6de-50cc">
       <profiles>
-        <profile name="Strangleroots" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="267e-dd77-79b2-3367">
+        <profile name="Strangleroots" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="267e-dd77-79b2-3367">
           <characteristics>
-            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
-            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">5</characteristic>
-            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (D6+1), Quick to Fire, Rapid Fire</characteristic>
+            <characteristic name="Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
+            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
+            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">D6+1</characteristic>
+            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Quick to Fire, Rapid Fire</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5300,11 +5491,10 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
             <conditionGroup type="and">
               <conditions>
                 <condition type="greaterThan" value="0" field="selections" scope="parent" childId="132d-5b9d-02d2-759b" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="8ea6-8723-f5f3-137c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="6a94-8b9c-62e3-a175" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="88f8-1cb9-2c5a-8556" shared="true" includeChildSelections="true"/>
                 <condition type="lessThan" value="1" field="selections" scope="parent" childId="4c0a-8554-3275-b8f2" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="c307-4bbb-81b2-ad9d" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="5dbd-4347-2125-e643" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="15b1-9a83-96cb-b3d3" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="82c7-736d-d5f9-7d01" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5331,11 +5521,10 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
             <conditionGroup type="and">
               <conditions>
                 <condition type="greaterThan" value="0" field="selections" scope="parent" childId="adef-fe2a-a6fb-f76a" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="8ea6-8723-f5f3-137c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="6a94-8b9c-62e3-a175" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="88f8-1cb9-2c5a-8556" shared="true" includeChildSelections="true"/>
                 <condition type="lessThan" value="1" field="selections" scope="parent" childId="4c0a-8554-3275-b8f2" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="c307-4bbb-81b2-ad9d" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="5dbd-4347-2125-e643" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="15b1-9a83-96cb-b3d3" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="82c7-736d-d5f9-7d01" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5362,11 +5551,10 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
             <conditionGroup type="and">
               <conditions>
                 <condition type="greaterThan" value="0" field="selections" scope="parent" childId="b1cb-a34f-98a2-5e6b" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="8ea6-8723-f5f3-137c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="6a94-8b9c-62e3-a175" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="88f8-1cb9-2c5a-8556" shared="true" includeChildSelections="true"/>
                 <condition type="lessThan" value="1" field="selections" scope="parent" childId="4c0a-8554-3275-b8f2" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="c307-4bbb-81b2-ad9d" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="5dbd-4347-2125-e643" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="15b1-9a83-96cb-b3d3" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="82c7-736d-d5f9-7d01" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5393,11 +5581,10 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
             <conditionGroup type="and">
               <conditions>
                 <condition type="greaterThan" value="0" field="selections" scope="parent" childId="70d5-3317-c6ec-4abe" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="8ea6-8723-f5f3-137c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="6a94-8b9c-62e3-a175" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="88f8-1cb9-2c5a-8556" shared="true" includeChildSelections="true"/>
                 <condition type="lessThan" value="1" field="selections" scope="parent" childId="4c0a-8554-3275-b8f2" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="c307-4bbb-81b2-ad9d" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="5dbd-4347-2125-e643" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="15b1-9a83-96cb-b3d3" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="82c7-736d-d5f9-7d01" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5424,11 +5611,10 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
             <conditionGroup type="and">
               <conditions>
                 <condition type="greaterThan" value="0" field="selections" scope="parent" childId="2a96-d816-be2f-3e1e" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="8ea6-8723-f5f3-137c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="6a94-8b9c-62e3-a175" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="88f8-1cb9-2c5a-8556" shared="true" includeChildSelections="true"/>
                 <condition type="lessThan" value="1" field="selections" scope="parent" childId="4c0a-8554-3275-b8f2" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="c307-4bbb-81b2-ad9d" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="5dbd-4347-2125-e643" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="15b1-9a83-96cb-b3d3" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="82c7-736d-d5f9-7d01" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5455,11 +5641,10 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
             <conditionGroup type="and">
               <conditions>
                 <condition type="greaterThan" value="0" field="selections" scope="parent" childId="c884-06b0-eeb8-a206" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="8ea6-8723-f5f3-137c" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="6a94-8b9c-62e3-a175" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="parent" childId="88f8-1cb9-2c5a-8556" shared="true" includeChildSelections="true"/>
                 <condition type="lessThan" value="1" field="selections" scope="parent" childId="4c0a-8554-3275-b8f2" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="c307-4bbb-81b2-ad9d" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="5dbd-4347-2125-e643" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="15b1-9a83-96cb-b3d3" shared="true" includeChildSelections="true"/>
-                <condition type="lessThan" value="1" field="selections" scope="parent" childId="82c7-736d-d5f9-7d01" shared="true" includeChildSelections="true"/>
               </conditions>
             </conditionGroup>
           </conditionGroups>
@@ -5533,11 +5718,12 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
             </rule>
           </rules>
           <profiles>
-            <profile name="A Murder of Spites" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="7de3-7049-cca7-9727">
+            <profile name="A Murder of Spites" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="7de3-7049-cca7-9727">
               <characteristics>
-                <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
                 <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">2</characteristic>
-                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magical Attacks, Poisoned Attacks, Random Attacks (D6)</characteristic>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c">Random Attacks (D6)</characteristic>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magical Attacks, Poisoned Attacks.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5593,11 +5779,12 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
             </rule>
           </rules>
           <profiles>
-            <profile name="A Muster of Malevolents" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="23af-1c6b-c94a-fe50">
+            <profile name="A Muster of Malevolents" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="23af-1c6b-c94a-fe50">
               <characteristics>
-                <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
-                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">2</characteristic>
-                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magical Attacks, Multiple Shots (D6), Poisoned Attacks, Quick to Fire, Rapid Fire</characteristic>
+                <characteristic name="Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
+                <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">2</characteristic>
+                <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">D6</characteristic>
+                <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magical Attacks, Poisoned Attacks, Quick to Fire, Rapid Fire</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5641,11 +5828,12 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
             </rule>
           </rules>
           <profiles>
-            <profile name="A Pageant of Shrikes" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="7a67-7477-1827-ffc6">
+            <profile name="A Pageant of Shrikes" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="7a67-7477-1827-ffc6">
               <characteristics>
-                <characteristic name="Range" typeId="59f2-3142-82d5-4f43">18&quot;</characteristic>
-                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magical Attacks, Slow to Fire, Sniper</characteristic>
+                <characteristic name="Range" typeId="af3c-d805-702c-9af9">18&quot;</characteristic>
+                <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
+                <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magical Attacks, Slow to Fire, Sniper</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5697,15 +5885,6 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
         <selectionEntryGroup name="Magic Weapons" id="db4d-49ed-07ad-29ca" hidden="false" defaultSelectionEntryId="none" collapsible="true" sortIndex="2">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Rageth&apos;s Wildfire Blades" hidden="false" id="46b8-118f-7f4d-e3ff" sortIndex="1">
-              <profiles>
-                <profile name="Rageth&apos;s Wildfire Blades" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="3076-f18d-298a-368f">
-                  <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Two hand weapons. Rageth&apos;s Wildfire Blades give the wielder the Flaming Attacks special rule.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
@@ -5717,7 +5896,9 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
                   <modifiers>
                     <modifier type="set" value="Rageth&apos;s Wildfire Blades" field="annotation"/>
                     <modifier type="append" value=" Rageth&apos;s Wildfire Blades give the wielder the Flaming Attacks special rule.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -5729,58 +5910,13 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Asyendi&apos;s Bane" hidden="false" id="82c7-736d-d5f9-7d01" sortIndex="2">
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b0d0-5d9c-3803-2e3a" includeChildSelections="true"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Asrai Longbow" id="dbee-473b-0ac7-f268" hidden="false" type="profile" targetId="4160-de14-8bb9-e552">
-                  <modifiers>
-                    <modifier type="set" value="Asyendi&apos;s Bane" field="annotation"/>
-                    <modifier type="append" value="This weapon allows the wielder to re-roll all failed rolls To Hit. However, if the shot still misses after this re-roll, then they suffer a Strength 3 hit." field="de63-d6da-efa8-00ac"/>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d322-2bd1-e64a-12c2" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Starcaster Longbow" hidden="false" id="15b1-9a83-96cb-b3d3" sortIndex="3">
-              <costs>
-                <cost name="pts" typeId="points" value="15"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="baed-74bb-fea0-0ab5" includeChildSelections="true"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Asrai Longbow" id="a2d2-65c8-b247-a7b3" hidden="false" type="profile" targetId="4160-de14-8bb9-e552">
-                  <modifiers>
-                    <modifier type="set" value="Starcaster Longbow" field="annotation"/>
-                    <modifier type="append" value="All shots from this bow have the Multiple Wounds (D3) special rule. On a To Wound roll of a natural 6, that shot has the Multiple Wounds (D6) special rule instead." field="de63-d6da-efa8-00ac"/>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d322-2bd1-e64a-12c2" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Splinterbirch Blade" hidden="false" id="065a-0593-92cb-c04c" sortIndex="4">
               <profiles>
-                <profile name="Splinterbirch Blade" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="79c3-be36-950e-a770">
+                <profile name="Splinterbirch Blade" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="79c3-be36-950e-a770">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43"/>
                     <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
                     <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Whenever an enemy model makes a successful save against Wounds caused by this blade, they suffer an additional D6 Strength 1 Hits.</characteristic>
                   </characteristics>
                 </profile>
@@ -5794,10 +5930,11 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="The Sword of a Thousand Winters" hidden="false" id="0b0a-3023-e8dc-0bf3" sortIndex="5">
               <profiles>
-                <profile name="The Sword of a Thousand Winters" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="0e18-0368-cba7-7d1a">
+                <profile name="The Sword of a Thousand Winters" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="0e18-0368-cba7-7d1a">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
                     <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
                     <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Sword of a Thousand Winters gives the bearer the Ice Attacks special rule. In addition, Characters and Monsters must take a Toughness test for each unsaved wound suffered by the Sword of a Thousand Winters For every test failed, they suffer -1 Strength, Initiative and Attacks for the remainder of the game.</characteristic>
                   </characteristics>
                 </profile>
@@ -5832,7 +5969,9 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
                 <infoLink name="Spear" id="44f0-77e4-4563-bbb5" hidden="false" type="profile" targetId="be39-37ac-ac20-5053">
                   <modifiers>
                     <modifier type="set" value="The Spear of Twilight" field="annotation"/>
-                    <modifier type="append" value="The Spear of Twilight gives the wielder the Killing Blow special rule." field="de63-d6da-efa8-00ac"/>
+                    <modifier type="append" value="The Spear of Twilight gives the wielder the Killing Blow special rule." field="de63-d6da-efa8-00ac" join="
+
+"/>
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="parent" childId="mount" shared="true" includeChildSelections="true"/>
@@ -5843,7 +5982,9 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
                 <infoLink name="Light Lance" id="af16-9bc0-44b5-8287" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb">
                   <modifiers>
                     <modifier type="set" value="The Spear of Twilight" field="annotation"/>
-                    <modifier type="append" value="The Spear of Twilight gives the wielder the Killing Blow special rule." field="de63-d6da-efa8-00ac"/>
+                    <modifier type="append" value="The Spear of Twilight gives the wielder the Killing Blow special rule." field="de63-d6da-efa8-00ac" join="
+
+"/>
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
                         <condition type="lessThan" value="1" field="selections" scope="parent" childId="mount" shared="true" includeChildSelections="true"/>
@@ -5881,7 +6022,9 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
                 <infoLink name="Light Lance" id="7cda-e094-b6b2-b7ba" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb">
                   <modifiers>
                     <modifier type="set" value="Spear of the Hunt" field="annotation"/>
-                    <modifier type="append" value="This item gives the wielder the Armour Piercing (1) special rule. In addition, they and any unit they are with may re-roll 1 for their charge distance." field="de63-d6da-efa8-00ac"/>
+                    <modifier type="append" value="This item gives the wielder the Armour Piercing (1) special rule. In addition, they and any unit they are with may re-roll 1 for their charge distance." field="de63-d6da-efa8-00ac" join="
+
+"/>
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
                         <condition type="lessThan" value="1" field="selections" scope="parent" childId="mount" shared="true" includeChildSelections="true"/>
@@ -5892,7 +6035,9 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
                 <infoLink name="Spear" id="fb0f-74b3-1a2e-fa77" hidden="false" type="profile" targetId="be39-37ac-ac20-5053">
                   <modifiers>
                     <modifier type="set" value="Spear of the Hunt" field="annotation"/>
-                    <modifier type="append" value="This item gives the wielder the Armour Piercing (1) special rule. In addition, they and any unit they are with may re-roll 1 for their charge distance." field="de63-d6da-efa8-00ac"/>
+                    <modifier type="append" value="This item gives the wielder the Armour Piercing (1) special rule. In addition, they and any unit they are with may re-roll 1 for their charge distance." field="de63-d6da-efa8-00ac" join="
+
+"/>
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="parent" childId="mount" shared="true" includeChildSelections="true"/>
@@ -5904,11 +6049,12 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Greenwood Gladius" hidden="false" id="a0ed-94f0-ddbf-1620" sortIndex="8">
               <profiles>
-                <profile name="Greenwood Gladius" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="35ba-dc20-c321-a626">
+                <profile name="Greenwood Gladius" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="35ba-dc20-c321-a626">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
                     <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The wielder of this item gains +D3 Attacks, rolled at the start of each round of close combat.</characteristic>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c">+D3</characteristic>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5943,63 +6089,20 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
                   <modifiers>
                     <modifier type="set" value="Blades of Loec" field="annotation"/>
                     <modifier type="append" value="The Blades of Loec allow the wielder to re-roll failed rolls To Wound.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Bow of Loren" hidden="false" id="5dbd-4347-2125-e643" sortIndex="10">
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d4ef-9419-1650-6869" includeChildSelections="true"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Asrai Longbow" id="c27e-65c3-ffc2-a15c" hidden="false" type="profile" targetId="4160-de14-8bb9-e552">
-                  <modifiers>
-                    <modifier type="set" value="The Bow of Loren" field="annotation"/>
-                    <modifier type="append" value="All shots from the Bow of Loren are resolved at Strength 4 with Multiple Shots (A) special rule. Multiple Shots (A) means the bow fires a number of shots equal to the wielder’s Attacks characteristic. It cannot fire enchanted arrows." field="de63-d6da-efa8-00ac"/>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d322-2bd1-e64a-12c2" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Hunter&apos;s Talon" hidden="false" id="c307-4bbb-81b2-ad9d" sortIndex="11">
-              <costs>
-                <cost name="pts" typeId="points" value="25"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2a5e-9ba7-341d-361e" includeChildSelections="true"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Asrai Longbow" id="2d10-f5f1-8ea3-d762" hidden="false" type="profile" targetId="4160-de14-8bb9-e552">
-                  <modifiers>
-                    <modifier type="set" value="The Hunter&apos;s Talon" field="annotation"/>
-                    <modifier type="append" value="The Hunter&apos;s Talon gives the wielder the Sniper special rule." field="de63-d6da-efa8-00ac"/>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d322-2bd1-e64a-12c2" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="The Callach&apos;s Claw" hidden="false" id="4033-c3d2-7ef2-84d9" sortIndex="12">
               <profiles>
-                <profile name="The Callach&apos;s Claw" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="908d-e175-59ea-8135">
+                <profile name="The Callach&apos;s Claw" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="908d-e175-59ea-8135">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43"/>
                     <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
                     <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Any unit suffering one or more unsaved wounds from the Callach&apos;s Claw suffers a -2 penalty to their Leadership for the remainder of the Combat phase.</characteristic>
                   </characteristics>
                 </profile>
@@ -6034,7 +6137,9 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
                 <infoLink name="Spear" id="94a1-4d21-ed90-5dee" hidden="false" type="profile" targetId="be39-37ac-ac20-5053">
                   <modifiers>
                     <modifier type="set" value="The Dawnspear" field="annotation"/>
-                    <modifier type="append" value="If the wielder of the Dawnspear causes an unsaved wound on an enemy, then all enemy models in that unit that have not yet attacked suffer -1 To Hit in this round of close combat." field="de63-d6da-efa8-00ac"/>
+                    <modifier type="append" value="If the wielder of the Dawnspear causes an unsaved wound on an enemy, then all enemy models in that unit that have not yet attacked suffer -1 To Hit in this round of close combat." field="de63-d6da-efa8-00ac" join="
+
+"/>
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="parent" childId="mount" shared="true" includeChildSelections="true"/>
@@ -6045,7 +6150,9 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
                 <infoLink name="Light Lance" id="4631-c2c2-1e67-4849" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb">
                   <modifiers>
                     <modifier type="set" value="The Dawnspear" field="annotation"/>
-                    <modifier type="append" value="If the wielder of the Dawnspear causes an unsaved wound on an enemy, then all enemy models in that unit that have not yet attacked suffer -1 To Hit in this round of close combat." field="de63-d6da-efa8-00ac"/>
+                    <modifier type="append" value="If the wielder of the Dawnspear causes an unsaved wound on an enemy, then all enemy models in that unit that have not yet attacked suffer -1 To Hit in this round of close combat." field="de63-d6da-efa8-00ac" join="
+
+"/>
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
                         <condition type="lessThan" value="1" field="selections" scope="parent" childId="mount" shared="true" includeChildSelections="true"/>
@@ -6057,10 +6164,11 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Daith&apos;s Reaper" hidden="false" id="65d4-76e0-1abd-5c76" sortIndex="14">
               <profiles>
-                <profile name="Daith&apos;s Reaper" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="88af-189e-e01a-37f9">
+                <profile name="Daith&apos;s Reaper" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="88af-189e-e01a-37f9">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43"/>
                     <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
                     <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">All failed To Hit and To Wound rolls made with Daith&apos;s Reaper must be re-rolled, as must all successful armour saves taken against Wounds caused by this weapon.</characteristic>
                   </characteristics>
                 </profile>
@@ -6074,10 +6182,11 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="The Spirit Sword" hidden="false" id="6a56-9279-9d43-4154" sortIndex="15">
               <profiles>
-                <profile name="The Spirit Sword" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="01d1-66f7-43da-3fa5">
+                <profile name="The Spirit Sword" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="01d1-66f7-43da-3fa5">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43"/>
                     <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
                     <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour saves cannot be taken against Wounds caused by the Spirit Sword. Furthermore, immediately when an enemy single model unit (that is not an Animated Construct) or Character suffers one or more unsaved Wounds from the Spirit Sword, both they and the wielder must roll 2D6 and add their respective Leadership values. If the wounded model’s total is higher, or the totals are the same, nothing else happens. If the wounded model’s total is lower, it immediately suffers a Wound which Ignores Armour Saves for each point by which its total was exceeded.</characteristic>
                   </characteristics>
                 </profile>
@@ -6088,6 +6197,130 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8b1c-5e09-bc68-9e63" includeChildSelections="true"/>
               </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Asyendi&apos;s Bane" hidden="false" id="8ea6-8723-f5f3-137c" sortIndex="2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5be1-c869-b1cc-9c0b" includeChildSelections="true"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Longbow" id="5f1f-8343-d643-9052" hidden="false" type="profile" targetId="cde7-c47d-3818-1e9d">
+                  <modifiers>
+                    <modifier type="set" value="Asrai Longbow, Asyendi&apos;s Bane" field="annotation"/>
+                    <modifier type="append" value="Armour Piercing (1)
+
+This weapon allows the wielder to re-roll all failed rolls To Hit. However, if the shot still misses after this re-roll, then they suffer a Strength 3 hit." field="96b8-546e-ac33-6054"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d322-2bd1-e64a-12c2" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Starcaster Longbow" hidden="false" id="6a94-8b9c-62e3-a175" sortIndex="3">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="33f8-aea2-fb09-7bb4" includeChildSelections="true"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Longbow" id="b7b6-4975-474b-5edd" hidden="false" type="profile" targetId="cde7-c47d-3818-1e9d">
+                  <modifiers>
+                    <modifier type="set" value="Asrai Longbow, Starcaster Longbow" field="annotation"/>
+                    <modifier type="append" value="Armour Piercing (1)
+
+All shots from this bow have the Multiple Wounds (D3) special rule. On a To Wound roll of a natural 6, that shot has the Multiple Wounds (D6) special rule instead.
+" field="96b8-546e-ac33-6054"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d322-2bd1-e64a-12c2" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="The Bow of Loren" hidden="false" id="7c1a-ea68-71e3-3128" sortIndex="10">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8df1-a55b-ab24-b499" includeChildSelections="true"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Longbow" id="01bc-4b2e-ad27-0626" hidden="false" type="profile" targetId="cde7-c47d-3818-1e9d">
+                  <modifiers>
+                    <modifier type="set" value="Asrai Longbow, The Bow of Loren" field="annotation"/>
+                    <modifier type="append" value="Armour Piercing (1)
+
+*The Bow of Loren fires a number of shots equal to the wielder’s Attacks characteristic. It cannot fire enchanted arrows.
+" field="96b8-546e-ac33-6054"/>
+                    <modifier type="set" value="A*" field="b886-975e-beb1-f6ca"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d322-2bd1-e64a-12c2" shared="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="add" value="{this} cannot fire enchanted arrows." field="warning">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="greaterThan" value="0" field="selections" scope="root-entry" childId="132d-5b9d-02d2-759b" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="8ea6-8723-f5f3-137c" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="6a94-8b9c-62e3-a175" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="88f8-1cb9-2c5a-8556" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="7c1a-ea68-71e3-3128" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="4c0a-8554-3275-b8f2" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="The Hunter&apos;s Talon" hidden="false" id="88f8-1cb9-2c5a-8556" sortIndex="11">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="154f-288c-6350-6efb" includeChildSelections="true"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Longbow" id="287c-baaa-a595-e977" hidden="false" type="profile" targetId="cde7-c47d-3818-1e9d">
+                  <modifiers>
+                    <modifier type="set" value="Asrai Longbow, The Hunter&apos;s Talon" field="annotation"/>
+                    <modifier type="append" value="Armour Piercing (1)
+
+The Hunter&apos;s Talon gives the wielder the Sniper special rule.
+" field="96b8-546e-ac33-6054"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d322-2bd1-e64a-12c2" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="pts" typeId="points" value="25"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
           <constraints>
@@ -6142,11 +6375,11 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c9bf-a6c7-049f-a812" includeChildSelections="true"/>
               </constraints>
               <profiles>
-                <profile name="The Helm of the Hunt" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="ba6b-e229-f8b3-40cf">
+                <profile name="The Helm of the Hunt" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="ba6b-e229-f8b3-40cf">
                   <characteristics>
-                    <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
-                    <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                    <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Wild Hunter only. This item gives the wearer a 6+ armour save. In addition, they may re-roll To Hit in turns that they successfully charge into combat.</characteristic>
+                    <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+                    <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+                    <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Wild Hunter only. the Waerer may re-roll To Hit in turns that they successfully charge into combat.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6276,15 +6509,6 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="598e-a72d-d283-a843" includeChildSelections="true"/>
               </constraints>
-              <profiles>
-                <profile name="Armour of the Fey" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="8bc3-32ce-ce5a-6f90">
-                  <characteristics>
-                    <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                    <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                    <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Light armour. The Armour of the Fey gives the Ward Save (4+) special rule against Magical Attacks.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
@@ -6325,10 +6549,15 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Hail Arrow of Doom" hidden="false" id="f621-923e-a870-5ec1" sortIndex="10">
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="4c0a-8554-3275-b8f2" shared="true" includeChildSelections="true"/>
-                  </conditions>
+                <modifier type="add" value="You need an Asrai Longbow to use {this}" field="warning">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="greaterThan" value="0" field="selections" scope="parent" childId="f621-923e-a870-5ec1" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="4c0a-8554-3275-b8f2" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <profiles>
@@ -6337,11 +6566,12 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
                     <characteristic name="Effect" typeId="042b-d7d7-12f4-63c8">One use only. Model with Asrai longbow only. The Hail of Doom arrow can be used instead of making a Shooting attack with the bearer’s Asrai longbow, though it cannot be used with the Sniper rule. Declare that the Hail of Doom Arrow is being used before any dice are rolled.</characteristic>
                   </characteristics>
                 </profile>
-                <profile name="Hail Arrow of Doom" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="3194-faee-db45-9cee">
+                <profile name="Hail Arrow of Doom" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="3194-faee-db45-9cee">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">30&quot;</characteristic>
-                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (3D6)</characteristic>
+                    <characteristic name="Range" typeId="af3c-d805-702c-9af9"/>
+                    <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
+                    <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3D6</characteristic>
+                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6354,10 +6584,15 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Dragontooth Arrows" hidden="false" id="e2be-f8e0-62bb-4278" sortIndex="1">
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="4c0a-8554-3275-b8f2" shared="true" includeChildSelections="true"/>
-                  </conditions>
+                <modifier type="add" value="You need an Asrai Longbow to use {this}" field="warning">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="greaterThan" value="0" field="selections" scope="parent" childId="e2be-f8e0-62bb-4278" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="4c0a-8554-3275-b8f2" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <profiles>
@@ -6376,10 +6611,15 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Arrows of Potency" hidden="false" id="d2a4-50c2-e09e-274e" sortIndex="3">
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="4c0a-8554-3275-b8f2" shared="true" includeChildSelections="true"/>
-                  </conditions>
+                <modifier type="add" value="You need an Asrai Longbow to use {this}" field="warning">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="greaterThan" value="0" field="selections" scope="parent" childId="d2a4-50c2-e09e-274e" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="4c0a-8554-3275-b8f2" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
               <profiles>
@@ -6411,10 +6651,15 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="4c0a-8554-3275-b8f2" shared="true" includeChildSelections="true"/>
-                  </conditions>
+                <modifier type="add" value="You need an Asrai Longbow to use {this}" field="warning">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="greaterThan" value="0" field="selections" scope="parent" childId="1a77-f639-7b8d-4e04" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="4c0a-8554-3275-b8f2" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </selectionEntry>
@@ -6957,6 +7202,9 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.16a0-7be6-7f1e-f0fa.profiles.Armour Save"/>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.db4d-49ed-07ad-29ca.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.db4d-49ed-07ad-29ca.profiles.Ranged Weapon"/>
       </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="Magic Standards" id="d171-04b0-1d99-36fb" hidden="false">
@@ -7198,22 +7446,22 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
         <characteristic name="Effect" typeId="4869-1d85-a5f6-cc2c">All close combat attacks against the model suffer -1 To Hit.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Stag" typeId="4600-9df5-127d-c2c7" typeName="Animal Form" hidden="false" id="231b-0f07-72d8-3bc7">
+    <profile name="Stag" typeId="4600-9df5-127d-c2c7" typeName="Animal Form" hidden="false" id="231b-0f07-72d8-3bc7" noindex="true">
       <characteristics>
         <characteristic name="Effect" typeId="8607-1877-d6d8-100e">The model gains the Impact Hits (1) special rule with Strength Bonus (1).</characteristic>
       </characteristics>
     </profile>
-    <profile name="Bear" typeId="4600-9df5-127d-c2c7" typeName="Animal Form" hidden="false" id="7d0b-b6a8-fc03-48f4">
+    <profile name="Bear" typeId="4600-9df5-127d-c2c7" typeName="Animal Form" hidden="false" id="7d0b-b6a8-fc03-48f4" noindex="true">
       <characteristics>
         <characteristic name="Effect" typeId="8607-1877-d6d8-100e">The model gains +1 Strength.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Boar" typeId="4600-9df5-127d-c2c7" typeName="Animal Form" hidden="false" id="fcd2-b658-d51d-66b6">
+    <profile name="Boar" typeId="4600-9df5-127d-c2c7" typeName="Animal Form" hidden="false" id="fcd2-b658-d51d-66b6" noindex="true">
       <characteristics>
         <characteristic name="Effect" typeId="8607-1877-d6d8-100e">The model gains +1 Toughness.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Wolf" typeId="4600-9df5-127d-c2c7" typeName="Animal Form" hidden="false" id="271e-4a82-64f5-2cb6">
+    <profile name="Wolf" typeId="4600-9df5-127d-c2c7" typeName="Animal Form" hidden="false" id="271e-4a82-64f5-2cb6" noindex="true">
       <characteristics>
         <characteristic name="Effect" typeId="8607-1877-d6d8-100e">The model gains +1 Attack and the Armour Piercing (1) special rule.</characteristic>
       </characteristics>
@@ -7230,13 +7478,6 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry (Wood Elf)</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="Asrai Longbow" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="4160-de14-8bb9-e552">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">30&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">3</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (2) (Only applies in turns the model has not moved. Cannot be used as a charge reaction.). Volley Fire, Armour Piercing (1).</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
@@ -7285,4 +7526,9 @@ spears, but Requires Two Hands and adds +1 Attack. You may choose which fighting
     <categoryEntry name="Y Asrai Longbow" id="d322-2bd1-e64a-12c2" hidden="false"/>
     <categoryEntry name="Forest Spirit" id="97e1-639e-c76c-da93" hidden="false"/>
   </categoryEntries>
+  <rules>
+    <rule name="Ambush from the Worldroots" id="b0df-5ac8-041a-a623" hidden="false">
+      <description>A Wood Elf army can always place an additional forest no more than 12&quot; in diameter on the battlefield. This is done during deployment, before any units are deployed, and must be placed wholly in your half of the battlefield. Declare which type of forest it is then you place it. If you cannot fit the forest on your half of the table, move other terrain features by the shortest distance necessary so that the forest can be placed. If you still cannot place the forest, or if the scenario means that the Wood Elf army does not have a table half in which to deploy, this additional forest is not used in this battle.</description>
+    </rule>
+  </rules>
 </catalogue>

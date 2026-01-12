@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="7528-1253-7f77-23d6" name="High Elves WAP 1.62" revision="36" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="38" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="7528-1253-7f77-23d6" name="High Elves WAP 1.62" revision="37" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="38" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://discordapp.com/invite/UrrPB3T</readme>
   <profileTypes>
     <profileType id="d410-463a-8132-795f" name="Attuned to Magic table">
@@ -980,9 +980,13 @@
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="976e-0ae6-d48b-c09a" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Heavy Armour" hidden="false" id="4e30-98b6-417e-108e" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b96a-d039-4694-7ba9"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2a65-3a21-af86-6ae3">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -1051,9 +1055,13 @@
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="fbdc-cd4a-faf6-a579" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Heavy Armour" hidden="false" id="d9ba-d2de-b72d-8490" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c0ba-93af-9431-4894"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2a65-3a21-af86-6ae3">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -1912,9 +1920,13 @@
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="4d9e-2e2c-98cb-a9cc" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="2020-89d0-9a54-1604" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="32f3-d3a1-c89a-f713"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -3083,6 +3095,7 @@
     <selectionEntry id="51dc-ae5a-1b89-49c2" name="Lion Chariot of Chrace" hidden="false" collective="false" import="true" type="model" sortIndex="206">
       <infoLinks>
         <infoLink id="9fbe-a8ca-55d5-3b84" name="Lion Chariot" hidden="false" targetId="4bf3-d4fb-ece4-3582" type="profile"/>
+        <infoLink id="4975-1b27-2b3c-6be2" name="Lion Chariot" hidden="false" targetId="d25e-2fba-d9c9-9e04" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="4a87-214e-5c48-4809" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -3120,6 +3133,7 @@
           </constraints>
           <infoLinks>
             <infoLink id="5c8c-ee40-4001-b0d8" name="Tiranoc Chariot" hidden="false" targetId="4544-1720-a510-78b5" type="profile"/>
+            <infoLink id="0888-80cf-e324-4b2f" name="Tiranoc Chariot" hidden="false" targetId="a672-7ce7-28bc-6a85" type="profile"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="70"/>
@@ -3613,7 +3627,7 @@
       </profiles>
       <infoLinks>
         <infoLink name="Bolt Thrower" id="4b34-880b-a985-7331" hidden="false" type="profile" targetId="2d26-2a21-00a2-685d"/>
-        <infoLink name="Firing a Blot Thrower" id="0db9-ac8d-470c-d0fb" hidden="false" type="rule" targetId="f55b-b981-fae7-afa2"/>
+        <infoLink name="Firing a Bolt Thrower" id="0db9-ac8d-470c-d0fb" hidden="false" type="rule" targetId="f55b-b981-fae7-afa2"/>
         <infoLink name="Repeater Bolt Thrower" id="ccfb-3f1b-8fa1-88a9" hidden="false" type="profile" targetId="9765-f312-5a8b-5cb8"/>
       </infoLinks>
       <categoryLinks>
@@ -4103,7 +4117,13 @@
       <infoLinks>
         <infoLink id="078c-c46c-0da2-bb49" name="Aquatic" hidden="false" targetId="3667-691b-abd9-7da6" type="rule"/>
         <infoLink id="db14-a2bf-3754-4954" name="Regeneration (4+)" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
-        <infoLink id="07b1-5047-fcb3-3516" name="Natural Armour (3+)" hidden="false" targetId="32e8-b4ad-3e59-a3c7" type="rule"/>
+        <infoLink name="Natural Armour" id="76c8-d235-bc76-5ed1" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="3+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="3+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="Merwyrm" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b629-dd53-1966-63bb" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -4176,11 +4196,12 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="6552-4d96-df09-0b1b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Sword of Teclis" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="8d01-c21a-5c9f-db7a" publicationId="9e23-79cb-pubN77092" page="37">
+                        <profile name="Sword of Teclis" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="8d01-c21a-5c9f-db7a" publicationId="9e23-79cb-pubN77092" page="37">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">All hits from the Sword of Teclis wound on a 2+, and Wounds caused by it Ignore Armour saves.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">MAgic Weapon. All hits from the Sword of Teclis wound on a 2+, and Wounds caused by it Ignore Armour saves.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -4559,11 +4580,20 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c337-14b5-a785-b770" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Sunfang" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="9b16-bfe0-38c7-9eee" publicationId="9e23-79cb-pubN77092" page="36">
+                        <profile name="Sunfang" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="9b16-bfe0-38c7-9eee" publicationId="9e23-79cb-pubN77092" page="36">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+3</characteristic>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Hits from Sunfang have Flaming Attacks. In addition, Sunfang&apos;s bearer can make a S 3 Breath Weapon attack once per game. Hits from this attack are magical, and have the Flaming Attacks.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+3</characteristic>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Hits from Sunfang have the Flaming Attacks special rule.</characteristic>
+                          </characteristics>
+                        </profile>
+                        <profile name="Sunfang" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="a470-34d3-423a-0818" publicationId="9e23-79cb-pubN77092" page="36">
+                          <characteristics>
+                            <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+                            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">3</characteristic>
+                            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">One use Only. Hits from this attack are magical, and have the Flaming Attacks special rule.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -4576,18 +4606,22 @@
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="7cd6-00ac-a6e0-21dd" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="6c64-c2ad-aa7b-cd1f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Dragon Armour of Aenarion" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="9215-9c1f-0fb0-028f" publicationId="9e23-79cb-pubN77092" page="36">
-                          <characteristics>
-                            <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                            <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                            <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Dragon armour. The Dragon Armour of Aenarion grants Tyrion a +1 armour save, as well as Ward save (4+).</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Heavy Armour" id="9abc-fa47-9b44-9aef" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
+                          <modifiers>
+                            <modifier type="set" value="Dragon Armour of Aenarion" field="annotation"/>
+                            <modifier type="append" value="Ward save (4+)" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                            <modifier type="set" value="1+" field="168d-1cc2-66f3-e766"/>
+                            <modifier type="set" value="1+" field="97ea-ecf7-8d24-b2ca"/>
+                            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Heart of Avelorn" hidden="false" id="af1e-d0c7-8fbb-1f07" collective="false">
                       <constraints>
@@ -4673,12 +4707,14 @@
                       </rules>
                       <infoLinks>
                         <infoLink name="Fly (7)" id="d3f6-7532-8a17-6d1d" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
-                        <infoLink name="Fiery Breath" id="35a7-020f-7481-50e2" hidden="false" targetId="222e-52ff-ae92-083d" type="rule"/>
-                        <infoLink name="Natural Armour (3+)" id="2763-94c0-c396-5c78" hidden="false" targetId="32e8-b4ad-3e59-a3c7" type="rule">
+                        <infoLink name="Natural Armour" id="bf73-155e-0e0d-0421" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
                           <modifiers>
-                            <modifier type="set" value="From Mount" field="annotation"/>
+                            <modifier type="set" value="3+" field="97ea-ecf7-8d24-b2ca"/>
+                            <modifier type="set" value="3+" field="168d-1cc2-66f3-e766"/>
+                            <modifier type="set" value="Minaithir" field="annotation"/>
                           </modifiers>
                         </infoLink>
+                        <infoLink name="Fiery Breath" id="d982-954b-23d1-c99d" hidden="false" type="profile" targetId="7dac-6edd-dd55-b79c"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
@@ -4701,18 +4737,20 @@
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="f50c-8fd6-79c6-72bf" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f25b-7f74-b655-0da1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Star Lance" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="2a3d-af25-6a2d-5124" publicationId="9e23-79cb-pubN77092" page="43">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Heavy lance. Imrik gains the Mighty Blow (1) and Ignores Armour saves special rules when charging.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Heavy Lance" id="c42c-f7cc-0415-d7f2" hidden="false" type="profile" targetId="e56e-fedf-c550-5d81">
+                          <modifiers>
+                            <modifier type="set" value="Star Lance" field="annotation"/>
+                            <modifier type="append" value="Imrik gains the Mighty Blow (1) and Ignores Armour saves special rules when charging." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Armour of Caledor" hidden="false" id="cec2-8ca0-996d-27e6" collective="false">
                       <constraints>
@@ -4728,6 +4766,7 @@
                             <modifier type="set" value="Armour of Caledor" field="annotation"/>
                             <modifier type="append" value="The Armour of Caledor grants a 5+ Ward save and the Immunity (Flaming Attacks) special rule. 
 " field="ff58-91e4-84d7-e6e4" join=", "/>
+                            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -4809,19 +4848,12 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9b9c-2e07-7477-24b0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Royal Sceptre of Ulthuan" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="628a-3327-de89-e2b5" publicationId="9e23-79cb-pubN77092" page="38">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Additional hand weapon. The Royal Sceptre gives Finubar +1 S and Flaming Attacks. In addition, it contains a Bound Spell.</characteristic>
-                          </characteristics>
-                        </profile>
                         <profile name="Blazing Aura of Flames" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5de2-3670-d675-8d36" publicationId="9e23-79cb-pubN77092" page="38">
                           <characteristics>
                             <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
                             <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
                             <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">3+</characteristic>
-                            <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+                            <characteristic name="Range" typeId="2954-76ea-decb-30ff">Base Contact</characteristic>
                             <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">When cast, all enemy models in base contact suffer a S 5 Hit with Flaming Attacks and Multiple Wounds (D3).</characteristic>
                           </characteristics>
                         </profile>
@@ -4829,6 +4861,18 @@
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Two/Additional Hand Weapons" id="7b23-5bd8-f13b-b042" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
+                          <modifiers>
+                            <modifier type="set" value="Royal Sceptre of Ulthuan" field="annotation"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                            <modifier type="set" value="+1" field="b80e-7dac-0dea-9add"/>
+                            <modifier type="append" value="Flaming Attack" field="de63-d6da-efa8-00ac" join="
+
+"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Crown of the Phoenix King" hidden="false" id="dcc2-c753-9535-53df" collective="false">
                       <constraints>
@@ -4898,11 +4942,11 @@
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="249f-f870-e3c9-e8bb-max"/>
                           </constraints>
                           <profiles>
-                            <profile name="Mask of the Merlord" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="013e-1f09-ce28-5b93" publicationId="9e23-79cb-pubN77092" page="44">
+                            <profile name="Mask of the Merlord" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="013e-1f09-ce28-5b93" publicationId="9e23-79cb-pubN77092" page="44">
                               <characteristics>
-                                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
-                                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The wearer and any unit they join gains the River Strider special rule and counts as being in soft cover while in any river.</characteristic>
+                                <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+                                <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+                                <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Armour Save. The wearer and any unit they join gains the River Strider special rule and counts as being in soft cover while in any river.</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -4933,15 +4977,26 @@
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2f59-1295-91c8-8630"/>
                       </constraints>
+                      <modifiers>
+                        <modifier type="set" value="1" field="80f0-b5fd-ae36-4ab6">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                     </entryLink>
                   </entryLinks>
                 </entryLink>
                 <entryLink import="true" name="50. Handheld Armour" hidden="false" id="e607-5c97-0fc5-87f9" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
                   <entryLinks>
                     <entryLink import="true" name="Shield" hidden="false" id="cc55-3149-e659-c16d" collective="false" targetId="c068-0827-9931-d9bf" type="selectionEntry">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4b12-0e78-f88f-eb7f"/>
-                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="1" field="3d59-dcea-ec30-dc28">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="ba52-4f0c-71ae-b52d" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                     </entryLink>
                   </entryLinks>
                 </entryLink>
@@ -5142,11 +5197,12 @@
                             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d56b-ee4b-23d9-1785" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="The Stormrider&apos;s Sword" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="07fe-29ed-fa54-6056" publicationId="9e23-79cb-pubN77092" page="44">
+                            <profile name="The Stormrider&apos;s Sword" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="07fe-29ed-fa54-6056" publicationId="9e23-79cb-pubN77092" page="44">
                               <characteristics>
-                                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Multiple Wounds (2)</characteristic>
+                                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Multiple Wounds (2)</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -5171,6 +5227,7 @@
                               <modifiers>
                                 <modifier type="set" value="Armour of Protection" field="annotation"/>
                                 <modifier type="append" value="This armour grants Althran a 5+ Ward save. " field="ff58-91e4-84d7-e6e4" join=", "/>
+                                <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
                               </modifiers>
                             </infoLink>
                           </infoLinks>
@@ -5195,9 +5252,13 @@
                 <entryLink import="true" name="50. Handheld Armour" hidden="false" id="99fe-d52f-023f-2ef9" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
                   <entryLinks>
                     <entryLink import="true" name="Shield" hidden="false" id="15c5-4b7d-58cc-1301" type="selectionEntry" targetId="c068-0827-9931-d9bf">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5f66-ccf6-d2fa-394a"/>
-                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="1" field="3d59-dcea-ec30-dc28">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="ba52-4f0c-71ae-b52d" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                     </entryLink>
                   </entryLinks>
                 </entryLink>
@@ -5384,11 +5445,12 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5e80-9dae-ad70-5d13" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Blade of Bel-Korhadris" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="dd16-6edf-4ace-a0f1" publicationId="9e23-79cb-pubN77092" page="45">
+                        <profile name="Blade of Bel-Korhadris" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="dd16-6edf-4ace-a0f1" publicationId="9e23-79cb-pubN77092" page="45">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">This blade Ignore Armour saves against non-magical armour, but magic armours works as normal. In addition, once per battle, at the beginning of any close combat phase, Belannaer can gain +D6 A with Flaming Attacks that turn.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. This blade Ignore Armour saves against non-magical armour, but magic armours works as normal. In addition, once per battle, at the beginning of any close combat phase, Belannaer can gain +D6 A with Flaming Attacks that turn.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -5543,6 +5605,7 @@
                           <modifiers>
                             <modifier type="set" value="The White Sword" field="annotation"/>
                             <modifier type="append" value="Killing Blow" field="de63-d6da-efa8-00ac" join=", "/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -5744,11 +5807,12 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="6185-3fe5-7be6-0531" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Fangsword of Athel Tamarha" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="0c21-b893-d89e-082c" publicationId="9e23-79cb-pubN77092" page="40">
+                        <profile name="Fangsword of Athel Tamarha" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="0c21-b893-d89e-082c" publicationId="9e23-79cb-pubN77092" page="40">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+2</characteristic>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Attacks made with the Fangsword Ignore Armour saves.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+2</characteristic>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Attacks made with the Fangsword Ignore Armour saves.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -5762,11 +5826,11 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="fa37-020d-26bc-6d2b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Helm of Yvresse" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="3097-ffde-f4ac-4cf9" publicationId="9e23-79cb-pubN77092" page="40">
+                        <profile name="Helm of Yvresse" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="3097-ffde-f4ac-4cf9" publicationId="9e23-79cb-pubN77092" page="40">
                           <characteristics>
-                            <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
-                            <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                            <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The Helm of Yvresse grants Eltharion a Ward save (5+). In addition, Eltharion may re-roll any failed Ld test.</characteristic>
+                            <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+                            <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+                            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Magic Armour. The Helm of Yvresse grants Eltharion a Ward save (5+). In addition, Eltharion may re-roll any failed Ld test.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -5909,11 +5973,12 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b009-5a9a-d8ae-46e8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Sword of Retaliation" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="3b45-841b-253d-bfb1" publicationId="9e23-79cb-pubN77092" page="49">
+                        <profile name="Sword of Retaliation" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="3b45-841b-253d-bfb1" publicationId="9e23-79cb-pubN77092" page="49">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">All enemy models from the Forces of Destruction suffer -1 To Hit Phytrion in close combat.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. All enemy models from the Forces of Destruction suffer -1 To Hit Phytrion in close combat.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -5926,18 +5991,20 @@
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="3c26-835e-35ac-0887" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2dbb-2db4-7828-9a2f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Moonshade Armour" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="5040-0bff-63e5-f901" publicationId="9e23-79cb-pubN77092" page="49">
-                          <characteristics>
-                            <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                            <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                            <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. The Moonshade Armour gives Phytrion Ward Save (5+).</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Heavy Armour" id="76ac-ee75-83fd-f4c0" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
+                          <modifiers>
+                            <modifier type="set" value="Moonshade Armour" field="annotation"/>
+                            <modifier type="append" value="The Moonshade Armour gives Phytrion Ward Save (5+)." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -6037,7 +6104,10 @@
                           <modifiers>
                             <modifier type="set" value="Chayal" field="annotation"/>
                             <modifier type="set" value="+2" field="b80e-7dac-0dea-9add"/>
-                            <modifier type="append" value="Killing Blow" field="annotation" join=", "/>
+                            <modifier type="append" value="Killing Blow" field="annotation" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -6048,11 +6118,11 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e967-6d94-fa37-99e7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Pelt of Charandis" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="7a29-b859-446b-8525" publicationId="9e23-79cb-pubN77092" page="47">
+                        <profile name="Pelt of Charandis" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="7a29-b859-446b-8525" publicationId="9e23-79cb-pubN77092" page="47">
                           <characteristics>
-                            <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
-                            <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">5+</characteristic>
-                            <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Immunity (Poison Attacks)</characteristic>
+                            <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+                            <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">5+</characteristic>
+                            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Magic Armour. Immunity (Poison Attacks)</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -6171,7 +6241,10 @@
                           <modifiers>
                             <modifier type="set" value="The Phoenix Blade" field="annotation"/>
                             <modifier type="append" value="Close combat attacks made with the Phoenix Blade have the Flaming Attacks and Multiple Wounds (D3) special rules. 
-" field="de63-d6da-efa8-00ac" join=", "/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -6308,11 +6381,12 @@
                             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e813-54ee-d63b-b561" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Blade of Galeth" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="3f74-a7c9-469c-bbc9" publicationId="1354-aa33-a41b-202a" page="14">
+                            <profile name="Blade of Galeth" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="3f74-a7c9-469c-bbc9" publicationId="1354-aa33-a41b-202a" page="14">
                               <characteristics>
-                                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">All attacks made by Gilead with the Blade of Galeth have Armour Piercing (1).</characteristic>
+                                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. All attacks made by Gilead with the Blade of Galeth have Armour Piercing (1).</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -6461,6 +6535,7 @@
                             <modifier type="set" value="Mathlann&apos;s Ire" field="annotation"/>
                             <modifier type="set" value="+1" field="b80e-7dac-0dea-9add"/>
                             <modifier type="append" value="Armour Piercing (1), In addition, enemies must re-roll successful To Hit rolls against her in close combat." field="de63-d6da-efa8-00ac" join=", "/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -6560,9 +6635,13 @@
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="518b-9bf6-0f35-8748" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="82f7-8efb-f939-ac67" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2314-9f06-d903-d741"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -6749,11 +6828,14 @@
           <constraints>
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="ba7a-6fad-0fff-b469"/>
           </constraints>
-          <rules>
-            <rule name="Lion Coat" id="fc4a-caf2-a94c-dbd9" hidden="false" publicationId="9e23-79cb-pubN77092" page="30">
-              <description>The model has the Natural Armour (6+) special rule against missile attacks.</description>
-            </rule>
-          </rules>
+          <infoLinks>
+            <infoLink name="Natural Armour" id="3f0e-d24f-2e11-71ee" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+              <modifiers>
+                <modifier type="set" value="Lion Coat" field="annotation"/>
+                <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </entryLink>
       </entryLinks>
       <categoryLinks>
@@ -6879,13 +6961,15 @@
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink name="Fiery Breath" id="1754-5566-552a-4251" hidden="false" type="rule" targetId="222e-52ff-ae92-083d"/>
                 <infoLink name="Fly (8)" id="0234-8fe9-76be-eddf" hidden="false" type="rule" targetId="0a9a-bfcb-1a9d-5609"/>
-                <infoLink name="Natural Armour (4+)" id="96a6-39bd-feb3-ae19" hidden="false" type="rule" targetId="6b43-9dda-f589-0509">
+                <infoLink name="Natural Armour" id="9c1e-47b2-9686-3197" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
                   <modifiers>
-                    <modifier type="set" value="from Mount" field="annotation"/>
+                    <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
+                    <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
+                    <modifier type="set" value="Drake" field="annotation"/>
                   </modifiers>
                 </infoLink>
+                <infoLink name="Fiery Breath" id="29f9-7916-6b96-09fe" hidden="false" type="profile" targetId="7dac-6edd-dd55-b79c"/>
               </infoLinks>
             </selectionEntry>
           </selectionEntries>
@@ -7495,7 +7579,9 @@
             <infoLink name="Light Armour" id="f79d-b4fb-6b55-d864" hidden="false" type="profile" targetId="4129-1acd-3564-d3ea">
               <modifiers>
                 <modifier type="set" value="Shadow Armour" field="annotation"/>
-                <modifier type="append" value="Model on foot only. The wearer gains the Strider special rule. In addition, no enemies can draw Line of Sight to them unless they are within 6&quot;." field="ff58-91e4-84d7-e6e4" join=", "/>
+                <modifier type="append" value="Model on foot only. The wearer gains the Strider special rule. In addition, no enemies can draw Line of Sight to them unless they are within 6&quot;." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7533,7 +7619,9 @@
             <infoLink name="Shield" id="825f-357b-4d85-b783" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
               <modifiers>
                 <modifier type="set" value="The Golden Shield" field="annotation"/>
-                <modifier type="append" value="Enemies must re-roll all successful To Hit rolls against the bearer of the Golden Shield." field="ff58-91e4-84d7-e6e4" join=", "/>
+                <modifier type="append" value="Enemies must re-roll all successful To Hit rolls against the bearer of the Golden Shield." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7547,11 +7635,11 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7d2e-38eb-0fdc-da96" type="max"/>
           </constraints>
           <profiles>
-            <profile id="1018-462a-2ca3-edb7" name="Temakador&apos;s Gauntlets" publicationId="9e23-79cb-pubN77092" page="7" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="1018-462a-2ca3-edb7" name="Temakador&apos;s Gauntlets" publicationId="9e23-79cb-pubN77092" page="7" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save">
               <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Temakador&apos;s Gauntlets gives the wearer Ward Save (5+) against attacks of S 4 or greater.</characteristic>
+                <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+                <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+                <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Temakador&apos;s Gauntlets gives the wearer Ward Save (5+) against attacks of S 4 or greater.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7572,11 +7660,11 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5f94-facd-1fe4-04cf" type="max"/>
           </constraints>
           <profiles>
-            <profile id="0bb7-d67f-fb37-ff67" name="Helm of Fortune" publicationId="9e23-79cb-pubN77092" page="7" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="0bb7-d67f-fb37-ff67" name="Helm of Fortune" publicationId="9e23-79cb-pubN77092" page="7" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save">
               <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The Helm of Fortune gives the wearer a 6+ armour save. The wearer may re-roll failed armour saves.</characteristic>
+                <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+                <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+                <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">The wearer may re-roll failed armour saves.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7615,7 +7703,9 @@
               <modifiers>
                 <modifier type="set" value="Dragonscale Shield" field="annotation"/>
                 <modifier type="set" value="5+*" field="97ea-ecf7-8d24-b2ca"/>
-                <modifier type="append" value="Ward Save (6+)" field="ff58-91e4-84d7-e6e4" join=", "/>
+                <modifier type="append" value="Ward Save (6+)" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                 <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
               </modifiers>
             </infoLink>
@@ -7643,7 +7733,9 @@
             <infoLink name="Heavy Armour" id="4233-a177-8b1f-bccb" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
               <modifiers>
                 <modifier type="set" value="Armor of Heroes" field="annotation"/>
-                <modifier type="append" value="In order to allocate close combat attacks against the wearer, each enemy model must first pass a Leadership test at the start of each close combat phase. If the test is failed, the model may not attack at all this round." field="ff58-91e4-84d7-e6e4" join=", "/>
+                <modifier type="append" value="In order to allocate close combat attacks against the wearer, each enemy model must first pass a Leadership test at the start of each close combat phase. If the test is failed, the model may not attack at all this round." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7670,7 +7762,9 @@
             <infoLink name="Heavy Armour" id="1d9b-7d83-39d3-e318" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
               <modifiers>
                 <modifier type="set" value="Wyrmscale Armour of the Deep" field="annotation"/>
-                <modifier type="append" value="The Wyrmscale Armour of the Deep gives the wearer Aquatic and Immunity (Flaming Attacks)." field="ff58-91e4-84d7-e6e4" join=", "/>
+                <modifier type="append" value="The Wyrmscale Armour of the Deep gives the wearer Aquatic and Immunity (Flaming Attacks)." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7720,7 +7814,9 @@
             <infoLink name="Light Armour" id="e9c8-5afc-34b9-2130" hidden="false" type="profile" targetId="4129-1acd-3564-d3ea">
               <modifiers>
                 <modifier type="set" value="Armour of Stars" field="annotation"/>
-                <modifier type="append" value="If the wearer of the Armour of Stars suffers an unsaved wound (but is not slain) they can choose to instantly teleport 3D6&quot; in a random direction (placing it at least 1&quot; away from other units or impassable terrain) with its front arc in a direction of your choosing. If the model teleports off the table, then treat this as it having pursued off the table." field="ff58-91e4-84d7-e6e4" join=", "/>
+                <modifier type="append" value="If the wearer of the Armour of Stars suffers an unsaved wound (but is not slain) they can choose to instantly teleport 3D6&quot; in a random direction (placing it at least 1&quot; away from other units or impassable terrain) with its front arc in a direction of your choosing. If the model teleports off the table, then treat this as it having pursued off the table." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7733,15 +7829,6 @@
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b1db-b7d8-342c-faef" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9690-215e-5fd5-6bf2" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="d752-9a32-e841-a9c4" name="Shield of the Merwyrm" publicationId="9e23-79cb-pubN77092" page="7" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
-              <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">This mask confers a 6+ armour save. In addition, the wearer and any unit they join gains the River Strider special rule and counts as being in soft cover while in any river.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
@@ -7757,7 +7844,9 @@
               <modifiers>
                 <modifier type="set" value="Shield of the Merwyrm" field="annotation"/>
                 <modifier type="append" value="The bearer of the Shield of the Merwyrm gains the Parry (6+) special rule.
-" field="ff58-91e4-84d7-e6e4" join=", "/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7784,7 +7873,9 @@
             <infoLink name="Shield" id="78a7-63dc-4f51-67f1" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
               <modifiers>
                 <modifier type="set" value="The Shield of Ithinar" field="annotation"/>
-                <modifier type="append" value="All close combat attacks against the bearer suffer -1 To Hit." field="ff58-91e4-84d7-e6e4" join=", "/>
+                <modifier type="append" value="All close combat attacks against the bearer suffer -1 To Hit." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7995,11 +8086,12 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5629-1ceb-ad62-49f6" type="max"/>
           </constraints>
           <profiles>
-            <profile id="192f-ba69-cdbd-90c1" name="Sword of Ages" publicationId="9e23-79cb-pubN77092" page="6" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="192f-ba69-cdbd-90c1" name="Sword of Ages" publicationId="9e23-79cb-pubN77092" page="6" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+2</characteristic>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Sword of Ages gives the wielder +1 To Hit and +1 A.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+2</characteristic>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c">+1</characteristic>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Sword of Ages gives the wielder +1 To Hit.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8019,7 +8111,7 @@
             <infoLink name="Elven Longbow" id="8de8-20d9-a7f5-3c11" hidden="false" type="profile" targetId="382b-9e51-5753-88bb">
               <modifiers>
                 <modifier type="set" value="Reaver Bow" field="annotation"/>
-                <modifier type="set" value="5" field="b80e-7dac-0dea-9add"/>
+                <modifier type="set" value="5" field="29fe-29a3-f94f-2e90"/>
                 <modifier type="set" value="Multiple Shots (3)" field="de63-d6da-efa8-00ac" join=", "/>
               </modifiers>
             </infoLink>
@@ -8038,11 +8130,12 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e402-b038-4be4-5e8a" type="max"/>
           </constraints>
           <profiles>
-            <profile id="6e6f-99b4-25c5-f898" name="The Blade of Leaping Gold" publicationId="9e23-79cb-pubN77092" page="6" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="6e6f-99b4-25c5-f898" name="The Blade of Leaping Gold" publicationId="9e23-79cb-pubN77092" page="6" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Blade of Leaping Gold grants the wielder +3 A. In addition, any roll of 6 To Wound made with the Blade of Leaping Gold Ignores Armour saves.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c">+3</characteristic>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Any roll of 6 To Wound made with the Blade of Leaping Gold Ignores Armour saves.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8056,11 +8149,12 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cb0b-a1c8-29d0-1295" type="max"/>
           </constraints>
           <profiles>
-            <profile id="1b95-b441-5995-b5a3" name="Blade of the Phoenix" publicationId="9e23-79cb-pubN77092" page="6" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="1b95-b441-5995-b5a3" name="Blade of the Phoenix" publicationId="9e23-79cb-pubN77092" page="6" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Blade of the Phoenix gives the wielder Ignores Armour Saves. Once per battle, at the start of any close combat phase the wielder can unleash the full power of the sword. For the remainder of that close combat phase, they get Always Strikes First and +D6 A.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Blade of the Phoenix gives the wielder Ignores Armour Saves. Once per battle, at the start of any close combat phase the wielder can unleash the full power of the sword. For the remainder of that close combat phase, they get Always Strikes First and +D6 A.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8074,11 +8168,12 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="44a2-2f56-2948-76fe" type="max"/>
           </constraints>
           <profiles>
-            <profile id="a6d6-c35c-9908-2b7c" name="Blade of Darting Steel" publicationId="9e23-79cb-pubN77092" page="6" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="a6d6-c35c-9908-2b7c" name="Blade of Darting Steel" publicationId="9e23-79cb-pubN77092" page="6" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Blade of Darting Steel gives the wielder +1 To Hit and the Always Strikes First special rule.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Blade of Darting Steel gives the wielder +1 To Hit and the Always Strikes First special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8098,7 +8193,9 @@
             <infoLink name="Great Weapon" id="0d39-ab0a-f2af-15bc" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
               <modifiers>
                 <modifier type="set" value="Sword of Hoeth" field="annotation"/>
-                <modifier type="append" value="All hits with the Sword of Hoeth wound automatically. Armour saves are modified by the Strength of the bearer." field="de63-d6da-efa8-00ac" join=", "/>
+                <modifier type="append" value="All hits with the Sword of Hoeth wound automatically. Armour saves are modified by the Strength of the bearer." field="de63-d6da-efa8-00ac" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -8122,7 +8219,10 @@
             <infoLink name="Elven Longbow" id="4a26-955f-96dc-9f95" hidden="false" type="profile" targetId="382b-9e51-5753-88bb">
               <modifiers>
                 <modifier type="set" value="Jade Bow" field="annotation"/>
-                <modifier type="set" value="Armour Piercing (1). Multiple Shots (3). Volley Fire." field="de63-d6da-efa8-00ac" join=", "/>
+                <modifier type="append" value="If you successfully Wound your target, you may fire an additional shot against the same target. You may continue to fire additional shots until you fail to Wound or the target is dead.
+" field="96b8-546e-ac33-6054" join="
+
+"/>
                 <modifier type="set" value="4" field="b80e-7dac-0dea-9add"/>
               </modifiers>
             </infoLink>
@@ -8147,7 +8247,9 @@
             <infoLink name="Elven Longbow" id="d580-28b9-ca1a-b691" hidden="false" type="profile" targetId="382b-9e51-5753-88bb">
               <modifiers>
                 <modifier type="set" value="Bow of Tor Alessi" field="annotation"/>
-                <modifier type="append" value="The Bow of Tor Alessi has Quick to Fire. In addition, it may re-roll any failed To Hit rolls." field="de63-d6da-efa8-00ac" join=", "/>
+                <modifier type="append" value="The Bow of Tor Alessi has Quick to Fire. In addition, it may re-roll any failed To Hit rolls." field="96b8-546e-ac33-6054" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -8165,11 +8267,12 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="42dd-d74f-6111-a3f5" type="max"/>
           </constraints>
           <profiles>
-            <profile id="f364-7162-5929-24bf" name="Deathsinger" publicationId="9e23-79cb-pubN77092" page="6" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="f364-7162-5929-24bf" name="Deathsinger" publicationId="9e23-79cb-pubN77092" page="6" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">At the beginning of each round of close combat, roll a D3; the result is the number you may increase the wielder&apos;s Weapon Skill, Strength and Attacks by.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+D3*</characteristic>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c">+D3*</characteristic>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">*At the beginning of each round of close combat, roll a D3; the result is the number you may increase the wielder&apos;s Weapon Skill, Strength and Attacks by.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8217,19 +8320,19 @@
               <modifiers>
                 <modifier type="set" value="Spear of the Shores" field="annotation"/>
                 <modifier type="set" value="+1" field="b80e-7dac-0dea-9add"/>
-                <modifier type="append" value="This weapon gives the wielder +2 Attacks." field="de63-d6da-efa8-00ac" join=", "/>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="parent" childId="mount" shared="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="+2" field="ffc4-c065-ab29-fb8c" join=""/>
               </modifiers>
             </infoLink>
             <infoLink name="Light Lance" id="00b9-6ef1-69c0-0b24" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb">
               <modifiers>
                 <modifier type="set" value="Spear of the Shores" field="annotation"/>
                 <modifier type="set" value="+1" field="b80e-7dac-0dea-9add"/>
-                <modifier type="append" value="This weapon gives the wielder +2 Attacks." field="de63-d6da-efa8-00ac" join=", "/>
+                <modifier type="set" value="+2" field="ffc4-c065-ab29-fb8c" join=""/>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
                     <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true"/>
@@ -8257,11 +8360,12 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1043-289c-cd10-be1f" type="max"/>
           </constraints>
           <profiles>
-            <profile id="68aa-e8ce-b45f-2b27" name="Sword of Victory" publicationId="9e23-79cb-pubN77092" page="6" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="68aa-e8ce-b45f-2b27" name="Sword of Victory" publicationId="9e23-79cb-pubN77092" page="6" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Sword of Victory gives the wielder the Always Strikes First and Armour Piercing (1) special rules. In addition, they will always Wound on a 3+ or better.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Sword of Victory gives the wielder the Always Strikes First and Armour Piercing (1) special rules. In addition, they will always Wound on a 3+ or better.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8288,7 +8392,9 @@
             <infoLink name="Polearm/Halberd" id="3164-5d4c-0232-6c52" hidden="false" type="profile" targetId="e43e-5153-eeec-36be">
               <modifiers>
                 <modifier type="set" value="Cloudcleaver" field="annotation"/>
-                <modifier type="append" value="All attacks made with Cloudcleaver have the Ignores Armour Saves special rule. In addition, it gives the wielder the Fear special rule and against War Beasts and Cavalry, they cause Terror." field="de63-d6da-efa8-00ac" join=", "/>
+                <modifier type="append" value="All attacks made with Cloudcleaver have the Ignores Armour Saves special rule. In addition, it gives the wielder the Fear special rule and against War Beasts and Cavalry, they cause Terror." field="de63-d6da-efa8-00ac" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -8322,7 +8428,9 @@
             <infoLink name="Heavy Lance" id="291c-4895-8e5b-baec" hidden="false" type="profile" targetId="e56e-fedf-c550-5d81">
               <modifiers>
                 <modifier type="set" value="Dragonblade Lance" field="annotation"/>
-                <modifier type="append" value="During turns in which the wielder of the Dragonblade Lance charges, it automatically Hits all models in one file that is in base contact rather than fighting normally. Hits are resolved as that from a Bolt Thrower, except the Strength does not decrease for each rank." field="de63-d6da-efa8-00ac" join=", "/>
+                <modifier type="append" value="During turns in which the wielder of the Dragonblade Lance charges, it automatically Hits all models in one file that is in base contact rather than fighting normally. Hits are resolved as that from a Bolt Thrower, except the Strength does not decrease for each rank." field="de63-d6da-efa8-00ac" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -8333,11 +8441,12 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="e051-8b63-7b1b-b7a1" type="max"/>
           </constraints>
           <profiles>
-            <profile id="e36a-01a5-ba1b-6b21" name="Foe Bane" publicationId="9e23-79cb-pubN77092" page="6" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="e36a-01a5-ba1b-6b21" name="Foe Bane" publicationId="9e23-79cb-pubN77092" page="6" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b"/>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Against Monstrous Infantry, Monstrous Cavalry, Monstrous Beasts, Monstrous Creatures and Monsters, this sword will always wound on a 2+.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Against Monstrous Infantry, Monstrous Cavalry, Monstrous Beasts, Monstrous Creatures and Monsters, this sword will always wound on a 2+.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -9054,6 +9163,9 @@ Strength penalty.</characteristic>
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.afaf-a8e7-8126-34fe.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.afaf-a8e7-8126-34fe.profiles.Ranged Weapon"/>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.8d5e-5159-0f2b-9ff8.profiles.Armour Save"/>
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Magic Weapons" hidden="false" id="afaf-a8e7-8126-34fe" type="selectionEntryGroup" targetId="12f5-c48f-1a21-852f" sortIndex="1"/>
@@ -9204,8 +9316,14 @@ Strength penalty.</characteristic>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
           <infoLinks>
-            <infoLink name="Natural Armour (5+)" id="59b6-04b7-1d6e-9169" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
             <infoLink name="Ice Attacks" id="d9cd-619f-1793-2390" hidden="false" type="rule" targetId="fa30-0410-43da-e1d7"/>
+            <infoLink name="Natural Armour" id="6c24-6b3a-abfd-5943" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+              <modifiers>
+                <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
+                <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
+                <modifier type="set" value="Frostheart Phoenix" field="annotation"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <rules>
             <rule name="Frostheart Phoenix" id="4f14-7204-0123-c850" hidden="false">
@@ -9300,9 +9418,6 @@ If a Flamespyre Phoenix has a rider when it loses its last Wound, both monster a
 
 At the end of the game, remove all Phoenix Reborn counters from the board – these Flamespyre Phoenixes and any riders they had count as casualties.</description>
     </rule>
-    <rule id="222e-52ff-ae92-083d" name="Fiery Breath" publicationId="9e23-79cb-pubN77092" page="3" hidden="false">
-      <description>A model with this special rule has a Strength 4 Breath Weapon with the Flaming Attacks special rule.</description>
-    </rule>
     <rule id="164e-ff3e-c05e-a60e" name="Naval Discipline" publicationId="9e23-79cb-pubN77092" page="153" hidden="false">
       <description>If a unit of Sea Guard containing at least one Sea Helm is charged during the Movement phase and chooses Hold as a charge reaction, it can attempt to change formation immediately before your opponent has moved any of his charging units, as long as it is not already engaged in close combat. To do so, the unit must take a Ld test. If the test is passed, the Sea Helm&apos;s unit can immediately make a reform as described in the Warhammer Rulebook.</description>
     </rule>
@@ -9323,7 +9438,7 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
     </rule>
   </sharedRules>
   <sharedProfiles>
-    <profile id="fd56-1283-21d5-6490" name="Sea Guard Crew" publicationId="9e23-79cb-pubN77092" page="153" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="fd56-1283-21d5-6490" name="Sea Guard Crew" publicationId="9e23-79cb-pubN77092" page="153" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215"/>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
@@ -9337,7 +9452,7 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (High Elf)</characteristic>
       </characteristics>
     </profile>
-    <profile id="9fc0-70a1-f213-56e3" name="Swiftfeather Roc" publicationId="9e23-79cb-pubN77092" page="32" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="9fc0-70a1-f213-56e3" name="Swiftfeather Roc" publicationId="9e23-79cb-pubN77092" page="32" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215"/>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
@@ -9351,7 +9466,7 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Avian)</characteristic>
       </characteristics>
     </profile>
-    <profile id="c0fc-e34b-4640-22c3" name="Lothern Skycutter" publicationId="9e23-79cb-pubN77092" page="153" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="c0fc-e34b-4640-22c3" name="Lothern Skycutter" publicationId="9e23-79cb-pubN77092" page="153" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215"/>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
@@ -9365,21 +9480,7 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour save 6+)</characteristic>
       </characteristics>
     </profile>
-    <profile id="3fa4-072f-d5f5-3cdd" name="Elven Steed" publicationId="9e23-79cb-pubN77092" page="179" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">9</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="108c-c295-c873-f62e" name="Sun Dragon" publicationId="9e23-79cb-pubN77092" page="22" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="108c-c295-c873-f62e" name="Sun Dragon" publicationId="9e23-79cb-pubN77092" page="22" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
@@ -9393,7 +9494,7 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Draconid)</characteristic>
       </characteristics>
     </profile>
-    <profile id="90e4-ef4f-19e2-ccb5" name="Moon Dragon" publicationId="9e23-79cb-pubN77092" page="22" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="90e4-ef4f-19e2-ccb5" name="Moon Dragon" publicationId="9e23-79cb-pubN77092" page="22" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
@@ -9407,7 +9508,7 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Draconid)</characteristic>
       </characteristics>
     </profile>
-    <profile id="95d9-aad8-f256-bb77" name="Charioteer" publicationId="9e23-79cb-pubN77092" page="164" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="95d9-aad8-f256-bb77" name="Charioteer" publicationId="9e23-79cb-pubN77092" page="164" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215"/>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
@@ -9421,7 +9522,7 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (High Elf)</characteristic>
       </characteristics>
     </profile>
-    <profile id="4bf3-d4fb-ece4-3582" name="Lion Chariot" publicationId="9e23-79cb-pubN77092" page="162" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="4bf3-d4fb-ece4-3582" name="Lion Chariot" publicationId="9e23-79cb-pubN77092" page="162" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
@@ -9432,10 +9533,10 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
         <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour save 6+)</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot</characteristic>
       </characteristics>
     </profile>
-    <profile id="4544-1720-a510-78b5" name="Tiranoc Chariot" publicationId="9e23-79cb-pubN77092" page="164" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="4544-1720-a510-78b5" name="Tiranoc Chariot" publicationId="9e23-79cb-pubN77092" page="164" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
@@ -9446,10 +9547,10 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
         <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour save 6+)</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot</characteristic>
       </characteristics>
     </profile>
-    <profile id="20fa-27e2-60b6-57d9" name="Flamespyre Phoenix" publicationId="9e23-79cb-pubN77092" page="177" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="20fa-27e2-60b6-57d9" name="Flamespyre Phoenix" publicationId="9e23-79cb-pubN77092" page="177" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">2</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
@@ -9463,7 +9564,7 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Phoenix)</characteristic>
       </characteristics>
     </profile>
-    <profile id="10ef-98c3-71a1-9693" name="Frostheart Phoenix" publicationId="9e23-79cb-pubN77092" page="177" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="10ef-98c3-71a1-9693" name="Frostheart Phoenix" publicationId="9e23-79cb-pubN77092" page="177" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">2</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
@@ -9502,22 +9603,22 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
         <characteristic name="Result" typeId="2e65-d5dd-5c91-e3eb">The Phoenix&apos;s Ward save is increased to 4+.</characteristic>
       </characteristics>
     </profile>
-    <profile id="0916-c9cb-28bb-3e58" name="1-2 Dead Embers" publicationId="9e23-79cb-pubN77092" page="173" hidden="false" typeId="f00a-3848-f5f4-009a" typeName="Phoenix Reborn table">
+    <profile id="0916-c9cb-28bb-3e58" name="1-2 Dead Embers" publicationId="9e23-79cb-pubN77092" page="173" hidden="false" typeId="f00a-3848-f5f4-009a" typeName="Phoenix Reborn table" noindex="true">
       <characteristics>
         <characteristic name="Result" typeId="0e20-4862-8cd4-dc73">The Flamespyre Phoenix is dead, remove the Phoenix Reborn counter from play.</characteristic>
       </characteristics>
     </profile>
-    <profile id="9d5b-c744-097b-bdd0" name="3-5 Flame Kindled" publicationId="9e23-79cb-pubN77092" page="173" hidden="false" typeId="f00a-3848-f5f4-009a" typeName="Phoenix Reborn table">
+    <profile id="9d5b-c744-097b-bdd0" name="3-5 Flame Kindled" publicationId="9e23-79cb-pubN77092" page="173" hidden="false" typeId="f00a-3848-f5f4-009a" typeName="Phoenix Reborn table" noindex="true">
       <characteristics>
         <characteristic name="Result" typeId="0e20-4862-8cd4-dc73">Centre the large round template over the centre of the Phoenix Reborn counter. All models (friend or foe) hit by the template suffer a S 4 hit with Flaming Attacks. This is a non-physical attack. The Phoenix Reborn counter remains in play – roll again at the end of the next turn (yours or your opponent&apos;s).</characteristic>
       </characteristics>
     </profile>
-    <profile id="34fc-406c-eed9-ca2f" name="6+ Rise from the Ashes" publicationId="9e23-79cb-pubN77092" page="173" hidden="false" typeId="f00a-3848-f5f4-009a" typeName="Phoenix Reborn table">
+    <profile id="34fc-406c-eed9-ca2f" name="6+ Rise from the Ashes" publicationId="9e23-79cb-pubN77092" page="173" hidden="false" typeId="f00a-3848-f5f4-009a" typeName="Phoenix Reborn table" noindex="true">
       <characteristics>
         <characteristic name="Result" typeId="0e20-4862-8cd4-dc73">Place the Flamespyre Phoenix anywhere that is within 6&quot; of the centre of the Phoenix Reborn counter and at least 1&quot; away from any unit, and then remove the marker from play. If it is not possible to place the Phoenix due to the aforementioned restrictions, treat this result as a Flame Kindled result instead. Reborn Flamespyre Phoenixes return with D3+2 Wounds. The reborn model suffers no bonuses or penalties incurred from its former existence – i.e. if the model was fleeing or affected by an augment or hex spell at the time of its death, the reborn model will not be.</characteristic>
       </characteristics>
     </profile>
-    <profile id="e321-c0e9-ddec-12cf" name="Swordmaster" publicationId="9e23-79cb-pubN77092" page="159" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="e321-c0e9-ddec-12cf" name="Swordmaster" publicationId="9e23-79cb-pubN77092" page="159" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
@@ -9531,7 +9632,7 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (High Elf)</characteristic>
       </characteristics>
     </profile>
-    <profile name="White Lion" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="efaf-e374-ef40-0d71" publicationId="9e23-79cb-pubN77092" page="27">
+    <profile name="White Lion" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="efaf-e374-ef40-0d71" publicationId="9e23-79cb-pubN77092" page="27" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
@@ -9545,21 +9646,23 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (High Elf)</characteristic>
       </characteristics>
     </profile>
-    <profile name="Elven Bow" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="63f3-694f-b72c-b6ea" publicationId="9e23-79cb-pubN77092" page="3">
+    <profile name="Elven Bow" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="63f3-694f-b72c-b6ea" publicationId="9e23-79cb-pubN77092" page="3" noindex="true">
       <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">24&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">3</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1). Multiple Shots (2) if the model has not moved, cannot be used as a charge reaction. Volley Fire.</characteristic>
+        <characteristic name="Range" typeId="af3c-d805-702c-9af9">24&quot;</characteristic>
+        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">3</characteristic>
+        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">2</characteristic>
+        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (1). (Multiple Shots only applies in turns the model has not moved. Cannot be used as a charge reaction.)</characteristic>
       </characteristics>
     </profile>
-    <profile name="Elven Longbow" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="382b-9e51-5753-88bb" publicationId="9e23-79cb-pubN77092" page="3">
+    <profile name="Elven Longbow" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="382b-9e51-5753-88bb" publicationId="9e23-79cb-pubN77092" page="3" noindex="true">
       <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">30&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">3</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1). Multiple Shots (2) if the model has not moved, cannot be used as a charge reaction. Volley Fire.</characteristic>
+        <characteristic name="Range" typeId="af3c-d805-702c-9af9">30&quot;</characteristic>
+        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">3</characteristic>
+        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">2</characteristic>
+        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (1). (Multiple Shots only applies in turns the model has not moved. Cannot be used as a charge reaction.)</characteristic>
       </characteristics>
     </profile>
-    <profile name="Great Eagle" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f925-5e0e-e604-2aac" publicationId="9e23-79cb-pubN77092" page="21">
+    <profile name="Great Eagle" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f925-5e0e-e604-2aac" publicationId="9e23-79cb-pubN77092" page="21" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">2</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
@@ -9573,15 +9676,38 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Avian)</characteristic>
       </characteristics>
     </profile>
+    <profile id="d25e-2fba-d9c9-9e04" name="Lion Chariot" publicationId="9e23-79cb-pubN77092" page="162" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" noindex="true">
+      <characteristics>
+        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
+      </characteristics>
+    </profile>
+    <profile id="a672-7ce7-28bc-6a85" name="Tiranoc Chariot" publicationId="9e23-79cb-pubN77092" page="164" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" noindex="true">
+      <characteristics>
+        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
+      </characteristics>
+    </profile>
+    <profile name="Fiery Breath" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="7dac-6edd-dd55-b79c">
+      <characteristics>
+        <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
+        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Flaming Attacks.</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Bow of Avelorn" hidden="false" id="9098-ed0b-8cb6-0a69" collective="true" sortIndex="11">
       <profiles>
-        <profile name="Bow of Avelorn" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="172d-414b-217a-95b8" publicationId="9e23-79cb-pubN77092" page="3">
+        <profile name="Bow of Avelorn" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="172d-414b-217a-95b8" publicationId="9e23-79cb-pubN77092" page="3">
           <characteristics>
-            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">24&quot;</characteristic>
-            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1), Flaming Attacks, Magical Attacks, Multiple Shots (2) if the model has not moved, cannot be used as a charge reaction, Volley Fire.</characteristic>
+            <characteristic name="Range" typeId="af3c-d805-702c-9af9">24&quot;</characteristic>
+            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
+            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">2</characteristic>
+            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (1), Flaming Attacks, Magical Attacks. (Multiple Shots only applies in turns the model has not moved. Cannot be used as a charge reaction.)</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -9620,7 +9746,9 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
         <infoLink name="Heavy Armour" id="feca-744d-cce7-4597" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
           <modifiers>
             <modifier type="set" value="Dragon Armour" field="annotation"/>
-            <modifier type="append" value="Models with dragon armour gain a 6+ Ward save and the Immunity (Flaming Attacks) special rule." field="ff58-91e4-84d7-e6e4" join=", "/>
+            <modifier type="append" value="Models with dragon armour gain a 6+ Ward save and the Immunity (Flaming Attacks) special rule." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -9630,7 +9758,7 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3cea-3430-d82b-1f59"/>
       </constraints>
       <profiles>
-        <profile name="Ithilmar Barding" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="119e-6fba-31a3-cb8c" publicationId="9e23-79cb-pubN77092" page="3">
+        <profile name="Ithilmar Barding" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="119e-6fba-31a3-cb8c" publicationId="9e23-79cb-pubN77092" page="3">
           <characteristics>
             <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
             <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
@@ -9640,18 +9768,17 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
       </profiles>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Lion Cloak" hidden="false" id="e76a-1110-ef6b-fa5c" collective="true" sortIndex="23">
-      <profiles>
-        <profile name="Lion Cloak" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="59c2-04c7-02d5-c509" publicationId="9e23-79cb-pubN77092" page="3">
-          <characteristics>
-            <characteristic name="Combat" typeId="168d-1cc2-66f3-e766"/>
-            <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
-            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
-          </characteristics>
-        </profile>
-      </profiles>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bf08-e88d-b593-822e" automatic="true"/>
       </constraints>
+      <infoLinks>
+        <infoLink name="Natural Armour" id="d78e-bcf2-173f-2fc0" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="Lion Cloak" field="annotation"/>
+            <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Moon Dragon" hidden="false" id="b70c-e9d9-3254-75c3" collective="true" subType="mount" sortIndex="33">
       <constraints>
@@ -9660,12 +9787,14 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
       <infoLinks>
         <infoLink name="Fly (7)" id="4477-440a-c9ca-46d6" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
         <infoLink name="Moon Dragon" id="ae6b-cddd-bc66-ffb9" hidden="false" targetId="90e4-ef4f-19e2-ccb5" type="profile"/>
-        <infoLink name="Natural Armour (3+)" id="2c14-e058-e01b-db55" hidden="false" targetId="32e8-b4ad-3e59-a3c7" type="rule">
+        <infoLink name="Natural Armour" id="1d67-1cfb-0714-9eab" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
           <modifiers>
-            <modifier type="set" value="from Mount" field="annotation"/>
+            <modifier type="set" value="3+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="3+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="Moon Dragon" field="annotation"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Fiery Breath" id="24ea-5775-5c4f-ea71" hidden="false" targetId="222e-52ff-ae92-083d" type="rule"/>
+        <infoLink name="Fiery Breath" id="a724-cf93-758d-ee01" hidden="false" type="profile" targetId="7dac-6edd-dd55-b79c"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="300"/>
@@ -9697,12 +9826,14 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
       </profiles>
       <infoLinks>
         <infoLink name="Fly (7)" id="40b2-9758-1eb2-38f3" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
-        <infoLink name="Natural Armour (2+)" id="f3ef-e371-d80c-8539" hidden="false" targetId="b15c-9f50-7081-ba29" type="rule">
+        <infoLink name="Natural Armour" id="e70d-fdd5-fc9f-4384" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
           <modifiers>
-            <modifier type="set" value="from Mount" field="annotation"/>
+            <modifier type="set" value="2+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="2+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Star Dragon" field="annotation"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Fiery Breath" id="67f9-e5a8-ae99-9c1d" hidden="false" targetId="222e-52ff-ae92-083d" type="rule"/>
+        <infoLink name="Fiery Breath" id="9370-3f7e-7c82-42c9" hidden="false" type="profile" targetId="7dac-6edd-dd55-b79c"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="390"/>
@@ -9719,12 +9850,14 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
       <infoLinks>
         <infoLink name="Fly (7)" id="06d7-31f9-0b30-8a9e" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
         <infoLink name="Sun Dragon" id="504a-6e97-1810-9489" hidden="false" targetId="108c-c295-c873-f62e" type="profile"/>
-        <infoLink name="Natural Armour (3+)" id="0cad-d59c-db03-9983" hidden="false" targetId="32e8-b4ad-3e59-a3c7" type="rule">
+        <infoLink name="Natural Armour" id="42df-6822-6a43-79a8" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
           <modifiers>
-            <modifier type="set" value="from Mount" field="annotation"/>
+            <modifier type="set" value="3+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="3+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="Sun Dragon" field="annotation"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Fiery Breath" id="8e07-6510-fe46-b8d6" hidden="false" targetId="222e-52ff-ae92-083d" type="rule"/>
+        <infoLink name="Fiery Breath" id="d39c-3de7-cc69-d1ef" hidden="false" type="profile" targetId="7dac-6edd-dd55-b79c"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="182m-U4Gz-9uTe-Soey" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -9737,6 +9870,7 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
       </constraints>
       <infoLinks>
         <infoLink name="Tiranoc Chariot" id="df3a-6b91-9af0-2227" hidden="false" targetId="4544-1720-a510-78b5" type="profile"/>
+        <infoLink name="Tiranoc Chariot" id="d8e4-37cf-7fc6-2cab" hidden="false" targetId="a672-7ce7-28bc-6a85" type="profile"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="Elven Steed" hidden="false" id="8c59-c272-5de6-d9d8" type="selectionEntry" targetId="279f-4d0e-d543-064f">
@@ -9787,12 +9921,29 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="81e2-4ec8-58c5-ca1c" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="81e2-4ec8-58c5-ca1c" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
           <entryLinks>
             <entryLink import="true" name="Medium Armour" hidden="false" id="b0ce-47ea-0878-9d91" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1666-281a-2224-1ed4"/>
               </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" value="0" field="1666-281a-2224-1ed4"/>
+                    <modifier type="set" value="0" field="aaab-a191-d887-0e14"/>
+                    <modifier type="set" value="true" field="hidden"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -9800,7 +9951,8 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Lion Chariot of Chrace" hidden="false" id="ecb7-3add-14ec-d6f7" collective="true" subType="mount" sortIndex="31">
       <infoLinks>
-        <infoLink name="Lion Chariot" id="b034-1d70-41a0-dafe" hidden="false" targetId="4bf3-d4fb-ece4-3582" type="profile"/>
+        <infoLink name="Lion Chariot" id="b034-1d70-41a0-dafe" hidden="false" targetId="d25e-2fba-d9c9-9e04" type="profile"/>
+        <infoLink name="Lion Chariot" id="73f7-0c6e-2afd-6440" hidden="false" targetId="4bf3-d4fb-ece4-3582" type="profile"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="White Lion Charioteer" hidden="false" id="550f-1ffb-5de4-2c2f" type="selectionEntry" targetId="a7a2-97ee-5a78-df28">
@@ -9868,12 +10020,29 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c2c1-e7a3-4aa0-d751-max"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="91f6-ad41-7ceb-a74f" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="91f6-ad41-7ceb-a74f" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
           <entryLinks>
             <entryLink import="true" name="Medium Armour" hidden="false" id="12c7-b4b0-ea7f-0a74" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c4d3-6787-1414-a4a4"/>
               </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" value="0" field="aaab-a191-d887-0e14"/>
+                    <modifier type="set" value="0" field="c4d3-6787-1414-a4a4"/>
+                    <modifier type="set" value="true" field="hidden"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -10903,7 +11072,7 @@ At the end of the game, remove all Phoenix Reborn counters from the board – th
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Firing a Blot Thrower" id="843f-2859-f613-b2af" hidden="false" type="rule" targetId="f55b-b981-fae7-afa2"/>
+        <infoLink name="Firing a Bolt Thrower" id="843f-2859-f613-b2af" hidden="false" type="rule" targetId="f55b-b981-fae7-afa2"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="25"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="489b-7a41-3ad0-e5eb" name="Tomb Kings WAP 1.6" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="60" revision="17" authorName="Leminge" battleScribeVersion="2.03" publicationId="feeb-1927-4a99-f849" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="Contact me via discord">
+<catalogue library="false" id="489b-7a41-3ad0-e5eb" name="Tomb Kings WAP 1.6" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="60" revision="18" authorName="Leminge" battleScribeVersion="2.03" publicationId="feeb-1927-4a99-f849" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="Contact me via discord">
   <sharedSelectionEntries>
     <selectionEntry type="model" import="true" name="Skeletal Steed" hidden="false" id="a440-163d-31eb-cdf7" collective="true" sortIndex="0" subType="mount">
       <constraints>
@@ -81,7 +81,8 @@
       </entryLinks>
       <infoLinks>
         <infoLink name="Undead" id="2d24-6b11-0533-5369" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
-        <infoLink name="Skeleton Chariot " id="7a5b-4d58-7de1-bfdb" hidden="false" type="profile" targetId="7fde-c386-9e67-4c2c"/>
+        <infoLink name="Skeleton Chariot " id="82ca-d97f-3224-0c72" hidden="false" type="profile" targetId="d2de-f5a2-d10e-a10d"/>
+        <infoLink name="Skeleton Chariot " id="ec7f-b53b-4df0-65c6" hidden="false" type="profile" targetId="0f95-ca53-690c-0478"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Chariot" hidden="false" id="75ec-0ebd-06b5-209a" targetId="7224-b7fd-d652-3ff2" primary="false"/>
@@ -96,7 +97,13 @@
             <modifier type="set" value="Necroserpent only" field="annotation"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Natural Armour (5+)" id="b379-59fe-c204-dc8a" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
+        <infoLink name="Natural Armour" id="b64c-64f2-fe18-ef14" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Necroserpent" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f884-3f14-3152-a520" includeChildSelections="false"/>
@@ -131,9 +138,6 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe28-f95e-76bb-34df" includeChildSelections="false"/>
       </constraints>
       <rules>
-        <rule name="Breath of Desiccation" id="f905-e238-d6dc-575f" hidden="false">
-          <description>This is a Breath Weapon attack with Strength 3, Magical Attacks and the Multiple Wounds (2) special rule.</description>
-        </rule>
         <rule name="Cloud of Dust" id="b0d7-0760-ce31-d2d6" hidden="false">
           <description>All enemy missile attacks suffer -1 To Hit against a Necrolith Bone Dragon.</description>
         </rule>
@@ -151,6 +155,14 @@
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Undead, Dragon)</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Breath of Desiccation" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="09c0-b9f5-74a7-8cea">
+          <characteristics>
+            <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">3</characteristic>
+            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magical Attacks, Multiple Wounds (2).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -258,17 +270,22 @@
             <entryLink import="true" name="56. Upgrades" hidden="false" id="1b17-4347-b667-e7ce" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Fiery Roar" hidden="false" id="fc2d-7352-bcd5-9d21">
-                  <rules>
-                    <rule name="Fiery Roar" id="f7e2-5435-530c-1a8c" hidden="false">
-                      <description>A Khemrian Warsphinx with this upgrade has a Strength 4 Breath Weapon with the Flaming Attacks special rule.</description>
-                    </rule>
-                  </rules>
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7e49-f15f-6ea4-d084" includeChildSelections="false"/>
                   </constraints>
                   <costs>
                     <cost name="pts" typeId="points" value="30"/>
                   </costs>
+                  <profiles>
+                    <profile name="Fiery Roar" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="1b3f-1bfe-d174-714f">
+                      <characteristics>
+                        <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
+                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Flaming Attacks.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Envenomed Sting" hidden="false" id="2d14-1acd-0cd8-5845">
                   <rules>
@@ -297,7 +314,7 @@
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Skeleton Crew " hidden="false" id="7bbf-cd5d-11fb-b862">
           <entryLinks>
-            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="5790-028c-c5c2-cfb6" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="5790-028c-c5c2-cfb6" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
               <entryLinks>
                 <entryLink import="true" name="Light Armour" hidden="false" id="3980-a81c-25e6-613d" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
                   <constraints>
@@ -306,9 +323,9 @@
                   <modifierGroups>
                     <modifierGroup type="and">
                       <modifiers>
-                        <modifier type="set" value="0" field="bd12-6b92-8aca-f4e2"/>
                         <modifier type="set" value="0" field="7e7f-0ba2-3874-ab3f"/>
                         <modifier type="set" value="true" field="hidden"/>
+                        <modifier type="set" value="0" field="bd12-6b92-8aca-f4e2"/>
                       </modifiers>
                       <conditionGroups>
                         <conditionGroup type="or">
@@ -322,22 +339,6 @@
                   </modifierGroups>
                 </entryLink>
               </entryLinks>
-              <modifierGroups>
-                <modifierGroup type="and">
-                  <modifiers>
-                    <modifier type="set" value="0" field="71c5-9037-5bd4-fae9"/>
-                    <modifier type="set" value="0" field="f5b7-0be5-74d6-45b2"/>
-                  </modifiers>
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
-                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifierGroup>
-              </modifierGroups>
             </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="e5cc-016c-930e-691f" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <selectionEntries>
@@ -426,7 +427,7 @@
             <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour Save 6+)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot</characteristic>
           </characteristics>
         </profile>
         <profile name="Ward of Qu&apos;aph" typeId="33db-947a-af70-07e7" typeName="Wards of the God" hidden="false" id="6b5b-eee4-2f88-6a5b">
@@ -442,6 +443,13 @@
         <profile name="Ward of Tahoth" typeId="33db-947a-af70-07e7" typeName="Wards of the God" hidden="false" id="8a3c-6553-fef8-88a0">
           <characteristics>
             <characteristic name="Effect" typeId="f82f-70a7-214a-c36f">All friendly Wizards within 6&quot; gain the Loremaster special rule.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Tomb Barque of Usirian" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="c4b0-1895-4b3a-bfe9">
+          <characteristics>
+            <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+            <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
           </characteristics>
         </profile>
       </profiles>
@@ -1059,20 +1067,6 @@ of the initial target, which also suffers the effects of the Light of Death. Kee
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
-    <profile name="Skeleton Chariot " typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="7fde-c386-9e67-4c2c">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour Save 6+)</characteristic>
-      </characteristics>
-    </profile>
     <profile name="Usirian&apos;s Incantation of Vengeance" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="6e30-f3df-96d1-2c98">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
@@ -1197,6 +1191,27 @@ of the initial target, which also suffers the effects of the Light of Death. Kee
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0"/>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Each time a Wizard successfully casts an augment or conveyance spell from the Lore of Nehekhara, the target of the spell immediately recovers a number of Wounds&apos; worth of models, just like a summoning spell. Core Units (except Chariots) recover D6+1 Wounds. Special Units, Chariots and Monstrous Cavalry recover D3 Wounds. Remaining Rare Units recover 1 Wound.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Skeleton Chariot " typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0f95-ca53-690c-0478">
+      <characteristics>
+        <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
+        <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
+        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+        <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
+        <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
+        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Skeleton Chariot " typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="d2de-f5a2-d10e-a10d">
+      <characteristics>
+        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
       </characteristics>
     </profile>
   </sharedProfiles>
@@ -1389,9 +1404,13 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="f64f-de70-f360-7e0c" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="e740-2cd2-2920-d842" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4198-3f59-6c1c-bdef" includeChildSelections="false"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -1837,9 +1856,13 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="c69b-d652-146c-d5e2" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="17c9-1ca6-fd5b-1bfd" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="baf2-4384-fa93-af57" includeChildSelections="false"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -1897,9 +1920,13 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="97ab-3cb9-8c5c-40a9" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="fb75-79b8-ef69-68fe" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4770-3901-ee97-af40" includeChildSelections="false"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -3147,11 +3174,12 @@ If, at the start of any of your turns following the death of the Hierophant, the
                 <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Undead)</characteristic>
               </characteristics>
             </profile>
-            <profile name="Transmogrifying Gaze" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="433d-684f-3ad9-8b79">
+            <profile name="Transmogrifying Gaze" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="433d-684f-3ad9-8b79">
               <characteristics>
-                <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
-                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Ignores Armour saves, Killing Blow, Magical Attacks, Multiple Shots (3), When rolling To Wound, substitute the target&apos;s Toughness with its Initiative value. This attack does not suffer any To Hit penalties.</characteristic>
+                <characteristic name="Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
+                <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
+                <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3</characteristic>
+                <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Ignores Armour saves, Killing Blow, Magical Attacks, When rolling To Wound, substitute the target&apos;s Toughness with its Initiative value. This attack does not suffer any To Hit penalties.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3200,11 +3228,17 @@ If, at the start of any of your turns following the death of the Hierophant, the
       <infoLinks>
         <infoLink name="Killing Blow" id="d639-9aa0-9382-1583" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29"/>
         <infoLink name="Entombed beneath the sand" id="f85e-d0b9-2346-7d8b" hidden="false" type="rule" targetId="1d24-e394-e63d-b2e2"/>
-        <infoLink name="Natural Armour (5+)" id="5183-77d1-0272-f8f5" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
         <infoLink name="Magic Resistance (1)" id="f461-f61e-c309-862f" hidden="false" type="rule" targetId="7ed4-9d31-09c3-6bf9"/>
         <infoLink name="Poisoned Attacks" id="5132-4fe9-d7bd-a624" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
         <infoLink name="Undead" id="8b88-6c61-4119-2efe" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
         <infoLink name="Entombed Beneath the Sands Mishap Table" id="d405-fcd6-d03c-8eec" hidden="false" type="infoGroup" targetId="f22f-d3e2-f29d-5ce1"/>
+        <infoLink name="Natural Armour" id="f1fd-3e36-25f2-fdb6" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Tomb Scorpion" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="b4d1-9e8c-17dd-3782" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -3245,10 +3279,16 @@ If, at the start of any of your turns following the death of the Hierophant, the
       </profiles>
       <infoLinks>
         <infoLink name="Killing Blow" id="8956-91c6-ca17-fe55" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29"/>
-        <infoLink name="Natural Armour (6+)" id="2265-345d-7302-1b0e" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
         <infoLink name="Magical Attacks" id="bcce-e6f6-873c-7b17" hidden="false" type="rule" targetId="03db-d81f-f264-84b8"/>
         <infoLink name="Scouts" id="e255-4423-c834-f825" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
         <infoLink name="Undead" id="17df-ab57-d5f4-bdec" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
+        <infoLink name="Natural Armour" id="2dde-0e2d-b08b-5a90" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Ammut" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="91da-1dec-084b-34b9" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -3533,7 +3573,6 @@ If, at the start of any of your turns following the death of the Hierophant, the
             <infoLink name="Undead" id="5ed8-7330-1351-517a" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
             <infoLink name="Killing Blow" id="6986-b8b1-6c54-7481" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29"/>
             <infoLink name="Magical Attacks" id="0649-f053-453d-3d85" hidden="false" type="rule" targetId="03db-d81f-f264-84b8"/>
-            <infoLink name="Natural Armour (5+)" id="7ecb-2387-6e5c-a7f9" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
           </infoLinks>
           <profiles>
             <profile name="Necropolis Knight" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="56b6-3de2-fee5-8953">
@@ -3984,7 +4023,13 @@ Leech from the Lore of Death.</characteristic>
         <infoLink name="Undead" id="ea1c-4f78-1bd5-d3da" hidden="false" type="rule" targetId="8786-eb6b-b0ac-a6d2"/>
         <infoLink name="Fly (7)" id="80ea-8787-877c-9b1c" hidden="false" type="rule" targetId="36ba-3349-99bd-1979"/>
         <infoLink name="Impact Hits (D6)" id="e9cf-a268-bb0d-c788" hidden="false" type="rule" targetId="e9e6-66cc-623f-8e94"/>
-        <infoLink name="Natural Armour (5+)" id="13c8-d4dd-f461-0606" hidden="false" type="rule" targetId="306d-711a-1300-587f"/>
+        <infoLink name="Natural Armour" id="5db1-e6de-8436-66cf" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Khemric Titan" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <rules>
         <rule name="Curse of the Fallen" id="4f34-9b1d-f613-27b4" hidden="false">
@@ -4116,7 +4161,10 @@ Strength 2 hits which Ignores Armour saves</description>
                         <infoLink name="Polearm/Halberd" id="3c6e-3406-4771-8e29" hidden="false" type="profile" targetId="e43e-5153-eeec-36be">
                           <modifiers>
                             <modifier type="set" value="Blessed Blade of Ptra" field="annotation"/>
-                            <modifier type="set" value="This blade gives Settra the Always Strikes First, Armour Piercing (1) and Flaming Attacks special rules. In addition, a character or monster that suffers one or more unsaved Wounds from the Blessed Blade of Ptra suffers -1 to its rolls To Hit (both shooting and close combat) for the remainder of the game." field="name"/>
+                            <modifier type="append" value="This blade gives Settra the Always Strikes First, Armour Piercing (1) and Flaming Attacks special rules. In addition, a character or monster that suffers one or more unsaved Wounds from the Blessed Blade of Ptra suffers -1 to its rolls To Hit (both shooting and close combat) for the remainder of the game." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -4134,7 +4182,10 @@ Strength 2 hits which Ignores Armour saves</description>
                         <infoLink name="Heavy Armour" id="31de-4580-ec1a-ef12" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
                           <modifiers>
                             <modifier type="set" value="Armour of Golden Magnificence" field="annotation"/>
-                            <modifier type="append" value="This armour save cannot be modified in any way, and may even be taken against mundane attacks that normally do not allow armour saves" field="ff58-91e4-84d7-e6e4"/>
+                            <modifier type="append" value="This armour save cannot be modified in any way, and may even be taken against mundane attacks that normally do not allow armour saves" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -4258,6 +4309,7 @@ Strength 2 hits which Ignores Armour saves</description>
                 <entryLink import="true" name="90. Magic Items" hidden="false" id="22c1-7839-fc67-38f7" type="selectionEntryGroup" targetId="4a6c-a780-b910-e3b8">
                   <modifiers>
                     <modifier type="set" value="50" field="6ee7-c31b-82f8-adfd"/>
+                    <modifier type="set" value="true" field="hidden" affects="838f-7b85-acae-a577"/>
                   </modifiers>
                 </entryLink>
                 <entryLink import="true" name="10. Character Options" hidden="false" id="763e-6211-5642-79b2" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
@@ -4493,11 +4545,12 @@ Strength 2 hits which Ignores Armour saves</description>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f531-0578-8547-6be6-max" includeChildSelections="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Tomb Blade of Arkhan" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="f4ab-7a7b-a5f0-3699">
+                        <profile name="Tomb Blade of Arkhan" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="f4ab-7a7b-a5f0-3699">
                           <characteristics>
-                            <characteristic name="Range" typeId="59f2-3142-82d5-4f43"/>
                             <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">For every unsaved Wound caused by this blade to an enemy in close combat, Arkhan&apos;s unit immediately recovers a Wound for each one inflicted, as described in Resurrecting Fallen Warriors</characteristic>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. For every unsaved Wound caused by this blade to an enemy in close combat, Arkhan&apos;s unit immediately recovers a Wound for each one inflicted, as described in Resurrecting Fallen Warriors</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -4523,25 +4576,19 @@ Strength 2 hits which Ignores Armour saves</description>
                           </constraints>
                         </entryLink>
                       </entryLinks>
-                      <profiles>
-                        <profile name="Chariot of the Liche King" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="7f4f-16ac-dd75-4849">
-                          <characteristics>
-                            <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
-                            <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
-                            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-                            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-                            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-                            <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
-                            <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
-                            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
-                            <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-                            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <infoLinks>
                         <infoLink name="Terror" id="f4ce-3b13-f609-877a" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
                         <infoLink name="Fly (8)" id="6565-f846-96c3-71e1" hidden="false" type="rule" targetId="0a9a-bfcb-1a9d-5609"/>
+                        <infoLink name="Skeleton Chariot " id="29cc-4003-4183-5d79" hidden="false" type="profile" targetId="d2de-f5a2-d10e-a10d">
+                          <modifiers>
+                            <modifier type="set" value="Chariot of the Liche King" field="annotation"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Skeleton Chariot " id="14e0-a216-7f2d-18c5" hidden="false" type="profile" targetId="0f95-ca53-690c-0478">
+                          <modifiers>
+                            <modifier type="set" value="Chariot of the Liche King" field="annotation"/>
+                          </modifiers>
+                        </infoLink>
                       </infoLinks>
                       <categoryLinks>
                         <categoryLink name="Chariot" hidden="false" id="5865-d88f-ce6a-09f7" targetId="7224-b7fd-d652-3ff2" primary="false"/>
@@ -4892,7 +4939,10 @@ Strength 2 hits which Ignores Armour saves</description>
                         <infoLink name="Great Weapon" id="910e-a50d-8da2-59f3" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
                           <modifiers>
                             <modifier type="set" value="The Sacred Crook of Shapesh" field="annotation"/>
-                            <modifier type="append" value="Keep track of the number of unsaved wounds inflicted by the Sacred Crook in each Close Combat phase. In each of your Shooting phases, the power of the Crook may be unleashed as a special attack with a range of 24&quot;, or against one enemy unit in base contact. The target suffers a number of Strength 4 hits equal to the number of wounds currently ‘stored’ in the Crook. Once unleashed, the number of wounds stored in the staff are returned to 0 until Sehenesmet inflicts more wounds. In addition, it increases the range of Sehenesmet&apos;s spells by 6&quot;." field="de63-d6da-efa8-00ac"/>
+                            <modifier type="append" value="Keep track of the number of unsaved wounds inflicted by the Sacred Crook in each Close Combat phase. In each of your Shooting phases, the power of the Crook may be unleashed as a special attack with a range of 24&quot;, or against one enemy unit in base contact. The target suffers a number of Strength 4 hits equal to the number of wounds currently ‘stored’ in the Crook. Once unleashed, the number of wounds stored in the staff are returned to 0 until Sehenesmet inflicts more wounds. In addition, it increases the range of Sehenesmet&apos;s spells by 6&quot;." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -4991,9 +5041,13 @@ Strength 2 hits which Ignores Armour saves</description>
                 <entryLink import="true" name="40. Suits of Armour" hidden="false" id="8747-ac9c-85e2-3ba5" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
                   <entryLinks>
                     <entryLink import="true" name="Heavy Armour" hidden="false" id="6ba8-8603-398d-935b" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="46f3-b8f4-6b1f-7032" includeChildSelections="false"/>
-                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="1" field="2a65-3a21-af86-6ae3">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                     </entryLink>
                   </entryLinks>
                 </entryLink>
@@ -5031,6 +5085,14 @@ Strength 2 hits which Ignores Armour saves</description>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
                     <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
                     <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Undead)</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Swarming Mass" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="2a64-6427-c01f-2520">
+                  <characteristics>
+                    <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+                    <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">1</characteristic>
+                    <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Poisoned Attacks.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5072,9 +5134,6 @@ Strength 2 hits which Ignores Armour saves</description>
                 <infoLink name="Entombed Beneath the Sands Mishap Table" id="52dc-ab19-70ae-d195" hidden="false" type="infoGroup" targetId="f22f-d3e2-f29d-5ce1"/>
               </infoLinks>
               <rules>
-                <rule name="Swarming Mass" id="47bb-65de-771f-85ff" hidden="false">
-                  <description>Apophas has a Strength 1 Breath Weapon with the Poisoned Attacks special rule.</description>
-                </rule>
                 <rule name="Desert Revenant" id="e494-2288-2430-5b80" hidden="false">
                   <description>When rolling to enter the table using the Entombed Beneath the Sands special, you may re-roll the Artillery dice.</description>
                 </rule>
@@ -5114,7 +5173,10 @@ Strength 2 hits which Ignores Armour saves</description>
                         <infoLink name="Flail" id="5e06-a6c0-adcb-4e6a" hidden="false" type="profile" targetId="7f6a-b8b2-8978-4f35">
                           <modifiers>
                             <modifier type="set" value="The Flail of Skulls" field="annotation"/>
-                            <modifier type="append" value="Attacks made with the Flail of Skulls have the Multiple Wounds (2) special rule." field="de63-d6da-efa8-00ac"/>
+                            <modifier type="append" value="Attacks made with the Flail of Skulls have the Multiple Wounds (2) special rule." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -5151,9 +5213,13 @@ Strength 2 hits which Ignores Armour saves</description>
                 <entryLink import="true" name="40. Suits of Armour" hidden="false" id="9f8d-4cfb-89ec-542e" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
                   <entryLinks>
                     <entryLink import="true" name="Light Armour" hidden="false" id="34dd-ad1d-d184-e116" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="90e1-2a47-4bc5-4a8a" includeChildSelections="false"/>
-                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                     </entryLink>
                   </entryLinks>
                 </entryLink>
@@ -5244,9 +5310,13 @@ Strength 2 hits which Ignores Armour saves</description>
                 <entryLink import="true" name="40. Suits of Armour" hidden="false" id="3b26-5d1e-918e-3bae" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
                   <entryLinks>
                     <entryLink import="true" name="Light Armour" hidden="false" id="a7cb-fa10-0aec-5f76" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2c66-c5fa-ec58-6ebb" includeChildSelections="false"/>
-                      </constraints>
+                      <modifiers>
+                        <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                     </entryLink>
                   </entryLinks>
                 </entryLink>
@@ -5609,7 +5679,9 @@ Strength 2 hits which Ignores Armour saves</description>
                 <infoLink name="Two/Additional Hand Weapons" id="6616-d018-cd3e-0a28" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
                   <modifiers>
                     <modifier type="set" value="Crook and Flail of Radiance" field="annotation"/>
-                    <modifier type="append" value=" These weapons gives the wielder the Always Strikes First special rule and +1 Combat Resolution bonus." field="de63-d6da-efa8-00ac"/>
+                    <modifier type="append" value=" These weapons gives the wielder the Always Strikes First special rule and +1 Combat Resolution bonus." field="de63-d6da-efa8-00ac" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -5654,7 +5726,9 @@ Strength 2 hits which Ignores Armour saves</description>
               <infoLinks>
                 <infoLink name="Great Weapon" id="c805-ad5d-eb33-ad26" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
                   <modifiers>
-                    <modifier type="append" value="Attacks made with the Destroyer of Eternities have the Heroic Killing Blow special rule. The wielder can choose to exchange all of their Attacks to make a special attack. If they do so, all enemy models in base contact with the wielder suffer a single automatic hit (with Heroic Killing Blow). In a challenge, only the models engaged in the challenge count as being in base contact with the Tomb King." field="de63-d6da-efa8-00ac"/>
+                    <modifier type="append" value="Attacks made with the Destroyer of Eternities have the Heroic Killing Blow special rule. The wielder can choose to exchange all of their Attacks to make a special attack. If they do so, all enemy models in base contact with the wielder suffer a single automatic hit (with Heroic Killing Blow). In a challenge, only the models engaged in the challenge count as being in base contact with the Tomb King." field="de63-d6da-efa8-00ac" join="
+
+"/>
                     <modifier type="set" value="Destroyer of Ethernities" field="annotation"/>
                   </modifiers>
                 </infoLink>
@@ -5689,7 +5763,10 @@ Strength 2 hits which Ignores Armour saves</description>
                 <infoLink name="Two/Additional Hand Weapons" id="2480-f053-5122-1212" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
                   <modifiers>
                     <modifier type="set" value="Phakth&apos;s Blades of Justice" field="annotation"/>
-                    <modifier type="append" value="The wielder of these weapons gain +1 Attack for each complete rank any one enemy unit in base contact with them has." field="de63-d6da-efa8-00ac"/>
+                    <modifier type="append" value="*The wielder of these weapons gain +1 Attack for each complete rank any one enemy unit in base contact with them has." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                    <modifier type="append" value="+X*" field="ffc4-c065-ab29-fb8c"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -5700,10 +5777,11 @@ Strength 2 hits which Ignores Armour saves</description>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8066-82ba-6524-9852" includeChildSelections="true"/>
               </constraints>
               <profiles>
-                <profile name="Blade of Setep" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="28d8-af4c-6a72-0fe2">
+                <profile name="Blade of Setep" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="28d8-af4c-6a72-0fe2">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
                     <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
                     <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Blade of Setep gives the wielder the Ignores Armour Saves special rule. If the enemy model wears magical armour, the first Hit against this model is ignored, but the magical armour is destroyed for the remainder of the battle.</characteristic>
                   </characteristics>
                 </profile>
@@ -5718,10 +5796,11 @@ Strength 2 hits which Ignores Armour saves</description>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8eb4-9f56-225e-f68b" includeChildSelections="true"/>
               </constraints>
               <profiles>
-                <profile name="Dagger of Bound Souls" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="adbc-f13d-f6ea-b4de">
+                <profile name="Dagger of Bound Souls" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="adbc-f13d-f6ea-b4de">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
                     <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
                     <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">No Ward saves can be taken against Wounds caused by this item. In addition, any model that suffers an unsaved Wound from it must pass a Toughness test or suffer an additional Wound with no saves allowed. They must keep taking Toughness tests until they pass or are removed as a casualty.</characteristic>
                   </characteristics>
                 </profile>
@@ -5736,10 +5815,11 @@ Strength 2 hits which Ignores Armour saves</description>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="aaf9-788f-f26c-b5ef" includeChildSelections="true"/>
               </constraints>
               <profiles>
-                <profile name="Blade of Mourning" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="20b9-dd72-6d5c-fa6c">
+                <profile name="Blade of Mourning" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="20b9-dd72-6d5c-fa6c">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
                     <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
                     <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">If a unit suffers at least one wound from the Blade of Mourning and loses the combat, any negative modifiers to the unit&apos;s Leadership for the subsequent Break test are doubled.</characteristic>
                   </characteristics>
                 </profile>
@@ -5767,7 +5847,9 @@ Strength 2 hits which Ignores Armour saves</description>
                 <infoLink name="Two/Additional Hand Weapons" id="a24e-c839-4108-605e" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
                   <modifiers>
                     <modifier type="set" value="Blades of Hounourable Demise" field="annotation"/>
-                    <modifier type="append" value="The wielder of these weapons gains +1 To Hit in close combat" field="de63-d6da-efa8-00ac"/>
+                    <modifier type="append" value="The wielder of these weapons gains +1 To Hit in close combat" field="de63-d6da-efa8-00ac" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -5778,10 +5860,11 @@ Strength 2 hits which Ignores Armour saves</description>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d9ce-3b60-13cc-91eb" includeChildSelections="true"/>
               </constraints>
               <profiles>
-                <profile name="The Conqueror&apos;s Blade" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="a89c-8f7a-4ceb-63f9">
+                <profile name="The Conqueror&apos;s Blade" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="a89c-8f7a-4ceb-63f9">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
                     <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
                     <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The wielder of this weapon gains the Killing Blow special rule. When fighting in a challenge, their Killing Blow takes effect on a 5+ rather than a 6.</characteristic>
                   </characteristics>
                 </profile>
@@ -5796,10 +5879,11 @@ Strength 2 hits which Ignores Armour saves</description>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="10db-de3a-74d2-5d89" includeChildSelections="true"/>
               </constraints>
               <profiles>
-                <profile name="Staff of Aeons" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="00c0-4f36-f8b6-defc">
+                <profile name="Staff of Aeons" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="00c0-4f36-f8b6-defc">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
                     <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
                     <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">If the wielder of this item successfully Hits an enemy unit one or more times in close combat, that unit suffers -1 to their armour saves for the duration of the game.</characteristic>
                   </characteristics>
                 </profile>
@@ -5828,10 +5912,11 @@ Strength 2 hits which Ignores Armour saves</description>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="50e7-e098-a6a0-f3b9" includeChildSelections="true"/>
               </constraints>
               <profiles>
-                <profile name="Serpent Staff" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="d1c4-0f4e-3a0c-1cc6">
+                <profile name="Serpent Staff" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="d1c4-0f4e-3a0c-1cc6">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
                     <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
                     <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Serpent Staff gives the wielder the Poisoned Attacks special rule. In addition, they may re- roll failed rolls To Wound.</characteristic>
                   </characteristics>
                 </profile>
@@ -5866,7 +5951,9 @@ Strength 2 hits which Ignores Armour saves</description>
                 <infoLink name="Light Lance" id="8e65-77d3-60ff-cdd8" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb">
                   <modifiers>
                     <modifier type="set" value="Spear of Antarhak" field="annotation"/>
-                    <modifier type="append" value="For every unsaved Wound inflicted by the Spear of Antarhak, the wielder immediately regains a single Wound lost earlier in the battle. If the bearer is already at their starting number of Wounds and inflicts another unsaved Wound with this weapon, they gain the Regeneration (4+) special rule until the end of the next player turn." field="de63-d6da-efa8-00ac"/>
+                    <modifier type="append" value="For every unsaved Wound inflicted by the Spear of Antarhak, the wielder immediately regains a single Wound lost earlier in the battle. If the bearer is already at their starting number of Wounds and inflicts another unsaved Wound with this weapon, they gain the Regeneration (4+) special rule until the end of the next player turn." field="de63-d6da-efa8-00ac" join="
+
+"/>
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
                         <condition type="lessThan" value="1" field="selections" scope="parent" childId="mount" shared="true" includeChildSelections="true"/>
@@ -5877,7 +5964,9 @@ Strength 2 hits which Ignores Armour saves</description>
                 <infoLink name="Spear" id="e46a-aee8-d96e-2047" hidden="false" type="profile" targetId="be39-37ac-ac20-5053">
                   <modifiers>
                     <modifier type="set" value="Spear of Antarhak" field="annotation"/>
-                    <modifier type="append" value="For every unsaved Wound inflicted by the Spear of Antarhak, the wielder immediately regains a single Wound lost earlier in the battle. If the bearer is already at their starting number of Wounds and inflicts another unsaved Wound with this weapon, they gain the Regeneration (4+) special rule until the end of the next player turn." field="de63-d6da-efa8-00ac"/>
+                    <modifier type="append" value="For every unsaved Wound inflicted by the Spear of Antarhak, the wielder immediately regains a single Wound lost earlier in the battle. If the bearer is already at their starting number of Wounds and inflicts another unsaved Wound with this weapon, they gain the Regeneration (4+) special rule until the end of the next player turn." field="de63-d6da-efa8-00ac" join="
+
+"/>
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="parent" childId="mount" shared="true" includeChildSelections="true"/>
@@ -5920,7 +6009,9 @@ Strength 2 hits which Ignores Armour saves</description>
               <infoLinks>
                 <infoLink name="Light Armour" id="fb7e-236a-7132-c728" hidden="false" type="profile" targetId="4129-1acd-3564-d3ea">
                   <modifiers>
-                    <modifier type="append" value="The character can never suffer more than one wound due to combat resolution. If the wearer is with a unit, up to half the wounds suffered due to combat resolution can be allocated against the character, which are then ignored save for the first one." field="ff58-91e4-84d7-e6e4"/>
+                    <modifier type="append" value="The character can never suffer more than one wound due to combat resolution. If the wearer is with a unit, up to half the wounds suffered due to combat resolution can be allocated against the character, which are then ignored save for the first one." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                     <modifier type="set" value="Scorpion Armour" field="name"/>
                   </modifiers>
                 </infoLink>
@@ -5986,7 +6077,9 @@ Strength 2 hits which Ignores Armour saves</description>
               <infoLinks>
                 <infoLink name="Light Armour" id="3576-1b60-525c-dc67" hidden="false" type="profile" targetId="4129-1acd-3564-d3ea">
                   <modifiers>
-                    <modifier type="append" value="Enemy models must re-roll successful rolls To Wound against the wearer of this armour." field="ff58-91e4-84d7-e6e4"/>
+                    <modifier type="append" value="Enemy models must re-roll successful rolls To Wound against the wearer of this armour." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                     <modifier type="set" value="Armour of Eternity" field="name"/>
                   </modifiers>
                 </infoLink>
@@ -6006,7 +6099,9 @@ Strength 2 hits which Ignores Armour saves</description>
               <infoLinks>
                 <infoLink name="Light Armour" id="b1cb-89b5-c9a1-28ed" hidden="false" type="profile" targetId="4129-1acd-3564-d3ea">
                   <modifiers>
-                    <modifier type="append" value="When the wearer of this armour is reduced to their last Wound, they gain a 3+ Ward save. This has no effect if they suffer their last Wound as a result of an attack that causes Multiple Wounds." field="ff58-91e4-84d7-e6e4"/>
+                    <modifier type="append" value="When the wearer of this armour is reduced to their last Wound, they gain a 3+ Ward save. This has no effect if they suffer their last Wound as a result of an attack that causes Multiple Wounds." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                     <modifier type="set" value="Armour of the Ages" field="name"/>
                   </modifiers>
                 </infoLink>
@@ -6037,7 +6132,7 @@ Strength 2 hits which Ignores Armour saves</description>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3244-98c1-29e4-a785" includeChildSelections="true"/>
               </constraints>
               <profiles>
-                <profile name="Vambraces of the Sun" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="4415-a382-644b-f25b">
+                <profile name="Vambraces of the Sun" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="4415-a382-644b-f25b">
                   <characteristics>
                     <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
                     <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
@@ -6062,7 +6157,7 @@ Strength 2 hits which Ignores Armour saves</description>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a695-9e2f-a0bb-fe14" includeChildSelections="true"/>
               </constraints>
               <profiles>
-                <profile name="Gauntlet of Hraklonesh" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="97a1-bf82-a748-3842">
+                <profile name="Gauntlet of Hraklonesh" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="97a1-bf82-a748-3842">
                   <characteristics>
                     <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
                     <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
@@ -6089,7 +6184,9 @@ Strength 2 hits which Ignores Armour saves</description>
               <infoLinks>
                 <infoLink name="Shield" id="eccf-c032-6c89-8336" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
                   <modifiers>
-                    <modifier type="append" value="The bearer of this shield gains the Parry (6+) special rule even while mounted. If they make a successful Parry save, all models in base contact with them suffer -1 To Hit for the remainder of the turn, or the next turn if they have already attacked this turn." field="ff58-91e4-84d7-e6e4"/>
+                    <modifier type="append" value="The bearer of this shield gains the Parry (6+) special rule even while mounted. If they make a successful Parry save, all models in base contact with them suffer -1 To Hit for the remainder of the turn, or the next turn if they have already attacked this turn." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                     <modifier type="set" value="Shield of Pta" field="annotation"/>
                   </modifiers>
                 </infoLink>
@@ -6114,7 +6211,7 @@ Strength 2 hits which Ignores Armour saves</description>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="05c1-bd49-f307-7d61" includeChildSelections="true"/>
               </constraints>
               <profiles>
-                <profile name="Royal Mantle" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="4879-0b95-f0f9-4da4">
+                <profile name="Royal Mantle" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="4879-0b95-f0f9-4da4">
                   <characteristics>
                     <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
                     <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
@@ -6135,15 +6232,6 @@ Strength 2 hits which Ignores Armour saves</description>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cae5-ee3e-6d84-6d3f" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6745-b902-1630-3829" includeChildSelections="true"/>
               </constraints>
-              <profiles>
-                <profile name="Warding Splint" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="5e1b-1bd0-fbfa-eae9">
-                  <characteristics>
-                    <characteristic name="Combat" typeId="168d-1cc2-66f3-e766"/>
-                    <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca"/>
-                    <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Light armour. This armour gives the wearer a 5+ Ward save in close combat. This armour may be taken even though Wizards may not normally wear armour.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
@@ -6154,6 +6242,16 @@ Strength 2 hits which Ignores Armour saves</description>
                   </conditions>
                 </modifier>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Light Armour" id="62d2-d289-8f97-3a80" hidden="false" type="profile" targetId="4129-1acd-3564-d3ea">
+                  <modifiers>
+                    <modifier type="append" value="This armour gives the wearer a 5+ Ward save in close combat. This armour may be taken even though Wizards may not normally wear armour." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                    <modifier type="set" value="Warding Splint" field="annotation"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
@@ -6760,6 +6858,9 @@ Strength 2 hits which Ignores Armour saves</description>
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.00e7-e0e6-c5f5-1a36.profiles.Armour Save"/>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.b08f-ec9b-c750-180a.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.b08f-ec9b-c750-180a.profiles.Ranged Weapon"/>
       </modifiers>
       <constraints>
         <constraint type="max" value="0" field="points" scope="parent" shared="true" id="6ee7-c31b-82f8-adfd"/>

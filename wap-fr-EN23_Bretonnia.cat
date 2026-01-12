@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="49b2-e0ed-c824-7db5" name="Bretonnia WAP 1.61" revision="6" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="39" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="49b2-e0ed-c824-7db5" name="Bretonnia WAP 1.61" revision="7" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="39" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <profileTypes>
     <profileType id="5706-c82a-69e3-ce8a" name="Virtue of the Chivalric Knight">
       <characteristicTypes>
@@ -98,9 +98,13 @@
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="45d2-912d-49a2-93d0" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Heavy Armour" hidden="false" id="f209-7ab3-de12-fafd" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3ea0-4077-45d6-1d4a"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2a65-3a21-af86-6ae3">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -232,11 +236,6 @@
                 <cost name="pts" typeId="points" value="42"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Sacrosanctum of the Lady" hidden="false" id="c287-5eb7-480d-af55" type="selectionEntry" targetId="ccca-e2d0-2bdf-6ce1" sortIndex="4">
-              <costs>
-                <cost name="pts" typeId="points" value="120"/>
-              </costs>
-            </entryLink>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="60. Wizard Level" hidden="false" id="d78d-c2ba-7807-ff44" type="selectionEntryGroup" targetId="d1c2-3512-e5b6-7616"/>
@@ -351,9 +350,13 @@
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="a26c-d095-df3d-bd69" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Heavy Armour" hidden="false" id="e9fc-4d00-70f5-679f" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d4bc-3be9-3697-3de5"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2a65-3a21-af86-6ae3">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -1773,22 +1776,6 @@ Defensive Stakes are treated as Defended Obstacles, and remain on the table duri
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="63c4-0ee8-e65e-7cc9" type="max"/>
               </constraints>
-              <profiles>
-                <profile id="714c-15de-05ee-a0d1" name="Equerry" publicationId="9e23-79cb-pubN75312" page="145" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <infoLinks>
                 <infoLink id="4b6a-d596-a2e3-b6a7" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
@@ -2475,22 +2462,6 @@ Grail Reliquae follow all the rules for Shrines. Only once all the Grail Pilgrim
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1a30-ef2b-0a3e-e408" type="max"/>
               </constraints>
-              <profiles>
-                <profile id="3b28-c4e7-9e7b-f836" name="Paragon" publicationId="9e23-79cb-pubN75312" page="133" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <infoLinks>
                 <infoLink id="d1bf-ec34-4b04-46f2" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
@@ -2657,22 +2628,6 @@ Grail Reliquae follow all the rules for Shrines. Only once all the Grail Pilgrim
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="385e-148b-76c9-2c54" type="max"/>
               </constraints>
-              <profiles>
-                <profile id="bf49-bd18-9526-1f6f" name="Chevalier" publicationId="9e23-79cb-pubN75312" page="137" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Cavalry</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <infoLinks>
                 <infoLink id="2077-ddd7-3608-7419" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
@@ -2695,7 +2650,7 @@ Grail Reliquae follow all the rules for Shrines. Only once all the Grail Pilgrim
       </rules>
       <infoLinks>
         <infoLink id="8733-1349-4e2f-f4dd" name="Bolt Thrower" hidden="false" targetId="2d26-2a21-00a2-685d" type="profile"/>
-        <infoLink name="Firing a Blot Thrower" id="200a-0579-554c-1f32" hidden="false" type="rule" targetId="f55b-b981-fae7-afa2"/>
+        <infoLink name="Firing a Bolt Thrower" id="200a-0579-554c-1f32" hidden="false" type="rule" targetId="f55b-b981-fae7-afa2"/>
         <infoLink name="Warmachine" id="359d-9f75-1a38-da91" hidden="false" type="profile" targetId="80b1-ed85-bde1-fa07">
           <modifiers>
             <modifier type="set" value="Ballista" field="name"/>
@@ -3070,11 +3025,12 @@ Grail Reliquae follow all the rules for Shrines. Only once all the Grail Pilgrim
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3226-2878-e0fd-e73e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="The Blade of Banishment" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="7046-69cb-1074-df0c" publicationId="9e23-79cb-pubN75312" page="167">
+                        <profile name="The Blade of Banishment" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="7046-69cb-1074-df0c" publicationId="9e23-79cb-pubN75312" page="167">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">This Sword automatically Wounds models with the Undead special rule, with the Ignores Armour Saves special rule. In addition, the bearer and any unit he is leading have Immunity (Terror) caused by Undead.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. This Sword automatically Wounds models with the Undead special rule, with the Ignores Armour Saves special rule. In addition, the bearer and any unit he is leading have Immunity (Terror) caused by Undead.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -3094,7 +3050,10 @@ Grail Reliquae follow all the rules for Shrines. Only once all the Grail Pilgrim
                         <infoLink name="Shield" id="89d8-ca6d-6114-7f77" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
                           <modifiers>
                             <modifier type="set" value="The Grail Shield" field="annotation"/>
-                            <modifier type="append" value="Models from the Forces of Destruction in base contact with Tancred suffer a -1 To Hit penalty in close combat." field="ff58-91e4-84d7-e6e4"/>
+                            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" join=" "/>
+                            <modifier type="append" value="Models from the Forces of Destruction in base contact with Tancred suffer a -1 To Hit penalty in close combat." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -3222,11 +3181,12 @@ During the game, the Green Knight may disappear at will and reappear in another 
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b55f-1704-f264-b963" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="The Dolorous Blade" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="8d66-cfd5-6a59-716e" publicationId="9e23-79cb-pubN75312" page="165">
+                        <profile name="The Dolorous Blade" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="8d66-cfd5-6a59-716e" publicationId="9e23-79cb-pubN75312" page="165">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Dolorous Blade may be used in one of two ways. Either the Green Knight can use the Blade to gain +D6 Attacks, or it can be used to add +2 to his Strength. The Green Knight may change which method he is using to attack with in each Close Combat phase if he wishes to.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. The Dolorous Blade may be used in one of two ways. Either the Green Knight can use the Blade to gain +D6 Attacks, or it can be used to add +2 to his Strength. The Green Knight may change which method he is using to attack with in each Close Combat phase if he wishes to.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -3476,11 +3436,12 @@ During the game, the Green Knight may disappear at will and reappear in another 
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2564-6f81-027b-b706" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="The Beast Mace of Bastonne" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="44d1-94df-cedb-8f46" publicationId="9e23-79cb-pubN75312" page="166">
+                        <profile name="The Beast Mace of Bastonne" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="44d1-94df-cedb-8f46" publicationId="9e23-79cb-pubN75312" page="166">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+2</characteristic>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Multiple Wounds (2)</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+2</characteristic>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Multiple Wounds (2)</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -3500,7 +3461,10 @@ During the game, the Green Knight may disappear at will and reappear in another 
                         <infoLink name="Shield" id="274e-c7f7-f2bc-aa7f" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
                           <modifiers>
                             <modifier type="set" value="Bohemond&apos;s Shield" field="annotation"/>
-                            <modifier type="append" value="Should an enemy strike Bohemond with a Magic Weapon, roll a D6 for each hit. On a roll of 6, the enemy weapon is destroyed. Resolve enemy hits that are not destroyed by the shield in the normal way but once the weapon is broken all further hits from that weapon are ignored." field="ff58-91e4-84d7-e6e4"/>
+                            <modifier type="append" value="Should an enemy strike Bohemond with a Magic Weapon, roll a D6 for each hit. On a roll of 6, the enemy weapon is destroyed. Resolve enemy hits that are not destroyed by the shield in the normal way but once the weapon is broken all further hits from that weapon are ignored." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" join=" "/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -3553,11 +3517,12 @@ During the game, the Green Knight may disappear at will and reappear in another 
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a074-dd99-50fd-16fc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Sword of Couronne" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="6dc2-6a54-614b-1317" publicationId="9e23-79cb-pubN75312" page="160">
+                        <profile name="Sword of Couronne" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="6dc2-6a54-614b-1317" publicationId="9e23-79cb-pubN75312" page="160">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The sword allows Louen to re-roll failed rolls to Hit. In addition, any enemy models in base contact with Louen at the beginning of any Close Combat phase must take an Initiative test. If this is failed, that model may make no attacks this round and will be hit automatically.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. The sword allows Louen to re-roll failed rolls to Hit. In addition, any enemy models in base contact with Louen at the beginning of any Close Combat phase must take an Initiative test. If this is failed, that model may make no attacks this round and will be hit automatically.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -3577,10 +3542,29 @@ During the game, the Green Knight may disappear at will and reappear in another 
                         <infoLink name="Heavy Lance" id="a941-0b69-9383-0d9f" hidden="false" type="profile" targetId="e56e-fedf-c550-5d81">
                           <modifiers>
                             <modifier type="set" value="The Lion Lance" field="annotation"/>
-                            <modifier type="set" value="Each successful Hit with the Lion Lance is multiplied into 2 Hits. The lance can only be used when charging; in other rounds of combat, Louen will use the Sword of Couronne." field="de63-d6da-efa8-00ac"/>
+                            <modifier type="append" value="Magic Weapon. Each successful Hit with the Lion Lance is multiplied into 2 Hits. The lance can only be used when charging; in other rounds of combat, Louen will use the Sword of Couronne." field="de63-d6da-efa8-00ac" join="
+
+"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
+                      <modifiers>
+                        <modifier type="add" value="{this} is not allowed if not mounted" field="error">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="atLeast" value="1" field="selections" scope="parent" childId="9eac-5c3e-3026-4d64" shared="true"/>
+                                <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true"/>
+                                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </modifier>
+                      </modifiers>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Armour of Brilliance" hidden="false" id="d8e2-f6a1-1c1e-b9d7" collective="false" sortIndex="3">
                       <constraints>
@@ -3594,7 +3578,10 @@ During the game, the Green Knight may disappear at will and reappear in another 
                         <infoLink name="Heavy Armour" id="632f-e3b4-f49a-82fc" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
                           <modifiers>
                             <modifier type="set" value="Armour of Brilliance" field="annotation"/>
-                            <modifier type="append" value="Opponents suffer a -1 penalty to all rolls To Hit the wearer with missile weapons and in close combat." field="ff58-91e4-84d7-e6e4"/>
+                            <modifier type="append" value="Opponents suffer a -1 penalty to all rolls To Hit the wearer with missile weapons and in close combat." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" join=" "/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -3611,7 +3598,10 @@ During the game, the Green Knight may disappear at will and reappear in another 
                         <infoLink name="Shield" id="668f-9409-5ae0-9531" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
                           <modifiers>
                             <modifier type="set" value="The Lion&apos;s Shield" field="annotation"/>
-                            <modifier type="append" value="The Lion’s Shield gives Louen a Magic Resistance equal to the total number of dice used in the casting of the enemy spell, to a maximum of 3." field="ff58-91e4-84d7-e6e4"/>
+                            <modifier type="append" value="The Lion’s Shield gives Louen a Magic Resistance equal to the total number of dice used in the casting of the enemy spell, to a maximum of 3." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" join=" "/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -3699,7 +3689,6 @@ During the game, the Green Knight may disappear at will and reappear in another 
                         <cost name="pts" typeId="points" value="155"/>
                       </costs>
                     </entryLink>
-                    <entryLink import="true" name="70. Mount" hidden="false" id="c6d0-3eb3-8ed1-0a67" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425"/>
                   </entryLinks>
                 </entryLink>
               </entryLinks>
@@ -3774,7 +3763,10 @@ During the game, the Green Knight may disappear at will and reappear in another 
                             <infoLink name="Polearm/Halberd" id="503d-6b11-c8b3-d8bf" hidden="false" type="profile" targetId="e43e-5153-eeec-36be">
                               <modifiers>
                                 <modifier type="set" value="Trident of Manann" field="annotation"/>
-                                <modifier type="append" value="The Trident of Manann contains a Bound Spell, power level 4." field="de63-d6da-efa8-00ac"/>
+                                <modifier type="append" value="The Trident of Manann contains a Bound Spell, power level 4." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                                <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                               </modifiers>
                             </infoLink>
                           </infoLinks>
@@ -3925,11 +3917,12 @@ During the game, the Green Knight may disappear at will and reappear in another 
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0d98-8ad5-1af5-a205" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Sorrow&apos;s End" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="d23e-2fb5-2a7e-e079" publicationId="9e23-79cb-pubN75312" page="166">
+                        <profile name="Sorrow&apos;s End" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="d23e-2fb5-2a7e-e079" publicationId="9e23-79cb-pubN75312" page="166">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+1</characteristic>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Multiple Wounds (2)</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Multiple Wounds (2)</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -3952,6 +3945,15 @@ During the game, the Green Knight may disappear at will and reappear in another 
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Natural Armour" id="8614-0ae5-6647-7a8b" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                          <modifiers>
+                            <modifier type="set" value="Dragonhide Cloak" field="annotation"/>
+                            <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
+                            <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -4167,18 +4169,26 @@ During the game, the Green Knight may disappear at will and reappear in another 
                     <entryLink import="true" name="40. Suits of Armour" hidden="false" id="ebaa-be81-a622-f17b" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
                       <entryLinks>
                         <entryLink import="true" name="Heavy Armour" hidden="false" id="73e9-db22-6264-af43" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4d0f-9e9b-5c05-72a1"/>
-                          </constraints>
+                          <modifiers>
+                            <modifier type="set" value="1" field="2a65-3a21-af86-6ae3">
+                              <conditions>
+                                <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </modifier>
+                          </modifiers>
                         </entryLink>
                       </entryLinks>
                     </entryLink>
                     <entryLink import="true" name="50. Handheld Armour" hidden="false" id="773c-81a9-3347-89d6" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
                       <entryLinks>
                         <entryLink import="true" name="Shield" hidden="false" id="a075-ac1a-a9fc-c6e2" type="selectionEntry" targetId="c068-0827-9931-d9bf">
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="32b3-e22e-64e3-a91e"/>
-                          </constraints>
+                          <modifiers>
+                            <modifier type="set" value="1" field="3d59-dcea-ec30-dc28">
+                              <conditions>
+                                <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="ba52-4f0c-71ae-b52d" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </modifier>
+                          </modifiers>
                         </entryLink>
                       </entryLinks>
                     </entryLink>
@@ -4489,11 +4499,12 @@ During the game, the Green Knight may disappear at will and reappear in another 
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0182-6168-49bd-b486" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Sword of Lyonesse" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="e587-e336-4b81-481e" publicationId="9e23-79cb-pubN75312" page="168">
+                        <profile name="Sword of Lyonesse" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="e587-e336-4b81-481e" publicationId="9e23-79cb-pubN75312" page="168">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">All magic items belonging to enemy models in base contact with Repanse lose their magical properties and will counts as mundane items of their type.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. All magic items belonging to enemy models in base contact with Repanse lose their magical properties and will counts as mundane items of their type.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -4568,11 +4579,12 @@ During the game, the Green Knight may disappear at will and reappear in another 
                                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="eefa-fa24-5358-cb66" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                               </constraints>
                               <profiles>
-                                <profile name="Morning Star of Fracasse" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="fd0c-8e1a-eb74-531e" publicationId="9e23-79cb-pubN75312" page="172">
+                                <profile name="Morning Star of Fracasse" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="fd0c-8e1a-eb74-531e" publicationId="9e23-79cb-pubN75312" page="172">
                                   <characteristics>
-                                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">This morning star gives the bearer the Mighty Blow (2) special rule. For each Hit he scores on an enemy model with a Magic Weapon, roll a D6. On a 4+, the enemy&apos;s weapon is destroyed.</characteristic>
+                                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. This morning star gives the bearer the Mighty Blow (2) special rule. For each Hit he scores on an enemy model with a Magic Weapon, roll a D6. On a 4+, the enemy&apos;s weapon is destroyed.</characteristic>
                                   </characteristics>
                                 </profile>
                               </profiles>
@@ -4588,18 +4600,26 @@ During the game, the Green Knight may disappear at will and reappear in another 
                     <entryLink import="true" name="40. Suits of Armour" hidden="false" id="01a2-bcb5-6153-1c90" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
                       <entryLinks>
                         <entryLink import="true" name="Heavy Armour" hidden="false" id="3e55-e842-1051-997d" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d502-9bd7-d90b-0b6c"/>
-                          </constraints>
+                          <modifiers>
+                            <modifier type="set" value="1" field="2a65-3a21-af86-6ae3">
+                              <conditions>
+                                <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </modifier>
+                          </modifiers>
                         </entryLink>
                       </entryLinks>
                     </entryLink>
                     <entryLink import="true" name="50. Handheld Armour" hidden="false" id="4400-6c48-4567-e28c" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
                       <entryLinks>
                         <entryLink import="true" name="Shield" hidden="false" id="ef45-2616-df55-44f7" type="selectionEntry" targetId="c068-0827-9931-d9bf">
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c760-4ea2-ad99-7951"/>
-                          </constraints>
+                          <modifiers>
+                            <modifier type="set" value="1" field="3d59-dcea-ec30-dc28">
+                              <conditions>
+                                <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="ba52-4f0c-71ae-b52d" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </modifier>
+                          </modifiers>
                         </entryLink>
                       </entryLinks>
                     </entryLink>
@@ -4780,11 +4800,12 @@ During the game, the Green Knight may disappear at will and reappear in another 
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="cd7d-e589-efbc-8ebc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="The Black Arrow" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="d25f-39dc-9a76-52f7" publicationId="9e23-79cb-pubN75312" page="176">
+                        <profile name="The Black Arrow" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="d25f-39dc-9a76-52f7" publicationId="9e23-79cb-pubN75312" page="176">
                           <characteristics>
-                            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">36&quot;</characteristic>
-                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">10</characteristic>
-                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">One Use Only. Killing Blow. Enchanted Item.</characteristic>
+                            <characteristic name="Range" typeId="af3c-d805-702c-9af9">36&quot;</characteristic>
+                            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">10</characteristic>
+                            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">One Use Only. Killing Blow. Enchanted Item.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -5686,6 +5707,9 @@ During the game, the Green Knight may disappear at will and reappear in another 
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6870-5dbd-ef4c-336e"/>
       </constraints>
+      <modifiers>
+        <modifier type="set" value="" field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.17ec-ae05-605b-27ce.profiles.Armour Save" scope="parent"/>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Royal Pegasus" hidden="false" id="5a9c-bbea-1735-6ce2" collective="true" subType="mount">
       <constraints>
@@ -5860,32 +5884,6 @@ During the game, the Green Knight may disappear at will and reappear in another 
         </entryLink>
       </entryLinks>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Sacrosanctum of the Lady" hidden="false" id="ccca-e2d0-2bdf-6ce1" collective="false">
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="80ba-4486-0660-05ea" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-      </constraints>
-      <infoLinks>
-        <infoLink name="Sacrosanctum" id="4050-0d63-4fe6-2421" hidden="false" targetId="229a-bb05-be1e-bb43" type="profile"/>
-        <infoLink name="Immunity (Psychology)" id="e094-faf5-e8af-b4d6" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
-        <infoLink name="Magic Resistance (2)" id="d086-f62b-3728-8f3d" hidden="false" targetId="0e09-3526-25d5-2646" type="rule"/>
-        <infoLink name="Ward Save (4+)" id="85fd-fdcd-6d2c-3ee5" hidden="false" targetId="d45b-0036-b5ef-951b" type="rule"/>
-        <infoLink name="Radiant Light" id="5861-2327-e1c6-9aeb" hidden="false" targetId="3d80-dc35-6457-bf9b" type="profile"/>
-        <infoLink name="Renewed Valour" id="3b85-a9c5-287e-a783" hidden="false" targetId="7ad9-59b2-4474-cdbf" type="profile"/>
-        <infoLink name="Shield of Faith" id="4163-477d-d285-0e44" hidden="false" targetId="2491-5f85-63d2-ec58" type="profile"/>
-        <infoLink name="Blessed Sanctum" id="b2eb-eea1-175c-4287" hidden="false" targetId="40b9-5d00-6d65-b3d7" type="rule"/>
-      </infoLinks>
-      <categoryLinks>
-        <categoryLink name="Chariot" hidden="false" id="95c6-820b-11ed-a0c9" targetId="7224-b7fd-d652-3ff2" primary="false"/>
-      </categoryLinks>
-      <entryLinks>
-        <entryLink import="true" name="Warhorse" hidden="false" id="7eb7-33a9-7344-5c5a" type="selectionEntry" targetId="a7d2-4d12-77bb-99a0">
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="3793-3719-f0be-47ec-min"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="3793-3719-f0be-47ec-max"/>
-          </constraints>
-        </entryLink>
-      </entryLinks>
-    </selectionEntry>
     <selectionEntry type="model" import="true" name="Peasant Crew" hidden="false" id="9c87-5649-d313-0b50" collective="false" subType="crew">
       <constraints>
         <constraint type="min" value="3" field="selections" scope="parent" shared="false" id="b8d4-ff51-c2af-6542" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
@@ -5940,7 +5938,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4f86-73df-1cc2-0cd3" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="ce7d-a141-f4f0-52cb" name="Virtue of Heroism (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="20">
+        <selectionEntry id="ce7d-a141-f4f0-52cb" name="Virtue of Heroism (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="42">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -5959,7 +5957,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="70"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="06da-7854-578f-ab28" name="Virtue of Stoicism" hidden="false" collective="false" import="true" type="upgrade" sortIndex="33">
+        <selectionEntry id="06da-7854-578f-ab28" name="Virtue of Stoicism" hidden="false" collective="false" import="true" type="upgrade" sortIndex="22">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b3b0-6b08-646e-2ee2" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="00ae-0d13-ee13-76f4" type="max"/>
@@ -5971,7 +5969,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9fe7-7933-320a-1247" name="Virtue of Stoicism (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="34">
+        <selectionEntry id="9fe7-7933-320a-1247" name="Virtue of Stoicism (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="43">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -5990,7 +5988,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="70"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1621-4d25-dc04-b0d2" name="Virtue of the Impetuous Knight" hidden="false" collective="false" import="true" type="upgrade" sortIndex="38">
+        <selectionEntry id="1621-4d25-dc04-b0d2" name="Virtue of the Impetuous Knight" hidden="false" collective="false" import="true" type="upgrade" sortIndex="20">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5010-effb-262a-24bb" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ab4f-05cb-0e61-7eae" type="max"/>
@@ -6002,7 +6000,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8dee-ffd8-b723-1b3f" name="Virtue of the Impetuous Knight (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="39">
+        <selectionEntry id="8dee-ffd8-b723-1b3f" name="Virtue of the Impetuous Knight (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="38">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6021,7 +6019,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="60"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="71f0-228f-e143-c21a" name="Virtue of the Impetuous Knight (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="40">
+        <selectionEntry id="71f0-228f-e143-c21a" name="Virtue of the Impetuous Knight (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="49">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6040,7 +6038,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="90"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="b3cd-ed9a-3ce7-d711" name="Virtue of the Ideal" hidden="false" collective="false" import="true" type="upgrade" sortIndex="35">
+        <selectionEntry id="b3cd-ed9a-3ce7-d711" name="Virtue of the Ideal" hidden="false" collective="false" import="true" type="upgrade" sortIndex="19">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0f0a-cbb6-ba41-29fb" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="4864-21ec-0366-3f4c" type="max"/>
@@ -6052,7 +6050,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="9b49-dc17-1838-e392" name="Virtue of the Ideal (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="36">
+        <selectionEntry id="9b49-dc17-1838-e392" name="Virtue of the Ideal (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="37">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6071,7 +6069,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="60"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="aa11-58e7-101e-4569" name="Virtue of the Ideal (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="37">
+        <selectionEntry id="aa11-58e7-101e-4569" name="Virtue of the Ideal (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="48">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6090,7 +6088,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="90"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ad16-1675-0e1a-57e8" name="Virtue of Audacity" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
+        <selectionEntry id="ad16-1675-0e1a-57e8" name="Virtue of Audacity" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1111-1e92-67df-d3f5" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="f104-b6a5-8d07-b033" type="max"/>
@@ -6102,7 +6100,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="6c34-c91b-e0fb-77af" name="Virtue of Audacity (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="2">
+        <selectionEntry id="6c34-c91b-e0fb-77af" name="Virtue of Audacity (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="33">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6121,7 +6119,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="60"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="878b-5bab-a6bb-2586" name="Virtue of Audacity (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="3">
+        <selectionEntry id="878b-5bab-a6bb-2586" name="Virtue of Audacity (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="46">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6140,7 +6138,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="90"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="479e-c78a-e751-d837" name="Virtue of Knightly Temper" hidden="false" collective="false" import="true" type="upgrade" sortIndex="24">
+        <selectionEntry id="479e-c78a-e751-d837" name="Virtue of Knightly Temper" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a914-2a5c-cde8-dea7" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="fb28-8949-c14b-f81c" type="max"/>
@@ -6152,7 +6150,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f572-c5eb-16eb-7314" name="Virtue of Knightly Temper (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="25">
+        <selectionEntry id="f572-c5eb-16eb-7314" name="Virtue of Knightly Temper (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="32">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6171,7 +6169,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="50"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8e6e-67ac-eea1-2a75" name="Virtue of Knightly Temper (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="26">
+        <selectionEntry id="8e6e-67ac-eea1-2a75" name="Virtue of Knightly Temper (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="45">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6190,7 +6188,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="75"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2cca-4cd4-7832-58f9" name="Virtue of the Penitent" hidden="false" collective="false" import="true" type="upgrade" sortIndex="44">
+        <selectionEntry id="2cca-4cd4-7832-58f9" name="Virtue of the Penitent" hidden="false" collective="false" import="true" type="upgrade" sortIndex="9">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2dd6-3eaa-2bbd-faae" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="8c01-b12a-cc1a-c4ac" type="max"/>
@@ -6202,7 +6200,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="699d-8e6f-0e63-78d5" name="Virtue of the Penitent (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="45">
+        <selectionEntry id="699d-8e6f-0e63-78d5" name="Virtue of the Penitent (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="26">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6221,7 +6219,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="0782-11cd-412a-490f" name="Virtue of the Penitent (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="46">
+        <selectionEntry id="0782-11cd-412a-490f" name="Virtue of the Penitent (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="40">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6240,7 +6238,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="60"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="a6f6-6fff-ad04-55cd" name="Virtue of Duty" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
+        <selectionEntry id="a6f6-6fff-ad04-55cd" name="Virtue of Duty" hidden="false" collective="false" import="true" type="upgrade" sortIndex="6">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="db41-6762-e6a4-cb73" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2162-f46c-10c4-b19a" type="max"/>
@@ -6259,7 +6257,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry id="ffa3-c072-f6d9-3d07" name="Virtue of Duty (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="14">
+        <selectionEntry id="ffa3-c072-f6d9-3d07" name="Virtue of Duty (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="24">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditionGroups>
@@ -6283,7 +6281,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="fe96-827e-1552-32c4" name="Virtue of Duty (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="15">
+        <selectionEntry id="fe96-827e-1552-32c4" name="Virtue of Duty (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="35">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditionGroups>
@@ -6307,7 +6305,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="60"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f9c8-f37c-ce5a-3d47" name="Virtue of Confidence (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="5">
+        <selectionEntry id="f9c8-f37c-ce5a-3d47" name="Virtue of Confidence (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="31">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6326,7 +6324,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="50"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="c84b-c58f-162d-c837" name="Virtue of Confidence (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="6">
+        <selectionEntry id="c84b-c58f-162d-c837" name="Virtue of Confidence (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="44">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6345,7 +6343,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="75"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="04aa-aec1-a29e-a067" name="Virtue of the Joust" hidden="false" collective="false" import="true" type="upgrade" sortIndex="41">
+        <selectionEntry id="04aa-aec1-a29e-a067" name="Virtue of the Joust" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3366-ff3d-1c17-4af2" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="aefc-b875-2d3e-1b09" type="max"/>
@@ -6357,7 +6355,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f689-1a8a-28dc-9efb" name="Virtue of the Joust (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="42">
+        <selectionEntry id="f689-1a8a-28dc-9efb" name="Virtue of the Joust (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="25">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6376,7 +6374,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8733-9331-9b78-977b" name="Virtue of the Joust (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="43">
+        <selectionEntry id="8733-9331-9b78-977b" name="Virtue of the Joust (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="39">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6395,7 +6393,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="60"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="739d-e6e0-707f-0ab9" name="Virtue of Purity (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="31">
+        <selectionEntry id="739d-e6e0-707f-0ab9" name="Virtue of Purity (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="18">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6414,7 +6412,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="19a1-5b0d-c41d-af04" name="Virtue of Purity (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="32">
+        <selectionEntry id="19a1-5b0d-c41d-af04" name="Virtue of Purity (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="30">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6433,7 +6431,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="45"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="e3fb-92aa-66a0-ed29" name="Virtue of Noble Disdain (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="28">
+        <selectionEntry id="e3fb-92aa-66a0-ed29" name="Virtue of Noble Disdain (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="17">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6471,7 +6469,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="45"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2430-1d6b-0ee6-203b" name="Virtue of Discipline" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
+        <selectionEntry id="2430-1d6b-0ee6-203b" name="Virtue of Discipline" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ca42-3d2e-76ac-08f8" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="2d23-c9e2-16e4-79ab" type="max"/>
@@ -6483,7 +6481,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="bf89-6f5f-9b23-3aee" name="Virtue of Discipline (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="11">
+        <selectionEntry id="bf89-6f5f-9b23-3aee" name="Virtue of Discipline (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="14">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6502,7 +6500,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="5c8b-4002-9553-531a" name="Virtue of Discipline (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="12">
+        <selectionEntry id="5c8b-4002-9553-531a" name="Virtue of Discipline (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="28">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6521,7 +6519,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="45"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="5824-9eaa-2ece-1832" name="Virtue of Empathy" hidden="false" collective="false" import="true" type="upgrade" sortIndex="16">
+        <selectionEntry id="5824-9eaa-2ece-1832" name="Virtue of Empathy" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7da8-e24e-ba9f-c64c" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="a07d-f59f-24d5-a63e" type="max"/>
@@ -6533,7 +6531,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="10"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="6155-cc3b-3439-7ae7" name="Virtue of Empathy (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="17">
+        <selectionEntry id="6155-cc3b-3439-7ae7" name="Virtue of Empathy (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="7">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6552,7 +6550,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="cf4e-4d77-c378-31c1" name="Virtue of Empathy (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="18">
+        <selectionEntry id="cf4e-4d77-c378-31c1" name="Virtue of Empathy (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="15">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6571,7 +6569,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="503e-ad61-9f65-2382" name="Virtue of Purity" hidden="false" collective="false" import="true" type="upgrade" sortIndex="30">
+        <selectionEntry id="503e-ad61-9f65-2382" name="Virtue of Purity" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5574-89ea-8290-38c1" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1796-f0b7-6b7b-fbec" type="max"/>
@@ -6583,7 +6581,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="20c0-f0ed-835f-8e3c" name="Virtue of Noble Disdain" hidden="false" collective="false" import="true" type="upgrade" sortIndex="27">
+        <selectionEntry id="20c0-f0ed-835f-8e3c" name="Virtue of Noble Disdain" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="da08-19f8-bf0b-2aff" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="ce7a-4cc5-3a01-5cba" type="max"/>
@@ -6595,7 +6593,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="15"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="730f-0b9a-e9fe-8c83" name="Virtue of Heroism" hidden="false" collective="false" import="true" type="upgrade" sortIndex="19">
+        <selectionEntry id="730f-0b9a-e9fe-8c83" name="Virtue of Heroism" hidden="false" collective="false" import="true" type="upgrade" sortIndex="21">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1367-2e5d-0785-d575" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="6a58-dd76-ea18-eeec" type="max"/>
@@ -6607,7 +6605,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="35"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="986e-13da-75d8-5a0b" name="Virtue of Confidence" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
+        <selectionEntry id="986e-13da-75d8-5a0b" name="Virtue of Confidence" hidden="false" collective="false" import="true" type="upgrade" sortIndex="11">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="94d2-c9ca-bec8-10a8" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="1255-b400-73a7-1dc2" type="max"/>
@@ -6619,7 +6617,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="25"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="57c4-5fce-56d2-2452" name="Virtue of Knightly Ardour" hidden="false" collective="false" import="true" type="upgrade" sortIndex="21">
+        <selectionEntry id="57c4-5fce-56d2-2452" name="Virtue of Knightly Ardour" hidden="false" collective="false" import="true" type="upgrade" sortIndex="16">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="56c3-b5a3-a00c-1a28" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="0ec8-d7d6-37f8-314c" type="max"/>
@@ -6631,7 +6629,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="30"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="2e6e-33b4-b50e-678a" name="Virtue of Knightly Ardour (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="22">
+        <selectionEntry id="2e6e-33b4-b50e-678a" name="Virtue of Knightly Ardour (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="36">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6650,7 +6648,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="60"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="ef6f-c187-650e-219b" name="Virtue of Knightly Ardour (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="23">
+        <selectionEntry id="ef6f-c187-650e-219b" name="Virtue of Knightly Ardour (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="47">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6669,7 +6667,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="90"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="7922-3662-402c-c6db" name="Virtue of Devotion" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
+        <selectionEntry id="7922-3662-402c-c6db" name="Virtue of Devotion" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="32a6-a5a9-3941-9f1d" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="33d7-63cb-1c1f-7778" type="max"/>
@@ -6681,7 +6679,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="66fa-a3ae-c1c6-126e" name="Virtue of Devotion (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="8">
+        <selectionEntry id="66fa-a3ae-c1c6-126e" name="Virtue of Devotion (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="23">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6700,7 +6698,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="1bd5-0f7f-2dd0-2fe5" name="Virtue of Devotion (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="9">
+        <selectionEntry id="1bd5-0f7f-2dd0-2fe5" name="Virtue of Devotion (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="34">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6719,7 +6717,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="60"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="8cf7-eeb4-cf62-94f4" name="Virtue of Utter Serenity" hidden="false" collective="false" import="true" type="upgrade" sortIndex="47">
+        <selectionEntry id="8cf7-eeb4-cf62-94f4" name="Virtue of Utter Serenity" hidden="false" collective="false" import="true" type="upgrade" sortIndex="10">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c9b5-b6ea-a510-f778" type="max"/>
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="5005-4d1a-1094-91ef" type="max"/>
@@ -6731,7 +6729,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="20"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="3ef5-762c-2943-eb94" name="Virtue of Utter Serenity (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="48">
+        <selectionEntry id="3ef5-762c-2943-eb94" name="Virtue of Utter Serenity (2nd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="27">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6750,7 +6748,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="40"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="f6da-3700-8614-0086" name="Virtue of Utter Serenity (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="49">
+        <selectionEntry id="f6da-3700-8614-0086" name="Virtue of Utter Serenity (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="41">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6769,7 +6767,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="60"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="dc44-d544-369f-4bf2" name="Virtue of Heroism (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="20">
+        <selectionEntry id="dc44-d544-369f-4bf2" name="Virtue of Heroism (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="50">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -6788,7 +6786,7 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <cost name="pts" typeId="points" value="105"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="600d-1906-84ef-e5b2" name="Virtue of Stoicism (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="34">
+        <selectionEntry id="600d-1906-84ef-e5b2" name="Virtue of Stoicism (3rd)" hidden="true" collective="false" import="true" type="upgrade" sortIndex="51">
           <modifiers>
             <modifier type="set" field="hidden" value="false">
               <conditions>
@@ -7108,6 +7106,14 @@ During the game, the Green Knight may disappear at will and reappear in another 
                 <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The bearer gains a Breath Weapon attack with Strength 4 and Flaming Attacks and Magical Attacks special rules.</characteristic>
               </characteristics>
             </profile>
+            <profile name="Wyrmbreath Vial" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="bfbe-2fe9-e392-fb37">
+              <characteristics>
+                <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+                <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
+                <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">One use only, Flaming Attacks, Magical Attacks.</characteristic>
+              </characteristics>
+            </profile>
           </profiles>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
@@ -7206,7 +7212,9 @@ During the game, the Green Knight may disappear at will and reappear in another 
               <modifiers>
                 <modifier type="set" value="Cuirass of Fortune" field="annotation"/>
                 <modifier type="append" value="The Knight may re-roll 1&apos;s when rolling To Hit, To Wound and when making armour saves.
-" field="ff58-91e4-84d7-e6e4"/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7234,7 +7242,9 @@ During the game, the Green Knight may disappear at will and reappear in another 
               <modifiers>
                 <modifier type="set" value="Armour of the Midsummer Sun" field="annotation"/>
                 <modifier type="append" value="Opponents suffer a -1 penalty To Hit the wearer of the Armour of the Midsummer Sun with both missile and close combat attacks.
-" field="ff58-91e4-84d7-e6e4"/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7261,7 +7271,9 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <infoLink name="Heavy Armour" id="0219-30df-499f-912c" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
               <modifiers>
                 <modifier type="set" value="Gilded Cuirass" field="annotation"/>
-                <modifier type="append" value="Regeneration (6+)" field="ff58-91e4-84d7-e6e4"/>
+                <modifier type="append" value="Regeneration (6+)" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7284,11 +7296,11 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b684-f361-d387-57b6" type="max"/>
           </constraints>
           <profiles>
-            <profile id="85ab-2d18-9177-4f90" name="Gromril Great Helm" publicationId="e3da-3848-ff08-a482" page="11" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="85ab-2d18-9177-4f90" name="Gromril Great Helm" publicationId="e3da-3848-ff08-a482" page="11" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save">
               <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The Gromril Great Helm allows the wearer to re-roll failed armour saves.</characteristic>
+                <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+                <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+                <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">The Gromril Great Helm allows the wearer to re-roll failed armour saves.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7334,17 +7346,19 @@ During the game, the Green Knight may disappear at will and reappear in another 
             <infoLink name="Shield" id="6963-6ed8-b07c-a623" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
               <modifiers>
                 <modifier type="set" value="Armour of Agilulf" field="annotation"/>
-                <modifier type="append" value="Shield must be used at all
-times.
-" field="ff58-91e4-84d7-e6e4"/>
+                <modifier type="append" value="Shield must be used at all times.
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
             <infoLink name="Heavy Armour" id="5640-8dfc-054e-3abd" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
               <modifiers>
                 <modifier type="set" value="Armour of Agilulf" field="annotation"/>
-                <modifier type="append" value="The wearer of the Armour of Agilulf gains
-Weapon Skill 10.
-" field="ff58-91e4-84d7-e6e4"/>
+                <modifier type="append" value="The wearer of the Armour of Agilulf gains Weapon Skill 10.
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7376,7 +7390,9 @@ Weapon Skill 10.
             <infoLink name="Shield" id="3589-73df-1165-35d4" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
               <modifiers>
                 <modifier type="set" value="Orcbane Shield" field="annotation"/>
-                <modifier type="append" value="Any Orc or Goblin unit within 12&quot; of the model with the Orcbane Shield that must take an Animosity test fails it on a 1-2 instead of a 1." field="ff58-91e4-84d7-e6e4"/>
+                <modifier type="append" value="Any Orc or Goblin unit within 12&quot; of the model with the Orcbane Shield that must take an Animosity test fails it on a 1-2 instead of a 1." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7403,7 +7419,9 @@ Weapon Skill 10.
             <infoLink name="Heavy Armour" id="20bf-2cee-e844-6c41" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
               <modifiers>
                 <modifier type="set" value="Anointed Armour" field="annotation"/>
-                <modifier type="append" value="The wearer may re-roll failed Ward saves as long as they have the Blessing of the Lady." field="ff58-91e4-84d7-e6e4"/>
+                <modifier type="append" value="The wearer may re-roll failed Ward saves as long as they have the Blessing of the Lady." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7442,7 +7460,9 @@ Weapon Skill 10.
             <infoLink name="Shield" id="13cc-2884-77bd-520d" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
               <modifiers>
                 <modifier type="set" value="The Grail Shield" field="annotation"/>
-                <modifier type="append" value="The wearer gains +1 to the Ward save gained from the Blessing of the Lady." field="ff58-91e4-84d7-e6e4"/>
+                <modifier type="append" value="The wearer gains +1 to the Ward save gained from the Blessing of the Lady." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7465,11 +7485,11 @@ Weapon Skill 10.
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4364-5190-ecf5-8bd9" type="max"/>
           </constraints>
           <profiles>
-            <profile id="aecb-bbf4-0e82-d80d" name="Helm of the Dragon Slayer" publicationId="e3da-3848-ff08-a482" page="11" hidden="false" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour">
+            <profile id="aecb-bbf4-0e82-d80d" name="Helm of the Dragon Slayer" publicationId="e3da-3848-ff08-a482" page="11" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save">
               <characteristics>
-                <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
-                <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The Ward Save from the Blessing of the Lady is increased to 5+ against close combat attacks and the wearer gains the Immunity (Flaming Attacks) special rule.</characteristic>
+                <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+                <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+                <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">The Ward Save from the Blessing of the Lady is increased to 5+ against close combat attacks and the wearer gains the Immunity (Flaming Attacks) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7499,7 +7519,9 @@ Weapon Skill 10.
             <infoLink name="Shield" id="2e43-5964-b391-ffe3" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
               <modifiers>
                 <modifier type="set" value="Ironspike Shield" field="annotation"/>
-                <modifier type="append" value="Whenever an enemy model rolls a natural 1 To Hit against the bearer of this shield, they immediately suffer a Strength 3 Hit with the Armour Piercing (1) special rule." field="ff58-91e4-84d7-e6e4"/>
+                <modifier type="append" value="Whenever an enemy model rolls a natural 1 To Hit against the bearer of this shield, they immediately suffer a Strength 3 Hit with the Armour Piercing (1) special rule." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7743,11 +7765,12 @@ Weapon Skill 10.
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fc1b-6842-5800-6b72" type="max"/>
           </constraints>
           <profiles>
-            <profile id="57fc-416a-6ae9-86e5" name="Sword of Heroes" publicationId="9e23-79cb-pubN75312" page="180" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="57fc-416a-6ae9-86e5" name="Sword of Heroes" publicationId="9e23-79cb-pubN75312" page="180" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Against enemies that have Toughness 5 or greater, the bearer gets +2 Strength and the Multiple Wounds (D3) special rule.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Against enemies that have Toughness 5 or greater, the bearer gets +2 Strength and the Multiple Wounds (D3) special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7761,12 +7784,12 @@ Weapon Skill 10.
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0e98-85ff-2476-4fdf" type="max"/>
           </constraints>
           <profiles>
-            <profile id="0974-6cde-c5ea-b3f9" name="Sword of the Lady&apos;s Champion" publicationId="9e23-79cb-pubN75312" page="180" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="0974-6cde-c5ea-b3f9" name="Sword of the Lady&apos;s Champion" publicationId="9e23-79cb-pubN75312" page="180" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Character with the Grail Vow only. The character
-always counts their Strength as one higher than their target&apos;s Toughness, unless their Strength would normally be more than this.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The character always counts their Strength as one higher than their target&apos;s Toughness, unless their Strength would normally be more than this.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7794,7 +7817,9 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
               <modifiers>
                 <modifier type="set" value="Silver Lance of the Blessed" field="annotation"/>
                 <modifier type="append" value="If the model has the Blessing of the Lady, then all attacks with the Silver Lance of the Blessed automatically hit. In addition, all successful enemy armour saves and Ward saves must be re-rolled. However, if the model wielding the lance flees for any reason, he suffers D6 Flaming Strength 4 hits with the Ignores Armour Saves special rule.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7804,6 +7829,21 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
                 <condition type="notInstanceOf" value="1" field="selections" scope="model-or-unit" childId="b906-254a-7949-9e08" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="add" value="{this} is not allowed if not mounted" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0548-4aeb-a60c-b378" shared="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry id="885c-985a-658a-ecb6" name="Sword of the Quest" hidden="false" collective="false" import="true" type="upgrade" sortIndex="8">
@@ -7812,11 +7852,12 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f7f5-3adc-4f32-5bb8" type="max"/>
           </constraints>
           <profiles>
-            <profile id="2433-0bfe-9b91-959a" name="Sword of the Quest" publicationId="e3da-3848-ff08-a482" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="2433-0bfe-9b91-959a" name="Sword of the Quest" publicationId="e3da-3848-ff08-a482" page="10" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Questing Vow only. The Sword of the Quest may be used as either a hand weapon or a great weapon, decided at the start of each round combat. All attacks made by the Sword of the Quest have the Ignores Armour Saves special rule.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Decide at the start of each round combat which version of this sword is used. All attacks made by the Sword of the Quest have the Ignores Armour Saves special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7830,6 +7871,16 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
               </conditions>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Great Weapon" id="191c-748c-ec31-f84e" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
+              <modifiers>
+                <modifier type="set" value="Sword of the Quest" field="annotation"/>
+                <modifier type="append" value="Decide at the start of each round combat which version of this sword is used. All attacks made by the Sword of the Quest have the Ignores Armour Saves special rule." field="de63-d6da-efa8-00ac" join="
+
+"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry id="0e80-39bb-45bb-d702" name="Wyrmlance" hidden="false" collective="false" import="true" type="upgrade" sortIndex="12">
           <constraints>
@@ -7843,8 +7894,10 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
             <infoLink name="Heavy Lance" id="2a18-61c5-5964-9fab" hidden="false" type="profile" targetId="e56e-fedf-c550-5d81">
               <modifiers>
                 <modifier type="set" value="Wyrmlance" field="annotation"/>
-                <modifier type="append" value="The wielder of the Wyrmlance gains a Strength 3 Breath Weapon with the Flaming Attacks special rule. In addition, all attacks made with the Wyrmlance have the Flaming Attacks special rule.
-" field="de63-d6da-efa8-00ac"/>
+                <modifier type="append" value="All attacks made with the Wyrmlance have the Flaming Attacks special rule.
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7854,7 +7907,32 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
                 <condition type="notInstanceOf" value="1" field="selections" scope="model-or-unit" childId="b906-254a-7949-9e08" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="add" value="{this} is not allowed if not mounted" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0548-4aeb-a60c-b378" shared="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
+          <profiles>
+            <profile name="Wyrmlance" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="6065-871c-832c-6cd9">
+              <characteristics>
+                <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+                <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">3</characteristic>
+                <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Flaming Attacks</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
         </selectionEntry>
         <selectionEntry id="53ee-ba01-13c8-1d6e" name="Birth-Sword of Carcassonne" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
@@ -7862,11 +7940,12 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="aa7e-6b57-38c3-8f3c" type="max"/>
           </constraints>
           <profiles>
-            <profile id="8a7e-289b-612a-bcf8" name="Birth-Sword of Carcassonne" publicationId="e3da-3848-ff08-a482" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="8a7e-289b-612a-bcf8" name="Birth-Sword of Carcassonne" publicationId="e3da-3848-ff08-a482" page="10" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+1</characteristic>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Enemies wounded by the sword must re- roll any successful Armour saves.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Enemies wounded by the sword must re- roll any successful Armour saves.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7879,15 +7958,6 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
             <constraint field="selections" scope="roster" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" id="b138-ea72-8752-7b28" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5a2f-8381-1f8b-8d52" type="max"/>
           </constraints>
-          <profiles>
-            <profile id="e579-1327-be07-b3e3" name="Heartwood Lance" publicationId="e3da-3848-ff08-a482" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Heavy lance. The Heartwood Lance allows the bearer to re-roll all failed rolls to wound.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
@@ -7895,9 +7965,10 @@ always counts their Strength as one higher than their target&apos;s Toughness, u
             <infoLink name="Heavy Lance" id="534e-7b38-d507-08bf" hidden="false" type="profile" targetId="e56e-fedf-c550-5d81">
               <modifiers>
                 <modifier type="set" value="Heartwood Lance" field="annotation"/>
-                <modifier type="append" value="The Heartwood Lance allows the bearer
-to re-roll all failed rolls to wound.
-" field="de63-d6da-efa8-00ac"/>
+                <modifier type="append" value="The Heartwood Lance allows the bearer to re-roll all failed rolls to wound.
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7906,6 +7977,21 @@ to re-roll all failed rolls to wound.
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="model-or-unit" childId="b906-254a-7949-9e08" shared="true" includeChildSelections="true"/>
               </conditions>
+            </modifier>
+            <modifier type="add" value="{this} is not allowed if not mounted" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0548-4aeb-a60c-b378" shared="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -7921,7 +8007,9 @@ to re-roll all failed rolls to wound.
             <infoLink name="Heavy Lance" id="d2f1-d45e-f75a-f61e" hidden="false" type="profile" targetId="e56e-fedf-c550-5d81">
               <modifiers>
                 <modifier type="set" value="Lance of Artois" field="annotation"/>
-                <modifier type="append" value="The Lance of Artois gives the wielder the Killing Blow special rule on turns in which the character charges." field="de63-d6da-efa8-00ac"/>
+                <modifier type="append" value="The Lance of Artois gives the wielder the Killing Blow special rule on turns in which the character charges." field="de63-d6da-efa8-00ac" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7930,6 +8018,21 @@ to re-roll all failed rolls to wound.
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="model-or-unit" childId="b906-254a-7949-9e08" shared="true" includeChildSelections="true"/>
               </conditions>
+            </modifier>
+            <modifier type="add" value="{this} is not allowed if not mounted" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0548-4aeb-a60c-b378" shared="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -7946,7 +8049,9 @@ to re-roll all failed rolls to wound.
               <modifiers>
                 <modifier type="set" value="Crusader&apos;s Lance" field="annotation"/>
                 <modifier type="append" value="Devastating Charge, Hatred.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7955,6 +8060,21 @@ to re-roll all failed rolls to wound.
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="model-or-unit" childId="b906-254a-7949-9e08" shared="true" includeChildSelections="true"/>
               </conditions>
+            </modifier>
+            <modifier type="add" value="{this} is not allowed if not mounted" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0548-4aeb-a60c-b378" shared="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -7970,7 +8090,9 @@ to re-roll all failed rolls to wound.
             <infoLink name="Great Weapon" id="1975-ab7f-d6f4-d030" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
               <modifiers>
                 <modifier type="set" value="Frontier Axe" field="annotation"/>
-                <modifier type="append" value="Multiple Wounds (2)" field="de63-d6da-efa8-00ac"/>
+                <modifier type="append" value="Multiple Wounds (2)" field="de63-d6da-efa8-00ac" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7995,7 +8117,9 @@ to re-roll all failed rolls to wound.
               <modifiers>
                 <modifier type="set" value="The Virtuous Lance" field="annotation"/>
                 <modifier type="append" value="This lance gives the wielder the Mighty Blow (1) and Multiple Wounds (D3) special rules when charging. When fighting Monstrous Creatures and Monsters, once you have established how many wounds have been inflicted, roll a D6 and add the number of wounds caused to the score. If the total is equal to 6 or more, remove the model as a casualty. Note that the wielder must cause at least one unsaved Wound for this rule to take effect.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -8005,6 +8129,21 @@ to re-roll all failed rolls to wound.
                 <condition type="notInstanceOf" value="1" field="selections" scope="model-or-unit" childId="b906-254a-7949-9e08" shared="true" includeChildSelections="true"/>
               </conditions>
             </modifier>
+            <modifier type="add" value="{this} is not allowed if not mounted" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="0548-4aeb-a60c-b378" shared="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
         </selectionEntry>
         <selectionEntry id="9bda-7607-8625-7a43" name="Foebreaker" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
@@ -8013,11 +8152,12 @@ to re-roll all failed rolls to wound.
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d877-df17-18e2-66a9" type="max"/>
           </constraints>
           <profiles>
-            <profile id="6eae-e207-3d52-4a99" name="Foebreaker" publicationId="e3da-3848-ff08-a482" page="10" hidden="false" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon">
+            <profile id="6eae-e207-3d52-4a99" name="Foebreaker" publicationId="e3da-3848-ff08-a482" page="10" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+1</characteristic>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Any enemy Character or Lone Model that suffers one or more unsaved wounds from the Foebreaker suffer a -1 penalty Weapon Skill and Attacks (to a minimum of 1) until the end of the next round of Close Combat.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Any enemy Character or Lone Model that suffers one or more unsaved wounds from the Foebreaker suffer a -1 penalty Weapon Skill and Attacks (to a minimum of 1) until the end of the next round of Close Combat.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -8037,7 +8177,9 @@ to re-roll all failed rolls to wound.
             <infoLink name="Great Weapon" id="f7e4-21f5-1f6f-ae9c" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
               <modifiers>
                 <modifier type="set" value="Sword of the Stout Hearted" field="annotation"/>
-                <modifier type="append" value="Immunity (Psychology)" field="de63-d6da-efa8-00ac"/>
+                <modifier type="append" value="Immunity (Psychology)" field="de63-d6da-efa8-00ac" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -8293,11 +8435,19 @@ to re-roll all failed rolls to wound.
             <condition type="atLeast" value="1" field="selections" scope="model" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.31dc-7d00-f7c8-4dc4.profiles.Armour Save"/>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.31dc-7d00-f7c8-4dc4.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.31dc-7d00-f7c8-4dc4.profiles.Ranged Weapon"/>
       </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="80. Magic Items" id="6fdf-b151-bfc8-df82" hidden="false" collapsible="true">
       <entryLinks>
-        <entryLink import="true" name="Magic Weapons" hidden="false" id="cac1-06b5-0f46-a918" type="selectionEntryGroup" targetId="671f-f2bd-a42e-d104" sortIndex="1"/>
+        <entryLink import="true" name="Magic Weapons" hidden="false" id="cac1-06b5-0f46-a918" type="selectionEntryGroup" targetId="671f-f2bd-a42e-d104" sortIndex="1">
+          <modifiers>
+            <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon"/>
+            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.profiles.Melee weapon"/>
+          </modifiers>
+        </entryLink>
         <entryLink import="true" name="Magic Armour" hidden="false" id="d184-481c-dda1-2c70" type="selectionEntryGroup" targetId="31dc-7d00-f7c8-4dc4" sortIndex="2"/>
         <entryLink import="true" name="Talismans" hidden="false" id="0199-1dab-cc62-3bf7" type="selectionEntryGroup" targetId="f90e-6119-6dae-4b9a" sortIndex="3"/>
         <entryLink import="true" name="Enchanted Items" hidden="false" id="0a51-f6be-6ebc-8394" type="selectionEntryGroup" targetId="8b2b-59ba-dd17-cb80" sortIndex="6"/>
@@ -8313,6 +8463,9 @@ to re-roll all failed rolls to wound.
             <condition type="atLeast" value="1" field="selections" scope="model" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.31dc-7d00-f7c8-4dc4.profiles.Armour Save"/>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.31dc-7d00-f7c8-4dc4.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.31dc-7d00-f7c8-4dc4.profiles.Ranged Weapon"/>
       </modifiers>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
@@ -8344,34 +8497,14 @@ On a turn that a unit in Lance Formation makes a successful charge, all models 
     <rule id="0c26-35bd-c83f-fc57" name="Aura of the Lady" publicationId="9e23-79cb-pubN75312" page="123" hidden="false">
       <description>Damsels have Magic Resistance (1), and Prophetesses Magic Resistance (2).</description>
     </rule>
-    <rule id="8a21-a21a-7111-59bd" name="Truffle Hound" publicationId="9e23-79cb-pubN75312" page="143" hidden="false">
-      <description>Truffle Hounds have the Frenzy special rule. A unit with one or more Truffle Hounds must place them in the front rank of the unit along with any command group models and/or characters. They may be attacked separately from any other models in the unit.
-If the unit they are with did not themselves declare a charge this turn, the Truffle Hounds may be released in the Charge sub-phase of the Movement Phase, and do not need to test for Berserk Rage. The Truffle Hounds must then declare a charge as if they had failed their Berserk Rage test. After they have been released, they will automatically form their own unit of Skirmishers. From that point, they will keep having to declare charges as if they had failed their Berserk Rage whenever possible for the rest of the game.
-Your opponent will only receive Victory Points for Truffle Hounds if the unit they were bought with is destroyed.</description>
-    </rule>
     <rule id="111a-acd0-ebb0-c96c" name="Wall Warden" publicationId="9e23-79cb-pubN75312" page="154" hidden="false">
       <description>A War Machine with a Wall Warden may re-roll one Artillery dice or failed To Hit roll once per game.</description>
-    </rule>
-    <rule id="1c9e-d354-9961-b23b" name="Purebred Warhorse" publicationId="9e23-79cb-pubN75312" page="157" hidden="false">
-      <description>Models with this special rule do not suffer any movement penalties for being barded.</description>
-    </rule>
-    <rule id="40b9-5d00-6d65-b3d7" name="Blessed Sanctum" publicationId="9e23-79cb-pubN75312" page="156" hidden="false">
-      <description>A Sacrosanctum knows the three Blessings listed below. Blessings are innate Bound Spells (power level 5). For each friendly Sacrosanctum on the battlefield at the start of your magic phase, add 1 dice to your power pool.</description>
-    </rule>
-    <rule id="2aca-ac1e-41a2-0555" name="Impale" publicationId="9e23-79cb-pubN75312" page="158" hidden="false">
-      <description>Unicorns gain +1 Strength to their Impact Hits.</description>
     </rule>
     <rule id="8090-11ba-027f-b6ff" name="Bloodrage" publicationId="9e23-79cb-pubN75312" page="137" hidden="false">
       <description>The Hippogryph is subject to Frenzy and Hatred.</description>
     </rule>
     <rule id="9a7e-75d6-ffa0-32bc" name="The Crusader&apos;s  Vow" publicationId="9e23-79cb-pubN75312" page="121" hidden="false">
       <description>Models with the Crusader&apos;s Vow have Immunity (Panic) caused by friendly models without a Chivalrous Vow and may re-roll failed Panic tests. In addition, they may only join units with the Knight&apos;s Vow or the Crusader&apos;s Vow. Furthermore, a character with the Crusader Vow allows any unit they join to roll an additional D6 for their charge distance roll and discard the lowest result.</description>
-    </rule>
-    <rule id="8834-ff0f-f32b-611b" name="Iron-hard Hooves" hidden="false">
-      <description>A Pegasus with this upgrade re-roils failed To Wound rolls.</description>
-    </rule>
-    <rule id="a789-786f-2782-a5ad" name="Swift as the Wind" hidden="false">
-      <description>A Pegasus with this upgrade re-rolls any dice results of a 1 when determining its charge range.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -8445,7 +8578,7 @@ Your opponent will only receive Victory Points for Truffle Hounds if the unit th
         <characteristic name="Effect" typeId="93c5-9e46-407e-fab5">For as long as the General is alive, the model with this Virtue adds +1 to the combat resolution of any fight of which he is a part. May not be taken by the General.</characteristic>
       </characteristics>
     </profile>
-    <profile id="1b59-fbaa-b006-c2ad" name="Horse" publicationId="9e23-79cb-pubN75312" page="157" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="bc30-2c0d-8f55-3868" name="Truffle Hound" publicationId="9e23-79cb-pubN75312" page="143" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -8459,49 +8592,7 @@ Your opponent will only receive Victory Points for Truffle Hounds if the unit th
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast</characteristic>
       </characteristics>
     </profile>
-    <profile id="42e6-e1b4-18d0-176f" name="Pegasus" publicationId="9e23-79cb-pubN75312" page="135" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="229a-bb05-be1e-bb43" name="Sacrosanctum" publicationId="9e23-79cb-pubN75312" page="156" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">-</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">-</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">-</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">-</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">-</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour save 5+)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="bc30-2c0d-8f55-3868" name="Truffle Hound" publicationId="9e23-79cb-pubN75312" page="143" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="f62a-7a00-daaf-a442" name="Peasant Crew" publicationId="9e23-79cb-pubN75312" page="152" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="f62a-7a00-daaf-a442" name="Peasant Crew" publicationId="9e23-79cb-pubN75312" page="152" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
@@ -8515,34 +8606,7 @@ Your opponent will only receive Victory Points for Truffle Hounds if the unit th
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">(Human)</characteristic>
       </characteristics>
     </profile>
-    <profile id="3d80-dc35-6457-bf9b" name="Radiant Light" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Innate Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Affects all enemy units within 12&quot;. Until the start of your next turn, the targets suffer -1 to their Weapon Skill and Ballistic Skill.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="7ad9-59b2-4474-cdbf" name="Renewed Valour" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Innate Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Affects all friendly units with the Blessing of the Lady special rule within 12&quot;. The target units will rally automatically (if they were fleeing) and regain the Blessing of the Lady (if they have lost it).</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="2491-5f85-63d2-ec58" name="Shield of Faith" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Innate Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Affects all friendly units with the Blessing of the Lady special rule within 12&quot;. Until the start of your next turn, the targets have their Ward save from the Blessing of the Lady increased by +1.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="78cb-19dc-820c-4cd1" name="Wall Warden" publicationId="9e23-79cb-pubN75312" page="152" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="78cb-19dc-820c-4cd1" name="Wall Warden" publicationId="9e23-79cb-pubN75312" page="152" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -8620,15 +8684,6 @@ At the start of each enemy turn, the transformed model must take a Leadership te
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a unit with a Chivalrous Vow. Until the start of the caster&apos;s next Magic phase, all models in the unit (excluding mounts) gain +1 To Hit and the Devastating Charge special rule.</characteristic>
       </characteristics>
     </profile>
-    <profile id="7038-cb2f-3718-dfbe" name="Wrath of Righteousness" publicationId="9e23-79cb-pubN75312" page="177" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+/15+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;/18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Affects all enemy units within range of the caster. All enemy units within range take D6 S 4 hits with with Lightning Attacks.</characteristic>
-      </characteristics>
-    </profile>
     <profile id="b35e-9543-f92e-e0be" name="The Lady´s Gift" publicationId="9e23-79cb-pubN75312" page="139" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature</characteristic>
@@ -8636,33 +8691,6 @@ At the start of each enemy turn, the transformed model must take a Leadership te
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in Play. Targets a unit with a Chivalrous Vow. While this spell is in effect, the target unit has the Regeneration (6+) special rule.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="abfa-fdf7-dadd-a96f" name="Sacred Lightning" publicationId="9e23-79cb-pubN75312" page="177" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 3 Hits with the Lightning Attacks special rule.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="c384-f85d-a95f-8f09" name="Burning Gaze" publicationId="9e23-79cb-pubN75312" page="177" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">-</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Extend a straight line, 30&quot; in length, within the caster&apos;s forward arc and directly away from their base. Any model whose base falls under the line suffers a Strength 5 hit with the Flaming Attacks special rule.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="ed90-1051-423a-3d99" name="The Curse of the Lady" publicationId="9e23-79cb-pubN75312" page="139" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target must pass a Leadership test with a -2 modifier or suffer -1 Weapon Skill, Initiative and Leadership for every point they fail the test by (down to a minimum of 1).</characteristic>
       </characteristics>
     </profile>
     <profile id="3b96-7974-259d-3415" name="Shield of the Lady" publicationId="9e23-79cb-pubN75312" page="139" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -8683,15 +8711,6 @@ At the start of each enemy turn, the transformed model must take a Leadership te
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a unit with a Chivalrous Vow. The target unit gains +1 Strength (excluding mounts) and the Armour Piercing (1) special rule until the start of your next Magic phase.</characteristic>
       </characteristics>
     </profile>
-    <profile id="002c-aff1-3f15-0e7f" name="Summoning the Fay" publicationId="9e23-79cb-pubN75312" page="177" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Summoning</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">15+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Brings a unit of Spirits of the Fay into play. Roll D6+4. This is how many models comprise the new unit.</characteristic>
-      </characteristics>
-    </profile>
     <profile id="38bc-ad90-8192-285a" name="Virtue of Knightly Ardour" publicationId="9e23-79cb-pubN75312" page="178" hidden="false" typeId="5706-c82a-69e3-ce8a" typeName="Virtue of the Chivalric Knight">
       <characteristics>
         <characteristic name="Effect" typeId="93c5-9e46-407e-fab5">The Knight and unit he is with may respond to a charge to his unit’s front by counter charging if he can pass a Leadership test and roll higher than the enemy for the charge distance. If he succeeds, count the enemy’s charge as a failed one and move the Knight&apos;s unit as per a normal charge.</characteristic>
@@ -8707,65 +8726,20 @@ At the start of each enemy turn, the transformed model must take a Leadership te
         <characteristic name="Effect" typeId="93c5-9e46-407e-fab5">All enemy Wizards within 12&quot; of this Knight suffer -1 to their casting result.</characteristic>
       </characteristics>
     </profile>
-    <profile id="0b6e-ab9c-c046-4f55" name="Unicorn" publicationId="9e23-79cb-pubN75312" page="157" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">10</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Forest Spirit)</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="734d-6ba5-578f-17cb" name="Warhorse" publicationId="9e23-79cb-pubN75312" page="157" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="f791-fa1d-a904-7c02" name="Royal Pegasus" publicationId="9e23-79cb-pubN75312" page="135" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="66e8-4e69-a4c1-0333" name="Royal Hippogryph" publicationId="9e23-79cb-pubN75312" page="135" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Creature</characteristic>
-      </characteristics>
-    </profile>
   </sharedProfiles>
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Bestiary" id="198d-d38b-9cce-8dec" targetId="1fc9-2903-cb19-5737"/>
     <catalogueLink type="catalogue" name="Armoury" id="3b48-63f4-7137-4c35" targetId="522e-5e2a-d54c-4959"/>
   </catalogueLinks>
+  <rules>
+    <rule name="The Lance Formation" id="910c-b349-1719-7176" hidden="false">
+      <description>Any Cavalry unit with this special rule may deploy in the Lance Formation and/or reform into it during the game. A unit in Lance Formation follow the rules for Ranks that apply to Monstrous Cavalry. In effect, if by any means a unit of Bretonnian Knights is formed into a unit three models wide, it is treated as being in Lance Formation. Note that if a unit is ever wider than three models, it no longer counts as being in Lance Formation. In addition to this, the unit may form a unit up to 5 ranks deep.
+
+
+ A Wizard may be placed in the centre of the second rank of the Lance Formation rather than the front rank, as the Knights form up protectively around her. Note that she remains fully in play even if she is not in the front rank (so the unit may use her Leadership, she may cast magic, etc.). If a second Wizard joins the unit, she may be placed in the centre of the third rank. If the rank in front of the Wizard ever falls below three models, she will move forward to take up the empty space. A Wizard in the second rank still counts as having line of sight for the purpose of casting spells. When casting a direct damage or magical vortex spell that originates from the Wizard&apos;s base, draw this spell from the base of the model in front of the Wizard instead.
+
+
+On a turn that a unit in Lance Formation makes a successful charge, all models with this special rule gain the Fight in Extra Ranks (1) special rule, and every rider that gets to fight can make up to 3 Supporting Attacks rather than 1. In addition, they add their current Rank Bonus to the Strength of the Impact Hits they inflict.</description>
+    </rule>
+  </rules>
 </catalogue>

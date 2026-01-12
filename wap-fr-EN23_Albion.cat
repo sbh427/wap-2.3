@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2752-b0ce-df50-3fd9" name="Albion WAP 1.6" revision="28" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/XwjPS8c9TB" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2752-b0ce-df50-3fd9" name="Albion WAP 1.6" revision="29" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/XwjPS8c9TB" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://discordapp.com/invite/UrrPB3T</readme>
   <profileTypes>
     <profileType id="49a3-0479-ec33-486e" name="Big Things Chart (Bonegrinder Giant)">
@@ -2335,9 +2335,15 @@
       <infoLinks>
         <infoLink id="e648-bab9-0543-2966" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
         <infoLink id="841a-6e30-b0ba-cbb8" name="Impact Hits (D6+1)" hidden="false" targetId="a043-3e3c-9f8a-3661" type="rule"/>
-        <infoLink id="888a-40ab-2aa0-f7e7" name="Natural Armour (4+)" hidden="false" targetId="6b43-9dda-f589-0509" type="rule"/>
         <infoLink id="ca4d-8ea5-26e6-4697" name="Stubborn" hidden="false" targetId="d56e-8ec7-dbcd-aeee" type="rule"/>
         <infoLink name="Mastodon" id="a3d9-c902-5999-6be9" hidden="false" targetId="3467-62aa-40cc-ee55" type="profile"/>
+        <infoLink name="Natural Armour" id="582c-f500-c274-ba65" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Mastodon" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="510b-3a85-a404-97ab" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -2584,7 +2590,7 @@
         <categoryLink id="1950-370c-e5ac-1deb" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="f3a2-4301-a337-7353" name="Character" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="f3a2-4301-a337-7353" name="Character" hidden="false" collective="false" import="true" defaultSelectionEntryId="none">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c3f1-6812-3f43-e8be" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5191-5fd1-36ef-d5b8" type="min"/>
@@ -2821,11 +2827,12 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4730-d72f-e2b7-6aeb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Sword of Ogma" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="7aff-bfee-3dfe-dc6e" publicationId="9e23-79cb-pubN67565" page="87">
+                        <profile name="Sword of Ogma" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="7aff-bfee-3dfe-dc6e" publicationId="9e23-79cb-pubN67565" page="87">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+1</characteristic>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Mighty Blow (1), Devastating Charge.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Mighty Blow (1), Devastating Charge.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -2849,7 +2856,10 @@
                         <infoLink name="Shield" id="c881-27fe-aaf0-b09e" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
                           <modifiers>
                             <modifier type="set" value="The Black Shield" field="annotation"/>
-                            <modifier type="append" value="Enemies must re-roll all successful rolls To Hit against the wearer (both shooting and close combat)." field="ff58-91e4-84d7-e6e4"/>
+                            <modifier type="append" value="Enemies must re-roll all successful rolls To Hit against the wearer (both shooting and close combat)." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -2941,7 +2951,7 @@
         <categoryLink id="c199-bd46-7242-0e6d" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup id="7351-0bac-0b7d-010f" name="Character" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="7351-0bac-0b7d-010f" name="Character" hidden="false" collective="false" import="true" defaultSelectionEntryId="none">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c153-a839-6ad6-eafe" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f785-66ab-3813-af8e" type="min"/>
@@ -2994,7 +3004,10 @@
                         <infoLink name="Great Weapon" id="d99c-81f3-0300-7124" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
                           <modifiers>
                             <modifier type="set" value="Great Fury" field="annotation"/>
-                            <modifier type="append" value="This sword allows Conor to re-roll all failed rolls To Hit and To Wound." field="de63-d6da-efa8-00ac"/>
+                            <modifier type="append" value="This sword allows Conor to re-roll all failed rolls To Hit and To Wound." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -3060,7 +3073,10 @@
                         <infoLink name="Great Weapon" id="bbcc-c252-382d-0426" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
                           <modifiers>
                             <modifier type="set" value="Caladbolg Claymore" field="annotation"/>
-                            <modifier type="append" value="All hits with this sword are multiplied by D3." field="de63-d6da-efa8-00ac"/>
+                            <modifier type="append" value="All hits with this sword are multiplied by D3." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -3156,11 +3172,12 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2b2c-fc3f-399b-19f5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Bow of the Sidhe" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="40e9-181d-cc7c-78d0" publicationId="9e23-79cb-pubN67565" page="93">
+                        <profile name="Bow of the Sidhe" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="40e9-181d-cc7c-78d0" publicationId="9e23-79cb-pubN67565" page="93">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">30&quot;</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">5</characteristic>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Multiple Shots (2). Killing Blow.</characteristic>
+                            <characteristic name="Range" typeId="af3c-d805-702c-9af9">30&quot;</characteristic>
+                            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
+                            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">2</characteristic>
+                            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon. Killing Blow.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -3220,7 +3237,10 @@
                         <infoLink name="Great Weapon" id="a388-d003-06ce-c661" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
                           <modifiers>
                             <modifier type="set" value="Brainbiter" field="annotation"/>
-                            <modifier type="append" value="All Attacks made with this weapon have Ignores Armour Saves and Killing Blow." field="de63-d6da-efa8-00ac"/>
+                            <modifier type="append" value="All Attacks made with this weapon have Ignores Armour Saves and Killing Blow." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -3234,18 +3254,19 @@
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="201e-68c9-34a2-8f2d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1c77-043e-6b1b-209f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Pelt of Chogor" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="3c8b-345e-b781-766b" publicationId="9e23-79cb-pubN67565" page="92">
-                          <characteristics>
-                            <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                            <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                            <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Grants Roth the Natural Armour (4+) special rule. In addition, enemy units within 6&quot; of him must re-roll successful Psychology tests.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Natural Armour" id="1ca3-89a4-414a-0ed5" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                          <modifiers>
+                            <modifier type="set" value="Pelt of Chogor" field="annotation"/>
+                            <modifier type="set" value="Magic Armour. Enemy units within 6&quot; of him must re-roll successful Psychology tests." field="ff58-91e4-84d7-e6e4"/>
+                            <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
+                            <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -3310,11 +3331,17 @@
                 <infoLink name="Stubborn" id="8a5e-7c0c-d7a8-e280" hidden="false" targetId="d56e-8ec7-dbcd-aeee" type="rule"/>
                 <infoLink name="Giant Special Attacks" id="7cdb-7ec7-947e-1586" hidden="false" targetId="fba8-fc55-f60b-edd8" type="rule"/>
                 <infoLink name="Fall Over" id="3acf-0405-9d69-b9d8" hidden="false" targetId="4a8b-1056-0bcd-e293" type="rule"/>
-                <infoLink name="Natural Armour (6+)" id="fe3d-3738-1ad0-e163" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
                 <infoLink name="Immunity (Psychology)" id="e5d9-66f4-6499-39d8" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
                 <infoLink name="Pick up and... Chart" id="82bc-6c06-9fac-3967" hidden="false" type="infoGroup" targetId="9636-1143-7911-ac44"/>
                 <infoLink name="Man-sized Things Chart (Giant)" id="7748-3283-e751-ec0b" hidden="false" type="infoGroup" targetId="4c74-f8f1-9bdd-ee0d"/>
                 <infoLink name="Big Things Chart (Giant)" id="8bf6-b314-a4b6-9bfd" hidden="false" type="infoGroup" targetId="fe35-1d09-0e78-ebb9"/>
+                <infoLink name="Natural Armour" id="1276-8ce0-6b10-67b6" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                  <modifiers>
+                    <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                    <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+                    <modifier type="set" value="Agum the Watcher" field="annotation"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="250"/>
@@ -3352,8 +3379,8 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Army Tribal Affiliation" hidden="false" id="c549-66ff-2dc2-e91c" sortIndex="0.5">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="9e7d-434a-1aa0-c471-min" percentValue="false" includeChildSelections="true" includeChildForces="false" automatic="true"/>
-        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="9e7d-434a-1aa0-c471-max" percentValue="false" includeChildSelections="true" includeChildForces="false" automatic="true"/>
+        <constraint type="min" value="1" field="selections" scope="force" shared="true" id="9e7d-434a-1aa0-c471-min" percentValue="false" includeChildSelections="true" includeChildForces="false" automatic="false"/>
+        <constraint type="max" value="1" field="selections" scope="force" shared="true" id="9e7d-434a-1aa0-c471-max" percentValue="false" includeChildSelections="true" includeChildForces="false" automatic="false"/>
       </constraints>
       <selectionEntryGroups>
         <selectionEntryGroup name="Tribe" id="0c15-bcc6-08a4-a35b" hidden="false">
@@ -3755,9 +3782,15 @@
       <infoLinks>
         <infoLink name="Immunity (Psychology)" id="9da8-6504-62bb-0a8c" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
         <infoLink name="Impact Hits (D6+1)" id="dd68-10f8-fde6-9540" hidden="false" targetId="a043-3e3c-9f8a-3661" type="rule"/>
-        <infoLink name="Natural Armour (4+)" id="98ca-62eb-84bc-55ee" hidden="false" targetId="6b43-9dda-f589-0509" type="rule"/>
         <infoLink name="Stubborn" id="b917-fb73-78f3-1079" hidden="false" targetId="d56e-8ec7-dbcd-aeee" type="rule"/>
         <infoLink name="Mastodon" id="9acf-9b83-a65a-c188" hidden="false" targetId="3467-62aa-40cc-ee55" type="profile"/>
+        <infoLink name="Natural Armour" id="329d-37fa-572a-2051" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Mastodon" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="4228-e3f7-9be5-4a1a" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
@@ -3862,7 +3895,14 @@
             <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour Save 6+)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Chariot" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="4c66-5e16-ac69-e0f9">
+          <characteristics>
+            <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+            <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
           </characteristics>
         </profile>
       </profiles>
@@ -3953,7 +3993,7 @@
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="838f-9a42-4d4e-a019" type="max"/>
           </constraints>
           <profiles>
-            <profile id="d122-9b70-bead-3a38" name="Viridian Standard" publicationId="9e23-79cb-pubN67565" page="97" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
+            <profile id="c8f4-e6b7-7799-3d4d" name="Viridian Standard" publicationId="9e23-79cb-pubN67565" page="97" hidden="false" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying this standard gains the Flammable and Natural Armour (6+) special rules.</characteristic>
               </characteristics>
@@ -3962,6 +4002,15 @@
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Natural Armour" id="9ab1-6ec3-7b34-8c30" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+              <modifiers>
+                <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                <modifier type="set" value="Viridian Standard" field="annotation"/>
+                <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry id="ae3f-3be3-5679-cb39" name="Banner of the Mists" hidden="false" collective="false" import="true" type="upgrade" sortIndex="4">
           <constraints>
@@ -4191,7 +4240,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="51f7-6037-a81e-edcb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="White Hilt" hidden="false" id="9530-ce96-9095-a898" collective="false" sortIndex="3">
+            <selectionEntry type="upgrade" import="true" name="White Hilt" hidden="false" id="9530-ce96-9095-a898" collective="false" sortIndex="4">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="fc64-0881-d73a-b067" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ce5b-2756-0c3b-8a1c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -4203,7 +4252,9 @@
                 <infoLink name="Great Weapon" id="236a-c893-6efc-4eba" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
                   <modifiers>
                     <modifier type="set" value="White Hilt" field="annotation"/>
-                    <modifier type="append" value="Flaming Attacks. Against models with Toughness 5 or more, the bearer may re-roll failed rolls To Wound." field="de63-d6da-efa8-00ac"/>
+                    <modifier type="append" value="Flaming Attacks. Against models with Toughness 5 or more, the bearer may re-roll failed rolls To Wound." field="de63-d6da-efa8-00ac" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -4215,7 +4266,7 @@
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Lightning Spear" hidden="false" id="3f9e-ee11-5b49-5b9c" collective="false" sortIndex="9">
+            <selectionEntry type="upgrade" import="true" name="The Lightning Spear" hidden="false" id="3f9e-ee11-5b49-5b9c" collective="false" sortIndex="10">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8617-1ae4-b4ce-27ec" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d968-f5b0-8c6c-a09e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -4228,7 +4279,9 @@
                   <modifiers>
                     <modifier type="set" value="The Lightning Spear" field="annotation"/>
                     <modifier type="append" value="All close combat attacks with this weapon automatically Hit and have the Lightning Attacks special rule.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
                         <condition type="equalTo" value="0" field="selections" scope="model" childId="mount" shared="true" includeChildSelections="true"/>
@@ -4240,7 +4293,9 @@
                   <modifiers>
                     <modifier type="set" value="The Lightning Spear" field="annotation"/>
                     <modifier type="append" value="All close combat attacks with this weapon automatically Hit and have the Lightning Attacks special rule.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="model" childId="mount" shared="true" includeChildSelections="true"/>
@@ -4252,7 +4307,9 @@
                   <modifiers>
                     <modifier type="set" value="The Lightning Spear" field="annotation"/>
                     <modifier type="append" value="All missile attacks with this weapon automatically Hit and have the Lightning Attacks special rule. Any Hits penetrates ranks as if it were a Bolt Thrower.
-" field="de63-d6da-efa8-00ac"/>
+" field="96b8-546e-ac33-6054" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -4270,7 +4327,7 @@
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Barbed Spear" hidden="false" id="bffa-d430-5283-7acb" collective="false" sortIndex="8">
+            <selectionEntry type="upgrade" import="true" name="The Barbed Spear" hidden="false" id="bffa-d430-5283-7acb" collective="false" sortIndex="9">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="38e0-a451-058a-fbda" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d16e-f927-ea3e-b527" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -4284,7 +4341,9 @@
                     <modifier type="set" value="The Barbed Spear" field="annotation"/>
                     <modifier type="append" value="This weapon gives the wielder +1
 Strength and the Multiple Wounds (D6) special rule.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
                         <condition type="equalTo" value="0" field="selections" scope="model" childId="mount" shared="true" includeChildSelections="true"/>
@@ -4301,7 +4360,9 @@ Strength and the Multiple Wounds (D6) special rule.
                     </modifier>
                     <modifier type="append" value="This weapon gives the wielder +1
 Strength and the Multiple Wounds (D6) special rule.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
                     <modifier type="set" value="The Barbed Spear" field="annotation"/>
                   </modifiers>
                 </infoLink>
@@ -4319,7 +4380,7 @@ Strength and the Multiple Wounds (D6) special rule.
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Great Staff" hidden="false" id="09f4-d357-9d50-b0b7" collective="false" sortIndex="7">
+            <selectionEntry type="upgrade" import="true" name="The Great Staff" hidden="false" id="09f4-d357-9d50-b0b7" collective="false" sortIndex="8">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d245-6ddf-b3cd-f434" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2087-bfdd-d076-3155" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -4332,7 +4393,9 @@ Strength and the Multiple Wounds (D6) special rule.
                   <modifiers>
                     <modifier type="set" value="The Great Staff" field="annotation"/>
                     <modifier type="append" value="For every unsaved Wound caused by this weapon in close combat, you may restore 1 Wounds worth of models in the same unit previously slain during the battle just like a summoning spell.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -4344,7 +4407,7 @@ Strength and the Multiple Wounds (D6) special rule.
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Spear of Fiacha" hidden="false" id="9d9c-1b7e-4b6f-e64a" collective="false" sortIndex="6">
+            <selectionEntry type="upgrade" import="true" name="Spear of Fiacha" hidden="false" id="9d9c-1b7e-4b6f-e64a" collective="false" sortIndex="7">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5314-17d0-fd7b-f692" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e671-4f7d-97ad-7f53" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -4357,7 +4420,9 @@ Strength and the Multiple Wounds (D6) special rule.
                   <modifiers>
                     <modifier type="set" value="Spear of Fiacha" field="annotation"/>
                     <modifier type="append" value="The wielder gains Magic Resistance (2). If a spell is dispelled with the assistance of this item, the Wizard who cast it forgets that spell on the roll of a 4+.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
                         <condition type="equalTo" value="0" field="selections" scope="model" childId="mount" shared="true" includeChildSelections="true"/>
@@ -4373,7 +4438,9 @@ Strength and the Multiple Wounds (D6) special rule.
                       </conditions>
                     </modifier>
                     <modifier type="append" value="The wielder gains Magic Resistance (2). If a spell is dispelled with the assistance of this item, the Wizard who cast it forgets that spell on the roll of a 4+.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
                     <modifier type="set" value="Spear of Fiacha" field="annotation"/>
                   </modifiers>
                 </infoLink>
@@ -4391,17 +4458,18 @@ Strength and the Multiple Wounds (D6) special rule.
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Answerer" hidden="false" id="1ab3-781f-7b5b-cdc7" sortIndex="4">
+            <selectionEntry type="upgrade" import="true" name="The Answerer" hidden="false" id="1ab3-781f-7b5b-cdc7" sortIndex="5">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9e84-b1d5-34b4-329a" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="210c-fcf1-2f19-52fc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="The Answerer" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="492a-ffb8-5a8b-8d33">
+                <profile name="The Answerer" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="492a-ffb8-5a8b-8d33">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">This sword has the Ignore Armour Saves special rule, and for every Wound caused, the enemy model must pass a Toughness test or suffer an additional Wound.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">This sword has the Ignore Armour Saves special rule, and for every Wound caused, the enemy model must pass a Toughness test or suffer an additional Wound.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4409,17 +4477,18 @@ Strength and the Multiple Wounds (D6) special rule.
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Singing Sword" hidden="false" id="7b6e-cbf2-69aa-07dd" sortIndex="5">
+            <selectionEntry type="upgrade" import="true" name="The Singing Sword" hidden="false" id="7b6e-cbf2-69aa-07dd" sortIndex="6">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d8e8-c831-04f3-a9c3" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9690-f1c5-e4c6-0fc8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="The Singing Sword" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="5f2b-ab1f-3dcb-f7d7">
+                <profile name="The Singing Sword" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="5f2b-ab1f-3dcb-f7d7">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">In any turn in which the wielder causes one or more unsaved Wound with this sword, all enemy units within 12&quot; must immediately take and resolve a Panic Test.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">In any turn in which the wielder causes one or more unsaved Wound with this sword, all enemy units within 12&quot; must immediately take and resolve a Panic Test.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4427,7 +4496,7 @@ Strength and the Multiple Wounds (D6) special rule.
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Ysbaddadan&apos;s Javelins" hidden="false" id="1f54-8276-13a2-a3f5" sortIndex="2">
+            <selectionEntry type="upgrade" import="true" name="Ysbaddadan&apos;s Javelins" hidden="false" id="1f54-8276-13a2-a3f5" sortIndex="3">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ac3f-a39a-755e-4aa5" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="eb74-b671-5346-bc97" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
@@ -4437,7 +4506,9 @@ Strength and the Multiple Wounds (D6) special rule.
                   <modifiers>
                     <modifier type="set" value="Ysbaddadan&apos;s Javelins" field="annotation"/>
                     <modifier type="append" value="Multiple Wounds (D3), Poisoned Attacks.
-" field="de63-d6da-efa8-00ac"/>
+" field="96b8-546e-ac33-6054" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -4452,7 +4523,7 @@ Strength and the Multiple Wounds (D6) special rule.
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Sickle Swords of Hordek" hidden="false" id="7bb4-b86c-9394-1c72" sortIndex="1">
+            <selectionEntry type="upgrade" import="true" name="Sickle Swords of Hordek" hidden="false" id="7bb4-b86c-9394-1c72" sortIndex="2">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7c98-ee54-3ddc-f49e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2056-41f3-da2f-26e7" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
@@ -4462,7 +4533,9 @@ Strength and the Multiple Wounds (D6) special rule.
                   <modifiers>
                     <modifier type="set" value="Sickle Swords of Hordek" field="annotation"/>
                     <modifier type="append" value="On any to hit roll of 5+, the weapon automatically wounds.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -4484,7 +4557,7 @@ Strength and the Multiple Wounds (D6) special rule.
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Common Magic Weapons" hidden="false" id="c491-06ee-7649-8dd6" collective="false" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="10" flatten="true"/>
+            <entryLink import="true" name="Common Magic Weapons" hidden="false" id="c491-06ee-7649-8dd6" collective="false" targetId="6820-41cc-94f6-87c1" type="selectionEntryGroup" sortIndex="91" flatten="true"/>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup name="Talismans" id="22b2-fd6a-04c6-456f" hidden="false" collective="false" import="true" sortIndex="3">
@@ -4597,7 +4670,9 @@ Strength and the Multiple Wounds (D6) special rule.
                   <modifiers>
                     <modifier type="set" value="Ogham Armour" field="annotation"/>
                     <modifier type="append" value="The wearer gains a 5+ Ward save and may re-roll Ward save results of 1.
-" field="ff58-91e4-84d7-e6e4"/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -4625,7 +4700,9 @@ Strength and the Multiple Wounds (D6) special rule.
                   <modifiers>
                     <modifier type="set" value="The Ear of Beauty" field="annotation"/>
                     <modifier type="append" value="The wielder gains the Parry (5+) special rule. For every successful Parry save the wielder makes in close combat, he may make an extra attack back immediately against the model/unit that struck the blow.
-" field="ff58-91e4-84d7-e6e4"/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -4653,7 +4730,9 @@ Strength and the Multiple Wounds (D6) special rule.
                   <modifiers>
                     <modifier type="set" value="moor Armour" field="annotation"/>
                     <modifier type="append" value="All attacks made against the bearer are resolved at -1 Strength.
-" field="ff58-91e4-84d7-e6e4"/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -4681,7 +4760,9 @@ Strength and the Multiple Wounds (D6) special rule.
                   <modifiers>
                     <modifier type="set" value="Swift to Hand" field="annotation"/>
                     <modifier type="append" value="The bearer gains +1 Attack.
-" field="ff58-91e4-84d7-e6e4"/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -4709,11 +4790,11 @@ Strength and the Multiple Wounds (D6) special rule.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="57b4-33b4-6f9f-d98a" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Helm of Pridwen" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="f613-fd6b-ca6f-6910">
+                <profile name="Helm of Pridwen" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="f613-fd6b-ca6f-6910">
                   <characteristics>
-                    <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
-                    <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                    <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The wearer gains the Mighty Blow (1) special rule in any turn in which they make a successful charge.</characteristic>
+                    <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+                    <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+                    <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">The wearer gains the Mighty Blow (1) special rule in any turn in which they make a successful charge.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4734,7 +4815,9 @@ Strength and the Multiple Wounds (D6) special rule.
                   <modifiers>
                     <modifier type="set" value="Red-Backed" field="annotation"/>
                     <modifier type="append" value="This shield (but not any other armour the wearer might have) ignores all negative modifiers when taking armour saves.
-" field="ff58-91e4-84d7-e6e4"/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -4764,15 +4847,16 @@ Strength and the Multiple Wounds (D6) special rule.
                   </conditions>
                 </modifier>
               </modifiers>
-              <profiles>
-                <profile name="Fimir-Skin Cloak" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="5420-fbab-39ec-fc60">
-                  <characteristics>
-                    <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                    <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                    <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The wearer of this item gains the Natural Armour (6+) special rule. However, all Fimir models gain the Hatred special rule against the wearer.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
+              <infoLinks>
+                <infoLink name="Natural Armour" id="186c-6668-2269-9fc4" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                  <modifiers>
+                    <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                    <modifier type="set" value="Fimir-Skin Cloak" field="annotation"/>
+                    <modifier type="set" value="All Fimir models gain the Hatred special rule against the wearer." field="ff58-91e4-84d7-e6e4"/>
+                    <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
@@ -5098,6 +5182,9 @@ Strength and the Multiple Wounds (D6) special rule.
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.0896-8af2-e7dc-2d7c.profiles.Armour Save"/>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.da7b-c7ff-33de-7e0d.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.da7b-c7ff-33de-7e0d.profiles.Ranged Weapon"/>
       </modifiers>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
@@ -5137,7 +5224,7 @@ Strength and the Multiple Wounds (D6) special rule.
     </rule>
   </sharedRules>
   <sharedProfiles>
-    <profile id="3467-62aa-40cc-ee55" name="Mastodon" publicationId="9e23-79cb-pubN67565" page="81" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="3467-62aa-40cc-ee55" name="Mastodon" publicationId="9e23-79cb-pubN67565" page="81" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -5151,7 +5238,7 @@ Strength and the Multiple Wounds (D6) special rule.
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Mastodon)</characteristic>
       </characteristics>
     </profile>
-    <profile name="Crew" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="ddc3-d2fb-ca21-79c8" publicationId="9e23-79cb-pubN67565" page="80">
+    <profile name="Crew" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="ddc3-d2fb-ca21-79c8" publicationId="9e23-79cb-pubN67565" page="80" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215"/>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -5186,16 +5273,12 @@ Strength and the Multiple Wounds (D6) special rule.
           </entryLinks>
         </entryLink>
       </entryLinks>
-      <infoLinks>
-        <infoLink name="Natural Armour (6+)" id="d0f3-f0fe-0b7f-aa2f" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
-      </infoLinks>
     </entryLink>
     <entryLink import="true" name="Bonegrinder Giant" hidden="false" id="c1e2-c89d-0e1e-1936" type="selectionEntry" targetId="a449-7bcf-5f21-2dee" sortIndex="28">
       <costs>
         <cost name="pts" typeId="points" value="380"/>
       </costs>
       <infoLinks>
-        <infoLink name="Natural Armour (6+)" id="de73-863d-6fdd-da1b" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
         <infoLink name="Line of Sight (10)" id="4273-5661-2382-b4b7" hidden="false" type="rule" targetId="224d-6096-4dc6-a3fb"/>
       </infoLinks>
     </entryLink>

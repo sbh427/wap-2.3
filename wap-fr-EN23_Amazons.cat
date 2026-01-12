@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="bda4-064a-e547-78ea" name="Amazons WAP 1.5" revision="1" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/XwjPS8c9TB" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="bda4-064a-e547-78ea" name="Amazons WAP 1.5" revision="2" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/XwjPS8c9TB" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="36" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://discordapp.com/invite/UrrPB3T</readme>
   <selectionEntries>
     <selectionEntry id="9214-eb23-4737-525a" name="Matriarch" hidden="false" collective="false" import="true" type="model" sortIndex="1">
@@ -642,6 +642,9 @@
               </costs>
             </entryLink>
           </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="03ce-8deb-5f17-012b" includeChildSelections="false"/>
+          </constraints>
         </entryLink>
       </entryLinks>
       <costs>
@@ -1067,18 +1070,28 @@
           <entryLinks>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="0ca5-07c2-f0d1-07c9" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
-                <entryLink import="true" name="Light Lance" hidden="false" id="1fbe-50d6-e9e5-b8f8" type="selectionEntry" targetId="d989-1124-0dea-ae27">
+                <entryLink import="true" name="Light Lance" hidden="false" id="1fbe-50d6-e9e5-b8f8" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="1">
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden">
+                    <modifier type="set" value="0" field="a304-918a-8319-8c31">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="model" childId="6da6-a980-506d-941d" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
+                    <modifier type="set" value="1" field="dca5-b708-4c31-a96e">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="model" childId="6da6-a980-506d-941d" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
                   </modifiers>
                 </entryLink>
-                <entryLink import="true" name="Hand Weapon" hidden="true" id="ce69-1e82-ff7f-5da2" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="ce69-1e82-ff7f-5da2" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="2">
                   <modifiers>
-                    <modifier type="set" value="false" field="hidden">
+                    <modifier type="set" value="0" field="0e5a-c680-7fa4-685d">
+                      <conditions>
+                        <condition type="lessThan" value="1" field="selections" scope="model" childId="6da6-a980-506d-941d" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="1" field="443c-baf5-540a-c81e">
                       <conditions>
                         <condition type="atLeast" value="1" field="selections" scope="model" childId="6da6-a980-506d-941d" shared="true" includeChildSelections="true"/>
                       </conditions>
@@ -1096,6 +1109,9 @@
                   </costs>
                 </entryLink>
               </entryLinks>
+              <modifiers>
+                <modifier type="set" value="Replace Light Lance" field="annotation"/>
+              </modifiers>
             </entryLink>
             <entryLink import="true" name="50. Handheld Armour" hidden="false" id="7723-548e-5965-8698" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
               <entryLinks>
@@ -1103,15 +1119,15 @@
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
+                  <modifiers>
+                    <modifier type="set" value="0" field="af56-60a7-18d1-6f4f">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="model" childId="b2c6-18cc-9482-8f48" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </entryLink>
               </entryLinks>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="model" childId="b2c6-18cc-9482-8f48" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
             </entryLink>
             <entryLink import="true" name="70. Mount" hidden="false" id="a56e-5445-1182-e459" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
               <entryLinks>
@@ -1311,19 +1327,42 @@
                   </costs>
                 </entryLink>
                 <entryLink import="true" name="Hand Weapon" hidden="false" id="4ff4-372a-e105-c930" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+                <entryLink import="true" name="Paired Claws of the Old Ones" hidden="false" id="e7e8-4e81-bf3c-b601" type="selectionEntry" targetId="6eda-4d44-816d-1a32" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="3"/>
+                  </costs>
+                  <modifiers>
+                    <modifier type="set" value="Replace Shields" field="annotation"/>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
             </entryLink>
             <entryLink import="true" name="50. Handheld Armour" hidden="false" id="f875-fecf-e10e-497f" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
               <entryLinks>
-                <entryLink import="true" name="Shield" hidden="false" id="5c65-6f9e-e997-edb3" type="selectionEntry" targetId="c068-0827-9931-d9bf"/>
+                <entryLink import="true" name="Shield" hidden="false" id="5c65-6f9e-e997-edb3" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <modifiers>
+                    <modifier type="set" value="1" field="3d59-dcea-ec30-dc28">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="model" childId="ca03-eba2-8c6f-d60b" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="model" childId="4ff4-372a-e105-c930" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="set" value="0" field="af56-60a7-18d1-6f4f">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="model" childId="e7e8-4e81-bf3c-b601" shared="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1043-72b6-7ce2-68c3" automatic="true"/>
-              </constraints>
               <modifiers>
-                <modifier type="set" value="0" field="1043-72b6-7ce2-68c3">
+                <modifier type="set" value="0" field="b127-dfd3-1284-6bb1">
                   <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="model" childId="ca03-eba2-8c6f-d60b" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="model" childId="e7e8-4e81-bf3c-b601" shared="true"/>
                   </conditions>
                 </modifier>
               </modifiers>
@@ -1436,17 +1475,6 @@
             <cost name="pts" typeId="points" value="17"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="4492-a08d-d31c-c2f0" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-              <entryLinks>
-                <entryLink import="true" name="Light Lance &amp; Shield" hidden="false" id="ab3f-a2ac-35ed-bdc6" type="selectionEntry" targetId="a50e-145b-8639-0387" sortIndex="1"/>
-                <entryLink import="true" name="Shortbow" hidden="false" id="4f6b-e4d4-6e77-1972" type="selectionEntry" targetId="b2c6-18cc-9482-8f48" sortIndex="2"/>
-                <entryLink import="true" name="Javelins &amp; Shields" hidden="false" id="6651-3f2b-94ac-b10b" type="selectionEntry" targetId="1715-a24f-ede6-9e9f" sortIndex="3">
-                  <costs>
-                    <cost name="pts" typeId="points" value="2"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
             <entryLink import="true" name="70. Mount" hidden="false" id="87b6-e0cd-5b25-79f2" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
               <entryLinks>
                 <entryLink import="true" name="Culchan" hidden="false" id="318a-cb9a-352c-485b" type="selectionEntry" targetId="cd06-a2ce-9f66-b9ba">
@@ -1470,6 +1498,17 @@
                 <entryLink import="true" name="Enchanted Charms" hidden="false" id="064a-4b30-e86b-310c" type="selectionEntry" targetId="0e0f-755c-21c8-a935" sortIndex="1">
                   <costs>
                     <cost name="pts" typeId="points" value="1.5"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="d71a-5b84-e16b-3a53" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Light Lance &amp; Shield" hidden="false" id="ab3f-a2ac-35ed-bdc6" type="selectionEntry" targetId="a50e-145b-8639-0387" sortIndex="1"/>
+                <entryLink import="true" name="Shortbow" hidden="false" id="4f6b-e4d4-6e77-1972" type="selectionEntry" targetId="b2c6-18cc-9482-8f48" sortIndex="2"/>
+                <entryLink import="true" name="Javelins &amp; Shields" hidden="false" id="6651-3f2b-94ac-b10b" type="selectionEntry" targetId="1715-a24f-ede6-9e9f" sortIndex="3">
+                  <costs>
+                    <cost name="pts" typeId="points" value="2"/>
                   </costs>
                 </entryLink>
               </entryLinks>
@@ -2885,12 +2924,20 @@
             </entryLink>
             <entryLink import="true" name="50. Handheld Armour" hidden="false" id="46ab-5eec-7536-1811" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
               <entryLinks>
-                <entryLink import="true" name="Shield" hidden="false" id="d33f-c475-8d9c-8499" type="selectionEntry" targetId="c068-0827-9931-d9bf"/>
+                <entryLink import="true" name="Shield" hidden="false" id="d33f-c475-8d9c-8499" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4d45-f21b-96c8-5e4e" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
             </entryLink>
             <entryLink import="true" name="40. Suits of Armour" hidden="false" id="e52d-1e9b-917c-e9ff" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
               <entryLinks>
-                <entryLink import="true" name="Light Armour" hidden="false" id="84d3-3956-8f7a-d919" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72"/>
+                <entryLink import="true" name="Light Armour" hidden="false" id="84d3-3956-8f7a-d919" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7de2-5820-8dc4-886b" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
             </entryLink>
           </entryLinks>
@@ -2954,7 +3001,7 @@
             <modifier type="append" value="(Bolt Thrower)" field="13f9-a26b-05af-3459"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Firing a Blot Thrower" id="c37c-5e2d-af69-0ebd" hidden="false" type="rule" targetId="f55b-b981-fae7-afa2"/>
+        <infoLink name="Firing a Bolt Thrower" id="c37c-5e2d-af69-0ebd" hidden="false" type="rule" targetId="f55b-b981-fae7-afa2"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink targetId="0eb4-f376-7725-b05b" id="7db4-2fa-e32f-2a9d" primary="true" name="Rare"/>
@@ -2970,7 +3017,7 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
           <profiles>
-            <profile id="966-85fa-69b7-a444" name="Crew" publicationId="315c-6fd1-56a3-8b04" page="17" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+            <profile id="966-85fa-69b7-a444" name="Crew" publicationId="315c-6fd1-56a3-8b04" page="17" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
               <characteristics>
                 <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
                 <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -3032,8 +3079,14 @@
           <infoLinks>
             <infoLink id="d201-6db1-2f4c-1151" name="Animated Construct" hidden="false" targetId="738b-aca4-740c-e425" type="rule"/>
             <infoLink id="df8b-3e0f-eb92-48c6" name="Magical Attacks" hidden="false" targetId="03db-d81f-f264-84b8" type="rule"/>
-            <infoLink id="7a2f-8e8d-d90-9fb9" name="Natural Armour (4+)" hidden="false" targetId="6b43-9dda-f589-0509" type="rule"/>
             <infoLink id="efa9-e75b-b6c3-736b" name="Magic Resistance (2)" hidden="false" targetId="0e09-3526-25d5-2646" type="rule"/>
+            <infoLink name="Natural Armour" id="5fd4-86f2-d49b-ab7e" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+              <modifiers>
+                <modifier type="set" value="Ancient Sentinel" field="annotation"/>
+                <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
+                <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="50"/>
@@ -3059,12 +3112,18 @@
     <selectionEntry id="7ee6-3bbc-f490-a0d4" name="Stegadon" hidden="false" collective="false" import="true" type="model" sortIndex="22">
       <infoLinks>
         <infoLink id="1df1-887e-1a7f-b6d3" name="Sacrificial Hunt" hidden="false" targetId="3f0b-bbac-b519-f929" type="rule"/>
-        <infoLink id="e242-d2c8-9e0d-692a" name="Natural Armour (4+)" hidden="false" targetId="6b43-9dda-f589-0509" type="rule"/>
         <infoLink id="b206-27ed-e387-7205" name="Impact Hits (D6+1)" hidden="false" targetId="a043-3e3c-9f8a-3661" type="rule"/>
         <infoLink id="3ebb-2f4e-c964-c98a" name="Stubborn" hidden="false" targetId="d56e-8ec7-dbcd-aeee" type="rule"/>
         <infoLink id="a566-327c-4b37-6713" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
         <infoLink id="be38-65c4-5d59-c352" name="Stegadon" hidden="false" targetId="7f07-a63b-a97a-d629" type="profile"/>
         <infoLink id="a989-3eab-11b7-6589" name="Cold-Blooded" hidden="false" targetId="eb46-96d2-9469-4905" type="rule"/>
+        <infoLink name="Natural Armour" id="8c34-a429-67c4-bfb2" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="Stegadon" field="annotation"/>
+            <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntries>
         <selectionEntry id="1f04-8bb3-6a57-d496" name="Crew" hidden="false" collective="false" import="true" type="model" subType="crew">
@@ -3113,7 +3172,7 @@
               </constraints>
               <infoLinks>
                 <infoLink name="Giant Bow" id="68e5-fc4e-5dcc-eca5" hidden="false" targetId="1d6c-8991-9a03-c9d3" type="profile"/>
-                <infoLink name="Firing a Blot Thrower" id="efe8-ceef-67dc-f754" hidden="false" type="rule" targetId="f55b-b981-fae7-afa2"/>
+                <infoLink name="Giant Bow" id="6668-0e69-c575-e7c3" hidden="false" type="rule" targetId="6c1b-fa0d-bdbb-e2c8"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
@@ -3172,8 +3231,14 @@
     <selectionEntry id="f9d8-e95f-2441-c550" name="Amaxon Swamp Python" hidden="false" collective="false" import="true" type="model" sortIndex="23">
       <infoLinks>
         <infoLink id="420c-2e90-95f9-61cd" name="Cold-Blooded" hidden="false" targetId="eb46-96d2-9469-4905" type="rule"/>
-        <infoLink id="32b3-b77a-4faa-7cf6" name="Natural Armour (4+)" hidden="false" targetId="6b43-9dda-f589-0509" type="rule"/>
         <infoLink id="4c-4b2e-b73c-43c8" name="Aquatic" hidden="false" targetId="3667-691b-abd9-7da6" type="rule"/>
+        <infoLink name="Natural Armour" id="8835-2c92-5cb1-787b" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="Amaxon Swamp Python" field="annotation"/>
+            <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="210"/>
@@ -3516,7 +3581,7 @@
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Claw of the Old Ones" hidden="false" id="072a-469c-34fc-74f5" collective="true">
       <profiles>
-        <profile name="Claw of the Old Ones" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="65f9-df0e-a9f2-5d48" publicationId="315c-6fd1-56a3-8b04" page="3">
+        <profile name="Claw of the Old Ones" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="65f9-df0e-a9f2-5d48" publicationId="315c-6fd1-56a3-8b04" page="3">
           <characteristics>
             <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
             <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
@@ -3532,14 +3597,16 @@
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ac5e-13c7-39ec-3139"/>
       </constraints>
-      <infoLinks>
-        <infoLink name="Two/Additional Hand Weapons" id="0f1c-acf7-9811-85c0" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
-          <modifiers>
-            <modifier type="set" value="+1" field="b80e-7dac-0dea-9add"/>
-            <modifier type="append" value="Armour Piercing (2), Magical Attacks." field="de63-d6da-efa8-00ac"/>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
+      <profiles>
+        <profile name="Paired Claws of the Old Ones" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="794f-d5c0-40e2-b148" publicationId="315c-6fd1-56a3-8b04" page="3">
+          <characteristics>
+            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
+            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c">+1</characteristic>
+            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (2), Magical Attacks, Requires Two Hands, Parry (6+).</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Sun Gauntlet" hidden="false" id="7612-6f1b-9afb-23a9" collective="true">
       <constraints>
@@ -3625,8 +3692,14 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Natural Armour (4+)" id="d613-4192-c99a-3dea" hidden="false" type="rule" targetId="6b43-9dda-f589-0509"/>
         <infoLink name="Fly (7)" id="6a09-bfd8-cf8b-3cda" hidden="false" type="rule" targetId="36ba-3349-99bd-1979"/>
+        <infoLink name="Natural Armour" id="ce0f-04f3-828f-bc9b" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="Great Wyrm" field="annotation"/>
+            <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink targetId="e1a0-da31-05c5-9a15" id="d025-9e0f-8122-72f3" primary="false" name="Monster"/>
@@ -3672,22 +3745,6 @@
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="6134-8276-e69a-49af" includeChildSelections="false" automatic="true"/>
             <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="b3f8-a63e-3d6d-8014" includeChildSelections="false" automatic="true"/>
           </constraints>
-          <profiles>
-            <profile name="Crew" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0eec-e700-2bfe-a5dc">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215"/>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Human</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <entryLinks>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="e025-05a2-9eef-684f" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
@@ -3717,6 +3774,9 @@
               </conditions>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Crew" id="c014-dafd-81a6-f43a" hidden="false" targetId="ae58-695e-c726-c986" type="profile"/>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <infoLinks>
@@ -3724,7 +3784,13 @@
         <infoLink name="Cold-Blooded" id="7a10-0183-9432-c3cb" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
         <infoLink name="Immunity (Psychology)" id="ef31-778c-5dde-a06a" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
         <infoLink name="Impact Hits (D6+1)" id="351b-e0b4-386d-07e6" hidden="false" type="rule" targetId="a043-3e3c-9f8a-3661"/>
-        <infoLink name="Natural Armour (4+)" id="2b5b-55db-39a2-ee87" hidden="false" type="rule" targetId="6b43-9dda-f589-0509"/>
+        <infoLink name="Natural Armour" id="5452-e378-c8fb-71d7" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="Stegadon" field="annotation"/>
+            <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="55. Equipment" hidden="false" id="cacb-46bc-846a-75e5" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
@@ -3738,20 +3804,9 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dad5-94a7-8792-1c2e" includeChildSelections="false"/>
               </constraints>
               <infoLinks>
-                <infoLink name="Bolt Thrower" id="97d7-a2c7-d521-4758" hidden="false" type="profile" targetId="2d26-2a21-00a2-685d">
-                  <modifiers>
-                    <modifier type="set" value="Multiple Wounds (D3), Poisoned Attacks " field="d3a4-721b-f750-5564"/>
-                    <modifier type="set" value="Giant Bow" field="annotation"/>
-                    <modifier type="set" value="36&quot;" field="1c88-efb0-083f-b945"/>
-                    <modifier type="set" value="5" field="6ca0-d074-628f-e276"/>
-                  </modifiers>
-                </infoLink>
+                <infoLink name="Giant Bow" id="ab24-608f-a090-db4f" hidden="false" targetId="1d6c-8991-9a03-c9d3" type="profile"/>
+                <infoLink name="Giant Bow" id="a39f-c2d1-467e-0e05" hidden="false" type="rule" targetId="6c1b-fa0d-bdbb-e2c8"/>
               </infoLinks>
-              <rules>
-                <rule name="Giant Bow" id="6c1b-fa0d-bdbb-e2c8" hidden="false">
-                  <description>Instead of firing another missile weapon in the Shooting phase, one of the Skink Crew may fire the giant bow.</description>
-                </rule>
-              </rules>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Gyroscope of Eternal Radiance" hidden="false" id="112d-794c-613b-c9e6" collective="true" sortIndex="2">
               <constraints>
@@ -3959,15 +4014,24 @@
               <infoLinks>
                 <infoLink name="Medium Armour" id="275e-0017-82fa-9b2d" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
                   <modifiers>
-                    <modifier type="set" value="Crystalline Armour" field="name"/>
+                    <modifier type="set" value="Crystalline Armour" field="annotation"/>
                     <modifier type="append" value="For every spell successfully cast upon the bearer or the unit they are with, the Amazon player gains an additional Power Dice or Dispel dice to their current pool. Characters may wear this armour despite not being able to take normal medium armour.
-" field="ff58-91e4-84d7-e6e4"/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="35"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="387c-2b7c-0a30-7305" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Shield of Feather Iron" hidden="false" id="43a9-3a03-f140-b586" collective="false" sortIndex="3">
               <constraints>
@@ -3981,8 +4045,10 @@
                 <infoLink name="Shield" id="fbbb-d288-64d1-8a05" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
                   <modifiers>
                     <modifier type="append" value="All enemy units in base contact with the bearer are subject to the Always Strikes Last special rule.
-" field="ff58-91e4-84d7-e6e4"/>
-                    <modifier type="set" value="Shield of Feather Iron" field="name"/>
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                    <modifier type="set" value="Shield of Feather Iron" field="annotation"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -4005,16 +4071,29 @@
               <infoLinks>
                 <infoLink name="Light Armour" id="da36-0bbc-d34a-b87d" hidden="false" type="profile" targetId="4129-1acd-3564-d3ea">
                   <modifiers>
-                    <modifier type="append" value="Aquatic, Natural Armour (6+)" field="ff58-91e4-84d7-e6e4"/>
-                    <modifier type="set" value="Armour of the Swamp Drake" field="name"/>
+                    <modifier type="append" value="Aquatic" field="ff58-91e4-84d7-e6e4"/>
+                    <modifier type="set" value="Armour of the Swamp Drake" field="annotation"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Natural Armour" id="57c4-ac58-3082-1e37" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                  <modifiers>
+                    <modifier type="append" value="6+" field="168d-1cc2-66f3-e766"/>
+                    <modifier type="set" value="Armour of the Swamp Drake" field="annotation"/>
+                    <modifier type="append" value="6+" field="97ea-ecf7-8d24-b2ca"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="fa51-55d0-00b9-c0e8" shared="true"/>
-                  </conditions>
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="fa51-55d0-00b9-c0e8" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="222a-078c-ce85-fb16" shared="true"/>
+                        <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="f667-6e97-ec08-38ea" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
               </modifiers>
             </selectionEntry>
@@ -4034,11 +4113,12 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="de40-a312-f80f-4db2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Hand of Rigg" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="c61f-c0b8-b9c7-598f" publicationId="315c-6fd1-56a3-8b04" page="5">
+                <profile name="Hand of Rigg" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="c61f-c0b8-b9c7-598f" publicationId="315c-6fd1-56a3-8b04" page="5">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">8</characteristic>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">All attacks made with the Hand of Rigg have Always Strikes Last.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">8</characteristic>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Always Strikes Last.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4057,10 +4137,12 @@
               <infoLinks>
                 <infoLink name="Bow" id="aa3a-76bd-d9c7-f82f" hidden="false" type="profile" targetId="9dcd-3be8-08b0-96ab">
                   <modifiers>
-                    <modifier type="set" value="Skypiercer" field="name"/>
-                    <modifier type="set" value="5" field="b80e-7dac-0dea-9add"/>
+                    <modifier type="set" value="Skypiercer" field="annotation"/>
+                    <modifier type="set" value="5" field="29fe-29a3-f94f-2e90"/>
                     <modifier type="append" value="Flaming Attacks. Each shot penetrates ranks like a bolt thrower, but does not suffer any Strength penalties for each rank.
-" field="de63-d6da-efa8-00ac"/>
+" field="96b8-546e-ac33-6054" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -4083,9 +4165,11 @@
               <infoLinks>
                 <infoLink name="Sunstaff" id="0db3-0281-9d94-88ce" hidden="false" type="profile" targetId="7ee0-50b8-745f-f6a3">
                   <modifiers>
-                    <modifier type="set" value="Bright Staff" field="name"/>
-                    <modifier type="set" value="30&quot;" field="59f2-3142-82d5-4f43"/>
-                    <modifier type="append" value="Multiple Shots (D6)" field="de63-d6da-efa8-00ac"/>
+                    <modifier type="set" value="Bright Staff" field="annotation"/>
+                    <modifier type="set" value="30&quot;" field="af3c-d805-702c-9af9"/>
+                    <modifier type="set" value="D6" field="b886-975e-beb1-f6ca" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -4108,9 +4192,11 @@
               <infoLinks>
                 <infoLink name="Two/Additional Hand Weapons" id="1663-ecd9-29c7-e37a" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
                   <modifiers>
-                    <modifier type="set" value="Arc Claws" field="name"/>
+                    <modifier type="set" value="Arc Claws" field="annotation"/>
                     <modifier type="append" value="Attacks made with the Arc Claws have the Lightning Attacks special rule, and the wielder may reroll any failed To Wound rolls in close combat.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -4128,11 +4214,12 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="bd75-6d58-b96c-603a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Jaguar Mace" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="5dc1-3933-79e0-5371" publicationId="315c-6fd1-56a3-8b04" page="5">
+                <profile name="Jaguar Mace" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="5dc1-3933-79e0-5371" publicationId="315c-6fd1-56a3-8b04" page="5">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder gains Armour Piercing (1), and enemies attacking the wielder in close combat suffer -1 To Hit.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The wielder gains the Armour Piercing (1) special rule, and enemies attacking the wielder in close combat suffer -1 To Hit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4151,9 +4238,11 @@
               <infoLinks>
                 <infoLink name="Light Lance" id="0f60-3ba6-dad7-4f2f" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb">
                   <modifiers>
-                    <modifier type="set" value="Meteor Spear" field="name"/>
+                    <modifier type="set" value="Meteor Spear" field="annotation"/>
                     <modifier type="append" value="Flaming Attacks. When charging, all attacks made with it have +1 Strength with the Armour Piercing (1) and Multiple Wounds (D3) special rules.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
                         <condition type="instanceOf" value="1" field="selections" scope="model" childId="22c9-1606-58f8-2e60" shared="true"/>
@@ -4163,9 +4252,11 @@
                 </infoLink>
                 <infoLink name="Spear" id="b0e5-8bba-0790-cb94" hidden="false" type="profile" targetId="be39-37ac-ac20-5053">
                   <modifiers>
-                    <modifier type="set" value="Meteor Spear" field="name"/>
+                    <modifier type="set" value="Meteor Spear" field="annotation"/>
                     <modifier type="append" value="Flaming Attacks. When charging, all attacks made with it have +1 Strength with the Armour Piercing (1) and Multiple Wounds (D3) special rules.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
                     <modifier type="set" value="true" field="hidden">
                       <conditions>
                         <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="22c9-1606-58f8-2e60" shared="true"/>
@@ -4193,10 +4284,22 @@
               <infoLinks>
                 <infoLink name="Sun Gauntlet" id="e31c-04bd-7e3a-ce49" hidden="false" type="profile" targetId="ea0a-001a-70bb-7aba">
                   <modifiers>
-                    <modifier type="set" value="Roar of Chotec" field="name"/>
-                    <modifier type="set" value="6" field="b80e-7dac-0dea-9add"/>
-                    <modifier type="append" value="When firing the Roar of Chotec, you may choose to overcharge it, making the shot have Strength 7 and the Multiple Wounds (2) special rule. If you do so, on a To Hit roll of 1 the wielder suffers one automatic hit from the weapon, using the normal profile, even if you can reroll the initial To Hit roll of 1.
-" field="de63-d6da-efa8-00ac"/>
+                    <modifier type="set" value="Roar of Chotec" field="annotation"/>
+                    <modifier type="set" value="6" field="29fe-29a3-f94f-2e90"/>
+                    <modifier type="append" value="When firing the Roar of Chotec, you may choose to overcharge it.
+" field="96b8-546e-ac33-6054" join="
+
+"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Sun Gauntlet" id="90f7-9c5a-f2a9-0b7e" hidden="false" type="profile" targetId="ea0a-001a-70bb-7aba">
+                  <modifiers>
+                    <modifier type="set" value="Roar of Chotec, Overcharged" field="annotation"/>
+                    <modifier type="set" value="7" field="29fe-29a3-f94f-2e90"/>
+                    <modifier type="append" value="Multiple Wounds (2). On a To Hit roll of 1 the wielder suffers one automatic hit from the weapon, using the normal profile, even if you can reroll the initial To Hit roll of 1.
+" field="96b8-546e-ac33-6054" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -4214,11 +4317,12 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1655-cc72-b2e6-941f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Star Sword" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="9bd4-a3fd-e291-714d" publicationId="315c-6fd1-56a3-8b04" page="5">
+                <profile name="Star Sword" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="9bd4-a3fd-e291-714d" publicationId="315c-6fd1-56a3-8b04" page="5">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Star Sword gives the wielder Always Strikes First, Ignores Armour saves, and Parry (6+).</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Always Strikes First, Ignores Armour saves, Parry (6+).</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4237,9 +4341,11 @@
               <infoLinks>
                 <infoLink name="Two/Additional Hand Weapons" id="45c7-0176-fc78-1641" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
                   <modifiers>
-                    <modifier type="set" value="Moonblade" field="name"/>
+                    <modifier type="set" value="Moonblade" field="annotation"/>
                     <modifier type="append" value="This weapon gives the wielder the Parry (6+) special rule.. In addition, for every successful Parry save they make, the model that struck the blow suffers a Strength 4 Hit.
-" field="de63-d6da-efa8-00ac"/>
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -4369,7 +4475,7 @@
             <entryLink import="true" name="Common Talismans" hidden="false" id="0746-5a4d-eb98-2c19" collective="false" targetId="946f-a470-9912-9301" type="selectionEntryGroup" sortIndex="7" flatten="true"/>
           </entryLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Arcane Items" id="dd66-02cb-df3a-5f88" hidden="true" collective="false" import="true" sortIndex="4" collapsible="true">
+        <selectionEntryGroup name="Arcane Items" id="dd66-02cb-df3a-5f88" hidden="false" collective="false" import="true" sortIndex="4" collapsible="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3e71-1eec-01ff-64bc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -4461,21 +4567,24 @@
             <entryLink import="true" name="Common Arcane Items" hidden="false" id="08f5-9669-075f-686d" collective="false" targetId="6cd2-3f4b-da2d-1ee9" type="selectionEntryGroup" sortIndex="5" flatten="true"/>
           </entryLinks>
           <modifiers>
-            <modifier type="set" value="false" field="hidden">
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="0" field="3e71-1eec-01ff-64bc">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true"/>
+                    <condition type="equalTo" value="1" field="selections" scope="model" childId="52ca-071b-cbc7-9a85" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-category" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="false"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Enchanted Items" id="0a69-b1f8-cfc9-7a03" hidden="false" collective="false" import="true" sortIndex="5" collapsible="true">
+        <selectionEntryGroup name="Enchanted Items" id="0a69-b1f8-cfc9-7a03" hidden="false" collective="false" import="true" sortIndex="6" collapsible="true">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7add-042b-aec5-8570" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -4672,6 +4781,31 @@
             <entryLink import="true" name="Common Enchanted Items" hidden="false" id="7802-c81d-4eb6-583c" collective="false" targetId="5857-a7aa-f954-a027" type="selectionEntryGroup" sortIndex="11" flatten="true"/>
           </entryLinks>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Arcane Items (One use only)" id="52ca-071b-cbc7-9a85" hidden="false" collective="false" import="true" collapsible="true" sortIndex="5">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="3582-4b2a-a10f-9807" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Common Arcane Items (One use only)" hidden="false" id="97e7-4930-e90f-055a" type="selectionEntryGroup" targetId="3dfd-c3fd-5a56-45f1" flatten="true"/>
+          </entryLinks>
+          <modifiers>
+            <modifier type="set" value="0" field="3582-4b2a-a10f-9807">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="1" field="selections" scope="model" childId="dd66-02cb-df3a-5f88" shared="true" includeChildSelections="true"/>
+                    <condition type="instanceOf" value="1" field="selections" scope="primary-category" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="false"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="1aae-2529-c509-7573" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <constraints>
         <constraint type="max" value="0" field="points" scope="parent" shared="true" id="5555-7586-df2f-1e98"/>
@@ -4682,6 +4816,9 @@
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.579f-95cf-8aaf-4914.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.9cb9-fc9a-a369-e6cb.profiles.Armour Save"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.579f-95cf-8aaf-4914.profiles.Ranged Weapon"/>
       </modifiers>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
@@ -4712,6 +4849,9 @@ Unless it charged, marched or fled during the Movement phase of its turn, a uni
     </rule>
     <rule id="3f0b-bbac-b519-f929" name="Sacrificial Hunt" publicationId="315c-6fd1-56a3-8b04" page="3" hidden="false">
       <description>All models with this special rule may re-roll the distance they pursue a broken enemy from combat.</description>
+    </rule>
+    <rule name="Giant Bow" id="6c1b-fa0d-bdbb-e2c8" hidden="false">
+      <description>Instead of firing another missile weapon in the Shooting phase, one of the Crew may fire the giant bow.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -4865,7 +5005,7 @@ Attacks.</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Ornithischian)</characteristic>
       </characteristics>
     </profile>
-    <profile id="ae58-695e-c726-c986" name="Crew" publicationId="315c-6fd1-56a3-8b04" page="18" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="ae58-695e-c726-c986" name="Crew" publicationId="315c-6fd1-56a3-8b04" page="18" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215"/>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -4876,15 +5016,15 @@ Attacks.</characteristic>
         <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Human)</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">(Human)</characteristic>
       </characteristics>
     </profile>
     <profile id="1d6c-8991-9a03-c9d3" name="Giant Bow" publicationId="315c-6fd1-56a3-8b04" page="18" hidden="false" typeId="781d-35fe-dd22-05d6" typeName="War Machine">
       <characteristics>
         <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Bolt Thrower</characteristic>
-        <characteristic name="Range" typeId="1c88-efb0-083f-b945">48&quot;</characteristic>
+        <characteristic name="Range" typeId="1c88-efb0-083f-b945">36&quot;</characteristic>
         <characteristic name="Strength" typeId="6ca0-d074-628f-e276">5</characteristic>
-        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Armour Piercing (1). Multiple Wounds (D3).</characteristic>
+        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Multiple Wounds (D3), Poisoned Attacks.</characteristic>
       </characteristics>
     </profile>
     <profile id="4d3b-5226-4aff-7c78" name="Gyroscope of Eternal Radiance" publicationId="315c-6fd1-56a3-8b04" page="18" hidden="false" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item">
@@ -4915,18 +5055,20 @@ Attacks.</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster, Animal</characteristic>
       </characteristics>
     </profile>
-    <profile name="Sunstaff" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="7ee0-50b8-745f-f6a3" publicationId="315c-6fd1-56a3-8b04" page="3">
+    <profile name="Sunstaff" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="7ee0-50b8-745f-f6a3" publicationId="315c-6fd1-56a3-8b04" page="3">
       <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">24&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (2). Magical Attacks. Quick to Fire.</characteristic>
+        <characteristic name="Range" typeId="af3c-d805-702c-9af9">24&quot;</characteristic>
+        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
+        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (2). Magical Attacks. Quick to Fire.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Sun Gauntlet" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="ea0a-001a-70bb-7aba" publicationId="315c-6fd1-56a3-8b04" page="3">
+    <profile name="Sun Gauntlet" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="ea0a-001a-70bb-7aba" publicationId="315c-6fd1-56a3-8b04" page="3">
       <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (2), Magical Attacks, Quick to Fire.</characteristic>
+        <characteristic name="Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
+        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
+        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (2), Magical Attacks, Quick to Fire.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

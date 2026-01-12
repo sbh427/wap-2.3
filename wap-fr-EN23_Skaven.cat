@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="28da-4dfe-fb43-8a0c" name="Skaven WAP 1.92" revision="15" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/XwjPS8c9TB" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="40" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="28da-4dfe-fb43-8a0c" name="Skaven WAP 1.92" revision="16" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/XwjPS8c9TB" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="40" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://discordapp.com/invite/UrrPB3T</readme>
   <selectionEntries>
     <selectionEntry id="e7cc-2891-79c2-d6b3" name="Grey Seer" hidden="false" collective="false" import="true" type="model" sortIndex="1">
@@ -73,7 +73,12 @@
         </entryLink>
         <entryLink import="true" name="65. Lore of Magic" hidden="false" id="51a8-8161-0bc1-2df0" type="selectionEntryGroup" targetId="758f-4e20-95b6-ffa5">
           <entryLinks>
-            <entryLink import="true" name="Lore of Plague &amp; Ruin" hidden="false" id="1339-ffcd-2434-09be" type="selectionEntry" targetId="b697-2a33-b4eb-bfcf"/>
+            <entryLink import="true" name="Lore of Plague &amp; Ruin" hidden="false" id="1339-ffcd-2434-09be" type="selectionEntry" targetId="b697-2a33-b4eb-bfcf">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b8a5-7b40-d318-8299" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c4b8-ddc9-07ad-069d" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="10. Character Options" hidden="false" id="131b-2da5-0b1c-6302" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
@@ -437,6 +442,8 @@
         <categoryLink name="X Whip" hidden="false" id="0512-7f2e-1a3e-2f13" targetId="a2da-ddf0-8a29-a7d1" primary="false"/>
         <categoryLink name="X Things-catcher" hidden="false" id="c201-a943-3d1b-5857" targetId="edab-9646-f035-31e7" primary="false"/>
         <categoryLink name="X Shock-prod" hidden="false" id="653d-6e49-511e-e058" targetId="5fcc-c2a0-3a50-d7d1" primary="false"/>
+        <categoryLink name="Z Armour" hidden="false" id="28e2-281f-44dd-bfdd" targetId="387c-2b7c-0a30-7305" primary="false"/>
+        <categoryLink name="Z Light Armour" hidden="false" id="e496-9e5a-4a9b-760d" targetId="fa51-55d0-00b9-c0e8" primary="false"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="90. Magic items" hidden="false" id="f2f1-cd91-5996-63d1" type="selectionEntryGroup" targetId="9764-a11a-9c24-ab67">
@@ -516,9 +523,13 @@
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="06f3-bcdf-0591-7486" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="132d-d587-96f4-6651" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0026-46a9-6e14-1264"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -642,9 +653,13 @@
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="0e47-f2be-debb-79b1" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="7da4-0c14-1022-271d" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8797-c375-2333-790a"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -950,9 +965,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="98b3-bed8-49c7-7e97" name="Assassin" hidden="false" collective="false" import="true" type="model" sortIndex="10">
-      <constraints>
-        <constraint field="selections" scope="roster" value="1" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="2d8f-159b-fe6b-e52a" type="max"/>
-      </constraints>
       <profiles>
         <profile id="f808-2652-91a4-0834" name="Assassin" publicationId="4086-1ccd-f433-39a2" page="23" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
           <characteristics>
@@ -1135,9 +1147,13 @@
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="d040-c98f-e24a-1646" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="d653-3c3e-d50f-7f18" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="09bc-2132-eb25-463d"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -1259,9 +1275,13 @@
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="acf9-6e83-353c-5a50" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="72ec-ea12-a794-f6d3" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cbd2-b5e8-893b-94fd"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -2759,11 +2779,12 @@
                     <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="43b4-d817-57f0-b80f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Poisoned Wind Globes" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="cac3-f066-1a88-a4ef" publicationId="4086-1ccd-f433-39a2" page="37">
+                    <profile name="Poisoned Wind Globes" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="cac3-f066-1a88-a4ef" publicationId="4086-1ccd-f433-39a2" page="37">
                       <characteristics>
-                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">6&quot;</characteristic>
-                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Quick to Fire. Magical Attacks. Ignores Armour saves. Models hit by a Poisoned Wind Globe must pass a T test or suffer a Wound. On the To Hit roll of a 1, the Globadier hits himself (including when firing into close combat).</characteristic>
+                        <characteristic name="Range" typeId="af3c-d805-702c-9af9">6&quot;</characteristic>
+                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90"/>
+                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Quick to Fire. Magical Attacks. Ignores Armour saves. Models hit by a Poisoned Wind Globe must pass a T test or suffer a Wound. On the To Hit roll of a 1, the Globadier hits himself (including when firing into close combat).</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -2858,7 +2879,7 @@
                     <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="a19b-709b-7b10-9684" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Pavise" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="90ac-ff3f-31b4-536b" publicationId="4086-1ccd-f433-39a2" page="37">
+                    <profile name="Pavise" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="90ac-ff3f-31b4-536b" publicationId="4086-1ccd-f433-39a2" page="37">
                       <characteristics>
                         <characteristic name="Combat" typeId="168d-1cc2-66f3-e766"/>
                         <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">4+</characteristic>
@@ -2880,11 +2901,12 @@
                     <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="05e2-f5a1-82a1-f9a6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
                   <profiles>
-                    <profile name="Warplock Jezzail" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="ae5f-a7c7-e5ab-74f5" publicationId="4086-1ccd-f433-39a2" page="37">
+                    <profile name="Warplock Jezzail" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="ae5f-a7c7-e5ab-74f5" publicationId="4086-1ccd-f433-39a2" page="37">
                       <characteristics>
-                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">36&quot;</characteristic>
-                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">6</characteristic>
-                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Move or Fire. Armour Piercing (1). Magical Attacks. Unstable Ammunition.</characteristic>
+                        <characteristic name="Range" typeId="af3c-d805-702c-9af9">36&quot;</characteristic>
+                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">6</characteristic>
+                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Move or Fire. Armour Piercing (1). Magical Attacks. Unstable Ammunition.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -3123,11 +3145,12 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1943-f0b6-810a-3d3b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Doom-flayer Gauntlets" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="be17-5ad1-80af-0318" publicationId="4086-1ccd-f433-39a2" page="45">
+                <profile name="Doom-flayer Gauntlets" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="be17-5ad1-80af-0318" publicationId="4086-1ccd-f433-39a2" page="45">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">As user</characteristic>
-                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Impact Hits (D3). +2D3 A.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c">+2D3</characteristic>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Impact Hits (D3)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3140,10 +3163,11 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="bc86-f96a-064d-9fdb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Grinderfists" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="834b-0050-3964-1f87" publicationId="4086-1ccd-f433-39a2" page="45">
+                <profile name="Grinderfists" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="834b-0050-3964-1f87" publicationId="4086-1ccd-f433-39a2" page="45">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">As user</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
                     <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magical Attacks.</characteristic>
                   </characteristics>
                 </profile>
@@ -3177,11 +3201,12 @@ If you roll a misfire, or if for any reason some of the models in the unit canno
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8e6b-e454-9bec-c79b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Shock Gauntlets" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="23a2-e65f-f808-91d7" publicationId="4086-1ccd-f433-39a2" page="45">
+                <profile name="Shock Gauntlets" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="23a2-e65f-f808-91d7" publicationId="4086-1ccd-f433-39a2" page="45">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
                     <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
-                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">+1 A. Magical Attacks. Lightning Attacks. Impact Hits (D3).</characteristic>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c">+1</characteristic>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magical Attacks. Lightning Attacks. Impact Hits (D3).</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -3465,14 +3490,22 @@ The Warp Lightning Cannon cannot fire grapeshot.</description>
             <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour Save 4+, Skaven, Clan Skryre)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot</characteristic>
           </characteristics>
         </profile>
-        <profile id="6750-ac1c-d1cf-124a" name="Warp Lightning Bolt" publicationId="4086-1ccd-f433-39a2" page="52" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+        <profile id="6750-ac1c-d1cf-124a" name="Warp Lightning Bolt" publicationId="4086-1ccd-f433-39a2" page="52" hidden="false" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon">
           <characteristics>
-            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">18&quot;</characteristic>
-            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">Artillery Dice</characteristic>
-            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Lightning Attacks. Magical Attacks. Multiple Shots (3). Multiple Wounds (D3).</characteristic>
+            <characteristic name="Range" typeId="af3c-d805-702c-9af9">18&quot;</characteristic>
+            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">Artillery Dice</characteristic>
+            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3</characteristic>
+            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Lightning Attacks. Magical Attacks. Multiple Wounds (D3).</characteristic>
+          </characteristics>
+        </profile>
+        <profile id="2f6b-89d3-36b2-ff0f" name="Doomwheel" publicationId="4086-1ccd-f433-39a2" page="52" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save">
+          <characteristics>
+            <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">4+</characteristic>
+            <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">4+</characteristic>
+            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
           </characteristics>
         </profile>
       </profiles>
@@ -3524,7 +3557,7 @@ If you roll a misfire result something has gone awry. No more shots are fired th
                 <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
                 <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
                 <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Skaven</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Skaven, Clan Skryre</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3763,15 +3796,17 @@ If you roll a misfire result something has gone awry. No more shots are fired th
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fc22-505e-d743-f257-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fc22-505e-d743-f257-max" includeChildSelections="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Blade of Corruption" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="fcd5-9f72-43ea-f079" publicationId="4086-1ccd-f433-39a2" page="56">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Two hand weapons. The wielder of this sword always wounds on at least a 3+, regardless of the enemy&apos;s Toughness. For each wound suffered (after saves), the enemy model must pass a Toughness test or suffer an additional Wound, with no saves allowed.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
+                      <infoLinks>
+                        <infoLink name="Two/Additional Hand Weapons" id="3cf3-c765-136f-1038" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
+                          <modifiers>
+                            <modifier type="set" value="Blade of Corruption" field="annotation"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                            <modifier type="append" value="The wielder of this sword always wounds on at least a 3+, regardless of the enemy&apos;s Toughness. For each wound suffered (after saves), the enemy model must pass a Toughness test or suffer an additional Wound, with no saves allowed." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -3945,10 +3980,11 @@ If the warpfire thrower misfires, the weapon inflicts D6 automatic hits on the c
                                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="37ec-3eba-6e28-935a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                               </constraints>
                               <profiles>
-                                <profile name="Warpfire Braziers" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="6469-32d8-113f-1c5d" publicationId="4086-1ccd-f433-39a2" page="53">
+                                <profile name="Warpfire Braziers" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="6469-32d8-113f-1c5d" publicationId="4086-1ccd-f433-39a2" page="53">
                                   <characteristics>
-                                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
                                     <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
+                                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
                                     <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Flaming Attacks. Magical Attacks. Multiple Wounds (D3).</characteristic>
                                   </characteristics>
                                 </profile>
@@ -4101,36 +4137,43 @@ there are no eligible friendly units, the Warpfire Projector simply does not fir
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1beb-5ec5-ac50-d17d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="4ce2-ac37-abae-2195" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Whip of Domination" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="4121-33ce-3391-7ea6" publicationId="4086-1ccd-f433-39a2" page="58">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Whip. This whip gives Throt +1 A in addition to his normal attacks. Any enemy unit that takes an unsaved wound from the Whip of Domination suffers a -2 penalty to its Ld for the remainder of the player turn.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Whip" id="2671-c453-5046-cd39" hidden="false" type="profile" targetId="2218-f882-4600-cf0c">
+                          <modifiers>
+                            <modifier type="prepend" value="Magic Weapon" field="de63-d6da-efa8-00ac"/>
+                            <modifier type="append" value="Any enemy unit that takes an unsaved wound from the Whip of Domination suffers a -2 penalty to its Ld for the remainder of the player turn." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="set" value="Whip of Domination" field="annotation"/>
+                            <modifier type="set" value="+2" field="ffc4-c065-ab29-fb8c"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Creature-killer" hidden="false" id="d2a8-7a87-95be-14c3" collective="false">
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9285-d011-5d0e-7e41" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="efbb-eb8f-72a2-b52c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Creature-killer" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="9520-40fa-fe9c-d29b" publicationId="4086-1ccd-f433-39a2" page="58">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Things-catcher. The Creature-killer gives Throt Heroic Killing Blow.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Polearm/Halberd" id="018a-b574-d86e-cacf" hidden="false" type="profile" targetId="e43e-5153-eeec-36be">
+                          <modifiers>
+                            <modifier type="set" value="Things-catcher, Creature-killer" field="annotation"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="append" value="The Creature-killer gives Throt Heroic Killing Blow." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -4248,11 +4291,12 @@ there are no eligible friendly units, the Warpfire Projector simply does not fir
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="8516-2817-130b-aba6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Blade of Nurglitch" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="637f-75b9-0eb9-b381" publicationId="4086-1ccd-f433-39a2" page="59">
+                        <profile name="Blade of Nurglitch" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="637f-75b9-0eb9-b381" publicationId="4086-1ccd-f433-39a2" page="59">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Enemy models lose 1 point of T for each wound they suffer from this blade.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Enemy models lose 1 point of T for each wound they suffer from this blade.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -4459,13 +4503,6 @@ there are no eligible friendly units, the Warpfire Projector simply does not fir
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="0b22-b30f-477e-0a4e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Storm Daemon" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="3c3f-9335-cfe1-2918" publicationId="4086-1ccd-f433-39a2" page="61">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Polearm/Halberd. Attacks with this weapon have Lightning Attacks. In addition, Storm Daemon contains a Bound Spell (power level 6).</characteristic>
-                          </characteristics>
-                        </profile>
                         <profile name="Dark Lightning Bolts" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="4faa-85bb-09a1-9066" publicationId="4086-1ccd-f433-39a2" page="61">
                           <characteristics>
                             <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Bound Spell</characteristic>
@@ -4501,24 +4538,47 @@ cables out.</characteristic>
                           </profiles>
                         </infoGroup>
                       </infoGroups>
+                      <infoLinks>
+                        <infoLink name="Polearm/Halberd" id="fca6-a80e-3f1d-640a" hidden="false" type="profile" targetId="e43e-5153-eeec-36be">
+                          <modifiers>
+                            <modifier type="append" value="Attacks with this weapon have Lightning Attacks. In addition, Storm Daemon contains a Bound Spell (power level 6)." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                            <modifier type="set" value="Storm Daemon" field="annotation"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Iron Frame" hidden="false" id="09d9-e718-b2f7-3d4d" collective="false">
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d8f6-9435-e529-af50" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="23db-08a8-ae2d-0bf6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Iron Frame" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="ae74-7b1f-1ccc-08ee" publicationId="4086-1ccd-f433-39a2" page="61">
-                          <characteristics>
-                            <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                            <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                            <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Medium armour. The suit gives Ikit +2 Strength (included in his profile) and a 5+ Ward Save. Once per game, Ikit can fire the warpfire projector housed in the device. This is Strength 5 Breath Weapon attack with the Flaming Attacks, Magical Attacks and Multiple Wounds (D3) special rules.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Medium Armour" id="cfdc-6f2b-4238-5006" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
+                          <modifiers>
+                            <modifier type="append" value="The suit gives Ikit +2 Strength (included in his profile) and a 5+ Ward Save." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                            <modifier type="set" value="Iron Frame" field="annotation"/>
+                            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                      <profiles>
+                        <profile name="Iron Frame" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="b64b-ea1d-4fe1-22a5">
+                          <characteristics>
+                            <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+                            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
+                            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">One use only. Flaming Attacks, Magical Attacks, Multiple Wounds (D3).</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
                     </selectionEntry>
                   </selectionEntries>
                   <entryLinks>
@@ -4591,36 +4651,40 @@ cables out.</characteristic>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="957a-1891-e9a7-5afc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="83fb-88de-9e55-8fc4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Dwarf-Gouger" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="24cc-b6f5-f8aa-bd20" publicationId="4086-1ccd-f433-39a2" page="55">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Two/Additional Hand Weapons. Attacks with this weapon have Ignores Armour saves. In addition, against Dwarfs, it always wounds on a 2+.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Two/Additional Hand Weapons" id="509a-4868-45cc-b3e5" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
+                          <modifiers>
+                            <modifier type="set" value="Dwarf-Gouger" field="annotation"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                            <modifier type="append" value="Attacks with this weapon have Ignores Armour saves. In addition, against Dwarfs, it always wounds on a 2+." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Warpstone Armour" hidden="false" id="20e5-aad9-bce8-bece" collective="false">
                       <constraints>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ba3b-cbc9-3506-66db" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="35af-5b34-f149-b302" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Warpstone Armour" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="ad37-0d76-e605-9663" publicationId="4086-1ccd-f433-39a2" page="55">
-                          <characteristics>
-                            <characteristic name="Combat" typeId="617f-cb5d-6c83-2017"/>
-                            <characteristic name="Missile" typeId="5b67-725f-ad85-da5b"/>
-                            <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Heavy armour. For each successful armour save made in close combat, the armour inflicts a S 5 hit against the enemy that struck the blow.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Heavy Armour" id="9ef9-a0e4-8064-5081" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
+                          <modifiers>
+                            <modifier type="append" value="For each successful armour save made in close combat, the armour inflicts a S 5 hit against the enemy that struck the blow." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                            <modifier type="set" value="Warpstone Armour" field="annotation"/>
+                            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="The Foul Pendant" hidden="false" id="3315-ce5f-7bc0-33f0" collective="false">
                       <constraints>
@@ -4713,11 +4777,12 @@ cables out.</characteristic>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="f571-0f1b-59a9-6335" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Plaguereaper" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="5657-f939-636f-edb1" publicationId="4086-1ccd-f433-39a2" page="57">
+                        <profile name="Plaguereaper" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="5657-f939-636f-edb1" publicationId="4086-1ccd-f433-39a2" page="57">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Melee</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Attacks made with this weapon have Always Strikes First.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Attacks made with this weapon have Always Strikes First.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -4813,18 +4878,21 @@ cables out.</characteristic>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e8bb-0f33-f4d2-db2f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="584b-91da-162e-2b7f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Rod of Corruption" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="6c8d-0c18-4e01-f641" publicationId="4086-1ccd-f433-39a2" page="60">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Plague Censer. Models hit by the rod must pass a single T test (regardless of the number of hits) or instantly decay and die. No saves of any kind are allowed. If the victim lives, roll To Wound as normal.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Flail" id="c574-64ae-6de5-32aa" hidden="false" type="profile" targetId="7f6a-b8b2-8978-4f35">
+                          <modifiers>
+                            <modifier type="set" value="Plague Censer, Rod of Corruption" field="annotation"/>
+                            <modifier type="append" value="At the start of each round of close combat, all enemy models in base contact with one or more models bearing a plague censer, as well the Censer Bearers themselves that are allowed to fight this round, must pass a T test or suffer a single wound with Ignores Armour Saves and Magical Attacks. All Clan Pestilens models gain a +1 bonus for these tests.
+
+Models hit by the rod must pass a single T test (regardless of the number of hits) or instantly decay and die. No saves of any kind are allowed. If the victim lives, roll To Wound as normal.
+" field="de63-d6da-efa8-00ac"/>
+                            <modifier type="prepend" value="Magic Weapon" field="de63-d6da-efa8-00ac"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -4888,11 +4956,12 @@ cables out.</characteristic>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d2e3-1a85-2da4-44d0-max" includeChildSelections="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Doomfang" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="4c42-ae38-cd35-4c9f">
+                        <profile name="Doomfang" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="4c42-ae38-cd35-4c9f">
                           <characteristics>
-                            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">This weapon gives Krittok +2 Strength and the Always Strikes First special rule. However, no friendly units can use his Inspiring Presence special rule while he is engaged in close combat.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+2</characteristic>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">This weapon gives Krittok the Always Strikes First special rule. However, no friendly units can use his Inspiring Presence special rule while he is engaged in close combat.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -5037,24 +5106,28 @@ cables out.</characteristic>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="ae80-4dc6-568f-1746" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Eshin Fighting Claws" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="ae73-0336-cfcb-176f" publicationId="4086-1ccd-f433-39a2" page="62">
+                        <profile name="Eshin Fighting Claws" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="9c64-d943-8be3-8d90" publicationId="4086-1ccd-f433-39a2" page="62">
                           <characteristics>
-                            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Two/Additional Hand Weapons. These claws give Veskit Armour Piercing (1) and Magical Attacks.</characteristic>
-                          </characteristics>
-                        </profile>
-                        <profile name="Eshin Fighting Claws" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="9c64-d943-8be3-8d90" publicationId="4086-1ccd-f433-39a2" page="62">
-                          <characteristics>
-                            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
-                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">5</characteristic>
-                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1). Magical Attacks. Multiple Shots (2). Quick to Fire. Unstable Ammunition</characteristic>
+                            <characteristic name="Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
+                            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
+                            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">2</characteristic>
+                            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (1). Magical Attacks. Quick to Fire. Unstable Ammunition</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Two/Additional Hand Weapons" id="f81e-bded-c956-a74c" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
+                          <modifiers>
+                            <modifier type="append" value="Armour Piercing (1), Magical Attacks." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="set" value="Eshin Fighting Claws" field="annotation"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -5173,11 +5246,11 @@ cables out.</characteristic>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="a590-10b6-8025-009a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Lucky Skullhelm" typeId="7826-5c3d-faa6-1cb7" typeName="Magic Armour" hidden="false" id="68f4-c73f-9c12-fb99" publicationId="4086-1ccd-f433-39a2" page="62">
+                        <profile name="Lucky Skullhelm" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="68f4-c73f-9c12-fb99" publicationId="4086-1ccd-f433-39a2" page="62">
                           <characteristics>
-                            <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
-                            <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                            <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The Skullhelm gives Tretch a Ward save (4+). In addition, once per game he can re-roll a dice roll. The re-roll can be one of his To Hit, To Wound, armour or ward save, Ld test, or a Stay Here, I&apos;ll Get Help! roll.</characteristic>
+                            <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+                            <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+                            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Magic Armour. The Skullhelm gives Tretch a Ward save (4+). In addition, once per game he can re-roll a dice roll. The re-roll can be one of his To Hit, To Wound, armour or ward save, Ld test, or a Stay Here, I&apos;ll Get Help! roll.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -5260,18 +5333,20 @@ cables out.</characteristic>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7896-e27a-cbbe-0124" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="a1c8-39e0-cbe9-04da" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Warp-lash" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="9c10-0ce7-5ce0-1a2d" publicationId="4086-1ccd-f433-39a2" page="63">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Whip. Warp-lash gives Skweel Armour Piercing (1) and Multiple Wounds (2).</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Whip" id="ccc4-fa1c-34dd-cca6" hidden="false" type="profile" targetId="2218-f882-4600-cf0c">
+                          <modifiers>
+                            <modifier type="set" value="Warp-lash" field="annotation"/>
+                            <modifier type="append" value="Warp-lash gives Skweel Armour Piercing (1) and Multiple Wounds (2)." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                   <entryLinks>
@@ -5474,18 +5549,20 @@ cables out.</characteristic>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0fe0-9f73-4332-3170" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="d622-f01b-558b-05cc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Censer Mace" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="4697-ab11-4743-c6de" publicationId="4086-1ccd-f433-39a2" page="64">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Great weapon. At the start of each round of close combat, all enemy models in base contact with Morbus Sanguis must pass a Toughness test or suffer a single wound with the Ignores Armour Saves and Magical Attacks special rules. All Clan Pestilens models gain a +1 bonus for these tests.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Great Weapon" id="4637-2dd2-87f9-8ea5" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
+                          <modifiers>
+                            <modifier type="set" value="Censer Mace" field="annotation"/>
+                            <modifier type="append" value="At the start of each round of close combat, all enemy models in base contact with Morbus Sanguis must pass a Toughness test or suffer a single wound with the Ignores Armour Saves and Magical Attacks special rules. All Clan Pestilens models gain a +1 bonus for these tests." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -5616,7 +5693,7 @@ cables out.</characteristic>
                 <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
                 <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
                 <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Skaven</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Skaven, Clan Skryre</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -5646,7 +5723,14 @@ cables out.</characteristic>
             <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour save 6+, Skaven, Clan Skryre)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Doom-flayer" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="061b-1dd0-21d2-716d" publicationId="4086-1ccd-f433-39a2" page="43">
+          <characteristics>
+            <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+            <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
           </characteristics>
         </profile>
       </profiles>
@@ -5721,10 +5805,11 @@ If you roll a misfire, or if for any reason some of the models in the unit canno
         </entryLink>
       </entryLinks>
       <profiles>
-        <profile name="Warp-grinder" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="d918-8891-7f97-731b" publicationId="4086-1ccd-f433-39a2" page="199">
+        <profile name="Warp-grinder" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="d918-8891-7f97-731b" publicationId="4086-1ccd-f433-39a2" page="199">
           <characteristics>
-            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
             <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
+            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
             <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Impact Hits (D3). Magical Attacks.</characteristic>
           </characteristics>
         </profile>
@@ -6039,12 +6124,12 @@ If you roll a misfire, or if for any reason some of the models in the unit canno
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bd0a-fcb0-6010-81cd-max" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Warpstiletto" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="a52c-39dd-087e-8678">
+                            <profile name="Warpstiletto" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="a52c-39dd-087e-8678">
                               <characteristics>
-                                <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
                                 <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-                                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Attacks made with this weapon have the Armour Piercing (1) and Poisoned
-Attacks special rules.</characteristic>
+                                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Attacks made with this weapon have the Armour Piercing (1) and Poisoned Attacks special rules.</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -6055,11 +6140,12 @@ Attacks special rules.</characteristic>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6319-5920-ee67-3ed2-max" includeChildSelections="false"/>
                           </constraints>
                           <profiles>
-                            <profile name="Doomstar" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="5d7e-55a1-0c36-75f7">
+                            <profile name="Doomstar" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="5d7e-55a1-0c36-75f7">
                               <characteristics>
-                                <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
-                                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">As User</characteristic>
-                                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Quick to Fire, Poisoned Attacks, This weapon makes as many shots as the number of models in the front rank of the target unit that are within range.</characteristic>
+                                <characteristic name="Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
+                                <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90"/>
+                                <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                                <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Quick to Fire, Poisoned Attacks, This weapon makes as many shots as the number of models in the front rank of the target unit that are within range.</characteristic>
                               </characteristics>
                             </profile>
                           </profiles>
@@ -6524,15 +6610,6 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
           <description>All missile fire directed against a Brood Terror or any unit within 6&quot; of it suffer -1 To Hit.</description>
         </rule>
       </rules>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Clan Enmity" hidden="false" id="dd79-ee56-5b36-cb3e" sortIndex="-1">
-      <infoLinks>
-        <infoLink name="Clan Enmity" id="731a-a880-350c-5db2" hidden="false" type="rule" targetId="19a5-0fee-5f4b-f3ac"/>
-      </infoLinks>
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d18e-5543-75cb-6d6a-min" includeChildSelections="false"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d18e-5543-75cb-6d6a-max" includeChildSelections="false"/>
-      </constraints>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
@@ -8169,11 +8246,12 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="84a4-fdd3-a891-d2d6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <profiles>
-        <profile name="Ratling Pistol" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="e52b-a110-c266-332e" publicationId="4086-1ccd-f433-39a2" page="7">
+        <profile name="Ratling Pistol" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="e52b-a110-c266-332e" publicationId="4086-1ccd-f433-39a2" page="7">
           <characteristics>
-            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
-            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1), Magical Attacks, Multiple Shots (3), Quick to Fire, Rapid Fire, Unstable Ammunition</characteristic>
+            <characteristic name="Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
+            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
+            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3</characteristic>
+            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (1), Magical Attacks, Quick to Fire, Rapid Fire, Unstable Ammunition</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -8186,11 +8264,12 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
         <infoLink name="Unstable Ammunition" id="5a9a-a305-5951-ac25" hidden="false" targetId="1c5e-300c-39c9-1c62" type="rule"/>
       </infoLinks>
       <profiles>
-        <profile name="Warplock Pistol" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="0976-5ad1-1c64-7ceb" publicationId="4086-1ccd-f433-39a2" page="7">
+        <profile name="Warplock Pistol" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="0976-5ad1-1c64-7ceb" publicationId="4086-1ccd-f433-39a2" page="7">
           <characteristics>
-            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
-            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">5</characteristic>
-            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Pistol. Quick to Fire. Armour Piercing (1). Magical Attacks. Unstable Ammunition.</characteristic>
+            <characteristic name="Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
+            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
+            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Pistol. Quick to Fire. Armour Piercing (1). Magical Attacks. Unstable Ammunition.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -8226,15 +8305,14 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2b59-c289-b9f8-38e4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
-      <profiles>
-        <profile name="Warpstone Stars" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="64b9-d9fa-e1c4-61ac" publicationId="4086-1ccd-f433-39a2" page="7">
-          <characteristics>
-            <characteristic name="Range" typeId="59f2-3142-82d5-4f43"/>
-            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Throwing weapons.  Armour Piercing (1), Magical Attacks, Multiple Wounds (D3).</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
+      <infoLinks>
+        <infoLink name="Throwing Weapons" id="e0e1-da3b-9af6-9589" hidden="false" type="profile" targetId="fdcd-6526-0b8e-b291">
+          <modifiers>
+            <modifier type="set" value="Warpstone Stars" field="annotation"/>
+            <modifier type="append" value="Armour Piercing (1), Magical Attacks, Multiple Wounds (D3)." field="96b8-546e-ac33-6054"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Weeping Blades" hidden="false" id="003f-747f-ef51-6391" collective="false">
       <constraints>
@@ -8250,25 +8328,30 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Shock-Prod" hidden="false" id="dc78-e267-2d9c-4b0e" collective="true">
-      <profiles>
-        <profile name="Shock-Prod" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="9492-b7c6-d6af-5e69" publicationId="4086-1ccd-f433-39a2" page="7">
-          <characteristics>
-            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Polearm. Lightning Attacks.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="594d-8347-e727-ea4d"/>
       </constraints>
+      <infoLinks>
+        <infoLink name="Polearm/Halberd" id="592a-13f7-0d02-dd5a" hidden="false" type="profile" targetId="e43e-5153-eeec-36be">
+          <modifiers>
+            <modifier type="set" value="Shock-Prod" field="annotation"/>
+            <modifier type="append" value="Lightning Attacks." field="de63-d6da-efa8-00ac"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Things-catcher" hidden="false" id="3e96-5fc9-6cec-d772" collective="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ce47-ff81-b411-0a01" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Things-Catcher" id="e78b-edb8-9d46-4a97" hidden="false" type="profile" targetId="baf9-427f-22e3-45ec"/>
+        <infoLink name="Polearm/Halberd" id="1586-9e1b-5ab3-ee43" hidden="false" type="profile" targetId="e43e-5153-eeec-36be">
+          <modifiers>
+            <modifier type="set" value="Things-catcher" field="annotation"/>
+            <modifier type="append" value="Killing Blow
+" field="de63-d6da-efa8-00ac"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Whip" hidden="false" id="a8d5-bafb-6900-5e3c" collective="true">
@@ -8284,7 +8367,12 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="47d4-b0d3-42a9-a364" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Plague Censer" id="7e62-2389-a21c-064f" hidden="false" type="profile" targetId="1878-fabb-bbf5-e9d7"/>
+        <infoLink name="Flail" id="2ea2-10f9-2031-f58b" hidden="false" type="profile" targetId="7f6a-b8b2-8978-4f35">
+          <modifiers>
+            <modifier type="set" value="Plague Censer" field="annotation"/>
+            <modifier type="append" value="At the start of each round of close combat, all enemy models in base contact with one or more models bearing a plague censer, as well the Censer Bearers themselves that are allowed to fight this round, must pass a T test or suffer a single wound with Ignores Armour Saves and Magical Attacks. All Clan Pestilens models gain a +1 bonus for these tests." field="de63-d6da-efa8-00ac"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Warpmusket" hidden="false" id="ee2e-4af4-6c99-fce9" collective="true">
@@ -8295,11 +8383,12 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
         <infoLink name="Unstable Ammunition" id="bf6c-ae85-f2a2-2a98" hidden="false" targetId="1c5e-300c-39c9-1c62" type="rule"/>
       </infoLinks>
       <profiles>
-        <profile name="Warpmusket" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="5a0c-705e-808a-ca99" publicationId="4086-1ccd-f433-39a2" page="8">
+        <profile name="Warpmusket" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="5a0c-705e-808a-ca99" publicationId="4086-1ccd-f433-39a2" page="8">
           <characteristics>
-            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">24&quot;</characteristic>
-            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">5</characteristic>
-            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1), Magical Attacks, Ponderous, Unstable Ammunition</characteristic>
+            <characteristic name="Range" typeId="af3c-d805-702c-9af9">24&quot;</characteristic>
+            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
+            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (1), Magical Attacks, Ponderous, Unstable Ammunition</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -8339,10 +8428,11 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0a31-648f-d899-c11f"/>
       </constraints>
       <profiles>
-        <profile name="Warpvolt Obliterator" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="aec5-b6f3-e78c-7df1" publicationId="4086-1ccd-f433-39a2" page="8">
+        <profile name="Warpvolt Obliterator" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="aec5-b6f3-e78c-7df1" publicationId="4086-1ccd-f433-39a2" page="8">
           <characteristics>
-            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">18&quot;</characteristic>
             <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">5</characteristic>
+            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
             <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Lightning Attacks, Magical Attacks.</characteristic>
           </characteristics>
         </profile>
@@ -8611,12 +8701,19 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1ec8-40f7-1503-6a90" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
-              <infoLinks>
-                <infoLink name="Pestilent Breath" id="5878-3065-ac96-a406" hidden="false" targetId="fbbd-0bcc-1bb0-a559" type="rule"/>
-              </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
+              <profiles>
+                <profile name="Pestilent Breath" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="7162-fe2c-4961-bea4">
+                  <characteristics>
+                    <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+                    <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">2</characteristic>
+                    <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Ignores Armour saves.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Lash Tail" hidden="false" id="4423-ebdc-b18e-6945" collective="false" sortIndex="3">
               <constraints>
@@ -8722,11 +8819,12 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <profiles>
-        <profile name="Doom Glaive" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="6112-bf91-2793-5c51" publicationId="4086-1ccd-f433-39a2" page="16">
+        <profile name="Doom Glaive" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="6112-bf91-2793-5c51" publicationId="4086-1ccd-f433-39a2" page="16">
           <characteristics>
-            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Attacks made with this weapon have Multiple Wounds (D3).</characteristic>
+            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. Attacks made with this weapon have Multiple Wounds (D3).</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -8873,7 +8971,6 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
         <infoLink name="Fear" id="7dcd-1c91-d5b3-0911" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
         <infoLink name="Magic Resistance (2)" id="9ac4-6de6-a50c-0286" hidden="false" targetId="0e09-3526-25d5-2646" type="rule"/>
         <infoLink name="Wrecker Attack" id="c1a7-f5f1-4a9b-d482" hidden="false" targetId="d3ca-4052-20b9-4293" type="rule"/>
-        <infoLink name="Billowing Death" id="c7ec-96b5-3fd9-adcf" hidden="false" targetId="6dea-37fb-3d6e-416d" type="rule"/>
         <infoLink name="Altar of the Horned Rat" id="d51c-d891-9b62-c639" hidden="false" targetId="a124-af13-de9e-d5cd" type="rule"/>
         <infoLink name="Line of Sight (5)" id="5e14-6a90-3b48-8f50" hidden="false" targetId="564d-ded4-217d-827c" type="rule"/>
         <infoLink name="Frenzy" id="c1e0-f241-3917-1d19" hidden="false" targetId="9ff3-dda6-e142-5a77" type="rule"/>
@@ -8895,6 +8992,14 @@ If the Screaming Bell suffers one or more wounds inflicted by a shooting attack 
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Shrine</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="Billowing Death" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="a9fc-a6cd-2ec7-1316">
+          <characteristics>
+            <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90"/>
+            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Can be used in every turn. All models Hit must pass a Toughness test or suffer a Wound with the Ignores Armour Saves and Magical Attacks special rules. All Clan Pestilens models gain a +1 bonus for this test</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -9142,6 +9247,11 @@ of Ruin.</characteristic>
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="1aae-2529-c509-7573" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
           </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Arcane Items (One use only)" id="c027-0a07-e3cb-1039" hidden="false" collective="false" import="true" sortIndex="5" collapsible="true">
@@ -9229,6 +9339,11 @@ of Ruin.</characteristic>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
+            </modifier>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="1aae-2529-c509-7573" shared="true" includeChildSelections="true"/>
+              </conditions>
             </modifier>
           </modifiers>
         </selectionEntryGroup>
@@ -9395,10 +9510,11 @@ of Ruin.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8de7-36e8-d13c-5441" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Doomrocket" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="25a2-d286-763d-4f6b" publicationId="4086-1ccd-f433-39a2" page="11">
+                <profile name="Doomrocket" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="25a2-d286-763d-4f6b" publicationId="4086-1ccd-f433-39a2" page="11">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12-36&quot;</characteristic>
                     <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">5</characteristic>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
                     <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Slow to Fire. One use only. A Doomrocket is fired like a Stone Thrower. In case a Misfire is rolled, roll a D6 and consult the Doomrocket Misfire chart.</characteristic>
                   </characteristics>
                 </profile>
@@ -9577,6 +9693,15 @@ allowed.</characteristic>
                 <profile name="Skyre&apos;s breath-Bellow" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="4a3e-cabd-72dd-1eb7" publicationId="4086-1ccd-f433-39a2" page="12">
                   <characteristics>
                     <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. This is a Breath Weapon Attack. Any model Hit must take a Toughness test or suffer a Wound which Ignores Armour saves.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Skyre&apos;s breath-Bellow" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="2b03-75aa-f253-da2a">
+                  <characteristics>
+                    <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+                    <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">
+</characteristic>
+                    <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">One use only. Any model Hit must take a Toughness test or suffer a Wound which Ignores Armour saves.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -9841,7 +9966,9 @@ allowed.</characteristic>
               <infoLinks>
                 <infoLink name="Medium Armour" id="c08d-d69a-84f5-fde6" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
                   <modifiers>
-                    <modifier type="append" value="The first time the wearer is wounded by a S high enough to completely cancel his armour save, or is not permitted an armour save for any reason, the wound is discounted, but the armour is completely destroyed." field="ff58-91e4-84d7-e6e4"/>
+                    <modifier type="append" value="The first time the wearer is wounded by a S high enough to completely cancel his armour save, or is not permitted an armour save for any reason, the wound is discounted, but the armour is completely destroyed." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                     <modifier type="set" value="Rust Armour" field="annotation"/>
                   </modifiers>
                 </infoLink>
@@ -9880,7 +10007,9 @@ allowed.</characteristic>
               <infoLinks>
                 <infoLink name="Shield" id="7ab2-8e39-75c5-b6f3" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
                   <modifiers>
-                    <modifier type="append" value="The Shield of Distraction causes all enemies in base contact with the bearer to suffer -1 A." field="ff58-91e4-84d7-e6e4"/>
+                    <modifier type="append" value="The Shield of Distraction causes all enemies in base contact with the bearer to suffer -1 A." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                     <modifier type="set" value="Shield of Distraction" field="annotation"/>
                   </modifiers>
                 </infoLink>
@@ -9912,7 +10041,9 @@ allowed.</characteristic>
               <infoLinks>
                 <infoLink name="Medium Armour" id="55fe-ab3e-6e6f-9f23" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f">
                   <modifiers>
-                    <modifier type="append" value=" This armour gives the wearer the Regeneration (4+) special rule." field="ff58-91e4-84d7-e6e4"/>
+                    <modifier type="append" value=" This armour gives the wearer the Regeneration (4+) special rule." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                     <modifier type="set" value="Foulhide" field="annotation"/>
                   </modifiers>
                 </infoLink>
@@ -9934,11 +10065,12 @@ allowed.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="64fe-ab7d-9383-dbab" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Fellblade" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="9dc3-b864-7eaa-751e" publicationId="4086-1ccd-f433-39a2" page="9">
+                <profile name="Fellblade" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="9dc3-b864-7eaa-751e" publicationId="4086-1ccd-f433-39a2" page="9">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">This foul sword gives the bearer S 10 and Multiple Wounds (D6), and successful ward saves taken against wounds inflicted by the bearer in close combat must be re-rolled. Roll a D6 at the end of each of the wielder&apos;s turns; on a 3+ there is no effect. On a roll of 1-2 the wielder suffers 1 wound with no armour save allowed.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">10</characteristic>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">This foul sword gives the bearer Multiple Wounds (D6) and successful ward saves taken against wounds inflicted by the bearer in close combat must be re-rolled. Roll a D6 at the end of each of the wielder&apos;s turns; on a 3+ there is no effect. On a roll of 1-2 the wielder suffers 1 wound with no armour save allowed.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -9959,11 +10091,12 @@ allowed.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="cd21-b9a8-ee32-ed88" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Dwarf Slayer" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="c589-731a-fec5-c013" publicationId="4086-1ccd-f433-39a2" page="9">
+                <profile name="Dwarf Slayer" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="c589-731a-fec5-c013" publicationId="4086-1ccd-f433-39a2" page="9">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+1</characteristic>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">All attacks made with this weapon are resolved with Multiple Wounds (2). Against all models from Warhammer: Dwarfs, all hits have the Armour Piercing (1) special rule and the wielder may re-roll all failed rolls To Wound.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">All attacks made with this weapon are resolved with Multiple Wounds (2). Against all models from Warhammer: Dwarfs, all hits have the Armour Piercing (1) special rule and the wielder may re-roll all failed rolls To Wound.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -9977,11 +10110,12 @@ allowed.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7288-f986-fe38-c699" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Blade of Black Fury" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="f6a5-bc3e-ac2d-50e8" publicationId="4086-1ccd-f433-39a2" page="9">
+                <profile name="Blade of Black Fury" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="f6a5-bc3e-ac2d-50e8" publicationId="4086-1ccd-f433-39a2" page="9">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Blade of Black Fury gives wielder +2 I and +1 A.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff">+2</characteristic>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c">+1</characteristic>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac"/>
                   </characteristics>
                 </profile>
               </profiles>
@@ -9995,11 +10129,12 @@ allowed.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="00ee-a669-37cd-669c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Desolate Blade" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="28ab-990f-93fb-3f85" publicationId="4086-1ccd-f433-39a2" page="9">
+                <profile name="Desolate Blade" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="28ab-990f-93fb-3f85" publicationId="4086-1ccd-f433-39a2" page="9">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+1</characteristic>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Desolate Blade allows the wielder to re-roll all failed rolls To Wound.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Desolate Blade allows the wielder to re-roll all failed rolls To Wound.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10013,11 +10148,12 @@ allowed.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d83d-2012-7541-2eea" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Languisher Sword" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="6805-9974-95bd-2b53" publicationId="4086-1ccd-f433-39a2" page="9">
+                <profile name="Languisher Sword" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="6805-9974-95bd-2b53" publicationId="4086-1ccd-f433-39a2" page="9">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Languisher Sword causes all enemy models in base contact with the wielder to be subject to Always Strikes Last.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Languisher Sword causes all enemy models in base contact with the wielder to be subject to Always Strikes Last.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10031,11 +10167,12 @@ allowed.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a1bf-31b2-fe8b-bfe2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Cursed Blade of Delirium" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="faf7-5d4d-4534-a996" publicationId="4086-1ccd-f433-39a2" page="9">
+                <profile name="Cursed Blade of Delirium" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="faf7-5d4d-4534-a996" publicationId="4086-1ccd-f433-39a2" page="9">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Cursed Blade of Delirium causes all enemy models attempting to strike the wielder in close combat to suffer -1 To Hit.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The Cursed Blade of Delirium causes all enemy models attempting to strike the wielder in close combat to suffer -1 To Hit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10066,7 +10203,9 @@ allowed.</characteristic>
               <infoLinks>
                 <infoLink name="Sling" id="0c65-af6f-eeb1-6ce4" hidden="false" type="profile" targetId="d083-b2f1-d1c5-e4f7">
                   <modifiers>
-                    <modifier type="append" value="Against models with T 5 or more, Headsplitter automatically Wounds on the roll of 2+ with Ignores Armour Saves." field="de63-d6da-efa8-00ac"/>
+                    <modifier type="append" value="Against models with T 5 or more, Headsplitter automatically Wounds on the roll of 2+ with Ignores Armour Saves." field="96b8-546e-ac33-6054" join="
+
+"/>
                     <modifier type="set" value="Headsplitter" field="annotation"/>
                   </modifiers>
                 </infoLink>
@@ -10096,7 +10235,10 @@ allowed.</characteristic>
                 <infoLink name="Whip" id="e028-6152-05e4-a4ac" hidden="false" type="profile" targetId="2218-f882-4600-cf0c">
                   <modifiers>
                     <modifier type="set" value="Electro-Whip" field="annotation"/>
-                    <modifier type="append" value="An Electro-whip gives the wielder +D3 Attacks rather than 1 as well as the Lightning Attacks special rule." field="de63-d6da-efa8-00ac" join=""/>
+                    <modifier type="append" value="An Electro-whip gives the wielder the Lightning Attacks special rule." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                    <modifier type="set" value="+D3" field="ffc4-c065-ab29-fb8c"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -10122,10 +10264,13 @@ allowed.</characteristic>
                 </modifier>
               </modifiers>
               <infoLinks>
-                <infoLink name="Plague Censer" id="ac4c-7aac-a1e9-8e53" hidden="false" type="profile" targetId="1878-fabb-bbf5-e9d7">
+                <infoLink name="Flail" id="faf4-3f92-fa4b-0ee8" hidden="false" type="profile" targetId="7f6a-b8b2-8978-4f35">
                   <modifiers>
-                    <modifier type="append" value="All Toughness tests taken from this weapon suffer a +1 modifier." field="de63-d6da-efa8-00ac"/>
-                    <modifier type="set" value="The Fumigatous" field="annotation"/>
+                    <modifier type="set" value="Plague Censer, The Fumigatous" field="annotation"/>
+                    <modifier type="append" value="At the start of each round of close combat, all enemy models in base contact with one or more models bearing a plague censer, as well the Censer Bearers themselves that are allowed to fight this round, must pass a T test or suffer a single wound with Ignores Armour Saves and Magical Attacks. All Clan Pestilens models gain a +1 bonus for these tests.
+
+All Toughness tests taken from this weapon suffer a +1 modifier.
+" field="de63-d6da-efa8-00ac"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -10135,10 +10280,11 @@ allowed.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9196-cf11-ef41-62aa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Warpforged Blade" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="f81c-1200-9e57-b958" publicationId="4086-1ccd-f433-39a2" page="9">
+                <profile name="Warpforged Blade" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="f81c-1200-9e57-b958" publicationId="4086-1ccd-f433-39a2" page="9">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
                     <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
                     <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Ignores Armour Saves</characteristic>
                   </characteristics>
                 </profile>
@@ -10167,7 +10313,7 @@ allowed.</characteristic>
                   <modifiers>
                     <modifier type="set" value="The Three Fangs" field="annotation"/>
                     <modifier type="append" value="If the wielder of these weapons scores 3 or more Hits against a single model, all those hits automatically Wound with the Ignores Armour Saves special rule. Replaces Tail Weapons." field="de63-d6da-efa8-00ac"/>
-                    <modifier type="replace" value="+2 A" field="de63-d6da-efa8-00ac" arg="+1 A"/>
+                    <modifier type="set" value="+2" field="ffc4-c065-ab29-fb8c"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -10180,46 +10326,18 @@ allowed.</characteristic>
                 </modifier>
               </modifiers>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Snap-Snap Snarepole" hidden="false" id="34e1-0115-c589-bdf8" sortIndex="9">
-              <costs>
-                <cost name="pts" typeId="points" value="20"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8128-3eaa-8811-bb87" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7108-c29f-4287-2bc4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <modifiers>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="bbc7-b72c-9cc5-965f" shared="true" includeChildForces="false" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="true" field="hidden">
-                  <conditions>
-                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="edab-9646-f035-31e7" shared="true" includeChildForces="false" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-              <infoLinks>
-                <infoLink name="Things-Catcher" id="2169-b4a3-e5fa-17ac" hidden="false" type="profile" targetId="baf9-427f-22e3-45ec">
-                  <modifiers>
-                    <modifier type="set" value="Snap-Snap Snarepole" field="annotation"/>
-                    <modifier type="append" value="One enemy model in base contact of your choice suffers a -1 penalty to their Attacks." field="de63-d6da-efa8-00ac"/>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
-            </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Gnaswhard" hidden="false" id="cf33-ef06-b305-a0a2" sortIndex="5">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f1d9-5222-448d-7041" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="132c-766a-9586-1a2c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Gnaswhard" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="6e21-1b08-8115-c538" publicationId="4086-1ccd-f433-39a2" page="9">
+                <profile name="Gnaswhard" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="6e21-1b08-8115-c538" publicationId="4086-1ccd-f433-39a2" page="9">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Any character, Monstrous Creature or Monster that suffers one or more unsaved Wounds from this weapon must pass a Toughness test at the start of each subsequent close combat phase for the rest of the game, or suffer one Wound with no saves allowed.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Any character, Monstrous Creature or Monster that suffers one or more unsaved Wounds from this weapon must pass a Toughness test at the start of each subsequent close combat phase for the rest of the game, or suffer one Wound with no saves allowed.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10233,11 +10351,12 @@ allowed.</characteristic>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9b21-815f-62ce-45de" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Things bane" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="ab4d-96bd-b966-10b6" publicationId="4086-1ccd-f433-39a2" page="9">
+                <profile name="Things bane" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="ab4d-96bd-b966-10b6" publicationId="4086-1ccd-f433-39a2" page="9">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Multiple wounds (2)</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple wounds (2)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10247,11 +10366,12 @@ allowed.</characteristic>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Brooding Blade" hidden="false" id="7c0b-fa2f-ff7c-18d5" sortIndex="1">
               <profiles>
-                <profile name="Brooding Blade" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="c10a-7147-0b6b-bff3" publicationId="4086-1ccd-f433-39a2" page="9">
+                <profile name="Brooding Blade" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="c10a-7147-0b6b-bff3" publicationId="4086-1ccd-f433-39a2" page="9">
                   <characteristics>
-                    <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                    <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                    <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Any model that suffers one or more unsaved Wounds from this weapon suffers 2D6 Strength 1 Hits with no saves allowed at the end of that round of close combat.</characteristic>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Any model that suffers one or more unsaved Wounds from this weapon suffers 2D6 Strength 1 Hits with no saves allowed at the end of that round of close combat.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -10287,10 +10407,42 @@ allowed.</characteristic>
                 <infoLink name="Whip" id="37eb-2b58-5f9e-121b" hidden="false" type="profile" targetId="2218-f882-4600-cf0c">
                   <modifiers>
                     <modifier type="set" value="Lash of fangs" field="annotation"/>
-                    <modifier type="append" value="Any character, Monstrous Creature or Monster that suffers one or more unsaved Wounds from this weapon are subject to the Stupidity special rule for the remainder of the game." field="de63-d6da-efa8-00ac" join=""/>
+                    <modifier type="append" value="Any character, Monstrous Creature or Monster that suffers one or more unsaved Wounds from this weapon are subject to the Stupidity special rule for the remainder of the game." field="de63-d6da-efa8-00ac" join="
+
+"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Snap-Snap Snarepole" hidden="false" id="f063-553d-dcaf-2a66" sortIndex="9">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ecf0-79b1-9eed-d551" includeChildSelections="true"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Polearm/Halberd" id="54b4-c611-985d-cd14" hidden="false" type="profile" targetId="e43e-5153-eeec-36be">
+                  <modifiers>
+                    <modifier type="set" value="Things-catcher, Snap-Snap Snarepole" field="annotation"/>
+                    <modifier type="append" value="Killing Blow. One enemy model in base contact of your choice suffer a -1 penalty to their Attacks." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="bbc7-b72c-9cc5-965f" shared="true" includeChildForces="false" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="edab-9646-f035-31e7" shared="true" includeChildForces="false" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
@@ -10445,6 +10597,9 @@ allowed.</characteristic>
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.e00e-6c4b-3cf0-6ce9.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.e00e-6c4b-3cf0-6ce9.profiles.Ranged Weapon"/>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.75a7-06a3-6a2d-496c.profiles.Armour Save"/>
       </modifiers>
     </selectionEntryGroup>
     <selectionEntryGroup name="91. Magic Standards" id="cb40-c54f-5ef7-aa93" hidden="false" collective="false" import="true" collapsible="true">
@@ -10722,9 +10877,6 @@ Note that a Skaven General confers his basic Ld and then units modify it with th
     <rule id="d3ca-4052-20b9-4293" name="Wrecker Attack" publicationId="4086-1ccd-f433-39a2" page="167" hidden="false">
       <description>The Plague Furnace may inflict special attack after all other attacks have been resolved, inflicting an Artillery dice&apos;s worth of Strength 5 Hits against a single enemy unit to their front. A roll of Misfire means something has gone wrong; roll a D6 on the Plague Furnace Mishap chart.</description>
     </rule>
-    <rule id="6dea-37fb-3d6e-416d" name="Billowing Death" publicationId="4086-1ccd-f433-39a2" page="167" hidden="false">
-      <description>Billowing Death follows the rules for Breath Weapons, but can be used in every turn. All models Hit must pass a T test or suffer a Wound with Ignores Armour Saves and Magical Attacks. All Clan Pestilens models gain a +1 modifer for this tests.</description>
-    </rule>
     <rule id="77ea-023f-0095-0507" name="Sensei" publicationId="4086-1ccd-f433-39a2" page="18" hidden="false">
       <description>A Master Assassin may be the Army General despite being Hidden. However, he can only pass on his Leadership value to other units if he is not Hidden.</description>
     </rule>
@@ -10745,9 +10897,6 @@ If the marker is under an enemy unit when the Stormfiends emerge, they count as 
     </rule>
     <rule id="c82f-6673-d7bb-7b55" name="Foul Ichor" publicationId="4086-1ccd-f433-39a2" page="187" hidden="false">
       <description>If a Brood Horror is slain, all units in base contact with the Brood Horror suffer 2D6 S 2 hits, distributed as shooting attacks.</description>
-    </rule>
-    <rule id="fbbd-0bcc-1bb0-a559" name="Pestilent Breath" publicationId="4086-1ccd-f433-39a2" page="187" hidden="false">
-      <description>The Brood Horror gains a S 2 Breath Weapon which Ignores Armour saves.</description>
     </rule>
     <rule id="863e-2af3-719c-4567" name="Skryre Claws" publicationId="4086-1ccd-f433-39a2" page="187" hidden="false">
       <description>The Brood Horror gains Armour Piercing (1) and Magical Attacks.</description>
@@ -10788,9 +10937,6 @@ Roll an Artillery Dice to determine number of shots fired. After the first Artil
     </rule>
     <rule id="aa3d-b64a-ba31-e27d" name="Mainstay" publicationId="4086-1ccd-f433-39a2" page="242" hidden="false">
       <description>You may not have more of any other type of Core Unit than you have units of Clanrats.</description>
-    </rule>
-    <rule id="19a5-0fee-5f4b-f3ac" name="Clan Enmity" publicationId="4086-1ccd-f433-39a2" page="3" hidden="false">
-      <description>Units belonging to each of the Greater Clans (Pestilens, Eshin, Moulder, Skryre) may only be joined by characters from the same Clan. Characters from one of these Clans may not join a unit containing models from another Clan.</description>
     </rule>
     <rule id="a124-af13-de9e-d5cd" name="Altar of the Horned Rat" publicationId="4086-1ccd-f433-39a2" page="29" hidden="false">
       <description>This model and any unit it joins has the Stubborn special rule.</description>
@@ -10911,25 +11057,12 @@ Roll an Artillery Dice to determine number of shots fired. After the first Artil
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Skaven</characteristic>
       </characteristics>
     </profile>
-    <profile name="Plague Censer" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="1878-fabb-bbf5-e9d7" publicationId="4086-1ccd-f433-39a2" page="7">
+    <profile name="Whip" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="2218-f882-4600-cf0c" publicationId="4086-1ccd-f433-39a2" page="7">
       <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Requires Two Hands. Mighty Blow (2). At the start of each round of close combat, all enemy models in base contact with one or more models bearing a plague censer, as well the Censer Bearers themselves that are allowed to fight this round, must pass a T test or suffer a single wound with Ignores Armour Saves and Magical Attacks. All Clan Pestilens models gain a +1 bonus for these tests.</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="Whip" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="2218-f882-4600-cf0c" publicationId="4086-1ccd-f433-39a2" page="7">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">A whip gives the wielder +1 A and Fight in Extra Ranks (2). In addition, they may make supporting attacks equal to their A characteristic.</characteristic>
-      </characteristics>
-    </profile>
-    <profile name="Things-Catcher" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="baf9-427f-22e3-45ec" publicationId="4086-1ccd-f433-39a2" page="7">
-      <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">+1 Initiative. Requires Two Hands. Killing Blow.</characteristic>
+        <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+        <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c">+1</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">A whip gives the wielder Fight in Extra Ranks (2). In addition, they may make supporting attacks equal to their A characteristic.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
@@ -10961,4 +11094,9 @@ Roll an Artillery Dice to determine number of shots fired. After the first Artil
       </categoryLinks>
     </entryLink>
   </entryLinks>
+  <rules>
+    <rule name="Clan Enmity" id="19a5-0fee-5f4b-f3ac" hidden="false" publicationId="4086-1ccd-f433-39a2" page="3">
+      <description>Units belonging to each of the Greater Clans (Pestilens, Eshin, Moulder, Skryre) may only be joined by characters from the same Clan. Characters from one of these Clans may not join a unit containing models from another Clan.</description>
+    </rule>
+  </rules>
 </catalogue>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1194-2922-b8ab-2f1d" name="Dark Elves WAP 1.73" revision="56" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="1194-2922-b8ab-2f1d" name="Dark Elves WAP 1.73" revision="57" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <profileTypes>
     <profileType id="4d67-b1d7-6891-ce0e" name="Gift of Khaine">
@@ -393,23 +393,28 @@
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="09c2-32a7-95d5-4a55" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="b183-fe86-27d6-c611" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3102-21ed-a815-e538"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
         <entryLink import="true" name="41. Sea Dragon Cloak" hidden="false" id="6842-81ee-7b66-29a7" type="selectionEntryGroup" targetId="4ea7-a350-dcbb-dca6">
           <entryLinks>
             <entryLink import="true" name="Sea Dragon Cloak" hidden="false" id="6d63-0339-d92e-1367" type="selectionEntry" targetId="60a6-0928-4fde-509c">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0ac8-df51-f868-35bf"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="c678-8168-cd07-9875">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="e7ca-c80d-139d-a731" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3add-0eac-2065-7ba4"/>
-          </constraints>
         </entryLink>
       </entryLinks>
       <costs>
@@ -728,6 +733,7 @@
               </constraints>
               <infoLinks>
                 <infoLink name="Scourgerunner Chariot" id="d16d-33ae-9323-48b3" hidden="false" targetId="01be-c14f-c557-80a6" type="profile"/>
+                <infoLink name="Scourgerunner Chariot" id="b5b3-7613-3825-7ed6" hidden="false" targetId="826b-a598-0537-72c6" type="profile"/>
               </infoLinks>
               <categoryLinks>
                 <categoryLink name="Mount" hidden="false" id="351f-da6a-aa87-9749" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -2204,8 +2210,9 @@
     </selectionEntry>
     <selectionEntry id="a2aa-004a-2195-0252" name="Cold One Chariot" hidden="false" collective="false" import="true" type="model" sortIndex="36">
       <infoLinks>
-        <infoLink name="Cold One Chariot" id="5820-2308-edb1-3590" hidden="false" targetId="5786-6e38-740c-54a8" type="profile"/>
+        <infoLink name="Cold One Chariot" id="5820-2308-edb1-3590" hidden="false" targetId="f785-81b0-fc74-576a" type="profile"/>
         <infoLink name="Scythes" id="c72a-0d23-f0b5-e1fa" hidden="false" targetId="d896-d52f-cc64-ab43" type="rule"/>
+        <infoLink name="Cold One Chariot" id="9698-c21f-79e8-3190" hidden="false" targetId="5786-6e38-740c-54a8" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8fae-1e30-a717-bbfe" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -2249,6 +2256,7 @@
     <selectionEntry id="2c5a-fd8d-76f0-d0f2" name="Scourgerunner Chariot" hidden="false" collective="false" import="true" type="model" sortIndex="37">
       <infoLinks>
         <infoLink name="Scourgerunner Chariot" id="9d98-e052-12f3-b6d0" hidden="false" targetId="01be-c14f-c557-80a6" type="profile"/>
+        <infoLink name="Scourgerunner Chariot" id="cd0c-e472-332b-6f19" hidden="false" targetId="826b-a598-0537-72c6" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="fe54-b535-518e-2dee" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -2402,7 +2410,7 @@
       </profiles>
       <infoLinks>
         <infoLink name="Bolt Thrower" id="cd53-04d0-0a7f-daf4" hidden="false" type="profile" targetId="2d26-2a21-00a2-685d"/>
-        <infoLink name="Firing a Blot Thrower" id="9681-845c-1821-3b4e" hidden="false" type="rule" targetId="f55b-b981-fae7-afa2"/>
+        <infoLink name="Firing a Bolt Thrower" id="9681-845c-1821-3b4e" hidden="false" type="rule" targetId="f55b-b981-fae7-afa2"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="fd8a-f25f-e3b2-c3bd" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -2497,7 +2505,13 @@
             <infoLink id="ef68-8531-0034-7950" name="Hatred (High Elves)" hidden="false" targetId="a0a3-ddd4-b1ed-1054" type="rule"/>
             <infoLink id="8245-2640-3367-820f" name="Khainite" hidden="false" targetId="fb7f-921b-b1e1-a5e7" type="rule"/>
             <infoLink id="392e-ddf5-fba5-9c74" name="Vanguard" hidden="false" targetId="38ba-d48a-be97-f830" type="rule"/>
-            <infoLink name="Natural Armour (6+)" id="1398-accb-e9ba-bf07" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
+            <infoLink name="Natural Armour" id="d608-f224-508d-9a01" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+              <modifiers>
+                <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+                <modifier type="set" value="Melusai" field="annotation"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="28"/>
@@ -2509,40 +2523,34 @@
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b817-b7a0-0bc4-de3c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
-                  <profiles>
-                    <profile name="Heartshard Glaives" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="4ec9-40a9-00da-585e">
-                      <characteristics>
-                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43"/>
-                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Polearm. All attacks made with this weapon have the Magical Attacks and Killing Blow special rules.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
                   <costs>
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                   <infoLinks>
                     <infoLink name="Medium Armour" id="6a00-7219-e42c-7371" hidden="false" type="profile" targetId="6d9a-c9f8-e013-e77f"/>
+                    <infoLink name="Polearm/Halberd" id="5baf-adbb-6601-4785" hidden="false" type="profile" targetId="e43e-5153-eeec-36be">
+                      <modifiers>
+                        <modifier type="set" value="Heartshard Glaives" field="annotation"/>
+                        <modifier type="append" value="All attacks made with this weapon have the Magical Attacks and Killing Blow special rules." field="de63-d6da-efa8-00ac"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Light Armour and Heartseeker Bows" hidden="false" id="7925-023d-c525-7207" collective="true" sortIndex="2">
                   <constraints>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b363-4ead-7223-987c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                   </constraints>
-                  <profiles>
-                    <profile name="Heartseeker Bows" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="e1fc-978e-f1ba-fb04">
-                      <characteristics>
-                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43"/>
-                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Warbow. All attacks made with this weapon have the Magical Attacks and Killing Blow special rules.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
                   <costs>
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
                   <infoLinks>
                     <infoLink name="Light Armour" id="1366-f681-6d8c-2730" hidden="false" type="profile" targetId="4129-1acd-3564-d3ea"/>
+                    <infoLink name="Warbow" id="b392-f3bf-0668-05f4" hidden="false" type="profile" targetId="51ac-33e6-8924-39dc">
+                      <modifiers>
+                        <modifier type="set" value="Heartseeker Bows" field="annotation"/>
+                        <modifier type="append" value="All attacks made with this weapon have the Magical Attacks and Killing Blow special rules." field="96b8-546e-ac33-6054"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
                 </selectionEntry>
               </selectionEntries>
@@ -2687,7 +2695,13 @@
         <infoLink id="dbd3-a6eb-9e48-1cc3" name="Bloodwrack Medusa" hidden="false" targetId="d4f7-df5b-ad54-2b58" type="profile"/>
         <infoLink id="2273-c322-4bb1-1b84" name="Hatred (High Elves)" hidden="false" targetId="a0a3-ddd4-b1ed-1054" type="rule"/>
         <infoLink id="ca93-501c-5f86-24ef" name="Bloodwrack Stare" hidden="false" targetId="b341-5500-89e7-d6a1" type="profile"/>
-        <infoLink id="8841-159d-4dd6-2463" name="Natural Armour (6+)" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
+        <infoLink name="Natural Armour" id="02e5-b379-5458-855b" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Bloodwrack Medusa" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="6a37-456e-6412-6dcc" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -3084,7 +3098,13 @@
             <infoLink name="Bloodwrack Medusa" id="ef5f-3aad-081a-47c8" hidden="false" targetId="d4f7-df5b-ad54-2b58" type="profile"/>
             <infoLink name="Hatred (High Elves)" id="a328-2769-bdd6-6949" hidden="false" targetId="a0a3-ddd4-b1ed-1054" type="rule"/>
             <infoLink name="Bloodwrack Stare" id="c237-127c-863c-ee51" hidden="false" targetId="b341-5500-89e7-d6a1" type="profile"/>
-            <infoLink name="Natural Armour (6+)" id="9a4e-86c8-4dfc-2aa0" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
+            <infoLink name="Natural Armour" id="12f7-1f2c-d7ec-b678" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+              <modifiers>
+                <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+                <modifier type="set" value="Bloodwrack Medusa" field="annotation"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="4afc-3061-5f44-679e" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
@@ -3144,7 +3164,13 @@
           </rules>
           <infoLinks>
             <infoLink id="ce5f-7985-f2f3-bea9" name="Regeneration (4+)" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
-            <infoLink id="b4bd-d4b3-e793-cb87" name="Natural Armour (4+)" hidden="false" targetId="6b43-9dda-f589-0509" type="rule"/>
+            <infoLink name="Natural Armour" id="310d-8382-c4d9-6481" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+              <modifiers>
+                <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
+                <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
+                <modifier type="set" value="War Hydra" field="annotation"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup id="65a9-a6e9-ae72-bf89" name="55. Breath Upgrades" hidden="false" collective="false" import="true">
@@ -3157,11 +3183,12 @@
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6789-5f6d-8423-77e4" type="max"/>
                   </constraints>
                   <profiles>
-                    <profile id="6790-52e7-72d3-0500" name="Spit Fire" publicationId="9e23-79cb-pubN76150" page="34" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+                    <profile id="6790-52e7-72d3-0500" name="Spit Fire" publicationId="9e23-79cb-pubN76150" page="34" hidden="false" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon">
                       <characteristics>
-                        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
-                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">*</characteristic>
-                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Flaming Attacks. Multiple Shots (the S and Multiple Shots value of this attack is equal to the War Hydra&apos;s remaining number of Wounds.). Quick to Fire.</characteristic>
+                        <characteristic name="Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
+                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">*</characteristic>
+                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">*</characteristic>
+                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Flaming Attacks. (Both * values of this attack is equal to the War Hydra&apos;s remaining number of Wounds) Quick to Fire.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -3173,27 +3200,37 @@
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="cd72-52a0-cc96-f11b" type="max"/>
                   </constraints>
-                  <rules>
-                    <rule id="b26a-6b15-cd46-985c" name="Fiery Breath" publicationId="9e23-79cb-pubN76150" page="34" hidden="false">
-                      <description>A War Hydra with this upgrade has a Breath Weapon with the Flaming Attacks special rule. The S of this attack is equal to the War Hydra&apos;s remaining Wounds.</description>
-                    </rule>
-                  </rules>
                   <costs>
                     <cost name="pts" typeId="points" value="20"/>
                   </costs>
+                  <profiles>
+                    <profile name="Fiery Breath" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="6f7f-9ba0-b5c2-673e" publicationId="9e23-79cb-pubN76150" page="34">
+                      <characteristics>
+                        <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">*</characteristic>
+                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Flaming Attacks. *equal to the War Hydra&apos;s remaining Wounds.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
                 </selectionEntry>
                 <selectionEntry id="cb48-46d1-e1d8-de53" name="Acid Breath" hidden="false" collective="false" import="true" type="upgrade" sortIndex="3">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="43d9-397e-5fb7-6a60" type="max"/>
                   </constraints>
-                  <rules>
-                    <rule id="7aa4-ae8b-33c3-8eed" name="Acid Breath" hidden="false">
-                      <description>The model gains a Strength 2 Breath Weapon with the Ignores Armour Saves special rule.</description>
-                    </rule>
-                  </rules>
                   <costs>
                     <cost name="pts" typeId="points" value="30"/>
                   </costs>
+                  <profiles>
+                    <profile name="Acid Breath" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="230b-8efc-93ba-5c76" publicationId="9e23-79cb-pubN76150" page="34">
+                      <characteristics>
+                        <characteristic name="Range" typeId="af3c-d805-702c-9af9">Breath Weapon</characteristic>
+                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">2</characteristic>
+                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Ignores Armour Saves.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
                 </selectionEntry>
               </selectionEntries>
             </selectionEntryGroup>
@@ -3268,6 +3305,15 @@
                   <costs>
                     <cost name="pts" typeId="points" value="15"/>
                   </costs>
+                  <infoLinks>
+                    <infoLink name="Natural Armour" id="5f9b-e3f7-2676-7657" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                      <modifiers>
+                        <modifier type="set" value="Armour Plates" field="annotation"/>
+                        <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                        <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
                 </selectionEntry>
               </selectionEntries>
             </entryLink>
@@ -3321,9 +3367,15 @@
           </rules>
           <infoLinks>
             <infoLink id="9854-ebc7-9295-a410" name="Poisoned Attacks" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule"/>
-            <infoLink id="5a9f-2aa0-7f81-df03" name="Natural Armour (4+)" hidden="false" targetId="6b43-9dda-f589-0509" type="rule"/>
             <infoLink id="b8f0-14a9-14bd-e5c0" name="Multiple Wounds (D3)" hidden="false" targetId="20d3-7f3f-51f9-e10d" type="rule"/>
             <infoLink name="Aquatic" id="d54c-63b9-7d75-4ebb" hidden="false" targetId="3667-691b-abd9-7da6" type="rule"/>
+            <infoLink name="Natural Armour" id="7391-aade-64dd-b66a" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+              <modifiers>
+                <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
+                <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
+                <modifier type="set" value="Kharibdyss" field="annotation"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="0"/>
@@ -3561,7 +3613,10 @@
                         <infoLink name="Light Lance" id="8769-e7cb-2306-6127" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb">
                           <modifiers>
                             <modifier type="set" value="Heartrender and the Darksword" field="annotation"/>
-                            <modifier type="append" value="Hits from this weapon have the Killing Blow special rule in the turn Morathi charges. In addition, for each Hit a Monstrous Creature, Monster or character take from these weapons they suffer -1 to their Strength, Toughness and Attack characteristics (to a minimum of 1) for the remainder of the close combat phase." field="de63-d6da-efa8-00ac" join=", "/>
+                            <modifier type="append" value="Hits from this weapon have the Killing Blow special rule in the turn Morathi charges. In addition, for each Hit a Monstrous Creature, Monster or character take from these weapons they suffer -1 to their Strength, Toughness and Attack characteristics (to a minimum of 1) for the remainder of the close combat phase." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon" field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -3652,7 +3707,13 @@
                       <infoLinks>
                         <infoLink name="Cold One" id="cc6a-2ad3-aee9-2c0a" hidden="false" targetId="be87-1185-25f0-2de4" type="profile"/>
                         <infoLink name="Fear" id="a4f5-0f79-aa9f-5483" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
-                        <infoLink name="Natural Armour (6+)" id="e70e-cb1f-f9a2-42b7" hidden="false" targetId="fa69-07b8-fdc1-3ac9" type="rule"/>
+                        <infoLink name="Natural Armour" id="089c-d80b-e7c9-09a5" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                          <modifiers>
+                            <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                            <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+                            <modifier type="set" value="Spite" field="annotation"/>
+                          </modifiers>
+                        </infoLink>
                       </infoLinks>
                       <modifiers>
                         <modifier type="set" value="Spite" field="name" affects="profiles.Model"/>
@@ -3689,11 +3750,12 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4a6d-029d-ba3c-414d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Warpsword of Khaine" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="494f-9bc7-210b-865d" publicationId="9e23-79cb-pubN76150" page="38">
+                        <profile name="Warpsword of Khaine" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="494f-9bc7-210b-865d" publicationId="9e23-79cb-pubN76150" page="38">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Warpsword of Khaine allow Malus to re-roll failed rolls To Wound and Ignores Armour saves.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. The Warpsword of Khaine allow Malus to re-roll failed rolls To Wound and Ignores Armour saves.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -3759,11 +3821,12 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="df2e-a64f-e64b-6e8d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Destroyer" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="930a-24f3-7b99-46d0" publicationId="9e23-79cb-pubN76150" page="36">
+                        <profile name="Destroyer" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="930a-24f3-7b99-46d0" publicationId="9e23-79cb-pubN76150" page="36">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">At the start of every Close Combat phase, all enemy models in base contact with Malekith must reveal their magic items. Furthermore, if Malekith scores one or more hits against a model with any magic items, roll a D6; on a 4+, one randomly determined magic item is immediately destroyed and cannot be used further in this game. Do not include Magic items that are mounts, magic items that contain bound spells that miscast earlier in the game, or any magic items labelled as &apos;one use only&apos; that have been used. In addition, if a Wizard suffers one or more unsaved Wounds from Destroyer, roll a D6; on a 4+, the Wizard immediately loses a Wizard level.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. At the start of every Close Combat phase, all enemy models in base contact with Malekith must reveal their magic items. Furthermore, if Malekith scores one or more hits against a model with any magic items, roll a D6; on a 4+, one randomly determined magic item is immediately destroyed and cannot be used further in this game. Do not include Magic items that are mounts, magic items that contain bound spells that miscast earlier in the game, or any magic items labelled as &apos;one use only&apos; that have been used. In addition, if a Wizard suffers one or more unsaved Wounds from Destroyer, roll a D6; on a 4+, the Wizard immediately loses a Wizard level.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -3777,11 +3840,12 @@
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0c4b-ded1-69be-79f6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Hand of Khaine" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="a552-3e9e-a0f5-c9aa" publicationId="9e23-79cb-pubN76150" page="36">
+                        <profile name="Hand of Khaine" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="a552-3e9e-a0f5-c9aa" publicationId="9e23-79cb-pubN76150" page="36">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Melee</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The Hand of Khaine gives Malekith an extra Attack at S 6 which Ignores armour saves.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. The Hand of Khaine gives Malekith an extra Attack at S 6 which Ignores armour saves.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -3802,6 +3866,7 @@
                           <modifiers>
                             <modifier type="set" value="Armour of Midnight" field="annotation"/>
                             <modifier type="append" value="The Armour of Midnight grants Malekith a Ward save (2+) against all non-magical attacks and Immunity (Killing Blow/Multiple Wounds)." field="ff58-91e4-84d7-e6e4" join=", "/>
+                            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -3818,7 +3883,10 @@
                         <infoLink name="Shield" id="2424-e2c9-8ea5-14cf" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
                           <modifiers>
                             <modifier type="set" value="Supreme Spellshield" field="annotation"/>
-                            <modifier type="append" value="This item grants Malekith Magic Resistance (2). If Malekith is ever the target of an enemy spell that he successfully dispels, the caster&apos;s unit immediately suffers D6 magical S 6 hits. In close combat, you must choose whether Malekith uses the Hand of Khaine or the Supreme Spellshield." field="ff58-91e4-84d7-e6e4" join=", "/>
+                            <modifier type="append" value="This item grants Malekith Magic Resistance (2). If Malekith is ever the target of an enemy spell that he successfully dispels, the caster&apos;s unit immediately suffers D6 magical S 6 hits. In close combat, you must choose whether Malekith uses the Hand of Khaine or the Supreme Spellshield." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -3934,19 +4002,21 @@
                         <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="1934-e9ba-5a60-1b92" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5f9c-da9b-b2ad-28cb" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Deathsword and the Cursed Blade" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="3bf8-ba98-5758-810c" publicationId="9e23-79cb-pubN76150" page="39">
-                          <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">10</characteristic>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Two hand weapons. Hits from Deathsword and the
-Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst attacking Hellebron in close combat, it suffers an automatic Strength 4 hit for each 1 rolled.</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Two/Additional Hand Weapons" id="0e7f-7a06-f96e-40d2" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
+                          <modifiers>
+                            <modifier type="set" value="Deathsword and the Cursed Blade" field="annotation"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                            <modifier type="append" value="If a model rolls a 1 To Hit whilst attacking Hellebron in close combat, it suffers an automatic Strength 4 hit for each 1 rolled." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="set" value="10" field="b80e-7dac-0dea-9add"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Amulet of Dark Fire" hidden="false" id="b839-65fc-4ef5-6bd9" collective="false">
                       <constraints>
@@ -4156,11 +4226,12 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="bdf7-930e-f15b-a64d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Whip of Agony" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="4260-8b53-aed6-e275" publicationId="9e23-79cb-pubN76150" page="40">
+                        <profile name="Whip of Agony" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="4260-8b53-aed6-e275" publicationId="9e23-79cb-pubN76150" page="40">
                           <characteristics>
-                            <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                            <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7">+1</characteristic>
-                            <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">At the beginning of any close combat phase, Rakarth may make a special attack with Always Strikes First before making his normal Attacks. If this attack causes an unsaved Wound but does not kill the target, it is overcome with pain and must roll 6&apos;s to Hit in that round of close combat.</characteristic>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. At the beginning of any close combat phase, Rakarth may make a special attack with Always Strikes First before making his normal Attacks. If this attack causes an unsaved Wound but does not kill the target, it is overcome with pain and must roll 6&apos;s to Hit in that round of close combat.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -4180,7 +4251,10 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
                         <infoLink name="Heavy Armour" id="58d9-b8a3-c554-7837" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
                           <modifiers>
                             <modifier type="set" value="Beast Armour of Clar Karond" field="annotation"/>
-                            <modifier type="append" value="This armour allows Rakarth to re-roll failed armour saves." field="ff58-91e4-84d7-e6e4" join=", "/>
+                            <modifier type="append" value="This armour allows Rakarth to re-roll failed armour saves." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -4279,8 +4353,11 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
                       <infoLinks>
                         <infoLink name="Great Weapon" id="520f-8ca4-9d20-02f7" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
                           <modifiers>
-                            <modifier type="append" value="Tullaris&apos; Killing Blow special rule takes effect on a 5+, rather than a 6." field="de63-d6da-efa8-00ac" join=", "/>
+                            <modifier type="append" value="Tullaris&apos; Killing Blow special rule takes effect on a 5+, rather than a 6." field="de63-d6da-efa8-00ac" join="
+
+"/>
                             <modifier type="set" value="The First Draich" field="annotation"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -4367,6 +4444,7 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
                           <modifiers>
                             <modifier type="set" value="Crimson Death" field="annotation"/>
                             <modifier type="set" value="+2" field="b80e-7dac-0dea-9add"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -4383,7 +4461,10 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
                         <infoLink name="Heavy Armour" id="61d0-59c8-31c3-f09f" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
                           <modifiers>
                             <modifier type="set" value="The Armour of Grief" field="annotation"/>
-                            <modifier type="append" value="Each time a model makes a successful To Hit roll against Kouran Darkhand in close combat, the model that struck the blow immediately suffers a S 5 hit." field="ff58-91e4-84d7-e6e4" join=", "/>
+                            <modifier type="append" value="Each time a model makes a successful To Hit roll against Kouran Darkhand in close combat, the model that struck the blow immediately suffers a S 5 hit." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -4474,7 +4555,10 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
                         <infoLink name="Two/Additional Hand Weapons" id="287c-9910-f490-a94c" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
                           <modifiers>
                             <modifier type="set" value="The Red Blades" field="annotation"/>
-                            <modifier type="append" value="Any hits made by the Red Blades re-roll any failed To Wound roll." field="de63-d6da-efa8-00ac" join=", "/>
+                            <modifier type="append" value="Any hits made by the Red Blades re-roll any failed To Wound roll." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -4489,7 +4573,7 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
                           <characteristics>
                             <characteristic name="Combat" typeId="617f-cb5d-6c83-2017">6+</characteristic>
                             <characteristic name="Missile" typeId="5b67-725f-ad85-da5b">6+</characteristic>
-                            <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">The Helm of the Kraken grants Lokhir Fellheart a 6+ armour save, +1 Toughness, as well as the Regeneration (6+) and Terror special rules.</characteristic>
+                            <characteristic name="Special Rules" typeId="4e25-3626-a136-c38d">Magic Armour. The Helm of the Kraken grants Lokhir Fellheart +1 Toughness, as well as the Regeneration (6+) and Terror special rules.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -4657,6 +4741,13 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="89e5-77ce-0609-7cea"/>
                       </constraints>
+                      <modifiers>
+                        <modifier type="set" value="1" field="80f0-b5fd-ae36-4ab6">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                     </entryLink>
                   </entryLinks>
                 </entryLink>
@@ -4734,9 +4825,13 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="78fa-f986-4722-0243" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Light Armour" hidden="false" id="8937-f184-e110-de6d" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="639b-138a-bcde-b05d"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -4800,8 +4895,14 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
         <infoLink id="f4ce-eac9-60f3-837a" name="Khainite" hidden="false" targetId="fb7f-921b-b1e1-a5e7" type="rule"/>
         <infoLink id="471b-6a3a-fcf0-a601" name="Hatred (Slaanesh)" hidden="false" targetId="b6f8-9d4f-4c93-cb8b" type="rule"/>
         <infoLink id="66ce-11cc-6939-d4ca" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-        <infoLink name="Natural Armour (6+)" id="4915-3763-439a-ad5e" hidden="false" type="rule" targetId="fa69-07b8-fdc1-3ac9"/>
         <infoLink name="Vanguard" id="cbd0-c0ca-7433-6294" hidden="false" type="rule" targetId="38ba-d48a-be97-f830"/>
+        <infoLink name="Natural Armour" id="d175-1f59-733b-1d89" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Melusai Ironscale" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="5d9b-59cc-c040-0577" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
@@ -4825,11 +4926,12 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
                 <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="c1ef-7905-5c69-f3ef" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Keldrisaíth (Shooting)" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="85cc-45b5-ee29-4f25">
+                <profile name="Keldrisaíth (Shooting)" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="85cc-45b5-ee29-4f25">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">24&quot;</characteristic>
-                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Killing Blow. Magical Attacks. Multiple Shots (2). Quick to Fire.</characteristic>
+                    <characteristic name="Range" typeId="af3c-d805-702c-9af9">24&quot;</characteristic>
+                    <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
+                    <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">2</characteristic>
+                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Killing Blow. Magical Attacks. Quick to Fire.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -4850,9 +4952,13 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="ddbf-7301-e306-0a1e" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
             <entryLink import="true" name="Medium Armour" hidden="false" id="9b56-3435-a4e0-648b" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f622-e5c4-2033-4f41"/>
-              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="80f0-b5fd-ae36-4ab6">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -5066,14 +5172,27 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Sea Dragon Cloak" hidden="false" id="60a6-0928-4fde-509c" collective="true">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c7cf-5d05-b6bb-5700" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c7cf-5d05-b6bb-5700" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="c678-8168-cd07-9875" includeChildSelections="false" automatic="true"/>
       </constraints>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <infoLinks>
-        <infoLink name="Sea Dragon Cloak" id="b840-66f9-177d-da5a" hidden="false" type="profile" targetId="8e5f-dcc4-54de-81e6"/>
+        <infoLink name="Natural Armour" id="0537-df61-3c67-d874" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="Sea Dragon Cloak" field="annotation"/>
+            <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
+      <modifiers>
+        <modifier type="set" value="0" field="c7cf-5d05-b6bb-5700">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="e7ca-c80d-139d-a731" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Deathrain Crossbow" hidden="false" id="f145-882a-3705-d674" collective="true">
       <constraints>
@@ -5094,11 +5213,12 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <profiles>
-        <profile name="Repeater Handbow" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="9190-6534-30bc-50b7" publicationId="9e23-79cb-pubN76150" page="3">
+        <profile name="Repeater Handbow" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="9190-6534-30bc-50b7" publicationId="9e23-79cb-pubN76150" page="3">
           <characteristics>
-            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
-            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">2</characteristic>
-            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (3), Rapid Fire, Quick to Fire.</characteristic>
+            <characteristic name="Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
+            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">2</characteristic>
+            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3</characteristic>
+            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Rapid Fire, Quick to Fire.</characteristic>
           </characteristics>
         </profile>
       </profiles>
@@ -5577,9 +5697,15 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
       </constraints>
       <infoLinks>
         <infoLink name="Noxious Breath" id="4b69-2940-4dd7-7061" hidden="false" targetId="15c3-e08b-0738-0239" type="rule"/>
-        <infoLink name="Natural Armour (3+)" id="05f2-95c8-8dcd-b673" hidden="false" targetId="32e8-b4ad-3e59-a3c7" type="rule"/>
         <infoLink name="Fly (7)" id="dced-0812-e746-03fa" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
         <infoLink name="Black Dragon" id="fe6d-3c77-3e55-4f22" hidden="false" targetId="838b-1abb-5af8-09a4" type="profile"/>
+        <infoLink name="Natural Armour" id="2705-baf8-df9f-1aa6" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+          <modifiers>
+            <modifier type="set" value="3+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="3+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="Black Dragon" field="annotation"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="18e1-8b9e-9345-d733" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -5593,6 +5719,7 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
       <infoLinks>
         <infoLink name="Cold One Chariot" id="6bf4-98ac-e299-1fdf" hidden="false" targetId="5786-6e38-740c-54a8" type="profile"/>
         <infoLink name="Scythes" id="f65c-3e43-f286-3b47" hidden="false" targetId="d896-d52f-cc64-ab43" type="rule"/>
+        <infoLink name="Cold One Chariot" id="c6fe-4e82-a50a-cdb3" hidden="false" targetId="f785-81b0-fc74-576a" type="profile"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="1444-90ec-6209-67c5" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -5679,12 +5806,29 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="01f9-674f-3b30-fea9" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+        <entryLink import="true" name="40. Suits of Armour" hidden="false" id="01f9-674f-3b30-fea9" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
           <entryLinks>
             <entryLink import="true" name="Heavy Armour" hidden="false" id="b6d9-b3e9-a31b-002f" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f116-6736-7629-f23a"/>
               </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" value="0" field="409c-38d4-353b-134c"/>
+                    <modifier type="set" value="0" field="f116-6736-7629-f23a"/>
+                    <modifier type="set" value="true" field="hidden"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
           </entryLinks>
         </entryLink>
@@ -5779,14 +5923,27 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
           <entryLinks>
             <entryLink import="true" name="Sea Dragon Cloak" hidden="false" id="4773-cb8f-ce4c-62e8" type="selectionEntry" targetId="60a6-0928-4fde-509c">
               <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bb10-2740-9fc4-888c"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bb10-2740-9fc4-888c" automatic="true"/>
               </constraints>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d38a-73da-883b-bab9" shared="true" includeChildSelections="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="d280-b7df-c185-2ba5" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <modifiers>
+                    <modifier type="set" value="0" field="c7cf-5d05-b6bb-5700"/>
+                    <modifier type="set" value="0" field="bb10-2740-9fc4-888c"/>
+                    <modifier type="set" value="true" field="hidden"/>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </entryLink>
           </entryLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e397-84f4-cc8d-c958-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e397-84f4-cc8d-c958-max"/>
-          </constraints>
         </entryLink>
       </entryLinks>
       <categoryLinks>
@@ -5803,11 +5960,12 @@ Cursed Blade are resolved at Strength 10. If a model rolls a 1 To Hit whilst att
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <profiles>
-        <profile name="Ravager Harpoon" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="6de2-26e1-663f-d2d7" publicationId="9e23-79cb-pubN76150" page="118">
+        <profile name="Ravager Harpoon" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="6de2-26e1-663f-d2d7" publicationId="9e23-79cb-pubN76150" page="118">
           <characteristics>
-            <characteristic name="Range" typeId="59f2-3142-82d5-4f43">30&quot;</characteristic>
-            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">5</characteristic>
-            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1). Multiple Wounds (D3).
+            <characteristic name="Range" typeId="af3c-d805-702c-9af9">30&quot;</characteristic>
+            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
+            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (1). Multiple Wounds (D3).
 
 If a Monstrous Creature or Monster is Hit by this weapon but survives, it must immediately turn and move D6&quot; towards the Scourgerunner Chariot, stopping within 1&quot; of other units or impassable terrain. In its following turn, the target may choose to either suffer 1 Wound with no saves allowed or be forced to keep moving D6&quot; towards the Scourgerunner Chariot instead of moving normally.</characteristic>
           </characteristics>
@@ -6207,6 +6365,9 @@ If a Monstrous Creature or Monster is Hit by this weapon but survives, it must i
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.a31f-8c65-324b-4b37.profiles.Armour Save"/>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.9d45-9519-de85-24bc.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.9d45-9519-de85-24bc.profiles.Ranged Weapon"/>
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Magic Weapons" hidden="false" id="c5b0-ce03-376e-2a8d" type="selectionEntryGroup" targetId="9d45-9519-de85-24bc" sortIndex="1"/>
@@ -6243,11 +6404,12 @@ If a Monstrous Creature or Monster is Hit by this weapon but survives, it must i
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="028e-2711-d341-3c41" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <profiles>
-                <profile name="Rending Stars" typeId="6f70-cea1-702c-43bc" typeName="Weapon" hidden="false" id="6973-b0a6-8276-7930" publicationId="9e23-79cb-pubN76150" page="5">
+                <profile name="Rending Stars" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="6973-b0a6-8276-7930" publicationId="9e23-79cb-pubN76150" page="5">
                   <characteristics>
-                    <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
-                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">As user +1</characteristic>
-                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (3). Quick to Fire.</characteristic>
+                    <characteristic name="Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
+                    <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">+1</characteristic>
+                    <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3</characteristic>
+                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Quick to Fire.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6470,6 +6632,9 @@ If a Monstrous Creature or Monster is Hit by this weapon but survives, it must i
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.a31f-8c65-324b-4b37.profiles.Armour Save"/>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.9d45-9519-de85-24bc.profiles.Melee weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.9d45-9519-de85-24bc.profiles.Ranged Weapon"/>
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Magic Weapons" hidden="false" id="9715-a05b-5772-2f08" type="selectionEntryGroup" targetId="9d45-9519-de85-24bc" sortIndex="2"/>
@@ -6491,11 +6656,12 @@ If a Monstrous Creature or Monster is Hit by this weapon but survives, it must i
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="59c6-5003-73fb-5431" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Hydra Blade" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="2877-5de0-6646-f39c" publicationId="9e23-79cb-pubN76150" page="7">
+            <profile name="Hydra Blade" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="2877-5de0-6646-f39c" publicationId="9e23-79cb-pubN76150" page="7">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder of the Hydra Blade has Random Attacks (D6) in addition to their normal attacks.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c">+D6</characteristic>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac"/>
               </characteristics>
             </profile>
           </profiles>
@@ -6509,11 +6675,12 @@ If a Monstrous Creature or Monster is Hit by this weapon but survives, it must i
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5a65-d920-96b3-a9fa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Chillblade" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="c36f-fed1-69fd-9550" publicationId="9e23-79cb-pubN76150" page="6">
+            <profile name="Chillblade" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="c36f-fed1-69fd-9550" publicationId="9e23-79cb-pubN76150" page="6">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Attacks made with the Chillblade wound automatically and have Ice Attacks. For each unsaved
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Attacks made with the Chillblade wound automatically and have Ice Attacks. For each unsaved
 Wound suffered from the Chillblade, the target suffers -1 to its A characteristic until the end of this Close Combat phase.</characteristic>
               </characteristics>
             </profile>
@@ -6556,7 +6723,9 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <infoLink name="Great Weapon" id="e9a8-ca8f-07cd-6629" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
               <modifiers>
                 <modifier type="set" value="Executioner&apos;s Axe" field="annotation"/>
-                <modifier type="append" value="In close combat, the wielder of the Executioner&apos;s Axe counts as having a S double that of their target&apos;s T. In addition, any attacks made with the Executioner&apos;s Axe have Multiple Wounds (D3). In addition, the wielder gains the Khainite special rule." field="de63-d6da-efa8-00ac" join=", "/>
+                <modifier type="append" value="In close combat, the wielder of the Executioner&apos;s Axe counts as having a S double that of their target&apos;s T. In addition, any attacks made with the Executioner&apos;s Axe have Multiple Wounds (D3). In addition, the wielder gains the Khainite special rule." field="de63-d6da-efa8-00ac" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -6567,11 +6736,12 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="bdcc-7c39-4d85-9da3" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Heartseeker" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="3eaf-60d1-c15e-5eb1" publicationId="9e23-79cb-pubN76150" page="6">
+            <profile name="Heartseeker" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="3eaf-60d1-c15e-5eb1" publicationId="9e23-79cb-pubN76150" page="6">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The model wielding Heartseeker may re-roll all failed rolls To Hit and To Wound in close combat.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The model wielding Heartseeker may re-roll all failed rolls To Hit and To Wound in close combat.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6585,11 +6755,12 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="55fd-c3b9-899e-16fc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Sword of Ruin" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="5cc1-45ee-c357-3318" publicationId="9e23-79cb-pubN76150" page="6">
+            <profile name="Sword of Ruin" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="5cc1-45ee-c357-3318" publicationId="9e23-79cb-pubN76150" page="6">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Attacks made with the Sword of Ruin have Armour Piercing (4).</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Attacks made with the Sword of Ruin have Armour Piercing (4).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6609,7 +6780,9 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <infoLink name="Two/Additional Hand Weapons" id="1f94-59a0-5a8a-9461" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
               <modifiers>
                 <modifier type="set" value="Dagger of Hotek" field="annotation"/>
-                <modifier type="append" value="The Dagger of Hotek gives the wielder the Always Strikes First special rule." field="de63-d6da-efa8-00ac" join=", "/>
+                <modifier type="append" value="The Dagger of Hotek gives the wielder the Always Strikes First special rule." field="de63-d6da-efa8-00ac" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -6633,9 +6806,9 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <infoLink name="Deathrain Crossbow" id="c4cb-7a2f-60fc-4c1f" hidden="false" type="profile" targetId="92df-4d61-e793-1d63">
               <modifiers>
                 <modifier type="set" value="Lifetaker" field="annotation"/>
-                <modifier type="set" value="30&quot;" field="59f2-3142-82d5-4f43"/>
+                <modifier type="set" value="30&quot;" field="af3c-d805-702c-9af9"/>
                 <modifier type="set" value="4" field="b80e-7dac-0dea-9add"/>
-                <modifier type="set" value="Armour Piercing (1), Multiple Shots (3), Lifetaker ignores all To Hit modifiers." field="de63-d6da-efa8-00ac"/>
+                <modifier type="set" value="Armour Piercing (1), Lifetaker ignores all To Hit modifiers." field="96b8-546e-ac33-6054"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -6653,11 +6826,12 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8898-c7c2-a13f-f90d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Web of Shadows" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="8a9a-f569-7911-2726" publicationId="9e23-79cb-pubN76150" page="6">
+            <profile name="Web of Shadows" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="8a9a-f569-7911-2726" publicationId="9e23-79cb-pubN76150" page="6">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b"/>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">One use only. The model can choose to use the Web of Shadows in addition to their normal attacks. When used, one model in base contact with the character automatically takes 2D6 S 3 hits. Wounds caused do not carry over on to other models.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">One use only. The model can choose to use the Web of Shadows in addition to their normal attacks. When used, one model in base contact with the character automatically takes 2D6 S 3 hits. Wounds caused do not carry over on to other models.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6677,7 +6851,9 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <infoLink name="Heavy Lance" id="190f-1f86-9a77-b522" hidden="false" type="profile" targetId="e56e-fedf-c550-5d81">
               <modifiers>
                 <modifier type="set" value="Caledor&apos;s Bane" field="annotation"/>
-                <modifier type="append" value="Caledor&apos;s Bane gives the wielder Devastating Charge, and attacks made with it ignore Natural Armour." field="de63-d6da-efa8-00ac" join=", "/>
+                <modifier type="append" value="Caledor&apos;s Bane gives the wielder Devastating Charge, and attacks made with it ignore Natural Armour." field="de63-d6da-efa8-00ac" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -6686,6 +6862,21 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="b906-254a-7949-9e08" shared="true"/>
               </conditions>
+            </modifier>
+            <modifier type="add" value="{this} is not allowed if not mounted" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="76ee-f466-4e49-77b8" shared="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -6701,7 +6892,9 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <infoLink name="Heavy Lance" id="a834-4273-5f59-256b" hidden="false" type="profile" targetId="e56e-fedf-c550-5d81">
               <modifiers>
                 <modifier type="set" value="Deathpiercer" field="annotation"/>
-                <modifier type="append" value="Attacks made with Deathpiercer have the Killing blow special rule." field="de63-d6da-efa8-00ac" join=", "/>
+                <modifier type="append" value="Attacks made with Deathpiercer have the Killing blow special rule." field="de63-d6da-efa8-00ac" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -6710,6 +6903,21 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
               <conditions>
                 <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="b906-254a-7949-9e08" shared="true"/>
               </conditions>
+            </modifier>
+            <modifier type="add" value="{this} is not allowed if not mounted" field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="76ee-f466-4e49-77b8" shared="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="parent" childId="mount" shared="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                    <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
             </modifier>
           </modifiers>
         </selectionEntry>
@@ -6725,7 +6933,9 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <infoLink name="Great Weapon" id="af3b-3ae1-3325-7189" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
               <modifiers>
                 <modifier type="set" value="Soulrender" field="annotation"/>
-                <modifier type="append" value="Attacks made with Soulrender have the Ignores Armour Saves special rule. In addition, the wielder gains the Khainite special rule." field="de63-d6da-efa8-00ac" join=", "/>
+                <modifier type="append" value="Attacks made with Soulrender have the Ignores Armour Saves special rule. In addition, the wielder gains the Khainite special rule." field="de63-d6da-efa8-00ac" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -6742,15 +6952,6 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2a95-8f78-4376-f7e4" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4243-6df2-2ed5-d1df" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
-          <profiles>
-            <profile name="Draich of Dark Power" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="6f80-3027-bd4d-8cff" publicationId="9e23-79cb-pubN76150" page="6">
-              <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b"/>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Great Weapon. The wielder of the Draich of Dark Power ignores the normal Initiative penalties from great weapons and gains the Killing Blow special rule. In addition, the wielder gains the Khainite special rule.</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
@@ -6766,6 +6967,17 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
               </conditionGroups>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Great Weapon" id="3f8e-7ef9-6b76-ff68" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
+              <modifiers>
+                <modifier type="set" value="Draich of Dark Power" field="annotation"/>
+                <modifier type="append" value="The wielder of the Draich of Dark Power gains the Killing Blow special rule. In addition, the wielder gains the Khainite special rule." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                <modifier type="set" value="0" field="7849-175d-a3fa-2fff"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Blade of Spite" hidden="false" id="ba21-577d-9907-1446" collective="false" sortIndex="12">
           <constraints>
@@ -6773,11 +6985,12 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="02b6-11c8-d900-c767" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Blade of Spite" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="8d4e-b376-02ba-5046" publicationId="9e23-79cb-pubN76150" page="6">
+            <profile name="Blade of Spite" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="8d4e-b376-02ba-5046" publicationId="9e23-79cb-pubN76150" page="6">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b"/>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Any To Hit roll of 5 or 6 with the Blade of Spite automatically Wounds. Armour saves apply as normal. This has no effect on models with Immunity (Poisoned Attacks).</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Any To Hit roll of 5 or 6 with the Blade of Spite automatically Wounds. Armour saves apply as normal. This has no effect on models with Immunity (Poisoned Attacks).</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6791,11 +7004,12 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4002-aa45-af17-cf4f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Venomfang Blade" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="13b7-fc49-8cb9-31ce" publicationId="9e23-79cb-pubN76150" page="6">
+            <profile name="Venomfang Blade" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="13b7-fc49-8cb9-31ce" publicationId="9e23-79cb-pubN76150" page="6">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b"/>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Any model that suffers an unsaved Wound from this weapon must pass a Toughness test or 2D6 or automatically lose all remaining wounds.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Any model that suffers an unsaved Wound from this weapon must pass a Toughness test or 2D6 or automatically lose all remaining wounds.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6816,11 +7030,12 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="7d9e-068f-7e2d-7a6d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Shadracar&apos;s Fang" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="65ba-a85e-1516-fbaf" publicationId="9e23-79cb-pubN76150" page="6">
+            <profile name="Shadracar&apos;s Fang" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="65ba-a85e-1516-fbaf" publicationId="9e23-79cb-pubN76150" page="6">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b"/>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder of this weapon gains +1 To Hit and the Killing Blow special rule.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The wielder of this weapon gains +1 To Hit and the Killing Blow special rule.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6840,7 +7055,9 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <infoLink name="Two/Additional Hand Weapons" id="5e23-b328-fe65-5da1" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
               <modifiers>
                 <modifier type="set" value="Shadesliver" field="annotation"/>
-                <modifier type="append" value="After every round of close combat in which the bearer of this item inflicts one or more Unsaved Wounds, this weapon gains +1 Strength for the remainder of the battle. This effect is cumulative." field="de63-d6da-efa8-00ac" join=", "/>
+                <modifier type="append" value="After every round of close combat in which the bearer of this item inflicts one or more Unsaved Wounds, this weapon gains +1 Strength for the remainder of the battle. This effect is cumulative." field="de63-d6da-efa8-00ac" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -6858,11 +7075,12 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5416-9d6b-ef1a-eee8" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Crone Blade" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="54de-4505-9fc3-4612" publicationId="9e23-79cb-pubN76150" page="6">
+            <profile name="Crone Blade" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="54de-4505-9fc3-4612" publicationId="9e23-79cb-pubN76150" page="6">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b"/>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">Roll a D6 each time the wielder of this weapon causes an unsaved Wound in close combat. On the roll of a 4+, they regain 1 Wound suffered earlier during the game.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Roll a D6 each time the wielder of this weapon causes an unsaved Wound in close combat. On the roll of a 4+, they regain 1 Wound suffered earlier during the game.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6894,7 +7112,9 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <infoLink name="Polearm/Halberd" id="b1c8-bec2-9603-c109" hidden="false" type="profile" targetId="e43e-5153-eeec-36be">
               <modifiers>
                 <modifier type="set" value="The Mirror Glaive" field="annotation"/>
-                <modifier type="append" value="Each time an enemy spell cast at the bearer of this weapon or the unit they are with is dispelled, you may attempt to cast the same spell back as if it was a Bound Spell, using your Dispel dice as if they were Power dice. The enemy may then attempt to dispel it using their Power dice." field="de63-d6da-efa8-00ac" join=", "/>
+                <modifier type="append" value="Each time an enemy spell cast at the bearer of this weapon or the unit they are with is dispelled, you may attempt to cast the same spell back as if it was a Bound Spell, using your Dispel dice as if they were Power dice. The enemy may then attempt to dispel it using their Power dice." field="de63-d6da-efa8-00ac" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -6912,11 +7132,12 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="dc88-66b2-acfe-6705" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Shade Claw" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="af1a-0010-a211-a576" publicationId="9e23-79cb-pubN76150" page="6">
+            <profile name="Shade Claw" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="af1a-0010-a211-a576" publicationId="9e23-79cb-pubN76150" page="6">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">The wielder of this weapon gains the Ignores Armour saves special rule. In addition, no Parry saves may be taken against it.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">The wielder of this weapon gains the Ignores Armour saves special rule. In addition, no Parry saves may be taken against it.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -6936,7 +7157,9 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <infoLink name="Two/Additional Hand Weapons" id="1bb9-abeb-7923-ce90" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
               <modifiers>
                 <modifier type="set" value="Blood Blades" field="annotation"/>
-                <modifier type="append" value="Multiple Wounds (D3)" field="de63-d6da-efa8-00ac"/>
+                <modifier type="append" value="Multiple Wounds (D3)" field="de63-d6da-efa8-00ac" join="
+
+"/>
                 <modifier type="set" value="+1" field="b80e-7dac-0dea-9add"/>
               </modifiers>
             </infoLink>
@@ -6970,11 +7193,12 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a5e8-3081-a1c8-2052" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Doomsinger" typeId="c119-42f4-2cbe-71a5" typeName="Magic Weapon" hidden="false" id="d8d4-7b9b-c350-ab2d" publicationId="9e23-79cb-pubN76150" page="6">
+            <profile name="Doomsinger" typeId="6f70-cea1-702c-43bc" typeName="Melee weapon" hidden="false" id="d8d4-7b9b-c350-ab2d" publicationId="9e23-79cb-pubN76150" page="6">
               <characteristics>
-                <characteristic name="Range" typeId="4285-3917-6bf9-348b">Combat</characteristic>
-                <characteristic name="Strength" typeId="a1a2-667b-2ec7-4ba7"/>
-                <characteristic name="Special Rules" typeId="ce2d-df6c-9271-a2f8">At the beginning of each round of close combat, roll a D3; the result is the number you may increase the wielder&apos;s Weapon Skill, Strength and Attacks by.</characteristic>
+                <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+D3*</characteristic>
+                <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c">+D3*</characteristic>
+                <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">At the beginning of each round of close combat, roll a D3; the result is the number you may increase the wielder&apos;s Weapon Skill, Strength and Attacks by.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -7001,7 +7225,9 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <infoLink name="Heavy Armour" id="c12b-b09b-0411-4c9a" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
               <modifiers>
                 <modifier type="set" value="Armour of Living Death" field="annotation"/>
-                <modifier type="append" value="The model gains +1 Toughness and +1 Wound. However, they also become subject to Stupidity." field="ff58-91e4-84d7-e6e4" join=", "/>
+                <modifier type="append" value="The model gains +1 Toughness and +1 Wound. However, they also become subject to Stupidity." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7028,7 +7254,9 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <infoLink name="Heavy Armour" id="fcf1-ec58-98d5-b65f" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
               <modifiers>
                 <modifier type="set" value="Armour of Eternal Servitude" field="annotation"/>
-                <modifier type="append" value="The wearer of the Armour of Eternal Servitude gains the Regeneration (4+) special rule." field="ff58-91e4-84d7-e6e4" join=", "/>
+                <modifier type="append" value="The wearer of the Armour of Eternal Servitude gains the Regeneration (4+) special rule." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7052,10 +7280,13 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <cost name="pts" typeId="points" value="25"/>
           </costs>
           <infoLinks>
-            <infoLink name="Sea Dragon Cloak" id="06a4-e079-8dbe-950b" hidden="false" type="profile" targetId="8e5f-dcc4-54de-81e6">
+            <infoLink name="Natural Armour" id="2fc1-c4c8-3d4c-0b06" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
               <modifiers>
-                <modifier type="set" value="Cloak of Hag Greaf" field="annotation"/>
-                <modifier type="append" value="In addition, any missile attack on a model wearing the Cloak of Hag Graef have their S halved (rounding up) before rolling To Wound." field="ff58-91e4-84d7-e6e4" join=", "/>
+                <modifier type="set" value="Sea Dragon Cloak, Cloak of Hag Greaf" field="annotation"/>
+                <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
+                <modifier type="append" value="Any missile attack on a model wearing the Cloak of Hag Graef have their S halved (rounding up) before rolling To Wound." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7107,7 +7338,9 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <infoLink name="Shield" id="4de4-dd16-3b66-ceec" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f">
               <modifiers>
                 <modifier type="set" value="Shield of Ghrond" field="annotation"/>
-                <modifier type="append" value="The Shield of Ghrond causes all Hits on the model to be resolved with -1 S." field="ff58-91e4-84d7-e6e4" join=", "/>
+                <modifier type="append" value="The Shield of Ghrond causes all Hits on the model to be resolved with -1 S." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -7134,7 +7367,9 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
             <infoLink name="Heavy Armour" id="9c03-ba8e-63e6-ace3" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
               <modifiers>
                 <modifier type="set" value="Blood Armour" field="annotation"/>
-                <modifier type="append" value="For every unsaved wound the wearer of the Blood Armour inflicts in close combat, their armour save is improved by one point to a maximum total of 1+ for the remainder of the game." field="ff58-91e4-84d7-e6e4" join=", "/>
+                <modifier type="append" value="For every unsaved wound the wearer of the Blood Armour inflicts in close combat, their armour save is improved by one point to a maximum total of 1+ for the remainder of the game." field="ff58-91e4-84d7-e6e4" join="
+
+"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -8012,23 +8247,15 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
     </rule>
   </sharedRules>
   <sharedProfiles>
-    <profile id="92df-4d61-e793-1d63" name="Deathrain Crossbow" publicationId="9e23-79cb-pubN76150" page="3" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+    <profile id="92df-4d61-e793-1d63" name="Deathrain Crossbow" publicationId="9e23-79cb-pubN76150" page="3" hidden="false" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" noindex="true">
       <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">24&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">2</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (3), Rapid Fire.</characteristic>
+        <characteristic name="Range" typeId="af3c-d805-702c-9af9">24&quot;</characteristic>
+        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">2</characteristic>
+        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3</characteristic>
+        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Rapid Fire.</characteristic>
       </characteristics>
     </profile>
-    <profile id="3761-fb5d-5bc5-9a4c" name="Fury of Khaine" publicationId="9e23-79cb-pubN76150" page="139" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Innate Bound Spell</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains the Frenzy special rule until the start of the Cauldron of Blood&apos;s next Magic phase.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="47f9-c021-c0f9-abc8" name="Dark Steed" publicationId="9e23-79cb-pubN76150" page="126" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="47f9-c021-c0f9-abc8" name="Dark Steed" publicationId="9e23-79cb-pubN76150" page="126" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">9</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -8042,7 +8269,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
       </characteristics>
     </profile>
-    <profile id="2775-9321-c358-1756" name="Dark Pegasus" publicationId="9e23-79cb-pubN76150" page="18" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="2775-9321-c358-1756" name="Dark Pegasus" publicationId="9e23-79cb-pubN76150" page="18" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
@@ -8056,7 +8283,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beast (Animal)</characteristic>
       </characteristics>
     </profile>
-    <profile id="838b-1abb-5af8-09a4" name="Black Dragon" publicationId="9e23-79cb-pubN76150" page="152" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="838b-1abb-5af8-09a4" name="Black Dragon" publicationId="9e23-79cb-pubN76150" page="152" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
@@ -8070,21 +8297,14 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Dragon)</characteristic>
       </characteristics>
     </profile>
-    <profile id="5786-6e38-740c-54a8" name="Cold One Chariot" publicationId="9e23-79cb-pubN76150" page="132" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="5786-6e38-740c-54a8" name="Cold One Chariot" publicationId="9e23-79cb-pubN76150" page="132" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" noindex="true">
       <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour save 6+)</characteristic>
+        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
       </characteristics>
     </profile>
-    <profile id="d385-c1d8-b4ef-4cea" name="Knight Charioteer" publicationId="9e23-79cb-pubN76150" page="132" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="d385-c1d8-b4ef-4cea" name="Knight Charioteer" publicationId="9e23-79cb-pubN76150" page="132" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215"/>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
@@ -8098,7 +8318,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Dark Elf</characteristic>
       </characteristics>
     </profile>
-    <profile id="716e-e63c-ea9b-0ace" name="Cauldron of Blood" publicationId="9e23-79cb-pubN76150" page="32" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="716e-e63c-ea9b-0ace" name="Cauldron of Blood" publicationId="9e23-79cb-pubN76150" page="32" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
@@ -8112,7 +8332,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Shrine (Armour save 6+)</characteristic>
       </characteristics>
     </profile>
-    <profile id="be4f-7e9f-3371-6b5d" name="Guardian" publicationId="9e23-79cb-pubN76150" page="139" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="be4f-7e9f-3371-6b5d" name="Guardian" publicationId="9e23-79cb-pubN76150" page="139" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215"/>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
@@ -8126,7 +8346,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Dark Elf</characteristic>
       </characteristics>
     </profile>
-    <profile id="055a-8484-ac61-b2ce" name="Beastmaster Crew" publicationId="9e23-79cb-pubN76150" page="118" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="055a-8484-ac61-b2ce" name="Beastmaster Crew" publicationId="9e23-79cb-pubN76150" page="118" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215"/>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
@@ -8140,7 +8360,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Type" typeId="13f9-a26b-05af-3459"/>
       </characteristics>
     </profile>
-    <profile id="01be-c14f-c557-80a6" name="Scourgerunner Chariot" publicationId="9e23-79cb-pubN76150" page="118" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="01be-c14f-c557-80a6" name="Scourgerunner Chariot" publicationId="9e23-79cb-pubN76150" page="118" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">8</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
@@ -8151,10 +8371,10 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Armour save 6+)</characteristic>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot</characteristic>
       </characteristics>
     </profile>
-    <profile id="1300-6687-1dac-a66b" name="Beastmaster Apprentice" publicationId="9e23-79cb-pubN76150" page="148" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="1300-6687-1dac-a66b" name="Beastmaster Apprentice" publicationId="9e23-79cb-pubN76150" page="148" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
@@ -8168,87 +8388,60 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Dark Elf)</characteristic>
       </characteristics>
     </profile>
-    <profile id="b341-5500-89e7-d6a1" name="Bloodwrack Stare" publicationId="9e23-79cb-pubN76150" page="140" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
+    <profile id="b341-5500-89e7-d6a1" name="Bloodwrack Stare" publicationId="9e23-79cb-pubN76150" page="140" hidden="false" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" noindex="true">
       <characteristics>
-        <characteristic name="Range" typeId="59f2-3142-82d5-4f43">12&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Ignores Armour saves. Killing Blow. Magical Attacks. Multiple Shots (5). Quick to Fire. When rolling To Wound, substitute the target&apos;s T with its I value. This attack does not suffer any To Hit penalties.</characteristic>
+        <characteristic name="Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
+        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
+        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">5</characteristic>
+        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Ignores Armour saves. Killing Blow. Magical Attacks. Quick to Fire. When rolling To Wound, substitute the target&apos;s T with its I value. This attack does not suffer any To Hit penalties.</characteristic>
       </characteristics>
     </profile>
-    <profile id="5f01-04b5-c4a7-b54e" name="City Guard" publicationId="9e23-79cb-pubN76150" page="122" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="244e-aa3b-7ee1-bf91" name="Lordling" publicationId="9e23-79cb-pubN76150" page="121" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-      <characteristics>
-        <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
-        <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-        <characteristic name="I" typeId="7cca-e51f-edc2-7322">5</characteristic>
-        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-        <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="7990-6494-700c-48dd" name="Cry of War" publicationId="9e23-79cb-pubN76150" page="5" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine">
+    <profile id="7990-6494-700c-48dd" name="Cry of War" publicationId="9e23-79cb-pubN76150" page="5" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine" noindex="true">
       <characteristics>
         <characteristic name="Effect" typeId="0f02-2954-b334-21af">All enemy units in base contact with the wearer suffer -1 To Hit in the first round of close combat. This has no effect on models with Immunity (Psychology).</characteristic>
       </characteristics>
     </profile>
-    <profile id="9b2e-1da7-c12a-3306" name="Rune of Khaine" publicationId="9e23-79cb-pubN76150" page="5" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine">
+    <profile id="9b2e-1da7-c12a-3306" name="Rune of Khaine" publicationId="9e23-79cb-pubN76150" page="5" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine" noindex="true">
       <characteristics>
         <characteristic name="Effect" typeId="0f02-2954-b334-21af">The model gains Random Attacks (D3) in addition to its normal attacks.</characteristic>
       </characteristics>
     </profile>
-    <profile id="6a0f-fc5e-6457-64e0" name="Witchbrew" publicationId="9e23-79cb-pubN76150" page="5" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine">
+    <profile id="6a0f-fc5e-6457-64e0" name="Witchbrew" publicationId="9e23-79cb-pubN76150" page="5" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine" noindex="true">
       <characteristics>
         <characteristic name="Effect" typeId="0f02-2954-b334-21af">This model, and all models in the same unit, gain the Frenzy special rule and can never lose their Frenzy.</characteristic>
       </characteristics>
     </profile>
-    <profile id="469d-0484-e45e-a388" name="Black Lotus" publicationId="9e23-79cb-pubN76150" page="5" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine">
+    <profile id="469d-0484-e45e-a388" name="Black Lotus" publicationId="9e23-79cb-pubN76150" page="5" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine" noindex="true">
       <characteristics>
         <characteristic name="Effect" typeId="0f02-2954-b334-21af">Each unsaved Wound caused in Close Combat counts as two for the purpose of combat resolution. This has no effect against models with Immunity (Poisoned Attacks).</characteristic>
       </characteristics>
     </profile>
-    <profile id="8039-a314-6e46-454f" name="Dance of Doom" publicationId="9e23-79cb-pubN76150" page="5" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine">
+    <profile id="8039-a314-6e46-454f" name="Dance of Doom" publicationId="9e23-79cb-pubN76150" page="5" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine" noindex="true">
       <characteristics>
         <characteristic name="Effect" typeId="0f02-2954-b334-21af">Models on foot only. Enemies targeting the model must re-roll all sucessful To Hit rolls with missile weapons and in close combat.</characteristic>
       </characteristics>
     </profile>
-    <profile id="8428-dc51-f751-383a" name="Dark Venom" publicationId="9e23-79cb-pubN76150" page="5" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine">
+    <profile id="8428-dc51-f751-383a" name="Dark Venom" publicationId="9e23-79cb-pubN76150" page="5" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine" noindex="true">
       <characteristics>
         <characteristic name="Effect" typeId="0f02-2954-b334-21af">A model with Dark Venom gains the Multiple Wounds (D3) special rule (including missile attacks). This has no effect against models with Immunity (Poisoned Attacks).</characteristic>
       </characteristics>
     </profile>
-    <profile id="437d-ee6e-2d0b-39c7" name="Hand of Khaine" publicationId="9e23-79cb-pubN76150" page="5" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine">
+    <profile id="437d-ee6e-2d0b-39c7" name="Hand of Khaine" publicationId="9e23-79cb-pubN76150" page="5" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine" noindex="true">
       <characteristics>
         <characteristic name="Effect" typeId="0f02-2954-b334-21af">All enemy units in base contact suffer a -1 penalty to their Weapon Skill and Initiative.</characteristic>
       </characteristics>
     </profile>
-    <profile id="4c13-c1ef-18a7-b39f" name="Manbane" publicationId="9e23-79cb-pubN76150" page="5" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine">
+    <profile id="4c13-c1ef-18a7-b39f" name="Manbane" publicationId="9e23-79cb-pubN76150" page="5" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine" noindex="true">
       <characteristics>
         <characteristic name="Effect" typeId="0f02-2954-b334-21af">A model with Manbane will automatically Wound on the roll of a 2+ (including missile attacks). This has no effect against models with Immunity (Poisoned Attacks).</characteristic>
       </characteristics>
     </profile>
-    <profile id="4da9-cf34-2940-4799" name="Touch of Death" publicationId="9e23-79cb-pubN76150" page="5" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine">
+    <profile id="4da9-cf34-2940-4799" name="Touch of Death" publicationId="9e23-79cb-pubN76150" page="5" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine" noindex="true">
       <characteristics>
         <characteristic name="Effect" typeId="0f02-2954-b334-21af">The model gains the Killing Blow special rule.</characteristic>
       </characteristics>
     </profile>
-    <profile id="d4f7-df5b-ad54-2b58" name="Bloodwrack Medusa" publicationId="9e23-79cb-pubN76150" page="29" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+    <profile id="d4f7-df5b-ad54-2b58" name="Bloodwrack Medusa" publicationId="9e23-79cb-pubN76150" page="29" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
@@ -8262,17 +8455,17 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Dark Elf)</characteristic>
       </characteristics>
     </profile>
-    <profile id="d26b-7880-43f9-569d" name="Blood Sigil" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine" publicationId="9e23-79cb-pubN76150" page="5">
+    <profile id="d26b-7880-43f9-569d" name="Blood Sigil" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine" publicationId="9e23-79cb-pubN76150" page="5" noindex="true">
       <characteristics>
         <characteristic name="Effect" typeId="0f02-2954-b334-21af">The model may re-roll failed Leadership tests when using Blood Rites. However, if they roll double 6&apos;s on the second roll, they will suffer 1 Wound which Ignores Armour Saves.</characteristic>
       </characteristics>
     </profile>
-    <profile id="9bc3-7846-52a7-04a2" name="Khainite Pendant" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine" publicationId="9e23-79cb-pubN76150" page="5">
+    <profile id="9bc3-7846-52a7-04a2" name="Khainite Pendant" hidden="false" typeId="4d67-b1d7-6891-ce0e" typeName="Gift of Khaine" publicationId="9e23-79cb-pubN76150" page="5" noindex="true">
       <characteristics>
         <characteristic name="Effect" typeId="0f02-2954-b334-21af">The model may attempt to use two Blood Rites this turn</characteristic>
       </characteristics>
     </profile>
-    <profile name="Arnzipal&apos;s Black Horror" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="fb00-bdd7-7146-e848" publicationId="9e23-79cb-pubN76150" page="4">
+    <profile name="Arnzipal&apos;s Black Horror" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="fb00-bdd7-7146-e848" publicationId="9e23-79cb-pubN76150" page="4" noindex="true">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
@@ -8281,7 +8474,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Uses the small round template. Any model touched by the template at any point during its move must pass a Strength test per Wound on their profile or suffer a Wound which Ignores Armour Saves and Regeneration.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Chroesh - Word of Pain" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5eed-29da-240a-e4f0" publicationId="9e23-79cb-pubN76150" page="4">
+    <profile name="Chroesh - Word of Pain" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5eed-29da-240a-e4f0" publicationId="9e23-79cb-pubN76150" page="4" noindex="true">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
@@ -8290,7 +8483,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit gain the Always Strikes Last special rule until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Bladewind" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="c97c-7b02-3192-da50" publicationId="9e23-79cb-pubN76150" page="4">
+    <profile name="Bladewind" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="c97c-7b02-3192-da50" publicationId="9e23-79cb-pubN76150" page="4" noindex="true">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
@@ -8299,7 +8492,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large round template within range of the Wizard – it then scatters D3&quot;. All models hit by the template must pass a Weapon Skill test or suffer a Strength 4 hit.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Doombolt of Kharaidon" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="83ce-8b5d-eef3-f48d" publicationId="9e23-79cb-pubN76150" page="168">
+    <profile name="Doombolt of Kharaidon" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="83ce-8b5d-eef3-f48d" publicationId="9e23-79cb-pubN76150" page="168" noindex="true">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
@@ -8308,7 +8501,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 5 hits.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Power of Darkness" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5346-38c9-7041-bdd8" publicationId="9e23-79cb-pubN76150" page="4">
+    <profile name="Power of Darkness" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5346-38c9-7041-bdd8" publicationId="9e23-79cb-pubN76150" page="4" noindex="true">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
@@ -8317,7 +8510,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit gain +1 Strength until the start of the caster&apos;s next Magic phase. In addition, add D3 power dice to your power pool. If a natural 6 is rolled when generating these power dice, the caster suffers a Wound which Ignores Armour saves.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Shroud of Despair" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="e25d-cae3-46e2-0cb7" publicationId="9e23-79cb-pubN76150" page="4">
+    <profile name="Shroud of Despair" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="e25d-cae3-46e2-0cb7" publicationId="9e23-79cb-pubN76150" page="4" noindex="true">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
@@ -8326,7 +8519,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. It affects all enemy units within range. While the spell is in effect, the targets cannot benefit from the Hold Your Ground or Inspiring Presence special rules. In addition, whenever a target unit fails a Break, Panic or Terror test, all target units suffer -1 to their Leadership (this effect is cumulative).</characteristic>
       </characteristics>
     </profile>
-    <profile name="Spiteful Conjuration" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="111d-86fc-0ac2-aa2e" publicationId="9e23-79cb-pubN76150" page="170">
+    <profile name="Spiteful Conjuration" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="111d-86fc-0ac2-aa2e" publicationId="9e23-79cb-pubN76150" page="170" noindex="true">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Lore Attribute</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b"/>
@@ -8335,7 +8528,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">When a Wizard successfully casts a hex, magic missile or direct damage spell from this lore, and the casting roll contains any double, the spell&apos;s target suffers 2D6 Strength 2 hits with Armour Piercing (1). If the casting roll contains any treble, the spell&apos;s target instead suffers 3D6 hits instead.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Anchan-Rogar the Soul Stealer" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2a6c-20a9-1718-e49f" publicationId="9e23-79cb-pubN76150" page="4">
+    <profile name="Anchan-Rogar the Soul Stealer" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2a6c-20a9-1718-e49f" publicationId="9e23-79cb-pubN76150" page="4" noindex="true">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
@@ -8344,7 +8537,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the unit suffer a Wound on the roll of a 5+ which Ignores Armour Saves. Roll a D6 for each unsaved Wound inflicted by this spell. For each roll of 5+, the caster immediately gains a single Wound (to a maximum of 10).</characteristic>
       </characteristics>
     </profile>
-    <profile name="Oblivion" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2a45-0195-fa0f-61b9" publicationId="9e23-79cb-pubN76150" page="4">
+    <profile name="Oblivion" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="2a45-0195-fa0f-61b9" publicationId="9e23-79cb-pubN76150" page="4" noindex="true">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
@@ -8353,7 +8546,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets all models (friend and foe) within range of the caster. Each model suffers a Strength 5 Hit.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Tenebrael Blades" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="d49b-206b-19f8-c4df" publicationId="9e23-79cb-pubN76150" page="4">
+    <profile name="Tenebrael Blades" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="d49b-206b-19f8-c4df" publicationId="9e23-79cb-pubN76150" page="4" noindex="true">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
@@ -8362,7 +8555,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains the Armour Piercing (2) and Magical Attacks special rule until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Sap Strength" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="dfd5-43dc-e656-0e34" publicationId="9e23-79cb-pubN76150" page="4">
+    <profile name="Sap Strength" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="dfd5-43dc-e656-0e34" publicationId="9e23-79cb-pubN76150" page="4" noindex="true">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
@@ -8371,7 +8564,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the target unit suffer -1 to their Strength (to a minimum of 1) until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Shadow Daggers" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5c0f-e808-67ee-1864" publicationId="9e23-79cb-pubN76150" page="4">
+    <profile name="Shadow Daggers" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5c0f-e808-67ee-1864" publicationId="9e23-79cb-pubN76150" page="4" noindex="true">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
@@ -8380,7 +8573,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes D6 Strength 3 Hits with the Armour Piercing (1) special rule on all enemy units in the caster&apos;s front arc.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Nagaelythe the Chillwind" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="6029-2904-b7c5-17fe" publicationId="9e23-79cb-pubN76150" page="170">
+    <profile name="Nagaelythe the Chillwind" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="6029-2904-b7c5-17fe" publicationId="9e23-79cb-pubN76150" page="170" noindex="true">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
@@ -8389,7 +8582,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strength 2 hits. If the target suffers any unsaved Wounds, all models in the unit suffer a -1 penalty to their BS until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Death Spasm" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7a33-4deb-832b-a0c2" publicationId="9e23-79cb-pubN76150" page="4">
+    <profile name="Death Spasm" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="7a33-4deb-832b-a0c2" publicationId="9e23-79cb-pubN76150" page="4" noindex="true">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
@@ -8398,7 +8591,7 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Targets a single enemy model (even a character in a unit). The target must take D3 Toughness tests. Each failed Toughness test causes a Wound which Ignores Armour Saves. In addition, all models in base contact with the target suffer a Hit at the target&apos;s base Strength.</characteristic>
       </characteristics>
     </profile>
-    <profile name="Shade" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="7620-4b4a-e5fb-efeb" publicationId="9e23-79cb-pubN76150" page="25">
+    <profile name="Shade" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="7620-4b4a-e5fb-efeb" publicationId="9e23-79cb-pubN76150" page="25" noindex="true">
       <characteristics>
         <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
@@ -8412,11 +8605,25 @@ Wound suffered from the Chillblade, the target suffers -1 to its A characteristi
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Dark Elf)</characteristic>
       </characteristics>
     </profile>
-    <profile name="Sea Dragon Cloak" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="8e5f-dcc4-54de-81e6">
+    <profile name="Cold One Chariot" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f785-81b0-fc74-576a" publicationId="9e23-79cb-pubN76150" page="132" noindex="true">
       <characteristics>
-        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766"/>
-        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca"/>
-        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">The Wearer has the Natural Armour (5+) special rule against missile attacks.</characteristic>
+        <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
+        <characteristic name="WS" typeId="f049-8a65-9c04-1559"/>
+        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+        <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
+        <characteristic name="I" typeId="7cca-e51f-edc2-7322"/>
+        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
+        <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
+        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot</characteristic>
+      </characteristics>
+    </profile>
+    <profile id="826b-a598-0537-72c6" name="Scourgerunner Chariot" publicationId="9e23-79cb-pubN76150" page="118" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" noindex="true">
+      <characteristics>
+        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
       </characteristics>
     </profile>
   </sharedProfiles>
