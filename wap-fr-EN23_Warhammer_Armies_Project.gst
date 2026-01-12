@@ -26,7 +26,7 @@
     <publication id="8abe-59b3-1084-5e51" name="Grand Cathay 1.52" shortName="GC" publisher="Warhammer - Grand Cathay 1.52" publicationDate="11.09.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="faf5-2026-3cea-6e96" name="Chaos Dwarfs 1.5" shortName="CD" publisher="Warhammer - Chaos Dwarfs 9th Ed 1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="7f0c-7d47-a39d-8c68" name="Cult of Ulric 1.11" shortName="CoU" publisher="Warhammer - Cult of Ulric 1.11" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="15.11.2023"/>
-    <publication id="8ada-88a0-cdcd-9b5e" name="Dogs of War v.1.4" shortName="DoW" publisher="Warhammer - Dogs of War 9th Ed v.1.4" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="8ada-88a0-cdcd-9b5e" name="Dogs of War v.1.5" shortName="DoW" publisher="Warhammer - Dogs of War 9th Ed v.1.5" publicationDate="16.11.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="894a-5ecc-1ff7-958a" name="Estalia 1.15" shortName="Es" publisher="Warhammer - Estalia 1.15" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="15.08.2023"/>
     <publication id="0545-ea23-873c-f668" name="Halflings 1.13" shortName="Ha" publisher="Warhammer - Halflings 1.13" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="16.01.2024"/>
     <publication id="92f3-84a1-4644-bc2f" name="Hobgoblins 1.12" shortName="Ho" publisher="Warhammer - Hobgoblins 1.12" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="18.03.2024"/>
@@ -7083,7 +7083,7 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Skirmishers" hidden="false" id="468e-0a4a-682a-7de2" collective="true">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8ee8-e6bb-0c3e-f5e7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8ee8-e6bb-0c3e-f5e7" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
       </constraints>
       <infoLinks>
         <infoLink name="Skirmishers" id="9cf6-f6fc-6f85-bf6f" hidden="false" targetId="9a30-1c5c-12f4-5798" type="rule"/>
@@ -7152,7 +7152,7 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="7456-81f5-9a96-d59e" collective="true">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aa1b-c20e-42aa-52e7" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aa1b-c20e-42aa-52e7" includeChildSelections="false" automatic="true"/>
       </constraints>
       <infoLinks>
         <infoLink name="Leader" id="f8c2-0094-8296-277c" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
@@ -7163,7 +7163,7 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="d3ec-3cba-c1d6-8c0f" collective="true">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="770c-368b-932e-904c" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="770c-368b-932e-904c" includeChildSelections="false" automatic="true"/>
       </constraints>
       <infoLinks>
         <infoLink name="Standard Bearer" id="e1f9-7db4-2d8d-3ee3" hidden="false" type="rule" targetId="6002-29d0-d620-1bd0"/>
@@ -7174,7 +7174,7 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="ecde-db3e-9381-c190" collective="true">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8fd5-38f5-2f70-0fd8" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8fd5-38f5-2f70-0fd8" includeChildSelections="false" automatic="true"/>
       </constraints>
       <infoLinks>
         <infoLink name="Musician" id="73c9-9eb6-dd73-8e91" hidden="false" type="rule" targetId="54c3-1d1b-3ffe-59a5"/>
@@ -7231,7 +7231,7 @@
     <selectionEntryGroup name="40. Suits of Armour" id="f7f7-2534-4683-595a" hidden="false">
       <comment>Min 1</comment>
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="71c5-9037-5bd4-fae9" includeChildSelections="false" automatic="true"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="71c5-9037-5bd4-fae9" includeChildSelections="false" automatic="false"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f5b7-0be5-74d6-45b2" includeChildSelections="false" automatic="true"/>
       </constraints>
       <modifierGroups>
@@ -7250,7 +7250,7 @@
       <comment>Min 0</comment>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b3e8-624f-92d7-7b5b" includeChildSelections="false" automatic="true"/>
-        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4347-5ff6-2917-e511" includeChildSelections="false"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4347-5ff6-2917-e511" includeChildSelections="false" automatic="false"/>
       </constraints>
       <modifierGroups>
         <modifierGroup type="and">
@@ -7720,7 +7720,6 @@ A unit that is accompanied by a Leader may re-roll failed Leadership tests in th
 • Reforming from Defeat after losing a round of close combat.
 • Restraining from Pursuit
 • Swift Reform (see Musicians)
-
 
 Some Leaders also have the option to take specialised equipment. If this is the case, it is clearly stated in their entry in each separate army book.</description>
     </rule>
@@ -9020,6 +9019,9 @@ A character that has a magic close combat weapon cannot use any other close comb
     </rule>
     <rule name="Natural Armour" id="9c79-58c1-b63c-684b" hidden="false">
       <description>Models with this rule have an armour save value equal to the number in the brackets. Natural Armour can be combined with other armour as normal, including other sources of Natural Armour.</description>
+    </rule>
+    <rule id="386a-976a-a504-96ed" name="Hatred (Wizards)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
+      <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
