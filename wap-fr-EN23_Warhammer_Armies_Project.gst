@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="81" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="82" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -11,7 +11,7 @@
     <publication id="9e23-79cb-pubN77402" name="Lizardmen v.1.5" shortName="LM" publisher="Warhammer - Lizardmen 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN78137" name="Ogre Kingdoms v.1.5" shortName="OK" publisher="Warhammer - Ogre Kingdoms 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="9e23-79cb-pubN78975" name="Orcs &amp; Goblins v.1.6" shortName="O&amp;G" publisher="Warhammer - Orcs &amp; Goblins 9th Ed v.1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="aa7b-3583-0834-7bfa" name="Dwarfs v.1.62" shortName="Dw" publisher="Warhammer - Dwarfs 9th Ed 1.62" publisherUrl=""/>
+    <publication id="aa7b-3583-0834-7bfa" name="Dwarfs v.1.62" shortName="Dw" publisher="Warhammer - Dwarfs 9th Ed 1.62"/>
     <publication id="315d-135b-135c-07ce" name="Empire v.1.7" shortName="Em" publisher="Warhammer - Empire 9th Ed v.1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="4086-1ccd-f433-39a2" name="Skaven v.1.9" shortName="Sk" publisher="Warhammer - Skaven 9th Ed v.1.8" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="ee54-3543-b9db-fe40" name="Daemons of Chaos 1.62" shortName="DoC" publisher="Warhammer - Daemons of Chaos 1.62" publicationDate="26.10.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -21,7 +21,7 @@
     <publication id="10a5-5781-61f5-86ae" name="Vampire Counts 1.63" shortName="VC" publisher="Warhammer - Vampire Counts 1.63" publicationDate="18.05.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="1a01-044f-047b-618f" name="Warriors of Chaos v.1.6" shortName="WoC" publisher="Warhammer - Warriors of Chaos 9th Ed v.1.6" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="e967-620f-06be-096a" name="Wood Elves v.1.5" shortName="WE" publisher="Warhammer - Wood Elves 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="315c-6fd1-56a3-8b04" name="Amazons v.1.5" shortName="Am" publisher="Warhammer - Amazons 1.5" publicationDate="" publisherUrl=""/>
+    <publication id="315c-6fd1-56a3-8b04" name="Amazons v.1.5" shortName="Am" publisher="Warhammer - Amazons 1.5"/>
     <publication id="d221-484d-439d-4310" name="Araby v.1.5" shortName="Ar" publisher="Warhammer - Araby 9th Ed 1.5" publicationDate="26.06.2025" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="8abe-59b3-1084-5e51" name="Grand Cathay 1.52" shortName="GC" publisher="Warhammer - Grand Cathay 1.52" publicationDate="11.09.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="faf5-2026-3cea-6e96" name="Chaos Dwarfs 1.5" shortName="CD" publisher="Warhammer - Chaos Dwarfs 9th Ed 1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -166,7 +166,7 @@
         <characteristicType name="Special Rule" id="84ea-8900-474d-6201" kind="longText"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Armour Save" id="884c-d50e-eeb6-eda0" hidden="false" kind="weapon" sortIndex="6">
+    <profileType name="Armour" id="884c-d50e-eeb6-eda0" hidden="false" kind="weapon" sortIndex="6">
       <characteristicTypes>
         <characteristicType name="Combat" id="168d-1cc2-66f3-e766" kind="annotation"/>
         <characteristicType name="Missile" id="97ea-ecf7-8d24-b2ca" kind="annotation"/>
@@ -298,7 +298,7 @@
         <infoLink name="Swiftstride" id="9700-feb5-c942-f86e" hidden="false" type="rule" targetId="fdd9-fa75-5594-d363"/>
       </infoLinks>
       <profiles>
-        <profile name="Ridden Monster" typeId="884c-d50e-eeb6-eda0" typeName="Armour Save" hidden="false" id="9450-3d04-ce97-32bd">
+        <profile name="Ridden Monster" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="9450-3d04-ce97-32bd">
           <characteristics>
             <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">Limit 2+</characteristic>
             <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">Limit 2+</characteristic>
@@ -10314,8 +10314,7 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Can be cast on an unengaged unit. Until the start of the caster&apos;s next Magic phase, the target gains the Unbreakable special rule, cannot move and is treated as impassable terrain for the purpose of movement.
-</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Can be cast on an unengaged unit. Until the start of the caster&apos;s next Magic phase, the target gains the Unbreakable special rule, cannot move and is treated as impassable terrain for the purpose of movement.</characteristic>
       </characteristics>
     </profile>
     <profile id="283c-6023-f253-bf83" name="Meteoric Ironclad" publicationId="9e23-79cb-pubN66727" page="121" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
