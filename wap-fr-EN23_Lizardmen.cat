@@ -1014,7 +1014,7 @@ A Slann who is in base contact with a model with the Guardians special rule is c
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Stegadon" hidden="false" id="871c-e199-3713-d5b7" subType="mount">
       <categoryLinks>
-        <categoryLink name="Monster" hidden="false" id="3e0c-94a8-03a4-f4b6" targetId="e1a0-da31-05c5-9a15" primary="false"/>
+        <categoryLink name="Monster" hidden="false" id="8273-3841-e544-63ac" targetId="e1a0-da31-05c5-9a15" primary="false"/>
       </categoryLinks>
       <profiles>
         <profile name="Stegadon" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="efcf-d49e-1b65-35fd">
@@ -1030,6 +1030,18 @@ A Slann who is in base contact with a model with the Guardians special rule is c
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Saurian)</characteristic>
           </characteristics>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="edd2-7979-54a4-6b35"/>
+                <modifier type="decrement" value="1" field="7cca-e51f-edc2-7322"/>
+                <modifier type="decrement" value="1" field="bfa2-d38d-7c93-d3f0"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="a1a7-5ef1-1177-89ab" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
         </profile>
       </profiles>
       <infoLinks>
@@ -1171,6 +1183,13 @@ A Slann who is in base contact with a model with the Guardians special rule is c
               <rules>
                 <rule name="Ancient" id="5897-4ac0-d392-e1c1" hidden="false">
                   <description>The Stegadon gains +1 Strength and the Natural Armour (6+) special rule. However, they suffer -1 Initiative and -1 Attacks.</description>
+                  <modifiers>
+                    <modifier type="append" value="(already in profile)" field="description">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="a1a7-5ef1-1177-89ab" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </rule>
               </rules>
               <infoLinks>
@@ -1554,13 +1573,6 @@ A Slann who is in base contact with a model with the Guardians special rule is c
             <modifier type="set" field="27ee-0675-122f-a1b1"/>
             <modifier type="set" field="09ad-18df-607b-1215"/>
             <modifier type="set" field="df90-5cbd-8cf9-95b2"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Natural Armour" id="4c38-7690-fbb3-edb5" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
-          <modifiers>
-            <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
-            <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
-            <modifier type="set" value="Skink" field="annotation"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -6442,7 +6454,7 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
                 <cost name="pts" typeId="points" value="3"/>
               </costs>
               <modifiers>
-                <modifier type="set" value="3" field="8da8-825c-6d7e-8c94"/>
+                <modifier type="set" value="3" field="b280-46fa-54b9-1ce3"/>
                 <modifier type="set" value="4" field="8da8-825c-6d7e-8c94"/>
               </modifiers>
             </entryLink>
@@ -6497,7 +6509,6 @@ The Ark of Sotek can be activated in any friendly Shooting phase, even if the Ba
       </entryLinks>
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="3704-4fef-a90f-b390" targetId="0eb4-f376-7725-b05b" primary="true"/>
-        <categoryLink name="Monster" hidden="false" id="4e08-440b-3a7d-a6f5" targetId="e1a0-da31-05c5-9a15" primary="false"/>
       </categoryLinks>
       <costs>
         <cost name="pts" typeId="points" value="215"/>
