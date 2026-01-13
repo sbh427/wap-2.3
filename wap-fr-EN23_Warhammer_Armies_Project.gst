@@ -8363,7 +8363,7 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
       <description>Models with this rule may re-roll all To Wound rolls of 1 when making close combat attacks.</description>
     </rule>
     <rule id="8c96-c7fe-2a85-f2f9" name="Elven Grace" publicationId="9e23-79cb-pubN77092" page="138" hidden="false">
-      <description>Models with this special rule have Dodge (6+) special rule in close combat. However, this cannot be used against enemies that attack before the model with Elven Grace.</description>
+      <description>Models with this rule have Dodge (6+) special rule in close combat. However, this cannot be used against enemies that attack before the model with Elven Grace.</description>
     </rule>
     <rule id="eb46-96d2-9469-4905" name="Cold-Blooded" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>Whenever the model takes a Leadership test, it rolls an additional dice and discards the highest result.</description>
