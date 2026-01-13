@@ -4696,7 +4696,7 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
       <description>Models with this special rule may choose one of the Animal Forms at the start of each round of close combat. This is done before Impact Hits are resolved. All models in the same unit must choose the same Animal Form. The effect of each Animal Form lasts until the end of that turn or until a new Animal Form is chosen. Models cannot choose the Animal Form in two consecutive rounds of combat.</description>
     </rule>
     <rule name="Enchanted Arrows" id="fe5f-201d-c693-29c2" hidden="false">
-      <description>Some models in the Wood Elf army have the option to purchase enchanted arrows. If a model has enchanted arrows, they must use them when shooting with an Asrai longbow. All Shooting attacks made with enchanted arrows count as Magical Attacks. Note that a model can only have one kind of Enchanted Arrows. </description>
+      <description>Some models in the Wood Elf army have the option to purchase enchanted arrows. If a model has enchanted arrows, they must use them when shooting with an Asrai longbow. All Shooting attacks made with enchanted arrows count as Magical Attacks. Note that a model can only have one kind of Enchanted Arrows.</description>
     </rule>
     <rule name="Spirit-walk" id="f8ff-48a0-94f2-0f3f" hidden="false">
       <description>Instead of moving normally, the unit can walk the spirit paths during the Remaining Moves sub-phase. Remove it from play, and set it up so that the centre of the unit is within any wood on the table.</description>
@@ -6736,17 +6736,21 @@ for their charge distance.
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="39fc-b44f-13bd-4dd0" includeChildSelections="false"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Common Enchanted Items" hidden="false" id="8ef2-39a5-42e0-8597" type="selectionEntryGroup" targetId="5857-a7aa-f954-a027" sortIndex="99" flatten="true"/>
+            <entryLink import="true" name="Common Enchanted Items" hidden="false" id="8ef2-39a5-42e0-8597" type="selectionEntryGroup" targetId="5857-a7aa-f954-a027" sortIndex="91" flatten="true"/>
           </entryLinks>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Hail Arrow of Doom" hidden="false" id="f621-923e-a870-5ec1" sortIndex="10">
+            <selectionEntry type="upgrade" import="true" name="Hail Arrow of Doom" hidden="false" id="f621-923e-a870-5ec1" sortIndex="14">
               <modifiers>
                 <modifier type="add" value="You need an Asrai Longbow to use {this}" field="warning">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
                         <condition type="greaterThan" value="0" field="selections" scope="parent" childId="f621-923e-a870-5ec1" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="8ea6-8723-f5f3-137c" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="6a94-8b9c-62e3-a175" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="88f8-1cb9-2c5a-8556" shared="true" includeChildSelections="true"/>
                         <condition type="lessThan" value="1" field="selections" scope="parent" childId="4c0a-8554-3275-b8f2" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="f4ee-50d9-f62f-2c43" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -6760,10 +6764,10 @@ for their charge distance.
                 </profile>
                 <profile name="Hail Arrow of Doom" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="3194-faee-db45-9cee">
                   <characteristics>
-                    <characteristic name="Range" typeId="af3c-d805-702c-9af9"/>
+                    <characteristic name="Range" typeId="af3c-d805-702c-9af9">30&quot;</characteristic>
                     <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
                     <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3D6</characteristic>
-                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054"/>
+                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">One use only.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6777,14 +6781,18 @@ for their charge distance.
                 <categoryLink name="Enchanted Arrow" hidden="false" id="c110-f174-f4e1-a78e" targetId="340b-b2b7-30f8-e8d2" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Dragontooth Arrows" hidden="false" id="e2be-f8e0-62bb-4278" sortIndex="1">
+            <selectionEntry type="upgrade" import="true" name="Dragontooth Arrows" hidden="false" id="e2be-f8e0-62bb-4278" sortIndex="2">
               <modifiers>
                 <modifier type="add" value="You need an Asrai Longbow to use {this}" field="warning">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
                         <condition type="greaterThan" value="0" field="selections" scope="parent" childId="e2be-f8e0-62bb-4278" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="8ea6-8723-f5f3-137c" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="6a94-8b9c-62e3-a175" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="88f8-1cb9-2c5a-8556" shared="true" includeChildSelections="true"/>
                         <condition type="lessThan" value="1" field="selections" scope="parent" childId="4c0a-8554-3275-b8f2" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="f4ee-50d9-f62f-2c43" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -6793,7 +6801,7 @@ for their charge distance.
               <profiles>
                 <profile name="Dragontooth Arrows" typeId="20d2-b203-b36b-28c4" typeName="Enchanted Arrows" hidden="false" id="8010-af54-8d1c-a43b">
                   <characteristics>
-                    <characteristic name="Effect" typeId="042b-d7d7-12f4-63c8">Enchanted Arrows. Any Character or Monster wounded by Dragontooth Arrows gains the Stupidity special rule for the remainder of the game.</characteristic>
+                    <characteristic name="Effect" typeId="042b-d7d7-12f4-63c8">Any Character, Monstrous Creature or Monster that is Wounded by Dragontooth Arrows gains the Stupidity special rule for the remainder of the game.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6807,14 +6815,18 @@ for their charge distance.
                 <categoryLink name="Enchanted Arrow" hidden="false" id="1533-b2a4-09fb-f430" targetId="340b-b2b7-30f8-e8d2" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Arrows of Potency" hidden="false" id="d2a4-50c2-e09e-274e" sortIndex="3">
+            <selectionEntry type="upgrade" import="true" name="Arrows of Potency" hidden="false" id="d2a4-50c2-e09e-274e" sortIndex="4">
               <modifiers>
                 <modifier type="add" value="You need an Asrai Longbow to use {this}" field="warning">
                   <conditionGroups>
                     <conditionGroup type="and">
                       <conditions>
                         <condition type="greaterThan" value="0" field="selections" scope="parent" childId="d2a4-50c2-e09e-274e" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="8ea6-8723-f5f3-137c" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="6a94-8b9c-62e3-a175" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="88f8-1cb9-2c5a-8556" shared="true" includeChildSelections="true"/>
                         <condition type="lessThan" value="1" field="selections" scope="parent" childId="4c0a-8554-3275-b8f2" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="f4ee-50d9-f62f-2c43" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -6823,7 +6835,7 @@ for their charge distance.
               <profiles>
                 <profile name="Arrows of Potency" typeId="20d2-b203-b36b-28c4" typeName="Enchanted Arrows" hidden="false" id="9187-1819-8cda-3559">
                   <characteristics>
-                    <characteristic name="Effect" typeId="042b-d7d7-12f4-63c8">Enchanted Arrows. Any shots made with the Arrows of Potency have the Multiple Wounds (2) special rule.</characteristic>
+                    <characteristic name="Effect" typeId="042b-d7d7-12f4-63c8">Any shots made with the Arrows of Potency have the Multiple Wounds (2) special rule.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6837,11 +6849,11 @@ for their charge distance.
                 <categoryLink name="Enchanted Arrow" hidden="false" id="898c-87a6-6916-1f48" targetId="340b-b2b7-30f8-e8d2" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Wailing Arrows" hidden="false" id="1a77-f639-7b8d-4e04" sortIndex="4">
+            <selectionEntry type="upgrade" import="true" name="Wailing Arrows" hidden="false" id="1a77-f639-7b8d-4e04" sortIndex="8">
               <profiles>
                 <profile name="Wailing Arrows" typeId="20d2-b203-b36b-28c4" typeName="Enchanted Arrows" hidden="false" id="3919-d0d5-238b-d551">
                   <characteristics>
-                    <characteristic name="Effect" typeId="042b-d7d7-12f4-63c8">Enchanted Arrows. Any unit that suffers an unsaved wound from these arrows must make a Panic test.</characteristic>
+                    <characteristic name="Effect" typeId="042b-d7d7-12f4-63c8">Any unit that suffers an unsaved wound from these arrows must make a Panic test.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -6857,7 +6869,11 @@ for their charge distance.
                     <conditionGroup type="and">
                       <conditions>
                         <condition type="greaterThan" value="0" field="selections" scope="parent" childId="1a77-f639-7b8d-4e04" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="8ea6-8723-f5f3-137c" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="6a94-8b9c-62e3-a175" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="88f8-1cb9-2c5a-8556" shared="true" includeChildSelections="true"/>
                         <condition type="lessThan" value="1" field="selections" scope="parent" childId="4c0a-8554-3275-b8f2" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="f4ee-50d9-f62f-2c43" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -6867,7 +6883,7 @@ for their charge distance.
                 <categoryLink name="Enchanted Arrow" hidden="false" id="d081-ceee-7363-a21b" targetId="340b-b2b7-30f8-e8d2" primary="false"/>
               </categoryLinks>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Gwytherc&apos;s Horn" hidden="false" id="5850-384a-e2cb-5b2e" sortIndex="2">
+            <selectionEntry type="upgrade" import="true" name="Gwytherc&apos;s Horn" hidden="false" id="5850-384a-e2cb-5b2e" sortIndex="3">
               <profiles>
                 <profile name="Gwytherc&apos;s Horn" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="338a-3298-1f1c-0c72">
                   <characteristics>
@@ -6882,7 +6898,7 @@ for their charge distance.
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Elynett&apos;s Brooch " hidden="false" id="2262-f3ee-2113-a933" sortIndex="5">
+            <selectionEntry type="upgrade" import="true" name="Elynett&apos;s Brooch " hidden="false" id="2262-f3ee-2113-a933" sortIndex="9">
               <profiles>
                 <profile name="Elynett&apos;s Brooch " typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="1bdc-5d7d-06fa-0e8e">
                   <characteristics>
@@ -6897,7 +6913,7 @@ for their charge distance.
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Wraithstone" hidden="false" id="d9e2-62c7-223b-586e" sortIndex="6">
+            <selectionEntry type="upgrade" import="true" name="Wraithstone" hidden="false" id="d9e2-62c7-223b-586e" sortIndex="13">
               <profiles>
                 <profile name="Wraithstone" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="cbc2-4045-b673-37cc">
                   <characteristics>
@@ -6912,7 +6928,7 @@ for their charge distance.
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Waystalker&apos;s Cloak " hidden="false" id="b2f8-c481-dc63-f925" sortIndex="7">
+            <selectionEntry type="upgrade" import="true" name="Waystalker&apos;s Cloak " hidden="false" id="b2f8-c481-dc63-f925" sortIndex="12">
               <profiles>
                 <profile name="Waystalker&apos;s Cloak " typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="e55f-e393-3d3f-bb8f">
                   <characteristics>
@@ -6927,7 +6943,7 @@ for their charge distance.
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Horn of the Asrai " hidden="false" id="ea6e-fe7c-403c-8d17" sortIndex="8">
+            <selectionEntry type="upgrade" import="true" name="Horn of the Asrai " hidden="false" id="ea6e-fe7c-403c-8d17" sortIndex="11">
               <profiles>
                 <profile name="Horn of the Asrai" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="9eeb-ffda-929a-258c">
                   <characteristics>
@@ -6942,7 +6958,7 @@ for their charge distance.
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Crown of Fell Bowers" hidden="false" id="8cec-8bc5-b0b7-534c" sortIndex="13">
+            <selectionEntry type="upgrade" import="true" name="Crown of Fell Bowers" hidden="false" id="8cec-8bc5-b0b7-534c" sortIndex="16">
               <profiles>
                 <profile name="Crown of Fell Bowers" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="190f-9579-7124-9357">
                   <characteristics>
@@ -6957,7 +6973,7 @@ for their charge distance.
                 <cost name="pts" typeId="points" value="40"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Forget-Me-Knot" hidden="false" id="80ad-8793-3285-f382" sortIndex="9">
+            <selectionEntry type="upgrade" import="true" name="Forget-Me-Knot" hidden="false" id="80ad-8793-3285-f382" sortIndex="10">
               <profiles>
                 <profile name="Forget-Me-Knot" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="c899-3df3-4547-ef1e">
                   <characteristics>
@@ -6972,7 +6988,7 @@ for their charge distance.
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Moonstone of the Hidden Ways" hidden="false" id="61b8-32d3-7ea4-c305" sortIndex="11">
+            <selectionEntry type="upgrade" import="true" name="Moonstone of the Hidden Ways" hidden="false" id="61b8-32d3-7ea4-c305" sortIndex="15">
               <profiles>
                 <profile name="Moonstone of the Hidden Ways" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="8447-b9c2-a949-7aaf">
                   <characteristics>
@@ -6987,7 +7003,7 @@ for their charge distance.
                 <cost name="pts" typeId="points" value="35"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Wardroth Horn" hidden="false" id="994c-1284-a008-b3e6" sortIndex="12">
+            <selectionEntry type="upgrade" import="true" name="Wardroth Horn" hidden="false" id="994c-1284-a008-b3e6" sortIndex="17">
               <profiles>
                 <profile name="Wardroth Horn" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="2511-8b4b-7da1-9a82">
                   <characteristics>
@@ -7002,11 +7018,75 @@ for their charge distance.
                 <cost name="pts" typeId="points" value="40"/>
               </costs>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Blight-Tipped Arrows" hidden="false" id="cf07-1e06-e4f9-d6b9" sortIndex="5">
+              <profiles>
+                <profile name="Blight-Tipped Arrows" typeId="20d2-b203-b36b-28c4" typeName="Enchanted Arrows" hidden="false" id="661d-16de-b58f-5df3">
+                  <characteristics>
+                    <characteristic name="Effect" typeId="042b-d7d7-12f4-63c8">Any Character, Monstrous Creature or Monster that is Wounded by Blight-Tipped Arrows must pass a Toughness test at the start of each turn for the remainder of the game or suffer an additional Wound which Ignores Armour Saves.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7248-8fbd-f436-a0b6" includeChildSelections="true"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <modifiers>
+                <modifier type="add" value="You need an Asrai Longbow to use {this}" field="warning">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="greaterThan" value="0" field="selections" scope="parent" childId="cf07-1e06-e4f9-d6b9" shared="true" includeChildSelections="true" includeChildForces="false"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="8ea6-8723-f5f3-137c" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="6a94-8b9c-62e3-a175" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="88f8-1cb9-2c5a-8556" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="4c0a-8554-3275-b8f2" shared="true" includeChildSelections="true"/>
+                        <condition type="lessThan" value="1" field="selections" scope="parent" childId="f4ee-50d9-f62f-2c43" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <categoryLinks>
+                <categoryLink name="Enchanted Arrow" hidden="false" id="7354-90c4-d5a1-62a1" targetId="340b-b2b7-30f8-e8d2" primary="false"/>
+              </categoryLinks>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Orion&apos;s Favour" hidden="false" id="47ea-c582-1c63-979f" sortIndex="7">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e14c-3901-39be-de10" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Orion&apos;s Favour" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="5e4e-4cb8-8eed-8e1b">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The bearer can re-roll any failed rolls To Hit and/or To Wound made during either the Shooting or Close Combat phase.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Crown of Antlers" hidden="false" id="2b1d-0304-b55d-bd03" sortIndex="6">
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="b51f-684a-29e4-d1c9" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Crown of Antlers" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="3cfb-68fd-35cc-37af">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The bearer of this item gains the Impact Hits (D3) special rule. The Impact Hits are Armour Piercing (1).</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup name="Arcane Items" id="35e7-3fe1-e8d7-7cb9" hidden="true" sortIndex="5" collapsible="true">
           <entryLinks>
-            <entryLink import="true" name="Common Arcane Items" hidden="false" id="c5c0-44e5-e21f-e20d" type="selectionEntryGroup" targetId="6cd2-3f4b-da2d-1ee9" sortIndex="99" flatten="true"/>
+            <entryLink import="true" name="Common Arcane Items" hidden="false" id="c5c0-44e5-e21f-e20d" type="selectionEntryGroup" targetId="6cd2-3f4b-da2d-1ee9" sortIndex="91" flatten="true"/>
           </entryLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cd71-7a0b-72d1-6d80" includeChildSelections="false"/>
@@ -7036,7 +7116,7 @@ for their charge distance.
             </modifier>
           </modifiers>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Warsong Stave" hidden="false" id="2a5c-903b-bc48-f904" sortIndex="2">
+            <selectionEntry type="upgrade" import="true" name="Warsong Stave" hidden="false" id="2a5c-903b-bc48-f904" sortIndex="4">
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
@@ -7051,7 +7131,7 @@ for their charge distance.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c96d-f37b-1b35-8a7c" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Wending Wand" hidden="false" id="69ed-0a35-d7ff-4120" sortIndex="1">
+            <selectionEntry type="upgrade" import="true" name="Wending Wand" hidden="false" id="69ed-0a35-d7ff-4120" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
@@ -7066,7 +7146,7 @@ for their charge distance.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="646f-702c-ba57-ff26" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Elf Charm" hidden="false" id="321c-f1d8-0d18-4b56" sortIndex="4">
+            <selectionEntry type="upgrade" import="true" name="Elf Charm" hidden="false" id="321c-f1d8-0d18-4b56" sortIndex="7">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
@@ -7081,7 +7161,7 @@ for their charge distance.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4cd0-2d76-3fb8-c390" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Calaingor&apos;s Stave" hidden="false" id="91ec-b266-d7e6-e53e" sortIndex="3">
+            <selectionEntry type="upgrade" import="true" name="Calaingor&apos;s Stave" hidden="false" id="91ec-b266-d7e6-e53e" sortIndex="5">
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
@@ -7096,12 +7176,12 @@ for their charge distance.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8bb5-52f2-d6dc-b653" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Silverwood Circlet" hidden="false" id="9997-f2db-d17e-d9ec" sortIndex="5">
+            <selectionEntry type="upgrade" import="true" name="Silverwood Circlet" hidden="false" id="9997-f2db-d17e-d9ec" sortIndex="8">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
               <profiles>
-                <profile name="The Silverwood Circlet" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="aa3d-cc35-601b-cd3f">
+                <profile name="Silverwood Circlet" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="aa3d-cc35-601b-cd3f">
                   <characteristics>
                     <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer of this item adds +6&quot; to the range of all their spells.</characteristic>
                   </characteristics>
@@ -7111,12 +7191,12 @@ for their charge distance.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="40f6-c5ee-b87c-e282" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Deepwood Sphere" hidden="false" id="78a3-d1b9-b9e0-99b5" sortIndex="6">
+            <selectionEntry type="upgrade" import="true" name="Deepwood Sphere" hidden="false" id="78a3-d1b9-b9e0-99b5" sortIndex="6">
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
               <profiles>
-                <profile name="The Deepwood Sphere" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="329b-7577-672e-f034">
+                <profile name="Deepwood Sphere" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="329b-7577-672e-f034">
                   <characteristics>
                     <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">Any enemy unit that enters a forest within 18&quot; of the bearer of the Deepwood Sphere suffers D6 Strength 4 Hits as soon as they have finished their move. They continue to suffer D6 Strength 4 Hits at the start of any of their Movement phases for as long as they remain in the forest.</characteristic>
                   </characteristics>
@@ -7126,14 +7206,14 @@ for their charge distance.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="be4d-561d-2f51-99f3" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Ranu&apos;s Heartstone" hidden="false" id="2bb7-214f-bda4-4304" sortIndex="11">
+            <selectionEntry type="upgrade" import="true" name="Ranu&apos;s Heartstone" hidden="false" id="2bb7-214f-bda4-4304" sortIndex="13">
               <costs>
                 <cost name="pts" typeId="points" value="40"/>
               </costs>
               <profiles>
                 <profile name="Ranu&apos;s Heartstone" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="1d0b-048c-d609-e085">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">Once per Magic phase, the bearer of Ranu&apos;s Heartstone may re-roll one of the dice when casting or dispelling a spell. This can be used to prevent a miscast or to cause Ultimate Power.</characteristic>
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">Once per Magic phase, the bearer of this item may re-roll one of the dice when casting or dispelling a spell. This can be used to prevent a miscast or to cause Ultimate Power.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -7141,7 +7221,7 @@ for their charge distance.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="47fa-da59-b0b3-3a24" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Divination Orb" hidden="false" id="b62c-4e61-06d4-a5b9" sortIndex="7">
+            <selectionEntry type="upgrade" import="true" name="Divination Orb" hidden="false" id="b62c-4e61-06d4-a5b9" sortIndex="9">
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
@@ -7156,7 +7236,7 @@ for their charge distance.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5f76-9ef9-c624-bb75" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Viridencent Shawl" hidden="false" id="c6ca-e671-bd5c-b86f" sortIndex="8">
+            <selectionEntry type="upgrade" import="true" name="Viridencent Shawl" hidden="false" id="c6ca-e671-bd5c-b86f" sortIndex="10">
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
@@ -7171,7 +7251,7 @@ for their charge distance.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="13d5-e653-2ecc-611a" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Oaken Stave" hidden="false" id="902e-5b89-05c0-701e" sortIndex="9">
+            <selectionEntry type="upgrade" import="true" name="Oaken Stave" hidden="false" id="902e-5b89-05c0-701e" sortIndex="11">
               <costs>
                 <cost name="pts" typeId="points" value="35"/>
               </costs>
@@ -7185,6 +7265,36 @@ for their charge distance.
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2068-c744-09a5-c8aa" includeChildSelections="true"/>
               </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Orb of Midsummer" hidden="false" id="c582-6d0b-0f08-2c66" sortIndex="12">
+              <costs>
+                <cost name="pts" typeId="points" value="40"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="24d8-e4df-cc8b-f7f6" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Orb of Midsummer" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="e203-021d-b43d-0fef">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer of this item may re-roll failed casting attempts, unless a Miscast has been rolled.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Heartwood Pendant" hidden="false" id="f676-6e31-404d-9f9b" sortIndex="3">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="08db-6dfe-6bfd-41e5" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Heartwood Pendant" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="8037-032a-7e7d-aad5">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The bearer of this item may choose their spells from the Lore of Athel Loren in addition to one other spell lore.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="10"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -7217,15 +7327,15 @@ for their charge distance.
             </modifier>
           </modifiers>
           <entryLinks>
-            <entryLink import="true" name="Common Arcane Items (One use only)" hidden="false" id="bf26-e7a1-a557-754b" type="selectionEntryGroup" targetId="3dfd-c3fd-5a56-45f1" sortIndex="99" flatten="true"/>
+            <entryLink import="true" name="Common Arcane Items (One use only)" hidden="false" id="bf26-e7a1-a557-754b" type="selectionEntryGroup" targetId="3dfd-c3fd-5a56-45f1" sortIndex="4" flatten="true"/>
           </entryLinks>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="The Vesperal Gem" hidden="false" id="e31b-10b5-b722-3c04" sortIndex="10">
+            <selectionEntry type="upgrade" import="true" name="Vesperal Gem" hidden="false" id="e31b-10b5-b722-3c04" sortIndex="3">
               <costs>
                 <cost name="pts" typeId="points" value="40"/>
               </costs>
               <profiles>
-                <profile name="The Vesperal Gem" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="90c2-9869-9ba8-6112">
+                <profile name="Vesperal Gem" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="90c2-9869-9ba8-6112">
                   <characteristics>
                     <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. This item can be used at the start of your Magic phase. Once used, the Wizard can automatically cast any one of their spells from the Lore of Athel Loren without using any power dice this turn. This spell cannot be dispelled. After resolving the effects of the spell, roll a D6. On a 1, the bearer suffers 1 Wound with no saves allowed.</characteristic>
                   </characteristics>
@@ -7235,6 +7345,21 @@ for their charge distance.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7dbe-627e-479d-741d" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Sigil of the Mage Queen" hidden="false" id="5167-6649-7be9-2ada" sortIndex="2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7ac8-a2ab-db0b-33bf" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Sigil of the Mage Queen" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="08c8-36bb-b931-d715">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. This item may be used after making a casting roll. When used, it adds a +3 casting bonus. </characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="points" value="5"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
         <selectionEntryGroup name="Talismans" id="0da9-2195-1756-586d" hidden="false" sortIndex="4" collapsible="true">
@@ -7242,10 +7367,10 @@ for their charge distance.
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f9e3-feed-138d-d4db" includeChildSelections="false"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Common Talismans" hidden="false" id="c536-57a3-5702-16b5" type="selectionEntryGroup" targetId="946f-a470-9912-9301" sortIndex="99" flatten="true"/>
+            <entryLink import="true" name="Common Talismans" hidden="false" id="c536-57a3-5702-16b5" type="selectionEntryGroup" targetId="946f-a470-9912-9301" sortIndex="91" flatten="true"/>
           </entryLinks>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Deepmire Cloak" hidden="false" id="ed95-f9be-48b1-14c0" sortIndex="1">
+            <selectionEntry type="upgrade" import="true" name="Deepmire Cloak" hidden="false" id="ed95-f9be-48b1-14c0" sortIndex="2">
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
@@ -7267,9 +7392,9 @@ for their charge distance.
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Rhymer&apos;s Harp" hidden="false" id="c0fa-7541-f605-f3f3" sortIndex="9">
+            <selectionEntry type="upgrade" import="true" name="Rhymer&apos;s Harp" hidden="false" id="c0fa-7541-f605-f3f3" sortIndex="11">
               <profiles>
-                <profile name="The Rhymer&apos;s Harp " typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="d033-0b95-bc34-979e">
+                <profile name="Rhymer&apos;s Harp " typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="d033-0b95-bc34-979e">
                   <characteristics>
                     <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Rhymer&apos;s Harp gives the bearer and any unit they join the Ward Save (5+) and Strider special rules.</characteristic>
                   </characteristics>
@@ -7282,7 +7407,7 @@ for their charge distance.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d0a7-e689-4381-7ca0" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Merciw&apos;s Locus " hidden="false" id="44ee-ea2b-d15f-7c33" sortIndex="2">
+            <selectionEntry type="upgrade" import="true" name="Merciw&apos;s Locus " hidden="false" id="44ee-ea2b-d15f-7c33" sortIndex="3">
               <profiles>
                 <profile name="Merciw&apos;s Locus " typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="06e5-99ed-d229-9008">
                   <characteristics>
@@ -7297,7 +7422,7 @@ for their charge distance.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="53ea-6ad0-fdc8-b14e" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Stone of Rebirth" hidden="false" id="e887-bb5f-976e-f9e5" sortIndex="3">
+            <selectionEntry type="upgrade" import="true" name="Stone of Rebirth" hidden="false" id="e887-bb5f-976e-f9e5" sortIndex="4">
               <profiles>
                 <profile name="Stone of Rebirth" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="ccd4-563e-e2db-3f47">
                   <characteristics>
@@ -7312,9 +7437,9 @@ for their charge distance.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4c22-d4c4-a731-6abe" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Fimbulwinter Shard " hidden="false" id="a079-4d99-932f-bba6" sortIndex="4">
+            <selectionEntry type="upgrade" import="true" name="Fimbulwinter Shard " hidden="false" id="a079-4d99-932f-bba6" sortIndex="7">
               <profiles>
-                <profile name="The Fimbulwinter Shard " typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="00a5-d6c3-381c-cad6">
+                <profile name="Fimbulwinter Shard " typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="00a5-d6c3-381c-cad6">
                   <characteristics>
                     <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Fimbulwinter Shard causes enemies attacking the bearer in close combat to suffer -1 To Hit. However, all models with the Forest Spirit special rule (including the bearer) suffer from Stupidity while the bearer is within 6&quot;.</characteristic>
                   </characteristics>
@@ -7327,7 +7452,7 @@ for their charge distance.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="01d1-f826-4ac1-26cb" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Amber Pendant " hidden="false" id="590a-afb9-b7bc-5fb9" sortIndex="5">
+            <selectionEntry type="upgrade" import="true" name="Amber Pendant " hidden="false" id="590a-afb9-b7bc-5fb9" sortIndex="6">
               <profiles>
                 <profile name="Amber Pendant" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="b073-6609-7c49-580b">
                   <characteristics>
@@ -7342,9 +7467,9 @@ for their charge distance.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="28c3-adf2-19d2-04d8" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="tone of the Crystal Mere " hidden="false" id="30c4-1bf2-2f22-767a" sortIndex="6">
+            <selectionEntry type="upgrade" import="true" name="Stone of the Crystal Mere " hidden="false" id="30c4-1bf2-2f22-767a" sortIndex="9">
               <profiles>
-                <profile name="tone of the Crystal Mere " typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="0ff8-cffc-cdf8-f012">
+                <profile name="tSone of the Crystal Mere " typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="0ff8-cffc-cdf8-f012">
                   <characteristics>
                     <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Stone of the Crystal Mere gives the bearer the Ward Save (3+) special rule. However, if this Ward Save is ever failed, then the stone shatters and the Ward Save is lost for the rest of the game.</characteristic>
                   </characteristics>
@@ -7357,7 +7482,7 @@ for their charge distance.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3d86-ac6a-a2d6-2971" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Amaranthine Brooch " hidden="false" id="b390-3484-77c5-e2c5" sortIndex="7">
+            <selectionEntry type="upgrade" import="true" name="Amaranthine Brooch " hidden="false" id="b390-3484-77c5-e2c5" sortIndex="8">
               <profiles>
                 <profile name="Amaranthine Brooch " typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="6813-5129-b993-8269">
                   <characteristics>
@@ -7372,7 +7497,7 @@ for their charge distance.
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="40ad-2159-c7e8-a772" includeChildSelections="true"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Glamourweave Brooch" hidden="false" id="31bd-1afc-51db-6ca3" sortIndex="8">
+            <selectionEntry type="upgrade" import="true" name="Glamourweave Brooch" hidden="false" id="31bd-1afc-51db-6ca3" sortIndex="10">
               <profiles>
                 <profile name="Glamourweave Brooch" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="471e-b1bc-64c6-8f30">
                   <characteristics>
@@ -7386,6 +7511,18 @@ for their charge distance.
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bae6-04e8-6c51-ffd6" includeChildSelections="true"/>
               </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Talisman of Qwar" hidden="false" id="a6ce-f8f2-05c8-169a" sortIndex="5">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+              <profiles>
+                <profile name="Talisman of Qwar" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="b968-f543-3e94-e0fa">
+                  <characteristics>
+                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">Models targeting the bearer with missile attacks must re-roll successful rolls To Hit.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -7413,13 +7550,13 @@ for their charge distance.
     </selectionEntryGroup>
     <selectionEntryGroup name="Magic Standards" id="d171-04b0-1d99-36fb" hidden="false" collapsible="true">
       <entryLinks>
-        <entryLink import="true" name="Common Magic Standards" hidden="false" id="7b6d-4882-1755-8f47" type="selectionEntryGroup" targetId="2613-24d7-a26e-eb37" sortIndex="99"/>
+        <entryLink import="true" name="Common Magic Standards" hidden="false" id="7b6d-4882-1755-8f47" type="selectionEntryGroup" targetId="2613-24d7-a26e-eb37" sortIndex="91"/>
       </entryLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d057-d5ac-6fda-c396" includeChildSelections="false"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Banner of Midsummer&apos;s Eve" hidden="false" id="417f-3888-55cb-b2bc" sortIndex="1">
+        <selectionEntry type="upgrade" import="true" name="Banner of Midsummer&apos;s Eve" hidden="false" id="417f-3888-55cb-b2bc" sortIndex="3">
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
@@ -7434,7 +7571,7 @@ for their charge distance.
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="The Battle Standard of Athel Loren" hidden="false" id="4217-7195-323c-db08" sortIndex="9">
+        <selectionEntry type="upgrade" import="true" name="Battle Standard of Athel Loren" hidden="false" id="4217-7195-323c-db08" sortIndex="13">
           <costs>
             <cost name="pts" typeId="points" value="75"/>
           </costs>
@@ -7442,7 +7579,7 @@ for their charge distance.
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="89f1-5018-b641-e794" includeChildSelections="true"/>
           </constraints>
           <profiles>
-            <profile name="The Battle Standard of Athel Loren" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="829e-de40-1a31-eafc">
+            <profile name="Battle Standard of Athel Loren" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="829e-de40-1a31-eafc">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">Any enemy spell cast at a friendly unit within 12&quot; of this standard is automatically dispelled on the roll of a 5+.</characteristic>
               </characteristics>
@@ -7464,7 +7601,7 @@ for their charge distance.
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Saemrath, the Banner of the Zenith" hidden="false" id="ec11-ffdb-34cb-c920" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Saemrath, the Banner of the Zenith" hidden="false" id="ec11-ffdb-34cb-c920" sortIndex="7">
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
@@ -7479,7 +7616,7 @@ for their charge distance.
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Faoghir, the Banner of Dwindling" hidden="false" id="065a-da9d-73c6-b069" sortIndex="4">
+        <selectionEntry type="upgrade" import="true" name="Faoghir, the Banner of Dwindling" hidden="false" id="065a-da9d-73c6-b069" sortIndex="5">
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
@@ -7494,7 +7631,7 @@ for their charge distance.
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Gaemrath, the Banner of Midwinter" hidden="false" id="0f94-bfda-7b3c-9285" sortIndex="5">
+        <selectionEntry type="upgrade" import="true" name="Gaemrath, the Banner of Midwinter" hidden="false" id="0f94-bfda-7b3c-9285" sortIndex="6">
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
@@ -7509,7 +7646,7 @@ for their charge distance.
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Banner of the Hunter King" hidden="false" id="df39-f222-37b8-1aad" sortIndex="6">
+        <selectionEntry type="upgrade" import="true" name="Banner of the Hunter King" hidden="false" id="df39-f222-37b8-1aad" sortIndex="10">
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
@@ -7521,10 +7658,17 @@ for their charge distance.
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying the Banner of the Hunter King add +D6&quot; to their charge range.</characteristic>
               </characteristics>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="738e-49a4-56d5-7c62" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Banner of the Eternal Queen" hidden="false" id="98aa-e17e-f98f-4a54" sortIndex="7">
+        <selectionEntry type="upgrade" import="true" name="Banner of the Eternal Queen" hidden="false" id="98aa-e17e-f98f-4a54" sortIndex="11">
           <costs>
             <cost name="pts" typeId="points" value="35"/>
           </costs>
@@ -7539,7 +7683,7 @@ for their charge distance.
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Banner of the Wildwood" hidden="false" id="7ef6-c39c-85f6-37ff" sortIndex="8">
+        <selectionEntry type="upgrade" import="true" name="Banner of the Wildwood" hidden="false" id="7ef6-c39c-85f6-37ff" sortIndex="12">
           <costs>
             <cost name="pts" typeId="points" value="40"/>
           </costs>
@@ -7553,6 +7697,58 @@ for their charge distance.
               </characteristics>
             </profile>
           </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Standard of Morning&apos;s Chill" hidden="false" id="3cc0-f7b7-2ded-3015" sortIndex="8">
+          <costs>
+            <cost name="pts" typeId="points" value="25"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d3cd-bde4-bf27-2869" includeChildSelections="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Standard of Morning&apos;s Chill" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="e607-dd55-28aa-d5a2">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">All missile attacks targeting the unit carrying this standard suffer -1 To Hit.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Tapestry of Talsyn" hidden="false" id="86d1-9dcd-7f52-4795" sortIndex="9">
+          <costs>
+            <cost name="pts" typeId="points" value="25"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4642-a8c4-c394-3ae5" includeChildSelections="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Tapestry of Talsyn" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="5371-0a80-fa19-3a88">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying this standard gains the Hold Your Ground (6) special rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Tapestry of the Wild Hunt" hidden="false" id="33af-0852-df19-8784" sortIndex="4">
+          <costs>
+            <cost name="pts" typeId="points" value="20"/>
+          </costs>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8f54-9f38-388d-a99c" includeChildSelections="true"/>
+          </constraints>
+          <profiles>
+            <profile name="Tapestry of the Wild Hunt" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="142e-d788-2bcf-01e6">
+              <characteristics>
+                <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying this standard gains +1 Combat Resolution and may re-roll failed pursuit rolls.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="parent" childId="738e-49a4-56d5-7c62" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
