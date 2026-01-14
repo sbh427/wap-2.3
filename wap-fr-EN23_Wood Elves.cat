@@ -1161,6 +1161,13 @@
                 <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
                 <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Wood Elf)</characteristic>
               </characteristics>
+              <modifiers>
+                <modifier type="increment" value="1" field="bfa2-d38d-7c93-d3f0">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4c2f-9390-116b-b4d0" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <constraints>
@@ -1274,6 +1281,24 @@
                   <conditions>
                     <condition type="lessThan" value="1" field="selections" scope="roster" childId="5a1c-e4ae-ae3a-3161" shared="true" includeChildSelections="true" includeChildForces="true"/>
                   </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Guardians of Talsyn" hidden="false" id="4c2f-9390-116b-b4d0">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6da9-9dcd-7b1c-4299" includeChildSelections="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="3f00-a753-4ed1-69f0" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="Guardians of Talsyn" field="name" scope="root-entry"/>
+                <modifier type="increment" value="1" field="points">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="7308-002a-47fb-3800" shared="true" roundUp="false" includeChildSelections="true"/>
+                  </repeats>
                 </modifier>
               </modifiers>
             </selectionEntry>
@@ -2508,7 +2533,7 @@
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="2003-a353-5d5f-de36"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="65. Enchanted Arrows" hidden="false" id="ad07-f741-6086-9f9d" type="selectionEntryGroup" targetId="bbf0-e3f8-85a7-513c" sortIndex=""/>
+            <entryLink import="true" name="65. Enchanted Arrows" hidden="false" id="ad07-f741-6086-9f9d" type="selectionEntryGroup" targetId="bbf0-e3f8-85a7-513c"/>
             <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="7526-ca32-3718-e2dc" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
               <entryLinks>
                 <entryLink import="true" name="Asrai Longbow" hidden="false" id="b23a-2ba5-3a53-ff5c" type="selectionEntry" targetId="4c0a-8554-3275-b8f2">
@@ -3283,112 +3308,6 @@
               <costs>
                 <cost name="pts" typeId="points" value="425"/>
               </costs>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Hounds of Orion" hidden="false" id="6071-d01a-6e63-db4d" sortIndex="1">
-                  <costs>
-                    <cost name="pts" typeId="points" value="20"/>
-                  </costs>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="486d-0df0-5879-7914"/>
-                  </constraints>
-                  <selectionEntries>
-                    <selectionEntry type="model" import="true" name="Hound of Orion " hidden="false" id="c1cf-1ffb-29cd-81a8" subType="crew">
-                      <constraints>
-                        <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="9836-4dfc-b8ce-7ee0-min" includeChildSelections="false"/>
-                        <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="9836-4dfc-b8ce-7ee0-max" includeChildSelections="false"/>
-                      </constraints>
-                      <profiles>
-                        <profile name="Hound of Orion " typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0144-f84d-9f6c-e3bb">
-                          <characteristics>
-                            <characteristic name="M" typeId="09ad-18df-607b-1215">9</characteristic>
-                            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-                            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-                            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-                            <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                            <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-                            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                            <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
-                            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beasts (Forest Spirit)</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <infoLinks>
-                        <infoLink name="Unbreakable" id="1f48-e345-0591-8ee2" hidden="false" type="rule" targetId="1c9d-2d99-6222-2853"/>
-                        <infoLink name="Frenzy" id="9158-e267-6b0e-086f" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
-                        <infoLink name="Forest Spirit" id="ecee-615d-12ce-7924" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
-                      </infoLinks>
-                    </selectionEntry>
-                  </selectionEntries>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Spear of Kurnous" hidden="false" id="c1fd-f6e6-97c1-1a7d" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e554-5948-5cca-886f-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e554-5948-5cca-886f-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Spear of Kurnous" typeId="781d-35fe-dd22-05d6" typeName="War Machine" hidden="false" id="0ae4-653d-aabc-e63c">
-                      <characteristics>
-                        <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Bolt Thrower</characteristic>
-                        <characteristic name="Range" typeId="1c88-efb0-083f-b945">18&quot;</characteristic>
-                        <characteristic name="Strength" typeId="6ca0-d074-628f-e276">As user +1</characteristic>
-                        <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Armour Piercing (1), Multiple Wounds (D3)</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <infoLinks>
-                    <infoLink name="Spear" id="9223-3349-bbfe-06ce" hidden="false" type="profile" targetId="be39-37ac-ac20-5053">
-                      <modifiers>
-                        <modifier type="append" value="The Spear of Kurnous gives Orion the Armour Piercing (1) and Multiple Wounds (D3) special rules." field="de63-d6da-efa8-00ac"/>
-                        <modifier type="set" value="Spear of Kurnous" field="annotation"/>
-                        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
-                      </modifiers>
-                    </infoLink>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Hawk&apos;s Talon" hidden="false" id="f3b9-1768-28e4-9338" sortIndex="3">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3273-6a75-17af-5bbe-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3273-6a75-17af-5bbe-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Hawk&apos;s Talon" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="f847-bb16-79b3-0c6b">
-                      <characteristics>
-                        <characteristic name="Range" typeId="af3c-d805-702c-9af9">36&quot;</characteristic>
-                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">6</characteristic>
-                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">6</characteristic>
-                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Cloak of Isha" hidden="false" id="3995-5502-a3c7-4dc2" sortIndex="4">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7501-e2ba-a1dd-1e75-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7501-e2ba-a1dd-1e75-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Cloak of Isha" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="ed47-8d53-50c8-9390">
-                      <characteristics>
-                        <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Cloak of Isha grants Orion a 6+ Ward Save and the Magic Resistance (2) special rule. At the start of each of your turns, roll a D6. On a score of 6, Orion regains a Wound lost earlier in the battle.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Horn of the Wild Hunt" hidden="false" id="8582-8d51-79d3-8ea9" sortIndex="5">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7573-70cd-4b77-533a-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7573-70cd-4b77-533a-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Horn of the Wild Hunt" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="117f-519d-b1e1-9f51">
-                      <characteristics>
-                        <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. At the start of any turn, the Horn of the Wild Hunt may be sounded. Once it has, Orion and all friendly units within 18&quot; gain the Devastating Charge and Fear special rules for the remainder of the turn.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-              </selectionEntries>
               <infoLinks>
                 <infoLink name="Terror" id="7d1e-78b6-acf4-1478" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
                 <infoLink name="Frenzy" id="0ca6-9607-5419-9b15" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
@@ -3409,11 +3328,87 @@
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f9de-d1c3-361b-b928" includeChildSelections="true"/>
               </constraints>
               <entryLinks>
-                <entryLink import="true" name="General" hidden="false" id="80aa-9d90-5d06-d928" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="-1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1ba1-0772-d638-a8d0-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1ba1-0772-d638-a8d0-max" includeChildSelections="false"/>
-                  </constraints>
+                <entryLink import="true" name="55. Equipment" hidden="false" id="08f4-e272-1206-17b1" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Horn of the Wild Hunt" hidden="false" id="8582-8d51-79d3-8ea9">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7573-70cd-4b77-533a-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7573-70cd-4b77-533a-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Horn of the Wild Hunt" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="117f-519d-b1e1-9f51">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. At the start of any turn, the Horn of the Wild Hunt may be sounded. Once it has, Orion and all friendly units within 18&quot; gain the Devastating Charge and Fear special rules for the remainder of the turn.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Cloak of Isha" hidden="false" id="3995-5502-a3c7-4dc2">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7501-e2ba-a1dd-1e75-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7501-e2ba-a1dd-1e75-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Cloak of Isha" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="ed47-8d53-50c8-9390">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Cloak of Isha grants Orion a 6+ Ward Save and the Magic Resistance (2) special rule. At the start of each of your turns, roll a D6. On a score of 6, Orion regains a Wound lost earlier in the battle.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="4616-eab1-8fbc-3207" type="selectionEntryGroup" targetId="7853-6aa4-00e8-09e0"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="e948-3f7c-445f-ec7d" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Spear of Kurnous" hidden="false" id="c1fd-f6e6-97c1-1a7d">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e554-5948-5cca-886f-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e554-5948-5cca-886f-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Spear of Kurnous" typeId="781d-35fe-dd22-05d6" typeName="War Machine" hidden="false" id="0ae4-653d-aabc-e63c">
+                          <characteristics>
+                            <characteristic name="Type" typeId="6081-ebe8-e15b-4e82">Bolt Thrower</characteristic>
+                            <characteristic name="Range" typeId="1c88-efb0-083f-b945">18&quot;</characteristic>
+                            <characteristic name="Strength" typeId="6ca0-d074-628f-e276">+1</characteristic>
+                            <characteristic name="Special Rules" typeId="d3a4-721b-f750-5564">Armour Piercing (1), Multiple Wounds (D3)</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <infoLinks>
+                        <infoLink name="Spear" id="9223-3349-bbfe-06ce" hidden="false" type="profile" targetId="be39-37ac-ac20-5053">
+                          <modifiers>
+                            <modifier type="append" value="The Spear of Kurnous gives Orion the Armour Piercing (1) and Multiple Wounds (D3) special rules." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="set" value="Spear of Kurnous" field="annotation"/>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="efdc-507b-6381-3d79" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Hawk&apos;s Talon" hidden="false" id="f3b9-1768-28e4-9338">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3273-6a75-17af-5bbe-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3273-6a75-17af-5bbe-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Hawk&apos;s Talon" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="f847-bb16-79b3-0c6b">
+                          <characteristics>
+                            <characteristic name="Range" typeId="af3c-d805-702c-9af9">36&quot;</characteristic>
+                            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">6</characteristic>
+                            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">6</characteristic>
+                            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
                 </entryLink>
               </entryLinks>
               <categoryLinks>
@@ -3432,6 +3427,42 @@
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Companions" id="9199-cdd2-c038-86b0" hidden="false">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Hounds of Orion" hidden="false" id="6071-d01a-6e63-db4d">
+                      <costs>
+                        <cost name="pts" typeId="points" value="20"/>
+                      </costs>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="486d-0df0-5879-7914"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Hound of Orion " typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0144-f84d-9f6c-e3bb">
+                          <characteristics>
+                            <characteristic name="M" typeId="09ad-18df-607b-1215">9</characteristic>
+                            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+                            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+                            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                            <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                            <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                            <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
+                            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beasts (Canine, Forest Spirit)</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <infoLinks>
+                        <infoLink name="Forest Spirit" id="ecee-615d-12ce-7924" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
+                        <infoLink name="Frenzy" id="9158-e267-6b0e-086f" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
+                        <infoLink name="Unbreakable" id="1f48-e345-0591-8ee2" hidden="false" type="rule" targetId="1c9d-2d99-6222-2853"/>
+                        <infoLink name="Hound of Orion " id="5d67-aff3-43c7-b23f" hidden="false" type="profile" targetId="0144-f84d-9f6c-e3bb"/>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Ariel" hidden="false" id="fc3e-3503-6717-76e7" sortIndex="2">
               <costs>
@@ -3454,95 +3485,104 @@
                 </profile>
               </profiles>
               <entryLinks>
-                <entryLink import="true" name="Lore of Athel Loren" hidden="false" id="b95a-83c0-4639-e173" type="selectionEntry" targetId="c85f-c430-1e4c-fc64" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="11b8-7acc-289a-87cc" includeChildSelections="false"/>
-                  </constraints>
+                <entryLink import="true" name="60. Wizard Level" hidden="false" id="93ed-8ece-9789-e629" type="selectionEntryGroup" targetId="e548-6739-0537-5d95"/>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="2ba2-2268-017f-ca86" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="4fab-b8b4-3302-7f59" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="The Dart of Doom" hidden="false" id="faf7-f51e-bab8-2167">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c4f6-6c43-4aa0-520d-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c4f6-6c43-4aa0-520d-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="The Dart of Doom" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="c487-1e68-d993-1e8f">
+                          <characteristics>
+                            <characteristic name="Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
+                            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90"/>
+                            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon. One use only. If the dart hits a model it causes 1 automatic Wound which Ignores Armour saves. If the wound is not saved the dart sucks energy out of the victim, draining their Strength characteristic by D3 to a minimum of 1.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
                 </entryLink>
-                <entryLink import="true" name="Wizard Level 4" hidden="false" id="6074-42a8-5905-b20f" type="selectionEntry" targetId="5460-3929-58ef-71ba" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ee90-f0de-824d-b4dd-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ee90-f0de-824d-b4dd-max" includeChildSelections="false"/>
-                  </constraints>
+                <entryLink import="true" name="55. Equipment" hidden="false" id="988a-25f5-9bc3-4dc4" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="The Acorn of Ages" hidden="false" id="8f96-2db6-e227-2d36">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="366a-d035-a3e7-074f-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="366a-d035-a3e7-074f-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="The Acorn of Ages" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="c62b-7f81-759b-903e">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. At the start of the game, after the battlefield has been set up, but before deployment begins, place a forest, no more than 12&quot; in diameter, on the battlefield. This forest can be placed anywhere at least 1&quot; away from another terrain feature and the edge of the battle field. Once the forest have been placed, it scatters 2D6&quot;. If this scatter causes a forest to end up within 1&quot; (or on top of) other terrain, or within 1&quot; of the battle field edge, reduce or increase the scatter by the smallest amount necessary to avoid the obstruction. When this has been done, declare which type of forest you want it to be from those available in the Main Rulebook.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="The Heartstone of Athel Loren" hidden="false" id="1c68-892a-1ece-a961">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="abf8-1b8f-be26-c233-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="abf8-1b8f-be26-c233-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="The Heartstone of Athel Loren" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="97b3-b1fc-a12c-2111">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">If Ariel successfully dispels a spell targeted at her, the casting Wizard must immediately take a Leadership test. If he fails, he immediately loses a Wizard level and may not cast that spell for the remainder of the game.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="The Wand of Wych Elm" hidden="false" id="6996-b997-bd2b-4c67">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1807-ee2c-ea00-eb46-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1807-ee2c-ea00-eb46-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="The Wand of Wych Elm" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="67cc-6ba9-010e-bc2b">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">This staff allows any failed Dispel attempt to be re-rolled.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="The Berry Wine" hidden="false" id="4b62-2ad9-fb78-cea7">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="134c-c0cc-7135-2e47-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="134c-c0cc-7135-2e47-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="The Berry Wine" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="9510-dc8e-6603-bf7f">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The wine can be drunk at the start of any phase. Ariel will immediately regain up to D3 Wounds previously lost during the battle.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
                 </entryLink>
-                <entryLink import="true" name="General" hidden="false" id="bed0-d3d6-1468-e67a" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="-1"/>
+                <entryLink import="true" name="65. Lore of Magic" hidden="false" id="a208-e9dc-72d0-d3f5" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
+                  <entryLinks>
+                    <entryLink import="true" name="Lore of Athel Loren" hidden="false" id="b95a-83c0-4639-e173" type="selectionEntry" targetId="c85f-c430-1e4c-fc64">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="11b8-7acc-289a-87cc" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="Loremaster" hidden="false" id="4fb6-2eed-b4db-7266" type="selectionEntry" targetId="a2bf-14a5-6723-7157">
+                  <modifiers>
+                    <modifier type="set" value="Lore of Athel Loren" field="annotation" affects="self.entries.rules"/>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="The Acorn of Ages" hidden="false" id="8f96-2db6-e227-2d36" sortIndex="7">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="366a-d035-a3e7-074f-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="366a-d035-a3e7-074f-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="The Acorn of Ages" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="c62b-7f81-759b-903e">
-                      <characteristics>
-                        <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. At the start of the game, after the battlefield has been set up, but before deployment begins, place a forest, no more than 12&quot; in diameter, on the battlefield. This forest can be placed anywhere at least 1&quot; away from another terrain feature and the edge of the battle field. Once the forest have been placed, it scatters 2D6&quot;. If this scatter causes a forest to end up within 1&quot; (or on top of) other terrain, or within 1&quot; of the battle field edge, reduce or increase the scatter by the smallest amount necessary to avoid the obstruction. When this has been done, declare which type of forest you want it to be from those available in the Main Rulebook.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="The Dart of Doom" hidden="false" id="faf7-f51e-bab8-2167" sortIndex="3">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c4f6-6c43-4aa0-520d-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c4f6-6c43-4aa0-520d-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="The Dart of Doom" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="c487-1e68-d993-1e8f">
-                      <characteristics>
-                        <characteristic name="Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
-                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90"/>
-                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
-                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon. One use only. If the dart hits a model it causes 1 automatic Wound which Ignores Armour saves. If the wound is not saved the dart sucks energy out of the victim, draining their Strength characteristic by D3 to a minimum of 1.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="The Heartstone of Athel Loren" hidden="false" id="1c68-892a-1ece-a961" sortIndex="4">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="abf8-1b8f-be26-c233-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="abf8-1b8f-be26-c233-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="The Heartstone of Athel Loren" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="97b3-b1fc-a12c-2111">
-                      <characteristics>
-                        <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">If Ariel successfully dispels a spell targeted at her, the casting Wizard must immediately take a Leadership test. If he fails, he immediately loses a Wizard level and may not cast that spell for the remainder of the game.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="The Wand of Wych Elm" hidden="false" id="6996-b997-bd2b-4c67" sortIndex="5">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1807-ee2c-ea00-eb46-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1807-ee2c-ea00-eb46-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="The Wand of Wych Elm" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="67cc-6ba9-010e-bc2b">
-                      <characteristics>
-                        <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">This staff allows any failed Dispel attempt to be re-rolled.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="The Berry Wine" hidden="false" id="4b62-2ad9-fb78-cea7" sortIndex="6">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="134c-c0cc-7135-2e47-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="134c-c0cc-7135-2e47-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="The Berry Wine" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="9510-dc8e-6603-bf7f">
-                      <characteristics>
-                        <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. The wine can be drunk at the start of any phase. Ariel will immediately regain up to D3 Wounds previously lost during the battle.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-              </selectionEntries>
               <infoLinks>
                 <infoLink name="Magic Resistance (3)" id="65c9-77e8-087e-9768" hidden="false" type="rule" targetId="9b99-4e37-be08-231a"/>
                 <infoLink name="Blessing of the Ancients" id="5f81-5618-3fb2-a546" hidden="false" type="rule" targetId="24fc-80ea-e9a4-b309"/>
                 <infoLink name="Fly (9)" id="df88-4bfe-7aa9-51ed" hidden="false" type="rule" targetId="2ba2-2aaa-3f36-4b24"/>
                 <infoLink name="Forest Spirit" id="ee79-7535-8f0a-6069" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
-                <infoLink name="Loremaster (Lore of Athel Loren)" id="0fbf-1f81-7db9-dc75" hidden="false" type="rule" targetId="4384-4bf5-ea6e-c49d"/>
               </infoLinks>
               <rules>
                 <rule name="Screech" id="2500-5eba-0712-3f61" hidden="false">
@@ -3567,45 +3607,154 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="3cae-295d-64d9-c002" includeChildSelections="true"/>
               </constraints>
-              <profiles>
-                <profile name="Neastra" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="bcc9-1d34-1b07-37aa">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">6</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">7</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459"/>
-                  </characteristics>
-                </profile>
-                <profile name="Arahan" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="1129-4740-7abf-f078">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">6</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">7</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459"/>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="90"/>
-              </costs>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Mount" id="c401-8326-6ba0-78a9" hidden="false" defaultSelectionEntryId="0820-402e-6905-4e5c" sortIndex="1">
+              <infoLinks>
+                <infoLink name="Elven Grace" id="64df-5b67-9654-6dba" hidden="false" type="rule" targetId="8c96-c7fe-2a85-f2f9"/>
+                <infoLink name="Asrai Archery" id="ea74-11b3-bc47-5ea3" hidden="false" type="rule" targetId="7a83-61cd-defa-0796"/>
+              </infoLinks>
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Naestra " hidden="false" id="d8da-dd30-e1a3-5262" sortIndex="1">
                   <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f0c8-7480-d7fb-1749-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f0c8-7480-d7fb-1749-max" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a9ee-80ce-ca1d-db19-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a9ee-80ce-ca1d-db19-max" includeChildSelections="false"/>
                   </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="90"/>
+                  </costs>
+                  <profiles>
+                    <profile name="Neastra" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="bcc9-1d34-1b07-37aa">
+                      <characteristics>
+                        <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
+                        <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+                        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">6</characteristic>
+                        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                        <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                        <characteristic name="I" typeId="7cca-e51f-edc2-7322">7</characteristic>
+                        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+                        <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+                        <characteristic name="Type" typeId="13f9-a26b-05af-3459"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <entryLinks>
+                    <entryLink import="true" name="20. Primary Weapon" hidden="false" id="b1a2-df35-55cc-c370" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Talon of Dawn" hidden="false" id="2ac6-7543-c50b-b6a7">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d736-9461-07ee-f59c-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d736-9461-07ee-f59c-max" includeChildSelections="false"/>
+                          </constraints>
+                          <profiles>
+                            <profile name="Talon of Dawn" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="e534-f1c6-54ee-fe47">
+                              <characteristics>
+                                <characteristic name="Range" typeId="af3c-d805-702c-9af9">30&quot;</characteristic>
+                                <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
+                                <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                                <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon. Armour Piercing (1), Flaming Attacks, Multiple Wounds (D6).
+If an attack from the Talon of Dawn causes one or more unsaved Wounds, they regain a single Wound lost earlier in the battle.</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </entryLink>
+                    <entryLink import="true" name="50. Handheld Armour" hidden="false" id="5420-986d-1506-7c25" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
+                      <entryLinks>
+                        <entryLink import="true" name="Shield" hidden="false" id="df98-43f0-4b62-7325" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3394-74d4-c0f2-91d8" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </entryLink>
+                    <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="03a8-5710-0beb-ac4b" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                      <entryLinks>
+                        <entryLink import="true" name="Hand Weapon" hidden="false" id="5345-00b1-fd5a-5260" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="96bc-f36c-4893-1969" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Arahan" hidden="false" id="b0a9-4dbf-c5a2-6dc9" sortIndex="2">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="609e-d6d0-0f7d-3cd3-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="609e-d6d0-0f7d-3cd3-max" includeChildSelections="false"/>
+                  </constraints>
+                  <costs>
+                    <cost name="pts" typeId="points" value="90"/>
+                  </costs>
+                  <profiles>
+                    <profile name="Arahan" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0a46-8a32-ec53-07fe">
+                      <characteristics>
+                        <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
+                        <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+                        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">6</characteristic>
+                        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                        <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                        <characteristic name="I" typeId="7cca-e51f-edc2-7322">7</characteristic>
+                        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+                        <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
+                        <characteristic name="Type" typeId="13f9-a26b-05af-3459"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <entryLinks>
+                    <entryLink import="true" name="20. Primary Weapon" hidden="false" id="2ff0-21a7-f917-cfea" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                      <selectionEntries>
+                        <selectionEntry type="upgrade" import="true" name="Talon of Dusk" hidden="false" id="bc58-57c4-528f-01df">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6c2c-db2a-89ce-12ac-min" includeChildSelections="false"/>
+                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6c2c-db2a-89ce-12ac-max" includeChildSelections="false"/>
+                          </constraints>
+                          <profiles>
+                            <profile name="Talon of Dusk" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="7121-e1fa-cdce-93f2">
+                              <characteristics>
+                                <characteristic name="Range" typeId="af3c-d805-702c-9af9">30&quot;</characteristic>
+                                <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">2</characteristic>
+                                <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">2D6</characteristic>
+                                <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon. Armour Piercing (1), Poisoned Attacks, Rapid Fire</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                        </selectionEntry>
+                      </selectionEntries>
+                    </entryLink>
+                    <entryLink import="true" name="50. Handheld Armour" hidden="false" id="676f-1cbc-37c8-8d2d" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
+                      <entryLinks>
+                        <entryLink import="true" name="Shield" hidden="false" id="d94d-0d3f-4fdf-4f59" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0f3b-6796-99e6-b8de" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </entryLink>
+                    <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="4fbc-2e74-6b32-2751" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                      <entryLinks>
+                        <entryLink import="true" name="Hand Weapon" hidden="false" id="1eae-6d34-c607-f752" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                          <constraints>
+                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0cd8-415a-2f15-e914" includeChildSelections="false"/>
+                          </constraints>
+                        </entryLink>
+                      </entryLinks>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <rules>
+                <rule name="Conjoined Destiny" id="275c-b4d6-e245-077c" hidden="false">
+                  <description>If Naestra and Arahan have been reduced to less than 4 Wounds at the end any turn, they will be restored to 4 Wounds.</description>
+                </rule>
+                <rule name="Sisters of Twilight" id="520a-cac2-4d73-21cb" hidden="false">
+                  <description>Naestra’s close combat attacks receive a +1 bonus To Wound against models from the Forces of Destruction. Arahan’s close combat attacks receive a +1 bonus To Wound against models from the Forces of Order.</description>
+                </rule>
+              </rules>
+              <entryLinks>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="1f0f-7007-fb7b-b357" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171" sortIndex="-1"/>
+                <entryLink import="true" name="70. Mount" hidden="false" id="4af1-9f6a-b344-342c" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
                   <entryLinks>
                     <entryLink import="true" name="Forest Dragon" hidden="false" id="5ee9-bafa-8c1e-a970" type="selectionEntry" targetId="206a-b1cc-7f65-e13f" sortIndex="2">
                       <modifiers>
@@ -3635,61 +3784,10 @@
                       </rules>
                     </entryLink>
                   </entryLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <infoLinks>
-                <infoLink name="Elven Grace" id="64df-5b67-9654-6dba" hidden="false" type="rule" targetId="8c96-c7fe-2a85-f2f9"/>
-                <infoLink name="Asrai Archery" id="ea74-11b3-bc47-5ea3" hidden="false" type="rule" targetId="7a83-61cd-defa-0796"/>
-              </infoLinks>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Talon of Dusk" hidden="false" id="bc58-57c4-528f-01df" sortIndex="3">
                   <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6c2c-db2a-89ce-12ac-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6c2c-db2a-89ce-12ac-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Talon of Dusk" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="7121-e1fa-cdce-93f2">
-                      <characteristics>
-                        <characteristic name="Range" typeId="af3c-d805-702c-9af9">30&quot;</characteristic>
-                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">2</characteristic>
-                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3D6</characteristic>
-                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon. Armour Piercing (1), Poisoned Attacks, Rapid Fire</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Talon of Dawn" hidden="false" id="2ac6-7543-c50b-b6a7" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d736-9461-07ee-f59c-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d736-9461-07ee-f59c-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Talon of Dawn" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="e534-f1c6-54ee-fe47">
-                      <characteristics>
-                        <characteristic name="Range" typeId="af3c-d805-702c-9af9">30&quot;</characteristic>
-                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
-                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
-                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon. Armour Piercing (1), Flaming Attacks, Multiple Wounds (D6)</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-              </selectionEntries>
-              <rules>
-                <rule name="Conjoined Destiny" id="275c-b4d6-e245-077c" hidden="false">
-                  <description>If Naestra and Arahan have been reduced to less than 4 Wounds at the end any turn, they will be restored to 4 Wounds.</description>
-                </rule>
-                <rule name="Sisters of Twilight" id="520a-cac2-4d73-21cb" hidden="false">
-                  <description>Naestra’s close combat attacks receive a +1 bonus To Wound against models from the Forces of Destruction. Arahan’s close combat attacks receive a +1 bonus To Wound against models from the Forces of Order.</description>
-                </rule>
-              </rules>
-              <entryLinks>
-                <entryLink import="true" name="Shield" hidden="false" id="df98-43f0-4b62-7325" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="4">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3394-74d4-c0f2-91d8" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3280-cfd5-3dbd-d2ae" includeChildSelections="false"/>
                   </constraints>
                 </entryLink>
-                <entryLink import="true" name="General" hidden="false" id="2c96-56df-cc02-51ea" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="-1"/>
               </entryLinks>
               <categoryLinks>
                 <categoryLink name="Infantry" hidden="false" id="c0fd-84aa-afb1-de50" targetId="22c9-1606-58f8-2e60" primary="false"/>
@@ -3714,51 +3812,78 @@
                     <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Wood Elf)</characteristic>
                   </characteristics>
                 </profile>
+                <profile name="Skaryn the Eye Thief" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="a756-a314-b306-f15f">
+                  <characteristics>
+                    <characteristic name="Range" typeId="af3c-d805-702c-9af9">24&quot;</characteristic>
+                    <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">3</characteristic>
+                    <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
+                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Sniper. Rather than rolling to Hit using Ballistic Skill, the target must pass a Weapon Skill test to avoid being Hit. If the Wound is unsaved, and the To Wound roll was a 6, the model suffers a -5 penalty to Weapon Skill, Ballistics Skill, and Initiative (to a minimum of 1) for the rest of the game. A model can only suffer this penalty once.</characteristic>
+                  </characteristics>
+                </profile>
               </profiles>
               <costs>
-                <cost name="pts" typeId="points" value="185"/>
+                <cost name="pts" typeId="points" value="190"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="General" hidden="false" id="9cc2-92c0-f291-3213" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="-1"/>
-                <entryLink import="true" name="Light Armour" hidden="false" id="f755-f0c0-6990-2012" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="2">
+                <entryLink import="true" name="90. Magic Items" hidden="false" id="4e5c-6f13-f660-08f2" type="selectionEntryGroup" targetId="e1f0-e61a-8c81-4eb0">
                   <modifiers>
-                    <modifier type="set" value="1" field="2f49-6379-8be5-5ddf">
-                      <conditions>
-                        <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
+                    <modifier type="set" value="true" field="hidden" affects="self.entries.db4d-49ed-07ad-29ca"/>
+                    <modifier type="increment" value="75" field="d364-5a06-f141-2697"/>
                   </modifiers>
                 </entryLink>
-                <entryLink import="true" name="90. Magic Items" hidden="false" id="4f4c-34f2-7861-b1a2" type="selectionEntryGroup" targetId="e1f0-e61a-8c81-4eb0" sortIndex="3">
-                  <modifiers>
-                    <modifier type="set" value="100" field="d364-5a06-f141-2697"/>
-                  </modifiers>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="93af-4aab-ab4d-80fb" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="4ecf-5be9-015c-3a84" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <entryLinks>
+                    <entryLink import="true" name="Light Armour" hidden="false" id="b14e-ca18-4b81-0044" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="824e-28ea-721f-c17a" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
-                <entryLink import="true" name="Spear" hidden="false" id="f79f-c746-9647-268c" type="selectionEntry" targetId="a901-4548-955d-623c" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f249-8ad8-0bdd-6a4d" includeChildSelections="false"/>
-                  </constraints>
+                <entryLink import="true" name="50. Handheld Armour" hidden="false" id="2d9a-7851-3894-ee36" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
+                  <entryLinks>
+                    <entryLink import="true" name="Shield" hidden="false" id="da7a-9d6a-5643-cae1" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c34c-89a3-2768-8393" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
-                <entryLink import="true" name="Shield" hidden="false" id="8f6c-dd46-f8a1-ee06" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="2">
-                  <modifiers>
-                    <modifier type="set" value="1" field="3d59-dcea-ec30-dc28">
-                      <conditions>
-                        <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="aef1-5f5f-22e0-5d8f" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Spear of Talsyn" hidden="false" id="4dfd-37e2-9eff-03b8">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="78b5-3b47-7117-19d9-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="78b5-3b47-7117-19d9-max" includeChildSelections="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Spear" id="686f-a46e-751e-dfca" hidden="false" type="profile" targetId="be39-37ac-ac20-5053">
+                          <modifiers>
+                            <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
+                            <modifier type="set" value="Spear of Talsyn" field="annotation"/>
+                            <modifier type="append" value="Armour Piercing (1)." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
                 </entryLink>
               </entryLinks>
               <rules>
-                <rule name="Skaryn the Eye Thief" id="aa7b-f20c-5ee1-0e2f" hidden="false">
-                  <description>At the start of each of your turns, nominate a single enemy model within 18&quot; of Araloth. That model takes a Strength 4 hit. If the Wound is unsaved, and the To Wound roll was a 6, the model suffers a -5 penalty to Weapon Skill, Ballistics Skill, and Initiative (to a minimum of 1) for the rest of the game. A model can only suffer this penalty once.</description>
-                </rule>
                 <rule name="Boldest of the Bold" id="86b3-c87d-acfa-f1a4" hidden="false">
                   <description>Whilst Araloth is a lone character, he has the Unbreakable special rule.</description>
                 </rule>
+                <rule name="Guardians of Talsyn" id="640e-17a2-8a09-bad0" hidden="false">
+                  <description>If Araloth is included in your army, you may upgrade one unit of Eternal Guard to the Guardians of Talsyn for a cost of +1 point per model. This unit has +1 Attack.</description>
+                </rule>
+                <rule name="Favour of the Goddess" id="fb1b-4f45-78c0-396f" hidden="false">
+                  <description>Araloth has a 5+ Ward Save.</description>
+                </rule>
               </rules>
               <infoLinks>
-                <infoLink name="Ward Save (5+)" id="7782-3c30-d50f-1b8a" hidden="false" type="rule" targetId="4b60-6477-75a8-f6dd"/>
                 <infoLink name="Elven Grace" id="e6c8-3e3e-0014-3762" hidden="false" type="rule" targetId="8c96-c7fe-2a85-f2f9"/>
                 <infoLink name="Strider (Forest)" id="aba3-e776-26a9-81b8" hidden="false" type="rule" targetId="8d09-c701-2658-67e8"/>
               </infoLinks>
@@ -3768,98 +3893,6 @@
                 <categoryLink name="Z Shield" hidden="false" id="24d5-dcc6-b701-0ffe" targetId="0210-637d-ff12-a760" primary="false"/>
                 <categoryLink name="Infantry" hidden="false" id="a35a-38d7-28a4-b732" targetId="22c9-1606-58f8-2e60" primary="false"/>
                 <categoryLink name="Z Armour" hidden="false" id="64be-7cb6-0bc7-6254" targetId="387c-2b7c-0a30-7305" primary="false"/>
-              </categoryLinks>
-            </selectionEntry>
-            <selectionEntry type="model" import="true" name="Thalandor Doomstar" hidden="false" id="6195-0278-8840-9ca5" sortIndex="5">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="019b-ab48-a227-c23e" includeChildSelections="true"/>
-              </constraints>
-              <profiles>
-                <profile name="Thalandor" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6352-2cb9-adfc-c232">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">7</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">7</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">8</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Cavalry (Special Character, Wood Elf)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <costs>
-                <cost name="pts" typeId="points" value="235"/>
-              </costs>
-              <entryLinks>
-                <entryLink import="true" name="Great Eagle" hidden="false" id="bd80-3f79-fe26-0e28" type="selectionEntry" targetId="4790-dfb5-2054-2f88" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7215-7fa7-f4a4-de56" includeChildSelections="false"/>
-                  </constraints>
-                  <modifiers>
-                    <modifier type="set" value="Gwandor" field="name" affects="profiles.Model"/>
-                  </modifiers>
-                </entryLink>
-                <entryLink import="true" name="Shield" hidden="false" id="ca5d-522d-281a-7b16" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="2">
-                  <modifiers>
-                    <modifier type="set" value="1" field="3d59-dcea-ec30-dc28">
-                      <conditions>
-                        <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
-                </entryLink>
-                <entryLink import="true" name="General" hidden="false" id="0ad0-3b23-8cc6-b601" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="-1"/>
-                <entryLink import="true" name="90. Magic Items" hidden="false" id="dc4a-7a15-db15-24da" type="selectionEntryGroup" targetId="e1f0-e61a-8c81-4eb0" sortIndex="5">
-                  <modifiers>
-                    <modifier type="set" value="50" field="d364-5a06-f141-2697"/>
-                    <modifier type="set" value="true" field="hidden" affects="self.entries.0da9-2195-1756-586d"/>
-                    <modifier type="set" value="true" field="hidden" affects="self.entries.db4d-49ed-07ad-29ca"/>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-              <infoLinks>
-                <infoLink name="Elven Grace" id="18ed-bfe2-9460-d268" hidden="false" type="rule" targetId="8c96-c7fe-2a85-f2f9"/>
-              </infoLinks>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Spear of Daith" hidden="false" id="bfa5-03e6-3c93-7ac8" sortIndex="3">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c6ad-102e-9e78-90b8-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c6ad-102e-9e78-90b8-max" includeChildSelections="false"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Light Lance" id="bd9a-37b5-0fd0-68de" hidden="false" type="profile" targetId="b2d2-2eb6-2bd2-ddbb">
-                      <modifiers>
-                        <modifier type="append" value="The Spear of Daith gives Thalandor a Parry save (5+), even while mounted
-" field="de63-d6da-efa8-00ac" join="
-
-"/>
-                        <modifier type="set" value="Spear of Daith" field="annotation"/>
-                        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
-                      </modifiers>
-                    </infoLink>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Talisman of Qwar" hidden="false" id="bc07-e0ac-dc45-6a8c" sortIndex="4">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9809-9145-1212-cc01-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9809-9145-1212-cc01-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Talisman of Qwar" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="4c19-e135-8f69-853e">
-                      <characteristics>
-                        <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">Models targeting against Thalandor and Gwandor with missile attacks suffer -1 To Hit.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-              </selectionEntries>
-              <categoryLinks>
-                <categoryLink name="Z Shield" hidden="false" id="c242-a482-802e-ebae" targetId="0210-637d-ff12-a760" primary="false"/>
-                <categoryLink name="Monstrous Cavalry" hidden="false" id="2388-0ede-648b-c06f" targetId="82d3-4589-72b4-b6ed" primary="false"/>
-                <categoryLink name="Z Armour" hidden="false" id="94e8-0f7f-7653-eb87" targetId="387c-2b7c-0a30-7305" primary="false"/>
               </categoryLinks>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Durthu Oakheart" hidden="false" id="3829-76d6-30d1-4eda" sortIndex="6">
@@ -3895,49 +3928,45 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
                 <cost name="pts" typeId="points" value="320"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="General" hidden="false" id="e551-41f9-b7cb-cb57" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="-1"/>
-                <entryLink import="true" name="Wizard Level 1" hidden="false" id="fd4c-0652-6c25-b53a" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cf7e-40d3-7417-958a-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cf7e-40d3-7417-958a-max" includeChildSelections="false"/>
-                  </constraints>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="f22b-8452-f7da-b9a1" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="7ac1-2e89-6897-9962" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Sword of Daith" hidden="false" id="1f13-56b8-0b16-4ac8">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="34e4-3658-99cf-ada7-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="34e4-3658-99cf-ada7-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Sword of Daith" typeId="6f70-cea1-702c-43bc" typeName="Melee Weapon" hidden="false" id="867e-084a-37de-a9e9">
+                          <characteristics>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. This sword gives Durthu the Hatred special rule. In addition, he can never lose his Frenzy special rule.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
                 </entryLink>
-                <entryLink import="true" name="Strangleroots" hidden="false" id="56e1-9d8d-2fe2-3e0b" type="selectionEntry" targetId="36bb-ac79-f6de-50cc" sortIndex="4">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0019-5452-749c-8ee2-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0019-5452-749c-8ee2-max" includeChildSelections="false"/>
-                  </constraints>
+                <entryLink import="true" name="65. Lore of Magic" hidden="false" id="f883-0c58-928a-7ab4" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
+                  <entryLinks>
+                    <entryLink import="true" name="Lore of Beasts" hidden="false" id="8f6f-fb92-8441-f607" type="selectionEntry" targetId="b436-b410-dd41-304f">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b714-6744-a0fd-db85-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b714-6744-a0fd-db85-max" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
-                <entryLink import="true" name="91. Forest Spites" hidden="false" id="8a0b-598e-de2e-a18f" type="selectionEntryGroup" targetId="c850-af54-29c4-33ae" sortIndex="5">
-                  <constraints>
-                    <constraint type="max" value="50" field="points" scope="parent" shared="true" id="847d-df28-f9fc-5b37"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="Lore of Beasts" hidden="false" id="8f6f-fb92-8441-f607" type="selectionEntry" targetId="b436-b410-dd41-304f" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b714-6744-a0fd-db85-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b714-6744-a0fd-db85-max" includeChildSelections="false"/>
-                  </constraints>
+                <entryLink import="true" name="60. Wizard Level" hidden="false" id="d11e-e23f-887e-d8a9" type="selectionEntryGroup" targetId="1d19-3d5b-2087-e988"/>
+                <entryLink import="true" name="90. Magic Items" hidden="false" id="bdfd-dcf2-c4c2-00f3" type="selectionEntryGroup" targetId="e1f0-e61a-8c81-4eb0">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden" affects="self.entries.db4d-49ed-07ad-29ca"/>
+                    <modifier type="increment" value="50" field="d364-5a06-f141-2697"/>
+                  </modifiers>
                 </entryLink>
               </entryLinks>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Sword of Daith" hidden="false" id="1f13-56b8-0b16-4ac8" sortIndex="3">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="34e4-3658-99cf-ada7-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="34e4-3658-99cf-ada7-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Sword of Daith" typeId="6f70-cea1-702c-43bc" typeName="Melee Weapon" hidden="false" id="867e-084a-37de-a9e9">
-                      <characteristics>
-                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-                        <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
-                        <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. This sword allows Durthu to re-roll failed To Hit rolls every turn, not just the first. In addition, he can never lose his Frenzy special rule.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-              </selectionEntries>
               <infoLinks>
                 <infoLink name="Tree Whack" id="b440-6700-0de9-4998" hidden="false" type="rule" targetId="a2d1-cbfa-e1ce-6c8f"/>
                 <infoLink name="Blessing of the Ancients" id="62a2-14f9-c498-0bc4" hidden="false" type="rule" targetId="24fc-80ea-e9a4-b309"/>
@@ -3953,6 +3982,7 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
                     <modifier type="set" value="Durthu Oakhead" field="annotation"/>
                   </modifiers>
                 </infoLink>
+                <infoLink name="Strangleroots" id="d96e-6b90-b55d-6778" hidden="false" type="profile" targetId="267e-dd77-79b2-3367"/>
               </infoLinks>
               <rules>
                 <rule name="Unburden of Thieflings" id="5c51-8dbb-122b-ad19" hidden="false">
@@ -3966,11 +3996,45 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Belthanos " hidden="false" id="1182-0bd5-74de-adb1" sortIndex="7">
               <entryLinks>
-                <entryLink import="true" name="General" hidden="false" id="e8a0-661a-7b4e-2eea" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="-1"/>
-                <entryLink import="true" name="Polearm/Halberd" hidden="false" id="6f84-c391-2204-c583" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="304c-f02c-6ed3-1b7b" includeChildSelections="false"/>
-                  </constraints>
+                <entryLink import="true" name="55. Equipment" hidden="false" id="1ac5-74be-f60b-ed3f" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="War-horn of Kurnous" hidden="false" id="c31f-e3e4-1742-8a53">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="97b4-c865-572d-37e3-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="97b4-c865-572d-37e3-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="War-horn of Kurnous" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="9936-ab5f-bc7c-42c0">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. At the start of any turn, the War-horn of Kurnous may be sounded. All friendly units within 12&quot; may re-roll failed charge distances this turn.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Mantle of Leaves" hidden="false" id="6778-68a4-bdf2-b85f">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1c6f-be82-b187-589a-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1c6f-be82-b187-589a-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Mantle of Leaves" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="d2c0-d701-b05f-206f">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">This item allows Belthanos to re-roll failed Ward saves.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="afa8-d252-bf75-7830" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="b43a-10eb-0770-044a" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Polearm/Halberd" hidden="false" id="6f84-c391-2204-c583" type="selectionEntry" targetId="757a-ff3d-710c-2d8b">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="304c-f02c-6ed3-1b7b" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
               </entryLinks>
               <constraints>
@@ -4009,34 +4073,6 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
                   </characteristics>
                 </profile>
               </profiles>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="War-horn of Kurnous" hidden="false" id="c31f-e3e4-1742-8a53">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="97b4-c865-572d-37e3-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="97b4-c865-572d-37e3-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="War-horn of Kurnous" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="9936-ab5f-bc7c-42c0">
-                      <characteristics>
-                        <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. At the start of any turn, the War-horn of Kurnous may be sounded. All friendly units within 12&quot; may re-roll failed charge distances this turn.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Mantle of Leaves" hidden="false" id="6778-68a4-bdf2-b85f">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1c6f-be82-b187-589a-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1c6f-be82-b187-589a-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Mantle of Leaves" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="d2c0-d701-b05f-206f">
-                      <characteristics>
-                        <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">This item allows Belthanos to re-roll failed Ward saves.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-              </selectionEntries>
               <infoLinks>
                 <infoLink name="Flammable" id="3d2f-8247-74fc-8aa6" hidden="false" type="rule" targetId="ec58-b231-6a2f-a163"/>
                 <infoLink name="Fly (7)" id="fa9c-a596-6beb-4c2a" hidden="false" type="rule" targetId="36ba-3349-99bd-1979"/>
@@ -4088,64 +4124,72 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
                 </profile>
               </profiles>
               <entryLinks>
-                <entryLink import="true" name="General" hidden="false" id="101d-f619-dbf6-d26a" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="-1"/>
-                <entryLink import="true" name="Wizard Level 2" hidden="false" id="99f1-ccaf-5942-4732" type="selectionEntry" targetId="801a-bc0a-a767-61db" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="360e-a41f-e430-4be5-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="360e-a41f-e430-4be5-max" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="Lore of Athel Loren" hidden="false" id="8461-9182-4589-51ed" type="selectionEntry" targetId="c85f-c430-1e4c-fc64" sortIndex="3">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="66d1-a8b3-7068-1f21-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="66d1-a8b3-7068-1f21-max" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="90. Magic Items" hidden="false" id="252e-2204-c181-3718" type="selectionEntryGroup" targetId="e1f0-e61a-8c81-4eb0" sortIndex="6">
+                <entryLink import="true" name="90. Magic Items" hidden="false" id="252e-2204-c181-3718" type="selectionEntryGroup" targetId="e1f0-e61a-8c81-4eb0" sortIndex="">
                   <modifiers>
                     <modifier type="set" value="50" field="d364-5a06-f141-2697"/>
                     <modifier type="set" value="true" field="hidden" affects="self.entries.0da9-2195-1756-586d"/>
                     <modifier type="set" value="true" field="hidden" affects="self.entries.db4d-49ed-07ad-29ca"/>
                   </modifiers>
                 </entryLink>
+                <entryLink import="true" name="65. Lore of Magic" hidden="false" id="f658-9eff-35a3-f52f" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
+                  <entryLinks>
+                    <entryLink import="true" name="Lore of Athel Loren" hidden="false" id="8461-9182-4589-51ed" type="selectionEntry" targetId="c85f-c430-1e4c-fc64">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="66d1-a8b3-7068-1f21-min" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="dc0b-98ea-5253-6303" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="60. Wizard Level" hidden="false" id="5bab-a6cb-1d04-faa0" type="selectionEntryGroup" targetId="2f28-d537-4a60-b96b"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="e812-14bd-36da-8263" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Kurnotheal&apos;s Wrath" hidden="false" id="5283-3ae9-a505-7e53">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fe11-af0b-23f0-9bf4-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe11-af0b-23f0-9bf4-max" includeChildSelections="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Spear" id="24ff-e1b3-dfe4-ab48" hidden="false" type="profile" targetId="be39-37ac-ac20-5053">
+                          <modifiers>
+                            <modifier type="set" value="Kurnotheal&apos;s Wrath" field="annotation"/>
+                            <modifier type="append" value="All attacks made with this weapon may re-roll failed rolls To Hit and have the Multiple Wounds (D3) special rule.
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Javelins" id="b72a-0ead-bc49-eaf1" hidden="false" type="profile" targetId="3ecc-5d9c-7d29-ee2f">
+                          <modifiers>
+                            <modifier type="set" value="Kurnotheal&apos;s Wrath" field="annotation"/>
+                            <modifier type="append" value="All attacks made with this weapon may re-roll failed rolls To Hit and have the Multiple Wounds (D3) special rule.
+" field="96b8-546e-ac33-6054" join="
+
+"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="55. Equipment" hidden="false" id="8b46-48fb-e386-d2d9" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Verdian Crown" hidden="false" id="8d4b-a120-39ec-3527">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8cf0-8e13-f89d-0033-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8cf0-8e13-f89d-0033-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Verdian Crown" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="9bf9-c710-bd03-7887">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">All friendly units with the Forest Spirit special rule within 6&quot; of the Lady of Vines counts as being in soft cover.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
               </entryLinks>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Kurnotheal&apos;s Wrath" hidden="false" id="5283-3ae9-a505-7e53" sortIndex="4">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fe11-af0b-23f0-9bf4-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe11-af0b-23f0-9bf4-max" includeChildSelections="false"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Spear" id="24ff-e1b3-dfe4-ab48" hidden="false" type="profile" targetId="be39-37ac-ac20-5053">
-                      <modifiers>
-                        <modifier type="set" value="Kurnotheal&apos;s Wrath" field="annotation"/>
-                        <modifier type="append" value="All attacks made with this weapon may re-roll failed rolls To Hit and have the Multiple Wounds (D3) special rule.
-" field="de63-d6da-efa8-00ac"/>
-                      </modifiers>
-                    </infoLink>
-                    <infoLink name="Javelins" id="b72a-0ead-bc49-eaf1" hidden="false" type="profile" targetId="3ecc-5d9c-7d29-ee2f">
-                      <modifiers>
-                        <modifier type="set" value="Kurnotheal&apos;s Wrath" field="annotation"/>
-                        <modifier type="append" value="All attacks made with this weapon may re-roll failed rolls To Hit and have the Multiple Wounds (D3) special rule.
-" field="de63-d6da-efa8-00ac"/>
-                      </modifiers>
-                    </infoLink>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Verdian Crown" hidden="false" id="8d4b-a120-39ec-3527" sortIndex="5">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8cf0-8e13-f89d-0033-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8cf0-8e13-f89d-0033-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Verdian Crown" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="9bf9-c710-bd03-7887">
-                      <characteristics>
-                        <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">All friendly units with the Forest Spirit special rule within 6&quot; of the Lady of Vines counts as being in soft cover.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-              </selectionEntries>
               <infoLinks>
                 <infoLink name="Blessing of the Ancients" id="11d0-8631-e5e8-871e" hidden="false" type="rule" targetId="24fc-80ea-e9a4-b309"/>
                 <infoLink name="Flammable" id="41dc-9b1a-613e-efb1" hidden="false" type="rule" targetId="ec58-b231-6a2f-a163"/>
@@ -4192,11 +4236,32 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
                 <cost name="pts" typeId="points" value="105"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="General" hidden="false" id="a603-6c59-65d0-b0cd" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="-1"/>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="69f0-be22-885c-90f5" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3562-de83-4249-3628" includeChildSelections="false"/>
-                  </constraints>
+                <entryLink import="true" name="55. Equipment" hidden="false" id="d48a-6b08-a3a8-7751" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="The Drum of Orcskin" hidden="false" id="5200-56d2-b6e2-435b">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2130-4f1b-5695-018b-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2130-4f1b-5695-018b-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="The Drum of Orcskin" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="82a2-1b98-a9ab-48ec">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The Drum of Orcskin gives Wychwethyl and any unit he joins the Swiftstride special rule when they roll their charge distance.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="6c4a-6936-784f-7f4b" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="5867-ae0f-e474-deb7" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="69f0-be22-885c-90f5" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3562-de83-4249-3628" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
               </entryLinks>
               <profiles>
@@ -4220,31 +4285,15 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
                   </characteristics>
                 </profile>
               </profiles>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="The Drum of Orcskin" hidden="false" id="5200-56d2-b6e2-435b" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2130-4f1b-5695-018b-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2130-4f1b-5695-018b-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="The Drum of Orcskin" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="82a2-1b98-a9ab-48ec">
-                      <characteristics>
-                        <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">The Drum of Orcskin gives Wychwethyl and any unit he joins the Swiftstride special rule when they roll their charge distance.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-              </selectionEntries>
               <infoLinks>
-                <infoLink name="Ward Save (6+)" id="5462-eb98-459a-1110" hidden="false" type="rule" targetId="5c26-a043-8535-5f4f"/>
                 <infoLink name="Elven Grace" id="0627-30dc-4d0b-b337" hidden="false" type="rule" targetId="8c96-c7fe-2a85-f2f9"/>
                 <infoLink name="Strider (Forest)" id="b7d6-4d42-95df-c278" hidden="false" type="rule" targetId="8d09-c701-2658-67e8"/>
-                <infoLink name="Magic Resistance (1)" id="2f4e-d2fc-36e8-5b9b" hidden="false" type="rule" targetId="7ed4-9d31-09c3-6bf9"/>
                 <infoLink name="Shadow Dances of Loec" id="7a61-84d9-385b-9db8" hidden="false" type="rule" targetId="4889-175b-33a4-f42a"/>
                 <infoLink name="Storm of Blades" id="9406-709f-df11-bdc2" hidden="false" type="profile" targetId="9969-ce08-4efa-f383"/>
                 <infoLink name="The Shadows Coil" id="93df-9b64-8df6-3f41" hidden="false" type="profile" targetId="f254-ae50-3c2b-aded"/>
                 <infoLink name="Whirling Death" id="2bcc-a836-6fde-49b7" hidden="false" type="profile" targetId="7855-feb8-5618-e3d4"/>
                 <infoLink name="Woven Mist" id="f431-7061-2330-5b92" hidden="false" type="profile" targetId="6409-447a-5c49-cfea"/>
+                <infoLink name="Talismanic Tattoos" id="8d2e-98cb-e250-844b" hidden="false" type="rule" targetId="6e51-d2ee-2f91-d750"/>
               </infoLinks>
               <rules>
                 <rule name="Choose Opponent" id="05e4-2e6d-0395-bf08" hidden="false">
@@ -4265,21 +4314,6 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
               <costs>
                 <cost name="pts" typeId="points" value="100"/>
               </costs>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="The Rod of Divination" hidden="false" id="544f-3cb9-c240-1107" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2bb0-6207-2239-07f1-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2bb0-6207-2239-07f1-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="The Rod of Divination" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="cbd2-8548-d982-6741">
-                      <characteristics>
-                        <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Rod of Divination gives Naieth an extra Power dice at the start of each Magic phase.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-              </selectionEntries>
               <profiles>
                 <profile name="Naieth" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="1fca-f46a-fee0-e725">
                   <characteristics>
@@ -4297,23 +4331,43 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
                 </profile>
               </profiles>
               <entryLinks>
-                <entryLink import="true" name="General" hidden="false" id="6199-4488-4185-4c3d" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="-1"/>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="f7de-e254-1b6b-519b" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e3f9-3280-89c0-489a" includeChildSelections="false"/>
-                  </constraints>
+                <entryLink import="true" name="65. Lore of Magic" hidden="false" id="98d1-6347-5c7b-5b20" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
+                  <entryLinks>
+                    <entryLink import="true" name="Lore of Heavens" hidden="false" id="1a4e-952c-5f94-0feb" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="949a-8090-d841-227f" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
-                <entryLink import="true" name="Wizard Level 2" hidden="false" id="29d5-6867-ecfc-7e43" type="selectionEntry" targetId="801a-bc0a-a767-61db" sortIndex="3">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="70ba-4810-8e93-dafe" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c138-56f4-3f32-8183" includeChildSelections="false"/>
-                  </constraints>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="4036-35fd-e088-8e40" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="6de1-8a38-8a14-5ce6" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="f7de-e254-1b6b-519b" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e3f9-3280-89c0-489a" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
-                <entryLink import="true" name="Lore of Heavens" hidden="false" id="1a4e-952c-5f94-0feb" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee" sortIndex="4">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="949a-8090-d841-227f" includeChildSelections="false"/>
-                  </constraints>
+                <entryLink import="true" name="55. Equipment" hidden="false" id="8083-fb29-f93a-adca" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="The Rod of Divination" hidden="false" id="544f-3cb9-c240-1107">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2bb0-6207-2239-07f1-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2bb0-6207-2239-07f1-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="The Rod of Divination" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="cbd2-8548-d982-6741">
+                          <characteristics>
+                            <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">The Rod of Divination gives Naieth an extra Power dice at the start of each Magic phase.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
                 </entryLink>
+                <entryLink import="true" name="60. Wizard Level" hidden="false" id="9e8e-f0bb-3505-1cb3" type="selectionEntryGroup" targetId="2f28-d537-4a60-b96b"/>
               </entryLinks>
               <infoLinks>
                 <infoLink name="Strider (Forest)" id="76d8-bd5f-ee11-7bf7" hidden="false" type="rule" targetId="8d09-c701-2658-67e8"/>
@@ -4337,17 +4391,42 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
                 <cost name="pts" typeId="points" value="100"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="General" hidden="false" id="b297-726e-3eb0-ddb2" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="-1"/>
-                <entryLink import="true" name="Asrai Longbow" hidden="false" id="2662-dfca-895f-6908" type="selectionEntry" targetId="4c0a-8554-3275-b8f2" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="32a8-0446-8641-1fec" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="90. Magic Items" hidden="false" id="6c0f-5381-092a-40eb" type="selectionEntryGroup" targetId="e1f0-e61a-8c81-4eb0" sortIndex="4">
+                <entryLink import="true" name="90. Magic Items" hidden="false" id="6c0f-5381-092a-40eb" type="selectionEntryGroup" targetId="e1f0-e61a-8c81-4eb0" sortIndex="">
                   <modifiers>
                     <modifier type="set" value="25" field="d364-5a06-f141-2697"/>
                     <modifier type="set" value="true" field="hidden" affects="self.entries.db4d-49ed-07ad-29ca"/>
                   </modifiers>
+                </entryLink>
+                <entryLink import="true" name="65. Enchanted Arrows" hidden="false" id="0fd4-3e80-c54e-4e8c" type="selectionEntryGroup" targetId="bbf0-e3f8-85a7-513c"/>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="075d-eb10-451b-de92" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="c2ed-0ab2-ecec-8983" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Runesword of Darkwood" hidden="false" id="32c8-5612-7b4f-aeea">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7eae-15d8-9d46-0592-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7eae-15d8-9d46-0592-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Runesword of Darkwood" typeId="6f70-cea1-702c-43bc" typeName="Melee Weapon" hidden="false" id="f07e-31df-1a20-d7cf">
+                          <characteristics>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. This weapon gives Skarloc the Always Strikes First and Armour Piercing (1) special rules.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="3dd0-0bf7-4a7e-2754" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                  <entryLinks>
+                    <entryLink import="true" name="Asrai Longbow" hidden="false" id="2662-dfca-895f-6908" type="selectionEntry" targetId="4c0a-8554-3275-b8f2">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="32a8-0446-8641-1fec" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
               </entryLinks>
               <profiles>
@@ -4366,58 +4445,6 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
                   </characteristics>
                 </profile>
               </profiles>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Enchanted Arrows" id="aa5e-abfd-e3d7-d953" hidden="false" sortIndex="3">
-                  <entryLinks>
-                    <entryLink import="true" name="Arcane Bodkins" hidden="false" id="3349-fb31-4771-8991" type="selectionEntry" targetId="132d-5b9d-02d2-759b" sortIndex="1">
-                      <costs>
-                        <cost name="pts" typeId="points" value="1"/>
-                      </costs>
-                    </entryLink>
-                    <entryLink import="true" name="Moonfire Shot" hidden="false" id="e691-ddd0-5103-121d" type="selectionEntry" targetId="adef-fe2a-a6fb-f76a" sortIndex="2">
-                      <costs>
-                        <cost name="pts" typeId="points" value="1"/>
-                      </costs>
-                    </entryLink>
-                    <entryLink import="true" name="Hagbane Tips" hidden="false" id="004a-296e-e7e1-d3b7" type="selectionEntry" targetId="70d5-3317-c6ec-4abe" sortIndex="3">
-                      <costs>
-                        <cost name="pts" typeId="points" value="2"/>
-                      </costs>
-                    </entryLink>
-                    <entryLink import="true" name="Trueflight Arrows" hidden="false" id="adcf-108c-26b1-6e89" type="selectionEntry" targetId="2a96-d816-be2f-3e1e" sortIndex="5">
-                      <costs>
-                        <cost name="pts" typeId="points" value="2"/>
-                      </costs>
-                    </entryLink>
-                    <entryLink import="true" name="Swiftshiver Shards" hidden="false" id="3c03-20df-b590-1ae6" type="selectionEntry" targetId="c884-06b0-eeb8-a206" sortIndex="6">
-                      <costs>
-                        <cost name="pts" typeId="points" value="3"/>
-                      </costs>
-                    </entryLink>
-                  </entryLinks>
-                  <infoLinks>
-                    <infoLink name="Enchanted Arrows" id="f697-87c5-a050-750e" hidden="false" type="rule" targetId="fe5f-201d-c693-29c2"/>
-                  </infoLinks>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Runesword of Darkwood" hidden="false" id="32c8-5612-7b4f-aeea" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7eae-15d8-9d46-0592-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7eae-15d8-9d46-0592-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Runesword of Darkwood" typeId="6f70-cea1-702c-43bc" typeName="Melee Weapon" hidden="false" id="f07e-31df-1a20-d7cf">
-                      <characteristics>
-                        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-                        <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
-                        <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. This weapon gives Skarloc the Always Strikes First and Armour Piercing (1) special rules.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-              </selectionEntries>
               <infoLinks>
                 <infoLink name="Scouts" id="d600-b9c1-8a6b-9fd4" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
                 <infoLink name="Elven Grace" id="c7bc-2b91-f55b-aa27" hidden="false" type="rule" targetId="8c96-c7fe-2a85-f2f9"/>
@@ -4437,15 +4464,49 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
                 <cost name="pts" typeId="points" value="85"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="General" hidden="false" id="df38-c6a1-53ef-1c6e" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="-1"/>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="b920-9a2e-0e4a-1361" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7c73-7fd3-c89a-bc2f" includeChildSelections="false"/>
-                  </constraints>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="30ef-e390-23d2-c71a" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="The Cape of Feathers" hidden="false" id="43b1-a5cf-6b0d-cfe6">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8a7c-3599-54cb-440c-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8a7c-3599-54cb-440c-max" includeChildSelections="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Natural Armour" id="bd6e-58ad-5f97-b3ba" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                          <modifiers>
+                            <modifier type="set" value="The Cape of Feathers" field="annotation"/>
+                            <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
+                            <modifier type="set" value="Ward save 6+" field="ff58-91e4-84d7-e6e4"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
                 </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="8687-914f-2f3e-19b9" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="The Lash of Claws" hidden="false" id="b365-f932-3165-83b4">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3a6f-0b85-be20-fa2e-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3a6f-0b85-be20-fa2e-max" includeChildSelections="false"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="The Lash of Claws" typeId="6f70-cea1-702c-43bc" typeName="Melee Weapon" hidden="false" id="95d2-5f92-5514-9b83">
+                          <characteristics>
+                            <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
+                            <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                            <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. The Lash of Claws gives Skaw the Always Strikes First and Mighty Blow (1) special rules. In addition, if the victim is hit but not wounded, it loses 1 Attack for the duration of the turn.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="b5cd-8585-e805-48cc" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
               </entryLinks>
               <profiles>
-                <profile name="Skaw" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="ee3c-d907-fb24-0b5a">
+                <profile name="Skaw" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="ee3c-d907-fb24-0b5a" noindex="true">
                   <characteristics>
                     <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
                     <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
@@ -4459,76 +4520,33 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
                     <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Wood Elf)</characteristic>
                   </characteristics>
                 </profile>
+                <profile name="Falcons" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="e7ac-7c96-5ba3-c811">
+                  <characteristics>
+                    <characteristic name="Range" typeId="af3c-d805-702c-9af9">24&quot;</characteristic>
+                    <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">3</characteristic>
+                    <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3</characteristic>
+                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054"> Rapid Fire. The enemy unit must take a Weapon Skill test for each falcon targeting them. If faild, it gets hit.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Falcons" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6c4e-57d0-28e9-d5a5">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459"/>
+                  </characteristics>
+                </profile>
               </profiles>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="The Cape of Feathers" hidden="false" id="43b1-a5cf-6b0d-cfe6" sortIndex="3">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8a7c-3599-54cb-440c-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8a7c-3599-54cb-440c-max" includeChildSelections="false"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink name="Natural Armour" id="bd6e-58ad-5f97-b3ba" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
-                      <modifiers>
-                        <modifier type="set" value="The Cape of Feathers" field="annotation"/>
-                        <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
-                        <modifier type="set" value="Ward save 6+" field="ff58-91e4-84d7-e6e4"/>
-                      </modifiers>
-                    </infoLink>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="The Lash of Claws" hidden="false" id="b365-f932-3165-83b4" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3a6f-0b85-be20-fa2e-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3a6f-0b85-be20-fa2e-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="The Lash of Claws" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="95d2-5f92-5514-9b83">
-                      <characteristics>
-                        <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Magic Weapon. The Lash of Claws gives Skaw the Always Strikes First and Mighty Blow (1) special rules. In addition, if the victim is hit but not wounded, it loses 1 Attack for the duration of the turn.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Falcons" hidden="false" id="9d82-c12b-ebfc-6a17">
-                  <constraints>
-                    <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="e2e5-aa2b-d143-6f50-min" includeChildSelections="false"/>
-                    <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="e2e5-aa2b-d143-6f50-max" includeChildSelections="false"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Falcons" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="e7ac-7c96-5ba3-c811">
-                      <characteristics>
-                        <characteristic name="Range" typeId="af3c-d805-702c-9af9">∞</characteristic>
-                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">3</characteristic>
-                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
-                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">The enemy unit must take a Weapon Skill test for each falcon targeting them. If faild, it gets hit.</characteristic>
-                      </characteristics>
-                    </profile>
-                    <profile name="Falcons" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="fa42-dec0-b8c7-64c8">
-                      <characteristics>
-                        <characteristic name="M" typeId="09ad-18df-607b-1215"/>
-                        <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-                        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-                        <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-                        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
-                        <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
-                        <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-                        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
-                        <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-                        <characteristic name="Type" typeId="13f9-a26b-05af-3459"/>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-              </selectionEntries>
               <infoLinks>
                 <infoLink name="Strider (Forest)" id="5175-3dbd-0935-3e7f" hidden="false" type="rule" targetId="8d09-c701-2658-67e8"/>
                 <infoLink name="Elven Grace" id="f7dd-3565-ffd2-016b" hidden="false" type="rule" targetId="8c96-c7fe-2a85-f2f9"/>
               </infoLinks>
-              <rules>
-                <rule name="Falcons" id="ae69-c60a-60a5-c904" hidden="false">
-                  <description>Skaw may use his 3 falcons in addition to another missile weapon during the start of the Shooting phase. The falcons can be directed against any enemy unit within line of sight, regardless of range. The enemy unit must take a Weapon Skill test for each falcon targeting them; if failed, the unit takes a Strength 3 Hit. In close combat, the falcons give Skaw an additional 3 Attacks that are resolved at Weapon Skill 4, Strength 3 and Initiative 4. These attacks no not benefit from any special rules or items that Skaw might have</description>
-                </rule>
-              </rules>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="359e-a009-0fe3-e77b" includeChildSelections="true"/>
               </constraints>
@@ -4538,11 +4556,36 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Gruarth" hidden="false" id="ec23-1408-bdce-669b" sortIndex="5">
               <entryLinks>
-                <entryLink import="true" name="General" hidden="false" id="b964-c5ed-16a9-bb39" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="-1"/>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="139a-174d-ccf1-75da" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c5a8-8291-7056-877b" includeChildSelections="false"/>
-                  </constraints>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="1625-919b-bb75-6772" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="f751-dce1-57cc-5f5e" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="The Binding Bolas" hidden="false" id="4bcb-2530-e88d-8568">
+                      <profiles>
+                        <profile name="The Binding Bolas" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="b38e-972b-56af-ba4d">
+                          <characteristics>
+                            <characteristic name="Range" typeId="af3c-d805-702c-9af9">18&quot;</characteristic>
+                            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">1</characteristic>
+                            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">2</characteristic>
+                            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon, Armour Piercing (1), Sniper.
+If a target has Unit Strength 3 or less and is Hit, but not slain, then it is temporarily entangled and cannot move in their next Movement phase. Entangled enemies may be left behind, counting as casualties, or in the case of a Character, as if they had left the unit.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ad90-b0d7-c61f-701b-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ad90-b0d7-c61f-701b-max" includeChildSelections="false"/>
+                      </constraints>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="210a-62be-0f1c-7b29" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="cba0-f758-f353-d104" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cd95-7cbf-6613-9a94" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
                 </entryLink>
               </entryLinks>
               <profiles>
@@ -4592,25 +4635,6 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
               <costs>
                 <cost name="pts" typeId="points" value="75"/>
               </costs>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="The Binding Bolas" hidden="false" id="4bcb-2530-e88d-8568" sortIndex="2">
-                  <profiles>
-                    <profile name="The Binding Bolas" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="b38e-972b-56af-ba4d">
-                      <characteristics>
-                        <characteristic name="Range" typeId="af3c-d805-702c-9af9">18&quot;</characteristic>
-                        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">1</characteristic>
-                        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">2</characteristic>
-                        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Magic Weapon, Armour Piercing (1), Sniper
-If a target has Unit Strength 3 or less and is Hit, but not slain, then it is temporarily entangled and cannot move in their next Movement phase. Entangled enemies may be left behind, counting as casualties, or in the case of a Character, as if they had left the unit.</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ad90-b0d7-c61f-701b-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ad90-b0d7-c61f-701b-max" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
               <infoLinks>
                 <infoLink name="Skirmishers" id="2145-ad81-0283-6ba4" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
                 <infoLink name="Animal Form" id="96b0-b25f-7436-1d38" hidden="false" type="rule" targetId="09c9-ff2d-034f-228d"/>
@@ -4632,7 +4656,7 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
               </infoLinks>
               <rules>
                 <rule name="Beastmaster" id="6dc4-2cd8-78be-88fd" hidden="false">
-                  <description>During the Movement phase, Fang and Claw may move away from Gruath if they wish, forming a unit of their own. They may return to Gruath in the Remaining Moves phase by moving within 1&quot; of him as long as neither of them is fleeing, in which case the unit will revert back to the normal Mixed Unit special rule. While the wolves are more than 12&quot; away from Gruath they are subject to Frenzy. If both wolves are slain, Gruarth becomes subject to Hatred.</description>
+                  <description>Fang and Claw are War Beasts (Canine) and Gruarth is their Handler. During the Movement phase, Fang and Claw may move away from Gruath if they wish, forming a unit of their own. They may return to Gruath in the Remaining Moves phase by moving within 1&quot; of him as long as neither of them is fleeing, in which case the unit will revert back to the normal Mixed Unit special rule. While Fang and Claw are more than 12&quot; away from Gruath they are subject to Frenzy. If both Fang and Claw are slain, Gruarth becomes subject to Hatred.</description>
                 </rule>
               </rules>
               <constraints>
@@ -4666,28 +4690,15 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
                 </profile>
               </profiles>
               <entryLinks>
-                <entryLink import="true" name="Wizard Level 2" hidden="false" id="acdd-86df-e060-2b3f" type="selectionEntry" targetId="801a-bc0a-a767-61db" sortIndex="1">
+                <entryLink import="true" name="91. Forest Spites" hidden="false" id="04ba-27d5-b43d-203c" type="selectionEntryGroup" targetId="c850-af54-29c4-33ae" sortIndex="">
                   <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dc3e-5342-fed3-5df3" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6e95-a896-5862-d161" includeChildSelections="false"/>
+                    <constraint type="max" value="50" field="points" scope="parent" shared="true" id="b1e5-1f55-e8fb-6085" includeChildSelections="false"/>
                   </constraints>
                 </entryLink>
-                <entryLink import="true" name="General" hidden="false" id="3bb3-b29f-c90d-f854" type="selectionEntry" targetId="d322-3c7a-6d1e-7dc2" sortIndex="-1"/>
-                <entryLink import="true" name="91. Forest Spites" hidden="false" id="04ba-27d5-b43d-203c" type="selectionEntryGroup" targetId="c850-af54-29c4-33ae" sortIndex="3"/>
+                <entryLink import="true" name="65. Lore of Magic" hidden="false" id="fc0c-131a-1c5b-c0d5" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32"/>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="5d91-ba5f-03f5-5a6c" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="60. Wizard Level" hidden="false" id="9280-e320-a86c-ed5e" type="selectionEntryGroup" targetId="2f28-d537-4a60-b96b"/>
               </entryLinks>
-              <selectionEntryGroups>
-                <selectionEntryGroup name="Lore" id="e2a5-c657-f8bc-40b8" hidden="false" sortIndex="2">
-                  <entryLinks>
-                    <entryLink import="true" name="Lore of Shadow" hidden="false" id="9070-2b51-7a1d-dd8b" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67"/>
-                    <entryLink import="true" name="Lore of Life" hidden="false" id="3b3b-16bb-8fca-3ed5" type="selectionEntry" targetId="968d-55ad-604c-f251"/>
-                    <entryLink import="true" name="Lore of Athel Loren" hidden="false" id="93d7-afa6-e248-5ffc" type="selectionEntry" targetId="c85f-c430-1e4c-fc64" sortIndex="1"/>
-                  </entryLinks>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6bfa-9346-23da-4ad9" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f930-5255-1c7f-dfb9" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntryGroup>
-              </selectionEntryGroups>
               <infoLinks>
                 <infoLink name="Tree Aspects" id="779a-9237-6e83-d63d" hidden="false" type="rule" targetId="1559-be95-1a35-56ca"/>
                 <infoLink name="Blessing of the Ancients" id="1cf1-2332-1ae2-b9cd" hidden="false" type="rule" targetId="24fc-80ea-e9a4-b309"/>
@@ -5609,19 +5620,12 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
       </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Strangleroots" hidden="false" id="36bb-ac79-f6de-50cc">
-      <profiles>
-        <profile name="Strangleroots" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="267e-dd77-79b2-3367">
-          <characteristics>
-            <characteristic name="Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
-            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
-            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">D6+1</characteristic>
-            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Quick to Fire, Rapid Fire</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6670-3ca8-5ea8-369d" includeChildSelections="false"/>
       </constraints>
+      <infoLinks>
+        <infoLink name="Strangleroots" id="8368-3018-fcb4-9c65" hidden="false" type="profile" targetId="267e-dd77-79b2-3367"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Steed of Kurnous" hidden="false" id="f3b5-014c-3c1a-1616" subType="mount" collective="true">
       <profiles>
@@ -7645,7 +7649,7 @@ for their charge distance.
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Stone of the Crystal Mere " hidden="false" id="30c4-1bf2-2f22-767a" sortIndex="9">
               <profiles>
-                <profile name="tSone of the Crystal Mere " typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="0ff8-cffc-cdf8-f012">
+                <profile name="Stone of the Crystal Mere " typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="0ff8-cffc-cdf8-f012">
                   <characteristics>
                     <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The Stone of the Crystal Mere gives the bearer the Ward Save (3+) special rule. However, if this Ward Save is ever failed, then the stone shatters and the Ward Save is lost for the rest of the game.</characteristic>
                   </characteristics>
@@ -8062,6 +8066,14 @@ for their charge distance.
         <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">3</characteristic>
         <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">2</characteristic>
         <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Volley Fire. (Multiple Shots only applies in turns the model has not moved. Cannot be used as a charge reaction.)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Strangleroots" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="267e-dd77-79b2-3367">
+      <characteristics>
+        <characteristic name="Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
+        <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">5</characteristic>
+        <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">D6+1</characteristic>
+        <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Quick to Fire, Rapid Fire</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
