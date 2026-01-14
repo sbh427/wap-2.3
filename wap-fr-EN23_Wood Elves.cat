@@ -761,7 +761,7 @@
             <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">6</characteristic>
             <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
             <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">7</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
@@ -2156,7 +2156,7 @@
             <cost name="pts" typeId="points" value="25"/>
           </costs>
           <entryLinks>
-            <entryLink import="true" name="65. Enchanted Arrows" hidden="false" id="aefd-dcaa-53ca-2acb" type="selectionEntryGroup" targetId="bbf0-e3f8-85a7-513c" sortIndex=""/>
+            <entryLink import="true" name="65. Enchanted Arrows" hidden="false" id="aefd-dcaa-53ca-2acb" type="selectionEntryGroup" targetId="bbf0-e3f8-85a7-513c"/>
             <entryLink import="true" name="70. Mount" hidden="false" id="48a8-6f49-311d-67c6" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
               <entryLinks>
                 <entryLink import="true" name="Warhawk" hidden="false" id="bda6-c3a8-f816-aabe" type="selectionEntry" targetId="78b4-8144-cce3-2d90">
@@ -2507,29 +2507,27 @@
           <constraints>
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="2003-a353-5d5f-de36"/>
           </constraints>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Primary Weapon" id="b828-ad6a-5637-098a" hidden="false" sortIndex="1">
+          <entryLinks>
+            <entryLink import="true" name="65. Enchanted Arrows" hidden="false" id="ad07-f741-6086-9f9d" type="selectionEntryGroup" targetId="bbf0-e3f8-85a7-513c" sortIndex=""/>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="7526-ca32-3718-e2dc" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
               <entryLinks>
+                <entryLink import="true" name="Asrai Longbow" hidden="false" id="b23a-2ba5-3a53-ff5c" type="selectionEntry" targetId="4c0a-8554-3275-b8f2">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cd7e-cd69-72e0-dc36" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="6e17-342d-a53f-30a1" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="006e-4a5f-e3db-2428" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
                 <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="90ba-a662-fe63-10ae" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="006e-4a5f-e3db-2428" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
               </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d5b7-3264-13ed-9f37-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d5b7-3264-13ed-9f37-max" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <entryLinks>
-            <entryLink import="true" name="Asrai Longbow" hidden="false" id="b23a-2ba5-3a53-ff5c" type="selectionEntry" targetId="4c0a-8554-3275-b8f2" sortIndex="2">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cd7e-cd69-72e0-dc36" includeChildSelections="false"/>
-              </constraints>
             </entryLink>
-            <entryLink import="true" name="65. Enchanted Arrows" hidden="false" id="ad07-f741-6086-9f9d" type="selectionEntryGroup" targetId="bbf0-e3f8-85a7-513c" sortIndex="3"/>
           </entryLinks>
           <infoLinks>
             <infoLink name="Scouts" id="8e16-fcf5-31d1-9081" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
@@ -2540,58 +2538,6 @@
             <infoLink name="Leathal Shot" id="0230-d011-9b99-1d84" hidden="false" type="rule" targetId="e291-39f3-8f5e-54e2"/>
             <infoLink name="Skirmishers" id="75cc-45c9-b564-e194" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
           </infoLinks>
-          <modifiers>
-            <modifier type="add" value="Book says 10+ (bug)" field="info">
-              <comment>Remove after bugfix</comment>
-              <conditions>
-                <condition type="lessThan" value="10" field="selections" scope="parent" childId="9260-cda4-0f9f-7ff2" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Traps" hidden="false" id="37a7-d560-9d19-ae3b" collective="true" sortIndex="2">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="25bc-c1e4-5b81-b4e8" includeChildSelections="false"/>
-          </constraints>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-          <rules>
-            <rule name="Traps" id="2b5f-f313-81e8-6885" hidden="false">
-              <description>A Waywatcher unit which is within a forest is automatically assumed to set traps around its positions. Any enemy charging the unit through the forest will activate the traps as soon as the enemy unit touches the forest. If the chargers are already inside the forest when the charge is declared the traps are activated as soon as the charge is declared. Roll a dice to determine the type and effect of the trap.</description>
-            </rule>
-          </rules>
-          <infoGroups>
-            <infoGroup name="Traps" id="2052-2178-8f54-bd4a" hidden="false">
-              <profiles>
-                <profile name="1-2 Spikes" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="28e9-99b3-4aca-5a46">
-                  <characteristics>
-                    <characteristic name="Result" typeId="686b-22d8-d67f-02eb"/>
-                  </characteristics>
-                </profile>
-                <profile name="3 Snares" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="b501-5336-1e5c-7e8d">
-                  <characteristics>
-                    <characteristic name="Result" typeId="686b-22d8-d67f-02eb"/>
-                  </characteristics>
-                </profile>
-                <profile name="4 Nets" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="6895-c7b5-132c-0140">
-                  <characteristics>
-                    <characteristic name="Result" typeId="686b-22d8-d67f-02eb"/>
-                  </characteristics>
-                </profile>
-                <profile name="5 Camouflaged Pit" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="e03e-91e5-4fc7-9b5b">
-                  <characteristics>
-                    <characteristic name="Result" typeId="686b-22d8-d67f-02eb"/>
-                  </characteristics>
-                </profile>
-                <profile name="6 Implaer" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="b8c6-6199-d59a-75f6">
-                  <characteristics>
-                    <characteristic name="Result" typeId="686b-22d8-d67f-02eb"/>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </infoGroup>
-          </infoGroups>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -2612,6 +2558,56 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <comment>Unit size has a bug in the book</comment>
+      <entryLinks>
+        <entryLink import="true" name="11. Unit Options" hidden="false" id="a32e-d686-d9aa-342a" type="selectionEntryGroup" targetId="920d-8a41-44b9-c364">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Traps" hidden="false" id="37a7-d560-9d19-ae3b" collective="true">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="25bc-c1e4-5b81-b4e8" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="pts" typeId="points" value="15"/>
+              </costs>
+              <rules>
+                <rule name="Traps" id="2b5f-f313-81e8-6885" hidden="false">
+                  <description>A Waywatcher unit which is within a forest is automatically assumed to set traps around its positions. Any enemy charging the unit through the forest will activate the traps as soon as the enemy unit touches the forest. If the chargers are already inside the forest when the charge is declared the traps are activated as soon as the charge is declared. Roll a dice to determine the type and effect of the trap.</description>
+                </rule>
+              </rules>
+              <infoGroups>
+                <infoGroup name="Traps" id="2052-2178-8f54-bd4a" hidden="false">
+                  <profiles>
+                    <profile name="1-2 Spikes" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="28e9-99b3-4aca-5a46">
+                      <characteristics>
+                        <characteristic name="Result" typeId="686b-22d8-d67f-02eb"/>
+                      </characteristics>
+                    </profile>
+                    <profile name="3 Snares" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="b501-5336-1e5c-7e8d">
+                      <characteristics>
+                        <characteristic name="Result" typeId="686b-22d8-d67f-02eb"/>
+                      </characteristics>
+                    </profile>
+                    <profile name="4 Nets" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="6895-c7b5-132c-0140">
+                      <characteristics>
+                        <characteristic name="Result" typeId="686b-22d8-d67f-02eb"/>
+                      </characteristics>
+                    </profile>
+                    <profile name="5 Camouflaged Pit" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="e03e-91e5-4fc7-9b5b">
+                      <characteristics>
+                        <characteristic name="Result" typeId="686b-22d8-d67f-02eb"/>
+                      </characteristics>
+                    </profile>
+                    <profile name="6 Implaer" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="b8c6-6199-d59a-75f6">
+                      <characteristics>
+                        <characteristic name="Result" typeId="686b-22d8-d67f-02eb"/>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </infoGroup>
+              </infoGroups>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Sisters of the Thorn " hidden="false" id="d270-cd05-e5a0-cabb" sortIndex="42">
       <selectionEntries>
@@ -2638,45 +2634,59 @@
               </characteristics>
             </profile>
           </profiles>
-          <selectionEntries>
-            <selectionEntry type="model" import="true" name="Steed of Isha" hidden="false" id="92a7-19db-b0ee-f473" subType="mount" collective="true" sortIndex="1">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="29c3-6523-4771-4fc5-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="29c3-6523-4771-4fc5-max" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Steed of Isha" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="9c88-50e1-be99-2c75">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">9</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Steed of Isha (Animal)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-          </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Light Armour" hidden="false" id="d50d-4c2e-c94a-80d6" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="4">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e7b4-dc4a-7bd4-1923" includeChildSelections="false"/>
-              </constraints>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="ffb0-6a24-51ff-7c05" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="3e7d-7d54-7a61-e592" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="39b0-5100-24d8-98c1" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="3e7d-7d54-7a61-e592" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="2">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="39b0-5100-24d8-98c1" includeChildSelections="false"/>
-              </constraints>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="93b4-7827-a06b-5282" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+              <entryLinks>
+                <entryLink import="true" name="Javelins" hidden="false" id="f2b6-09a9-ec91-8e15" type="selectionEntry" targetId="a923-e8b1-94c0-3f2c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ddea-81d5-3e94-795c" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Javelins" hidden="false" id="f2b6-09a9-ec91-8e15" type="selectionEntry" targetId="a923-e8b1-94c0-3f2c" sortIndex="3">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ddea-81d5-3e94-795c" includeChildSelections="false"/>
-              </constraints>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="3c76-de9e-b859-e632" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+              <entryLinks>
+                <entryLink import="true" name="Light Armour" hidden="false" id="d50d-4c2e-c94a-80d6" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e7b4-dc4a-7bd4-1923" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="70. Mount" hidden="false" id="5fa5-8468-3338-a46f" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+              <selectionEntries>
+                <selectionEntry type="model" import="true" name="Steed of Isha" hidden="false" id="92a7-19db-b0ee-f473" subType="mount" collective="true">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="29c3-6523-4771-4fc5-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="29c3-6523-4771-4fc5-max" includeChildSelections="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Steed of Isha" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="9c88-50e1-be99-2c75">
+                      <characteristics>
+                        <characteristic name="M" typeId="09ad-18df-607b-1215">9</characteristic>
+                        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+                        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                        <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                        <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                        <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
+                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Steed of Isha (Cervine)</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                </selectionEntry>
+              </selectionEntries>
             </entryLink>
           </entryLinks>
           <infoLinks>
@@ -2743,24 +2753,15 @@
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Lore" id="6e5b-4bb2-6419-c2e0" hidden="false" collective="true" sortIndex="3">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2780-3e2a-ccb7-cd3b-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2780-3e2a-ccb7-cd3b-max" includeChildSelections="false"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Lore of Athel Loren" hidden="false" id="c836-2ce7-14ba-8227" type="selectionEntry" targetId="c85f-c430-1e4c-fc64" collective="true"/>
-            <entryLink import="true" name="Lore of Life" hidden="false" id="df8b-b628-8a1b-a7fd" type="selectionEntry" targetId="968d-55ad-604c-f251" collective="true"/>
-            <entryLink import="true" name="Lore of Beasts" hidden="false" id="61bf-af95-dbb6-d2c3" type="selectionEntry" targetId="b436-b410-dd41-304f" collective="true"/>
-          </entryLinks>
-        </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Wizard Level 1" hidden="false" id="f7ec-425f-e59b-df09" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8" collective="true" sortIndex="2">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="78a9-5a30-baa5-df48-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="78a9-5a30-baa5-df48-max" includeChildSelections="false"/>
-          </constraints>
+        <entryLink import="true" name="60. Wizard Level" hidden="false" id="ad38-b9e0-2f26-254e" type="selectionEntryGroup" targetId="1d19-3d5b-2087-e988" sortIndex="2"/>
+        <entryLink import="true" name="65. Lore of Magic" hidden="false" id="1b9c-9ad6-6ea5-aa63" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32" sortIndex="3">
+          <entryLinks>
+            <entryLink import="true" name="Lore of Athel Loren" hidden="false" id="c836-2ce7-14ba-8227" type="selectionEntry" targetId="c85f-c430-1e4c-fc64" collective="true"/>
+            <entryLink import="true" name="Lore of Beasts" hidden="false" id="61bf-af95-dbb6-d2c3" type="selectionEntry" targetId="b436-b410-dd41-304f" collective="true"/>
+            <entryLink import="true" name="Lore of Life" hidden="false" id="df8b-b628-8a1b-a7fd" type="selectionEntry" targetId="968d-55ad-604c-f251" collective="true"/>
+          </entryLinks>
         </entryLink>
       </entryLinks>
     </selectionEntry>
@@ -2791,25 +2792,41 @@
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="5eef-a31c-79c0-ceaf"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Great Stag" hidden="false" id="56be-0961-2548-7ec2" type="selectionEntry" targetId="1fe3-345a-4efc-8da0" sortIndex="1">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8fcd-33d4-a594-4ca1" includeChildSelections="false"/>
-              </constraints>
+            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="5432-d3d5-4b78-d23c" type="selectionEntryGroup" targetId="0420-92ca-bbfc-b5f2">
+              <entryLinks>
+                <entryLink import="true" name="Shield" hidden="false" id="7682-ebcc-f015-8f91" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <costs>
+                    <cost name="pts" typeId="points" value="3"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Light Armour" hidden="false" id="8a5c-5a9b-a1db-dd01" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="3">
-              <costs>
-                <cost name="pts" typeId="points" value="3"/>
-              </costs>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="7a3a-f74b-3d1e-91e8" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Light Lance" hidden="false" id="d286-3f68-7a03-18ce" type="selectionEntry" targetId="d989-1124-0dea-ae27">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e10a-2cd1-56a2-3506" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Light Lance" hidden="false" id="d286-3f68-7a03-18ce" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="2">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e10a-2cd1-56a2-3506" includeChildSelections="false"/>
-              </constraints>
+            <entryLink import="true" name="70. Mount" hidden="false" id="8cc4-c3fc-9a45-0778" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+              <entryLinks>
+                <entryLink import="true" name="Great Stag" hidden="false" id="56be-0961-2548-7ec2" type="selectionEntry" targetId="1fe3-345a-4efc-8da0">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8fcd-33d4-a594-4ca1" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Shield" hidden="false" id="7682-ebcc-f015-8f91" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="4">
-              <costs>
-                <cost name="pts" typeId="points" value="3"/>
-              </costs>
+            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="afe2-a6ae-48c1-94a0" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
+              <entryLinks>
+                <entryLink import="true" name="Light Armour" hidden="false" id="8a5c-5a9b-a1db-dd01" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72">
+                  <costs>
+                    <cost name="pts" typeId="points" value="3"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
         </selectionEntry>
@@ -2911,15 +2928,23 @@
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="5888-e2b8-0726-e76c"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Hand Weapon" hidden="false" id="83ea-19eb-4389-1abe" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4638-f6d6-f44f-b5c2" includeChildSelections="false"/>
-              </constraints>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="78b3-a71b-85f4-dae3" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="83ea-19eb-4389-1abe" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4638-f6d6-f44f-b5c2" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
-            <entryLink import="true" name="Asrai Longbow" hidden="false" id="3e0c-ca0d-f0ee-d304" type="selectionEntry" targetId="4c0a-8554-3275-b8f2">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0356-630e-5ace-7299" includeChildSelections="false"/>
-              </constraints>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="5085-b0cc-1a50-0b23" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Asrai Longbow" hidden="false" id="3e0c-ca0d-f0ee-d304" type="selectionEntry" targetId="4c0a-8554-3275-b8f2">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0356-630e-5ace-7299" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
           <rules>
@@ -2993,10 +3018,59 @@
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="6087-501d-809f-2433"/>
           </constraints>
           <entryLinks>
-            <entryLink import="true" name="Shield" hidden="false" id="315d-147d-2002-db32" type="selectionEntry" targetId="c068-0827-9931-d9bf" sortIndex="2">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f80b-0735-c5a7-6b9b" includeChildSelections="false"/>
-              </constraints>
+            <entryLink import="true" name="70. Mount" hidden="false" id="444a-15c9-a064-9a36" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
+              <selectionEntries>
+                <selectionEntry type="model" import="true" name="Dragonspite" hidden="false" id="6ddf-10ca-540d-a7d8" subType="mount" collective="true">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5740-e079-549d-c0e7-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5740-e079-549d-c0e7-max" includeChildSelections="false"/>
+                  </constraints>
+                  <profiles>
+                    <profile name="Dragonspite" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6f97-9050-cf1e-cae4">
+                      <characteristics>
+                        <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
+                        <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
+                        <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+                        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                        <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                        <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                        <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                        <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+                        <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
+                        <characteristic name="Type" typeId="13f9-a26b-05af-3459">Dragonspite (Insectoid, Forest Spirit)</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <infoLinks>
+                    <infoLink name="Natural Armour" id="aef2-a62e-0f18-0090" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                      <modifiers>
+                        <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                        <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+                        <modifier type="set" value="Dragonspite" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="aae9-140a-e279-474b" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="b879-1c49-7a4e-69a2" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+                <entryLink import="true" name="Light Lance" hidden="false" id="1ba4-447d-af3a-b9d2" type="selectionEntry" targetId="d989-1124-0dea-ae27" sortIndex="2">
+                  <costs>
+                    <cost name="pts" typeId="points" value="2"/>
+                  </costs>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="f962-8cef-d7e1-96bb" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
+              <entryLinks>
+                <entryLink import="true" name="Shield" hidden="false" id="315d-147d-2002-db32" type="selectionEntry" targetId="c068-0827-9931-d9bf">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f80b-0735-c5a7-6b9b" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
           <infoLinks>
@@ -3014,55 +3088,6 @@
               </modifiers>
             </infoLink>
           </infoLinks>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Primary Weapon" id="b408-b752-1e1d-7b10" hidden="false" sortIndex="1">
-              <entryLinks>
-                <entryLink import="true" name="Light Lance" hidden="false" id="1ba4-447d-af3a-b9d2" type="selectionEntry" targetId="d989-1124-0dea-ae27">
-                  <costs>
-                    <cost name="pts" typeId="points" value="2"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="b879-1c49-7a4e-69a2" type="selectionEntry" targetId="a658-337d-0cbd-a38c"/>
-              </entryLinks>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="aa6d-0a03-9822-a422-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aa6d-0a03-9822-a422-max" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <selectionEntries>
-            <selectionEntry type="model" import="true" name="Dragonspite" hidden="false" id="6ddf-10ca-540d-a7d8" subType="mount" sortIndex="3" collective="true">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5740-e079-549d-c0e7-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5740-e079-549d-c0e7-max" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Dragonspite" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6f97-9050-cf1e-cae4">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Dragonspite (Forest Spirit)</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink name="Natural Armour" id="aef2-a62e-0f18-0090" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
-                  <modifiers>
-                    <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
-                    <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
-                    <modifier type="set" value="Dragonspite" field="annotation"/>
-                  </modifiers>
-                </infoLink>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
@@ -3117,31 +3142,35 @@
         <categoryLink name="Forest Spirit" hidden="false" id="25e7-a218-880d-5a8c" targetId="97e1-639e-c76c-da93" primary="false"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Treeman" hidden="false" id="4307-ad6b-dcc6-eb42" sortIndex="48">
+    <selectionEntry type="model" import="true" name="Treelord" hidden="false" id="4307-ad6b-dcc6-eb42" sortIndex="48">
       <costs>
-        <cost name="pts" typeId="points" value="215"/>
+        <cost name="pts" typeId="points" value="260"/>
       </costs>
       <profiles>
-        <profile name="Treeman" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="1abb-a9f5-48b7-859b">
+        <profile name="Treelord" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="1abb-a9f5-48b7-859b">
           <characteristics>
             <characteristic name="M" typeId="09ad-18df-607b-1215">5</characteristic>
             <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
             <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">6</characteristic>
-            <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+            <characteristic name="S" typeId="edd2-7979-54a4-6b35">6</characteristic>
             <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">6</characteristic>
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">6</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Forest Spirit)</characteristic>
           </characteristics>
         </profile>
       </profiles>
       <entryLinks>
-        <entryLink import="true" name="Strangleroots" hidden="false" id="47c3-7a0b-3dec-fd3c" type="selectionEntry" targetId="36bb-ac79-f6de-50cc">
-          <costs>
-            <cost name="pts" typeId="points" value="20"/>
-          </costs>
+        <entryLink import="true" name="56. Upgrades" hidden="false" id="586b-e18c-a351-a8ac" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
+          <entryLinks>
+            <entryLink import="true" name="Strangleroots" hidden="false" id="47c3-7a0b-3dec-fd3c" type="selectionEntry" targetId="36bb-ac79-f6de-50cc">
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </entryLink>
       </entryLinks>
       <infoLinks>
@@ -3153,7 +3182,7 @@
           <modifiers>
             <modifier type="set" value="3+" field="168d-1cc2-66f3-e766"/>
             <modifier type="set" value="3+" field="97ea-ecf7-8d24-b2ca"/>
-            <modifier type="set" value="Treeman" field="annotation"/>
+            <modifier type="set" value="Treelord" field="annotation"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -3180,33 +3209,26 @@
           </characteristics>
         </profile>
       </profiles>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Wizard Level" id="f5d9-747e-ccb2-75d3" hidden="false" sortIndex="2">
-          <entryLinks>
-            <entryLink import="true" name="Wizard Level 2" hidden="false" id="43ba-b2eb-e3db-1d9a" type="selectionEntry" targetId="801a-bc0a-a767-61db">
-              <costs>
-                <cost name="pts" typeId="points" value="35"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Wizard Level 1" hidden="false" id="7ea2-7249-79d8-57d5" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8"/>
-          </entryLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="89e3-0432-3d0e-e07f" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7561-cf40-698a-2df3" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
       <entryLinks>
-        <entryLink import="true" name="Lore of Life" hidden="false" id="d8b8-bdeb-6d48-25cd" type="selectionEntry" targetId="968d-55ad-604c-f251" sortIndex="3">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c795-56d2-abac-3654" includeChildSelections="false"/>
-          </constraints>
+        <entryLink import="true" name="65. Lore of Magic" hidden="false" id="a51f-b83a-1e5c-1d98" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
+          <entryLinks>
+            <entryLink import="true" name="Lore of Life" hidden="false" id="d8b8-bdeb-6d48-25cd" type="selectionEntry" targetId="968d-55ad-604c-f251">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c795-56d2-abac-3654" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
-        <entryLink import="true" name="Great Weapon" hidden="false" id="b560-3cba-c566-4dbc" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="1">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="944d-adb6-568d-fb87" includeChildSelections="false"/>
-          </constraints>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="2141-9f82-0d8b-6e33" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Great Weapon" hidden="false" id="b560-3cba-c566-4dbc" type="selectionEntry" targetId="0473-857e-78d9-cb7c">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="944d-adb6-568d-fb87" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
         </entryLink>
+        <entryLink import="true" name="60. Wizard Level" hidden="false" id="02f2-d6ae-4c45-5934" type="selectionEntryGroup" targetId="6921-bd2a-e7cb-9029"/>
       </entryLinks>
       <infoLinks>
         <infoLink name="Cold-Blooded" id="9a0b-a5c6-0104-113a" hidden="false" type="rule" targetId="eb46-96d2-9469-4905"/>
@@ -4710,7 +4732,7 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
         <categoryLink name="Forest Spirit" hidden="false" id="b8e2-f0e7-a4ad-ffc5" targetId="97e1-639e-c76c-da93" primary="false"/>
       </categoryLinks>
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Spite Swarm" hidden="false" id="e3fe-a37c-2d6e-fb70" sortIndex="">
+        <selectionEntry type="upgrade" import="true" name="Spite Swarm" hidden="false" id="e3fe-a37c-2d6e-fb70">
           <constraints>
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="498c-1680-2fa8-f9f0" includeChildSelections="false"/>
             <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="ee2d-db16-55cd-83aa" includeChildSelections="false"/>
@@ -4945,8 +4967,8 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
         <infoLink name="Forest Spirit" id="1753-1512-caec-9931" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
         <infoLink name="Natural Armour" id="47ca-f36e-839a-fa54" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
           <modifiers>
-            <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
-            <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
+            <modifier type="set" value="3+" field="168d-1cc2-66f3-e766"/>
+            <modifier type="set" value="3+" field="97ea-ecf7-8d24-b2ca"/>
             <modifier type="set" value="Forest Dragon" field="annotation"/>
           </modifiers>
         </infoLink>
@@ -7506,7 +7528,7 @@ for their charge distance.
               <profiles>
                 <profile name="Sigil of the Mage Queen" typeId="24d7-7f7d-a4d7-c26c" typeName="Arcane Item" hidden="false" id="08c8-36bb-b931-d715">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. This item may be used after making a casting roll. When used, it adds a +3 casting bonus. </characteristic>
+                    <characteristic name="Special Rules" typeId="3df8-4ab0-c4bd-e2ad">One use only. This item may be used after making a casting roll. When used, it adds a +3 casting bonus.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
