@@ -100,6 +100,7 @@
       </constraints>
       <infoLinks>
         <infoLink name="Buckler" id="2ca1-86fa-a28b-8bfb" hidden="false" targetId="1700-a7e5-d272-ef20" type="profile"/>
+        <infoLink name="Buckler" id="e41c-1e30-49bc-a5df" hidden="false" type="profile" targetId="2d0d-e77a-2eeb-b599"/>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="0" field="d939-23d6-2a8e-e332">
@@ -164,6 +165,7 @@
       <infoLinks>
         <infoLink name="Hand Weapon" id="530c-eb28-4bce-f897" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
         <infoLink name="Shield" id="3560-32e1-5fa3-17eb" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
+        <infoLink name="Shield" id="71ce-89d2-1354-5822" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6688-fbd9-3fae-e968" automatic="true"/>
@@ -413,6 +415,7 @@
       </constraints>
       <infoLinks>
         <infoLink name="Shield" id="be32-d054-1088-b539" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
+        <infoLink name="Shield" id="1398-df65-db3a-45e2" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="0" field="af56-60a7-18d1-6f4f">
@@ -547,6 +550,7 @@
       <infoLinks>
         <infoLink name="Buckler" id="d2dd-656a-de4e-4bd9" hidden="false" targetId="1700-a7e5-d272-ef20" type="profile"/>
         <infoLink name="Hand Weapon" id="9287-c500-c190-bb83" hidden="false" type="profile" targetId="f6da-d707-0cd6-b1dd"/>
+        <infoLink name="Buckler" id="870a-fd87-b1b5-2b81" hidden="false" type="profile" targetId="2d0d-e77a-2eeb-b599"/>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -633,8 +637,24 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="prepend" value="*Only applies to models on foot against missile attacks to the front." field="ff58-91e4-84d7-e6e4" join="
+        <modifier type="append" value="*Only applies to models on foot against missile attacks to the front." field="ff58-91e4-84d7-e6e4" join="
 ">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="f651-5580-8a7b-45eb" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="prepend" value="Parry (6+) (Only applies if used with a hand weapon.)" field="ff58-91e4-84d7-e6e4">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
@@ -681,7 +701,7 @@
 Parry (6+) (Only applies if used with a hand weapon)</characteristic>
       </characteristics>
       <modifiers>
-        <modifier type="prepend" value="*Models on foot armed with shields get an additional +1 to their armour save against missile attacks to their front." field="ff58-91e4-84d7-e6e4" join="
+        <modifier type="append" value="*Models on foot armed with shields get an additional +1 to their armour save against missile attacks to their front." field="ff58-91e4-84d7-e6e4" join="
 ">
           <conditionGroups>
             <conditionGroup type="and">
@@ -692,6 +712,22 @@ Parry (6+) (Only applies if used with a hand weapon)</characteristic>
                 <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
                 <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
                 <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="f651-5580-8a7b-45eb" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="prepend" value="Parry (6+) (Only applies if used with a hand weapon.)" field="ff58-91e4-84d7-e6e4">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
                 <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="f651-5580-8a7b-45eb" shared="true" includeChildSelections="true"/>
                 <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
               </conditions>
@@ -914,6 +950,34 @@ Parry (6+) (Only applies if used with a hand weapon)</characteristic>
         <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca"/>
         <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
       </characteristics>
+    </profile>
+    <profile name="Shield" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="fae6-fa36-d8e9-b115">
+      <characteristics>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Parry</characteristic>
+        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">6+</characteristic>
+        <characteristic name="Special Rule" typeId="84ea-8900-474d-6201">Only if used with a Hand Weapon.</characteristic>
+      </characteristics>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </profile>
+    <profile name="Buckler" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="2d0d-e77a-2eeb-b599">
+      <characteristics>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Parry</characteristic>
+        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">6+</characteristic>
+        <characteristic name="Special Rule" typeId="84ea-8900-474d-6201">Only if used with a Hand Weapon.</characteristic>
+      </characteristics>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </profile>
   </sharedProfiles>
   <profileTypes>
