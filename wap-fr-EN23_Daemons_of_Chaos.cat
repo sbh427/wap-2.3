@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="442a-94b5-5142-d10c" name="Daemons of Chaos WAP 1.71" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="70" revision="4" authorContact="Contact me via Discord" authorName="xetolosch" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="442a-94b5-5142-d10c" name="Daemons of Chaos WAP 1.71" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="70" revision="5" authorContact="Contact me via Discord" authorName="xetolosch" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Armoury" id="61ff-ad9f-83c7-fbff" targetId="522e-5e2a-d54c-4959"/>
     <catalogueLink type="catalogue" name="Bestiary" id="f60e-240a-8426-d3ed" targetId="1fc9-2903-cb19-5737"/>
@@ -4550,7 +4550,7 @@ Once the final position is established, place the unit so it can touch the mark
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Magic Weapons" id="8079-5ab7-5374-7c83" hidden="false" sortIndex="1">
+    <selectionEntryGroup name="Magic Weapons" id="8079-5ab7-5374-7c83" hidden="false" sortIndex="1" collapsible="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="24e6-89ba-1f77-21da"/>
       </constraints>
@@ -4573,6 +4573,13 @@ Once the final position is established, place the unit so it can touch the mark
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ced4-5f0c-517b-2c4e" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1561-7516-b5fb-4844" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="9822-c78a-4355-5837" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -5123,7 +5130,7 @@ Once the final position is established, place the unit so it can touch the mark
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Talismans" id="f655-0f32-6c19-0e29" hidden="false" sortIndex="3">
+    <selectionEntryGroup name="Talismans" id="f655-0f32-6c19-0e29" hidden="false" sortIndex="3" collapsible="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0b9d-0c3a-917e-cf78"/>
       </constraints>
@@ -5203,7 +5210,7 @@ Once the final position is established, place the unit so it can touch the mark
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Arcane Items" id="c645-4489-1c2f-2ae6" hidden="false" sortIndex="4">
+    <selectionEntryGroup name="Arcane Items" id="c645-4489-1c2f-2ae6" hidden="false" sortIndex="4" collapsible="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7e60-7b10-f99d-226d"/>
       </constraints>
@@ -5378,7 +5385,7 @@ Once the final position is established, place the unit so it can touch the mark
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Arcane Items (one use only)" id="c5c6-7d76-3a57-a7ea" hidden="false" sortIndex="4.5">
+    <selectionEntryGroup name="Arcane Items (one use only)" id="c5c6-7d76-3a57-a7ea" hidden="false" sortIndex="4.5" collapsible="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="59da-1848-ccf2-7457"/>
       </constraints>
@@ -5403,7 +5410,7 @@ Once the final position is established, place the unit so it can touch the mark
         <entryLink import="true" name="Common Arcane Items (One use only)" hidden="false" id="807e-27c3-796d-696f" type="selectionEntryGroup" targetId="3dfd-c3fd-5a56-45f1" sortIndex="99" flatten="true"/>
       </entryLinks>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Enchanted Items" id="053d-18c3-ec2b-534b" hidden="false" sortIndex="5">
+    <selectionEntryGroup name="Enchanted Items" id="053d-18c3-ec2b-534b" hidden="false" sortIndex="5" collapsible="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb1e-cd86-2f02-2be4"/>
       </constraints>
@@ -5714,7 +5721,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
-    <selectionEntryGroup name="90. Magic Items" id="0f99-83df-69ec-1396" hidden="false" collapsible="true">
+    <selectionEntryGroup name="90. Magic Items" id="0f99-83df-69ec-1396" hidden="false">
       <entryLinks>
         <entryLink import="true" name="Magic Weapons" hidden="false" id="bf42-95f6-2799-fff6" type="selectionEntryGroup" targetId="8079-5ab7-5374-7c83" sortIndex="1"/>
         <entryLink import="true" name="Magic Armour" hidden="false" id="a8e5-d129-6c67-2bfe" type="selectionEntryGroup" targetId="5814-a171-28a1-046e" sortIndex="2"/>
@@ -5737,7 +5744,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
         <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.8079-5ab7-5374-7c83.profiles.Ranged Weapon"/>
       </modifiers>
     </selectionEntryGroup>
-    <selectionEntryGroup name="90. Magic Items &amp; Daemonic Gifts" id="d0ce-b6fd-aa17-1c52" hidden="false" collapsible="true">
+    <selectionEntryGroup name="90. Magic Items &amp; Daemonic Gifts" id="d0ce-b6fd-aa17-1c52" hidden="false">
       <entryLinks>
         <entryLink import="true" name="Magic Weapons" hidden="false" id="3c27-63f5-13c8-7002" type="selectionEntryGroup" targetId="8079-5ab7-5374-7c83" sortIndex="1"/>
         <entryLink import="true" name="Magic Armour" hidden="false" id="82ad-172a-909b-eddd" type="selectionEntryGroup" targetId="5814-a171-28a1-046e" sortIndex="2"/>
@@ -5761,7 +5768,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
         <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.8079-5ab7-5374-7c83.profiles.Ranged Weapon"/>
       </modifiers>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Magic Standards" id="f0ec-52cb-0529-c265" hidden="false" sortIndex="6">
+    <selectionEntryGroup name="Magic Standards" id="f0ec-52cb-0529-c265" hidden="false" sortIndex="6" collapsible="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e847-9a06-4f40-f5c5"/>
       </constraints>
@@ -9145,6 +9152,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
           </constraints>
           <infoLinks>
             <infoLink name="Daemonette" id="900b-a6a2-f4ae-d9f2" hidden="false" type="profile" targetId="ea8a-c917-0e40-9d57"/>
+            <infoLink name="Fast Cavalry" id="23f6-25d2-6dd1-71d9" hidden="false" type="rule" targetId="8877-a5de-cc9c-9142"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
