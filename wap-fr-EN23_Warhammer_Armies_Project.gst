@@ -847,6 +847,15 @@
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Move or Fire</characteristic>
               </characteristics>
             </profile>
+            <profile name="Large Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="9329-62a9-b2b2-3b33">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">4</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">2</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">1</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">-</characteristic>
+              </characteristics>
+            </profile>
           </profiles>
         </selectionEntry>
       </selectionEntries>
