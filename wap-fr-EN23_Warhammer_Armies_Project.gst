@@ -7090,8 +7090,8 @@
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Extra spell selection" hidden="false" id="c5d0-4769-c76f-2cac">
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="621c-3761-7574-7ea5-min"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="621c-3761-7574-7ea5-max"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="621c-3761-7574-7ea5-min" automatic="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="621c-3761-7574-7ea5-max" automatic="true"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Extra Wizard Level" hidden="false" id="0b04-11f6-6811-c5fc">
