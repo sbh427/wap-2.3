@@ -7664,15 +7664,6 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
 Models that are Immune to all three above effects have Immunity (Psychology). This also includes automatically passing any Psychology tests they might need to take (such as many spell effects or special rules that would otherwise force a unit to take a Psychology
 test).</description>
     </rule>
-    <rule id="4b60-6477-75a8-f6dd" name="Ward Save (5+)" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
-      <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
-
-Note that does not stop single Ward Saves from being used, such as a model having a listed 2+ or 3+ Ward Save; the above limitation only applies to combining Ward Saves.
-
-Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
-
-Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
-    </rule>
     <rule id="f366-0f91-841f-cf80" name="Ambushers" publicationId="9e23-79cb-pubN66727" page="72" hidden="false">
       <description>Before starting deployment, a unit with the Ambushers special rule can choose to not deploy at the start of the battle. Instead, at the start of the Remaining Moves sub-phase of Turn 2 the controlling player rolls a D6 for each of their units of Ambushers. On a 3+, the unit arrives. If the unit does not arrive on Turn 2, roll another D6 at the start of the Remaining Moves sub- phase of Turn 3. On a 2+, the unit arrives. If the unit does not arrive on Turn 3, it will automatically arrive at the start of the Remaining Moves sub-phase of turn 4.
 
@@ -8122,15 +8113,6 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
     <rule id="0b20-ae38-065f-96ce" name="Hatred (Orcs &amp; Goblins)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
     </rule>
-    <rule id="d45b-0036-b5ef-951b" name="Ward Save (4+)" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
-      <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
-
-Note that does not stop single Ward Saves from being used, such as a model having a listed 2+ or 3+ Ward Save; the above limitation only applies to combining Ward Saves.
-
-Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
-
-Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
-    </rule>
     <rule id="48d5-6bee-c3f6-cec8" name="Strider (River)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
       <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
     </rule>
@@ -8191,9 +8173,6 @@ If two or more models in a unit have the Random Movement, pivot the unit about i
 
 A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Terrain test, unless the model is making a charge, pursuit or flee move, in which case it counts as a move of the appropriate type.</description>
     </rule>
-    <rule id="5e3f-9736-a9c0-4a1c" name="Dodge (4+)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
-      <description>Models with this rule gain a Ward save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have the Always Strikes First special rule, nor can it be used if the model is subject to the Always Strikes Last special rule.</description>
-    </rule>
     <rule id="4d40-9a96-4af8-e943" name="Random Movement (Variable)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
       <description>Models with Random Movement do not have a normal M characteristic, but rather a dice roll, (as indicated in the
 brackets). This is the distance they move, charge, pursue, overrun and flee – they cannot march. If a model has Random Movement and Swiftstride, then Swiftstride is not used. Note that certain Random Movement rolls can result in the model having a M value higher than 10 – this is an exception to the usual maximum.
@@ -8223,15 +8202,6 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
     <rule id="065b-1f43-47e5-70cb" name="Random Attacks (2D6)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
     </rule>
-    <rule id="7323-b2a0-af7b-3ec6" name="Ward Save (3+)" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
-      <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
-
-Note that does not stop single Ward Saves from being used, such as a model having a listed 2+ or 3+ Ward Save; the above limitation only applies to combining Ward Saves.
-
-Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
-
-Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
-    </rule>
     <rule id="5b16-622a-da0d-d50b" name="Random Attacks (D6)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
     </rule>
@@ -8243,15 +8213,6 @@ Some models may be allowed to re-roll a Ward Save from a specific source. In tha
     </rule>
     <rule id="a001-2c00-3971-2a29" name="Hatred (Bretonnia)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="5c26-a043-8535-5f4f" name="Ward Save (6+)" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
-      <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
-
-Note that does not stop single Ward Saves from being used, such as a model having a listed 2+ or 3+ Ward Save; the above limitation only applies to combining Ward Saves.
-
-Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
-
-Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
     </rule>
     <rule id="fb5f-f956-90e7-af6f" name="Loremaster (Lore of Tzeentch)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
@@ -8267,12 +8228,6 @@ Some models may be allowed to re-roll a Ward Save from a specific source. In tha
     </rule>
     <rule id="6112-6e8d-a942-fcba" name="Hatred (Lizardmen)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="cfff-6563-d1c6-820c" name="Dodge (5+)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
-      <description>Models with this rule gain a Ward save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have the Always Strikes First special rule, nor can it be used if the model is subject to the Always Strikes Last special rule.</description>
-    </rule>
-    <rule id="bf3d-abaf-45ca-3477" name="Dodge (6+)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
-      <description>Models with this rule gain a Ward save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have the Always Strikes First special rule, nor can it be used if the model is subject to the Always Strikes Last special rule.</description>
     </rule>
     <rule id="e20a-3f4d-cc8c-06bc" name="Random Attacks (D3+1)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
@@ -8951,9 +8906,6 @@ Unless otherwise specified, Multiple Wounds only apply to close combat attacks.<
 
 Immunity can also include Panic, Fear and Terror. If the majority of the models in a unit have the Immunity (Panic, Fear or Terror) rule, the unit ignores the effects of Panic, Fear or Terror and any such tests it would otherwise had to take.</description>
     </rule>
-    <rule id="062c-b646-a4c3-3b7c" name="Dodge (2+)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
-      <description>Models with this rule gain a Ward save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have the Always Strikes First special rule, nor can it be used if the model is subject to the Always Strikes Last special rule.</description>
-    </rule>
     <rule id="b5ab-1a7b-4c54-5733" name="Unit Strength (26)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Unit Strength of 26.</description>
     </rule>
@@ -9012,6 +8964,18 @@ Disrupted units and Skirmishers (see Special Rules chapter) cannot be Steadfast
 
 
 Steadfast units always take Break tests on their own Leadership characteristic, ignoring any negative close combat resolution modifiers. However, remember that units that are Disrupted cannot be Steadfast.  </description>
+    </rule>
+    <rule id="c79e-5ae7-e683-8fb4" name="Dodge" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
+      <description>Models with this rule gain a Ward save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have the Always Strikes First special rule, nor can it be used if the model is subject to the Always Strikes Last special rule.</description>
+    </rule>
+    <rule id="ee1d-9c99-af9c-1816" name="Ward Save" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
+      <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
+
+Note that does not stop single Ward Saves from being used, such as a model having a listed 2+ or 3+ Ward Save; the above limitation only applies to combining Ward Saves.
+
+Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
+
+Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -10728,6 +10692,20 @@ Magic phase.</characteristic>
     <profile name="Regeneration" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="73f3-8451-504e-a6e5" noindex="true">
       <characteristics>
         <characteristic name="Type" typeId="31b2-f73f-865d-f538">Regeneration</characteristic>
+        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce"/>
+        <characteristic name="Special Rule" typeId="84ea-8900-474d-6201"/>
+      </characteristics>
+    </profile>
+    <profile name="Dodge" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="6407-7161-d748-2c03" noindex="true">
+      <characteristics>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Dodge</characteristic>
+        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce"/>
+        <characteristic name="Special Rule" typeId="84ea-8900-474d-6201"/>
+      </characteristics>
+    </profile>
+    <profile name="Ward Save" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="0ea4-277a-19d5-3635" noindex="true">
+      <characteristics>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Ward Save</characteristic>
         <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce"/>
         <characteristic name="Special Rule" typeId="84ea-8900-474d-6201"/>
       </characteristics>
