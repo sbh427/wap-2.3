@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="aea5-0b49-3f3d-0e16" name="Orcs &amp; Goblins WAP 1.62" revision="60" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="aea5-0b49-3f3d-0e16" name="Orcs &amp; Goblins WAP 1.62" revision="61" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <selectionEntries>
     <selectionEntry id="bcd3-0731-37ca-d244" name="Warchanter" hidden="false" collective="false" import="true" type="model" sortIndex="8">
@@ -7302,13 +7302,6 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
-          <modifiers>
-            <modifier type="decrement" value="2" field="points">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="d989-1124-0dea-ae27" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </entryLink>
         <entryLink import="true" name="70. Mount" hidden="false" id="d8b7-95be-2fa4-3e01" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
           <entryLinks>
@@ -7341,9 +7334,9 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
         <categoryLink name="Chariot" hidden="false" id="115b-1d3c-8abe-1f27" targetId="7224-b7fd-d652-3ff2" primary="false"/>
       </categoryLinks>
       <modifiers>
-        <modifier type="increment" value="2" field="points">
+        <modifier type="increment" value="2" field="points" affects="recursive">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="parent" childId="d989-1124-0dea-ae27" shared="true" includeChildSelections="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="d989-1124-0dea-ae27" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -11132,6 +11125,13 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
       <categoryLinks>
         <categoryLink name="Chariot" hidden="false" id="08c8-abbd-eac2-83a6" targetId="7224-b7fd-d652-3ff2" primary="false"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="increment" value="2" field="points" affects="recursive">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="self" childId="d989-1124-0dea-ae27" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Wyvern" hidden="false" id="b76c-2504-f081-9706" collective="false" subType="mount">
       <constraints>
@@ -11272,6 +11272,13 @@ Should the artillery dice roll a misfire, roll a D6 and consult the Doom Diver M
           </characteristics>
         </profile>
       </profiles>
+      <modifiers>
+        <modifier type="decrement" value="2" field="points">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="d989-1124-0dea-ae27" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Maw-Grunta" hidden="false" id="6d27-51d8-8816-e91d" collective="false" subType="mount">
       <constraints>
