@@ -2634,6 +2634,13 @@
                   <rules>
                     <rule id="a09a-3f93-844a-baa4" name="Extra Extremities" publicationId="4086-1ccd-f433-39a2" page="35" hidden="false">
                       <description>All Rat Ogres in the unit gain +1 A.</description>
+                      <modifiers>
+                        <modifier type="append" value="(already in profile)" field="description">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="d690-6d9c-b2b2-1bd4" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                     </rule>
                   </rules>
                   <costs>
@@ -2647,6 +2654,13 @@
                   <rules>
                     <rule id="6fba-d702-7754-73ce" name="Quadrupedal" publicationId="4086-1ccd-f433-39a2" page="35" hidden="false">
                       <description>All Rat Ogres in the unit gain +1 M.</description>
+                      <modifiers>
+                        <modifier type="append" value="(already in profile)" field="description">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="b329-f4f2-bf1b-61ca" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                     </rule>
                   </rules>
                   <costs>
@@ -2660,6 +2674,13 @@
                   <rules>
                     <rule id="22f6-0013-7b29-5b40" name="Resilient" publicationId="4086-1ccd-f433-39a2" page="35" hidden="false">
                       <description>All Rat Ogres in the unit gain +1 T.</description>
+                      <modifiers>
+                        <modifier type="append" value="(already in profile)" field="description">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="3137-e7fa-66dc-ac0f" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </modifier>
+                      </modifiers>
                     </rule>
                   </rules>
                   <costs>
@@ -2670,16 +2691,16 @@
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5004-4302-57d5-8305" type="max"/>
                   </constraints>
-                  <rules>
-                    <rule id="ee49-da28-6a55-fe38" name="Trollblooded" publicationId="4086-1ccd-f433-39a2" page="35" hidden="false">
-                      <description>All Rat Ogres in the unit gain Regeneration (5+).</description>
-                    </rule>
-                  </rules>
                   <costs>
                     <cost name="pts" typeId="points" value="6"/>
                   </costs>
                   <infoLinks>
-                    <infoLink name="Regeneration (5+)" id="9d2c-f149-35e8-40b2" hidden="false" type="rule" targetId="5fed-df2e-b6d6-cc93"/>
+                    <infoLink name="Regeneration" id="75bf-6cc8-5d26-4bcf" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                      <modifiers>
+                        <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                        <modifier type="set" value="Trollblooded" field="name"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
                 </selectionEntry>
               </selectionEntries>
@@ -2984,11 +3005,16 @@
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="92a9-9ebb-fcbb-9d79" name="Regeneration (4+)" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
         <infoLink id="4563-abcf-612d-3634" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
         <infoLink id="7215-4f4e-48a3-35dc" name="Stubborn" hidden="false" targetId="d56e-8ec7-dbcd-aeee" type="rule"/>
         <infoLink id="d9fe-6ad1-3334-d6ff" name="Impact Hits (D6)" hidden="false" targetId="e9e6-66cc-623f-8e94" type="rule"/>
         <infoLink id="8e0b-5787-2a00-5c37" name="Random Movement (3D6)" hidden="false" targetId="0877-cd17-c381-a045" type="rule"/>
+        <infoLink name="Regeneration" id="c866-7d44-b7a9-ce4d" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+          <modifiers>
+            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+            <modifier type="set" value="Hell Pit Abomination" field="name"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="6be2-1a89-baee-6796" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -4120,9 +4146,14 @@ there are no eligible friendly units, the Warpfire Projector simply does not fir
               <infoLinks>
                 <infoLink id="5358-3a6a-dba2-0c4d" name="Strength in Numbers" hidden="false" targetId="337b-11fe-1de2-0cd0" type="rule"/>
                 <infoLink id="1399-1290-2af4-25fe" name="Scurry Away!" hidden="false" targetId="45db-9bbc-8b3b-4865" type="rule"/>
-                <infoLink id="e0ca-854c-cb13-efd5" name="Regeneration (4+)" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
                 <infoLink id="d25e-8243-2146-b688" name="Fear" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
                 <infoLink name="Leader of the Pack" id="493d-a248-7ddb-ff03" hidden="false" type="rule" targetId="b29b-75ba-9d82-c0e2"/>
+                <infoLink name="Regeneration" id="a32b-df84-3924-4da2" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                  <modifiers>
+                    <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                    <modifier type="set" value="Throt the Unclean" field="name"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="10. Character Options" hidden="false" id="5900-9775-045f-143b" type="selectionEntryGroup" targetId="4a40-8e2b-b181-5412"/>
@@ -6568,7 +6599,12 @@ To throw the Scry-orb, place the small round template with its centre anywhere w
       </categoryLinks>
       <infoLinks>
         <infoLink name="Scurry Away!" id="baaf-fac4-283e-d1ef" hidden="false" type="rule" targetId="45db-9bbc-8b3b-4865"/>
-        <infoLink name="Regeneration (4+)" id="07bc-1921-321d-be56" hidden="false" type="rule" targetId="c21b-d368-6f1c-bae3"/>
+        <infoLink name="Regeneration" id="8979-aa95-d090-f1da" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+          <modifiers>
+            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+            <modifier type="set" value="Brood Terror" field="name"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="7e07-a54c-b9dc-7236" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
