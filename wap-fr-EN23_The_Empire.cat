@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1530-30e9-f488-7652" name="Empire WAP 1.71" revision="53" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="1530-30e9-f488-7652" name="Empire WAP 1.71" revision="54" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <profileTypes>
     <profileType name="Steam Boiler Mishap Chart" id="b72c-c262-64a8-a221" hidden="false">
@@ -11539,7 +11539,7 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ac26-148e-1005-d314" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Grey Wand" hidden="false" id="bc03-3867-46f4-c708" collective="false" sortIndex="3">
+            <selectionEntry type="upgrade" import="true" name="Grey Wand" hidden="false" id="bc03-3867-46f4-c708" collective="false" sortIndex="6">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5eac-f323-735d-9dc7" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="36ac-4909-8e8e-c964" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -11555,7 +11555,7 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
                 <cost name="pts" typeId="points" value="40"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Tome of Midnight" hidden="false" id="71d9-b2f3-b42c-a47c" collective="false" sortIndex="1">
+            <selectionEntry type="upgrade" import="true" name="Tome of Midnight" hidden="false" id="71d9-b2f3-b42c-a47c" collective="false" sortIndex="4">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ca11-03e2-04c2-7229" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0eb5-2f97-e9db-34e2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -11570,8 +11570,35 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
+              <entryLinks>
+                <entryLink import="true" name="Extra spell selection" hidden="false" id="d47e-7510-d603-c7f8" type="selectionEntry" targetId="c5d0-4769-c76f-2cac">
+                  <modifiers>
+                    <modifier type="set" value="0" field="621c-3761-7574-7ea5-max">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="bc0d-47f8-7220-1e16" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="6c88-e0ab-2ca2-7e67" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="set" value="0" field="621c-3761-7574-7ea5-min">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="bc0d-47f8-7220-1e16" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="6c88-e0ab-2ca2-7e67" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="set" value="true" field="hidden" affects="self.entries.35f1-2fc8-9817-3171" scope="root-entry"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Chalice of Fate" hidden="false" id="5e28-be81-31eb-eeff" collective="false" sortIndex="2">
+            <selectionEntry type="upgrade" import="true" name="Chalice of Fate" hidden="false" id="5e28-be81-31eb-eeff" collective="false" sortIndex="5">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="12ae-e8ca-6a55-4e0a" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="6067-069f-9ea5-d43a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -11587,7 +11614,7 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
                 <cost name="pts" typeId="points" value="35"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Crystal Ball" hidden="false" id="052e-7cf5-57a5-3ed5" collective="false" sortIndex="1">
+            <selectionEntry type="upgrade" import="true" name="Crystal Ball" hidden="false" id="052e-7cf5-57a5-3ed5" collective="false" sortIndex="2">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="32b4-05d2-037a-4eb9" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a8b9-b2e9-3aa3-bdf2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -11603,7 +11630,7 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Twin-Tailed Wand" hidden="false" id="725a-b4e6-0961-c99e" collective="false" sortIndex="1">
+            <selectionEntry type="upgrade" import="true" name="Twin-Tailed Wand" hidden="false" id="725a-b4e6-0961-c99e" collective="false" sortIndex="3">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="03c9-c381-63f5-54f5" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5dd7-1613-90a8-469e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -11621,7 +11648,7 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Common Arcane Items" hidden="false" id="fa09-19bc-762f-21ba" collective="false" targetId="6cd2-3f4b-da2d-1ee9" type="selectionEntryGroup" sortIndex="4" flatten="true"/>
+            <entryLink import="true" name="Common Arcane Items" hidden="false" id="fa09-19bc-762f-21ba" collective="false" targetId="6cd2-3f4b-da2d-1ee9" type="selectionEntryGroup" sortIndex="911" flatten="true"/>
           </entryLinks>
           <modifiers>
             <modifier type="set" value="false" field="hidden">
