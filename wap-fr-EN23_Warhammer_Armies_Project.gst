@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="83" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="84" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -9476,15 +9476,6 @@ This armour save can never be lowered below 6+ from modifiers while the spell i
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target has -1 Strength and -1 Toughness (to a minimum of 1) until the start of the caster&apos;s next Magic phase.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="e037-ebb5-dade-80d4" name="Steed of Shadows" publicationId="9e23-79cb-pubN66727" page="151" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
-      <characteristics>
-        <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
-        <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-        <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-        <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Can be cast on Infantry character (including the Wizard) within range. The target immediately makes a move using Fly (10) as if it were the Remaining Moves sub-phase. In addition, the target will count as being Ethereal for the purpose of resolving missile attacks against it until the start of the caster&apos;s next Magic phase.</characteristic>
       </characteristics>
     </profile>
     <profile id="5a5d-30a8-b377-cad8" name="The Amber Spear" publicationId="9e23-79cb-pubN66727" page="123" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
