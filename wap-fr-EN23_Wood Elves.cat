@@ -2139,6 +2139,16 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <modifiers>
+        <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries" scope="root-entry">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="8d21-196e-291c-9660" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries" scope="root-entry">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="8d21-196e-291c-9660" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
         <modifier type="set" value="1" field="a1b2-4df5-7608-0a8b">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="8d21-196e-291c-9660" shared="true" includeChildSelections="true" includeChildForces="true"/>
@@ -2148,18 +2158,6 @@
       <constraints>
         <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="a1b2-4df5-7608-0a8b"/>
       </constraints>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <modifiers>
-            <modifier type="unset-primary" value="fc26-7737-f7cb-8977" field="category" affects="self.entries.recursive"/>
-            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries.recursive"/>
-            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries.recursive"/>
-          </modifiers>
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="8d21-196e-291c-9660" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifierGroup>
-      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Warhawk Riders" hidden="false" id="9570-5fb5-f10b-20d0" sortIndex="35">
       <selectionEntries>
@@ -2609,7 +2607,7 @@ to attack in the ensuing close combat.</characteristic>
                     </profile>
                     <profile name="6 Implaer" typeId="d549-1f73-1ba5-861c" typeName="Table / Chart" hidden="false" id="b8c6-6199-d59a-75f6">
                       <characteristics>
-                        <characteristic name="Result" typeId="686b-22d8-d67f-02eb"> Treat the unit as being hit by a bolt thrower in the front rank. The file it hits is determined by the Wood Elf player.</characteristic>
+                        <characteristic name="Result" typeId="686b-22d8-d67f-02eb">Treat the unit as being hit by a bolt thrower in the front rank. The file it hits is determined by the Wood Elf player.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -3417,7 +3415,7 @@ to attack in the ensuing close combat.</characteristic>
               <selectionEntryGroups>
                 <selectionEntryGroup name="Companions" id="9199-cdd2-c038-86b0" hidden="false">
                   <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Hounds of Orion" hidden="false" id="6071-d01a-6e63-db4d">
+                    <selectionEntry type="model" import="true" name="Hounds of Orion" hidden="false" id="6071-d01a-6e63-db4d">
                       <costs>
                         <cost name="pts" typeId="points" value="20"/>
                       </costs>
@@ -3733,7 +3731,7 @@ If an attack from the Talon of Dawn causes one or more unsaved Wounds, they rega
               </selectionEntries>
               <rules>
                 <rule name="Conjoined Destiny" id="275c-b4d6-e245-077c" hidden="false">
-                  <description>If Naestra and Arahan have been reduced to less than 4 Wounds at the end any turn, they will be restored to 4 Wounds.</description>
+                  <description>If Naestra and Arahan have been reduced to less than 4 Wounds at the end of any turn, they will be restored to 4 Wounds.</description>
                 </rule>
                 <rule name="Sisters of Twilight" id="520a-cac2-4d73-21cb" hidden="false">
                   <description>Naestra’s close combat attacks receive a +1 bonus To Wound against models from the Forces of Destruction. Arahan’s close combat attacks receive a +1 bonus To Wound against models from the Forces of Order.</description>
@@ -4436,6 +4434,7 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
                 <infoLink name="Scouts" id="d600-b9c1-8a6b-9fd4" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
                 <infoLink name="Elven Grace" id="c7bc-2b91-f55b-aa27" hidden="false" type="rule" targetId="8c96-c7fe-2a85-f2f9"/>
                 <infoLink name="Strider (Forest)" id="a578-926e-0320-57fb" hidden="false" type="rule" targetId="8d09-c701-2658-67e8"/>
+                <infoLink name="Asrai Archery" id="861c-9ff0-2950-a2b5" hidden="false" type="rule" targetId="7a83-61cd-defa-0796"/>
               </infoLinks>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="5f86-b9b0-d175-a2c7" includeChildSelections="true"/>
@@ -4512,7 +4511,7 @@ Any enemy units that suffer Wounds from any of these attacks suffer -1 To Hit an
                     <characteristic name="Range" typeId="af3c-d805-702c-9af9">24&quot;</characteristic>
                     <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">3</characteristic>
                     <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">3</characteristic>
-                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Rapid Fire. The enemy unit must take a Weapon Skill test for each falcon targeting them. If faild, it gets hit.</characteristic>
+                    <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Rapid Fire. Rather than rolling to Hit using Ballistic Skill, the target must pass a Weapon Skill test to avoid being Hit.</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Falcons" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6c4e-57d0-28e9-d5a5">
@@ -6982,6 +6981,11 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d322-2bd1-e64a-12c2" shared="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <profiles>
                 <profile name="Hail Arrow of Doom" typeId="20d2-b203-b36b-28c4" typeName="Enchanted Arrows" hidden="false" id="ed76-3506-4acd-3569">
@@ -7024,6 +7028,11 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d322-2bd1-e64a-12c2" shared="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
               <profiles>
                 <profile name="Dragontooth Arrows" typeId="20d2-b203-b36b-28c4" typeName="Enchanted Arrows" hidden="false" id="8010-af54-8d1c-a43b">
@@ -7057,6 +7066,11 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d322-2bd1-e64a-12c2" shared="true"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <profiles>
@@ -7104,6 +7118,11 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d322-2bd1-e64a-12c2" shared="true"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <categoryLinks>
@@ -7273,6 +7292,11 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="d322-2bd1-e64a-12c2" shared="true"/>
+                  </conditions>
                 </modifier>
               </modifiers>
               <categoryLinks>
