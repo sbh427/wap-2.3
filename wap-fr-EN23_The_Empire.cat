@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1530-30e9-f488-7652" name="Empire WAP 1.71" revision="54" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="1530-30e9-f488-7652" name="Empire WAP 1.71" revision="55" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <profileTypes>
     <profileType name="Steam Boiler Mishap Chart" id="b72c-c262-64a8-a221" hidden="false">
@@ -11593,10 +11593,12 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
                         </conditionGroup>
                       </conditionGroups>
                     </modifier>
-                    <modifier type="set" value="true" field="hidden" affects="self.entries.35f1-2fc8-9817-3171" scope="root-entry"/>
                   </modifiers>
                 </entryLink>
               </entryLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden" affects="self.entries.d322-3c7a-6d1e-7dc2" scope="root-entry"/>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Chalice of Fate" hidden="false" id="5e28-be81-31eb-eeff" collective="false" sortIndex="5">
               <constraints>
@@ -11791,109 +11793,133 @@ If the first artillery dice rolls a misfire, the Steam Cannon does not fire and 
                 </profile>
               </profiles>
               <selectionEntryGroups>
-                <selectionEntryGroup name="Spell" id="cd51-2829-a56a-1a5a" hidden="false">
-                  <selectionEntries>
-                    <selectionEntry type="upgrade" import="true" name="Lore of Beasts" hidden="false" id="1288-15d3-eba2-41f8">
+                <selectionEntryGroup name="Spell" id="cd51-2829-a56a-1a5a" hidden="false" defaultSelectionEntryId="none">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="56c0-5fb6-7d69-dd0f-min"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d2e3-6e99-3e2a-1872" includeChildSelections="false"/>
+                  </constraints>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Lore of Shadow" id="8cf3-c30d-8ade-9962" hidden="false" collapsible="true">
                       <entryLinks>
-                        <entryLink import="true" name="0. Wyssan&apos;s Wildform" hidden="false" id="1852-305f-805e-4e8b" type="selectionEntry" targetId="0096-7e25-66b4-9cad"/>
-                        <entryLink import="true" name="1. The Flock of Doom" hidden="false" id="0d74-ca54-4a75-de8c" type="selectionEntry" targetId="0465-fa36-e7c8-9c79"/>
-                        <entryLink import="true" name="2. The Ox Stands" hidden="false" id="6a8c-b15b-eab3-ebff" type="selectionEntry" targetId="dd76-faf9-80fd-4382"/>
-                        <entryLink import="true" name="3. Pann&apos;s Impenetrable Pelt" hidden="false" id="ddc1-a107-af8a-a0c9" type="selectionEntry" targetId="8142-6684-5e96-a011"/>
+                        <entryLink import="true" name="0. Melkoth&apos;s Mystifying Miasma" hidden="false" id="7b07-16b0-95bd-0ba7" type="selectionEntry" targetId="dba6-e588-0a5b-69a1">
+                          <modifiers>
+                            <modifier type="set" value="0" field="5cd7-39f6-1064-bdc3"/>
+                          </modifiers>
+                        </entryLink>
+                        <entryLink import="true" name="1. Creeping Darkness" hidden="false" id="3532-1347-16ef-79c5" type="selectionEntry" targetId="1881-7f35-6713-cba7"/>
+                        <entryLink import="true" name="2. The Enfeebling Foe" hidden="false" id="69f6-ff97-ccd6-8e75" type="selectionEntry" targetId="579c-cdd9-614c-8b33"/>
+                        <entryLink import="true" name="3. Cloak of Midnight" hidden="false" id="2497-8397-c217-27dd" type="selectionEntry" targetId="a6b4-9378-c3b6-2553"/>
                       </entryLinks>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a1c1-85ff-5b45-0911-min"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a1c1-85ff-5b45-0911-max"/>
-                      </constraints>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Lore of Death" hidden="false" id="addc-37b7-fd44-ee1c">
+                      <infoLinks>
+                        <infoLink name="Steed of Shadows" id="d8a8-0a34-8e5e-719d" hidden="false" type="profile" targetId="4fcb-a016-2721-ff01"/>
+                      </infoLinks>
+                    </selectionEntryGroup>
+                    <selectionEntryGroup name="Lore of Metal" id="4299-d2b2-96cb-1dc6" hidden="false" collapsible="true">
                       <entryLinks>
-                        <entryLink import="true" name="0. Dark Hand of Death" hidden="false" id="a39b-8c3f-a46c-8100" type="selectionEntry" targetId="3b38-7f74-f979-94f4"/>
-                        <entryLink import="true" name="1. Death Dealer" hidden="false" id="b133-5aab-8e01-1383" type="selectionEntry" targetId="462b-0dd2-392c-2439"/>
-                        <entryLink import="true" name="2. The Caress of Laniph" hidden="false" id="ce26-cbc3-2958-5098" type="selectionEntry" targetId="a5c5-fce0-7c91-d277"/>
-                        <entryLink import="true" name="3. Spirit Leech" hidden="false" id="00ae-9c34-33a7-e2ed" type="selectionEntry" targetId="7a63-500c-5cfb-4a00"/>
-                      </entryLinks>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="caac-ea52-ba7e-68cb-min"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="caac-ea52-ba7e-68cb-max"/>
-                      </constraints>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Lore of Fire" hidden="false" id="03e0-7316-a1f7-95ef">
-                      <entryLinks>
-                        <entryLink import="true" name="0. Fireball" hidden="false" id="e118-4e1b-9048-403b" type="selectionEntry" targetId="e899-1538-32f0-e469"/>
-                        <entryLink import="true" name="1. Cascading Fire-Cloak" hidden="false" id="6b94-0ffb-ee04-f92b" type="selectionEntry" targetId="c52e-1f2f-ab75-6f3c"/>
-                        <entryLink import="true" name="2. Breathe Fire" hidden="false" id="7ce4-8581-b108-5151" type="selectionEntry" targetId="b2d8-b581-0ada-df2d"/>
-                        <entryLink import="true" name="3. Flaming Sword of Rhuin" hidden="false" id="bc72-4134-18e3-b7cf" type="selectionEntry" targetId="f722-5b25-3d5c-45d4"/>
-                      </entryLinks>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a147-93cb-2c8d-7252-min"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a147-93cb-2c8d-7252-max"/>
-                      </constraints>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Lore of Heavens" hidden="false" id="6130-d471-096c-d44a">
-                      <entryLinks>
-                        <entryLink import="true" name="0. Harmonic Convergence" hidden="false" id="7bee-6b35-7de6-ba9f" type="selectionEntry" targetId="e9eb-1db7-772d-1bb5"/>
-                        <entryLink import="true" name="1. Azur Blades" hidden="false" id="54ea-8b74-469d-a5dc" type="selectionEntry" targetId="b19b-8399-0f8c-85b7"/>
-                        <entryLink import="true" name="2. Star Tides Ebb" hidden="false" id="3bf7-abb7-1b88-64ec" type="selectionEntry" targetId="681c-5eda-22cf-6fe5"/>
-                        <entryLink import="true" name="3. Cerulean Shield" hidden="false" id="c695-9f20-5cbb-c694" type="selectionEntry" targetId="17f8-8cd0-4dc5-2b57"/>
-                      </entryLinks>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fe9d-b03d-387f-4b98-min"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fe9d-b03d-387f-4b98-max"/>
-                      </constraints>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Lore of Life" hidden="false" id="0afd-253e-427d-c955">
-                      <entryLinks>
-                        <entryLink import="true" name="0. Earth Blood" hidden="false" id="6b25-752e-96da-94ae" type="selectionEntry" targetId="413a-6e59-0fd2-16a8"/>
-                        <entryLink import="true" name="1. Shield of Thorns" hidden="false" id="0132-8a03-d0f3-dada" type="selectionEntry" targetId="b18a-83fa-c4a2-4b24"/>
-                        <entryLink import="true" name="2. Awakening of the Wood" hidden="false" id="03bb-f94a-0815-7f98" type="selectionEntry" targetId="301e-8db5-9663-51dc"/>
-                        <entryLink import="true" name="3. The Cloak of Dain" hidden="false" id="41e6-4088-5ae6-c7d1" type="selectionEntry" targetId="2d6a-65ae-5cc6-7e71"/>
-                      </entryLinks>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cf84-d1d5-42ee-0638-min"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cf84-d1d5-42ee-0638-max"/>
-                      </constraints>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Lore of Light" hidden="false" id="f2ca-7830-5f23-bbaf">
-                      <entryLinks>
-                        <entryLink import="true" name="0. Shem&apos;s Burning Gaze" hidden="false" id="f986-d84d-2ece-9312" type="selectionEntry" targetId="6287-ea6c-c498-b86a"/>
-                        <entryLink import="true" name="1. Dazzling Brightness" hidden="false" id="e379-becd-bbdb-db30" type="selectionEntry" targetId="6d9e-7cb4-b203-883b"/>
-                        <entryLink import="true" name="2. Healing Energy" hidden="false" id="752c-f132-c734-8eb3" type="selectionEntry" targetId="1177-7eab-d7d8-07a7"/>
-                        <entryLink import="true" name="3. Pha&apos;s Protection" hidden="false" id="bb31-61ed-6d2e-bcf8" type="selectionEntry" targetId="6bb3-22d6-bb06-1d9e"/>
-                      </entryLinks>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a791-3c99-3d1f-99bd-min"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a791-3c99-3d1f-99bd-max"/>
-                      </constraints>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Lore of Metal" hidden="false" id="d32a-f1be-da20-d2f4">
-                      <entryLinks>
-                        <entryLink import="true" name="0. Glittering Robe" hidden="false" id="a815-a2c4-0f7a-5065" type="selectionEntry" targetId="2fbe-0ca5-12f1-b74b"/>
+                        <entryLink import="true" name="0. Glittering Robe" hidden="false" id="a815-a2c4-0f7a-5065" type="selectionEntry" targetId="2fbe-0ca5-12f1-b74b">
+                          <modifiers>
+                            <modifier type="set" value="0" field="f44d-ed4e-5ce8-62b4"/>
+                          </modifiers>
+                        </entryLink>
                         <entryLink import="true" name="1. Searing Doom" hidden="false" id="a81c-8e40-006e-9dd3" type="selectionEntry" targetId="644b-e439-7b01-d620"/>
                         <entryLink import="true" name="2. Law of Gold" hidden="false" id="78fd-8424-510a-7143" type="selectionEntry" targetId="80cb-0b29-5a85-f396"/>
                         <entryLink import="true" name="3. Plague of Rust" hidden="false" id="4a19-5153-eeef-0e9a" type="selectionEntry" targetId="6590-69a5-61a4-46f1"/>
                       </entryLinks>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="026e-4c3a-ee47-0a6b-min"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="026e-4c3a-ee47-0a6b-max"/>
-                      </constraints>
-                    </selectionEntry>
-                    <selectionEntry type="upgrade" import="true" name="Lore of Shadow" hidden="false" id="8d21-a596-cdbb-148a">
+                      <infoLinks>
+                        <infoLink name="Metallic Attraction" id="eaa2-baa5-5f41-e7de" hidden="false" type="profile" targetId="0958-a1b9-1238-c0e7"/>
+                      </infoLinks>
+                    </selectionEntryGroup>
+                    <selectionEntryGroup name="Lore of Light" id="da0b-3c79-b398-5279" hidden="false" collapsible="true">
                       <entryLinks>
-                        <entryLink import="true" name="0. Melkoth&apos;s Mystifying Miasma" hidden="false" id="3b67-31d5-1dd0-c3f8" type="selectionEntry" targetId="dba6-e588-0a5b-69a1"/>
-                        <entryLink import="true" name="1. Creeping Darkness" hidden="false" id="c497-d9d8-2f6d-b42b" type="selectionEntry" targetId="1881-7f35-6713-cba7"/>
-                        <entryLink import="true" name="2. The Enfeebling Foe" hidden="false" id="ea08-2496-3986-b7d8" type="selectionEntry" targetId="579c-cdd9-614c-8b33"/>
-                        <entryLink import="true" name="3. Cloak of Midnight" hidden="false" id="af03-7db7-746b-a5d4" type="selectionEntry" targetId="a6b4-9378-c3b6-2553"/>
+                        <entryLink import="true" name="0. Shem&apos;s Burning Gaze" hidden="false" id="f986-d84d-2ece-9312" type="selectionEntry" targetId="6287-ea6c-c498-b86a">
+                          <modifiers>
+                            <modifier type="set" value="0" field="4929-1d6b-41d4-2c15"/>
+                          </modifiers>
+                        </entryLink>
+                        <entryLink import="true" name="1. Dazzling Brightness" hidden="false" id="e379-becd-bbdb-db30" type="selectionEntry" targetId="6d9e-7cb4-b203-883b"/>
+                        <entryLink import="true" name="2. Healing Energy" hidden="false" id="752c-f132-c734-8eb3" type="selectionEntry" targetId="1177-7eab-d7d8-07a7"/>
+                        <entryLink import="true" name="3. Pha&apos;s Protection" hidden="false" id="bb31-61ed-6d2e-bcf8" type="selectionEntry" targetId="6bb3-22d6-bb06-1d9e"/>
                       </entryLinks>
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0d10-634a-0683-97e7-min"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0d10-634a-0683-97e7-max"/>
-                      </constraints>
-                    </selectionEntry>
-                  </selectionEntries>
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="56c0-5fb6-7d69-dd0f-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="56c0-5fb6-7d69-dd0f-max"/>
-                  </constraints>
+                      <infoLinks>
+                        <infoLink name="Focus Energy" id="790a-3cda-2fea-6517" hidden="false" type="profile" targetId="cd1f-0bc5-ab83-af06"/>
+                      </infoLinks>
+                    </selectionEntryGroup>
+                    <selectionEntryGroup name="Lore of Life" id="cc79-c128-2849-62e6" hidden="false" collapsible="true">
+                      <entryLinks>
+                        <entryLink import="true" name="0. Earth Blood" hidden="false" id="6b25-752e-96da-94ae" type="selectionEntry" targetId="413a-6e59-0fd2-16a8">
+                          <modifiers>
+                            <modifier type="set" value="0" field="8fb9-7f73-c665-8c43"/>
+                          </modifiers>
+                        </entryLink>
+                        <entryLink import="true" name="1. Shield of Thorns" hidden="false" id="0132-8a03-d0f3-dada" type="selectionEntry" targetId="b18a-83fa-c4a2-4b24"/>
+                        <entryLink import="true" name="2. Awakening of the Wood" hidden="false" id="03bb-f94a-0815-7f98" type="selectionEntry" targetId="301e-8db5-9663-51dc"/>
+                        <entryLink import="true" name="3. The Cloak of Dain" hidden="false" id="41e6-4088-5ae6-c7d1" type="selectionEntry" targetId="2d6a-65ae-5cc6-7e71"/>
+                      </entryLinks>
+                      <infoLinks>
+                        <infoLink name="Lifebloom" id="a049-aa0e-ea79-7ef9" hidden="false" type="profile" targetId="655d-ede0-9e85-a1ad"/>
+                      </infoLinks>
+                    </selectionEntryGroup>
+                    <selectionEntryGroup name="Lore of Fire" id="5fff-fd34-5cd5-5004" hidden="false" collapsible="true">
+                      <entryLinks>
+                        <entryLink import="true" name="0. Fireball" hidden="false" id="e118-4e1b-9048-403b" type="selectionEntry" targetId="e899-1538-32f0-e469">
+                          <modifiers>
+                            <modifier type="set" value="0" field="32ee-149d-e11a-225b"/>
+                          </modifiers>
+                        </entryLink>
+                        <entryLink import="true" name="1. Cascading Fire-Cloak" hidden="false" id="6b94-0ffb-ee04-f92b" type="selectionEntry" targetId="c52e-1f2f-ab75-6f3c"/>
+                        <entryLink import="true" name="2. Breathe Fire" hidden="false" id="7ce4-8581-b108-5151" type="selectionEntry" targetId="b2d8-b581-0ada-df2d"/>
+                        <entryLink import="true" name="3. Flaming Sword of Rhuin" hidden="false" id="bc72-4134-18e3-b7cf" type="selectionEntry" targetId="f722-5b25-3d5c-45d4"/>
+                      </entryLinks>
+                      <infoLinks>
+                        <infoLink name="Kindleflame" id="f136-aff5-74c8-4e16" hidden="false" type="profile" targetId="c198-878a-0683-0889"/>
+                      </infoLinks>
+                    </selectionEntryGroup>
+                    <selectionEntryGroup name="Lore of Death" id="a85f-3c5a-e672-3e6a" hidden="false" collapsible="true">
+                      <entryLinks>
+                        <entryLink import="true" name="0. Dark Hand of Death" hidden="false" id="a39b-8c3f-a46c-8100" type="selectionEntry" targetId="3b38-7f74-f979-94f4">
+                          <modifiers>
+                            <modifier type="set" value="0" field="63cb-a6db-9494-90d7"/>
+                          </modifiers>
+                        </entryLink>
+                        <entryLink import="true" name="1. Death Dealer" hidden="false" id="b133-5aab-8e01-1383" type="selectionEntry" targetId="462b-0dd2-392c-2439"/>
+                        <entryLink import="true" name="2. The Caress of Laniph" hidden="false" id="ce26-cbc3-2958-5098" type="selectionEntry" targetId="a5c5-fce0-7c91-d277"/>
+                        <entryLink import="true" name="3. Spirit Leech" hidden="false" id="00ae-9c34-33a7-e2ed" type="selectionEntry" targetId="7a63-500c-5cfb-4a00"/>
+                      </entryLinks>
+                      <infoLinks>
+                        <infoLink name="Life Leeching" id="5979-5ede-f301-c2e3" hidden="false" type="profile" targetId="2c43-e445-f916-eae9"/>
+                      </infoLinks>
+                    </selectionEntryGroup>
+                    <selectionEntryGroup name="Lore of Beasts" id="067e-0963-9bb4-d159" hidden="false" collapsible="true">
+                      <entryLinks>
+                        <entryLink import="true" name="0. Wyssan&apos;s Wildform" hidden="false" id="1852-305f-805e-4e8b" type="selectionEntry" targetId="0096-7e25-66b4-9cad">
+                          <modifiers>
+                            <modifier type="set" value="0" field="5986-e58b-7345-9a05"/>
+                          </modifiers>
+                        </entryLink>
+                        <entryLink import="true" name="1. The Flock of Doom" hidden="false" id="0d74-ca54-4a75-de8c" type="selectionEntry" targetId="0465-fa36-e7c8-9c79"/>
+                        <entryLink import="true" name="2. The Ox Stands" hidden="false" id="6a8c-b15b-eab3-ebff" type="selectionEntry" targetId="dd76-faf9-80fd-4382"/>
+                        <entryLink import="true" name="3. Pann&apos;s Impenetrable Pelt" hidden="false" id="ddc1-a107-af8a-a0c9" type="selectionEntry" targetId="8142-6684-5e96-a011"/>
+                      </entryLinks>
+                      <infoLinks>
+                        <infoLink name="Wildheart" id="0301-e8a5-93b1-df71" hidden="false" type="profile" targetId="7c9a-10fe-33ee-5112"/>
+                      </infoLinks>
+                    </selectionEntryGroup>
+                    <selectionEntryGroup name="Lore of Heavens" id="32c2-8586-add2-e2fb" hidden="false" collapsible="true">
+                      <entryLinks>
+                        <entryLink import="true" name="0. Harmonic Convergence" hidden="false" id="7bee-6b35-7de6-ba9f" type="selectionEntry" targetId="e9eb-1db7-772d-1bb5">
+                          <modifiers>
+                            <modifier type="set" value="0" field="6b8b-86fe-e6f0-3c09"/>
+                          </modifiers>
+                        </entryLink>
+                        <entryLink import="true" name="1. Azur Blades" hidden="false" id="54ea-8b74-469d-a5dc" type="selectionEntry" targetId="b19b-8399-0f8c-85b7"/>
+                        <entryLink import="true" name="2. Star Tides Ebb" hidden="false" id="3bf7-abb7-1b88-64ec" type="selectionEntry" targetId="681c-5eda-22cf-6fe5"/>
+                        <entryLink import="true" name="3. Cerulean Shield" hidden="false" id="c695-9f20-5cbb-c694" type="selectionEntry" targetId="17f8-8cd0-4dc5-2b57"/>
+                      </entryLinks>
+                      <infoLinks>
+                        <infoLink name="Fantastic Foresight" id="442f-ca50-dd0c-3dd1" hidden="false" type="profile" targetId="64c1-2688-2cd5-b359"/>
+                      </infoLinks>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <costs>
