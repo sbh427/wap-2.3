@@ -2138,26 +2138,22 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <modifiers>
-        <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries" scope="root-entry">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="8d21-196e-291c-9660" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries" scope="root-entry">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="8d21-196e-291c-9660" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="1" field="a1b2-4df5-7608-0a8b">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="8d21-196e-291c-9660" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <constraints>
         <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="a1b2-4df5-7608-0a8b"/>
       </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries"/>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="8d21-196e-291c-9660" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Warhawk Riders" hidden="false" id="9570-5fb5-f10b-20d0" sortIndex="35">
       <selectionEntries>
