@@ -3411,35 +3411,42 @@ to attack in the ensuing close combat.</characteristic>
               <selectionEntryGroups>
                 <selectionEntryGroup name="Companions" id="9199-cdd2-c038-86b0" hidden="false">
                   <selectionEntries>
-                    <selectionEntry type="model" import="true" name="Hounds of Orion" hidden="false" id="6071-d01a-6e63-db4d">
+                    <selectionEntry type="unit" import="true" name="Hounds of Orion" hidden="false" id="6071-d01a-6e63-db4d" collective="true" subType="unit-group">
                       <costs>
                         <cost name="pts" typeId="points" value="20"/>
                       </costs>
                       <constraints>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="486d-0df0-5879-7914"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9a3b-ec9f-f26f-9a4b" includeChildSelections="false"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Hound of Orion " typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0144-f84d-9f6c-e3bb">
-                          <characteristics>
-                            <characteristic name="M" typeId="09ad-18df-607b-1215">9</characteristic>
-                            <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-                            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-                            <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-                            <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                            <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-                            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                            <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
-                            <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beasts (Canine, Forest Spirit)</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
-                      <infoLinks>
-                        <infoLink name="Forest Spirit" id="ecee-615d-12ce-7924" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
-                        <infoLink name="Frenzy" id="9158-e267-6b0e-086f" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
-                        <infoLink name="Unbreakable" id="1f48-e345-0591-8ee2" hidden="false" type="rule" targetId="1c9d-2d99-6222-2853"/>
-                        <infoLink name="Hound of Orion " id="5d67-aff3-43c7-b23f" hidden="false" type="profile" targetId="0144-f84d-9f6c-e3bb"/>
-                      </infoLinks>
+                      <selectionEntries>
+                        <selectionEntry type="model" import="true" name="Hound of Orion" hidden="false" id="35fc-5686-f7d1-e416" collective="true">
+                          <constraints>
+                            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="c40f-a165-3f71-63e9-min" includeChildSelections="false" automatic="true"/>
+                            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="c40f-a165-3f71-63e9-max" includeChildSelections="false" automatic="true"/>
+                          </constraints>
+                          <profiles>
+                            <profile name="Hound of Orion " typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0144-f84d-9f6c-e3bb">
+                              <characteristics>
+                                <characteristic name="M" typeId="09ad-18df-607b-1215">9</characteristic>
+                                <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+                                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
+                                <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+                                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                                <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                                <characteristic name="Ld" typeId="a199-f10b-a038-5730">6</characteristic>
+                                <characteristic name="Type" typeId="13f9-a26b-05af-3459">War Beasts (Canine, Forest Spirit)</characteristic>
+                              </characteristics>
+                            </profile>
+                          </profiles>
+                          <infoLinks>
+                            <infoLink name="Forest Spirit" id="ecee-615d-12ce-7924" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
+                            <infoLink name="Frenzy" id="9158-e267-6b0e-086f" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
+                            <infoLink name="Unbreakable" id="1f48-e345-0591-8ee2" hidden="false" type="rule" targetId="1c9d-2d99-6222-2853"/>
+                          </infoLinks>
+                        </selectionEntry>
+                      </selectionEntries>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -4776,11 +4783,11 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
           <infoLinks>
             <infoLink name="Forest Spirit" id="1243-7ca6-3fe6-8324" hidden="false" type="rule" targetId="ebd6-301f-37af-aaf6"/>
           </infoLinks>
-          <entryLinks>
-            <entryLink import="true" name="Expendable" hidden="false" id="ade5-bb9d-698e-c7a7" type="selectionEntry" targetId="b90d-9045-a6d5-9e7d"/>
-          </entryLinks>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Expendable" hidden="false" id="ade5-bb9d-698e-c7a7" type="selectionEntry" targetId="b90d-9045-a6d5-9e7d"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Treeman" hidden="false" id="5d20-c418-772a-53e2" sortIndex="40">
       <costs>
@@ -5032,7 +5039,7 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">5</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Dragon, Forest Spirit)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Draconid, Forest Spirit)</characteristic>
           </characteristics>
         </profile>
         <profile name="Soporific Breath" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="e008-08cc-4ef5-0469">
@@ -5191,13 +5198,14 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Lore of Athel Loren" hidden="false" id="c85f-c430-1e4c-fc64">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a1d2-c109-39b1-90ae" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a1d2-c109-39b1-90ae" includeChildSelections="false" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="fa47-7713-acb6-9a46" includeChildSelections="false"/>
       </constraints>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Glamourweaving" hidden="false" id="4685-b787-01fa-97c8" sortIndex="1">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="247a-1a11-b92a-ba3d-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="247a-1a11-b92a-ba3d-max" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="247a-1a11-b92a-ba3d-max" includeChildSelections="false" automatic="true"/>
           </constraints>
           <profiles>
             <profile name="Glamourweaving" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="ab05-026e-2346-d031">
@@ -5214,7 +5222,7 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
         <selectionEntry type="upgrade" import="true" name="Tree Singing" hidden="false" id="7851-6f65-7f24-a5eb" sortIndex="2">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d86a-bfc2-3268-b347-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d86a-bfc2-3268-b347-max" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d86a-bfc2-3268-b347-max" includeChildSelections="false" negative="false" automatic="true"/>
           </constraints>
           <profiles>
             <profile name="Tree Singing" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="0537-9093-2be4-8b20">
@@ -5229,298 +5237,8 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
           </profiles>
         </selectionEntry>
       </selectionEntries>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Athel Loren" id="2a32-3a99-5957-de5a" hidden="false">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Fury of the Forest" hidden="false" id="9084-803a-516e-e67d" sortIndex="1" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3917-91cd-1e54-8186" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Fury of the Forest" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="c897-2c77-9fa1-4d61">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If the target is within 6&quot; of a forest it suffers 2D6 Strength 4 hits. If the target is partially or wholly within a forest it suffers 3D6 Strength 4 hits.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Durthu&apos;s Wrath" hidden="false" id="b640-048d-d9be-5acf" sortIndex="2" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c80a-91b5-e993-34b7" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Durthu&apos;s Wrath" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="fbdc-3595-c21b-14dd">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">Combat</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the front rank of any unit in base contact with the caster must pass an Initiative test or suffer a Strength 4 hit with the Ignores Armour Saves and Multiple Wounds (D3) special rules.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Twilight Host" hidden="false" id="21b5-fede-4535-91e4" sortIndex="3" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3cfa-f9b2-64a7-4828" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="The Twilight Host" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="dca1-9979-5d31-2a53">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains the Fear special rule until the start of the caster&apos;s next Magic phase. If the unit already has the Fear special rule, it instead gains the Terror special rule. In addition, the target will count as having twice the Unit Strength and number of ranks it really has for the purpose of determining Outnumber and Steadfast.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Hidden Path" hidden="true" id="4b52-4d42-af8c-ce60" sortIndex="4" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="651c-db99-12c9-e97a" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="The Hidden Path" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="78a4-b8be-3852-9e9e">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The unit gains the Ethereal special rule until the start of the caster&apos;s next Magic phase. If the unit becomes engaged in close combat, the spell instantly ends.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Spiteful Torrent" hidden="true" id="f053-a2cf-5b79-4a38" sortIndex="5" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="11a3-38cd-a9c5-c599" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Spiteful Torrent" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="826e-9667-7fa8-9a01">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Uses the small round template. Any model touched by the template at any point during its move suffers a Strength 2 hit with the Armour Piercing (1) special rule.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Aspect of Athel Loren" hidden="true" id="629a-f89a-151b-d1b5" sortIndex="6" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aee2-e52a-1e2f-0f0a" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Aspect of Athel Loren" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="41e2-0d03-5873-6081">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Affects all friendly Forest Spirits within range. Until the start of the caster&apos;s next Magic phase, all affected units gain a 6+ Ward save.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Ariel&apos;s Blessing" hidden="true" id="cb72-ec9a-929c-0bc8" sortIndex="12" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="279b-92b4-ec22-1ec4" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Ariel&apos;s Blessing" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="11ae-3287-1116-ab44">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">13+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains the Regeneration (4+) special rule until the start of the caster&apos;s next Magic phase</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Madrigal of Greening" hidden="true" id="fe71-79c5-27c4-8cc4" sortIndex="7" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b919-1632-c06f-e320" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Madrigal of Greening" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5868-59a6-b989-0946">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Summoning</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This spell summons a forest of your choosing no more than 12&quot; in diameter.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Sapping Blight" hidden="true" id="7e67-2752-39dd-f93c" sortIndex="8" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ea13-55e1-2020-a447" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Sapping Blight" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="a3e2-1bdf-49bf-e8e3">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, the target has -1 Strength and -1 Toughness (to a minimum of 1).</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Cage of Thorns" hidden="true" id="f027-9e34-ac01-fa18" sortIndex="9" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e0d9-84bc-5a97-4d98" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Cage of Thorns" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5ab7-fdeb-5948-1fcc">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, the target unit halves all their Movement (rounding up). In addition, the target suffer D6 Strength 3 Hits any time it moves.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Call of the Hunt" hidden="true" id="b685-b91f-e7ad-8482" sortIndex="10" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6533-cc64-2cff-c3b4" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="The Call of the Hunt" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="9e64-4449-3e19-44ee">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target immediately moves forward towards the closest enemy unit within line of sight using the Random Movement (2D6) special rule. If no enemy unit is in line of sight, the unit will move directly forwards. In addition, the unit gains +1 Attack (except mounts) until the start of the caster’s next Magic phase.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Verdurous Harmony" hidden="true" id="715a-de29-d8a8-26ae" sortIndex="11" collective="true">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="576e-203b-8fd3-36e6" includeChildSelections="false"/>
-              </constraints>
-              <profiles>
-                <profile name="Verdurous Harmony" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="6e50-be24-dc85-a4eb">
-                  <characteristics>
-                    <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
-                    <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
-                    <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
-                    <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All targets instantly recover D3 Wounds&apos; worth of models slain earlier in the battle, just like a summoning spell.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <modifiers>
-                <modifier type="set" value="false" field="hidden">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Spells from the Lore of Athel Loren" hidden="false" id="21f0-0139-e0e4-288b" type="selectionEntryGroup" targetId="2a32-3a99-5957-de5a">
           <constraints>
             <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="b14f-f8a5-185c-deed"/>
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="e9ec-4197-0abd-8a0e"/>
@@ -5677,8 +5395,15 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
               </conditionGroups>
             </modifier>
           </modifiers>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
+        </entryLink>
+      </entryLinks>
+      <modifiers>
+        <modifier type="set" value="0" field="a1d2-c109-39b1-90ae">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Strangleroots" hidden="false" id="36bb-ac79-f6de-50cc">
       <constraints>
@@ -5895,6 +5620,331 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0a2e-55e3-332f-6e8f" includeChildSelections="false" automatic="true"/>
       </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Lore of Beasts" hidden="false" id="afe9-2f74-ddf3-67cc">
+      <entryLinks>
+        <entryLink import="true" name="Wildheart" hidden="false" id="133b-2b72-4508-44ad" type="selectionEntry" targetId="3ce9-08d9-0e1a-1e25" sortIndex="1"/>
+        <entryLink import="true" name="0. Wyssan&apos;s Wildform" hidden="false" id="dfb1-9008-c783-84c7" type="selectionEntry" targetId="0096-7e25-66b4-9cad" sortIndex="2"/>
+        <entryLink import="true" name="Spells from the Lore of Beasts &amp; Athel Loren" hidden="false" id="5b6d-6a4c-c1e6-5e37" type="selectionEntryGroup" targetId="8f9a-aac2-7174-578c" sortIndex="5">
+          <modifiers>
+            <modifier type="append" value="&amp; Athel Loren" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+          <entryLinks>
+            <entryLink import="true" name="Spells from the Lore of Athel Loren" hidden="false" id="12b1-177a-957b-1be2" type="selectionEntryGroup" targetId="2a32-3a99-5957-de5a" flatten="true">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="Glamourweaving" hidden="false" id="3b9d-8dd2-0734-3064" type="selectionEntry" targetId="4685-b787-01fa-97c8" sortIndex="3">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden"/>
+                <modifier type="set" value="0" field="247a-1a11-b92a-ba3d-min"/>
+                <modifier type="set" value="0" field="247a-1a11-b92a-ba3d-max"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </entryLink>
+        <entryLink import="true" name="Tree Singing" hidden="false" id="0dd9-8cff-55f8-2e10" type="selectionEntry" targetId="7851-6f65-7f24-a5eb" sortIndex="4">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden"/>
+                <modifier type="set" value="0" field="d86a-bfc2-3268-b347-min"/>
+                <modifier type="set" value="0" field="d86a-bfc2-3268-b347-max"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7cf3-8d2b-1444-d62f"/>
+      </constraints>
+      <modifiers>
+        <modifier type="append" value="&amp; Athel Loren" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <comment> &amp; Athel Loren</comment>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Lore of Life" hidden="false" id="8827-1ecd-f704-ba6c">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3a48-d0a6-5837-1950"/>
+      </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Lifebloom" hidden="false" id="abda-c7bb-0dba-4461" type="selectionEntry" targetId="7f68-7905-ad21-9d6d" sortIndex="1"/>
+        <entryLink import="true" name="0. Earth Blood" hidden="false" id="cf3c-19ee-c8d5-8d5e" type="selectionEntry" targetId="413a-6e59-0fd2-16a8" sortIndex="2"/>
+        <entryLink import="true" name="Spells from the Lore of Life" hidden="false" id="9e91-f998-84ad-3953" type="selectionEntryGroup" targetId="5376-05d7-fd54-9e38" sortIndex="5">
+          <entryLinks>
+            <entryLink import="true" name="Spells from the Lore of Athel Loren" hidden="false" id="a649-4d4e-6d07-4f54" type="selectionEntryGroup" targetId="2a32-3a99-5957-de5a" flatten="true">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <modifiers>
+            <modifier type="append" value="&amp; Athel Loren" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Tree Singing" hidden="false" id="e8de-f1bf-77c4-0404" type="selectionEntry" targetId="7851-6f65-7f24-a5eb" sortIndex="4">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden"/>
+                <modifier type="set" value="0" field="d86a-bfc2-3268-b347-min"/>
+                <modifier type="set" value="0" field="d86a-bfc2-3268-b347-max"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </entryLink>
+        <entryLink import="true" name="Glamourweaving" hidden="false" id="02aa-ad86-7e5e-90e2" type="selectionEntry" targetId="4685-b787-01fa-97c8" sortIndex="3">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden"/>
+                <modifier type="set" value="0" field="247a-1a11-b92a-ba3d-min"/>
+                <modifier type="set" value="0" field="247a-1a11-b92a-ba3d-max"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </entryLink>
+      </entryLinks>
+      <modifiers>
+        <modifier type="append" value="&amp; Athel Loren" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <comment> &amp; Athel Loren</comment>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Lore of Heavens" hidden="false" id="e208-8f98-da5f-f0ba">
+      <entryLinks>
+        <entryLink import="true" name="Fantastic Foresight" hidden="false" id="b002-e659-38b6-b63a" type="selectionEntry" targetId="0a9f-7dc6-486b-092d" sortIndex="1"/>
+        <entryLink import="true" name="0. Harmonic Convergence" hidden="false" id="3569-a357-39b7-a7e7" type="selectionEntry" targetId="e9eb-1db7-772d-1bb5" sortIndex="2"/>
+        <entryLink import="true" name="Spells from the Lore of Heavens" hidden="false" id="8c30-96e6-6c45-c6ca" type="selectionEntryGroup" targetId="1c5c-7a73-f0af-937f" sortIndex="5">
+          <entryLinks>
+            <entryLink import="true" name="Spells from the Lore of Athel Loren" hidden="false" id="29f3-a2cf-f0b6-bdff" type="selectionEntryGroup" targetId="2a32-3a99-5957-de5a" flatten="true">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <modifiers>
+            <modifier type="append" value="&amp; Athel Loren" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Tree Singing" hidden="false" id="adf4-72c1-e36e-26e7" type="selectionEntry" targetId="7851-6f65-7f24-a5eb" sortIndex="4">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden"/>
+                <modifier type="set" value="0" field="d86a-bfc2-3268-b347-min"/>
+                <modifier type="set" value="0" field="d86a-bfc2-3268-b347-max"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </entryLink>
+        <entryLink import="true" name="Glamourweaving" hidden="false" id="4519-e3db-fd0c-3c7a" type="selectionEntry" targetId="4685-b787-01fa-97c8" sortIndex="3">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden"/>
+                <modifier type="set" value="0" field="247a-1a11-b92a-ba3d-min"/>
+                <modifier type="set" value="0" field="247a-1a11-b92a-ba3d-max"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </entryLink>
+      </entryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8181-fdb2-7cf6-64b4"/>
+      </constraints>
+      <modifiers>
+        <modifier type="append" value="&amp; Athel Loren" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <comment> &amp; Athel Loren</comment>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Lore of Light" hidden="false" id="e4ee-4ed3-94a2-bc6d">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="05f0-c2b7-65c3-7053"/>
+      </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Focus Energy" hidden="false" id="9981-cb31-ac91-3a96" type="selectionEntry" targetId="35f9-a846-5d77-2266" sortIndex="1"/>
+        <entryLink import="true" name="0. Shem&apos;s Burning Gaze" hidden="false" id="1d94-f54f-3887-91de" type="selectionEntry" targetId="6287-ea6c-c498-b86a" sortIndex="2"/>
+        <entryLink import="true" name="Spells from the Lore of Light" hidden="false" id="47b3-5e02-c842-87dd" type="selectionEntryGroup" targetId="ca43-e62e-0cd5-034d" sortIndex="5">
+          <entryLinks>
+            <entryLink import="true" name="Spells from the Lore of Athel Loren" hidden="false" id="742d-a93c-91e2-8a4a" type="selectionEntryGroup" targetId="2a32-3a99-5957-de5a" flatten="true">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <modifiers>
+            <modifier type="append" value="&amp; Athel Loren" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Tree Singing" hidden="false" id="6860-1134-e287-a215" type="selectionEntry" targetId="7851-6f65-7f24-a5eb" sortIndex="4">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden"/>
+                <modifier type="set" value="0" field="d86a-bfc2-3268-b347-min"/>
+                <modifier type="set" value="0" field="d86a-bfc2-3268-b347-max"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </entryLink>
+        <entryLink import="true" name="Glamourweaving" hidden="false" id="a512-e57a-32e7-67b1" type="selectionEntry" targetId="4685-b787-01fa-97c8" sortIndex="3">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden"/>
+                <modifier type="set" value="0" field="247a-1a11-b92a-ba3d-min"/>
+                <modifier type="set" value="0" field="247a-1a11-b92a-ba3d-max"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </entryLink>
+      </entryLinks>
+      <modifiers>
+        <modifier type="append" value="&amp; Athel Loren" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <comment> &amp; Athel Loren</comment>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Lore of Shadow" hidden="false" id="8e66-0e23-c28c-2fff">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7c40-0ca8-1979-7cb4"/>
+      </constraints>
+      <entryLinks>
+        <entryLink import="true" name="Steed of Shadows" hidden="false" id="66d8-e313-01ca-9ab5" type="selectionEntry" targetId="196d-e427-60d7-9cb9" sortIndex="1"/>
+        <entryLink import="true" name="0. Melkoth&apos;s Mystifying Miasma" hidden="false" id="2f2b-f42f-56d5-0f68" type="selectionEntry" targetId="dba6-e588-0a5b-69a1" sortIndex="2"/>
+        <entryLink import="true" name="Spells from the Lore of Shadow" hidden="false" id="180c-a13e-38e1-df55" type="selectionEntryGroup" targetId="3de4-d82e-f3ec-8038" sortIndex="5">
+          <entryLinks>
+            <entryLink import="true" name="Spells from the Lore of Athel Loren" hidden="false" id="bcc4-b876-1857-72f9" type="selectionEntryGroup" targetId="2a32-3a99-5957-de5a" flatten="true">
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <modifiers>
+            <modifier type="append" value="&amp; Athel Loren" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
+        <entryLink import="true" name="Tree Singing" hidden="false" id="8cf5-ad4a-0118-255f" type="selectionEntry" targetId="7851-6f65-7f24-a5eb" sortIndex="4">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden"/>
+                <modifier type="set" value="0" field="d86a-bfc2-3268-b347-min"/>
+                <modifier type="set" value="0" field="d86a-bfc2-3268-b347-max"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </entryLink>
+        <entryLink import="true" name="Glamourweaving" hidden="false" id="e86d-8552-fcdc-54b5" type="selectionEntry" targetId="4685-b787-01fa-97c8" sortIndex="3">
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden"/>
+                <modifier type="set" value="0" field="247a-1a11-b92a-ba3d-min"/>
+                <modifier type="set" value="0" field="247a-1a11-b92a-ba3d-max"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </entryLink>
+      </entryLinks>
+      <modifiers>
+        <modifier type="append" value="&amp; Athel Loren" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="f676-6e31-404d-9f9b" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <comment> &amp; Athel Loren</comment>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
@@ -7993,7 +8043,7 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Tapestry of the Wild Hunt" hidden="false" id="33af-0852-df19-8784" sortIndex="4">
+        <selectionEntry type="upgrade" import="true" name="Banner of the Wild Hunt" hidden="false" id="33af-0852-df19-8784" sortIndex="4">
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
@@ -8001,7 +8051,7 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8f54-9f38-388d-a99c" includeChildSelections="true"/>
           </constraints>
           <profiles>
-            <profile name="Tapestry of the Wild Hunt" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="142e-d788-2bcf-01e6">
+            <profile name="Banner of the Wild Hunt" typeId="fc80-e52f-edf4-4e7e" typeName="Magic Standard" hidden="false" id="142e-d788-2bcf-01e6">
               <characteristics>
                 <characteristic name="Special Rules" typeId="97aa-092b-c6fe-4f5a">The unit carrying this standard gains +1 Combat Resolution and may re-roll failed pursuit rolls.</characteristic>
               </characteristics>
@@ -8019,12 +8069,12 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
     </selectionEntryGroup>
     <selectionEntryGroup name="61. Lore of Magic" id="4924-2a02-39c0-4a05" hidden="false">
       <entryLinks>
-        <entryLink import="true" name="Lore of Shadow" hidden="false" id="f912-7c28-85be-de3e" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67"/>
-        <entryLink import="true" name="Lore of Life" hidden="false" id="bf94-6cad-bf98-f20f" type="selectionEntry" targetId="968d-55ad-604c-f251"/>
-        <entryLink import="true" name="Lore of Light" hidden="false" id="3f90-309a-3b2b-d456" type="selectionEntry" targetId="c543-a893-3879-cf32"/>
+        <entryLink import="true" name="Lore of Shadow" hidden="false" id="f912-7c28-85be-de3e" type="selectionEntry" targetId="8e66-0e23-c28c-2fff"/>
+        <entryLink import="true" name="Lore of Life" hidden="false" id="bf94-6cad-bf98-f20f" type="selectionEntry" targetId="8827-1ecd-f704-ba6c"/>
+        <entryLink import="true" name="Lore of Light" hidden="false" id="3f90-309a-3b2b-d456" type="selectionEntry" targetId="e4ee-4ed3-94a2-bc6d"/>
         <entryLink import="true" name="Lore of Athel Loren" hidden="false" id="d88a-134e-d361-080e" type="selectionEntry" targetId="c85f-c430-1e4c-fc64" sortIndex="1"/>
-        <entryLink import="true" name="Lore of Heavens" hidden="false" id="40e4-1a83-b9f6-db3e" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee"/>
-        <entryLink import="true" name="Lore of Beasts" hidden="false" id="faeb-9446-e3d8-a63e" type="selectionEntry" targetId="b436-b410-dd41-304f"/>
+        <entryLink import="true" name="Lore of Heavens" hidden="false" id="40e4-1a83-b9f6-db3e" type="selectionEntry" targetId="e208-8f98-da5f-f0ba"/>
+        <entryLink import="true" name="Lore of Beasts" hidden="false" id="faeb-9446-e3d8-a63e" type="selectionEntry" targetId="afe9-2f74-ddf3-67cc"/>
       </entryLinks>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8404-dbbe-94c0-1ae9" includeChildSelections="false"/>
@@ -8033,7 +8083,7 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
     </selectionEntryGroup>
     <selectionEntryGroup name="61. Lore of Magic" id="69ef-02ab-e95b-625b" hidden="false">
       <entryLinks>
-        <entryLink import="true" name="Lore of Life" hidden="false" id="81ab-7aea-3306-7ea3" type="selectionEntry" targetId="968d-55ad-604c-f251"/>
+        <entryLink import="true" name="Lore of Life" hidden="false" id="81ab-7aea-3306-7ea3" type="selectionEntry" targetId="8827-1ecd-f704-ba6c"/>
         <entryLink import="true" name="Lore of Athel Loren" hidden="false" id="92b2-5b94-a4ae-3d7b" type="selectionEntry" targetId="c85f-c430-1e4c-fc64" sortIndex="1"/>
       </entryLinks>
       <constraints>
@@ -8041,6 +8091,298 @@ If a target has Unit Strength 3 or less and is Hit, but not slain, then it is te
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e893-2389-a239-9b8c" includeChildSelections="false"/>
       </constraints>
       <comment>Athel and Life</comment>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Spells from the Lore of Athel Loren" id="2a32-3a99-5957-de5a" hidden="false">
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Fury of the Forest" hidden="false" id="9084-803a-516e-e67d" sortIndex="1" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3917-91cd-1e54-8186" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Fury of the Forest" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="c897-2c77-9fa1-4d61">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">If the target is within 6&quot; of a forest it suffers 2D6 Strength 4 hits. If the target is partially or wholly within a forest it suffers 3D6 Strength 4 hits.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Durthu&apos;s Wrath" hidden="false" id="b640-048d-d9be-5acf" sortIndex="2" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c80a-91b5-e993-34b7" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Durthu&apos;s Wrath" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="fbdc-3595-c21b-14dd">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct Damage</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">Combat</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All models in the front rank of any unit in base contact with the caster must pass an Initiative test or suffer a Strength 4 hit with the Ignores Armour Saves and Multiple Wounds (D3) special rules.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="The Twilight Host" hidden="false" id="21b5-fede-4535-91e4" sortIndex="3" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3cfa-f9b2-64a7-4828" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="The Twilight Host" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="dca1-9979-5d31-2a53">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains the Fear special rule until the start of the caster&apos;s next Magic phase. In addition, the target will count as having twice the Unit Strength and number of ranks it really has for the purpose of determining Outnumber and Steadfast.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="The Hidden Path" hidden="true" id="4b52-4d42-af8c-ce60" sortIndex="4" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="651c-db99-12c9-e97a" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="The Hidden Path" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="78a4-b8be-3852-9e9e">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">7+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The unit gains the Ethereal special rule until the start of the caster&apos;s next Magic phase. If the unit becomes engaged in close combat, the spell instantly ends.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Spiteful Torrent" hidden="true" id="f053-a2cf-5b79-4a38" sortIndex="5" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="11a3-38cd-a9c5-c599" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Spiteful Torrent" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="826e-9667-7fa8-9a01">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magical Vortex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">8+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff"/>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. Uses the small round template. Any model touched by the template at any point during its move suffers a Strength 2 hit with the Armour Piercing (1) special rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Aspect of Athel Loren" hidden="true" id="629a-f89a-151b-d1b5" sortIndex="6" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aee2-e52a-1e2f-0f0a" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Aspect of Athel Loren" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="41e2-0d03-5873-6081">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">2</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Affects all friendly Forest Spirits within range. Until the start of the caster&apos;s next Magic phase, all affected units gain a 6+ Ward save.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Ariel&apos;s Blessing" hidden="true" id="cb72-ec9a-929c-0bc8" sortIndex="12" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="279b-92b4-ec22-1ec4" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Ariel&apos;s Blessing" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="11ae-3287-1116-ab44">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">13+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target gains the Regeneration (4+) special rule until the start of the caster&apos;s next Magic phase</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Madrigal of Greening" hidden="true" id="fe71-79c5-27c4-8cc4" sortIndex="7" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b919-1632-c06f-e320" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Madrigal of Greening" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5868-59a6-b989-0946">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Summoning</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">9+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">This spell summons a forest of your choosing no more than 12&quot; in diameter.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Sapping Blight" hidden="true" id="7e67-2752-39dd-f93c" sortIndex="8" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ea13-55e1-2020-a447" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Sapping Blight" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="a3e2-1bdf-49bf-e8e3">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, the target has -1 Strength and -1 Toughness (to a minimum of 1).</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Cage of Thorns" hidden="true" id="f027-9e34-ac01-fa18" sortIndex="9" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e0d9-84bc-5a97-4d98" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Cage of Thorns" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="5ab7-fdeb-5948-1fcc">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">3</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Hex</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">10+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Remains in play. While the spell is in effect, the target unit halves all their Movement (rounding up). In addition, the target suffer D6 Strength 3 Hits any time it moves.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="The Call of the Hunt" hidden="true" id="b685-b91f-e7ad-8482" sortIndex="10" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6533-cc64-2cff-c3b4" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="The Call of the Hunt" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="9e64-4449-3e19-44ee">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Conveyance</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">11+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target immediately moves forward towards the closest enemy unit within line of sight using the Random Movement (2D6) special rule. If no enemy unit is in line of sight, the unit will move directly forwards. In addition, the unit gains +1 Attack (except mounts) until the start of the caster’s next Magic phase.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Verdurous Harmony" hidden="true" id="715a-de29-d8a8-26ae" sortIndex="11" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="576e-203b-8fd3-36e6" includeChildSelections="false"/>
+          </constraints>
+          <profiles>
+            <profile name="Verdurous Harmony" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="6e50-be24-dc85-a4eb">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">4</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">12+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">12&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">All targets instantly recover D3 Wounds&apos; worth of models slain earlier in the battle, just like a summoning spell.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <profileTypes>
