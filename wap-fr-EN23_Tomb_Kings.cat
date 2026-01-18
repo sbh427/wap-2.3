@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="489b-7a41-3ad0-e5eb" name="Tomb Kings WAP 1.6" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="60" revision="19" authorName="Leminge" battleScribeVersion="2.03" publicationId="feeb-1927-4a99-f849" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="Contact me via discord">
+<catalogue library="false" id="489b-7a41-3ad0-e5eb" name="Tomb Kings WAP 1.6" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="60" revision="20" authorName="Leminge" battleScribeVersion="2.03" publicationId="feeb-1927-4a99-f849" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema" authorContact="Contact me via discord">
   <sharedSelectionEntries>
     <selectionEntry type="model" import="true" name="Skeletal Steed" hidden="false" id="a440-163d-31eb-cdf7" collective="true" sortIndex="0" subType="mount">
       <constraints>
@@ -2052,18 +2052,19 @@ If, at the start of any of your turns following the death of the Hierophant, the
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <modifiers>
-        <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category"/>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+            <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries"/>
+          </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
-        </modifier>
-        <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Skeleton Archers" hidden="false" id="aacf-a61d-53e9-3cef" sortIndex="8">
       <categoryLinks>
@@ -2182,18 +2183,19 @@ If, at the start of any of your turns following the death of the Hierophant, the
           </entryLinks>
         </entryLink>
       </entryLinks>
-      <modifiers>
-        <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category">
+      <modifierGroups>
+        <modifierGroup type="and">
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
-        </modifier>
-        <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+          <modifiers>
+            <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category"/>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries"/>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Skeleton Skirmishers" hidden="false" id="5f3a-6229-b473-5874" sortIndex="9">
       <categoryLinks>
@@ -2289,18 +2291,19 @@ If, at the start of any of your turns following the death of the Hierophant, the
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <modifiers>
-        <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category"/>
+            <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries"/>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+          </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
-        </modifier>
-        <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Skeleton Horsemen" hidden="false" id="f525-7d97-2889-6624" sortIndex="10">
       <categoryLinks>
@@ -2424,18 +2427,19 @@ If, at the start of any of your turns following the death of the Hierophant, the
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <modifiers>
-        <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category"/>
+            <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries"/>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+          </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
-        </modifier>
-        <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Skeleton Horse Archers" hidden="false" id="da0b-7f69-b082-95dc" sortIndex="11">
       <categoryLinks>
@@ -2660,18 +2664,19 @@ If, at the start of any of your turns following the death of the Hierophant, the
           </entryLinks>
         </entryLink>
       </entryLinks>
-      <modifiers>
-        <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category"/>
+            <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries"/>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+          </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
-        </modifier>
-        <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Tomb Guard" hidden="false" id="f209-2324-32b5-17ec" sortIndex="14">
       <selectionEntries>
@@ -2785,18 +2790,19 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <categoryLink name="Special" hidden="false" id="6792-a536-6893-9cfa" targetId="fc26-7737-f7cb-8977" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="522e-9d94-4268-3a6e" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
-      <modifiers>
-        <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category"/>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category" affects="self.entries"/>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+          </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
-        </modifier>
-        <modifier type="remove" value="fc26-7737-f7cb-8977" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Tomb Swarms" hidden="false" id="5ff0-cb19-073c-6fec" sortIndex="13">
       <selectionEntries>
@@ -2838,21 +2844,22 @@ If, at the start of any of your turns following the death of the Hierophant, the
       <entryLinks>
         <entryLink import="true" name="Expendable" hidden="false" id="b6af-5068-6e0c-5bd9" type="selectionEntry" targetId="b90d-9045-a6d5-9e7d"/>
       </entryLinks>
-      <modifiers>
-        <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <infoLinks>
         <infoLink name="Entombed Beneath the Sands Mishap Table" id="ef2d-b889-f2df-7802" hidden="false" type="infoGroup" targetId="f22f-d3e2-f29d-5ce1"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category"/>
+            <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries"/>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Tomb Guard Chariots" hidden="false" id="4a35-6e2e-dad9-7a37" sortIndex="15">
       <categoryLinks>
@@ -3003,18 +3010,19 @@ If, at the start of any of your turns following the death of the Hierophant, the
           </modifiers>
         </entryLink>
       </entryLinks>
-      <modifiers>
-        <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category"/>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category" affects="self.entries"/>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+          </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
-        </modifier>
-        <modifier type="remove" value="fc26-7737-f7cb-8977" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Mummies" hidden="false" id="b00c-59e8-7c15-663b" sortIndex="16">
       <selectionEntries>
@@ -3064,18 +3072,19 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <categoryLink name="Special" hidden="false" id="bc7e-c06c-bfdb-c767" targetId="fc26-7737-f7cb-8977" primary="true"/>
         <categoryLink name="Infantry" hidden="false" id="d0de-10ca-86a6-ed2d" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
-      <modifiers>
-        <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category"/>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category" affects="self.entries"/>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+          </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
-        </modifier>
-        <modifier type="remove" value="fc26-7737-f7cb-8977" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Carrions" hidden="false" id="9ace-4ce2-d52e-22c2" sortIndex="18">
       <selectionEntries>
@@ -3113,18 +3122,19 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <categoryLink name="Special" hidden="false" id="d57f-3a4e-ef0b-3cc3" targetId="fc26-7737-f7cb-8977" primary="true"/>
         <categoryLink name="War Beast" hidden="false" id="b0ed-00f1-02a3-2fdb" targetId="5c5d-6944-cd09-0db8" primary="false"/>
       </categoryLinks>
-      <modifiers>
-        <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category"/>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category" affects="self.entries"/>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+          </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
-        </modifier>
-        <modifier type="remove" value="fc26-7737-f7cb-8977" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Sepulchral Stalkers" hidden="false" id="8f4c-3c77-7f66-00a8" sortIndex="19">
       <selectionEntries>
@@ -3189,21 +3199,22 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <categoryLink name="Special" hidden="false" id="2740-fee0-9ee0-7869" targetId="fc26-7737-f7cb-8977" primary="true"/>
         <categoryLink name="Monstrous Beasts" hidden="false" id="62d5-fa59-5eb7-63c1" targetId="f98e-8d4f-7b1b-59cd" primary="false"/>
       </categoryLinks>
-      <modifiers>
-        <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="remove" value="fc26-7737-f7cb-8977" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <infoLinks>
         <infoLink name="Entombed Beneath the Sands Mishap Table" id="6139-e04b-290a-0ba2" hidden="false" type="infoGroup" targetId="f22f-d3e2-f29d-5ce1"/>
       </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries"/>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Tomb Scorpion" hidden="false" id="17dc-43f7-2ea2-8e2b" sortIndex="20">
       <costs>
@@ -3244,18 +3255,19 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <categoryLink name="Special" hidden="false" id="b4d1-9e8c-17dd-3782" targetId="fc26-7737-f7cb-8977" primary="true"/>
         <categoryLink name="Monstrous Beasts" hidden="false" id="61aa-03a9-42b4-0e61" targetId="f98e-8d4f-7b1b-59cd" primary="false"/>
       </categoryLinks>
-      <modifiers>
-        <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries"/>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category"/>
+          </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
-        </modifier>
-        <modifier type="remove" value="fc26-7737-f7cb-8977" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Ammut" hidden="false" id="f5a0-20b5-9bae-98ea" sortIndex="21">
       <costs>
@@ -3302,18 +3314,19 @@ If, at the start of any of your turns following the death of the Hierophant, the
           <description>The Ammut may re-roll failed To Wound rolls against models from the Forces of Destruction.</description>
         </rule>
       </rules>
-      <modifiers>
-        <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries"/>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category"/>
+          </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
-        </modifier>
-        <modifier type="remove" value="fc26-7737-f7cb-8977" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Bastethi" hidden="false" id="4e59-5a5b-f101-d254" sortIndex="23">
       <selectionEntries>
@@ -3356,18 +3369,6 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <categoryLink name="Special" hidden="false" id="36a8-8f16-a778-a3c9" targetId="fc26-7737-f7cb-8977" primary="true"/>
         <categoryLink name="War Beast" hidden="false" id="ed71-7719-f95c-db27" targetId="5c5d-6944-cd09-0db8" primary="false"/>
       </categoryLinks>
-      <modifiers>
-        <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="remove" value="fc26-7737-f7cb-8977" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <entryLinks>
         <entryLink import="true" name="65. Lore of Magic" hidden="false" id="ebad-a83c-ee8b-e42b" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
           <entryLinks>
@@ -3380,6 +3381,19 @@ If, at the start of any of your turns following the death of the Hierophant, the
         </entryLink>
         <entryLink import="true" name="60. Wizard Level" hidden="false" id="170b-5628-13cf-1394" type="selectionEntryGroup" targetId="1d19-3d5b-2087-e988"/>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category"/>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category" affects="self.entries"/>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Bone Thrower" hidden="false" id="bad7-64dd-dea6-c3e3" sortIndex="25">
       <categoryLinks>
@@ -3445,18 +3459,19 @@ If, at the start of any of your turns following the death of the Hierophant, the
       <costs>
         <cost name="pts" typeId="points" value="35"/>
       </costs>
-      <modifiers>
-        <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category"/>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category" affects="self.entries"/>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+          </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
-        </modifier>
-        <modifier type="remove" value="fc26-7737-f7cb-8977" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Screaming Skull Catapult" hidden="false" id="c68d-6a6d-a03a-2751" sortIndex="26">
       <categoryLinks>
@@ -3543,18 +3558,19 @@ If, at the start of any of your turns following the death of the Hierophant, the
           <description>All shooting attacks made by a Screaming Skull Catapult are magical and have the Flaming Attacks special rule. In addition, any unit that suffers one or more casualties from a shooting attack by a Screaming Skull Catapult must take a Panic test as if it had taken 25% casualties.</description>
         </rule>
       </rules>
-      <modifiers>
-        <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category"/>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category" affects="self.entries"/>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+          </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
-        </modifier>
-        <modifier type="remove" value="fc26-7737-f7cb-8977" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Necropolis Knights" hidden="false" id="6d29-a153-8503-73a4" sortIndex="27">
       <categoryLinks>
@@ -3638,18 +3654,6 @@ If, at the start of any of your turns following the death of the Hierophant, the
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <modifiers>
-        <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="remove" value="0eb4-f376-7725-b05b" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <entryLinks>
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="18c4-2a92-8d80-6dbe" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
@@ -3688,6 +3692,19 @@ If, at the start of any of your turns following the death of the Hierophant, the
           </entryLinks>
         </entryLink>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="remove" value="0eb4-f376-7725-b05b" field="category"/>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+            <modifier type="remove" value="0eb4-f376-7725-b05b" field="category" affects="self.entries"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Necrosphinx" hidden="false" id="0f82-a74b-92b9-d1c4" sortIndex="30">
       <costs>
@@ -3755,18 +3772,19 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <infoLink name="Fly (7)" id="046d-377e-a19a-73e3" hidden="false" type="rule" targetId="36ba-3349-99bd-1979"/>
         <infoLink name="Heroic Killing Blow" id="388c-c64e-efa2-544f" hidden="false" type="rule" targetId="4dc2-df44-cb9c-2c9b"/>
       </infoLinks>
-      <modifiers>
-        <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="remove" value="0eb4-f376-7725-b05b" field="category"/>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+            <modifier type="remove" value="0eb4-f376-7725-b05b" field="category" affects="self.entries"/>
+          </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
-        </modifier>
-        <modifier type="remove" value="0eb4-f376-7725-b05b" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Necrolith Colossus " hidden="false" id="6321-dfe8-a699-d4e2" sortIndex="31">
       <costs>
@@ -3866,18 +3884,19 @@ If, at the start of any of your turns following the death of the Hierophant, the
           <description>In the turn in which a Necrolith Colossus charges, every unsaved Wound that it inflicts in close combat immediately allows it to make an additional Attack, up to a maximum of +5 Attacks. Note that these additional Attacks also benefit from the Unstoppable Assault rule, but Stomps do not</description>
         </rule>
       </rules>
-      <modifiers>
-        <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="remove" value="0eb4-f376-7725-b05b" field="category"/>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+            <modifier type="remove" value="0eb4-f376-7725-b05b" field="category" affects="self.entries"/>
+          </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
-        </modifier>
-        <modifier type="remove" value="0eb4-f376-7725-b05b" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Hierotitan" hidden="false" id="8563-1887-334c-47f5" sortIndex="32">
       <costs>
@@ -3911,18 +3930,6 @@ If, at the start of any of your turns following the death of the Hierophant, the
         <categoryLink name="Rare" hidden="false" id="f4b6-b202-6680-ea37" targetId="0eb4-f376-7725-b05b" primary="true"/>
         <categoryLink name="Monster" hidden="false" id="aadc-3825-9fce-f525" targetId="e1a0-da31-05c5-9a15" primary="false"/>
       </categoryLinks>
-      <modifiers>
-        <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="remove" value="0eb4-f376-7725-b05b" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <entryLinks>
         <entryLink import="true" name="55. Equipment" hidden="false" id="fb57-8f00-aa82-a9d5" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
           <selectionEntries>
@@ -3971,6 +3978,19 @@ Leech from the Lore of Death.</characteristic>
           </entryLinks>
         </entryLink>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="remove" value="0eb4-f376-7725-b05b" field="category"/>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+            <modifier type="remove" value="0eb4-f376-7725-b05b" field="category" affects="self.entries"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Khemric Titan" hidden="false" id="4039-4f03-c53a-5c40" sortIndex="33">
       <costs>
@@ -4047,18 +4067,6 @@ Strength 2 hits which Ignores Armour saves</description>
         <categoryLink name="Rare" hidden="false" id="14e5-9f7f-a563-72b9" targetId="0eb4-f376-7725-b05b" primary="true"/>
         <categoryLink name="Monster" hidden="false" id="6a53-1fd1-1aff-5ee4" targetId="e1a0-da31-05c5-9a15" primary="false"/>
       </categoryLinks>
-      <modifiers>
-        <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="remove" value="0eb4-f376-7725-b05b" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <infoGroups>
         <infoGroup name="Khemric Titan Special Attacks" id="4044-464f-bbe0-dee8" hidden="false">
           <profiles>
@@ -4101,6 +4109,19 @@ Strength 2 hits which Ignores Armour saves</description>
           </entryLinks>
         </entryLink>
       </entryLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="remove" value="0eb4-f376-7725-b05b" field="category"/>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+            <modifier type="remove" value="0eb4-f376-7725-b05b" field="category" affects="self.entries"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Special Characters" hidden="false" id="eabd-201c-6cac-7962" sortIndex="98" subType="unit-group">
       <categoryLinks>
@@ -5495,18 +5516,19 @@ Strength 2 hits which Ignores Armour saves</description>
           </entryLinks>
         </entryLink>
       </entryLinks>
-      <modifiers>
-        <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category"/>
+            <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries"/>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+          </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
-        </modifier>
-        <modifier type="remove" value="b876-2856-f1c2-c4f0" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Ushabti" hidden="false" id="c5db-de5b-7130-4ca6" sortIndex="17">
       <selectionEntries>
@@ -5648,18 +5670,19 @@ Strength 2 hits which Ignores Armour saves</description>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <modifiers>
-        <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries"/>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category"/>
+          </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
-        </modifier>
-        <modifier type="remove" value="fc26-7737-f7cb-8977" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntryGroups>
@@ -7128,18 +7151,19 @@ move as normal (including declaring charges).</characteristic>
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="9393-60a1-cee4-aeee" targetId="0eb4-f376-7725-b05b" primary="true"/>
       </categoryLinks>
-      <modifiers>
-        <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="remove" value="0eb4-f376-7725-b05b" field="category"/>
+            <modifier type="set-primary" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+            <modifier type="remove" value="0eb4-f376-7725-b05b" field="category" affects="self.entries"/>
+          </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
-        </modifier>
-        <modifier type="remove" value="0eb4-f376-7725-b05b" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Tomb Barque of Usirian" hidden="false" id="f5d8-3045-8ac3-28fd" type="selectionEntry" targetId="9b70-c0b0-e261-8a04" sortIndex="24">
       <costs>
@@ -7148,18 +7172,19 @@ move as normal (including declaring charges).</characteristic>
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="b4a9-f665-4e42-d21f" targetId="fc26-7737-f7cb-8977" primary="true"/>
       </categoryLinks>
-      <modifiers>
-        <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category">
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category"/>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category" affects="self.entries"/>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+          </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
-        </modifier>
-        <modifier type="remove" value="fc26-7737-f7cb-8977" field="category">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="edd3-38ef-b378-e726" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Casket of Souls" hidden="false" id="c5c3-ac39-614d-0adf" type="selectionEntry" targetId="35ef-e7ca-0605-a361" sortIndex="28">
       <costs>

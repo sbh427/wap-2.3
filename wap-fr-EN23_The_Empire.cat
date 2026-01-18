@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="1530-30e9-f488-7652" name="Empire WAP 1.71" revision="55" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="1530-30e9-f488-7652" name="The Empire WAP 1.71" revision="56" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <profileTypes>
     <profileType name="Steam Boiler Mishap Chart" id="b72c-c262-64a8-a221" hidden="false">
@@ -3290,11 +3290,6 @@
     </selectionEntry>
     <selectionEntry id="ef98-f56b-8910-1b05" name="Flagellants" hidden="false" collective="false" import="true" type="unit" sortIndex="29">
       <modifiers>
-        <modifier type="set-primary" field="category" value="b876-2856-f1c2-c4f0">
-          <conditions>
-            <condition type="equalTo" value="1" field="selections" scope="force" childId="9d22-a8fc-1673-bc03" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
         <modifier type="set" value="true" field="hidden">
           <conditions>
             <condition type="instanceOf" value="1" field="selections" scope="5b10-3406-8dd2-c0ca" childId="force" shared="true"/>
@@ -3410,6 +3405,19 @@
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <comment>Sigmarite only</comment>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category"/>
+            <modifier type="add" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries"/>
+            <modifier type="add" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+          </modifiers>
+          <conditions>
+            <condition type="equalTo" value="1" field="selections" scope="force" childId="9d22-a8fc-1673-bc03" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="4a2c-d8df-ff0c-ffe7" name="Sisters of Sigmar" hidden="false" collective="false" import="true" type="unit" sortIndex="28">
       <categoryLinks>
