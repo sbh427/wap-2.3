@@ -15481,17 +15481,20 @@ Tamurkhan&apos;s power cannot save him if he is destroyed by an attack which cau
             <condition type="equalTo" value="1" field="selections" scope="force" childId="a696-9ce8-c2ba-5461" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
           </conditions>
         </modifier>
-        <modifier type="unset-primary" value="fc26-7737-f7cb-8977" field="category">
-          <conditions>
-            <condition type="equalTo" value="1" field="selections" scope="force" childId="a696-9ce8-c2ba-5461" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-          </conditions>
-        </modifier>
-        <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category">
-          <conditions>
-            <condition type="equalTo" value="1" field="selections" scope="force" childId="a696-9ce8-c2ba-5461" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-          </conditions>
-        </modifier>
       </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category"/>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries"/>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries"/>
+          </modifiers>
+          <conditions>
+            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a696-9ce8-c2ba-5461" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </entryLink>
     <entryLink import="true" name="Spawn of Chaos" hidden="false" id="ded2-4424-0522-a849" type="selectionEntry" targetId="eb04-809f-24c4-89ec" sortIndex="23"/>
     <entryLink import="true" name="Giant Spawn of Chaos" hidden="false" id="a27f-c480-aed6-f374" type="selectionEntry" targetId="c75c-0942-751a-598c" sortIndex="37"/>
