@@ -247,6 +247,13 @@
             <entryLink import="true" name="Lore of Light" hidden="false" id="19e1-4e94-4fad-ced5" type="selectionEntry" targetId="c543-a893-3879-cf32"/>
             <entryLink import="true" name="Lore of Life" hidden="false" id="9a22-5099-a039-889f" type="selectionEntry" targetId="968d-55ad-604c-f251"/>
           </entryLinks>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model" childId="4926-e76f-94ae-62f9" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </entryLink>
       </entryLinks>
       <costs>
@@ -1616,13 +1623,6 @@
       </costs>
     </selectionEntry>
     <selectionEntry id="73c5-a3cf-0d34-c883" name="Conquistadors" hidden="false" collective="false" import="true" type="unit" sortIndex="24">
-      <modifiers>
-        <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category">
-          <conditions>
-            <condition type="equalTo" value="1" field="selections" scope="force" childId="d2ef-4ce1-07e5-f9bc" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
       <categoryLinks>
         <categoryLink id="4c02-b126-b7d5-90a4" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
         <categoryLink name="Cavalry" hidden="false" id="f20a-358a-ff14-f507" targetId="bdee-b168-38ba-7d3c" primary="false"/>
@@ -1741,6 +1741,19 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category"/>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries.recursive"/>
+            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries.recursive"/>
+          </modifiers>
+          <conditions>
+            <condition type="equalTo" value="1" field="selections" scope="force" childId="d2ef-4ce1-07e5-f9bc" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry id="5846-e4bf-7480-ec8a" name="Grenadiers" hidden="false" collective="false" import="true" type="unit" sortIndex="27">
       <categoryLinks>
