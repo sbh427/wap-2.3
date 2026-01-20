@@ -66,11 +66,6 @@ The enemy unit then rolls their charge distance and complete the charge as norma
     </rule>
   </sharedRules>
   <profileTypes>
-    <profileType name="Mercenary Loyalty Table" id="dda6-e9c2-de29-3078" hidden="false">
-      <characteristicTypes>
-        <characteristicType name="Result" id="c981-b755-9b7e-f276"/>
-      </characteristicTypes>
-    </profileType>
     <profileType name="Quirk of Character" id="731d-e13c-86a3-f5c0" hidden="false">
       <characteristicTypes>
         <characteristicType name="Effect" id="00b0-989f-924f-e991"/>
@@ -117,35 +112,18 @@ The enemy unit then rolls their charge distance and complete the charge as norma
       </characteristicTypes>
     </profileType>
   </profileTypes>
-  <sharedInfoGroups>
-    <infoGroup name="Mercenaries" id="52b4-7b55-2cb7-7392" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="3">
-      <rules>
-        <rule name="Mercenaries" id="b315-43d0-6cd5-571d" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="3">
-          <description>Every time a unit with this special rule fails a Break test, roll on the Mercenary Loyalty table and apply the results. This rule has no effect on a unit that is joined by the Army General, Paymaster.</description>
-        </rule>
-      </rules>
-      <profiles>
-        <profile name="1-3 Wavering Loyalty" typeId="dda6-e9c2-de29-3078" typeName="Mercenary Loyalty Table" hidden="false" id="8df0-c252-adef-3469">
-          <characteristics>
-            <characteristic name="Result" typeId="c981-b755-9b7e-f276">The unit flees as normal, and all models in the unit suffer a -1 modifier to their Leadership for the rest of the battle.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="4-5 Soldier On" typeId="dda6-e9c2-de29-3078" typeName="Mercenary Loyalty Table" hidden="false" id="c22a-a3b2-0635-0af0">
-          <characteristics>
-            <characteristic name="Result" typeId="c981-b755-9b7e-f276">The unit flees as normal.</characteristic>
-          </characteristics>
-        </profile>
-        <profile name="6 Stand Fast!" typeId="dda6-e9c2-de29-3078" typeName="Mercenary Loyalty Table" hidden="false" id="8c16-7ad8-e591-08e7">
-          <characteristics>
-            <characteristic name="Result" typeId="c981-b755-9b7e-f276">The unit have the Cold-Blooded special rule on their next Rally test.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-    </infoGroup>
-  </sharedInfoGroups>
   <rules>
     <rule name="Racial Distrust" id="aadc-9202-eade-f969" hidden="false" publicationId="8ada-88a0-cdcd-9b5e">
       <description>Most models belong to a certain race as detailed in their Troop Type. This includes Human, Dwarf, Elf, Halfling, Ogre, Orc and Hobgoblin. Characters may only join units belonging to the same race. Only a Human character may be the Army General.</description>
+    </rule>
+    <rule name="Mercenaries" id="6440-a3e6-fd53-47c5" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="3">
+      <description>Every time a unit with this special rule fails a Break test, roll on the Mercenary Loyalty table below and apply the results. This rule has no effect on a unit that is joined by the Army General, Paymaster.
+
+
+&lt;b&gt;D6 - Result&lt;/b&gt;
+&lt;b&gt;1 - Wavering Loyalty: &lt;/b&gt;The unit flees as normal, and all models in the unit suffer a -1 modifier to their Leadership for the rest of the battle.
+&lt;b&gt;2-4 - Soldier On: &lt;/b&gt; The unit flees as normal.
+&lt;b&gt;5-6 - Stand Fast!: &lt;/b&gt; The unit have the Cold-Blooded special rule on their next Rally test.</description>
     </rule>
   </rules>
   <sharedSelectionEntries>
@@ -1693,13 +1671,16 @@ In close combat, an Ogre pistol counts as an additional hand weapon that does no
                       </conditions>
                     </modifier>
                   </modifiers>
+                  <costs>
+                    <cost name="pts" typeId="points" value="1"/>
+                  </costs>
                 </entryLink>
               </entryLinks>
             </entryLink>
           </entryLinks>
           <infoLinks>
             <infoLink name="Elven Grace" id="a07e-8a9b-8a4e-5805" hidden="false" type="rule" targetId="c542-240f-db52-5b1d"/>
-            <infoLink name="Mercenaries" id="b648-ee8d-361c-d3d1" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+            <infoLink name="Mercenaries" id="ef7f-ea38-5e65-b219" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="Dark Elf" field="name">
@@ -2186,7 +2167,7 @@ In close combat, an Ogre pistol counts as an additional hand weapon that does no
           </entryLinks>
           <infoLinks>
             <infoLink name="Skirmishers" id="5f2b-8df2-d36b-0b3e" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
-            <infoLink name="Mercenaries" id="ae59-5660-1409-9b5d" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+            <infoLink name="Mercenaries" id="7653-4621-5359-f8e5" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
           </infoLinks>
           <modifiers>
             <modifier type="decrement" value="2" field="cb97-d29b-9e55-2fd3">
@@ -2499,10 +2480,10 @@ In close combat, an Ogre pistol counts as an additional hand weapon that does no
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="c1f5-ad9c-3c83-51ba"/>
           </constraints>
           <infoLinks>
-            <infoLink name="Mercenaries" id="36d7-d172-34c7-10a6" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
             <infoLink name="Backstabbers" id="e5b5-eff2-19a0-c00b" hidden="false" type="rule" targetId="264b-43f7-6123-a1a5"/>
             <infoLink name="Cowardly Despoilers" id="2aed-f6dc-d7bb-6248" hidden="false" type="rule" targetId="0654-6a47-bd1c-81f5"/>
             <infoLink name="Ded Shooty" id="0601-8b66-96d8-846b" hidden="false" type="rule" targetId="ef85-b476-eaf2-ae2e"/>
+            <infoLink name="Mercenaries" id="7800-efe5-44cc-883a" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
           </infoLinks>
           <infoGroups>
             <infoGroup name="Treacherous Gits" id="349a-a01e-989e-7ee5" hidden="false">
@@ -2821,7 +2802,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Mercenaries" id="db10-af86-78d6-6513" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+        <infoLink name="Mercenaries" id="20a0-4e36-b0e6-e06a" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Mercenary General" hidden="false" id="5637-e274-085c-fa4e" sortIndex="1">
@@ -3000,7 +2981,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
         </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Mercenaries" id="5a06-e9ac-7e20-f8c8" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+        <infoLink name="Mercenaries" id="5a06-e9ac-7e20-f8c8" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="90"/>
@@ -3010,7 +2991,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
       <entryLinks>
         <entryLink import="true" name="70. Mount" hidden="false" id="0587-103b-9bcd-6141" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
           <entryLinks>
-            <entryLink import="true" name="Pay Chest" hidden="false" id="06d2-1b72-9dd1-f0e5" type="selectionEntry" targetId="b623-b3fc-efbe-2a1b" sortIndex="2">
+            <entryLink import="true" name="Pay Cart" hidden="false" id="06d2-1b72-9dd1-f0e5" type="selectionEntry" targetId="7640-0dc6-5860-14a5" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="60"/>
               </costs>
@@ -3222,8 +3203,8 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Mercenaries" id="076f-8d6a-e9b5-800f" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
         <infoLink name="Paymaster" id="5386-f07b-a961-29d7" hidden="false" type="rule" targetId="b468-f27b-6f95-6b33"/>
+        <infoLink name="Mercenaries" id="d730-ae89-9e1b-5568" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
       </infoLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -3305,7 +3286,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
         </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Mercenaries" id="0c0a-fa91-d34e-4d4a" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+        <infoLink name="Mercenaries" id="1e7a-0a74-31da-7ef2" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Hireling Wizard" hidden="false" id="1f30-98d5-c112-75f9" sortIndex="12">
@@ -3437,10 +3418,10 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Mercenaries" id="3e00-14c9-e94e-2283" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
         <infoLink name="Scouts" id="f4ec-9adf-d257-cde1" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
         <infoLink name="Dodge (5+)" id="da9f-4fc3-a2fa-48a0" hidden="false" type="rule" targetId="cfff-6563-d1c6-820c"/>
         <infoLink name="Hidden" id="a220-7ce4-5ad6-7c7f" hidden="false" type="rule" targetId="2796-b399-4f98-a36f"/>
+        <infoLink name="Mercenaries" id="d7db-7b7e-1716-8222" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Dwarf Captain" hidden="false" id="af34-173d-922b-b343" sortIndex="15">
@@ -3561,7 +3542,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
         <infoLink name="Hatred (Orcs &amp; Goblins)" id="e0f3-bff2-9585-ad68" hidden="false" type="rule" targetId="0b20-ae38-065f-96ce"/>
         <infoLink name="Hatred (Skaven)" id="66eb-9f9b-d117-2570" hidden="false" type="rule" targetId="34e1-3b0e-e471-fafa"/>
         <infoLink name="Relentless" id="828f-69e1-d941-918a" hidden="false" type="rule" targetId="9269-7d14-1c40-c445"/>
-        <infoLink name="Mercenaries" id="0a9e-e6f2-cea6-3700" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+        <infoLink name="Mercenaries" id="9028-9722-84dc-d125" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Elf Captain" hidden="false" id="62a1-877b-9f92-39c2" sortIndex="16">
@@ -3665,7 +3646,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
       </entryLinks>
       <infoLinks>
         <infoLink name="Elven Grace" id="276e-4a04-4069-c790" hidden="false" type="rule" targetId="c542-240f-db52-5b1d"/>
-        <infoLink name="Mercenaries" id="ae9e-6730-d9d1-0313" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+        <infoLink name="Mercenaries" id="7ae1-4e0b-1b32-d501" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Halfling Captain" hidden="false" id="01ff-1d44-62a3-aee4" sortIndex="17">
@@ -3779,7 +3760,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
       </profiles>
       <infoLinks>
         <infoLink name="Duck &amp; Weave" id="635b-1ccf-9a7a-e5eb" hidden="false" type="rule" targetId="98d9-ed19-1ab7-5a19"/>
-        <infoLink name="Mercenaries" id="b494-3f15-20c5-f691" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+        <infoLink name="Mercenaries" id="f888-6f72-b42c-eb89" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
       </infoLinks>
       <rules>
         <rule name="Trinkets" id="0686-c80f-55f6-60de" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="17">
@@ -3969,8 +3950,8 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
             <modifier type="set" value="Ogre Captain" field="annotation"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Mercenaries" id="e3ee-c967-2aea-fa81" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
         <infoLink name="Ogre Charge" id="f4bb-f4c7-cded-3771" hidden="false" type="rule" targetId="a543-d0ae-beb8-c99f"/>
+        <infoLink name="Mercenaries" id="c438-e260-49d4-f41c" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Orc Captain" hidden="false" id="6a11-444c-4083-05d8" sortIndex="19">
@@ -4055,8 +4036,8 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
         </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Mercenaries" id="869e-1959-68e6-c5ba" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
         <infoLink name="Mighty Blow (1)" id="1501-8dbe-3113-b11c" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
+        <infoLink name="Mercenaries" id="04ba-7ec1-ffb3-7783" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Hobgoblin Captain" hidden="false" id="ca9d-157c-dff9-3d39" sortIndex="20">
@@ -4172,11 +4153,11 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
         </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Mercenaries" id="5fd4-772f-70ea-545b" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
         <infoLink name="Backstabbers" id="fbff-44ad-6994-225e" hidden="false" type="rule" targetId="264b-43f7-6123-a1a5"/>
         <infoLink name="Cowardly Despoilers" id="3419-d787-621d-3d61" hidden="false" type="rule" targetId="0654-6a47-bd1c-81f5"/>
         <infoLink name="Quell Treachery" id="ed32-22ec-7fd0-4f37" hidden="false" type="rule" targetId="a23e-1357-8959-ae5a"/>
         <infoLink name="Ded Shooty" id="3518-fb0d-5acd-d672" hidden="false" type="rule" targetId="ef85-b476-eaf2-ae2e"/>
+        <infoLink name="Mercenaries" id="d9d0-5a22-03bb-cfb3" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Pikemen" hidden="false" id="8697-a2a5-6cd1-5f55" sortIndex="101">
@@ -4393,7 +4374,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
             </profile>
           </profiles>
           <infoLinks>
-            <infoLink name="Mercenaries" id="7116-b8ea-50de-9d10" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+            <infoLink name="Mercenaries" id="64b6-9b6b-1d08-2450" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
           </infoLinks>
           <constraints>
             <constraint type="min" value="20" field="selections" scope="parent" shared="true" id="830f-479e-48d4-c113"/>
@@ -4918,7 +4899,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
             </entryLink>
           </entryLinks>
           <infoLinks>
-            <infoLink name="Mercenaries" id="dde7-fbd8-5450-8e55" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+            <infoLink name="Mercenaries" id="f7fc-921a-a2fa-bd62" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="8"/>
@@ -5342,7 +5323,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
             <cost name="Crossbowmen with Handguns" typeId="1d5e-af1e-25ce-3bd6" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Mercenaries" id="d3f8-a223-4053-053c" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+            <infoLink name="Mercenaries" id="3908-63e1-2947-8e38" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
           </infoLinks>
           <modifiers>
             <modifier type="add" value="At least one special weapon option and/or shields must be picked" field="error">
@@ -5808,7 +5789,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
           </profiles>
           <infoLinks>
             <infoLink name="Fast Cavalry" id="98a4-405d-b056-77ed" hidden="false" type="rule" targetId="8877-a5de-cc9c-9142"/>
-            <infoLink name="Mercenaries" id="8efd-7fab-326e-a0e3" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+            <infoLink name="Mercenaries" id="014e-4b10-67c8-4556" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="Grudgebringer" field="name">
@@ -6146,9 +6127,6 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
               </characteristics>
             </profile>
           </profiles>
-          <infoLinks>
-            <infoLink name="Mercenaries" id="8500-40d1-61e3-d001" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
-          </infoLinks>
           <rules>
             <rule name="Bodyguard" id="eafc-d18f-91ea-203f" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="28">
               <description>When a Paymaster (including any Money Lender and/or Pay Chest it might have) joins a unit whose front rank contains five or more models with the Bodyguard special rule, they may be placed in the second rank, rather than the first. If the unit&apos;s front rank is ever reduced to four or fewer models with the Bodyguard special rule, the Paymaster must immediately move to the front rank (displacing rank and file models if necessary). As long as the Paymaster is alive, the unit is Stubborn.</description>
@@ -6159,6 +6137,9 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="64b1-6ea3-b42c-9e84" includeChildSelections="true" includeChildForces="true"/>
       </constraints>
+      <infoLinks>
+        <infoLink name="Mercenaries" id="396b-04eb-d317-d0a1" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Freeelancers" hidden="false" id="1b98-eee5-0ddb-3fc8" sortIndex="202">
       <categoryLinks>
@@ -6472,9 +6453,9 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
             </entryLink>
           </entryLinks>
           <infoLinks>
-            <infoLink name="Mercenaries" id="3cbc-5da1-4884-7cad" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
             <infoLink name="Skirmishers" id="22b9-a4be-ba47-415d" hidden="false" type="rule" targetId="9a30-1c5c-12f4-5798"/>
             <infoLink name="Immunity (Fear)" id="3411-4935-a9de-2fa4" hidden="false" type="rule" targetId="9fed-6076-6c75-b774"/>
+            <infoLink name="Mercenaries" id="2e26-4672-d973-ae90" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
@@ -6658,8 +6639,8 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
             <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="65d4-9102-6151-9317"/>
           </constraints>
           <infoLinks>
-            <infoLink name="Mercenaries" id="5a98-68e3-7c82-246c" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
             <infoLink name="Counter-Charge" id="ae31-790f-d33a-ff71" hidden="false" type="rule" targetId="6186-1d2b-2ee6-95c7"/>
+            <infoLink name="Mercenaries" id="824d-5d4c-e6a8-fe2c" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
           </infoLinks>
           <rules>
             <rule name="Blood Rage" id="5b3d-2dc3-49d9-92b2" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="31">
@@ -7035,7 +7016,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
             <infoLink name="Hatred (Orcs &amp; Goblins)" id="74f9-bfc7-2e38-9651" hidden="false" type="rule" targetId="0b20-ae38-065f-96ce"/>
             <infoLink name="Hatred (Skaven)" id="317b-c5a2-7d79-f1d1" hidden="false" type="rule" targetId="34e1-3b0e-e471-fafa"/>
             <infoLink name="Relentless" id="96a1-2802-7632-ff19" hidden="false" type="rule" targetId="9269-7d14-1c40-c445"/>
-            <infoLink name="Mercenaries" id="94b9-547e-0b36-95db" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+            <infoLink name="Mercenaries" id="5564-0418-fd5e-3b4f" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Slayer Pirates" hidden="false" id="b6b9-20e9-df9d-78b4" sortIndex="1">
@@ -7164,8 +7145,8 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
             <cost name="Crossbowmen with Handguns" typeId="1d5e-af1e-25ce-3bd6" value="0"/>
           </costs>
           <infoLinks>
-            <infoLink name="Mercenaries" id="15fa-e3c1-0b06-d8f3" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
             <infoLink name="Duck &amp; Weave" id="6326-34bc-e30b-bf9d" hidden="false" type="rule" targetId="98d9-ed19-1ab7-5a19"/>
+            <infoLink name="Mercenaries" id="94d4-6ac5-7de1-7d03" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
           </infoLinks>
           <profiles>
             <profile name="Halfling" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="7bbd-6933-4f58-3043" publicationId="8ada-88a0-cdcd-9b5e" page="34">
@@ -7585,8 +7566,8 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
                 <modifier type="set" value="Ogre" field="annotation"/>
               </modifiers>
             </infoLink>
-            <infoLink name="Mercenaries" id="b7f7-05d5-0d4b-04c1" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
             <infoLink name="Ogre Charge" id="5240-c3bd-841f-cc4e" hidden="false" type="rule" targetId="a543-d0ae-beb8-c99f"/>
+            <infoLink name="Mercenaries" id="9fb2-73a4-0b1c-9f2b" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
@@ -9744,7 +9725,7 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink name="Mercenaries" id="aaf8-6812-18b8-c475" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+                <infoLink name="Mercenaries" id="eaf9-3947-70cf-aebc" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <rules>
                 <rule name="Murderous Charge" id="211f-7375-f1ce-b981" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="50">
@@ -9858,7 +9839,7 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink name="Mercenaries" id="be42-db11-e61f-83da" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+                <infoLink name="Mercenaries" id="370e-9f11-6b61-eae9" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <rules>
                 <rule name="Grudgebringer Cavalry" id="c2a5-df91-8665-d7fa" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="51">
@@ -10503,12 +10484,12 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6242-613d-215e-f953" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
               <infoLinks>
-                <infoLink name="Mercenaries" id="f460-d322-1696-27e9" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
                 <infoLink name="Backstabbers" id="db65-20cf-ff7b-32d4" hidden="false" type="rule" targetId="264b-43f7-6123-a1a5"/>
                 <infoLink name="Quell Treachery" id="cdb8-39d7-072b-c774" hidden="false" type="rule" targetId="a23e-1357-8959-ae5a"/>
                 <infoLink name="Ded Shooty" id="0e7f-0d55-311e-3c54" hidden="false" type="rule" targetId="ef85-b476-eaf2-ae2e"/>
                 <infoLink name="Fear" id="e6d9-346a-f662-9837" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
                 <infoLink name="Cowardly Despoilers" id="eae1-125e-311e-4e9e" hidden="false" type="rule" targetId="0654-6a47-bd1c-81f5"/>
+                <infoLink name="Mercenaries" id="4e3c-56c0-d822-a05e" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <rules>
                 <rule name="Commander of the Black Wolves" id="c464-3851-bdec-c990" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="55">
@@ -10737,7 +10718,7 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
                 </selectionEntry>
               </selectionEntries>
               <infoLinks>
-                <infoLink name="Mercenaries" id="8b86-6100-fee1-c0d5" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+                <infoLink name="Mercenaries" id="e8e0-e3dc-8277-8cd1" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Leonardo Da Miragliano" hidden="false" id="66c5-87c9-128a-f968" sortIndex="2">
@@ -10894,8 +10875,8 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
                 </entryLink>
               </entryLinks>
               <infoLinks>
-                <infoLink name="Mercenaries" id="c109-64a3-1fd4-60cf" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
                 <infoLink name="Leader" id="7134-5686-c8fd-19a3" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
+                <infoLink name="Mercenaries" id="586f-983f-a55f-df2b" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <rules>
                 <rule name="The Alcatani Fellowship" id="960d-e051-e106-b0bc" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="58">
@@ -10976,8 +10957,8 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="029d-ed7a-fdd8-3ef6" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
               <infoLinks>
-                <infoLink name="Mercenaries" id="6a58-95e0-6d3a-5e5b" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
                 <infoLink name="Leader" id="d915-502b-bb5f-40da" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
+                <infoLink name="Mercenaries" id="8aba-6e2f-15bd-a7b0" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <rules>
                 <rule name="The Lost Legion" id="ce10-5b77-5837-daa5" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="58">
@@ -11070,8 +11051,8 @@ Any crossbow-armed models in the unit must be placed as far forward in the unit 
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink name="Mercenaries" id="c132-98f9-8274-596b" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
                 <infoLink name="Leader" id="017b-b1e1-bc87-dbaf" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
+                <infoLink name="Mercenaries" id="05e6-460e-5094-0c0c" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <rules>
                 <rule name="The Leopard Company" id="e2de-33e4-11b5-9ed6" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="59">
@@ -11099,7 +11080,7 @@ Any crossbow-armed models in the unit must be placed as far forward in the unit 
               </costs>
               <infoLinks>
                 <infoLink name="Leader" id="730c-eb53-4a05-1bc7" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
-                <infoLink name="Mercenaries" id="c0b8-e31b-b97d-e451" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+                <infoLink name="Mercenaries" id="bf85-3b0d-1f4d-6e5b" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e0c7-2787-4b53-427b" includeChildSelections="true" includeChildForces="true"/>
@@ -11224,7 +11205,7 @@ Any crossbow-armed models in the unit must be placed as far forward in the unit 
               </constraints>
               <infoLinks>
                 <infoLink name="Leader" id="1a34-5e11-5d0a-d58d" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
-                <infoLink name="Mercenaries" id="d47b-2be8-8fa5-95ca" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+                <infoLink name="Mercenaries" id="c205-7d9c-8a41-c94b" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <modifiers>
                 <modifier type="add" value="{this} needs one more Selection of Marksmen of Miragliano (Crossbowmen)" field="error">
@@ -11314,7 +11295,7 @@ Any crossbow-armed models in the unit must be placed as far forward in the unit 
               </constraints>
               <infoLinks>
                 <infoLink name="Leader" id="4217-a5ff-99d3-d77b" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
-                <infoLink name="Mercenaries" id="3be3-64da-ce07-d55b" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+                <infoLink name="Mercenaries" id="fa8b-4196-fb40-0428" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <modifiers>
                 <modifier type="add" value="{this} needs one more Selection of The Besiegers (Crossbowmen)" field="error">
@@ -11441,8 +11422,8 @@ Any crossbow-armed models in the unit must be placed as far forward in the unit 
               </constraints>
               <infoLinks>
                 <infoLink name="Leader" id="e530-2cb5-b232-c309" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
-                <infoLink name="Mercenaries" id="0606-d77b-676a-fcd1" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
                 <infoLink name="Loner" id="8a28-9cdf-1013-bf10" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+                <infoLink name="Mercenaries" id="c67f-6321-2b0e-35e6" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <modifiers>
                 <modifier type="add" value="{this} needs one more Selection of Vespero&apos;s Vendetta (Duellists)" field="error">
@@ -11551,7 +11532,7 @@ Any crossbow-armed models in the unit must be placed as far forward in the unit 
               </constraints>
               <infoLinks>
                 <infoLink name="Leader" id="50d0-c4d3-c9d5-5da8" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
-                <infoLink name="Mercenaries" id="55ab-6821-70e5-f484" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+                <infoLink name="Mercenaries" id="05dc-0ca8-5f2d-0cb1" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <modifiers>
                 <modifier type="add" value="{this} needs one more Selection of The Venators (Freelancers)" field="error">
@@ -11627,9 +11608,9 @@ Any crossbow-armed models in the unit must be placed as far forward in the unit 
               </constraints>
               <infoLinks>
                 <infoLink name="Loner" id="d826-ed15-025b-2ce0" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
-                <infoLink name="Mercenaries" id="6514-d565-8d2a-5ad7" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
                 <infoLink name="Leader" id="835d-f8d7-fb11-1f2f" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
                 <infoLink name="Fly (8)" id="60d5-7e35-08d5-a3b8" hidden="false" type="rule" targetId="0a9a-bfcb-1a9d-5609"/>
+                <infoLink name="Mercenaries" id="68b4-726e-3a76-6fe1" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <modifiers>
                 <modifier type="add" value="{this} needs one more Selection of Birdmen of Catrazza" field="error">
@@ -11698,7 +11679,7 @@ Any crossbow-armed models in the unit must be placed as far forward in the unit 
               </constraints>
               <infoLinks>
                 <infoLink name="Loner" id="272f-e47b-22dd-d725" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
-                <infoLink name="Mercenaries" id="4741-0b5c-d341-292e" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+                <infoLink name="Mercenaries" id="e3e2-5e6a-7a14-3d38" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <modifiers>
                 <modifier type="add" value="{this} needs one more Selection of Galloper Gun" field="error">
@@ -11817,7 +11798,7 @@ Any crossbow-armed models in the unit must be placed as far forward in the unit 
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1efc-e1ae-951d-e9d2" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
               <infoLinks>
-                <infoLink name="Mercenaries" id="3161-6002-2187-8a92" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+                <infoLink name="Mercenaries" id="58a6-ba6c-5a8f-f98b" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <modifiers>
                 <modifier type="add" value="{this} needs one more Selection of Manann&apos;s Blades (Sellswords)" field="error">
@@ -12009,9 +11990,9 @@ Any crossbow-armed models in the unit must be placed as far forward in the unit 
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6829-05e3-97a9-d398" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
               <infoLinks>
-                <infoLink name="Mercenaries" id="bcb8-bded-4edd-0649" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
                 <infoLink name="Zealotry" id="f738-047d-afa7-1d6f" hidden="false" type="rule" targetId="dce3-bc9e-e3bf-fc71"/>
                 <infoLink name="Loner" id="e53e-0c1f-d703-5674" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+                <infoLink name="Mercenaries" id="b3f8-8107-7107-13a3" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <rules>
                 <rule name="The Desert Dogs" id="3ccb-ed52-b6f4-2c10" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="65">
@@ -12185,7 +12166,7 @@ Any crossbow-armed models in the unit must be placed as far forward in the unit 
                 <categoryLink targetId="fa51-55d0-00b9-c0e8" id="6657-d197-1305-786b" primary="false" name="Z Light Armour"/>
               </categoryLinks>
               <infoLinks>
-                <infoLink name="Mercenaries" id="d19a-e9c8-68db-e006" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
+                <infoLink name="Mercenaries" id="329d-21b3-e581-f57d" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <rules>
                 <rule name="Inseparable" id="b851-1452-859a-c723" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="66">
@@ -12398,11 +12379,11 @@ Phase until they pass the Toughness test, the spell is dispelled or the unit is 
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink name="Mercenaries" id="5a7f-0440-89c7-9c12" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
                 <infoLink name="Dodge (5+)" id="88f3-43bd-2586-5a27" hidden="false" type="rule" targetId="cfff-6563-d1c6-820c"/>
                 <infoLink name="Hidden" id="0ab4-5933-0c62-e2d5" hidden="false" type="rule" targetId="2796-b399-4f98-a36f"/>
                 <infoLink name="Poisoned Attacks" id="b725-6d5f-2d32-ca44" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
                 <infoLink name="Scouts" id="e74f-1a0b-a580-ccec" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
+                <infoLink name="Mercenaries" id="9402-b870-fdbb-4ca3" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <rules>
                 <rule name="Knife Fighter Extraordinaire" id="d3b7-568d-372f-3639" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="68">
@@ -13099,9 +13080,9 @@ Phase until they pass the Toughness test, the spell is dispelled or the unit is 
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink name="Mercenaries" id="52f7-bace-bb70-1763" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
                 <infoLink name="Leader" id="5e2d-ea79-a0a8-f5b7" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
                 <infoLink name="Duck &amp; Weave" id="7310-901c-984b-0aff" hidden="false" type="rule" targetId="98d9-ed19-1ab7-5a19"/>
+                <infoLink name="Mercenaries" id="ac84-81b8-6ff1-1cc0" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <rules>
                 <rule name="The Fighting Cocks" id="6972-d726-5c74-822d" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="75">
@@ -13164,7 +13145,6 @@ Phase until they pass the Toughness test, the spell is dispelled or the unit is 
                 </modifier>
               </modifiers>
               <infoLinks>
-                <infoLink name="Mercenaries" id="1ac2-05cd-090f-1bfd" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
                 <infoLink name="Stubborn" id="1272-a612-d563-7d74" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
                 <infoLink name="Immunity (Psychology)" id="d0f0-97fc-c89a-108e" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
                 <infoLink name="Ogre Charge" id="6411-0648-ab09-f817" hidden="false" type="rule" targetId="a543-d0ae-beb8-c99f"/>
@@ -13175,6 +13155,7 @@ Phase until they pass the Toughness test, the spell is dispelled or the unit is 
                     <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
                   </modifiers>
                 </infoLink>
+                <infoLink name="Mercenaries" id="feb6-cd8c-1a0d-6f73" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <categoryLinks>
                 <categoryLink targetId="5fc5-b80a-115f-bca3" id="e730-4d8f-45b9-b765" primary="false" name="Monstrous Infantry"/>
@@ -13434,11 +13415,11 @@ Phase until they pass the Toughness test, the spell is dispelled or the unit is 
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink name="Mercenaries" id="5767-3ac9-a6ef-db87" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
                 <infoLink name="Backstabbers" id="d366-445e-7b55-c3ec" hidden="false" type="rule" targetId="264b-43f7-6123-a1a5"/>
                 <infoLink name="Cowardly Despoilers" id="4cd3-555f-cefc-e79f" hidden="false" type="rule" targetId="0654-6a47-bd1c-81f5"/>
                 <infoLink name="Ded Shooty" id="ea18-5844-6138-f977" hidden="false" type="rule" targetId="ef85-b476-eaf2-ae2e"/>
                 <infoLink name="Quell Treachery" id="cdd2-931d-4636-550a" hidden="false" type="rule" targetId="a23e-1357-8959-ae5a"/>
+                <infoLink name="Mercenaries" id="3e30-553a-6779-09d2" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <rules>
                 <rule name="The Wolfboyz" id="f12a-f6f4-44b3-3f11" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="77">
@@ -13729,11 +13710,11 @@ Phase until they pass the Toughness test, the spell is dispelled or the unit is 
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <infoLinks>
-                <infoLink name="Mercenaries" id="0198-1afb-f152-2913" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
                 <infoLink name="Dodge (5+)" id="8fd3-52b8-27e8-1777" hidden="false" type="rule" targetId="cfff-6563-d1c6-820c"/>
                 <infoLink name="Hidden" id="1a01-e240-b6d4-4b70" hidden="false" type="rule" targetId="2796-b399-4f98-a36f"/>
                 <infoLink name="Poisoned Attacks" id="2e1e-ba74-24bc-9816" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
                 <infoLink name="Scouts" id="d29c-93ba-6426-2c1a" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
+                <infoLink name="Mercenaries" id="6178-0d10-9d0d-b3a6" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <rules>
                 <rule name="Marianna Chevaux" id="a46a-b2c8-4335-d3ed" hidden="false" publicationId="8ada-88a0-cdcd-9b5e">
@@ -16341,7 +16322,4 @@ Phase until they pass the Toughness test, the spell is dispelled or the unit is 
     <costType name="Crossbowmen with Handguns" id="1d5e-af1e-25ce-3bd6" defaultCostLimit="0" hidden="true"/>
     <costType name="The Lost Legion Crossbows" id="e81e-b5d3-1917-1844" defaultCostLimit="-1" hidden="true"/>
   </costTypes>
-  <infoLinks>
-    <infoLink name="Mercenaries" id="0a4e-017c-cde5-2f69" hidden="false" type="infoGroup" targetId="52b4-7b55-2cb7-7392"/>
-  </infoLinks>
 </catalogue>
