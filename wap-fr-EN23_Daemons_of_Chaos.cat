@@ -9288,6 +9288,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
                     <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="ccbc-737c-b6a7-967e" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="15+ Models" field="annotation" affects="profiles.Spell"/>
               </modifiers>
               <constraints>
                 <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="46c8-cfd2-6267-7722" includeChildSelections="false" automatic="true"/>
@@ -9300,20 +9301,11 @@ Cursed terrain features placed in this way must be positioned touching an exist
           <entryLinks>
             <entryLink import="true" name="Wizard Level 1" hidden="false" id="fe9b-007a-1d5a-c4d1" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
               <constraints>
-                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="b49e-b14c-0cd0-d883" includeChildSelections="false" automatic="true"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2f27-2183-6ddc-619f" includeChildSelections="false" automatic="true"/>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b49e-b14c-0cd0-d883" includeChildSelections="false" automatic="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2f27-2183-6ddc-619f" includeChildSelections="false" automatic="false"/>
               </constraints>
               <modifiers>
-                <modifier type="set" value="1" field="b49e-b14c-0cd0-d883">
-                  <conditions>
-                    <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="ccbc-737c-b6a7-967e" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="0" field="2f27-2183-6ddc-619f">
-                  <conditions>
-                    <condition type="atLeast" value="15" field="selections" scope="root-entry" childId="ccbc-737c-b6a7-967e" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </modifier>
+                <modifier type="set" value="1-14 Models" field="annotation" affects="profiles.Wizard"/>
               </modifiers>
             </entryLink>
             <entryLink import="true" name="Wizard Level 2" hidden="false" id="24e0-4e6e-7a31-7d4c" type="selectionEntry" targetId="801a-bc0a-a767-61db">
@@ -9332,6 +9324,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
                     <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="ccbc-737c-b6a7-967e" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="15+ Models" field="annotation" affects="profiles.Wizard"/>
               </modifiers>
             </entryLink>
           </entryLinks>
@@ -14241,7 +14234,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
         <categoryLink name="Infantry" hidden="false" id="4f99-e061-2f7c-64ca" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="fbb5-de30-7cdb-bcb6" hidden="false" sortIndex="2">
+        <selectionEntryGroup name="Command Group" id="fbb5-de30-7cdb-bcb6" hidden="false" sortIndex="4">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="ee00-e6c8-3b15-4685">
               <costs>
@@ -14285,21 +14278,13 @@ Cursed terrain features placed in this way must be positioned touching an exist
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup name="61. Spell" id="1a3b-4db8-9f4f-6eaf" hidden="false">
-          <entryLinks>
-            <entryLink import="true" name="0. Blue Fire of Tzeentch" hidden="false" id="d38a-2cea-9f8b-5f58" type="selectionEntry" targetId="d760-acbb-99bb-d332" collective="true"/>
-          </entryLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="66d4-1630-6cf3-64a0"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c24-63b5-58a7-1ab6"/>
-          </constraints>
-        </selectionEntryGroup>
       </selectionEntryGroups>
       <infoLinks>
         <infoLink name="Blue Horror" id="ed3e-99a3-b242-62aa" hidden="false" type="profile" targetId="6515-70c9-8a96-5d81"/>
       </infoLinks>
       <entryLinks>
-        <entryLink import="true" name="60. Wizard Level" hidden="false" id="2c89-77c6-aca6-1446" type="selectionEntryGroup" targetId="1d19-3d5b-2087-e988" collective="true"/>
+        <entryLink import="true" name="Spell" hidden="false" id="864e-979c-7f0c-31c0" type="selectionEntryGroup" targetId="fef9-98e0-093d-8c29" sortIndex="3"/>
+        <entryLink import="true" name="Wizard Level" hidden="false" id="4ba9-d9cc-28af-f03a" type="selectionEntryGroup" targetId="5ea3-009b-4b9b-88d9" sortIndex="2"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
