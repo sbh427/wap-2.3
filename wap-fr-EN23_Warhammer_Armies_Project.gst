@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="85" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="86" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -26,7 +26,7 @@
     <publication id="8abe-59b3-1084-5e51" name="Grand Cathay 1.52" shortName="GC" publisher="Warhammer - Grand Cathay 1.52" publicationDate="11.09.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="faf5-2026-3cea-6e96" name="Chaos Dwarfs 1.5" shortName="CD" publisher="Warhammer - Chaos Dwarfs 9th Ed 1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="7f0c-7d47-a39d-8c68" name="Cult of Ulric 1.11" shortName="CoU" publisher="Warhammer - Cult of Ulric 1.11" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="15.11.2023"/>
-    <publication id="8ada-88a0-cdcd-9b5e" name="Dogs of War v.1.5" shortName="DoW" publisher="Warhammer - Dogs of War 9th Ed v.1.5" publicationDate="16.11.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
+    <publication id="8ada-88a0-cdcd-9b5e" name="Dogs of War v.1.52" shortName="DoW" publisher="Warhammer - Dogs of War 9th Ed v.1.5" publicationDate="22.01.2026" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="894a-5ecc-1ff7-958a" name="Estalia 1.15" shortName="Es" publisher="Warhammer - Estalia 1.15" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="15.08.2023"/>
     <publication id="0545-ea23-873c-f668" name="Halflings 1.13" shortName="Ha" publisher="Warhammer - Halflings 1.13" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="16.01.2024"/>
     <publication id="92f3-84a1-4644-bc2f" name="Hobgoblins 1.12" shortName="Ho" publisher="Warhammer - Hobgoblins 1.12" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="18.03.2024"/>
