@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="442a-94b5-5142-d10c" name="Daemons of Chaos WAP 1.71" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="70" revision="5" authorContact="Contact me via Discord" authorName="xetolosch" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="442a-94b5-5142-d10c" name="Daemons of Chaos WAP 1.71" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="70" revision="6" authorContact="Contact me via Discord" authorName="xetolosch" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <catalogueLinks>
     <catalogueLink type="catalogue" name="Armoury" id="61ff-ad9f-83c7-fbff" targetId="522e-5e2a-d54c-4959"/>
     <catalogueLink type="catalogue" name="Bestiary" id="f60e-240a-8426-d3ed" targetId="1fc9-2903-cb19-5737"/>
@@ -1625,6 +1625,23 @@
             </profile>
           </profiles>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="0. Blue Fire of Tzeentch" hidden="false" id="d760-acbb-99bb-d332">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6173-2064-f5f4-3317-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6173-2064-f5f4-3317-max"/>
+          </constraints>
+          <profiles>
+            <profile name="0. Blue Fire of Tzeentch" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3e64-e33e-0a9b-5b67" publicationId="314a-aacb-0877-4081" page="8">
+              <characteristics>
+                <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
+                <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
+                <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
+                <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
+                <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">It causes D6 Strength D6+1 hits with the Flaming Attacks special rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Spells from the Lore of Tzeentch" id="535c-012d-6391-bb18" hidden="false" collapsible="true">
@@ -2176,9 +2193,6 @@
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <entryLinks>
-        <entryLink import="true" name="0. Blue Fire of Tzeentch" hidden="false" id="cd47-5f34-d9b2-9fab" type="selectionEntry" targetId="d760-acbb-99bb-d332"/>
-      </entryLinks>
       <modifiers>
         <modifier type="set" value="0" field="ce7d-71d1-72cb-c701">
           <conditions>
@@ -3021,23 +3035,6 @@
           </entryLinks>
         </entryLink>
       </entryLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="0. Blue Fire of Tzeentch" hidden="false" id="d760-acbb-99bb-d332" sortIndex="4.5">
-      <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6173-2064-f5f4-3317-min"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6173-2064-f5f4-3317-max"/>
-      </constraints>
-      <profiles>
-        <profile name="0. Blue Fire of Tzeentch" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="3e64-e33e-0a9b-5b67" publicationId="314a-aacb-0877-4081" page="8">
-          <characteristics>
-            <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">Signature Spell</characteristic>
-            <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
-            <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">6+</characteristic>
-            <characteristic name="Range" typeId="2954-76ea-decb-30ff">24&quot;</characteristic>
-            <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">It causes D6 Strength D6+1 hits with the Flaming Attacks special rule.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Beast of Nurgle" hidden="false" id="b317-50ee-3ed0-3657" sortIndex="106" subType="mount">
       <profiles>
@@ -9231,7 +9228,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
         <categoryLink name="Infantry" hidden="false" id="9334-5667-33a2-46e7" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="420c-45e2-fb02-adf4" hidden="false" sortIndex="2">
+        <selectionEntryGroup name="Command Group" id="420c-45e2-fb02-adf4" hidden="false" sortIndex="5">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="7350-bfa5-a239-4149">
               <costs>
@@ -9275,22 +9272,67 @@ Cursed terrain features placed in this way must be positioned touching an exist
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup name="61. Spell" id="fef9-98e0-093d-8c29" hidden="false">
+        <selectionEntryGroup name="Spell" id="fef9-98e0-093d-8c29" hidden="false" sortIndex="4">
           <entryLinks>
             <entryLink import="true" name="0. Blue Fire of Tzeentch" hidden="false" id="3fc5-4de7-5dd0-844e" type="selectionEntry" targetId="d760-acbb-99bb-d332" collective="true"/>
+            <entryLink import="true" name="4. Pink Fire of Tzeentch" hidden="false" id="492e-0b8a-27b3-f84b" type="selectionEntry" targetId="8609-df1c-a43e-f19b">
+              <modifiers>
+                <modifier type="set" value="false" field="hidden"/>
+                <modifier type="set" value="1" field="46c8-cfd2-6267-7722">
+                  <conditions>
+                    <condition type="atLeast" value="15" field="selections" scope="root-entry" childId="ccbc-737c-b6a7-967e" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="0" field="8559-e2e1-1ca5-dd13">
+                  <conditions>
+                    <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="ccbc-737c-b6a7-967e" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="15+ Models" field="annotation" affects="profiles.Spell"/>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="46c8-cfd2-6267-7722" includeChildSelections="false" automatic="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8559-e2e1-1ca5-dd13" includeChildSelections="false" automatic="true"/>
+              </constraints>
+            </entryLink>
           </entryLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0dc8-a23b-2e67-baa1-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0dc8-a23b-2e67-baa1-max"/>
-          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Wizard Level" id="5ea3-009b-4b9b-88d9" hidden="false" sortIndex="3">
+          <entryLinks>
+            <entryLink import="true" name="Wizard Level 1" hidden="false" id="fe9b-007a-1d5a-c4d1" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b49e-b14c-0cd0-d883" includeChildSelections="false" automatic="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2f27-2183-6ddc-619f" includeChildSelections="false" automatic="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="1-14 Models" field="annotation" affects="profiles.Wizard"/>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Wizard Level 2" hidden="false" id="24e0-4e6e-7a31-7d4c" type="selectionEntry" targetId="801a-bc0a-a767-61db">
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="3b8c-fc0c-69c7-ad63" includeChildSelections="false" automatic="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ef3e-f8d6-7582-3662" includeChildSelections="false" automatic="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="3b8c-fc0c-69c7-ad63">
+                  <conditions>
+                    <condition type="atLeast" value="15" field="selections" scope="root-entry" childId="ccbc-737c-b6a7-967e" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="0" field="ef3e-f8d6-7582-3662">
+                  <conditions>
+                    <condition type="lessThan" value="15" field="selections" scope="root-entry" childId="ccbc-737c-b6a7-967e" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="15+ Models" field="annotation" affects="profiles.Wizard"/>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <infoLinks>
         <infoLink name="Blue Horror" id="109a-e59c-3a93-9e2d" hidden="false" type="profile" targetId="6515-70c9-8a96-5d81"/>
       </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="60. Wizard Level" hidden="false" id="53e3-f6c8-548b-dfef" type="selectionEntryGroup" targetId="1d19-3d5b-2087-e988" collective="true"/>
-      </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
           <conditionGroups>
@@ -14192,7 +14234,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
         <categoryLink name="Infantry" hidden="false" id="4f99-e061-2f7c-64ca" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="fbb5-de30-7cdb-bcb6" hidden="false" sortIndex="2">
+        <selectionEntryGroup name="Command Group" id="fbb5-de30-7cdb-bcb6" hidden="false" sortIndex="4">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="ee00-e6c8-3b15-4685">
               <costs>
@@ -14236,21 +14278,13 @@ Cursed terrain features placed in this way must be positioned touching an exist
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
-        <selectionEntryGroup name="61. Spell" id="1a3b-4db8-9f4f-6eaf" hidden="false">
-          <entryLinks>
-            <entryLink import="true" name="0. Blue Fire of Tzeentch" hidden="false" id="d38a-2cea-9f8b-5f58" type="selectionEntry" targetId="d760-acbb-99bb-d332" collective="true"/>
-          </entryLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="66d4-1630-6cf3-64a0"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c24-63b5-58a7-1ab6"/>
-          </constraints>
-        </selectionEntryGroup>
       </selectionEntryGroups>
       <infoLinks>
         <infoLink name="Blue Horror" id="ed3e-99a3-b242-62aa" hidden="false" type="profile" targetId="6515-70c9-8a96-5d81"/>
       </infoLinks>
       <entryLinks>
-        <entryLink import="true" name="60. Wizard Level" hidden="false" id="2c89-77c6-aca6-1446" type="selectionEntryGroup" targetId="1d19-3d5b-2087-e988" collective="true"/>
+        <entryLink import="true" name="Spell" hidden="false" id="864e-979c-7f0c-31c0" type="selectionEntryGroup" targetId="fef9-98e0-093d-8c29" sortIndex="3"/>
+        <entryLink import="true" name="Wizard Level" hidden="false" id="4ba9-d9cc-28af-f03a" type="selectionEntryGroup" targetId="5ea3-009b-4b9b-88d9" sortIndex="2"/>
       </entryLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
