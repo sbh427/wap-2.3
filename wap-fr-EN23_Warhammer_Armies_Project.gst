@@ -64,7 +64,7 @@
         <characteristicType id="13f9-a26b-05af-3459" name="Type"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="cb92-d882-5ba8-11ab" name="Spell" sortIndex="19">
+    <profileType id="cb92-d882-5ba8-11ab" name="Spell" sortIndex="20">
       <characteristicTypes>
         <characteristicType id="576b-eaa1-0bd1-3f7a" name="Spell Level"/>
         <characteristicType id="21e9-4aa2-f538-c93b" name="Type"/>
@@ -73,7 +73,7 @@
         <characteristicType id="f5f2-ac1b-25cd-89c6" name="Details"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="0ce6-a5f9-6184-218d" name="Wizard" sortIndex="18">
+    <profileType id="0ce6-a5f9-6184-218d" name="Wizard" sortIndex="19">
       <characteristicTypes>
         <characteristicType id="7f8d-5707-7251-c1a5" name="Wizard Level"/>
         <characteristicType id="b859-9e7c-9452-f90e" name="Known Spells"/>
@@ -130,7 +130,7 @@
         <characteristicType id="c8b7-e979-95fd-ac37" name="Result"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Prayer" id="4608-9b35-b7dc-202d" hidden="false" sortIndex="17">
+    <profileType name="Prayer" id="4608-9b35-b7dc-202d" hidden="false" sortIndex="18">
       <characteristicTypes>
         <characteristicType name="Effect" id="1f79-8144-edd6-8b51"/>
       </characteristicTypes>
@@ -172,7 +172,7 @@
         <characteristicType name="Special Rules" id="ff58-91e4-84d7-e6e4" kind="longText"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Magic Resistance" id="e6b8-3bf4-4d0c-974e" hidden="false" sortIndex="20">
+    <profileType name="Magic Resistance" id="e6b8-3bf4-4d0c-974e" hidden="false" sortIndex="17">
       <characteristicTypes>
         <characteristicType name="Value" id="19f0-e982-f035-416c"/>
       </characteristicTypes>
