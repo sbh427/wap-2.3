@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="a833-bc85-ca8c-442d" name="Chaos Dwarfs WAP 1.71" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="70" revision="9" authorContact="xetolosch" authorName="contact via discord" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="a833-bc85-ca8c-442d" name="Chaos Dwarfs WAP 1.71" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="70" revision="10" authorContact="xetolosch" authorName="contact via discord" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Cowarldy Despoilers" id="8536-b279-7c0d-a0cb" hidden="false" publicationId="53f5-3638-a9ce-8dd3" page="3">
       <description>Models with this special rule gain +1 To Hit in the first round of combat if they successfully charge an enemy in the rear or flank.</description>
@@ -1564,7 +1564,6 @@
             <modifier type="increment" value="50" field="be6e-2130-6460-42ed"/>
           </modifiers>
         </entryLink>
-        <entryLink import="true" name="60. Wizard Level" hidden="false" id="cb40-becd-5fc1-71c9" type="selectionEntryGroup" targetId="e303-1f8c-2385-b1e5"/>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="7061-cc8d-fb7d-3f78" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
           <entryLinks>
             <entryLink import="true" name="Hand Weapon" hidden="false" id="4888-4d6a-5b1c-5e31" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
@@ -1621,7 +1620,7 @@
           <modifierGroups>
             <modifierGroup type="and">
               <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="parent" childId="cb40-becd-5fc1-71c9" shared="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="parent" childId="94b6-7f8b-b587-e9cb" shared="true"/>
               </conditions>
               <modifiers>
                 <modifier type="set" value="true" field="hidden"/>
@@ -1658,6 +1657,18 @@
               </infoLinks>
             </selectionEntry>
           </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="60. Wizard Level" id="94b6-7f8b-b587-e9cb" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Wizard Level 1" hidden="false" id="531a-8b10-7677-f0f3" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
+              <costs>
+                <cost name="pts" typeId="points" value="50"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bfd2-2171-120e-356c"/>
+          </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <rules>
@@ -4919,7 +4930,7 @@ While there are rank and file models left in the unit (except the Command Group)
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Juggernaut Siege Tower" hidden="false" id="e28c-ba24-2c61-1d1d" sortIndex="306">
       <costs>
-        <cost name="pts" typeId="points" value="112"/>
+        <cost name="pts" typeId="points" value="212"/>
       </costs>
       <categoryLinks>
         <categoryLink name="Rare" hidden="false" id="116e-4723-d068-9526" targetId="0eb4-f376-7725-b05b" primary="true"/>
