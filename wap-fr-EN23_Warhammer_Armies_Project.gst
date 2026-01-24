@@ -569,9 +569,9 @@
     </forceEntry>
   </forceEntries>
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Tables &amp; Charts" hidden="false" id="8607-a440-1e4a-de26">
+    <selectionEntry type="upgrade" import="true" name="Tables, Charts &amp; Rules" hidden="false" id="8607-a440-1e4a-de26">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Blackpowder Misfire Chart" hidden="false" id="fa37-e5db-5351-a408" collective="false" sortIndex="1">
+        <selectionEntry type="upgrade" import="true" name="Blackpowder Misfire Chart" hidden="false" id="fa37-e5db-5351-a408" collective="false" sortIndex="12">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="e8ed-fd7d-58d1-f615" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -667,7 +667,7 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Miscast Table" hidden="false" id="a92c-dee5-1aa8-4a42" collective="false" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Miscast Table" hidden="false" id="a92c-dee5-1aa8-4a42" collective="false" sortIndex="10">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="22de-1797-7260-b838" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -727,7 +727,7 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Stone Thrower Misfire Chart" hidden="false" id="f7e0-ba91-0886-7916" collective="false" sortIndex="2">
+        <selectionEntry type="upgrade" import="true" name="Stone Thrower Misfire Chart" hidden="false" id="f7e0-ba91-0886-7916" collective="false" sortIndex="11">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="f2e5-059d-7b35-1ee2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -863,6 +863,66 @@
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Print Rules: &quot;Firing a ...&quot;" id="10aa-9013-92f4-fbea" hidden="false" sortIndex="2">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Bolt Thrower" hidden="false" id="5f4f-ae5d-fa50-30bf">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4962-1503-c5e1-a4fe" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Cannon" hidden="false" id="cd8b-0893-c11b-4b2e">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="44e9-a0bc-2216-a72c" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fire Thrower" hidden="false" id="c55b-93a4-c935-c2b7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dae4-3e43-ec6b-22f0" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Stone Thrower" hidden="false" id="9a40-3d7e-c9ea-759a">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f8c8-e610-8e2a-c5f1" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Organ Gun" hidden="false" id="48c1-b856-7aa7-2b61">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9e38-f8ea-f88c-2bbd" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Print Rules: Ward Saves" id="720e-87eb-15b4-3592" hidden="false" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Ward Save" hidden="false" id="3b36-ced8-0cad-a602" sortIndex="5">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="341c-715a-50c1-9236" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Regeneration" hidden="false" id="3a34-b5f4-2b85-7c98" sortIndex="4">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="717f-1e45-9146-08eb" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Dodge" hidden="false" id="17af-9594-4a92-38a8" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0372-1c45-580e-d869" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Parry" hidden="false" id="164b-f5a8-5d6c-d0cb" sortIndex="3">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="313f-0d87-14db-e9ec" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Magic Resistance" hidden="false" id="7764-a0aa-4fdb-06cb" sortIndex="2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8ee2-4ffd-0de6-db3d" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
@@ -10753,4 +10813,105 @@ Magic phase.</characteristic>
       </profiles>
     </infoGroup>
   </sharedInfoGroups>
+  <infoLinks>
+    <infoLink name="Ward Save" id="ba8d-ab05-e584-7ff3" hidden="false" type="rule" targetId="ee1d-9c99-af9c-1816">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="3b36-ced8-0cad-a602" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Parry" id="fa4f-21c7-de96-1ddb" hidden="false" type="rule" targetId="a816-2399-5f72-61e9">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="164b-f5a8-5d6c-d0cb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Regeneration" id="db6f-625c-85fd-1c9d" hidden="false" type="rule" targetId="ebb3-06a2-a251-5b84">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="3a34-b5f4-2b85-7c98" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Dodge" id="dfa2-8162-5943-8394" hidden="false" type="rule" targetId="c79e-5ae7-e683-8fb4">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="17af-9594-4a92-38a8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Magic Resistance" id="7758-2f01-597e-a073" hidden="false" type="rule" targetId="fabd-07ef-35b4-adf9">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7764-a0aa-4fdb-06cb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Firing a Bolt Thrower" id="14d2-ff7e-3a5e-196d" hidden="false" type="rule" targetId="f55b-b981-fae7-afa2">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="5f4f-ae5d-fa50-30bf" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Firing a Cannon" id="f251-37be-5517-939a" hidden="false" type="rule" targetId="1b5a-8c3a-7e3d-0e2e">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="cd8b-0893-c11b-4b2e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Firing Grapeshot" id="3edd-0dc4-af36-b06c" hidden="false" type="rule" targetId="493e-43ce-ef2f-2beb">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="cd8b-0893-c11b-4b2e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Firing a Fire Thrower" id="c6ef-0413-ec9b-d26a" hidden="false" type="rule" targetId="5184-235f-3d04-5636">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="c55b-93a4-c935-c2b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Firing a Stone Thrower" id="ee7b-7a46-33c5-4bda" hidden="false" type="rule" targetId="0638-a1ac-c907-7ee2">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="9a40-3d7e-c9ea-759a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Firing an Organ Gun" id="1662-8a68-f1d4-fbe8" hidden="false" type="rule" targetId="516f-a12a-2ccc-9ac7">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="48c1-b856-7aa7-2b61" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+  </infoLinks>
 </gameSystem>
