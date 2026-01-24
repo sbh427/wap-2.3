@@ -7109,6 +7109,24 @@
     <selectionEntry type="upgrade" import="true" name="Mark of Tzeentch" hidden="false" id="a5c6-cd36-6ce9-c322" collective="true">
       <infoLinks>
         <infoLink name="Mark of Tzeentch" id="448a-fe5e-64c2-6989" hidden="false" type="rule" targetId="Mark of Tzeentch"/>
+        <infoLink name="Ward Save" id="4a32-1d3d-e7b3-1a37" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+          <modifiers>
+            <modifier type="set" value="Mark of Tzeentch" field="name"/>
+            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Magic Resistance" id="f035-4684-65b8-a8c8" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+          <modifiers>
+            <modifier type="set" value="Mark of Tzeentch" field="name"/>
+            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Magic Resistance" id="d054-ce44-09c9-20ca" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+          <modifiers>
+            <modifier type="set" value="Mark of Tzeentch" field="name"/>
+            <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Expendable" hidden="false" id="b90d-9045-a6d5-9e7d" collective="true">

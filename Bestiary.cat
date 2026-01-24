@@ -334,7 +334,7 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Chimera" hidden="false" id="9369-395a-8e7e-3937" collective="false">
       <profiles>
-        <profile name="Chimera" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f2b0-b7d7-35a6-a55d" publicationId="1a01-044f-047b-618f" page="212">
+        <profile name="Chimera" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f2b0-b7d7-35a6-a55d" publicationId="1a01-044f-047b-618f" page="212" noindex="true">
           <characteristics>
             <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
             <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
@@ -347,6 +347,13 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Canine)</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="increment" value="1" field="bfa2-d38d-7c93-d3f0">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="69a0-e339-e85a-633b" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
@@ -382,6 +389,13 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
               <rules>
                 <rule name="Fiend Tail" id="02b0-f303-8e79-6d86" hidden="false" publicationId="1a01-044f-047b-618f" page="212">
                   <description>The Chimera gains +1 A.</description>
+                  <modifiers>
+                    <modifier type="append" value="(already in profile)" field="description">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="69a0-e339-e85a-633b" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </rule>
               </rules>
               <costs>
@@ -392,11 +406,6 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5eb9-a1f5-920a-a4d0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
-              <rules>
-                <rule name="Iron-hard Skin" id="a36b-d014-4470-16ab" hidden="false" publicationId="1a01-044f-047b-618f" page="212">
-                  <description>The Chimera gains Natural Armour (4+).</description>
-                </rule>
-              </rules>
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
@@ -432,14 +441,17 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d9de-c00f-05d5-bd7f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
-              <rules>
-                <rule name="Regenerating Flesh" id="8a3a-5970-500f-225d" hidden="false" publicationId="1a01-044f-047b-618f" page="212">
-                  <description>The Chimera gains Regeneration (4+).</description>
-                </rule>
-              </rules>
               <costs>
                 <cost name="pts" typeId="points" value="40"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Regeneration" id="c877-e949-900f-d76c" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                  <modifiers>
+                    <modifier type="set" value="Regenerating Flesh" field="name"/>
+                    <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </entryLink>
