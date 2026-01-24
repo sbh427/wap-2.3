@@ -1355,7 +1355,7 @@ In close combat, an Ogre pistol counts as an additional hand weapon that does no
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Look-out Gnoblar" hidden="false" id="2a46-36e4-e0be-fd08" sortIndex="51">
+    <selectionEntry type="upgrade" import="true" name="Look-out Gnoblar" hidden="false" id="2a46-36e4-e0be-fd08" sortIndex="51" collective="true">
       <costs>
         <cost name="pts" typeId="points" value="5"/>
       </costs>
@@ -1402,7 +1402,7 @@ In close combat, an Ogre pistol counts as an additional hand weapon that does no
         </infoLink>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Core (Diplomat)" hidden="false" id="0e48-1d29-efd1-1f17" sortIndex="52">
+    <selectionEntry type="upgrade" import="true" name="Core (Diplomat)" hidden="false" id="0e48-1d29-efd1-1f17" sortIndex="52" collective="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="cb3c-6e24-3df6-b5d5" includeChildSelections="true" includeChildForces="true"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1ecf-4965-204c-acd4" automatic="true"/>
@@ -1447,6 +1447,33 @@ In close combat, an Ogre pistol counts as an additional hand weapon that does no
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="roster" childId="5e20-97e8-9744-1be1" shared="true" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
+        </modifierGroup>
+      </modifierGroups>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Ambusher (Leonardo da Miragliano)" hidden="false" id="912b-4fd3-28dd-a565" sortIndex="53" collective="true">
+      <comment>Battle Strategy, Leonardo da Miragliano</comment>
+      <infoLinks>
+        <infoLink name="Ambushers" id="c2ba-e590-1d22-a78f" hidden="false" type="rule" targetId="f366-0f91-841f-cf80"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c57f-5622-39c0-9ea9" includeChildSelections="true" includeChildForces="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c2d9-70e0-8cae-c5af" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="207c-f45d-c88f-11a3"/>
+      </constraints>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden"/>
+            <modifier type="set" value="0" field="c2d9-70e0-8cae-c5af"/>
+          </modifiers>
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="66c5-87c9-128a-f968" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="b876-2856-f1c2-c4f0" shared="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
@@ -1821,7 +1848,7 @@ In close combat, an Ogre pistol counts as an additional hand weapon that does no
         </selectionEntryGroup>
         <selectionEntryGroup name="Unit Upgrades" id="dc04-8248-7943-e5d8" hidden="false" flatten="true" sortIndex="1">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="The Manflayers" hidden="false" id="eade-2cfd-16d7-de51">
+            <selectionEntry type="upgrade" import="true" name="The Manflayers" hidden="false" id="eade-2cfd-16d7-de51" sortIndex="2">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ecf7-f116-4760-8106" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
@@ -1852,7 +1879,8 @@ In close combat, an Ogre pistol counts as an additional hand weapon that does no
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Core (Diplomat)" hidden="false" id="3161-aa54-2269-4682" type="selectionEntry" targetId="0e48-1d29-efd1-1f17"/>
+            <entryLink import="true" name="Core (Diplomat)" hidden="false" id="3161-aa54-2269-4682" type="selectionEntry" targetId="0e48-1d29-efd1-1f17" sortIndex="1"/>
+            <entryLink import="true" name="Ambusher (Leonardo da Miragliano)" hidden="false" id="f4d7-79c2-acc6-55fa" type="selectionEntry" targetId="912b-4fd3-28dd-a565" sortIndex="3"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -2287,69 +2315,100 @@ In close combat, an Ogre pistol counts as an additional hand weapon that does no
       </modifiers>
       <selectionEntryGroups>
         <selectionEntryGroup name="Unit Upgrades" id="78d9-8646-c7a6-c0e7" hidden="false" flatten="true" sortIndex="1">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Vespero&apos;s Vendetta" hidden="false" id="a63b-4288-c41b-59d0" sortIndex="2">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c7c5-9531-96cd-3bc7" includeChildSelections="true" includeChildForces="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="increment" value="3" field="points">
-                  <repeats>
-                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="8b29-6c5d-a002-9c47" shared="true" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <modifierGroups>
-                <modifierGroup type="and">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Special Character Units" id="066a-eda1-4fb2-5c50" hidden="false" flatten="true" sortIndex="1">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="Anakonda&apos;s Amazons" hidden="false" id="005b-8718-8fb9-308e" sortIndex="1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="67fe-17c6-b4f7-6d30" includeChildSelections="true" includeChildForces="true"/>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="f19d-fa6e-00f7-1e5a"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f272-25e3-8a13-4d46" automatic="true"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink name="Scouts" id="3e53-eda7-03ec-8825" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
+                  </infoLinks>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden"/>
-                    <modifier type="set" value="0" field="c7c5-9531-96cd-3bc7"/>
+                    <modifier type="increment" value="6" field="points">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="parent" childId="8b29-6c5d-a002-9c47" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                    <modifier type="set" value="0" field="f272-25e3-8a13-4d46">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="066a-eda1-4fb2-5c50" shared="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="parent" childId="005b-8718-8fb9-308e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
                   </modifiers>
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="roster" childId="efbb-2d23-e11f-8a11" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </modifierGroup>
-              </modifierGroups>
-              <rules>
-                <rule name="Vespero&apos;s Vendetta" id="4b03-7dbd-0319-23fb" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="61">
-                  <description>Vespero&apos;s Vendetta may re-roll failed Parry saves.</description>
-                </rule>
-              </rules>
-              <infoLinks>
-                <infoLink name="Loner" id="29f9-0f09-5aaf-f221" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Anakonda&apos;s Amazons" hidden="false" id="005b-8718-8fb9-308e" sortIndex="1">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="67fe-17c6-b4f7-6d30" includeChildSelections="true" includeChildForces="true"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Scouts" id="3e53-eda7-03ec-8825" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
-              </infoLinks>
-              <modifiers>
-                <modifier type="increment" value="6" field="points">
-                  <repeats>
-                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="8b29-6c5d-a002-9c47" shared="true" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <modifierGroups>
-                <modifierGroup type="and">
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden"/>
+                        <modifier type="set" value="0" field="67fe-17c6-b4f7-6d30"/>
+                      </modifiers>
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="7c91-cdef-db22-cf20" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </modifierGroup>
+                  </modifierGroups>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Vespero&apos;s Vendetta" hidden="false" id="a63b-4288-c41b-59d0" sortIndex="2">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="c7c5-9531-96cd-3bc7" includeChildSelections="true" includeChildForces="true"/>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="7722-abc1-bf75-9b56"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fb8f-3fad-9593-456c" automatic="true"/>
+                  </constraints>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden"/>
-                    <modifier type="set" value="0" field="67fe-17c6-b4f7-6d30"/>
+                    <modifier type="increment" value="3" field="points">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="parent" childId="8b29-6c5d-a002-9c47" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                    <modifier type="set" value="0" field="fb8f-3fad-9593-456c">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="066a-eda1-4fb2-5c50" shared="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="parent" childId="a63b-4288-c41b-59d0" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
                   </modifiers>
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="roster" childId="7c91-cdef-db22-cf20" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </modifierGroup>
-              </modifierGroups>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="68e1-716e-8b9a-b705"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="779e-9a79-7894-5420" automatic="false"/>
-          </constraints>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden"/>
+                        <modifier type="set" value="0" field="c7c5-9531-96cd-3bc7"/>
+                      </modifiers>
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="efbb-2d23-e11f-8a11" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <rules>
+                    <rule name="Vespero&apos;s Vendetta" id="4b03-7dbd-0319-23fb" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="61">
+                      <description>Vespero&apos;s Vendetta may re-roll failed Parry saves.</description>
+                    </rule>
+                  </rules>
+                  <infoLinks>
+                    <infoLink name="Loner" id="29f9-0f09-5aaf-f221" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c7d6-133f-6d39-394d" automatic="false"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="f70e-4215-17e5-2d67"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink import="true" name="Ambusher " hidden="false" id="bd2c-9bb4-f04b-8a15" type="selectionEntry" targetId="912b-4fd3-28dd-a565" sortIndex="2"/>
+          </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <constraints>
@@ -2638,6 +2697,11 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
             <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="348f-95c0-cbaa-2218" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="increment" value="1" field="ee11-0ca9-a6d6-453d">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="e34c-e881-7326-c277" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
       <selectionEntryGroups>
         <selectionEntryGroup name="99. Command Group" id="638c-a574-9279-948b" hidden="false">
@@ -2656,7 +2720,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
             </entryLink>
             <entryLink import="true" name="Musician" hidden="false" id="d7db-0548-191b-8988" type="selectionEntry" targetId="ecde-db3e-9381-c190" sortIndex="2">
               <constraints>
-                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="cc00-1842-adf9-c16e"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="cc00-1842-adf9-c16e" automatic="true"/>
               </constraints>
               <modifiers>
                 <modifier type="set" value="1" field="cc00-1842-adf9-c16e">
@@ -2682,14 +2746,14 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d306-7746-931b-e5db"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d306-7746-931b-e5db" automatic="true"/>
               </constraints>
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup name="Unit Upgrades" id="2425-0ded-6897-06e5" hidden="false" flatten="true" sortIndex="1">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="The Wolfboyz" hidden="false" id="348f-95c0-cbaa-2218">
+            <selectionEntry type="upgrade" import="true" name="The Wolfboyz" hidden="false" id="348f-95c0-cbaa-2218" sortIndex="2">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f1ca-2257-23c4-fae5" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
@@ -2714,10 +2778,14 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Core (Diplomat)" hidden="false" id="9086-e23f-7653-d3b1" type="selectionEntry" targetId="0e48-1d29-efd1-1f17"/>
+            <entryLink import="true" name="Core (Diplomat)" hidden="false" id="9086-e23f-7653-d3b1" type="selectionEntry" targetId="0e48-1d29-efd1-1f17" sortIndex="1"/>
+            <entryLink import="true" name="Ambusher (Leonardo da Miragliano)" hidden="false" id="7be3-f941-5ca5-2f0e" type="selectionEntry" targetId="912b-4fd3-28dd-a565" sortIndex="3"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="ee11-0ca9-a6d6-453d" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Mercenary Captain" hidden="false" id="1d42-87a0-4d64-6086" sortIndex="11">
       <costs>
@@ -3081,12 +3149,12 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
       <entryLinks>
         <entryLink import="true" name="70. Mount" hidden="false" id="0587-103b-9bcd-6141" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
           <entryLinks>
-            <entryLink import="true" name="Pay Cart" hidden="false" id="06d2-1b72-9dd1-f0e5" type="selectionEntry" targetId="7640-0dc6-5860-14a5" sortIndex="2">
+            <entryLink import="true" name="Paycart" hidden="false" id="06d2-1b72-9dd1-f0e5" type="selectionEntry" targetId="7640-0dc6-5860-14a5" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="60"/>
               </costs>
             </entryLink>
-            <entryLink import="true" name="Pay Chest" hidden="false" id="6902-b9c1-516c-7180" type="selectionEntry" targetId="b623-b3fc-efbe-2a1b" sortIndex="1">
+            <entryLink import="true" name="Paychest" hidden="false" id="6902-b9c1-516c-7180" type="selectionEntry" targetId="b623-b3fc-efbe-2a1b" sortIndex="1">
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
@@ -4614,133 +4682,192 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup name="Unit Options" id="4069-7318-9f10-6a45" hidden="false" flatten="true" sortIndex="1">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="The Alcatani Fellowship" hidden="false" id="30d4-d20b-d306-230e" collective="true" sortIndex="1">
-              <costs>
-                <cost name="Crossbowmen with Handguns" typeId="1d5e-af1e-25ce-3bd6" value="0"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0621-0550-a6e1-dd79" includeChildSelections="true" includeChildForces="true"/>
-              </constraints>
-              <modifierGroups>
-                <modifierGroup type="and">
-                  <modifiers>
-                    <modifier type="set" value="true" field="hidden"/>
-                    <modifier type="set" value="0" field="0621-0550-a6e1-dd79"/>
-                  </modifiers>
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="roster" childId="8e0e-e143-6c6f-f2c5" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </modifierGroup>
-              </modifierGroups>
-              <modifiers>
-                <modifier type="increment" value="1" field="points">
-                  <repeats>
-                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="a59a-ef9e-a54e-9cc6" shared="true" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Leopard Company" hidden="false" id="392d-cc5b-dc47-76dc" collective="true" sortIndex="2">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f6f1-774f-bb74-0a98" includeChildSelections="true" includeChildForces="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="increment" value="3" field="points">
-                  <repeats>
-                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="a59a-ef9e-a54e-9cc6" shared="true" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <modifierGroups>
-                <modifierGroup type="and">
-                  <modifiers>
-                    <modifier type="set" value="true" field="hidden"/>
-                    <modifier type="set" value="0" field="f6f1-774f-bb74-0a98"/>
-                  </modifiers>
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="roster" childId="b01b-21e3-68f1-f7df" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </modifierGroup>
-              </modifierGroups>
-              <infoLinks>
-                <infoLink name="Immunity (Psychology)" id="1cad-5b64-b76f-04e4" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Lost Legion" hidden="false" id="0fb8-4f30-fe79-6809" collective="true" sortIndex="3">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6dc9-82f7-09fb-bc85" includeChildSelections="true" includeChildForces="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="increment" value="1" field="points">
-                  <repeats>
-                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="a59a-ef9e-a54e-9cc6" shared="true" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <modifierGroups>
-                <modifierGroup type="and">
-                  <modifiers>
-                    <modifier type="set" value="true" field="hidden"/>
-                    <modifier type="set" value="0" field="6dc9-82f7-09fb-bc85"/>
-                  </modifiers>
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="roster" childId="ec39-707f-de93-bec6" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </modifierGroup>
-              </modifierGroups>
+          <entryLinks>
+            <entryLink import="true" name="Ambusher " hidden="false" id="8c9b-4cfc-01ff-4e9c" type="selectionEntry" targetId="912b-4fd3-28dd-a565">
+              <categoryLinks>
+                <categoryLink targetId="fc26-7737-f7cb-8977" id="12d6-3159-7cbd-e6bb" primary="false" name="Special"/>
+              </categoryLinks>
+            </entryLink>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Special Character Units" id="a60c-187c-0269-3c79" hidden="false" flatten="true" sortIndex="1">
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Crossbows" hidden="false" id="5007-6c4d-88ac-160c" collective="true">
+                <selectionEntry type="upgrade" import="true" name="The Alcatani Fellowship" hidden="false" id="30d4-d20b-d306-230e" collective="true" sortIndex="1">
+                  <costs>
+                    <cost name="Crossbowmen with Handguns" typeId="1d5e-af1e-25ce-3bd6" value="0"/>
+                  </costs>
                   <constraints>
-                    <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="400e-a778-abf9-69d2"/>
-                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="33e9-62b6-bf89-c6ff"/>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0621-0550-a6e1-dd79" includeChildSelections="true" includeChildForces="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7b72-129e-f318-34a9" automatic="true"/>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="f2c8-c809-4635-9c26"/>
                   </constraints>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden"/>
+                        <modifier type="set" value="0" field="0621-0550-a6e1-dd79"/>
+                      </modifiers>
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="8e0e-e143-6c6f-f2c5" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </modifierGroup>
+                  </modifierGroups>
                   <modifiers>
-                    <modifier type="increment" value="1" field="400e-a778-abf9-69d2">
+                    <modifier type="increment" value="1" field="points">
                       <repeats>
-                        <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="a59a-ef9e-a54e-9cc6" shared="true" roundUp="false" includeChildSelections="true"/>
+                        <repeat value="1" repeats="1" field="selections" scope="parent" childId="a59a-ef9e-a54e-9cc6" shared="true" roundUp="false"/>
                       </repeats>
                     </modifier>
+                    <modifier type="set" value="0" field="7b72-129e-f318-34a9">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="a60c-187c-0269-3c79" shared="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="parent" childId="30d4-d20b-d306-230e" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
                   </modifiers>
-                  <costs>
-                    <cost name="pts" typeId="points" value="3"/>
-                    <cost name="Crossbowmen with Handguns" typeId="1d5e-af1e-25ce-3bd6" value="0"/>
-                    <cost name="The Lost Legion Crossbows" typeId="e81e-b5d3-1917-1844" value="1"/>
-                  </costs>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="The Leopard Company" hidden="false" id="392d-cc5b-dc47-76dc" collective="true" sortIndex="2">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="f6f1-774f-bb74-0a98" includeChildSelections="true" includeChildForces="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="96ce-ed5c-f5f7-6305" automatic="true"/>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="a54e-8853-61c0-8172"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="increment" value="3" field="points">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="parent" childId="a59a-ef9e-a54e-9cc6" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                    <modifier type="set" value="0" field="96ce-ed5c-f5f7-6305">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="a60c-187c-0269-3c79" shared="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="parent" childId="392d-cc5b-dc47-76dc" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden"/>
+                        <modifier type="set" value="0" field="f6f1-774f-bb74-0a98"/>
+                      </modifiers>
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="b01b-21e3-68f1-f7df" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </modifierGroup>
+                  </modifierGroups>
                   <infoLinks>
-                    <infoLink name="Crossbow" id="a1c9-d003-a558-544e" hidden="false" type="profile" targetId="844f-f2d8-d2d9-61d4"/>
+                    <infoLink name="Immunity (Psychology)" id="1cad-5b64-b76f-04e4" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
                   </infoLinks>
                 </selectionEntry>
-              </selectionEntries>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Republican Guard" hidden="false" id="8cd4-b8a7-25db-6bea" collective="true" sortIndex="4">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="08c0-f92c-ae27-f272" includeChildSelections="true" includeChildForces="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="increment" value="4" field="points">
-                  <repeats>
-                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="a59a-ef9e-a54e-9cc6" shared="true" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <modifierGroups>
-                <modifierGroup type="and">
+                <selectionEntry type="upgrade" import="true" name="The Lost Legion" hidden="false" id="0fb8-4f30-fe79-6809" collective="true" sortIndex="3">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6dc9-82f7-09fb-bc85" includeChildSelections="true" includeChildForces="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9b4b-7942-152a-7cf3" automatic="true"/>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="8e78-1329-b09f-4101"/>
+                  </constraints>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden"/>
-                    <modifier type="set" value="0" field="08c0-f92c-ae27-f272"/>
+                    <modifier type="increment" value="1" field="points">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="parent" childId="a59a-ef9e-a54e-9cc6" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                    <modifier type="set" value="0" field="9b4b-7942-152a-7cf3">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="a60c-187c-0269-3c79" shared="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="parent" childId="0fb8-4f30-fe79-6809" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
                   </modifiers>
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="roster" childId="38b0-23a8-7941-86ac" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </modifierGroup>
-              </modifierGroups>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9637-59bd-13e1-9ba5" automatic="false"/>
-            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="1625-bae0-7730-6e5e"/>
-          </constraints>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden"/>
+                        <modifier type="set" value="0" field="6dc9-82f7-09fb-bc85"/>
+                      </modifiers>
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="ec39-707f-de93-bec6" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </modifierGroup>
+                  </modifierGroups>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Crossbows" hidden="false" id="5007-6c4d-88ac-160c" collective="true">
+                      <constraints>
+                        <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="400e-a778-abf9-69d2"/>
+                        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="33e9-62b6-bf89-c6ff"/>
+                      </constraints>
+                      <modifiers>
+                        <modifier type="increment" value="1" field="400e-a778-abf9-69d2">
+                          <repeats>
+                            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="a59a-ef9e-a54e-9cc6" shared="true" roundUp="false" includeChildSelections="true"/>
+                          </repeats>
+                        </modifier>
+                      </modifiers>
+                      <costs>
+                        <cost name="pts" typeId="points" value="3"/>
+                        <cost name="Crossbowmen with Handguns" typeId="1d5e-af1e-25ce-3bd6" value="0"/>
+                        <cost name="The Lost Legion Crossbows" typeId="e81e-b5d3-1917-1844" value="1"/>
+                      </costs>
+                      <infoLinks>
+                        <infoLink name="Crossbow" id="a1c9-d003-a558-544e" hidden="false" type="profile" targetId="844f-f2d8-d2d9-61d4"/>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="The Republican Guard" hidden="false" id="8cd4-b8a7-25db-6bea" collective="true" sortIndex="4">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="08c0-f92c-ae27-f272" includeChildSelections="true" includeChildForces="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="675f-3fc9-2be5-e7d5" automatic="true"/>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="0e52-5bb3-66c1-472b"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="increment" value="4" field="points">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="parent" childId="a59a-ef9e-a54e-9cc6" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                    <modifier type="set" value="0" field="675f-3fc9-2be5-e7d5">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="a60c-187c-0269-3c79" shared="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="parent" childId="8cd4-b8a7-25db-6bea" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden"/>
+                        <modifier type="set" value="0" field="08c0-f92c-ae27-f272"/>
+                      </modifiers>
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="38b0-23a8-7941-86ac" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </modifierGroup>
+                  </modifierGroups>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9637-59bd-13e1-9ba5" automatic="false"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="1625-bae0-7730-6e5e"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <infoLinks>
@@ -5093,58 +5220,89 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
           </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup name="Unit Upgrades" id="30a1-f26f-f4f2-1607" hidden="false" flatten="true" sortIndex="1">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Marksmen of Miragliano" hidden="false" id="b08c-958b-ca3b-558f" sortIndex="1">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bde6-1f84-c188-b50b" includeChildSelections="true" includeChildForces="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="increment" value="2" field="points">
-                  <repeats>
-                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="734a-6b00-c7b4-7c79" shared="true" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <modifierGroups>
-                <modifierGroup type="and">
+          <entryLinks>
+            <entryLink import="true" name="Ambusher " hidden="false" id="0839-6141-148d-4fac" type="selectionEntry" targetId="912b-4fd3-28dd-a565" sortIndex="2"/>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Special Character Units" id="6125-513e-317d-702e" hidden="false" flatten="true" sortIndex="1">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="The Besiegers" hidden="false" id="d007-1f02-9dfa-6481" sortIndex="2">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1998-c298-91e4-aab1" includeChildSelections="true" includeChildForces="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5a7d-8ba3-770a-856f" automatic="true"/>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="ca4e-6f8d-e06f-8b70"/>
+                  </constraints>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden"/>
-                    <modifier type="set" value="0" field="bde6-1f84-c188-b50b"/>
+                    <modifier type="increment" value="4" field="points">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="parent" childId="734a-6b00-c7b4-7c79" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                    <modifier type="set" value="0" field="5a7d-8ba3-770a-856f">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="6125-513e-317d-702e" shared="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="parent" childId="d007-1f02-9dfa-6481" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
                   </modifiers>
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="roster" childId="8ce2-c6e9-0951-5755" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </modifierGroup>
-              </modifierGroups>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Besiegers" hidden="false" id="d007-1f02-9dfa-6481" sortIndex="2">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1998-c298-91e4-aab1" includeChildSelections="true" includeChildForces="true"/>
-              </constraints>
-              <modifiers>
-                <modifier type="increment" value="4" field="points">
-                  <repeats>
-                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="734a-6b00-c7b4-7c79" shared="true" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <modifierGroups>
-                <modifierGroup type="and">
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden"/>
+                        <modifier type="set" value="0" field="1998-c298-91e4-aab1"/>
+                      </modifiers>
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="d903-4805-8821-6044" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </modifierGroup>
+                  </modifierGroups>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Marksmen of Miragliano" hidden="false" id="b08c-958b-ca3b-558f" sortIndex="1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bde6-1f84-c188-b50b" includeChildSelections="true" includeChildForces="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="28d5-a6c4-c3c4-b24c" automatic="true"/>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="f750-f48a-2916-2af7"/>
+                  </constraints>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden"/>
-                    <modifier type="set" value="0" field="1998-c298-91e4-aab1"/>
+                    <modifier type="increment" value="2" field="points">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="parent" childId="734a-6b00-c7b4-7c79" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                    <modifier type="set" value="0" field="28d5-a6c4-c3c4-b24c">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="6125-513e-317d-702e" shared="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="parent" childId="b08c-958b-ca3b-558f" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
                   </modifiers>
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="roster" childId="d903-4805-8821-6044" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </modifierGroup>
-              </modifierGroups>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d0c0-a70a-c972-d014"/>
-            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4294-88a5-65e4-4c24"/>
-          </constraints>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden"/>
+                        <modifier type="set" value="0" field="bde6-1f84-c188-b50b"/>
+                      </modifiers>
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="8ce2-c6e9-0951-5755" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </modifierGroup>
+                  </modifierGroups>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="35cd-d1c3-0933-b7a6" automatic="false"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="82f7-ca06-1221-314a"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <constraints>
@@ -5430,29 +5588,6 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
             </modifier>
           </modifiers>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Manann&apos;s Blades" hidden="false" id="4b94-a394-cbc3-2a34" sortIndex="1">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="792c-ea03-8b4e-7b28" includeChildSelections="true" includeChildForces="true"/>
-          </constraints>
-          <modifiers>
-            <modifier type="increment" value="3" field="points">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="1952-e978-de1e-d39f" shared="true" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="set" value="true" field="hidden"/>
-                <modifier type="set" value="0" field="792c-ea03-8b4e-7b28"/>
-              </modifiers>
-              <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="roster" childId="7567-0df2-6b1d-0756" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </modifierGroup>
-          </modifierGroups>
-        </selectionEntry>
       </selectionEntries>
       <costs>
         <cost name="Crossbowmen with Handguns" typeId="1d5e-af1e-25ce-3bd6" value="0"/>
@@ -5564,6 +5699,36 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
                 </selectionEntryGroup>
               </selectionEntryGroups>
             </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Unit Upgrades" id="fc0b-0e45-a111-bd11" hidden="false" flatten="true" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Manann&apos;s Blades" hidden="false" id="4b94-a394-cbc3-2a34" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="792c-ea03-8b4e-7b28" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="increment" value="3" field="points">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="1952-e978-de1e-d39f" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden"/>
+                    <modifier type="set" value="0" field="792c-ea03-8b4e-7b28"/>
+                  </modifiers>
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="roster" childId="7567-0df2-6b1d-0756" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifierGroup>
+              </modifierGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <entryLinks>
+            <entryLink import="true" name="Ambusher " hidden="false" id="ffcc-e0ef-c777-81dc" type="selectionEntry" targetId="912b-4fd3-28dd-a565" sortIndex="2"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -5920,71 +6085,102 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
       </modifiers>
       <selectionEntryGroups>
         <selectionEntryGroup name="Unit Upgrades" id="c1d4-3a67-5f86-0d9f" hidden="false" sortIndex="1" flatten="true">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Grudgebringer Cavalry" hidden="false" id="99a5-bb20-a2da-2183" collective="true" sortIndex="1">
-              <costs>
-                <cost name="Crossbowmen with Handguns" typeId="1d5e-af1e-25ce-3bd6" value="0"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4bae-3bc7-a822-e6b4-max" includeChildSelections="true" includeChildForces="true"/>
-              </constraints>
-              <modifierGroups>
-                <modifierGroup type="and">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Special Character Units" id="ef0f-2aeb-8650-914a" hidden="false" flatten="true" sortIndex="1">
+              <selectionEntries>
+                <selectionEntry type="upgrade" import="true" name="The Desert Dogs" hidden="false" id="59a6-a58e-52d8-e6f7" collective="true" sortIndex="2">
+                  <costs>
+                    <cost name="Crossbowmen with Handguns" typeId="1d5e-af1e-25ce-3bd6" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="60f7-187b-9289-d9fb" includeChildSelections="true" includeChildForces="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7a43-2718-0ea8-fc4b" automatic="true"/>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="b9f6-fcd3-4e17-ce6a"/>
+                  </constraints>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden"/>
+                        <modifier type="set" value="0" field="60f7-187b-9289-d9fb"/>
+                      </modifiers>
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="19b2-88b8-893f-96be" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </modifierGroup>
+                  </modifierGroups>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden"/>
-                    <modifier type="set" value="0" field="4bae-3bc7-a822-e6b4-max"/>
+                    <modifier type="increment" value="1" field="points">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="parent" childId="698f-a8df-8709-1be9" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                    <modifier type="set" value="0" field="7a43-2718-0ea8-fc4b">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="ef0f-2aeb-8650-914a" shared="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="parent" childId="59a6-a58e-52d8-e6f7" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
                   </modifiers>
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="roster" childId="64f4-87c6-97c6-d2d8" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </modifierGroup>
-              </modifierGroups>
-              <modifiers>
-                <modifier type="increment" value="5" field="points">
-                  <repeats>
-                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="698f-a8df-8709-1be9" shared="true" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <infoLinks>
-                <infoLink name="Stubborn" id="2a01-81ee-c59a-5acf" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="The Desert Dogs" hidden="false" id="59a6-a58e-52d8-e6f7" collective="true" sortIndex="2">
-              <costs>
-                <cost name="Crossbowmen with Handguns" typeId="1d5e-af1e-25ce-3bd6" value="0"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="60f7-187b-9289-d9fb" includeChildSelections="true" includeChildForces="true"/>
-              </constraints>
-              <modifierGroups>
-                <modifierGroup type="and">
+                  <infoLinks>
+                    <infoLink name="Loner" id="95ba-ca51-0329-a602" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+                    <infoLink name="Zealotry" id="7c42-fe89-72ba-8de5" hidden="false" type="rule" targetId="dce3-bc9e-e3bf-fc71"/>
+                  </infoLinks>
+                </selectionEntry>
+                <selectionEntry type="upgrade" import="true" name="Grudgebringer Cavalry" hidden="false" id="99a5-bb20-a2da-2183" collective="true" sortIndex="1">
+                  <costs>
+                    <cost name="Crossbowmen with Handguns" typeId="1d5e-af1e-25ce-3bd6" value="0"/>
+                  </costs>
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4bae-3bc7-a822-e6b4-max" includeChildSelections="true" includeChildForces="true"/>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="ffa5-ff4e-eb63-5b07"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f753-db03-f72d-07f0" automatic="true"/>
+                  </constraints>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="true" field="hidden"/>
+                        <modifier type="set" value="0" field="4bae-3bc7-a822-e6b4-max"/>
+                      </modifiers>
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="64f4-87c6-97c6-d2d8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </modifierGroup>
+                  </modifierGroups>
                   <modifiers>
-                    <modifier type="set" value="true" field="hidden"/>
-                    <modifier type="set" value="0" field="60f7-187b-9289-d9fb"/>
+                    <modifier type="increment" value="5" field="points">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="parent" childId="698f-a8df-8709-1be9" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                    <modifier type="set" value="0" field="f753-db03-f72d-07f0">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="parent" childId="ef0f-2aeb-8650-914a" shared="true"/>
+                            <condition type="equalTo" value="0" field="selections" scope="parent" childId="99a5-bb20-a2da-2183" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
                   </modifiers>
-                  <conditions>
-                    <condition type="equalTo" value="0" field="selections" scope="roster" childId="19b2-88b8-893f-96be" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                  </conditions>
-                </modifierGroup>
-              </modifierGroups>
-              <modifiers>
-                <modifier type="increment" value="1" field="points">
-                  <repeats>
-                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="698f-a8df-8709-1be9" shared="true" roundUp="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <infoLinks>
-                <infoLink name="Loner" id="95ba-ca51-0329-a602" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
-                <infoLink name="Zealotry" id="7c42-fe89-72ba-8de5" hidden="false" type="rule" targetId="dce3-bc9e-e3bf-fc71"/>
-              </infoLinks>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e160-0403-187c-0516" automatic="false"/>
-            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d679-f1e6-03ee-2932"/>
-          </constraints>
+                  <infoLinks>
+                    <infoLink name="Stubborn" id="2a01-81ee-c59a-5acf" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
+                  </infoLinks>
+                </selectionEntry>
+              </selectionEntries>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f535-89fa-1396-4e3c" automatic="false"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="cd21-e7dd-66b4-05a2"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+          <entryLinks>
+            <entryLink import="true" name="Ambusher " hidden="false" id="991f-8bd2-5ef1-ae15" type="selectionEntry" targetId="912b-4fd3-28dd-a565" sortIndex="2"/>
+          </entryLinks>
         </selectionEntryGroup>
         <selectionEntryGroup name="99. Command Group" id="8eac-a8a8-75f9-f5cd" hidden="false">
           <entryLinks>
@@ -6099,7 +6295,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
                 </entryLink>
                 <entryLink import="true" name="70. Mount" hidden="false" id="0188-47d4-d162-315a" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
                   <entryLinks>
-                    <entryLink import="true" name="Arabian Steed" hidden="false" id="d03c-7322-8046-9d87" type="selectionEntry" targetId="e14c-3347-a810-be71">
+                    <entryLink import="true" name="Arabyan Steed" hidden="false" id="d03c-7322-8046-9d87" type="selectionEntry" targetId="e14c-3347-a810-be71">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2211-42fe-c642-a410"/>
                       </constraints>
@@ -6628,10 +6824,17 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
                     </modifier>
                   </modifiers>
                 </entryLink>
-                <entryLink import="true" name="Flail and Shield" hidden="false" id="4bfe-56b5-185a-0fee" type="selectionEntry" targetId="55be-2017-7d40-b514" sortIndex="4">
+                <entryLink import="true" name="Flail &amp; Shield" hidden="false" id="4bfe-56b5-185a-0fee" type="selectionEntry" targetId="55be-2017-7d40-b514" sortIndex="4">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
+                  <modifiers>
+                    <modifier type="set" value="0" field="0a5b-3970-d7f4-4f43">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="594f-5b41-b349-4da6" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </entryLink>
               </entryLinks>
             </entryLink>
@@ -6915,7 +7118,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
         </selectionEntryGroup>
         <selectionEntryGroup name="Unit Upgrades" id="f603-963c-d41a-de35" hidden="false" sortIndex="1" flatten="true">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="The Bearmen of Urslo" hidden="false" id="594f-5b41-b349-4da6">
+            <selectionEntry type="upgrade" import="true" name="The Bearmen of Urslo" hidden="false" id="594f-5b41-b349-4da6" sortIndex="2">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0219-d910-d438-7dfa" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
@@ -6944,7 +7147,8 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Core (Diplomat)" hidden="false" id="66b8-e835-fc53-d37f" type="selectionEntry" targetId="0e48-1d29-efd1-1f17"/>
+            <entryLink import="true" name="Core (Diplomat)" hidden="false" id="66b8-e835-fc53-d37f" type="selectionEntry" targetId="0e48-1d29-efd1-1f17" sortIndex="1"/>
+            <entryLink import="true" name="Ambusher (Leonardo da Miragliano)" hidden="false" id="3ff3-0792-7d33-752e" type="selectionEntry" targetId="912b-4fd3-28dd-a565" sortIndex="3"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -7228,7 +7432,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
         </selectionEntryGroup>
         <selectionEntryGroup name="Unit Upgrades" id="9bc4-1323-2390-38ec" hidden="false" sortIndex="1" flatten="true">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Slayer Pirates" hidden="false" id="b6b9-20e9-df9d-78b4">
+            <selectionEntry type="upgrade" import="true" name="Slayer Pirates" hidden="false" id="b6b9-20e9-df9d-78b4" sortIndex="2">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="ca19-4629-192d-b946" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
@@ -7259,7 +7463,8 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Core (Diplomat)" hidden="false" id="a610-c693-1da4-49fe" type="selectionEntry" targetId="0e48-1d29-efd1-1f17"/>
+            <entryLink import="true" name="Core (Diplomat)" hidden="false" id="a610-c693-1da4-49fe" type="selectionEntry" targetId="0e48-1d29-efd1-1f17" sortIndex="1"/>
+            <entryLink import="true" name="Ambusher (Leonardo da Miragliano)" hidden="false" id="786a-af44-81b5-5147" type="selectionEntry" targetId="912b-4fd3-28dd-a565" sortIndex="3"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -7533,6 +7738,24 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
                     <constraint type="max" value="25" field="points" scope="parent" shared="true" id="2748-c2d7-0860-1c47"/>
                   </constraints>
                 </entryLink>
+                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="a112-175d-0209-9cc8" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                  <entryLinks>
+                    <entryLink import="true" name="Shortbow" hidden="false" id="2981-2132-73a0-a8fe" type="selectionEntry" targetId="b2c6-18cc-9482-8f48">
+                      <modifiers>
+                        <modifier type="set" value="1" field="b9ce-2543-422c-994a"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="e8fd-1383-226e-a034" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="664e-2c5d-bcf8-ced2" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <modifiers>
+                        <modifier type="set" value="1" field="443c-baf5-540a-c81e"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
               </entryLinks>
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a6f2-347e-1791-02cb-min" automatic="true"/>
@@ -7574,7 +7797,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
         </selectionEntryGroup>
         <selectionEntryGroup name="Unit Upgrades" id="7423-8789-d08b-5a8d" hidden="false" flatten="true" sortIndex="1">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="The Fighting Cocks" hidden="false" id="ea25-92f9-895c-996d">
+            <selectionEntry type="upgrade" import="true" name="The Fighting Cocks" hidden="false" id="ea25-92f9-895c-996d" sortIndex="2">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="73d7-07c0-c065-ce16" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
@@ -7602,7 +7825,8 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Core (Diplomat)" hidden="false" id="e4cf-d7c5-ac52-b2ca" type="selectionEntry" targetId="0e48-1d29-efd1-1f17"/>
+            <entryLink import="true" name="Core (Diplomat)" hidden="false" id="e4cf-d7c5-ac52-b2ca" type="selectionEntry" targetId="0e48-1d29-efd1-1f17" sortIndex="1"/>
+            <entryLink import="true" name="Ambusher (Leonardo da Miragliano)" hidden="false" id="4c6e-5ab7-41cb-1b1d" type="selectionEntry" targetId="912b-4fd3-28dd-a565" sortIndex="3"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -7650,7 +7874,6 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
             </entryLink>
           </entryLinks>
         </entryLink>
-        <entryLink import="true" name="Core (Diplomat)" hidden="false" id="f795-4c10-c2e3-bcf0" type="selectionEntry" targetId="0e48-1d29-efd1-1f17" sortIndex="1"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Ogre" hidden="false" id="9584-4e4a-c365-f0ab" sortIndex="2">
@@ -7750,6 +7973,14 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Unit Upgrades" id="4f74-9b87-2276-5e7e" hidden="false" flatten="true" sortIndex="1">
+          <entryLinks>
+            <entryLink import="true" name="Ambusher (Leonardo da Miragliano)" hidden="false" id="d274-7fe1-eb1e-e57c" type="selectionEntry" targetId="912b-4fd3-28dd-a565" sortIndex="2"/>
+            <entryLink import="true" name="Core (Diplomat)" hidden="false" id="f795-4c10-c2e3-bcf0" type="selectionEntry" targetId="0e48-1d29-efd1-1f17" sortIndex="1"/>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Orcs" hidden="false" id="2261-3ba7-1d99-814a" sortIndex="209">
       <categoryLinks>
@@ -8097,6 +8328,33 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
                     <constraint type="max" value="25" field="points" scope="parent" shared="true" id="02d4-e5a2-7512-fb7a"/>
                   </constraints>
                 </entryLink>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="a91d-d307-4743-3d3e" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="756d-5c99-a46a-f27e" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <modifiers>
+                        <modifier type="set" value="1" field="443c-baf5-540a-c81e"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="40. Suits of Armour" hidden="false" id="53aa-d8e5-18f1-5efb" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
+                  <entryLinks>
+                    <entryLink import="true" name="Medium Armour" hidden="false" id="c295-e1eb-353b-f22b" type="selectionEntry" targetId="76a4-23c1-f96d-021e">
+                      <modifiers>
+                        <modifier type="set" value="1" field="80f0-b5fd-ae36-4ab6"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="1e54-6c44-84cc-c831" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                  <entryLinks>
+                    <entryLink import="true" name="Crossbow" hidden="false" id="212b-37e7-0908-c743" type="selectionEntry" targetId="9936-c747-429f-6327">
+                      <modifiers>
+                        <modifier type="set" value="1" field="8d8c-efd1-22a4-fad8"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
               </entryLinks>
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ffda-9402-285a-d4cb-min" automatic="true"/>
@@ -8135,7 +8393,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
         </selectionEntryGroup>
         <selectionEntryGroup name="Unit Upgrades" id="cb24-e368-fb0f-992b" hidden="false" flatten="true" sortIndex="1">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="The Armoured Orcs" hidden="false" id="2fb1-0511-2708-517b">
+            <selectionEntry type="upgrade" import="true" name="The Armoured Orcs" hidden="false" id="2fb1-0511-2708-517b" sortIndex="2">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="da03-40c0-e254-4a36" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
@@ -8160,7 +8418,8 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
-            <entryLink import="true" name="Core (Diplomat)" hidden="false" id="936e-5196-81d3-9315" type="selectionEntry" targetId="0e48-1d29-efd1-1f17"/>
+            <entryLink import="true" name="Core (Diplomat)" hidden="false" id="936e-5196-81d3-9315" type="selectionEntry" targetId="0e48-1d29-efd1-1f17" sortIndex="1"/>
+            <entryLink import="true" name="Ambusher (Leonardo da Miragliano)" hidden="false" id="0610-11c0-8aaf-bbd6" type="selectionEntry" targetId="912b-4fd3-28dd-a565" sortIndex="3"/>
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -8993,7 +9252,15 @@ Ship also immediately suffers D3 Wounds which Ignores Armour Saves." field="d3a4
             <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5a39-00ef-aecf-f1e9" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="increment" value="1" field="4da1-bf8f-f0f0-6fd2">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="7b3d-150b-8841-e213" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
       </modifiers>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="4da1-bf8f-f0f0-6fd2" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Serpentine" hidden="false" id="0ad3-5668-6a65-5615" sortIndex="302">
       <costs>
@@ -9537,6 +9804,7 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
                 <entryLink import="true" name="90. Magic Items" hidden="false" id="25b4-0cff-a399-24a0" type="selectionEntryGroup" targetId="a709-2e4f-f54f-c534">
                   <modifiers>
                     <modifier type="increment" value="50" field="8751-3ec2-62b2-471b"/>
+                    <modifier type="set" value="true" field="hidden" affects="f384-7dc4-f9e2-a230"/>
                   </modifiers>
                 </entryLink>
               </entryLinks>
@@ -10223,7 +10491,7 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
                         </profile>
                         <profile name="Shield of Faith" typeId="4608-9b35-b7dc-202d" typeName="Prayer" hidden="false" id="31da-01cb-a962-5a04" publicationId="8ada-88a0-cdcd-9b5e" page="52">
                           <characteristics>
-                            <characteristic name="Effect" typeId="1f79-8144-edd6-8b51">The model and any unit they are with gain a 5+ Ward save in close combat until the start of your next turn. </characteristic>
+                            <characteristic name="Effect" typeId="1f79-8144-edd6-8b51">The model and any unit they are with gain a 5+ Ward save in close combat until the start of your next turn.</characteristic>
                           </characteristics>
                         </profile>
                         <profile name="Soulfire" typeId="4608-9b35-b7dc-202d" typeName="Prayer" hidden="false" id="5452-11da-9c0e-70a9" publicationId="8ada-88a0-cdcd-9b5e" page="52">
@@ -10508,15 +10776,6 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c95c-516c-b03e-b3ce-min"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c95c-516c-b03e-b3ce-max"/>
                       </constraints>
-                      <profiles>
-                        <profile name="Dragon Armour" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="ad1a-3bbc-60f7-920a" publicationId="8ada-88a0-cdcd-9b5e" page="54">
-                          <characteristics>
-                            <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">3+</characteristic>
-                            <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">3+</characteristic>
-                            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Immunity (Flaming Attacks)</characteristic>
-                          </characteristics>
-                        </profile>
-                      </profiles>
                       <infoLinks>
                         <infoLink name="Heavy Armour" id="df11-40af-d8e5-287b" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
                           <modifiers>
@@ -10880,7 +11139,7 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
                   <entryLinks>
                     <entryLink import="true" name="70. Mount" hidden="false" id="e319-cd98-5239-2d9b" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
                       <entryLinks>
-                        <entryLink import="true" name="Pay Cart" hidden="false" id="9fde-bf66-4136-869d" type="selectionEntry" targetId="7640-0dc6-5860-14a5">
+                        <entryLink import="true" name="Paycart" hidden="false" id="9fde-bf66-4136-869d" type="selectionEntry" targetId="7640-0dc6-5860-14a5">
                           <constraints>
                             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8110-60ef-c359-06eb"/>
                           </constraints>
@@ -12009,7 +12268,8 @@ Any crossbow-armed models in the unit must be placed as far forward in the unit 
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="1efc-e1ae-951d-e9d2" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
               <infoLinks>
-                <infoLink name="Mercenaries" id="58a6-ba6c-5a8f-f98b" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
+                <infoLink name="Leader" id="58a6-ba6c-5a8f-f98b" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
+                <infoLink name="Mercenaries" id="1f72-0b2e-7ecd-9add" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <modifiers>
                 <modifier type="add" value="{this} needs one more Selection of Manann&apos;s Blades (Sellswords)" field="error">
@@ -12100,7 +12360,7 @@ Any crossbow-armed models in the unit must be placed as far forward in the unit 
                     </entryLink>
                     <entryLink import="true" name="70. Mount" hidden="false" id="58ae-3de3-8cf4-8696" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
                       <entryLinks>
-                        <entryLink import="true" name="Arabian Steed" hidden="false" id="2c2c-4992-8305-73dd" type="selectionEntry" targetId="e14c-3347-a810-be71">
+                        <entryLink import="true" name="Arabyan Steed" hidden="false" id="2c2c-4992-8305-73dd" type="selectionEntry" targetId="e14c-3347-a810-be71">
                           <constraints>
                             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e593-39b9-58db-07bd"/>
                           </constraints>
@@ -12187,7 +12447,7 @@ Any crossbow-armed models in the unit must be placed as far forward in the unit 
                     </entryLink>
                     <entryLink import="true" name="70. Mount" hidden="false" id="5484-6a73-4bc5-fc52" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
                       <entryLinks>
-                        <entryLink import="true" name="Arabian Steed" hidden="false" id="6773-b16c-f518-00f9" type="selectionEntry" targetId="e14c-3347-a810-be71">
+                        <entryLink import="true" name="Arabyan Steed" hidden="false" id="6773-b16c-f518-00f9" type="selectionEntry" targetId="e14c-3347-a810-be71">
                           <constraints>
                             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0b33-f5bb-3e77-5cef"/>
                           </constraints>
@@ -12203,7 +12463,8 @@ Any crossbow-armed models in the unit must be placed as far forward in the unit 
               <infoLinks>
                 <infoLink name="Zealotry" id="f738-047d-afa7-1d6f" hidden="false" type="rule" targetId="dce3-bc9e-e3bf-fc71"/>
                 <infoLink name="Loner" id="e53e-0c1f-d703-5674" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
-                <infoLink name="Mercenaries" id="b3f8-8107-7107-13a3" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
+                <infoLink name="Leader" id="b3f8-8107-7107-13a3" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
+                <infoLink name="Mercenaries" id="64c5-4618-7cef-879a" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
               </infoLinks>
               <rules>
                 <rule name="The Desert Dogs" id="3ccb-ed52-b6f4-2c10" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="65">
@@ -12654,7 +12915,8 @@ Phase until they pass the Toughness test, the spell is dispelled or the unit is 
               </categoryLinks>
               <infoLinks>
                 <infoLink name="Loner" id="edff-6a59-6a56-cada" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
-                <infoLink name="Strider (Forest)" id="07a3-d3de-60ce-f6ad" hidden="false" type="rule" targetId="8d09-c701-2658-67e8"/>
+                <infoLink name="Leader" id="07a3-d3de-60ce-f6ad" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
+                <infoLink name="Strider (Forest)" id="2f3e-2382-aa99-0563" hidden="false" type="rule" targetId="8d09-c701-2658-67e8"/>
               </infoLinks>
               <rules>
                 <rule name="Anakonda&apos;s Amazons" id="decb-bb2c-7dbe-cbcf" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="69">
@@ -12770,8 +13032,9 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
                 <infoLink name="Regeneration (5+)" id="32ac-72db-be8c-e7e4" hidden="false" type="rule" targetId="5fed-df2e-b6d6-cc93"/>
                 <infoLink name="Leader" id="1e59-1c7a-655b-0bdf" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
                 <infoLink name="Frenzy" id="bf2b-1a54-5dda-8356" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
-                <infoLink name="Loner" id="8d76-a880-ed73-7221" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+                <infoLink name="Leader" id="8d76-a880-ed73-7221" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
                 <infoLink name="Counter-Charge" id="f068-a1c1-7f3d-d41b" hidden="false" type="rule" targetId="6186-1d2b-2ee6-95c7"/>
+                <infoLink name="Loner" id="cbea-422e-fa7c-e8b8" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
               </infoLinks>
               <rules>
                 <rule name="The Bearmen of Urslo" id="ba86-d6cf-374b-0e90" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="70">
@@ -13214,6 +13477,7 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
                 <infoLink name="Loner" id="0480-7b67-1588-cc92" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
                 <infoLink name="Poisoned Attacks" id="705d-c4ca-2daa-0063" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
                 <infoLink name="Hatred (High Elves)" id="e31c-93fd-95f8-0ea3" hidden="false" type="rule" targetId="a0a3-ddd4-b1ed-1054"/>
+                <infoLink name="Leader" id="67c2-a391-2f3f-611d" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
               </infoLinks>
               <modifiers>
                 <modifier type="add" value="{this} needs one more Selection of The Manflayers ((Dark) Elves)" field="error">
@@ -13386,6 +13650,7 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
                   </modifiers>
                 </infoLink>
                 <infoLink name="Mercenaries" id="feb6-cd8c-1a0d-6f73" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
+                <infoLink name="Leader" id="c09c-0c25-987c-0f9e" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
               </infoLinks>
               <categoryLinks>
                 <categoryLink targetId="5fc5-b80a-115f-bca3" id="e730-4d8f-45b9-b765" primary="false" name="Monstrous Infantry"/>
@@ -13516,6 +13781,7 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
               </profiles>
               <infoLinks>
                 <infoLink name="Mighty Blow (1)" id="b460-215d-f4bc-7e99" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
+                <infoLink name="Leader" id="d7f7-01cf-e993-a3fd" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
               </infoLinks>
               <rules>
                 <rule name="The Armoured Orcs" id="cbb0-1a6b-f41e-94b4" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="76">
@@ -13650,6 +13916,7 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
                 <infoLink name="Ded Shooty" id="ea18-5844-6138-f977" hidden="false" type="rule" targetId="ef85-b476-eaf2-ae2e"/>
                 <infoLink name="Quell Treachery" id="cdd2-931d-4636-550a" hidden="false" type="rule" targetId="a23e-1357-8959-ae5a"/>
                 <infoLink name="Mercenaries" id="3e30-553a-6779-09d2" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
+                <infoLink name="Leader" id="d382-d5d7-aa51-3e39" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
               </infoLinks>
               <rules>
                 <rule name="The Wolfboyz" id="f12a-f6f4-44b3-3f11" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="77">
@@ -13857,6 +14124,7 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
               <infoLinks>
                 <infoLink name="Undead" id="0502-2b11-9cdd-aab6" hidden="false" type="rule" targetId="fc95-dad9-29d6-2b0d"/>
                 <infoLink name="Loner" id="c3f9-2eb9-2cdd-e474" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+                <infoLink name="Leader" id="e3c2-6d52-d6d0-419b" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
               </infoLinks>
               <rules>
                 <rule name="&apos;Join us in damnation...&apos;" id="a5c5-4514-b550-ad6a" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="79">
@@ -15258,9 +15526,9 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
-        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.a4c7-5116-4839-ab58.profiles.Melee weapon"/>
-        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.6777-6f53-5351-5f70.profiles.Armour Save"/>
-        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.a4c7-5116-4839-ab58.profiles.Ranged Weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.b3d9-29cb-4195-586d.profiles.Melee Weapon"/>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.5bc0-88a0-0d99-b25c.profiles.Armour"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.b3d9-29cb-4195-586d.profiles.Ranged Weapon"/>
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Magic Weapons" hidden="false" id="699c-8b8e-fedd-cfb0" type="selectionEntryGroup" targetId="b3d9-29cb-4195-586d" sortIndex="1"/>
@@ -16667,9 +16935,9 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
             <condition type="equalTo" value="1" field="selections" scope="parent" childId="6ba4-68a0-cd51-88ce" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
-        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.a4c7-5116-4839-ab58.profiles.Melee weapon"/>
-        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.6777-6f53-5351-5f70.profiles.Armour Save"/>
-        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.a4c7-5116-4839-ab58.profiles.Ranged Weapon"/>
+        <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac" affects="self.entries.recursive.b3d9-29cb-4195-586d.profiles.Melee Weapon"/>
+        <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" affects="self.entries.recursive.5bc0-88a0-0d99-b25c.profiles.Armour"/>
+        <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.b3d9-29cb-4195-586d.profiles.Ranged Weapon"/>
       </modifiers>
       <entryLinks>
         <entryLink import="true" name="Quirks of Character" hidden="false" id="5ce5-5031-7b1e-e941" type="selectionEntryGroup" targetId="8e84-0328-0243-af9f" sortIndex="1"/>
@@ -16856,7 +17124,7 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
     </profile>
     <profile name="Charismatic Leader" typeId="731d-e13c-86a3-f5c0" typeName="Quirk of Character" hidden="false" id="0ea5-cf41-2710-940d" publicationId="8ada-88a0-cdcd-9b5e" page="6">
       <characteristics>
-        <characteristic name="Effect" typeId="00b0-989f-924f-e991">The model gains the Inspiring Presence (6) special rule.</characteristic>
+        <characteristic name="Effect" typeId="00b0-989f-924f-e991">Army General only. The model gains the Inspiring Presence (6) special rule.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
