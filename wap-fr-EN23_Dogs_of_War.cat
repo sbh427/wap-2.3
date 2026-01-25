@@ -16,9 +16,6 @@
     <rule name="Duck &amp; Weave" id="98d9-ed19-1ab7-5a19" hidden="false" publicationId="8ada-88a0-cdcd-9b5e">
       <description>Enemies attacking Infantry models with this special rule suffer -1 To Hit in close combat.</description>
     </rule>
-    <rule name="Elven Grace" id="c542-240f-db52-5b1d" hidden="false" publicationId="8ada-88a0-cdcd-9b5e">
-      <description>Models with this special rule have the Dodge (6+) special rule in close combat. However, this cannot be used against enemies that attack before the model with Elven Grace.</description>
-    </rule>
     <rule name="Resolute" id="dff1-9d80-ae6e-1410" hidden="false" publicationId="8ada-88a0-cdcd-9b5e">
       <description>When taking Break tests, models with this special rule count as having lost the combat with 1 point fewer than they actually have.</description>
     </rule>
@@ -212,6 +209,21 @@ The enemy unit then rolls their charge distance and complete the charge as norma
           </conditions>
         </modifier>
       </modifiers>
+      <profiles>
+        <profile name="Ironfist" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="f4df-1883-28e5-78e7">
+          <characteristics>
+            <characteristic name="Type" typeId="31b2-f73f-865d-f538">Parry</characteristic>
+            <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">6+</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="6+, even while mounted." field="bdf9-d73e-e13b-b0ce">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+      </profiles>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Ogre Pistol" hidden="false" id="d0d1-6e1f-ae80-105b" sortIndex="5" collective="true">
       <constraints>
@@ -262,6 +274,14 @@ In close combat, an Ogre pistol counts as an additional hand weapon that does no
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Parry" id="53a3-d619-5198-b23e" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
+          <modifiers>
+            <modifier type="set" value="Oriental Longsword" field="name"/>
+            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Pavise" hidden="false" id="bd2e-ceae-4dc3-5e23" sortIndex="8" collective="true">
       <constraints>
@@ -1781,7 +1801,7 @@ In close combat, an Ogre pistol counts as an additional hand weapon that does no
             </entryLink>
           </entryLinks>
           <infoLinks>
-            <infoLink name="Elven Grace" id="a07e-8a9b-8a4e-5805" hidden="false" type="rule" targetId="c542-240f-db52-5b1d"/>
+            <infoLink name="Elven Grace" id="a07e-8a9b-8a4e-5805" hidden="false" type="infoGroup" targetId="b697-4417-5f4b-5140"/>
             <infoLink name="Mercenaries" id="ef7f-ea38-5e65-b219" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
           </infoLinks>
           <modifiers>
@@ -3596,7 +3616,12 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
       </profiles>
       <infoLinks>
         <infoLink name="Scouts" id="f4ec-9adf-d257-cde1" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
-        <infoLink name="Dodge (5+)" id="da9f-4fc3-a2fa-48a0" hidden="false" type="rule" targetId="cfff-6563-d1c6-820c"/>
+        <infoLink name="Dodge" id="da9f-4fc3-a2fa-48a0" hidden="false" type="profile" targetId="6407-7161-d748-2c03">
+          <modifiers>
+            <modifier type="set" value="Assassin" field="name"/>
+            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
         <infoLink name="Hidden" id="a220-7ce4-5ad6-7c7f" hidden="false" type="rule" targetId="2796-b399-4f98-a36f"/>
         <infoLink name="Mercenaries" id="d7db-7b7e-1716-8222" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
       </infoLinks>
@@ -3822,7 +3847,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
         </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Elven Grace" id="276e-4a04-4069-c790" hidden="false" type="rule" targetId="c542-240f-db52-5b1d"/>
+        <infoLink name="Elven Grace" id="276e-4a04-4069-c790" hidden="false" type="infoGroup" targetId="b697-4417-5f4b-5140"/>
         <infoLink name="Mercenaries" id="7ae1-4e0b-1b32-d501" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
       </infoLinks>
     </selectionEntry>
@@ -9566,6 +9591,12 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
                             <modifier type="set" value="Magic Armour. The Armour of Brazen Bronze gives Borgio a 5+ Ward save." field="ff58-91e4-84d7-e6e4"/>
                           </modifiers>
                         </infoLink>
+                        <infoLink name="Ward Save" id="9023-33bb-40d0-b3e6" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Armour of Brazen Bronze" field="name"/>
+                            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
                       </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
@@ -9908,6 +9939,14 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
                           </characteristics>
                         </profile>
                       </profiles>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="1111-8225-9b8d-571d" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Gem of Lustria" field="name"/>
+                            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Scroll of Araby" hidden="false" id="8586-7990-f332-61b4">
                       <constraints>
@@ -9921,6 +9960,20 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
                           </characteristics>
                         </profile>
                       </profiles>
+                      <infoLinks>
+                        <infoLink name="Magic Resistance" id="27b2-9440-2d8c-88d8" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                          <modifiers>
+                            <modifier type="set" value="Scroll of Araby" field="name"/>
+                            <modifier type="set" value="4+, use at the start of any player&apos;s turn." field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Magic Resistance" id="6486-6c9c-062f-feb2" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                          <modifiers>
+                            <modifier type="set" value="Scroll of Araby" field="name"/>
+                            <modifier type="set" value="3, use at the start of any player&apos;s turn." field="19f0-e982-f035-416c"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Gourd of Lustrian Wine" hidden="false" id="80cd-c734-a431-2955">
                       <constraints>
@@ -10060,6 +10113,12 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
               </profiles>
               <infoLinks>
                 <infoLink name="Mercenaries" id="eaf9-3947-70cf-aebc" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
+                <infoLink name="Ward Save" id="7caf-8fdc-0082-0536" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Blessings of Lethe" field="name"/>
+                    <modifier type="set" value="3+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <rules>
                 <rule name="Murderous Charge" id="211f-7375-f1ce-b981" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="50">
@@ -10350,6 +10409,20 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
                               </characteristics>
                             </profile>
                           </profiles>
+                          <infoLinks>
+                            <infoLink name="Magic Resistance" id="a934-8efa-c3d2-228b" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                              <modifiers>
+                                <modifier type="set" value="The Hammer of Witches" field="name"/>
+                                <modifier type="set" value="6+, against Dark Magic, Necromancy, Nurgle, Slaanesh and Tzeentch. " field="bdf9-d73e-e13b-b0ce"/>
+                              </modifiers>
+                            </infoLink>
+                            <infoLink name="Magic Resistance" id="f6e1-d6ab-a6eb-36a3" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                              <modifiers>
+                                <modifier type="set" value="The Hammer of Witches" field="name"/>
+                                <modifier type="set" value="1, against Dark Magic, Necromancy, Nurgle, Slaanesh and Tzeentch. " field="19f0-e982-f035-416c"/>
+                              </modifiers>
+                            </infoLink>
+                          </infoLinks>
                         </selectionEntry>
                       </selectionEntries>
                     </entryLink>
@@ -10392,7 +10465,18 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
               </constraints>
               <infoLinks>
                 <infoLink name="Magical Attacks" id="35ca-f383-a42a-8f88" hidden="false" type="rule" targetId="03db-d81f-f264-84b8"/>
-                <infoLink name="Magic Resistance (2)" id="0a45-2274-3d70-04c0" hidden="false" type="rule" targetId="0e09-3526-25d5-2646"/>
+                <infoLink name="Magic Resistance" id="239f-0cea-655e-b6b0" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                  <modifiers>
+                    <modifier type="set" value="Johann van Hal &amp; Wilhelm Hasburg" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Magic Resistance" id="c3c1-a673-bb2e-782c" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                  <modifiers>
+                    <modifier type="set" value="Johann van Hal &amp; Wilhelm Hasburg" field="name"/>
+                    <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Gotrek &amp; Felix" hidden="false" id="1d86-e164-3d62-3657" sortIndex="8">
@@ -10404,6 +10488,24 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
               </constraints>
               <infoLinks>
                 <infoLink name="Loner" id="289f-f10f-137b-9568" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+                <infoLink name="Ward Save" id="e251-47b2-f3ba-38f0" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Gotrek&apos;s Doom" field="name"/>
+                    <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Magic Resistance" id="7db1-5947-3982-92e4" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                  <modifiers>
+                    <modifier type="set" value="Gotrek&apos;s Doom" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Magic Resistance" id="b795-bf5c-1dbd-f091" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                  <modifiers>
+                    <modifier type="set" value="Gotrek&apos;s Doom" field="name"/>
+                    <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry type="model" import="true" name="Gotrek Gurnisson" hidden="false" id="f74e-ffab-3131-9342" sortIndex="1">
@@ -10664,6 +10766,12 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
 "/>
                           </modifiers>
                         </infoLink>
+                        <infoLink name="Ward Save" id="b14b-ae95-f964-8dc9" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Dragon Armour" field="name"/>
+                            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
                       </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
@@ -10801,6 +10909,26 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
                           </characteristics>
                         </profile>
                       </profiles>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="9c18-4f85-f1bc-3f4b" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Daemonhead Helmet" field="name"/>
+                            <modifier type="set" value="4+ after suffered first wound." field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Magic Resistance" id="a9a9-c6fa-b1da-e6e5" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                          <modifiers>
+                            <modifier type="set" value="Daemonhead Helmet" field="name"/>
+                            <modifier type="set" value="6+, after suffered first wound." field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Magic Resistance" id="6e1b-c5ec-f1ba-d8db" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                          <modifiers>
+                            <modifier type="set" value="Daemonhead Helmet" field="name"/>
+                            <modifier type="set" value="1, after suffered first wound." field="19f0-e982-f035-416c"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -12149,6 +12277,12 @@ Any crossbow-armed models in the unit must be placed as far forward in the unit 
               <infoLinks>
                 <infoLink name="Leader" id="58a6-ba6c-5a8f-f98b" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
                 <infoLink name="Mercenaries" id="1f72-0b2e-7ecd-9add" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
+                <infoLink name="Regeneration" id="6f07-5a40-471a-5a1d" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                  <modifiers>
+                    <modifier type="set" value="Hard to Kill" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <modifiers>
                 <modifier type="add" value="{this} needs one more Selection of Manann&apos;s Blades (Sellswords)" field="error">
@@ -12426,14 +12560,16 @@ Any crossbow-armed models in the unit must be placed as far forward in the unit 
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8286-6c97-870e-2433-max"/>
                   </constraints>
                   <infoLinks>
-                    <infoLink name="Dodge (6+)" id="6056-1254-adb8-668e" hidden="false" type="rule" targetId="bf3d-abaf-45ca-3477">
+                    <infoLink name="Dodge" id="5c33-5201-cbf4-c6f7" hidden="false" type="profile" targetId="6407-7161-d748-2c03">
                       <modifiers>
-                        <modifier type="set" value="Marquand only" field="annotation"/>
+                        <modifier type="set" value="Marquand" field="name"/>
+                        <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
                       </modifiers>
                     </infoLink>
-                    <infoLink name="Parry (6+)" id="f81f-3253-22e5-0a15" hidden="false" type="rule" targetId="e56f-d7d4-8987-dbdb">
+                    <infoLink name="Parry" id="792c-eaf3-dc29-cea2" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
                       <modifiers>
-                        <modifier type="set" value="Marquand only" field="annotation"/>
+                        <modifier type="set" value="Marquand" field="name"/>
+                        <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
                       </modifiers>
                     </infoLink>
                   </infoLinks>
@@ -12730,11 +12866,16 @@ Phase until they pass the Toughness test, the spell is dispelled or the unit is 
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink name="Dodge (5+)" id="88f3-43bd-2586-5a27" hidden="false" type="rule" targetId="cfff-6563-d1c6-820c"/>
                 <infoLink name="Hidden" id="0ab4-5933-0c62-e2d5" hidden="false" type="rule" targetId="2796-b399-4f98-a36f"/>
                 <infoLink name="Poisoned Attacks" id="b725-6d5f-2d32-ca44" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
                 <infoLink name="Scouts" id="e74f-1a0b-a580-ccec" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
                 <infoLink name="Mercenaries" id="9402-b870-fdbb-4ca3" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
+                <infoLink name="Dodge" id="9e37-c8b4-6c55-fb4f" hidden="false" type="profile" targetId="6407-7161-d748-2c03">
+                  <modifiers>
+                    <modifier type="set" value="Johann the Knife" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <rules>
                 <rule name="Knife Fighter Extraordinaire" id="d3b7-568d-372f-3639" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="68">
@@ -12872,6 +13013,14 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
                           </characteristics>
                         </profile>
                       </profiles>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="e141-b67f-a61d-f3d7" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Bear Fang" field="name"/>
+                            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -12908,12 +13057,17 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
                 </profile>
               </profiles>
               <infoLinks>
-                <infoLink name="Regeneration (5+)" id="32ac-72db-be8c-e7e4" hidden="false" type="rule" targetId="5fed-df2e-b6d6-cc93"/>
                 <infoLink name="Leader" id="1e59-1c7a-655b-0bdf" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
                 <infoLink name="Frenzy" id="bf2b-1a54-5dda-8356" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
                 <infoLink name="Leader" id="8d76-a880-ed73-7221" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
                 <infoLink name="Counter-Charge" id="f068-a1c1-7f3d-d41b" hidden="false" type="rule" targetId="6186-1d2b-2ee6-95c7"/>
                 <infoLink name="Loner" id="cbea-422e-fa7c-e8b8" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
+                <infoLink name="Regeneration" id="81bd-eaaf-9c3b-836d" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                  <modifiers>
+                    <modifier type="set" value="Beorg Bearstruck" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <rules>
                 <rule name="The Bearmen of Urslo" id="ba86-d6cf-374b-0e90" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="70">
@@ -12980,6 +13134,14 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
                           </characteristics>
                         </profile>
                       </profiles>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="90d3-3b4a-0b62-e4bd" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Oggum Staff" field="name"/>
+                            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -13247,6 +13409,14 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
                           </characteristics>
                         </profile>
                       </profiles>
+                      <infoLinks>
+                        <infoLink name="Parry" id="7d58-64fd-2528-dc29" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
+                          <modifiers>
+                            <modifier type="set" value="Ienh-Khain" field="name"/>
+                            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -13261,7 +13431,7 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
                 </entryLink>
               </entryLinks>
               <infoLinks>
-                <infoLink name="Elven Grace" id="bac5-c66f-07c6-f4b4" hidden="false" type="rule" targetId="c542-240f-db52-5b1d"/>
+                <infoLink name="Elven Grace" id="bac5-c66f-07c6-f4b4" hidden="false" type="infoGroup" targetId="b697-4417-5f4b-5140"/>
               </infoLinks>
               <rules>
                 <rule name="Invincible Swordsman" id="8db6-25e0-cd33-9491" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="73">
@@ -13351,7 +13521,7 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
               </constraints>
               <infoLinks>
                 <infoLink name="Scouts" id="0b8a-8f5c-b785-d221" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
-                <infoLink name="Elven Grace" id="e710-9742-f964-ac7d" hidden="false" type="rule" targetId="c542-240f-db52-5b1d"/>
+                <infoLink name="Elven Grace" id="e710-9742-f964-ac7d" hidden="false" type="infoGroup" targetId="b697-4417-5f4b-5140"/>
                 <infoLink name="Murderous Prowess" id="d19b-0a22-6444-341d" hidden="false" type="rule" targetId="a7a7-132b-2db2-ab14"/>
                 <infoLink name="Loner" id="0480-7b67-1588-cc92" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
                 <infoLink name="Poisoned Attacks" id="705d-c4ca-2daa-0063" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
@@ -13996,6 +14166,14 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
                           </characteristics>
                         </profile>
                       </profiles>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="3f0d-f7dd-5325-7bb2" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Dark Gem of the Cursed" field="name"/>
+                            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -14087,11 +14265,16 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
                 </selectionEntryGroup>
               </selectionEntryGroups>
               <infoLinks>
-                <infoLink name="Dodge (5+)" id="8fd3-52b8-27e8-1777" hidden="false" type="rule" targetId="cfff-6563-d1c6-820c"/>
                 <infoLink name="Hidden" id="1a01-e240-b6d4-4b70" hidden="false" type="rule" targetId="2796-b399-4f98-a36f"/>
                 <infoLink name="Poisoned Attacks" id="2e1e-ba74-24bc-9816" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
                 <infoLink name="Scouts" id="d29c-93ba-6426-2c1a" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
                 <infoLink name="Mercenaries" id="6178-0d10-9d0d-b3a6" hidden="false" type="rule" targetId="6440-a3e6-fd53-47c5"/>
+                <infoLink name="Dodge" id="444f-4f2a-b223-95ae" hidden="false" type="profile" targetId="6407-7161-d748-2c03">
+                  <modifiers>
+                    <modifier type="set" value="Marianna Chevaux" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <rules>
                 <rule name="Marianna Chevaux" id="a46a-b2c8-4335-d3ed" hidden="false" publicationId="8ada-88a0-cdcd-9b5e">
@@ -14641,14 +14824,65 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9a2f-bc0e-0479-1da7" includeChildSelections="false"/>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="74ff-63c9-b49e-ed37" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="b60c-d1ff-d4c7-a2d4" includeChildSelections="false"/>
           </constraints>
           <infoLinks>
             <infoLink name="Blademaster" id="76f0-435b-efee-4885" hidden="false" type="profile" targetId="ca9f-2352-9a5a-d99f"/>
+            <infoLink name="Parry" id="5802-3c51-4255-cf69" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
+              <modifiers>
+                <modifier type="set" value="Blademaster" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <comment>Characters</comment>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
+          <modifiers>
+            <modifier type="set" value="0" field="9a2f-bc0e-0479-1da7">
+              <conditionGroups>
+                <conditionGroup type="or">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="bb72-8f15-ec51-b098" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="f11c-e029-bc6c-58b6" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="0" field="9a2f-bc0e-0479-1da7">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="537c-4a99-b01c-f810" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="d509-46a8-2dc7-0eb9" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="7617-f4b5-02ac-3d15" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="757a-ff3d-710c-2d8b" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="0473-857e-78d9-cb7c" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="5d16-5965-b9d5-b411" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="b3d9-29cb-4195-586d" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="set" value="0" field="9a2f-bc0e-0479-1da7">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="a574-f633-253c-b619" shared="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="b3d9-29cb-4195-586d" shared="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="a658-337d-0cbd-a38c" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Crushing Blow" hidden="false" id="0853-78a6-d1be-467e" collective="true" sortIndex="11">
           <constraints>
@@ -15071,6 +15305,12 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
           </constraints>
           <infoLinks>
             <infoLink name="Blademaster" id="c5a5-0a81-af35-e3bb" hidden="false" type="profile" targetId="ca9f-2352-9a5a-d99f"/>
+            <infoLink name="Parry" id="5cb4-737f-c84c-9553" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
+              <modifiers>
+                <modifier type="set" value="Blademaster" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <comment>Units</comment>
         </selectionEntry>
@@ -16149,6 +16389,14 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Regeneration" id="2309-3b99-0645-7b98" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+              <modifiers>
+                <modifier type="set" value="Dashing Cloak of Heroic Renown" field="name"/>
+                <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Master Duellists&apos;s Mark" hidden="false" id="9249-e85c-1140-31c0" sortIndex="6">
           <constraints>
@@ -16171,6 +16419,20 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
               </conditions>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Dodge" id="3ba2-415d-8472-c395" hidden="false" type="profile" targetId="6407-7161-d748-2c03">
+              <modifiers>
+                <modifier type="set" value="Master Duellists&apos;s Mark" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Parry" id="d732-5dec-b7cb-b9c6" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
+              <modifiers>
+                <modifier type="set" value="Master Duellists&apos;s Mark" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Wards of Battle" hidden="false" id="ee1f-60ab-f2e6-0be4" sortIndex="7">
           <costs>
@@ -16186,6 +16448,14 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink name="Ward Save" id="1759-4e13-6ad2-a30d" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Wards of Battle" field="name"/>
+                <modifier type="set" value="4+ against close combat attacks." field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Guardian Amulet" hidden="false" id="41e3-4b78-7cbd-2029" sortIndex="8">
           <costs>
@@ -16201,6 +16471,14 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink name="Ward Save" id="d250-5196-1ecb-2e55" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Guardian Amulet" field="name"/>
+                <modifier type="set" value="2+, -1 for each success." field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Icon of Fortitude" hidden="false" id="080f-ef2f-2ad5-4489" sortIndex="5">
           <costs>
