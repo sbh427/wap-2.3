@@ -27,7 +27,7 @@
     <publication id="faf5-2026-3cea-6e96" name="Chaos Dwarfs 1.5" shortName="CD" publisher="Warhammer - Chaos Dwarfs 9th Ed 1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="7f0c-7d47-a39d-8c68" name="Cult of Ulric 1.11" shortName="CoU" publisher="Warhammer - Cult of Ulric 1.11" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="15.11.2023"/>
     <publication id="8ada-88a0-cdcd-9b5e" name="Dogs of War v.1.52" shortName="DoW" publisher="Warhammer - Dogs of War 9th Ed v.1.5" publicationDate="22.01.2026" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="894a-5ecc-1ff7-958a" name="Estalia 1.15" shortName="Es" publisher="Warhammer - Estalia 1.15" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="15.08.2023"/>
+    <publication id="894a-5ecc-1ff7-958a" name="Estalia 1.21" shortName="Es" publisher="Warhammer - Estalia 1.21" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate=""/>
     <publication id="0545-ea23-873c-f668" name="Halflings 1.13" shortName="Ha" publisher="Warhammer - Halflings 1.13" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="16.01.2024"/>
     <publication id="92f3-84a1-4644-bc2f" name="Hobgoblins 1.12" shortName="Ho" publisher="Warhammer - Hobgoblins 1.12" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="18.03.2024"/>
     <publication id="84d9-dc45-4bf8-ae57" name="Kingdoms of Ind 1.12" shortName="KoI" publisher="Warhammer - Kingdoms of Ind 1.12" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="15.11.2023"/>
@@ -7250,7 +7250,7 @@
       <comment>Min 0</comment>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b3e8-624f-92d7-7b5b" includeChildSelections="false" automatic="true"/>
-        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4347-5ff6-2917-e511" includeChildSelections="false" automatic="false"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="4347-5ff6-2917-e511" includeChildSelections="false" automatic="true"/>
       </constraints>
       <modifierGroups>
         <modifierGroup type="and">
