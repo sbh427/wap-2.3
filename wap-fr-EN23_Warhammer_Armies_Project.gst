@@ -8360,9 +8360,6 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
     <rule id="1451-9754-507c-44a8" name="Murderous Prowess" publicationId="9e23-79cb-pubN76150" page="3" hidden="false">
       <description>Models with this rule may re-roll all To Wound rolls of 1 when making close combat attacks.</description>
     </rule>
-    <rule id="8c96-c7fe-2a85-f2f9" name="Elven Grace" publicationId="9e23-79cb-pubN77092" page="138" hidden="false">
-      <description>Models with this rule have Dodge (6+) special rule in close combat. However, this cannot be used against enemies that attack before the model with Elven Grace.</description>
-    </rule>
     <rule id="eb46-96d2-9469-4905" name="Cold-Blooded" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>Whenever the model takes a Leadership test, it rolls an additional dice and discards the highest result.</description>
     </rule>
@@ -9043,6 +9040,9 @@ Some models may be allowed to re-roll a Ward Save from a specific source. In tha
       <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward Save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
 
 If a character with Magic Resistance joins a unit, all models in the unit benefit from the Magic Resistance as long as they are part of the unit. If a model or unit has two sets of Magic Resistance, the two combine to a maximum of Magic Resistance (3), unless specified.</description>
+    </rule>
+    <rule name="Elven Grace" id="b726-c451-19d2-7658" hidden="false" publicationId="9e23-79cb-pubN77092" page="138">
+      <description>Models with this rule have Dodge (6+) special rule in close combat. However, this cannot be used against enemies that attack before the model with Elven Grace.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -10829,6 +10829,17 @@ Magic phase.</characteristic>
           </characteristics>
         </profile>
       </profiles>
+    </infoGroup>
+    <infoGroup name="Elven Grace" id="b697-4417-5f4b-5140" hidden="false">
+      <infoLinks>
+        <infoLink name="Dodge" id="0b51-0566-e7de-f62f" hidden="false" type="profile" targetId="6407-7161-d748-2c03">
+          <modifiers>
+            <modifier type="set" value="Elven Grace" field="name"/>
+            <modifier type="set" value="6+ in close combat when attacking first." field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Elven Grace" id="62b3-a43e-ce65-d029" hidden="false" type="rule" targetId="b726-c451-19d2-7658"/>
+      </infoLinks>
     </infoGroup>
   </sharedInfoGroups>
   <infoLinks>
