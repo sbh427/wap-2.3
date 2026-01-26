@@ -915,7 +915,7 @@
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Beasts" id="8f9a-aac2-7174-578c" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Spells from the Lore of Beasts" id="8f9a-aac2-7174-578c" hidden="false" sortIndex="3" collapsible="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="12. Merciw&apos;s Monstrous Regiment" hidden="true" id="5715-a0fb-3e52-ae60" collective="false">
               <constraints>
@@ -1383,7 +1383,7 @@
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Fire" id="70ea-cfeb-a8a4-e2d7" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Spells from the Lore of Fire" id="70ea-cfeb-a8a4-e2d7" hidden="false" sortIndex="3" collapsible="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="12. Magma Storm" hidden="true" id="ac7c-f6c7-747b-9610" collective="false">
               <constraints>
@@ -1851,7 +1851,7 @@
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Metal" id="1c34-f45c-13cf-4c2a" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Spells from the Lore of Metal" id="1c34-f45c-13cf-4c2a" hidden="false" sortIndex="3" collapsible="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="12. Final Transmutation" hidden="true" id="e962-f920-5b72-267c" collective="false">
               <constraints>
@@ -2319,7 +2319,7 @@
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Heavens" id="1c5c-7a73-f0af-937f" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Spells from the Lore of Heavens" id="1c5c-7a73-f0af-937f" hidden="false" sortIndex="3" collapsible="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="12. Thorsen&apos;s Thunderstorm" hidden="true" id="9dfc-19fa-7a64-b7dd" collective="false">
               <constraints>
@@ -2787,7 +2787,7 @@
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Light" id="ca43-e62e-0cd5-034d" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Spells from the Lore of Light" id="ca43-e62e-0cd5-034d" hidden="false" sortIndex="3" collapsible="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="12. Pillar of Radiance" hidden="true" id="00c0-adb6-2f54-a354" collective="false">
               <constraints>
@@ -3255,7 +3255,7 @@
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Life" id="5376-05d7-fd54-9e38" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Spells from the Lore of Life" id="5376-05d7-fd54-9e38" hidden="false" sortIndex="3" collapsible="true">
           <constraints>
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="ca7f-ccc1-104d-2ada"/>
             <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0b32-6c3c-78d3-dee6"/>
@@ -3723,7 +3723,7 @@
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Shadow" id="3de4-d82e-f3ec-8038" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Spells from the Lore of Shadow" id="3de4-d82e-f3ec-8038" hidden="false" sortIndex="3" collapsible="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="12. Pit of Shades" hidden="true" id="3381-0a9e-89d1-461b" collective="false">
               <constraints>
@@ -4191,7 +4191,7 @@
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Death" id="fcc3-c3ee-49af-ce8d" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Spells from the Lore of Death" id="fcc3-c3ee-49af-ce8d" hidden="false" sortIndex="3" collapsible="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="12. The Purple Sun of Xereus" hidden="true" id="64f8-69f4-ffb0-f045" collective="false">
               <constraints>
@@ -4667,7 +4667,7 @@
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Chaos" id="1c75-2182-f79a-8f54" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Spells from the Lore of Chaos" id="1c75-2182-f79a-8f54" hidden="false" sortIndex="3" collapsible="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="12. Vortex of Chaos" hidden="true" id="b54d-be44-e21e-5c93" collective="false">
               <constraints>
@@ -5247,7 +5247,7 @@
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Tzeentch" id="f53a-7223-a0d1-e317" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Spells from the Lore of Tzeentch" id="f53a-7223-a0d1-e317" hidden="false" sortIndex="3" collapsible="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="12. Infernal Gateway" hidden="true" id="e756-09f0-58ca-ed4b" collective="false">
               <constraints>
@@ -5827,7 +5827,7 @@
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Nurgle" id="7f7c-e15f-b8e8-d1af" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Spells from the Lore of Nurgle" id="7f7c-e15f-b8e8-d1af" hidden="false" sortIndex="3" collapsible="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="12. Rot, Glorious Rot" hidden="true" id="629e-6a0d-216f-a8a9" collective="false">
               <constraints>
@@ -6407,7 +6407,7 @@
         <cost name="pts" typeId="points" value="0"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Spells from the Lore of Slaanesh" id="d5a8-14e5-85b4-b777" hidden="false" sortIndex="3">
+        <selectionEntryGroup name="Spells from the Lore of Slaanesh" id="d5a8-14e5-85b4-b777" hidden="false" sortIndex="3" collapsible="true">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="12. Song of Seduction" hidden="true" id="3608-64a5-f3d8-40ae" collective="false">
               <constraints>
