@@ -165,7 +165,7 @@
       <infoLinks>
         <infoLink name="Hand Weapon" id="530c-eb28-4bce-f897" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
         <infoLink name="Shield" id="3560-32e1-5fa3-17eb" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
-        <infoLink name="Shield" id="71ce-89d2-1354-5822" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
+        <infoLink name="Parry" id="71ce-89d2-1354-5822" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6688-fbd9-3fae-e968" automatic="true"/>
@@ -415,7 +415,7 @@
       </constraints>
       <infoLinks>
         <infoLink name="Shield" id="be32-d054-1088-b539" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
-        <infoLink name="Shield" id="1398-df65-db3a-45e2" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
+        <infoLink name="Parry" id="1398-df65-db3a-45e2" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="0" field="af56-60a7-18d1-6f4f">
@@ -935,7 +935,7 @@ Parry (6+) (Only applies if used with a hand weapon.)" field="ff58-91e4-84d7-e6e
         <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
       </characteristics>
     </profile>
-    <profile name="Parry" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="fae6-fa36-d8e9-b115" noindex="true">
+    <profile name="Parry (shield)" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="fae6-fa36-d8e9-b115" noindex="true">
       <characteristics>
         <characteristic name="Type" typeId="31b2-f73f-865d-f538">Parry</characteristic>
         <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">6+</characteristic>
@@ -948,9 +948,8 @@ Parry (6+) (Only applies if used with a hand weapon.)" field="ff58-91e4-84d7-e6e
         </modifier>
         <modifier type="set" value="Shield" field="name"/>
       </modifiers>
-      <comment>Shield</comment>
     </profile>
-    <profile name="Buckler" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="2d0d-e77a-2eeb-b599" noindex="true">
+    <profile name="Parry (buckler)" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="2d0d-e77a-2eeb-b599" noindex="true">
       <characteristics>
         <characteristic name="Type" typeId="31b2-f73f-865d-f538">Parry</characteristic>
         <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">6+</characteristic>
@@ -961,6 +960,7 @@ Parry (6+) (Only applies if used with a hand weapon.)" field="ff58-91e4-84d7-e6e
             <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
+        <modifier type="set" value="Buckler" field="name"/>
       </modifiers>
     </profile>
     <profile name="Two/Additional Hand Weapons" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="48ad-587e-84ad-c237">
@@ -1900,7 +1900,7 @@ Note that they may not choose any Arcane Items.</characteristic>
                 <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
               </modifiers>
             </infoLink>
-            <infoLink name="Shield" id="c2fe-086d-789f-f905" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
+            <infoLink name="Parry" id="c2fe-086d-789f-f905" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -1988,7 +1988,7 @@ Note that they may not choose any Arcane Items.</characteristic>
                 <modifier type="set" value="1+" field="97ea-ecf7-8d24-b2ca"/>
               </modifiers>
             </infoLink>
-            <infoLink name="Shield" id="10fe-e7d8-3737-ebab" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
+            <infoLink name="Parry" id="10fe-e7d8-3737-ebab" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -2050,7 +2050,7 @@ Note that they may not choose any Arcane Items.</characteristic>
 "/>
               </modifiers>
             </infoLink>
-            <infoLink name="Shield" id="354c-9745-586c-bfa8" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
+            <infoLink name="Parry" id="354c-9745-586c-bfa8" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
             <infoLink name="Magic Resistance" id="d2d0-7286-deb9-b495" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
               <modifiers>
                 <modifier type="set" value="Spellshield" field="name"/>
@@ -2092,7 +2092,7 @@ Note that they may not choose any Arcane Items.</characteristic>
 "/>
               </modifiers>
             </infoLink>
-            <infoLink name="Shield" id="0568-8c44-de8c-56ee" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
+            <infoLink name="Parry" id="0568-8c44-de8c-56ee" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -2323,7 +2323,7 @@ Note that they may not choose any Arcane Items.</characteristic>
 "/>
               </modifiers>
             </infoLink>
-            <infoLink name="Shield" id="d20e-d801-7558-339e" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
+            <infoLink name="Parry" id="d20e-d801-7558-339e" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
             <infoLink name="Ward Save" id="c313-6a67-9822-4158" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
               <modifiers>
                 <modifier type="set" value="Shield of the Warrior True" field="name"/>
