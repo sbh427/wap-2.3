@@ -226,6 +226,7 @@
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="333e-b960-5957-160b"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d9bb-97aa-42a1-bddb"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Fireglaive" hidden="false" id="7770-9e14-52c4-9bfe" collective="true">
@@ -239,6 +240,7 @@
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0031-178e-fd47-7f5b" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="3f3c-9e42-2ab0-1442"/>
       </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Lore of Hashut" hidden="false" id="8472-08d4-6de0-9da0">
@@ -1998,7 +2000,7 @@
         <categoryLink name="Infantry" hidden="false" id="d9a9-4c55-0004-89bc" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="63db-e887-3923-9e83" hidden="false" sortIndex="2">
+        <selectionEntryGroup name="Command Group" id="63db-e887-3923-9e83" hidden="false" sortIndex="3">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="3a3f-0a8c-8e42-5d4e">
               <costs>
@@ -2044,7 +2046,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Warrior" hidden="false" id="88a2-5301-b3fb-afbc" sortIndex="1">
+        <selectionEntry type="model" import="true" name="Warrior" hidden="false" id="88a2-5301-b3fb-afbc" sortIndex="2">
           <costs>
             <cost name="pts" typeId="points" value="7"/>
           </costs>
@@ -2119,7 +2121,35 @@
             <infoLink name="Relentless" id="ca25-c186-9923-b0c3" hidden="false" type="rule" targetId="6c22-4c29-0d6b-f601"/>
           </infoLinks>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="The Blazing Beards of Bazherak" hidden="false" id="c41b-de37-4a52-b13a" sortIndex="1">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="3bd0-3117-7b30-5250" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="1.5" field="points">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e9fc-e7ad-1301-4aed" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Frenzy" id="6a52-5248-083a-5147" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
+            <infoLink name="Flaming Attacks" id="4ffb-38f4-a69d-aa57" hidden="false" type="rule" targetId="8600-a090-2761-d661"/>
+          </infoLinks>
+        </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="The Blazing Beards of Bazherak" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c41b-de37-4a52-b13a" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Blunderbusses" hidden="false" id="2024-2b7d-5ab9-9a49" sortIndex="102">
       <categoryLinks>
@@ -2127,7 +2157,7 @@
         <categoryLink name="Infantry" hidden="false" id="d51e-335b-01c7-900c" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="58e8-1063-54b3-9dd0" hidden="false" sortIndex="2">
+        <selectionEntryGroup name="Command Group" id="58e8-1063-54b3-9dd0" hidden="false" sortIndex="3">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="ef3b-5709-4069-2e88">
               <costs>
@@ -2190,8 +2220,36 @@
             </entryLink>
             <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="5f28-8099-f540-220f" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
               <entryLinks>
-                <entryLink import="true" name="Blunderbuss" hidden="false" id="e67c-aee8-25b9-d29a" type="selectionEntry" targetId="dc92-514e-0596-fd55" sortIndex="1"/>
-                <entryLink import="true" name="Crossbow" hidden="false" id="fae2-459d-e43f-97ed" type="selectionEntry" targetId="9936-c747-429f-6327" sortIndex="2"/>
+                <entryLink import="true" name="Blunderbuss" hidden="false" id="e67c-aee8-25b9-d29a" type="selectionEntry" targetId="dc92-514e-0596-fd55" sortIndex="1">
+                  <modifiers>
+                    <modifier type="set" value="1" field="6238-2375-0dac-dbaa">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="45c6-a96c-8b32-cf16" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="6238-2375-0dac-dbaa"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Crossbow" hidden="false" id="fae2-459d-e43f-97ed" type="selectionEntry" targetId="9936-c747-429f-6327" sortIndex="2">
+                  <modifiers>
+                    <modifier type="set" value="0" field="249d-fe25-ca99-9790">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="45c6-a96c-8b32-cf16" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="b79a-aba1-efc9-94d5" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+              <entryLinks>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="eeb7-f49a-233f-387f" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                  <modifiers>
+                    <modifier type="set" value="1" field="443c-baf5-540a-c81e"/>
+                  </modifiers>
+                </entryLink>
               </entryLinks>
             </entryLink>
           </entryLinks>
@@ -2220,7 +2278,36 @@
             <infoLink name="Resolute" id="3538-abc7-ef58-5e82" hidden="false" type="rule" targetId="c88d-5cb0-b4e7-7793"/>
           </infoLinks>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="The Granite Guard" hidden="false" id="45c6-a96c-8b32-cf16" sortIndex="1">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="63f9-f678-b549-3d5e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="2" field="points">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4454-0793-f901-47d2" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <rules>
+            <rule name="The Granite Guard" id="00af-f9c2-e7d8-5635" hidden="false">
+              <description>This unit always counts as fighting behind a defended obstacle in the first round of close combat, and do not suffer -1 To Hit when choosing Stand &amp; Shoot as a charge reaction.</description>
+            </rule>
+          </rules>
+        </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="The Granite Guard" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="45c6-a96c-8b32-cf16" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Hobgoblin Cutthroats" hidden="false" id="989b-1165-e0fe-bad9" sortIndex="103">
       <selectionEntryGroups>
@@ -2779,7 +2866,7 @@
         <categoryLink name="Infantry" hidden="false" id="67f9-3c5d-9f52-25d3" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="6d41-fae6-2b98-9b82" hidden="false" sortIndex="2">
+        <selectionEntryGroup name="Command Group" id="6d41-fae6-2b98-9b82" hidden="false" sortIndex="3">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="4da4-2b40-df59-b2a6">
               <costs>
@@ -2825,7 +2912,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Infernal Guard" hidden="false" id="e86e-1207-66eb-ce52" sortIndex="1">
+        <selectionEntry type="model" import="true" name="Infernal Guard" hidden="false" id="e86e-1207-66eb-ce52" sortIndex="2">
           <constraints>
             <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="65ea-ca7f-634c-fe42"/>
           </constraints>
@@ -2843,6 +2930,13 @@
                 <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
                 <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Chaos Dwarf)</characteristic>
               </characteristics>
+              <modifiers>
+                <modifier type="increment" value="1" field="f049-8a65-9c04-1559">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="743f-630e-bfcf-d53e" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <entryLinks>
@@ -2857,16 +2951,41 @@
             </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="16a8-e9ea-836d-d281" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
-                <entryLink import="true" name="Hand Weapon &amp; Shield" hidden="false" id="1af5-d12f-219b-bda9" type="selectionEntry" targetId="8613-9419-33a1-5aaf" sortIndex="1"/>
+                <entryLink import="true" name="Hand Weapon &amp; Shield" hidden="false" id="1af5-d12f-219b-bda9" type="selectionEntry" targetId="8613-9419-33a1-5aaf" sortIndex="1">
+                  <constraints>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="1e18-8afa-a696-0a0f"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="1" field="1e18-8afa-a696-0a0f">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="743f-630e-bfcf-d53e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
                 <entryLink import="true" name="Great Weapon" hidden="false" id="5600-a35e-ee9f-1e64" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
+                  <modifiers>
+                    <modifier type="set" value="0" field="4fc2-f1e9-73bb-48d6">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="743f-630e-bfcf-d53e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </entryLink>
                 <entryLink import="true" name="Fireglaive" hidden="false" id="d9e3-6647-dae9-d095" type="selectionEntry" targetId="7770-9e14-52c4-9bfe" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
+                  <modifiers>
+                    <modifier type="set" value="0" field="0031-178e-fd47-7f5b">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="743f-630e-bfcf-d53e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </entryLink>
               </entryLinks>
             </entryLink>
@@ -2881,20 +3000,53 @@
             <cost name="pts" typeId="points" value="13"/>
           </costs>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="The Ironsworn" hidden="false" id="743f-630e-bfcf-d53e" sortIndex="1">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d2db-4e3a-6565-5ead" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="5f62-232f-b8cb-e054" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="2" field="points">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Magical Attacks" id="6b94-c7c2-7dbe-4653" hidden="false" type="rule" targetId="03db-d81f-f264-84b8"/>
+            <infoLink name="Mighty Blow (1)" id="1e88-8600-0184-b3f0" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
+          </infoLinks>
+        </selectionEntry>
       </selectionEntries>
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category"/>
-            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category"/>
             <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries.recursive"/>
             <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries.recursive"/>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category"/>
+            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category"/>
           </modifiers>
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="5c30-c07c-7e2f-2bc5" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="roster" childId="5c30-c07c-7e2f-2bc5" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="743f-630e-bfcf-d53e" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
         </modifierGroup>
       </modifierGroups>
+      <modifiers>
+        <modifier type="set" value="The Ironsworn" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="743f-630e-bfcf-d53e" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Zealot Berzerkers" hidden="false" id="98cf-d8bd-f97b-a410" sortIndex="202">
       <selectionEntryGroups>
@@ -4250,7 +4402,7 @@ While there are rank and file models left in the unit (except the Command Group)
         <categoryLink name="Monstrous Cavalry" hidden="false" id="5972-a8c7-f441-81a2" targetId="82d3-4589-72b4-b6ed" primary="false"/>
       </categoryLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="e98e-1498-a96e-9c6b" hidden="false" sortIndex="2">
+        <selectionEntryGroup name="Command Group" id="e98e-1498-a96e-9c6b" hidden="false" sortIndex="3">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="6cba-e07c-c7d2-6fb4">
               <costs>
@@ -4296,7 +4448,7 @@ While there are rank and file models left in the unit (except the Command Group)
         </selectionEntryGroup>
       </selectionEntryGroups>
       <selectionEntries>
-        <selectionEntry type="model" import="true" name="Bull Centaur Render" hidden="false" id="93f8-afe3-6fba-d889" sortIndex="1">
+        <selectionEntry type="model" import="true" name="Bull Centaur Render" hidden="false" id="93f8-afe3-6fba-d889" sortIndex="2">
           <costs>
             <cost name="pts" typeId="points" value="50"/>
           </costs>
@@ -4332,14 +4484,68 @@ While there are rank and file models left in the unit (except the Command Group)
             </entryLink>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="732d-f14a-6d18-e2a0" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
-                <entryLink import="true" name="Hand Weapon &amp; Shield" hidden="false" id="3106-ff86-3fa7-4aaa" type="selectionEntry" targetId="8613-9419-33a1-5aaf" sortIndex="1"/>
-                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="b449-f3f7-a65b-b056" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2"/>
+                <entryLink import="true" name="Hand Weapon &amp; Shield" hidden="false" id="3106-ff86-3fa7-4aaa" type="selectionEntry" targetId="8613-9419-33a1-5aaf" sortIndex="1">
+                  <modifiers>
+                    <modifier type="set" value="0" field="6688-fbd9-3fae-e968">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="dd05-cc22-3636-0147" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="b449-f3f7-a65b-b056" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
+                  <modifiers>
+                    <modifier type="set" value="1" field="45e6-ac3f-a2b2-6acd">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="dd05-cc22-3636-0147" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="45e6-ac3f-a2b2-6acd"/>
+                  </constraints>
+                </entryLink>
                 <entryLink import="true" name="Great Weapon" hidden="false" id="7ec9-3c41-0d06-3b60" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="6"/>
                   </costs>
+                  <modifiers>
+                    <modifier type="set" value="0" field="4fc2-f1e9-73bb-48d6">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="dd05-cc22-3636-0147" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </entryLink>
               </entryLinks>
+            </entryLink>
+            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="03c0-d336-1b30-b970" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
+              <entryLinks>
+                <entryLink import="true" name="Throwing Axes" hidden="false" id="17c3-1d1f-ba33-c25c" type="selectionEntry" targetId="4206-830c-785a-3707">
+                  <modifiers>
+                    <modifier type="set" value="1" field="a7d1-f362-d023-f03e">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="dd05-cc22-3636-0147" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="0" field="4a34-da8f-768e-08b6">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="dd05-cc22-3636-0147" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="a7d1-f362-d023-f03e" automatic="true"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="roster" childId="e21b-ecf6-7808-b0ab" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
           <infoLinks>
@@ -4353,7 +4559,34 @@ While there are rank and file models left in the unit (except the Command Group)
             </infoLink>
           </infoLinks>
         </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Hashut&apos;s Dark Ravagers" hidden="false" id="dd05-cc22-3636-0147" sortIndex="1">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="bc67-0aed-d962-0511" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="roster" childId="e21b-ecf6-7808-b0ab" shared="true" includeChildSelections="true" includeChildForces="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="5" field="points">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <infoLinks>
+            <infoLink name="Devastating Charge" id="1c33-84e4-c7b0-3890" hidden="false" type="rule" targetId="e025-10f3-f893-4bd7"/>
+          </infoLinks>
+        </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="Hashut&apos;s Dark Ravagers" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="dd05-cc22-3636-0147" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Dreadquake Mortar" hidden="false" id="2186-c4c0-3e6c-8e8e" sortIndex="304">
       <costs>
@@ -5746,509 +5979,17 @@ While there are rank and file models left in the unit (except the Command Group)
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Hashut&apos;s Dark Ravagers (Bull Centaur Renders)" hidden="false" id="ac0d-8ea5-de7c-cf10" sortIndex="302.5">
+    <selectionEntry type="model" import="true" name="Lammasu" hidden="false" id="1ce3-d25c-433b-ba40" sortIndex="303">
+      <costs>
+        <cost name="pts" typeId="points" value="155"/>
+      </costs>
       <categoryLinks>
-        <categoryLink name="Rare" hidden="false" id="30bc-e807-642c-256b" targetId="0eb4-f376-7725-b05b" primary="true"/>
-        <categoryLink name="Monstrous Cavalry" hidden="false" id="860f-d451-d68c-4d7d" targetId="82d3-4589-72b4-b6ed" primary="false"/>
+        <categoryLink targetId="0eb4-f376-7725-b05b" id="5326-2f98-1348-5d7e" primary="true" name="Rare"/>
+        <categoryLink targetId="b3e5-4b1b-7050-7e02" id="0c10-fab8-232b-ff0b" primary="false" name="Monstrous Creature"/>
       </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="ae8b-a00f-70f5-8311" hidden="false" sortIndex="2">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="5dc7-11d6-40c0-b5a5">
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c7e-6e58-0aa9-f350"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Leader" id="8928-f9de-6a42-c2f0" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="1275-1f54-8905-52ac">
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6fae-a084-bef6-f49d"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Musician" id="8c86-48ac-b5ba-9529" hidden="false" type="rule" targetId="54c3-1d1b-3ffe-59a5"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="7908-fbdf-aba5-6094">
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bed5-2ba3-e7a8-7ed7"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Standard Bearer" id="5b88-e869-b79d-063c" hidden="false" type="rule" targetId="6002-29d0-d620-1bd0"/>
-              </infoLinks>
-              <entryLinks>
-                <entryLink import="true" name="90. Magic Standards" hidden="false" id="9d74-3454-1900-59cc" type="selectionEntryGroup" targetId="f48f-882b-de19-6e38">
-                  <constraints>
-                    <constraint type="max" value="50" field="points" scope="parent" shared="false" id="3caa-9dd2-b2ae-372b" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="Hashut&apos;s Dark Ravager (Bull Centaur Render)" hidden="false" id="5ae5-27c5-faab-7a17" sortIndex="1">
-          <costs>
-            <cost name="pts" typeId="points" value="55"/>
-          </costs>
-          <profiles>
-            <profile name="Hashut&apos;s Dark Ravager (Bull Centaur Render)" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="483f-83d0-6c4e-2cb3" publicationId="53f5-3638-a9ce-8dd3" page="34">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">2</characteristic>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
-                <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Cavalry (Chaos Dwarf, Bull Centaur)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <constraints>
-            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="7a58-bb6f-86e0-245f"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="efc5-d354-39c6-732b" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
-              <entryLinks>
-                <entryLink import="true" name="Light Armour" hidden="false" id="d6a9-3c09-60cd-d9ab" type="selectionEntry" targetId="6bb1-79c9-4af5-ca72" sortIndex="1"/>
-                <entryLink import="true" name="Medium Armour" hidden="false" id="d4e9-2593-8ffe-1fe3" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="6"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="d067-a8dd-c909-7333" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
-              <entryLinks>
-                <entryLink import="true" name="Shield" hidden="false" id="3d40-5def-44d7-42d4" type="selectionEntry" targetId="c068-0827-9931-d9bf">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="435d-db27-90e7-c4fb"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="1c48-c542-50eb-a911" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-              <entryLinks>
-                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="509b-dc9f-3702-d5c1" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6e44-9679-3eee-b58b"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="d2ed-137a-72e0-2972" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
-              <entryLinks>
-                <entryLink import="true" name="Throwing Axes" hidden="false" id="5c18-59d2-8045-8913" type="selectionEntry" targetId="4206-830c-785a-3707">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0524-fb91-23fc-0084"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-          <infoLinks>
-            <infoLink name="Contempt" id="b8d3-b60f-3f41-d87e" hidden="false" type="rule" targetId="a16e-837f-8162-8d44"/>
-            <infoLink name="Devastating Charge" id="1aef-fd35-4d6d-790e" hidden="false" type="rule" targetId="e025-10f3-f893-4bd7"/>
-            <infoLink name="Natural Armour" id="575d-2598-6198-d12e" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
-              <modifiers>
-                <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
-                <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
-                <modifier type="set" value="Bull Centaur Render" field="annotation"/>
-              </modifiers>
-            </infoLink>
-          </infoLinks>
-        </selectionEntry>
-      </selectionEntries>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="equalTo" value="0" field="selections" scope="roster" childId="e21b-ecf6-7808-b0ab" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="6307-4b6b-7cf5-e11b" includeChildSelections="true" includeChildForces="true"/>
-      </constraints>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="The Blazing Beards of Bazherak (Warriors)" hidden="false" id="1ec9-41f7-d4e5-307a" sortIndex="101.5">
-      <categoryLinks>
-        <categoryLink name="Core" hidden="false" id="a062-ad65-bd17-fa87" targetId="b876-2856-f1c2-c4f0" primary="true"/>
-        <categoryLink name="Infantry" hidden="false" id="f2e9-00fe-b277-c0cb" targetId="22c9-1606-58f8-2e60" primary="false"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="1daa-7590-9e72-da62" hidden="false" sortIndex="2">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="f401-74d7-bbbc-6bb9">
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="db52-8434-6838-7f1c"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Leader" id="1e99-da3f-3ba6-b7da" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="96bd-0579-d405-d5ff">
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0114-ae68-3c84-9bec"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Musician" id="b5b6-5d59-f10f-2cd6" hidden="false" type="rule" targetId="54c3-1d1b-3ffe-59a5"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="59e4-f424-64d1-f278">
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eda5-171e-7915-c019"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Standard Bearer" id="dc59-66d7-6c59-2025" hidden="false" type="rule" targetId="6002-29d0-d620-1bd0"/>
-              </infoLinks>
-              <entryLinks>
-                <entryLink import="true" name="90. Magic Standards" hidden="false" id="f8e9-9a88-67c1-c837" type="selectionEntryGroup" targetId="f48f-882b-de19-6e38">
-                  <constraints>
-                    <constraint type="max" value="25" field="points" scope="parent" shared="false" id="e0a1-e2ec-187b-05bd" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="Blazing Beard of Bazherak (Warrior)" hidden="false" id="b5e8-a036-c81b-8778" sortIndex="1">
-          <costs>
-            <cost name="pts" typeId="points" value="8.5"/>
-          </costs>
-          <entryLinks>
-            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="f8f7-bfd1-8eb7-c192" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-              <entryLinks>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="0cee-87dd-c998-e5fa" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
-                <entryLink import="true" name="Hand Weapon &amp; Shield" hidden="false" id="2e28-3adc-2709-8799" type="selectionEntry" targetId="8613-9419-33a1-5aaf" sortIndex="2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="1"/>
-                  </costs>
-                </entryLink>
-                <entryLink import="true" name="Great Weapon" hidden="false" id="1bd2-3c64-d473-3722" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="3">
-                  <costs>
-                    <cost name="pts" typeId="points" value="3"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="482a-5d2f-85ba-0096" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
-              <entryLinks>
-                <entryLink import="true" name="Medium Armour" hidden="false" id="71b9-136d-5414-d792" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="1"/>
-                <entryLink import="true" name="Heavy Armour" hidden="false" id="2b9c-479c-da1d-3395" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="1.5"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-          <profiles>
-            <profile name="Blazing Beard of Bazherak (Warrior)" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="d89d-b786-7692-0570" publicationId="53f5-3638-a9ce-8dd3" page="18">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Chaos Dwarf)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <constraints>
-            <constraint type="min" value="15" field="selections" scope="parent" shared="true" id="1672-ef15-592b-b77a"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Resolute" id="910d-cba8-2471-3180" hidden="false" type="rule" targetId="c88d-5cb0-b4e7-7793"/>
-            <infoLink name="Contempt" id="bc62-521f-8445-68ae" hidden="false" type="rule" targetId="a16e-837f-8162-8d44"/>
-            <infoLink name="Relentless" id="efed-246e-f513-a493" hidden="false" type="rule" targetId="6c22-4c29-0d6b-f601"/>
-            <infoLink name="Flaming Attacks" id="0a83-3565-3740-9eb1" hidden="false" type="rule" targetId="8600-a090-2761-d661"/>
-            <infoLink name="Frenzy" id="9717-676f-0072-bc73" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
-          </infoLinks>
-        </selectionEntry>
-      </selectionEntries>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="equalTo" value="0" field="selections" scope="roster" childId="3bd0-3117-7b30-5250" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="74c7-3aed-184b-dc3f" includeChildSelections="true" includeChildForces="true"/>
-      </constraints>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="The Granite Guard (Blunderbusses)" hidden="false" id="93b1-fcce-9cc2-3f76" sortIndex="102.5">
-      <categoryLinks>
-        <categoryLink name="Core" hidden="false" id="b89b-e2ed-fde0-70d8" targetId="b876-2856-f1c2-c4f0" primary="true"/>
-        <categoryLink name="Infantry" hidden="false" id="0840-bebf-d306-72e6" targetId="22c9-1606-58f8-2e60" primary="false"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="102d-fd75-8b2a-d506" hidden="false" sortIndex="2">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="435a-90c7-c251-f043">
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="427f-e825-e1ee-67ab"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Leader" id="edcb-e50c-3714-4eb8" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="21d6-bb6e-f2ce-59dc">
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7494-b685-a2bf-8ee5"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Musician" id="213a-5803-68ef-22b2" hidden="false" type="rule" targetId="54c3-1d1b-3ffe-59a5"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="0262-f1e9-abc1-6714">
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8fb8-4335-65b9-a455"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Standard Bearer" id="5576-7be0-8a6f-fdfe" hidden="false" type="rule" targetId="6002-29d0-d620-1bd0"/>
-              </infoLinks>
-              <entryLinks>
-                <entryLink import="true" name="90. Magic Standards" hidden="false" id="8a27-bcc8-41f3-e688" type="selectionEntryGroup" targetId="f48f-882b-de19-6e38">
-                  <constraints>
-                    <constraint type="max" value="25" field="points" scope="parent" shared="false" id="3559-c9c1-8d55-8224" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="Granite Guard (Blunderbusser)" hidden="false" id="9b7f-8e8d-5144-5b76" sortIndex="2">
-          <costs>
-            <cost name="pts" typeId="points" value="14"/>
-          </costs>
-          <entryLinks>
-            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="00e8-cf33-8cbc-c48f" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
-              <entryLinks>
-                <entryLink import="true" name="Medium Armour" hidden="false" id="b8c5-84b0-f80d-ba49" type="selectionEntry" targetId="76a4-23c1-f96d-021e" sortIndex="1"/>
-                <entryLink import="true" name="Heavy Armour" hidden="false" id="7d0c-fb5f-21be-d805" type="selectionEntry" targetId="30e0-7325-ea6b-af97" sortIndex="2">
-                  <costs>
-                    <cost name="pts" typeId="points" value="1.5"/>
-                  </costs>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-            <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="23b3-081f-2485-c849" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
-              <entryLinks>
-                <entryLink import="true" name="Blunderbuss" hidden="false" id="e182-3f31-547a-7f83" type="selectionEntry" targetId="dc92-514e-0596-fd55" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5078-de25-3631-823a" automatic="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-          <profiles>
-            <profile name="Granite Guard (Blunderbusser)" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="0650-265a-f48d-361b" publicationId="53f5-3638-a9ce-8dd3" page="18">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Chaos Dwarf)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <constraints>
-            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="ab9f-4d58-bbf6-0a67"/>
-          </constraints>
-          <infoLinks>
-            <infoLink name="Contempt" id="f1dd-0955-116d-bf15" hidden="false" type="rule" targetId="a16e-837f-8162-8d44"/>
-            <infoLink name="Relentless" id="cc2d-e3a4-c590-57d6" hidden="false" type="rule" targetId="6c22-4c29-0d6b-f601"/>
-            <infoLink name="Resolute" id="1dcc-a8c2-3e38-4fe1" hidden="false" type="rule" targetId="c88d-5cb0-b4e7-7793"/>
-          </infoLinks>
-          <rules>
-            <rule name="The Granite Guard" id="c5d6-4ba8-8544-3aca" hidden="false" publicationId="53f5-3638-a9ce-8dd3" page="43">
-              <description>This unit always counts as fighting behind a defended obstacle in the first round of close combat, and do not suffer -1 To Hit when choosing Stand &amp; Shoot as a charge reaction.</description>
-            </rule>
-          </rules>
-        </selectionEntry>
-      </selectionEntries>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="equalTo" value="0" field="selections" scope="roster" childId="63f9-f678-b549-3d5e" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="4f03-4894-6e9e-fa8e" includeChildSelections="true" includeChildForces="true"/>
-      </constraints>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="The Ironsworn (Infernal Guard)" hidden="false" id="8952-2ae5-2bc5-3cbf" sortIndex="201.5">
-      <categoryLinks>
-        <categoryLink name="Special" hidden="false" id="a567-f7c6-2430-fc59" targetId="fc26-7737-f7cb-8977" primary="true"/>
-        <categoryLink name="Infantry" hidden="false" id="75e5-5084-a773-37ae" targetId="22c9-1606-58f8-2e60" primary="false"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Command Group" id="2f28-5eac-5f79-76af" hidden="false" sortIndex="2">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="0fea-91b5-82cd-9208">
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d1dc-cdcd-4ade-1ae4"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Leader" id="0265-6327-14cf-1597" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="93f8-9bad-c776-398f">
-              <costs>
-                <cost name="pts" typeId="points" value="5"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f28d-1b9e-bb38-488a"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Musician" id="a2bc-6187-f66a-9a16" hidden="false" type="rule" targetId="54c3-1d1b-3ffe-59a5"/>
-              </infoLinks>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="dba6-265a-9cbe-3103">
-              <costs>
-                <cost name="pts" typeId="points" value="10"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="37db-3467-780d-cca0"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Standard Bearer" id="85fd-01ee-277c-be82" hidden="false" type="rule" targetId="6002-29d0-d620-1bd0"/>
-              </infoLinks>
-              <entryLinks>
-                <entryLink import="true" name="90. Magic Standards" hidden="false" id="c183-ac91-a9a4-1694" type="selectionEntryGroup" targetId="f48f-882b-de19-6e38">
-                  <constraints>
-                    <constraint type="max" value="50" field="points" scope="parent" shared="false" id="d283-8775-1d3f-ab56" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </selectionEntry>
-          </selectionEntries>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="The Ironsworn (Infernal Guard)" hidden="false" id="4985-5b09-9a57-0c02" sortIndex="1">
-          <constraints>
-            <constraint type="min" value="10" field="selections" scope="parent" shared="true" id="ce7e-5cf6-f235-b207"/>
-          </constraints>
-          <profiles>
-            <profile name="The Ironsworn (Infernal Guard)" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="3759-2ee4-e631-e7e7" publicationId="53f5-3638-a9ce-8dd3" page="23">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                <characteristic name="Ld" typeId="a199-f10b-a038-5730">9</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Chaos Dwarf)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <entryLinks>
-            <entryLink import="true" name="50. Handheld Armour" hidden="false" id="b002-2abf-0f4b-8370" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
-              <entryLinks>
-                <entryLink import="true" name="Shield" hidden="false" id="2cd5-7913-42d2-503d" type="selectionEntry" targetId="c068-0827-9931-d9bf">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0723-7ce9-d66c-7c35"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-            <entryLink import="true" name="40. Suits of Armour" hidden="false" id="7448-f27f-bbd1-3dd8" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
-              <entryLinks>
-                <entryLink import="true" name="Heavy Armour" hidden="false" id="b57f-89c3-e7c8-5494" type="selectionEntry" targetId="30e0-7325-ea6b-af97">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ecd5-3caa-dca9-ff28"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-            <entryLink import="true" name="20. Primary Weapon" hidden="false" id="2c89-56da-619c-2d54" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-              <entryLinks>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="af3d-6210-9d9f-55ec" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6289-835f-99cf-1e45" automatic="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-            </entryLink>
-          </entryLinks>
-          <infoLinks>
-            <infoLink name="Resolute" id="978e-43c3-c0c4-0734" hidden="false" type="rule" targetId="c88d-5cb0-b4e7-7793"/>
-            <infoLink name="Blackshard Armour" id="eb69-67c7-6410-df46" hidden="false" type="rule" targetId="7ce6-08e4-cd81-90a5"/>
-            <infoLink name="Contempt" id="424e-284d-8c74-68b6" hidden="false" type="rule" targetId="a16e-837f-8162-8d44"/>
-            <infoLink name="Relentless" id="5da8-12b6-8874-167a" hidden="false" type="rule" targetId="6c22-4c29-0d6b-f601"/>
-            <infoLink name="Magical Attacks" id="c444-1c2c-7a6b-b529" hidden="false" type="rule" targetId="03db-d81f-f264-84b8"/>
-            <infoLink name="Mighty Blow (1)" id="2538-fdec-08ef-652d" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="15"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <constraints>
-        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2d1d-f142-04eb-7f4e" includeChildSelections="true" includeChildForces="true"/>
-      </constraints>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditions>
-            <condition type="equalTo" value="0" field="selections" scope="roster" childId="5f62-232f-b8cb-e054" shared="true" includeChildSelections="true" includeChildForces="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+      <entryLinks>
+        <entryLink import="true" name="Lammasu" hidden="false" id="e9e4-a5fc-9ca4-f497" type="selectionEntryGroup" targetId="2013-91b2-30d5-15ff" flatten="true"/>
+      </entryLinks>
     </selectionEntry>
   </selectionEntries>
   <profileTypes>
@@ -7472,7 +7213,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="31fa-9c31-96d4-e02e-max"/>
           </constraints>
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Lore of Death" hidden="false" id="c1fe-cbc0-718b-4945" collapsible="true">
+            <selectionEntry type="upgrade" import="true" name="Lore of Death" hidden="false" id="c1fe-cbc0-718b-4945">
               <entryLinks>
                 <entryLink import="true" name="Life Leeching" hidden="false" id="2476-91ae-9d04-f08c" type="selectionEntry" targetId="fcda-0bcd-07ba-1f18" sortIndex="1"/>
                 <entryLink import="true" name="0. Dark Hand of Death" hidden="false" id="383d-c40f-44d2-bf3c" type="selectionEntry" targetId="3b38-7f74-f979-94f4" sortIndex="2"/>
@@ -7555,7 +7296,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
               </constraints>
               <comment>Lammasu Lore</comment>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Lore of Fire" hidden="false" id="d60b-7650-9f46-d65e" collapsible="true">
+            <selectionEntry type="upgrade" import="true" name="Lore of Fire" hidden="false" id="d60b-7650-9f46-d65e">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c791-148d-5e8a-0ecb"/>
               </constraints>
@@ -7638,7 +7379,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
                 </selectionEntryGroup>
               </selectionEntryGroups>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Lore of Shadow" hidden="false" id="af68-672f-f9fe-4577" collapsible="true">
+            <selectionEntry type="upgrade" import="true" name="Lore of Shadow" hidden="false" id="af68-672f-f9fe-4577">
               <comment>Lammasu Lore</comment>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0293-4923-86d4-77b4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -7755,14 +7496,4 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
     <categoryEntry name="Y Fireglaive" id="5f27-0638-910b-f4e0" hidden="true"/>
     <categoryEntry name="Hobgoblin" id="aec6-79a1-d385-1c43" hidden="true"/>
   </categoryEntries>
-  <entryLinks>
-    <entryLink import="true" name="Lammasu" hidden="false" id="87f1-3911-0e98-1984" type="selectionEntry" targetId="4278-bcb3-6704-6095" sortIndex="303">
-      <costs>
-        <cost name="pts" typeId="points" value="155"/>
-      </costs>
-      <categoryLinks>
-        <categoryLink name="Rare" hidden="false" id="3992-5015-c8f5-dd2f" targetId="0eb4-f376-7725-b05b" primary="true"/>
-      </categoryLinks>
-    </entryLink>
-  </entryLinks>
 </catalogue>
