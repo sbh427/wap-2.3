@@ -227,7 +227,7 @@
     <profile name="Daemonic" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="94de-0de5-c983-09f6">
       <characteristics>
         <characteristic name="Type" typeId="31b2-f73f-865d-f538">Ward Save</characteristic>
-        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">5+ / 6+ against Magical Attacks. </characteristic>
+        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">5+ / 6+ against Magical Attacks.</characteristic>
       </characteristics>
     </profile>
     <profile name="Hellbound" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="02f2-6c8b-b0d4-2f87">
@@ -5593,7 +5593,7 @@ While there are rank and file models left in the unit (except the Command Group)
                             <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" join=" "/>
                           </modifiers>
                         </infoLink>
-                        <infoLink name="Shield" id="30fc-444b-8ddb-3fdd" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
+                        <infoLink name="Parry (shield)" id="30fc-444b-8ddb-3fdd" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
                         <infoLink name="Ward Save" id="9106-e8b3-0103-d786" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
                           <modifiers>
                             <modifier type="set" value="Chaos Runeshield" field="name"/>
@@ -6800,7 +6800,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
 "/>
                   </modifiers>
                 </infoLink>
-                <infoLink name="Shield" id="8c32-1159-120e-578b" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
+                <infoLink name="Parry (shield)" id="8c32-1159-120e-578b" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
               </infoLinks>
               <categoryLinks>
                 <categoryLink name="Handheld Armour" hidden="false" id="8387-8d40-f7f3-c8f5" targetId="ba52-4f0c-71ae-b52d" primary="false"/>
@@ -7407,6 +7407,13 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
               <rules>
                 <rule name="Mace Tail" id="47f2-f39d-04be-3948" hidden="false" publicationId="53f5-3638-a9ce-8dd3" page="35">
                   <description>The Lammasu gains +1 Attack.</description>
+                  <modifiers>
+                    <modifier type="append" value="(already in profile)" field="description">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="df68-0c0c-33c9-92ff" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </rule>
               </rules>
               <constraints>

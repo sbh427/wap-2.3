@@ -201,6 +201,7 @@ The enemy unit then rolls their charge distance and complete the charge as norma
             <modifier type="set" value="Ironfist" field="annotation"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Ironfist" id="90b6-4d3b-3cd3-8e52" hidden="false" type="profile" targetId="05f2-6717-63ff-c1cd"/>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="0" field="9094-2da2-3cb2-e6fc">
@@ -209,21 +210,6 @@ The enemy unit then rolls their charge distance and complete the charge as norma
           </conditions>
         </modifier>
       </modifiers>
-      <profiles>
-        <profile name="Ironfist" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="f4df-1883-28e5-78e7">
-          <characteristics>
-            <characteristic name="Type" typeId="31b2-f73f-865d-f538">Parry</characteristic>
-            <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">6+</characteristic>
-          </characteristics>
-          <modifiers>
-            <modifier type="set" value="6+, even while mounted." field="bdf9-d73e-e13b-b0ce">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
-      </profiles>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Ogre Pistol" hidden="false" id="d0d1-6e1f-ae80-105b" sortIndex="5" collective="true">
       <constraints>
@@ -16177,7 +16163,7 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
 "/>
               </modifiers>
             </infoLink>
-            <infoLink name="Parry" id="ef50-f1e1-aab2-eeba" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
+            <infoLink name="Parry (shield)" id="ef50-f1e1-aab2-eeba" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink name="Handheld Armour" hidden="false" id="0fe9-5a30-89c7-1cb6" targetId="ba52-4f0c-71ae-b52d" primary="false"/>
@@ -16323,7 +16309,7 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
                 <modifier type="set" value="Levitating Shield" field="annotation"/>
               </modifiers>
             </infoLink>
-            <infoLink name="Parry" id="188c-9af2-6f83-50a9" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
+            <infoLink name="Parry (shield)" id="188c-9af2-6f83-50a9" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
           </infoLinks>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d483-c1c0-58d5-3c37" includeChildSelections="true"/>
@@ -17210,6 +17196,7 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
                 <modifier type="set" value="Ironfist" field="annotation"/>
               </modifiers>
             </infoLink>
+            <infoLink name="Ironfist" id="088a-0bef-327b-7b82" hidden="false" type="profile" targetId="05f2-6717-63ff-c1cd"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="0" field="c4a4-3110-7f76-2a48">
@@ -17272,7 +17259,11 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
             <cost name="pts" typeId="points" value="2"/>
           </costs>
           <infoLinks>
-            <infoLink name="Parry (6+)" id="0874-fd0d-f0ca-ed24" hidden="false" type="rule" targetId="e56f-d7d4-8987-dbdb"/>
+            <infoLink name="Parry" id="0874-fd0d-f0ca-ed24" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
+              <modifiers>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Poisoned Attacks (close combat only)" hidden="false" id="59f4-206b-e92e-7676" sortIndex="7">
@@ -17461,6 +17452,19 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
       <characteristics>
         <characteristic name="Effect" typeId="00b0-989f-924f-e991">Army General only. The model gains the Inspiring Presence (6) special rule.</characteristic>
       </characteristics>
+    </profile>
+    <profile name="Ironfist" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="05f2-6717-63ff-c1cd">
+      <characteristics>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Parry</characteristic>
+        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">6+</characteristic>
+      </characteristics>
+      <modifiers>
+        <modifier type="set" value="6+, even while mounted." field="bdf9-d73e-e13b-b0ce">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </profile>
   </sharedProfiles>
   <costTypes>
