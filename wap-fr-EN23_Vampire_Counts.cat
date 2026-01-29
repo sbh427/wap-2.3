@@ -2346,44 +2346,54 @@
         <selectionEntryGroup name="Pullers" id="b0c6-ebfc-a9b3-036b" hidden="false">
           <selectionEntryGroups>
             <selectionEntryGroup name="Nightmares" id="8520-9379-0ed4-d6ec" hidden="false">
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="2 Nightmares" hidden="false" id="35b0-f9d2-02ea-5418">
-                  <entryLinks>
-                    <entryLink import="true" name="Nightmare" hidden="false" id="2003-36be-33c2-f186" type="selectionEntry" targetId="288d-c0a8-77de-61e7">
-                      <modifiers>
-                        <modifier type="set" value="2" field="15f0-0e98-b366-4120"/>
-                      </modifiers>
-                      <constraints>
-                        <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="1403-1ecf-4ec0-dea6"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="4 Nightmares" hidden="false" id="ffbe-9da9-b5cc-ccd9">
-                  <entryLinks>
-                    <entryLink import="true" name="Nightmare" hidden="false" id="2301-9c24-0632-6629" type="selectionEntry" targetId="288d-c0a8-77de-61e7">
-                      <modifiers>
-                        <modifier type="set" value="4" field="15f0-0e98-b366-4120"/>
-                      </modifiers>
-                      <constraints>
-                        <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="a253-caf8-0882-b130"/>
-                      </constraints>
-                    </entryLink>
-                  </entryLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="6"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5772-bed7-cac5-2feb-min"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5772-bed7-cac5-2feb-max"/>
-              </constraints>
               <modifiers>
                 <modifier type="set" field="df90-5cbd-8cf9-95b2" affects="self.entries.recursive.profiles.Model"/>
                 <modifier type="set" field="09ad-18df-607b-1215" affects="self.entries.recursive.profiles.Model"/>
                 <modifier type="set" field="27ee-0675-122f-a1b1" affects="self.entries.recursive.profiles.Model"/>
               </modifiers>
+              <entryLinks>
+                <entryLink import="true" name="Nightmare" hidden="false" id="63b5-c570-4e10-d7ae" type="selectionEntry" targetId="288d-c0a8-77de-61e7" sortIndex="2">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="58d8-0114-4596-5887" automatic="true"/>
+                  </constraints>
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="2" field="15f0-0e98-b366-4120"/>
+                        <modifier type="set" value="2" field="58d8-0114-4596-5887"/>
+                      </modifiers>
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="35b0-f9d2-02ea-5418" shared="true"/>
+                      </conditions>
+                    </modifierGroup>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="4" field="15f0-0e98-b366-4120"/>
+                        <modifier type="set" value="4" field="58d8-0114-4596-5887"/>
+                      </modifiers>
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="ffbe-9da9-b5cc-ccd9" shared="true"/>
+                      </conditions>
+                    </modifierGroup>
+                  </modifierGroups>
+                </entryLink>
+              </entryLinks>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Choice Group" id="d9aa-61c1-6e6f-0bc2" hidden="false" flatten="true" sortIndex="1">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="2 Nightmares" hidden="false" id="35b0-f9d2-02ea-5418"/>
+                    <selectionEntry type="upgrade" import="true" name="4 Nightmares" hidden="false" id="ffbe-9da9-b5cc-ccd9">
+                      <costs>
+                        <cost name="pts" typeId="points" value="6"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1256-26fb-fb0a-1f62-min" automatic="true"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1256-26fb-fb0a-1f62-max" automatic="true"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
             </selectionEntryGroup>
           </selectionEntryGroups>
         </selectionEntryGroup>
@@ -2438,12 +2448,13 @@
             </profile>
             <profile name="2" typeId="b659-54a2-034b-b2ce" typeName="Evocation of Death Chart" hidden="false" id="b3c5-cc63-9409-93a9" publicationId="10a5-5781-61f5-86ae" page="40" noindex="true">
               <characteristics>
-                <characteristic name="Effect" typeId="d693-989f-1f2c-3527">The Cairn Wraith and Nightmares gain +1 Strength.</characteristic>
+                <characteristic name="Effect" typeId="d693-989f-1f2c-3527">The Wraith, Spectres and Nightmares gain +1 Strength.</characteristic>
               </characteristics>
             </profile>
             <profile name="3" typeId="b659-54a2-034b-b2ce" typeName="Evocation of Death Chart" hidden="false" id="fe2b-6594-a053-5de5" publicationId="10a5-5781-61f5-86ae" page="40" noindex="true">
               <characteristics>
-                <characteristic name="Effect" typeId="d693-989f-1f2c-3527">The Black Coach&apos;s Impact Hits, Nightmares&apos; and Cairn Wraith&apos;s Attacks gain the Killing Blow and Flaming Attacks special rules.</characteristic>
+                <characteristic name="Effect" typeId="d693-989f-1f2c-3527">The Black Coach&apos;s Impact Hits, Nightmares&apos;, Wraith&apos;s and Spectres Attacks gain the Killing Blow 
+and Flaming Attacks special rules.</characteristic>
               </characteristics>
             </profile>
             <profile name="4" typeId="b659-54a2-034b-b2ce" typeName="Evocation of Death Chart" hidden="false" id="7e7a-3393-b0f8-294c" publicationId="10a5-5781-61f5-86ae" page="40" noindex="true">
@@ -13299,7 +13310,7 @@ To resolve a Death Shriek, roll 2D6+3. For each point by which the result excee
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Nightmare" hidden="false" id="288d-c0a8-77de-61e7" collective="true" subType="mount" sortIndex="6">
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="15f0-0e98-b366-4120" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="15f0-0e98-b366-4120" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
       </constraints>
       <infoLinks>
         <infoLink name="Undead" id="e810-acbd-5a83-8402" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule">
