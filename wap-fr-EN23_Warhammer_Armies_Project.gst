@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="86" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="87" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -27,7 +27,7 @@
     <publication id="faf5-2026-3cea-6e96" name="Chaos Dwarfs 1.5" shortName="CD" publisher="Warhammer - Chaos Dwarfs 9th Ed 1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="7f0c-7d47-a39d-8c68" name="Cult of Ulric 1.11" shortName="CoU" publisher="Warhammer - Cult of Ulric 1.11" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="15.11.2023"/>
     <publication id="8ada-88a0-cdcd-9b5e" name="Dogs of War v.1.52" shortName="DoW" publisher="Warhammer - Dogs of War 9th Ed v.1.5" publicationDate="22.01.2026" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="894a-5ecc-1ff7-958a" name="Estalia 1.21" shortName="Es" publisher="Warhammer - Estalia 1.21" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate=""/>
+    <publication id="894a-5ecc-1ff7-958a" name="Estalia 1.21" shortName="Es" publisher="Warhammer - Estalia 1.21" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
     <publication id="0545-ea23-873c-f668" name="Halflings 1.13" shortName="Ha" publisher="Warhammer - Halflings 1.13" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="16.01.2024"/>
     <publication id="92f3-84a1-4644-bc2f" name="Hobgoblins 1.12" shortName="Ho" publisher="Warhammer - Hobgoblins 1.12" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="18.03.2024"/>
     <publication id="84d9-dc45-4bf8-ae57" name="Kingdoms of Ind 1.12" shortName="KoI" publisher="Warhammer - Kingdoms of Ind 1.12" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="15.11.2023"/>
@@ -7620,7 +7620,7 @@ Losing Frenzy
 Frenzy can be lost. Models retain their Frenzy for the entire game unless beaten in combat.</description>
     </rule>
     <rule id="d56e-8ec7-dbcd-aeee" name="Stubborn" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
-      <description>If the majority of the models in a unit are Stubborn, the unit is always Steadfast, whether or not they have a higher Unit Strength than their enemy or are disrupted.</description>
+      <description>A unit is considered Stubborn if the majority of the models in a unit have this special rule. A Stubborn unit is always Steadfast, whether or not they have more ranks than their enemy or are disrupted. </description>
     </rule>
     <rule id="e025-10f3-f893-4bd7" name="Devastating Charge" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>The Models have +1 A during a turn in which they charge into combat.</description>
@@ -7781,9 +7781,9 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
 For every Core unit with Expendable rule in your army, you are required to include at least one other Core Unit without Expendable. For more information on this, see the Choosing Your Army chapter.</description>
     </rule>
     <rule id="668c-19e8-b764-8549" name="Stomp" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
-      <description>A model with this rule can make a Stomp in addition to its other close combat attacks (including Breath Weapons). A Stomp has Always Strikes Last, and inflicts D6 (or D3 against lone Infantry models and skirmishers) automatic hits, at the model&apos;s Strength, on one enemy Infantry, War Beasts or Swarm unit in base contact with the model and are randomised as Automatic Hits.
+      <description>A model with this special rule can make a Stomp in addition to its other close combat attacks (including Breath Weapons). A Stomp has the Always Strikes Last special rule and inflicts a number of automatic hits as indicated in the brackets. These are resolved at the model&apos;s Strength against a single enemy unit that consists of models with a Line of Sight value of 1 or less. If the model is a Monster, it may also Stomp models with a Line of Sight value of 2 or less. 
 
-Unless specified, any rules that apply to the model’s normal attacks do not apply to its Stomps.</description>
+Unless specified, any special rules that apply to the model’s normal attacks do not apply to its Stomps.</description>
     </rule>
     <rule id="e9e6-66cc-623f-8e94" name="Impact Hits (D6)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
@@ -7841,9 +7841,7 @@ Units containing one or more models with an unmodified close combat armour save 
     <rule id="fcc3-a722-a9e4-9c94" name="General" publicationId="9e23-79cb-pubN66727" page="106, 132" hidden="false">
       <description>An army must always include at least one Lord or Hero character to be its Army General.
 
-
 The Army General has the Inspiring Presence (12) special rule.
-
 
 Some books might have several characters that must be the Army General. In this case, only one of them may be included in your army.</description>
     </rule>
@@ -7854,13 +7852,12 @@ Unlike normal standards, the battle standard is lost if the bearer is slain.
 
 If a Battle Standard Bearer is in a unit, Refuses a Challenge and is subsequently moved to the rear of its unit, it loses Hold Your Ground until the end of the turn. Note, however, that if the Battle Standard Bearer has a magic standard its effects continue to apply as normal.
 
-Combat Resolution Bonus
 A battle standard adds +1 combat resolution in a close combat if it is in a friendly unit.
 
-Hold your Ground!
-Friendly models within 12&quot; of the Battle Standard Bearer re-roll failed Panic and Break tests. This ability cannot be used if the Battle Standard Bearer is also fleeing.
+The Battle Standard Bearer has the Hold Your Ground (12) special rule. 
 
-If your Battle Standard Bearer has a Line of Sight value of 5 or more, then the range of their Hold Your Ground ability is increased by 6&quot;.</description>
+
+If your Battle Standard Bearer has a Line of Sight value of 4 or more, then the range of their Hold Your Ground ability is increased by 6&quot;.</description>
     </rule>
     <rule id="00b2-9504-41a2-f664" name="Always Strikes First" publicationId="9e23-79cb-pubN66727" page="58" hidden="false">
       <description>Models with this rule always strike first in close combat, regardless of I. If a model with this rule is fighting an enemy with the same ability, the model with the higher I will strike first.
@@ -8446,9 +8443,6 @@ Flyers always move on the ground when attempting to flee or pursue.</description
     <rule id="4740-7f33-d5b8-5563" name="Slayer" publicationId="aa7b-3583-0834-7bfa" page="160" hidden="false">
       <description>Slayers always Wound on a To Wound roll of 4+ in close combat, unless they would need a lower result. Use the Slayer&apos;s Strength to determine the armour save modifier for any successful Wounds.</description>
     </rule>
-    <rule id="390b-8c96-7c3a-9598" name="Orc Animosity" publicationId="8ada-88a0-cdcd-9b5e" page="60" hidden="false">
-      <description>Units with this  rule must roll a D6 and consult the orc animosity chart in the Charge subphase after all other charges have been declared, unless they have declared a charge, are already in combat, fleeing, or have less than 5 models.</description>
-    </rule>
     <rule id="7366-8bcf-f881-7f30" name="Hatred (Chaos)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
     </rule>
@@ -8776,8 +8770,7 @@ Models with the Mark of Tzeentch have Magic Resistance (1) and Ward Save (6+).</
       <description>Weapons with this rule suffer an additional -1 To Hit penalty if they move and shoot in the same turn.</description>
     </rule>
     <rule id="6068-f53d-1b7e-d503" name="Rapid Fire" publicationId="9e23-79cb-pubN66727" page="65" hidden="false">
-      <description>Models or weapons with this special rule do not suffer
-the usual -1 To Hit penalty for firing Multiple Shots.</description>
+      <description>Models or weapons with this special rule do not suffer the usual -1 To Hit penalty for firing Multiple Shots.</description>
     </rule>
     <rule name="Firing a Bolt Thrower" id="f55b-b981-fae7-afa2" hidden="false" publicationId="9e23-79cb-pubN66727" page="82">
       <description>To fire a bolt thrower, select a target according to the normal rules for shooting. Roll to hit using the crew&apos;s Ballistic Skill, just as you would for a normal missile weapon.
@@ -8900,12 +8893,9 @@ Other than the aforementioned inaccuracy of the scatter, an indirect shot from 
     <rule name="Inspiring Presence" id="1c71-6c8f-f47a-0a91" hidden="false">
       <description>A model with Inspiring Presence allows all friendly units within a distance equal to the number in the brackets to use their Leadership instead of their own, unless specified (such as having to use their unmodified Leadership). This rule cannot be used if the model with Inspiring Presence is also fleeing.
 
-
 This rule is cumulative with other sources of Inspiring Presence. If the model has a Line of Sight value of 4 or more, then the range of their Inspiring Presence rule is increased by 6.
 
-
 If a unit taking a Leadership test has a modifier to its Leadership, this modifier still applies if the unit uses the Inspiring Presence.
-
 
 If a unit is Steadfast, it may use the Leadership of the model for Break tests if it is higher than their own Leadership after applying all negative modifiers from combat resolution. Otherwise, they will use their own Leadership.</description>
     </rule>
@@ -9022,6 +9012,15 @@ A character that has a magic close combat weapon cannot use any other close comb
     </rule>
     <rule id="386a-976a-a504-96ed" name="Hatred (Wizards)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
+    </rule>
+    <rule name="Steadfast" id="c004-3fb1-fbf3-ed02" hidden="false">
+      <description>If a defeated unit has a higher number of complete ranks than all individual enemy units in base contact, it takes its Break test on its unmodified Leadership.
+
+
+Disrupted units and Skirmishers (see Special Rules chapter) cannot be Steadfast.
+
+
+Steadfast units always take Break tests on their own Leadership characteristic, ignoring any negative close combat resolution modifiers. However, remember that units that are Disrupted cannot be Steadfast.  </description>
     </rule>
   </sharedRules>
   <sharedProfiles>
