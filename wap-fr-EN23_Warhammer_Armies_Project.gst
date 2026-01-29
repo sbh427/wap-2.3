@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="87" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="88" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -7273,6 +7273,66 @@
         <infoLink name="Scouts" id="67e4-25e2-a92b-02ae" hidden="false" targetId="6624-0b7b-c5b8-6397" type="rule"/>
       </infoLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Daemon of Khorne" hidden="false" id="7a64-1c48-ee17-d64f">
+      <infoLinks>
+        <infoLink name="Daemon of Khorne" id="6996-804b-a457-de84" hidden="false" type="rule" targetId="a356-05c9-d963-c1bb"/>
+        <infoLink name="Daemonic" id="7ac3-1236-301e-2746" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
+        <infoLink name="Daemonic" id="3652-0632-6e9e-8b72" hidden="false" type="profile" targetId="9c1c-92d1-b507-cf66"/>
+        <infoLink name="Magic Resistance" id="5411-29af-d86b-5ed8" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+          <modifiers>
+            <modifier type="set" value="Daemon of Khorne" field="name"/>
+            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Magic Resistance" id="3df4-57d1-6ab5-57cb" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+          <modifiers>
+            <modifier type="set" value="Daemon of Khorne" field="name"/>
+            <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Daemon of Nurgle" hidden="false" id="47e8-9faa-b387-1bad">
+      <infoLinks>
+        <infoLink name="Daemon of Nurgle" id="b9aa-473a-4642-95c2" hidden="false" type="rule" targetId="0b9b-1baf-5bcd-1ec3"/>
+        <infoLink name="Daemonic" id="aa6b-08d1-fa08-c137" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
+        <infoLink name="Daemonic" id="0dc2-db49-5925-8abb" hidden="false" type="profile" targetId="9c1c-92d1-b507-cf66"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Daemon of Slaanesh" hidden="false" id="58e6-5e97-fb48-f325">
+      <infoLinks>
+        <infoLink name="Daemon of Slaanesh" id="7437-a8c0-a303-1dc4" hidden="false" type="rule" targetId="2ad0-3e18-aba8-5e68"/>
+        <infoLink name="Daemonic" id="b31b-0f1f-6f8f-c7b9" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
+        <infoLink name="Daemonic" id="59a8-2cb8-b94e-accc" hidden="false" type="profile" targetId="9c1c-92d1-b507-cf66"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Daemon of Tzeentch" hidden="false" id="2639-87cf-ddd7-ac2d">
+      <infoLinks>
+        <infoLink name="Daemon of Tzeentch" id="1500-5e31-ac81-46f2" hidden="false" type="rule" targetId="fe9a-f478-5bcc-57a8"/>
+        <infoLink name="Daemonic" id="8828-fef9-55f4-3947" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
+        <infoLink name="Daemonic" id="dacc-0d2d-387d-3235" hidden="false" type="profile" targetId="9c1c-92d1-b507-cf66"/>
+        <infoLink name="Ward Save" id="66c4-3ebe-535e-1fbc" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+          <modifiers>
+            <modifier type="set" value="Daemon of Tzeentch" field="name"/>
+            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="50. Handheld Armour" id="9015-46da-282c-713d" hidden="false">
@@ -7702,7 +7762,7 @@ Losing Frenzy
 Frenzy can be lost. Models retain their Frenzy for the entire game unless beaten in combat.</description>
     </rule>
     <rule id="d56e-8ec7-dbcd-aeee" name="Stubborn" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
-      <description>A unit is considered Stubborn if the majority of the models in a unit have this special rule. A Stubborn unit is always Steadfast, whether or not they have more ranks than their enemy or are disrupted. </description>
+      <description>A unit is considered Stubborn if the majority of the models in a unit have this special rule. A Stubborn unit is always Steadfast, whether or not they have more ranks than their enemy or are disrupted.</description>
     </rule>
     <rule id="e025-10f3-f893-4bd7" name="Devastating Charge" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>The Models have +1 A during a turn in which they charge into combat.</description>
@@ -9022,7 +9082,7 @@ A character that has a magic close combat weapon cannot use any other close comb
 Disrupted units and Skirmishers (see Special Rules chapter) cannot be Steadfast.
 
 
-Steadfast units always take Break tests on their own Leadership characteristic, ignoring any negative close combat resolution modifiers. However, remember that units that are Disrupted cannot be Steadfast.  </description>
+Steadfast units always take Break tests on their own Leadership characteristic, ignoring any negative close combat resolution modifiers. However, remember that units that are Disrupted cannot be Steadfast.</description>
     </rule>
     <rule id="c79e-5ae7-e683-8fb4" name="Dodge" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>Models with this rule gain a Ward save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have the Always Strikes First special rule, nor can it be used if the model is subject to the Always Strikes Last special rule.</description>
@@ -10788,6 +10848,12 @@ Magic phase.</characteristic>
     <profile name="Magic Resistance" typeId="e6b8-3bf4-4d0c-974e" typeName="Magic Resistance" hidden="false" id="dfc2-ea60-0f92-be07" noindex="true">
       <characteristics>
         <characteristic name="Value" typeId="19f0-e982-f035-416c"/>
+      </characteristics>
+    </profile>
+    <profile name="Daemonic" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="9c1c-92d1-b507-cf66">
+      <characteristics>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Ward Save</characteristic>
+        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">5+ / 6+ against Magical Attacks.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
