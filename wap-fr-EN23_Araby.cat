@@ -1051,7 +1051,7 @@
 "/>
                   </modifiers>
                 </infoLink>
-                <infoLink name="Shield" id="ce74-fbc2-3234-fda0" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
+                <infoLink name="Parry (shield)" id="ce74-fbc2-3234-fda0" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
                 <infoLink name="Ward Save" id="d868-d7a3-9214-bee2" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
                   <modifiers>
                     <modifier type="set" value="Shield of Faith" field="name"/>
@@ -4806,37 +4806,6 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="638a-c4fe-c049-8ec5" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
               <selectionEntryGroups>
-                <selectionEntryGroup name="80. Genies" id="4049-1ac0-32e1-4f47" hidden="false">
-                  <entryLinks>
-                    <entryLink import="true" name="Djinn" hidden="false" id="372f-ef67-77bd-6f82" type="selectionEntry" targetId="ced0-11df-ea9f-37f6" sortIndex="1">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ece7-8e80-49ff-56ac-min"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ece7-8e80-49ff-56ac-max"/>
-                      </constraints>
-                      <modifiers>
-                        <modifier type="set" value="0" field="points"/>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Efreet" hidden="false" id="4457-428f-0b06-e8e7" type="selectionEntry" targetId="bb7d-8adc-30e6-4b6a" sortIndex="2">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0e5d-7654-6cbd-2af3-min"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0e5d-7654-6cbd-2af3-max"/>
-                      </constraints>
-                      <modifiers>
-                        <modifier type="set" value="0" field="points"/>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Marid" hidden="false" id="5b5a-a86a-9b34-bec7" type="selectionEntry" targetId="0dab-e01d-6762-48b4" sortIndex="3">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e9cf-f241-71e2-84fb-min"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e9cf-f241-71e2-84fb-max"/>
-                      </constraints>
-                      <modifiers>
-                        <modifier type="set" value="0" field="points"/>
-                      </modifiers>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntryGroup>
                 <selectionEntryGroup name="61. Lore" id="4627-3498-acba-2d42" hidden="false">
                   <entryLinks>
                     <entryLink import="true" name="Lore of Death" hidden="false" id="592f-5aed-b213-d610" type="selectionEntry" targetId="bc0d-47f8-7220-1e16" sortIndex="1"/>
@@ -4896,6 +4865,17 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
               <entryLinks>
                 <entryLink import="true" name="10. Character Options" hidden="false" id="820c-35dd-a161-8852" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
                 <entryLink import="true" name="60. Wizard Level" hidden="false" id="3802-a3c4-7522-d174" type="selectionEntryGroup" targetId="8e7d-af82-eb9b-19f2"/>
+                <entryLink import="true" name="80. Genies" hidden="false" id="1bb5-e875-2552-56a2" type="selectionEntryGroup" targetId="f24a-9804-50e2-77e3">
+                  <modifiers>
+                    <modifier type="set" value="0" field="points" affects="self.entries.recursive"/>
+                    <modifier type="set" value="true" field="hidden" affects="c39e-a7ec-9c5c-7f08"/>
+                    <modifier type="set" value="true" field="hidden" affects="7b77-720f-ffee-e2eb"/>
+                    <modifier type="set" value="3" field="8f01-aa3d-c881-8283"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="f02a-bea4-05b0-c76d" includeChildSelections="false" automatic="true"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
               <profiles>
                 <profile name="The Golden Magus" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="2304-28b2-7387-2e37" publicationId="fd0a-6995-03c8-1dd6" page="34">
@@ -6229,14 +6209,12 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
           <modifiers>
             <modifier type="set" value="Marid" field="name"/>
             <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
-            <modifier type="set" value="Marid only" field="annotation"/>
           </modifiers>
         </infoLink>
         <infoLink name="Magic Resistance" id="c4dd-4e0c-9593-dc72" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
           <modifiers>
             <modifier type="set" value="Marid" field="name"/>
             <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
-            <modifier type="set" value="Marid only" field="annotation"/>
           </modifiers>
         </infoLink>
       </infoLinks>
