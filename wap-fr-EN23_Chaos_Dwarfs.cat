@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="a833-bc85-ca8c-442d" name="Chaos Dwarfs WAP 1.71" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="70" revision="13" authorContact="xetolosch" authorName="contact via discord" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="a833-bc85-ca8c-442d" name="Chaos Dwarfs WAP 1.71" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="70" revision="14" authorContact="xetolosch" authorName="contact via discord" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Cowarldy Despoilers" id="8536-b279-7c0d-a0cb" hidden="false" publicationId="53f5-3638-a9ce-8dd3" page="3">
       <description>Models with this special rule gain +1 To Hit in the first round of combat if they successfully charge an enemy in the rear or flank.</description>
@@ -222,6 +222,18 @@
         <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
         <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Creature (Chaos Beast)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Daemonic" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="94de-0de5-c983-09f6">
+      <characteristics>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Ward Save</characteristic>
+        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">5+ / 6+ against Magical Attacks.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Hellbound" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="02f2-6c8b-b0d4-2f87">
+      <characteristics>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Ward Save</characteristic>
+        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">6+ against non-magical Attacks.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
@@ -981,6 +993,12 @@
             <modifier type="set" value="Altar of Hashut" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Ward Save" id="4b63-852a-91a9-8714" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+          <modifiers>
+            <modifier type="set" value="Altar of Hashut" field="name"/>
+            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <rules>
         <rule name="Sacrifices to Hashut" id="be7b-169f-a212-cb83" hidden="false" publicationId="53f5-3638-a9ce-8dd3" page="17">
@@ -1127,6 +1145,7 @@
     <selectionEntry type="upgrade" import="true" name="Hellbound" hidden="false" id="77df-fc60-c3fb-723a">
       <infoLinks>
         <infoLink name="Hellbound" id="6b5e-238d-71e8-a437" hidden="false" type="rule" targetId="b37b-8e99-c7ac-04e3"/>
+        <infoLink name="Hellbound" id="0fa2-10e2-0fc8-5409" hidden="false" type="profile" targetId="02f2-6c8b-b0d4-2f87"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e1be-6d9b-f91c-ccf2"/>
@@ -3193,7 +3212,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Command Group" id="f8f5-df94-2ac6-249c" hidden="false" sortIndex="2">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="d708-9b75-faa5-a732">
+            <selectionEntry type="upgrade" import="true" name="Leader" hidden="false" id="d708-9b75-faa5-a732" sortIndex="1">
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
@@ -3204,7 +3223,7 @@
                 <infoLink name="Leader" id="0e5b-c5d4-2332-1f5d" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
               </infoLinks>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="ea60-6d77-a37d-62af">
+            <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="ea60-6d77-a37d-62af" sortIndex="2">
               <costs>
                 <cost name="pts" typeId="points" value="5"/>
               </costs>
@@ -3215,7 +3234,7 @@
                 <infoLink name="Musician" id="c4db-fa89-a04f-8f63" hidden="false" type="rule" targetId="54c3-1d1b-3ffe-59a5"/>
               </infoLinks>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="ac16-16b7-403f-c803">
+            <selectionEntry type="upgrade" import="true" name="Standard Bearer" hidden="false" id="ac16-16b7-403f-c803" sortIndex="3">
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
@@ -3233,7 +3252,7 @@
                 </entryLink>
               </entryLinks>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Petrified Sorcerer" hidden="false" id="9fca-28b5-8cea-ff27">
+            <selectionEntry type="upgrade" import="true" name="Petrified Sorcerer" hidden="false" id="9fca-28b5-8cea-ff27" sortIndex="4">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="85f4-dbcf-6696-bea4"/>
               </constraints>
@@ -3264,6 +3283,20 @@
 While there are rank and file models left in the unit (except the Command Group), always remove one in preference to the Petrified Sorcerer taking a wound (it is assumed that if one of the bearers falls, another rank-and-file model steps in). Only when the rest of the unit has been killed does the Petrified Sorcerer start taking wounds, even in close combat. A unit carrying a Petrified Sorcerer gains +1 to their Combat Resolution Bonus, the Fear and Magic Resistance (2) special rules.</description>
                 </rule>
               </rules>
+              <infoLinks>
+                <infoLink name="Magic Resistance" id="f162-2653-3cc1-9ff5" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                  <modifiers>
+                    <modifier type="set" value="Petrified Sorcerer" field="name"/>
+                    <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Magic Resistance" id="68a4-ca1b-e739-dfef" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                  <modifiers>
+                    <modifier type="set" value="Petrified Sorcerer" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4026,6 +4059,7 @@ While there are rank and file models left in the unit (except the Command Group)
             <infoLink name="Daemonic" id="dc33-47d9-9913-6a28" hidden="false" type="rule" targetId="1104-7880-dbb0-82de"/>
             <infoLink name="Flaming Attacks" id="35e7-9b72-4120-08e4" hidden="false" type="rule" targetId="8600-a090-2761-d661"/>
             <infoLink name="Burning Bright" id="5a4d-308d-3dbc-eb87" hidden="false" type="rule" targetId="d984-9e21-796b-46a7"/>
+            <infoLink name="Daemonic" id="b4ca-e44f-f7a0-223b" hidden="false" type="profile" targetId="94de-0de5-c983-09f6"/>
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="40. Suits of Armour" hidden="false" id="0f2d-ba9f-91b6-b8bc" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
@@ -4747,6 +4781,7 @@ While there are rank and file models left in the unit (except the Command Group)
             <modifier type="set" value="Hellcannon" field="annotation"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Daemonic" id="391f-6d5e-24e3-1fb0" hidden="false" type="profile" targetId="94de-0de5-c983-09f6"/>
       </infoLinks>
       <profiles>
         <profile name="Hellcannon" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="6157-e57f-79a5-f8dd" publicationId="53f5-3638-a9ce-8dd3" page="37">
@@ -4966,6 +5001,18 @@ While there are rank and file models left in the unit (except the Command Group)
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Animated Construct)</characteristic>
           </characteristics>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="increment" value="1" field="edd2-7979-54a4-6b35"/>
+                <modifier type="increment" value="1" field="09ad-18df-607b-1215"/>
+                <modifier type="increment" value="1" field="bfa2-d38d-7c93-d3f0"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="86d1-d682-1884-b553" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
         </profile>
       </profiles>
       <infoLinks>
@@ -4987,14 +5034,18 @@ While there are rank and file models left in the unit (except the Command Group)
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
-              <rules>
-                <rule name="Armoured Plating" id="6009-5901-4612-4db4" hidden="false" publicationId="53f5-3638-a9ce-8dd3" page="39">
-                  <description>The Kollossus gains +1 to its armour save.</description>
-                </rule>
-              </rules>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="472e-276b-e9d2-84e7"/>
               </constraints>
+              <profiles>
+                <profile name="Armoured Plating" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="ecfb-b60f-a3a2-2d5c">
+                  <characteristics>
+                    <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+                    <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+                    <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
+                  </characteristics>
+                </profile>
+              </profiles>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Lavathrower" hidden="false" id="eff5-0e72-4c03-6444" sortIndex="7">
               <costs>
@@ -5021,11 +5072,16 @@ While there are rank and file models left in the unit (except the Command Group)
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0b7a-fb7e-f5e4-18a8"/>
               </constraints>
-              <rules>
-                <rule name="Great Hammer" id="067c-9130-2533-449f" hidden="false" publicationId="53f5-3638-a9ce-8dd3" page="39">
-                  <description>The Kollossus gains +1 Strength to its Attacks.</description>
-                </rule>
-              </rules>
+              <profiles>
+                <profile name="Great Hammer" typeId="6f70-cea1-702c-43bc" typeName="Melee Weapon" hidden="false" id="13b5-fa20-b26f-a0ae">
+                  <characteristics>
+                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">+1</characteristic>
+                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
+                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
+                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac"/>
+                  </characteristics>
+                </profile>
+              </profiles>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Crushing Grip" hidden="false" id="55f5-20ec-e938-7ca2" sortIndex="3">
               <costs>
@@ -5047,11 +5103,20 @@ While there are rank and file models left in the unit (except the Command Group)
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c948-c247-873a-3ba4"/>
               </constraints>
-              <rules>
-                <rule name="Daemon Crystal" id="76a4-300a-2393-d8a9" hidden="false" publicationId="53f5-3638-a9ce-8dd3" page="39">
-                  <description>The Kollossus gains Magic Resistance (3).</description>
-                </rule>
-              </rules>
+              <infoLinks>
+                <infoLink name="Magic Resistance" id="8e9d-3e16-5c0b-fabe" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                  <modifiers>
+                    <modifier type="set" value="Daemon Crystal" field="name"/>
+                    <modifier type="set" value="3" field="19f0-e982-f035-416c"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Magic Resistance" id="7194-b69c-64b8-4412" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                  <modifiers>
+                    <modifier type="set" value="Daemon Crystal" field="name"/>
+                    <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Furnace of Hashut" hidden="false" id="9834-650b-f96d-cb9f" sortIndex="5">
               <costs>
@@ -5076,6 +5141,13 @@ While there are rank and file models left in the unit (except the Command Group)
               <rules>
                 <rule name="High-Powered Engine" id="0ca3-5c8f-0827-eb9c" hidden="false" publicationId="53f5-3638-a9ce-8dd3" page="39">
                   <description>he Kollossus gains the following bonuses to its profile: +1 Movement, +1 Strength, +1 Attack.</description>
+                  <modifiers>
+                    <modifier type="append" value="(already in profile)" field="description">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="86d1-d682-1884-b553" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </rule>
               </rules>
             </selectionEntry>
@@ -5091,6 +5163,31 @@ While there are rank and file models left in the unit (except the Command Group)
               </constraints>
             </entryLink>
           </entryLinks>
+        </entryLink>
+        <entryLink import="true" name="20. Primary Weapon" hidden="false" id="a1c2-5b77-9871-ad64" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+          <entryLinks>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="19a1-23f6-a3d2-1e7d" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+              <modifiers>
+                <modifier type="set" value="0" field="0e5a-c680-7fa4-685d">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="fc5a-6125-2665-9c18" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="1" field="443c-baf5-540a-c81e">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="fc5a-6125-2665-9c18" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+          </entryLinks>
+          <modifiers>
+            <modifier type="set" value="0" field="e941-9082-0af2-8b43">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="fc5a-6125-2665-9c18" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </entryLink>
       </entryLinks>
     </selectionEntry>
@@ -5135,6 +5232,7 @@ While there are rank and file models left in the unit (except the Command Group)
         <infoLink name="Daemonic" id="1765-efaf-7f1f-ab00" hidden="false" type="rule" targetId="1104-7880-dbb0-82de"/>
         <infoLink name="Burning Bright" id="b3a4-c032-c9da-286d" hidden="false" type="rule" targetId="d984-9e21-796b-46a7"/>
         <infoLink name="Flaming Attacks" id="bdfb-f77d-7363-e213" hidden="false" type="rule" targetId="8600-a090-2761-d661"/>
+        <infoLink name="Daemonic" id="da18-315e-5f75-8a11" hidden="false" type="profile" targetId="94de-0de5-c983-09f6"/>
       </infoLinks>
       <rules>
         <rule name="Hellish Frenzy" id="4ced-1087-b569-fa04" hidden="false" publicationId="53f5-3638-a9ce-8dd3" page="40">
@@ -5495,6 +5593,25 @@ While there are rank and file models left in the unit (except the Command Group)
                             <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4" join=" "/>
                           </modifiers>
                         </infoLink>
+                        <infoLink name="Parry (shield)" id="30fc-444b-8ddb-3fdd" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
+                        <infoLink name="Ward Save" id="9106-e8b3-0103-d786" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Chaos Runeshield" field="name"/>
+                            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Magic Resistance" id="a9c9-55ae-0361-32b8" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                          <modifiers>
+                            <modifier type="set" value="Chaos Runeshield" field="name"/>
+                            <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Magic Resistance" id="0ae7-f14b-0f2f-78f5" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                          <modifiers>
+                            <modifier type="set" value="Chaos Runeshield" field="name"/>
+                            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
                       </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
@@ -5603,6 +5720,14 @@ While there are rank and file models left in the unit (except the Command Group)
                           </characteristics>
                         </profile>
                       </profiles>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="22d5-eef5-81ba-6e17" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Hellshard Amulet" field="name"/>
+                            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Daemonspite Crucible" hidden="false" id="fa6c-ee33-1e13-11cf" sortIndex="3">
                       <constraints>
@@ -5988,12 +6113,13 @@ While there are rank and file models left in the unit (except the Command Group)
               <infoLinks>
                 <infoLink name="Cowarldy Despoilers" id="1d27-9fd4-352f-4330" hidden="false" type="rule" targetId="8536-b279-7c0d-a0cb"/>
                 <infoLink name="Backstabbers" id="eb22-7b73-9b8b-c3ea" hidden="false" type="rule" targetId="a8ae-0c75-c023-52c8"/>
+                <infoLink name="Ward Save" id="64c6-4d0f-4f88-d726" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="4+ when reduced to one Wound" field="bdf9-d73e-e13b-b0ce"/>
+                    <modifier type="set" value="Fated... Lucky... Sneaky!" field="name"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
-              <rules>
-                <rule name="Fated... Lucky... Sneaky!" id="6e8c-f868-3b93-0ca2" hidden="false" publicationId="53f5-3638-a9ce-8dd3" page="47">
-                  <description>When Gorduz is reduced to his last Wound, he gains a 4+ Ward save.</description>
-                </rule>
-              </rules>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -6110,9 +6236,28 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
     <infoGroup name="Lammasu" id="36f7-7355-bf59-f3fa" hidden="false">
       <infoLinks>
         <infoLink name="Fly (8)" id="fec9-d329-8408-5bab" hidden="false" type="rule" targetId="0a9a-bfcb-1a9d-5609"/>
-        <infoLink name="Magic Resistance (3)" id="d745-3392-e30b-c409" hidden="false" type="rule" targetId="9b99-4e37-be08-231a"/>
+        <infoLink name="Magic Resistance" id="d745-3392-e30b-c409" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+          <modifiers>
+            <modifier type="set" value="Lammasu" field="name"/>
+            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
         <infoLink name="Sorcerous Miasma" id="e4a2-3d47-9021-26cd" hidden="false" type="rule" targetId="e731-38c1-b3ec-972e"/>
-        <infoLink name="Lammasu" id="56f4-b8ff-7d8e-f283" hidden="false" type="profile" targetId="d71a-abae-4d89-66e3"/>
+        <infoLink name="Lammasu" id="56f4-b8ff-7d8e-f283" hidden="false" type="profile" targetId="d71a-abae-4d89-66e3">
+          <modifiers>
+            <modifier type="increment" value="1" field="bfa2-d38d-7c93-d3f0">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="df68-0c0c-33c9-92ff" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Magic Resistance" id="82b1-8d30-776d-719b" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+          <modifiers>
+            <modifier type="set" value="Lammasu" field="name"/>
+            <modifier type="set" value="3" field="19f0-e982-f035-416c"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
     </infoGroup>
   </sharedInfoGroups>
@@ -6380,6 +6525,26 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
                   </characteristics>
                 </profile>
               </profiles>
+              <infoLinks>
+                <infoLink name="Ward Save" id="8e7b-4a32-8f99-751b" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Gift of Hashut" field="name"/>
+                    <modifier type="set" value="4+ against non-physical Flaming Attacks." field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Magic Resistance" id="7126-621f-87f6-8087" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                  <modifiers>
+                    <modifier type="set" value="Gift of Hashut" field="name"/>
+                    <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Magic Resistance" id="b3ea-8d24-091b-95c2" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                  <modifiers>
+                    <modifier type="set" value="Gift of Hashut" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Crown of the K&apos;Daai" hidden="false" id="45f5-a8f2-5d50-e2a5" sortIndex="2">
               <costs>
@@ -6396,6 +6561,14 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
                   </characteristics>
                 </profile>
               </profiles>
+              <infoLinks>
+                <infoLink name="Ward Save" id="6510-d86a-cd1e-057e" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Crown of the K&apos;Daai" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Talisman of Obsidian" hidden="false" id="372f-94c2-d073-3ae7" sortIndex="3">
               <costs>
@@ -6428,6 +6601,14 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
                   </characteristics>
                 </profile>
               </profiles>
+              <infoLinks>
+                <infoLink name="Ward Save" id="9198-5d2f-680d-1c0c" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Hellforged Amulet" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Infernal Charm" hidden="false" id="b466-0116-8239-13f7" sortIndex="5">
               <costs>
@@ -6444,6 +6625,14 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
                   </characteristics>
                 </profile>
               </profiles>
+              <infoLinks>
+                <infoLink name="Ward Save" id="bcc7-6e76-f94f-f757" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Infernal Charm" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -6630,6 +6819,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
 "/>
                   </modifiers>
                 </infoLink>
+                <infoLink name="Parry (shield)" id="8c32-1159-120e-578b" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
               </infoLinks>
               <categoryLinks>
                 <categoryLink name="Handheld Armour" hidden="false" id="8387-8d40-f7f3-c8f5" targetId="ba52-4f0c-71ae-b52d" primary="false"/>
@@ -6731,6 +6921,20 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
                   </conditions>
                 </modifier>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Magic Resistance" id="43ac-8f00-883a-46a7" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                  <modifiers>
+                    <modifier type="set" value="Obsidian Vambraces" field="name"/>
+                    <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Magic Resistance" id="bd85-ac50-ded5-2572" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                  <modifiers>
+                    <modifier type="set" value="Obsidian Vambraces" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Armour of the Forge" hidden="false" id="f3fe-ca9d-0350-c1e2" sortIndex="5">
               <constraints>
@@ -6745,6 +6949,12 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
 " field="ff58-91e4-84d7-e6e4" join="
 
 "/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Ward Save" id="035b-62b5-6d29-9c72" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Armour of the Forge" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -6777,6 +6987,18 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
 "/>
                     <modifier type="set" value="2+" field="168d-1cc2-66f3-e766"/>
                     <modifier type="set" value="2+" field="97ea-ecf7-8d24-b2ca"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Magic Resistance" id="4522-8f9d-14d3-f8b0" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                  <modifiers>
+                    <modifier type="set" value="Armour of Bazherak the Cruel" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Magic Resistance" id="1318-7ba2-b7c1-3641" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                  <modifiers>
+                    <modifier type="set" value="Armour of Bazherak the Cruel" field="name"/>
+                    <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -6818,6 +7040,14 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
                   </characteristics>
                 </profile>
               </profiles>
+              <infoLinks>
+                <infoLink name="Ward Save" id="b5c2-39b9-74c7-6525" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="The Mask of the Furnace" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -7146,6 +7376,26 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink name="Ward Save" id="6079-fe3e-b409-cd52" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="The Lammasu&apos;s Beard" field="name"/>
+                <modifier type="set" value="6+ against missile attacks." field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Magic Resistance" id="ad92-b7cb-72c6-104c" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+              <modifiers>
+                <modifier type="set" value="The Lammasu&apos;s Beard" field="name"/>
+                <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Magic Resistance" id="4e81-dcb8-3932-cc97" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+              <modifiers>
+                <modifier type="set" value="The Lammasu&apos;s Beard" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Standard of Zharr" hidden="false" id="b63a-a814-1cf7-7eb5" sortIndex="10">
           <costs>
@@ -7176,6 +7426,13 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beh
               <rules>
                 <rule name="Mace Tail" id="47f2-f39d-04be-3948" hidden="false" publicationId="53f5-3638-a9ce-8dd3" page="35">
                   <description>The Lammasu gains +1 Attack.</description>
+                  <modifiers>
+                    <modifier type="append" value="(already in profile)" field="description">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="df68-0c0c-33c9-92ff" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </rule>
               </rules>
               <constraints>

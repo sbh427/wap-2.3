@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="87" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="88" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -64,7 +64,7 @@
         <characteristicType id="13f9-a26b-05af-3459" name="Type"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="cb92-d882-5ba8-11ab" name="Spell" sortIndex="19">
+    <profileType id="cb92-d882-5ba8-11ab" name="Spell" sortIndex="20">
       <characteristicTypes>
         <characteristicType id="576b-eaa1-0bd1-3f7a" name="Spell Level"/>
         <characteristicType id="21e9-4aa2-f538-c93b" name="Type"/>
@@ -73,7 +73,7 @@
         <characteristicType id="f5f2-ac1b-25cd-89c6" name="Details"/>
       </characteristicTypes>
     </profileType>
-    <profileType id="0ce6-a5f9-6184-218d" name="Wizard" sortIndex="18">
+    <profileType id="0ce6-a5f9-6184-218d" name="Wizard" sortIndex="19">
       <characteristicTypes>
         <characteristicType id="7f8d-5707-7251-c1a5" name="Wizard Level"/>
         <characteristicType id="b859-9e7c-9452-f90e" name="Known Spells"/>
@@ -130,7 +130,7 @@
         <characteristicType id="c8b7-e979-95fd-ac37" name="Result"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Prayer" id="4608-9b35-b7dc-202d" hidden="false" sortIndex="17">
+    <profileType name="Prayer" id="4608-9b35-b7dc-202d" hidden="false" sortIndex="18">
       <characteristicTypes>
         <characteristicType name="Effect" id="1f79-8144-edd6-8b51"/>
       </characteristicTypes>
@@ -163,7 +163,6 @@
       <characteristicTypes>
         <characteristicType name="Type" id="31b2-f73f-865d-f538" kind="annotation"/>
         <characteristicType name="Value" id="bdf9-d73e-e13b-b0ce" kind="annotation"/>
-        <characteristicType name="Special Rule" id="84ea-8900-474d-6201" kind="longText"/>
       </characteristicTypes>
     </profileType>
     <profileType name="Armour" id="884c-d50e-eeb6-eda0" hidden="false" kind="weapon" sortIndex="6">
@@ -171,6 +170,11 @@
         <characteristicType name="Combat" id="168d-1cc2-66f3-e766" kind="annotation"/>
         <characteristicType name="Missile" id="97ea-ecf7-8d24-b2ca" kind="annotation"/>
         <characteristicType name="Special Rules" id="ff58-91e4-84d7-e6e4" kind="longText"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Magic Resistance" id="e6b8-3bf4-4d0c-974e" hidden="false" sortIndex="9">
+      <characteristicTypes>
+        <characteristicType name="Value" id="19f0-e982-f035-416c"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -565,9 +569,9 @@
     </forceEntry>
   </forceEntries>
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Tables &amp; Charts" hidden="false" id="8607-a440-1e4a-de26">
+    <selectionEntry type="upgrade" import="true" name="Tables, Charts &amp; Rules" hidden="false" id="8607-a440-1e4a-de26">
       <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Blackpowder Misfire Chart" hidden="false" id="fa37-e5db-5351-a408" collective="false" sortIndex="1">
+        <selectionEntry type="upgrade" import="true" name="Blackpowder Misfire Chart" hidden="false" id="fa37-e5db-5351-a408" collective="false" sortIndex="12">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="e8ed-fd7d-58d1-f615" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -663,7 +667,7 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Miscast Table" hidden="false" id="a92c-dee5-1aa8-4a42" collective="false" sortIndex="3">
+        <selectionEntry type="upgrade" import="true" name="Miscast Table" hidden="false" id="a92c-dee5-1aa8-4a42" collective="false" sortIndex="10">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="22de-1797-7260-b838" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -723,7 +727,7 @@
             <cost name="pts" typeId="points" value="0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry type="upgrade" import="true" name="Stone Thrower Misfire Chart" hidden="false" id="f7e0-ba91-0886-7916" collective="false" sortIndex="2">
+        <selectionEntry type="upgrade" import="true" name="Stone Thrower Misfire Chart" hidden="false" id="f7e0-ba91-0886-7916" collective="false" sortIndex="11">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="f2e5-059d-7b35-1ee2" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
@@ -793,7 +797,7 @@
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Impact Hits (1), Swiftstride</characteristic>
               </characteristics>
             </profile>
-            <profile name="Monstrous Creatures" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="0bb7-f712-d89d-3dd7">
+            <profile name="Monstrous Creature" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="0bb7-f712-d89d-3dd7">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
@@ -801,6 +805,7 @@
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">3 (or 4 if ridden)</characteristic>
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D3), Swiftstride, Terror</characteristic>
               </characteristics>
+              <alias>Monstrous Creatures</alias>
             </profile>
             <profile name="Monstrous Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="0326-f2c0-835a-1ab9">
               <characteristics>
@@ -829,7 +834,7 @@
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Expendable, Skirmishers, Unstable</characteristic>
               </characteristics>
             </profile>
-            <profile name="War Beasts" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="a8d0-cc85-e2d0-3f6b">
+            <profile name="War Beast" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="a8d0-cc85-e2d0-3f6b">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">5</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1</characteristic>
@@ -837,6 +842,7 @@
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Expendable, Swiftstride, Vanguard</characteristic>
               </characteristics>
+              <alias>War Beasts</alias>
             </profile>
             <profile name="War Machines" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="d79a-9ca4-4700-f6bd">
               <characteristics>
@@ -859,6 +865,66 @@
           </profiles>
         </selectionEntry>
       </selectionEntries>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Print Rules: &quot;Firing a ...&quot;" id="10aa-9013-92f4-fbea" hidden="false" sortIndex="2">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Bolt Thrower" hidden="false" id="5f4f-ae5d-fa50-30bf">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4962-1503-c5e1-a4fe" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Cannon" hidden="false" id="cd8b-0893-c11b-4b2e">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="44e9-a0bc-2216-a72c" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Fire Thrower" hidden="false" id="c55b-93a4-c935-c2b7">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="dae4-3e43-ec6b-22f0" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Stone Thrower" hidden="false" id="9a40-3d7e-c9ea-759a">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f8c8-e610-8e2a-c5f1" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Organ Gun" hidden="false" id="48c1-b856-7aa7-2b61">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9e38-f8ea-f88c-2bbd" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Print Rules: Ward Saves" id="720e-87eb-15b4-3592" hidden="false" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Ward Save" hidden="false" id="3b36-ced8-0cad-a602" sortIndex="5">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="341c-715a-50c1-9236" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Regeneration" hidden="false" id="3a34-b5f4-2b85-7c98" sortIndex="4">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="717f-1e45-9146-08eb" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Dodge" hidden="false" id="17af-9594-4a92-38a8" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0372-1c45-580e-d869" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Parry" hidden="false" id="164b-f5a8-5d6c-d0cb" sortIndex="3">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="313f-0d87-14db-e9ec" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Magic Resistance" hidden="false" id="7764-a0aa-4fdb-06cb" sortIndex="2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8ee2-4ffd-0de6-db3d" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
@@ -7045,6 +7111,24 @@
     <selectionEntry type="upgrade" import="true" name="Mark of Tzeentch" hidden="false" id="a5c6-cd36-6ce9-c322" collective="true">
       <infoLinks>
         <infoLink name="Mark of Tzeentch" id="448a-fe5e-64c2-6989" hidden="false" type="rule" targetId="Mark of Tzeentch"/>
+        <infoLink name="Ward Save" id="4a32-1d3d-e7b3-1a37" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+          <modifiers>
+            <modifier type="set" value="Mark of Tzeentch" field="name"/>
+            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Magic Resistance" id="f035-4684-65b8-a8c8" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+          <modifiers>
+            <modifier type="set" value="Mark of Tzeentch" field="name"/>
+            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Magic Resistance" id="d054-ce44-09c9-20ca" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+          <modifiers>
+            <modifier type="set" value="Mark of Tzeentch" field="name"/>
+            <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Expendable" hidden="false" id="b90d-9045-a6d5-9e7d" collective="true">
@@ -7620,16 +7704,13 @@ Losing Frenzy
 Frenzy can be lost. Models retain their Frenzy for the entire game unless beaten in combat.</description>
     </rule>
     <rule id="d56e-8ec7-dbcd-aeee" name="Stubborn" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
-      <description>A unit is considered Stubborn if the majority of the models in a unit have this special rule. A Stubborn unit is always Steadfast, whether or not they have more ranks than their enemy or are disrupted. </description>
+      <description>A unit is considered Stubborn if the majority of the models in a unit have this special rule. A Stubborn unit is always Steadfast, whether or not they have more ranks than their enemy or are disrupted.</description>
     </rule>
     <rule id="e025-10f3-f893-4bd7" name="Devastating Charge" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>The Models have +1 A during a turn in which they charge into combat.</description>
     </rule>
     <rule id="ec58-b231-6a2f-a163" name="Flammable" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>If a Flammable model is attacked with a Flaming Attack, all failed To Wound rolls made by the attackers may be re-rolled.</description>
-    </rule>
-    <rule id="c21b-d368-6f1c-bae3" name="Regeneration (4+)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
-      <description>A model with Regeneration gains a Ward Save (indicated by the number in the brackets). This is cumulative with other sources of Regeneration. Regeneration may not be used against Flaming Attacks, successful Killing Blows (including Heroic Killing Blow) or wounds caused due the unit being Unstable.</description>
     </rule>
     <rule id="1c9d-2d99-6222-2853" name="Unbreakable" publicationId="9e23-79cb-pubN66727" page="83" hidden="false">
       <description>Models with this rule have Immunity (Psychology) and pass Break tests automatically. However, they may never choose Flee! as a charge reaction.
@@ -7666,15 +7747,6 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
 
 Models that are Immune to all three above effects have Immunity (Psychology). This also includes automatically passing any Psychology tests they might need to take (such as many spell effects or special rules that would otherwise force a unit to take a Psychology
 test).</description>
-    </rule>
-    <rule id="4b60-6477-75a8-f6dd" name="Ward Save (5+)" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
-      <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
-
-Note that does not stop single Ward Saves from being used, such as a model having a listed 2+ or 3+ Ward Save; the above limitation only applies to combining Ward Saves.
-
-Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
-
-Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
     </rule>
     <rule id="f366-0f91-841f-cf80" name="Ambushers" publicationId="9e23-79cb-pubN66727" page="72" hidden="false">
       <description>Before starting deployment, a unit with the Ambushers special rule can choose to not deploy at the start of the battle. Instead, at the start of the Remaining Moves sub-phase of Turn 2 the controlling player rolls a D6 for each of their units of Ambushers. On a 3+, the unit arrives. If the unit does not arrive on Turn 2, roll another D6 at the start of the Remaining Moves sub- phase of Turn 3. On a 2+, the unit arrives. If the unit does not arrive on Turn 3, it will automatically arrive at the start of the Remaining Moves sub-phase of turn 4.
@@ -8006,11 +8078,6 @@ Where the number of Multiple Wounds is generated by a dice roll, roll a dice sep
 
 Unless otherwise specified, Multiple Wounds only apply to close combat attacks.</description>
     </rule>
-    <rule id="7ed4-9d31-09c3-6bf9" name="Magic Resistance (1)" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
-      <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward Save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
-
-If a character with Magic Resistance joins a unit, all models in the unit benefit from the Magic Resistance as long as they are part of the unit. If a model or unit has two sets of Magic Resistance, the two combine to a maximum of Magic Resistance (3), unless specified.</description>
-    </rule>
     <rule id="f30d-0b61-2836-689e" name="Impact Hits (D3)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>The number of Impact Hits is shown in brackets after the rule. If a creature is granted two sets of Impact Hits, use the highest set, rather than a total, before rolling. If a unit contains more than one model that inflicts a random amount of Impact Hits, always roll separately for each model.
 
@@ -8041,21 +8108,8 @@ Impact Hits roll to wound using the Strength of the model making the Impact Hits
 
 Unless specified, any rules that apply to the model’s normal attacks do not apply to its Impact Hits.</description>
     </rule>
-    <rule id="0e09-3526-25d5-2646" name="Magic Resistance (2)" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
-      <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward Save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
-
-If a character with Magic Resistance joins a unit, all models in the unit benefit from the Magic Resistance as long as they are part of the unit. If a model or unit has two sets of Magic Resistance, the two combine to a maximum of Magic Resistance (3), unless specified.</description>
-    </rule>
     <rule id="738b-aca4-740c-e425" name="Animated Construct" publicationId="9e23-79cb-pubN66727" page="58" hidden="false">
       <description>Animated Constructs have the Unbreakable special rule. However, they may not march.</description>
-    </rule>
-    <rule id="9b99-4e37-be08-231a" name="Magic Resistance (3)" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
-      <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward Save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
-
-If a character with Magic Resistance joins a unit, all models in the unit benefit from the Magic Resistance as long as they are part of the unit. If a model or unit has two sets of Magic Resistance, the two combine to a maximum of Magic Resistance (3), unless specified.</description>
-    </rule>
-    <rule id="e56f-d7d4-8987-dbdb" name="Parry (6+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with this rule gain a Ward Save in close combat as indicated in the brackets. This is cumulative with other sources of Parry. It cannot be used against attacks made against the model&apos;s flank or rear, nor can it be used against attacks that Hit automatically, attacks that are made at +3 Strength over the model&apos;s own Strength value, nor can it be used by mounted models, unless specified.</description>
     </rule>
     <rule id="c270-3956-9b64-b587" name="Strider" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
       <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
@@ -8128,15 +8182,6 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
     <rule id="0b20-ae38-065f-96ce" name="Hatred (Orcs &amp; Goblins)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
     </rule>
-    <rule id="d45b-0036-b5ef-951b" name="Ward Save (4+)" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
-      <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
-
-Note that does not stop single Ward Saves from being used, such as a model having a listed 2+ or 3+ Ward Save; the above limitation only applies to combining Ward Saves.
-
-Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
-
-Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
-    </rule>
     <rule id="48d5-6bee-c3f6-cec8" name="Strider (River)" publicationId="9e23-79cb-pubN66727" page="82" hidden="false">
       <description>Models with Strider will normally have a subset of Strider that is mentioned in the brackets. The rule only applies in terrain of the specified type. Models with Strider treat that piece of terrain as open ground for the purposes of Movement, meaning they ignore any M penalties or Dangerous Terrain tests otherwise caused by it. Note that they still follow the rules for that terrain type in terms of combat.</description>
     </rule>
@@ -8151,11 +8196,6 @@ Some models may be allowed to re-roll a Ward Save from a specific source. In tha
     </rule>
     <rule id="4003-e9b4-9295-bef4" name="Loremaster (Lore of Heavens)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
-    </rule>
-    <rule id="76e1-4919-c7d3-29df" name="Magic Resistance (4)" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
-      <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward Save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
-
-If a character with Magic Resistance joins a unit, all models in the unit benefit from the Magic Resistance as long as they are part of the unit. If a model or unit has two sets of Magic Resistance, the two combine to a maximum of Magic Resistance (3), unless specified.</description>
     </rule>
     <rule id="be9b-43a8-959d-9cd1" name="Loremaster (Lore of the Great Maw)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
@@ -8197,9 +8237,6 @@ If two or more models in a unit have the Random Movement, pivot the unit about i
 
 A Random Move counts as a &quot;normal&quot; move for triggering a Dangerous Terrain test, unless the model is making a charge, pursuit or flee move, in which case it counts as a move of the appropriate type.</description>
     </rule>
-    <rule id="5e3f-9736-a9c0-4a1c" name="Dodge (4+)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
-      <description>Models with this rule gain a Ward save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have the Always Strikes First special rule, nor can it be used if the model is subject to the Always Strikes Last special rule.</description>
-    </rule>
     <rule id="4d40-9a96-4af8-e943" name="Random Movement (Variable)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
       <description>Models with Random Movement do not have a normal M characteristic, but rather a dice roll, (as indicated in the
 brackets). This is the distance they move, charge, pursue, overrun and flee – they cannot march. If a model has Random Movement and Swiftstride, then Swiftstride is not used. Note that certain Random Movement rolls can result in the model having a M value higher than 10 – this is an exception to the usual maximum.
@@ -8229,15 +8266,6 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
     <rule id="065b-1f43-47e5-70cb" name="Random Attacks (2D6)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
     </rule>
-    <rule id="7323-b2a0-af7b-3ec6" name="Ward Save (3+)" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
-      <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
-
-Note that does not stop single Ward Saves from being used, such as a model having a listed 2+ or 3+ Ward Save; the above limitation only applies to combining Ward Saves.
-
-Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
-
-Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
-    </rule>
     <rule id="5b16-622a-da0d-d50b" name="Random Attacks (D6)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
     </rule>
@@ -8249,21 +8277,6 @@ Some models may be allowed to re-roll a Ward Save from a specific source. In tha
     </rule>
     <rule id="a001-2c00-3971-2a29" name="Hatred (Bretonnia)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="6f3b-cd4f-062d-7f26" name="Regeneration (6+)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
-      <description>A model with Regeneration gains a Ward Save (indicated by the number in the brackets). This is cumulative with other sources of Regeneration. Regeneration may not be used against Flaming Attacks, successful Killing Blows (including Heroic Killing Blow) or wounds caused due the unit being Unstable.</description>
-    </rule>
-    <rule id="5fed-df2e-b6d6-cc93" name="Regeneration (5+)" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
-      <description>A model with Regeneration gains a Ward Save (indicated by the number in the brackets). This is cumulative with other sources of Regeneration. Regeneration may not be used against Flaming Attacks, successful Killing Blows (including Heroic Killing Blow) or wounds caused due the unit being Unstable.</description>
-    </rule>
-    <rule id="5c26-a043-8535-5f4f" name="Ward Save (6+)" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
-      <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
-
-Note that does not stop single Ward Saves from being used, such as a model having a listed 2+ or 3+ Ward Save; the above limitation only applies to combining Ward Saves.
-
-Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
-
-Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
     </rule>
     <rule id="fb5f-f956-90e7-af6f" name="Loremaster (Lore of Tzeentch)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
@@ -8279,12 +8292,6 @@ Some models may be allowed to re-roll a Ward Save from a specific source. In tha
     </rule>
     <rule id="6112-6e8d-a942-fcba" name="Hatred (Lizardmen)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="cfff-6563-d1c6-820c" name="Dodge (5+)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
-      <description>Models with this rule gain a Ward save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have the Always Strikes First special rule, nor can it be used if the model is subject to the Always Strikes Last special rule.</description>
-    </rule>
-    <rule id="bf3d-abaf-45ca-3477" name="Dodge (6+)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
-      <description>Models with this rule gain a Ward save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have the Always Strikes First special rule, nor can it be used if the model is subject to the Always Strikes Last special rule.</description>
     </rule>
     <rule id="e20a-3f4d-cc8c-06bc" name="Random Attacks (D3+1)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
       <description>Models with Random Attacks do not have a normal number for their A characteristic, but rather a dice roll. Each time a model with this rule comes to strike blows, roll the indicated dice, adding any modifiers shown, to determine the number of attacks that the model will make, then roll to hit as normal. If a unit contains more than one model with this rule, always roll separately for each model.</description>
@@ -8305,9 +8312,6 @@ Immunity can also include Panic, Fear and Terror. If the majority of the models 
     </rule>
     <rule id="bff4-3615-a342-c3c4" name="Hatred (Norse)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
-    </rule>
-    <rule id="f210-1e7c-a315-2849" name="Parry (5+)" publicationId="9e23-79cb-pubN66727" page="79" hidden="false">
-      <description>Models with this rule gain a Ward Save in close combat as indicated in the brackets. This is cumulative with other sources of Parry. It cannot be used against attacks made against the model&apos;s flank or rear, nor can it be used against attacks that Hit automatically, attacks that are made at +3 Strength over the model&apos;s own Strength value, nor can it be used by mounted models, unless specified.</description>
     </rule>
     <rule id="3efd-81b2-458e-604e" name="Loremaster (Hedge Magic)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>A Wizard with Loremaster knows all the available spells from their chosen lore (limited by their Wizard level as normal). The lore in question is normally given in brackets as part of Loremaster. If a model knows spells from multiple Lores, then Loremaster only applies to one Lore of your choice.</description>
@@ -8357,9 +8361,6 @@ Once on the ground, a Giant may get up in his following Movement phase, but may 
     </rule>
     <rule id="1451-9754-507c-44a8" name="Murderous Prowess" publicationId="9e23-79cb-pubN76150" page="3" hidden="false">
       <description>Models with this rule may re-roll all To Wound rolls of 1 when making close combat attacks.</description>
-    </rule>
-    <rule id="8c96-c7fe-2a85-f2f9" name="Elven Grace" publicationId="9e23-79cb-pubN77092" page="138" hidden="false">
-      <description>Models with this rule have Dodge (6+) special rule in close combat. However, this cannot be used against enemies that attack before the model with Elven Grace.</description>
     </rule>
     <rule id="eb46-96d2-9469-4905" name="Cold-Blooded" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
       <description>Whenever the model takes a Leadership test, it rolls an additional dice and discards the highest result.</description>
@@ -8475,18 +8476,6 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
     <rule id="18cb-1dc6-4139-8c3" name="Line of Sight (0)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Line of Sight of 0.</description>
     </rule>
-    <rule name="Swarms" id="f4d1-e978-a3ed-869b" hidden="false">
-      <description>Complete Ranks (3). Supporting Attacks (5). Unit Strength (3). Line of Sight (0). Expendable. Skirmishers. Unstable.
-
-
-Other models can fire through them at targets behind them with no To Hit penalty. However, any Swarm base that is hit by a template attack suffers Multiple Wounds (D6) rather than 1.</description>
-    </rule>
-    <rule name="Large Infantry" id="501d-e1d6-df0e-d961" hidden="false">
-      <description>Complete Ranks (4). Supporting Attacks (2). Unit Strength (1). Line of Sight (1)</description>
-    </rule>
-    <rule name="Monstrous Infantry" id="0997-a400-8b77-fa7c" hidden="false">
-      <description>Complete Ranks (3). Supporting Attacks (2). Unit Strength (2). Line of Sight (2). Swiftstride. Fear.</description>
-    </rule>
     <rule name="Cavalry" id="f299-b4f5-2ed1-08ce" hidden="false">
       <description>Complete Ranks (5). Supporting Attacks (1+1). Unit Strength (2). Line of Sight (2). Split Profile (Cavalry). Impact Hits (1). Swiftstride.
 
@@ -8593,23 +8582,6 @@ War Machines have a Unit Strength equal to their current number of crew.</descri
     <rule id="8f97-966e-ddb2-f7bb" name="Line of Sight (1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Line of Sight of 1.</description>
     </rule>
-    <rule name="Infantry" id="5669-ecc5-1f66-edd8" hidden="false">
-      <description>Complete Ranks (5). Supporting Attacks (1). Unit Strength (1). Line of Sight (1)</description>
-    </rule>
-    <rule name="Monster" id="b965-f383-1052-74df" hidden="false">
-      <description>Line of Sight (5). Stomp (D6). Terror. Swiftstride.
-
-Split profile
-Ridden Monsters follow the Split Profile (Cavalry) rule. However, they may only have an armour save of a total of 2+ instead of the normal 1+. The riders can fire in 360 degrees around them, rather than only firing at targets within their front arc. This only applies to any missile weapons carried by the crew themselves, any missile weapons mounted on the Monster itself can only fire in the model&apos;s forward arc as normal. Any crew member that chooses to fire the mounted weapon cannot fire their own weapon in the same turn.
-
-
-Character mount
-Some characters can ride Monsters. If a character has a ridden Monster, the whole model is treated as having the troop type Monster and thus follows all the rules for both characters and Monster models including the Split Profile rules above. A character on a ridden Monster cannot join other units.
-
-
-Unit strength
-Monsters have a Unit Strength of double their original starting number of Wounds. Ridden Monsters add the number of riders to their Unit Strength.</description>
-    </rule>
     <rule name="Monstrous Beasts" id="c629-2c10-da21-4037" hidden="false">
       <description>Complete Ranks (3). Supporting Attacks (2). Unit Strength (2). Line of Sight (2). Fear. Swiftstride.
 
@@ -8676,12 +8648,6 @@ Any missile weapons use the Ballistic Skill of the crew when making Shooting at
 If a misfire is rolled, roll immediately on the Black Powder Misfire chart.</description>
       <alias>Organ Gun</alias>
     </rule>
-    <rule name="War Beast" id="42ce-1113-52c7-5ef8" hidden="false">
-      <description>Complete Ranks (5). Supporting Attacks (1). Unit Strength (1). Line of Sight (1). Expendable. Swiftstride. Vanguard.
-
-
-Some characters can ride war beasts, in which case the model uses the rules for Cavalry.</description>
-    </rule>
     <rule name="Split Profile (Shrines)" id="6331-09f9-0580-9ac8" hidden="false">
       <description>In a similar manner to a Chariot, a Shrine can often have more than one set of characteristics, one for the creatures pulling or carrying the Shrine, one for the crew and one for the shrine itself, and is treated as a single model.
 
@@ -8693,21 +8659,6 @@ When moving, the shrine model uses its own Movement characteristic. The crew an
 
 
 The Wounds and Toughness of the crew and the creatures are never used – hits are resolved against the shrine&apos;s Wounds and Toughness. It is the crew&apos;s Weapon Skill that is used for the purposes of the enemy rolling to hit, just as with cavalry.</description>
-    </rule>
-    <rule name="Shrine" id="3952-6c6d-75ce-9b60" hidden="false">
-      <description>Line of Sight (1). Split Profile (Shrines).
-
-Armour Saves
-Some Shrines have an armour save detailed in their army list entry, which is combined with any armour the crew might have.
-
-Character mounts
-Some characters can be mounted upon shrines. If a character has taken a shrine as a mount, the whole model is treated as having the troop type &apos;Shrine&apos; and follows all the rules for both characters and Shrine models. A Shrine mount otherwise follows all the rules for Cavalry in regard to Split Profile. If the Shrine includes any crew in addition to the character, their armour saves are ignored when calculating the overall armour save of the model – only the character&apos;s own armour save is used.
-
-Terrain
-Shrines have to take Dangerous Terrain tests if they move march, charge, flee or pursue over anything other than open ground or hills.
-
-Unit strength
-Shrines have a Unit Strength equal to their starting number of Wounds.</description>
     </rule>
     <rule name="Firing a Fire Thrower" id="5184-235f-3d04-5636" hidden="false" publicationId="9e23-79cb-pubN66727" page="85">
       <description>Place the teardrop-shaped template with its narrow end touching the fire thrower barrel and the large end aimed at any enemy model or building in line of sight. Roll the artillery dice and move the template directly forward the number of inches indicated. Some fire throwers might also have a range value. In this case, place the template with its narrow end anywhere within this range, measured from the fire thrower barrel as normal.
@@ -8730,9 +8681,6 @@ If a misfire is rolled, roll immediately on the Black Powder Misfire chart.</de
 
 
 This rule is cumulative with other sources of Hold Your Ground. If the model has a Line of Sight value of 4 or more, then the range of their Inspiring Presence rule is increased by 6.</description>
-    </rule>
-    <rule name="Daemonic" id="a6d9-b8e9-21b2-96ff" hidden="false" publicationId="1a01-044f-047b-618f" page="162">
-      <description>Models with this rule have Fear and Magical Attacks special rules. In addition, models that are not mounts have a Ward Save (5+) which gets reduced to a Ward Save (6+) against Magical Attacks.</description>
     </rule>
     <rule name="Daemon of Khorne" id="a356-05c9-d963-c1bb" hidden="false" publicationId="1a01-044f-047b-618f" page="171">
       <description>A Daemon of Khorne has Hatred (Daemons of Slaanesh), Magic Resistance (1) and Mighty Blow (1).</description>
@@ -8966,9 +8914,6 @@ Unless otherwise specified, Multiple Wounds only apply to close combat attacks.<
 
 Immunity can also include Panic, Fear and Terror. If the majority of the models in a unit have the Immunity (Panic, Fear or Terror) rule, the unit ignores the effects of Panic, Fear or Terror and any such tests it would otherwise had to take.</description>
     </rule>
-    <rule id="062c-b646-a4c3-3b7c" name="Dodge (2+)" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
-      <description>Models with this rule gain a Ward save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have the Always Strikes First special rule, nor can it be used if the model is subject to the Always Strikes Last special rule.</description>
-    </rule>
     <rule id="b5ab-1a7b-4c54-5733" name="Unit Strength (26)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Unit Strength of 26.</description>
     </rule>
@@ -9010,6 +8955,12 @@ A character that has a magic close combat weapon cannot use any other close comb
     <rule name="Natural Armour" id="9c79-58c1-b63c-684b" hidden="false">
       <description>Models with this rule have an armour save value equal to the number in the brackets. Natural Armour can be combined with other armour as normal, including other sources of Natural Armour.</description>
     </rule>
+    <rule name="Parry" id="a816-2399-5f72-61e9" hidden="false">
+      <description>Models with this rule gain a Ward save in close combat as indicated in the brackets. This is cumulative with other sources of Parry. It cannot be used against attacks made against the model&apos;s flank or rear, nor can it be used against attacks that Hit automatically, attacks that are made at +3 Strength over the model&apos;s own Strength value, nor can it be used by mounted models, unless specified.</description>
+    </rule>
+    <rule id="ebb3-06a2-a251-5b84" name="Regeneration" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
+      <description>A model with Regeneration gains a Ward Save (indicated by the number in the brackets). This is cumulative with other sources of Regeneration. Regeneration may not be used against Flaming Attacks, successful Killing Blows (including Heroic Killing Blow) or wounds caused due the unit being Unstable.</description>
+    </rule>
     <rule id="386a-976a-a504-96ed" name="Hatred (Wizards)" publicationId="9e23-79cb-pubN66727" page="75" hidden="false">
       <description>A model striking a hated foe in close combat re-rolls all failed To Hit rolls during the first round of combat. Sometimes a model will only Hate a specific foe. Where this is the case, the type of foe will be expressed in the brackets. In the case an enemy hates a certain faction, they have Hatred against all models from that army book. In addition, they must also re-roll successful rolls to restrain from pursuit against enemies they have Hatred against. If a unit would gain Hatred in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
     </rule>
@@ -9020,7 +8971,30 @@ A character that has a magic close combat weapon cannot use any other close comb
 Disrupted units and Skirmishers (see Special Rules chapter) cannot be Steadfast.
 
 
-Steadfast units always take Break tests on their own Leadership characteristic, ignoring any negative close combat resolution modifiers. However, remember that units that are Disrupted cannot be Steadfast.  </description>
+Steadfast units always take Break tests on their own Leadership characteristic, ignoring any negative close combat resolution modifiers. However, remember that units that are Disrupted cannot be Steadfast.</description>
+    </rule>
+    <rule id="c79e-5ae7-e683-8fb4" name="Dodge" publicationId="9e23-79cb-pubN66727" page="59" hidden="false">
+      <description>Models with this rule gain a Ward save against attacks in their front arc (including templates, Stomps and Impact Hits) as indicated in the brackets. This is cumulative with other sources of Dodge. This cannot be used against Magical Attacks that Hit automatically (such as spells or certain special rules), or that have the Always Strikes First special rule, nor can it be used if the model is subject to the Always Strikes Last special rule.</description>
+    </rule>
+    <rule id="ee1d-9c99-af9c-1816" name="Ward Save" publicationId="9e23-79cb-pubN66727" page="49" hidden="false">
+      <description>The value of a Ward Save will always be shown in a model&apos;s entry in the relevant Warhammer Armies book. These work in the same way as armour saves, and may be combined with other Ward Saves as normal. The key difference between Ward Saves and armour saves is that Ward Saves are never modified by the Strength of the attack. However, no model may have a Ward Save better than 4+ by combining multiple Ward Saves regardless of source.
+
+Note that does not stop single Ward Saves from being used, such as a model having a listed 2+ or 3+ Ward Save; the above limitation only applies to combining Ward Saves.
+
+Sometimes a model has both an armour save and a Ward Save. Where this is the case, the model takes its armour save as normal. If the armour save is failed (or modified to the point at which the model cannot pass it) then the model takes its Ward Save.
+
+Some models may be allowed to re-roll a Ward Save from a specific source. In that case, the re-roll will only apply to that specific Ward Save, and not the model&apos;s total Ward Save.</description>
+    </rule>
+    <rule id="fabd-07ef-35b4-adf9" name="Magic Resistance" publicationId="9e23-79cb-pubN66727" page="78" hidden="false">
+      <description>A model with Magic Resistance gains a bonus to dispel enemy spells directly targeting it (not including templates that are placed on top of it) as well as a Ward Save against damage caused by spells. This bonus is based on the number shown in brackets after Magic Resistance. Note that Magical Resistance does not offer protection against Miscasts.
+
+If a character with Magic Resistance joins a unit, all models in the unit benefit from the Magic Resistance as long as they are part of the unit. If a model or unit has two sets of Magic Resistance, the two combine to a maximum of Magic Resistance (3), unless specified.</description>
+    </rule>
+    <rule name="Elven Grace" id="b726-c451-19d2-7658" hidden="false" publicationId="9e23-79cb-pubN77092" page="138">
+      <description>Models with this rule have Dodge (6+) special rule in close combat. However, this cannot be used against enemies that attack before the model with Elven Grace.</description>
+    </rule>
+    <rule name="Daemonic" id="6940-194d-860b-18d4" hidden="false" publicationId="1a01-044f-047b-618f" page="162">
+      <description>Models with this rule have Fear and Magical Attacks special rules. In addition, models that are not mounts have a Ward Save (5+) which gets reduced to a Ward Save (6+) against Magical Attacks.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
@@ -10720,6 +10694,60 @@ Magic phase.</characteristic>
         <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Causes 2D6 Strength 3 hits with the Armour Piercing (1) special rule.</characteristic>
       </characteristics>
     </profile>
+    <profile name="Parry" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="a889-dd6d-da67-3ba6" noindex="true">
+      <characteristics>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Parry</characteristic>
+        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce"/>
+      </characteristics>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </profile>
+    <profile name="Regeneration" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="73f3-8451-504e-a6e5" noindex="true">
+      <characteristics>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Regeneration</characteristic>
+        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce"/>
+      </characteristics>
+    </profile>
+    <profile name="Dodge" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="6407-7161-d748-2c03" noindex="true">
+      <characteristics>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Dodge</characteristic>
+        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce"/>
+      </characteristics>
+    </profile>
+    <profile name="Ward Save" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="0ea4-277a-19d5-3635" noindex="true">
+      <characteristics>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Ward Save</characteristic>
+        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce"/>
+      </characteristics>
+    </profile>
+    <profile name="Ethereal" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="0d17-762d-8841-8d11">
+      <characteristics>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Ward Save</characteristic>
+        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">2+ / 5+ against Magical Attacks</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Magic Resistance" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="d51b-e3da-4ab4-6b26" noindex="true">
+      <characteristics>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Magic Resistance</characteristic>
+        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce"/>
+      </characteristics>
+    </profile>
+    <profile name="Magic Resistance" typeId="e6b8-3bf4-4d0c-974e" typeName="Magic Resistance" hidden="false" id="dfc2-ea60-0f92-be07" noindex="true">
+      <characteristics>
+        <characteristic name="Value" typeId="19f0-e982-f035-416c"/>
+      </characteristics>
+    </profile>
+    <profile name="Daemonic" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="377d-1fae-4a56-de9e">
+      <characteristics>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Ward Save</characteristic>
+        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">5+ / 6+ against Magical Attacks.</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
   <sharedInfoGroups>
     <infoGroup name="Stone Thrower Misfire Chart" id="f6f0-bb1f-f863-3e81" hidden="false">
@@ -10760,5 +10788,123 @@ Magic phase.</characteristic>
         </profile>
       </profiles>
     </infoGroup>
+    <infoGroup name="Elven Grace" id="b697-4417-5f4b-5140" hidden="false">
+      <infoLinks>
+        <infoLink name="Dodge" id="0b51-0566-e7de-f62f" hidden="false" type="profile" targetId="6407-7161-d748-2c03">
+          <modifiers>
+            <modifier type="set" value="Elven Grace" field="name"/>
+            <modifier type="set" value="6+ in close combat when attacking first." field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Elven Grace" id="62b3-a43e-ce65-d029" hidden="false" type="rule" targetId="b726-c451-19d2-7658"/>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup name="Daemonic" id="9c1c-92d1-b507-cf66" hidden="false">
+      <infoLinks>
+        <infoLink name="Daemonic" id="5840-89e3-85aa-a46b" hidden="false" type="profile" targetId="377d-1fae-4a56-de9e"/>
+        <infoLink name="Daemonic" id="01cb-230c-673c-8c44" hidden="false" type="rule" targetId="6940-194d-860b-18d4"/>
+      </infoLinks>
+    </infoGroup>
   </sharedInfoGroups>
+  <infoLinks>
+    <infoLink name="Ward Save" id="ba8d-ab05-e584-7ff3" hidden="false" type="rule" targetId="ee1d-9c99-af9c-1816">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="3b36-ced8-0cad-a602" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Parry" id="fa4f-21c7-de96-1ddb" hidden="false" type="rule" targetId="a816-2399-5f72-61e9">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="164b-f5a8-5d6c-d0cb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Regeneration" id="db6f-625c-85fd-1c9d" hidden="false" type="rule" targetId="ebb3-06a2-a251-5b84">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="3a34-b5f4-2b85-7c98" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Dodge" id="dfa2-8162-5943-8394" hidden="false" type="rule" targetId="c79e-5ae7-e683-8fb4">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="17af-9594-4a92-38a8" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Magic Resistance" id="7758-2f01-597e-a073" hidden="false" type="rule" targetId="fabd-07ef-35b4-adf9">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="7764-a0aa-4fdb-06cb" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Firing a Bolt Thrower" id="14d2-ff7e-3a5e-196d" hidden="false" type="rule" targetId="f55b-b981-fae7-afa2">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="5f4f-ae5d-fa50-30bf" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Firing a Cannon" id="f251-37be-5517-939a" hidden="false" type="rule" targetId="1b5a-8c3a-7e3d-0e2e">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="cd8b-0893-c11b-4b2e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Firing Grapeshot" id="3edd-0dc4-af36-b06c" hidden="false" type="rule" targetId="493e-43ce-ef2f-2beb">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="cd8b-0893-c11b-4b2e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Firing a Fire Thrower" id="c6ef-0413-ec9b-d26a" hidden="false" type="rule" targetId="5184-235f-3d04-5636">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="c55b-93a4-c935-c2b7" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Firing a Stone Thrower" id="ee7b-7a46-33c5-4bda" hidden="false" type="rule" targetId="0638-a1ac-c907-7ee2">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="9a40-3d7e-c9ea-759a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+    <infoLink name="Firing an Organ Gun" id="1662-8a68-f1d4-fbe8" hidden="false" type="rule" targetId="516f-a12a-2ccc-9ac7">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="48c1-b856-7aa7-2b61" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </infoLink>
+  </infoLinks>
 </gameSystem>

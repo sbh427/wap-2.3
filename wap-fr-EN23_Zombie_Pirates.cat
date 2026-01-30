@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="d63c-bfc7-b3cb-5a6d" name="Zombie Pirates WAP 1.5" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="72" revision="7" authorName="xetolosch" authorContact="contact me on discord" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="d63c-bfc7-b3cb-5a6d" name="Zombie Pirates WAP 1.5" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="72" revision="8" authorName="xetolosch" authorContact="contact me on discord" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="The Red Thirst" id="bbaa-8771-dddb-7fe5" hidden="false" page="3" publicationId="4f8f-9147-1eae-6c3d">
       <description>Roll a D6 at the end of each Close Combat phase for every enemy model slain by a model with this special rule this round. On the roll of a 6+, the model recovers a single Wound lost earlier in the battle. This does not work against models with the Animated Construct, Daemonic, Forest Spirit or Vampiric special rules.</description>
@@ -609,6 +609,7 @@
         <infoLink name="Fly (6)" id="12cf-0391-7a3b-a396" hidden="false" type="rule" targetId="b830-fe6e-b461-0377"/>
         <infoLink name="Terror" id="049a-58ab-16d3-3952" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
         <infoLink name="Ethereal" id="d37d-3c2a-8960-09f9" hidden="false" type="rule" targetId="9e47-05bc-376a-7463"/>
+        <infoLink name="Ethereal" id="0a8e-2c34-fad7-cdb8" hidden="false" type="profile" targetId="0d17-762d-8841-8d11"/>
       </infoLinks>
       <modifiers>
         <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
@@ -1814,6 +1815,20 @@
                               </characteristics>
                             </profile>
                           </profiles>
+                          <infoLinks>
+                            <infoLink name="Magic Resistance" id="4587-29ce-2d30-ada7" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                              <modifiers>
+                                <modifier type="set" value="Slaan Gold" field="name"/>
+                                <modifier type="set" value="3" field="19f0-e982-f035-416c"/>
+                              </modifiers>
+                            </infoLink>
+                            <infoLink name="Magic Resistance" id="27df-e518-7dc7-5bca" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                              <modifiers>
+                                <modifier type="set" value="Slaan Gold" field="name"/>
+                                <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                              </modifiers>
+                            </infoLink>
+                          </infoLinks>
                         </selectionEntry>
                       </selectionEntries>
                       <constraints>
@@ -2160,6 +2175,7 @@
                 <infoLink name="Ethereal" id="ec48-30fe-3591-1978" hidden="false" type="rule" targetId="9e47-05bc-376a-7463"/>
                 <infoLink name="Fly (6)" id="7310-5b6c-e7bf-d396" hidden="false" type="rule" targetId="b830-fe6e-b461-0377"/>
                 <infoLink name="Terror" id="8a7f-33d4-a0f7-bbcd" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
+                <infoLink name="Ethereal" id="e9ff-3790-6e44-6c26" hidden="false" type="profile" targetId="0d17-762d-8841-8d11"/>
               </infoLinks>
               <rules>
                 <rule name="Ghosts of the Past" id="5e7d-2b81-0f98-f270" hidden="false" publicationId="4f8f-9147-1eae-6c3d" page="25">
@@ -2246,6 +2262,7 @@
           <infoLinks>
             <infoLink name="Undead" id="a990-dca3-380e-0cb4" hidden="false" type="rule" targetId="8e82-7b9d-c1f6-d62b"/>
             <infoLink name="Ethereal" id="7765-7fc3-e46f-aa6d" hidden="false" type="rule" targetId="9e47-05bc-376a-7463"/>
+            <infoLink name="Ethereal" id="213f-2ea9-9998-a49b" hidden="false" type="profile" targetId="0d17-762d-8841-8d11"/>
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="e4ee-8fb2-6178-5b87" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
@@ -2363,6 +2380,7 @@
                             <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
+                        <infoLink name="Two/Additional Hand Weapons" id="ed52-786f-2bd7-a481" hidden="false" type="profile" targetId="48ad-587e-84ad-c237"/>
                       </infoLinks>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2430-aa46-8cd2-bc4d-min"/>
@@ -2381,6 +2399,14 @@
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b4c1-66f5-d14c-ce12-min"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b4c1-66f5-d14c-ce12-max"/>
                       </constraints>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="16e7-3c57-f0da-2147" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Skull of King Kalhazzar" field="name"/>
+                            <modifier type="set" value="6+ against non-Magical Attacks." field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -2550,6 +2576,7 @@
                 <infoLink name="Undead" id="9630-5d41-e3c8-bd1a" hidden="false" type="rule" targetId="8e82-7b9d-c1f6-d62b"/>
                 <infoLink name="Ethereal" id="e0fd-4d0e-dddd-c1e2" hidden="false" type="rule" targetId="9e47-05bc-376a-7463"/>
                 <infoLink name="Terror" id="0f62-854f-3928-7b73" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
+                <infoLink name="Ethereal" id="4817-eefe-917e-801c" hidden="false" type="profile" targetId="0d17-762d-8841-8d11"/>
               </infoLinks>
               <rules>
                 <rule name="Damned Crew" id="7550-3fde-2488-086e" hidden="false" publicationId="4f8f-9147-1eae-6c3d" page="27">
@@ -2629,6 +2656,26 @@
                           </characteristics>
                         </profile>
                       </profiles>
+                      <infoLinks>
+                        <infoLink name="Regeneration" id="67c7-e7b2-9d26-78bb" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                          <modifiers>
+                            <modifier type="set" value="Warp-cage Heart" field="name"/>
+                            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Magic Resistance" id="7ec3-1f02-74d8-1743" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                          <modifiers>
+                            <modifier type="set" value="Warp-cage Heart" field="name"/>
+                            <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Magic Resistance" id="5ba3-a46e-e1f4-7878" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                          <modifiers>
+                            <modifier type="set" value="Warp-cage Heart" field="name"/>
+                            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -2807,6 +2854,7 @@
                 </infoLink>
                 <infoLink name="Terror" id="7a81-3cf4-a025-2e5a" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
                 <infoLink name="Fly (6)" id="80fe-dd36-f5cc-604b" hidden="false" type="rule" targetId="b830-fe6e-b461-0377"/>
+                <infoLink name="Ethereal" id="4c20-dfde-8894-6cd1" hidden="false" type="profile" targetId="0d17-762d-8841-8d11"/>
               </infoLinks>
               <categoryLinks>
                 <categoryLink name="Infantry" hidden="false" id="2901-3456-fa2f-06ba" targetId="22c9-1606-58f8-2e60" primary="false"/>
@@ -2879,6 +2927,7 @@
           <infoLinks>
             <infoLink name="Undead" id="9923-5b07-65e6-c928" hidden="false" type="rule" targetId="8e82-7b9d-c1f6-d62b"/>
             <infoLink name="Ethereal" id="ce24-9a66-afd0-1fb8" hidden="false" type="rule" targetId="9e47-05bc-376a-7463"/>
+            <infoLink name="Ethereal" id="2234-b1eb-6340-10de" hidden="false" type="profile" targetId="0d17-762d-8841-8d11"/>
           </infoLinks>
           <entryLinks>
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="89f2-e28b-c46e-62f8" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
@@ -3593,6 +3642,7 @@
           <constraints>
             <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="78a6-8e4c-823d-5529" automatic="false"/>
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="d844-4d18-c900-455a" automatic="false"/>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="f90b-0b3b-98ee-d30b" includeChildSelections="true"/>
           </constraints>
           <modifiers>
             <modifier type="set" value="3" field="78a6-8e4c-823d-5529">
@@ -4243,6 +4293,14 @@
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="12e7-96fc-6f4d-2618"/>
               </constraints>
+              <infoLinks>
+                <infoLink name="Regeneration" id="f8df-f121-c4ad-ff5e" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                  <modifiers>
+                    <modifier type="set" value="Vampire Blood" field="name"/>
+                    <modifier type="set" value="3+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Corpse Killer" hidden="false" id="ea20-a2c5-85c1-1b6a" sortIndex="3">
               <costs>
@@ -4329,7 +4387,12 @@
       <infoLinks>
         <infoLink name="Undead" id="f86a-9bbe-97dd-8fec" hidden="false" type="rule" targetId="8e82-7b9d-c1f6-d62b"/>
         <infoLink name="Magical Attacks" id="069e-3674-cede-4f4a" hidden="false" type="rule" targetId="03db-d81f-f264-84b8"/>
-        <infoLink name="Regeneration (4+)" id="430c-db0a-198f-f194" hidden="false" type="rule" targetId="c21b-d368-6f1c-bae3"/>
+        <infoLink name="Regeneration" id="58e6-9063-7d7c-e1f9" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+          <modifiers>
+            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+            <modifier type="set" value="Necrofex Colossus" field="name"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <costs>
         <cost name="pts" typeId="points" value="270"/>
@@ -4542,6 +4605,14 @@
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink name="Parry" id="9ec9-0d33-1587-d1c3" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
+              <modifiers>
+                <modifier type="set" value="Swashbuckler" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Taunting Curses" hidden="false" id="4e77-8595-fa9d-da80" sortIndex="10">
           <costs>
@@ -4589,6 +4660,14 @@
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink name="Ward Save" id="f07e-5105-4d21-1a47" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Curse of the Revenant" field="name"/>
+                <modifier type="set" value="3+ when at one wound." field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Fog of Deception" hidden="false" id="6932-c443-7bd5-17d8" sortIndex="13" publicationId="4f8f-9147-1eae-6c3d" page="6">
           <costs>
@@ -4700,6 +4779,14 @@
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink name="Regeneration" id="6bf5-a18a-52c9-1e90" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+              <modifiers>
+                <modifier type="set" value="Unholy Regeneration" field="name"/>
+                <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -4755,6 +4842,7 @@
                 <modifier type="set" value="Kraken Fang" field="annotation"/>
               </modifiers>
             </infoLink>
+            <infoLink name="Two/Additional Hand Weapons" id="79a6-cb9d-7a0f-d356" hidden="false" type="profile" targetId="48ad-587e-84ad-c237"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -4833,6 +4921,7 @@
                 <modifier type="set" value="Lucky Levi&apos;s Hook Hand" field="annotation"/>
               </modifiers>
             </infoLink>
+            <infoLink name="Two/Additional Hand Weapons" id="aa38-bf1f-11b8-3d24" hidden="false" type="profile" targetId="48ad-587e-84ad-c237"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -4955,6 +5044,13 @@
                 <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
               </modifiers>
             </infoLink>
+            <infoLink name="Parry (buckler)" id="7b6a-05c0-b795-6258" hidden="false" type="profile" targetId="2d0d-e77a-2eeb-b599"/>
+            <infoLink name="Ward Save" id="f838-a7ea-f108-f8ff" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Sea Dragon Buckler" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
@@ -4976,6 +5072,13 @@
 " field="ff58-91e4-84d7-e6e4" join="
 
 "/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Parry (buckler)" id="0fd5-0d7d-8886-2b67" hidden="false" type="profile" targetId="2d0d-e77a-2eeb-b599"/>
+            <infoLink name="Parry" id="2fb6-c924-95f9-7f4b" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
+              <modifiers>
+                <modifier type="set" value="Bloody Bill&apos;s Buckler" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -5109,6 +5212,12 @@
 " field="ff58-91e4-84d7-e6e4"/>
               </modifiers>
             </infoLink>
+            <infoLink name="Regeneration" id="ba90-5840-ac83-b78b" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+              <modifiers>
+                <modifier type="set" value="Armour of the Depths" field="name"/>
+                <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -5151,6 +5260,26 @@
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d4af-e2dd-3ca4-23cc" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="bae0-738c-6211-4b46" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
+          <infoLinks>
+            <infoLink name="Ward Save" id="7924-517f-b30e-6da1" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Ex-Parrot" field="name"/>
+                <modifier type="set" value="6+ against Magical Attacks." field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Magic Resistance" id="49fe-08f5-6f9d-fb8b" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+              <modifiers>
+                <modifier type="set" value="Ex-Parrot" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Magic Resistance" id="f283-1905-1fba-f376" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+              <modifiers>
+                <modifier type="set" value="Ex-Parrot" field="name"/>
+                <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="The Ring of Undeath" hidden="false" id="4306-a508-ab12-c1f0" sortIndex="2">
           <costs>
@@ -5218,7 +5347,38 @@
                 </conditionGroup>
               </conditionGroups>
             </modifier>
+            <modifier type="add" value="{this} does not allow to take any weapons or armour. " field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f56d-df75-2d0b-ce09" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="9015-46da-282c-713d" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f483-3197-52b5-1c6f" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="5c7e-8d63-76ac-6e3b" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="9bf8-b456-dd2f-8826" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="350c-4b0b-93c1-4e47" shared="true" includeChildSelections="true"/>
+                            <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="a658-337d-0cbd-a38c" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c788-a898-9f87-a75e" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Ethereal" id="ab9c-c726-e488-0428" hidden="false" type="profile" targetId="0d17-762d-8841-8d11"/>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Panteleon&apos;s Pendant" hidden="false" id="c088-ec3e-b7f5-4b2d" sortIndex="5">
           <costs>
@@ -5235,6 +5395,14 @@
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink name="Regeneration" id="ec40-b3f7-6043-0536" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+              <modifiers>
+                <modifier type="set" value="Panteleon&apos;s Pendant" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -5614,6 +5782,14 @@
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink name="Regeneration" id="0e40-e457-3835-10ec" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+              <modifiers>
+                <modifier type="set" value="War Standard o&apos;the Corpse Surgeons" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Bloody Reaver Colours" hidden="false" id="3666-553c-3f70-85f1" sortIndex="6">
           <constraints>
@@ -5637,6 +5813,14 @@
           <costs>
             <cost name="pts" typeId="points" value="35"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Ward Save" id="89ba-e9f3-8e05-ace4" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Bloody Reaver Colours" field="name"/>
+                <modifier type="set" value="5+ against missile attacks." field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Skull and Crossbones" hidden="false" id="b1b8-0d59-c7f4-5ec1" sortIndex="7">
           <costs>

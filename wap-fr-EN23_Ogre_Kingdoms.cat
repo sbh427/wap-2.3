@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="1580-32e4-2f36-d2bb" name="Ogre Kingdoms WAP 1.6" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="65" revision="10" battleScribeVersion="2.03" authorContact="Contact me via discord" authorName="Xetolosch" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="1580-32e4-2f36-d2bb" name="Ogre Kingdoms WAP 1.6" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="65" revision="11" battleScribeVersion="2.03" authorContact="Contact me via discord" authorName="Xetolosch" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Beneath Contempt" id="76bd-2842-3052-fa33" hidden="false" publicationId="dc4b-67ab-7b8e-baa5" page="3">
       <description>Gnoblars have the Expendable special rule. In addition, even other Gnoblars treat them as being Expendable.</description>
@@ -462,6 +462,19 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
         <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Flaming Attacks.</characteristic>
       </characteristics>
     </profile>
+    <profile name="Ironfist" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="3393-6851-8894-a7f3">
+      <characteristics>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Parry</characteristic>
+        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">6+</characteristic>
+      </characteristics>
+      <modifiers>
+        <modifier type="set" value="6+, even while mounted." field="bdf9-d73e-e13b-b0ce">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </profile>
   </sharedProfiles>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Blood Vulture" hidden="false" id="864f-1868-b2cb-22c5" collective="true" sortIndex="21">
@@ -539,6 +552,14 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
           </characteristics>
         </profile>
       </profiles>
+      <infoLinks>
+        <infoLink name="Parry" id="1c47-1c5e-7248-940d" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
+          <modifiers>
+            <modifier type="set" value="Oriental Longsword" field="name"/>
+            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Gut Plate" hidden="false" id="70bc-a2e4-d580-b03f" collective="true" sortIndex="31">
       <constraints>
@@ -569,8 +590,10 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
 " field="ff58-91e4-84d7-e6e4" join="
 
 "/>
+            <modifier type="prepend" value="Parry (6+) even while mounted." field="ff58-91e4-84d7-e6e4"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Ironfist" id="a5fe-2845-5807-df5f" hidden="false" type="profile" targetId="3393-6851-8894-a7f3"/>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="0" field="463f-8caa-60f4-0dbf">
@@ -1029,6 +1052,12 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
             <modifier type="set" value="Great Mawpot" field="name"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Ward Save" id="ce07-2cd4-7655-8742" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+          <modifiers>
+            <modifier type="set" value="Vessel of the Gulping God" field="name"/>
+            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <rules>
         <rule name="Vessel of the Gulping God" id="df56-fb2e-4ca8-2800" hidden="false" publicationId="dc4b-67ab-7b8e-baa5" page="20">
@@ -1271,6 +1300,7 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
 "/>
           </modifiers>
         </infoLink>
+        <infoLink name="Ironfist" id="a50d-db9d-3db2-6511" hidden="false" type="profile" targetId="3393-6851-8894-a7f3"/>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -1311,6 +1341,14 @@ Weapon Skill of the owning model (the opponent&apos;s attention is elsewhere!).
           <constraints>
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="daf0-0110-887f-2e52" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
+          <infoLinks>
+            <infoLink name="Ward Save" id="6744-ec9a-9fae-87de" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="3+ from next phase, when at last wound." field="bdf9-d73e-e13b-b0ce"/>
+                <modifier type="set" value="Deathcheater" field="name"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Mountaineater" hidden="false" id="6f28-441e-d2bb-28dd" sortIndex="9">
           <costs>
@@ -1957,6 +1995,7 @@ Any hits made with the Skullplucker have the Killing Blow special rule.
 "/>
               </modifiers>
             </infoLink>
+            <infoLink name="Ironfist" id="2ced-9844-9903-5cc5" hidden="false" type="profile" targetId="3393-6851-8894-a7f3"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -2204,6 +2243,13 @@ The wearer gains +1 Strength and a Ward save (6+). If a Magic Weapon inflicts a 
 "/>
               </modifiers>
             </infoLink>
+            <infoLink name="Ironfist" id="525e-52e4-0b89-2bc7" hidden="false" type="profile" targetId="3393-6851-8894-a7f3"/>
+            <infoLink name="Ward Save" id="5395-a128-27ad-fd76" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Greedy Fist" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -2241,6 +2287,14 @@ The wearer gains +1 Strength and a Ward save (6+). If a Magic Weapon inflicts a 
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink name="Ward Save" id="99cf-9041-8de5-a80b" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Wyrdstone Necklace" field="name"/>
+                <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Shrunken Priest Head" hidden="false" id="8999-696e-7e95-63df" sortIndex="2">
           <costs>
@@ -2271,6 +2325,14 @@ The wearer gains +1 Strength and a Ward save (6+). If a Magic Weapon inflicts a 
               </conditionGroups>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Ward Save" id="5fbd-922e-2c54-7456" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Shrunken Priest Head" field="name"/>
+                <modifier type="set" value="4+ against the first wounding hit each phase. " field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="The Rime Shroud" hidden="false" id="eedb-5540-347d-139c" sortIndex="3">
           <costs>
@@ -2318,6 +2380,12 @@ The wearer gains +1 Strength and a Ward save (6+). If a Magic Weapon inflicts a 
                 <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
               </modifiers>
             </infoLink>
+            <infoLink name="Regeneration" id="f6e7-fe8d-836a-784e" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+              <modifiers>
+                <modifier type="set" value="The Pelt of Charngar" field="name"/>
+                <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Cathayan Jet Pendant" hidden="false" id="3b81-df7b-5422-28f8" sortIndex="5">
@@ -2335,6 +2403,20 @@ The wearer gains +1 Strength and a Ward save (6+). If a Magic Weapon inflicts a 
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink name="Magic Resistance" id="cf5c-e9d9-cbf0-9a52" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+              <modifiers>
+                <modifier type="set" value="Cathayan Jet Pendant" field="name"/>
+                <modifier type="set" value="4+, except against the Lore of Yin and Yang." field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Magic Resistance" id="af46-9ffb-ad42-df01" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+              <modifiers>
+                <modifier type="set" value="Cathayan Jet Pendant" field="name"/>
+                <modifier type="set" value="3 except against the Lore of Yin and Yang." field="19f0-e982-f035-416c"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Battered Talisman" hidden="false" id="d203-2c44-e4f3-b6bd" sortIndex="6">
           <costs>
@@ -2351,6 +2433,14 @@ The wearer gains +1 Strength and a Ward save (6+). If a Magic Weapon inflicts a 
               </characteristics>
             </profile>
           </profiles>
+          <infoLinks>
+            <infoLink name="Ward Save" id="323a-c32d-0432-7003" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Battered Talisman" field="name"/>
+                <modifier type="set" value="4+ against Attacks with S 5+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Spangleshard" hidden="false" id="b39f-69d2-9c01-ac0a" sortIndex="7">
           <costs>
@@ -2422,6 +2512,20 @@ The wearer gains +1 Strength and a Ward save (6+). If a Magic Weapon inflicts a 
               </infoLinks>
             </selectionEntry>
           </selectionEntries>
+          <infoLinks>
+            <infoLink name="Magic Resistance" id="4d45-230f-a061-8632" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+              <modifiers>
+                <modifier type="set" value="Gnoblar Thiefstone" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Magic Resistance" id="7ec0-2272-b606-a760" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+              <modifiers>
+                <modifier type="set" value="Gnoblar Thiefstone" field="name"/>
+                <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
@@ -4880,7 +4984,12 @@ The wearer gains +1 Strength and a Ward save (6+). If a Magic Weapon inflicts a 
                         <cost name="pts" typeId="points" value="2"/>
                       </costs>
                       <infoLinks>
-                        <infoLink name="Parry (6+)" id="1094-261a-d2a8-a7a3" hidden="false" type="rule" targetId="e56f-d7d4-8987-dbdb"/>
+                        <infoLink name="Parry" id="e2cc-99b8-61d5-7495" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
+                          <modifiers>
+                            <modifier type="set" value="Upgrade" field="name"/>
+                            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
                       </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Poisoned Attacks (close combat only)" hidden="false" id="0995-a701-0ed5-7ca0" sortIndex="7">
@@ -5145,7 +5254,12 @@ The wearer gains +1 Strength and a Ward save (6+). If a Magic Weapon inflicts a 
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
                   <infoLinks>
-                    <infoLink name="Parry (6+)" id="29a8-6b3c-6109-2650" hidden="false" type="rule" targetId="e56f-d7d4-8987-dbdb"/>
+                    <infoLink name="Parry" id="6eb7-25e3-0b3b-64b9" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
+                      <modifiers>
+                        <modifier type="set" value="Upgrade" field="name"/>
+                        <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Poisoned Attacks (close combat only)" hidden="false" id="5e31-0d89-00fb-932c" sortIndex="7">
@@ -6711,6 +6825,14 @@ If no suitable target is in base contact, roll again on the chart until you get 
                           </characteristics>
                         </profile>
                       </profiles>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="d66e-690e-316a-f065" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Overtyrant&apos;s Crown" field="name"/>
+                            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -6744,6 +6866,12 @@ If no suitable target is in base contact, roll again on the chart until you get 
 
 "/>
                             <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Ward Save" id="66b0-60f6-0ddc-eb1b" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Ironskin Armrour" field="name"/>
+                            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -7390,6 +7518,12 @@ If no suitable target is in base contact, roll again on the chart until you get 
                     <modifier type="set" value="Braugh Slavelord" field="annotation"/>
                   </modifiers>
                 </infoLink>
+                <infoLink name="Regeneration" id="1dbb-17eb-5d44-5162" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                  <modifiers>
+                    <modifier type="set" value="Slavelord" field="name"/>
+                    <modifier type="set" value="5+ (slaves only)" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry type="model" import="true" name="Braugh Slavelord" hidden="false" id="14ea-52a8-2112-a8fa" sortIndex="1">
@@ -7437,6 +7571,7 @@ If no suitable target is in base contact, roll again on the chart until you get 
 "/>
                               </modifiers>
                             </infoLink>
+                            <infoLink name="Two/Additional Hand Weapons" id="9527-d8e7-39ed-4ba9" hidden="false" type="profile" targetId="48ad-587e-84ad-c237"/>
                           </infoLinks>
                         </selectionEntry>
                         <selectionEntry type="upgrade" import="true" name="The Great Bullplate" hidden="false" id="dcf2-a779-1e64-0560" sortIndex="2">

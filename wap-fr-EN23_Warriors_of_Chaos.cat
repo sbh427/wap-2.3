@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ce3b-bf93-496e-a65c" name="Warriors of Chaos WAP 1.62" revision="59" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="ce3b-bf93-496e-a65c" name="Warriors of Chaos WAP 1.62" revision="60" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <profileTypes>
     <profileType id="49dc-2fd8-b942-dbc2" name="Gift of the Gods">
@@ -72,8 +72,19 @@
       <infoLinks>
         <infoLink id="c266-2ab3-bbab-510b" name="Eye of the Gods" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
         <infoLink id="b0f8-a368-254f-0e47" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
-        <infoLink id="d894-5df2-d2cd-fd87" name="Magic Resistance (1)" hidden="false" targetId="7ed4-9d31-09c3-6bf9" type="rule"/>
         <infoLink name="Chaos Armour" id="8067-1222-e6f0-fe6f" hidden="false" type="profile" targetId="607f-51b8-00aa-68b0"/>
+        <infoLink name="Magic Resistance" id="febc-0506-2d15-c955" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+          <modifiers>
+            <modifier type="set" value="Slaughterpriest of Khorne" field="name"/>
+            <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Magic Resistance" id="246b-e684-a236-c639" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+          <modifiers>
+            <modifier type="set" value="Slaughterpriest of Khorne" field="name"/>
+            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="db95-fde1-92b3-4226" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
@@ -125,11 +136,16 @@
               <infoLinks>
                 <infoLink name="Fear" id="e882-6298-c7f4-363e" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
                 <infoLink name="Giver of Glory" id="0ff9-0851-7a46-8a6c" hidden="false" targetId="29d8-56a5-ea8a-80e4" type="rule"/>
-                <infoLink name="Ward Save (5+)" id="82f5-2f4d-cb45-2eb4" hidden="false" targetId="4b60-6477-75a8-f6dd" type="rule"/>
                 <infoLink name="Will of Chaos" id="4a52-acf4-0641-b282" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
                 <infoLink name="Mark of Khorne" id="1d6a-afd5-9ed5-798c" hidden="false" targetId="Mark of Khorne" type="rule"/>
                 <infoLink name="Warshrine" id="a0b1-c24f-89b7-0d24" hidden="false" targetId="cd60-020c-c3f2-a5fa" type="profile"/>
                 <infoLink name="Line of Sight (5)" id="ef9a-8448-91a1-f0fb" hidden="false" targetId="564d-ded4-217d-827c" type="rule"/>
+                <infoLink name="Ward Save" id="0875-60f7-f68f-dad0" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Chaos Warshrine of Khorne" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <selectionEntries>
                 <selectionEntry type="upgrade" import="true" name="Chaos Shrine Bearers" hidden="false" id="482b-4877-8849-a44c" collective="false">
@@ -194,7 +210,7 @@
         <cost name="pts" typeId="points" value="145"/>
       </costs>
       <selectionEntryGroups>
-        <selectionEntryGroup name="11. Mark of Chaos" id="b00f-3b8d-6f38-2303" hidden="false">
+        <selectionEntryGroup name="11. Mark of Chaos" id="b00f-3b8d-6f38-2303" hidden="false" sortIndex="0">
           <entryLinks>
             <entryLink import="true" name="Mark of Khorne" hidden="false" id="7533-6d9f-7193-5b0c" type="selectionEntry" targetId="2211-a88b-c358-2e91">
               <constraints>
@@ -580,12 +596,12 @@
             <constraint field="selections" scope="parent" value="10" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f3a9-bc53-4dc7-dd42" type="min"/>
           </constraints>
           <profiles>
-            <profile id="15b1-7d33-3954-e336" name="1" publicationId="1a01-044f-047b-618f" page="189" hidden="false" typeId="afff-5e32-307f-3912" typeName="Freakish Mutations Table">
+            <profile id="15b1-7d33-3954-e336" name="1 Slug Brains" publicationId="1a01-044f-047b-618f" page="189" hidden="false" typeId="afff-5e32-307f-3912" typeName="Freakish Mutations Table">
               <characteristics>
-                <characteristic name="Result" typeId="46f2-3f21-a696-7750">Slug Brains: All Forsaken in the unit is subject to Always Strikes Last.</characteristic>
+                <characteristic name="Result" typeId="46f2-3f21-a696-7750">All Forsaken in the unit is subject to Always Strikes Last.</characteristic>
               </characteristics>
             </profile>
-            <profile id="73e2-0766-cfe2-5134" name="Forsaken" publicationId="1a01-044f-047b-618f" page="189" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
+            <profile id="73e2-0766-cfe2-5134" name="Forsaken" publicationId="1a01-044f-047b-618f" page="189" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model" noindex="true">
               <characteristics>
                 <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
                 <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
@@ -599,29 +615,29 @@
                 <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Human)</characteristic>
               </characteristics>
             </profile>
-            <profile id="2c0a-892b-7e03-cf43" name="2" publicationId="1a01-044f-047b-618f" page="189" hidden="false" typeId="afff-5e32-307f-3912" typeName="Freakish Mutations Table">
+            <profile id="2c0a-892b-7e03-cf43" name="2 Razor Talons" publicationId="1a01-044f-047b-618f" page="189" hidden="false" typeId="afff-5e32-307f-3912" typeName="Freakish Mutations Table">
               <characteristics>
-                <characteristic name="Result" typeId="46f2-3f21-a696-7750">Razor Talons: All Forsaken in the unit have Armour Piercing (1).</characteristic>
+                <characteristic name="Result" typeId="46f2-3f21-a696-7750">All Forsaken in the unit have Armour Piercing (1).</characteristic>
               </characteristics>
             </profile>
-            <profile id="be92-3571-99fd-093e" name="4" publicationId="1a01-044f-047b-618f" page="189" hidden="false" typeId="afff-5e32-307f-3912" typeName="Freakish Mutations Table">
+            <profile id="be92-3571-99fd-093e" name="4 Venomous Fangs" publicationId="1a01-044f-047b-618f" page="189" hidden="false" typeId="afff-5e32-307f-3912" typeName="Freakish Mutations Table">
               <characteristics>
-                <characteristic name="Result" typeId="46f2-3f21-a696-7750">Venomous Fangs: All Forsaken in the unit have Poisoned Attacks.</characteristic>
+                <characteristic name="Result" typeId="46f2-3f21-a696-7750">All Forsaken in the unit have Poisoned Attacks.</characteristic>
               </characteristics>
             </profile>
-            <profile id="f1fd-3a9f-76f4-827e" name="3" publicationId="1a01-044f-047b-618f" page="189" hidden="false" typeId="afff-5e32-307f-3912" typeName="Freakish Mutations Table">
+            <profile id="f1fd-3a9f-76f4-827e" name="3 Lashing Tentacles" publicationId="1a01-044f-047b-618f" page="189" hidden="false" typeId="afff-5e32-307f-3912" typeName="Freakish Mutations Table">
               <characteristics>
-                <characteristic name="Result" typeId="46f2-3f21-a696-7750">Lashing Tentacles: All Forsaken in the unit gain +2 to their I.</characteristic>
+                <characteristic name="Result" typeId="46f2-3f21-a696-7750">All Forsaken in the unit gain +2 to their I.</characteristic>
               </characteristics>
             </profile>
-            <profile id="dcf3-d498-7dd0-8c34" name="5" publicationId="1a01-044f-047b-618f" page="189" hidden="false" typeId="afff-5e32-307f-3912" typeName="Freakish Mutations Table">
+            <profile id="dcf3-d498-7dd0-8c34" name="5 Healing Flesh" publicationId="1a01-044f-047b-618f" page="189" hidden="false" typeId="afff-5e32-307f-3912" typeName="Freakish Mutations Table">
               <characteristics>
-                <characteristic name="Result" typeId="46f2-3f21-a696-7750">Healing Flesh: All Forsaken in the unit have Regeneration (5+).</characteristic>
+                <characteristic name="Result" typeId="46f2-3f21-a696-7750">All Forsaken in the unit have Regeneration (5+).</characteristic>
               </characteristics>
             </profile>
-            <profile id="0599-ad26-dc76-4356" name="6" publicationId="1a01-044f-047b-618f" page="189" hidden="false" typeId="afff-5e32-307f-3912" typeName="Freakish Mutations Table">
+            <profile id="0599-ad26-dc76-4356" name="6 Decapitating Claws" publicationId="1a01-044f-047b-618f" page="189" hidden="false" typeId="afff-5e32-307f-3912" typeName="Freakish Mutations Table">
               <characteristics>
-                <characteristic name="Result" typeId="46f2-3f21-a696-7750">Decapitating Claws: All Forsaken in the unit have Killing Blow.</characteristic>
+                <characteristic name="Result" typeId="46f2-3f21-a696-7750">All Forsaken in the unit have Killing Blow.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -649,14 +665,17 @@
                   </costs>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Forsaken of Tzeentch" hidden="false" id="313c-5885-68b9-e1bd" collective="true">
-                  <rules>
-                    <rule name="Forsaken of Tzeentch" id="98ef-b681-241d-f5bc" hidden="false">
-                      <description>Forsaken of Tzeentch have the Ward Save (6+) special rule.</description>
-                    </rule>
-                  </rules>
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
+                  <infoLinks>
+                    <infoLink name="Ward Save" id="be24-9780-e281-ccdf" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                      <modifiers>
+                        <modifier type="set" value="Forsaken of Tzeentch" field="name"/>
+                        <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Forsaken of Slaanesh" hidden="false" id="d766-e289-481f-23ad" collective="true">
                   <rules>
@@ -2230,8 +2249,13 @@
           </profiles>
           <infoLinks>
             <infoLink id="5aaa-641b-b4f8-09ef" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
-            <infoLink id="d017-27fb-1c0f-3e85" name="Regeneration (5+)" hidden="false" targetId="5fed-df2e-b6d6-cc93" type="rule"/>
             <infoLink id="3383-447c-6b6b-5e9c" name="Frenzy" hidden="false" targetId="9ff3-dda6-e142-5a77" type="rule"/>
+            <infoLink name="Regeneration" id="5885-2f7b-5d78-5e03" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+              <modifiers>
+                <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                <modifier type="set" value="Skin Wolf" field="name"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="Mark of Chaos" id="3f0d-4217-94a9-f966" hidden="false">
@@ -2247,14 +2271,17 @@
                   </costs>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Skin Wolves of Tzeentch" hidden="false" id="c4ad-cc86-a2bb-06ec" collective="true">
-                  <rules>
-                    <rule name="Skin Wolves of Tzeentch" id="5a66-4566-881c-5a22" hidden="false">
-                      <description>The model gains the Regeneration (6+) special rule.</description>
-                    </rule>
-                  </rules>
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
+                  <infoLinks>
+                    <infoLink name="Regeneration" id="f66c-248f-38bf-9f1c" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                      <modifiers>
+                        <modifier type="set" value="Skin Wolves of Tzeentch" field="name"/>
+                        <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
                 </selectionEntry>
                 <selectionEntry type="upgrade" import="true" name="Skin Wolves of Slaanesh" hidden="false" id="d646-f68d-dbd1-112d" collective="true">
                   <rules>
@@ -3002,12 +3029,29 @@ Each time the unit casts a spell (or is targeted by a special rule that affects 
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Canine)</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="increment" value="1" field="edd2-7979-54a4-6b35">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="d5f2-a266-5ba1-b16c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="increment" value="2" field="7cca-e51f-edc2-7322">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="7740-5280-a862-e771" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
         <infoLink id="2695-ba46-6a00-0978" name="Impact Hits (D6)" hidden="false" targetId="e9e6-66cc-623f-8e94" type="rule"/>
-        <infoLink id="43f5-8781-0b66-05de" name="Regeneration (5+)" hidden="false" targetId="5fed-df2e-b6d6-cc93" type="rule"/>
         <infoLink id="6727-27a3-89f0-bbd0" name="Frenzy" hidden="false" targetId="9ff3-dda6-e142-5a77" type="rule"/>
+        <infoLink name="Regeneration" id="21c2-e2fc-0f71-2557" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+          <modifiers>
+            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+            <modifier type="set" value="Giant Spinehound" field="name"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="159c-9c6d-45cf-d66b" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -3026,6 +3070,13 @@ Each time the unit casts a spell (or is targeted by a special rule that affects 
               <rules>
                 <rule id="03a7-391c-cce0-67e1" name="Beast of Khorne" publicationId="1a01-044f-047b-618f" page="203" hidden="false">
                   <description>A Beast of Khorne has +1 S.</description>
+                  <modifiers>
+                    <modifier type="append" value="(already in profile)" field="description">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="d5f2-a266-5ba1-b16c" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </rule>
               </rules>
               <costs>
@@ -3036,14 +3087,17 @@ Each time the unit casts a spell (or is targeted by a special rule that affects 
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f007-1340-d962-d93e" type="max"/>
               </constraints>
-              <rules>
-                <rule id="9a74-968f-24fb-a671" name="Beast of Tzeentch" publicationId="1a01-044f-047b-618f" page="203" hidden="false">
-                  <description>A Beast of Tzeentch has a Ward Save (6+).</description>
-                </rule>
-              </rules>
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Ward Save" id="5c15-32b5-60f6-11a0" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Beast of Tzeentch" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry id="7740-5280-a862-e771" name="Beast of Slaanesh" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
               <constraints>
@@ -3052,6 +3106,13 @@ Each time the unit casts a spell (or is targeted by a special rule that affects 
               <rules>
                 <rule id="5045-2326-7163-d2d7" name="Beast of Slaanesh" publicationId="1a01-044f-047b-618f" page="203" hidden="false">
                   <description>A Beast of Slaanesh has +2 to its I.</description>
+                  <modifiers>
+                    <modifier type="append" value="(already in profile)" field="description">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="7740-5280-a862-e771" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </rule>
               </rules>
               <costs>
@@ -3062,14 +3123,12 @@ Each time the unit casts a spell (or is targeted by a special rule that affects 
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b06f-06a8-1036-922d" type="max"/>
               </constraints>
-              <rules>
-                <rule id="556e-7179-eec4-6c72" name="Beast of Nurgle" publicationId="1a01-044f-047b-618f" page="203" hidden="false">
-                  <description>A Beast of Nurgle has Poisoned Attacks.</description>
-                </rule>
-              </rules>
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Poisoned Attacks" id="7f10-c937-a3c3-0404" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -3174,12 +3233,17 @@ Unlike other random movement, an Unbound Slaughterbrute can move into base conta
         <infoLink id="f8e1-3ca3-eb73-7351" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
         <infoLink id="2ef5-58b4-dcb7-10f4" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
         <infoLink id="f9cc-ec56-f4c1-7873" name="Random Attacks (D6+2)" hidden="false" targetId="33f1-4ddd-d26b-281a" type="rule"/>
-        <infoLink id="f953-0df3-159e-8a80" name="Regeneration (5+)" hidden="false" targetId="5fed-df2e-b6d6-cc93" type="rule"/>
         <infoLink name="Natural Armour" id="71d9-eee0-b7d1-00bd" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
           <modifiers>
             <modifier type="set" value="4+" field="168d-1cc2-66f3-e766"/>
             <modifier type="set" value="4+" field="97ea-ecf7-8d24-b2ca"/>
             <modifier type="set" value="Mutalith Vortex Beast" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Regeneration" id="c9c2-ea53-defb-a2f9" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+          <modifiers>
+            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+            <modifier type="set" value="Mutalith Vortex Beast" field="name"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -3274,7 +3338,6 @@ Any unit that suffers one or more casualties from Doomfire must take a Panic tes
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="cf52-b3ec-0b9d-c6c6" name="Daemonic" hidden="false" targetId="a6d9-b8e9-21b2-96ff" type="rule"/>
         <infoLink id="b738-a5e2-2241-cb29" name="Mixed Unit" hidden="false" targetId="e00a-3a09-9b67-e994" type="rule"/>
         <infoLink name="Natural Armour" id="ffdf-372b-11ae-14ef" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
           <modifiers>
@@ -3283,6 +3346,7 @@ Any unit that suffers one or more casualties from Doomfire must take a Panic tes
             <modifier type="set" value="670b-dfca-1cbd-356a" field="annotation"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Daemonic" id="3232-78bd-e7bd-4021" hidden="false" type="infoGroup" targetId="9c1c-92d1-b507-cf66"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="6a90-df5c-8388-b09e" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -4069,8 +4133,13 @@ Use the Big Things Chart when fighting Monsters, Monstrous Creatures, Monstrous 
                 <infoLink id="d90e-2ada-a00b-6b72" name="Eye of the Gods" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
                 <infoLink name="Poisoned Attacks" id="15dc-a41c-20be-47ab" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule"/>
                 <infoLink name="Impact Hits (D3)" id="835e-5668-b3dd-5c66" hidden="false" targetId="f30d-0b61-2836-689e" type="rule"/>
-                <infoLink name="Regeneration (4+)" id="e466-1c76-b805-d15c" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
                 <infoLink name="Mark of Nurgle" id="2b27-a770-2275-8195" hidden="false" targetId="Mark of Nurgle" type="rule"/>
+                <infoLink name="Regeneration" id="9b6c-e959-4423-061b" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                  <modifiers>
+                    <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                    <modifier type="set" value="The Glottkin" field="name"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="10. Character Options" hidden="false" id="35e3-5901-b44d-c14b" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
@@ -4191,12 +4260,17 @@ Use the Big Things Chart when fighting Monsters, Monstrous Creatures, Monstrous 
               </rules>
               <infoLinks>
                 <infoLink id="124f-7afd-1835-aaf5" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
-                <infoLink id="7e0d-f387-f5a5-56b4" name="Ward Save (5+)" hidden="false" targetId="4b60-6477-75a8-f6dd" type="rule"/>
                 <infoLink id="b630-4a00-28ea-609b" name="Fear" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
                 <infoLink id="bbf7-2647-b9ac-5f7a" name="Fly (10)" hidden="false" targetId="953a-d5a4-ee81-4093" type="rule"/>
                 <infoLink id="86b6-00f2-ad86-06cb" name="Eye of the Gods" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
                 <infoLink id="71a3-1144-60fc-2b18" name="Mark of Khorne" hidden="false" targetId="Mark of Khorne" type="rule"/>
                 <infoLink name="Chaos Armour" id="12b8-80fc-4785-22f1" hidden="false" type="profile" targetId="607f-51b8-00aa-68b0"/>
+                <infoLink name="Ward Save" id="01e7-c49d-036c-fa42" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Valkia the Bloody" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="50. Handheld Armour" hidden="false" id="5374-740e-a231-7806" type="selectionEntryGroup" targetId="9015-46da-282c-713d">
@@ -4421,6 +4495,7 @@ Use the Big Things Chart when fighting Monsters, Monstrous Creatures, Monstrous 
                             <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
                           </modifiers>
                         </infoLink>
+                        <infoLink name="Parry (shield)" id="46b6-c044-b97c-b343" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
                       </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
@@ -4468,6 +4543,12 @@ Use the Big Things Chart when fighting Monsters, Monstrous Creatures, Monstrous 
                             <modifier type="set" value="2+" field="97ea-ecf7-8d24-b2ca"/>
                             <modifier type="set" value="2+" field="168d-1cc2-66f3-e766"/>
                             <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Regeneration" id="08e9-3ba6-90e1-b38a" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                          <modifiers>
+                            <modifier type="set" value="Auric Armour" field="name"/>
+                            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -4546,6 +4627,14 @@ Use the Big Things Chart when fighting Monsters, Monstrous Creatures, Monstrous 
                           <costs>
                             <cost name="pts" typeId="points" value="0"/>
                           </costs>
+                          <infoLinks>
+                            <infoLink name="Ward Save" id="4c97-9ecc-a098-1989" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                              <modifiers>
+                                <modifier type="set" value="The Viperous Staff" field="name"/>
+                                <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                              </modifiers>
+                            </infoLink>
+                          </infoLinks>
                         </selectionEntry>
                       </selectionEntries>
                     </entryLink>
@@ -4733,22 +4822,34 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                             <modifier type="set" value="Hound of Khorne only" field="annotation"/>
                           </modifiers>
                         </infoLink>
-                        <infoLink name="Daemonic" id="ccc7-3a20-4a5c-a764" hidden="false" targetId="a6d9-b8e9-21b2-96ff" type="rule">
-                          <modifiers>
-                            <modifier type="set" value="Hound of Khorne only" field="annotation"/>
-                          </modifiers>
-                        </infoLink>
                         <infoLink name="Frenzy" id="7f8f-e5e4-4a47-f55e" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77">
                           <modifiers>
-                            <modifier type="set" value="including Hound of Khorne" field="annotation"/>
+                            <modifier type="set" value="Including Hound of Khorne" field="annotation"/>
                           </modifiers>
                         </infoLink>
-                        <infoLink name="Magic Resistance (2)" id="70a8-6d5a-49ee-3f07" hidden="false" type="rule" targetId="0e09-3526-25d5-2646"/>
                         <infoLink name="Natural Armour" id="90f3-ddf1-78ef-1564" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
                           <modifiers>
                             <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
                             <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
                             <modifier type="set" value="Hound of Khorne" field="annotation"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Magic Resistance" id="127f-6a90-d8cb-e721" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                          <modifiers>
+                            <modifier type="set" value="Hound of Khorne" field="name"/>
+                            <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Magic Resistance" id="4f0d-e3fa-20bc-f77e" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                          <modifiers>
+                            <modifier type="set" value="Hound of Khorne" field="name"/>
+                            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Daemonic" id="f773-a022-c354-6213" hidden="false" type="profile" targetId="377d-1fae-4a56-de9e"/>
+                        <infoLink name="Daemonic" id="f434-267f-a2df-2b29" hidden="false" type="rule" targetId="6940-194d-860b-18d4">
+                          <modifiers>
+                            <modifier type="set" value="Hound of Khorne only" field="annotation"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -4803,9 +4904,14 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
               <infoLinks>
                 <infoLink id="93ae-a0fc-9c88-e709" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
                 <infoLink id="64ee-dfe0-c91e-b5c9" name="Mark of Nurgle" hidden="false" targetId="Mark of Nurgle" type="rule"/>
-                <infoLink id="0d6d-3be7-7af4-1c50" name="Ward Save (6+)" hidden="false" targetId="5c26-a043-8535-5f4f" type="rule"/>
                 <infoLink id="f5e7-eb2c-b283-3c63" name="Eye of the Gods" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
                 <infoLink name="Chaos Armour" id="29f0-0c3b-0cf3-5597" hidden="false" type="profile" targetId="607f-51b8-00aa-68b0"/>
+                <infoLink name="Ward Save" id="51fe-7c8b-49da-4518" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Orghotts Daemonspew" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="20. Primary Weapon" hidden="false" id="0f80-1735-d630-4848" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
@@ -4829,6 +4935,7 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                             <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
+                        <infoLink name="Two/Additional Hand Weapons" id="24c6-88fe-3118-ba2f" hidden="false" type="profile" targetId="48ad-587e-84ad-c237"/>
                       </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
@@ -5084,6 +5191,7 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                             <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
                           </modifiers>
                         </infoLink>
+                        <infoLink name="Parry (shield)" id="941c-f4eb-ece0-1476" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
                       </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
@@ -5313,6 +5421,7 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                             <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
                           </modifiers>
                         </infoLink>
+                        <infoLink name="Parry (shield)" id="004b-77ad-1c86-6eee" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
                       </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
@@ -5543,8 +5652,13 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
               </rules>
               <infoLinks>
                 <infoLink id="e324-05e7-3a2c-1634" name="Eye of the Gods" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
-                <infoLink id="2c86-1398-ed43-0d8e" name="Ward Save (5+)" hidden="false" targetId="4b60-6477-75a8-f6dd" type="rule"/>
                 <infoLink name="Mark of Slaanesh" id="492a-c19f-634b-207f" hidden="false" type="rule" targetId="Mark of Slaanesh"/>
+                <infoLink name="Ward Save" id="0277-60c7-aa45-6551" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Glutos Orscollion" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="65. Lore of Magic" hidden="false" id="37c1-1ac4-3218-e855" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
@@ -5712,7 +5826,6 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
               </rules>
               <infoLinks>
                 <infoLink id="2352-e6bf-8423-77ee" name="Fly (7)" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
-                <infoLink id="c7e6-8991-c651-c25a" name="Ward Save (6+)" hidden="false" targetId="5c26-a043-8535-5f4f" type="rule"/>
                 <infoLink name="Mark of Tzeentch" id="a9a4-bd80-b66e-94fa" hidden="false" type="rule" targetId="Mark of Tzeentch"/>
                 <infoLink name="Natural Armour" id="6997-93b3-dca0-e14b" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
                   <modifiers>
@@ -5723,6 +5836,12 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                 </infoLink>
                 <infoLink name="Dark Fire of Chaos" id="5ab9-a028-c789-0269" hidden="false" type="profile" targetId="04f9-8a40-3169-2785"/>
                 <infoLink name="Fumes of Contagion" id="9e29-6711-759a-2871" hidden="false" type="profile" targetId="75de-a288-db8b-4700"/>
+                <infoLink name="Ward Save" id="9ecb-0eb6-870c-79b0" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Galrauch" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="65. Lore of Magic" hidden="false" id="f231-e89b-5d46-0c6a" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
@@ -6058,6 +6177,18 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
               <infoLinks>
                 <infoLink id="8533-9845-de97-4b91" name="Eye of the Gods" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
                 <infoLink name="Chaos Armour" id="07b9-9678-d1ce-ee4d" hidden="false" type="profile" targetId="607f-51b8-00aa-68b0"/>
+                <infoLink name="Magic Resistance" id="1cb2-bfb5-9087-f08f" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                  <modifiers>
+                    <modifier type="set" value="Chosen of the Gods" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Magic Resistance" id="2445-ba35-40b5-921e" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                  <modifiers>
+                    <modifier type="set" value="Chosen of the Gods" field="name"/>
+                    <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="10. Character Options" hidden="false" id="b447-6b6f-d354-a947" type="selectionEntryGroup" targetId="7853-6aa4-00e8-09e0"/>
@@ -6085,7 +6216,7 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                       </profiles>
                       <infoLinks>
                         <infoLink name="Strider" id="c545-3d9a-dbca-f10c" hidden="false" targetId="c270-3956-9b64-b587" type="rule"/>
-                        <infoLink name="Daemonic" id="edc6-0822-a6bd-7fea" hidden="false" targetId="a6d9-b8e9-21b2-96ff" type="rule"/>
+                        <infoLink name="Daemonic" id="c829-f42e-98b0-1acc" hidden="false" type="infoGroup" targetId="9c1c-92d1-b507-cf66"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="50"/>
@@ -6139,6 +6270,14 @@ deployed within 3&quot; of Sayl, but may otherwise move like an independent unit
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="68a7-a2c5-eef8-8d26" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="The Eye of Sheerian" field="name"/>
+                            <modifier type="set" value="3+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -6411,7 +6550,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                           </modifiers>
                         </infoLink>
                         <infoLink name="Swiftstride" id="9cef-07cb-a5b1-78de" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                        <infoLink name="Daemonic" id="8040-a931-0aef-cd9b" hidden="false" targetId="a6d9-b8e9-21b2-96ff" type="rule"/>
+                        <infoLink name="Daemonic" id="8a47-a847-3670-9807" hidden="false" type="infoGroup" targetId="9c1c-92d1-b507-cf66"/>
                       </infoLinks>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
@@ -6546,6 +6685,12 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                             <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
                           </modifiers>
                         </infoLink>
+                        <infoLink name="Ward Save" id="d39d-fdd5-8502-c00a" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Warpsteel Shield" field="name"/>
+                            <modifier type="set" value="4+ against non-magical attacks. " field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
                       </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
@@ -6635,6 +6780,13 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                             <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
                           </modifiers>
                         </infoLink>
+                        <infoLink name="Parry (shield)" id="7ea9-4196-41b2-ddb5" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
+                        <infoLink name="Ward Save" id="20dc-06f5-41ab-1b29" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Infernal Runeshield" field="name"/>
+                            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
                       </infoLinks>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7261-ea20-7ba3-9f1c-min"/>
@@ -6700,8 +6852,19 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                 <infoLink name="Eye of the Gods" id="5200-5bbd-0e23-8dfa" hidden="false" type="rule" targetId="b167-39dc-6abe-179d"/>
                 <infoLink name="Immunity (Psychology)" id="75d2-937b-b0dc-cff8" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
                 <infoLink name="Mark of Khorne" id="f04d-91c0-c37b-c3b6" hidden="false" type="rule" targetId="Mark of Khorne"/>
-                <infoLink name="Magic Resistance (1)" id="f48c-ac3b-b045-db88" hidden="false" type="rule" targetId="7ed4-9d31-09c3-6bf9"/>
                 <infoLink name="Chaos Armour" id="d7c5-cec9-5444-a948" hidden="false" type="profile" targetId="607f-51b8-00aa-68b0"/>
+                <infoLink name="Magic Resistance" id="ddfc-9fad-a10b-fcc2" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                  <modifiers>
+                    <modifier type="set" value="Skarr Bloodwrath" field="name"/>
+                    <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Magic Resistance" id="2722-6ef9-8fb8-dc41" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                  <modifiers>
+                    <modifier type="set" value="Skarr Bloodwrath" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <rules>
                 <rule name="Bloodborn" id="d103-28a2-e50d-0cd0" hidden="false">
@@ -6725,6 +6888,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                             <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
+                        <infoLink name="Two/Additional Hand Weapons" id="4a27-395f-1b72-1011" hidden="false" type="profile" targetId="48ad-587e-84ad-c237"/>
                       </infoLinks>
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5889-0445-ee27-65e7-min"/>
@@ -6884,6 +7048,12 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                 <infoLink id="1382-9842-23a3-dfae" name="Mark of Tzeentch" hidden="false" targetId="Mark of Tzeentch" type="rule"/>
                 <infoLink id="0b5d-3f64-169b-ef38" name="Eye of the Gods" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
                 <infoLink name="Chaos Armour" id="b580-38da-2ef2-a111" hidden="false" type="profile" targetId="607f-51b8-00aa-68b0"/>
+                <infoLink name="Regeneration" id="e150-1458-6193-564f" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                  <modifiers>
+                    <modifier type="set" value="The Breath of Life" field="name"/>
+                    <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="40. Suits of Armour" hidden="false" id="0c78-92ee-7b87-36a1" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
@@ -6997,6 +7167,14 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Regeneration" id="05d0-2267-f8a7-2fc7" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                          <modifiers>
+                            <modifier type="set" value="Snow Troll Amulet" field="name"/>
+                            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -7053,6 +7231,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                             <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
                           </modifiers>
                         </infoLink>
+                        <infoLink name="Parry (shield)" id="11b6-d350-01a6-088f" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
                       </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
@@ -7124,6 +7303,26 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="61da-6fa0-c199-903a" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Brass Collar of Khorne" field="name"/>
+                            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Magic Resistance" id="a41c-3412-787a-ac91" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                          <modifiers>
+                            <modifier type="set" value="Brass Collar of Khorne" field="name"/>
+                            <modifier type="set" value="3" field="19f0-e982-f035-416c"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Magic Resistance" id="43e9-8cca-685c-c9f2" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                          <modifiers>
+                            <modifier type="set" value="Brass Collar of Khorne" field="name"/>
+                            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -7168,13 +7367,18 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               </rules>
               <infoLinks>
                 <infoLink id="8187-c3cc-e7e5-95f5" name="Eye of the Gods" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
-                <infoLink id="6987-9e8b-5965-72da" name="Regeneration (4+)" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
                 <infoLink name="Loner" id="18d8-9fdd-7080-7cac" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
                 <infoLink name="Natural Armour" id="35fe-6d8e-ba86-b7a2" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
                   <modifiers>
                     <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
                     <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
                     <modifier type="set" value="Throgg Wintertooth" field="annotation"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Regeneration" id="5a35-845d-35ec-02eb" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                  <modifiers>
+                    <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                    <modifier type="set" value="Throgg Wintertooth" field="name"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -7366,8 +7570,13 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                 <infoLink id="5742-1cec-a7b6-2896" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
                 <infoLink id="9162-162a-d113-afc6" name="Mark of Nurgle" hidden="false" targetId="Mark of Nurgle" type="rule"/>
                 <infoLink id="8673-c539-422c-6a97" name="Eye of the Gods" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
-                <infoLink name="Regeneration (5+)" id="0c78-242c-1f7c-d130" hidden="false" targetId="5fed-df2e-b6d6-cc93" type="rule"/>
                 <infoLink name="Chaos Armour" id="d45e-63bd-ce48-eaf0" hidden="false" type="profile" targetId="607f-51b8-00aa-68b0"/>
+                <infoLink name="Regeneration" id="6150-211e-a8f8-1ff9" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                  <modifiers>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                    <modifier type="set" value="Kayzk the Befouled" field="name"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="55. Equipment" hidden="false" id="026f-6e89-a271-8814" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
@@ -7489,8 +7698,13 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                 <infoLink id="2cef-0c69-5e96-5535" name="Eye of the Gods" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
                 <infoLink id="0cbc-33b1-4276-a72b" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
                 <infoLink id="4463-5287-110d-61b7" name="Poisoned Attacks" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule"/>
-                <infoLink id="3290-5469-f3dd-9d45" name="Regeneration (4+)" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
                 <infoLink name="Mark of Nurgle" id="be11-2d2a-3097-7f59" hidden="false" type="rule" targetId="Mark of Nurgle"/>
+                <infoLink name="Regeneration" id="9beb-9f0f-d31a-f2b5" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                  <modifiers>
+                    <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                    <modifier type="set" value="Festus the Leechlord" field="name"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="55. Equipment" hidden="false" id="9b6c-7fe2-1ce9-0695" type="selectionEntryGroup" targetId="6423-df0f-15a7-7575">
@@ -7668,9 +7882,14 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                 <infoLink name="Immunity (Psychology)" id="8007-ed6d-20b2-726b" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
                 <infoLink name="Fear" id="a5a1-b9e4-d93c-1b4f" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
                 <infoLink name="Hatred" id="2d25-abe8-ef6a-7f6e" hidden="false" targetId="f6d7-9fbc-abc1-5cfc" type="rule"/>
-                <infoLink name="Regeneration (4+)" id="b9f5-f9b1-3e85-45f5" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
                 <infoLink name="Eye of the Gods" id="d027-c1f9-8745-f805" hidden="false" targetId="b167-39dc-6abe-179d" type="rule"/>
                 <infoLink name="Chaos Armour" id="4580-5a1a-3d65-5c86" hidden="false" type="profile" targetId="607f-51b8-00aa-68b0"/>
+                <infoLink name="Regeneration" id="7983-9bcf-fe66-2e2a" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                  <modifiers>
+                    <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                    <modifier type="set" value="Valnir the Reaper" field="name"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="40. Suits of Armour" hidden="false" id="d0de-ddce-abe6-ef49" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
@@ -7845,6 +8064,12 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                             <modifier type="append" value="This armour gives Styrkaar a 6+ Ward save. For each Hit that Styrkaar suffers in close combat, he immediately gets to make an additional Attack.
 " field="ff58-91e4-84d7-e6e4"/>
                             <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Ward Save" id="9ca6-e072-54a0-9a17" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Armour of Disdain" field="name"/>
+                            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -8310,6 +8535,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
       <infoLinks>
         <infoLink name="Daemonic Instability" id="f24f-579a-5ee3-b32d" hidden="false" type="rule" targetId="c6ed-33cf-2be7-0cec"/>
         <infoLink name="Chaos Armour" id="cb55-9a26-43f5-84c1" hidden="false" type="profile" targetId="607f-51b8-00aa-68b0"/>
+        <infoLink name="Daemonic" id="dacc-0d2d-387d-3235" hidden="false" type="infoGroup" targetId="9c1c-92d1-b507-cf66"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="11. Daemonic" id="c1e2-7235-0a87-0830" hidden="false">
@@ -9112,9 +9338,14 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <infoLink name="Warshrine" id="fbaf-c221-a36d-7de2" hidden="false" targetId="cd60-020c-c3f2-a5fa" type="profile"/>
         <infoLink name="Fear" id="890c-1162-c065-5b0f" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
         <infoLink name="Giver of Glory" id="c1bc-c040-e8f4-465c" hidden="false" targetId="29d8-56a5-ea8a-80e4" type="rule"/>
-        <infoLink name="Ward Save (5+)" id="cb44-be36-6fe4-d57b" hidden="false" targetId="4b60-6477-75a8-f6dd" type="rule"/>
         <infoLink name="Will of Chaos" id="a8aa-0a84-ced9-8258" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
         <infoLink name="Line of Sight (5)" id="c2ab-500c-5839-59fd" hidden="false" targetId="564d-ded4-217d-827c" type="rule"/>
+        <infoLink name="Ward Save" id="2597-fd01-6e7c-e4b1" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+          <modifiers>
+            <modifier type="set" value="Warshrine" field="name"/>
+            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntries>
         <selectionEntry type="model" import="true" name="Shrinemaster" hidden="false" id="c1f1-ca31-a8a9-d5ac" collective="false" subType="crew">
@@ -9250,12 +9481,23 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
       <infoLinks>
         <infoLink id="ea29-6014-379a-41ae" name="Fly (7)" hidden="false" targetId="36ba-3349-99bd-1979" type="rule"/>
         <infoLink name="Magical Attacks" id="2d41-1944-15ec-4bc5" hidden="false" type="rule" targetId="03db-d81f-f264-84b8"/>
-        <infoLink name="Regeneration (6+)" id="c2ad-3c03-59f2-6919" hidden="false" type="rule" targetId="6f3b-cd4f-062d-7f26"/>
         <infoLink name="Natural Armour" id="013a-1918-8273-5b98" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
           <modifiers>
             <modifier type="set" value="3+" field="168d-1cc2-66f3-e766"/>
             <modifier type="set" value="3+" field="97ea-ecf7-8d24-b2ca"/>
             <modifier type="set" value="Warpfire Dragon" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Regeneration" id="2e6d-81d0-4b46-a170" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+          <modifiers>
+            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+            <modifier type="set" value="Warpfire Dragon" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Ward Save" id="444e-8cdf-099b-01c3" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+          <modifiers>
+            <modifier type="set" value="Warpfire Aura" field="name"/>
+            <modifier type="set" value="5+ against Magical Attacks." field="bdf9-d73e-e13b-b0ce"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -9432,11 +9674,6 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
               <selectionEntries>
                 <selectionEntry type="model" import="true" name="Exalted Steed of Slaanesh" hidden="false" id="7dd5-b4d8-cb50-2585" collective="true" subType="mount">
                   <infoLinks>
-                    <infoLink name="Daemonic" id="5abe-8a9c-3f81-d6c5" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff">
-                      <modifiers>
-                        <modifier type="set" value="Steed of Slaanesh only" field="annotation"/>
-                      </modifiers>
-                    </infoLink>
                     <infoLink name="Daemon of Slaanesh" id="7cb1-2a1e-f241-f6c8" hidden="false" type="rule" targetId="2ad0-3e18-aba8-5e68">
                       <modifiers>
                         <modifier type="set" value="Steed of Slaanesh only" field="annotation"/>
@@ -9447,6 +9684,12 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
                         <modifier type="set" value="Steed of Slaanesh only" field="annotation"/>
                       </modifiers>
                     </infoLink>
+                    <infoLink name="Daemonic" id="f0e2-f0f6-f90f-12dc" hidden="false" type="rule" targetId="6940-194d-860b-18d4">
+                      <modifiers>
+                        <modifier type="set" value="Steed of Slaanesh only" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
+                    <infoLink name="Daemonic" id="7610-1445-c8be-b426" hidden="false" type="profile" targetId="377d-1fae-4a56-de9e"/>
                   </infoLinks>
                   <categoryLinks>
                     <categoryLink name="Mount" hidden="false" id="12d3-3318-5b33-c2bf" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -9777,14 +10020,14 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
     <selectionEntry type="model" import="true" name="Palanquin of Nurgle" hidden="false" id="8fe2-5f5f-dea0-6be0" collective="false" subType="mount">
       <infoLinks>
         <infoLink name="Daemon of Nurgle" id="93f0-3b5d-fff8-392c" hidden="false" type="rule" targetId="0b9b-1baf-5bcd-1ec3"/>
-        <infoLink name="Daemonic" id="bc28-9d60-3d27-9d80" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
+        <infoLink name="Daemonic" id="e2f2-3c3c-1ea2-6639" hidden="false" type="infoGroup" targetId="9c1c-92d1-b507-cf66"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="6649-3ca5-95f9-0a79" targetId="8b8a-34b1-ed30-df11" primary="false"/>
         <categoryLink name="Infantry" hidden="false" id="a0cc-5600-70df-323a" targetId="22c9-1606-58f8-2e60" primary="false"/>
       </categoryLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier type="set" value="0" field="d35b-3845-e512-84bb">
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="fce4-1eaa-170d-634c" shared="true"/>
           </conditions>
@@ -9806,19 +10049,23 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
           </characteristics>
         </profile>
       </profiles>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="b2c4-8a76-7619-5ae0" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d35b-3845-e512-84bb" includeChildSelections="false" automatic="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Steed of Slaanesh" hidden="false" id="57f0-0301-2544-4b78" collective="true" subType="mount">
       <infoLinks>
-        <infoLink name="Daemonic" id="8ce2-3ab7-e44b-19a0" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
         <infoLink name="Daemon of Slaanesh" id="3510-91b9-e6e6-97a1" hidden="false" type="rule" targetId="2ad0-3e18-aba8-5e68"/>
         <infoLink name="Poisoned Attacks" id="f22e-5307-5f9a-72e1" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
+        <infoLink name="Daemonic" id="8fd0-6c6b-a449-0a65" hidden="false" type="infoGroup" targetId="9c1c-92d1-b507-cf66"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="bed5-8734-632b-2860" targetId="8b8a-34b1-ed30-df11" primary="false"/>
         <categoryLink name="Cavalry" hidden="false" id="0004-e073-4685-6abf" targetId="bdee-b168-38ba-7d3c" primary="false"/>
       </categoryLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier type="set" value="0" field="7147-bc82-2cd1-15ef">
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
           </conditions>
@@ -9840,10 +10087,14 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
           </characteristics>
         </profile>
       </profiles>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="deb3-dad2-99ac-857b" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7147-bc82-2cd1-15ef" includeChildSelections="false" automatic="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Daemonic Steed" hidden="false" id="53de-7f63-b47a-4c2d" collective="true" subType="mount">
       <infoLinks>
-        <infoLink name="Daemonic" id="fd8b-3e4f-6bfd-ba72" hidden="false" targetId="a6d9-b8e9-21b2-96ff" type="rule"/>
+        <infoLink name="Daemonic" id="6efa-a542-39f5-6621" hidden="false" type="infoGroup" targetId="9c1c-92d1-b507-cf66"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Mount" hidden="false" id="274d-aca5-40bf-dd53" targetId="8b8a-34b1-ed30-df11" primary="false"/>
@@ -9871,25 +10122,26 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Rot Fly of Nurgle" hidden="false" id="3b62-252e-721b-1425" subType="mount" collective="true">
       <infoLinks>
-        <infoLink name="Daemonic" id="d07f-b1c3-7a71-0713" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff">
-          <modifiers>
-            <modifier type="set" value="Rot Fly only" field="annotation"/>
-          </modifiers>
-        </infoLink>
         <infoLink name="Daemon of Nurgle" id="b7d7-b3e5-a33d-cba5" hidden="false" type="rule" targetId="0b9b-1baf-5bcd-1ec3">
           <modifiers>
-            <modifier type="set" value="Rot Fly only" field="annotation"/>
+            <modifier type="set" value="Rot Fly of Nurgle only" field="annotation"/>
           </modifiers>
         </infoLink>
         <infoLink name="Fly (6)" id="919e-45ff-0c52-8ac5" hidden="false" type="rule" targetId="b830-fe6e-b461-0377"/>
         <infoLink name="Poisoned Attacks" id="8369-8038-b053-e868" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef">
           <modifiers>
-            <modifier type="set" value="Rot Fly only" field="annotation"/>
+            <modifier type="set" value="Rot Fly of Nurgle only" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Daemonic" id="abe0-0376-1472-3a67" hidden="false" type="profile" targetId="377d-1fae-4a56-de9e"/>
+        <infoLink name="Daemonic" id="fc00-59fe-93f4-67ce" hidden="false" type="rule" targetId="6940-194d-860b-18d4">
+          <modifiers>
+            <modifier type="set" value="Rot Fly of Nurgle only" field="annotation"/>
           </modifiers>
         </infoLink>
       </infoLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier type="set" value="0" field="919f-e8d4-589b-73a3">
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
           </conditions>
@@ -9915,6 +10167,10 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
           </characteristics>
         </profile>
       </profiles>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="0a30-ff56-151b-ac36" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="919f-e8d4-589b-73a3" includeChildSelections="false" automatic="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Disc of Tzeentch" hidden="false" id="628a-55ba-92d7-a406" subType="mount">
       <infoLinks>
@@ -9923,11 +10179,17 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
             <modifier type="set" value="Disc only" field="annotation"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Daemonic" id="252e-853b-4239-9815" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
         <infoLink name="Fly (9)" id="e343-cdd6-c823-62c4" hidden="false" type="rule" targetId="2ba2-2aaa-3f36-4b24"/>
+        <infoLink name="Daemonic" id="a198-f718-1ad7-4e3a" hidden="false" type="infoGroup" targetId="9c1c-92d1-b507-cf66"/>
+        <infoLink name="Ward Save" id="4b86-f7d4-db98-8afe" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+          <modifiers>
+            <modifier type="set" value="Daemon of Tzeentch" field="name"/>
+            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier type="set" value="0" field="ad16-5f08-0b4b-2cf9">
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
           </conditions>
@@ -9953,15 +10215,19 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
           </characteristics>
         </profile>
       </profiles>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="c626-d7fc-791e-a6b6" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ad16-5f08-0b4b-2cf9" includeChildSelections="false" automatic="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Serpent of Slaanesh" hidden="false" id="34b1-59d3-f1a9-3c19" subType="mount" collective="true">
       <infoLinks>
-        <infoLink name="Daemonic" id="fbfe-dc5a-17ec-3e78" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
         <infoLink name="Daemon of Slaanesh" id="221a-6481-bc7c-c912" hidden="false" type="rule" targetId="2ad0-3e18-aba8-5e68"/>
         <infoLink name="Poisoned Attacks" id="a223-65d4-b2a9-e0a8" hidden="false" type="rule" targetId="fefd-9cb0-d6fa-e2ef"/>
+        <infoLink name="Daemonic" id="bef4-2de5-3902-696b" hidden="false" type="infoGroup" targetId="9c1c-92d1-b507-cf66"/>
       </infoLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier type="set" value="0" field="1b34-a529-bc07-bed4">
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="b570-8e89-e752-8902" shared="true"/>
           </conditions>
@@ -9987,15 +10253,14 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
           </characteristics>
         </profile>
       </profiles>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="8510-f577-1a18-9b75" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1b34-a529-bc07-bed4" includeChildSelections="false" automatic="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Juggernaut of Khorne" hidden="false" id="4c0a-27d1-5a06-bbe8" subType="mount" collective="true">
       <infoLinks>
         <infoLink name="Daemon of Khorne" id="0527-56a2-bb87-7336" hidden="false" type="rule" targetId="a356-05c9-d963-c1bb">
-          <modifiers>
-            <modifier type="set" value="Juggernaut only" field="annotation"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Daemonic" id="2639-6cce-15eb-2329" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff">
           <modifiers>
             <modifier type="set" value="Juggernaut only" field="annotation"/>
           </modifiers>
@@ -10007,9 +10272,15 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
             <modifier type="set" value="Juggernaut of Khorne" field="annotation"/>
           </modifiers>
         </infoLink>
+        <infoLink name="Daemonic" id="8a84-6ac1-fe43-e28a" hidden="false" type="rule" targetId="6940-194d-860b-18d4">
+          <modifiers>
+            <modifier type="set" value="Juggernaut only" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Daemonic" id="8c2e-238a-80ed-aa53" hidden="false" type="profile" targetId="377d-1fae-4a56-de9e"/>
       </infoLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier type="set" value="0" field="308c-27cd-952e-e8e8">
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="2211-a88b-c358-2e91" shared="true" includeChildSelections="true"/>
           </conditions>
@@ -10035,6 +10306,10 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
           </characteristics>
         </profile>
       </profiles>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="456b-fd14-e9a9-fa6d" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="308c-27cd-952e-e8e8" includeChildSelections="false" automatic="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Rot Beast of Nurgle" hidden="false" id="114c-1ea0-c4d4-b734" subType="mount" collective="true">
       <infoLinks>
@@ -10044,10 +10319,15 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
             <modifier type="set" value="Rot Beast only" field="annotation"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Regeneration (5+)" id="1580-b167-d000-bfc7" hidden="false" type="rule" targetId="5fed-df2e-b6d6-cc93"/>
+        <infoLink name="Regeneration" id="dfb0-91ea-3440-31c4" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+          <modifiers>
+            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+            <modifier type="set" value="Rot Beast of Nurgle" field="name"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <modifiers>
-        <modifier type="set" value="true" field="hidden">
+        <modifier type="set" value="0" field="2c56-b030-cbd5-60f3">
           <conditions>
             <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
           </conditions>
@@ -10057,6 +10337,10 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <categoryLink targetId="8b8a-34b1-ed30-df11" id="eb52-fc37-fe68-bde8" primary="false" name="Mount"/>
         <categoryLink name="Monstrous Cavalry" hidden="false" id="98e3-aee9-f9c9-a9bd" targetId="82d3-4589-72b4-b6ed" primary="false"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="8dd1-bf2f-7cf8-ef74" includeChildSelections="false"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2c56-b030-cbd5-60f3" includeChildSelections="false" automatic="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="War Chariot" hidden="false" id="8ab9-75cd-5f33-e891" collective="false" subType="mount">
       <infoLinks>
@@ -10623,6 +10907,58 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         </rule>
       </rules>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Daemon of Khorne" hidden="false" id="7a64-1c48-ee17-d64f">
+      <infoLinks>
+        <infoLink name="Daemon of Khorne" id="6996-804b-a457-de84" hidden="false" type="rule" targetId="a356-05c9-d963-c1bb"/>
+        <infoLink name="Magic Resistance" id="5411-29af-d86b-5ed8" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+          <modifiers>
+            <modifier type="set" value="Daemon of Khorne" field="name"/>
+            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Magic Resistance" id="3df4-57d1-6ab5-57cb" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+          <modifiers>
+            <modifier type="set" value="Daemon of Khorne" field="name"/>
+            <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Daemon of Nurgle" hidden="false" id="47e8-9faa-b387-1bad">
+      <infoLinks>
+        <infoLink name="Daemon of Nurgle" id="b9aa-473a-4642-95c2" hidden="false" type="rule" targetId="0b9b-1baf-5bcd-1ec3"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Daemon of Slaanesh" hidden="false" id="58e6-5e97-fb48-f325">
+      <infoLinks>
+        <infoLink name="Daemon of Slaanesh" id="7437-a8c0-a303-1dc4" hidden="false" type="rule" targetId="2ad0-3e18-aba8-5e68"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Daemon of Tzeentch" hidden="false" id="2639-87cf-ddd7-ac2d">
+      <infoLinks>
+        <infoLink name="Daemon of Tzeentch" id="1500-5e31-ac81-46f2" hidden="false" type="rule" targetId="fe9a-f478-5bcc-57a8"/>
+        <infoLink name="Ward Save" id="66c4-3ebe-535e-1fbc" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+          <modifiers>
+            <modifier type="set" value="Daemon of Tzeentch" field="name"/>
+            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="90. Gifts of the Gods and Magic Items" id="0841-5f3d-f89f-4459" hidden="false">
@@ -10989,86 +11325,14 @@ with this standard counts the armour save modifier from their Strength or Armou
     </selectionEntryGroup>
     <selectionEntryGroup name="65. Lore of Magic" id="3048-d9e5-c82c-c6d1" hidden="false" defaultSelectionEntryId="34e8-c8fc-7612-64f6">
       <entryLinks>
-        <entryLink import="true" name="Lore of Fire" hidden="false" id="07bc-32b7-d626-598f" type="selectionEntry" targetId="4d24-c803-7a05-0894">
+        <entryLink import="true" name="Lore of Nurgle" hidden="false" id="a811-1cab-0be5-b0fa" type="selectionEntry" targetId="a4ce-5b63-a11d-6b22">
           <modifiers>
-            <modifier type="set" value="true" field="hidden">
+            <modifier type="set" value="0" field="4ea7-111a-46cc-5ff3">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Lore of Death" hidden="false" id="fb3b-94cd-f2b8-2354" type="selectionEntry" targetId="bc0d-47f8-7220-1e16">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Lore of Metal" hidden="false" id="5181-d3b8-4513-66c9" type="selectionEntry" targetId="527f-89f1-1b92-a01d">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Lore of Shadow" hidden="false" id="8f2e-6e0e-8737-6af3" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Lore of Nurgle" hidden="true" id="a811-1cab-0be5-b0fa" type="selectionEntry" targetId="a4ce-5b63-a11d-6b22">
-          <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -11093,16 +11357,17 @@ with this standard counts the armour save modifier from their Strength or Armou
           </modifiers>
           <constraints>
             <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="33b5-9408-10fd-9b7d" includeChildSelections="false" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4ea7-111a-46cc-5ff3" includeChildSelections="false" automatic="true"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Lore of Slaanesh" hidden="true" id="8f6d-2d0a-58ff-088c" type="selectionEntry" targetId="16cc-0573-bda7-993c">
+        <entryLink import="true" name="Lore of Slaanesh" hidden="false" id="8f6d-2d0a-58ff-088c" type="selectionEntry" targetId="16cc-0573-bda7-993c">
           <modifiers>
-            <modifier type="set" value="false" field="hidden">
+            <modifier type="set" value="0" field="03f7-592f-f902-966e">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -11127,16 +11392,17 @@ with this standard counts the armour save modifier from their Strength or Armou
           </modifiers>
           <constraints>
             <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="dc40-c45e-8b40-8338" includeChildSelections="false" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="03f7-592f-f902-966e" includeChildSelections="false" automatic="true"/>
           </constraints>
         </entryLink>
-        <entryLink import="true" name="Lore of Tzeentch" hidden="true" id="b058-d9c5-6a24-4fe7" type="selectionEntry" targetId="446a-99ef-5aad-d30a">
+        <entryLink import="true" name="Lore of Tzeentch" hidden="false" id="b058-d9c5-6a24-4fe7" type="selectionEntry" targetId="446a-99ef-5aad-d30a">
           <modifiers>
-            <modifier type="set" value="false" field="hidden">
+            <modifier type="set" value="0" field="81d7-9bf3-99f1-a0ca">
               <conditionGroups>
-                <conditionGroup type="or">
+                <conditionGroup type="and">
                   <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
+                    <condition type="lessThan" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
               </conditionGroups>
@@ -11161,406 +11427,512 @@ with this standard counts the armour save modifier from their Strength or Armou
           </modifiers>
           <constraints>
             <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d05e-1b15-a4f3-5cc5" includeChildSelections="false" automatic="true"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="81d7-9bf3-99f1-a0ca" includeChildSelections="false" automatic="true"/>
           </constraints>
-        </entryLink>
-        <entryLink import="true" name="Lore of Chaos" hidden="false" id="34e8-c8fc-7612-64f6" type="selectionEntry" targetId="785b-99a7-f641-d552">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Lore of Beasts" hidden="false" id="97de-fd39-7756-1e3b" type="selectionEntry" targetId="b436-b410-dd41-304f">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
-        </entryLink>
-        <entryLink import="true" name="Lore of Heavens" hidden="false" id="a15a-20e6-6d1a-54dc" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee">
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditionGroups>
-                <conditionGroup type="or">
-                  <conditions>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
-                    <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-          </modifiers>
         </entryLink>
       </entryLinks>
       <constraints>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="001f-0a3e-736d-2c4e-min" automatic="true"/>
-        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="001f-0a3e-736d-2c4e-max" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="001f-0a3e-736d-2c4e-max" automatic="false"/>
       </constraints>
-      <modifierGroups>
-        <modifierGroup type="and">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9d7-146a-f07f-a7f9" shared="true" includeChildSelections="true"/>
-          </conditions>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden" affects="527f-89f1-1b92-a01d"/>
-            <modifier type="set" value="true" field="hidden" affects="b436-b410-dd41-304f"/>
-            <modifier type="set" value="true" field="hidden" affects="785b-99a7-f641-d552"/>
-            <modifier type="set" value="true" field="hidden" affects="bc0d-47f8-7220-1e16"/>
-            <modifier type="set" value="true" field="hidden" affects="4d24-c803-7a05-0894"/>
-            <modifier type="set" value="true" field="hidden" affects="e64b-e6a1-58ba-0aee"/>
-            <modifier type="set" value="true" field="hidden" affects="6c88-e0ab-2ca2-7e67"/>
-          </modifiers>
-          <comment>Tome of the Darkness</comment>
-        </modifierGroup>
-      </modifierGroups>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Lore of Chaos, Nurgle, Slaanesh &amp; Tzeentch." hidden="false" id="807c-e7b7-2aa1-b61d">
-          <comment>Tome of the Darkness</comment>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Signature Spells" id="f778-c088-8b02-0506" hidden="false">
-              <constraints>
-                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="b205-01d1-e1b2-3501-min" includeChildSelections="false" automatic="false" negative="false"/>
-                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="b205-01d1-e1b2-3501-max" includeChildSelections="false" automatic="false" negative="false"/>
-              </constraints>
-              <entryLinks>
-                <entryLink import="true" name="0. The Summoning" hidden="false" id="b3a2-85e6-cf62-2cb9" type="selectionEntry" targetId="3127-141a-5d90-ce77">
-                  <modifiers>
-                    <modifier type="set" value="0" field="8a9f-12f4-f242-f52e"/>
-                  </modifiers>
-                </entryLink>
-                <entryLink import="true" name="0. Stream of Corruption" hidden="false" id="706b-8d1f-a6a1-4d34" type="selectionEntry" targetId="2159-60b2-e898-87e2">
-                  <modifiers>
-                    <modifier type="set" value="0" field="1e04-387b-7e88-98e4"/>
-                  </modifiers>
-                </entryLink>
-                <entryLink import="true" name="0. Lash of Slaanesh" hidden="false" id="f91f-54ed-2dc3-f2cb" type="selectionEntry" targetId="5bf9-1462-bfad-4206">
-                  <modifiers>
-                    <modifier type="set" value="0" field="e55d-98f9-aa3e-bf5a"/>
-                  </modifiers>
-                </entryLink>
-                <entryLink import="true" name="0. Blue Fire of Tzeentch" hidden="false" id="7fd4-2f51-8330-88f0" type="selectionEntry" targetId="0d5c-1131-1f1d-b764">
-                  <modifiers>
-                    <modifier type="set" value="0" field="5fde-7c63-b3ec-789f"/>
-                  </modifiers>
-                </entryLink>
-              </entryLinks>
-            </selectionEntryGroup>
-            <selectionEntryGroup name="Lore Attributes" id="4da3-cd36-122f-2a9d" hidden="false">
-              <constraints>
-                <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="7f13-c4de-0419-e441-min" includeChildSelections="false"/>
-                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="7f13-c4de-0419-e441-max" includeChildSelections="false"/>
-              </constraints>
-              <entryLinks>
-                <entryLink import="true" name="Boon of Chaos" hidden="false" id="67d7-faa3-2a2c-7899" type="selectionEntry" targetId="7d54-1b9b-c891-71e5"/>
-                <entryLink import="true" name="Bloated with Disease" hidden="false" id="9f74-210a-bbf7-b7aa" type="selectionEntry" targetId="af11-5691-e999-6e4c"/>
-                <entryLink import="true" name="Bliss in Torment" hidden="false" id="8a45-cd30-dccf-590a" type="selectionEntry" targetId="23bd-6e35-5744-64ca"/>
-                <entryLink import="true" name="Boon of Magic" hidden="false" id="27b8-49e1-a35f-c82c" type="selectionEntry" targetId="5fb0-8579-7b4d-6645"/>
-              </entryLinks>
-            </selectionEntryGroup>
-            <selectionEntryGroup name="Spells from the Lore of Chaos, Nurgle, Slaanesh &amp; Tzeentch." id="ba03-1a7d-9b59-6172" hidden="false" collapsible="true">
-              <constraints>
-                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="8fc4-1510-3959-a8b2"/>
-                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="c151-f3aa-2858-5751"/>
-              </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Undivided Lores" id="2067-a87a-94c4-222c" hidden="false" flatten="true">
+          <entryLinks>
+            <entryLink import="true" name="Lore of Shadow" hidden="false" id="8f2e-6e0e-8737-6af3" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67">
               <modifiers>
-                <modifier type="set" value="3" field="8fc4-1510-3959-a8b2">
+                <modifier type="set" value="0" field="30d6-1393-3e98-b233">
                   <conditionGroups>
                     <conditionGroup type="or">
                       <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </conditionGroup>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="3" field="c151-f3aa-2858-5751">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </conditionGroup>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="4" field="8fc4-1510-3959-a8b2">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="4" field="c151-f3aa-2858-5751">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="5" field="8fc4-1510-3959-a8b2">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="5" field="c151-f3aa-2858-5751">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="6" field="8fc4-1510-3959-a8b2">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </conditionGroup>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="6" field="c151-f3aa-2858-5751">
-                  <conditionGroups>
-                    <conditionGroup type="or">
-                      <conditionGroups>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </conditionGroup>
-                        <conditionGroup type="and">
-                          <conditions>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
-                          </conditions>
-                        </conditionGroup>
-                      </conditionGroups>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="9" field="8fc4-1510-3959-a8b2">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="9" field="c151-f3aa-2858-5751">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="12" field="8fc4-1510-3959-a8b2">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </conditionGroup>
-                  </conditionGroups>
-                </modifier>
-                <modifier type="set" value="12" field="c151-f3aa-2858-5751">
-                  <conditionGroups>
-                    <conditionGroup type="and">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-                        <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9d7-146a-f07f-a7f9" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="d003-5581-17b7-3973" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="30d6-1393-3e98-b233" includeChildSelections="false" automatic="true"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Lore of Metal" hidden="false" id="5181-d3b8-4513-66c9" type="selectionEntry" targetId="527f-89f1-1b92-a01d">
+              <modifiers>
+                <modifier type="set" value="0" field="b953-c8bf-c7a1-322e">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9d7-146a-f07f-a7f9" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="f678-d25f-0122-4840" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b953-c8bf-c7a1-322e" includeChildSelections="false" automatic="true"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Lore of Heavens" hidden="false" id="a15a-20e6-6d1a-54dc" type="selectionEntry" targetId="e64b-e6a1-58ba-0aee">
+              <modifiers>
+                <modifier type="set" value="0" field="0c6f-0e08-2b60-6d30">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9d7-146a-f07f-a7f9" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="780b-c260-82e5-cb63" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0c6f-0e08-2b60-6d30" includeChildSelections="false" automatic="true"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Lore of Fire" hidden="false" id="07bc-32b7-d626-598f" type="selectionEntry" targetId="4d24-c803-7a05-0894">
+              <modifiers>
+                <modifier type="set" value="0" field="92ec-3e7f-3dbc-8323">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9d7-146a-f07f-a7f9" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="6b37-8145-4b36-ee55" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="92ec-3e7f-3dbc-8323" includeChildSelections="false" automatic="true"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Lore of Death" hidden="false" id="fb3b-94cd-f2b8-2354" type="selectionEntry" targetId="bc0d-47f8-7220-1e16">
+              <modifiers>
+                <modifier type="set" value="0" field="9543-c86e-529d-8132">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9d7-146a-f07f-a7f9" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="2d2e-296c-2d49-72b9" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9543-c86e-529d-8132" includeChildSelections="false" automatic="true"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Lore of Chaos" hidden="false" id="34e8-c8fc-7612-64f6" type="selectionEntry" targetId="785b-99a7-f641-d552" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="0" field="c115-15d8-257d-b4f9">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9d7-146a-f07f-a7f9" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="835e-7130-459b-d720" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c115-15d8-257d-b4f9" includeChildSelections="false" automatic="true"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Lore of Beasts" hidden="false" id="97de-fd39-7756-1e3b" type="selectionEntry" targetId="b436-b410-dd41-304f">
+              <modifiers>
+                <modifier type="set" value="0" field="da99-b484-7dcd-3a9d">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="2639-87cf-ddd7-ac2d" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="47e8-9faa-b387-1bad" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="parent" childId="58e6-5e97-fb48-f325" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9d7-146a-f07f-a7f9" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="61f4-b5e9-94b5-3c0a" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da99-b484-7dcd-3a9d" includeChildSelections="false" automatic="true"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Lore of Chaos, Nurgle, Slaanesh &amp; Tzeentch." hidden="false" id="807c-e7b7-2aa1-b61d">
+              <comment>Tome of the Darkness</comment>
               <selectionEntryGroups>
-                <selectionEntryGroup name="Chaos" id="ab27-46e7-2262-353a" hidden="false" sortIndex="1">
+                <selectionEntryGroup name="Signature Spells" id="f778-c088-8b02-0506" hidden="false">
+                  <constraints>
+                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="b205-01d1-e1b2-3501-min" includeChildSelections="false" automatic="false" negative="false"/>
+                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="b205-01d1-e1b2-3501-max" includeChildSelections="false" automatic="false" negative="false"/>
+                  </constraints>
                   <entryLinks>
-                    <entryLink import="true" name="1. Daemonic Familiars" hidden="false" id="15e1-280b-fda6-01e8" type="selectionEntry" targetId="55fd-085f-8282-34ad"/>
-                    <entryLink import="true" name="2. Gift of Chaos" hidden="false" id="d465-e2d7-5cac-7b2c" type="selectionEntry" targetId="d304-ad1a-14a5-14f6"/>
-                    <entryLink import="true" name="5. Winds of Chaos" hidden="false" id="835f-feb0-e8dd-da78" type="selectionEntry" targetId="bccf-908d-d55a-5aa0"/>
-                    <entryLink import="true" name="3. Veil of Gloom" hidden="false" id="1c1b-6e77-6ce2-6aa1" type="selectionEntry" targetId="0148-a357-c74c-afc3"/>
-                    <entryLink import="true" name="4. Vision of Torment" hidden="false" id="6b93-2224-7d0c-05dd" type="selectionEntry" targetId="ecd8-43ad-f80a-dabd"/>
-                    <entryLink import="true" name="6. Binding Damnation" hidden="false" id="2ad6-3e81-ecf0-e314" type="selectionEntry" targetId="353c-a842-62c3-b15d"/>
-                    <entryLink import="true" name="7. Mask of Darkness" hidden="false" id="d689-9273-f393-0349" type="selectionEntry" targetId="4cac-9347-9732-e3ab"/>
-                    <entryLink import="true" name="8. Veil of Corruption" hidden="false" id="3014-42b1-3ab8-fde4" type="selectionEntry" targetId="7861-035e-1be2-b735"/>
-                    <entryLink import="true" name="9. Ruinous Vigour" hidden="false" id="1118-82ed-a57b-8266" type="selectionEntry" targetId="1acb-3044-c1de-b14b"/>
-                    <entryLink import="true" name="10. Chaotic Conduit" hidden="false" id="dcff-a31b-5d4b-8ff7" type="selectionEntry" targetId="f581-f9c0-da09-f156"/>
-                    <entryLink import="true" name="11. Spite-Tongue Curse" hidden="false" id="9229-1c5c-c65e-041c" type="selectionEntry" targetId="44c2-621c-a9c9-f11f"/>
-                    <entryLink import="true" name="12. Vortex of Chaos" hidden="false" id="9ee4-837a-8ae1-5367" type="selectionEntry" targetId="b54d-be44-e21e-5c93"/>
+                    <entryLink import="true" name="0. The Summoning" hidden="false" id="b3a2-85e6-cf62-2cb9" type="selectionEntry" targetId="3127-141a-5d90-ce77">
+                      <modifiers>
+                        <modifier type="set" value="0" field="8a9f-12f4-f242-f52e"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="0. Stream of Corruption" hidden="false" id="706b-8d1f-a6a1-4d34" type="selectionEntry" targetId="2159-60b2-e898-87e2">
+                      <modifiers>
+                        <modifier type="set" value="0" field="1e04-387b-7e88-98e4"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="0. Lash of Slaanesh" hidden="false" id="f91f-54ed-2dc3-f2cb" type="selectionEntry" targetId="5bf9-1462-bfad-4206">
+                      <modifiers>
+                        <modifier type="set" value="0" field="e55d-98f9-aa3e-bf5a"/>
+                      </modifiers>
+                    </entryLink>
+                    <entryLink import="true" name="0. Blue Fire of Tzeentch" hidden="false" id="7fd4-2f51-8330-88f0" type="selectionEntry" targetId="0d5c-1131-1f1d-b764">
+                      <modifiers>
+                        <modifier type="set" value="0" field="5fde-7c63-b3ec-789f"/>
+                      </modifiers>
+                    </entryLink>
                   </entryLinks>
                 </selectionEntryGroup>
-                <selectionEntryGroup name="Nurgle" id="9fbc-f880-4ea7-2a7a" hidden="false" sortIndex="2">
+                <selectionEntryGroup name="Lore Attributes" id="4da3-cd36-122f-2a9d" hidden="false">
+                  <constraints>
+                    <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="7f13-c4de-0419-e441-min" includeChildSelections="false"/>
+                    <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="7f13-c4de-0419-e441-max" includeChildSelections="false"/>
+                  </constraints>
                   <entryLinks>
-                    <entryLink import="true" name="1. Miasma of Pestilence" hidden="false" id="819e-7ad8-fa5a-ef91" type="selectionEntry" targetId="d528-f18f-2c55-0db3"/>
-                    <entryLink import="true" name="2. Blades of Putrefaction" hidden="false" id="3645-ac28-2d52-1761" type="selectionEntry" targetId="3fae-0d80-4fbd-8647"/>
-                    <entryLink import="true" name="3. Magnificent Buboes" hidden="false" id="417d-65ec-f480-0845" type="selectionEntry" targetId="1513-3e6c-e605-dbff"/>
-                    <entryLink import="true" name="4. Curse of the Leper" hidden="false" id="e5a6-a122-c429-c44d" type="selectionEntry" targetId="973f-9384-b099-5010"/>
-                    <entryLink import="true" name="5. Plague Squall" hidden="false" id="9378-6681-61e2-f4c5" type="selectionEntry" targetId="cbd6-5b68-f980-b875"/>
-                    <entryLink import="true" name="6. Rancid Visitations" hidden="false" id="2ca3-cb1a-e1c4-d677" type="selectionEntry" targetId="126c-cf22-6784-0ee1"/>
-                    <entryLink import="true" name="7. Rot Bomb" hidden="false" id="869f-a847-00c2-9f22" type="selectionEntry" targetId="90d7-adad-edda-6a66"/>
-                    <entryLink import="true" name="8. Cloying Quagmire" hidden="false" id="65cd-3128-3ea1-adf2" type="selectionEntry" targetId="4267-e247-899c-6b07"/>
-                    <entryLink import="true" name="9. Fleshy Abundance" hidden="false" id="9ad0-10f1-7a8e-7248" type="selectionEntry" targetId="43ff-626b-9d8a-89a5"/>
-                    <entryLink import="true" name="10. Grandfather Nurgle&apos;s Circle of Life" hidden="false" id="3fec-6b20-8bfe-1fa9" type="selectionEntry" targetId="52ee-6660-1c48-9c87"/>
-                    <entryLink import="true" name="11. Plague Wind" hidden="false" id="881d-b468-1047-3aa9" type="selectionEntry" targetId="6ca7-a875-4668-70d7"/>
-                    <entryLink import="true" name="12. Rot, Glorious Rot" hidden="false" id="47df-dc09-e191-2125" type="selectionEntry" targetId="629e-6a0d-216f-a8a9"/>
+                    <entryLink import="true" name="Boon of Chaos" hidden="false" id="67d7-faa3-2a2c-7899" type="selectionEntry" targetId="7d54-1b9b-c891-71e5"/>
+                    <entryLink import="true" name="Bloated with Disease" hidden="false" id="9f74-210a-bbf7-b7aa" type="selectionEntry" targetId="af11-5691-e999-6e4c"/>
+                    <entryLink import="true" name="Bliss in Torment" hidden="false" id="8a45-cd30-dccf-590a" type="selectionEntry" targetId="23bd-6e35-5744-64ca"/>
+                    <entryLink import="true" name="Boon of Magic" hidden="false" id="27b8-49e1-a35f-c82c" type="selectionEntry" targetId="5fb0-8579-7b4d-6645"/>
                   </entryLinks>
                 </selectionEntryGroup>
-                <selectionEntryGroup name="Slaanesh" id="56d9-e5ec-7111-be04" hidden="false" sortIndex="3">
-                  <entryLinks>
-                    <entryLink import="true" name="1. Hysterical Frenzy" hidden="false" id="c0c1-263b-0234-73de" type="selectionEntry" targetId="4857-01c2-032a-8fca"/>
-                    <entryLink import="true" name="2. Pavane of Slaanesh" hidden="false" id="18ff-2685-17e1-2a5e" type="selectionEntry" targetId="e224-ccc6-d885-15b1"/>
-                    <entryLink import="true" name="3. Succour of Chaos" hidden="false" id="192a-afa4-1c7e-a7ab" type="selectionEntry" targetId="6631-2fa0-6526-f891"/>
-                    <entryLink import="true" name="4. Titillating Delusions" hidden="false" id="29c9-57bf-fbb6-d7df" type="selectionEntry" targetId="0cf8-9452-b042-6f84"/>
-                    <entryLink import="true" name="5. Slothful Stupor" hidden="false" id="7796-48ef-6028-dce9" type="selectionEntry" targetId="fe2c-3a98-9471-fcc2"/>
-                    <entryLink import="true" name="6. Acquiescence" hidden="false" id="68e3-a888-d1f6-1f4e" type="selectionEntry" targetId="63e9-43a3-3fb7-2f5e"/>
-                    <entryLink import="true" name="7. Delicious Excruciation" hidden="false" id="2bb5-6ecf-7e65-3974" type="selectionEntry" targetId="65d2-a282-49da-708e"/>
-                    <entryLink import="true" name="8. Slicing Shards" hidden="false" id="1868-d451-47dd-0c0f" type="selectionEntry" targetId="a712-dc5a-2d39-0123"/>
-                    <entryLink import="true" name="9. Phantasmagoria" hidden="false" id="1e27-cc52-8704-1527" type="selectionEntry" targetId="e6c6-62d8-3d8d-7490"/>
-                    <entryLink import="true" name="10. Cacophonic Choir" hidden="false" id="d59a-29b5-20c1-ff2e" type="selectionEntry" targetId="2d05-f0f0-5bbc-9b4d"/>
-                    <entryLink import="true" name="11. Ecstatic Seizures" hidden="false" id="ff86-021b-d053-c24f" type="selectionEntry" targetId="f566-5eae-38ca-7953"/>
-                    <entryLink import="true" name="12. Song of Seduction" hidden="false" id="7012-53f8-23dd-075b" type="selectionEntry" targetId="3608-64a5-f3d8-40ae"/>
-                  </entryLinks>
-                </selectionEntryGroup>
-                <selectionEntryGroup name="Tzeentch" id="c661-bd0c-df5c-4bf9" hidden="false" sortIndex="4">
-                  <entryLinks>
-                    <entryLink import="true" name="1. Baleful Transmogrification" hidden="false" id="6f67-48fe-a853-0c84" type="selectionEntry" targetId="ae47-8dc9-06f3-f02a"/>
-                    <entryLink import="true" name="2. Boon of Tzeentch" hidden="false" id="c2e8-9e72-a45b-91bc" type="selectionEntry" targetId="a55d-a382-a231-2a40"/>
-                    <entryLink import="true" name="3. Pandemonium" hidden="false" id="4ff9-2bb6-e19d-3678" type="selectionEntry" targetId="02c1-4a4f-e80a-1322"/>
-                    <entryLink import="true" name="4. Pink Fire of Tzeentch" hidden="false" id="f166-b6bc-d17b-5af9" type="selectionEntry" targetId="7c79-2381-5249-2bac"/>
-                    <entryLink import="true" name="5. Blot of Change" hidden="false" id="1220-a0f3-11e0-a088" type="selectionEntry" targetId="aa4b-20b0-bae9-f228"/>
-                    <entryLink import="true" name="6. Shield of Fate" hidden="false" id="2169-d91c-2b8b-63af" type="selectionEntry" targetId="0995-b7f1-e8b3-d64a"/>
-                    <entryLink import="true" name="7. Fold Reality" hidden="false" id="87c6-c223-2441-d39a" type="selectionEntry" targetId="a989-6c66-a6da-fbcc"/>
-                    <entryLink import="true" name="8. Glean Magic" hidden="false" id="a0b6-8c40-214d-6147" type="selectionEntry" targetId="9016-5753-d9e8-26e7"/>
-                    <entryLink import="true" name="9. Tzeentch&apos;s Firestorm" hidden="false" id="b2a2-6238-3ddb-6476" type="selectionEntry" targetId="2f0a-33ed-5dbb-2ada"/>
-                    <entryLink import="true" name="10. Daemonfire Vortex" hidden="false" id="f1df-f53a-572f-f7b2" type="selectionEntry" targetId="fe59-5f58-f0fb-e061"/>
-                    <entryLink import="true" name="11. Treason of Tzeentch" hidden="false" id="512d-df74-7ec1-18df" type="selectionEntry" targetId="8129-8b1b-cd1a-c273"/>
-                    <entryLink import="true" name="12. Infernal Gateway" hidden="false" id="bf01-d00c-16fa-4213" type="selectionEntry" targetId="e756-09f0-58ca-ed4b"/>
-                  </entryLinks>
+                <selectionEntryGroup name="Spells from the Lore of Chaos, Nurgle, Slaanesh &amp; Tzeentch." id="ba03-1a7d-9b59-6172" hidden="false" collapsible="true">
+                  <constraints>
+                    <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="8fc4-1510-3959-a8b2"/>
+                    <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="c151-f3aa-2858-5751"/>
+                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="3" field="8fc4-1510-3959-a8b2">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="set" value="3" field="c151-f3aa-2858-5751">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="set" value="4" field="8fc4-1510-3959-a8b2">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="set" value="4" field="c151-f3aa-2858-5751">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="set" value="5" field="8fc4-1510-3959-a8b2">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="set" value="5" field="c151-f3aa-2858-5751">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="set" value="6" field="8fc4-1510-3959-a8b2">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="set" value="6" field="c151-f3aa-2858-5751">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="c5d0-4769-c76f-2cac" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="set" value="9" field="8fc4-1510-3959-a8b2">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="set" value="9" field="c151-f3aa-2858-5751">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
+                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="set" value="12" field="8fc4-1510-3959-a8b2">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                    <modifier type="set" value="12" field="c151-f3aa-2858-5751">
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
+                            <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="a2bf-14a5-6723-7157" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </modifier>
+                  </modifiers>
+                  <selectionEntryGroups>
+                    <selectionEntryGroup name="Chaos" id="ab27-46e7-2262-353a" hidden="false" sortIndex="1">
+                      <entryLinks>
+                        <entryLink import="true" name="1. Daemonic Familiars" hidden="false" id="15e1-280b-fda6-01e8" type="selectionEntry" targetId="55fd-085f-8282-34ad"/>
+                        <entryLink import="true" name="2. Gift of Chaos" hidden="false" id="d465-e2d7-5cac-7b2c" type="selectionEntry" targetId="d304-ad1a-14a5-14f6"/>
+                        <entryLink import="true" name="5. Winds of Chaos" hidden="false" id="835f-feb0-e8dd-da78" type="selectionEntry" targetId="bccf-908d-d55a-5aa0"/>
+                        <entryLink import="true" name="3. Veil of Gloom" hidden="false" id="1c1b-6e77-6ce2-6aa1" type="selectionEntry" targetId="0148-a357-c74c-afc3"/>
+                        <entryLink import="true" name="4. Vision of Torment" hidden="false" id="6b93-2224-7d0c-05dd" type="selectionEntry" targetId="ecd8-43ad-f80a-dabd"/>
+                        <entryLink import="true" name="6. Binding Damnation" hidden="false" id="2ad6-3e81-ecf0-e314" type="selectionEntry" targetId="353c-a842-62c3-b15d"/>
+                        <entryLink import="true" name="7. Mask of Darkness" hidden="false" id="d689-9273-f393-0349" type="selectionEntry" targetId="4cac-9347-9732-e3ab"/>
+                        <entryLink import="true" name="8. Veil of Corruption" hidden="false" id="3014-42b1-3ab8-fde4" type="selectionEntry" targetId="7861-035e-1be2-b735"/>
+                        <entryLink import="true" name="9. Ruinous Vigour" hidden="false" id="1118-82ed-a57b-8266" type="selectionEntry" targetId="1acb-3044-c1de-b14b"/>
+                        <entryLink import="true" name="10. Chaotic Conduit" hidden="false" id="dcff-a31b-5d4b-8ff7" type="selectionEntry" targetId="f581-f9c0-da09-f156"/>
+                        <entryLink import="true" name="11. Spite-Tongue Curse" hidden="false" id="9229-1c5c-c65e-041c" type="selectionEntry" targetId="44c2-621c-a9c9-f11f"/>
+                        <entryLink import="true" name="12. Vortex of Chaos" hidden="false" id="9ee4-837a-8ae1-5367" type="selectionEntry" targetId="b54d-be44-e21e-5c93"/>
+                      </entryLinks>
+                    </selectionEntryGroup>
+                    <selectionEntryGroup name="Nurgle" id="9fbc-f880-4ea7-2a7a" hidden="false" sortIndex="2">
+                      <entryLinks>
+                        <entryLink import="true" name="1. Miasma of Pestilence" hidden="false" id="819e-7ad8-fa5a-ef91" type="selectionEntry" targetId="d528-f18f-2c55-0db3"/>
+                        <entryLink import="true" name="2. Blades of Putrefaction" hidden="false" id="3645-ac28-2d52-1761" type="selectionEntry" targetId="3fae-0d80-4fbd-8647"/>
+                        <entryLink import="true" name="3. Magnificent Buboes" hidden="false" id="417d-65ec-f480-0845" type="selectionEntry" targetId="1513-3e6c-e605-dbff"/>
+                        <entryLink import="true" name="4. Curse of the Leper" hidden="false" id="e5a6-a122-c429-c44d" type="selectionEntry" targetId="973f-9384-b099-5010"/>
+                        <entryLink import="true" name="5. Plague Squall" hidden="false" id="9378-6681-61e2-f4c5" type="selectionEntry" targetId="cbd6-5b68-f980-b875"/>
+                        <entryLink import="true" name="6. Rancid Visitations" hidden="false" id="2ca3-cb1a-e1c4-d677" type="selectionEntry" targetId="126c-cf22-6784-0ee1"/>
+                        <entryLink import="true" name="7. Rot Bomb" hidden="false" id="869f-a847-00c2-9f22" type="selectionEntry" targetId="90d7-adad-edda-6a66"/>
+                        <entryLink import="true" name="8. Cloying Quagmire" hidden="false" id="65cd-3128-3ea1-adf2" type="selectionEntry" targetId="4267-e247-899c-6b07"/>
+                        <entryLink import="true" name="9. Fleshy Abundance" hidden="false" id="9ad0-10f1-7a8e-7248" type="selectionEntry" targetId="43ff-626b-9d8a-89a5"/>
+                        <entryLink import="true" name="10. Grandfather Nurgle&apos;s Circle of Life" hidden="false" id="3fec-6b20-8bfe-1fa9" type="selectionEntry" targetId="52ee-6660-1c48-9c87"/>
+                        <entryLink import="true" name="11. Plague Wind" hidden="false" id="881d-b468-1047-3aa9" type="selectionEntry" targetId="6ca7-a875-4668-70d7"/>
+                        <entryLink import="true" name="12. Rot, Glorious Rot" hidden="false" id="47df-dc09-e191-2125" type="selectionEntry" targetId="629e-6a0d-216f-a8a9"/>
+                      </entryLinks>
+                    </selectionEntryGroup>
+                    <selectionEntryGroup name="Slaanesh" id="56d9-e5ec-7111-be04" hidden="false" sortIndex="3">
+                      <entryLinks>
+                        <entryLink import="true" name="1. Hysterical Frenzy" hidden="false" id="c0c1-263b-0234-73de" type="selectionEntry" targetId="4857-01c2-032a-8fca"/>
+                        <entryLink import="true" name="2. Pavane of Slaanesh" hidden="false" id="18ff-2685-17e1-2a5e" type="selectionEntry" targetId="e224-ccc6-d885-15b1"/>
+                        <entryLink import="true" name="3. Succour of Chaos" hidden="false" id="192a-afa4-1c7e-a7ab" type="selectionEntry" targetId="6631-2fa0-6526-f891"/>
+                        <entryLink import="true" name="4. Titillating Delusions" hidden="false" id="29c9-57bf-fbb6-d7df" type="selectionEntry" targetId="0cf8-9452-b042-6f84"/>
+                        <entryLink import="true" name="5. Slothful Stupor" hidden="false" id="7796-48ef-6028-dce9" type="selectionEntry" targetId="fe2c-3a98-9471-fcc2"/>
+                        <entryLink import="true" name="6. Acquiescence" hidden="false" id="68e3-a888-d1f6-1f4e" type="selectionEntry" targetId="63e9-43a3-3fb7-2f5e"/>
+                        <entryLink import="true" name="7. Delicious Excruciation" hidden="false" id="2bb5-6ecf-7e65-3974" type="selectionEntry" targetId="65d2-a282-49da-708e"/>
+                        <entryLink import="true" name="8. Slicing Shards" hidden="false" id="1868-d451-47dd-0c0f" type="selectionEntry" targetId="a712-dc5a-2d39-0123"/>
+                        <entryLink import="true" name="9. Phantasmagoria" hidden="false" id="1e27-cc52-8704-1527" type="selectionEntry" targetId="e6c6-62d8-3d8d-7490"/>
+                        <entryLink import="true" name="10. Cacophonic Choir" hidden="false" id="d59a-29b5-20c1-ff2e" type="selectionEntry" targetId="2d05-f0f0-5bbc-9b4d"/>
+                        <entryLink import="true" name="11. Ecstatic Seizures" hidden="false" id="ff86-021b-d053-c24f" type="selectionEntry" targetId="f566-5eae-38ca-7953"/>
+                        <entryLink import="true" name="12. Song of Seduction" hidden="false" id="7012-53f8-23dd-075b" type="selectionEntry" targetId="3608-64a5-f3d8-40ae"/>
+                      </entryLinks>
+                    </selectionEntryGroup>
+                    <selectionEntryGroup name="Tzeentch" id="c661-bd0c-df5c-4bf9" hidden="false" sortIndex="4">
+                      <entryLinks>
+                        <entryLink import="true" name="1. Baleful Transmogrification" hidden="false" id="6f67-48fe-a853-0c84" type="selectionEntry" targetId="ae47-8dc9-06f3-f02a"/>
+                        <entryLink import="true" name="2. Boon of Tzeentch" hidden="false" id="c2e8-9e72-a45b-91bc" type="selectionEntry" targetId="a55d-a382-a231-2a40"/>
+                        <entryLink import="true" name="3. Pandemonium" hidden="false" id="4ff9-2bb6-e19d-3678" type="selectionEntry" targetId="02c1-4a4f-e80a-1322"/>
+                        <entryLink import="true" name="4. Pink Fire of Tzeentch" hidden="false" id="f166-b6bc-d17b-5af9" type="selectionEntry" targetId="7c79-2381-5249-2bac"/>
+                        <entryLink import="true" name="5. Blot of Change" hidden="false" id="1220-a0f3-11e0-a088" type="selectionEntry" targetId="aa4b-20b0-bae9-f228"/>
+                        <entryLink import="true" name="6. Shield of Fate" hidden="false" id="2169-d91c-2b8b-63af" type="selectionEntry" targetId="0995-b7f1-e8b3-d64a"/>
+                        <entryLink import="true" name="7. Fold Reality" hidden="false" id="87c6-c223-2441-d39a" type="selectionEntry" targetId="a989-6c66-a6da-fbcc"/>
+                        <entryLink import="true" name="8. Glean Magic" hidden="false" id="a0b6-8c40-214d-6147" type="selectionEntry" targetId="9016-5753-d9e8-26e7"/>
+                        <entryLink import="true" name="9. Tzeentch&apos;s Firestorm" hidden="false" id="b2a2-6238-3ddb-6476" type="selectionEntry" targetId="2f0a-33ed-5dbb-2ada"/>
+                        <entryLink import="true" name="10. Daemonfire Vortex" hidden="false" id="f1df-f53a-572f-f7b2" type="selectionEntry" targetId="fe59-5f58-f0fb-e061"/>
+                        <entryLink import="true" name="11. Treason of Tzeentch" hidden="false" id="512d-df74-7ec1-18df" type="selectionEntry" targetId="8129-8b1b-cd1a-c273"/>
+                        <entryLink import="true" name="12. Infernal Gateway" hidden="false" id="bf01-d00c-16fa-4213" type="selectionEntry" targetId="e756-09f0-58ca-ed4b"/>
+                      </entryLinks>
+                    </selectionEntryGroup>
+                  </selectionEntryGroups>
                 </selectionEntryGroup>
               </selectionEntryGroups>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <modifiers>
-            <modifier type="set" value="true" field="hidden">
-              <conditions>
-                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="f9d7-146a-f07f-a7f9" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </selectionEntry>
-      </selectionEntries>
+              <modifiers>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="f9d7-146a-f07f-a7f9" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="1" field="bf0f-9058-1bbc-254e">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9d7-146a-f07f-a7f9" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5f89-3465-2a5d-84e4" includeChildSelections="false"/>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="bf0f-9058-1bbc-254e" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
     </selectionEntryGroup>
     <selectionEntryGroup name="Magic Items" id="e209-d9fa-d21a-8f20" hidden="false">
       <entryLinks>
@@ -12118,6 +12490,14 @@ with this standard counts the armour save modifier from their Strength or Armou
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Ward Save" id="b12d-3252-6ab1-a7ab" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Aura of Chaos" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Dark Fury" hidden="false" id="cb6c-f956-8c7f-50aa" collective="false" sortIndex="19">
           <constraints>
@@ -12149,6 +12529,20 @@ rule.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Magic Resistance" id="58d0-f07b-ab43-c70f" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+              <modifiers>
+                <modifier type="set" value="Flames of Chaos" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Magic Resistance" id="a7da-04d1-9899-85c6" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+              <modifiers>
+                <modifier type="set" value="Flames of Chaos" field="name"/>
+                <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Slaughterer&apos;s Strength" hidden="false" id="b41d-9957-af9f-9580" collective="false" sortIndex="21">
           <constraints>
@@ -12495,6 +12889,14 @@ Armour saves.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Regeneration" id="9217-dfda-bd79-95c7" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                  <modifiers>
+                    <modifier type="set" value="Protean Form" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Third Eye of Tzeentch" hidden="false" id="15f0-6ac3-d646-1b59" collective="false" sortIndex="1">
               <constraints>
@@ -12750,6 +13152,7 @@ Armour saves.</characteristic>
 "/>
               </modifiers>
             </infoLink>
+            <infoLink name="Two/Additional Hand Weapons" id="0b8e-835f-c9df-5b40" hidden="false" type="profile" targetId="48ad-587e-84ad-c237"/>
           </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Obsidian Dread-Glave" hidden="false" id="bd74-4e9d-0a63-f2ae" collective="false" sortIndex="10.2">
@@ -13112,6 +13515,14 @@ Armour saves.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="35"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Parry" id="556d-0659-d412-cebd" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
+                  <modifiers>
+                    <modifier type="set" value="Slaanesh&apos;s Blade" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Blade of Ecstasy" hidden="false" id="e9d3-7060-da2d-870e" collective="false" sortIndex="2">
               <constraints>
@@ -13286,6 +13697,12 @@ Armour saves.</characteristic>
 "/>
               </modifiers>
             </infoLink>
+            <infoLink name="Ward Save" id="ed0c-e2ae-2e33-aaff" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Armour of Morrslieb" field="name"/>
+                <modifier type="set" value="4+ against non-Magical Attacks." field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -13406,6 +13823,7 @@ Armour saves.</characteristic>
 "/>
               </modifiers>
             </infoLink>
+            <infoLink name="Ethereal" id="f4c9-eac1-e3db-4128" hidden="false" type="profile" targetId="0d17-762d-8841-8d11"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -13614,6 +14032,7 @@ Armour saves.</characteristic>
 "/>
               </modifiers>
             </infoLink>
+            <infoLink name="Parry (shield)" id="bc3a-2563-1713-40df" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -13677,6 +14096,12 @@ Armour saves.</characteristic>
 "/>
               </modifiers>
             </infoLink>
+            <infoLink name="Ward Save" id="9308-99cc-2486-3e3d" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Idolatous Plackart" field="name"/>
+                <modifier type="set" value="5+ / 6+ against Magical Attacks." field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -13705,6 +14130,12 @@ Armour saves.</characteristic>
 " field="ff58-91e4-84d7-e6e4" join="
 
 "/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Ward Save" id="5869-f5a7-93eb-5148" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Crimson Armour of Dargan" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -13744,6 +14175,19 @@ Armour saves.</characteristic>
                     <modifier type="append" value="The Spelleater Shield gives the bearer Magic Resistance (2). In addition, roll a D6 each time a spell is cast at the bearer of the Spelleater Shield and is dispelled. On the roll of a 4+, the spell is destroyed and the enemy Wizard may not cast it for the rest of the battle." field="ff58-91e4-84d7-e6e4" join="
 
 "/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Parry (shield)" id="5bdc-4daf-efca-8563" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
+                <infoLink name="Magic Resistance" id="9d1d-2e09-4776-c199" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                  <modifiers>
+                    <modifier type="set" value="Spelleater Shield" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Magic Resistance" id="323e-a80d-932d-37ab" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                  <modifiers>
+                    <modifier type="set" value="Spelleater Shield" field="name"/>
+                    <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -13888,6 +14332,7 @@ Armour saves.</characteristic>
 "/>
                   </modifiers>
                 </infoLink>
+                <infoLink name="Parry (shield)" id="1a51-598c-918f-d354" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
@@ -13936,6 +14381,7 @@ Armour saves.</characteristic>
 "/>
                   </modifiers>
                 </infoLink>
+                <infoLink name="Parry (shield)" id="c052-b901-5710-2773" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
@@ -13944,6 +14390,14 @@ Armour saves.</characteristic>
                   </conditions>
                 </modifier>
               </modifiers>
+              <profiles>
+                <profile name="Paradoxical Shield" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="df22-be37-c8b1-ad7c">
+                  <characteristics>
+                    <characteristic name="Type" typeId="31b2-f73f-865d-f538">Paradoxical Shield</characteristic>
+                    <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">5+ even while mounted</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
             </selectionEntry>
           </selectionEntries>
           <modifiers>
@@ -14535,6 +14989,14 @@ Armour saves.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="50"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Regeneration" id="d425-1480-cc26-366e" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+              <modifiers>
+                <modifier type="set" value="Crown of Everlasting Conquest" field="name"/>
+                <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Gaze of the Gods" hidden="false" id="3309-8ac6-478b-9189" collective="false" sortIndex="1">
           <constraints>
@@ -14551,6 +15013,14 @@ Armour saves.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Ward Save" id="6b08-fc0b-19fe-f063" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Gaze of the Gods" field="name"/>
+                <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -14593,6 +15063,14 @@ Armour saves.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Ward Save" id="def8-2331-0e21-40d6" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="The Brazen Rune" field="name"/>
+                    <modifier type="set" value="2+ against spells." field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
           <modifiers>
@@ -14679,6 +15157,14 @@ Armour saves.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="35"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Ward Save" id="f2cb-5177-6abd-54e7" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Jewel of Denial" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="The Beguiling Gem" hidden="false" id="4ce9-3f2b-7eca-cac9" collective="false">
               <constraints>
@@ -14746,6 +15232,14 @@ Armour saves.</characteristic>
               <costs>
                 <cost name="pts" typeId="points" value="30"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Ward Save" id="8cc1-7806-db0f-93b4" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Golden Eye of Tzeentch" field="name"/>
+                    <modifier type="set" value="3+ against missile attacks." field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Crystal Pendant" hidden="false" id="a73e-da23-ad40-14bd" collective="false">
               <constraints>
@@ -15413,6 +15907,13 @@ Tamurkhan&apos;s power cannot save him if he is destroyed by an attack which cau
               <rules>
                 <rule name="Giant of Khorne" id="ecf1-f7cf-65f4-1366" hidden="false" publicationId="1a01-044f-047b-618f" page="206">
                   <description>A Giant of Khorne has +1 Strength.</description>
+                  <modifiers>
+                    <modifier type="append" value="(already in profile)" field="description">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="a08b-6e69-e707-9f5e" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </rule>
               </rules>
               <costs>
@@ -15423,14 +15924,17 @@ Tamurkhan&apos;s power cannot save him if he is destroyed by an attack which cau
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="71e6-cf37-723f-7ebf" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
-              <rules>
-                <rule name="Giant of Tzeentch" id="52f9-584f-0bcc-5ca5" hidden="false" publicationId="1a01-044f-047b-618f" page="206">
-                  <description>A Giant of Tzeentch has a Ward save (6+)</description>
-                </rule>
-              </rules>
               <costs>
                 <cost name="pts" typeId="points" value="20"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Ward Save" id="c15e-d0d1-f38b-00f7" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Giant of Tzeentch" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Giant of Slaanesh" hidden="false" id="0f14-68a2-5363-23df" collective="false" sortIndex="3">
               <constraints>
@@ -15439,6 +15943,13 @@ Tamurkhan&apos;s power cannot save him if he is destroyed by an attack which cau
               <rules>
                 <rule name="Giant of Slaanesh" id="c610-5302-3b1d-a4c7" hidden="false" publicationId="1a01-044f-047b-618f" page="206">
                   <description>A Giant of Slaanesh has +1 Initiative and the Unbreakable special rule</description>
+                  <modifiers>
+                    <modifier type="append" value="(already in profile)" field="description">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="0f14-68a2-5363-23df" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </rule>
               </rules>
               <costs>
@@ -15452,6 +15963,13 @@ Tamurkhan&apos;s power cannot save him if he is destroyed by an attack which cau
               <rules>
                 <rule name="Giant of Nurgle" id="2aba-e270-d533-8741" hidden="false" publicationId="1a01-044f-047b-618f" page="206">
                   <description>A Giant of Nurgle has +1 Toughness.</description>
+                  <modifiers>
+                    <modifier type="append" value="(already in profile)" field="description">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="ab70-33a2-e11e-0e16" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </rule>
               </rules>
               <costs>
@@ -15464,6 +15982,23 @@ Tamurkhan&apos;s power cannot save him if he is destroyed by an attack which cau
       <costs>
         <cost name="pts" typeId="points" value="175"/>
       </costs>
+      <modifiers>
+        <modifier type="increment" value="1" field="edd2-7979-54a4-6b35" affects="profiles.Model">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="a08b-6e69-e707-9f5e" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="1" field="df90-5cbd-8cf9-95b2" affects="profiles.Model">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="ab70-33a2-e11e-0e16" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="increment" value="1" field="7cca-e51f-edc2-7322" affects="profiles.Model">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="0f14-68a2-5363-23df" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </entryLink>
     <entryLink import="true" name="Warhounds" hidden="false" id="a756-ee58-69e6-b792" type="selectionEntry" targetId="8cdb-f7a0-9ebc-1109" sortIndex="13"/>
     <entryLink import="true" name="Trolls" hidden="false" id="23c6-ef08-6483-0e35" type="selectionEntry" targetId="a318-4aee-10c0-31b8" sortIndex="22">

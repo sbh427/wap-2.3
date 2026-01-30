@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="522e-5e2a-d54c-4959" name="Armoury" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="68" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="522e-5e2a-d54c-4959" name="Armoury" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="68" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="X Additional Hand Weapon" id="c4b0-4ee4-7b99-843e" hidden="true"/>
     <categoryEntry name="X Flail" id="a86f-aab3-889c-0b6d" hidden="true"/>
@@ -100,6 +100,7 @@
       </constraints>
       <infoLinks>
         <infoLink name="Buckler" id="2ca1-86fa-a28b-8bfb" hidden="false" targetId="1700-a7e5-d272-ef20" type="profile"/>
+        <infoLink name="Parry (buckler)" id="e41c-1e30-49bc-a5df" hidden="false" type="profile" targetId="2d0d-e77a-2eeb-b599"/>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="0" field="d939-23d6-2a8e-e332">
@@ -164,6 +165,7 @@
       <infoLinks>
         <infoLink name="Hand Weapon" id="530c-eb28-4bce-f897" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
         <infoLink name="Shield" id="3560-32e1-5fa3-17eb" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
+        <infoLink name="Parry (shield)" id="71ce-89d2-1354-5822" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6688-fbd9-3fae-e968" automatic="true"/>
@@ -413,6 +415,7 @@
       </constraints>
       <infoLinks>
         <infoLink name="Shield" id="be32-d054-1088-b539" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
+        <infoLink name="Parry (shield)" id="1398-df65-db3a-45e2" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="0" field="af56-60a7-18d1-6f4f">
@@ -510,6 +513,7 @@
       </constraints>
       <infoLinks>
         <infoLink name="Two/Additional Hand Weapons" id="5e96-af7a-dae3-cc67" hidden="false" targetId="4a5d-0b6d-f6ac-fd7d" type="profile"/>
+        <infoLink name="Two/Additional Hand Weapons" id="b35c-057f-0995-ca5f" hidden="false" type="profile" targetId="48ad-587e-84ad-c237"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Medium Armour" hidden="false" id="76a4-23c1-f96d-021e" collective="true">
@@ -547,6 +551,7 @@
       <infoLinks>
         <infoLink name="Buckler" id="d2dd-656a-de4e-4bd9" hidden="false" targetId="1700-a7e5-d272-ef20" type="profile"/>
         <infoLink name="Hand Weapon" id="9287-c500-c190-bb83" hidden="false" type="profile" targetId="f6da-d707-0cd6-b1dd"/>
+        <infoLink name="Parry (buckler)" id="870a-fd87-b1b5-2b81" hidden="false" type="profile" targetId="2d0d-e77a-2eeb-b599"/>
       </infoLinks>
       <modifiers>
         <modifier type="set" value="true" field="hidden">
@@ -633,8 +638,24 @@
             </conditionGroup>
           </conditionGroups>
         </modifier>
-        <modifier type="prepend" value="*Only applies to models on foot against missile attacks to the front." field="ff58-91e4-84d7-e6e4" join="
+        <modifier type="append" value="*Only applies to models on foot against missile attacks to the front." field="ff58-91e4-84d7-e6e4" join="
 ">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="f651-5580-8a7b-45eb" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+        <modifier type="prepend" value="Parry (6+) (Only applies if used with a hand weapon.)" field="ff58-91e4-84d7-e6e4">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
@@ -677,21 +698,20 @@
       <characteristics>
         <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
         <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+*</characteristic>
-        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">*Shields do not add any armour against missile attacks to the rear.
-Parry (6+) (Only applies if used with a hand weapon)</characteristic>
+        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">*Shields do not add any armour against missile attacks to the rear.</characteristic>
       </characteristics>
       <modifiers>
-        <modifier type="prepend" value="*Models on foot armed with shields get an additional +1 to their armour save against missile attacks to their front." field="ff58-91e4-84d7-e6e4" join="
-">
+        <modifier type="prepend" value="*Models on foot armed with shields get an additional +1 to their armour save against missile attacks to their front.
+Parry (6+) (Only applies if used with a hand weapon.)" field="ff58-91e4-84d7-e6e4">
           <conditionGroups>
             <conditionGroup type="and">
               <conditions>
                 <condition type="equalTo" value="0" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
                 <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
                 <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
                 <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
                 <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
-                <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
                 <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="f651-5580-8a7b-45eb" shared="true" includeChildSelections="true"/>
                 <condition type="notInstanceOf" value="0" field="selections" scope="model-or-unit" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
               </conditions>
@@ -915,6 +935,47 @@ Parry (6+) (Only applies if used with a hand weapon)</characteristic>
         <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
       </characteristics>
     </profile>
+    <profile name="Parry (shield)" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="fae6-fa36-d8e9-b115" noindex="true">
+      <characteristics>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Parry</characteristic>
+        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">6+ if used with a hand weapon.</characteristic>
+      </characteristics>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="Shield" field="name"/>
+      </modifiers>
+    </profile>
+    <profile name="Parry (buckler)" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="2d0d-e77a-2eeb-b599" noindex="true">
+      <characteristics>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Parry</characteristic>
+        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">6+ if used with a hand weapon.</characteristic>
+      </characteristics>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="Buckler" field="name"/>
+      </modifiers>
+    </profile>
+    <profile name="Two/Additional Hand Weapons" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="48ad-587e-84ad-c237">
+      <characteristics>
+        <characteristic name="Type" typeId="31b2-f73f-865d-f538">Parry</characteristic>
+        <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">6+</characteristic>
+      </characteristics>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </profile>
   </sharedProfiles>
   <profileTypes>
     <profileType name="Melee Weapon" id="6f70-cea1-702c-43bc" hidden="false" kind="weapon" sortIndex="2">
@@ -925,22 +986,22 @@ Parry (6+) (Only applies if used with a hand weapon)</characteristic>
         <characteristicType name="Special Rules" id="de63-d6da-efa8-00ac" kind="longText"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Magic Standard" id="fc80-e52f-edf4-4e7e" hidden="false" sortIndex="13">
+    <profileType name="Magic Standard" id="fc80-e52f-edf4-4e7e" hidden="false" sortIndex="14">
       <characteristicTypes>
         <characteristicType name="Special Rules" id="97aa-092b-c6fe-4f5a"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Enchanted Item" id="ff67-d27f-2eef-bb35" hidden="false" sortIndex="12">
+    <profileType name="Enchanted Item" id="ff67-d27f-2eef-bb35" hidden="false" sortIndex="13">
       <characteristicTypes>
         <characteristicType name="Special Rules" id="9d2e-d14d-dd58-a829"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Talisman" id="065f-58ea-de5d-d3c6" hidden="false" sortIndex="9">
+    <profileType name="Talisman" id="065f-58ea-de5d-d3c6" hidden="false" sortIndex="10">
       <characteristicTypes>
         <characteristicType name="Special Rules" id="08ca-4a32-203d-40c0"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Arcane Item" id="24d7-7f7d-a4d7-c26c" hidden="false" sortIndex="11">
+    <profileType name="Arcane Item" id="24d7-7f7d-a4d7-c26c" hidden="false" sortIndex="12">
       <characteristicTypes>
         <characteristicType name="Special Rules" id="3df8-4ab0-c4bd-e2ad"/>
       </characteristicTypes>
@@ -1676,6 +1737,15 @@ Note that they may not choose any Arcane Items.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Ward Save" id="5047-e08f-6cf8-8c63" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Ironcurse Icon" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                <modifier type="set" value="Only against Artillery" field="84ea-8900-474d-6201"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Potion of Toughness" hidden="false" id="b706-ccc0-394e-89a2" collective="false" sortIndex="6">
           <constraints>
@@ -1830,6 +1900,7 @@ Note that they may not choose any Arcane Items.</characteristic>
                 <modifier type="set" value="5+" field="97ea-ecf7-8d24-b2ca"/>
               </modifiers>
             </infoLink>
+            <infoLink name="Parry (shield)" id="c2fe-086d-789f-f905" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -1917,6 +1988,7 @@ Note that they may not choose any Arcane Items.</characteristic>
                 <modifier type="set" value="1+" field="97ea-ecf7-8d24-b2ca"/>
               </modifiers>
             </infoLink>
+            <infoLink name="Parry (shield)" id="10fe-e7d8-3737-ebab" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -1978,6 +2050,19 @@ Note that they may not choose any Arcane Items.</characteristic>
 "/>
               </modifiers>
             </infoLink>
+            <infoLink name="Parry (shield)" id="354c-9745-586c-bfa8" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
+            <infoLink name="Magic Resistance" id="d2d0-7286-deb9-b495" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+              <modifiers>
+                <modifier type="set" value="Spellshield" field="name"/>
+                <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Magic Resistance" id="d193-ed52-c647-36d0" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+              <modifiers>
+                <modifier type="set" value="Spellshield" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -2007,6 +2092,7 @@ Note that they may not choose any Arcane Items.</characteristic>
 "/>
               </modifiers>
             </infoLink>
+            <infoLink name="Parry (shield)" id="0568-8c44-de8c-56ee" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -2034,6 +2120,12 @@ Note that they may not choose any Arcane Items.</characteristic>
 
 "/>
                 <modifier type="set" value="Gambler&apos;s Armour" field="annotation"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Ward Save" id="dead-e897-691b-f691" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Gambler&apos;s Armour" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -2071,6 +2163,12 @@ Note that they may not choose any Arcane Items.</characteristic>
 "/>
               </modifiers>
             </infoLink>
+            <infoLink name="Ward Save" id="8d26-165a-96f2-f53b" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Armour of Fortune" field="name"/>
+                <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -2106,6 +2204,12 @@ Note that they may not choose any Arcane Items.</characteristic>
                 <modifier type="append" value="The wearer gains a Ward Save (4+)." field="ff58-91e4-84d7-e6e4" join="
 
 "/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Ward Save" id="33a3-9fc0-35d9-8462" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Armour of Destiny" field="name"/>
+                <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -2219,6 +2323,14 @@ Note that they may not choose any Arcane Items.</characteristic>
 "/>
               </modifiers>
             </infoLink>
+            <infoLink name="Parry (shield)" id="d20e-d801-7558-339e" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
+            <infoLink name="Ward Save" id="c313-6a67-9822-4158" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Shield of the Warrior True" field="name"/>
+                <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                <modifier type="set" value="Only against  missile attacks. " field="84ea-8900-474d-6201"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -2326,6 +2438,20 @@ Note that they may not choose any Arcane Items.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Magic Resistance" id="3d05-061f-896a-b93e" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+              <modifiers>
+                <modifier type="set" value="Standard of Arcane Warding" field="name"/>
+                <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Magic Resistance" id="4865-2e2f-f35e-0b68" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+              <modifiers>
+                <modifier type="set" value="Standard of Arcane Warding" field="name"/>
+                <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Razor Standard" hidden="false" id="001c-8ede-5ac4-440c" collective="false" sortIndex="16">
           <constraints>
@@ -2422,6 +2548,15 @@ Note that they may not choose any Arcane Items.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Ward Save" id="239c-622c-8be5-faf3" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Standard of Shielding" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                <modifier type="set" value="Only against missile attacks." field="84ea-8900-474d-6201"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Banner of Might" hidden="false" id="1aac-8bc7-07ca-4810" collective="false" sortIndex="20">
           <constraints>
@@ -2502,6 +2637,20 @@ Note that they may not choose any Arcane Items.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Magic Resistance" id="a478-82e4-3e12-7f06" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+              <modifiers>
+                <modifier type="set" value="Lichbone Pennant" field="name"/>
+                <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Magic Resistance" id="346d-e7f6-52e9-caa0" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+              <modifiers>
+                <modifier type="set" value="Lichbone Pennant" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Banner of Eternal Flame" hidden="false" id="870b-a8ab-ff7b-bb44" collective="false" sortIndex="5">
           <constraints>
@@ -2661,6 +2810,7 @@ Note that they may not choose any Arcane Items.</characteristic>
 "/>
               </modifiers>
             </infoLink>
+            <infoLink name="Two/Additional Hand Weapons" id="a181-331a-7d03-638d" hidden="false" type="profile" targetId="48ad-587e-84ad-c237"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -2802,6 +2952,14 @@ Note that they may not choose any Arcane Items.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Parry" id="e7c4-4c2d-f948-1b95" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
+              <modifiers>
+                <modifier type="set" value="Parrying Blade" field="name"/>
+                <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Relic Sword" hidden="false" id="438f-4d2e-cd3a-eb4d" collective="false" sortIndex="7">
           <constraints>
@@ -3148,6 +3306,14 @@ Note that they may not choose any Arcane Items.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Ward Save" id="bf6d-93a3-8420-9175" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Talisman of Protection" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Talisman of Preservation" hidden="false" id="afd6-a153-299c-88c4" collective="false" sortIndex="12">
           <constraints>
@@ -3164,6 +3330,14 @@ Note that they may not choose any Arcane Items.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="45"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Ward Save" id="2822-5b0e-f64c-4f7d" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Talisman of Preservation" field="name"/>
+                <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Talisman of Endurance" hidden="false" id="f246-4c21-10b8-b186" collective="false" sortIndex="11">
           <constraints>
@@ -3180,6 +3354,14 @@ Note that they may not choose any Arcane Items.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Ward Save" id="4c80-c1e8-cd0b-69e1" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Talisman of Endurance" field="name"/>
+                <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Seed of Rebirth" hidden="false" id="968a-ebf7-08e9-a735" collective="false" sortIndex="5">
           <constraints>
@@ -3196,6 +3378,14 @@ Note that they may not choose any Arcane Items.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Regeneration" id="1283-f3a7-559e-8990" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+              <modifiers>
+                <modifier type="set" value="Seed of Rebirth" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Opal Amulet" hidden="false" id="9475-b023-f368-e7e9" collective="false" sortIndex="6">
           <constraints>
@@ -3212,6 +3402,14 @@ Note that they may not choose any Arcane Items.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="15"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Ward Save" id="d2e7-1c6e-6b7f-b511" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Opal Amulet" field="name"/>
+                <modifier type="set" value="2+ against the first wound." field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Obsidian Trinket" hidden="false" id="5ef5-bc7d-8e86-93a1" collective="false" sortIndex="4">
           <constraints>
@@ -3228,6 +3426,20 @@ Note that they may not choose any Arcane Items.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="10"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Magic Resistance" id="ab54-64dd-0ec8-1b49" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+              <modifiers>
+                <modifier type="set" value="Obsidian Trinket" field="name"/>
+                <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Magic Resistance" id="1045-9846-4ffe-0edb" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+              <modifiers>
+                <modifier type="set" value="Obsidian Trinket" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Obsidian Lodestone" hidden="false" id="695d-1483-60be-3710" collective="false" sortIndex="10">
           <constraints>
@@ -3244,6 +3456,20 @@ Note that they may not choose any Arcane Items.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Magic Resistance" id="d43c-9319-0a3a-41ce" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+              <modifiers>
+                <modifier type="set" value="Obsidian Lodestone" field="name"/>
+                <modifier type="set" value="3" field="19f0-e982-f035-416c"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Magic Resistance" id="fb69-c1d5-ecc4-bf5c" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+              <modifiers>
+                <modifier type="set" value="Obsidian Lodestone" field="name"/>
+                <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Obsidian Amulet" hidden="false" id="e716-d445-d848-23cb" collective="false" sortIndex="8">
           <constraints>
@@ -3260,6 +3486,20 @@ Note that they may not choose any Arcane Items.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Magic Resistance" id="7cb0-d8e7-e1a1-d605" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+              <modifiers>
+                <modifier type="set" value="Obsidian Amulet" field="name"/>
+                <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Magic Resistance" id="d9f8-9a8e-fa94-2462" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+              <modifiers>
+                <modifier type="set" value="Obsidian Amulet" field="name"/>
+                <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Lucky Trinket" hidden="false" id="0291-b00a-a412-76e3" collective="false" sortIndex="2">
           <constraints>
@@ -3292,6 +3532,15 @@ Note that they may not choose any Arcane Items.</characteristic>
           <costs>
             <cost name="pts" typeId="points" value="5"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Ward Save" id="27e1-3fde-a2c7-a242" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Pigeon Plucker Pendant" field="name"/>
+                <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                <modifier type="set" value="Only against flyer." field="84ea-8900-474d-6201"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Dawnstone" hidden="false" id="44fe-7b40-47df-f1fc" collective="false" sortIndex="9">
           <constraints>

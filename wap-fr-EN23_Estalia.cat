@@ -531,8 +531,19 @@
         <infoLink name="Spear of Myrmidia" id="6591-a17d-3d2d-55f5" hidden="false" targetId="1423-aa45-d15f-5594" type="profile"/>
         <infoLink name="Battle Prayers" id="688b-e136-371c-fe40" hidden="false" targetId="659d-1537-180c-4696" type="rule"/>
         <infoLink name="Blessing of Myrmidia" id="b420-2ad1-f686-28ca" hidden="false" targetId="80f2-5041-87e8-11b5" type="rule"/>
-        <infoLink name="Magic Resistance (1)" id="61a4-f6c2-5f4e-56d3" hidden="false" targetId="7ed4-9d31-09c3-6bf9" type="rule"/>
         <infoLink name="Tactical Supremacy" id="c3c9-7de0-4f3e-455f" hidden="false" targetId="988f-a5b4-56b9-dbcb" type="rule"/>
+        <infoLink name="Magic Resistance" id="fe5d-b981-d6f9-8e69" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+          <modifiers>
+            <modifier type="set" value="Priest of Myrmidia" field="name"/>
+            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Magic Resistance" id="3500-66ac-3b4e-74b3" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+          <modifiers>
+            <modifier type="set" value="Priest of Myrmidia" field="name"/>
+            <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="bad9-dec7-b671-fb61" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
@@ -2788,10 +2799,17 @@ The wearer and any unit they join have the Cold-Blooded special rule when taking
                         <infoLink name="Heavy Armour" id="f5cc-fe95-eeaa-cac0" hidden="false" type="profile" targetId="8e15-bc32-b40c-bad3">
                           <modifiers>
                             <modifier type="set" value="Blessed Cuirass" field="annotation"/>
-                            <modifier type="append" value="
-Enemies in base contact with the wielder suffer -1 To Hit. In addition, attacks with this blade have the Ignores Armour saves special rule.
-" field="ff58-91e4-84d7-e6e4"/>
+                            <modifier type="append" value=" The wearer gains the Fly (10) special rule and a Ward Save (4+) against non-Magical Attacks, which may be re-rolled. 
+" field="ff58-91e4-84d7-e6e4" join="
+
+"/>
                             <modifier type="prepend" value="Magic Armour. " field="ff58-91e4-84d7-e6e4"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Ward Save" id="8b2a-a272-5836-cbd5" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Blessed Cuirass" field="name"/>
+                            <modifier type="set" value="4+ against non-Magical Attacks." field="bdf9-d73e-e13b-b0ce"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -2882,7 +2900,12 @@ Enemies in base contact with the wielder suffer -1 To Hit. In addition, attacks 
                 <infoLink id="705c-ea68-a2b5-f396" name="Tactical Supremacy" hidden="false" targetId="988f-a5b4-56b9-dbcb" type="rule"/>
                 <infoLink id="c050-9daa-5bfd-5206" name="Hidden" hidden="false" targetId="2796-b399-4f98-a36f" type="rule"/>
                 <infoLink id="562a-b831-6f54-be05" name="Immunity (Psychology)" hidden="false" targetId="b143-056c-658e-ba26" type="rule"/>
-                <infoLink id="a214-e194-26c6-1d6b" name="Dodge (5+)" hidden="false" targetId="cfff-6563-d1c6-820c" type="rule"/>
+                <infoLink name="Dodge" id="5620-de63-72cf-8f77" hidden="false" type="profile" targetId="6407-7161-d748-2c03">
+                  <modifiers>
+                    <modifier type="set" value="Maria de Salvo" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="150"/>
@@ -2939,6 +2962,14 @@ All attacks made with the Eradicators have the Always Strikes First, Poisoned At
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="7773-c5b5-6324-3e3f" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Seal of Myrmidia" field="name"/>
+                            <modifier type="set" value="4+ against Magical Attacks. " field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -2997,6 +3028,14 @@ All attacks made with the Eradicators have the Always Strikes First, Poisoned At
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Parry" id="bf40-87c3-4b91-f9f3" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
+                          <modifiers>
+                            <modifier type="set" value="Rapier of Quietude" field="name"/>
+                            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -3054,6 +3093,14 @@ All attacks made with the Eradicators have the Always Strikes First, Poisoned At
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Regeneration" id="0290-c5a5-4757-be7b" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                          <modifiers>
+                            <modifier type="set" value="Amulet of Pahuax" field="name"/>
+                            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -3092,7 +3139,12 @@ All attacks made with the Eradicators have the Always Strikes First, Poisoned At
               </rules>
               <infoLinks>
                 <infoLink id="9094-b138-437f-3450" name="Unbreakable" hidden="false" targetId="1c9d-2d99-6222-2853" type="rule"/>
-                <infoLink id="7578-e60d-e1d5-c0c4" name="Ward Save (3+)" hidden="false" targetId="7323-b2a0-af7b-3ec6" type="rule"/>
+                <infoLink name="Ward Save" id="ac28-48c1-594d-f951" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Insane Luck" field="name"/>
+                    <modifier type="set" value="3+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="100"/>
@@ -3725,8 +3777,19 @@ Units of Crossbowmen, Arquebusiers and Musketeers within 3&quot; of a unit of T
         <infoLink id="3f4b-f143-f65a-5ec1" name="Skill of Combat" hidden="false" targetId="b967-9af7-b31b-9cf5" type="profile"/>
         <infoLink id="2a06-52e6-5262-cf0a" name="Shield of Myrmidia" hidden="false" targetId="c2b9-30a8-1efe-d5a7" type="profile"/>
         <infoLink id="2d45-bd07-f3cc-509d" name="Spear of Myrmidia" hidden="false" targetId="1423-aa45-d15f-5594" type="profile"/>
-        <infoLink id="e36d-4499-1add-ae2a" name="Magic Resistance (2)" hidden="false" targetId="0e09-3526-25d5-2646" type="rule"/>
         <infoLink id="97eb-e6ba-8096-40bb" name="Battle Prayers" hidden="false" targetId="659d-1537-180c-4696" type="rule"/>
+        <infoLink name="Magic Resistance" id="d449-f280-df1e-2455" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+          <modifiers>
+            <modifier type="set" value="Priest of Myrmidia" field="name"/>
+            <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Magic Resistance" id="591e-5011-de66-a9c2" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+          <modifiers>
+            <modifier type="set" value="Priest of Myrmidia" field="name"/>
+            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Lords" hidden="false" id="5399-e110-10a4-d6d5" targetId="d280-b7df-c185-2ba5" primary="true"/>
@@ -3854,7 +3917,6 @@ Units of Crossbowmen, Arquebusiers and Musketeers within 3&quot; of a unit of T
                     </modifier>
                   </modifiers>
                 </infoLink>
-                <infoLink name="Ward Save (4+)" id="4edb-f358-660a-7fbf" hidden="false" type="rule" targetId="d45b-0036-b5ef-951b"/>
                 <infoLink name="Mighty Blow (1)" id="210e-9d07-566e-a1a4" hidden="false" type="rule" targetId="01e3-7f81-20e3-45fe">
                   <modifiers>
                     <modifier type="set" value="true" field="hidden">
@@ -3863,6 +3925,12 @@ Units of Crossbowmen, Arquebusiers and Musketeers within 3&quot; of a unit of T
                       </conditions>
                     </modifier>
                     <modifier type="set" value="Chariot only" field="annotation"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Ward Save" id="5246-8667-9694-d717" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Divine Protection" field="name"/>
+                    <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
                   </modifiers>
                 </infoLink>
               </infoLinks>
@@ -4800,7 +4868,7 @@ If the Picador(s) are killed before they have lit the bulls, the bulls simply wa
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedSelectionEntryGroups>
-    <selectionEntryGroup id="1182-5614-d9fe-26dc" name="Magic Standards" hidden="false" collective="false" import="true">
+    <selectionEntryGroup id="1182-5614-d9fe-26dc" name="Magic Standards" hidden="false" collective="false" import="true" collapsible="true">
       <constraints>
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6bb1-31c8-2a92-52b8" type="max"/>
       </constraints>
@@ -5249,6 +5317,14 @@ The wielder of this weapon can re-roll all failed rolls To Hit in close combat.
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Regeneration" id="eb17-5a31-f66c-1f47" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                  <modifiers>
+                    <modifier type="set" value="Rat Catcher&apos;s Charm" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Aegis of the Maiden" hidden="false" id="97d5-5a96-d654-f90f" collective="false" sortIndex="2">
               <constraints>
@@ -5309,6 +5385,14 @@ The wielder of this weapon can re-roll all failed rolls To Hit in close combat.
               <costs>
                 <cost name="pts" typeId="points" value="50"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Ward Save" id="f389-4afb-0ef6-1c56" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Amulet of Dawn" field="name"/>
+                    <modifier type="set" value="Game turn +1" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
           <entryLinks>
@@ -5337,6 +5421,7 @@ All attacks targeted at the bearer suffer -1 To Hit. For every armour or Ward sa
 " field="ff58-91e4-84d7-e6e4"/>
                   </modifiers>
                 </infoLink>
+                <infoLink name="Parry" id="3cbd-ae03-bdd4-e8b6" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
@@ -5363,6 +5448,13 @@ The bearer of this shield gains the Parry (5+) special rule. In addition, all en
 " field="ff58-91e4-84d7-e6e4"/>
                   </modifiers>
                 </infoLink>
+                <infoLink name="Parry" id="d5b8-762d-a54d-d4f3" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
+                  <modifiers>
+                    <modifier type="set" value="Shield of Honour" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Parry" id="b481-8feb-e794-e589" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
@@ -5490,6 +5582,7 @@ The wielder has the Fear special rule. In addition, if the wielder rolls a natur
 " field="ff58-91e4-84d7-e6e4"/>
                   </modifiers>
                 </infoLink>
+                <infoLink name="Parry" id="cb5a-8899-1948-f812" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">

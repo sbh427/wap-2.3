@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="2572-4a7a-3823-e3b2" name="Vampire Counts WAP 1.73" revision="20" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="38" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="2572-4a7a-3823-e3b2" name="Vampire Counts WAP 1.73" revision="21" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="38" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <profileTypes>
     <profileType id="21e6-6317-460c-b75f" name="Vampiric Power">
       <characteristicTypes>
@@ -528,6 +528,7 @@
         <infoLink id="11e5-950b-9dfa-7e34" name="Ignores Armour Saves" hidden="false" targetId="917c-1397-bf0b-5856" type="rule"/>
         <infoLink id="d97f-409f-4692-123b" name="Soulstriders" hidden="false" targetId="f452-b558-83a9-797a" type="rule"/>
         <infoLink id="f0b5-90b1-3ed2-0eed" name="Ethereal" hidden="false" targetId="9e47-05bc-376a-7463" type="rule"/>
+        <infoLink name="Ethereal" id="429c-72bd-0653-49d4" hidden="false" type="profile" targetId="0d17-762d-8841-8d11"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="8606-847b-eea7-8bc4" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
@@ -1764,6 +1765,7 @@
             <infoLink id="2f48-35f5-6c6f-a44c" name="Soulstriders" hidden="false" targetId="f452-b558-83a9-797a" type="rule"/>
             <infoLink id="ea0e-3a32-15ef-737a" name="Flaming Attacks" hidden="false" targetId="8600-a090-2761-d661" type="rule"/>
             <infoLink id="894a-a384-e19c-2a76" name="Ignores Armour Saves" hidden="false" targetId="917c-1397-bf0b-5856" type="rule"/>
+            <infoLink name="Ethereal" id="ccc2-0737-e243-f3b9" hidden="false" type="profile" targetId="0d17-762d-8841-8d11"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="27"/>
@@ -1877,7 +1879,12 @@
           </profiles>
           <infoLinks>
             <infoLink id="d07c-0d70-6547-ac6b" name="Poisoned Attacks" hidden="false" targetId="fefd-9cb0-d6fa-e2ef" type="rule"/>
-            <infoLink id="a078-b728-1088-5259" name="Regeneration (5+)" hidden="false" targetId="5fed-df2e-b6d6-cc93" type="rule"/>
+            <infoLink name="Regeneration" id="2548-9d42-8924-aba9" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+              <modifiers>
+                <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                <modifier type="set" value="Crypt Horror" field="name"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="35"/>
@@ -1996,63 +2003,6 @@
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
-    </selectionEntry>
-    <selectionEntry id="5030-9514-eca2-98f9" name="Spirit Hosts" hidden="false" collective="false" import="true" type="unit" sortIndex="211">
-      <categoryLinks>
-        <categoryLink id="1a19-1357-95e9-1d9b" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
-        <categoryLink name="Undead" hidden="false" id="cc92-e221-7fea-aca7" targetId="10fa-658f-38fd-4cad" primary="false"/>
-        <categoryLink name="Swarm" hidden="false" id="5e56-e6b2-c84c-0e33" targetId="f651-5580-8a7b-45eb" primary="false"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry id="b143-a335-4988-0d8d" name="Spirit Host" hidden="false" collective="false" import="true" type="model" sortIndex="1">
-          <constraints>
-            <constraint field="selections" scope="parent" value="2" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="733a-a6ec-7951-8860" type="min"/>
-            <constraint field="selections" scope="parent" value="10" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6ea1-47c1-58d4-c3c6" type="max"/>
-          </constraints>
-          <profiles>
-            <profile id="3a58-4c2f-e0e4-f1e8" name="Spirit Host" publicationId="10a5-5781-61f5-86ae" page="34" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-              <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">1</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
-                <characteristic name="Ld" typeId="a199-f10b-a038-5730">4</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Swarm (Undead, Spirit)</characteristic>
-              </characteristics>
-            </profile>
-          </profiles>
-          <infoLinks>
-            <infoLink id="63a7-e650-e1e9-1173" name="Line of Sight (1)" hidden="false" targetId="8f97-966e-ddb2-f7bb" type="rule"/>
-            <infoLink id="ba28-6f74-157-6e08" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-            <infoLink id="0a66-542b-de18-7da7" name="Ethereal" hidden="false" targetId="9e47-05bc-376a-7463" type="rule"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="40"/>
-          </costs>
-        </selectionEntry>
-      </selectionEntries>
-      <costs>
-        <cost name="pts" typeId="points" value="0"/>
-      </costs>
-      <entryLinks>
-        <entryLink import="true" name="Expendable" hidden="false" id="23a1-a57c-67d6-2896" type="selectionEntry" targetId="b90d-9045-a6d5-9e7d" sortIndex="2"/>
-      </entryLinks>
-      <modifiers>
-        <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
-          <conditionGroups>
-            <conditionGroup type="and">
-              <conditions>
-                <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
-                <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
     </selectionEntry>
     <selectionEntry id="690c-c730-6330-9416" name="Blood Knights" hidden="false" collective="false" import="true" type="unit" sortIndex="301">
       <categoryLinks>
@@ -2196,9 +2146,14 @@
           <infoLinks>
             <infoLink id="d08e-9851-009b-2842" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
             <infoLink id="1788-12df-a0db-0986" name="Skirmishers" hidden="false" targetId="9a30-1c5c-12f4-5798" type="rule"/>
-            <infoLink id="71c3-a991-e64b-45b5" name="Dodge (6+)" hidden="false" targetId="bf3d-abaf-45ca-3477" type="rule"/>
             <infoLink id="34f3-15ec-3a96-d224" name="Scouts" hidden="false" targetId="6624-0b7b-c5b8-6397" type="rule"/>
             <infoLink id="7265-e879-659a-a563" name="Handmaiden" hidden="false" targetId="ba1e-616a-b0ea-ffe1" type="profile"/>
+            <infoLink name="Dodge" id="2532-5530-0673-1864" hidden="false" type="profile" targetId="6407-7161-d748-2c03">
+              <modifiers>
+                <modifier type="set" value="Handmaiden" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="21"/>
@@ -2294,9 +2249,14 @@
       </profiles>
       <infoLinks>
         <infoLink id="211d-b0c0-0f00-fb92" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
-        <infoLink id="6822-a93a-0761-f6cb" name="Insubstantial Form" hidden="false" targetId="b545-694e-edbb-f4a1" type="rule"/>
         <infoLink name="Magical Attacks" id="493c-d71c-9559-3e21" hidden="false" type="rule" targetId="03db-d81f-f264-84b8"/>
         <infoLink id="af3d-61f9-dc1f-afd0" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
+        <infoLink name="Ward Save" id="4f41-d1ef-eb91-84a3" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+          <modifiers>
+            <modifier type="set" value="Insubstantial Form" field="name"/>
+            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="6266-0d79-f1cc-0d86" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -2507,7 +2467,12 @@ and Flaming Attacks special rules.</characteristic>
         <infoLink id="bc23-d762-af8e-2163" name="The Red Thirst" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
         <infoLink id="d0a0-7301-ccae-6d9e" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
         <infoLink id="b613-a1cc-ec01-4fb4" name="Hatred" hidden="false" targetId="f6d7-9fbc-abc1-5cfc" type="rule"/>
-        <infoLink id="b310-245a-bd48-a9b2" name="Regeneration (4+)" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
+        <infoLink name="Regeneration" id="b3aa-0a8f-4735-dc2d" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+          <modifiers>
+            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+            <modifier type="set" value="Varghulf" field="name"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="6a56-ac03-5351-fb67" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -2541,6 +2506,7 @@ and Flaming Attacks special rules.</characteristic>
         <infoLink id="0895-ec09-cede-41a3" name="Ethereal" hidden="false" targetId="9e47-05bc-376a-7463" type="rule"/>
         <infoLink id="14e9-e714-d192-305f" name="Death Shriek" hidden="false" targetId="515e-c009-6cec-66aa" type="rule"/>
         <infoLink id="8337-9b1b-f145-e0ad" name="Fly (6)" hidden="false" targetId="b830-fe6e-b461-0377" type="rule"/>
+        <infoLink name="Ethereal" id="072b-740f-6680-57df" hidden="false" type="profile" targetId="0d17-762d-8841-8d11"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="d423-64ea-590d-1b14" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
@@ -2595,14 +2561,17 @@ and Flaming Attacks special rules.</characteristic>
         <rule id="ef1e-de47-78f6-1241" name="Carnophage" publicationId="10a5-5781-61f5-86ae" page="37" hidden="false">
           <description>For every unsaved Wound the Mourngul inflicts in close combat, it regains one Wound it has previously lost during the battle.</description>
         </rule>
-        <rule id="300b-76b4-8dce-c3f6" name="Haunter of the Dark" publicationId="10a5-5781-61f5-86ae" page="37" hidden="false">
-          <description>A Mourngul has a Ward save (4+) against non-magical attacks.</description>
-        </rule>
       </rules>
       <infoLinks>
         <infoLink id="a2c2-933d-4b50-6748" name="Killing Blow" hidden="false" targetId="a711-7cf6-cd2b-1d29" type="rule"/>
         <infoLink id="fbc6-9cf1-89c7-643e" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
         <infoLink id="fcf5-ca56-5f1c-a43d" name="Ice Attacks" hidden="false" targetId="fa30-0410-43da-e1d7" type="rule"/>
+        <infoLink name="Ward Save" id="8495-dedc-d482-e3f3" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+          <modifiers>
+            <modifier type="set" value="Haunter of the Dark" field="name"/>
+            <modifier type="set" value="4+ against non-magical attacks." field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Special" hidden="false" id="8364-0779-209c-1955" targetId="fc26-7737-f7cb-8977" primary="true"/>
@@ -2651,8 +2620,13 @@ and Flaming Attacks special rules.</characteristic>
         </rule>
       </rules>
       <infoLinks>
-        <infoLink id="f2e5-c144-9757-946a" name="Regeneration (4+)" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
         <infoLink id="b5ef-846e-4c57-0be5" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
+        <infoLink name="Regeneration" id="7eb8-ad19-7fd9-5759" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+          <modifiers>
+            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+            <modifier type="set" value="Necrofex Colossus" field="name"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="d923-daee-3851-07f7" name="Rare" hidden="false" targetId="0eb4-f376-7725-b05b" primary="true"/>
@@ -2715,14 +2689,17 @@ and Flaming Attacks special rules.</characteristic>
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e9b8-dfbe-85f4-1294" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
-              <rules>
-                <rule name="Vampire Blood" id="83f3-d696-2c09-e2c3" hidden="false" publicationId="10a5-5781-61f5-86ae" page="39">
-                  <description>The Necrofex Colossus gains Regeneration (3+), but is also subject to the Berserk Rage part of Frenzy.</description>
-                </rule>
-              </rules>
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Regeneration" id="d7d4-cfd2-eb73-e064" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                  <modifiers>
+                    <modifier type="set" value="Vampire Blood" field="name"/>
+                    <modifier type="set" value="3+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Corpse Killers" hidden="false" id="e95c-cacc-9b30-3d7f" collective="false" sortIndex="3">
               <constraints>
@@ -2840,6 +2817,14 @@ and Flaming Attacks special rules.</characteristic>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="3687-870e-f6f0-2756" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Circlet of Rathek" field="name"/>
+                            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Staff of Kaphamon" hidden="false" id="de19-baac-61d7-6b3a" collective="false" sortIndex="2">
                       <constraints>
@@ -3367,6 +3352,14 @@ and Flaming Attacks special rules.</characteristic>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="0a95-f660-bfe3-987d" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="The Carstein Ring" field="name"/>
+                            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -3488,6 +3481,12 @@ and Flaming Attacks special rules.</characteristic>
 "/>
                             <modifier type="set" value="Walach&apos;s Bloody Hauberk" field="annotation"/>
                             <modifier type="prepend" value="Magic Armour." field="ff58-91e4-84d7-e6e4"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Ward Save" id="f129-acbe-b646-23d3" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Walach&apos;s Bloody Hauberk" field="name"/>
+                            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -3848,6 +3847,7 @@ Blood Chalice allowing them to do one of the following:
                 </infoLink>
                 <infoLink name="Unit Strength (3)" id="9c0f-e4d2-6cb1-3172" hidden="false" type="rule" targetId="fe8b-fd33-652e-4e2f"/>
                 <infoLink name="Line of Sight (2)" id="17c0-d780-bae9-4de9" hidden="false" type="rule" targetId="40b4-9828-f47e-28c9"/>
+                <infoLink name="Ethereal" id="5f1d-383e-ebcf-842e" hidden="false" type="profile" targetId="0d17-762d-8841-8d11"/>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="20. Primary Weapon" hidden="false" id="a470-9c99-4120-eb24" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
@@ -4225,12 +4225,17 @@ Blood Chalice allowing them to do one of the following:
                 </rule>
               </rules>
               <infoLinks>
-                <infoLink id="2921-4f94-4b63-5b32" name="Dodge (6+)" hidden="false" targetId="bf3d-abaf-45ca-3477" type="rule"/>
                 <infoLink id="8cc2-96fe-eb0d-4979" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
                 <infoLink id="9cdc-8a78-7f7a-f34e" name="The Red Thirst" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
-                <infoLink name="Quickblood" id="0bf5-43f7-1ecb-75e8" hidden="false" type="profile" targetId="7214-e7a5-d1fd-50f2"/>
+                <infoLink name="Quickblood" id="0bf5-43f7-1ecb-75e8" hidden="false" type="infoGroup" targetId="7214-e7a5-d1fd-50f2"/>
                 <infoLink name="Lightning Reflexes" id="3ea8-98b1-d410-4c1d" hidden="false" type="profile" targetId="27f6-29cf-89e9-b5b8"/>
                 <infoLink name="Seduction" id="3afc-c165-108f-ed33" hidden="false" type="profile" targetId="134a-0b9c-3f0c-32ee"/>
+                <infoLink name="Dodge" id="085a-0744-277a-96f1" hidden="false" type="profile" targetId="6407-7161-d748-2c03">
+                  <modifiers>
+                    <modifier type="set" value="Neferata" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="10. Character Options" hidden="false" id="05d0-9387-eefc-1569" type="selectionEntryGroup" targetId="7853-6aa4-00e8-09e0"/>
@@ -4470,6 +4475,20 @@ Lahmia automatically lets them regain one Wound that they has lost during the ba
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Magic Resistance" id="da66-44dd-9e76-ff90" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                          <modifiers>
+                            <modifier type="set" value="Cloak of Darkness" field="name"/>
+                            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Magic Resistance" id="efea-67b5-aee0-7255" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                          <modifiers>
+                            <modifier type="set" value="Cloak of Darkness" field="name"/>
+                            <modifier type="set" value="3" field="19f0-e982-f035-416c"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -4610,6 +4629,7 @@ Lahmia automatically lets them regain one Wound that they has lost during the ba
                 <infoLink id="82d8-15c6-d0e7-5298" name="Ethereal" hidden="false" targetId="9e47-05bc-376a-7463" type="rule"/>
                 <infoLink name="Death Shriek" id="6fdc-1450-d60b-060d" hidden="false" targetId="515e-c009-6cec-66aa" type="rule"/>
                 <infoLink name="Unit Strength (3)" id="6a7d-756c-f36e-0a1a" hidden="false" type="rule" targetId="fe8b-fd33-652e-4e2f"/>
+                <infoLink name="Ethereal" id="1714-99c7-f69b-803f" hidden="false" type="profile" targetId="0d17-762d-8841-8d11"/>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="20. Primary Weapon" hidden="false" id="60e0-188b-ffd4-b89a" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
@@ -4767,6 +4787,14 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="1c41-928e-baab-7119" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="The King&apos;s Chalice" field="name"/>
+                            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Shroudcage Fragment" hidden="false" id="7166-62c0-eb7e-c4de" collective="false" sortIndex="2">
                       <constraints>
@@ -4871,6 +4899,7 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
                 <infoLink id="4e36-d3e0-ab06-f7b2" name="Chill Grasp" hidden="false" targetId="1cec-8e53-53b2-2e4c" type="rule"/>
                 <infoLink id="3eae-eaf6-3ed3-bf79" name="Ethereal" hidden="false" targetId="9e47-05bc-376a-7463" type="rule"/>
                 <infoLink id="4241-919c-2859-4116" name="Fly (9)" hidden="false" targetId="2ba2-2aaa-3f36-4b24" type="rule"/>
+                <infoLink name="Ethereal" id="e80b-d99c-ef1e-77a4" hidden="false" type="profile" targetId="0d17-762d-8841-8d11"/>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="20. Primary Weapon" hidden="false" id="0ec0-5ca0-c5d4-0d11" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
@@ -5024,8 +5053,13 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
                 <infoLink id="8e58-51cd-0e5d-eb85" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
                 <infoLink id="7d0a-74d7-867e-5a83" name="Always Strikes First" hidden="false" targetId="00b2-9504-41a2-f664" type="rule"/>
                 <infoLink id="4dd7-470e-3bb3-5713" name="The Red Thirst" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
-                <infoLink id="9d94-99b2-bdcd-b938" name="Dodge (4+)" hidden="false" targetId="5e3f-9736-a9c0-4a1c" type="rule"/>
                 <infoLink id="fe4c-99b4-69f6-e7d7" name="Loner" hidden="false" targetId="32b6-55f6-6cc6-8fc4" type="rule"/>
+                <infoLink name="Dodge" id="8aed-3764-bea9-4a21" hidden="false" type="profile" targetId="6407-7161-d748-2c03">
+                  <modifiers>
+                    <modifier type="set" value="Lady Annika" field="name"/>
+                    <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="20. Primary Weapon" hidden="false" id="e388-8c22-b10b-9741" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
@@ -5248,6 +5282,14 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="f740-0d31-4a24-e988" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Crown of the Damned" field="name"/>
+                            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -5433,6 +5475,14 @@ turns, it can restore one Wound lost earlier during the game.</characteristic>
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="4299-d40a-6fe5-7b1e" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Ring of the Night" field="name"/>
+                            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -5631,9 +5681,14 @@ If he does so, pick one of the effects below. That effect lasts until the start 
                     <modifier type="set" value="Ouboroth" field="annotation"/>
                   </modifiers>
                 </infoLink>
-                <infoLink id="01c5-2e44-beb7-f968" name="Dodge (6+)" hidden="false" targetId="bf3d-abaf-45ca-3477" type="rule"/>
                 <infoLink name="Lightning Reflexes" id="620c-a97b-5cf8-4af8" hidden="false" type="profile" targetId="27f6-29cf-89e9-b5b8"/>
                 <infoLink name="Seduction" id="395a-8639-7fad-4bee" hidden="false" type="profile" targetId="134a-0b9c-3f0c-32ee"/>
+                <infoLink name="Dodge" id="c395-437d-fe93-48ec" hidden="false" type="profile" targetId="6407-7161-d748-2c03">
+                  <modifiers>
+                    <modifier type="set" value="Sekhar" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="20. Primary Weapon" hidden="false" id="7614-d20e-9b6e-b265" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
@@ -5706,7 +5761,7 @@ If he does so, pick one of the effects below. That effect lasts until the start 
                 <infoLink id="8ae3-43be-e6df-f244" name="Vampiric" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
                 <infoLink id="d3a7-7fa-47f4-83a" name="Hatred" hidden="false" targetId="f6d7-9fbc-abc1-5cfc" type="rule"/>
                 <infoLink id="9f1c-1512-1f40-d745" name="The Red Thirst" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
-                <infoLink name="Unholy Regeneration" id="cce5-4d08-80d3-69a4" hidden="false" type="profile" targetId="fc2c-76ee-bcb0-1a3d"/>
+                <infoLink name="Unholy Regeneration" id="cce5-4d08-80d3-69a4" hidden="false" type="infoGroup" targetId="2a27-77cf-0d97-89d4"/>
                 <infoLink name="Natural Armour" id="db38-1913-cd04-da78" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
                   <modifiers>
                     <modifier type="set" value="5+" field="168d-1cc2-66f3-e766"/>
@@ -5762,6 +5817,7 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
                 <infoLink id="576c-f07f-bbea-3166" name="Chill Grasp" hidden="false" targetId="1cec-8e53-53b2-2e4c" type="rule"/>
                 <infoLink id="aab6-b25e-9349-d91b" name="Fly (6)" hidden="false" targetId="b830-fe6e-b461-0377" type="rule"/>
                 <infoLink id="36f2-7c7f-7066-a782" name="Terror" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
+                <infoLink name="Ethereal" id="dc3c-0331-9978-d410" hidden="false" type="profile" targetId="0d17-762d-8841-8d11"/>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="20. Primary Weapon" hidden="false" id="fde2-b65b-601f-c07a" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
@@ -6705,6 +6761,7 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
             <infoLink id="144f-75fd-8f2d-25d" name="Ethereal" hidden="false" targetId="9e47-05bc-376a-7463" type="rule"/>
             <infoLink id="a1b2-81c6-b429-6630" name="Undead" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
             <infoLink id="3be5-3558-a510-6bcc" name="Skirmishers" hidden="false" targetId="9a30-1c5c-12f4-5798" type="rule"/>
+            <infoLink name="Ethereal" id="6f7e-39db-0e96-08c3" hidden="false" type="profile" targetId="0d17-762d-8841-8d11"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="13"/>
@@ -7196,7 +7253,12 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
       <infoLinks>
         <infoLink name="The Red Thirst" id="ec69-5d75-1f28-088d" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
         <infoLink name="Vampiric" id="044c-dd5d-8ef4-f047" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
-        <infoLink name="Dodge (6+)" id="f70c-749d-350f-436b" hidden="false" targetId="bf3d-abaf-45ca-3477" type="rule"/>
+        <infoLink name="Dodge" id="5478-665e-3db6-fe09" hidden="false" type="profile" targetId="6407-7161-d748-2c03">
+          <modifiers>
+            <modifier type="set" value="Lahmian Vampire Lady" field="name"/>
+            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="65. Lores of Magic" id="4b43-77fd-4ae8-9a72" hidden="false" defaultSelectionEntryId="50ec-6d64-233e-01fd">
@@ -7822,7 +7884,12 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
       <infoLinks>
         <infoLink name="The Red Thirst" id="1480-2141-b6a5-8cbf" hidden="false" targetId="fe0f-548f-c1a9-9edd" type="rule"/>
         <infoLink name="Vampiric" id="02e2-9762-e61b-3e97" hidden="false" targetId="0f26-d445-00d9-2a92" type="rule"/>
-        <infoLink name="Dodge (6+)" id="9867-152f-045b-e3dd" hidden="false" targetId="bf3d-abaf-45ca-3477" type="rule"/>
+        <infoLink name="Dodge" id="d056-8e04-8bc7-ce31" hidden="false" type="profile" targetId="6407-7161-d748-2c03">
+          <modifiers>
+            <modifier type="set" value="Lahmian Vampire" field="name"/>
+            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="65. Lores of Magic" id="f5b0-a2a3-104e-f57b" hidden="false" defaultSelectionEntryId="50ec-6d64-233e-01fd">
@@ -8409,6 +8476,7 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
             <infoLink name="Undead" id="ac95-4960-33d6-f616" hidden="false" type="rule" targetId="8ed3-e201-052d-d42a"/>
             <infoLink name="Line of Sight (1)" id="e505-3e60-4e2a-3352" hidden="false" type="rule" targetId="8f97-966e-ddb2-f7bb"/>
             <infoLink name="Ethereal" id="8a62-7c46-7443-627c" hidden="false" type="rule" targetId="9e47-05bc-376a-7463"/>
+            <infoLink name="Ethereal" id="a00a-ea3d-68ce-645c" hidden="false" type="profile" targetId="0d17-762d-8841-8d11"/>
           </infoLinks>
           <profiles>
             <profile name="Spirit Host" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f869-fab2-2f81-f078">
@@ -8426,6 +8494,18 @@ That unit may make a Fly move up to 10&quot; and be placed facing in any directi
               </characteristics>
             </profile>
           </profiles>
+          <modifiers>
+            <modifier type="add" value="An army containing Undead units must include at least one character that is a Wizard that uses the Lore of Necromancy." field="error">
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="roster" childId="f945-02e4-f4ac-718e" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="10fa-658f-38fd-4cad" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
@@ -9586,6 +9666,7 @@ immediately recovers all lost Wounds (ignoring any additional Wounds from mount
                 <modifier type="set" value="The Cursed Shield of Mousillon" field="annotation"/>
               </modifiers>
             </infoLink>
+            <infoLink name="Parry (shield)" id="e939-6938-d8d3-c35d" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
           </infoLinks>
           <categoryLinks>
             <categoryLink name="Handheld Armour" hidden="false" id="6124-eb8c-afe6-1598" targetId="ba52-4f0c-71ae-b52d" primary="false"/>
@@ -9869,6 +9950,14 @@ immediately recovers all lost Wounds (ignoring any additional Wounds from mount
               </conditionGroups>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Ward Save" id="b1dd-54ba-8418-5f6d" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="The Flag of Blood Keep" field="name"/>
+                <modifier type="set" value="4+ against missile attacks." field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry id="f091-2d70-1d8b-e690" name="Banner of the Barrows" hidden="false" collective="false" import="true" type="upgrade" sortIndex="13">
           <constraints>
@@ -9936,6 +10025,14 @@ immediately recovers all lost Wounds (ignoring any additional Wounds from mount
               </conditionGroups>
             </modifier>
           </modifiers>
+          <infoLinks>
+            <infoLink name="Regeneration" id="6e3c-f117-66ec-59c3" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+              <modifiers>
+                <modifier type="set" value="The Drakenhof Banner" field="name"/>
+                <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry id="7b67-8b2a-eae8-a996" name="Hell Banner" hidden="false" collective="false" import="true" type="upgrade" sortIndex="14">
           <constraints>
@@ -9968,6 +10065,14 @@ immediately recovers all lost Wounds (ignoring any additional Wounds from mount
           <costs>
             <cost name="pts" typeId="points" value="25"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Regeneration" id="a41a-ccb8-1a0c-b538" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+              <modifiers>
+                <modifier type="set" value="Banner of Doom" field="name"/>
+                <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry id="d113-8ea3-e6fb-078c" name="Banner of the Dead Legion" hidden="false" collective="false" import="true" type="upgrade" sortIndex="7">
           <constraints>
@@ -10452,6 +10557,7 @@ immediately recovers all lost Wounds (ignoring any additional Wounds from mount
                 </modifierGroup>
               </modifierGroups>
             </infoLink>
+            <infoLink name="Two/Additional Hand Weapons" id="3be0-2e6b-2bd7-c10a" hidden="false" type="profile" targetId="48ad-587e-84ad-c237"/>
           </infoLinks>
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -10572,6 +10678,14 @@ immediately recovers all lost Wounds (ignoring any additional Wounds from mount
           <costs>
             <cost name="pts" typeId="points" value="20"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Ward Save" id="7fa9-c01d-cc32-68f6" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Wristbands of Black Gold" field="name"/>
+                <modifier type="set" value="3+ against missile attacks." field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry id="fb25-e799-a1b3-ca45" name="The Gem of Blood" hidden="false" collective="false" import="true" type="upgrade" sortIndex="5">
           <constraints>
@@ -10726,6 +10840,20 @@ immediately recovers all lost Wounds (ignoring any additional Wounds from mount
           <costs>
             <cost name="pts" typeId="points" value="30"/>
           </costs>
+          <infoLinks>
+            <infoLink name="Magic Resistance" id="eba2-92c7-3af6-d689" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+              <modifiers>
+                <modifier type="set" value="Talisman of the Nadir" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Magic Resistance" id="2b36-1747-1152-8229" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+              <modifiers>
+                <modifier type="set" value="Talisman of the Nadir" field="name"/>
+                <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
@@ -10799,6 +10927,12 @@ immediately recovers all lost Wounds (ignoring any additional Wounds from mount
           </constraints>
           <infoLinks>
             <infoLink name="Curse of the Revenant" id="925b-5720-dda7-a6bc" hidden="false" targetId="e3ab-379e-ec42-f276" type="profile"/>
+            <infoLink name="Ward Save" id="cccb-c897-aae7-7947" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Curse of the Revenant" field="name"/>
+                <modifier type="set" value="3+ when at last wound." field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="20"/>
@@ -10867,7 +11001,7 @@ immediately recovers all lost Wounds (ignoring any additional Wounds from mount
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a6cf-246a-159d-3af7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <infoLinks>
-            <infoLink name="Unholy Regeneration" id="8467-b061-abab-bbf1" hidden="false" targetId="fc2c-76ee-bcb0-1a3d" type="profile"/>
+            <infoLink name="Unholy Regeneration" id="8467-b061-abab-bbf1" hidden="false" targetId="2a27-77cf-0d97-89d4" type="infoGroup"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="30"/>
@@ -11155,6 +11289,12 @@ immediately recovers all lost Wounds (ignoring any additional Wounds from mount
                     <characteristic name="Special Rules" typeId="e351-0ddf-3e1a-0f9f">The model gains the Parry (6+) special rule, even while mounted.</characteristic>
                   </characteristics>
                 </profile>
+                <profile name="Blademaster" typeId="54b0-94fc-eb1e-8e37" typeName="Ward Saves" hidden="false" id="feee-2dfb-a835-aeda">
+                  <characteristics>
+                    <characteristic name="Type" typeId="31b2-f73f-865d-f538">Blademaster</characteristic>
+                    <characteristic name="Value" typeId="bdf9-d73e-e13b-b0ce">6+</characteristic>
+                  </characteristics>
+                </profile>
               </profiles>
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
@@ -11222,7 +11362,38 @@ immediately recovers all lost Wounds (ignoring any additional Wounds from mount
                     <condition type="equalTo" value="1" field="selections" scope="model" childId="mount" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="add" value="{this} does not allow to take any weapons or armour. " field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditionGroups>
+                        <conditionGroup type="or">
+                          <conditions>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f56d-df75-2d0b-ce09" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="9015-46da-282c-713d" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="8d7f-61fb-44ba-0b6c" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="65a4-2cd8-a0c9-8a92" shared="true" includeChildSelections="true"/>
+                            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="9bf8-b456-dd2f-8826" shared="true" includeChildSelections="true"/>
+                          </conditions>
+                          <conditionGroups>
+                            <conditionGroup type="and">
+                              <conditions>
+                                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="350c-4b0b-93c1-4e47" shared="true" includeChildSelections="true"/>
+                                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="a658-337d-0cbd-a38c" shared="true" includeChildSelections="true"/>
+                              </conditions>
+                            </conditionGroup>
+                          </conditionGroups>
+                        </conditionGroup>
+                      </conditionGroups>
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="a2d1-0579-5aee-1998" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Ethereal" id="4b81-dd3e-6d28-81b0" hidden="false" type="profile" targetId="0d17-762d-8841-8d11"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Master of the Black Arts" hidden="false" id="a551-517d-3b35-8732" collective="false" sortIndex="1">
               <constraints>
@@ -11392,7 +11563,7 @@ immediately recovers all lost Wounds (ignoring any additional Wounds from mount
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="2a8c-a394-bc2c-c6fc" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
               <infoLinks>
-                <infoLink name="Quickblood" id="8f1b-f161-353f-696c" hidden="false" targetId="7214-e7a5-d1fd-50f2" type="profile"/>
+                <infoLink name="Quickblood" id="8f1b-f161-353f-696c" hidden="false" targetId="7214-e7a5-d1fd-50f2" type="infoGroup"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
@@ -11517,6 +11688,20 @@ immediately recovers all lost Wounds (ignoring any additional Wounds from mount
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Magic Resistance" id="1132-30fa-9d9a-7226" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                  <modifiers>
+                    <modifier type="set" value="Earth Bind" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Magic Resistance" id="bfb0-3ed0-5a02-b465" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                  <modifiers>
+                    <modifier type="set" value="Earth Bind" field="name"/>
+                    <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Summon Creatures of the Night" hidden="false" id="f9c9-fe52-046a-1719" collective="false" sortIndex="3">
               <constraints>
@@ -12184,9 +12369,6 @@ To resolve a Death Shriek, roll 2D6+3. For each point by which the result excee
     <rule name="Undead" id="8ed3-e201-052d-d42a" hidden="false" publicationId="feeb-1927-4a99-f849" page="4">
       <description>All models with the Undead special rule have the Animated Construct, Fear, and Unstable special rules. However, they may make march moves if they are within the Army General&apos;s Inspiring Presence range or are joined by a character with the Lore of Necromancy.</description>
     </rule>
-    <rule name="Insubstantial Form" id="b545-694e-edbb-f4a1" hidden="false">
-      <description>A model with this special rule has a 4+ Ward Save.</description>
-    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="e679-8675-a6b7-0bf1" name="Scrying Pool" publicationId="10a5-5781-61f5-86ae" page="41" hidden="false" typeId="cb92-d882-5ba8-11ab" typeName="Spell">
@@ -12303,11 +12485,6 @@ To resolve a Death Shriek, roll 2D6+3. For each point by which the result excee
     <profile id="27f6-29cf-89e9-b5b8" name="Lightning Reflexes" publicationId="10a5-5781-61f5-86ae" page="8" hidden="false" typeId="21e6-6317-460c-b75f" typeName="Vampiric Power">
       <characteristics>
         <characteristic name="Special Rules" typeId="e351-0ddf-3e1a-0f9f">Enemies must re-roll successful rolls To Hit in close combat against this model.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="7214-e7a5-d1fd-50f2" name="Quickblood" publicationId="10a5-5781-61f5-86ae" page="8" hidden="false" typeId="21e6-6317-460c-b75f" typeName="Vampiric Power">
-      <characteristics>
-        <characteristic name="Special Rules" typeId="e351-0ddf-3e1a-0f9f">The model gains the Dodge (5+) special rule.</characteristic>
       </characteristics>
     </profile>
     <profile id="134a-0b9c-3f0c-32ee" name="Seduction" publicationId="10a5-5781-61f5-86ae" page="8" hidden="false" typeId="21e6-6317-460c-b75f" typeName="Vampiric Power">
@@ -12522,11 +12699,6 @@ To resolve a Death Shriek, roll 2D6+3. For each point by which the result excee
     <profile id="a4ba-69ba-8de5-2c21" name="6+ Completely Enthralled" publicationId="10a5-5781-61f5-86ae" page="41" hidden="false" typeId="d09e-4f93-2fb7-83eb" typeName="Battle of Wills Table" noindex="true">
       <characteristics>
         <characteristic name="Effect" typeId="3663-7341-2661-c967">Every model in the enemy unit makes a single close combat attack, resolved against its own unit. Roll To Hit, To Wound and take saves as normal. The caster may choose which of the unit&apos;s weapons is used for these attacks. Parry or Dodge save does not apply, and neither do any special rules that only applies in the first round of close combat. Affected units may not otherwise shoot or attack this turn.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="fc2c-76ee-bcb0-1a3d" name="Unholy Regeneration" publicationId="10a5-5781-61f5-86ae" page="6" hidden="false" typeId="21e6-6317-460c-b75f" typeName="Vampiric Power">
-      <characteristics>
-        <characteristic name="Special Rules" typeId="e351-0ddf-3e1a-0f9f">Necrarch or Strigoi only. The model gains the Regeneration (4+) special rule.</characteristic>
       </characteristics>
     </profile>
     <profile id="5ac4-e5ed-b843-9193" name="Crew" publicationId="10a5-5781-61f5-86ae" page="40" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
@@ -13706,15 +13878,6 @@ Characters who are not Undead may join Undead units despite not being Unstable 
             </modifier>
           </modifiers>
         </infoLink>
-        <infoLink name="Regeneration (6+)" id="d498-15f7-8294-5633" hidden="false" targetId="6f3b-cd4f-062d-7f26" type="rule">
-          <modifiers>
-            <modifier type="set" value="Terrorgheist" field="annotation">
-              <conditions>
-                <condition type="notInstanceOf" value="1" field="selections" scope="root-entry" childId="3640-a2b7-c440-694f" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </infoLink>
         <infoLink name="Undead" id="d277-0b21-9606-3767" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule">
           <modifiers>
             <modifier type="set" value="Terrorgheist" field="annotation">
@@ -13725,6 +13888,12 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           </modifiers>
         </infoLink>
         <infoLink name="Terrorgheist" id="8813-2cd3-4b20-76f1" hidden="false" type="profile" targetId="e1b0-3d3c-6199-747d"/>
+        <infoLink name="Regeneration" id="1f92-178c-cfa0-b445" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+          <modifiers>
+            <modifier type="set" value="Terrorgheist" field="name"/>
+            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
     </infoGroup>
     <infoGroup name="Zombie Dragon" id="1144-a4e5-a499-b328" hidden="false">
@@ -13754,21 +13923,31 @@ Characters who are not Undead may join Undead units despite not being Unstable 
     <infoGroup name="Mortis Engine" id="2114-fdc2-50de-59e7" hidden="false">
       <infoLinks>
         <infoLink name="Line of Sight (5)" id="f97-98a1-d92a-5ed2" hidden="false" targetId="564d-ded4-217d-827c" type="rule"/>
-        <infoLink name="Regeneration (4+)" id="2092-3693-e30c-47ff" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
         <infoLink name="Terror" id="81ad-f2f4-b9b9-0b0d" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
         <infoLink name="The Reliquary" id="40dd-0920-8b43-da88" hidden="false" targetId="fe80-29be-6795-934d" type="rule"/>
         <infoLink name="Undead" id="fbad-46d5-18e9-36a8" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule"/>
         <infoLink name="Mortis Engine" id="6d7d-cc31-6cf8-4871" hidden="false" type="profile" targetId="326f-4c10-00c3-41ff"/>
         <infoLink name="Mortis Engine" id="fbfc-7016-2f31-bd35" hidden="false" type="profile" targetId="df90-35b2-7dde-9d67"/>
+        <infoLink name="Regeneration" id="7579-873a-bf80-4966" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+          <modifiers>
+            <modifier type="set" value="Mortis Engine" field="name"/>
+            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
     </infoGroup>
     <infoGroup name="Coven Throne" id="bf33-e660-da8a-4dae" hidden="false">
       <infoLinks>
-        <infoLink name="Insubstantial Form" id="dd67-deec-b560-cdbf" hidden="false" targetId="b545-694e-edbb-f4a1" type="rule"/>
         <infoLink name="Line of Sight (5)" id="2d84-6c9d-4751-5eff" hidden="false" type="rule" targetId="564d-ded4-217d-827c"/>
         <infoLink name="Terror" id="72b0-57a6-8ea4-f95a" hidden="false" targetId="df59-4284-cca7-e4ca" type="rule"/>
         <infoLink name="Coven Throne" id="267f-3ca1-792d-a3d2" hidden="false" type="profile" targetId="56a9-401d-7df0-71f1"/>
         <infoLink name="Coven Throne" id="1596-8656-6c9c-229c" hidden="false" type="profile" targetId="bb09-0293-8e5e-2650"/>
+        <infoLink name="Ward Save" id="4082-1daa-a991-9278" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+          <modifiers>
+            <modifier type="set" value="Insubstantial Form" field="name"/>
+            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <infoGroups>
         <infoGroup name="Battle of Wills" id="fad5-91dc-990b-0371" hidden="false">
@@ -13785,7 +13964,6 @@ Characters who are not Undead may join Undead units despite not being Unstable 
     <infoGroup name="Corpse Cart" id="0cc4-41df-a726-c98b" hidden="false">
       <infoLinks>
         <infoLink name="Corpse Cart" id="3b1a-c46f-cf51-1659" hidden="false" targetId="fd92-c4f2-8dbf-7be8" type="profile"/>
-        <infoLink name="Regeneration (4+)" id="81f9-869d-190f-8c81" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
         <infoLink name="Undead" id="273b-6d36-1810-3de6" hidden="false" targetId="8ed3-e201-052d-d42a" type="rule">
           <modifiers>
             <modifier type="set" value="Corpse Cart" field="annotation">
@@ -13796,6 +13974,46 @@ Characters who are not Undead may join Undead units despite not being Unstable 
           </modifiers>
         </infoLink>
         <infoLink name="Vigour Mortis" id="3f07-49ce-2302-7f68" hidden="false" targetId="c41f-c24c-5271-1bb9" type="rule"/>
+        <infoLink name="Regeneration" id="2595-a8b5-ad6d-3b04" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+          <modifiers>
+            <modifier type="set" value="Corpse Cart" field="name"/>
+            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup name="Unholy Regeneration" id="2a27-77cf-0d97-89d4" hidden="false">
+      <profiles>
+        <profile name="Unholy Regeneration" typeId="21e6-6317-460c-b75f" typeName="Vampiric Power" hidden="false" id="9673-6b2e-2e30-43ac" publicationId="10a5-5781-61f5-86ae" page="6">
+          <characteristics>
+            <characteristic name="Special Rules" typeId="e351-0ddf-3e1a-0f9f">Necrarch or Strigoi only. The model gains the Regeneration (4+) special rule.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Regeneration" id="e864-c04b-1edb-cec0" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+          <modifiers>
+            <modifier type="set" value="Unholy Regeneration" field="name"/>
+            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </infoGroup>
+    <infoGroup name="Quickblood" id="7214-e7a5-d1fd-50f2" hidden="false">
+      <profiles>
+        <profile name="Quickblood" typeId="21e6-6317-460c-b75f" typeName="Vampiric Power" hidden="false" id="9053-27a3-8d98-02ba" publicationId="10a5-5781-61f5-86ae" page="8">
+          <characteristics>
+            <characteristic name="Special Rules" typeId="e351-0ddf-3e1a-0f9f">The model gains the Dodge (5+) special rule.</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <infoLinks>
+        <infoLink name="Dodge" id="7261-bd80-4eee-1be0" hidden="false" type="profile" targetId="6407-7161-d748-2c03">
+          <modifiers>
+            <modifier type="set" value="Quickblood" field="name"/>
+            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
     </infoGroup>
   </sharedInfoGroups>

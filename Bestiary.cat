@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="1fc9-2903-cb19-5737" name="Bestiary" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="68" revision="11" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="1fc9-2903-cb19-5737" name="Bestiary" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="68" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="model" import="true" name="Arabyan Steed" hidden="false" id="ac96-1c86-3a61-e422" collective="true" subType="mount" publicationId="fd0a-6995-03c8-1dd6" page="12">
       <constraints>
@@ -154,7 +154,6 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="400a-3a7e-d68f-e7ec" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <infoLinks>
-            <infoLink name="Regeneration (4+)" id="683a-3bb2-622b-9805" hidden="false" targetId="c21b-d368-6f1c-bae3" type="rule"/>
             <infoLink name="Stupidity" id="f8ab-6416-1232-1005" hidden="false" targetId="755c-61c2-fa25-f4ce" type="rule"/>
             <infoLink name="Troll Vomit" id="18ce-3f9a-85bc-502d" hidden="false" type="rule" targetId="42ef-fb9e-e70b-55e0"/>
             <infoLink name="Loner" id="fb18-2490-495c-7baa" hidden="false" type="rule" targetId="32b6-55f6-6cc6-8fc4"/>
@@ -163,6 +162,12 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
                 <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
                 <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
                 <modifier type="set" value="Troll" field="annotation"/>
+              </modifiers>
+            </infoLink>
+            <infoLink name="Regeneration" id="65f1-1e83-7783-0ef6" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+              <modifiers>
+                <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                <modifier type="set" value="Troll" field="name"/>
               </modifiers>
             </infoLink>
           </infoLinks>
@@ -329,7 +334,7 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Chimera" hidden="false" id="9369-395a-8e7e-3937" collective="false">
       <profiles>
-        <profile name="Chimera" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f2b0-b7d7-35a6-a55d" publicationId="1a01-044f-047b-618f" page="212">
+        <profile name="Chimera" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="f2b0-b7d7-35a6-a55d" publicationId="1a01-044f-047b-618f" page="212" noindex="true">
           <characteristics>
             <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
             <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
@@ -342,6 +347,13 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Canine)</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="increment" value="1" field="bfa2-d38d-7c93-d3f0">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="69a0-e339-e85a-633b" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
@@ -377,6 +389,13 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
               <rules>
                 <rule name="Fiend Tail" id="02b0-f303-8e79-6d86" hidden="false" publicationId="1a01-044f-047b-618f" page="212">
                   <description>The Chimera gains +1 A.</description>
+                  <modifiers>
+                    <modifier type="append" value="(already in profile)" field="description">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="69a0-e339-e85a-633b" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </rule>
               </rules>
               <costs>
@@ -387,11 +406,6 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5eb9-a1f5-920a-a4d0" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
-              <rules>
-                <rule name="Iron-hard Skin" id="a36b-d014-4470-16ab" hidden="false" publicationId="1a01-044f-047b-618f" page="212">
-                  <description>The Chimera gains Natural Armour (4+).</description>
-                </rule>
-              </rules>
               <costs>
                 <cost name="pts" typeId="points" value="25"/>
               </costs>
@@ -427,14 +441,17 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d9de-c00f-05d5-bd7f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
-              <rules>
-                <rule name="Regenerating Flesh" id="8a3a-5970-500f-225d" hidden="false" publicationId="1a01-044f-047b-618f" page="212">
-                  <description>The Chimera gains Regeneration (4+).</description>
-                </rule>
-              </rules>
               <costs>
                 <cost name="pts" typeId="points" value="40"/>
               </costs>
+              <infoLinks>
+                <infoLink name="Regeneration" id="c877-e949-900f-d76c" hidden="false" type="profile" targetId="73f3-8451-504e-a6e5">
+                  <modifiers>
+                    <modifier type="set" value="Regenerating Flesh" field="name"/>
+                    <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </entryLink>
@@ -472,44 +489,6 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
         <categoryLink name="Cavalry" hidden="false" id="6bef-71a6-2797-4248" targetId="bdee-b168-38ba-7d3c" primary="false"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Daemon of Khorne" hidden="false" id="7a64-1c48-ee17-d64f">
-      <infoLinks>
-        <infoLink name="Daemon of Khorne" id="6996-804b-a457-de84" hidden="false" type="rule" targetId="a356-05c9-d963-c1bb"/>
-        <infoLink name="Daemonic" id="7ac3-1236-301e-2746" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
-      </infoLinks>
-      <modifiers>
-        <modifier type="set" value="true" field="hidden">
-          <conditionGroups>
-            <conditionGroup type="or">
-              <conditions>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="745f-c8e7-be1d-a4d8" shared="true" includeChildSelections="true"/>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="801a-bc0a-a767-61db" shared="true" includeChildSelections="true"/>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="1670-dca4-294b-7d9b" shared="true" includeChildSelections="true"/>
-                <condition type="equalTo" value="1" field="selections" scope="root-entry" childId="5460-3929-58ef-71ba" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </conditionGroup>
-          </conditionGroups>
-        </modifier>
-      </modifiers>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Daemon of Nurgle" hidden="false" id="47e8-9faa-b387-1bad">
-      <infoLinks>
-        <infoLink name="Daemon of Nurgle" id="b9aa-473a-4642-95c2" hidden="false" type="rule" targetId="0b9b-1baf-5bcd-1ec3"/>
-        <infoLink name="Daemonic" id="aa6b-08d1-fa08-c137" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Daemon of Slaanesh" hidden="false" id="58e6-5e97-fb48-f325">
-      <infoLinks>
-        <infoLink name="Daemon of Slaanesh" id="7437-a8c0-a303-1dc4" hidden="false" type="rule" targetId="2ad0-3e18-aba8-5e68"/>
-        <infoLink name="Daemonic" id="b31b-0f1f-6f8f-c7b9" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Daemon of Tzeentch" hidden="false" id="2639-87cf-ddd7-ac2d">
-      <infoLinks>
-        <infoLink name="Daemon of Tzeentch" id="1500-5e31-ac81-46f2" hidden="false" type="rule" targetId="fe9a-f478-5bcc-57a8"/>
-        <infoLink name="Daemonic" id="8828-fef9-55f4-3947" hidden="false" type="rule" targetId="a6d9-b8e9-21b2-96ff"/>
-      </infoLinks>
-    </selectionEntry>
     <selectionEntry type="model" import="true" name="Dragon Ogre" hidden="false" id="7d5f-f65e-9739-0714" collective="false">
       <constraints>
         <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="7477-94c7-7a73-3d2a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
@@ -546,52 +525,24 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
       </costs>
       <entryLinks>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="1f4c-310d-f36a-c906" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Hand Weapon" hidden="false" id="98a6-18eb-ce13-aa0e" collective="true" sortIndex="1">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="670f-0853-2064-6fe4" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Hand Weapon" id="6e7b-c59e-c7e0-8ef2" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Two/Additional Hand Weapons" hidden="false" id="01ba-c60d-2432-f2f8" collective="true" sortIndex="2">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d61c-8529-4510-799e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Two/Additional Hand Weapons" id="a55a-b628-1a43-1541" hidden="false" targetId="4a5d-0b6d-f6ac-fd7d" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="4"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Polearm/Halberd" hidden="false" id="1987-9fa9-51fa-0322" collective="true" sortIndex="3">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8ce1-a11e-ccba-e9ec" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Polearm/Halberd" id="5d42-6f80-0e9d-c52e" hidden="false" targetId="e43e-5153-eeec-36be" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="6"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Great Weapon" hidden="false" id="2b35-858d-82e1-63d7" collective="true" sortIndex="4">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="520a-81d8-6717-7bf7" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Great Weapon" id="fde3-57cb-512f-7845" hidden="false" targetId="193e-bc43-b252-8eff" type="profile"/>
-              </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Great Weapon" hidden="false" id="57ae-196f-ac99-b350" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="8">
               <costs>
                 <cost name="pts" typeId="points" value="9"/>
               </costs>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="2b57-aaa0-c6e0-58be" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="2"/>
+            <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="8c3e-e499-64a5-ae1f" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="4">
+              <costs>
+                <cost name="pts" typeId="points" value="4"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Polearm/Halberd" hidden="false" id="1d8f-4562-b1c2-72d2" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="6">
+              <costs>
+                <cost name="pts" typeId="points" value="6"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </entryLink>
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="32ac-15df-789b-62f4" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
@@ -647,41 +598,19 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
       </costs>
       <entryLinks>
         <entryLink import="true" name="20. Primary Weapon" hidden="false" id="4525-ad14-f122-e593" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Hand Weapon" hidden="false" id="68b3-a823-93ec-52a2" collective="false" sortIndex="1">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="dafa-d8ec-ebea-bc89" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Hand Weapon" id="e6da-ddac-4f61-9713" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Two/Additional Hand Weapons" hidden="false" id="07ed-baf7-d3f8-e238" collective="false" sortIndex="2">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f0ab-0853-e045-2081" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Two/Additional Hand Weapons" id="ef97-9613-8e9c-13e8" hidden="false" targetId="4a5d-0b6d-f6ac-fd7d" type="profile"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="6"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Great Weapon" hidden="false" id="5966-7b8f-e3dd-e821" collective="false" sortIndex="3">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="d0a4-32f4-d62e-b818" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
-              </constraints>
-              <infoLinks>
-                <infoLink name="Great Weapon" id="8d29-00d5-f62f-fa00" hidden="false" targetId="193e-bc43-b252-8eff" type="profile"/>
-              </infoLinks>
+          <entryLinks>
+            <entryLink import="true" name="Great Weapon" hidden="false" id="0b3e-ae0f-7ad3-0b6e" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="3">
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
-            </selectionEntry>
-          </selectionEntries>
+            </entryLink>
+            <entryLink import="true" name="Hand Weapon" hidden="false" id="afba-2f8d-6ec5-5bde" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+            <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="5105-d725-2e0b-c17b" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
+              <costs>
+                <cost name="pts" typeId="points" value="6"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </entryLink>
         <entryLink import="true" name="40. Suits of Armour" hidden="false" id="99c0-198b-ef43-eeec" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
           <entryLinks>
@@ -1122,10 +1051,21 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="35a5-8dd0-7403-169e" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <infoLinks>
-        <infoLink name="Magic Resistance (2)" id="f7a0-9739-0265-d018" hidden="false" targetId="0e09-3526-25d5-2646" type="rule"/>
         <infoLink name="Magical Attacks" id="cd1d-da86-4a3f-e93f" hidden="false" targetId="03db-d81f-f264-84b8" type="rule">
           <modifiers>
             <modifier type="set" value="Unicorn only" field="annotation"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Magic Resistance" id="ee44-9375-8282-9dec" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+          <modifiers>
+            <modifier type="set" value="Unicorn" field="name"/>
+            <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Magic Resistance" id="f8a3-dd36-8310-0c5d" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+          <modifiers>
+            <modifier type="set" value="Unicorn" field="name"/>
+            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
           </modifiers>
         </infoLink>
       </infoLinks>

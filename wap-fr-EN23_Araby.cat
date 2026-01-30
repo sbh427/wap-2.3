@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="89a4-c9a0-f3a0-6dba" name="Araby WAP 1.72" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="61" revision="8" authorName="Xetolosch" battleScribeVersion="2.03" authorContact="Contact me via discord" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="89a4-c9a0-f3a0-6dba" name="Araby WAP 1.72" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="61" revision="9" authorName="Xetolosch" battleScribeVersion="2.03" authorContact="Contact me via discord" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Tactical Withdrawl" id="cf87-cae6-cc46-9094" hidden="false" publicationId="fd0a-6995-03c8-1dd6" page="3">
       <description>Models with this rule may re-roll the lowest dice roll for their flee distance when choosing Flee as a charge reaction.</description>
@@ -507,6 +507,7 @@
                     <modifier type="set" value="The Dagger of the Grand Master" field="annotation"/>
                   </modifiers>
                 </infoLink>
+                <infoLink name="Two/Additional Hand Weapons" id="50f3-a22b-1cfc-d09d" hidden="false" type="profile" targetId="48ad-587e-84ad-c237"/>
               </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="The Thirsting Blade" hidden="false" id="e058-f3ff-d34c-d923" sortIndex="1">
@@ -566,6 +567,20 @@
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="60c3-3360-103c-683d" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f799-da32-92f6-2d22" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
+              <infoLinks>
+                <infoLink name="Magic Resistance" id="dfce-8186-fe57-0ad1" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                  <modifiers>
+                    <modifier type="set" value="Hand of Fatima" field="name"/>
+                    <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Magic Resistance" id="cf9f-ff2a-472f-2cf0" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                  <modifiers>
+                    <modifier type="set" value="Hand of Fatima" field="name"/>
+                    <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Haboob Cloak" hidden="false" id="4f35-8923-1b7d-6e21" sortIndex="3">
               <costs>
@@ -598,6 +613,14 @@
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="e8e7-4e15-a9d3-3733" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1656-b728-6b7c-ae3d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
+              <infoLinks>
+                <infoLink name="Ward Save" id="a6d7-b8b5-8363-a3dd" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Talismanic Tunic of the One" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Orb of Illusion" hidden="false" id="29dc-0875-86da-9984" sortIndex="5">
               <costs>
@@ -1028,6 +1051,13 @@
 "/>
                   </modifiers>
                 </infoLink>
+                <infoLink name="Parry (shield)" id="ce74-fbc2-3234-fda0" hidden="false" type="profile" targetId="fae6-fa36-d8e9-b115"/>
+                <infoLink name="Ward Save" id="d868-d7a3-9214-bee2" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                  <modifiers>
+                    <modifier type="set" value="Shield of Faith" field="name"/>
+                    <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <modifiers>
                 <modifier type="set" value="true" field="hidden">
@@ -1063,12 +1093,12 @@
         <modifier type="prepend" value="Magic Weapon." field="96b8-546e-ac33-6054" affects="self.entries.recursive.22cb-7492-eb53-25c1.profiles.Ranged Weapon"/>
       </modifiers>
     </selectionEntryGroup>
-    <selectionEntryGroup name="Magic Standards" id="3335-4603-acc0-28b4" hidden="false">
+    <selectionEntryGroup name="Magic Standards" id="3335-4603-acc0-28b4" hidden="false" collapsible="true">
       <constraints>
         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="e5b1-e9e0-7cbf-b0df" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
       </constraints>
       <entryLinks>
-        <entryLink import="true" name="Common Magic Standards" hidden="false" id="e7a2-9f15-5f83-7c44" type="selectionEntryGroup" targetId="2613-24d7-a26e-eb37" sortIndex="99"/>
+        <entryLink import="true" name="Common Magic Standards" hidden="false" id="e7a2-9f15-5f83-7c44" type="selectionEntryGroup" targetId="2613-24d7-a26e-eb37" sortIndex="99" flatten="true"/>
       </entryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Standard of the Steed" hidden="false" id="6f12-633d-7499-bf2f" sortIndex="1">
@@ -1146,6 +1176,14 @@
             <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="15d6-7293-dccb-6cdf" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="5af8-537d-0f0f-799f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
+          <infoLinks>
+            <infoLink name="Ward Save" id="00ec-5d47-e5c3-c019" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+              <modifiers>
+                <modifier type="set" value="Icon of the Blessed Wali" field="name"/>
+                <modifier type="set" value="6+, Only against non-Magical Attacks." field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Banner of the Djinn" hidden="false" id="fbec-7bcd-d1d8-99f8" sortIndex="5">
           <costs>
@@ -1233,9 +1271,10 @@
             <modifier type="set" value="Genie only" field="annotation"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Ward Save (5+)" id="937a-e8e9-197c-0f79" hidden="false" type="rule" targetId="4b60-6477-75a8-f6dd">
+        <infoLink name="Ward Save" id="7522-8f48-a10b-ff19" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
           <modifiers>
-            <modifier type="set" value="Genie only" field="annotation"/>
+            <modifier type="set" value="Genies" field="name"/>
+            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
           </modifiers>
         </infoLink>
       </infoLinks>
@@ -1262,11 +1301,16 @@
         <cost name="pts" typeId="points" value="95"/>
       </costs>
       <infoLinks>
-        <infoLink name="Dodge (5+)" id="6443-03af-f6c4-f423" hidden="false" type="rule" targetId="cfff-6563-d1c6-820c"/>
         <infoLink name="Hidden" id="5426-ea31-cf0e-e897" hidden="false" type="rule" targetId="2796-b399-4f98-a36f"/>
         <infoLink name="Immunity (Psychology)" id="4177-022a-9dd0-e0b0" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
         <infoLink name="Scouts" id="ae5b-53e4-e7a5-1f7a" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
         <infoLink name="Zealotry" id="73b1-06dd-a197-acb5" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
+        <infoLink name="Dodge" id="5896-3c67-5e19-f1d4" hidden="false" type="profile" targetId="6407-7161-d748-2c03">
+          <modifiers>
+            <modifier type="set" value="Hashishin" field="name"/>
+            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <profiles>
         <profile name="Hashishin" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="85b5-2c9f-2b54-648d" publicationId="fd0a-6995-03c8-1dd6" page="11">
@@ -1948,12 +1992,23 @@
       </entryLinks>
       <infoLinks>
         <infoLink name="Zealotry" id="5b5c-d65e-26fc-9d2a" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
-        <infoLink name="Magic Resistance (1)" id="0705-5992-f87b-33cb" hidden="false" type="rule" targetId="7ed4-9d31-09c3-6bf9"/>
         <infoLink name="Frenzy" id="a3c9-f195-909d-a4ba" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
         <infoLink name="Battle Prayers" id="f18f-1ab7-c437-5379" hidden="false" type="rule" targetId="2fc8-8eef-c508-0f80"/>
         <infoLink name="Invocation of the Blade" id="5b65-d004-1cf6-d6f1" hidden="false" type="profile" targetId="e919-1f42-197d-fb19"/>
         <infoLink name="Resolve of the Devout" id="5de0-e39c-393c-fad8" hidden="false" type="profile" targetId="7b84-52a9-0042-cb6b"/>
         <infoLink name="Shield of the Crescent Moon" id="bdf9-b5bc-27c5-1dcb" hidden="false" type="profile" targetId="2b77-45df-7950-847d"/>
+        <infoLink name="Magic Resistance" id="b434-eb68-c22d-d6ae" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+          <modifiers>
+            <modifier type="set" value="Cleric of the One" field="name"/>
+            <modifier type="set" value="1" field="19f0-e982-f035-416c"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Magic Resistance" id="0be5-6913-2b73-3acc" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+          <modifiers>
+            <modifier type="set" value="Cleric of the One" field="name"/>
+            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+          </modifiers>
+        </infoLink>
       </infoLinks>
       <rules>
         <rule name="Holy Fury" id="d232-cbf0-3c2e-9204" hidden="false" publicationId="0896-cf2d-d305-6de3" page="11">
@@ -3476,7 +3531,12 @@
           <infoLinks>
             <infoLink name="Tactical Withdrawl" id="988d-7066-41c4-1f72" hidden="false" type="rule" targetId="cf87-cae6-cc46-9094"/>
             <infoLink name="Zealotry" id="bb9d-bec8-68ce-216e" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
-            <infoLink name="Dodge (6+)" id="9b24-ddbd-6969-b152" hidden="false" type="rule" targetId="bf3d-abaf-45ca-3477"/>
+            <infoLink name="Dodge" id="ee86-429b-aec1-976a" hidden="false" type="profile" targetId="6407-7161-d748-2c03">
+              <modifiers>
+                <modifier type="set" value="Bladedancer" field="name"/>
+                <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <constraints>
             <constraint type="min" value="5" field="selections" scope="parent" shared="true" id="7c02-9166-a37c-a3cf"/>
@@ -4483,6 +4543,26 @@ If the model is successfully picked up, it is then either dropped to the ground,
                           </characteristics>
                         </profile>
                       </profiles>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="ffad-0863-b091-2c2b" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Jewel of Mullah Aklan&apos;d" field="name"/>
+                            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Magic Resistance" id="9cde-9e0f-1cf7-332a" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                          <modifiers>
+                            <modifier type="set" value="Jewel of Mullah Aklan&apos;d" field="name"/>
+                            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Magic Resistance" id="3dc9-b290-b89b-f3cc" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
+                          <modifiers>
+                            <modifier type="set" value="Jewel of Mullah Aklan&apos;d" field="name"/>
+                            <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Scriptures of the Prophet" hidden="false" id="bc2f-4b89-0401-ccca">
                       <profiles>
@@ -4726,37 +4806,6 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="638a-c4fe-c049-8ec5" includeChildSelections="true" includeChildForces="true"/>
               </constraints>
               <selectionEntryGroups>
-                <selectionEntryGroup name="80. Genies" id="4049-1ac0-32e1-4f47" hidden="false">
-                  <entryLinks>
-                    <entryLink import="true" name="Djinn" hidden="false" id="372f-ef67-77bd-6f82" type="selectionEntry" targetId="ced0-11df-ea9f-37f6" sortIndex="1">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ece7-8e80-49ff-56ac-min"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ece7-8e80-49ff-56ac-max"/>
-                      </constraints>
-                      <modifiers>
-                        <modifier type="set" value="0" field="points"/>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Efreet" hidden="false" id="4457-428f-0b06-e8e7" type="selectionEntry" targetId="bb7d-8adc-30e6-4b6a" sortIndex="2">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0e5d-7654-6cbd-2af3-min"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0e5d-7654-6cbd-2af3-max"/>
-                      </constraints>
-                      <modifiers>
-                        <modifier type="set" value="0" field="points"/>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Marid" hidden="false" id="5b5a-a86a-9b34-bec7" type="selectionEntry" targetId="0dab-e01d-6762-48b4" sortIndex="3">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e9cf-f241-71e2-84fb-min"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e9cf-f241-71e2-84fb-max"/>
-                      </constraints>
-                      <modifiers>
-                        <modifier type="set" value="0" field="points"/>
-                      </modifiers>
-                    </entryLink>
-                  </entryLinks>
-                </selectionEntryGroup>
                 <selectionEntryGroup name="61. Lore" id="4627-3498-acba-2d42" hidden="false">
                   <entryLinks>
                     <entryLink import="true" name="Lore of Death" hidden="false" id="592f-5aed-b213-d610" type="selectionEntry" targetId="bc0d-47f8-7220-1e16" sortIndex="1"/>
@@ -4801,6 +4850,14 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                           </characteristics>
                         </profile>
                       </profiles>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="8336-9050-10af-5f7d" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Golden Robe of Protection" field="name"/>
+                            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -4808,6 +4865,17 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
               <entryLinks>
                 <entryLink import="true" name="10. Character Options" hidden="false" id="820c-35dd-a161-8852" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
                 <entryLink import="true" name="60. Wizard Level" hidden="false" id="3802-a3c4-7522-d174" type="selectionEntryGroup" targetId="8e7d-af82-eb9b-19f2"/>
+                <entryLink import="true" name="80. Genies" hidden="false" id="1bb5-e875-2552-56a2" type="selectionEntryGroup" targetId="f24a-9804-50e2-77e3">
+                  <modifiers>
+                    <modifier type="set" value="0" field="points" affects="self.entries.recursive"/>
+                    <modifier type="set" value="true" field="hidden" affects="c39e-a7ec-9c5c-7f08"/>
+                    <modifier type="set" value="true" field="hidden" affects="7b77-720f-ffee-e2eb"/>
+                    <modifier type="set" value="3" field="8f01-aa3d-c881-8283"/>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="f02a-bea4-05b0-c76d" includeChildSelections="false" automatic="true"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
               <profiles>
                 <profile name="The Golden Magus" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="2304-28b2-7387-2e37" publicationId="fd0a-6995-03c8-1dd6" page="34">
@@ -4942,6 +5010,14 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                           </characteristics>
                         </profile>
                       </profiles>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="6e50-fc2d-f530-a5b0" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Anklet of the One" field="name"/>
+                            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -5036,6 +5112,14 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                           </characteristics>
                         </profile>
                       </profiles>
+                      <infoLinks>
+                        <infoLink name="Parry" id="a30a-6b69-0db9-655b" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
+                          <modifiers>
+                            <modifier type="set" value="6+" field="bdf9-d73e-e13b-b0ce"/>
+                            <modifier type="set" value="Commander&apos;s Yatagan" field="name"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="Blessed Ketche of the Crescent Moon" hidden="false" id="f7f0-5896-7474-3f17">
                       <constraints>
@@ -5049,6 +5133,14 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                           </characteristics>
                         </profile>
                       </profiles>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="7271-0e36-865e-c550" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="Blessed Ketche of the Crescent Moon" field="name"/>
+                            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -5265,6 +5357,7 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                             <modifier type="prepend" value="Magic Weapon." field="de63-d6da-efa8-00ac"/>
                           </modifiers>
                         </infoLink>
+                        <infoLink name="Two/Additional Hand Weapons" id="0034-2389-508e-efb2" hidden="false" type="profile" targetId="48ad-587e-84ad-c237"/>
                       </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="The Ruby Eye" hidden="false" id="0c9c-04e7-c9a1-7625">
@@ -5279,6 +5372,14 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                           </characteristics>
                         </profile>
                       </profiles>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="ccce-e554-348e-d44d" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="The Ruby Eye" field="name"/>
+                            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </selectionEntryGroup>
@@ -5367,6 +5468,14 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
                           </characteristics>
                         </profile>
                       </profiles>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="6e0a-0258-5f77-b2d0" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="The Eye Pendant" field="name"/>
+                            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                     <selectionEntry type="upgrade" import="true" name="The Necronomicon" hidden="false" id="6163-47e5-94fd-b5e3">
                       <constraints>
@@ -5394,11 +5503,16 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
               </constraints>
               <infoLinks>
                 <infoLink name="Zealotry" id="60df-5ab5-fd18-bc04" hidden="false" type="rule" targetId="bf11-9a5f-fe2f-28d8"/>
-                <infoLink name="Dodge (4+)" id="1f19-fecc-50fc-1814" hidden="false" type="rule" targetId="5e3f-9736-a9c0-4a1c"/>
                 <infoLink name="Immunity (Psychology)" id="e24d-37ac-6c15-3ffc" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
                 <infoLink name="Hidden" id="545d-b03e-8a5d-494d" hidden="false" type="rule" targetId="2796-b399-4f98-a36f"/>
                 <infoLink name="Killing Blow" id="b215-fc7d-99f2-8104" hidden="false" type="rule" targetId="a711-7cf6-cd2b-1d29"/>
                 <infoLink name="Scouts" id="af6c-46d7-9bab-b8d8" hidden="false" type="rule" targetId="6624-0b7b-c5b8-6397"/>
+                <infoLink name="Dodge" id="7c8a-e82c-6388-92ed" hidden="false" type="profile" targetId="6407-7161-d748-2c03">
+                  <modifiers>
+                    <modifier type="set" value="Malik Ibn La&apos;Ahad" field="name"/>
+                    <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
               <rules>
                 <rule name="Counterattack" id="f029-73e2-ba83-2c25" hidden="false" publicationId="fd0a-6995-03c8-1dd6" page="39">
@@ -6086,14 +6200,21 @@ Clerics of the One) special rule. However, each Battle Prayer can target any fri
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Magic Resistance (2)" id="2733-8592-7804-2e15" hidden="false" type="rule" targetId="0e09-3526-25d5-2646">
+        <infoLink name="Immunity (Ice Attacks)" id="4280-bf14-72a4-e1ae" hidden="false" type="rule" targetId="5dfb-b5c0-520b-ed68">
           <modifiers>
             <modifier type="set" value="Marid only" field="annotation"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Immunity (Ice Attacks)" id="4280-bf14-72a4-e1ae" hidden="false" type="rule" targetId="5dfb-b5c0-520b-ed68">
+        <infoLink name="Magic Resistance" id="d596-268c-0d4e-7f87" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
           <modifiers>
-            <modifier type="set" value="Marid only" field="annotation"/>
+            <modifier type="set" value="Marid" field="name"/>
+            <modifier type="set" value="2" field="19f0-e982-f035-416c"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Magic Resistance" id="c4dd-4e0c-9593-dc72" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+          <modifiers>
+            <modifier type="set" value="Marid" field="name"/>
+            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
           </modifiers>
         </infoLink>
       </infoLinks>
