@@ -797,7 +797,7 @@
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Impact Hits (1), Swiftstride</characteristic>
               </characteristics>
             </profile>
-            <profile name="Monstrous Creatures" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="0bb7-f712-d89d-3dd7">
+            <profile name="Monstrous Creature" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="0bb7-f712-d89d-3dd7">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
@@ -805,6 +805,7 @@
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">3 (or 4 if ridden)</characteristic>
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D3), Swiftstride, Terror</characteristic>
               </characteristics>
+              <alias>Monstrous Creatures</alias>
             </profile>
             <profile name="Monstrous Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="0326-f2c0-835a-1ab9">
               <characteristics>
@@ -833,7 +834,7 @@
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Expendable, Skirmishers, Unstable</characteristic>
               </characteristics>
             </profile>
-            <profile name="War Beasts" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="a8d0-cc85-e2d0-3f6b">
+            <profile name="War Beast" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="a8d0-cc85-e2d0-3f6b">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">5</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1</characteristic>
@@ -841,6 +842,7 @@
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Expendable, Swiftstride, Vanguard</characteristic>
               </characteristics>
+              <alias>War Beasts</alias>
             </profile>
             <profile name="War Machines" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="d79a-9ca4-4700-f6bd">
               <characteristics>
@@ -8474,18 +8476,6 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
     <rule id="18cb-1dc6-4139-8c3" name="Line of Sight (0)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Line of Sight of 0.</description>
     </rule>
-    <rule name="Swarms" id="f4d1-e978-a3ed-869b" hidden="false">
-      <description>Complete Ranks (3). Supporting Attacks (5). Unit Strength (3). Line of Sight (0). Expendable. Skirmishers. Unstable.
-
-
-Other models can fire through them at targets behind them with no To Hit penalty. However, any Swarm base that is hit by a template attack suffers Multiple Wounds (D6) rather than 1.</description>
-    </rule>
-    <rule name="Large Infantry" id="501d-e1d6-df0e-d961" hidden="false">
-      <description>Complete Ranks (4). Supporting Attacks (2). Unit Strength (1). Line of Sight (1)</description>
-    </rule>
-    <rule name="Monstrous Infantry" id="0997-a400-8b77-fa7c" hidden="false">
-      <description>Complete Ranks (3). Supporting Attacks (2). Unit Strength (2). Line of Sight (2). Swiftstride. Fear.</description>
-    </rule>
     <rule name="Cavalry" id="f299-b4f5-2ed1-08ce" hidden="false">
       <description>Complete Ranks (5). Supporting Attacks (1+1). Unit Strength (2). Line of Sight (2). Split Profile (Cavalry). Impact Hits (1). Swiftstride.
 
@@ -8592,23 +8582,6 @@ War Machines have a Unit Strength equal to their current number of crew.</descri
     <rule id="8f97-966e-ddb2-f7bb" name="Line of Sight (1)" publicationId="9e23-79cb-pubN66727" page="77" hidden="false">
       <description>Models with this rule have a Line of Sight of 1.</description>
     </rule>
-    <rule name="Infantry" id="5669-ecc5-1f66-edd8" hidden="false">
-      <description>Complete Ranks (5). Supporting Attacks (1). Unit Strength (1). Line of Sight (1)</description>
-    </rule>
-    <rule name="Monster" id="b965-f383-1052-74df" hidden="false">
-      <description>Line of Sight (5). Stomp (D6). Terror. Swiftstride.
-
-Split profile
-Ridden Monsters follow the Split Profile (Cavalry) rule. However, they may only have an armour save of a total of 2+ instead of the normal 1+. The riders can fire in 360 degrees around them, rather than only firing at targets within their front arc. This only applies to any missile weapons carried by the crew themselves, any missile weapons mounted on the Monster itself can only fire in the model&apos;s forward arc as normal. Any crew member that chooses to fire the mounted weapon cannot fire their own weapon in the same turn.
-
-
-Character mount
-Some characters can ride Monsters. If a character has a ridden Monster, the whole model is treated as having the troop type Monster and thus follows all the rules for both characters and Monster models including the Split Profile rules above. A character on a ridden Monster cannot join other units.
-
-
-Unit strength
-Monsters have a Unit Strength of double their original starting number of Wounds. Ridden Monsters add the number of riders to their Unit Strength.</description>
-    </rule>
     <rule name="Monstrous Beasts" id="c629-2c10-da21-4037" hidden="false">
       <description>Complete Ranks (3). Supporting Attacks (2). Unit Strength (2). Line of Sight (2). Fear. Swiftstride.
 
@@ -8675,12 +8648,6 @@ Any missile weapons use the Ballistic Skill of the crew when making Shooting at
 If a misfire is rolled, roll immediately on the Black Powder Misfire chart.</description>
       <alias>Organ Gun</alias>
     </rule>
-    <rule name="War Beast" id="42ce-1113-52c7-5ef8" hidden="false">
-      <description>Complete Ranks (5). Supporting Attacks (1). Unit Strength (1). Line of Sight (1). Expendable. Swiftstride. Vanguard.
-
-
-Some characters can ride war beasts, in which case the model uses the rules for Cavalry.</description>
-    </rule>
     <rule name="Split Profile (Shrines)" id="6331-09f9-0580-9ac8" hidden="false">
       <description>In a similar manner to a Chariot, a Shrine can often have more than one set of characteristics, one for the creatures pulling or carrying the Shrine, one for the crew and one for the shrine itself, and is treated as a single model.
 
@@ -8692,21 +8659,6 @@ When moving, the shrine model uses its own Movement characteristic. The crew an
 
 
 The Wounds and Toughness of the crew and the creatures are never used – hits are resolved against the shrine&apos;s Wounds and Toughness. It is the crew&apos;s Weapon Skill that is used for the purposes of the enemy rolling to hit, just as with cavalry.</description>
-    </rule>
-    <rule name="Shrine" id="3952-6c6d-75ce-9b60" hidden="false">
-      <description>Line of Sight (1). Split Profile (Shrines).
-
-Armour Saves
-Some Shrines have an armour save detailed in their army list entry, which is combined with any armour the crew might have.
-
-Character mounts
-Some characters can be mounted upon shrines. If a character has taken a shrine as a mount, the whole model is treated as having the troop type &apos;Shrine&apos; and follows all the rules for both characters and Shrine models. A Shrine mount otherwise follows all the rules for Cavalry in regard to Split Profile. If the Shrine includes any crew in addition to the character, their armour saves are ignored when calculating the overall armour save of the model – only the character&apos;s own armour save is used.
-
-Terrain
-Shrines have to take Dangerous Terrain tests if they move march, charge, flee or pursue over anything other than open ground or hills.
-
-Unit strength
-Shrines have a Unit Strength equal to their starting number of Wounds.</description>
     </rule>
     <rule name="Firing a Fire Thrower" id="5184-235f-3d04-5636" hidden="false" publicationId="9e23-79cb-pubN66727" page="85">
       <description>Place the teardrop-shaped template with its narrow end touching the fire thrower barrel and the large end aimed at any enemy model or building in line of sight. Roll the artillery dice and move the template directly forward the number of inches indicated. Some fire throwers might also have a range value. In this case, place the template with its narrow end anywhere within this range, measured from the fire thrower barrel as normal.
