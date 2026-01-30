@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="c4f4-ccda-e9ae-da94" name="Dogs of War WAP 1.52" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="82" revision="4" authorContact="xetolosch" authorName="contact me via discord" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="c4f4-ccda-e9ae-da94" name="Dogs of War WAP 1.52" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="82" revision="5" authorContact="xetolosch" authorName="contact me via discord" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Backstabbers" id="264b-43f7-6123-a1a5" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="3">
       <description>A unit with this special rule that successfully restrains from pursuing after breaking an enemy unit in close combat causes D6 Strength 3 hits on the fleeing unit for every complete rank the Hobgoblin unit has (up to a maximum of 3). Resolve any casualties before moving the fleeing unit.</description>
@@ -7962,7 +7962,18 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
                     <cost name="pts" typeId="points" value="9"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Hand Weapon" hidden="false" id="79cf-f09b-b8b3-6581" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1"/>
+                <entryLink import="true" name="Hand Weapon" hidden="false" id="79cf-f09b-b8b3-6581" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
+                  <modifiers>
+                    <modifier type="set" value="1" field="e226-6e5c-509d-eb0a">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="1ebd-5e4f-4db3-6816" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="e226-6e5c-509d-eb0a" includeChildSelections="false" automatic="true"/>
+                  </constraints>
+                </entryLink>
                 <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="57f7-e545-fd72-dea6" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
@@ -7974,6 +7985,18 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
                   </costs>
                 </entryLink>
               </entryLinks>
+              <modifiers>
+                <modifier type="set" value="2" field="fe22-ce5f-b23e-303d">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="1ebd-5e4f-4db3-6816" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="2" field="fe22-ce5f-b23e-303d">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="1ebd-5e4f-4db3-6816" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
             <entryLink import="true" name="40. Suits of Armour" hidden="false" id="2e7a-7a2f-6862-921d" type="selectionEntryGroup" targetId="f56d-df75-2d0b-ce09">
               <entryLinks>
