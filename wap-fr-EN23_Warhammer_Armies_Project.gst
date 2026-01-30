@@ -172,7 +172,7 @@
         <characteristicType name="Special Rules" id="ff58-91e4-84d7-e6e4" kind="longText"/>
       </characteristicTypes>
     </profileType>
-    <profileType name="Magic Resistance" id="e6b8-3bf4-4d0c-974e" hidden="false" sortIndex="17">
+    <profileType name="Magic Resistance" id="e6b8-3bf4-4d0c-974e" hidden="false" sortIndex="9">
       <characteristicTypes>
         <characteristicType name="Value" id="19f0-e982-f035-416c"/>
       </characteristicTypes>
