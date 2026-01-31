@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="522e-5e2a-d54c-4959" name="Armoury" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="68" revision="14" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="522e-5e2a-d54c-4959" name="Armoury" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="68" revision="15" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <categoryEntries>
     <categoryEntry name="X Additional Hand Weapon" id="c4b0-4ee4-7b99-843e" hidden="true"/>
     <categoryEntry name="X Flail" id="a86f-aab3-889c-0b6d" hidden="true"/>
@@ -605,6 +605,29 @@
         <infoLink name="Flail" id="dc77-400f-c289-2d2f" hidden="false" targetId="7f6a-b8b2-8978-4f35" type="profile"/>
         <infoLink name="Shield" id="46d9-d63f-d269-79c3" hidden="false" type="profile" targetId="8bf1-244f-c642-d43f"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Spear &amp; Buckler" hidden="false" id="24e0-a2b0-c8a3-5931" collective="true">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="ebcc-429e-a63f-b6fe" percentValue="false" includeChildSelections="false" includeChildForces="false" automatic="true"/>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="false" id="1eee-db78-a2c6-8aeb" includeChildSelections="false"/>
+      </constraints>
+      <infoLinks>
+        <infoLink name="Spear" id="c05d-b337-b8f6-5015" hidden="false" type="profile" targetId="be39-37ac-ac20-5053"/>
+        <infoLink name="Buckler" id="2ec4-fc48-c993-9444" hidden="false" targetId="1700-a7e5-d272-ef20" type="profile"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" value="0" field="ebcc-429e-a63f-b6fe">
+          <conditionGroups>
+            <conditionGroup type="or">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="mount" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="0" field="selections" scope="model-or-unit" childId="bdee-b168-38ba-7d3c" shared="true" includeChildSelections="true"/>
+                <condition type="instanceOf" value="0" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
