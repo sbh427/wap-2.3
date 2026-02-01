@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="true" id="1fc9-2903-cb19-5737" name="Bestiary" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="68" revision="12" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="true" id="1fc9-2903-cb19-5737" name="Bestiary" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="68" revision="13" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="model" import="true" name="Arabyan Steed" hidden="false" id="ac96-1c86-3a61-e422" collective="true" subType="mount" publicationId="fd0a-6995-03c8-1dd6" page="12">
       <constraints>
@@ -108,17 +108,24 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
           <profiles>
             <profile name="Spawn of Chaos" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="8daa-c99a-8a39-ca3e" publicationId="1a01-044f-047b-618f" page="197">
               <characteristics>
-                <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">*</characteristic>
                 <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
                 <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
                 <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
                 <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
                 <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">*</characteristic>
                 <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
                 <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Beast (Chaos Beast)</characteristic>
               </characteristics>
+              <modifiers>
+                <modifier type="increment" value="1" field="edd2-7979-54a4-6b35">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="1a77-d1dc-4b1b-c1be" shared="true" includeChildForces="false" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </profile>
           </profiles>
           <rules>
@@ -338,14 +345,14 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
           <characteristics>
             <characteristic name="M" typeId="09ad-18df-607b-1215">6</characteristic>
             <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
             <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
             <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
             <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">6</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Canine)</characteristic>
+            <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Chimeric)</characteristic>
           </characteristics>
           <modifiers>
             <modifier type="increment" value="1" field="bfa2-d38d-7c93-d3f0">
@@ -756,17 +763,24 @@ Once on the ground a Giant may get up in his following Movement phase, but may n
       <profiles>
         <profile name="Giant Spawn of Chaos" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="77f2-125c-b416-ee9b" publicationId="1a01-044f-047b-618f" page="47">
           <characteristics>
-            <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+            <characteristic name="M" typeId="09ad-18df-607b-1215">*</characteristic>
             <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+            <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
             <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
             <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">6</characteristic>
             <characteristic name="W" typeId="27ee-0675-122f-a1b1">5</characteristic>
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0"/>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">*</characteristic>
             <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monster (Chaos Beast)</characteristic>
           </characteristics>
+          <modifiers>
+            <modifier type="increment" value="1" field="edd2-7979-54a4-6b35">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="1a77-d1dc-4b1b-c1be" shared="true" includeChildForces="false" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
         </profile>
       </profiles>
       <infoLinks>
@@ -1548,7 +1562,15 @@ done so this round. The Bonegrinder Giant automatically wins the combat by 3 poi
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4d51-5a1d-1daa-0039" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <infoLinks>
-            <infoLink name="Spawn of Khorne" id="6bfe-ac8c-cffc-2488" hidden="false" targetId="9342-d93f-e118-0b55" type="rule"/>
+            <infoLink name="Spawn of Khorne" id="6bfe-ac8c-cffc-2488" hidden="false" targetId="9342-d93f-e118-0b55" type="rule">
+              <modifiers>
+                <modifier type="append" value="(already in profile)" field="description">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="1a77-d1dc-4b1b-c1be" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </infoLink>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="15"/>
