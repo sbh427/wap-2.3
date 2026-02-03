@@ -11,8 +11,9 @@
       <characteristicTypes>
         <characteristicType id="05e5-8b6d-3a70-8314" name="Result"/>
       </characteristicTypes>
+      <comment>Mutants</comment>
     </profileType>
-    <profileType id="5908-7da9-266c-ec18" name="Drunken Table">
+    <profileType id="5908-7da9-266c-ec18" name="Drunken">
       <characteristicTypes>
         <characteristicType id="9a3e-0c62-59af-6fc4" name="Result"/>
       </characteristicTypes>
@@ -176,7 +177,6 @@
       <infoLinks>
         <infoLink id="7b51-2c23-efb8-e63b" name="Bloodgreed" hidden="false" targetId="3bde-1140-28c7-8bfd" type="rule"/>
         <infoLink id="13f4-27aa-bec9-7fed" name="Impact Hits (1)" hidden="false" targetId="bb3b-3ca8-fcbc-a78b" type="rule"/>
-        <infoLink id="86bc-76be-536c-5608" name="Slaughterer&apos;s Call" hidden="false" targetId="bac0-d624-4a87-c6a6" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="b735-3751-868c-0a55" name="Lords" hidden="false" targetId="d280-b7df-c185-2ba5" primary="true"/>
@@ -406,8 +406,7 @@
       </profiles>
       <infoLinks>
         <infoLink id="446b-471a-9ace-4511" name="Bloodgreed" hidden="false" targetId="3bde-1140-28c7-8bfd" type="rule"/>
-        <infoLink id="35b5-c8e8-49e6-eff1" name="Impact Hits (D3)" hidden="false" targetId="f30d-0b61-2836-689e" type="rule"/>
-        <infoLink id="e0f9-0bc6-481f-6fcf" name="Slaughterer&apos;s Call" hidden="false" targetId="bac0-d624-4a87-c6a6" type="rule"/>
+        <infoLink id="35b5-c8e8-49e6-eff1" name="Impact Hits (1)" hidden="false" targetId="bb3b-3ca8-fcbc-a78b" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="d5a4-c8b4-2123-f150" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
@@ -686,6 +685,13 @@
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
+              <entryLinks>
+                <entryLink import="true" name="Magic Standards" hidden="false" id="6bf4-6d8e-3255-ea73" type="selectionEntryGroup" targetId="7a65-1758-870e-b49d">
+                  <constraints>
+                    <constraint type="max" value="25" field="points" scope="parent" shared="true" id="9fc2-461e-b8f9-5c95"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Musician" hidden="false" id="58bf-9b60-b50f-f5cc" collective="false">
               <constraints>
@@ -1095,11 +1101,8 @@
           </profiles>
           <infoLinks>
             <infoLink id="96ac-ebc9-b641-fbca" name="Primal Fury" hidden="false" targetId="80ca-7f30-49ff-4274" type="rule"/>
-            <infoLink id="e9b0-08db-9e98-6f0e" name="Drunken" hidden="false" targetId="e266-edfb-e9f4-02d1" type="rule"/>
             <infoLink id="adc5-44ae-ce03-ff93" name="Strider (Forest)" hidden="false" targetId="8d09-c701-2658-67e8" type="rule"/>
-            <infoLink id="e080-b534-88e3-bc26" name="1-2 Drunken Stupor" hidden="false" targetId="26c8-8fd3-7a0a-e24c" type="profile"/>
-            <infoLink id="1ad7-e143-6cc8-d50b" name="3-4 Drunken Frenzy" hidden="false" targetId="1823-42ce-82a9-75a2" type="profile"/>
-            <infoLink id="b56e-61e9-2712-9a61" name="5-6 Drunken Bravado: " hidden="false" targetId="dc96-3f8c-befe-1533" type="profile"/>
+            <infoLink name="Drunken Table" id="7dcf-d0ad-0606-e422" hidden="false" type="infoGroup" targetId="4807-e26a-85ff-caea"/>
           </infoLinks>
           <costs>
             <cost name="pts" typeId="points" value="18"/>
@@ -1230,11 +1233,15 @@
                 <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="cca2-51b4-8f0e-d721" includeChildSelections="true"/>
               </constraints>
               <modifiers>
-                <modifier type="increment" value="1" field="cca2-51b4-8f0e-d721">
-                  <repeats>
-                    <repeat value="1" repeats="1" field="selections" scope="roster" childId="68d1-a0ad-4b08-e7e4" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-                    <repeat value="1" repeats="1" field="selections" scope="roster" childId="1869-6740-649f-4e91" shared="true" roundUp="false" includeChildSelections="true" includeChildForces="true"/>
-                  </repeats>
+                <modifier type="set" value="1" field="cca2-51b4-8f0e-d721">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="68d1-a0ad-4b08-e7e4" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="roster" childId="1869-6740-649f-4e91" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
                 </modifier>
                 <modifier type="set" value="true" field="hidden">
                   <conditions>
@@ -1249,6 +1256,16 @@
           </constraints>
         </entryLink>
       </entryLinks>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="d679-4e7b-3a3d-8a22" includeChildSelections="true"/>
+      </constraints>
+      <modifiers>
+        <modifier type="set" value="1" field="d679-4e7b-3a3d-8a22">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="1869-6740-649f-4e91" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry id="bbd9-05b5-b1a2-549e" name="Razorgors" hidden="false" collective="false" import="true" type="unit" sortIndex="35">
       <categoryLinks>
@@ -1304,7 +1321,7 @@
           <description>A Preyton has the Hatred special rule. Any wounds it suffers during close combat are included in its player&apos;s own Combat result score as well as that of their opponent&apos;s.</description>
         </rule>
         <rule id="a24d-9356-b953-2ef1" name="Endless Malice" publicationId="9e23-79cb-pubN71963" page="32" hidden="false">
-          <description>If the Preyton has killed one or more models that round of close combat and the enemy unit Breaks, it may not pursue. All enemy units within 12&quot; and with line of sight to the Preyton must immediately take a Panic test after the broken unit has finished their Flee move. </description>
+          <description>If the Preyton has killed one or more models that round of close combat and the enemy unit Breaks, it may not pursue. All enemy units within 12&quot; and with line of sight to the Preyton must immediately take a Panic test after the broken unit has finished their Flee move.</description>
         </rule>
       </rules>
       <infoLinks>
@@ -1663,7 +1680,7 @@ When rolling To Wound with this Shooting attack, substitute the target&apos;s T 
         <categoryLink name="Monster" hidden="false" id="eab0-da84-1c4b-1103" targetId="e1a0-da31-05c5-9a15" primary="false"/>
       </categoryLinks>
       <costs>
-        <cost name="pts" typeId="points" value="250"/>
+        <cost name="pts" typeId="points" value="240"/>
       </costs>
       <entryLinks>
         <entryLink import="true" name="Bestigor" hidden="false" id="ef75-8557-3064-8274" type="selectionEntry" targetId="3bd8-3c38-c257-2b4b">
@@ -1671,6 +1688,9 @@ When rolling To Wound with this Shooting attack, substitute the target&apos;s T 
             <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="bae7-6e50-b341-8f36-min"/>
             <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="bae7-6e50-b341-8f36-max"/>
           </constraints>
+          <modifiers>
+            <modifier type="set" value="Bestigor only" field="annotation" affects="rules"/>
+          </modifiers>
         </entryLink>
       </entryLinks>
     </selectionEntry>
@@ -1729,65 +1749,10 @@ When rolling To Wound with this Shooting attack, substitute the target&apos;s T 
               <selectionEntryGroups>
                 <selectionEntryGroup name="61. Lore of Magic" id="ce25-f2e2-4a3a-f19f" hidden="false" defaultSelectionEntryId="34e8-c8fc-7612-64f6">
                   <entryLinks>
-                    <entryLink import="true" name="Lore of Death" hidden="false" id="3891-d219-aa69-84d6" type="selectionEntry" targetId="bc0d-47f8-7220-1e16">
-                      <modifiers>
-                        <modifier type="set" value="true" field="hidden">
-                          <conditionGroups>
-                            <conditionGroup type="or">
-                              <conditions>
-                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
-                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
-                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
-                              </conditions>
-                            </conditionGroup>
-                          </conditionGroups>
-                        </modifier>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Lore of Shadow" hidden="false" id="5a08-0ca6-9f05-eb02" type="selectionEntry" targetId="6c88-e0ab-2ca2-7e67">
-                      <modifiers>
-                        <modifier type="set" value="true" field="hidden">
-                          <conditionGroups>
-                            <conditionGroup type="or">
-                              <conditions>
-                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
-                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
-                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
-                              </conditions>
-                            </conditionGroup>
-                          </conditionGroups>
-                        </modifier>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Lore of the Wild" hidden="false" id="927c-cd02-748f-db5d" type="selectionEntry" targetId="6b7b-067e-e19f-2870">
-                      <modifiers>
-                        <modifier type="set" value="true" field="hidden">
-                          <conditionGroups>
-                            <conditionGroup type="or">
-                              <conditions>
-                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
-                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
-                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
-                              </conditions>
-                            </conditionGroup>
-                          </conditionGroups>
-                        </modifier>
-                      </modifiers>
-                    </entryLink>
-                    <entryLink import="true" name="Lore of Beasts" hidden="false" id="5c66-91db-c42c-7f65" type="selectionEntry" targetId="b436-b410-dd41-304f">
-                      <modifiers>
-                        <modifier type="set" value="true" field="hidden">
-                          <conditionGroups>
-                            <conditionGroup type="or">
-                              <conditions>
-                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="a5c6-cd36-6ce9-c322" shared="true" includeChildSelections="true"/>
-                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="fce4-1eaa-170d-634c" shared="true" includeChildSelections="true"/>
-                                <condition type="equalTo" value="1" field="selections" scope="parent" childId="b570-8e89-e752-8902" shared="true" includeChildSelections="true"/>
-                              </conditions>
-                            </conditionGroup>
-                          </conditionGroups>
-                        </modifier>
-                      </modifiers>
+                    <entryLink import="true" name="Undivided lores" hidden="false" id="ef6d-cd28-4781-f2d3" type="selectionEntryGroup" targetId="3b2d-108e-b75c-3287" flatten="true">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1a22-b3d4-0068-08f0" includeChildSelections="false"/>
+                      </constraints>
                     </entryLink>
                   </entryLinks>
                   <constraints>
@@ -1845,7 +1810,7 @@ When rolling To Wound with this Shooting attack, substitute the target&apos;s T 
                   <description>Gorthor must be the Army General. Gorthor, and any unit he joins, may re-roll failed Psychology and Break tests.</description>
                 </rule>
                 <rule id="e974-5a80-3f02-d11b" name="Scion of the Dark Gods" publicationId="9e23-79cb-pubN71963" page="40" hidden="false">
-                  <description>At the start of each friendly Magic phase, randomly generate a spell from the Lore of Chaos up to Level 2. Gorthor may use this spell during this Magic phase as a Bound Spell, with a Power Level equal to half the casting value of the spell, rounding up. </description>
+                  <description>At the start of each friendly Magic phase, randomly generate a spell from the Lore of Chaos up to Level 2. Gorthor may use this spell during this Magic phase as a Bound Spell, with a Power Level equal to half the casting value of the spell, rounding up.</description>
                 </rule>
               </rules>
               <infoLinks>
@@ -2032,6 +1997,11 @@ When rolling To Wound with this Shooting attack, substitute the target&apos;s T 
                                       </entryLinks>
                                     </entryLink>
                                   </entryLinks>
+                                  <rules>
+                                    <rule name="Bagrar the Tamer" id="b3d3-730e-f3aa-f6eb" hidden="false">
+                                      <description>If Gorthor is mounted on a Chariot, he may re-roll all Charge, Flee and Pursuit distance rolls.</description>
+                                    </rule>
+                                  </rules>
                                 </selectionEntry>
                               </selectionEntries>
                             </selectionEntryGroup>
@@ -2340,7 +2310,7 @@ When rolling To Wound with this Shooting attack, substitute the target&apos;s T 
                   <description>All friendly Beastmen models within 12&quot; of Morghur may re-roll failed Rally Tests.</description>
                 </rule>
                 <rule id="0a00-7e78-3f34-81fe" name="The Hordes of Morghur" publicationId="9e23-79cb-pubN71963" page="42" hidden="false">
-                  <description>A Beastmen army containing Morghur must re-roll all successful Unruly tests. In addition, you may upgrade any Gor Herds or Gor Raiders to Warped Gors for +1 point per model. Warped Gors have the Mutations &amp; Traits special rule (see Mutants). </description>
+                  <description>A Beastmen army containing Morghur must re-roll all successful Unruly tests. In addition, you may upgrade any Gor Herds or Gor Raiders to Warped Gors for +1 point per model. Warped Gors have the Mutations &amp; Traits special rule (see Mutants).</description>
                 </rule>
               </rules>
               <infoLinks>
@@ -2384,9 +2354,9 @@ When rolling To Wound with this Shooting attack, substitute the target&apos;s T 
                         <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="765d-6694-eb4c-64c9" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
                       </constraints>
                       <profiles>
-                        <profile name="Skull-Weave" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="cc55-2c1b-4d5a-d6a7" publicationId="9e23-79cb-pubN71963" page="42">
+                        <profile name="Skull-Weave" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="cc55-2c1b-4d5a-d6a7" publicationId="9e23-79cb-pubN71963" page="42">
                           <characteristics>
-                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">Morghur causes Terror. Any model attempting to attack Morghur in close combat suffers -1 to Hit.</characteristic>
+                            <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">Morghur causes Terror. Any model attempting to attack Morghur in close combat suffers -1 to Hit.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -2467,6 +2437,8 @@ When rolling To Wound with this Shooting attack, substitute the target&apos;s T 
                     <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
                   </modifiers>
                 </infoLink>
+                <infoLink name="Primal Fury" id="2114-4453-5ac5-9abb" hidden="false" type="rule" targetId="80ca-7f30-49ff-4274"/>
+                <infoLink name="Strider (Forest)" id="d43c-5b9b-910f-8d13" hidden="false" type="rule" targetId="8d09-c701-2658-67e8"/>
               </infoLinks>
               <rules>
                 <rule name="Leering Spirit" id="ef0b-f7de-0ad5-e2c2" hidden="false">
@@ -2841,17 +2813,11 @@ Note that the Leering Spirit marker is ignored for the purposes of movement, com
                 <rule id="81f6-40bd-d4a3-34dd" name="The Sons of Ghorros" publicationId="9e23-79cb-pubN71963" page="107" hidden="false">
                   <description>Ghorros must be accompanied by a unit of Centigors chosen from the army list at a cost of +1 point per model. This unit has +1 Weapon Skill. Ghorros can always use the &apos;Look Out, Sir!&apos; rule as long as there is at least one other Centigor in his unit still alive.</description>
                 </rule>
-                <rule name="Centigors with Beastmen Ambush" id="31a0-8db9-0fb8-5f2d" hidden="false">
-                  <description>If Ghorros Warhoof is included in your army, one unit of Centigors may deploy with the Beastmen Ambush special rule.</description>
-                </rule>
               </rules>
               <infoLinks>
-                <infoLink id="b02c-023e-d0fc-de6e" name="3-4 Drunken Frenzy" hidden="false" targetId="1823-42ce-82a9-75a2" type="profile"/>
                 <infoLink id="8b98-b1a6-c986-1477" name="Primal Fury" hidden="false" targetId="80ca-7f30-49ff-4274" type="rule"/>
                 <infoLink id="9a50-d978-9d99-ab00" name="Strider (Forest)" hidden="false" targetId="8d09-c701-2658-67e8" type="rule"/>
-                <infoLink id="cdb6-a593-8771-b6e6" name="Drunken" hidden="false" targetId="e266-edfb-e9f4-02d1" type="rule"/>
-                <infoLink id="3b31-de8c-a1f4-692e" name="5-6 Drunken Bravado: " hidden="false" targetId="dc96-3f8c-befe-1533" type="profile"/>
-                <infoLink id="278a-63c8-0ce9-4581" name="1-2 Drunken Stupor" hidden="false" targetId="26c8-8fd3-7a0a-e24c" type="profile"/>
+                <infoLink name="Drunken Table" id="614e-e9f1-2f90-e7e3" hidden="false" type="infoGroup" targetId="4807-e26a-85ff-caea"/>
               </infoLinks>
               <entryLinks>
                 <entryLink import="true" name="10. Character Options" hidden="false" id="68df-644a-4d85-2a32" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
@@ -3069,7 +3035,7 @@ Note that the Leering Spirit marker is ignored for the purposes of movement, com
       <infoLinks>
         <infoLink id="3457-5145-529b-9f6a" name="Primal Fury" hidden="false" targetId="80ca-7f30-49ff-4274" type="rule"/>
         <infoLink id="2985-f982-ed24-a6dc" name="Strider (Forest)" hidden="false" targetId="8d09-c701-2658-67e8" type="rule"/>
-        <infoLink id="3ab4-4e22-92af-568e" name="Drunken" hidden="false" targetId="e266-edfb-e9f4-02d1" type="rule"/>
+        <infoLink name="Drunken Table" id="157f-fe65-8cc2-e341" hidden="false" type="infoGroup" targetId="4807-e26a-85ff-caea"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="3cbc-398b-7937-ac3c" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
@@ -3640,10 +3606,43 @@ Note that the Leering Spirit marker is ignored for the purposes of movement, com
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Unit Options" id="1b31-dea7-f098-9217" hidden="false" sortIndex="-1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Core Unit" hidden="false" id="afac-0af5-97c6-6269">
+              <constraints>
+                <constraint type="max" value="0" field="selections" scope="roster" shared="true" id="a829-8375-25cb-64a5" includeChildSelections="true"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9288-25a7-096d-f0da" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="a829-8375-25cb-64a5">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="roster" childId="d418-c028-0f9c-1566" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="lessThan" value="1" field="selections" scope="roster" childId="d418-c028-0f9c-1566" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0"/>
       </costs>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set-primary" value="b876-2856-f1c2-c4f0" field="category" affects="self.entries.recursive"/>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries.recursive"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="afac-0af5-97c6-6269" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
   </selectionEntries>
   <sharedSelectionEntries>
@@ -4676,7 +4675,7 @@ However, all enemy units gain the Hatred special rule against the unit.</charac
         </selectionEntryGroup>
       </selectionEntryGroups>
     </selectionEntryGroup>
-    <selectionEntryGroup name="90. Gifts of Chaos &amp; Magic Items" id="e313-54c8-c3cc-fc88" hidden="false" collapsible="true">
+    <selectionEntryGroup name="90. Mutations, Traits &amp; Magic Items" id="e313-54c8-c3cc-fc88" hidden="false" collapsible="true">
       <constraints>
         <constraint type="max" value="0" field="points" scope="parent" shared="false" id="5555-d21f-24af-b3df" percentValue="false" includeChildSelections="true" includeChildForces="false"/>
       </constraints>
@@ -6343,7 +6342,11 @@ Weapons or attacks that do not use Ballistic Skill may only fire on the roll of
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Tuskgor (x2)" hidden="false" id="4ad3-88fc-3585-6703" collective="false" subType="mount" sortIndex="1">
               <infoLinks>
-                <infoLink name="Tusker Charge" id="3228-f8bf-efe4-3963" hidden="false" targetId="0ca0-8541-95c8-2de3" type="rule"/>
+                <infoLink name="Tusker Charge" id="3228-f8bf-efe4-3963" hidden="false" targetId="0ca0-8541-95c8-2de3" type="rule">
+                  <modifiers>
+                    <modifier type="set" value="Tuskgor only" field="annotation"/>
+                  </modifiers>
+                </infoLink>
                 <infoLink name="Natural Armour" id="ec20-efc0-28b7-282e" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
                   <modifiers>
                     <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
@@ -6358,6 +6361,7 @@ Weapons or attacks that do not use Ballistic Skill may only fire on the roll of
                     <modifier type="set" value="Tuskgor" field="annotation"/>
                   </modifiers>
                 </infoLink>
+                <infoLink name="Tuskgor" id="5169-a112-0e52-5818" hidden="false" type="profile" targetId="00d0-3973-6454-616a"/>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
@@ -6378,28 +6382,18 @@ Weapons or attacks that do not use Ballistic Skill may only fire on the roll of
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
                     <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">(Chaos beast)</characteristic>
-                  </characteristics>
-                </profile>
-                <profile name="Tuskgor" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="018b-71af-be5d-3645" publicationId="9e23-79cb-pubN71963" page="25" noindex="true">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215"/>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                    <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">(Chaos beast)</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">(Porcine)</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Razorgor" hidden="false" id="03c2-7940-e953-d33f" collective="false" subType="mount" sortIndex="2">
               <infoLinks>
-                <infoLink name="Tusker Charge" id="b136-5065-422d-0dda" hidden="false" targetId="0ca0-8541-95c8-2de3" type="rule"/>
+                <infoLink name="Tusker Charge" id="b136-5065-422d-0dda" hidden="false" targetId="0ca0-8541-95c8-2de3" type="rule">
+                  <modifiers>
+                    <modifier type="set" value="Razorgor only" field="annotation"/>
+                  </modifiers>
+                </infoLink>
                 <infoLink name="Natural Armour" id="f82b-2837-b08c-51df" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
                   <modifiers>
                     <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
@@ -6461,10 +6455,7 @@ Weapons or attacks that do not use Ballistic Skill may only fire on the roll of
       <description>At the beginning of each round of close combat, each engaged unit with the Primal Fury special rule must take a Leadership test. If the test is passed, that unit gains the Hatred special rule until the end of the close combat phase. In addition, if they passed the Leadership test and rolled a double, they also gain the Frenzy special rule until the end of the close combat phase.</description>
     </rule>
     <rule id="bac0-d624-4a87-c6a6" name="Slaughterer&apos;s Call" publicationId="9e23-79cb-pubN71963" page="77" hidden="false">
-      <description> Any friendly unit of Minotaurs that is joined by Taurox gains the Frenzy special rule. In addition, if Taurox is included in your army, you may take one unit of Minotaurs as a Core Unit instead of a Special Unit.</description>
-    </rule>
-    <rule id="e266-edfb-e9f4-02d1" name="Drunken" publicationId="9e23-79cb-pubN71963" page="3" hidden="false">
-      <description>Roll a D6 for each Centigor unit at the beginning of each of their turns and consult the Drunken Table to see the effects of their rampant alcoholism until the start of their next turn.</description>
+      <description>Any friendly unit of Minotaurs that is joined by Taurox gains the Frenzy special rule. In addition, if Taurox is included in your army, you may take one unit of Minotaurs as a Core Unit instead of a Special Unit.</description>
     </rule>
     <rule id="3bde-1140-28c7-8bfd" name="Bloodgreed" publicationId="9e23-79cb-pubN71963" page="3" hidden="false">
       <description>Whenever a model with this special rule wins a round of close combat, it gains the Frenzy special rule until the end of the next close combat phase. However, models with Bloodgreed only roll one D6 for their pursuit distance.</description>
@@ -6545,21 +6536,6 @@ Weapons or attacks that do not use Ballistic Skill may only fire on the roll of
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Beastmen, Gor)</characteristic>
       </characteristics>
     </profile>
-    <profile id="26c8-8fd3-7a0a-e24c" name="1-2 Drunken Stupor" publicationId="9e23-79cb-pubN71963" page="80" hidden="false" typeId="5908-7da9-266c-ec18" typeName="Drunken Table" noindex="true">
-      <characteristics>
-        <characteristic name="Result" typeId="9a3e-0c62-59af-6fc4">The unit is subject to Stupidity.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="1823-42ce-82a9-75a2" name="3-4 Drunken Frenzy" publicationId="9e23-79cb-pubN71963" page="80" hidden="false" typeId="5908-7da9-266c-ec18" typeName="Drunken Table" noindex="true">
-      <characteristics>
-        <characteristic name="Result" typeId="9a3e-0c62-59af-6fc4">The unit is subject to Frenzy.</characteristic>
-      </characteristics>
-    </profile>
-    <profile id="dc96-3f8c-befe-1533" name="5-6 Drunken Bravado: " publicationId="9e23-79cb-pubN71963" page="80" hidden="false" typeId="5908-7da9-266c-ec18" typeName="Drunken Table" noindex="true">
-      <characteristics>
-        <characteristic name="Result" typeId="9a3e-0c62-59af-6fc4">The unit is subject to Stubborn.</characteristic>
-      </characteristics>
-    </profile>
     <profile name="Viletide" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="4704-fef3-02e4-2d06" publicationId="9e23-79cb-pubN71963" page="5" noindex="true">
       <characteristics>
         <characteristic name="Spell Level" typeId="576b-eaa1-0bd1-3f7a">1</characteristic>
@@ -6595,7 +6571,7 @@ Weapons or attacks that do not use Ballistic Skill may only fire on the roll of
         <characteristic name="M" typeId="09ad-18df-607b-1215">7</characteristic>
         <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
         <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">0</characteristic>
-        <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+        <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
         <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
         <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
         <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
@@ -6606,10 +6582,10 @@ Weapons or attacks that do not use Ballistic Skill may only fire on the roll of
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="set" value="" field="09ad-18df-607b-1215"/>
-            <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
-            <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
-            <modifier type="set" value="" field="a199-f10b-a038-5730"/>
+            <modifier type="set" field="09ad-18df-607b-1215"/>
+            <modifier type="set" field="df90-5cbd-8cf9-95b2"/>
+            <modifier type="set" field="27ee-0675-122f-a1b1"/>
+            <modifier type="set" field="a199-f10b-a038-5730"/>
           </modifiers>
           <conditions>
             <condition type="atLeast" value="1" field="selections" scope="model" childId="crew" shared="true" includeChildSelections="true"/>
@@ -6684,7 +6660,7 @@ Weapons or attacks that do not use Ballistic Skill may only fire on the roll of
             <modifier type="remove" value="0eb4-f376-7725-b05b" field="category" affects="self.entries.recursive"/>
           </modifiers>
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="roster" childId="fcf7-1be7-7b77-e837" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="fcf7-1be7-7b77-e837" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
           </conditions>
         </modifierGroup>
       </modifierGroups>
@@ -6736,6 +6712,9 @@ Weapons or attacks that do not use Ballistic Skill may only fire on the roll of
           </selectionEntries>
         </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden" affects="recursive.profiles.Armour"/>
+      </modifiers>
     </entryLink>
   </entryLinks>
   <catalogueLinks>
@@ -6793,7 +6772,31 @@ Weapons or attacks that do not use Ballistic Skill may only fire on the roll of
       </profiles>
       <rules>
         <rule name="Mutations &amp; Traits" id="c19a-b9ed-a6a6-eeab" hidden="false" publicationId="9e23-79cb-pubN71963" page="24">
-          <description>Roll a D6 at the start of the game and consult the table to determine which mutation is the most prominent for the remainder of the game:  </description>
+          <description>Roll a D6 at the start of the game and consult the table to determine which mutation is the most prominent for the remainder of the game:</description>
+        </rule>
+      </rules>
+    </infoGroup>
+    <infoGroup name="Drunken Table" id="4807-e26a-85ff-caea" hidden="false">
+      <profiles>
+        <profile name="1-2 Drunken Stupor" typeId="5908-7da9-266c-ec18" typeName="Drunken" hidden="false" id="26c8-8fd3-7a0a-e24c" publicationId="9e23-79cb-pubN71963" page="80" noindex="true">
+          <characteristics>
+            <characteristic name="Result" typeId="9a3e-0c62-59af-6fc4">The unit is subject to the Stupidity special rule.</characteristic>
+          </characteristics>
+        </profile>
+        <profile name="3-4 Drunken Frenzy" typeId="5908-7da9-266c-ec18" typeName="Drunken" hidden="false" id="1823-42ce-82a9-75a2" publicationId="9e23-79cb-pubN71963" page="80" noindex="true">
+          <characteristics>
+            <characteristic name="Result" typeId="9a3e-0c62-59af-6fc4">The unit is subject to the Frenzy special rule. </characteristic>
+          </characteristics>
+        </profile>
+        <profile name="5-6 Drunken Bravado: " typeId="5908-7da9-266c-ec18" typeName="Drunken" hidden="false" id="dc96-3f8c-befe-1533" publicationId="9e23-79cb-pubN71963" page="80" noindex="true">
+          <characteristics>
+            <characteristic name="Result" typeId="9a3e-0c62-59af-6fc4">The unit is subject to the Stubborn special rule. </characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <rules>
+        <rule name="Drunken" id="60b2-039f-270f-d8e9" hidden="false" publicationId="9e23-79cb-pubN71963" page="3">
+          <description>Roll a D6 for each unit containing models with this special rule at the beginning of each of their turns and consult the table below to see what effect they have until the start of their next turn: </description>
         </rule>
       </rules>
     </infoGroup>
