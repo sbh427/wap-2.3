@@ -870,6 +870,7 @@
             </entryLink>
           </entryLinks>
         </entryLink>
+        <entryLink import="true" name="Armed and Ready" hidden="false" id="2b17-1fb6-0307-d8f0" type="selectionEntryGroup" targetId="6fd0-9ecc-5a6a-25da" sortIndex="-1"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Gunners" hidden="false" id="4743-afb6-82a6-ab47" sortIndex="22">
@@ -957,6 +958,7 @@
             </entryLink>
           </entryLinks>
         </entryLink>
+        <entryLink import="true" name="Armed and Ready" hidden="false" id="460e-728e-105d-bf52" type="selectionEntryGroup" targetId="6fd0-9ecc-5a6a-25da" sortIndex="-1"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Buccaneers" hidden="false" id="55aa-01d1-089c-4973" sortIndex="23">
@@ -1023,6 +1025,7 @@
       </selectionEntries>
       <entryLinks>
         <entryLink import="true" name="99. Command Group" hidden="false" id="d85b-2b83-e48a-9174" type="selectionEntryGroup" targetId="6d24-2d46-8718-0b8f"/>
+        <entryLink import="true" name="Armed and Ready" hidden="false" id="dc38-b93d-8b16-d9f0" type="selectionEntryGroup" targetId="6fd0-9ecc-5a6a-25da" sortIndex="-1"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Harpooners" hidden="false" id="f825-6c99-f2d0-f2e9" sortIndex="24">
@@ -1150,6 +1153,7 @@
             </selectionEntry>
           </selectionEntries>
         </entryLink>
+        <entryLink import="true" name="Armed and Ready" hidden="false" id="e2d1-5b6d-5a10-81bf" type="selectionEntryGroup" targetId="6fd0-9ecc-5a6a-25da" sortIndex="-1"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Swabbies" hidden="false" id="0bfe-4ced-cb21-ffdf" sortIndex="25">
@@ -1343,6 +1347,7 @@
       <entryLinks>
         <entryLink import="true" name="Expendable" hidden="false" id="01a5-87f3-885c-2fba" type="selectionEntry" targetId="b90d-9045-a6d5-9e7d" sortIndex="1"/>
         <entryLink import="true" name="99. Command Group" hidden="false" id="2cba-b9b5-b4cc-b670" type="selectionEntryGroup" targetId="6d24-2d46-8718-0b8f"/>
+        <entryLink import="true" name="Armed and Ready" hidden="false" id="3470-8cf7-0644-3414" type="selectionEntryGroup" targetId="6fd0-9ecc-5a6a-25da" sortIndex="-1"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Seadogs" hidden="false" id="0020-9bc9-bcad-dc97" sortIndex="31">
@@ -1472,6 +1477,7 @@
             </entryLink>
           </entryLinks>
         </entryLink>
+        <entryLink import="true" name="Armed and Ready" hidden="false" id="2feb-6cea-7b48-778e" type="selectionEntryGroup" targetId="6fd0-9ecc-5a6a-25da" sortIndex="-1"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Powder Monkeys" hidden="false" id="a8e6-c2c7-bf9f-97f7" sortIndex="32">
@@ -1560,6 +1566,7 @@
             </entryLink>
           </entryLinks>
         </entryLink>
+        <entryLink import="true" name="Armed and Ready" hidden="false" id="4849-baa8-2229-89e4" type="selectionEntryGroup" targetId="6fd0-9ecc-5a6a-25da" sortIndex="-1"/>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Grog Lubbers" hidden="false" id="967e-5083-88f2-4059" sortIndex="33">
@@ -1678,6 +1685,11 @@
       </selectionEntries>
       <entryLinks>
         <entryLink import="true" name="99. Command Group" hidden="false" id="f6d1-52a9-be2f-677d" type="selectionEntryGroup" targetId="6d24-2d46-8718-0b8f"/>
+        <entryLink import="true" name="Armed and Ready" hidden="false" id="523f-639c-d3fd-7bde" type="selectionEntryGroup" targetId="6fd0-9ecc-5a6a-25da" sortIndex="-1">
+          <entryLinks>
+            <entryLink import="true" name="Armed and Ready" hidden="false" id="c83a-ecbd-5425-7e02" type="selectionEntryGroup" targetId="6fd0-9ecc-5a6a-25da"/>
+          </entryLinks>
+        </entryLink>
       </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Dwarf Privateers" hidden="false" id="370c-34f0-a012-f8d9" sortIndex="34">
@@ -1713,6 +1725,13 @@
                   <costs>
                     <cost name="pts" typeId="points" value="6"/>
                   </costs>
+                  <modifiers>
+                    <modifier type="set" value="0" field="5c0c-f421-f84b-b7fc">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9a3-29bd-1616-9b2a" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </entryLink>
                 <entryLink import="true" name="Hand Weapon" hidden="false" id="05a3-e6b2-a577-2350" type="selectionEntry" targetId="a658-337d-0cbd-a38c" sortIndex="1">
                   <constraints>
@@ -1730,37 +1749,84 @@
                         </conditionGroup>
                       </conditionGroups>
                     </modifier>
+                    <modifier type="set" value="1" field="9071-06ce-db63-e0de">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9a3-29bd-1616-9b2a" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
                   </modifiers>
                 </entryLink>
                 <entryLink import="true" name="Buckler" hidden="false" id="1690-f1e6-acf5-3a11" type="selectionEntry" targetId="b785-38e4-3e4a-9385" sortIndex="2">
                   <costs>
                     <cost name="pts" typeId="points" value="0.5"/>
                   </costs>
+                  <modifiers>
+                    <modifier type="set" value="0" field="d939-23d6-2a8e-e332">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9a3-29bd-1616-9b2a" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </entryLink>
                 <entryLink import="true" name="Spear" hidden="false" id="c2fc-9cb8-9faa-d803" type="selectionEntry" targetId="a901-4548-955d-623c" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="0.5"/>
                   </costs>
+                  <modifiers>
+                    <modifier type="set" value="0" field="ebfc-0219-3a07-b87c">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9a3-29bd-1616-9b2a" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </entryLink>
                 <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="4b6c-a53a-550f-d783" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="4">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
+                  <modifiers>
+                    <modifier type="set" value="0" field="f956-f565-3d36-b632">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9a3-29bd-1616-9b2a" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </entryLink>
                 <entryLink import="true" name="Polearm/Halberd" hidden="false" id="3704-eee8-c4bb-20de" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="5">
                   <costs>
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
+                  <modifiers>
+                    <modifier type="set" value="0" field="86ad-a362-8a86-339c">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9a3-29bd-1616-9b2a" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </entryLink>
                 <entryLink import="true" name="Great Weapon" hidden="false" id="aef4-2aaf-a92a-e18b" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="6">
                   <costs>
                     <cost name="pts" typeId="points" value="3"/>
                   </costs>
+                  <modifiers>
+                    <modifier type="set" value="0" field="4fc2-f1e9-73bb-48d6">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9a3-29bd-1616-9b2a" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </entryLink>
                 <entryLink import="true" name="Pistol" hidden="false" id="f605-5b8c-56db-0439" type="selectionEntry" targetId="4883-fb9f-3893-0d9c" sortIndex="7">
                   <costs>
                     <cost name="pts" typeId="points" value="5"/>
                   </costs>
+                  <modifiers>
+                    <modifier type="set" value="0" field="d648-e247-77ea-67d9">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9a3-29bd-1616-9b2a" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
                 </entryLink>
               </entryLinks>
               <modifiers>
@@ -1779,10 +1845,39 @@
             </entryLink>
             <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="30df-42a2-afbf-c08b" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
               <entryLinks>
-                <entryLink import="true" name="Throwing Weapons" hidden="false" id="03cd-2ac1-e517-0a3d" type="selectionEntry" targetId="8013-6f6f-96e1-1acc">
+                <entryLink import="true" name="Throwing Weapons" hidden="false" id="03cd-2ac1-e517-0a3d" type="selectionEntry" targetId="8013-6f6f-96e1-1acc" sortIndex="-1">
                   <costs>
                     <cost name="pts" typeId="points" value="1"/>
                   </costs>
+                  <modifiers>
+                    <modifier type="set" value="0" field="1f83-7ea8-982f-35c5">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9a3-29bd-1616-9b2a" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </entryLink>
+                <entryLink import="true" name="Brace of Pistols" hidden="false" id="4bd1-fe00-935d-5850" type="selectionEntry" targetId="a574-f633-253c-b619">
+                  <modifiers>
+                    <modifier type="set" value="0" field="c10d-f6af-a407-41cf">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="f9a3-29bd-1616-9b2a" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="true" field="hidden">
+                      <conditions>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="f8ac-9b36-a66f-5084" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="1" field="725a-0e3a-36b1-c1b2">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9a3-29bd-1616-9b2a" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                  <constraints>
+                    <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="725a-0e3a-36b1-c1b2" automatic="true"/>
+                  </constraints>
                 </entryLink>
               </entryLinks>
             </entryLink>
@@ -1808,7 +1903,7 @@
         </selectionEntry>
       </selectionEntries>
       <entryLinks>
-        <entryLink import="true" name="99. Command Group" hidden="false" id="3970-d657-cfec-c755" type="selectionEntryGroup" targetId="6d24-2d46-8718-0b8f">
+        <entryLink import="true" name="99. Command Group" hidden="false" id="3970-d657-cfec-c755" type="selectionEntryGroup" targetId="11f9-4ce5-7246-17b0">
           <entryLinks>
             <entryLink import="true" name="Standard Bearer" hidden="false" id="e444-4b63-4ae8-7300" type="selectionEntry" targetId="d3ec-3cba-c1d6-8c0f">
               <entryLinks>
@@ -1818,10 +1913,103 @@
                   </constraints>
                 </entryLink>
               </entryLinks>
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="540f-0e56-f42b-fbab" automatic="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="540f-0e56-f42b-fbab">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9a3-29bd-1616-9b2a" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Musician" hidden="false" id="9dcd-c826-7a49-9bb4" type="selectionEntry" targetId="ecde-db3e-9381-c190">
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="8743-abed-16cf-931a" automatic="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="1" field="8743-abed-16cf-931a">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9a3-29bd-1616-9b2a" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </entryLink>
+            <entryLink import="true" name="Leader" hidden="false" id="5f78-8f82-ef96-30f8" type="selectionEntry" targetId="7456-81f5-9a96-d59e">
+              <constraints>
+                <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="bf0a-c6fd-040b-fa08" automatic="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="0" field="aa1b-c20e-42aa-52e7">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9a3-29bd-1616-9b2a" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </entryLink>
           </entryLinks>
         </entryLink>
+        <entryLink import="true" name="11. Unit Options" hidden="false" id="3e9a-a9bc-f072-a46e" type="selectionEntryGroup" targetId="920d-8a41-44b9-c364" sortIndex="-1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Slayer Pirates" hidden="false" id="f9a3-29bd-1616-9b2a">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="7a57-4092-988c-c221" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Unbreakable" id="b509-7fc2-1021-e493" hidden="false" type="rule" targetId="1c9d-2d99-6222-2853"/>
+                <infoLink name="Deathblow" id="d9ac-a815-510e-caf2" hidden="false" type="rule" targetId="0163-644f-4112-a9a6"/>
+                <infoLink name="Dwarf Rum" id="fbc0-2edf-8e0f-c812" hidden="false" type="rule" targetId="c755-1cda-7ca5-f55f"/>
+                <infoLink name="Slayer" id="ebb3-3c96-a19d-7e9f" hidden="false" type="rule" targetId="1027-905b-043e-f4b2"/>
+              </infoLinks>
+              <modifiers>
+                <modifier type="increment" value="6" field="points">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="true" field="hidden"/>
+                    <modifier type="set" value="0" field="7a57-4092-988c-c221"/>
+                  </modifiers>
+                  <conditions>
+                    <condition type="equalTo" value="0" field="selections" scope="roster" childId="f8ac-9b36-a66f-5084" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                  </conditions>
+                </modifierGroup>
+              </modifierGroups>
+            </selectionEntry>
+          </selectionEntries>
+        </entryLink>
       </entryLinks>
+      <modifiers>
+        <modifier type="set" value="1" field="a0d2-6d88-12ac-3f6b">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="roster" childId="f8ac-9b36-a66f-5084" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="set" value="Slayer Pirates" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9a3-29bd-1616-9b2a" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="remove" value="fc26-7737-f7cb-8977" field="category" affects="self.entries.recursive"/>
+            <modifier type="set-primary" value="0eb4-f376-7725-b05b" field="category" affects="self.entries.recursive"/>
+          </modifiers>
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="f9a3-29bd-1616-9b2a" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifierGroup>
+      </modifierGroups>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="roster" shared="true" id="a0d2-6d88-12ac-3f6b" includeChildSelections="true"/>
+      </constraints>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Orc Freebooterz" hidden="false" id="bdde-d015-b5de-105c" sortIndex="35">
       <categoryLinks>
@@ -2238,6 +2426,9 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
           </infoLinks>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Armed and Ready" hidden="false" id="7b97-6008-f27e-b856" type="selectionEntryGroup" targetId="6fd0-9ecc-5a6a-25da" sortIndex="-1"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Carronade" hidden="false" id="df92-263e-978e-8465" sortIndex="39">
       <categoryLinks>
@@ -3389,7 +3580,7 @@ challenges, he may re-roll all failed rolls To Hit. </description>
                 <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="64cd-ee3f-517a-39ff" includeChildSelections="true"/>
               </constraints>
               <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Fleur" hidden="false" id="0fa2-c0d0-a1a3-1a8c">
+                <selectionEntry type="model" import="true" name="Fleur" hidden="false" id="0fa2-c0d0-a1a3-1a8c">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="71b3-7f92-4472-d454-min" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="71b3-7f92-4472-d454-max" includeChildSelections="false"/>
@@ -3398,7 +3589,7 @@ challenges, he may re-roll all failed rolls To Hit. </description>
                     <cost name="pts" typeId="points" value="60"/>
                   </costs>
                   <profiles>
-                    <profile name="Fleur" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="570d-4154-b7b9-6331">
+                    <profile name="Fleur" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="570d-4154-b7b9-6331" noindex="true">
                       <characteristics>
                         <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
                         <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
@@ -3420,11 +3611,6 @@ challenges, he may re-roll all failed rolls To Hit. </description>
                           <constraints>
                             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3c38-c8f1-80ec-3486" includeChildSelections="false"/>
                           </constraints>
-                          <modifiers>
-                            <modifier type="append" value="Rapid Fire" field="96b8-546e-ac33-6054" affects="profiles.Ranged Weapon" join="
-
-"/>
-                          </modifiers>
                         </entryLink>
                       </entryLinks>
                     </entryLink>
@@ -3440,14 +3626,19 @@ challenges, he may re-roll all failed rolls To Hit. </description>
                   <infoLinks>
                     <infoLink name="Two/Additional Hand Weapons" id="3c33-841b-67d0-a96b" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
                       <modifiers>
-                        <modifier type="set" value="Festooned with Pistols" field="annotation"/>
+                        <modifier type="set" value="Festooned with Pistols, Fleur only)" field="annotation"/>
                         <modifier type="set" value="Requires Two Hands, Armour Piercing (1), Only in the first round of close combat. These attacks do not benefit from any bonuses that normally only affect close combat attacks." field="de63-d6da-efa8-00ac"/>
                         <modifier type="set" value="4" field="b80e-7dac-0dea-9add"/>
                       </modifiers>
                     </infoLink>
+                    <infoLink name="Rapid Fire" id="c434-d5cf-c99e-5d71" hidden="false" type="rule" targetId="6068-f53d-1b7e-d503">
+                      <modifiers>
+                        <modifier type="set" value="Fleur only" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
                   </infoLinks>
                 </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Estella" hidden="false" id="265c-d88c-7724-92fc">
+                <selectionEntry type="model" import="true" name="Estella" hidden="false" id="265c-d88c-7724-92fc">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a821-a4a2-1309-6bd2-min" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a821-a4a2-1309-6bd2-max" includeChildSelections="false"/>
@@ -3456,7 +3647,7 @@ challenges, he may re-roll all failed rolls To Hit. </description>
                     <cost name="pts" typeId="points" value="60"/>
                   </costs>
                   <profiles>
-                    <profile name="Estella" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="2e3e-afc1-4c60-a700">
+                    <profile name="Estella" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="2e3e-afc1-4c60-a700" noindex="true">
                       <characteristics>
                         <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
                         <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
@@ -3490,6 +3681,15 @@ challenges, he may re-roll all failed rolls To Hit. </description>
                   <categoryLinks>
                     <categoryLink name="X Additional Hand Weapon" hidden="false" id="d947-867b-69e3-2f0c" targetId="c4b0-4ee4-7b99-843e" primary="false"/>
                   </categoryLinks>
+                  <infoLinks>
+                    <infoLink name="Parry" id="471f-57a5-26fa-2825" hidden="false" type="profile" targetId="a889-dd6d-da67-3ba6">
+                      <modifiers>
+                        <modifier type="set" value="Princess of Parries" field="name"/>
+                        <modifier type="set" value="6+ / 5+ if Estella has higher WS" field="bdf9-d73e-e13b-b0ce"/>
+                        <modifier type="set" value="Estella only" field="annotation"/>
+                      </modifiers>
+                    </infoLink>
+                  </infoLinks>
                 </selectionEntry>
               </selectionEntries>
               <categoryLinks>
@@ -3504,6 +3704,204 @@ challenges, he may re-roll all failed rolls To Hit. </description>
                   <description>Fleur &amp; Estella must deploy together and fight as a single unit, though they may join other units as normal. If Fleur is killed, Estella will be subject to Hatred and Frenzy for the remainder of the game. </description>
                 </rule>
               </rules>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Long Drong Slayer" hidden="false" id="f8ac-9b36-a66f-5084" page="" sortIndex="4">
+              <costs>
+                <cost name="pts" typeId="points" value="70"/>
+                <cost name="Crossbowmen with Handguns" typeId="1d5e-af1e-25ce-3bd6" value="0"/>
+                <cost name="The Lost Legion Crossbows" typeId="e81e-b5d3-1917-1844" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="8c1f-ac3e-e2ba-4dd3" includeChildSelections="true" includeChildForces="true"/>
+              </constraints>
+              <modifiers>
+                <modifier type="add" value="{this} needs one more Selection of Slayer Pirates (Dwarf Privateers)" field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="f8ac-9b36-a66f-5084" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="roster" childId="f9a3-29bd-1616-9b2a" shared="true" includeChildSelections="true" includeChildForces="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+              <profiles>
+                <profile name="Long Drong Slayer" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="722d-83a2-f9a4-a8e3" publicationId="8ada-88a0-cdcd-9b5e" page="71">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">3</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">6</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">4</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">10</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Special Character, Dwarf)</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <entryLinks>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="f52c-7cb3-200d-aa56" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <entryLinks>
+                    <entryLink import="true" name="Hand Weapon" hidden="false" id="34ed-8b5f-3333-59a6" type="selectionEntry" targetId="a658-337d-0cbd-a38c">
+                      <modifiers>
+                        <modifier type="set" value="1" field="443c-baf5-540a-c81e"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="f733-a782-e44d-7e48" type="selectionEntryGroup" targetId="f86c-485f-5cc1-2a43">
+                  <entryLinks>
+                    <entryLink import="true" name="Brace of Pistols" hidden="false" id="a638-13d0-a949-63f6" type="selectionEntry" targetId="a574-f633-253c-b619">
+                      <modifiers>
+                        <modifier type="set" value="1" field="dbee-e5e4-2d5a-f361"/>
+                      </modifiers>
+                    </entryLink>
+                  </entryLinks>
+                </entryLink>
+              </entryLinks>
+              <categoryLinks>
+                <categoryLink name="Infantry" hidden="false" id="70f9-4e8a-97b2-5fe8" targetId="22c9-1606-58f8-2e60" primary="false"/>
+                <categoryLink name="Y Brace of Pistols" hidden="false" id="bb1c-b527-81a6-a10c" targetId="6754-79b4-168a-afc0" primary="false"/>
+              </categoryLinks>
+              <infoLinks>
+                <infoLink name="Unbreakable" id="ca14-0479-11d2-9e67" hidden="false" type="rule" targetId="1c9d-2d99-6222-2853"/>
+                <infoLink name="Hatred (Orcs &amp; Goblins)" id="4f4c-54ee-7d8c-5615" hidden="false" type="rule" targetId="0b20-ae38-065f-96ce"/>
+                <infoLink name="Hatred (Skaven)" id="2269-8c18-6c9c-59ac" hidden="false" type="rule" targetId="34e1-3b0e-e471-fafa"/>
+                <infoLink name="Relentless" id="d30a-2619-2e53-85ac" hidden="false" type="rule" targetId="1860-d0ef-0722-8672"/>
+                <infoLink name="Dwarf-crafted" id="e83f-2f8a-6745-8b0f" hidden="false" type="rule" targetId="1be9-e473-2558-462d"/>
+                <infoLink name="Leader" id="e040-6795-293c-b074" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
+              </infoLinks>
+              <rules>
+                <rule name="Dwarf Rum" id="c755-1cda-7ca5-f55f" hidden="false" page="">
+                  <description>Enemy units in base contact with models with this special rule suffer -1 to their Weapon Skill in Close Combat. This does not affect Undead, Daemons or followers of Nurgle. The Slayer Pirates may not be deployed closer than 6&quot; to any other unit in the army at the start of the battle. </description>
+                </rule>
+                <rule name="Deathblow" id="0163-644f-4112-a9a6" hidden="false">
+                  <description>If a model with this special rule is killed by normal Close Combat Attacks, it will immediately make a single Attack back against the unit or model that killed it before the Slayer is removed as a casualty. </description>
+                </rule>
+                <rule name="Slayer" id="1027-905b-043e-f4b2" hidden="false" page="">
+                  <description>Models with this special rule always Wound on a To Wound roll of 4+ in close combat, unless they would need a lower result. Use the model&apos;s Strength to determine the armour save modifier for any successful Wounds. </description>
+                </rule>
+                <rule name="Slayer Pirates" id="1f64-caa7-266b-8477" hidden="false" page="">
+                  <description>Long Drong must be accompanied by a unit of Dwarfs chosen from the army list as a Rare Unit at a cost of 12 points per model. This unit has the Deathblow, Dwarf Rum, Slayer and Unbreakable special rules, and is equipped with a brace of pistols instead of light armour. The unit must be given a Standard Bearer and Musician. Long Drong is the unit&apos;s Leader and may never choose to leave this unit.</description>
+                </rule>
+              </rules>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Krusher the Anchorman " hidden="false" id="658c-8437-41a7-4524" sortIndex="5">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="d0fe-d4cf-e671-2004" includeChildSelections="true"/>
+              </constraints>
+              <profiles>
+                <profile name="Krusher the Anchorman " typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="bca3-8154-bc90-d1a4">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">5</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">5</characteristic>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">4</characteristic>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459"> Monstrous Infantry (Special Character, Ogre) </characteristic>
+                  </characteristics>
+                </profile>
+                <profile name="Giant Parrot" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="5bc5-da27-5fc3-a376">
+                  <characteristics>
+                    <characteristic name="M" typeId="09ad-18df-607b-1215"/>
+                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">2</characteristic>
+                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007"/>
+                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">2</characteristic>
+                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2"/>
+                    <characteristic name="W" typeId="27ee-0675-122f-a1b1"/>
+                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
+                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                    <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459"/>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <categoryLinks>
+                <categoryLink name="Monstrous Infantry" hidden="false" id="d001-c562-376c-927b" targetId="5fc5-b80a-115f-bca3" primary="false"/>
+              </categoryLinks>
+              <entryLinks>
+                <entryLink import="true" name="10. Character Options" hidden="false" id="5461-5a9a-0f59-6358" type="selectionEntryGroup" targetId="35f1-2fc8-9817-3171"/>
+                <entryLink import="true" name="20. Primary Weapon" hidden="false" id="ca56-3adb-9f3f-1c70" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Lucky Smasher" hidden="false" id="289d-e57c-e0b1-7332">
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="464f-bdd1-3e9a-814f-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="464f-bdd1-3e9a-814f-max" includeChildSelections="false"/>
+                      </constraints>
+                      <infoLinks>
+                        <infoLink name="Great Weapon" id="32d0-c565-1c67-2a7f" hidden="false" type="profile" targetId="193e-bc43-b252-8eff">
+                          <modifiers>
+                            <modifier type="set" value="Lucky Smasher" field="annotation"/>
+                            <modifier type="append" value=" All attacks with this weapon have the Multiple Wounds (D3) special rule. In addition, Krusher may re-roll 1&apos;s when rolling To Hit.
+" field="de63-d6da-efa8-00ac" join="
+
+"/>
+                            <modifier type="prepend" value=" Magic Weapon" field="de63-d6da-efa8-00ac"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="bcef-28ff-c05a-e3dc" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
+                  <entryLinks>
+                    <entryLink import="true" name="Ogre Pistol" hidden="false" id="ae12-952c-54fa-dff9" type="selectionEntry" targetId="9c06-bad6-8730-a29f" sortIndex="1">
+                      <costs>
+                        <cost name="pts" typeId="points" value="7"/>
+                      </costs>
+                    </entryLink>
+                  </entryLinks>
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Brace of Ogre Pistols" hidden="false" id="0f1d-3d13-bcb9-b983" collective="true" sortIndex="2">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d80f-de29-4d39-be9b"/>
+                      </constraints>
+                      <profiles>
+                        <profile name="Brace of Ogre Pistols" typeId="5ac6-af7f-fe0f-57cd" typeName="Ranged Weapon" hidden="false" id="d9c2-b303-6541-0fef" publicationId="dc4b-67ab-7b8e-baa5" page="3" noindex="true">
+                          <characteristics>
+                            <characteristic name="Range" typeId="af3c-d805-702c-9af9">24&quot;</characteristic>
+                            <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
+                            <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">2</characteristic>
+                            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (1), Quick to Fire, In close combat, a Ogre pistol counts as an additional hand weapon that does not give the model the Parry special rule.</characteristic>
+                          </characteristics>
+                        </profile>
+                      </profiles>
+                      <costs>
+                        <cost name="pts" typeId="points" value="10"/>
+                      </costs>
+                    </selectionEntry>
+                  </selectionEntries>
+                </entryLink>
+                <entryLink import="true" name="90. Magic Items" hidden="false" id="05bd-b13c-3ff0-1646" type="selectionEntryGroup" targetId="8ed5-07b6-d546-3276">
+                  <modifiers>
+                    <modifier type="increment" value="25" field="b2e9-a833-4746-1700"/>
+                    <modifier type="set" value="true" field="hidden" affects="fcfa-83a6-8576-bbf9"/>
+                  </modifiers>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="150"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Mercenaries" id="0901-ea83-66ae-de5b" hidden="false" type="rule" targetId="8a53-e985-f3f0-a91b"/>
+                <infoLink name="Natural Armour" id="4cfc-f30f-df95-2876" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
+                  <modifiers>
+                    <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
+                    <modifier type="set" value="Ogre" field="annotation"/>
+                    <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Immunity (Psychology)" id="6f70-4221-47cb-89a8" hidden="false" type="rule" targetId="b143-056c-658e-ba26"/>
+                <infoLink name="Ogre Charge" id="d81d-8abf-a57d-28bb" hidden="false" type="rule" targetId="a7a6-fb9f-e883-cc68"/>
+                <infoLink name="Stubborn" id="8bc6-b1b5-cd74-f110" hidden="false" type="rule" targetId="d56e-8ec7-dbcd-aeee"/>
+              </infoLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4602,6 +5000,49 @@ resolution score. In addition, any captured standards by this unit are worth tw
           </costs>
         </selectionEntry>
       </selectionEntries>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Armed and Ready" id="6fd0-9ecc-5a6a-25da" hidden="false">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="2c9b-b7e4-a834-6b2a" includeChildSelections="true" includeChildForces="true"/>
+      </constraints>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Armour Piercing (1)" hidden="false" id="0797-087b-ac5a-7f60" collective="true">
+          <infoLinks>
+            <infoLink name="Armour Piercing" id="6e03-bd53-44a0-7dd1" hidden="false" type="rule" targetId="bf4e-212e-fe1d-20c6">
+              <modifiers>
+                <modifier type="set" value="1" field="annotation"/>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5687-257c-d280-2783" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Light Armour" hidden="false" id="ddf2-2e9d-e71f-ef06" collective="true">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2d4b-d3d0-587f-938e" includeChildSelections="false"/>
+          </constraints>
+          <infoLinks>
+            <infoLink name="Light Armour" id="9f11-b020-75de-329f" hidden="false" type="profile" targetId="4129-1acd-3564-d3ea">
+              <modifiers>
+                <modifier type="set" value="x0" field="annotation"/>
+                <modifier type="increment" value="1" field="annotation">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </infoLink>
+          </infoLinks>
+        </selectionEntry>
+      </selectionEntries>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="roster" childId="fe0b-939b-b111-7343" shared="true" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedSelectionEntries>
