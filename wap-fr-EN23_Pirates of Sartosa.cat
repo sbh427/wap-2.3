@@ -542,7 +542,7 @@
             </entryLink>
             <entryLink import="true" name="Throwing Weapons" hidden="false" id="32e6-d06a-4b9e-7f2c" type="selectionEntry" targetId="8013-6f6f-96e1-1acc" sortIndex="1">
               <costs>
-                <cost name="pts" typeId="points" value="4"/>
+                <cost name="pts" typeId="points" value="3"/>
               </costs>
             </entryLink>
             <entryLink import="true" name="Pistol" hidden="false" id="dbc2-49dc-0698-b4f5" type="selectionEntry" targetId="4883-fb9f-3893-0d9c" sortIndex="2">
@@ -814,21 +814,22 @@
             <entryLink import="true" name="20. Primary Weapon" hidden="false" id="43b0-be1f-a1b9-eec2" type="selectionEntryGroup" targetId="350c-4b0b-93c1-4e47">
               <entryLinks>
                 <entryLink import="true" name="Hand Weapon &amp; Buckler" hidden="false" id="4857-9626-5c05-ced8" type="selectionEntry" targetId="ae2b-eee3-83a8-131d" sortIndex="1"/>
-                <entryLink import="true" name="Great Weapon" hidden="false" id="a2dc-22ec-94b7-b22e" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="4">
+                <entryLink import="true" name="Great Weapon" hidden="false" id="a2dc-22ec-94b7-b22e" type="selectionEntry" targetId="0473-857e-78d9-cb7c" sortIndex="5">
                   <costs>
                     <cost name="pts" typeId="points" value="2.5"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="d5d2-40e8-f79b-6299" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="2">
+                <entryLink import="true" name="Two/Additional Hand Weapons" hidden="false" id="d5d2-40e8-f79b-6299" type="selectionEntry" targetId="7617-f4b5-02ac-3d15" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="0.5"/>
                   </costs>
                 </entryLink>
-                <entryLink import="true" name="Polearm/Halberd" hidden="false" id="2809-2a1f-97a8-e537" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="3">
+                <entryLink import="true" name="Polearm/Halberd" hidden="false" id="2809-2a1f-97a8-e537" type="selectionEntry" targetId="757a-ff3d-710c-2d8b" sortIndex="4">
                   <costs>
                     <cost name="pts" typeId="points" value="1.5"/>
                   </costs>
                 </entryLink>
+                <entryLink import="true" name="Spear" hidden="false" id="2c77-d04a-ed71-068f" type="selectionEntry" targetId="a901-4548-955d-623c" sortIndex="2"/>
               </entryLinks>
             </entryLink>
             <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="a283-9286-b505-265a" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
@@ -1963,7 +1964,7 @@
                 <infoLink name="Slayer" id="ebb3-3c96-a19d-7e9f" hidden="false" type="rule" targetId="1027-905b-043e-f4b2"/>
               </infoLinks>
               <modifiers>
-                <modifier type="increment" value="6" field="points">
+                <modifier type="increment" value="8" field="points">
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
                   </repeats>
@@ -2087,7 +2088,7 @@
                 </entryLink>
                 <entryLink import="true" name="Pistol" hidden="false" id="5780-3fc5-fa9a-7891" type="selectionEntry" targetId="4883-fb9f-3893-0d9c" sortIndex="7">
                   <costs>
-                    <cost name="pts" typeId="points" value="5"/>
+                    <cost name="pts" typeId="points" value="4"/>
                   </costs>
                 </entryLink>
               </entryLinks>
@@ -2456,7 +2457,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
         </entryLink>
         <entryLink import="true" name="56. Upgrades" hidden="false" id="c6d2-149e-75e5-9aad" type="selectionEntryGroup" targetId="f845-cd7c-43ba-0c0d">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Heat Shot" hidden="false" id="76a7-49ba-80f5-1d67">
+            <selectionEntry type="upgrade" import="true" name="Heat Shot" hidden="false" id="76a7-49ba-80f5-1d67" sortIndex="1">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6f3a-c8c5-1e9f-4558" includeChildSelections="false"/>
               </constraints>
@@ -2471,9 +2472,15 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
                   </modifiers>
                 </infoLink>
                 <infoLink name="Blackpowder Misfire Chart" id="2f84-c7f2-e079-2341" hidden="false" type="infoGroup" targetId="ea16-32f7-b7ef-8a37"/>
+                <infoLink name="Grapeshot" id="4dad-83ea-ef56-7310" hidden="false" type="profile" targetId="78db-91d9-aaca-d5ba">
+                  <modifiers>
+                    <modifier type="set" value="Heat Shot" field="name"/>
+                    <modifier type="append" value="Flaming Attacks" field="d3a4-721b-f750-5564" join=" "/>
+                  </modifiers>
+                </infoLink>
               </infoLinks>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Chain Shot" hidden="false" id="a7b5-1c49-790d-d823">
+            <selectionEntry type="upgrade" import="true" name="Chain Shot" hidden="false" id="a7b5-1c49-790d-d823" sortIndex="2">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="928b-3af6-8e23-318d" includeChildSelections="false"/>
               </constraints>
@@ -2587,6 +2594,9 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
               </modifiers>
             </entryLink>
           </entryLinks>
+          <modifiers>
+            <modifier type="replace" value="" field="96b8-546e-ac33-6054" affects="self.entries.recursive.profiles.Ranged Weapon" arg="Ponderous."/>
+          </modifiers>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <entryLinks>
@@ -2605,7 +2615,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
       </infoLinks>
       <rules>
         <rule name="Hull-mounted" id="04d5-bcd3-ba14-2a46" hidden="false">
-          <description>An Airskiff is armed with two missile weapons, one on either side. Each weapon can fire within the model&apos;s front arc, or within the model&apos;s left and right arc, respectively. These weapons are not Ponderous.</description>
+          <description>An Airskiff is armed with two missile weapons, one on either side. Each weapon can fire within the model&apos;s front arc, or within the model&apos;s left and right arc, respectively.</description>
         </rule>
       </rules>
       <profiles>
@@ -2749,6 +2759,7 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
             <modifier type="set" field="09ad-18df-607b-1215" affects="recursive.profiles.Model"/>
             <modifier type="set" field="27ee-0675-122f-a1b1" affects="recursive.profiles.Model"/>
             <modifier type="set" field="df90-5cbd-8cf9-95b2" affects="recursive.profiles.Model"/>
+            <modifier type="set" field="f049-8a65-9c04-1559" affects="recursive.profiles.Model" value="4"/>
           </modifiers>
         </entryLink>
       </entryLinks>
@@ -2922,7 +2933,7 @@ Hellhammer Cannons may re-roll the distance bounced by the cannonball and failed
           </infoLinks>
           <rules>
             <rule name="Maiden&apos;s Chant" id="e1ad-1ad3-6627-7a1c" hidden="false">
-              <description> In the Shooting phase, a unit of Dark Maidens may target one enemy unit within 18&quot; and their line of sight. The unit must take a Leadership test with a -2 modifier. For ever point above their Leadership the test shows, the enemy unit suffer 1 Wound with no save of any kind allowed. </description>
+              <description>In the Shooting phase, a unit of Dark Maidens may target one enemy unit within 18&quot; and their line of sight. The unit must take a Leadership test with a -2 modifier. For ever point above their Leadership the test shows, the enemy unit suffer 1 Wound with no save of any kind allowed.</description>
             </rule>
           </rules>
           <profiles>
@@ -2937,7 +2948,7 @@ Hellhammer Cannons may re-roll the distance bounced by the cannonball and failed
                 <characteristic name="I" typeId="7cca-e51f-edc2-7322">2</characteristic>
                 <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">3</characteristic>
                 <characteristic name="Ld" typeId="a199-f10b-a038-5730">5</characteristic>
-                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Animated Construct) </characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Animated Construct)</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -3013,7 +3024,7 @@ Hellhammer Cannons may re-roll the distance bounced by the cannonball and failed
                             <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
                             <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
                             <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. All attacks from this sword always Wounds on at least a 3+ and have have Ignores Armour Saves special rule. </characteristic>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. All attacks from this sword always Wounds on at least a 3+ and have have Ignores Armour Saves special rule.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -3043,6 +3054,14 @@ Hellhammer Cannons may re-roll the distance bounced by the cannonball and failed
                           </characteristics>
                         </profile>
                       </profiles>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="4b3a-1c74-1d57-df3e" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="The Blasted Skull" field="name"/>
+                            <modifier type="set" value="4+" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -3050,11 +3069,12 @@ Hellhammer Cannons may re-roll the distance bounced by the cannonball and failed
               </entryLinks>
               <infoLinks>
                 <infoLink name="Sea Legs" id="697e-a8f3-6db4-33b3" hidden="false" type="rule" targetId="e229-6002-bf95-38d6"/>
-                <infoLink name="Dirty Fighting" id="af2e-21cd-a090-6e5d" hidden="false" type="rule" targetId="d42d-d3ba-acf9-f2ef"/>
+                <infoLink name="Fear" id="af2e-21cd-a090-6e5d" hidden="false" type="rule" targetId="7bd0-8602-4375-a731"/>
+                <infoLink name="Dirty Fighting" id="2fdf-cbed-4643-f993" hidden="false" type="rule" targetId="d42d-d3ba-acf9-f2ef"/>
               </infoLinks>
               <rules>
                 <rule name="Pirate Princess" id="e05c-8f2e-de8d-018a" hidden="false">
-                  <description>Carmen has the Inspiring Presence (6) special rule. In addition, all friendly units within her Inspiring Presence range may re-roll failed Panic tests. </description>
+                  <description>Carmen has the Inspiring Presence (6) special rule. In addition, all friendly units within her Inspiring Presence range may re-roll failed Panic tests.</description>
                 </rule>
               </rules>
               <constraints>
@@ -3099,9 +3119,8 @@ Hellhammer Cannons may re-roll the distance bounced by the cannonball and failed
                             <characteristic name="Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
                             <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">4</characteristic>
                             <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca">D3</characteristic>
-                            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (1). Quick to Fire. Rapid Fire.
-In close combat, a repeater pistol counts as an additional hand weapon that does not give the model the Parry special rule.
-</characteristic>
+                            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Armour Piercing (1). Quick to Fire.
+In close combat, a repeater pistol counts as an additional hand weapon that does not give the model the Parry special rule.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -3136,7 +3155,7 @@ In close combat, a repeater pistol counts as an additional hand weapon that doe
                       <profiles>
                         <profile name="Arcane Moondial" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="7251-389a-b736-81f0">
                           <characteristics>
-                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. When used, this item allows Roth and any unit he is with to move as if they had the Ethereal special rule for the duration of the turn. </characteristic>
+                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">One use only. When used, this item allows Roth and any unit he is with to move as if they had the Ethereal special rule for the duration of the turn.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -3149,7 +3168,7 @@ In close combat, a repeater pistol counts as an additional hand weapon that doe
                       <profiles>
                         <profile name="Indigo Roth&apos;s Sea Chart" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="77a7-1bd5-711c-c9d2">
                           <characteristics>
-                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829"> One use only. When used, this item allows Roth and any unit he is with to move as if they had the Ethereal special rule for the duration of the turn. </characteristic>
+                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">This item gives Roth the Navigator special rule.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -3162,7 +3181,7 @@ In close combat, a repeater pistol counts as an additional hand weapon that doe
                       <profiles>
                         <profile name="Arabyan Spy-glass" typeId="ff67-d27f-2eef-bb35" typeName="Enchanted Item" hidden="false" id="dc97-f3a5-2e9b-0d1d">
                           <characteristics>
-                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">This item gives Roth the Sniper special rule. In addition, at the start of each of your turns, one enemy unit within line of sight of Roth must reveal all hidden units, special upgrades and Magic Items. </characteristic>
+                            <characteristic name="Special Rules" typeId="9d2e-d14d-dd58-a829">This item gives Roth the Sniper special rule. In addition, at the start of each of your turns, one enemy unit within line of sight of Roth must reveal all hidden units, special upgrades and Magic Items.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -3184,10 +3203,10 @@ In close combat, a repeater pistol counts as an additional hand weapon that doe
               <rules>
                 <rule name="Will of Steel" id="bb5a-81e4-1783-8460" hidden="false">
                   <description>Captain Roth and any unit he is with may re-roll any failed Leadership tests. When fighting in 
-challenges, he may re-roll all failed rolls To Hit. </description>
+challenges, he may re-roll all failed rolls To Hit.</description>
                 </rule>
                 <rule name="Captain of the Heldenhammer" id="8e0c-8533-e360-9c70" hidden="false">
-                  <description>If Jaego Roth is included your army, you may fire an additional D3 shots when using the Naval Bombardment special rule. </description>
+                  <description>If Jaego Roth is included your army, you may fire an additional D3 shots when using the Naval Bombardment special rule.</description>
                 </rule>
               </rules>
               <constraints>
@@ -3267,10 +3286,10 @@ challenges, he may re-roll all failed rolls To Hit. </description>
               </infoLinks>
               <rules>
                 <rule name="Spearfisher&apos;s Net" id="f856-6b41-430c-eea5" hidden="false">
-                  <description> At the start of each round of close combat, Aranessa may target one enemy model in base contact. Roll to Hit against the target; if successful, that model is ensnared and suffers -D3 to its Attacks this round.</description>
+                  <description>At the start of each round of close combat, Aranessa may target one enemy model in base contact. Roll to Hit against the target; if successful, that model is ensnared and suffers -D3 to its Attacks this round.</description>
                 </rule>
                 <rule name="Blessed of Manann" id="a165-eba3-c4a6-1a45" hidden="false">
-                  <description>Aranessa and any unit she is with may re-roll one D6 when charging and pursuing enemies. In addition, Aranessa may re-roll one roll To Hit or To Wound each round of close combat, and has a 5+ Ward save. </description>
+                  <description>Aranessa and any unit she is with may re-roll one D6 when charging and pursuing enemies. In addition, Aranessa may re-roll one roll To Hit or To Wound each round of close combat, and has a 5+ Ward save.</description>
                 </rule>
               </rules>
               <constraints>
@@ -3339,7 +3358,7 @@ challenges, he may re-roll all failed rolls To Hit. </description>
                             <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
                             <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
                             <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. This cutlass grants Captain Giacchino the Parry (5+) special rule. For each wound suffered, he gains +1 to his Parry save. </characteristic>
+                            <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Magic Weapon. This cutlass grants Captain Giacchino the Parry (5+) special rule. For each wound suffered, he gains +1 to his Parry save.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -3393,10 +3412,10 @@ challenges, he may re-roll all failed rolls To Hit. </description>
               </infoLinks>
               <rules>
                 <rule name="Son of a Biscuit Eater" id="3f93-dc12-1aa0-3550" hidden="false">
-                  <description>Before the start of the game, choose one enemy character on the table. Once during the game, Giacchino may make a special shot with the Sniper special rule against the chosen model. This shot is resolved with the Killing Blow special rule. </description>
+                  <description>Before the start of the game, choose one enemy character on the table. Once during the game, Giacchino may make a special shot with the Sniper special rule against the chosen model. This shot is resolved with the Killing Blow special rule.</description>
                 </rule>
                 <rule name="Dead Men Tell No Tales" id="9475-75f1-208f-8dd3" hidden="false">
-                  <description>Giacchino and any unit he is with have the Swiftstride special rule when fleeing. </description>
+                  <description>Giacchino and any unit he is with have the Swiftstride special rule when fleeing.</description>
                 </rule>
               </rules>
               <constraints>
@@ -3406,13 +3425,13 @@ challenges, he may re-roll all failed rolls To Hit. </description>
                 <infoGroup name="Strange and Confused Table" id="3c06-1b4d-065f-689b" hidden="false">
                   <rules>
                     <rule name="Strange and Confused" id="42a0-ca33-5feb-bb85" hidden="false">
-                      <description> At the start of your Movement phase, roll a D6 and consult the Strange and Confused table.</description>
+                      <description>At the start of your Movement phase, roll a D6 and consult the Strange and Confused table.</description>
                     </rule>
                   </rules>
                   <profiles>
                     <profile name="1 Aaaarrrrgggghhhh!" typeId="87a7-9eec-576a-c822" typeName="Strange and Confused" hidden="false" id="ea0f-5501-8778-85ac">
                       <characteristics>
-                        <characteristic name="Effect" typeId="78e7-8648-cd57-4d73">Giacchino and the unit he is with counts as having failed a Stupidity test this turn. </characteristic>
+                        <characteristic name="Effect" typeId="78e7-8648-cd57-4d73">Giacchino and the unit he is with counts as having failed a Stupidity test this turn.</characteristic>
                       </characteristics>
                     </profile>
                     <profile name="2 Bring a Spring Upon &apos;er" typeId="87a7-9eec-576a-c822" typeName="Strange and Confused" hidden="false" id="4807-afe9-473b-f8df">
@@ -3422,22 +3441,22 @@ challenges, he may re-roll all failed rolls To Hit. </description>
                     </profile>
                     <profile name="3 Shiver Me Timbers!" typeId="87a7-9eec-576a-c822" typeName="Strange and Confused" hidden="false" id="1925-04df-722b-76ee">
                       <characteristics>
-                        <characteristic name="Effect" typeId="78e7-8648-cd57-4d73">Giacchino and any unit he is with must re-roll successful Leadership tests until the start of your next turn. </characteristic>
+                        <characteristic name="Effect" typeId="78e7-8648-cd57-4d73">Giacchino and any unit he is with must re-roll successful Leadership tests until the start of your next turn.</characteristic>
                       </characteristics>
                     </profile>
                     <profile name="4 Avast Ye!" typeId="87a7-9eec-576a-c822" typeName="Strange and Confused" hidden="false" id="75dc-37c1-fc4e-720f">
                       <characteristics>
-                        <characteristic name="Effect" typeId="78e7-8648-cd57-4d73">Giacchino and any unit he is with may re-roll failed Leadership tests until the start of your next turn. </characteristic>
+                        <characteristic name="Effect" typeId="78e7-8648-cd57-4d73">Giacchino and any unit he is with may re-roll failed Leadership tests until the start of your next turn.</characteristic>
                       </characteristics>
                     </profile>
                     <profile name="5 Batten Down the Hatches!" typeId="87a7-9eec-576a-c822" typeName="Strange and Confused" hidden="false" id="7034-e319-93b6-53af">
                       <characteristics>
-                        <characteristic name="Effect" typeId="78e7-8648-cd57-4d73">Giacchino and any unit he is with gain the Stubborn special rule until the start of your next turn. </characteristic>
+                        <characteristic name="Effect" typeId="78e7-8648-cd57-4d73">Giacchino and any unit he is with gain the Stubborn special rule until the start of your next turn.</characteristic>
                       </characteristics>
                     </profile>
                     <profile name="6 Send &apos;em to Stromfels!" typeId="87a7-9eec-576a-c822" typeName="Strange and Confused" hidden="false" id="3a9f-329f-5ea7-eeec">
                       <characteristics>
-                        <characteristic name="Effect" typeId="78e7-8648-cd57-4d73">Giacchino and any unit he is with must immediately declare a charge against the nearest enemy unit if possible. In addition, they may re-roll their charge distance and gain the Devastating Charge special rule until the start of your next turn. </characteristic>
+                        <characteristic name="Effect" typeId="78e7-8648-cd57-4d73">Giacchino and any unit he is with must immediately declare a charge against the nearest enemy unit if possible. In addition, they may re-roll their charge distance and gain the Devastating Charge special rule until the start of your next turn.</characteristic>
                       </characteristics>
                     </profile>
                   </profiles>
@@ -3553,7 +3572,7 @@ challenges, he may re-roll all failed rolls To Hit. </description>
                             <characteristic name="Range" typeId="af3c-d805-702c-9af9">12&quot;</characteristic>
                             <characteristic name="Strength" typeId="29fe-29a3-f94f-2e90">2</characteristic>
                             <characteristic name="Multiple Shots" typeId="b886-975e-beb1-f6ca"/>
-                            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Quick to Fire, Flaming Attacks </characteristic>
+                            <characteristic name="Special Rules" typeId="96b8-546e-ac33-6054">Quick to Fire, Flaming Attacks</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -3571,7 +3590,7 @@ challenges, he may re-roll all failed rolls To Hit. </description>
               </infoLinks>
               <rules>
                 <rule name="Armed and Ready" id="abc5-eb6e-c12c-f6c4" hidden="false">
-                  <description>One Human Infantry unit in the army may choose between being equipped with Light Armour or gain the Armour Piercing (1) special rule. </description>
+                  <description>One Human Infantry unit in the army may choose between being equipped with Light Armour or gain the Armour Piercing (1) special rule.</description>
                 </rule>
               </rules>
             </selectionEntry>
@@ -3701,11 +3720,11 @@ challenges, he may re-roll all failed rolls To Hit. </description>
               </infoLinks>
               <rules>
                 <rule name="Protective" id="978b-a0df-579f-4852" hidden="false">
-                  <description>Fleur &amp; Estella must deploy together and fight as a single unit, though they may join other units as normal. If Fleur is killed, Estella will be subject to Hatred and Frenzy for the remainder of the game. </description>
+                  <description>Fleur &amp; Estella must deploy together and fight as a single unit, though they may join other units as normal. If Fleur is killed, Estella will be subject to Hatred and Frenzy for the remainder of the game.</description>
                 </rule>
               </rules>
             </selectionEntry>
-            <selectionEntry type="model" import="true" name="Long Drong Slayer" hidden="false" id="f8ac-9b36-a66f-5084" page="" sortIndex="4">
+            <selectionEntry type="model" import="true" name="Long Drong Slayer" hidden="false" id="f8ac-9b36-a66f-5084" sortIndex="4">
               <costs>
                 <cost name="pts" typeId="points" value="70"/>
                 <cost name="Crossbowmen with Handguns" typeId="1d5e-af1e-25ce-3bd6" value="0"/>
@@ -3775,16 +3794,16 @@ challenges, he may re-roll all failed rolls To Hit. </description>
                 <infoLink name="Leader" id="e040-6795-293c-b074" hidden="false" type="rule" targetId="777a-7a64-44fa-a78e"/>
               </infoLinks>
               <rules>
-                <rule name="Dwarf Rum" id="c755-1cda-7ca5-f55f" hidden="false" page="">
-                  <description>Enemy units in base contact with models with this special rule suffer -1 to their Weapon Skill in Close Combat. This does not affect Undead, Daemons or followers of Nurgle. The Slayer Pirates may not be deployed closer than 6&quot; to any other unit in the army at the start of the battle. </description>
+                <rule name="Dwarf Rum" id="c755-1cda-7ca5-f55f" hidden="false">
+                  <description>Enemy units in base contact with models with this special rule suffer -1 to their Weapon Skill in Close Combat. This does not affect Undead, Daemons or followers of Nurgle. The Slayer Pirates may not be deployed closer than 6&quot; to any other unit in the army at the start of the battle.</description>
                 </rule>
                 <rule name="Deathblow" id="0163-644f-4112-a9a6" hidden="false">
-                  <description>If a model with this special rule is killed by normal Close Combat Attacks, it will immediately make a single Attack back against the unit or model that killed it before the Slayer is removed as a casualty. </description>
+                  <description>If a model with this special rule is killed by normal Close Combat Attacks, it will immediately make a single Attack back against the unit or model that killed it before the Slayer is removed as a casualty.</description>
                 </rule>
-                <rule name="Slayer" id="1027-905b-043e-f4b2" hidden="false" page="">
-                  <description>Models with this special rule always Wound on a To Wound roll of 4+ in close combat, unless they would need a lower result. Use the model&apos;s Strength to determine the armour save modifier for any successful Wounds. </description>
+                <rule name="Slayer" id="1027-905b-043e-f4b2" hidden="false">
+                  <description>Models with this special rule always Wound on a To Wound roll of 4+ in close combat, unless they would need a lower result. Use the model&apos;s Strength to determine the armour save modifier for any successful Wounds.</description>
                 </rule>
-                <rule name="Slayer Pirates" id="1f64-caa7-266b-8477" hidden="false" page="">
+                <rule name="Slayer Pirates" id="1f64-caa7-266b-8477" hidden="false">
                   <description>Long Drong must be accompanied by a unit of Dwarfs chosen from the army list as a Rare Unit at a cost of 12 points per model. This unit has the Deathblow, Dwarf Rum, Slayer and Unbreakable special rules, and is equipped with a brace of pistols instead of light armour. The unit must be given a Standard Bearer and Musician. Long Drong is the unit&apos;s Leader and may never choose to leave this unit.</description>
                 </rule>
               </rules>
@@ -3805,7 +3824,7 @@ challenges, he may re-roll all failed rolls To Hit. </description>
                     <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
                     <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
                     <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459"> Monstrous Infantry (Special Character, Ogre) </characteristic>
+                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Monstrous Infantry (Special Character, Ogre)</characteristic>
                   </characteristics>
                 </profile>
                 <profile name="Giant Parrot" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="5bc5-da27-5fc3-a376">
@@ -3927,16 +3946,6 @@ challenges, he may re-roll all failed rolls To Hit. </description>
                 <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="8fac-4384-ef98-ca91" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f1c8-ccf6-8bda-462e" includeChildSelections="false" automatic="true"/>
               </constraints>
-              <profiles>
-                <profile name="Bloody Boarding Axe" typeId="6f70-cea1-702c-43bc" typeName="Melee Weapon" hidden="false" id="550f-af1e-a51c-11b1">
-                  <characteristics>
-                    <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-                    <characteristic name="Initiative" typeId="7849-175d-a3fa-2fff"/>
-                    <characteristic name="Attacks" typeId="ffc4-c065-ab29-fb8c"/>
-                    <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Model on foot only. Additional hand weapon. The wielder gains the Mighty Blow (1) special rule. In addition, they suffer no penalties when attacking units that are garrisoned or defending an obstacle.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
@@ -3946,7 +3955,23 @@ challenges, he may re-roll all failed rolls To Hit. </description>
                     <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="mount" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditions>
+                    <condition type="notInstanceOf" value="1" field="selections" scope="model" childId="c4b0-4ee4-7b99-843e" shared="true"/>
+                  </conditions>
+                </modifier>
               </modifiers>
+              <infoLinks>
+                <infoLink name="Two/Additional Hand Weapons" id="379a-b56e-82da-bf2f" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
+                  <modifiers>
+                    <modifier type="append" value="The wielder gains the Mighty Blow (1) special rule. In addition, they suffer no penalties when attacking units that are garrisoned or defending an obstacle." field="de63-d6da-efa8-00ac" join="
+
+"/>
+                    <modifier type="set" value="Bloody Boarding Axe" field="annotation"/>
+                  </modifiers>
+                </infoLink>
+                <infoLink name="Two/Additional Hand Weapons" id="6b1c-445a-5e3b-1b02" hidden="false" type="profile" targetId="48ad-587e-84ad-c237"/>
+              </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Storm Trident" hidden="false" id="ac54-6f47-b1d1-fcad" sortIndex="10">
               <constraints>
@@ -4203,6 +4228,9 @@ challenges, he may re-roll all failed rolls To Hit. </description>
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <categoryLinks>
+                <categoryLink name="Suits of Armour" hidden="false" id="fa88-562e-2569-912a" targetId="9a61-618b-519a-807c" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Barnacle Coat" hidden="false" id="53d8-1632-1b35-515e" sortIndex="3">
               <constraints>
@@ -4241,6 +4269,9 @@ challenges, he may re-roll all failed rolls To Hit. </description>
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <categoryLinks>
+                <categoryLink name="Suits of Armour" hidden="false" id="b997-a033-60c2-cccd" targetId="9a61-618b-519a-807c" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Megaladon Helmet" hidden="false" id="9f61-c7e9-39fc-61cd" collective="false" sortIndex="5">
               <constraints>
@@ -4297,6 +4328,9 @@ challenges, he may re-roll all failed rolls To Hit. </description>
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <categoryLinks>
+                <categoryLink name="Suits of Armour" hidden="false" id="8bcc-1f79-0208-74af" targetId="9a61-618b-519a-807c" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Sea Serpent Scales" hidden="false" id="0948-117e-d28f-6778" sortIndex="6">
               <constraints>
@@ -4336,6 +4370,9 @@ challenges, he may re-roll all failed rolls To Hit. </description>
                   </conditionGroups>
                 </modifier>
               </modifiers>
+              <categoryLinks>
+                <categoryLink name="Suits of Armour" hidden="false" id="1aca-4328-ad94-eb7b" targetId="9a61-618b-519a-807c" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="Black Barnabus&apos; Buckler" hidden="false" id="9d70-bc19-476e-ec02" sortIndex="2">
               <constraints>
@@ -4363,6 +4400,9 @@ challenges, he may re-roll all failed rolls To Hit. </description>
                   </conditions>
                 </modifier>
               </modifiers>
+              <categoryLinks>
+                <categoryLink name="Handheld Armour" hidden="false" id="6482-5ecc-585d-fb08" targetId="ba52-4f0c-71ae-b52d" primary="false"/>
+              </categoryLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -4381,8 +4421,7 @@ challenges, he may re-roll all failed rolls To Hit. </description>
               <profiles>
                 <profile name="Coin of the Betrayer" typeId="065f-58ea-de5d-d3c6" typeName="Talisman" hidden="false" id="c85a-a40a-6311-3ff6">
                   <characteristics>
-                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The bearer gains a 3+ Ward save. However, for every roll of a natural 1 when taking Ward saves, they suffer 
-D3 Wounds instead of 1.</characteristic>
+                    <characteristic name="Special Rules" typeId="08ca-4a32-203d-40c0">The bearer gains a 3+ Ward save. However, for every roll of a natural 1 when taking Ward saves, they suffer D3 Wounds instead of 1.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5202,8 +5241,7 @@ resolution score. In addition, any captured standards by this unit are worth tw
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Direct damage</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">13+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">18+</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large template anywhere within range; it then scatters D6&quot;. All models under the template suffer 
-a Strength Hit equal to their Unit Strength plus 2. In addition, any surviving models will have their Movement value lowered by half until the start of the caster&apos;s next Magic Phase.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Place the large template anywhere within range; it then scatters D6&quot;. All models under the template suffer a Strength Hit equal to their Unit Strength plus 2. In addition, any surviving models will have their Movement value lowered by half until the start of the caster&apos;s next Magic Phase.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
@@ -5222,8 +5260,7 @@ a Strength Hit equal to their Unit Strength plus 2. In addition, any surviving 
                     <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Augment</characteristic>
                     <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
                     <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, all models in the target unit gets to immediately make an additional Attack for every unsaved Wound they cause in Close Combat. These Attacks can generate 
-additional Attacks to a maximum of +2 Attacks per attacking model in the unit.</characteristic>
+                    <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">Until the start of the caster&apos;s next Magic phase, all models in the target unit gets to immediately make an additional Attack for every unsaved Wound they cause in Close Combat. These Attacks can generate additional Attacks to a maximum of +2 Attacks per attacking model in the unit.</characteristic>
                   </characteristics>
                 </profile>
               </profiles>
