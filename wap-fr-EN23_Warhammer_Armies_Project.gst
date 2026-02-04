@@ -177,6 +177,16 @@
         <characteristicType name="Value" id="19f0-e982-f035-416c"/>
       </characteristicTypes>
     </profileType>
+    <profileType name="Stone Thrower Misfire Chart" id="ac64-eee9-c4ac-3056" hidden="false">
+      <characteristicTypes>
+        <characteristicType name="Result" id="e2ee-1671-62ca-fc4a"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Blackpowder Misfire Chart" id="fdfe-c06f-1bf8-2262" hidden="false">
+      <characteristicTypes>
+        <characteristicType name="Result" id="6b93-2bec-91c5-e695"/>
+      </characteristicTypes>
+    </profileType>
   </profileTypes>
   <categoryEntries>
     <categoryEntry id="d280-b7df-c185-2ba5" name="Lords" hidden="false">
@@ -569,7 +579,7 @@
     </forceEntry>
   </forceEntries>
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Tables, Charts &amp; Rules" hidden="false" id="8607-a440-1e4a-de26">
+    <selectionEntry type="unit" import="true" name="Tables, Charts &amp; Rules" hidden="false" id="8607-a440-1e4a-de26">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Blackpowder Misfire Chart" hidden="false" id="fa37-e5db-5351-a408" collective="false" sortIndex="12">
           <constraints>
@@ -10752,38 +10762,38 @@ Magic phase.</characteristic>
   <sharedInfoGroups>
     <infoGroup name="Stone Thrower Misfire Chart" id="f6f0-bb1f-f863-3e81" hidden="false">
       <profiles>
-        <profile name="1 Destroyed!" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="f14c-d708-7ec1-d950" publicationId="9e23-79cb-pubN66727" page="115">
+        <profile name="1 Destroyed!" typeId="ac64-eee9-c4ac-3056" typeName="Stone Thrower Misfire Chart" hidden="false" id="f14c-d708-7ec1-d950" publicationId="9e23-79cb-pubN66727" page="115">
           <characteristics>
-            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The war machine is destroyed.</characteristic>
+            <characteristic name="Result" typeId="e2ee-1671-62ca-fc4a">The war machine is destroyed.</characteristic>
           </characteristics>
         </profile>
-        <profile name="2-3 Disabled" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="b7a8-f42f-997c-7958" publicationId="9e23-79cb-pubN66727" page="115">
+        <profile name="2-3 Disabled" typeId="ac64-eee9-c4ac-3056" typeName="Stone Thrower Misfire Chart" hidden="false" id="b7a8-f42f-997c-7958" publicationId="9e23-79cb-pubN66727" page="115">
           <characteristics>
-            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The stone thrower suffers a wound, with no armour saves allowed. The stone thrower cannot fire this turn or in the controlling player&apos;s next turn.</characteristic>
+            <characteristic name="Result" typeId="e2ee-1671-62ca-fc4a">The stone thrower suffers a wound, with no armour saves allowed. The stone thrower cannot fire this turn or in the controlling player&apos;s next turn.</characteristic>
           </characteristics>
         </profile>
-        <profile name="4-6 May not Shoot" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="cf7e-50c9-f10c-da28" publicationId="9e23-79cb-pubN66727" page="115">
+        <profile name="4-6 May not Shoot" typeId="ac64-eee9-c4ac-3056" typeName="Stone Thrower Misfire Chart" hidden="false" id="cf7e-50c9-f10c-da28" publicationId="9e23-79cb-pubN66727" page="115">
           <characteristics>
-            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The stone thrower is unharmed and can shoot as normal again in the controlling player&apos;s next turn.</characteristic>
+            <characteristic name="Result" typeId="e2ee-1671-62ca-fc4a">The stone thrower is unharmed and can shoot as normal again in the controlling player&apos;s next turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
     </infoGroup>
     <infoGroup name="Blackpowder Misfire Chart" id="bb8f-7181-30f9-fc65" hidden="false">
       <profiles>
-        <profile name="1-2 Destroyed!" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="385d-5c05-b088-169b" publicationId="9e23-79cb-pubN66727" page="113">
+        <profile name="1-2 Destroyed!" typeId="fdfe-c06f-1bf8-2262" typeName="Blackpowder Misfire Chart" hidden="false" id="385d-5c05-b088-169b" publicationId="9e23-79cb-pubN66727" page="113">
           <characteristics>
-            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The war machine is destroyed.</characteristic>
+            <characteristic name="Result" typeId="6b93-2bec-91c5-e695">The war machine is destroyed.</characteristic>
           </characteristics>
         </profile>
-        <profile name="3-4 Malfunction" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="1adf-38fa-f9cd-97c8" publicationId="9e23-79cb-pubN66727" page="113">
+        <profile name="3-4 Malfunction" typeId="fdfe-c06f-1bf8-2262" typeName="Blackpowder Misfire Chart" hidden="false" id="1adf-38fa-f9cd-97c8" publicationId="9e23-79cb-pubN66727" page="113">
           <characteristics>
-            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The war machine cannot fire this turn or in the controlling player&apos;s next turn.</characteristic>
+            <characteristic name="Result" typeId="6b93-2bec-91c5-e695">The war machine cannot fire this turn or in the controlling player&apos;s next turn.</characteristic>
           </characteristics>
         </profile>
-        <profile name="5-6 May not Shoot" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="c47b-e500-a5b2-5143" publicationId="9e23-79cb-pubN66727" page="113">
+        <profile name="5-6 May not Shoot" typeId="fdfe-c06f-1bf8-2262" typeName="Blackpowder Misfire Chart" hidden="false" id="c47b-e500-a5b2-5143" publicationId="9e23-79cb-pubN66727" page="113">
           <characteristics>
-            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The war machine can shoot as normal again in the controlling player&apos;s next turn.</characteristic>
+            <characteristic name="Result" typeId="6b93-2bec-91c5-e695">The war machine can shoot as normal again in the controlling player&apos;s next turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
