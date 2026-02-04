@@ -672,54 +672,54 @@
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="22de-1797-7260-b838" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="12+ Damned by Chaos" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="6fb3-b0c8-656e-d475" publicationId="9e23-79cb-pubN66727" page="40">
+            <profile name="2-3 Loss of Power" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="090e-59fb-c71f-f970" publicationId="9e23-79cb-pubN66727" page="40">
               <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard is immediately removed as a casualty, regardless of any protective magic item or rule they might have.</characteristic>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard cannot attempt to cast further spells this phase.</characteristic>
               </characteristics>
             </profile>
-            <profile name="7 Detonation" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="a511-7f28-0f3b-1a91" publicationId="9e23-79cb-pubN66727" page="40">
-              <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard and all models in base contact with him suffer a Strength 10 hit.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="5 Magical Feedback" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="bc70-79a8-a31c-c477" publicationId="9e23-79cb-pubN66727" page="40">
-              <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard and every model on the same side within 12&quot; that can channel/generate power or dispel dice suffer a Strength 4 hit as a result of the magical backlash. The Wizard cannot attempt to cast further spells this phase.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="9 Calamitous Detonation" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="d716-289e-2d74-e0c5" publicationId="9e23-79cb-pubN66727" page="40">
-              <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Centre the small round template over the Wizard – every model underneath the template suffers a Strength 10 hit (including the Wizard – they do not benefit from Look Out Sir! in this case).</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="8 Amnesia" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="f0b3-811a-2c59-1669" publicationId="9e23-79cb-pubN66727" page="40">
-              <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The caster forgets how to cast the spell and will not be able to cast it again during this battle.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="4 Lost Concentration" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="f267-0d21-8489-77a3" publicationId="9e23-79cb-pubN66727" page="40">
+            <profile name="4 Lost Concentration" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="67c0-e64b-2b15-356b" publicationId="9e23-79cb-pubN66727" page="40">
               <characteristics>
                 <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The opposing player may immediately cast any one of their own spells of the same casting difficulty rating or less. No casting roll is required – the spell is automatically cast – but it can be dispelled by the player whose turn it is as normal (by using power dice in the same way as dispel dice). They need to beat the basic casting value of the spell to dispel it.</characteristic>
               </characteristics>
             </profile>
-            <profile name="11 Dimensional Cascade" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="1a08-69de-ebfa-da11" publicationId="9e23-79cb-pubN66727" page="40">
+            <profile name="5 Magical Feedback" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="1e0a-bbff-69aa-a3cc" publicationId="9e23-79cb-pubN66727" page="40">
               <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Centre the large round template over the Wizard – every model underneath the template (including the Wizard – they do not benefit from Look Out Sir! in this case) suffers a Strength 10 hit.</characteristic>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard and every model on the same side within 12&quot; that can channel/generate power or dispel dice suffer a Strength 4 hit as a result of the magical backlash. The Wizard cannot attempt to cast further spells this phase.</characteristic>
               </characteristics>
             </profile>
-            <profile name="10 Deamonic Poessession" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="3893-4961-bc56-1cb8" publicationId="9e23-79cb-pubN66727" page="40">
-              <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The caster suffers one Strength 10 hit and loses a Wizard level and their highest levelled spell. If the caster reaches Level 0, he stops counting as a Wizard for all purposes and therefore will not be able to use any arcane magic items he is carrying.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="6 Power Drain" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="92e1-d44e-2735-96fc" publicationId="9e23-79cb-pubN66727" page="40">
+            <profile name="6 Power Drain" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="233b-8cb4-00de-7a5f" publicationId="9e23-79cb-pubN66727" page="40">
               <characteristics>
                 <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The casting player loses D3 dice from the power pool.</characteristic>
               </characteristics>
             </profile>
-            <profile name="2-3 Loss of Power" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="8424-e2b3-178b-a62c" publicationId="9e23-79cb-pubN66727" page="40">
+            <profile name="7 Detonation" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="89bf-44ef-2963-e79d" publicationId="9e23-79cb-pubN66727" page="40">
               <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard cannot attempt to cast further spells this phase.</characteristic>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard and all models in base contact with him suffer a Strength 10 hit.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="8 Amnesia" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="fade-80ba-d556-969d" publicationId="9e23-79cb-pubN66727" page="40">
+              <characteristics>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The caster forgets how to cast the spell and will not be able to cast it again during this battle.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="9 Calamitous Detonation" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="622b-a75d-7348-6c84" publicationId="9e23-79cb-pubN66727" page="40">
+              <characteristics>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Centre the small round template over the Wizard – every model underneath the template suffers a Strength 10 hit (including the Wizard – they do not benefit from Look Out Sir! in this case).</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="10 Deamonic Poessession" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="4c66-1555-c1a2-832d" publicationId="9e23-79cb-pubN66727" page="40">
+              <characteristics>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The caster suffers one Strength 10 hit and loses a Wizard level and their highest levelled spell. If the caster reaches Level 0, he stops counting as a Wizard for all purposes and therefore will not be able to use any arcane magic items he is carrying.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="11 Dimensional Cascade" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="5a62-a6ec-2be0-64d0" publicationId="9e23-79cb-pubN66727" page="40">
+              <characteristics>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Centre the large round template over the Wizard – every model underneath the template (including the Wizard – they do not benefit from Look Out Sir! in this case) suffers a Strength 10 hit.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="12+ Damned by Chaos" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="1ba1-8ee3-3293-f4a5" publicationId="9e23-79cb-pubN66727" page="40">
+              <characteristics>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard is immediately removed as a casualty, regardless of any protective magic item or rule they might have.</characteristic>
               </characteristics>
             </profile>
           </profiles>
