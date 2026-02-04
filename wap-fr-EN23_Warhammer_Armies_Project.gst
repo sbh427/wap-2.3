@@ -770,6 +770,7 @@
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">-</characteristic>
               </characteristics>
+              <alias>Monsters</alias>
             </profile>
             <profile name="Monstrous Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="4da4-43b4-2628-522e">
               <characteristics>
@@ -779,6 +780,7 @@
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Swiftstride</characteristic>
               </characteristics>
+              <alias>Monstrous Beasts</alias>
             </profile>
             <profile name="Cavalry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="144b-c69f-fe6c-82c2">
               <characteristics>
@@ -862,6 +864,7 @@
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">-</characteristic>
               </characteristics>
+              <alias>War Machines</alias>
             </profile>
             <profile name="War Machines" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="3163-9fd3-3283-33a6">
               <characteristics>
@@ -7325,7 +7328,7 @@
     <selectionEntryGroup name="40. Suits of Armour" id="f7f7-2534-4683-595a" hidden="false">
       <comment>Min 1</comment>
       <constraints>
-        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="71c5-9037-5bd4-fae9" includeChildSelections="false" automatic="false"/>
+        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="71c5-9037-5bd4-fae9" includeChildSelections="false" automatic="true"/>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f5b7-0be5-74d6-45b2" includeChildSelections="false" automatic="true"/>
       </constraints>
       <modifierGroups>
@@ -7651,6 +7654,7 @@
       </constraints>
     </selectionEntryGroup>
     <selectionEntryGroup name="11. Unit Options" id="920d-8a41-44b9-c364" hidden="false"/>
+    <selectionEntryGroup name="71. Pullers" id="5faf-cb7b-5c89-b96d" hidden="false"/>
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="6624-0b7b-c5b8-6397" name="Scouts" publicationId="9e23-79cb-pubN66727" page="80" hidden="false">
