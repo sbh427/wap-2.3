@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="88" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="89" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <publications>
     <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
@@ -175,6 +175,16 @@
     <profileType name="Magic Resistance" id="e6b8-3bf4-4d0c-974e" hidden="false" sortIndex="9">
       <characteristicTypes>
         <characteristicType name="Value" id="19f0-e982-f035-416c"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Stone Thrower Misfire Chart" id="ac64-eee9-c4ac-3056" hidden="false">
+      <characteristicTypes>
+        <characteristicType name="Result" id="e2ee-1671-62ca-fc4a"/>
+      </characteristicTypes>
+    </profileType>
+    <profileType name="Blackpowder Misfire Chart" id="fdfe-c06f-1bf8-2262" hidden="false">
+      <characteristicTypes>
+        <characteristicType name="Result" id="6b93-2bec-91c5-e695"/>
       </characteristicTypes>
     </profileType>
   </profileTypes>
@@ -569,7 +579,7 @@
     </forceEntry>
   </forceEntries>
   <selectionEntries>
-    <selectionEntry type="upgrade" import="true" name="Tables, Charts &amp; Rules" hidden="false" id="8607-a440-1e4a-de26">
+    <selectionEntry type="unit" import="true" name="Tables, Charts &amp; Rules" hidden="false" id="8607-a440-1e4a-de26">
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Blackpowder Misfire Chart" hidden="false" id="fa37-e5db-5351-a408" collective="false" sortIndex="12">
           <constraints>
@@ -672,54 +682,54 @@
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="22de-1797-7260-b838" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="12+ Damned by Chaos" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="6fb3-b0c8-656e-d475" publicationId="9e23-79cb-pubN66727" page="40">
+            <profile name="2-3 Loss of Power" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="090e-59fb-c71f-f970" publicationId="9e23-79cb-pubN66727" page="40">
               <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard is immediately removed as a casualty, regardless of any protective magic item or rule they might have.</characteristic>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard cannot attempt to cast further spells this phase.</characteristic>
               </characteristics>
             </profile>
-            <profile name="7 Detonation" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="a511-7f28-0f3b-1a91" publicationId="9e23-79cb-pubN66727" page="40">
-              <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard and all models in base contact with him suffer a Strength 10 hit.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="5 Magical Feedback" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="bc70-79a8-a31c-c477" publicationId="9e23-79cb-pubN66727" page="40">
-              <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard and every model on the same side within 12&quot; that can channel/generate power or dispel dice suffer a Strength 4 hit as a result of the magical backlash. The Wizard cannot attempt to cast further spells this phase.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="9 Calamitous Detonation" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="d716-289e-2d74-e0c5" publicationId="9e23-79cb-pubN66727" page="40">
-              <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Centre the small round template over the Wizard – every model underneath the template suffers a Strength 10 hit (including the Wizard – they do not benefit from Look Out Sir! in this case).</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="8 Amnesia" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="f0b3-811a-2c59-1669" publicationId="9e23-79cb-pubN66727" page="40">
-              <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The caster forgets how to cast the spell and will not be able to cast it again during this battle.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="4 Lost Concentration" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="f267-0d21-8489-77a3" publicationId="9e23-79cb-pubN66727" page="40">
+            <profile name="4 Lost Concentration" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="67c0-e64b-2b15-356b" publicationId="9e23-79cb-pubN66727" page="40">
               <characteristics>
                 <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The opposing player may immediately cast any one of their own spells of the same casting difficulty rating or less. No casting roll is required – the spell is automatically cast – but it can be dispelled by the player whose turn it is as normal (by using power dice in the same way as dispel dice). They need to beat the basic casting value of the spell to dispel it.</characteristic>
               </characteristics>
             </profile>
-            <profile name="11 Dimensional Cascade" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="1a08-69de-ebfa-da11" publicationId="9e23-79cb-pubN66727" page="40">
+            <profile name="5 Magical Feedback" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="1e0a-bbff-69aa-a3cc" publicationId="9e23-79cb-pubN66727" page="40">
               <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Centre the large round template over the Wizard – every model underneath the template (including the Wizard – they do not benefit from Look Out Sir! in this case) suffers a Strength 10 hit.</characteristic>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard and every model on the same side within 12&quot; that can channel/generate power or dispel dice suffer a Strength 4 hit as a result of the magical backlash. The Wizard cannot attempt to cast further spells this phase.</characteristic>
               </characteristics>
             </profile>
-            <profile name="10 Deamonic Poessession" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="3893-4961-bc56-1cb8" publicationId="9e23-79cb-pubN66727" page="40">
-              <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The caster suffers one Strength 10 hit and loses a Wizard level and their highest levelled spell. If the caster reaches Level 0, he stops counting as a Wizard for all purposes and therefore will not be able to use any arcane magic items he is carrying.</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="6 Power Drain" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="92e1-d44e-2735-96fc" publicationId="9e23-79cb-pubN66727" page="40">
+            <profile name="6 Power Drain" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="233b-8cb4-00de-7a5f" publicationId="9e23-79cb-pubN66727" page="40">
               <characteristics>
                 <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The casting player loses D3 dice from the power pool.</characteristic>
               </characteristics>
             </profile>
-            <profile name="2-3 Loss of Power" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="8424-e2b3-178b-a62c" publicationId="9e23-79cb-pubN66727" page="40">
+            <profile name="7 Detonation" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="89bf-44ef-2963-e79d" publicationId="9e23-79cb-pubN66727" page="40">
               <characteristics>
-                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard cannot attempt to cast further spells this phase.</characteristic>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard and all models in base contact with him suffer a Strength 10 hit.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="8 Amnesia" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="fade-80ba-d556-969d" publicationId="9e23-79cb-pubN66727" page="40">
+              <characteristics>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The caster forgets how to cast the spell and will not be able to cast it again during this battle.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="9 Calamitous Detonation" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="622b-a75d-7348-6c84" publicationId="9e23-79cb-pubN66727" page="40">
+              <characteristics>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Centre the small round template over the Wizard – every model underneath the template suffers a Strength 10 hit (including the Wizard – they do not benefit from Look Out Sir! in this case).</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="10 Deamonic Poessession" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="4c66-1555-c1a2-832d" publicationId="9e23-79cb-pubN66727" page="40">
+              <characteristics>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The caster suffers one Strength 10 hit and loses a Wizard level and their highest levelled spell. If the caster reaches Level 0, he stops counting as a Wizard for all purposes and therefore will not be able to use any arcane magic items he is carrying.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="11 Dimensional Cascade" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="5a62-a6ec-2be0-64d0" publicationId="9e23-79cb-pubN66727" page="40">
+              <characteristics>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">Centre the large round template over the Wizard – every model underneath the template (including the Wizard – they do not benefit from Look Out Sir! in this case) suffers a Strength 10 hit.</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="12+ Damned by Chaos" typeId="1766-fa9f-6052-97c8" typeName="Miscast Table" hidden="false" id="1ba1-8ee3-3293-f4a5" publicationId="9e23-79cb-pubN66727" page="40">
+              <characteristics>
+                <characteristic name="Result" typeId="281f-07de-e7b1-1e4a">The Wizard is immediately removed as a casualty, regardless of any protective magic item or rule they might have.</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -743,25 +753,7 @@
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="f8b1-3254-6b54-ec6f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Cavalry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="673b-7c68-b72a-80a9">
-              <characteristics>
-                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">5</characteristic>
-                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1+1 (2 for non-split profiles)</characteristic>
-                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">2</characteristic>
-                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Impact Hits (1), Swiftstride</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Chariots" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="1db4-a25b-c45f-f01a">
-              <characteristics>
-                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
-                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
-                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Starting Wounds (+1 for each additional Crew &amp; Mount)</characteristic>
-                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327"/>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80"/>
-              </characteristics>
-            </profile>
-            <profile name="Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="cd26-319b-8477-3e7f">
+            <profile name="Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="dcd0-af31-ae44-ecc9">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">5</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1</characteristic>
@@ -770,16 +762,16 @@
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">-</characteristic>
               </characteristics>
             </profile>
-            <profile name="Monsters" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="72e8-5b9e-bf24-b9bf">
+            <profile name="Large Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="3a82-c31d-f265-c34c">
               <characteristics>
-                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
-                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
-                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Double Starting Wounds (+1 for each Rider)</characteristic>
-                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">5</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D6), Swiftstride, Terror</characteristic>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">4</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">2</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">1</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">-</characteristic>
               </characteristics>
             </profile>
-            <profile name="Monstrous Beasts" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="d563-68dc-9d48-87ba">
+            <profile name="Monstrous Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="4da4-43b4-2628-522e">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">2</characteristic>
@@ -788,7 +780,16 @@
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Swiftstride</characteristic>
               </characteristics>
             </profile>
-            <profile name="Monstrous Cavalry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="eea7-5e88-55dc-9b0d">
+            <profile name="Cavalry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="144b-c69f-fe6c-82c2">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">5</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1+1 (2 for non-split profiles)</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">2</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Impact Hits (1), Swiftstride</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Monstrous Cavalry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="334b-8b7c-45c4-bdef">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1+2 (3 for non-split profiles)</characteristic>
@@ -797,35 +798,7 @@
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Impact Hits (1), Swiftstride</characteristic>
               </characteristics>
             </profile>
-            <profile name="Monstrous Creature" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="0bb7-f712-d89d-3dd7">
-              <characteristics>
-                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
-                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
-                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">4 (+1 for each rider)</characteristic>
-                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">3 (or 4 if ridden)</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D3), Swiftstride, Terror</characteristic>
-              </characteristics>
-              <alias>Monstrous Creatures</alias>
-            </profile>
-            <profile name="Monstrous Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="0326-f2c0-835a-1ab9">
-              <characteristics>
-                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
-                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">2</characteristic>
-                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">2</characteristic>
-                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Swiftstride</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Shrines" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="2ea0-20ac-0251-e18e">
-              <characteristics>
-                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
-                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
-                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Starting Wounds</characteristic>
-                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">-</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Swarms" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="c256-e4c0-9042-6f91">
+            <profile name="Swarms" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="16d3-292a-ce8e-e20f">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">5</characteristic>
@@ -834,7 +807,7 @@
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Expendable, Skirmishers, Unstable</characteristic>
               </characteristics>
             </profile>
-            <profile name="War Beast" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="a8d0-cc85-e2d0-3f6b">
+            <profile name="War Beast" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="6f84-bd91-392c-3a1f">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">5</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1</characteristic>
@@ -844,22 +817,59 @@
               </characteristics>
               <alias>War Beasts</alias>
             </profile>
-            <profile name="War Machines" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="d79a-9ca4-4700-f6bd">
+            <profile name="Monstrous Beasts" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="1e3f-80ca-0055-b088">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">2</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">2</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Swiftstride</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Monstrous Creature" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="7942-0a77-4060-6438">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">4 (+1 for each rider)</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">3 (or 4 if ridden)</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D3), Swiftstride, Terror</characteristic>
+              </characteristics>
+              <alias>Monstrous Creatures</alias>
+            </profile>
+            <profile name="Monsters" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="dc73-dcb7-9933-24d6">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Double Starting Wounds (+1 for each Rider)</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">5</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D6), Swiftstride, Terror</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Chariots" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="e48b-2fab-06d5-90da">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">+D3 Impact hits to the chariots in the first rank.</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Starting Wounds (+1 for each additional Crew &amp; Mount)</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Impact Hits (D6), Swiftstride</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Shrines" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="95ec-6037-f74a-d19f">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Starting Wounds</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="War Machines" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="3163-9fd3-3283-33a6">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Starting Wounds</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Move or Fire</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Large Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="9329-62a9-b2b2-3b33">
-              <characteristics>
-                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">4</characteristic>
-                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">2</characteristic>
-                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">1</characteristic>
-                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
@@ -10752,38 +10762,38 @@ Magic phase.</characteristic>
   <sharedInfoGroups>
     <infoGroup name="Stone Thrower Misfire Chart" id="f6f0-bb1f-f863-3e81" hidden="false">
       <profiles>
-        <profile name="1 Destroyed!" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="f14c-d708-7ec1-d950" publicationId="9e23-79cb-pubN66727" page="115">
+        <profile name="1 Destroyed!" typeId="ac64-eee9-c4ac-3056" typeName="Stone Thrower Misfire Chart" hidden="false" id="f14c-d708-7ec1-d950" publicationId="9e23-79cb-pubN66727" page="115">
           <characteristics>
-            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The war machine is destroyed.</characteristic>
+            <characteristic name="Result" typeId="e2ee-1671-62ca-fc4a">The war machine is destroyed.</characteristic>
           </characteristics>
         </profile>
-        <profile name="2-3 Disabled" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="b7a8-f42f-997c-7958" publicationId="9e23-79cb-pubN66727" page="115">
+        <profile name="2-3 Disabled" typeId="ac64-eee9-c4ac-3056" typeName="Stone Thrower Misfire Chart" hidden="false" id="b7a8-f42f-997c-7958" publicationId="9e23-79cb-pubN66727" page="115">
           <characteristics>
-            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The stone thrower suffers a wound, with no armour saves allowed. The stone thrower cannot fire this turn or in the controlling player&apos;s next turn.</characteristic>
+            <characteristic name="Result" typeId="e2ee-1671-62ca-fc4a">The stone thrower suffers a wound, with no armour saves allowed. The stone thrower cannot fire this turn or in the controlling player&apos;s next turn.</characteristic>
           </characteristics>
         </profile>
-        <profile name="4-6 May not Shoot" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="cf7e-50c9-f10c-da28" publicationId="9e23-79cb-pubN66727" page="115">
+        <profile name="4-6 May not Shoot" typeId="ac64-eee9-c4ac-3056" typeName="Stone Thrower Misfire Chart" hidden="false" id="cf7e-50c9-f10c-da28" publicationId="9e23-79cb-pubN66727" page="115">
           <characteristics>
-            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The stone thrower is unharmed and can shoot as normal again in the controlling player&apos;s next turn.</characteristic>
+            <characteristic name="Result" typeId="e2ee-1671-62ca-fc4a">The stone thrower is unharmed and can shoot as normal again in the controlling player&apos;s next turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
     </infoGroup>
     <infoGroup name="Blackpowder Misfire Chart" id="bb8f-7181-30f9-fc65" hidden="false">
       <profiles>
-        <profile name="1-2 Destroyed!" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="385d-5c05-b088-169b" publicationId="9e23-79cb-pubN66727" page="113">
+        <profile name="1-2 Destroyed!" typeId="fdfe-c06f-1bf8-2262" typeName="Blackpowder Misfire Chart" hidden="false" id="385d-5c05-b088-169b" publicationId="9e23-79cb-pubN66727" page="113">
           <characteristics>
-            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The war machine is destroyed.</characteristic>
+            <characteristic name="Result" typeId="6b93-2bec-91c5-e695">The war machine is destroyed.</characteristic>
           </characteristics>
         </profile>
-        <profile name="3-4 Malfunction" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="1adf-38fa-f9cd-97c8" publicationId="9e23-79cb-pubN66727" page="113">
+        <profile name="3-4 Malfunction" typeId="fdfe-c06f-1bf8-2262" typeName="Blackpowder Misfire Chart" hidden="false" id="1adf-38fa-f9cd-97c8" publicationId="9e23-79cb-pubN66727" page="113">
           <characteristics>
-            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The war machine cannot fire this turn or in the controlling player&apos;s next turn.</characteristic>
+            <characteristic name="Result" typeId="6b93-2bec-91c5-e695">The war machine cannot fire this turn or in the controlling player&apos;s next turn.</characteristic>
           </characteristics>
         </profile>
-        <profile name="5-6 May not Shoot" typeId="c972-d0be-bd2e-332b" typeName="Misfire Chart" hidden="false" id="c47b-e500-a5b2-5143" publicationId="9e23-79cb-pubN66727" page="113">
+        <profile name="5-6 May not Shoot" typeId="fdfe-c06f-1bf8-2262" typeName="Blackpowder Misfire Chart" hidden="false" id="c47b-e500-a5b2-5143" publicationId="9e23-79cb-pubN66727" page="113">
           <characteristics>
-            <characteristic name="Result" typeId="008a-8bda-9586-4ae1">The war machine can shoot as normal again in the controlling player&apos;s next turn.</characteristic>
+            <characteristic name="Result" typeId="6b93-2bec-91c5-e695">The war machine can shoot as normal again in the controlling player&apos;s next turn.</characteristic>
           </characteristics>
         </profile>
       </profiles>
