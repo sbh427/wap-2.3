@@ -743,25 +743,7 @@
             <constraint type="max" value="1" field="selections" scope="force" shared="false" id="f8b1-3254-6b54-ec6f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
           <profiles>
-            <profile name="Cavalry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="673b-7c68-b72a-80a9">
-              <characteristics>
-                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">5</characteristic>
-                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1+1 (2 for non-split profiles)</characteristic>
-                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">2</characteristic>
-                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Impact Hits (1), Swiftstride</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Chariots" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="1db4-a25b-c45f-f01a">
-              <characteristics>
-                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
-                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">+D3 Impact hits to the chariots in the first rank.</characteristic>
-                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Starting Wounds (+1 for each additional Crew &amp; Mount)</characteristic>
-                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Impact Hits (D6), Swiftstride</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="cd26-319b-8477-3e7f">
+            <profile name="Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="dcd0-af31-ae44-ecc9">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">5</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1</characteristic>
@@ -770,16 +752,16 @@
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">-</characteristic>
               </characteristics>
             </profile>
-            <profile name="Monsters" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="72e8-5b9e-bf24-b9bf">
+            <profile name="Large Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="3a82-c31d-f265-c34c">
               <characteristics>
-                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
-                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
-                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Double Starting Wounds (+1 for each Rider)</characteristic>
-                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">5</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D6), Swiftstride, Terror</characteristic>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">4</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">2</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">1</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">-</characteristic>
               </characteristics>
             </profile>
-            <profile name="Monstrous Beasts" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="d563-68dc-9d48-87ba">
+            <profile name="Monstrous Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="4da4-43b4-2628-522e">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">2</characteristic>
@@ -788,7 +770,16 @@
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Swiftstride</characteristic>
               </characteristics>
             </profile>
-            <profile name="Monstrous Cavalry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="eea7-5e88-55dc-9b0d">
+            <profile name="Cavalry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="144b-c69f-fe6c-82c2">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">5</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1+1 (2 for non-split profiles)</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">2</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Impact Hits (1), Swiftstride</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Monstrous Cavalry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="334b-8b7c-45c4-bdef">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1+2 (3 for non-split profiles)</characteristic>
@@ -797,35 +788,7 @@
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Impact Hits (1), Swiftstride</characteristic>
               </characteristics>
             </profile>
-            <profile name="Monstrous Creature" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="0bb7-f712-d89d-3dd7">
-              <characteristics>
-                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
-                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
-                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">4 (+1 for each rider)</characteristic>
-                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">3 (or 4 if ridden)</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D3), Swiftstride, Terror</characteristic>
-              </characteristics>
-              <alias>Monstrous Creatures</alias>
-            </profile>
-            <profile name="Monstrous Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="0326-f2c0-835a-1ab9">
-              <characteristics>
-                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
-                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">2</characteristic>
-                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">2</characteristic>
-                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Swiftstride</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Shrines" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="2ea0-20ac-0251-e18e">
-              <characteristics>
-                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
-                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
-                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Starting Wounds</characteristic>
-                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">-</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Swarms" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="c256-e4c0-9042-6f91">
+            <profile name="Swarms" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="16d3-292a-ce8e-e20f">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">5</characteristic>
@@ -834,7 +797,7 @@
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Expendable, Skirmishers, Unstable</characteristic>
               </characteristics>
             </profile>
-            <profile name="War Beast" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="a8d0-cc85-e2d0-3f6b">
+            <profile name="War Beast" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="6f84-bd91-392c-3a1f">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">5</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">1</characteristic>
@@ -844,22 +807,59 @@
               </characteristics>
               <alias>War Beasts</alias>
             </profile>
-            <profile name="War Machines" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="d79a-9ca4-4700-f6bd">
+            <profile name="Monstrous Beasts" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="1e3f-80ca-0055-b088">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">2</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">2</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Fear, Swiftstride</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Monstrous Creature" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="7942-0a77-4060-6438">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">4 (+1 for each rider)</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">3 (or 4 if ridden)</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D3), Swiftstride, Terror</characteristic>
+              </characteristics>
+              <alias>Monstrous Creatures</alias>
+            </profile>
+            <profile name="Monsters" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="dc73-dcb7-9933-24d6">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Double Starting Wounds (+1 for each Rider)</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">5</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Stomp (D6), Swiftstride, Terror</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Chariots" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="e48b-2fab-06d5-90da">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">3</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">+D3 Impact hits to the chariots in the first rank.</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Starting Wounds (+1 for each additional Crew &amp; Mount)</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">2</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Impact Hits (D6), Swiftstride</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="Shrines" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="95ec-6037-f74a-d19f">
+              <characteristics>
+                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
+                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
+                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Starting Wounds</characteristic>
+                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
+                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile name="War Machines" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="3163-9fd3-3283-33a6">
               <characteristics>
                 <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">-</characteristic>
                 <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">-</characteristic>
                 <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">Starting Wounds</characteristic>
                 <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
                 <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">Move or Fire</characteristic>
-              </characteristics>
-            </profile>
-            <profile name="Large Infantry" typeId="3adc-2604-f88f-aa41" typeName="Troop Type" hidden="false" id="9329-62a9-b2b2-3b33">
-              <characteristics>
-                <characteristic name="Min. Files for Rank Bonus" typeId="e21c-5a94-1922-5dd8">4</characteristic>
-                <characteristic name="Max. Number of Supporting Attacks" typeId="882b-4e9f-a4d6-182a">2</characteristic>
-                <characteristic name="Unit Strength" typeId="ec2f-bc98-8ff4-9997">1</characteristic>
-                <characteristic name="Line of Sight" typeId="6fa1-9401-65a0-4327">1</characteristic>
-                <characteristic name="Default Special Rules" typeId="bedb-f7c8-dfb9-fa80">-</characteristic>
               </characteristics>
             </profile>
           </profiles>
