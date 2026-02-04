@@ -243,7 +243,7 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntryGroup>
-    <selectionEntryGroup name="90. Magic Items" id="ee74-1528-4ea5-f624" hidden="false" collapsible="true">
+    <selectionEntryGroup name="90. Magic Items" id="ee74-1528-4ea5-f624" hidden="false">
       <constraints>
         <constraint type="max" value="0" field="points" scope="parent" shared="true" id="715a-c2fd-33cd-38d8"/>
       </constraints>
@@ -1031,10 +1031,30 @@
               <modifiers>
                 <modifier type="set" value="0" field="a90c-8daf-5ff1-3656">
                   <conditionGroups>
-                    <conditionGroup type="and">
+                    <conditionGroup type="or">
                       <conditions>
-                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="22c9-1606-58f8-2e60" shared="true"/>
-                        <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="bdee-b168-38ba-7d3c" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="7a21-ba63-63e2-7d8e" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="5fc5-b80a-115f-bca3" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="82d3-4589-72b4-b6ed" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="f651-5580-8a7b-45eb" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="5c5d-6944-cd09-0db8" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="f98e-8d4f-7b1b-59cd" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="b3e5-4b1b-7050-7e02" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="e1a0-da31-05c5-9a15" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="7224-b7fd-d652-3ff2" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="aff0-db72-0064-43fe" shared="true" includeChildSelections="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="model-or-unit" childId="d0ba-7b91-1049-d48b" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="true" field="hidden">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="104d-56e8-ca19-2764" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="e953-7389-8af9-0721" shared="true"/>
+                        <condition type="instanceOf" value="1" field="selections" scope="root-entry" childId="a0e9-f0db-f579-08a1" shared="true"/>
                       </conditions>
                     </conditionGroup>
                   </conditionGroups>
@@ -1302,16 +1322,76 @@
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="2 Warhorses" hidden="false" id="af5d-26b3-feda-4f72" collective="true" sortIndex="1">
               <infoLinks>
-                <infoLink name="Warhorse" id="6e80-0d9e-aebc-2bce" hidden="false" type="profile" targetId="393f-57c9-c289-36a7"/>
-                <infoLink name="Warhorse" id="d91a-157e-9aba-1864" hidden="false" type="profile" targetId="393f-57c9-c289-36a7"/>
+                <infoLink name="Warhorse" id="6e80-0d9e-aebc-2bce" hidden="false" type="profile" targetId="393f-57c9-c289-36a7">
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="" field="09ad-18df-607b-1215"/>
+                        <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
+                        <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                </infoLink>
+                <infoLink name="Warhorse" id="d91a-157e-9aba-1864" hidden="false" type="profile" targetId="393f-57c9-c289-36a7">
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="" field="09ad-18df-607b-1215"/>
+                        <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
+                        <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                </infoLink>
               </infoLinks>
             </selectionEntry>
             <selectionEntry type="upgrade" import="true" name="4 Warhorses" hidden="false" id="1c93-c5c3-ce99-dce1" collective="true" sortIndex="2">
               <infoLinks>
-                <infoLink name="Warhorse" id="22a2-b388-0a2c-75b5" hidden="false" type="profile" targetId="393f-57c9-c289-36a7"/>
-                <infoLink name="Warhorse" id="49f1-1aed-c60e-8849" hidden="false" type="profile" targetId="393f-57c9-c289-36a7"/>
-                <infoLink name="Warhorse" id="194c-a7fb-501b-8969" hidden="false" type="profile" targetId="393f-57c9-c289-36a7"/>
-                <infoLink name="Warhorse" id="72b7-be37-dd64-ca08" hidden="false" type="profile" targetId="393f-57c9-c289-36a7"/>
+                <infoLink name="Warhorse" id="22a2-b388-0a2c-75b5" hidden="false" type="profile" targetId="393f-57c9-c289-36a7">
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="" field="09ad-18df-607b-1215"/>
+                        <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
+                        <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                </infoLink>
+                <infoLink name="Warhorse" id="49f1-1aed-c60e-8849" hidden="false" type="profile" targetId="393f-57c9-c289-36a7">
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="" field="09ad-18df-607b-1215"/>
+                        <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
+                        <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                </infoLink>
+                <infoLink name="Warhorse" id="194c-a7fb-501b-8969" hidden="false" type="profile" targetId="393f-57c9-c289-36a7">
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="" field="09ad-18df-607b-1215"/>
+                        <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
+                        <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                </infoLink>
+                <infoLink name="Warhorse" id="72b7-be37-dd64-ca08" hidden="false" type="profile" targetId="393f-57c9-c289-36a7">
+                  <modifierGroups>
+                    <modifierGroup type="and">
+                      <modifiers>
+                        <modifier type="set" value="" field="09ad-18df-607b-1215"/>
+                        <modifier type="set" value="" field="df90-5cbd-8cf9-95b2"/>
+                        <modifier type="set" value="" field="27ee-0675-122f-a1b1"/>
+                      </modifiers>
+                    </modifierGroup>
+                  </modifierGroups>
+                </infoLink>
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="6"/>
@@ -2292,12 +2372,16 @@
                 </infoLink>
                 <infoLink name="Mixed Unit" id="20f0-a055-b135-2041" hidden="false" type="rule" targetId="e00a-3a09-9b67-e994"/>
               </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="20"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink targetId="d38a-73da-883b-bab9" id="5d3e-8846-336d-2481" primary="true" name="Heroes"/>
+        <categoryLink targetId="22c9-1606-58f8-2e60" id="5ccb-f082-7252-a8f7" primary="false" name="Infantry"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Warriors" hidden="false" id="fa17-c9c1-5929-ded9" sortIndex="101">
@@ -5215,11 +5299,7 @@
         </entryLink>
       </entryLinks>
       <infoLinks>
-        <infoLink name="Karma" id="6b28-54eb-1f78-92ed" hidden="false" type="rule" targetId="060d-b89c-8279-8bb3">
-          <modifiers>
-            <modifier type="set" value="Crew" field="annotation"/>
-          </modifiers>
-        </infoLink>
+        <infoLink name="Karma" id="6b28-54eb-1f78-92ed" hidden="false" type="rule" targetId="060d-b89c-8279-8bb3"/>
       </infoLinks>
       <constraints>
         <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="1435-3aee-292f-35be" automatic="true"/>
