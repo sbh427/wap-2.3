@@ -2410,6 +2410,14 @@ If you roll a misfire, or if for any reason some of the models in the unit canno
                       <costs>
                         <cost name="pts" typeId="points" value="0"/>
                       </costs>
+                      <infoLinks>
+                        <infoLink name="Ward Save" id="063c-a39b-ff4b-ea48" hidden="false" type="profile" targetId="0ea4-277a-19d5-3635">
+                          <modifiers>
+                            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
+                            <modifier type="set" value="Mask of the Great Deceiver" field="name"/>
+                          </modifiers>
+                        </infoLink>
+                      </infoLinks>
                     </selectionEntry>
                   </selectionEntries>
                 </entryLink>
@@ -2741,6 +2749,18 @@ Once the final position of the template is determined, all models under the temp
                 <categoryLink name="Z Medium Armour" hidden="false" id="d667-917e-e948-8c56" targetId="222a-078c-ce85-fb16" primary="false"/>
                 <categoryLink name="Z Shield" hidden="false" id="ec97-11e7-6b2a-a2ec" targetId="0210-637d-ff12-a760" primary="false"/>
               </categoryLinks>
+              <modifiers>
+                <modifier type="add" value="{this} must be accompanied by the Wolfboys." field="error">
+                  <conditionGroups>
+                    <conditionGroup type="and">
+                      <conditions>
+                        <condition type="equalTo" value="1" field="selections" scope="force" childId="43f4-7615-517f-e049" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="force" childId="7383-b595-691e-4ac6" shared="true" includeChildSelections="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
             </selectionEntry>
             <selectionEntry type="model" import="true" name="Maglah Khan" hidden="false" id="d14b-d119-b51e-e6b0" collective="false" sortIndex="3">
               <constraints>
