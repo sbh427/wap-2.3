@@ -1,80 +1,107 @@
-# Warhammer Armies Project - v9.2.3 (Unofficial Battlescribe & New Recruit Files)
-
-## Overview
-
-This repository contains **Battlescribe-compatible data files** for the [New Recruit roster editor](https://www.newrecruit.eu/app/MySystems), based on version **9.2.3** of the **Warhammer Armies Project** (WAP).
-
-These files are **unofficial** and maintained by the community to help players use the latest army book updates in digital list-building tools.
+# Warhammer Armies Project – v9.2.3  
+### Unofficial BattleScribe & New Recruit data files
 
 ---
 
-## Development Status
+## Scope & Intent
 
-The files are currently **under active development**. I typically update one army every 2–3 weeks. Updates are done army by army and may temporarily exclude special characters in early passes.
+This project aims to represent **Warhammer Armies Project v9.2.3** rules within list-building tools.  
+It does **not** introduce balance changes, house rules, or alternate interpretations beyond what is required for correct implementation.
 
 ---
 
-## How to Use
+## Project Status
+
+The data files are largely complete, with all armies implemented and playable.  
+
+Ongoing work focuses on:
+- Bug fixes and minor corrections  
+- Clarifications based on errata or edge cases  
+
+Occasionally, **larger updates** may occur to improve rule representation, resolve rare interactions, or clean up the data structure.  
+No regular army rewrites are planned; updates are driven by issues, errata, and community feedback.
+
+---
+
+## Bug Reports & Feedback
+
+Feedback from actual list builders is invaluable. You can report issues through:
 
 ### New Recruit
-
-1. Open the [New Recruit roster editor](https://www.newrecruit.eu/app/MySystems) — no account required.
-2. Scroll to the bottom and click **“Add more games.”**
-3. Select **“Add from GitHub.”**
-4. For **Version**, choose `custom`, and enter: `main`
-5. For **Repository**, enter: `sbh427/wap-2.3`
-6. Click the green `+` and wait for the upload to finish.
-7. You can now start building your list!
-
-### Battlescribe
-
-1. Download and open [Battlescribe](https://www.battlescribe.net/).
-2. Go to **Manage Data > Add Data Index URL**
-3. Enter: `https://wap-fr.ovh/bsdata/repos.json`
-4. Add the repository.
-5. Open the tab: **“wap-fr Battlescribe data”**
-6. Choose the version (9.2.2 or 9.2.3).
-7. Update your data.
-8. You can now create rosters using the selected rule version.
-
-> **Note:** Switching rosters between rule versions is not possible, and probably won't be in the future.
-
----
-
-## Bug Reports
-
-### New Recruit
-
-To report a bug within New Recruit:
-
-1. Click **`Report Issue`** (top right of the page).
-
+1. Click **`Report Issue`** (top right).  
    ![Report Issue](./pictures/bug_report1.png)
-
-2. Select **Game Data Issue**.
-
+2. Select **Game Data Issue**.  
    ![Game Data Issue](./pictures/bug_report2.png)
-
-3. Describe the issue (minimum characters required to enable **Send**).
-
+3. Describe the issue (minimum character count required).  
    ![Details](./pictures/bug_report3.png)
 
-### GitHub
+Include:
+- Army and unit name  
+- Rule, option, or interaction in question  
+- Expected vs. actual behavior  
+- Screenshot or example list, if relevant  
 
-Alternatively, you can report bugs by creating an [Issue on GitHub](https://github.com/sbh427/wap-2.3/issues) if you have a GitHub account.
+Reports via New Recruit are reviewed alongside GitHub issues.
+
+### GitHub
+Submit more complex issues or discussions via [GitHub Issues](https://github.com/sbh427/wap-2.3/issues).
+
+---
+
+## Contributions
+
+This is a community-driven project, and contributions of all sizes are welcome.  
+
+Areas where help is appreciated:
+- Bug fixes and rules corrections  
+- Rule implementation improvements  
+- Usability and readability improvements  
+- Playtesting and validation  
+
+You don’t need to be a rules or data expert — clear feedback, screenshots, or examples are highly valuable.
+
+---
+
+## Known Limitations
+
+- **Some rules are simplified.** Conditional or situational rules may be represented in a simplified way for technical reasons.  
+- **Validation is not complete.** The builder enforces many restrictions, but players remain responsible for legal armies and correct gameplay.  
+- **Edge cases exist.** Rare combinations and interactions may appear; reports help us improve accuracy.  
+
+---
+
+## FAQ
+
+**Is this an official release?**  
+No. These files are unofficial and community-maintained.  
+
+**Does this project change balance, points, or rules?**  
+No. Only changes needed to correctly implement or clarify rules are made.  
+
+**Why doesn’t the builder enforce every rule?**  
+Some rules depend on game context or interactions that cannot be fully enforced at list-building time.  
+
+**I found something that looks wrong — is it a bug?**  
+Report it if a rule is implemented incorrectly, points/options/restrictions are wrong, or illegal configurations are allowed.  
+It may not be a bug if the behavior is situational, legal but unintuitive, or technically unavoidable.  
+
+**Why was my issue closed as “working as intended”?**  
+This usually means the implementation matches the rules, the behavior is a tool limitation, or the issue is known. Your report still helps improve clarity and documentation.  
+
+**Why not rewrite a whole army?**  
+The focus is on accuracy and stability. Large rewrites are only done for clear rule or technical reasons.  
+
+**Can I suggest improvements?**  
+Yes! Feedback on clarity, usability, or readability is always welcome.  
+
+**Do I need to know BattleScribe or New Recruit data formats?**  
+No. Descriptions, screenshots, examples, or play experience are often more valuable than technical changes.
 
 ---
 
 ## Disclaimer
 
-This is a **fan-made, unofficial project** and is **not affiliated** with Mathias Eliasson, the original WAP team, or the original Battlescribe file maintainers. All credit for the rules belongs to Mathias and the Warhammer Armies Project.
+This is a fan-made, unofficial project and is **not affiliated** with Mathias Eliasson, the original WAP team, or the original BattleScribe file maintainers.  
+All credit for the rules belongs to Mathias Eliasson and the Warhammer Armies Project.
 
 ---
-
-## Contributions Welcome
-
-If you'd like to help with updates, corrections, or testing, feel free to open an issue or submit a pull request.
-
----
-
-**Happy list-building and may your dice roll true!**
