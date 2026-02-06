@@ -2069,17 +2069,17 @@ The enemy unit then rolls their charge distance and complete the charge as norm
         </entryLink>
       </entryLinks>
       <profiles>
-        <profile name="Vitki" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="834b-80e8-8264-c555">
+        <profile name="Seer" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="5c1a-e975-e5ab-df93">
           <characteristics>
             <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
             <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
             <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
             <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
-            <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+            <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
             <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-            <characteristic name="Ld" typeId="a199-f10b-a038-5730">8</characteristic>
+            <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Character, Human)</characteristic>
           </characteristics>
         </profile>
@@ -2194,6 +2194,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
         <infoLink name="Blood Rage" id="322a-9943-c3b7-817a" hidden="false" type="rule" targetId="c41f-d1ee-2236-6359"/>
         <infoLink name="Counter-Charge" id="43c9-694d-384d-1306" hidden="false" type="rule" targetId="91b7-3709-a752-cceb"/>
         <infoLink name="Skald" id="f69e-b5ab-8e79-844e" hidden="false" type="infoGroup" targetId="be58-5d96-8209-443f"/>
+        <infoLink name="Musician" id="de49-a66d-57c6-05ab" hidden="false" type="rule" targetId="54c3-1d1b-3ffe-59a5"/>
       </infoLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="10. Character Options" id="9820-4530-6dd4-5dd8" hidden="false">
@@ -2601,7 +2602,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
             </entryLink>
           </entryLinks>
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="Oerl the Young" hidden="false" id="22d1-0677-cfd7-6dcd" sortIndex="4">
+            <selectionEntry type="upgrade" import="true" name="Oerl the Young" hidden="false" id="22d1-0677-cfd7-6dcd" sortIndex="4">
               <costs>
                 <cost name="pts" typeId="points" value="15"/>
               </costs>
@@ -2803,7 +2804,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
                 <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Human)</characteristic>
               </characteristics>
               <modifiers>
-                <modifier type="increment" value="1" field="edd2-7979-54a4-6b35">
+                <modifier type="set" value="true" field="hidden">
                   <conditions>
                     <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="d2fc-1856-e0dd-bc3d" shared="true" includeChildSelections="true"/>
                   </conditions>
@@ -2811,13 +2812,6 @@ The enemy unit then rolls their charge distance and complete the charge as norm
               </modifiers>
             </profile>
           </profiles>
-          <modifiers>
-            <modifier type="decrement" value="1" field="6893-7300-ae1f-80ec">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="d2fc-1856-e0dd-bc3d" shared="true" includeChildSelections="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="The Bearmen of Urslo" hidden="false" id="d2fc-1856-e0dd-bc3d" sortIndex="1">
           <constraints>
@@ -2838,6 +2832,31 @@ The enemy unit then rolls their charge distance and complete the charge as norm
           <infoLinks>
             <infoLink name="Frenzy" id="14b5-bf7e-bdd7-1b1d" hidden="false" type="rule" targetId="9ff3-dda6-e142-5a77"/>
           </infoLinks>
+          <profiles>
+            <profile name="Marauder" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="43f1-8e9d-7b66-da8d">
+              <characteristics>
+                <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">5</characteristic>
+                <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
+                <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
+                <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+                <characteristic name="Ld" typeId="a199-f10b-a038-5730">7</characteristic>
+                <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry (Human)</characteristic>
+              </characteristics>
+              <modifiers>
+                <modifier type="set" value="x0" field="annotation"/>
+                <modifier type="decrement" value="1" field="annotation"/>
+                <modifier type="increment" value="1" field="annotation">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </profile>
+          </profiles>
         </selectionEntry>
       </selectionEntries>
       <modifierGroups>
@@ -3383,6 +3402,9 @@ The enemy unit then rolls their charge distance and complete the charge as norm
           </constraints>
         </selectionEntry>
       </selectionEntries>
+      <entryLinks>
+        <entryLink import="true" name="Expendable" hidden="false" id="d926-06d1-8a1c-e771" type="selectionEntry" targetId="b90d-9045-a6d5-9e7d"/>
+      </entryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Huscarls" hidden="false" id="593b-527d-a8fa-01c7" sortIndex="201">
       <categoryLinks>
@@ -5238,7 +5260,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e79a-80eb-5465-825b-max"/>
                       </constraints>
                       <infoLinks>
-                        <infoLink name="Bow" id="322a-0ffd-49fe-758e" hidden="false" type="profile" targetId="9dcd-3be8-08b0-96ab">
+                        <infoLink name="Longbow" id="322a-0ffd-49fe-758e" hidden="false" type="profile" targetId="cde7-c47d-3818-1e9d">
                           <modifiers>
                             <modifier type="set" value="Steelbane" field="annotation"/>
                             <modifier type="append" value="Magic Weapon. Killing Blow." field="96b8-546e-ac33-6054" join="
@@ -5675,7 +5697,7 @@ The enemy unit then rolls their charge distance and complete the charge as norm
                         <infoLink name="Two/Additional Hand Weapons" id="dea1-e3a8-32fd-b73e" hidden="false" type="profile" targetId="4a5d-0b6d-f6ac-fd7d">
                           <modifiers>
                             <modifier type="set" value="Gram and Balmung" field="annotation"/>
-                            <modifier type="append" value="Magic Weapon. Always Strikes First. Strength Bonus (1). Armour Piercing (1)" field="de63-d6da-efa8-00ac" join="
+                            <modifier type="append" value="Magic Weapon. Always Strikes First. Mighty Blow (1). Armour Piercing (1)" field="de63-d6da-efa8-00ac" join="
 
 "/>
                           </modifiers>
