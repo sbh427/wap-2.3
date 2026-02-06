@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="c4f4-ccda-e9ae-da94" name="Dogs of War WAP 1.52" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="82" revision="5" authorContact="xetolosch" authorName="contact me via discord" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="c4f4-ccda-e9ae-da94" name="Dogs of War WAP 1.52" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="82" revision="6" authorContact="xetolosch" authorName="contact me via discord" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedRules>
     <rule name="Backstabbers" id="264b-43f7-6123-a1a5" hidden="false" publicationId="8ada-88a0-cdcd-9b5e" page="3">
       <description>A unit with this special rule that successfully restrains from pursuing after breaking an enemy unit in close combat causes D6 Strength 3 hits on the fleeing unit for every complete rank the Hobgoblin unit has (up to a maximum of 3). Resolve any casualties before moving the fleeing unit.</description>
@@ -124,9 +124,9 @@ The enemy unit then rolls their charge distance and complete the charge as norma
 
 
 &lt;b&gt;D6 - Result&lt;/b&gt;
-&lt;b&gt;1 - Wavering Loyalty: &lt;/b&gt;The unit flees as normal, and all models in the unit suffer a -1 modifier to their Leadership for the rest of the battle.
-&lt;b&gt;2-4 - Soldier On: &lt;/b&gt; The unit flees as normal.
-&lt;b&gt;5-6 - Stand Fast!: &lt;/b&gt; The unit have the Cold-blooded special rule on their next Rally test.</description>
+&lt;b&gt;1-3 - Wavering Loyalty: &lt;/b&gt;The unit flees as normal, and all models in the unit suffer a -1 modifier to their Leadership for the rest of the battle.
+&lt;b&gt;4-5 - Soldier On: &lt;/b&gt; The unit flees as normal.
+&lt;b&gt;6 - Stand Fast!: &lt;/b&gt; The unit have the Cold-blooded special rule on their next Rally test.</description>
     </rule>
   </rules>
   <sharedSelectionEntries>
@@ -1484,6 +1484,27 @@ In close combat, an Ogre pistol counts as an additional hand weapon that does no
           </conditionGroups>
         </modifierGroup>
       </modifierGroups>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Light Armour &amp; Gut-plate" hidden="false" id="a44d-d4fc-b78f-048a" collective="true" sortIndex="12">
+      <costs>
+        <cost name="Crossbowmen with Handguns" typeId="1d5e-af1e-25ce-3bd6" value="0"/>
+        <cost name="The Lost Legion Crossbows" typeId="e81e-b5d3-1917-1844" value="0"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Light Armour" id="1ee6-94bf-f034-2af0" hidden="false" type="profile" targetId="4129-1acd-3564-d3ea"/>
+      </infoLinks>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="94e1-f954-75b6-d5f3"/>
+      </constraints>
+      <profiles>
+        <profile name="Gutplate" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="9402-9f3a-0744-f22e">
+          <characteristics>
+            <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+*</characteristic>
+            <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+*</characteristic>
+            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">*only applies against attacks to the front</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
     </selectionEntry>
   </sharedSelectionEntries>
   <catalogueLinks>
@@ -8010,31 +8031,12 @@ Roll a D6 for each eligible unit. If the dice roll is a 2 or more, the unit beha
                     <cost name="pts" typeId="points" value="2"/>
                   </costs>
                 </entryLink>
-              </entryLinks>
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Light Armour &amp; Gut-plate" hidden="false" id="a44d-d4fc-b78f-048a" sortIndex="3" collective="true">
+                <entryLink import="true" name="Light Armour &amp; Gut-plate" hidden="false" id="0ae5-7997-4fde-8aa0" type="selectionEntry" targetId="a44d-d4fc-b78f-048a" sortIndex="3">
                   <costs>
                     <cost name="pts" typeId="points" value="6"/>
-                    <cost name="Crossbowmen with Handguns" typeId="1d5e-af1e-25ce-3bd6" value="0"/>
-                    <cost name="The Lost Legion Crossbows" typeId="e81e-b5d3-1917-1844" value="0"/>
                   </costs>
-                  <infoLinks>
-                    <infoLink name="Light Armour" id="1ee6-94bf-f034-2af0" hidden="false" type="profile" targetId="4129-1acd-3564-d3ea"/>
-                  </infoLinks>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="94e1-f954-75b6-d5f3"/>
-                  </constraints>
-                  <profiles>
-                    <profile name="Gutplate" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="9402-9f3a-0744-f22e">
-                      <characteristics>
-                        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+*</characteristic>
-                        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+*</characteristic>
-                        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">*only applies against attacks to the front</characteristic>
-                      </characteristics>
-                    </profile>
-                  </profiles>
-                </selectionEntry>
-              </selectionEntries>
+                </entryLink>
+              </entryLinks>
             </entryLink>
           </entryLinks>
           <profiles>
@@ -15008,6 +15010,7 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
                     <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="6bb1-79c9-4af5-ca72" shared="true" includeChildSelections="true"/>
                     <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="76a4-23c1-f96d-021e" shared="true" includeChildSelections="true"/>
                     <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="30e0-7325-ea6b-af97" shared="true" includeChildSelections="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="a44d-d4fc-b78f-048a" shared="true" includeChildSelections="true"/>
                     <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
@@ -15534,6 +15537,7 @@ In addition, whenever a unit with this rule chooses Flee as a charge reaction or
                     <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="6bb1-79c9-4af5-ca72" shared="true" includeChildSelections="true"/>
                     <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="76a4-23c1-f96d-021e" shared="true" includeChildSelections="true"/>
                     <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="30e0-7325-ea6b-af97" shared="true" includeChildSelections="true"/>
+                    <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="a44d-d4fc-b78f-048a" shared="true" includeChildSelections="true"/>
                     <condition type="equalTo" value="0" field="selections" scope="root-entry" childId="9a61-618b-519a-807c" shared="true" includeChildSelections="true"/>
                   </conditions>
                 </conditionGroup>
