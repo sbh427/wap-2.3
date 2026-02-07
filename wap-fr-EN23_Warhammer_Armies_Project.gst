@@ -10251,8 +10251,7 @@ Piercing (1) special rule.</characteristic>
         <characteristic name="Type" typeId="21e9-4aa2-f538-c93b">Magic Missile</characteristic>
         <characteristic name="Casting Value" typeId="d6bf-647e-ba69-e8a0">5+</characteristic>
         <characteristic name="Range" typeId="2954-76ea-decb-30ff">18&quot;</characteristic>
-        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target is &apos;pushed&apos; 2D3&quot; directly away from the caster (it does not change facing). If the target comes into contact with impassable terrain or another unit it stops 1&quot; away and both units suffer D6 Strength 3 hits.
-Targets that cannot move are not pushed back at all, but still suffer D6 Strength 3 hits.</characteristic>
+        <characteristic name="Details" typeId="f5f2-ac1b-25cd-89c6">The target is &apos;pushed&apos; 2D3&quot; directly away from the caster (it does not change facing). If the target comes into contact with impassable terrain or another unit it stops 1&quot; away and both units suffer D6 Strength 3 hits. Targets that cannot move are not pushed back at all, but still suffer D6 Strength 3 hits.</characteristic>
       </characteristics>
     </profile>
     <profile name="Nikkit! Nikkit!" typeId="cb92-d882-5ba8-11ab" typeName="Spell" hidden="false" id="b19a-411f-5214-3ea4" publicationId="9e23-79cb-pubN78975" page="7">
