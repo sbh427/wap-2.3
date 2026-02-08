@@ -3153,9 +3153,6 @@ When the unit emerges, place a marker anywhere on the battlefield and roll 2D6 
 
 Once the final position is established, place the unit so it can touch the marker. If the marker is under a unit or impassable terrain, place it next to the closest edge of the unit/terrain. They may face in any direction.</description>
     </rule>
-    <rule name="Chaos Armour" id="93e8-18ec-9c64-9680" hidden="false" publicationId="314a-aacb-0877-4081" page="19">
-      <description>Models with this special rule add +1 to their armour saves if they wear light or medium armour.</description>
-    </rule>
     <rule name="Sporific Musk" id="c8d6-8857-0913-03d0" hidden="false" publicationId="314a-aacb-0877-4081" page="45">
       <description>Units in base contact with one or more Fiends of Slaanesh suffer a -1 penalty to both Weapon Skill and Initiative. This has no effect on Daemons of Slaanesh.</description>
     </rule>
@@ -7147,7 +7144,6 @@ Cursed terrain features placed in this way must be positioned touching an exist
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink name="Chaos Armour" id="9cf8-9fb3-0273-87d4" hidden="false" type="rule" targetId="93e8-18ec-9c64-9680"/>
         <infoLink name="Undivided Daemon" id="55d0-f234-a0e7-89cd" hidden="false" type="infoGroup" targetId="aced-5181-c6f8-6341">
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -7157,6 +7153,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
             </modifier>
           </modifiers>
         </infoLink>
+        <infoLink name="Chaos Armour" id="85a2-aca4-3499-4b04" hidden="false" type="profile" targetId="a5fe-2572-9543-581a"/>
       </infoLinks>
       <entryLinks>
         <entryLink import="true" name="15. Daemonic Alignement" hidden="false" id="9f22-96e8-8aa6-fb86" type="selectionEntryGroup" targetId="aab2-86a3-c9d8-7a6c">
@@ -7614,7 +7611,6 @@ Cursed terrain features placed in this way must be positioned touching an exist
         </selectionEntryGroup>
       </selectionEntryGroups>
       <infoLinks>
-        <infoLink name="Chaos Armour" id="d8eb-5b8c-e6c7-a4a6" hidden="false" type="rule" targetId="93e8-18ec-9c64-9680"/>
         <infoLink name="Undivided Daemon" id="3869-594b-69e0-8d1d" hidden="false" type="infoGroup" targetId="aced-5181-c6f8-6341">
           <modifiers>
             <modifier type="set" value="true" field="hidden">
@@ -7625,6 +7621,7 @@ Cursed terrain features placed in this way must be positioned touching an exist
           </modifiers>
         </infoLink>
         <infoLink name="Terror" id="7c6d-c51d-2e8e-1f91" hidden="false" type="rule" targetId="df59-4284-cca7-e4ca"/>
+        <infoLink name="Chaos Armour" id="9184-0754-7f7c-d508" hidden="false" type="profile" targetId="a5fe-2572-9543-581a"/>
       </infoLinks>
       <profiles>
         <profile name="Exalted Daemon" typeId="d9ed-a507-0102-d498" typeName="Model" hidden="false" id="7a25-bd90-5349-1bf1" publicationId="314a-aacb-0877-4081" page="23">
@@ -15105,6 +15102,33 @@ Cursed terrain features placed in this way must be positioned touching an exist
         <characteristic name="Ld" typeId="a199-f10b-a038-5730"/>
         <characteristic name="Type" typeId="13f9-a26b-05af-3459">Chariot (Daemon)</characteristic>
       </characteristics>
+    </profile>
+    <profile name="Chaos Armour" typeId="884c-d50e-eeb6-eda0" typeName="Armour" hidden="false" id="a5fe-2572-9543-581a">
+      <characteristics>
+        <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
+        <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
+        <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4"/>
+      </characteristics>
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditionGroups>
+            <conditionGroup type="and">
+              <conditions>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="6bb1-79c9-4af5-ca72" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="76a4-23c1-f96d-021e" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="ca40-942e-a36b-e6fd" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="7e9e-bcf1-b376-3c7e" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="ecd0-0bdb-3b07-1502" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="fdc2-057c-715c-557a" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="472c-90d3-fd34-9c83" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="a039-9655-2c7a-f788" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="7d0d-7b73-9561-a623" shared="true" includeChildSelections="true"/>
+                <condition type="lessThan" value="1" field="selections" scope="root-entry" childId="07d9-a853-ebb5-839c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </conditionGroup>
+          </conditionGroups>
+        </modifier>
+      </modifiers>
     </profile>
   </sharedProfiles>
   <sharedInfoGroups>
