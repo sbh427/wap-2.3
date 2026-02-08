@@ -5271,7 +5271,7 @@
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c04e-4b85-d3ea-d076" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="5fb0-8579-7b4d-6645" name="Boon of Magic" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
+        <selectionEntry id="5fb0-8579-7b4d-6645" name="Boon of Magic" hidden="false" collective="true" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="db50-881a-83f3-45d1" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="79dd-1569-e042-db2b" type="min"/>
@@ -5291,7 +5291,7 @@
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry id="0d5c-1131-1f1d-b764" name="0. Blue Fire of Tzeentch" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
+        <selectionEntry id="0d5c-1131-1f1d-b764" name="0. Blue Fire of Tzeentch" hidden="false" collective="true" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f538-b753-e850-bd08" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5fde-7c63-b3ec-789f" type="min"/>
@@ -5318,7 +5318,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Spells from the Lore of Tzeentch" id="f53a-7223-a0d1-e317" hidden="false" sortIndex="3" collapsible="true">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="12. Infernal Gateway" hidden="true" id="e756-09f0-58ca-ed4b" collective="false">
+            <selectionEntry type="upgrade" import="true" name="12. Infernal Gateway" hidden="true" id="e756-09f0-58ca-ed4b" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="881e-a12c-d730-f046" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5344,7 +5344,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="1. Baleful Transmogrification" hidden="false" id="ae47-8dc9-06f3-f02a" collective="false">
+            <selectionEntry type="upgrade" import="true" name="1. Baleful Transmogrification" hidden="false" id="ae47-8dc9-06f3-f02a" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a6f3-cbb9-49f4-cbc6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5363,7 +5363,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="2. Boon of Tzeentch" hidden="false" id="a55d-a382-a231-2a40" collective="false">
+            <selectionEntry type="upgrade" import="true" name="2. Boon of Tzeentch" hidden="false" id="a55d-a382-a231-2a40" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c0ce-77e1-483d-5eaa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5382,7 +5382,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="3. Pandemonium" hidden="false" id="02c1-4a4f-e80a-1322" collective="false">
+            <selectionEntry type="upgrade" import="true" name="3. Pandemonium" hidden="false" id="02c1-4a4f-e80a-1322" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4410-69c2-8b60-fd72" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5401,7 +5401,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="4. Pink Fire of Tzeentch" hidden="true" id="7c79-2381-5249-2bac" collective="false">
+            <selectionEntry type="upgrade" import="true" name="4. Pink Fire of Tzeentch" hidden="true" id="7c79-2381-5249-2bac" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8900-afed-4621-1122" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5433,7 +5433,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="5. Blot of Change" hidden="true" id="aa4b-20b0-bae9-f228" collective="false">
+            <selectionEntry type="upgrade" import="true" name="5. Blot of Change" hidden="true" id="aa4b-20b0-bae9-f228" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="547e-d96a-395b-9b34" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5465,7 +5465,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="6. Shield of Fate" hidden="true" id="0995-b7f1-e8b3-d64a" collective="false">
+            <selectionEntry type="upgrade" import="true" name="6. Shield of Fate" hidden="true" id="0995-b7f1-e8b3-d64a" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1fa6-f93d-ec2d-b1df" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5497,7 +5497,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="7. Fold Reality" hidden="true" id="a989-6c66-a6da-fbcc" collective="false">
+            <selectionEntry type="upgrade" import="true" name="7. Fold Reality" hidden="true" id="a989-6c66-a6da-fbcc" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0c85-cf76-80ce-8388" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5528,7 +5528,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="8. Glean Magic" hidden="true" id="9016-5753-d9e8-26e7" collective="false">
+            <selectionEntry type="upgrade" import="true" name="8. Glean Magic" hidden="true" id="9016-5753-d9e8-26e7" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c4ad-9d19-fd4b-a49a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5559,7 +5559,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="9. Tzeentch&apos;s Firestorm" hidden="true" id="2f0a-33ed-5dbb-2ada" collective="false">
+            <selectionEntry type="upgrade" import="true" name="9. Tzeentch&apos;s Firestorm" hidden="true" id="2f0a-33ed-5dbb-2ada" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="82a4-fa81-2d39-016c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5590,7 +5590,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="10. Daemonfire Vortex" hidden="true" id="fe59-5f58-f0fb-e061" collective="false">
+            <selectionEntry type="upgrade" import="true" name="10. Daemonfire Vortex" hidden="true" id="fe59-5f58-f0fb-e061" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f362-6689-2c0a-71b1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5616,7 +5616,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="11. Treason of Tzeentch" hidden="true" id="8129-8b1b-cd1a-c273" collective="false">
+            <selectionEntry type="upgrade" import="true" name="11. Treason of Tzeentch" hidden="true" id="8129-8b1b-cd1a-c273" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="bc7c-34de-3dc9-f4af" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -7427,7 +7427,7 @@
     <selectionEntryGroup name="60. Wizard Level" id="1d19-3d5b-2087-e988" hidden="false">
       <comment>1</comment>
       <entryLinks>
-        <entryLink import="true" name="Wizard Level 1" hidden="false" id="2461-692e-68b5-a7e6" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
+        <entryLink import="true" name="Wizard Level 1" hidden="false" id="2461-692e-68b5-a7e6" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8" collective="true">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0203-9259-3a51-4379-min"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0203-9259-3a51-4379-max"/>
