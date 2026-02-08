@@ -1022,18 +1022,9 @@
             <entryLink import="true" name="30. Secondary Weapon" hidden="false" id="694f-5eeb-f749-fbef" type="selectionEntryGroup" targetId="9bf8-b456-dd2f-8826">
               <entryLinks>
                 <entryLink import="true" name="Throwing Weapons" hidden="false" id="c6c8-f78a-2d5c-2e2c" type="selectionEntry" targetId="8013-6f6f-96e1-1acc">
-                  <modifiers>
-                    <modifier type="set" value="0" field="1f83-7ea8-982f-35c5">
-                      <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="unit" childId="e1b0-2f90-18af-984f" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="set" value="1" field="716a-54a9-b8af-03ab">
-                      <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="unit" childId="e1b0-2f90-18af-984f" shared="true" includeChildSelections="true"/>
-                      </conditions>
-                    </modifier>
-                  </modifiers>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0.5"/>
+                  </costs>
                 </entryLink>
               </entryLinks>
             </entryLink>
@@ -1091,15 +1082,18 @@
                   <modifiers>
                     <modifier type="set" value="0" field="1f83-7ea8-982f-35c5">
                       <conditions>
-                        <condition type="equalTo" value="0" field="selections" scope="unit" childId="e1b0-2f90-18af-984f" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="0" field="selections" scope="unit" childId="c6c8-f78a-2d5c-2e2c" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
                     <modifier type="set" value="1" field="716a-54a9-b8af-03ab">
                       <conditions>
-                        <condition type="equalTo" value="1" field="selections" scope="unit" childId="e1b0-2f90-18af-984f" shared="true" includeChildSelections="true"/>
+                        <condition type="equalTo" value="1" field="selections" scope="unit" childId="c6c8-f78a-2d5c-2e2c" shared="true" includeChildSelections="true"/>
                       </conditions>
                     </modifier>
                   </modifiers>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0.5"/>
+                  </costs>
                 </entryLink>
               </entryLinks>
             </entryLink>
@@ -1116,20 +1110,6 @@
           <entryLinks>
             <entryLink import="true" name="Expendable" hidden="false" id="8b48-dabc-a91b-550b" type="selectionEntry" targetId="b90d-9045-a6d5-9e7d"/>
           </entryLinks>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Throwing Weapons" hidden="false" id="e1b0-2f90-18af-984f">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="18f3-64f8-6051-98aa"/>
-              </constraints>
-              <modifiers>
-                <modifier type="increment" value="0.5" field="points">
-                  <repeats>
-                    <repeat value="1" repeats="1" field="selections" scope="unit" childId="8013-6f6f-96e1-1acc" shared="true" roundUp="false" includeChildSelections="true"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
         </entryLink>
       </entryLinks>
       <costs>
@@ -1404,13 +1384,6 @@
               <costs>
                 <cost name="pts" typeId="points" value="10"/>
               </costs>
-              <entryLinks>
-                <entryLink import="true" name="Magic Standards" hidden="false" id="ee09-f256-6a03-1ed9" type="selectionEntryGroup" targetId="856e-14b3-600e-fbcd">
-                  <constraints>
-                    <constraint type="max" value="50" field="points" scope="parent" shared="true" id="739e-f0f8-3e28-dd09"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -2139,7 +2112,7 @@ If you roll a misfire, or if for any reason some of the models in the unit canno
                 <characteristic name="Result" typeId="03fd-e2ca-a53a-4c2b">The unit must immediately take a Panic test. If it&apos;s passed, the unit may not voluntarily move this turn.</characteristic>
               </characteristics>
             </profile>
-            <profile name="03-04 We Stayz Ere!" typeId="62d9-de22-44ef-796c" typeName="Treachery Table" hidden="false" id="a7a8-cb54-d3df-c1c8" publicationId="92f3-84a1-4644-bc2f" page="3">
+            <profile name="3-4 We Stayz Ere!" typeId="62d9-de22-44ef-796c" typeName="Treacherous Gits Table" hidden="false" id="a7a8-cb54-d3df-c1c8" publicationId="92f3-84a1-4644-bc2f" page="3">
               <characteristics>
                 <characteristic name="Result" typeId="03fd-e2ca-a53a-4c2b">The unit may not voluntarily move this turn.</characteristic>
               </characteristics>
@@ -2258,7 +2231,7 @@ If you roll a misfire, or if for any reason some of the models in the unit canno
                           <characteristics>
                             <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
                             <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
-                            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">As soon as Ghazak suffers his first wound in battle, the Daemon of the helmet awakens and gives Ghazak a 4+ Ward save the and Magic Resistance (1) special rule for the remainder of the battle. In addition, his Strength is doubled when fighting against the model or unit which caused the Wound.</characteristic>
+                            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Magic Armour. As soon as Ghazak suffers his first wound in battle, the Daemon of the helmet awakens and gives Ghazak a 4+ Ward save the and Magic Resistance (1) special rule for the remainder of the battle. In addition, his Strength is doubled when fighting against the model or unit which caused the Wound.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -2446,7 +2419,7 @@ If you roll a misfire, or if for any reason some of the models in the unit canno
                           <characteristics>
                             <characteristic name="Combat" typeId="168d-1cc2-66f3-e766">6+</characteristic>
                             <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">6+</characteristic>
-                            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Ward Save (5+). In addition, all Hobgoblins may use the wearers Inspiring Presence ability within 18&quot; rather than the normal 12&quot;.</characteristic>
+                            <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Magic Armour. Ward Save (5+). In addition, all Hobgoblins may use the wearers Inspiring Presence ability within 18&quot; rather than the normal 12&quot;.</characteristic>
                           </characteristics>
                         </profile>
                       </profiles>
@@ -2613,10 +2586,16 @@ Once the final position of the template is determined, all models under the temp
                             <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
                           </modifiers>
                         </infoLink>
-                        <infoLink name="Magic Resistance" id="5b1c-c9a2-04b4-c371" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                        <infoLink name="Magic Resistance" id="5b1c-c9a2-04b4-c371" hidden="false" type="profile" targetId="dfc2-ea60-0f92-be07">
                           <modifiers>
                             <modifier type="set" value="Ongon" field="name"/>
                             <modifier type="set" value="2" field="bdf9-d73e-e13b-b0ce"/>
+                          </modifiers>
+                        </infoLink>
+                        <infoLink name="Magic Resistance" id="c1f7-3f49-6104-eb70" hidden="false" type="profile" targetId="d51b-e3da-4ab4-6b26">
+                          <modifiers>
+                            <modifier type="set" value="Ongon" field="name"/>
+                            <modifier type="set" value="5+" field="bdf9-d73e-e13b-b0ce"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -2761,11 +2740,7 @@ Once the final position of the template is determined, all models under the temp
                           <modifiers>
                             <modifier type="set" value="6+" field="97ea-ecf7-8d24-b2ca"/>
                             <modifier type="set" value="6+" field="168d-1cc2-66f3-e766"/>
-                            <modifier type="set" value="Pelt of Wulfag" field="annotation">
-                              <conditions>
-                                <condition type="lessThan" value="1" field="selections" scope="parent" childId="any" shared="true" includeChildSelections="false"/>
-                              </conditions>
-                            </modifier>
+                            <modifier type="set" value="Pelt of Wulfag" field="annotation"/>
                           </modifiers>
                         </infoLink>
                       </infoLinks>
@@ -3748,8 +3723,8 @@ Instead of firing another missile weapon in the Shooting phase, one of the Hobgo
         </modifier>
       </modifiers>
       <constraints>
-        <constraint type="max" value="1" field="selections" scope="force" shared="false" id="c592-1204-437e-b42a" percentValue="false" includeChildSelections="true" includeChildForces="true" automatic="true"/>
-        <constraint type="min" value="0" field="selections" scope="force" shared="false" id="d895-a780-6a3-8e22" percentValue="false" includeChildSelections="true" includeChildForces="true" automatic="true"/>
+        <constraint type="max" value="1" field="selections" scope="force" shared="false" id="c592-1204-437e-b42a" percentValue="false" includeChildSelections="true" includeChildForces="true" automatic="false"/>
+        <constraint type="min" value="0" field="selections" scope="force" shared="false" id="d895-a780-6a3-8e22" percentValue="false" includeChildSelections="true" includeChildForces="true" automatic="false"/>
       </constraints>
     </selectionEntry>
   </selectionEntries>
