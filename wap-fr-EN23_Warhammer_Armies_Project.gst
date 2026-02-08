@@ -1,41 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="91" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
+<gameSystem id="5835-cbeb-a5c6-d13e" name="Warhammer Armies Project WAP 2.32" revision="92" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" xmlns="http://www.battlescribe.net/schema/gameSystemSchema" type="gameSystem" library="true">
   <readme>https://github.com/sbh427/wap-2.3</readme>
-  <publications>
-    <publication id="9e23-79cb-pubN66727" name="Rulebook v.2.32" shortName="RB" publisher="Warhammer - The Game of Fantasy Battles - 9th Edition v.2.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="9e23-79cb-pubN67565" name="Albion v.1.5" shortName="Al" publisher="Warhammer - Albion 9th Ed 1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="9e23-79cb-pubN71963" name="Beastmen v.1.7" shortName="BM" publisher="Warhammer - Beastmen 9th Ed 1.6" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="9e23-79cb-pubN75312" name="Bretonnia v.1.61" shortName="Br" publisher="Warhammer - Bretonnia 9th Ed v.1.61" publicationDate="06.12.2025" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="9e23-79cb-pubN76150" name="Dark Elves v.1.73" shortName="DE" publisher="Warhammer - Dark Elves 9th Ed 1.73" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="9e23-79cb-pubN77092" name="High Elves v.1.62" shortName="HE" publisher="Warhammer - High Elves 9th Ed v.1.62" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="9e23-79cb-pubN77402" name="Lizardmen v.1.5" shortName="LM" publisher="Warhammer - Lizardmen 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="9e23-79cb-pubN78975" name="Orcs &amp; Goblins v.1.6" shortName="O&amp;G" publisher="Warhammer - Orcs &amp; Goblins 9th Ed v.1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="aa7b-3583-0834-7bfa" name="Dwarfs v.1.62" shortName="Dw" publisher="Warhammer - Dwarfs 9th Ed 1.62"/>
-    <publication id="315d-135b-135c-07ce" name="Empire v.1.7" shortName="Em" publisher="Warhammer - Empire 9th Ed v.1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="4086-1ccd-f433-39a2" name="Skaven v.1.9" shortName="Sk" publisher="Warhammer - Skaven 9th Ed v.1.8" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="feeb-1927-4a99-f849" name="Tomb Kings v.1.6" shortName="TK" publisher="Warhammer - Tomb Kings v.1.6" publicationDate="24.08.2024" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="10a5-5781-61f5-86ae" name="Vampire Counts 1.63" shortName="VC" publisher="Warhammer - Vampire Counts 1.73" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="1a01-044f-047b-618f" name="Warriors of Chaos v.1.6" shortName="WoC" publisher="Warhammer - Warriors of Chaos 9th Ed v.1.6" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="e967-620f-06be-096a" name="Wood Elves v.1.5" shortName="WE" publisher="Warhammer - Wood Elves 9th Ed v.1.5" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="315c-6fd1-56a3-8b04" name="Amazons v.1.5" shortName="Am" publisher="Warhammer - Amazons 1.5"/>
-    <publication id="7f0c-7d47-a39d-8c68" name="Cult of Ulric 1.11" shortName="CoU" publisher="Warhammer - Cult of Ulric 1.11" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="15.11.2023"/>
-    <publication id="8ada-88a0-cdcd-9b5e" name="Dogs of War v.1.52" shortName="DoW" publisher="Warhammer - Dogs of War 9th Ed v.1.5" publicationDate="22.01.2026" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="894a-5ecc-1ff7-958a" name="Estalia 1.21" shortName="Es" publisher="Warhammer - Estalia 1.21" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="92f3-84a1-4644-bc2f" name="Hobgoblins 1.12" shortName="Ho" publisher="Warhammer - Hobgoblins 1.12" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="18.03.2024"/>
-    <publication id="84d9-dc45-4bf8-ae57" name="Kingdoms of Ind 1.12" shortName="KoI" publisher="Warhammer - Kingdoms of Ind 1.12" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="15.11.2023"/>
-    <publication id="5ff9-69dd-8810-183f" name="Nippon v.1.2" shortName="Ni" publisher="Warhammer - Nippon 9th Ed v.1.2" publicationDate="22.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="5884-1659-bf10-0d5a" name="Norsca v.1.1" shortName="No" publisher="Warhammer - Norsca 9th Ed v.1.1" publicationDate="10.11.2022" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="2053-6f2b-423f-8b0f" name="Pirates of Sartosa v.1.2" shortName="PoS" publisher="Warhammer - Pirates of Sartosa 9th Ed v.1.2" publicationDate="27.02.2023" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication name="Github" id="8db3-575d-91b-47f8" hidden="false" shortName="sbh427/wap-2.3" publisherUrl="https://github.com/sbh427/wap-2.3"/>
-    <publication name="Araby v.1.72" id="fd0a-6995-03c8-1dd6" hidden="false" shortName="Ar" publisher="Warhammer - Araby 9th Ed 1.5" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication name="Kislev 1.2" id="af5e-f821-6fd4-7df3" hidden="false" shortName="Ki" publisher="Warhammer - Kislev 1.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="18.05.2024"/>
-    <publication name="Ogre Kingdoms v.1.6" id="dc4b-67ab-7b8e-baa5" hidden="false" shortName="OK" publisher="Warhammer - Ogre Kingdoms 9th Ed v.1.6" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="14.09.2024"/>
-    <publication name="Daemons of Chaos 1.71" id="314a-aacb-0877-4081" hidden="false" shortName="DoC" publisher="Warhammer - Daemons of Chaos 1.71" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="23.06.2025"/>
-    <publication name="Chaos Dwarfs v.1.71" id="53f5-3638-a9ce-8dd3" hidden="false" shortName="CD" publisher="Warhammer - Chaos Dwarfs 9th Ed 1.71" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="20.04.2025"/>
-    <publication id="4f8f-9147-1eae-6c3d" name="Zombie Pirates of the Vampire Coast v.1.5" shortName="ZP" publisher="Warhammer - Zombie Pirates of the Vampire Coast 9th Ed v.1.5" publicationDate="08.02.2025" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="65fb-a9da-0a71-9dc9" name="Grand Cathay 1.71" shortName="GC" publisher="Warhammer - Grand Cathay 1.71" publicationDate="05.12.2025" publisherUrl="http://warhammerarmiesproject.blogspot.com/"/>
-    <publication id="ebd7-07af-35b9-4e00" name="Halflings 1.2" shortName="Ha" publisher="Warhammer - Halflings 1.2" publisherUrl="http://warhammerarmiesproject.blogspot.com/" publicationDate="30.06.2025"/>
-  </publications>
   <costTypes>
     <costType id="points" name="pts" defaultCostLimit="-1" hidden="false"/>
   </costTypes>
@@ -5271,7 +5236,7 @@
         <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c04e-4b85-d3ea-d076" type="max"/>
       </constraints>
       <selectionEntries>
-        <selectionEntry id="5fb0-8579-7b4d-6645" name="Boon of Magic" hidden="false" collective="false" import="true" type="upgrade" sortIndex="1">
+        <selectionEntry id="5fb0-8579-7b4d-6645" name="Boon of Magic" hidden="false" collective="true" import="true" type="upgrade" sortIndex="1">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="db50-881a-83f3-45d1" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="79dd-1569-e042-db2b" type="min"/>
@@ -5291,7 +5256,7 @@
             </profile>
           </profiles>
         </selectionEntry>
-        <selectionEntry id="0d5c-1131-1f1d-b764" name="0. Blue Fire of Tzeentch" hidden="false" collective="false" import="true" type="upgrade" sortIndex="2">
+        <selectionEntry id="0d5c-1131-1f1d-b764" name="0. Blue Fire of Tzeentch" hidden="false" collective="true" import="true" type="upgrade" sortIndex="2">
           <constraints>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f538-b753-e850-bd08" type="max"/>
             <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5fde-7c63-b3ec-789f" type="min"/>
@@ -5318,7 +5283,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Spells from the Lore of Tzeentch" id="f53a-7223-a0d1-e317" hidden="false" sortIndex="3" collapsible="true">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="12. Infernal Gateway" hidden="true" id="e756-09f0-58ca-ed4b" collective="false">
+            <selectionEntry type="upgrade" import="true" name="12. Infernal Gateway" hidden="true" id="e756-09f0-58ca-ed4b" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="881e-a12c-d730-f046" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5344,7 +5309,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="1. Baleful Transmogrification" hidden="false" id="ae47-8dc9-06f3-f02a" collective="false">
+            <selectionEntry type="upgrade" import="true" name="1. Baleful Transmogrification" hidden="false" id="ae47-8dc9-06f3-f02a" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="a6f3-cbb9-49f4-cbc6" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5363,7 +5328,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="2. Boon of Tzeentch" hidden="false" id="a55d-a382-a231-2a40" collective="false">
+            <selectionEntry type="upgrade" import="true" name="2. Boon of Tzeentch" hidden="false" id="a55d-a382-a231-2a40" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c0ce-77e1-483d-5eaa" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5382,7 +5347,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="3. Pandemonium" hidden="false" id="02c1-4a4f-e80a-1322" collective="false">
+            <selectionEntry type="upgrade" import="true" name="3. Pandemonium" hidden="false" id="02c1-4a4f-e80a-1322" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4410-69c2-8b60-fd72" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5401,7 +5366,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="4. Pink Fire of Tzeentch" hidden="true" id="7c79-2381-5249-2bac" collective="false">
+            <selectionEntry type="upgrade" import="true" name="4. Pink Fire of Tzeentch" hidden="true" id="7c79-2381-5249-2bac" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="8900-afed-4621-1122" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5433,7 +5398,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="5. Blot of Change" hidden="true" id="aa4b-20b0-bae9-f228" collective="false">
+            <selectionEntry type="upgrade" import="true" name="5. Blot of Change" hidden="true" id="aa4b-20b0-bae9-f228" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="547e-d96a-395b-9b34" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5465,7 +5430,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="6. Shield of Fate" hidden="true" id="0995-b7f1-e8b3-d64a" collective="false">
+            <selectionEntry type="upgrade" import="true" name="6. Shield of Fate" hidden="true" id="0995-b7f1-e8b3-d64a" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="1fa6-f93d-ec2d-b1df" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5497,7 +5462,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="7. Fold Reality" hidden="true" id="a989-6c66-a6da-fbcc" collective="false">
+            <selectionEntry type="upgrade" import="true" name="7. Fold Reality" hidden="true" id="a989-6c66-a6da-fbcc" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="0c85-cf76-80ce-8388" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5528,7 +5493,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="8. Glean Magic" hidden="true" id="9016-5753-d9e8-26e7" collective="false">
+            <selectionEntry type="upgrade" import="true" name="8. Glean Magic" hidden="true" id="9016-5753-d9e8-26e7" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="c4ad-9d19-fd4b-a49a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5559,7 +5524,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="9. Tzeentch&apos;s Firestorm" hidden="true" id="2f0a-33ed-5dbb-2ada" collective="false">
+            <selectionEntry type="upgrade" import="true" name="9. Tzeentch&apos;s Firestorm" hidden="true" id="2f0a-33ed-5dbb-2ada" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="82a4-fa81-2d39-016c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5590,7 +5555,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="10. Daemonfire Vortex" hidden="true" id="fe59-5f58-f0fb-e061" collective="false">
+            <selectionEntry type="upgrade" import="true" name="10. Daemonfire Vortex" hidden="true" id="fe59-5f58-f0fb-e061" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="f362-6689-2c0a-71b1" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -5616,7 +5581,7 @@
                 </profile>
               </profiles>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="11. Treason of Tzeentch" hidden="true" id="8129-8b1b-cd1a-c273" collective="false">
+            <selectionEntry type="upgrade" import="true" name="11. Treason of Tzeentch" hidden="true" id="8129-8b1b-cd1a-c273" collective="true">
               <constraints>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="bc7c-34de-3dc9-f4af" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
               </constraints>
@@ -7427,7 +7392,7 @@
     <selectionEntryGroup name="60. Wizard Level" id="1d19-3d5b-2087-e988" hidden="false">
       <comment>1</comment>
       <entryLinks>
-        <entryLink import="true" name="Wizard Level 1" hidden="false" id="2461-692e-68b5-a7e6" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8">
+        <entryLink import="true" name="Wizard Level 1" hidden="false" id="2461-692e-68b5-a7e6" type="selectionEntry" targetId="745f-c8e7-be1d-a4d8" collective="true">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0203-9259-3a51-4379-min"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0203-9259-3a51-4379-max"/>

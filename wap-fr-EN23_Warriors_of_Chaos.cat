@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="ce3b-bf93-496e-a65c" name="Warriors of Chaos WAP 1.62" revision="62" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
+<catalogue id="ce3b-bf93-496e-a65c" name="Warriors of Chaos WAP 1.62" revision="63" battleScribeVersion="2.03" authorName="skalfmarteaunoir" authorContact="Contact me via discord (1st link). See instructions for bug reporting on Github (2nd link)" authorUrl="https://discord.com/invite/AaNyj9s" library="false" gameSystemId="5835-cbeb-a5c6-d13e" gameSystemRevision="56" xmlns="http://www.battlescribe.net/schema/catalogueSchema" type="catalogue">
   <readme>https://github.com/sbh427/wap-2.3</readme>
   <profileTypes>
     <profileType id="49dc-2fd8-b942-dbc2" name="Gift of the Gods">
@@ -2799,9 +2799,6 @@ Each time the unit casts a spell (or is targeted by a special rule that affects 
           </rules>
           <infoLinks>
             <infoLink id="ab35-6ca2-e908-2dfe" name="Will of Chaos" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
-            <infoLink id="aab9-7ac5-b68a-49fb" name="Blue Fire of Tzeentch" hidden="false" targetId="884b-d4e2-a581-531b" type="profile"/>
-            <infoLink id="2a70-4d1f-9ab7-dff1" name="Boon of Magic" hidden="false" targetId="6882-88e4-9cfc-032b" type="profile"/>
-            <infoLink id="4f82-0b92-6848-5071" name="Pink Fire of Tzeentch" hidden="false" targetId="75f5-0942-b785-d105" type="profile"/>
             <infoLink name="Chaos Armour" id="96d5-e141-bbd4-2865" hidden="false" type="profile" targetId="607f-51b8-00aa-68b0"/>
           </infoLinks>
           <costs>
@@ -2841,12 +2838,14 @@ Each time the unit casts a spell (or is targeted by a special rule that affects 
             <entryLink import="true" name="70. Mount" hidden="false" id="4735-1895-c301-ae23" type="selectionEntryGroup" targetId="d3f4-2566-96e2-e425">
               <entryLinks>
                 <entryLink import="true" name="Disc of Tzeentch" hidden="false" id="62e9-155f-1b1f-c796" type="selectionEntry" targetId="628a-55ba-92d7-a406">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="70ff-39c8-686c-af67-min"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="70ff-39c8-686c-af67-max"/>
-                  </constraints>
+                  <modifiers>
+                    <modifier type="set" value="1" field="c626-d7fc-791e-a6b6"/>
+                  </modifiers>
                 </entryLink>
               </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="49f0-4a35-c195-a379" automatic="true"/>
+              </constraints>
             </entryLink>
             <entryLink import="true" name="40. Suits of Armour" hidden="false" id="b535-7343-6204-6e30" type="selectionEntryGroup" targetId="f7f7-2534-4683-595a">
               <entryLinks>
@@ -2858,6 +2857,15 @@ Each time the unit casts a spell (or is targeted by a special rule that affects 
               </entryLinks>
             </entryLink>
             <entryLink import="true" name="60. Wizard Level" hidden="false" id="adb5-128a-5f94-dfb4" type="selectionEntryGroup" targetId="1d19-3d5b-2087-e988"/>
+            <entryLink import="true" name="65. Lore of Magic" hidden="false" id="743f-ade2-3960-5a89" type="selectionEntryGroup" targetId="6704-e54c-3f8f-1d32">
+              <entryLinks>
+                <entryLink import="true" name="Lore of Tzeentch" hidden="false" id="a978-6d7a-5877-d3de" type="selectionEntry" targetId="446a-99ef-5aad-d30a" collective="true">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5d8f-15b5-7f26-1288"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </entryLink>
           </entryLinks>
           <selectionEntryGroups>
             <selectionEntryGroup name="10. Mark of Chaos" id="a749-deb9-5653-4de7" hidden="false">
@@ -10017,7 +10025,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <modifier type="add" value="e650-a901-f069-ca88" field="category" scope="root-entry"/>
       </modifiers>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Palanquin of Nurgle" hidden="false" id="8fe2-5f5f-dea0-6be0" collective="false" subType="mount">
+    <selectionEntry type="model" import="true" name="Palanquin of Nurgle" hidden="false" id="8fe2-5f5f-dea0-6be0" collective="true" subType="mount">
       <infoLinks>
         <infoLink name="Daemon of Nurgle" id="93f0-3b5d-fff8-392c" hidden="false" type="rule" targetId="0b9b-1baf-5bcd-1ec3"/>
         <infoLink name="Daemonic" id="e2f2-3c3c-1ea2-6639" hidden="false" type="infoGroup" targetId="9c1c-92d1-b507-cf66"/>
@@ -10172,7 +10180,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="919f-e8d4-589b-73a3" includeChildSelections="false" automatic="true"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Disc of Tzeentch" hidden="false" id="628a-55ba-92d7-a406" subType="mount">
+    <selectionEntry type="model" import="true" name="Disc of Tzeentch" hidden="false" id="628a-55ba-92d7-a406" subType="mount" collective="true">
       <infoLinks>
         <infoLink name="Daemon of Tzeentch" id="df5c-c981-9fba-f38e" hidden="false" type="rule" targetId="fe9a-f478-5bcc-57a8">
           <modifiers>
@@ -10342,7 +10350,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2c56-b030-cbd5-60f3" includeChildSelections="false" automatic="true"/>
       </constraints>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="War Chariot" hidden="false" id="8ab9-75cd-5f33-e891" collective="false" subType="mount">
+    <selectionEntry type="model" import="true" name="War Chariot" hidden="false" id="8ab9-75cd-5f33-e891" collective="true" subType="mount">
       <infoLinks>
         <infoLink name="Will of Chaos" id="6a8e-464e-3736-da8e" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
       </infoLinks>
@@ -10576,7 +10584,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Karkadrak" hidden="false" id="dc59-39e9-9991-577f" collective="false" subType="mount">
+    <selectionEntry type="model" import="true" name="Karkadrak" hidden="false" id="dc59-39e9-9991-577f" collective="true" subType="mount">
       <infoLinks>
         <infoLink name="Impact Hits (D3)" id="9d04-117a-c008-131b" hidden="false" type="rule" targetId="f30d-0b61-2836-689e"/>
         <infoLink name="Natural Armour" id="d697-d0c5-e57b-daab" hidden="false" type="profile" targetId="9aa1-cdbd-98da-c7d1">
@@ -10652,7 +10660,7 @@ If Crom uses two hand weapons, he gains +3 Attacks rather than +1.</description>
         </profile>
       </profiles>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="Marauder Chariot" hidden="false" id="b11e-4376-956f-32c8" collective="false" subType="mount">
+    <selectionEntry type="model" import="true" name="Marauder Chariot" hidden="false" id="b11e-4376-956f-32c8" collective="true" subType="mount">
       <infoLinks>
         <infoLink name="Marauder Chariot" id="701b-ee16-bb24-e484" hidden="false" targetId="f54b-d34d-bb44-2e9c" type="profile"/>
         <infoLink name="Will of Chaos" id="c7a6-9b9b-b098-9fd4" hidden="false" targetId="d658-f5e9-8cbf-0cbb" type="rule"/>
